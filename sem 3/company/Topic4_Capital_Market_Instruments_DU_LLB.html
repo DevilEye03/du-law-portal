@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Topic 4 · Capital Market Instruments · DU LLB III Term (LB-303)</title>
+<style>
+  :root{
+    --ink:#0f172a; --navy:#0b1f3a; --gold:#c9a227; --gold2:#e8c547;
+    --cream:#f7f1e3; --paper:#fffdf8; --muted:#5c6573; --line:#e6dcc4;
+    --red:#8b1e3f; --green:#1b5e4a; --blue:#1e4d7b; --chip:#eef3f8;
+    --card:#ffffff; --shadow:0 10px 30px rgba(11,31,58,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    color:var(--ink); background:linear-gradient(180deg,#f4efe3 0%, #faf7f0 40%, #fff 100%);
+    line-height:1.65; font-size:17px;
+  }
+  a{color:var(--blue)}
+  header.hero{
+    background:radial-gradient(1200px 500px at 10% -20%, #1a3a66 0%, var(--navy) 55%);
+    color:#f8f4ea; padding:42px 24px 28px; border-bottom:6px solid var(--gold);
+    position:relative; overflow:hidden;
+  }
+  header.hero:after{
+    content:""; position:absolute; right:-80px; top:-80px; width:280px; height:280px;
+    border:40px solid rgba(201,162,39,.12); border-radius:50%;
+  }
+  .wrap{max-width:1180px; margin:0 auto; padding:0 20px}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; color:var(--gold2); font-family:ui-sans-serif,system-ui,sans-serif}
+  h1{font-size:clamp(28px,4vw,46px); margin:8px 0 6px; font-weight:700; line-height:1.15}
+  .sub{opacity:.9; max-width:820px; font-size:16.5px}
+  .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:18px}
+  .pill{background:rgba(255,255,255,.08); border:1px solid rgba(201,162,39,.35); color:#f3e7c4;
+    padding:6px 12px; border-radius:999px; font-size:12.5px; font-family:ui-sans-serif,system-ui,sans-serif}
+  nav.toc{
+    position:sticky; top:0; z-index:20; background:rgba(11,31,58,.96); backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(201,162,39,.3);
+  }
+  nav.toc .wrap{display:flex; gap:6px; overflow:auto; padding:10px 20px; scrollbar-width:thin}
+  nav.toc a{color:#ead9a4; text-decoration:none; font-size:12.5px; white-space:nowrap;
+    font-family:ui-sans-serif,system-ui,sans-serif; padding:6px 10px; border-radius:8px}
+  nav.toc a:hover{background:rgba(201,162,39,.18); color:#fff}
+  section{padding:36px 0 8px}
+  h2{font-size:28px; color:var(--navy); border-bottom:3px solid var(--gold); display:inline-block; padding-bottom:4px; margin:0 0 16px}
+  h3{color:var(--red); font-size:21px; margin:28px 0 10px}
+  h4{color:var(--blue); margin:18px 0 8px; font-size:18px}
+  p{margin:10px 0}
+  .lead{font-size:18.5px; color:#243044}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px; box-shadow:var(--shadow)}
+  .card h4{margin-top:0}
+  .note,.warn,.exam,.src{
+    border-radius:14px; padding:14px 16px; margin:16px 0; border:1px solid;
+  }
+  .note{background:#eef6ff; border-color:#c9ddf3}
+  .warn{background:#fff4e8; border-color:#f0d2a8}
+  .exam{background:#f3eee0; border-color:#e0d3ad}
+  .src{background:#f6f0e4; border-color:#e5d7b8; font-size:14.5px; color:#3d4552}
+  .src strong{color:var(--navy)}
+  .stat{font-family:ui-sans-serif,system-ui,sans-serif; font-size:13px; color:var(--muted)}
+  table{width:100%; border-collapse:collapse; margin:14px 0 22px; background:#fff; font-size:15.5px}
+  th,td{border:1px solid #eadfca; padding:9px 10px; vertical-align:top}
+  th{background:var(--navy); color:#f7ecd0; font-weight:600; font-family:ui-sans-serif,system-ui,sans-serif; font-size:13px; letter-spacing:.03em}
+  tr:nth-child(even) td{background:#fbf7ee}
+  .sec{display:inline-block; background:var(--navy); color:var(--gold2); padding:2px 8px; border-radius:6px;
+    font-family:ui-sans-serif,system-ui,sans-serif; font-size:12px; letter-spacing:.04em}
+  .case{
+    background:#fff; border-left:6px solid var(--gold); border-radius:0 16px 16px 0;
+    padding:16px 18px 8px; margin:22px 0; box-shadow:var(--shadow)
+  }
+  .case h3{margin-top:0; color:var(--navy); font-size:20px}
+  .tag{display:inline-block; background:var(--chip); color:var(--blue); border-radius:999px; padding:2px 10px;
+    font-size:12px; font-family:ui-sans-serif,system-ui,sans-serif; margin-right:6px}
+  .tag.du{background:#8b1e3f; color:#fff}
+  .tag.pilot{background:#c9a227; color:#1a1404}
+  ol.deep, ul.deep{padding-left:22px}
+  ol.deep li, ul.deep li{margin:6px 0}
+  .flow{
+    background:#0b1f3a; color:#f4ead0; border-radius:18px; padding:18px; margin:18px 0 26px; overflow:auto
+  }
+  .flow h4{color:var(--gold2); margin-top:0}
+  .steps{display:flex; flex-wrap:wrap; gap:8px; align-items:stretch}
+  .step{
+    background:#143052; border:1px solid rgba(201,162,39,.35); border-radius:12px; padding:10px 12px; min-width:140px; flex:1
+  }
+  .step b{display:block; color:var(--gold2); font-size:12px; letter-spacing:.08em; font-family:ui-sans-serif,system-ui,sans-serif}
+  .arrow{align-self:center; color:var(--gold); font-size:22px}
+  svg.diagram{width:100%; max-width:1080px; height:auto; display:block; margin:10px auto}
+  .viz{
+    background:linear-gradient(#f8f1de,#efe4c8); border:1px solid #e0d0a8; border-radius:16px; padding:10px 12px 6px; margin:12px 0 20px
+  }
+  .viz .cap{font-size:13px; color:#4a4334; font-family:ui-sans-serif,system-ui,sans-serif; text-align:center; margin:4px 0 8px}
+  .qa{border:1px solid var(--line); border-radius:16px; overflow:hidden; margin:16px 0; background:#fff}
+  .qa .q{background:var(--navy); color:#f7ecd0; padding:12px 16px; font-weight:700}
+  .qa .a{padding:12px 16px}
+  footer{background:var(--navy); color:#d9cba2; padding:28px 20px; margin-top:40px; font-size:14px}
+  code, .mono{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.92em}
+  .two{display:grid; grid-template-columns:1.2fr .8fr; gap:16px}
+  @media (max-width:900px){ .two{grid-template-columns:1fr} nav.toc{position:relative} }
+  @media print{
+    nav.toc, .noprint{display:none !important}
+    header.hero{background:#0b1f3a; -webkit-print-color-adjust:exact; print-color-adjust:exact}
+    body{background:#fff}
+    .case, .card, .flow{break-inside:avoid}
+    a{color:inherit; text-decoration:none}
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Faculty of Law · LL.B. III Term · LB-303 Company Law</div>
+    <h1>Topic 4 — Capital Market Instruments</h1>
+    <p class="sub">A complete exam-ready commentary on <em>Prospectus</em> (ss. 2(70), 2(1), 23–37) and <em>Share Capital &amp; Debentures</em> (ss. 2(84), 43, 2(30), 44, 71), built first from the DU 2025/2022 case material and then from Avtar Singh, <em>Company Law</em> (prescribed reading), Taxmann, and the Faculty Exam Checklist.</p>
+    <div class="meta">
+      <span class="pill">Companies Act, 2013 (as amended)</span>
+      <span class="pill">SEBI Act, 1992 · ICDR Regulations</span>
+      <span class="pill">DU Case Material 2025 — no dedicated Topic-4 cases</span>
+      <span class="pill">Adjacent DU cases: Erlanger · German Date Coffee · Salomon</span>
+    </div>
+  </div>
+</header>
+<nav class="toc noprint">
+  <div class="wrap">
+    <a href="#map">Syllabus map</a>
+    <a href="#philosophy">Why prospectus law</a>
+    <a href="#def">S. 2(70)</a>
+    <a href="#kinds">Kinds of prospectus</a>
+    <a href="#reg">Registration s. 26</a>
+    <a href="#golden">Golden rule</a>
+    <a href="#remedies">Remedies</a>
+    <a href="#cases">Case law bank</a>
+    <a href="#shares">Share capital</a>
+    <a href="#deb">Debentures</a>
+    <a href="#compare">Share v Debenture</a>
+    <a href="#hypos">Hypotheticals</a>
+    <a href="#pyq">PYQs + models</a>
+    <a href="#ready">Exam ready</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="map">
+  <h2>0. Syllabus map &amp; how DU actually examines this topic</h2>
+  <p class="lead">The 2025 Faculty case material prints Topic 4 exactly as on the syllabus sheet. Importantly, <strong>the 2025 casebook lists no numbered cases under Topic 4</strong>. Cases 1–18 cover Topics 1–3 (corporate personality, promoters, memorandum/articles). Cases 19 onwards jump to Topic 5 (directors). That does <em>not</em> mean Topic 4 is unexaminable. It means the Faculty expects you to answer from the <em>Act + Avtar Singh Ch. 5, 7, 9, 14</em> and to <em>borrow</em> the adjacent cases that already sit in the casebook.</p>
+
+  <div class="src"><strong>Primary sources used in these notes (in the order the Faculty itself ranks them):</strong> (1) DU LB-303 Case Material 2025 &amp; 2022 — Erlanger, German Date Coffee Co, Salomon (shares + debentures), Peek/Hedley Byrne discussion in the Standard Chartered extract; (2) Avtar Singh, <em>Company Law</em>, Ch. 5 Prospectus (pp. 107–134), Ch. 9 Share Capital, Ch. 14 Debentures; (3) Faculty Exam Checklist item 8B; (4) Taxmann Company Law (Ch. 7 Prospectus / Ch. 9 Share Capital / Ch. 12 Debentures); (5) Companies Act, 2013 ss. 2, 23–42, 43–44, 71.</div>
+
+  <table>
+    <tr><th>Syllabus limb</th><th>Statutory home</th><th>What the examiner wants</th><th>DU-adjacent case</th></tr>
+    <tr><td>Prospectus</td><td>s. 2(70)</td><td>Definition + “invitation to the public”</td><td>South of England Gas; Nash v Lynde (Avtar)</td></tr>
+    <tr><td>Abridged</td><td>s. 2(1) + s. 33</td><td>Salient features + application form duty</td><td>—</td></tr>
+    <tr><td>Deemed</td><td>s. 25</td><td>Offer for sale; 6-month / unpaid-consideration presumptions</td><td>SEBI v Kunnamkulam Paper Mills</td></tr>
+    <tr><td>Shelf</td><td>s. 31</td><td>1-year validity + information memorandum</td><td>—</td></tr>
+    <tr><td>Red-herring</td><td>s. 32</td><td>Price/quantum blank; book-building</td><td>—</td></tr>
+    <tr><td>Information memorandum</td><td>s. 31(2)–(3)</td><td>Updates between tranches; 15-day withdrawal</td><td>—</td></tr>
+    <tr><td>Registration</td><td>s. 26</td><td>Contents, expert consent, 90-day life, penalty</td><td>—</td></tr>
+    <tr><td>Remedies / civil &amp; criminal liability</td><td>ss. 34, 35, 36, 37, 447 + tort + Contract Act</td><td>Deceit, statutory compensation, rescission, fraud, class action</td><td>Erlanger (false prospectus); German Date Coffee; Derry v Peek; R v Kylsant; Peek v Gurney</td></tr>
+    <tr><td>Shares</td><td>s. 2(84), s. 44</td><td>Bundle of rights; movable property</td><td>Borland’s Trustee; Salomon</td></tr>
+    <tr><td>Kinds of capital</td><td>s. 43</td><td>Equity (incl. DVR) / preference (cumulative, participating, redeemable)</td><td>—</td></tr>
+    <tr><td>Debentures</td><td>s. 2(30), s. 71</td><td>Acknowledgement of debt; no voting rights; DRR; trustee</td><td>Salomon (secured debentures); Levy v Abercorris</td></tr>
+    <tr><td>Share v Debenture</td><td>ss. 43, 44, 71(2)</td><td>Owner v creditor; dividend v interest; residual v priority</td><td>Salomon; Gower (quoted in Avtar)</td></tr>
+  </table>
+
+  <div class="warn"><strong>Checklist trap (8B):</strong> the Faculty Exam Checklist cites abridged prospectus as s. 33. The <em>syllabus sheet</em> cites s. 2(1). Both are right in different senses: s. 2(1) is the definition (“memorandum containing such salient features of a prospectus as may be specified by SEBI”); s. 33 is the operative duty (no application form without an abridged prospectus). In the answer, write both.</div>
+</section>
+
+<section id="philosophy">
+  <h2>1. Why the law of prospectus exists</h2>
+  <p>A company that needs money has two lawful choices. It can sell a slice of itself (a <em>share</em>) or it can borrow (a <em>debenture</em>). When it sells or borrows from <em>the public</em>, the offeree is at the mercy of promoters and directors. Kindersley V-C’s golden rule in <em>New Brunswick and Canada Railway and Land Co v Muggeridge</em> (1860) 3 LT 651 — treated by Page-Wood V-C in <em>Henderson v Lacon</em> (1867) LR 5 Eq 249 as a “golden legacy” — is the philosophical core of Topic 4:</p>
+  <blockquote style="border-left:4px solid var(--gold); margin:16px 0; padding:8px 16px; background:#fff; font-style:italic">
+    Those who issue a prospectus hold out to the public great advantages which will accrue to persons who take shares. The public is at the mercy of company promoters. Everything must therefore be stated with strict and scrupulous accuracy. Nothing should be stated as fact which is not so, and no fact should be omitted the existence of which might in any degree affect the nature or quality of the privileges and advantages which the prospectus holds out as inducement to take shares. In a word, the true nature of the company’s venture should be disclosed.
+  </blockquote>
+  <p>Lord Cairns in <em>Peek v Gurney</em> (1873) LR 6 HL 377 noted that the fear of heavy liability and criminal sanctions has controlled directors’ tendency of “using extravagant terms and flattering descriptions.” Avtar Singh (Ch. 5) treats this as the reason modern prospectus litigation has declined — the statute is so severe that the wise do not gamble.</p>
+
+  <div class="flow">
+    <h4>Capital-raising map (ss. 23, 42)</h4>
+    <div class="steps">
+      <div class="step"><b>PUBLIC CO</b>Public offer through prospectus (Part I, Ch. III, ss. 23–41) · IPO / FPO / OFS</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>OR</b>Private placement s. 42 (identified persons, 200 cap, PAS-4)</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>OR</b>Rights issue / bonus issue (s. 62 / s. 63) + SEBI ICDR if listed</div>
+    </div>
+    <p style="margin:12px 0 0; font-size:14px; opacity:.85">Private company: rights, bonus or private placement only — it cannot issue a prospectus inviting the public. Explanation to s. 23: “public offer” includes IPO, FPO, and an offer for sale of securities to the public by an existing shareholder through a prospectus.</p>
+  </div>
+</section>
+
+<section id="def">
+  <h2>2. Prospectus — s. 2(70) dissected</h2>
+  <p><span class="sec">s. 2(70)</span> “Prospectus” means any document described or issued as a prospectus and includes a red herring prospectus referred to in section 32 or shelf prospectus referred to in section 31 or any notice, circular, advertisement or other document inviting offers from the public for the subscription or purchase of any securities of a body corporate.</p>
+
+  <h3>2.1 Four ingredients (memorise this structure)</h3>
+  <ol class="deep">
+    <li><strong>Document of any form.</strong> Not confined to a bound booklet. A newspaper advertisement, a circular, a tweeted PDF, a slide deck — if it invites offers from the public, it is a prospectus. The label is irrelevant; substance controls. Even a document <em>described as</em> a prospectus is one, even if it does not in fact invite.</li>
+    <li><strong>Invitation, not an offer.</strong> Classic contract-law distinction. The prospectus is an invitation to treat. The application is the offer; allotment is the acceptance (<em>Hebb’s Case</em>; <em>Ramanbhai v Ghasiram</em>). Until allotment, the applicant may withdraw (subject to SEBI lock-in for listed issues).</li>
+    <li><strong>“From the public.”</strong> s. 2(68) / s. 42 and the old s. 67(3) of 1956 Act thinking still matter. “Public” includes any section of the public, whether selected as members or debenture-holders or as clients of the person issuing the prospectus or in any other manner. Three hundred copies circulated among members of certain gas companies = public: <em>South of England Natural Gas and Petroleum Co Ltd, re</em> (1911) 1 Ch 573. One copy given to the company’s solicitor who forwarded it to a single client ≠ issue to the public: <em>Nash v Lynde</em> [1929] AC 158 (HL). There must be some measure of publicity, however modest. A single private communication is not an “issue”.</li>
+    <li><strong>For subscription or purchase of securities of a body corporate.</strong> “Securities” takes colour from s. 2(81) read with s. 2(h) of the Securities Contracts (Regulation) Act, 1956 — shares, scrips, stocks, bonds, debentures, debenture stock, and other marketable securities. “Body corporate” is wider than “company” (s. 2(11)).</li>
+  </ol>
+
+  <div class="note"><strong>What is not a prospectus?</strong> (a) A bona fide invitation to enter into an underwriting agreement (s. 33(1)(a)); (b) documents relating to securities not offered to the public (s. 33(1)(b)); (c) a rights circular to existing members, even with a right to renounce, unless the number of “others” to whom rights are renounced takes it into deemed-prospectus territory (Avtar citing <em>SEBI v Kunnamkulam Paper Mills Ltd</em> (2013) 178 Comp Cas 371 (Ker) — if others exceed fifty, deemed prospectus); (d) private placement offer letter under s. 42, provided the 200-person / no-public-advertisement conditions are kept. Breach of s. 42 converts the placement into a public offer, with refund + penalty consequences.</div>
+</section>
+
+<section id="kinds">
+  <h2>3. Kinds of prospectus — the five-box answer</h2>
+  <p>Write this as a labelled diagram in the answer booklet. The syllabus lists five: Abridged, Deemed, Shelf, Red-herring, Information Memorandum. (Information memorandum is technically a companion document to a shelf prospectus, not a free-standing sixth species, but the syllabus treats it separately — so you must too.)</p>
+
+  <svg class="diagram" viewBox="0 0 1100 430" role="img" aria-label="Kinds of prospectus flowchart">
+    <rect width="1100" height="430" fill="#0b1f3a" rx="18"/>
+    <text x="40" y="40" fill="#e8c547" font-family="Georgia" font-size="22">KINDS OF PROSPECTUS — Companies Act, 2013</text>
+    <text x="40" y="64" fill="#c9b88a" font-family="sans-serif" font-size="13">Start from s. 2(70) (genus) → five statutory species the DU syllabus demands</text>
+    <!-- boxes -->
+    <rect x="30" y="90" width="200" height="110" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="50" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">1. ABRIDGED</text>
+    <text x="50" y="140" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 2(1) definition</text>
+    <text x="50" y="158" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 33 application form</text>
+    <text x="50" y="176" fill="#c9b88a" font-size="11" font-family="sans-serif">SEBI “salient features”</text>
+
+    <rect x="250" y="90" width="200" height="110" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="270" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">2. DEEMED</text>
+    <text x="270" y="140" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 25 offer for sale</text>
+    <text x="270" y="158" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 28 members’ OFS</text>
+    <text x="270" y="176" fill="#c9b88a" font-size="11" font-family="sans-serif">presumptions in s. 25(2)</text>
+
+    <rect x="470" y="90" width="200" height="110" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="490" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">3. SHELF</text>
+    <text x="490" y="140" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 31 · validity ≤ 1 yr</text>
+    <text x="490" y="158" fill="#f4ead0" font-size="12" font-family="sans-serif">repeat issues, no new</text>
+    <text x="490" y="176" fill="#c9b88a" font-size="11" font-family="sans-serif">full prospectus</text>
+
+    <rect x="690" y="90" width="200" height="110" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="710" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">4. RED HERRING</text>
+    <text x="710" y="140" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 32 · price / size blank</text>
+    <text x="710" y="158" fill="#f4ead0" font-size="12" font-family="sans-serif">file 3 days before open</text>
+    <text x="710" y="176" fill="#c9b88a" font-size="11" font-family="sans-serif">book-building vehicle</text>
+
+    <rect x="910" y="90" width="160" height="110" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="925" y="118" fill="#e8c547" font-size="13" font-family="sans-serif">5. INFO MEMO</text>
+    <text x="925" y="140" fill="#f4ead0" font-size="12" font-family="sans-serif">s. 31(2)</text>
+    <text x="925" y="158" fill="#f4ead0" font-size="12" font-family="sans-serif">updates + 15-day</text>
+    <text x="925" y="176" fill="#c9b88a" font-size="11" font-family="sans-serif">withdrawal right</text>
+
+    <path d="M130 200 v40 H550 v0" stroke="#c9a227" fill="none" stroke-width="2"/>
+    <rect x="250" y="250" width="600" height="140" rx="12" fill="#1b3a5f" stroke="#e8c547"/>
+    <text x="270" y="280" fill="#e8c547" font-size="16" font-family="Georgia">STATUTORY PROSPECTUS (the “full” document) — s. 26</text>
+    <text x="270" y="304" fill="#f4ead0" font-size="13" font-family="sans-serif">Dated + signed · filed with RoC before issue · expert consent · 90-day life · SEBI ICDR if listed</text>
+    <text x="270" y="328" fill="#f4ead0" font-size="13" font-family="sans-serif">On closing of a red-herring offer, a final prospectus with price, capital raised and closing price is filed with RoC + SEBI (s. 32(4)).</text>
+    <text x="270" y="352" fill="#f4ead0" font-size="13" font-family="sans-serif">Shelf + information memorandum together = a prospectus (s. 31(3)).</text>
+    <text x="270" y="376" fill="#c9b88a" font-size="12" font-family="sans-serif">Advertisement of prospectus: s. 30 (must recite objects, liability of members, capital, signatories, capital structure).</text>
+  </svg>
+
+  <h3>3.1 Abridged prospectus — s. 2(1) read with s. 33</h3>
+  <p><span class="sec">s. 2(1)</span> “Abridged prospectus” means a memorandum containing such salient features of a prospectus as may be specified by the Securities and Exchange Board by making regulations in this behalf.</p>
+  <p><span class="sec">s. 33(1)</span> No form of application for the purchase of any of the securities of a company shall be issued unless such form is accompanied by an abridged prospectus. Purpose (Avtar): to reduce the expense-burden of a public issue while still putting the investor on notice of the essentials. The full prospectus must be kept at the company’s office and a copy given, on request, before closing of the offer and the subscription list (s. 33(2)). Default: company liable to a penalty of ₹50,000 for each default.</p>
+  <p><strong>Exceptions</strong> (s. 33(1) proviso conceptually / s. 33(1)(a)–(b)): (a) bona fide invitation to enter into an underwriting agreement; (b) securities not offered to the public.</p>
+
+  <h3>3.2 Deemed prospectus — s. 25 (and the cousin, s. 28)</h3>
+  <p>Promoters historically tried to dodge prospectus law by allotting the entire issue to an intermediary (often a house of issue) who then offered the securities to the public by a document that was <em>not</em> called a prospectus. Section 25 closes that door.</p>
+  <p><span class="sec">s. 25(1)</span> Where a company allots or agrees to allot any securities of the company with a view to all or any of those securities being offered for sale to the public, any document by which the offer for sale to the public is made shall, for all purposes, be deemed to be a prospectus issued by the company. All enactments and rules of law as to the contents of a prospectus and as to liability in respect of statements in and omissions from a prospectus, or otherwise relating to a prospectus, apply with the modifications in s. 25(3) and (4).</p>
+  <p><strong>Statutory presumptions — s. 25(2).</strong> Unless the contrary is proved, an allotment of, or an agreement to allot, securities is presumed to have been made with a view to the securities being offered for sale to the public if it is shown —</p>
+  <ol class="deep">
+    <li>that an offer of the securities or of any of them for sale to the public was made within <strong>six months</strong> after the allotment or agreement to allot; or</li>
+    <li>that at the date when the offer was made, the whole consideration to be received by the company in respect of the securities had <strong>not been received</strong> by it.</li>
+  </ol>
+  <p><strong>Additional contents</strong> (s. 25(3)): (a) net amount of consideration received or to be received by the company; (b) time and place at which the underlying contract of allotment may be inspected. The persons making the offer are treated as named as directors for liability purposes. If the offeror is a company or firm, signature by two directors or not less than one-half of the partners suffices (s. 25(4)).</p>
+  <p><span class="sec">s. 28</span> Offer of sale of shares by certain members (an OFS by existing holders, in consultation with the Board): the document is deemed a prospectus issued by the company; contents and misstatement liability attach. The selling members must collectively authorise the company to act and must reimburse its expenses (s. 28(3)).</p>
+
+  <h3>3.3 Shelf prospectus — s. 31</h3>
+  <p>Designed for frequent issuers (typically NBFCs, public financial institutions, and such class as SEBI specifies). Instead of printing a fresh full prospectus for every tranche:</p>
+  <ol class="deep">
+    <li>File a shelf prospectus with the Registrar at the first offer (s. 31(1)).</li>
+    <li>Indicate a period of validity <strong>not exceeding one year</strong>, commencing from the opening of the first offer.</li>
+    <li>During validity, second and subsequent offers of those securities need no further prospectus.</li>
+    <li>Before every subsequent offer, file an <strong>information memorandum</strong> (s. 31(2)) containing all material facts relating to new charges created, changes in financial position since the first (or preceding) offer, and other prescribed particulars, within the prescribed time prior to the issue.</li>
+    <li>If applications with advance subscription were received <em>before</em> such a change, the applicant must be informed; if he withdraws within <strong>15 days</strong>, money must be refunded.</li>
+    <li>After filing of the information memorandum, the memorandum together with the shelf prospectus is <strong>deemed to be a prospectus</strong> (s. 31(3)).</li>
+  </ol>
+  <p>Explanation to s. 31: “shelf prospectus” means a prospectus in respect of which the securities or class of securities included therein are issued for subscription in one or more issues over a certain period without the issue of a further prospectus.</p>
+
+  <h3>3.4 Red herring prospectus — s. 32</h3>
+  <p>The vehicle of book-building. Explanation: a red herring prospectus is a prospectus which does <strong>not include complete particulars of the quantum or price</strong> of the securities.</p>
+  <ul class="deep">
+    <li>A company proposing to make an offer of securities may issue a red herring prospectus prior to the issue of a prospectus (s. 32(1)).</li>
+    <li>It shall be filed with the Registrar at least <strong>three days</strong> prior to the opening of the subscription list and the offer (s. 32(2)).</li>
+    <li>Same obligations as a prospectus. Any variation between the red herring and the final prospectus shall be highlighted as variations (s. 32(3)).</li>
+    <li>Upon closing of the offer, a prospectus stating the total capital raised (debt or share capital), the closing price of the securities, and any other details not included in the red herring, shall be filed with the Registrar and SEBI (s. 32(4)).</li>
+  </ul>
+  <div class="exam"><strong>Exam line:</strong> “Red herring” is a printer’s term — the warning “Preliminary — Not a prospectus for the purposes of the Act” used to be printed in red. Under the 2013 Act it is a defined statutory document, not a mere draft. Price discovery happens in the book; the final prospectus records the discovered price.</div>
+
+  <h3>3.5 Information memorandum</h3>
+  <p>Not a free-standing invitation. It is the updating document that keeps a shelf prospectus honest between tranches (s. 31(2)–(3)). Together they equal a prospectus, so ss. 34–37 liability attaches to the combined document. Do not confuse it with the merchant-banker’s “IM” used in private placements — that is extra-statutory.</p>
+
+  <h3>3.6 Advertisement of prospectus — s. 30</h3>
+  <p>Where an advertisement of a prospectus is published in any manner, it must specify the contents of the memorandum as regards objects, the liability of members and the amount of share capital, the names of the signatories and the number of shares subscribed for by them, and the capital structure.</p>
+</section>
+
+<section id="reg">
+  <h2>4. Registration and contents — s. 26 (the “engine room”)</h2>
+  <p>Every prospectus issued by or on behalf of a company, or by or on behalf of any person who is or has been engaged or interested in the formation of a public company, shall be dated and signed. Avtar Singh sets out s. 26(1) as a catalogue. For the exam, group the catalogue under four heads.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h4>A. Identities &amp; process</h4>
+      <p>Registered office; CS, CFO, auditors, legal advisers, bankers, trustees, underwriters; dates of opening and closing; declaration on allotment letters and refunds; Board statement of a separate bank account for issue receipts and utilisation of previous issues; underwriting; consents; authority and resolution; procedure and time-schedule for allotment.</p>
+    </div>
+    <div class="card">
+      <h4>B. Capital &amp; objects</h4>
+      <p>Capital structure; main objects of the public offer and terms of the present issue; present business and location; schedule of implementation; minimum subscription; premium; shares otherwise than for cash; promoters’ contribution sources.</p>
+    </div>
+    <div class="card">
+      <h4>C. Risk, litigation, management</h4>
+      <p>Management perception of risk factors specific to the project; gestation period; progress; deadlines; litigation or legal action by a Government department or statutory body in the last five years against the promoter; directors’ particulars, appointments, remuneration and interests.</p>
+    </div>
+    <div class="card">
+      <h4>D. Reports &amp; compliance</h4>
+      <p>Auditors’ reports on P&amp;L and assets/liabilities; five-year track record of the company and subsidiaries; reports on any business whose proceeds will be applied; statement of compliance with the 2013 Act, SCRA 1956 and SEBI Act 1992; nothing in the prospectus contrary thereto.</p>
+    </div>
+  </div>
+
+  <h3>4.1 Expert’s statement — s. 26(5) read with s. 2(38)</h3>
+  <p>A prospectus shall not include a statement purporting to be made by an expert unless the expert (a) is a person who is not, and has not been, engaged or interested in the formation, promotion or management of the company, (b) has given his written consent to the issue of the prospectus and has not withdrawn it before delivery of a copy to the Registrar, and (c) a statement that he has given and has not withdrawn his consent is included in the prospectus. “Expert” (s. 2(38)) includes an engineer, valuer, chartered accountant, company secretary, cost accountant, and any other person who has the power or authority to issue a certificate in pursuance of any law.</p>
+
+  <h3>4.2 The registration clock</h3>
+  <div class="flow">
+    <h4>s. 26 procedural pipeline</h4>
+    <div class="steps">
+      <div class="step"><b>DRAFT</b>Dated &amp; signed by every named director or proposed director (or attorney)</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>DELIVER</b>Copy to RoC on or before the date of publication (s. 26(4))</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>FACE</b>Prospectus must state on its face that a copy was delivered, and list accompanying documents (s. 26(6))</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>REGISTER</b>RoC shall not register unless s. 26 complied with and written consents enclosed (s. 26(7))</div>
+      <span class="arrow">→</span>
+      <div class="step"><b>ISSUE</b>Must be issued within 90 days of delivery to RoC, else invalid (s. 26(8))</div>
+    </div>
+  </div>
+  <p><strong>Penalty — s. 26(9).</strong> Company: fine not less than ₹50,000, may extend to ₹3,00,000. Every person who is knowingly a party: imprisonment up to 3 years, or fine ₹50,000–₹3,00,000, or both.</p>
+  <p><strong>When s. 26(1) does not apply — s. 26(2):</strong> (a) issue to existing members or debenture-holders of a prospectus or form of application relating to shares or debentures, whether or not the applicant has a right to renounce (s. 62); (b) issue of a prospectus or form relating to shares or debentures which are in all respects uniform with shares or debentures previously issued and for the time being dealt in or quoted on a recognised stock exchange.</p>
+
+  <h3>4.3 Variation of terms / objects — s. 27</h3>
+  <p>Terms of a contract referred to in the prospectus, or objects for which the prospectus was issued, can be varied only by <strong>special resolution</strong>. Prescribed details of the notice must be published in newspapers (one English, one vernacular) circulating where the registered office is, indicating clearly the justification. Amount raised through the prospectus shall not be used for buying, trading or otherwise dealing in equity shares of any other listed company. Dissenting shareholders must be given an exit offer by promoters / controlling shareholders at a SEBI-specified exit price (s. 27(2)).</p>
+
+  <h3>4.4 Dematerialised public offer — s. 29</h3>
+  <p>Every company making a public offer, and such other class as may be prescribed, shall issue securities only in dematerialised form under the Depositories Act, 1996.</p>
+
+  <h3>4.5 SEBI’s administrative empire — s. 24</h3>
+  <p>Chapter III (ss. 23–42), Chapter IV (ss. 43–72) and s. 127, insofar as they relate to issue and transfer of securities and non-payment of dividend, are administered by SEBI in the case of listed companies and companies which intend to get their securities listed. Residual matters (prospectus filing with RoC, return of allotment, etc.) remain with the Central Government / RoC. In a long answer always mention that a listed issuer must also satisfy the SEBI (ICDR) Regulations — Avtar notes that SEBI’s disclosure guidelines sit on top of s. 26.</p>
+</section>
+
+<section id="golden">
+  <h2>5. When is a statement “untrue” or “misleading”?</h2>
+  <p>A statement is deemed untrue if it is false in the form and context in which it is included. Omissions calculated to mislead also render the prospectus false (Avtar; now reflected in ss. 34 and 36). Truth of each sentence is not enough if the whole paints a false picture — that is the <em>Kylsant</em> doctrine, which Avtar treats as the modern reading of “untrue”.</p>
+  <ul class="deep">
+    <li>A statement true at issue but false at allotment makes the allotment voidable (<em>T.S. Rajagopala Iyer v South Indian Rubber Works</em> AIR 1942 Mad 656 — change of directors between application and allotment).</li>
+    <li>Half-truths: “Everybody knows that sometimes half a truth is no better than a downright falsehood” — Lord Macnaghten in <em>Gluckstein v Barnes</em> [1900] AC 240, 250 (a DU-adjacent promoter case: Erlanger / Gluckstein sit in Topic 2 of the casebook).</li>
+    <li>Ambiguous statements: if the maker knows the statement may bear two meanings, one of which is false, he cannot say the reader “ought to have put the other” — <em>Smith v Chadwick</em> (1884) LR 9 App Cas 187.</li>
+    <li>Puffing is allowed if it would not deceive a reasonable applicant — <em>Mckeown v Boudard Peveril Gear Co</em> (1896) 65 LJ Ch 735 (cycle-race records: omission of later, better records by others was mere puff).</li>
+    <li>Misrepresentation of law, as opposed to fact, gives no rescission (classic Contract Act learning; Avtar’s example: promising fully-paid shares at 50% discount when the Act forbids it).</li>
+  </ul>
+</section>
+
+<section id="remedies">
+  <h2>6. Remedies against misrepresentation — civil and criminal</h2>
+  <p class="lead">This is the 16-mark heart of Topic 4. Structure the answer as four civil remedies + two criminal heads + the class-action wrapper in s. 37. Always say who sues whom, for what, and which defences survive.</p>
+
+  <svg class="diagram" viewBox="0 0 1100 520" role="img" aria-label="Remedies flowchart">
+    <rect width="1100" height="520" fill="#0b1f3a" rx="18"/>
+    <text x="36" y="40" fill="#e8c547" font-size="22" font-family="Georgia">REMEDIES FOR A MISLEADING PROSPECTUS</text>
+    <text x="36" y="64" fill="#c9b88a" font-size="13" font-family="sans-serif">Investor who subscribed on the faith of the document (s. 37: any person / group / association affected)</text>
+
+    <rect x="30" y="90" width="250" height="150" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="48" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">1. DECEIT (tort)</text>
+    <text x="48" y="142" fill="#f4ead0" font-size="12" font-family="sans-serif">Derry v Peek (1889)</text>
+    <text x="48" y="160" fill="#f4ead0" font-size="12" font-family="sans-serif">Against directors / issuers</text>
+    <text x="48" y="178" fill="#f4ead0" font-size="12" font-family="sans-serif">Must prove fraud (knowledge,</text>
+    <text x="48" y="196" fill="#f4ead0" font-size="12" font-family="sans-serif">no belief, or recklessness)</text>
+    <text x="48" y="214" fill="#c9b88a" font-size="11" font-family="sans-serif">No reduction for contrib. neg.</text>
+
+    <rect x="295" y="90" width="250" height="150" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="313" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">2. s. 35 CIVIL LIABILITY</text>
+    <text x="313" y="142" fill="#f4ead0" font-size="12" font-family="sans-serif">Directors, named directors,</text>
+    <text x="313" y="160" fill="#f4ead0" font-size="12" font-family="sans-serif">promoters, authorisers, experts</text>
+    <text x="313" y="178" fill="#f4ead0" font-size="12" font-family="sans-serif">No need to prove fraud</text>
+    <text x="313" y="196" fill="#f4ead0" font-size="12" font-family="sans-serif">Joint &amp; several; contribution</text>
+    <text x="313" y="214" fill="#c9b88a" font-size="11" font-family="sans-serif">Statutory defences in s. 35(2)</text>
+
+    <rect x="560" y="90" width="250" height="150" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="578" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">3. RESCISSION</text>
+    <text x="578" y="142" fill="#f4ead0" font-size="12" font-family="sans-serif">Against the company</text>
+    <text x="578" y="160" fill="#f4ead0" font-size="12" font-family="sans-serif">Contract Act ss. 18, 19, 64, 75</text>
+    <text x="578" y="178" fill="#f4ead0" font-size="12" font-family="sans-serif">Innocent OR fraudulent</text>
+    <text x="578" y="196" fill="#f4ead0" font-size="12" font-family="sans-serif">Lost by affirmation / delay /</text>
+    <text x="578" y="214" fill="#c9b88a" font-size="11" font-family="sans-serif">winding-up (Shiromani Sugar)</text>
+
+    <rect x="825" y="90" width="245" height="150" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="843" y="118" fill="#e8c547" font-size="14" font-family="sans-serif">4. s. 26 DAMAGES</text>
+    <text x="843" y="142" fill="#f4ead0" font-size="12" font-family="sans-serif">Omission of required</text>
+    <text x="843" y="160" fill="#f4ead0" font-size="12" font-family="sans-serif">particulars (Twycross v Grant)</text>
+    <text x="843" y="178" fill="#f4ead0" font-size="12" font-family="sans-serif">Must prove he would not have</text>
+    <text x="843" y="196" fill="#f4ead0" font-size="12" font-family="sans-serif">subscribed if he had known</text>
+    <text x="843" y="214" fill="#c9b88a" font-size="11" font-family="sans-serif">Does not itself give rescission</text>
+
+    <rect x="30" y="270" width="335" height="130" rx="12" fill="#5a1730" stroke="#e8c547"/>
+    <text x="48" y="300" fill="#e8c547" font-size="14" font-family="sans-serif">CRIMINAL — s. 34 → s. 447</text>
+    <text x="48" y="324" fill="#f4ead0" font-size="12" font-family="sans-serif">Untrue / misleading statement or omission</text>
+    <text x="48" y="342" fill="#f4ead0" font-size="12" font-family="sans-serif">Every person who authorises the issue</text>
+    <text x="48" y="360" fill="#f4ead0" font-size="12" font-family="sans-serif">Defence: immaterial, or reasonable belief</text>
+    <text x="48" y="378" fill="#c9b88a" font-size="11" font-family="sans-serif">s. 447: fraud — 6 months–10 yrs + fine ≥ gain</text>
+
+    <rect x="385" y="270" width="335" height="130" rx="12" fill="#5a1730" stroke="#e8c547"/>
+    <text x="403" y="300" fill="#e8c547" font-size="14" font-family="sans-serif">CRIMINAL / CIVIL — s. 36</text>
+    <text x="403" y="324" fill="#f4ead0" font-size="12" font-family="sans-serif">Fraudulently inducing persons to invest</text>
+    <text x="403" y="342" fill="#f4ead0" font-size="12" font-family="sans-serif">Also s. 36(2): disguise of public issue</text>
+    <text x="403" y="360" fill="#f4ead0" font-size="12" font-family="sans-serif">as private placement, etc.</text>
+    <text x="403" y="378" fill="#c9b88a" font-size="11" font-family="sans-serif">Punishment: s. 447</text>
+
+    <rect x="740" y="270" width="330" height="130" rx="12" fill="#1b3a5f" stroke="#e8c547"/>
+    <text x="758" y="300" fill="#e8c547" font-size="14" font-family="sans-serif">WHO MAY SUE — s. 37</text>
+    <text x="758" y="324" fill="#f4ead0" font-size="12" font-family="sans-serif">Any person, group, or association</text>
+    <text x="758" y="342" fill="#f4ead0" font-size="12" font-family="sans-serif">affected by any misleading statement</text>
+    <text x="758" y="360" fill="#f4ead0" font-size="12" font-family="sans-serif">or inclusion / omission of any matter</text>
+    <text x="758" y="378" fill="#c9b88a" font-size="11" font-family="sans-serif">Opens the door to class actions</text>
+
+    <text x="36" y="440" fill="#c9b88a" font-size="13" font-family="sans-serif">Against the company in deceit: Houldsworth v City of Glasgow Bank (1880) — common-law rule that allotment must first be rescinded. Indian Contract Act s. 75 + English Misrepresentation Act thinking now allow damages in lieu. Hedley Byrne [1964] AC 465 may found a duty to after-market purchasers if proximity is shown (Possfund Custodian Trustee v Diamond [1996] 2 BCLC 665).</text>
+    <text x="36" y="478" fill="#c9b88a" font-size="13" font-family="sans-serif">s. 35(3) (post-2013 / 2017): if it is proved that the prospectus was issued with intent to defraud, every person in s. 35(1) is personally responsible, without any limitation of liability, for all or any of the losses or damage.</text>
+  </svg>
+
+  <h3>6.1 Damages for deceit (common law)</h3>
+  <p>Deceit is a tort. The plaintiff must prove, per Lord Herschell in <em>Derry v Peek</em> (1889) 14 App Cas 337:</p>
+  <ol class="deep">
+    <li>a false representation of existing fact (or of present intention — “the state of a man’s mind is as much a fact as the state of his digestion”, Bowen LJ in <em>Edgington v Fitzmaurice</em> (1885) 29 Ch D 459);</li>
+    <li>made knowingly, or without belief in its truth, or recklessly, careless whether it be true or false;</li>
+    <li>intended to be acted upon;</li>
+    <li>in fact acted upon by the plaintiff, who thereby suffered loss.</li>
+  </ol>
+  <p>Honest belief, even if unreasonable, defeats deceit. That is why <em>Derry v Peek</em> produced the Directors’ Liability Act, 1890, the ancestor of s. 35. Contributory negligence does not reduce deceit damages: <em>Standard Chartered Bank v Pakistan National Shipping Corpn (No 2)</em> [2000] 1 Lloyd’s Rep 218 (CA) — Avtar flags this; the DU 2022 casebook also carries the Standard Chartered / Hedley Byrne discussion in the City Equitable extract.</p>
+  <p><strong>Direct-allottee rule — <em>Peek v Gurney</em>.</strong> The office of a prospectus is to invite persons to become allottees; once allotment is completed that office is exhausted. A later market purchaser cannot sue on the prospectus, unless the prospectus was intended to induce market purchases as well (<em>Andrews v Mockford</em> [1896] 1 QB 372 — sham company + fraudulent telegram “reflecting back” on the prospectus). <em>Hedley Byrne</em> and <em>Possfund</em> have softened the edges for after-market purchasers who can show proximity and intended reliance. <em>Al-Nakib Investments (Jersey) v Longcroft</em> [1991] BCLC 7 refused a duty to a shareholder who, after a rights prospectus, bought extra shares in the market — no sufficient proximity.</p>
+
+  <h3>6.2 Statutory compensation — s. 35</h3>
+  <p>Persons liable (jointly and severally): (i) every director at the time of issue; (ii) every person who has authorised himself to be named and is named in the prospectus as a director; (iii) every promoter; (iv) every person who has authorised the issue of the prospectus; (v) every expert referred to in s. 26(5). They must compensate for any loss or damage the subscriber has sustained by reason of any untrue or misleading statement, or inclusion / omission of any matter.</p>
+  <p><strong>Defences — s. 35(2)</strong> (Avtar notes that some of the old 1956 Act defences are not reproduced but survive as common law):</p>
+  <ol class="deep">
+    <li>He withdrew consent to become a director before issue, and the prospectus was issued without his authority or consent.</li>
+    <li>The prospectus was issued without his knowledge or consent, and on becoming aware he gave reasonable public notice forthwith.</li>
+    <li>(Common-law survival) He was ignorant of the untrue statement and, on becoming aware and before allotment, withdrew by reasonable public notice.</li>
+    <li>(The crucial one) He had <strong>reasonable ground to believe, and did up to the time of the issue of the prospectus believe</strong>, that the statement was true / the inclusion or omission was necessary. Honesty is not enough — the belief must be reasonable. <em>Adams v Thrift</em> [1915] 2 Ch 21: a director who asked the promoter “is everything perfectly all right?” and was told “of course it is” had honest but <em>unreasonable</em> belief. “The promoter is the very last person whose uncorroborated statement ought to be relied upon.”</li>
+    <li>The statement was a fair copy of an expert’s report or a public official document, and he had reasonable ground to believe the expert competent.</li>
+  </ol>
+  <p>Measure of compensation: the difference between the price paid and the true value at the date of allotment; delay in selling is irrelevant if justifiable — <em>Smith New Court Securities Ltd v Scrimgeour Vickers</em> [1997] 1 BCLC 350 (HL), cited by Avtar.</p>
+
+  <h3>6.3 Rescission against the company</h3>
+  <p>Available for innocent as well as fraudulent misrepresentation (Contract Act s. 18). The allottee’s name is removed from the register; money is returned (s. 64); and s. 75 gives compensation for damage through non-fulfilment. Essentials (Avtar):</p>
+  <ol class="deep">
+    <li>false representation (positive misstatement or concealment that prevents an adequate appreciation of what was stated);</li>
+    <li>of fact, not of law; material (likely to influence an average purchaser);</li>
+    <li>relied on — the applicant is entitled to rely and is not bound to verify (<em>Directors of Central Railway Co v Kisch</em> (1867) LR 2 HL 99). Exception to Contract Act s. 19 (means of discovering truth with ordinary diligence) is applied sparingly; <em>Mohun Loll v Sri Gungaji Cotton Mills</em> (1900) 4 CWN 369 is a rare Indian application;</li>
+    <li>made by or on behalf of the company (Board, or promoters whose prospectus the company ratifies). A secretary has no general authority: <em>Diwan Chand v Gujranwala Sugar Mills</em> AIR 1937 Lah 644. A stranger who never invested cannot maintain a PIL: <em>Kisan Mehta v Universal Luggage</em> (1988) 63 Comp Cas 398 (Bom).</li>
+  </ol>
+  <p><strong>Loss of the right</strong> — three classic bars:</p>
+  <ul class="deep">
+    <li><em>Affirmation</em> — selling shares, attending meetings, receiving dividends, paying calls after knowledge (<em>Dunlop Truflault Cycle, re, ex p Shearman</em> (1896) 66 LJ Ch 25).</li>
+    <li><em>Unreasonable delay</em> — “come at the earliest possible moment.” Five months was too late: <em>Christineville Rubber Estates Ltd, re</em> (1911) 81 LJ Ch 63.</li>
+    <li><em>Commencement of winding up</em> — creditors have inspected the register. But if the shareholder had already started active proceedings, a winding-up order during pendency does not defeat him: Desai J in <em>Shiromani Sugar Mills Ltd v Debi Prasad</em> AIR 1950 All 508 (Avtar Case Pilot; Indian authority you must cite).</li>
+  </ul>
+
+  <h3>6.4 Criminal liability — ss. 34, 36, 447</h3>
+  <p><span class="sec">s. 34</span> Where a prospectus includes any statement which is untrue or misleading in form or context, or where any inclusion or omission of any matter is likely to mislead, every person who authorises the issue of such prospectus shall be liable under s. 447. Proviso: no liability if he proves the statement or omission was immaterial, or that he had reasonable grounds to believe, and did up to the time of issue believe, that the statement was true or the inclusion or omission was necessary.</p>
+  <p><em>Progressive Aluminium Ltd v RoC</em> (1997) 89 Comp Cas 147 (AP): prospectus said the company had 2½ decades of experience; in fact the experience was that of a firm taken over. Relief granted — no mala fides, management successful, statement not so materially false as to invite prosecution. Complaints after long delay have been struck: <em>Ramakrishna Raja v RoC</em> (2005) 123 Comp Cas 319 (Mad) (7 years; s. 468 CrPC); <em>Hafeez Rustom Dalal v RoC</em> (2005) 128 Comp Cas 883 (Gau) (10 years).</p>
+  <p><span class="sec">s. 36</span> Punishment for fraudulently inducing persons to invest money; and for making any statement, promise or forecast which is false, deceptive or misleading, or concealing any material facts, to induce subscription. Also catches disguising a public issue as something else. Punishment: s. 447.</p>
+  <p><span class="sec">s. 447</span> “Fraud” includes any act, omission, concealment of any fact, or abuse of position, committed with intent to deceive, to gain undue advantage, or to injure the interests of the company or its shareholders or creditors or any other person, whether or not there is wrongful gain or wrongful loss. Punishment: imprisonment not less than 6 months, may extend to 10 years, and fine not less than the amount involved, which may extend to three times that amount. If public interest is involved, imprisonment shall not be less than 3 years.</p>
+  <p><span class="sec">s. 38</span> Personation for acquisition of securities — also s. 447, plus possible disgorgement.</p>
+</section>
+
+<section id="cases">
+  <h2>7. Case-law bank — facts, issues, both sides, decision, principle</h2>
+  <p>The Faculty’s 2025 casebook does not list Topic-4 cases. The cases below are (A) the DU-printed cases that actually turn on a prospectus or on shares/debentures, and (B) the Case Pilots Avtar Singh prints in the prescribed Chapter 5, which is what a DU answer is expected to use. Each write-up follows the five-part structure the user (and the Faculty) demand.</p>
+
+  <!-- ERLANGER -->
+  <article class="case" id="erlanger">
+    <h3>7.1 Erlanger v New Sombrero Phosphate Co (1878) 3 App Cas 121 (HL) <span class="tag du">DU Case Material · Topic 2 (promoters) — prospectus is the vehicle of the fraud</span></h3>
+    <div class="viz">
+      <div class="cap">Hypothetical visual — the phosphate island and the nominee board</div>
+      <svg viewBox="0 0 980 220" class="diagram" style="max-width:980px">
+        <rect width="980" height="220" fill="#efe4c8" rx="8"/>
+        <ellipse cx="160" cy="130" rx="90" ry="40" fill="#3d7ea6"/>
+        <ellipse cx="160" cy="110" rx="70" ry="28" fill="#c2b280"/>
+        <text x="110" y="115" font-size="12" fill="#3b2f12">Sombrero Island</text>
+        <text x="108" y="132" font-size="11" fill="#3b2f12">phosphate · £55,000</text>
+        <path d="M250 110 H340" stroke="#8b1e3f" stroke-width="3" marker-end="url(#a)"/>
+        <rect x="350" y="40" width="240" height="140" rx="10" fill="#0b1f3a"/>
+        <text x="365" y="68" fill="#e8c547" font-size="13">ERLANGER syndicate</text>
+        <text x="365" y="90" fill="#f4ead0" font-size="12">buys at £55,000</text>
+        <text x="365" y="110" fill="#f4ead0" font-size="12">sells to company at £110,000</text>
+        <text x="365" y="132" fill="#c9b88a" font-size="11">nominee directors</text>
+        <text x="365" y="150" fill="#c9b88a" font-size="11">FALSE PROSPECTUS</text>
+        <rect x="640" y="40" width="300" height="140" rx="10" fill="#fff"/>
+        <text x="655" y="70" fill="#0b1f3a" font-size="13">New Sombrero Phosphate Co</text>
+        <text x="655" y="96" fill="#5a1730" font-size="12">public allottees, ignorant of profit</text>
+        <text x="655" y="118" fill="#5a1730" font-size="12">shareholders “sanction” on</text>
+        <text x="655" y="138" fill="#5a1730" font-size="12">directors’ assurance → rescinded</text>
+      </svg>
+    </div>
+    <p><strong>Facts.</strong> A syndicate headed by Erlanger purchased the lease of the island of Sombrero (rich in phosphate) for £55,000. They then got up a company, the New Sombrero Phosphate Co, to buy the island from them for £110,000. The directors were “mere tools in his hands” (Lord Cairns) — virtually the vendor’s nominees. The public was attracted by a prospectus which, in the words of the DU 2025 extract of <em>Salomon</em> (where Lord Macnaghten recites <em>Erlanger</em>), “was essentially false in material particulars.” The directors who made the purchase were not aware of the real facts. A majority of shareholders later purported to sanction the contract, acting on the directors’ assurance. When the truth emerged, the company (through its liquidator) sued to rescind and recover the purchase money.</p>
+    <p><strong>Issues.</strong> (i) Are promoters fiduciaries vis-à-vis the company they form? (ii) Can a sale by a promoter to the company stand when the prospectus conceals the promoter’s profit and the board is packed with nominees? (iii) Does a subsequent shareholder ratification, itself procured by the same false assurance, cure the defect?</p>
+    <p><strong>Arguments.</strong> <em>Vendor/promoters:</em> the company, once incorporated, contracted with its eyes open; the price was a matter of bargain; shareholders in general meeting had sanctioned; there was no duty to disclose a profit made before the company existed. <em>Company/liquidator:</em> promoters stand in a fiduciary position; they cannot make a secret profit; a board of nominees is not an independent purchasing organ; a prospectus that conceals the double price is a fraud on the subscribing public; a ratification procured by the same fraud is no ratification.</p>
+    <p><strong>Decision.</strong> House of Lords set the transaction aside. The contract was not binding. Lord Cairns: promoters “stand in a fiduciary position. They have in their hands the creation and moulding of the company; they have the power of defining how, and when, and in what shape, and under what supervision, it shall come into existence and begin to act as a trading corporation.” A promoter may sell, but only after providing the company with an independent board and making full disclosure. Lord Macnaghten (recited in the DU <em>Salomon</em> extract): “the fraud was conceivably more than the company could have undone without the assistance of the Court, but it was a fraud directly traceable to the vendor.”</p>
+    <p><strong>Principle evolved.</strong> (1) Promoters are fiduciaries. (2) A prospectus is the public face of that fiduciary duty — concealment of the promoter’s profit is a material misrepresentation entitling the company (and, where appropriate, subscribers) to rescission. (3) Nominee directors are not an independent organ. (4) Shareholder “sanction” obtained on a false prospectus is itself tainted. <em>Use in Topic 4:</em> whenever the question is “remedies against misrepresentation in a prospectus”, open with the golden rule and then say: the DU casebook’s own illustration of a false prospectus is <em>Erlanger</em>.</p>
+  </article>
+
+  <!-- GERMAN DATE -->
+  <article class="case" id="gdc">
+    <h3>7.2 Re German Date Coffee Co (1882) 20 Ch D 169 (CA) <span class="tag du">DU Case Material · objects / just &amp; equitable winding up — the prospectus stated a German patent had been granted</span></h3>
+    <div class="viz">
+      <div class="cap">Hypothetical visual — the patent that never was</div>
+      <svg viewBox="0 0 980 180" class="diagram">
+        <rect width="980" height="180" fill="#efe4c8" rx="8"/>
+        <rect x="30" y="30" width="280" height="120" rx="10" fill="#fff" stroke="#8b1e3f" stroke-width="2"/>
+        <text x="48" y="58" font-size="14">PROSPECTUS</text>
+        <text x="48" y="82" font-size="12">“German patent granted”</text>
+        <text x="48" y="104" font-size="12">coffee from dates</text>
+        <text x="48" y="126" font-size="12" fill="#8b1e3f">FALSE — only a Swedish patent</text>
+        <rect x="360" y="30" width="280" height="120" rx="10" fill="#0b1f3a"/>
+        <text x="378" y="70" fill="#e8c547" font-size="13">SUBSCRIBERS</text>
+        <text x="378" y="94" fill="#f4ead0" font-size="12">paid for a German-patent</text>
+        <text x="378" y="114" fill="#f4ead0" font-size="12">business that did not exist</text>
+        <rect x="690" y="30" width="260" height="120" rx="10" fill="#5a1730"/>
+        <text x="708" y="70" fill="#e8c547" font-size="13">COURT OF APPEAL</text>
+        <text x="708" y="94" fill="#f4ead0" font-size="12">substratum gone</text>
+        <text x="708" y="114" fill="#f4ead0" font-size="12">just &amp; equitable winding up</text>
+      </svg>
+    </div>
+    <p><strong>Facts.</strong> The company was formed to work a German patent for manufacturing coffee from dates. The prospectus stated that the German patent had been granted. It had not. A Swedish patent was acquired instead and the company began to manufacture under it. A contributory petitioned to wind up.</p>
+    <p><strong>Issues.</strong> Has the substratum gone when the very patent held out in the prospectus never existed? Is a subscriber who paid on the faith of that statement entitled to have the adventure stopped?</p>
+    <p><strong>Arguments.</strong> <em>Company:</em> we are manufacturing coffee from dates, which is the commercial idea; a Swedish patent is a reasonable substitute; majority wish to continue. <em>Petitioner:</em> I subscribed for a German-patent business. That is the adventure I joined. Anything else is ultra vires the purpose for which I paid.</p>
+    <p><strong>Decision.</strong> Winding up ordered. The substratum had failed.</p>
+    <p><strong>Principle.</strong> A prospectus statement of the venture’s legal foundation is not puff. If the stated substratum never existed, subscribers may have the company wound up just and equitably. <em>Topic-4 use:</em> materiality of a prospectus statement; also a bridge to Topic 3 (objects) and Topic 8 (winding up). The 2011 DU paper literally asked this hypo.</p>
+  </article>
+
+  <!-- DERRY -->
+  <article class="case">
+    <h3>7.3 Derry v Peek (1889) 14 App Cas 337 (HL) <span class="tag pilot">Avtar Case Pilot · the high-water mark of deceit, and why s. 35 exists</span></h3>
+    <div class="viz">
+      <div class="cap">Hypothetical visual — steam trams that needed the Board of Trade</div>
+      <svg viewBox="0 0 980 160" class="diagram">
+        <rect width="980" height="160" fill="#efe4c8" rx="8"/>
+        <text x="40" y="40" font-size="16">Special Act: horses always; steam only with Board of Trade consent</text>
+        <rect x="40" y="60" width="420" height="70" rx="8" fill="#0b1f3a"/>
+        <text x="55" y="90" fill="#e8c547" font-size="13">PROSPECTUS: “we have the right to use steam”</text>
+        <text x="55" y="112" fill="#f4ead0" font-size="12">Directors honestly thought consent was a formality</text>
+        <rect x="500" y="60" width="440" height="70" rx="8" fill="#5a1730"/>
+        <text x="515" y="90" fill="#e8c547" font-size="13">Board of Trade REFUSES · company wound up</text>
+        <text x="515" y="112" fill="#f4ead0" font-size="12">HL: no deceit — honest belief, even if wrong</text>
+      </svg>
+    </div>
+    <p><strong>Facts.</strong> A special Act incorporating a tramway company provided that carriages might be moved by animal power and, with the consent of the Board of Trade, by steam power. The directors issued a prospectus stating that by their special Act the company had the right to use steam power instead of horses, and that a saving would be effected thereby. No reference was made to the need for Board of Trade consent. The Board refused. The company was wound up. Peek, who had taken shares on the faith of the statement, sued the directors in deceit.</p>
+    <p><strong>Issues.</strong> Is an untrue statement made with honest belief in its truth actionable as deceit? What mental element does the tort require?</p>
+    <p><strong>Arguments.</strong> <em>Peek:</em> the statement was false as a matter of law; steam was conditional, not absolute; directors must be taken to know the contents of their own Act; shareholders were induced and ruined. <em>Directors:</em> they honestly believed that once Parliament had authorised steam, Board of Trade consent was a formality that would follow; there was no want of honest belief, hence no fraud.</p>
+    <p><strong>Decision.</strong> House of Lords (Lord Herschell) held the directors not liable. Fraud is proved only when a false representation has been made (a) knowingly, or (b) without belief in its truth, or (c) recklessly, careless whether it be true or false. Honest belief, even if unreasonable, is a defence to deceit.</p>
+    <p><strong>Principle.</strong> Deceit is a narrow tort. The decision caused “widespread resentment” (Avtar). Within a year Parliament passed the Directors’ Liability Act, 1890, re-enacted as s. 62 of the 1956 Act and now s. 35 of the 2013 Act, under which honesty is not enough — the belief must rest on <em>reasonable grounds</em>. Always pair <em>Derry v Peek</em> with s. 35 and <em>Adams v Thrift</em>.</p>
+  </article>
+
+  <!-- PEEK V GURNEY -->
+  <article class="case">
+    <h3>7.4 Peek v Gurney (1873) LR 6 HL 377 <span class="tag pilot">Avtar Case Pilot · who may sue</span></h3>
+    <p><strong>Facts.</strong> A deceitful prospectus was issued. The plaintiff received a copy but did not take shares on the original allotment. Months later, after allotment was completed, he bought 2,000 shares on the Stock Exchange. He sued the directors for deceit.</p>
+    <p><strong>Issues.</strong> Does a prospectus found a duty to subsequent transferees in the market?</p>
+    <p><strong>Arguments.</strong> <em>Plaintiff:</em> I read the prospectus, I was deceived, I lost money; the document was still circulating. <em>Directors:</em> the office of a prospectus is to invite allottees; once the company has gone to allotment that office is exhausted; otherwise directors would be liable <em>ad infinitum</em> for every subsequent bargain on the Exchange.</p>
+    <p><strong>Decision.</strong> Action failed. Lord Cairns: directors cannot be made liable ad infinitum for all subsequent dealings.</p>
+    <p><strong>Principle.</strong> Direct-allottee rule. Qualified by <em>Andrews v Mockford</em> (where the prospectus was intended to keep working on the market, and a fraudulent telegram was published to “reflect back” upon it) and, later, by <em>Hedley Byrne</em> proximity analysis. s. 37 of the 2013 Act (“any person or group of persons or any association of persons affected”) is the Indian statutory attempt to broaden standing — argue both the common-law limit and the statutory widening.</p>
+  </article>
+
+  <!-- ANDREWS -->
+  <article class="case">
+    <h3>7.5 Andrews v Mockford [1896] 1 QB 372 (CA) <span class="tag pilot">Avtar Case Pilot</span></h3>
+    <p><strong>Facts.</strong> Defendants sent the plaintiff a prospectus of what they knew would be a sham company. He did not then subscribe. The prospectus produced only a scanty subscription. Defendants then fraudulently published a telegram in a newspaper. Believing the telegram, the plaintiff bought shares in the open market.</p>
+    <p><strong>Issues.</strong> Had the function of the prospectus been exhausted?</p>
+    <p><strong>Arguments.</strong> <em>Directors:</em> <em>Peek v Gurney</em> — market purchaser has no action. <em>Plaintiff:</em> this was a systematic fraud; the telegram was brought into play to countenance the false prospectus; the function was not exhausted.</p>
+    <p><strong>Decision.</strong> Directors liable. Rigby LJ: the function of the prospectus was not exhausted.</p>
+    <p><strong>Principle.</strong> If the object of issuing the prospectus is not merely to induce original allotment but also to induce market purchases, liability follows the document into the after-market.</p>
+  </article>
+
+  <!-- KYLSANT -->
+  <article class="case">
+    <h3>7.6 R v Kylsant [1932] 1 KB 442 (CCA) <span class="tag pilot">Avtar Case Pilot · half-truths; criminal liability; the ancestor of s. 34</span></h3>
+    <div class="viz">
+      <div class="cap">Hypothetical visual — the dividend table that hid seven years of losses</div>
+      <svg viewBox="0 0 980 200" class="diagram">
+        <rect width="980" height="200" fill="#efe4c8" rx="8"/>
+        <rect x="40" y="30" width="560" height="140" rx="8" fill="#fff" stroke="#0b1f3a"/>
+        <text x="55" y="55" font-size="14">Royal Mail Steam Packet · dividend table 1911–1927</text>
+        <text x="55" y="80" font-size="12">5–8% almost every year (nil in 1914; 4% in 1926)</text>
+        <text x="55" y="104" font-size="12" fill="#1b5e4a">Every figure true.</text>
+        <text x="55" y="128" font-size="12" fill="#8b1e3f">Omitted: from 1921 the company made trading losses;</text>
+        <text x="55" y="148" font-size="12" fill="#8b1e3f">dividends paid out of stored wartime profits.</text>
+        <rect x="630" y="30" width="310" height="140" rx="8" fill="#5a1730"/>
+        <text x="648" y="70" fill="#e8c547" font-size="14">Avory J / CCA</text>
+        <text x="648" y="96" fill="#f4ead0" font-size="12">The whole prospectus is false,</text>
+        <text x="648" y="116" fill="#f4ead0" font-size="12">not because of what it stated,</text>
+        <text x="648" y="136" fill="#f4ead0" font-size="12">but because of what it did not.</text>
+      </svg>
+    </div>
+    <p><strong>Facts.</strong> Lord Kylsant was prosecuted for issuing a prospectus with untrue statements. A table showed that between 1911 and 1927 the company had paid dividends of 5–8%, except 1914 (nil) and 1926 (4%). The impression: a sound trading concern. The truth: for seven years the company had made substantial trading losses, and dividends were paid only by recourse to funds stored up during the war.</p>
+    <p><strong>Issues.</strong> Can a prospectus composed entirely of true sentences be “untrue” for criminal purposes? Is concealment of the source of dividends a fraud?</p>
+    <p><strong>Arguments.</strong> <em>Defence:</em> every figure is accurate; there is no false statement of fact; at most non-disclosure, which is not the offence charged. <em>Crown:</em> taking the document as a whole, it was intended to give a false impression of current earning capacity.</p>
+    <p><strong>Decision.</strong> Conviction upheld. Avory J relied on Lord Halsbury in <em>Aaron’s Reefs Ltd v Twiss</em> [1896] AC 273, 281: “I do not care by what means it is conveyed — by what trick or device or ambiguous language… If by a number of statements you intentionally give a false impression and induce a person to act upon it, it is not the less false although if one takes each statement by itself there may be a difficulty in showing that any specific statement is untrue.”</p>
+    <p><strong>Principle.</strong> Half-truth = falsehood. This is now statutory: ss. 34 and 36 punish a statement “misleading in form or context” and an “inclusion or omission … likely to mislead.” Always cite <em>Kylsant</em> in a s. 34 answer. Followed in <em>R v Bishirgian</em>.</p>
+  </article>
+
+  <!-- EDGINGTON -->
+  <article class="case">
+    <h3>7.7 Edgington v Fitzmaurice (1885) 29 Ch D 459 (CA)</h3>
+    <p><strong>Facts.</strong> Directors issued a prospectus inviting subscriptions for debentures, stating the objects were to complete alterations in buildings, purchase horses and vans, and develop trade. The real object was to pay off pressing liabilities. The company became insolvent. The plaintiff, who had advanced money, sued in fraud.</p>
+    <p><strong>Issues.</strong> Is a misstatement of the purpose of a loan a statement of existing fact? Is it material?</p>
+    <p><strong>Arguments.</strong> <em>Directors:</em> a statement of possible future purposes is not a statement of existing fact. <em>Plaintiff:</em> you misrepresented your present intention; a lender reasonably wishes to know why the money is borrowed.</p>
+    <p><strong>Decision.</strong> Directors liable. Bowen LJ’s classic sentence: the state of a man’s mind is as much a fact as the state of his digestion.</p>
+    <p><strong>Principle.</strong> Present intention is a fact. A prospectus that conceals that the issue will be used to pay old debts is fraudulent. Directly usable in a “share v debenture” paper because the security issued was a debenture.</p>
+  </article>
+
+  <!-- ADAMS -->
+  <article class="case">
+    <h3>7.8 Adams v Thrift [1915] 2 Ch 21 (CA) <span class="tag pilot">reasonable-ground defence fails</span></h3>
+    <p><strong>Facts.</strong> A director was sued under the statutory compensation section for false statements in a prospectus. The statements had been prepared by the promoters. Before issuing, the director asked one of them, “Is everything perfectly all right?” and was told “Of course it is.”</p>
+    <p><strong>Issues.</strong> Does honest belief based solely on a promoter’s assurance amount to “reasonable ground to believe”?</p>
+    <p><strong>Arguments.</strong> <em>Director:</em> I believed the statements; I made inquiry. <em>Plaintiff:</em> inquiry of the promoter is the one inquiry that is not reasonable.</p>
+    <p><strong>Decision.</strong> Liable. Cozens-Hardy MR: “The promoter is the very last person whose uncorroborated statement ought to be relied upon by an intending director as justification for saying that he had reasonable ground for belief.” A report of competent people as to material facts might have afforded such ground.</p>
+    <p><strong>Principle.</strong> s. 35 is stricter than <em>Derry v Peek</em>. Honesty ≠ reasonableness. Directors must verify; they may not take promoters at their word. Pair with <em>Reese River Silver Mining Co, re</em> (1867) LR 2 Ch 604.</p>
+  </article>
+
+  <!-- NEW BRUNSWICK -->
+  <article class="case">
+    <h3>7.9 New Brunswick and Canada Railway and Land Co v Muggeridge (1860) 3 LT 651 <span class="tag pilot">the golden rule</span></h3>
+    <p><strong>Facts / Decision / Principle.</strong> Kindersley V-C laid down the golden rule of prospectus drafting quoted in §1 above. Page-Wood V-C in <em>Henderson v Lacon</em> (1867) LR 5 Eq 249 called it a “golden legacy” which had “condensed in few words the whole doctrine as to the rule of conduct between shareholders and directors.” In <em>Henderson</em> itself a prospectus stating that “the directors and their friends have subscribed a large portion of the capital” when each director had taken only 10 shares was held misleading. Other illustrations Avtar collects: “more than half the shares have already been sold” when only a promoter had signed applications and paid nothing (<em>Ross v Estates Investment Co</em> (1868) LR 3 Ch App 682); “B and M have agreed to become directors” when they had only expressed willingness to help (<em>Karberg’s Case</em> [1892] 3 Ch 1).</p>
+    <p>Contrast <em>Shiromani Sugar Mills Ltd v Debi Prasad</em> AIR 1950 All 508: “the managing agents with their friends, promoters and directors have already promised to subscribe shares worth six lakh rupees” — held not a misrepresentation of fact, because “the only fact asserted was the existence of a promise, and the existence of a promise is not falsified by the breaking of it.” That is a DU-citable Indian distinction: promise v present fact.</p>
+  </article>
+
+  <!-- HOULDSWORTH / HEDLEY / APL -->
+  <article class="case">
+    <h3>7.10 Houldsworth v City of Glasgow Bank (1880) 5 App Cas 317 (HL); Hedley Byrne &amp; Co Ltd v Heller &amp; Partners Ltd [1964] AC 465; APL Industries Ltd v SEBI (2017) 200 Comp Cas 440 (Del)</h3>
+    <p><strong>Houldsworth.</strong> A shareholder who wishes to sue the company itself for deceit must first rescind the contract of allotment; one cannot remain a member and yet claim damages from the company. Followed in <em>Addlestone Linoleum Co, re</em> (1887) 37 Ch D 191. The English Misrepresentation Act 1967 s. 2(2) and Indian Contract Act s. 75 now allow damages in lieu of rescission — Avtar invites you to argue that <em>Houldsworth</em> is spent in India.</p>
+    <p><strong>Hedley Byrne.</strong> A person may be liable for a false statement to anyone whom he knew or ought to have known would act in reliance on it, if a special relationship / proximity exists. This is the doctrinal route by which after-market purchasers may sometimes sue (see <em>Possfund Custodian Trustee Ltd v Diamond</em> [1996] 2 BCLC 665: claims of after-market purchasers not to be struck out where wide publicity of the prospectus showed an intention to influence subsequent market operations). The DU 2022 material discusses Hedley Byrne in the auditors / City Equitable / Standard Chartered neighbourhood — borrow it.</p>
+    <p><strong>APL Industries (Delhi, 2017).</strong> Avtar’s modern Indian Case Pilot. SEBI ordered refund of monies with interest to subscribers where a public issue of shares was unsubscribed. After two decades of litigation the Delhi High Court held that the refund plus interest could not be delayed any further. Use this for s. 39 (minimum subscription / refund) which sits next to the prospectus chapter, and for the proposition that SEBI’s refund jurisdiction is real.</p>
+  </article>
+
+  <!-- GREENWOOD / AARON / NASH -->
+  <article class="case">
+    <h3>7.11 Short but examinable companions</h3>
+    <ul class="deep">
+      <li><em>Greenwood v Leather Shod Wheel Co</em> [1900] 1 Ch 421 — “orders already received from the House of Commons”; in fact only trial/experimental orders. Untrue statement for statutory compensation.</li>
+      <li><em>Aaron’s Reefs Ltd v Twiss</em> [1896] AC 273 — Halsbury’s “trick or device or ambiguous language” dictum; the whole-document test.</li>
+      <li><em>Nash v Lynde</em> [1929] AC 158 — one private communication is not an “issue to the public.”</li>
+      <li><em>South of England Natural Gas</em> [1911] 1 Ch 573 — 3,000 copies among members of gas companies = public.</li>
+      <li><em>SEBI v Kunnamkulam Paper Mills</em> (2013) 178 Comp Cas 371 (Ker) — rights issue with renunciation to more than 50 “others” = deemed prospectus.</li>
+      <li><em>T.S. Rajagopala Iyer v South Indian Rubber Works</em> AIR 1942 Mad 656 — change of directors between application and allotment entitles the applicant to revoke; “few matters are more important than the names of directors” (Lindley LJ in <em>Karberg</em>).</li>
+      <li><em>Smith v Chadwick</em> (1884) 9 App Cas 187 — two-meaning statements.</li>
+      <li><em>Mckeown v Boudard Peveril Gear</em> (1896) 65 LJ Ch 735 — puffing of cycle records not material.</li>
+      <li><em>Kisan Mehta v Universal Luggage</em> (1988) 63 Comp Cas 398 (Bom) — a stranger who has not invested cannot maintain a PIL over a misleading prospectus.</li>
+    </ul>
+  </article>
+</section>
+
+<section id="shares">
+  <h2>8. Company’s share capital — equity finance</h2>
+  <p class="lead">Syllabus: Shares s. 2(84); kinds of share capital s. 43 — (a) equity (b) preference. Nature of shares or debentures s. 44. Avtar Singh Ch. 9 is the prescribed text. The DU casebook’s deepest treatment of shares-and-debentures as a pair is <em>Salomon</em> itself.</p>
+
+  <h3>8.1 What is a share? — s. 2(84) and the case law</h3>
+  <p><span class="sec">s. 2(84)</span> “Share” means a share in the share capital of a company and includes stock. The classic common-law definition, which DU answers still open with, is Farwell J in <em>Borland’s Trustee v Steel Bros &amp; Co Ltd</em> [1901] 1 Ch 279:</p>
+  <blockquote style="border-left:4px solid var(--gold); margin:12px 0; padding:8px 16px; background:#fff; font-style:italic">A share is the interest of a shareholder in the company measured by a sum of money, for the purpose of liability in the first place, and of interest in the second, but also consisting of a series of mutual covenants entered into by all the shareholders inter se in accordance with [the Act]. The contract contained in the articles is one of the original incidents of the share.</blockquote>
+  <p>So a share is (i) a measurable interest in the company, (ii) a bundle of rights (dividend, vote, surplus on winding up, attendance, inspection), (iii) a bundle of liabilities (to pay calls up to nominal value), and (iv) movable property.</p>
+  <p><span class="sec">s. 44</span> The shares, debentures or other interest of any member in a company shall be <strong>movable property</strong>, transferable in the manner provided by the articles of the company. This is the statutory answer to the old controversy whether a share is a chose in action. It is movable property; transfer is not free-form — it follows the articles (and ss. 56, 58, 59).</p>
+
+  <h3>8.2 The five faces of “capital”</h3>
+  <table>
+    <tr><th>Label</th><th>Section</th><th>Meaning</th></tr>
+    <tr><td>Authorised / nominal</td><td>s. 2(8), s. 4(1)(e)</td><td>Maximum stated in the memorandum. Kerala High Court in <em>SNDP Yogam, Quilon, re</em> (1970) 40 Comp Cas 60: without a stated amount and its division there is no “share capital”; a membership fee is not share capital even if a “share” certificate is issued.</td></tr>
+    <tr><td>Issued</td><td>s. 2(50)</td><td>That part of authorised capital which has been offered.</td></tr>
+    <tr><td>Subscribed</td><td>—</td><td>That part of issued capital which has been taken up / allotted.</td></tr>
+    <tr><td>Called-up</td><td>s. 2(15)</td><td>That part which has been called for payment.</td></tr>
+    <tr><td>Paid-up</td><td>s. 2(64)</td><td>Aggregate credited as paid-up equivalent to money received (and amounts credited as paid-up), excluding other amounts received in respect of such shares by whatever name called.</td></tr>
+  </table>
+  <p>Uncalled capital may be converted into <em>reserve capital</em> by special resolution: it cannot be called except in winding up, cannot be charged by the directors. A charge on “undertaking including uncalled capital” does not bite on reserve capital: <em>Mayfair Property Ltd, re</em> [1898] 2 Ch 28.</p>
+
+  <h3>8.3 Kinds of share capital — s. 43</h3>
+  <p>The share capital of a company limited by shares shall be of two kinds only, namely —</p>
+  <ol class="deep">
+    <li><strong>Equity share capital</strong> — (i) with voting rights; or (ii) with differential rights as to dividend, voting or otherwise in accordance with prescribed rules and conditions (DVR shares);</li>
+    <li><strong>Preference share capital.</strong></li>
+  </ol>
+  <p>Equity share capital means all share capital which is not preference share capital. Private companies are exempted from the rigidity of s. 43 and may have other kinds. “Securities” in this chapter takes the SCRA meaning and includes hybrids. The 2000 amendments also recognised derivatives (s. 2(33)).</p>
+
+  <svg class="diagram" viewBox="0 0 1100 340" role="img">
+    <rect width="1100" height="340" fill="#0b1f3a" rx="18"/>
+    <text x="36" y="40" fill="#e8c547" font-size="20" font-family="Georgia">s. 43 — TWO KINDS ONLY (company limited by shares)</text>
+    <rect x="40" y="70" width="490" height="240" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="60" y="100" fill="#e8c547" font-size="16">EQUITY (ordinary)</text>
+    <text x="60" y="128" fill="#f4ead0" font-size="13">Residual owners. Dividend only out of profits, rate not fixed.</text>
+    <text x="60" y="150" fill="#f4ead0" font-size="13">Voting: s. 47 — one share one vote on poll (unless DVR).</text>
+    <text x="60" y="172" fill="#f4ead0" font-size="13">DVR: differential as to dividend / voting / otherwise, per rules.</text>
+    <text x="60" y="194" fill="#f4ead0" font-size="13">On winding up: surplus after creditors + preference.</text>
+    <text x="60" y="216" fill="#f4ead0" font-size="13">Sweat equity: s. 54 (to directors / employees for know-how).</text>
+    <text x="60" y="238" fill="#f4ead0" font-size="13">Cannot be redeemed while company is a going concern</text>
+    <text x="60" y="260" fill="#f4ead0" font-size="13">(except reduction s. 66 / buy-back s. 68 / scheme).</text>
+    <rect x="560" y="70" width="500" height="240" rx="12" fill="#143052" stroke="#c9a227"/>
+    <text x="580" y="100" fill="#e8c547" font-size="16">PREFERENCE — BOTH conditions of s. 43</text>
+    <text x="580" y="128" fill="#f4ead0" font-size="13">1. Preferential dividend (fixed amount or fixed rate)</text>
+    <text x="580" y="150" fill="#f4ead0" font-size="13">   during the continuance of the company; AND</text>
+    <text x="580" y="172" fill="#f4ead0" font-size="13">2. Preferential repayment of capital on winding up</text>
+    <text x="580" y="194" fill="#f4ead0" font-size="13">   (up to amount paid up, unless otherwise agreed).</text>
+    <text x="580" y="216" fill="#f4ead0" font-size="13">Voting: generally none, except on preference matters</text>
+    <text x="580" y="238" fill="#f4ead0" font-size="13">and if dividend is in arrears (s. 47(2)).</text>
+    <text x="580" y="260" fill="#f4ead0" font-size="13">Redeemable preference: s. 55 (max 20 years; infra 30).</text>
+    <text x="580" y="282" fill="#c9b88a" font-size="12">Fail either condition → it is equity, whatever the label.</text>
+  </svg>
+
+  <h4>Sub-kinds of preference shares (always asked)</h4>
+  <table>
+    <tr><th>Kind</th><th>Rule and authority</th></tr>
+    <tr><td>Cumulative / non-cumulative</td><td>If arrears of dividend are carried forward, cumulative. Presumed cumulative unless a clear contrary provision: <em>Foster v Coles, Foster &amp; Sons Ltd</em> (1906) 22 TLR 555 (even striking the word “cumulative” from the articles did not suffice). Contrast <em>Staples v Eastman Photographic Materials Co</em> [1896] 2 Ch 303 — “out of the net profits of each year” made them non-cumulative. Preference shareholders cannot compel a dividend even if arrears have piled up.</td></tr>
+    <tr><td>Participating / non-participating</td><td>Do they share in surplus profits after the equity dividend, and in surplus assets on winding up? Presumed <em>not</em> participating. Need clear words. (Avtar Ch. 9; <em>Scottish Insurance Corpn v Wilsons &amp; Clyde Coal</em> [1949] AC 462 — preference as a class may be paid off at par on a reduction / winding up and have no further claim on surplus unless the constitution says so.)</td></tr>
+    <tr><td>Redeemable</td><td>s. 55. Only out of profits otherwise available for dividend or out of proceeds of a fresh issue; premium on redemption out of profits or securities-premium account; Capital Redemption Reserve to be created. Not later than 20 years (infrastructure companies: 30). Must be fully paid. Cannot be redeemed out of borrowed funds.</td></tr>
+    <tr><td>Convertible</td><td>May be converted into equity on prescribed terms. Conversion is an issue of shares and must respect s. 62 / SEBI pricing if listed. <em>Tin Plate Dealers Assn (P) Ltd v Satish Chandra Sanwalka</em> (2016) 10 SCC 1: equity proposed to be issued against preference “because no dividend was paid”; no material that equity represented fair value of dividends claimed — Supreme Court cancelled the proposal.</td></tr>
+  </table>
+  <p>Each share shall be distinguished by its appropriate number (s. 45), except shares held in demat form.</p>
+</section>
+
+<section id="deb">
+  <h2>9. Debentures — debt finance</h2>
+  <h3>9.1 Definition — s. 2(30)</h3>
+  <p><span class="sec">s. 2(30)</span> “Debenture” includes debenture stock, bonds or any other instrument of a company evidencing a debt, whether constituting a charge on the assets of the company or not. Convertible instruments listed in the proviso (as inserted) — instruments referred to in Chapter III-D of the RBI Act, 1934, and such other instrument as may be prescribed by the Central Government in consultation with RBI — are excluded from “debenture” to keep certain money-market / hybrid instruments out of company-law debenture regulation.</p>
+  <p>Avtar: the term has no precise legal meaning; it is “of extremely elastic character.” Chitty J in <em>Levy v Abercorris Slate &amp; Slab Co</em> (1887) 37 Ch D 260, 264: “a document which either creates a debt or acknowledges it.” Topham: “a document given by a company as evidence of a debt to the holder usually arising out of a loan and most commonly secured by charge.” Pollock MR in <em>Lemon v Austin Friars Investment Trust</em> [1926] Ch 1: “the root meaning of the word is indebtedness.” Viscount Maugham collected the definitions in <em>Knightsbridge Estates Ltd v Byrne</em> [1940] AC 613. Indian: <em>Madanlal Fakirchand Dudhediya v Changdeo Sugar Mills</em> AIR 1958 Bom 491; <em>Narendra Kumar Maheshwari v Union of India</em> 1990 Supp SCC 440 (nature of convertible debentures in a constitutional challenge to government guidelines).</p>
+
+  <h3>9.2 The DU case you already know — Salomon’s debentures</h3>
+  <div class="note"><strong>From the DU 2025 extract of <em>Salomon v A. Salomon &amp; Co Ltd</em> [1897] AC 22.</strong> Salomon sold his boot business to the company for £39,000: 20,000 fully paid £1 shares, and <strong>£10,000 in debentures</strong> charged on the company’s assets. When the company failed, Salomon as debenture-holder claimed as a <em>secured creditor</em> in priority to unsecured trade creditors. Vaughan Williams J and the Court of Appeal thought this a fraud on creditors — a device to “enjoy the advantage of limited liability, and to leave at the same time a part of his business, on which creditors might recoup themselves in full.” The House of Lords reversed. A company may owe its own beneficial owner; a member may also be a creditor; secured debentures issued for a genuine sale are valid. Lord Macnaghten: the unsecured creditors “have only themselves to blame for not taking security.” <em>This is the single most important DU illustration of the difference between a share and a debenture:</em> the same man held both; on insolvency the debenture won and the shares were wiped out.</div>
+
+  <div class="viz">
+    <div class="cap">Hypothetical visual — Salomon’s two hats</div>
+    <svg viewBox="0 0 980 210" class="diagram">
+      <rect width="980" height="210" fill="#efe4c8" rx="8"/>
+      <rect x="40" y="30" width="260" height="150" rx="10" fill="#0b1f3a"/>
+      <text x="58" y="60" fill="#e8c547" font-size="14">A. SALOMON</text>
+      <text x="58" y="84" fill="#f4ead0" font-size="12">Hat 1 · 20,001 shares</text>
+      <text x="58" y="104" fill="#f4ead0" font-size="12">(owner / member)</text>
+      <text x="58" y="128" fill="#f4ead0" font-size="12">Hat 2 · £10,000 debentures</text>
+      <text x="58" y="148" fill="#f4ead0" font-size="12">(secured creditor)</text>
+      <rect x="360" y="30" width="260" height="150" rx="10" fill="#143052" stroke="#c9a227"/>
+      <text x="378" y="70" fill="#e8c547" font-size="14">THE COMPANY</text>
+      <text x="378" y="96" fill="#f4ead0" font-size="12">separate legal person</text>
+      <text x="378" y="116" fill="#f4ead0" font-size="12">owes Salomon on the charge</text>
+      <text x="378" y="136" fill="#f4ead0" font-size="12">owes trade creditors, unsecured</text>
+      <rect x="680" y="30" width="260" height="150" rx="10" fill="#5a1730"/>
+      <text x="698" y="70" fill="#e8c547" font-size="14">INSOLVENCY</text>
+      <text x="698" y="96" fill="#f4ead0" font-size="12">debenture paid first</text>
+      <text x="698" y="116" fill="#f4ead0" font-size="12">shares = residual, = 0</text>
+      <text x="698" y="136" fill="#f4ead0" font-size="12">HL: this is the whole point</text>
+    </svg>
+  </div>
+
+  <h3>9.3 Usual features (Avtar, from <em>Laxman Bharamji v Emperor</em> ILR 1945 Bom 863)</h3>
+  <p>A private company sold “Patron Bonds”. They bore a serial number, acknowledged a debt, formed a series, bore the company’s seal, and provided for interest by “lucky numbers.” Held, they were debentures: acknowledgement of debt + promise to return it + consecutive series. Usual features:</p>
+  <ol class="deep">
+    <li>A certificate, usually under the company’s seal (seal not essential: <em>British India Steam Navigation v IRC</em> (1881) 7 QBD 165).</li>
+    <li>An acknowledgement of indebtedness.</li>
+    <li>Usually a promise to pay a specified principal on a specified date — but perpetual / irredeemable debentures are valid (old s. 120 of 1956 Act; the 2013 Act does not invalidate irredeemable debentures as such, though s. 71 regulates redemption and DRR for redeemable issues).</li>
+    <li>Usually a promise to pay interest until the principal is repaid.</li>
+    <li>Usually one of a series.</li>
+    <li>Usually secured by a charge, floating or fixed — but s. 2(30) expressly includes unsecured instruments.</li>
+  </ol>
+
+  <h3>9.4 Kinds of debentures (the short-note list)</h3>
+  <div class="grid">
+    <div class="card"><h4>Bearer / registered</h4><p>Bearer: transferable by delivery, negotiable. Registered: transfer as per articles / s. 56.</p></div>
+    <div class="card"><h4>Secured / unsecured</h4><p>Fixed charge, floating charge, or both. Floating charge hovers over a fluctuating class of assets and crystallises on winding up, default, or appointment of a receiver (<em>Panama, New Zealand &amp; Australia Royal Mail Co, re</em> (1870) LR 5 Ch App 318; <em>Government Stock v Manila Rly</em> [1897] AC 81).</p></div>
+    <div class="card"><h4>Redeemable / perpetual</h4><p>Redeemable on a date or on a contingency. Perpetual: no date; holder is a permanent creditor. s. 71(8)–(10) give the Tribunal power to direct redemption on default.</p></div>
+    <div class="card"><h4>Convertible / non-convertible</h4><p>FCDs / PCDs / NCDs. Conversion is an issue of shares (s. 62). SEBI ICDR pricing applies if listed. Convertible debentures were the subject of <em>Narendra Kumar Maheshwari</em>.</p></div>
+    <div class="card"><h4>Naked</h4><p>Unsecured. Rank with ordinary creditors, save for any contractual priority among themselves.</p></div>
+    <div class="card"><h4>Mortgage debentures</h4><p>Secured on particular property. Trust deed usual.</p></div>
+  </div>
+
+  <h3>9.5 Statutory regime — s. 71 (must be in any 8-mark answer)</h3>
+  <ul class="deep">
+    <li><strong>s. 71(1)</strong> A company may issue debentures with an option to convert wholly or partly into shares, subject to special resolution.</li>
+    <li><strong>s. 71(2)</strong> <em>No company shall issue any debentures carrying voting rights.</em> This is the statutory wall between ownership and credit.</li>
+    <li><strong>s. 71(3)–(4)</strong> Secured debentures only on prescribed conditions; charge on the company’s (or subsidiary / holding / associate’s) property of sufficient value; created in favour of the debenture trustee.</li>
+    <li><strong>s. 71(5)</strong> No prospectus, and no offer or invitation to the public or to members exceeding 500, for subscription of debentures, unless the company has, before such issue or offer, appointed one or more debenture trustees and the conditions of the appointment are complied with. (Independence conditions are in the Rules: trustee must not be a shareholder beneficially, not have pecuniary relationship ≥ 2% of turnover / ₹50 lakh, not be a promoter or director, etc.)</li>
+    <li><strong>s. 71(6)–(7)</strong> Trustee to protect interest of holders; to ensure creation of security and of Debenture Redemption Reserve.</li>
+    <li><strong>s. 71(8) + Rules</strong> Company shall create a Debenture Redemption Reserve (DRR) out of profits available for dividend; amounts credited shall not be used except for redemption. (The quantum of DRR has been relaxed by MCA / SEBI circulars for listed NCDs and All-India FIs — mention “as prescribed for the time being” rather than a stale percentage.)</li>
+    <li><strong>s. 71(10)</strong> On default in redemption or interest, any or all holders or the trustee may apply to the Tribunal; the Tribunal may direct redemption forthwith of principal and interest.</li>
+    <li><strong>s. 71(11)</strong> Default in carrying out the Tribunal’s order: criminal penalty (imprisonment and fine) on officers.</li>
+    <li><strong>s. 71(12)</strong> A contract with a company to take up and pay for any debentures of the company <em>may be enforced by a decree of specific performance</em> — a notable exception to the ordinary reluctance to specifically enforce contracts to lend money.</li>
+  </ul>
+  <p>Transfer, refusal to register, and share-certificates provisions (ss. 56, 58, 59) apply to debentures also (Avtar).</p>
+</section>
+
+<section id="compare">
+  <h2>10. Comparison: share versus debenture</h2>
+  <p>This is a standing DU short note (2017 Q.1(e); 2015 Business Association II Q.6(a) “Discuss kinds of share capital and differentiate between share and debenture”). Write resemblances first, then differences, then a one-line conclusion citing <em>Salomon</em>.</p>
+  <table>
+    <tr><th></th><th>Share</th><th>Debenture</th></tr>
+    <tr><td>Nature</td><td>Ownership interest; member (s. 2(55))</td><td>Creditorship; not a member</td></tr>
+    <tr><td>Definition</td><td>s. 2(84) + <em>Borland’s Trustee</em></td><td>s. 2(30) + <em>Levy v Abercorris</em></td></tr>
+    <tr><td>Movable property</td><td>s. 44 — yes</td><td>s. 44 — yes</td></tr>
+    <tr><td>Return</td><td>Dividend — only out of profits; discretionary</td><td>Interest — a debt; payable even out of capital, whether or not there are profits</td></tr>
+    <tr><td>Rate</td><td>Equity: not fixed. Preference: fixed preferential dividend</td><td>Usually fixed</td></tr>
+    <tr><td>Voting</td><td>s. 47 — yes (equity); limited for preference</td><td>s. 71(2) — never</td></tr>
+    <tr><td>Control</td><td>Ultimate control of the company</td><td>No interference with management unless enforcing security</td></tr>
+    <tr><td>Repayment while a going concern</td><td>No (except reduction, buy-back, redeemable preference s. 55)</td><td>Yes, on the redemption date (unless perpetual)</td></tr>
+    <tr><td>Priority on winding up</td><td>Residual; paid after all creditors</td><td>If secured, paid in priority out of charged assets (<em>Salomon</em>)</td></tr>
+    <tr><td>Specific performance of a contract to take</td><td>Generally no (shares are allotted, not “taken” by decree)</td><td>s. 71(12) — yes</td></tr>
+    <tr><td>Forfeiture</td><td>Possible for non-payment of calls</td><td>Not forfeited; the debt remains</td></tr>
+    <tr><td>Trust / DRR / trustee</td><td>No statutory trustee</td><td>Compulsory trustee if public / &gt;500 members (s. 71(5)); DRR</td></tr>
+    <tr><td>Convertibility</td><td>Preference may be convertible into equity</td><td>May be convertible into shares (s. 71(1), special resolution)</td></tr>
+  </table>
+  <p><strong>Resemblances</strong> (Avtar): both are investments; both yield a return; both are transferable; perpetual debentures, like shares, are not generally paid back; redeemable preference shares and debentures have many common features; where debentures carry a charge, the holder’s fortune, like the shareholder’s, depends on the company’s assets. Gower (quoted by Avtar) even asked whether shareholders should be converted into some form of creditors, and there have been suggestions for participating debentures for the small saver.</p>
+  <p><strong>Conclusion line:</strong> A share is a slice of the company; a debenture is a claim against it. <em>Salomon</em> is the forensic demonstration: when the same man held both, the law paid the debenture and buried the share.</p>
+</section>
+
+<section id="hypos">
+  <h2>11. Worked hypotheticals (write these in the margin of the paper if a problem question appears)</h2>
+
+  <div class="qa">
+    <div class="q">H1. A Ltd allots its entire IPO to a merchant bank on 1 January. On 1 May the bank issues a glossy brochure offering those shares to its 8,000 clients. The brochure is not filed with the RoC. A subscriber loses money and sues A Ltd on the brochure. Decide.</div>
+    <div class="a">
+      <p>s. 25(1) deems the brochure a prospectus issued by A Ltd, because the allotment was with a view to an offer for sale to the public. The s. 25(2) presumption applies: the offer was within six months of allotment. All contents and liability provisions attach. Non-filing with RoC is a s. 26(4)/(9) contravention. The subscriber has s. 35 compensation against directors, promoters, authorisers; s. 34/447 if the brochure was misleading; rescission against the company if misrepresentation is made out. The merchant bank, as offeror, is treated as named as a director (s. 25(3)).</p>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">H2. B Ltd, a listed NBFC, files a shelf prospectus in April 2025 (validity one year) and makes a first issue. In November it creates a new floating charge and its NPAs jump. It opens a second tranche in December without telling anyone. X applied in October with advance money. Advise X and SEBI.</div>
+    <div class="a">
+      <p>s. 31(2) required an information memorandum of the new charge and the change in financial position, filed with the RoC before the second offer. X, having applied before the change, had a right to be informed and to withdraw within 15 days with refund. The IM + shelf prospectus together are a prospectus (s. 31(3)), so ss. 34–37 apply to the omission. SEBI may act under s. 24 / SEBI Act ss. 11, 11B. Officers risk s. 447 if the omission was dishonest.</p>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">H3. C Ltd’s red herring omits the price (lawful). After book-building the final prospectus quietly changes the objects from “setting up a solar plant” to “acquisition of listed equity of D Ltd.” Dissenting applicants want out. Can the company use the proceeds to buy D Ltd’s shares?</div>
+    <div class="a">
+      <p>Variations between red herring and prospectus must be highlighted (s. 32(3)). Change of objects of a prospectus issue requires a special resolution and a newspaper notice of justification (s. 27(1)). The second proviso to s. 27(1) <em>forbids</em> using prospectus proceeds for buying, trading or dealing in equity shares of any other listed company. Dissenters are entitled to a SEBI-priced exit offer from promoters (s. 27(2)). Using the money to buy D Ltd is independently illegal.</p>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">H4. D, a director, signed a prospectus containing a mining engineer’s report which was wildly optimistic. D had never met the engineer. He says he “honestly believed” the report because the promoter told him the engineer was “the best in India.” Allottee sues D under s. 35 and the State prosecutes under s. 34. D’s defences?</div>
+    <div class="a">
+      <p>s. 35: the expert-report defence requires reasonable ground to believe, up to allotment, that the expert was competent. Taking the promoter’s word is <em>Adams v Thrift</em> — unreasonable. Honest belief is not enough (that is <em>Derry v Peek</em>, which s. 35 superseded). s. 34: D may prove reasonable grounds of belief that the statement was true, or that it was immaterial. On these facts both defences fail. If intent to defraud is proved, s. 35(3) imposes unlimited personal liability and s. 447 is attracted via s. 36.</p>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">H5. E bought shares of F Ltd on the NSE three months after the IPO, having read the prospectus on the exchange website. The prospectus had omitted a pending SFIO investigation. Can E sue?</div>
+    <div class="a">
+      <p>Common law: <em>Peek v Gurney</em> says no; <em>Andrews v Mockford</em> / <em>Possfund</em> / <em>Hedley Byrne</em> say maybe, if the prospectus was intended to influence the after-market (an exchange-hosted prospectus almost is). Statute: s. 37 allows a suit by “any person … affected by any misleading statement or … omission.” Argue that s. 37 widens standing beyond allottees. Materiality of an SFIO investigation is obvious under s. 26(1) (litigation / legal action in last five years). Rescission against the company is harder because E is not an allottee; s. 35 compensation against directors/promoters is the cleaner route if standing is made out. Also SEBI ICDR / LODR continuous-disclosure breach.</p>
+    </div>
+  </div>
+  <div class="qa">
+    <div class="q">H6. G Ltd issues “participating bonds” carrying 8% interest plus 10% of surplus profits and one vote per bond at the AGM. Are they shares or debentures? Valid?</div>
+    <div class="a">
+      <p>Label is irrelevant (<em>Laxman Bharamji</em> — look at the substance). Interest + profit participation = hybrid. But s. 71(2) is fatal to the vote: no company shall issue any debentures carrying voting rights. If they are true debentures, the voting clause is void. If the instrument is in substance a share (residual ownership, not a debt), it must fit s. 43 — either equity (including DVR) or preference. A “bond with a vote” cannot stand as a debenture. Counsel should recast as DVR equity under s. 43(a)(ii) and the Rules, or as a non-voting NCD.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pyq">
+  <h2>12. DU &amp; sister-university PYQs, with model answers</h2>
+  <p class="src">Sources: dullbonline archive of DU Business Association II / Company Law papers (2011–2017); Faculty Exam Checklist 8B; typical 16-mark / 8-mark / 5-mark splits used in LB-303. Model answers are written to the 2013 Act (the Act on which you will be marked), even where the original paper was set under the 1956 Act.</p>
+
+  <div class="qa">
+    <div class="q">PYQ 1. (DU 2017, Q. 1(e), short note) Difference between share and debenture. [5]</div>
+    <div class="a">
+      <p><strong>Model.</strong> A share (s. 2(84); <em>Borland’s Trustee</em>) is a bundle of membership rights — a slice of ownership, movable property (s. 44), yielding a dividend only out of profits, carrying votes (s. 47), residual on winding up, not repayable while the company is a going concern (save s. 55 / s. 66 / s. 68). A debenture (s. 2(30); <em>Levy v Abercorris</em>) is an instrument evidencing a debt, usually (not necessarily) charged on assets, yielding interest whether or not there are profits, carrying <em>no</em> votes (s. 71(2)), specifically enforceable as a contract to take (s. 71(12)), and, if secured, paid in priority on insolvency. <em>Salomon</em> is the DU illustration: the founder’s £10,000 debentures were paid; his shares were not. Resemblances: both are transferable investments; redeemable preference shares mimic debentures. (Then 4–5 rows of the comparison table, memorised.)</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 2. (DU 2015 Business Association II, Q. 6(a)) Discuss kinds of share capital and differentiate between share and debenture. [attempt any two, ~16 combined]</div>
+    <div class="a">
+      <p><strong>Model structure (8+8).</strong> <em>Part A — kinds.</em> Open with authorised / issued / subscribed / called-up / paid-up. Then s. 43: two kinds only. Equity with votes; equity with differential rights; preference defined by the two cumulative conditions (preferential dividend + preferential repayment). Sub-classify preference: cumulative (presumed: <em>Foster v Coles</em>) / non-cumulative (<em>Staples</em>); participating / non-participating (presumed not: <em>Wilsons &amp; Clyde</em>); redeemable s. 55; convertible. Mention sweat equity s. 54. <em>Part B — difference.</em> The table in §10, anchored to <em>Salomon</em> and s. 71(2). Close: “the law of capital is a law of two doors — ownership and credit — and s. 71(2) welds them shut against each other.”</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 3. (Typical 16-mark, Faculty Checklist 8B) What are the various kinds of prospectus? Discuss the liabilities for misstatements in the prospectus.</div>
+    <div class="a">
+      <p><strong>Model (16 marks, 40 minutes).</strong></p>
+      <p><em>I. Introduction (½ page).</em> Prospectus is the disclosure document by which a public company invites the public to subscribe (s. 2(70)). Golden rule: <em>New Brunswick / Henderson v Lacon</em>. Public company only (s. 23); private placement is s. 42.</p>
+      <p><em>II. Kinds (4–5 pages, with a box diagram).</em> (1) Statutory / full — s. 26. (2) Abridged — s. 2(1) + s. 33, exceptions, ₹50,000 penalty. (3) Deemed — s. 25 (six-month and unpaid-consideration presumptions; extra contents) and s. 28 OFS. (4) Shelf — s. 31, 1-year, IM, 15-day withdrawal. (5) Red herring — s. 32, price/quantum blank, 3-day filing, final prospectus on close. Information memorandum as the syllabus’s fifth/sixth item, deemed (with the shelf document) to be a prospectus. Advertisement s. 30. Demat s. 29.</p>
+      <p><em>III. When is a statement untrue.</em> Form and context; half-truths (<em>Kylsant</em>, <em>Aaron’s Reefs</em>, <em>Gluckstein v Barnes</em>); change of circumstances (<em>Rajagopala Iyer</em>); puffing (<em>Mckeown</em>).</p>
+      <p><em>IV. Civil liability.</em> (a) Deceit — <em>Derry v Peek</em>, <em>Edgington</em>, <em>Peek v Gurney</em> / <em>Andrews v Mockford</em>, <em>Hedley Byrne</em>. (b) s. 35 — persons, no need to prove fraud, defences, <em>Adams v Thrift</em>, unlimited liability if intent to defraud s. 35(3). (c) Rescission — Contract Act, bars in <em>Shiromani Sugar</em>, <em>Christineville</em>. (d) s. 26 omission damages — <em>Twycross v Grant</em>. Standing: s. 37.</p>
+      <p><em>V. Criminal.</em> s. 34 → s. 447; s. 36; personation s. 38. Defences and <em>Progressive Aluminium</em>.</p>
+      <p><em>VI. DU colour.</em> <em>Erlanger</em> (false prospectus; nominee board). <em>German Date Coffee</em> (prospectus patent). SEBI s. 24 / <em>APL Industries</em> refund.</p>
+      <p><em>VII. Conclusion.</em> The 2013 Act is more severe than <em>Derry v Peek</em> ever was: honesty is not enough, half-truths are lies, after-market purchasers may have s. 37, and fraud is a 10-year offence. That severity is the point.</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 4. (Sister-university, frequently cloned at DU tutorials) Explain the remedies available to a shareholder who has been induced to invest on the basis of misstatements in a prospectus. [8–12]</div>
+    <div class="a">
+      <p><strong>Model.</strong> Do <em>not</em> list kinds of prospectus here — the question is remedies only. Four civil + two criminal, each with a case, plus loss of rescission. End with s. 37 class action and SEBI’s s. 11B direction to refund (<em>APL Industries</em>). If marks are 8, do deceit, s. 35, rescission, s. 34. If 12, add s. 26 damages, s. 36, <em>Peek v Gurney</em> standing, and the affirmation/delay/winding-up bars.</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 5. (Short notes bank, 5 each) Red herring prospectus · Shelf prospectus · Statement in lieu of prospectus · Deemed prospectus · Civil liability of directors for misrepresentation in prospectus · Kinds of debentures · Preference shares · Sweat equity.</div>
+    <div class="a">
+      <p><strong>Red herring (5).</strong> Definition (s. 32 Explanation) — quantum/price incomplete. Purpose: book-building. File with RoC 3 days before opening. Same obligations as a prospectus; variations to be highlighted. On close, final prospectus with capital raised and closing price to RoC + SEBI. Not a “draft” in the loose sense — it is a statutory prospectus minus price.</p>
+      <p><strong>Shelf (5).</strong> s. 31; class specified by SEBI; file once; validity ≤ 1 year from first opening; subsequent offers without a fresh prospectus; IM of new charges and financial changes; 15-day withdrawal; IM + shelf = prospectus.</p>
+      <p><strong>Statement in lieu (5 — historical).</strong> Under the 1956 Act s. 70, a public company that did not issue a prospectus had to file a statement in lieu of prospectus before first allotment. The 2013 Act has <em>no</em> statement in lieu. Public companies either issue a prospectus, or use s. 42 private placement, or rights/bonus. If an old question paper says “statement in lieu”, write one sentence that it is repealed, then answer on s. 42.</p>
+      <p><strong>Deemed (5).</strong> s. 25 + s. 28; the six-month / unpaid-consideration presumptions; extra contents; signatures; <em>Kunnamkulam</em> rights-renunciation point.</p>
+      <p><strong>Civil liability of directors (5).</strong> s. 35 persons and defences; contrast deceit (<em>Derry</em>) with statutory compensation (<em>Adams v Thrift</em>); s. 35(3) unlimited if fraud; contribution among the guilty.</p>
+      <p><strong>Kinds of debentures (5).</strong> Bearer/registered; secured/naked; redeemable/perpetual; convertible/non-convertible; the Patron Bonds case for “look at substance.” s. 71(2) no votes.</p>
+      <p><strong>Preference (5).</strong> Dual definition in s. 43; cumulative presumption; participating presumption against; redeemable s. 55; voting s. 47(2); <em>Tin Plate Dealers</em>.</p>
+      <p><strong>Sweat equity (5).</strong> s. 54 — equity issued to directors or employees at a discount or for consideration other than cash, for providing know-how or making available intellectual property or value additions. Special resolution; registered valuer; lock-in as prescribed; limits in the Rules. Not in the Topic-4 syllabus strictly, but often a 5-mark hitchhiker with “kinds of share capital.”</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 6. (DU 2011, Q. 8 — German Date Coffee facts, set as a winding-up problem) A company was formed with the main object of manufacturing coffee from dates under a German patent to be acquired. It failed to acquire the German patent but started manufacturing under a Swedish patent. A contributory petitions to wind up. Decide. Also discuss grounds of compulsory winding up.</div>
+    <div class="a">
+      <p><strong>Model (Topic 4 + Topic 8 crossover).</strong> This is <em>Re German Date Coffee Co</em> (1882) 20 Ch D 169. The prospectus held out a German patent as the substratum. A Swedish patent is a different adventure. Substratum gone → just and equitable winding up. Then list s. 271 grounds (the 2013 successor of 1956 s. 433): inability to pay debts, special resolution, affairs conducted fraudulently, default in filing, just and equitable (deadlock, loss of substratum, bubble companies, loss of confidence — <em>Seth Mohan Lal</em>, <em>Yenidje Tobacco</em>, <em>Ebrahimi v Westbourne Galleries</em>, all in the DU casebook). For Topic 4 marks in the same answer: the prospectus statement was a material representation of fact; subscribers who paid on its faith are not bound to accept a substituted venture.</p>
+    </div>
+  </div>
+
+  <div class="qa">
+    <div class="q">PYQ 7. Problem. “The Board of Reckless Investments Ltd allotted shares to investors without issuing a prospectus with the RoC. Remedy?”</div>
+    <div class="a">
+      <p>If it was a public offer, s. 26(4) is breached: no prospectus shall be issued unless a copy has been delivered to the RoC. s. 26(9) penal consequences. Allotment without a filed prospectus also collides with s. 23 (public offer must comply with Part I of Ch. III) and, if money was collected from more than 200 unidentified persons, s. 42(9)/(10) — the offer is deemed public, money to be refunded with interest, penalty, and officers liable. Investors: refund + interest; s. 35 if any document used was in substance a prospectus and was misleading; SEBI s. 11B. <em>APL Industries</em> is the refund authority.</p>
+    </div>
+  </div>
+</section>
+
+<section id="ready">
+  <h2>13. Exam-ready one-pagers</h2>
+  <div class="grid">
+    <div class="card">
+      <h4>16-mark skeleton · Prospectus</h4>
+      <ol class="deep">
+        <li>Definition s. 2(70) + golden rule (<em>New Brunswick</em>)</li>
+        <li>Public offer map s. 23 / private placement s. 42</li>
+        <li>Five kinds + diagram</li>
+        <li>s. 26 contents, expert, 90 days, penalty</li>
+        <li>Untrue / misleading: <em>Kylsant</em></li>
+        <li>Civil: deceit / s. 35 / rescission / s. 26 damages</li>
+        <li>Standing: <em>Peek v Gurney</em> v s. 37</li>
+        <li>Criminal: ss. 34, 36, 447</li>
+        <li>DU colour: <em>Erlanger</em>, <em>German Date Coffee</em></li>
+        <li>SEBI s. 24, <em>APL Industries</em></li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4>16-mark skeleton · Share capital / debentures</h4>
+      <ol class="deep">
+        <li>Share: s. 2(84), <em>Borland</em>, s. 44</li>
+        <li>Five faces of capital</li>
+        <li>s. 43 two kinds; DVR; preference dual test</li>
+        <li>Cumulative / participating / redeemable / convertible</li>
+        <li>Debenture: s. 2(30), <em>Levy</em>, Patron Bonds</li>
+        <li>s. 71 in eight numbered points, especially (2), (5), (12)</li>
+        <li>Kinds of debentures</li>
+        <li>Comparison table</li>
+        <li><em>Salomon</em> as the DU demonstration</li>
+        <li>One sentence on hybrids / s. 71(2) wall</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h4>Cases you must name</h4>
+      <p>Erlanger · German Date Coffee · Salomon · Derry v Peek · Peek v Gurney · Andrews v Mockford · R v Kylsant · Edgington v Fitzmaurice · Adams v Thrift · New Brunswick · Henderson v Lacon · Aaron’s Reefs · Gluckstein v Barnes · Shiromani Sugar · Rajagopala Iyer · Nash v Lynde · South of England Gas · APL Industries · Levy v Abercorris · Borland’s Trustee · Foster v Coles · Staples · Wilsons &amp; Clyde · Hedley Byrne</p>
+    </div>
+    <div class="card">
+      <h4>Numbers that win marks</h4>
+      <p>90 days (s. 26(8)) · 3 days (s. 32(2)) · 1 year (s. 31) · 15 days withdrawal (s. 31) · 6 months presumption (s. 25) · 50 “others” (Kunnamkulam / public) · 200 private-placement cap (s. 42) · 500 members → debenture trustee (s. 71(5)) · 20 years redeemable preference (s. 55) · ₹50,000 / ₹3,00,000 (s. 26(9)) · s. 447: 6 months–10 years, 3 years if public interest · DRR as prescribed</p>
+    </div>
+  </div>
+
+  <div class="exam">
+    <strong>How to deploy DU case material when Topic 4 itself has none.</strong> Sentence you can write in any answer: “The 2025 Faculty case material does not print a dedicated prospectus authority under Topic 4. The closest printed cases are <em>Erlanger v New Sombrero Phosphate Co</em> (a prospectus which was essentially false in material particulars; nominee directors; rescission), <em>Re German Date Coffee Co</em> (prospectus representation that a German patent had been granted; substratum), and <em>Salomon</em> (the same person as member and as secured debenture-holder). The prescribed commentary — Avtar Singh, Chapter 5 — then supplies the Case Pilots (<em>Derry v Peek</em>, <em>Peek v Gurney</em>, <em>Kylsant</em>, <em>Adams v Thrift</em>, <em>New Brunswick</em>) on which a DU answer is conventionally built.”
+  </div>
+
+  <h3>13.1 Last-night recitation (speak it aloud once)</h3>
+  <p>Prospectus is any invitation to the public to subscribe for securities. Abridged goes with the application form. Deemed catches the offer-for-sale. Shelf lasts a year and lives on an information memorandum. Red herring is book-building without a price. File with the Registrar, ninety days, expert consent. Untrue includes half-truths — Kylsant. Deceit needs fraud — Derry v Peek. Section 35 needs only untruth plus want of reasonable ground — Adams v Thrift. Rescission dies by delay, affirmation, winding up — Shiromani Sugar. Criminal is section 34 to 447. Shares are ownership, debentures are debt, section 71(2) says a debenture never votes, and Salomon wore both hats and was paid only as a creditor.</p>
+</section>
+
+<section>
+  <h2>14. Statutory appendix (the sections the syllabus names, in one place)</h2>
+  <table>
+    <tr><th>Section</th><th>Catch-line</th></tr>
+    <tr><td>2(1)</td><td>Abridged prospectus (SEBI salient features)</td></tr>
+    <tr><td>2(8)</td><td>Authorised capital</td></tr>
+    <tr><td>2(15)</td><td>Called-up capital</td></tr>
+    <tr><td>2(30)</td><td>Debenture</td></tr>
+    <tr><td>2(38)</td><td>Expert</td></tr>
+    <tr><td>2(50)</td><td>Issued capital</td></tr>
+    <tr><td>2(64)</td><td>Paid-up capital</td></tr>
+    <tr><td>2(70)</td><td>Prospectus (includes red herring and shelf)</td></tr>
+    <tr><td>2(81)</td><td>Securities</td></tr>
+    <tr><td>2(84)</td><td>Share</td></tr>
+    <tr><td>23</td><td>Public offer / private placement / rights / bonus</td></tr>
+    <tr><td>24</td><td>SEBI to administer issue &amp; transfer of listed securities</td></tr>
+    <tr><td>25</td><td>Deemed prospectus (offer for sale)</td></tr>
+    <tr><td>26</td><td>Matters to be stated; registration; 90 days; penalty</td></tr>
+    <tr><td>27</td><td>Variation of terms / objects; exit offer; no use of proceeds to buy listed equity</td></tr>
+    <tr><td>28</td><td>Offer for sale by members (deemed prospectus)</td></tr>
+    <tr><td>29</td><td>Public offer in demat form</td></tr>
+    <tr><td>30</td><td>Advertisement of prospectus</td></tr>
+    <tr><td>31</td><td>Shelf prospectus + information memorandum</td></tr>
+    <tr><td>32</td><td>Red herring prospectus</td></tr>
+    <tr><td>33</td><td>Issue of application forms with abridged prospectus</td></tr>
+    <tr><td>34</td><td>Criminal liability for misstatement → s. 447</td></tr>
+    <tr><td>35</td><td>Civil liability for misstatement; unlimited if fraud</td></tr>
+    <tr><td>36</td><td>Fraudulently inducing persons to invest → s. 447</td></tr>
+    <tr><td>37</td><td>Action by affected persons / class</td></tr>
+    <tr><td>38</td><td>Personation for acquisition of securities</td></tr>
+    <tr><td>42</td><td>Private placement (the negative image of a prospectus)</td></tr>
+    <tr><td>43</td><td>Kinds of share capital</td></tr>
+    <tr><td>44</td><td>Nature of shares / debentures — movable property</td></tr>
+    <tr><td>47</td><td>Voting rights</td></tr>
+    <tr><td>54</td><td>Sweat equity</td></tr>
+    <tr><td>55</td><td>Redeemable preference shares</td></tr>
+    <tr><td>71</td><td>Debentures — conversion, no votes, trustee, DRR, specific performance</td></tr>
+    <tr><td>447</td><td>Punishment for fraud</td></tr>
+  </table>
+</section>
+
+</main>
+<footer>
+  <div class="wrap">
+    <p><strong>DU LLB III Term · LB-303 Company Law · Topic 4 Capital Market Instruments</strong></p>
+    <p>Prepared as exam notes from the DU 2025/2022 case material (Erlanger, German Date Coffee, Salomon), Avtar Singh <em>Company Law</em> Chs. 5, 9, 14 (prescribed), the Faculty Exam Checklist item 8B, and the Companies Act, 2013. Topic 4 has no dedicated numbered cases in the 2025 casebook — that fact is flagged wherever it matters, and the adjacent printed cases are used instead of invented ones.</p>
+    <p>Not a substitute for the bare Act or for reading the judgments. Section numbers and penalty figures should be confirmed against the latest official text (penalties have been iteratively recast as in-house penalties by the 2020 amendment in several neighbouring sections; ss. 34 and 447 remain criminal).</p>
+  </div>
+</footer>
+</body>
+</html>

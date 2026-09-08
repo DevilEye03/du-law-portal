@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misbranding &amp; Adulteration — The Food Safety and Standards Act, 2006 | LB-3034 Case File</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0b0a08;
+  --panel:#16140f;
+  --panel-raised:#1d1a13;
+  --panel-inset:#100f0b;
+  --hairline:#332e21;
+  --hairline-soft:#241f17;
+  --ink:#e9e2d0;
+  --ink-bright:#f7f2e4;
+  --ink-muted:#a89d84;
+  --ink-faint:#786d58;
+  --amber:#d1a13a;
+  --amber-bright:#e8bd5c;
+  --amber-dim:#8a6a2a;
+  --danger:#b3452f;
+  --danger-bright:#d1633f;
+  --sage:#6d8a6a;
+  --sage-bright:#8fae8a;
+  --slate-blue:#5c7a94;
+  --serif-display:'Fraunces',serif;
+  --serif-body:'Source Serif 4',serif;
+  --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--void);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -5%, rgba(209,161,58,0.06), transparent 60%),
+    radial-gradient(ellipse 700px 600px at 100% 20%, rgba(92,122,148,0.05), transparent 55%);
+  color:var(--ink);
+  font-family:var(--serif-body);
+  font-size:16.5px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--amber-dim);color:var(--ink-bright);}
+a{color:var(--amber-bright);}
+::-webkit-scrollbar{width:10px;height:10px;}
+::-webkit-scrollbar-track{background:var(--void);}
+::-webkit-scrollbar-thumb{background:var(--hairline);border-radius:0;}
+::-webkit-scrollbar-thumb:hover{background:var(--amber-dim);}
+
+/* ===== Layout shell ===== */
+.shell{display:grid;grid-template-columns:272px 1fr;min-height:100vh;max-width:1480px;margin:0 auto;}
+@media (max-width:980px){.shell{display:block;}}
+
+/* ===== Sidebar ===== */
+.sidebar{
+  position:sticky;top:0;height:100vh;overflow-y:auto;
+  border-right:1px solid var(--hairline);
+  padding:28px 20px 40px;
+  background:linear-gradient(180deg, var(--panel), var(--void) 90%);
+}
+@media (max-width:980px){
+  .sidebar{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--hairline);}
+}
+.case-stamp{
+  border:1px solid var(--amber-dim);
+  padding:10px 12px;
+  margin-bottom:22px;
+  font-family:var(--mono);
+  font-size:10.5px;
+  letter-spacing:.06em;
+  color:var(--amber-bright);
+  line-height:1.6;
+  background:rgba(209,161,58,0.05);
+}
+.case-stamp .num{color:var(--ink-muted);}
+.sidebar h1{
+  font-family:var(--serif-display);
+  font-size:1.32rem;
+  font-weight:600;
+  line-height:1.28;
+  color:var(--ink-bright);
+  margin:0 0 4px;
+}
+.sidebar .subhead{
+  font-size:.82rem;
+  color:var(--ink-muted);
+  margin-bottom:22px;
+  font-style:italic;
+  font-family:var(--serif-display);
+}
+.navgroup{margin-bottom:4px;}
+.navgroup-label{
+  font-family:var(--mono);
+  font-size:10px;
+  letter-spacing:.12em;
+  color:var(--ink-faint);
+  margin:20px 0 8px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--hairline-soft);
+}
+.navgroup:first-of-type .navgroup-label{margin-top:0;}
+.navlink{
+  display:block;
+  padding:6px 0 6px 14px;
+  border-left:2px solid transparent;
+  color:var(--ink-muted);
+  text-decoration:none;
+  font-size:.865rem;
+  line-height:1.4;
+  transition:color .15s, border-color .15s;
+}
+.navlink:hover{color:var(--amber-bright);border-left-color:var(--amber-dim);}
+.navlink.case-link{color:var(--sage-bright);}
+.navlink.case-link:hover{color:var(--sage-bright);border-left-color:var(--sage);}
+
+/* ===== Main content ===== */
+main{padding:0;min-width:0;}
+.hero{
+  padding:64px 56px 44px;
+  border-bottom:1px solid var(--hairline);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(135deg, rgba(209,161,58,0.035) 0 2px, transparent 2px 26px);
+  pointer-events:none;
+}
+.hero .eyebrow{
+  font-family:var(--mono);
+  font-size:11.5px;
+  color:var(--amber-bright);
+  letter-spacing:.1em;
+  margin-bottom:18px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero .eyebrow::before{content:"";width:26px;height:1px;background:var(--amber-dim);display:inline-block;}
+.hero h1{
+  font-family:var(--serif-display);
+  font-size:2.85rem;
+  font-weight:600;
+  line-height:1.12;
+  color:var(--ink-bright);
+  margin:0 0 18px;
+  max-width:14ch;
+}
+.hero h1 em{color:var(--amber-bright);font-style:normal;}
+.hero .dek{
+  font-size:1.12rem;
+  color:var(--ink-muted);
+  max-width:62ch;
+  line-height:1.65;
+  margin-bottom:28px;
+}
+.hero .tags{display:flex;flex-wrap:wrap;gap:10px;}
+.tag{
+  font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  border:1px solid var(--hairline);color:var(--ink-muted);
+  padding:5px 10px;
+}
+.tag.hot{border-color:var(--danger);color:var(--danger-bright);}
+.tag.gold{border-color:var(--amber-dim);color:var(--amber-bright);}
+
+section.block{padding:0 56px;margin:56px 0;}
+section.block:first-of-type{margin-top:48px;}
+@media (max-width:700px){
+  .hero{padding:44px 22px 32px;}
+  section.block{padding:0 20px;}
+  .hero h1{font-size:2.1rem;max-width:none;}
+}
+
+.kicker{
+  display:flex;align-items:baseline;gap:14px;margin-bottom:6px;
+}
+.kicker .no{font-family:var(--mono);color:var(--amber-dim);font-size:.95rem;}
+h2.section-title{
+  font-family:var(--serif-display);
+  font-size:1.9rem;font-weight:600;color:var(--ink-bright);
+  margin:0 0 6px;
+  scroll-margin-top:24px;
+}
+.section-intro{color:var(--ink-muted);max-width:74ch;margin-bottom:28px;font-size:1.01rem;}
+h3.sub-title{
+  font-family:var(--serif-display);font-size:1.32rem;font-weight:600;
+  color:var(--ink-bright);margin:34px 0 12px;scroll-margin-top:24px;
+}
+h4.minor-title{
+  font-family:var(--mono);font-size:.92rem;color:var(--amber-bright);
+  letter-spacing:.02em;margin:22px 0 10px;
+}
+.sub-title-anchor{scroll-margin-top:24px;}
+p{margin:0 0 14px;max-width:76ch;}
+ul,ol{margin:0 0 16px;padding-left:22px;max-width:74ch;}
+li{margin-bottom:7px;}
+strong{color:var(--ink-bright);font-weight:600;}
+
+/* ===== Statute box ===== */
+.statute{
+  border:1px solid var(--hairline);
+  background:var(--panel);
+  padding:20px 24px;
+  margin:18px 0 24px;
+  position:relative;
+}
+.statute::before{
+  content:attr(data-tag);
+  position:absolute;top:-11px;left:20px;
+  background:var(--void);
+  padding:0 10px;
+  font-family:var(--mono);font-size:11px;color:var(--amber-bright);letter-spacing:.05em;
+}
+.statute .sec-text{color:var(--ink);font-size:.98rem;}
+.statute .sec-text em{color:var(--ink-muted);font-style:italic;}
+.statute-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:700px){.statute-grid{grid-template-columns:1fr;}}
+
+/* ===== Definition cards ===== */
+.def-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:20px 0 28px;}
+.def-card{
+  border:1px solid var(--hairline);background:var(--panel);
+  padding:16px 18px;
+}
+.def-card .term{
+  font-family:var(--mono);color:var(--amber-bright);font-size:.85rem;
+  display:flex;justify-content:space-between;margin-bottom:8px;
+}
+.def-card .term .cite{color:var(--ink-faint);}
+.def-card p{font-size:.9rem;color:var(--ink-muted);margin:0;}
+.def-card p strong{color:var(--ink);}
+
+/* ===== Accordion ===== */
+.accordion{border:1px solid var(--hairline);margin-bottom:10px;background:var(--panel);}
+.accordion summary{
+  list-style:none;cursor:pointer;padding:16px 20px;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-family:var(--serif-display);font-weight:500;color:var(--ink-bright);font-size:1.03rem;
+}
+.accordion summary::-webkit-details-marker{display:none;}
+.accordion summary .plus{font-family:var(--mono);color:var(--amber-bright);font-size:1.1rem;flex-shrink:0;transition:transform .2s;}
+.accordion[open] summary .plus{transform:rotate(45deg);}
+.accordion summary .role{
+  font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
+  border:1px solid var(--hairline);padding:3px 8px;white-space:nowrap;
+}
+.accordion .accordion-body{padding:0 20px 20px;border-top:1px solid var(--hairline-soft);padding-top:16px;}
+.accordion .accordion-body p{font-size:.95rem;}
+
+/* ===== Tables ===== */
+.tbl-wrap{overflow-x:auto;margin:18px 0 26px;border:1px solid var(--hairline);}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:560px;}
+thead th{
+  background:var(--panel-raised);color:var(--amber-bright);
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;
+  text-align:left;padding:11px 14px;border-bottom:1px solid var(--hairline);
+  white-space:nowrap;
+}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--hairline-soft);color:var(--ink);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:rgba(209,161,58,0.04);}
+td.sec-num,th.sec-num{font-family:var(--mono);color:var(--amber-bright);white-space:nowrap;}
+td.penalty{color:var(--danger-bright);}
+.tbl-caption{font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-bottom:8px;}
+
+/* ===== Case law dossier ===== */
+.dossier{
+  border:1px solid var(--hairline);
+  background:linear-gradient(180deg, var(--panel), var(--panel-inset));
+  margin:26px 0 40px;
+}
+.dossier-head{
+  padding:22px 26px;border-bottom:1px solid var(--hairline);
+  display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;
+}
+.dossier-head .name{font-family:var(--serif-display);font-size:1.4rem;font-weight:600;color:var(--ink-bright);margin:0 0 6px;}
+.dossier-head .cite{font-family:var(--mono);font-size:.82rem;color:var(--sage-bright);}
+.dossier-head .status{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  border:1px solid var(--sage);color:var(--sage-bright);padding:5px 10px;height:fit-content;
+}
+.dossier-head .status.prescribed{border-color:var(--amber-dim);color:var(--amber-bright);}
+.dossier-body{padding:6px 26px 26px;}
+.dossier-nav{display:flex;flex-wrap:wrap;gap:8px;padding:14px 26px 0;}
+.dossier-tab-label{
+  font-family:var(--mono);font-size:10px;color:var(--ink-faint);
+  border:1px solid var(--hairline-soft);padding:3px 9px;letter-spacing:.04em;
+}
+.dossier h5{
+  font-family:var(--mono);font-size:.8rem;color:var(--amber-bright);
+  letter-spacing:.06em;margin:22px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--hairline-soft);
+}
+.dossier h5:first-child{margin-top:0;}
+.dossier p{font-size:.96rem;}
+.vs-split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:8px 0 4px;}
+@media (max-width:700px){.vs-split{grid-template-columns:1fr;}}
+.vs-col{border:1px solid var(--hairline-soft);padding:14px 16px;}
+.vs-col.petitioner{border-left:3px solid var(--slate-blue);}
+.vs-col.respondent{border-left:3px solid var(--danger);}
+.vs-col .side-label{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-bottom:8px;letter-spacing:.04em;}
+.vs-col p,.vs-col li{font-size:.88rem;}
+.principle-box{
+  background:rgba(209,161,58,0.07);border:1px solid var(--amber-dim);
+  padding:16px 18px;margin-top:16px;
+}
+.principle-box .lbl{font-family:var(--mono);font-size:10.5px;color:var(--amber-bright);letter-spacing:.06em;margin-bottom:8px;}
+.issue-item{border-left:2px solid var(--hairline);padding:2px 0 2px 14px;margin-bottom:14px;}
+.issue-item .q{font-weight:600;color:var(--ink-bright);font-size:.93rem;}
+.issue-item .a{font-size:.88rem;color:var(--ink-muted);margin-top:4px;}
+.issue-item .a strong{color:var(--sage-bright);}
+
+/* ===== Model answer card ===== */
+.pyq-card{border:1px solid var(--hairline);background:var(--panel);margin-bottom:14px;}
+.pyq-q{
+  padding:14px 20px;border-bottom:1px solid var(--hairline-soft);
+  display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
+}
+.pyq-q .yr{font-family:var(--mono);color:var(--amber-bright);font-size:.78rem;border:1px solid var(--amber-dim);padding:2px 8px;flex-shrink:0;}
+.pyq-q .yr.pred{color:var(--slate-blue);border-color:var(--slate-blue);}
+.pyq-q .qtext{font-family:var(--serif-display);color:var(--ink-bright);font-size:1rem;font-weight:500;}
+.pyq-ans{padding:16px 20px;}
+.pyq-ans p{font-size:.92rem;}
+
+.verify-note{
+  font-family:var(--mono);font-size:11px;color:var(--ink-faint);
+  border-left:2px solid var(--hairline);padding:8px 0 8px 12px;margin:14px 0;
+}
+.verify-note.verified{border-color:var(--sage);color:var(--sage-bright);}
+.verify-note.predicted{border-color:var(--slate-blue);color:var(--slate-blue);}
+
+/* ===== Callouts ===== */
+.callout{border:1px solid var(--hairline);padding:16px 20px;margin:18px 0;background:var(--panel);}
+.callout.danger{border-color:var(--danger);background:rgba(179,69,47,0.06);}
+.callout.danger .lbl{color:var(--danger-bright);}
+.callout .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--amber-bright);margin-bottom:8px;}
+.callout p:last-child{margin-bottom:0;}
+
+/* ===== Diagram frame ===== */
+.diagram-frame{
+  border:1px solid var(--hairline);background:var(--panel-inset);
+  padding:22px;margin:22px 0 30px;overflow-x:auto;
+}
+.diagram-frame .cap{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);margin-top:12px;text-align:center;}
+svg text{font-family:var(--serif-body);}
+svg .mono{font-family:var(--mono);}
+
+/* ===== Source register ===== */
+.source-list{list-style:none;padding:0;margin:0;}
+.source-list li{
+  padding:12px 0;border-bottom:1px solid var(--hairline-soft);
+  display:grid;grid-template-columns:120px 1fr;gap:16px;font-size:.88rem;
+}
+.source-list li .kind{font-family:var(--mono);color:var(--ink-faint);font-size:.75rem;}
+.source-list li .kind.core{color:var(--amber-bright);}
+
+footer{
+  border-top:1px solid var(--hairline);padding:36px 56px 60px;
+  color:var(--ink-faint);font-size:.82rem;font-family:var(--mono);
+}
+@media (max-width:700px){footer{padding:30px 20px 50px;}}
+
+.back-to-top{
+  position:fixed;bottom:24px;right:24px;
+  width:42px;height:42px;border:1px solid var(--amber-dim);
+  background:var(--panel);color:var(--amber-bright);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:1.1rem;opacity:0;pointer-events:none;
+  transition:opacity .2s;z-index:50;
+}
+.back-to-top.show{opacity:1;pointer-events:auto;}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidebar">
+  <div class="case-stamp">
+    LB-3034 · LAW OF CRIMES III<br>
+    <span class="num">WHITE COLLAR CRIMES — TOPIC 3(D)</span><br>
+    DELHI UNIVERSITY, FACULTY OF LAW
+  </div>
+  <h1>Misbranding &amp; Adulteration</h1>
+  <div class="subhead">The Food Safety and Standards Act, 2006 — Case File Notes</div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">ORIENTATION</div>
+    <a class="navlink" href="#intro">Why the FSS Act exists</a>
+    <a class="navlink" href="#definitions">Key definitions (S.3)</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">INSTITUTIONS &amp; OFFICERS</div>
+    <a class="navlink" href="#fssai">FSSAI — apex authority</a>
+    <a class="navlink" href="#s18">S.18 — general principles</a>
+    <a class="navlink" href="#state-machinery">State enforcement machinery</a>
+    <a class="navlink" href="#org-chart">Organogram (diagram)</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">LICENSING &amp; PROCEDURE</div>
+    <a class="navlink" href="#licensing">Licensing &amp; registration</a>
+    <a class="navlink" href="#procedure">Sampling-to-prosecution (S.38–47)</a>
+    <a class="navlink" href="#flowchart">Procedure flowchart</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">OFFENCES &amp; ADJUDICATION</div>
+    <a class="navlink" href="#offences">Offences &amp; penalties (Ch. IX)</a>
+    <a class="navlink" href="#adjudication">Adjudication &amp; FSAT (Ch. X)</a>
+    <a class="navlink" href="#ipc-bns">IPC ↔ BNS correspondence</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">CASE DOSSIERS</div>
+    <a class="navlink case-link" href="#case-nestle">Nestlé India v. FSSAI (2015)</a>
+    <a class="navlink case-link" href="#case-swami">Swami Achyutanand Tirth (2016)</a>
+    <a class="navlink case-link" href="#case-mohammed">M. Mohammed v. UOI (2015)</a>
+    <a class="navlink case-link" href="#case-traders">Assn. of Traders v. UOI</a>
+    <a class="navlink case-link" href="#case-ramnath">Ram Nath v. State of UP (2024)</a>
+  </div>
+
+  <div class="navgroup">
+    <div class="navgroup-label">REFORM &amp; REVISION</div>
+    <a class="navlink" href="#lci264">Law Commission Report No. 264</a>
+    <a class="navlink" href="#pyq">PYQ bank &amp; model answers</a>
+    <a class="navlink" href="#sources">Source register</a>
+  </div>
+</nav>
+<main>
+<div class="hero">
+  <div class="eyebrow">CASE FILE · WHITE COLLAR CRIMES · TOPIC 3(D)</div>
+  <h1>When the Plate Becomes the <em>Crime Scene</em></h1>
+  <p class="dek">A complete working file on misbranding and adulteration as white-collar crime under Indian law — the institutional architecture of the Food Safety and Standards Act, 2006, its offences and adjudicatory machinery, its relationship with Sections 272–276 IPC / 274–278 BNS, and the full text of every case prescribed or referenced in the DU LL.B. course material for LB-3034.</p>
+  <div class="tags">
+    <span class="tag gold">FSS Act, 2006 — Ss. 1–101</span>
+    <span class="tag">FSS Rules &amp; Regulations, 2011</span>
+    <span class="tag hot">IPC Ss. 272–276 / BNS Ss. 274–278</span>
+    <span class="tag">5 case dossiers</span>
+  </div>
+</div>
+
+<section class="block" id="intro">
+  <div class="kicker"><span class="no">§ 00</span></div>
+  <h2 class="section-title">Why this Act exists</h2>
+  <p class="section-intro">Before 2006, food regulation in India was scattered across at least eight central enactments and a web of state rules. The Food Safety and Standards Act, 2006 was enacted to consolidate this into one science-based, single-window code — and it is squarely a white-collar crime statute, because almost every offence it creates is committed by a food business operator in the ordinary, outwardly legitimate course of trade.</p>
+
+  <h3 class="sub-title">The pre-2006 patchwork</h3>
+  <p>Before consolidation, food safety regulation in India was governed by a fragmented set of laws, each administered by a different ministry and enforced by different officers, with inconsistent standards and overlapping jurisdiction: the Prevention of Food Adulteration Act, 1954; the Fruit Products Order, 1955; the Meat Food Products Order, 1973; the Vegetable Oil Products (Control) Order, 1947; the Edible Oils Packaging (Regulation) Order, 1998; the Solvent Extracted Oil, De-Oiled Meal and Edible Flour (Control) Order, 1967; the Milk and Milk Products Order, 1992; and provisions of the Essential Commodities Act, 1955 insofar as they touched food. This multiplicity meant a single food business could simultaneously need clearances from, and answer to, half a dozen different inspecting authorities applying different standards to the same product.</p>
+
+  <div class="statute" data-tag="PREAMBLE">
+    <p class="sec-text">An Act to consolidate the laws relating to food and to establish the Food Safety and Standards Authority of India for laying down science based standards for articles of food and to regulate their manufacture, storage, distribution, sale and import, to ensure availability of safe and wholesome food for human consumption and for matters connected therewith or incidental thereto.</p>
+  </div>
+
+  <h3 class="sub-title">The Law Commission's diagnosis</h3>
+  <p>The Krishna Murari Yadav compilation (relying on the Law Commission of India's <strong>264th Report, 2017</strong>) records that Parliament's own stated reasons for enacting the FSS Act, 2006 were: (i) the existing food laws had become <strong>fragmented and outdated</strong>, having grown organically over decades without a unifying philosophy; (ii) there was <strong>no single, science-based standard-setting body</strong> — standards were fixed by different committees under different orders, often without a common risk-assessment methodology; (iii) enforcement was in the hands of <strong>multiple, poorly coordinated agencies</strong>, producing both regulatory gaps and duplicated compliance burdens; and (iv) India needed a framework aligned with <strong>international food safety practice</strong> (Codex Alimentarius-style science-based standards) to support both consumer protection and export competitiveness. The Act therefore repeals the PFA Act, 1954 and the other food control orders listed above, and vests standard-setting, licensing, and enforcement in one integrated hierarchy running from the Food Safety and Standards Authority of India (FSSAI) down to the Food Safety Officer in the field.</p>
+
+  <div class="callout">
+    <div class="lbl">WHY THIS TOPIC BELONGS IN A WHITE-COLLAR CRIME COURSE</div>
+    <p>Food adulteration and misbranding fit Sutherland's definition of white-collar crime with unusual precision: the offender is almost always a "person of respectability and high social status" — a manufacturer, packer, or corporate food business — who commits the offence "in the course of [their] occupation," using the outward legitimacy of a licensed trade to conceal a breach of trust against an anonymous class of consumer-victims. Unlike street crime, the harm is diffuse (millions of small doses of injury rather than one visible victim), the offender's intent is commercial rather than malicious, and detection depends entirely on regulatory sampling and laboratory science rather than a complaining witness — exactly the enforcement-dependency pattern McBarnet identifies as the structural advantage of white-collar offenders.</p>
+  </div>
+
+  <div class="statute" data-tag="OFFICIAL DU SYLLABUS — TOPIC 3">
+    <p class="sec-text"><strong>Unit III: White Collar Crimes in Different Professions</strong><br>
+    (A) Tax Evasion &nbsp;(B) Corporate Fraud &nbsp;(C) Health Care Fraud &nbsp;<strong>(D) Misbranding and Adulteration</strong> &nbsp;(E) Education Fraud</p>
+    <p class="sec-text" style="margin-top:10px;"><em>Prescribed reading for (D):</em> M/S Nestle India Limited v. FSSAI &amp; Ors., W.P.(L) No. 1688 of 2015 (Bombay High Court) — "Discuss the relevant provisions of the Food Safety and Standards Act, 2006."</p>
+  </div>
+  <p class="verify-note verified">✓ Reproduced verbatim from the LB-3034 official course-material file. The Nestlé judgment is the <strong>only</strong> case formally prescribed for this sub-topic; every other case in this file is drawn from Krishna Murari Yadav's supplementary DU-LL.B. compilation or is flagged as supplementary doctrinal material — see the Source Register at the foot of this file for the exact provenance of every case.</p>
+</section>
+<section class="block" id="definitions">
+  <div class="kicker"><span class="no">§ 01</span></div>
+  <h2 class="section-title">Key Definitions — Section 3</h2>
+  <p class="section-intro">Section 3 is the vocabulary on which every offence in Chapter IX is built. A prosecution under Section 59 (unsafe food) or Section 52 (misbranded food) lives or dies on whether the product fits these statutory definitions — so examiners test them constantly, and they recur inside every case dossier below.</p>
+
+  <div class="def-grid">
+    <div class="def-card">
+      <div class="term">ADULTERANT <span class="cite">S.3(a)</span></div>
+      <p>Any material which is or could be employed for making the food unsafe or sub-standard or misbranded or containing extraneous matter.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">CONTAMINANT <span class="cite">S.3(f)</span></div>
+      <p>Any substance, whether or not added to food, but which is present in such food as a result of the production (including operations carried out in crop husbandry, animal husbandry or veterinary medicine), manufacture, processing, preparation, treatment, packing, packaging, transport or holding of such food, or as a result of environmental contamination and does not include insect fragments, rodent hair and other extraneous matter.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">FOOD <span class="cite">S.3(j)</span></div>
+      <p>Any substance, whether processed, partially processed or unprocessed, which is intended for human consumption and includes primary food, genetically modified food, infant food, packaged drinking water, alcoholic drink, chewing gum, and any substance used as an ingredient in the manufacture of food; but does not include animal feed, live animals unless prepared for market for human consumption, plants prior to harvesting, drugs/medicinal products, cosmetics, narcotic or psychotropic substances.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">PRIMARY FOOD <span class="cite">S.3(zk)</span></div>
+      <p>An article of food, being a produce of agriculture or horticulture or animal husbandry and dairying or aquaculture, in its natural form, resulting from the growing, raising, cultivation, picking, harvesting, collection or catching in the hands of a person other than a farmer or fisherman.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">FOOD BUSINESS <span class="cite">S.3(n)</span></div>
+      <p>Any undertaking, whether for profit or not, and whether public or private, carrying out any of the activities related to any stage of manufacture, processing, packaging, storage, transportation, distribution of food, import, and includes food services, catering services, sale of food or food ingredients.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">FOOD BUSINESS OPERATOR <span class="cite">S.3(o)</span></div>
+      <p>A person by whom the business is actually carried on or by whom the affairs of the business are conducted — i.e., ownership/control-based liability, which is how Section 66 (offences by companies) fastens onto directors and managers "in charge of and responsible to the company for its conduct."</p>
+    </div>
+    <div class="def-card">
+      <div class="term">MISBRANDED FOOD <span class="cite">S.3(zf)</span></div>
+      <p>An article of food is "misbranded" if it is (i) mis-described, mis-stated, or false/misleading in its label particulars; (ii) sold under the name of another article; (iii) an imitation of another food without disclosure; (iv) sold in a package with false/misleading label or one not conforming to Act/Rules; (v) sold contrary to representation on the label; (vi) not labelled per Act/Rules requirements; (vii) not conforming to a claim on the label (e.g. "enriched"); or (viii) any other condition prescribed as constituting misbranding.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">SUB-STANDARD FOOD <span class="cite">S.3(zx)</span></div>
+      <p>An article of food is "sub-standard" if it does not meet the specified standard but does not pose a health risk — the least serious of the four defective-food categories.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">UNSAFE FOOD <span class="cite">S.3(zz)</span></div>
+      <p>An article of food is "unsafe" if it is injurious to health by reason of composition, contamination, decomposition, adulterants, toxins, disease-carrying constituents, or if the harm from ordinary handling/storage/consumption outweighs any beneficial effect — the most serious category, and the trigger for Section 59's graded, injury-linked penalty scale.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">EXTRANEOUS MATTER <span class="cite">S.3(i)</span></div>
+      <p>Any matter contained in an article of food which may be carried from the raw materials, packaging material or process systems used for its manufacture or which is added to it, but such matter does not render such food unsafe.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">CODEX ALIMENTARIUS COMMISSION <span class="cite">S.3(e)</span></div>
+      <p>The joint FAO/WHO body that sets international food standards, referenced repeatedly in Section 18 and the Nestlé judgment as the benchmark FSSAI standards are meant to track.</p>
+    </div>
+    <div class="def-card">
+      <div class="term">TRIBUNAL <span class="cite">S.3(zy)</span></div>
+      <p>The Food Safety Appellate Tribunal established under Section 70 — the specialised first-appeal forum from an Adjudicating Officer's order.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">EXAM ANGLE — THE FOUR TIERS OF "DEFECTIVE" FOOD</div>
+    <p>The Act does not use one undifferentiated idea of "bad food." It grades defects on a rising scale of seriousness, and each tier has its own offence provision: <strong>extraneous matter</strong> (S.3(i) → S.54, mildest, fine only) → <strong>sub-standard food</strong> (S.3(zx) → S.51, quality falls short but not unsafe) → <strong>misbranded food</strong> (S.3(zf) → S.52, a labelling/description defect) → <strong>unsafe food</strong> (S.3(zz) → S.59, the gravest, with imprisonment scaled to actual injury or death caused). Examiners frequently ask you to classify a given fact pattern into the correct tier — this is precisely the exercise the Nestlé case performs when it asks whether excess lead made Maggi noodles "unsafe" rather than merely "misbranded" for want of MSG disclosure.</p>
+  </div>
+</section>
+<section class="block" id="fssai">
+  <div class="kicker"><span class="no">§ 02</span></div>
+  <h2 class="section-title">Offices &amp; Officers, Part I — The National Apex Body</h2>
+  <p class="section-intro">The Act builds a two-tier machinery: a single national standard-setter (FSSAI) at the top, and a state-level enforcement hierarchy underneath it that actually inspects, samples, licenses and prosecutes. This part covers the apex body; the enforcement chain follows in the next section.</p>
+
+  <h3 class="sub-title">Food Safety and Standards Authority of India (FSSAI) — Sections 4–17</h3>
+  <div class="statute" data-tag="S.4 — ESTABLISHMENT">
+    <p class="sec-text">The Central Government shall, by notification, establish a body to be known as the <strong>Food Safety and Standards Authority of India</strong> — a body corporate with perpetual succession and a common seal, competent to acquire and hold property and to sue or be sued in its own name. Its head office is at Delhi, with power to open offices elsewhere in India.</p>
+  </div>
+
+  <div class="accordion-stack">
+    <details class="accordion">
+      <summary><span>S.5 &amp; S.6 — Composition, qualifications, and the Selection Committee</span><span class="role">STRUCTURE</span></summary>
+      <div class="accordion-body">
+        <p>FSSAI consists of a <strong>Chairperson</strong> and <strong>twenty-two Members</strong> (at least one-third women): seven ex-officio Joint-Secretary-rank members representing Agriculture, Commerce, Consumer Affairs, Food Processing, Health, Legislative Affairs and Small Scale Industries; two from the food industry (one from small-scale industry); two from consumer organisations; three eminent food technologists/scientists; five rotating zonal members representing States/UTs; two representing farmers' organisations; and one representing retailers. The Chairperson must be a person of eminence in food science, or a retired/serving officer of Secretary rank who has handled the subject, and cannot hold any other office while in post.</p>
+        <p>Appointments (other than ex-officio members) go through a <strong>Selection Committee</strong> chaired by the Cabinet Secretary, with the Secretary in charge of the administering Ministry as convener, plus Secretaries of Health, Legislative and Personnel departments, the Chairman of the Public Enterprises Selection Board, and one eminent food technologist nominated by the Centre. The Committee must recommend a panel of two names for every vacancy, and must first satisfy itself the candidate has no conflicting financial interest.</p>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary><span>S.7 &amp; S.8 — Tenure and removal</span><span class="role">SECURITY OF TENURE</span></summary>
+      <div class="accordion-body">
+        <p>Members hold office for <strong>three years</strong>, renewable once; the Chairperson cannot continue past age 65. The Central Government may remove the Chairperson or a Member for insolvency, conviction involving moral turpitude, physical/mental incapacity, acquisition of a disqualifying financial interest, or abuse of position — but removal on the latter two grounds requires a reasonable opportunity of hearing first, a due-process safeguard built directly into the statute.</p>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary><span>S.9 &amp; S.10 — Chief Executive Officer</span><span class="role">EXECUTIVE HEAD</span></summary>
+      <div class="accordion-body">
+        <p>The <strong>CEO</strong>, not below Additional Secretary rank, is FSSAI's Member-Secretary and legal representative, running its day-to-day administration: drawing up work programmes, executing the budget, and reporting annually to the Authority and Central Government. Critically, S.10(5) makes the CEO exercise <strong>the powers of the Commissioner of Food Safety</strong> in matters concerning food safety of specified articles — a functional bridge between the national and state tiers.</p>
+      </div>
+    </details>
+
+    <details class="accordion">
+      <summary><span>S.11–S.15 — Central Advisory Committee, Scientific Panels &amp; Scientific Committee</span><span class="role">SCIENCE INPUT</span></summary>
+      <div class="accordion-body">
+        <p>The <strong>Central Advisory Committee</strong> (S.11–12) links FSSAI to enforcement agencies and stakeholders (industry, agriculture, consumers, laboratories, every State Commissioner of Food Safety), advising on work-programme priorities, risk identification, and knowledge-pooling; it must meet at least three times a year.</p>
+        <p><strong>Scientific Panels</strong> (S.13) are made up of independent scientific experts and cover eight named domains: food additives/processing aids; pesticide/antibiotic residues; GMOs; functional foods/nutraceuticals; biological hazards; contaminants; labelling; and sampling/analysis methods.</p>
+        <p>The <strong>Scientific Committee</strong> (S.14) sits above the Panels — chaired collectively by the Panel Chairpersons plus six independent experts — and gives opinions on cross-cutting issues that fall between or outside individual Panels' remits, organising public hearings where necessary.</p>
+      </div>
+    </details>
+  </div>
+
+  <div id="s16" class="sub-title-anchor"></div>
+  <h4 class="minor-title">DUTIES &amp; FUNCTIONS OF THE FOOD AUTHORITY — SECTION 16</h4>
+  <p>Section 16(1) casts FSSAI's core duty in a single sentence: <strong>"to regulate and monitor the manufacture, processing, distribution, sale and import of food so as to ensure safe and wholesome food."</strong> Sub-section (2) then lets it specify, by regulation, the actual machinery for doing this — standards and enforcement systems (a); tolerance limits for additives, contaminants, pesticide/veterinary-drug residues, heavy metals, myco-toxins, antibiotics and irradiation (b); laboratory accreditation (c),(e); import quality control (d); sampling and inter-agency information exchange (f); enforcement surveys (g); food-labelling standards (h); and risk-analysis methodology (i). Sub-section (3) layers on a further set of "shall also" functions — scientific advisory support to governments, data collection on consumption risk and contaminants, crisis-management planning, international coordination, consumer/panchayat outreach, training, and general food-safety awareness.</p>
+  <div class="callout">
+    <div class="lbl">STRUCTURE TO REMEMBER</div>
+    <p>S.16(1) = the duty (one line). S.16(2) = regulation-making powers (9 heads, a–i). S.16(3) = additional functions (14 heads, a–n). S.16(4) = transparency obligations (must publish Scientific Committee opinions, conflict-of-interest declarations, study results, annual report). S.16(5) = FSSAI may bind State Commissioners of Food Safety with directions. S.16(6) = confidentiality carve-out for commercially sensitive information, subject to a public-health override.</p>
+  </div>
+
+  <div id="s18" class="sub-title-anchor"></div>
+  <h4 class="minor-title">GENERAL PRINCIPLES — SECTION 18</h4>
+  <p>Section 18 is a compact, three-clause provision that courts treat as the interpretive lens for the entire Act. Krishna Murari Yadav's teaching diagram frames it as three tracks: principles to be followed <strong>during implementation</strong> (clause 1), principles for the Food Authority <strong>while framing regulations/standards</strong> (clause 2), and a <strong>carve-out excluding farmers and fishermen</strong> from the Act's reach at the primary-production stage (clause 3).</p>
+
+  <div class="statute-grid">
+    <div class="statute" data-tag="S.18(1) — DURING IMPLEMENTATION">
+      <p class="sec-text">Achieve an appropriate level of protection of human life/health and consumer interests (a); carry out risk management based on risk assessment (b); adopt provisional precautionary measures where harm is suspected but scientific uncertainty persists (c), provided such measures are proportionate and no more trade-restrictive than necessary (d) and are periodically reviewed (e); proactively inform the public of identified health risks (f); and presume an entire batch/lot/consignment non-compliant once part of it is shown to be, until the contrary is proved (g).</p>
+    </div>
+    <div class="statute" data-tag="S.18(2) — WHILE FRAMING STANDARDS">
+      <p class="sec-text">Take account of prevalent domestic practice and international standards (a); base standards on risk analysis (b); conduct risk assessment independently, objectively and transparently (c); hold open public consultation before regulations (d, urgency exception capped at 6 months); protect consumer interests and informed choice (e); and prevent both unfair trade practices and unsafe/sub-standard food (f).</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">S.18(3) — THE FARMER/FISHERMAN CARVE-OUT</div>
+    <p>The Act does <strong>not</strong> apply to a farmer, fisherman, or their farming/fishing operations, crops, livestock, or aquaculture, nor to supplies used or produced in farming, nor to a farmer's or fisherman's own-produced crops/catch. Regulatory responsibility attaches only once produce passes into the hands of a food business — precisely why the definition of "primary food" (S.3(zk)) speaks of produce "in the hands of a person <em>other than</em> a farmer or fisherman."</p>
+  </div>
+
+  <p style="margin-top:20px;">Both prescribed and supplementary DU case material read Section 18 the same way — as a set of guiding principles, not an independent source of power. See the <strong>Association of the Traders v. Union of India</strong> and <strong>Nestlé India Ltd. v. FSSAI</strong> dossiers below for the exact judicial language.</p>
+</section>
+<section class="block" id="org-chart">
+  <div class="kicker"><span class="no">§ 03</span></div>
+  <h2 class="section-title">The Full Enforcement Hierarchy — Organogram</h2>
+  <p class="section-intro">One diagram tying the national and state tiers together, from the Central Government's notification establishing FSSAI down to the Food Safety Officer standing in a shop with a sampling kit.</p>
+
+  <div class="diagram-frame">
+    <svg viewBox="0 0 1040 900" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;font-size:14px;">
+      <defs>
+        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="#8a6a2a"/>
+        </marker>
+      </defs>
+      <!-- Central Govt -->
+      <rect x="400" y="10" width="240" height="46" fill="#1d1a13" stroke="#d1a13a" stroke-width="1.4"/>
+      <text x="520" y="30" text-anchor="middle" fill="#e8bd5c" font-size="12" font-family="IBM Plex Mono">CENTRAL GOVERNMENT</text>
+      <text x="520" y="46" text-anchor="middle" fill="#a89d84" font-size="10.5">notifies &amp; establishes — S.4</text>
+
+      <line x1="520" y1="56" x2="520" y2="82" stroke="#8a6a2a" stroke-width="1.3" marker-end="url(#arrowhead)"/>
+
+      <!-- FSSAI -->
+      <rect x="360" y="84" width="320" height="56" fill="#16140f" stroke="#d1a13a" stroke-width="1.8"/>
+      <text x="520" y="106" text-anchor="middle" fill="#f7f2e4" font-size="14.5" font-family="Fraunces" font-weight="600">FSSAI — Food Authority</text>
+      <text x="520" y="124" text-anchor="middle" fill="#a89d84" font-size="10.5">Chairperson + 22 Members · S.5 · Head Office: Delhi</text>
+
+      <!-- branches from FSSAI -->
+      <line x1="520" y1="140" x2="520" y2="162" stroke="#8a6a2a" stroke-width="1.2"/>
+      <line x1="200" y1="162" x2="840" y2="162" stroke="#8a6a2a" stroke-width="1.2"/>
+      <line x1="200" y1="162" x2="200" y2="180" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <line x1="520" y1="162" x2="520" y2="180" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <line x1="840" y1="162" x2="840" y2="180" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+
+      <rect x="80" y="182" width="240" height="50" fill="#16140f" stroke="#332e21" stroke-width="1"/>
+      <text x="200" y="202" text-anchor="middle" fill="#e9e2d0" font-size="12">Central Advisory Committee</text>
+      <text x="200" y="218" text-anchor="middle" fill="#786d58" font-size="10">S.11–12 — industry/consumer/State liaison</text>
+
+      <rect x="400" y="182" width="240" height="50" fill="#16140f" stroke="#332e21" stroke-width="1"/>
+      <text x="520" y="200" text-anchor="middle" fill="#e9e2d0" font-size="12">CEO (Member-Secretary)</text>
+      <text x="520" y="216" text-anchor="middle" fill="#786d58" font-size="10">S.9–10 · not below Addl. Secy.</text>
+      <text x="520" y="228" text-anchor="middle" fill="#786d58" font-size="10">exercises Commissioner's powers, S.10(5)</text>
+
+      <rect x="720" y="182" width="240" height="50" fill="#16140f" stroke="#332e21" stroke-width="1"/>
+      <text x="840" y="202" text-anchor="middle" fill="#e9e2d0" font-size="12">Scientific Panels + Committee</text>
+      <text x="840" y="218" text-anchor="middle" fill="#786d58" font-size="10">S.13–15 — 8 panels, independent experts</text>
+
+      <!-- down to State Govt -->
+      <line x1="520" y1="232" x2="520" y2="258" stroke="#8a6a2a" stroke-width="1.3" marker-end="url(#arrowhead)"/>
+
+      <rect x="380" y="260" width="280" height="46" fill="#1d1a13" stroke="#5c7a94" stroke-width="1.4"/>
+      <text x="520" y="280" text-anchor="middle" fill="#8fbcd6" font-size="12" font-family="IBM Plex Mono">STATE GOVERNMENT</text>
+      <text x="520" y="296" text-anchor="middle" fill="#a89d84" font-size="10.5">appoints — S.30(1)</text>
+
+      <line x1="520" y1="306" x2="520" y2="330" stroke="#5c7a94" stroke-width="1.3" marker-end="url(#arrowhead)"/>
+
+      <!-- Commissioner of Food Safety -->
+      <rect x="330" y="332" width="380" height="58" fill="#16140f" stroke="#5c7a94" stroke-width="1.8"/>
+      <text x="520" y="356" text-anchor="middle" fill="#f7f2e4" font-size="14" font-family="Fraunces" font-weight="600">Commissioner of Food Safety</text>
+      <text x="520" y="374" text-anchor="middle" fill="#a89d84" font-size="10.5">State-level head — S.30 · sanctions prosecution, S.30(2)(e)</text>
+      <text x="520" y="386" text-anchor="middle" fill="#786d58" font-size="9.5">appoints DO, FSO &amp; Food Analyst (non-delegable — S.30(3))</text>
+
+      <line x1="520" y1="390" x2="520" y2="412" stroke="#5c7a94" stroke-width="1.2"/>
+      <line x1="200" y1="412" x2="840" y2="412" stroke="#5c7a94" stroke-width="1.2"/>
+      <line x1="200" y1="412" x2="200" y2="430" stroke="#5c7a94" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <line x1="520" y1="412" x2="520" y2="430" stroke="#5c7a94" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <line x1="840" y1="412" x2="840" y2="430" stroke="#5c7a94" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+
+      <!-- Designated Officer -->
+      <rect x="80" y="432" width="240" height="66" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="200" y="452" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">Designated Officer</text>
+      <text x="200" y="468" text-anchor="middle" fill="#786d58" font-size="9.5">S.36 · ≥ Sub-Divisional Officer</text>
+      <text x="200" y="480" text-anchor="middle" fill="#786d58" font-size="9.5">1 per district · issues/cancels licences</text>
+      <text x="200" y="492" text-anchor="middle" fill="#786d58" font-size="9.5">recommends prosecution sanction</text>
+
+      <!-- Food Safety Officer -->
+      <rect x="400" y="432" width="240" height="66" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="520" y="452" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">Food Safety Officer</text>
+      <text x="520" y="468" text-anchor="middle" fill="#786d58" font-size="9.5">S.37–39 · field inspector</text>
+      <text x="520" y="480" text-anchor="middle" fill="#786d58" font-size="9.5">samples, seizes, inspects premises</text>
+      <text x="520" y="492" text-anchor="middle" fill="#786d58" font-size="9.5">personally liable for malicious seizure</text>
+
+      <!-- Food Analyst -->
+      <rect x="720" y="432" width="240" height="66" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="840" y="452" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">Food Analyst</text>
+      <text x="840" y="468" text-anchor="middle" fill="#786d58" font-size="9.5">S.45–46 · lab scientist</text>
+      <text x="840" y="480" text-anchor="middle" fill="#786d58" font-size="9.5">analyses samples, reports in 14 days</text>
+      <text x="840" y="492" text-anchor="middle" fill="#786d58" font-size="9.5">must have no financial interest in trade</text>
+
+      <!-- reporting lines back up -->
+      <line x1="200" y1="498" x2="200" y2="520" stroke="#6d8a6a" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="840" y1="498" x2="840" y2="520" stroke="#6d8a6a" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="200" y1="520" x2="840" y2="520" stroke="#6d8a6a" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="520" y="538" text-anchor="middle" fill="#6d8a6a" font-size="10" font-style="italic">reports / analysis results flow back to the Designated Officer (S.42, S.46)</text>
+
+      <!-- Adjudication branch -->
+      <line x1="520" y1="498" x2="520" y2="560" stroke="#b3452f" stroke-width="1.3" marker-end="url(#arrowhead)"/>
+      <text x="560" y="530" fill="#b3452f" font-size="10" font-style="italic">contraventions →</text>
+
+      <rect x="330" y="562" width="380" height="56" fill="#1d1613" stroke="#b3452f" stroke-width="1.6"/>
+      <text x="520" y="584" text-anchor="middle" fill="#d1633f" font-size="13" font-family="Fraunces" font-weight="600">Adjudicating Officer</text>
+      <text x="520" y="600" text-anchor="middle" fill="#a89d84" font-size="10">S.68 · ≥ Addl. District Magistrate · powers of a civil court</text>
+      <text x="520" y="612" text-anchor="middle" fill="#786d58" font-size="9.5">imposes monetary penalty, Ch. IX</text>
+
+      <line x1="520" y1="618" x2="520" y2="642" stroke="#b3452f" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <text x="600" y="636" fill="#786d58" font-size="9.5" font-style="italic">appeal, 30 days</text>
+
+      <rect x="330" y="644" width="380" height="56" fill="#1d1613" stroke="#b3452f" stroke-width="1.6"/>
+      <text x="520" y="666" text-anchor="middle" fill="#d1633f" font-size="13" font-family="Fraunces" font-weight="600">Food Safety Appellate Tribunal</text>
+      <text x="520" y="682" text-anchor="middle" fill="#a89d84" font-size="10">S.70–71 · Presiding Officer is/has been a District Judge</text>
+      <text x="520" y="694" text-anchor="middle" fill="#786d58" font-size="9.5">powers of a civil court · not bound by CPC</text>
+
+      <line x1="520" y1="700" x2="520" y2="724" stroke="#b3452f" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <text x="600" y="718" fill="#786d58" font-size="9.5" font-style="italic">appeal, 60 days</text>
+
+      <rect x="380" y="726" width="280" height="46" fill="#1d1613" stroke="#b3452f" stroke-width="1.6"/>
+      <text x="520" y="748" text-anchor="middle" fill="#d1633f" font-size="13" font-family="Fraunces" font-weight="600">High Court</text>
+      <text x="520" y="764" text-anchor="middle" fill="#a89d84" font-size="10">S.76 · bench of not less than 2 judges</text>
+
+      <!-- imprisonment branch -->
+      <line x1="200" y1="498" x2="200" y2="800" stroke="#b3452f" stroke-width="1.2" stroke-dasharray="4,3"/>
+      <line x1="200" y1="800" x2="330" y2="800" stroke="#b3452f" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+      <text x="140" y="600" fill="#786d58" font-size="9.5" transform="rotate(-90 140 600)">if imprisonment involved →</text>
+      <rect x="332" y="774" width="378" height="54" fill="#1d1613" stroke="#332e21" stroke-width="1.3"/>
+      <text x="521" y="795" text-anchor="middle" fill="#e9e2d0" font-size="12" font-weight="600">Judicial Magistrate / Special Court</text>
+      <text x="521" y="811" text-anchor="middle" fill="#786d58" font-size="9.5">S.42(4), S.73–74 · Ch.IX offences carrying imprisonment</text>
+    </svg>
+    <div class="cap">Fig. 1 — FSSAI &amp; state enforcement hierarchy, with the two parallel post-contravention tracks: civil penalty (Adjudicating Officer → FSAT → High Court) and criminal prosecution (Magistrate/Special Court), per Sections 4, 30, 36–37, 45, 68, 70–71 &amp; 42, 73–74.</div>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">WHY TWO TRACKS?</div>
+    <p>The FSS Act splits consequences into a <strong>civil/administrative track</strong> (Chapter IX offences that carry only a monetary "penalty" — Ss.50–58, 60–67 — go to the Adjudicating Officer, then FSAT, then High Court) and a <strong>criminal track</strong> (offences that carry "punishment" including imprisonment — chiefly S.59, unsafe food — go before a Judicial Magistrate or Special Court under ordinary criminal procedure, per the routing decision the Designated Officer and Commissioner make under Section 42(3)–(4)). Confusing "penalty" sections with "punishment" sections is one of the most common examination errors on this topic.</p>
+  </div>
+</section>
+<section class="block" id="state-machinery">
+  <div class="kicker"><span class="no">§ 04</span></div>
+  <h2 class="section-title">Offices &amp; Officers, Part II — The State Enforcement Chain</h2>
+  <p class="section-intro">This is where the Act actually touches a shopkeeper, a factory floor, or a restaurant kitchen. Four officers do all the work — the Commissioner sets state policy and sanctions prosecution, the Designated Officer runs each district, the Food Safety Officer does the sampling in the field, and the Food Analyst turns the sample into scientific evidence.</p>
+
+  <details class="accordion" open>
+    <summary><span>Commissioner of Food Safety — Section 30</span><span class="role">STATE HEAD</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.30(1)">
+        <p class="sec-text">The <strong>State Government</strong> appoints the Commissioner of Food Safety for efficient implementation of the Act within the State.</p>
+      </div>
+      <p><strong>Functions — S.30(2):</strong></p>
+      <ul>
+        <li>Prohibit, in the public interest, the manufacture/storage/distribution/sale of any food article across the State or any part of it, for up to one year (notified in the Official Gazette);</li>
+        <li>Survey industrial units to check compliance with FSSAI-notified standards;</li>
+        <li>Conduct training programmes for departmental staff and industry segments;</li>
+        <li>Ensure efficient, uniform, objective, accountable and transparent implementation of standards;</li>
+        <li><strong>Sanction prosecution for offences punishable with imprisonment</strong> (the Commissioner's single most exam-tested power);</li>
+        <li>Any other function the State Government prescribes in consultation with FSSAI.</li>
+      </ul>
+      <div class="callout">
+        <div class="lbl">S.30(3) — THE ONE POWER THE COMMISSIONER CANNOT DELEGATE</div>
+        <p>The Commissioner may delegate any power or function to a subordinate officer — <strong>except the power to appoint the Designated Officer, Food Safety Officer, or Food Analyst.</strong> Appointment of the three field-level offices is reserved non-delegably to the Commissioner personally.</p>
+      </div>
+      <p>Under Section 29(6), both the Commissioner and the Designated Officer additionally exercise the same powers as, and follow the same procedure as, a Food Safety Officer — so the hierarchy is cumulative, not exclusive.</p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Designated Officer — Section 36</span><span class="role">DISTRICT HEAD</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.3(h) / S.36(1)–(2)">
+        <p class="sec-text">"Designated Officer" means the officer appointed under Section 36. The Commissioner appoints, by order, a Designated Officer — not below the rank of a <strong>Sub-Divisional Officer</strong> — to be in charge of food safety administration in a specified area. There must be <strong>one Designated Officer for each district.</strong></p>
+      </div>
+      <p><strong>Functions — S.36(3):</strong></p>
+      <ul>
+        <li>Issue or cancel food business licences (a);</li>
+        <li>Prohibit sale of any article of food contravening the Act (b);</li>
+        <li>Receive reports/samples from the Food Safety Officer and get them analysed (c);</li>
+        <li>Recommend prosecution sanction to the Commissioner where imprisonment is possible (d);</li>
+        <li>Sanction or launch prosecution directly where only a fine is involved (e);</li>
+        <li>Maintain records of FSO inspections and action taken (f);</li>
+        <li>Investigate written complaints of contravention (g), and written complaints made against the FSO (h);</li>
+        <li>Perform any other duty entrusted by the Commissioner (i).</li>
+      </ul>
+      <p><strong>Qualification (FSS Rules, 2011, Para 2.1.2):</strong> a whole-time officer, not below Sub-Divisional Officer rank, holding at minimum a Bachelor's degree in Science with Chemistry, or an equivalent FSO qualification; must complete training within six months of appointment; functions under the overall supervision of the District Collector/Magistrate. The DO also refunds analysis fees to a purchaser under Section 40(1) and has emergency administrative power to suspend/cancel a licence where the Food Analyst's report shows grave threat to public health.</p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Food Safety Officer — Sections 37–39</span><span class="role">FIELD INSPECTOR</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.3(t) / S.37">
+        <p class="sec-text">"Food Safety Officer" means an officer appointed under Section 37. The Commissioner appoints, by notification, persons having the prescribed qualification as FSOs for assigned local areas; a State Government may additionally authorise any qualified State officer to perform FSO functions within a specified jurisdiction.</p>
+      </div>
+      <p><strong>Qualification (FSS Rules, 2011, Para 2.1.3):</strong> a whole-time officer holding a degree in Food Technology, Dairy Technology, Biotechnology, Oil Technology, Agricultural Science, Veterinary Science, Bio-Chemistry, Microbiology, a Master's in Chemistry, a degree in Medicine, or any other Centrally-notified equivalent qualification.</p>
+
+      <h5 style="font-family:var(--mono);font-size:.8rem;color:var(--amber-bright);margin:20px 0 8px;">Powers — Section 38 (the working toolkit)</h5>
+      <ul>
+        <li><strong>Sample (S.38(1)(a)):</strong> take a sample of any food intended for/sold for human consumption, or found on suspect premises, where it may be needed as evidence;</li>
+        <li><strong>Seize (S.38(1)(b)–(c)):</strong> seize contravening food and keep it in the food business operator's safe custody against a bond, sending a sample for analysis;</li>
+        <li><strong>Enter and inspect (S.38(2)):</strong> enter and inspect manufacturing/storage/sale premises and take samples of food or adulterant;</li>
+        <li><strong>Destroy perishables (S.38(4)):</strong> destroy a seized perishable article found unfit for consumption, after written notice to the FBO;</li>
+        <li><strong>Search per CrPC (S.38(5)):</strong> follow CrPC search-warrant procedure "as far as may be" when entering and inspecting;</li>
+        <li><strong>Seize unexplained adulterant + documents (S.38(6)):</strong> seize adulterant found in a manufacturer/dealer's possession that they cannot satisfactorily account for, plus relevant books of account (only with superior's prior approval), and place the <strong>burden of proof on the possessor</strong> to show it was not meant for adulteration (S.38(9));</li>
+        <li><strong>Witness requirement (S.38(7)):</strong> call independent witnesses to be present and sign whenever sampling, seizing, or destroying;</li>
+        <li><strong>Return documents within 30 days (S.38(8))</strong> after taking certified copies.</li>
+      </ul>
+      <div class="statute" data-tag="S.39 — PERSONAL LIABILITY">
+        <p class="sec-text">An FSO who <strong>vexatiously and without reasonable ground</strong> seizes food/adulterant, or otherwise injures a person without reasonable belief the act was necessary for duty, is personally guilty of an offence — penalty up to <strong>₹1 lakh</strong>. Mirror-image protection: a person who makes a proven <strong>false complaint</strong> against an FSO is punishable with a fine of not less than ₹50,000, extendable to ₹1 lakh — a deliberate two-way check against both officer overreach and vexatious trade complaints.</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Food Analyst — Sections 45–46</span><span class="role">LABORATORY SCIENTIST</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.45">
+        <p class="sec-text">The Commissioner of Food Safety appoints, by notification, qualified persons as <strong>Food Analysts</strong> for assigned local areas. Critically, <strong>no person with any financial interest in the manufacture or sale of any food article can be appointed</strong> — a direct conflict-of-interest bar. Different analysts may be appointed for different categories of food.</p>
+      </div>
+      <p><strong>Functions — Section 46:</strong></p>
+      <ul>
+        <li>On receiving a sealed sample, compare its seal against the specimen impression and note the seal's condition; if the container is broken/unfit, inform the Designated Officer within 7 days and requisition the second part of the sample (S.46(1));</li>
+        <li>Analyse every sample received (S.46(2));</li>
+        <li>Report <strong>within 14 days</strong> of receipt — four copies to the Designated Officer (with a copy to the Commissioner) for samples taken under S.38/S.47, or a copy to the purchaser (with a copy to the DO) for purchaser-initiated samples under S.40 (S.46(3)); if analysis cannot finish in 14 days, must inform the DO and Commissioner with reasons and a revised timeline;</li>
+        <li><strong>Appeal (S.46(4)):</strong> an appeal against the Food Analyst's report lies to the Designated Officer, who may refer the matter to the notified <strong>referral food laboratory</strong> for a fresh opinion.</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="callout danger">
+    <div class="lbl">EXAM ANGLE — THE 4-WAY SAMPLE SPLIT (SECTION 47)</div>
+    <p>When an FSO takes a food sample, it is divided into <strong>four parts</strong>: one goes to the Food Analyst for testing, <strong>two</strong> stay with the Designated Officer in safe custody (as a reserve for referral testing), and the fourth goes to an accredited private laboratory <strong>only if the food business operator requests it</strong>. If the FBO's private lab result conflicts with the Food Analyst's result, the Designated Officer sends a reserve part to the <strong>referral laboratory</strong>, whose finding is final (S.47(1)(c) proviso). This four-way split is a favourite short-answer question because it builds in a check against a lone government analyst's finding being unchallengeable.</p>
+  </div>
+</section>
+<section class="block" id="licensing">
+  <div class="kicker"><span class="no">§ 05</span></div>
+  <h2 class="section-title">Licensing &amp; Registration — Section 31</h2>
+  <p class="section-intro">No person may run a food business without either a licence or a registration — the Act uses a two-track model calibrated to the scale of the business.</p>
+
+  <div class="statute" data-tag="S.31(1)–(2) — TWO TRACKS">
+    <p class="sec-text"><strong>General rule (S.31(1)):</strong> no person shall commence or carry on any food business except under a licence.<br><br>
+    <strong>Exception — registration instead (S.31(2)):</strong> a petty manufacturer who himself manufactures/sells food, a petty retailer, hawker, itinerant vendor, temporary stall-holder, or small-scale/cottage/tiny food business operator need only <strong>register</strong> with the prescribed authority in the prescribed manner — a lighter-touch compliance track for the smallest operators, without compromising the availability of safe food or consumer interests.</p>
+  </div>
+
+  <h4 class="minor-title">THE LICENSING PROCEDURE, STEP BY STEP</h4>
+  <ol>
+    <li><strong>Application (S.31(3)):</strong> the applicant applies to the <strong>Designated Officer</strong> in the prescribed form, with prescribed particulars and fees.</li>
+    <li><strong>Decision (S.31(4)):</strong> the DO either grants the licence, or — after giving the applicant a hearing and recording reasons in writing — refuses it in the interest of public health, supplying a copy of the order.</li>
+    <li><strong>Deemed licence on delay:</strong> if the DO neither issues nor rejects the application within <strong>two months</strong>, the applicant may start business after that period; the DO cannot then refuse the licence outright but may issue an Improvement Notice under Section 32 instead.</li>
+    <li><strong>Form of licence (S.31(5)–(7)):</strong> a single licence can cover multiple food articles and multiple establishments in the same area; separate applications/licences are required for premises in different areas.</li>
+    <li><strong>Appeal (S.31(8)):</strong> an appeal against refusal to grant a licence lies to the <strong>Commissioner of Food Safety</strong>.</li>
+    <li><strong>Validity &amp; renewal (S.31(9)):</strong> the licence runs for the specified period; if a renewal application is filed before expiry, the licence continues in force until the renewal application is decided.</li>
+    <li><strong>Survivorship (S.31(10)):</strong> on the licensee's death, the licence subsists for the benefit of the personal representative/family member for three months (extendable by the DO).</li>
+  </ol>
+
+  <details class="accordion">
+    <summary><span>Improvement Notices &amp; Prohibition Orders — Sections 32–34</span><span class="role">GRADED ENFORCEMENT</span></summary>
+    <div class="accordion-body">
+      <p><strong>Improvement Notice (S.32):</strong> where the DO has reasonable grounds to believe an FBO has failed to comply with applicable regulations, he serves a notice stating the grounds, the specific failure, the corrective measures required, and a deadline (not less than 14 days). Non-compliance → licence <strong>suspension</strong>; continued non-compliance after a show-cause opportunity → licence <strong>cancellation</strong> (though the DO may suspend forthwith in the public interest, recording reasons). An aggrieved person may appeal to the Commissioner within 15 days, whose decision is final.</p>
+      <p><strong>Prohibition Order (S.33):</strong> where a court convicts an FBO and is satisfied a health risk exists, it may — after a hearing — prohibit use of the process/treatment, the premises/equipment for that business or any similar business, or even bar the individual from managing any food business. Knowing contravention of such an order is punishable with a fine up to <strong>₹3 lakh.</strong> The order lifts once the FBO satisfies the concerned FSO (with DO approval) that sufficient corrective measures have been taken, or on a court application made no earlier than six months after the order.</p>
+      <p><strong>Emergency Prohibition Notice/Order (S.34):</strong> where the DO is satisfied a health-risk condition exists, he applies to the Commissioner for an emergency prohibition — at least one day's prior notice to the FBO is mandatory. Knowing contravention of an emergency order carries <strong>imprisonment up to 2 years and fine up to ₹2 lakh.</strong></p>
+    </div>
+  </details>
+</section>
+
+<section class="block" id="procedure">
+  <div class="kicker"><span class="no">§ 06</span></div>
+  <h2 class="section-title">From Sampling to Prosecution — Sections 38, 40, 42 &amp; 47</h2>
+  <p class="section-intro">This is the procedural spine examiners test most often, because it is the sequence that actually convicts (or acquits) an accused: exactly how a sample becomes evidence, and exactly who decides whether the case goes to a magistrate or to the Adjudicating Officer.</p>
+
+  <h4 class="minor-title">THE PURCHASER'S PARALLEL ROUTE — SECTION 40</h4>
+  <div class="statute" data-tag="S.40(1)–(2)">
+    <p class="sec-text">Nothing in the Act stops <strong>any purchaser</strong> (other than an FSO) from privately getting a food article analysed by the Food Analyst on payment of a fee, provided the purchaser informs the food business operator at the time of purchase of the intention to do so. If the resulting report shows non-compliance, the purchaser is entitled to a <strong>refund of the analysis fee</strong>. Where the Food Analyst's report confirms a contravention, it is forwarded to the Designated Officer, who follows the ordinary Section 42 prosecution procedure exactly as if an FSO had drawn the sample — giving an ordinary consumer a direct, self-service trigger for enforcement action, independent of waiting for a regulatory inspection.</p>
+  </div>
+
+  <div id="flowchart"></div>
+  <div class="diagram-frame">
+    <svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+      <defs>
+        <marker id="fah" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <polygon points="0 0, 7 3, 0 6" fill="#8a6a2a"/>
+        </marker>
+      </defs>
+      <rect x="30" y="20" width="220" height="60" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="140" y="44" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">FSO samples/seizes</text>
+      <text x="140" y="60" text-anchor="middle" fill="#786d58" font-size="9.5">S.38 · sample split 4 ways, S.47</text>
+      <text x="140" y="72" text-anchor="middle" fill="#786d58" font-size="9.5">(or purchaser initiates, S.40)</text>
+
+      <line x1="250" y1="50" x2="300" y2="50" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#fah)"/>
+
+      <rect x="300" y="20" width="220" height="60" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="410" y="44" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">Food Analyst tests</text>
+      <text x="410" y="60" text-anchor="middle" fill="#786d58" font-size="9.5">reports within 14 days, S.46(3)</text>
+      <text x="410" y="72" text-anchor="middle" fill="#786d58" font-size="9.5">4 copies → Designated Officer</text>
+
+      <line x1="520" y1="50" x2="570" y2="50" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#fah)"/>
+
+      <rect x="570" y="20" width="240" height="60" fill="#16140f" stroke="#8fae8a" stroke-width="1.4"/>
+      <text x="690" y="44" text-anchor="middle" fill="#e9e2d0" font-size="12.5" font-weight="600">Designated Officer scrutinises</text>
+      <text x="690" y="60" text-anchor="middle" fill="#786d58" font-size="9.5">S.42(3): imprisonment or fine-only?</text>
+
+      <line x1="690" y1="80" x2="690" y2="110" stroke="#8a6a2a" stroke-width="1.2"/>
+      <line x1="400" y1="110" x2="900" y2="110" stroke="#8a6a2a" stroke-width="1.2"/>
+      <line x1="400" y1="110" x2="400" y2="130" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#fah)"/>
+      <line x1="900" y1="110" x2="900" y2="130" stroke="#8a6a2a" stroke-width="1.2" marker-end="url(#fah)"/>
+
+      <!-- LEFT: fine only -->
+      <rect x="240" y="132" width="320" height="54" fill="#16140f" stroke="#6d8a6a" stroke-width="1.3"/>
+      <text x="400" y="153" text-anchor="middle" fill="#8fae8a" font-size="12" font-weight="600">Fine-only contravention</text>
+      <text x="400" y="169" text-anchor="middle" fill="#786d58" font-size="9.5">DO directly sanctions/launches, S.42(3)</text>
+      <text x="400" y="180" text-anchor="middle" fill="#786d58" font-size="9.5">e.g. Ss.50–58, 60–67</text>
+
+      <line x1="400" y1="186" x2="400" y2="212" stroke="#6d8a6a" stroke-width="1.2" marker-end="url(#fah)"/>
+      <rect x="240" y="214" width="320" height="50" fill="#1d1613" stroke="#6d8a6a" stroke-width="1.4"/>
+      <text x="400" y="235" text-anchor="middle" fill="#8fae8a" font-size="12" font-weight="600">Adjudicating Officer</text>
+      <text x="400" y="251" text-anchor="middle" fill="#786d58" font-size="9.5">≥ Addl. District Magistrate, S.68</text>
+
+      <!-- RIGHT: imprisonment path -->
+      <rect x="740" y="132" width="320" height="54" fill="#16140f" stroke="#d1633f" stroke-width="1.3"/>
+      <text x="900" y="153" text-anchor="middle" fill="#d1633f" font-size="12" font-weight="600">Imprisonment-linked contravention</text>
+      <text x="900" y="169" text-anchor="middle" fill="#786d58" font-size="9.5">DO recommends within 14 days, S.42(3)</text>
+      <text x="900" y="180" text-anchor="middle" fill="#786d58" font-size="9.5">→ to Commissioner for sanction</text>
+
+      <line x1="900" y1="186" x2="900" y2="212" stroke="#d1633f" stroke-width="1.2" marker-end="url(#fah)"/>
+      <rect x="740" y="214" width="320" height="66" fill="#1d1613" stroke="#d1633f" stroke-width="1.4"/>
+      <text x="900" y="234" text-anchor="middle" fill="#d1633f" font-size="12" font-weight="600">Commissioner decides forum, S.42(4)</text>
+      <text x="900" y="250" text-anchor="middle" fill="#786d58" font-size="9.5">≤ 3 yrs imprisonment → ordinary court</text>
+      <text x="900" y="262" text-anchor="middle" fill="#786d58" font-size="9.5">&gt; 3 yrs → Special Court (if notified)</text>
+      <text x="900" y="274" text-anchor="middle" fill="#786d58" font-size="9.5">FSO launches prosecution, S.42(5)</text>
+
+      <!-- convergence to results -->
+      <line x1="400" y1="264" x2="400" y2="300" stroke="#6d8a6a" stroke-width="1.1" stroke-dasharray="3,3"/>
+      <line x1="900" y1="280" x2="900" y2="300" stroke="#d1633f" stroke-width="1.1" stroke-dasharray="3,3"/>
+      <line x1="400" y1="300" x2="900" y2="300" stroke="#786d58" stroke-width="1" stroke-dasharray="3,3"/>
+      <text x="650" y="316" text-anchor="middle" fill="#786d58" font-size="10" font-style="italic">S.65 — compensation for injury/death may be ordered on either track</text>
+
+      <rect x="330" y="330" width="340" height="60" fill="#1d1613" stroke="#332e21" stroke-width="1.2"/>
+      <text x="500" y="352" text-anchor="middle" fill="#e9e2d0" font-size="12">Appeal: Adjudicating Officer's order</text>
+      <text x="500" y="368" text-anchor="middle" fill="#786d58" font-size="9.5">→ Food Safety Appellate Tribunal (30 days)</text>
+      <text x="500" y="380" text-anchor="middle" fill="#786d58" font-size="9.5">→ High Court (60 days), bench of ≥2 judges</text>
+
+      <rect x="700" y="330" width="340" height="60" fill="#1d1613" stroke="#332e21" stroke-width="1.2"/>
+      <text x="870" y="352" text-anchor="middle" fill="#e9e2d0" font-size="12">Appeal: Magistrate/Special Court order</text>
+      <text x="870" y="368" text-anchor="middle" fill="#786d58" font-size="9.5">→ ordinary criminal appeal under CrPC</text>
+      <text x="870" y="380" text-anchor="middle" fill="#786d58" font-size="9.5">to Sessions Court / High Court</text>
+    </svg>
+    <div class="cap">Fig. 2 — The sampling-to-prosecution procedure and its fork at Section 42(3)–(4) between the civil-penalty track and the criminal-prosecution track.</div>
+  </div>
+</section>
+<section class="block" id="offences">
+  <div class="kicker"><span class="no">§ 07</span></div>
+  <h2 class="section-title">Offences &amp; Penalties — Chapter IX (Sections 48–67)</h2>
+  <p class="section-intro">Twenty sections, all reproduced from the bare Act. Two general provisions frame the chapter; eighteen create specific offences graded from a mild extraneous-matter fine to life imprisonment for causing death through unsafe food.</p>
+
+  <details class="accordion">
+    <summary><span>S.48 &amp; S.49 — The two framing provisions</span><span class="role">GENERAL</span></summary>
+    <div class="accordion-body">
+      <p><strong>S.48 — General provisions relating to offences:</strong> defines the four ways food is rendered injurious — adding a substance, using a substance as an ingredient, abstracting a constituent, or subjecting food to any other process — done with knowledge it may be sold/distributed for consumption. S.48(2) lists the factors relevant to whether food is "unsafe": normal conditions of use and handling; label/consumer information; probable cumulative toxic effects; sensitivities of the category of consumer targeted; and cumulative effect of ordinary-quantity consumption. A proviso protects <strong>primary food</strong> whose quality has fallen below standard solely due to <strong>natural causes beyond human control</strong> — such food is not deemed unsafe/sub-standard/extraneous-matter-containing.</p>
+      <p><strong>S.49 — General provisions relating to penalty:</strong> when fixing the quantum of penalty, the Adjudicating Officer or Tribunal must have regard to: the gain/unfair advantage made (a); the loss caused to any person (b); the repetitive nature of the contravention (c); whether the contravention was without the accused's knowledge (d); and any other relevant factor (e) — a structured sentencing-guideline template unusual for Indian regulatory legislation of this vintage.</p>
+    </div>
+  </details>
+
+  <div class="tbl-wrap">
+    <div class="tbl-caption" style="padding:10px 14px 0;">TABLE — CHAPTER IX OFFENCES (VERBATIM FROM THE BARE ACT)</div>
+    <table>
+      <thead>
+        <tr><th class="sec-num">Section</th><th>Offence</th><th>Penalty / Punishment</th><th>Key ingredient</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="sec-num">S.50</td><td>Selling food not of the nature/substance/quality demanded by the purchaser</td><td class="penalty">Penalty ≤ ₹5 lakh (≤ ₹25,000 for S.31(2) petty operators)</td><td>Prejudice to purchaser's demand</td></tr>
+        <tr><td class="sec-num">S.51</td><td>Manufacture/store/sell/distribute/import sub-standard food</td><td class="penalty">Penalty ≤ ₹5 lakh</td><td>Falls short of standard, not unsafe</td></tr>
+        <tr><td class="sec-num">S.52</td><td>Manufacture/store/sell/distribute/import misbranded food</td><td class="penalty">Penalty ≤ ₹3 lakh</td><td>Label/description defect, S.3(zf)</td></tr>
+        <tr><td class="sec-num">S.53</td><td>Publishing a misleading advertisement (false description, or misleads as to nature/substance/quality, or false guarantee)</td><td class="penalty">Penalty ≤ ₹10 lakh</td><td>Highest simple-penalty figure in the Chapter</td></tr>
+        <tr><td class="sec-num">S.54</td><td>Manufacture/store/sell/distribute/import food containing extraneous matter</td><td class="penalty">Penalty ≤ ₹1 lakh</td><td>Mildest defect tier, S.3(i)</td></tr>
+        <tr><td class="sec-num">S.55</td><td>Failure, without reasonable ground, to comply with FSO's directions</td><td class="penalty">Penalty ≤ ₹2 lakh</td><td>Non-cooperation with enforcement</td></tr>
+        <tr><td class="sec-num">S.56</td><td>Manufacture/processing food under unhygienic or unsanitary conditions</td><td class="penalty">Penalty ≤ ₹1 lakh</td><td>Process/hygiene defect</td></tr>
+        <tr><td class="sec-num">S.57(1)(i)</td><td>Import/manufacture/store/sell/distribute an adulterant <strong>not</strong> injurious to health</td><td class="penalty">Penalty ≤ ₹2 lakh</td><td>Mere possession/dealing, no defence that held on another's behalf, S.57(2)</td></tr>
+        <tr><td class="sec-num">S.57(1)(ii)</td><td>Same, where the adulterant <strong>is</strong> injurious to health</td><td class="penalty">Penalty ≤ ₹10 lakh</td><td>Graded by health-risk of the adulterant itself</td></tr>
+        <tr><td class="sec-num">S.58</td><td>Residuary — any contravention for which no specific penalty is provided</td><td class="penalty">Penalty ≤ ₹2 lakh</td><td>Catch-all clause</td></tr>
+        <tr><td class="sec-num">S.59(i)</td><td>Unsafe food — no injury results</td><td class="penalty">Imprisonment ≤ 6 months + fine ≤ ₹1 lakh</td><td rowspan="4">Only offence in the Chapter carrying compulsory imprisonment exposure, graded strictly by actual injury caused</td></tr>
+        <tr><td class="sec-num">S.59(ii)</td><td>Unsafe food — non-grievous injury</td><td class="penalty">Imprisonment ≤ 1 year + fine ≤ ₹3 lakh</td></tr>
+        <tr><td class="sec-num">S.59(iii)</td><td>Unsafe food — grievous injury</td><td class="penalty">Imprisonment ≤ 6 years + fine ≤ ₹5 lakh</td></tr>
+        <tr><td class="sec-num">S.59(iv)</td><td>Unsafe food — death</td><td class="penalty">Imprisonment ≥ 7 years, extendable to life + fine ≥ ₹10 lakh</td></tr>
+        <tr><td class="sec-num">S.60</td><td>Retaining, removing or tampering with seized items without FSO's permission</td><td class="penalty">Imprisonment ≤ 6 months + fine ≤ ₹2 lakh</td><td>Interference with evidence</td></tr>
+        <tr><td class="sec-num">S.61</td><td>Providing information/documents known to be false or misleading</td><td class="penalty">Imprisonment ≤ 3 months + fine ≤ ₹2 lakh</td><td>Deceiving the regulator directly</td></tr>
+        <tr><td class="sec-num">S.62</td><td>Obstructing, impersonating, threatening, intimidating or assaulting an FSO without reasonable excuse</td><td class="penalty">Imprisonment ≤ 3 months + fine ≤ ₹1 lakh</td><td>Mirrors S.39's protection of the officer</td></tr>
+        <tr><td class="sec-num">S.63</td><td>Carrying on food business without a licence (where licensing, not mere registration, is required)</td><td class="penalty">Imprisonment ≤ 6 months + fine ≤ ₹5 lakh</td><td>The only unlicensed-operation offence</td></tr>
+        <tr><td class="sec-num">S.64</td><td>Repeat conviction for the same offence</td><td class="penalty">Up to <strong>double</strong> the first-conviction punishment (capped at the statutory maximum) + daily fine ≤ ₹1 lakh for continuing offences + mandatory licence cancellation; court may order "public shaming" publication at offender's cost</td><td>Recidivism multiplier</td></tr>
+        <tr><td class="sec-num">S.65</td><td>Compensation for injury/death of a consumer</td><td class="penalty">Death: not less than ₹5 lakh · Grievous injury: up to ₹3 lakh · Other injury: up to ₹1 lakh (interim relief to next-of-kin within 30 days; full payment within 6 months)</td><td>Victim compensation, separate from the S.59 fine itself</td></tr>
+        <tr><td class="sec-num">S.66</td><td>Offences by companies</td><td class="penalty">Company + every person in charge of/responsible for its conduct deemed guilty; individual escapes liability only by proving lack of knowledge or due diligence; consenting/negligent directors/managers also individually liable</td><td>Vicarious + attributed corporate liability</td></tr>
+        <tr><td class="sec-num">S.67</td><td>Contravention in case of imported food</td><td class="penalty">Liability under FSS Act <strong>in addition to</strong> penalties under the Foreign Trade (Development &amp; Regulation) Act, 1992 and the Customs Act, 1962</td><td>Cumulative, not substitutive, liability</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout danger">
+    <div class="lbl">EXAM ANGLE — SECTION 59 IS THE ONLY SECTION THAT SCALES PUNISHMENT TO HARM</div>
+    <p>Every other Chapter IX offence carries a single fixed monetary ceiling regardless of actual consequence. Section 59 alone has a four-step ladder tied strictly to the injury actually caused — no injury, non-grievous injury, grievous injury, or death — culminating in a <strong>mandatory minimum of seven years</strong>, extendable to life imprisonment, with a mandatory minimum fine of ₹10 lakh where death results. This is precisely the provision the Supreme Court held, in <em>Ram Nath v. State of U.P.</em> (2024) — see the case dossier below — must be used <strong>in place of</strong> IPC Sections 272–273 wherever both could apply, because it is "more stringent" and Section 89 FSSA gives it an overriding effect.</p>
+  </div>
+
+  <h4 class="minor-title">S.66 — OFFENCES BY COMPANIES, IN DETAIL</h4>
+  <div class="statute-grid">
+    <div class="statute" data-tag="S.66(1) — DEFAULT RULE">
+      <p class="sec-text">Where a company commits an offence, <strong>every person in charge of, and responsible to, the company for the conduct of its business</strong> at the time — as well as the company itself — is deemed guilty and liable to be proceeded against. Where the company has separate establishments/branches/units, the Head or in-charge <strong>nominated by the company as responsible for food safety</strong> for that unit is liable for contraventions there. A due-diligence/no-knowledge defence is available.</p>
+    </div>
+    <div class="statute" data-tag="S.66(2) — CONSENT/CONNIVANCE/NEGLECT">
+      <p class="sec-text">Independently of sub-section (1), where it is <strong>proved</strong> the offence was committed with the <strong>consent or connivance of</strong>, or is <strong>attributable to neglect on the part of</strong>, any director, manager, secretary or other officer, that individual is also deemed guilty — regardless of whether they were "in charge" under sub-section (1). "Company" includes a firm; "director" in relation to a firm means a partner.</p>
+    </div>
+  </div>
+</section>
+<section class="block" id="adjudication">
+  <div class="kicker"><span class="no">§ 08</span></div>
+  <h2 class="section-title">Adjudication &amp; the Food Safety Appellate Tribunal — Chapter X (Ss. 68–76)</h2>
+  <p class="section-intro">Chapter IX creates the offences; Chapter X builds the specialised forum that decides them and the appeal ladder above it.</p>
+
+  <details class="accordion" open>
+    <summary><span>Adjudicating Officer — Section 68</span><span class="role">FIRST FORUM</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.68">
+        <p class="sec-text"><strong>S.68(1):</strong> an officer <strong>not below the rank of Additional District Magistrate</strong> of the district where the alleged offence occurred is notified by the State Government as the Adjudicating Officer.<br><br>
+        <strong>S.68(2):</strong> after giving the person a reasonable opportunity to make representations, and if satisfied on inquiry that a contravention has occurred, the Adjudicating Officer imposes such penalty as he thinks fit under the relevant Chapter IX provision.<br><br>
+        <strong>S.68(3):</strong> the Adjudicating Officer has the <strong>powers of a civil court</strong>; all proceedings before him are deemed judicial proceedings within the meaning of Sections 193 and 228 IPC (giving false evidence / intentional insult or interruption to a public servant sitting in judicial proceeding), and he is deemed a court for the purposes of Sections 345–346 CrPC (compounding of offences).<br><br>
+        <strong>S.68(4):</strong> in fixing the penalty quantum, he must apply the Section 49 guidelines (gain made, loss caused, repetitiveness, knowledge, other relevant factors).</p>
+      </div>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Power to Compound Offences — Section 69</span><span class="role">SETTLEMENT</span></summary>
+    <div class="accordion-body">
+      <p>The Commissioner may empower the Designated Officer to accept, from <strong>petty manufacturers, retailers, hawkers, itinerant vendors and temporary stall-holders</strong> reasonably suspected of an offence, a composition sum in lieu of prosecution. On payment, any person in custody is discharged and no further proceedings follow. The composition sum is <strong>capped at ₹1 lakh</strong>, fixed with regard to the Section 49 guidelines. Crucially — <strong>no offence carrying a prescribed imprisonment</strong> can be compounded; compounding is available only for the smallest operators' fine-only contraventions.</p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Food Safety Appellate Tribunal — Sections 70–72</span><span class="role">APPELLATE FORUM</span></summary>
+    <div class="accordion-body">
+      <div class="statute" data-tag="S.70">
+        <p class="sec-text">The Central or State Government may, by notification, establish one or more <strong>Food Safety Appellate Tribunals</strong> to hear appeals from Adjudicating Officer decisions under Section 68. The Tribunal consists of a single <strong>Presiding Officer</strong>, who must be, or have been, a <strong>District Judge</strong>. Qualifications, appointment, tenure, salary and removal are centrally prescribed.</p>
+      </div>
+      <p><strong>Procedure and powers (S.71):</strong> the Tribunal is <strong>not bound by the Code of Civil Procedure, 1908</strong> but must be guided by principles of natural justice, and may regulate its own procedure including venue. It has the civil-court powers to summon and examine witnesses on oath, order discovery/production of documents (including electronic records), receive affidavit evidence, issue commissions for examining witnesses, review its own decisions, and dismiss for default or decide ex parte. Every Tribunal proceeding is a judicial proceeding under Sections 193/228 IPC, and for Section 196 IPC purposes it is deemed a civil court under Section 195 and Chapter XXVI CrPC. An appellant may appear in person or through a legal practitioner/authorised officer. The <strong>Limitation Act, 1963</strong> applies to Tribunal appeals.</p>
+      <div class="statute" data-tag="S.71(6) &amp; S.76 — APPEAL TO HIGH COURT">
+        <p class="sec-text">Any person aggrieved by a Tribunal decision may appeal to the <strong>High Court within 60 days</strong> of communication of the order (extendable by a further 60 days on sufficient cause) on any question of fact or law. Section 76 additionally provides that such an appeal is disposed of by a <strong>High Court bench of not less than two judges</strong> — a two-judge minimum unusual for a regulatory appeal and a strong signal of the seriousness Parliament attached to these disputes.</p>
+      </div>
+      <p><strong>Civil court barred (S.72):</strong> no civil court has jurisdiction over any matter the Adjudicating Officer or Tribunal is empowered to determine, and no court may grant an injunction against action taken under the Act — an ouster clause that channels every dispute through the Act's own forum.</p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary><span>Summary Trial, Special Courts &amp; Related Procedural Provisions — Sections 73–80</span><span class="role">CRIMINAL-TRACK MACHINERY</span></summary>
+    <div class="accordion-body">
+      <ul>
+        <li><strong>S.73 — Summary trial:</strong> offences not triable by a Special Court are tried summarily by a Judicial Magistrate First Class/Metropolitan Magistrate under CrPC Ss.262–265; a summary conviction can carry imprisonment up to one year, but the Magistrate must switch to a regular trial if a longer sentence may be warranted.</li>
+        <li><strong>S.74 — Special Courts and Public Prosecutor:</strong> Central/State Governments may, in the public interest, notify Special Courts (particularly for offences involving grievous injury or death) and appoint a Public Prosecutor.</li>
+        <li><strong>S.75 — Power to transfer cases to regular courts.</strong></li>
+        <li><strong>S.76 — Appeal</strong> (to the High Court from the Tribunal, per above).</li>
+        <li><strong>S.77 — Time limit for prosecutions</strong> under the Act.</li>
+        <li><strong>S.78 — Power of court to implead the manufacturer</strong> where a retailer/distributor is prosecuted, so liability can reach up the supply chain.</li>
+        <li><strong>S.79 — Magistrate's power to impose enhanced punishment</strong> in appropriate cases.</li>
+        <li><strong>S.80 — Defences which may or may not be allowed</strong> in a prosecution under the Act (e.g., calibrating how far a "guarantee" from a seller's supplier can exculpate the seller).</li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="callout">
+    <div class="lbl">S.89 — THE OVERRIDING-EFFECT CLAUSE</div>
+    <p>Tucked into Chapter XII (Miscellaneous), Section 89 provides that the FSS Act's provisions have effect <strong>"notwithstanding anything inconsistent therewith contained in any other law for the time being in force."</strong> This one line is the entire basis of the Supreme Court's 2024 ruling in <em>Ram Nath v. State of Uttar Pradesh</em> that Section 59 FSSA displaces Sections 272–273 IPC in food-adulteration prosecutions — discussed in full in the IPC/BNS section below and in its own case dossier.</p>
+  </div>
+</section>
+<section class="block" id="ipc-bns">
+  <div class="kicker"><span class="no">§ 09</span></div>
+  <h2 class="section-title">IPC ↔ BNS: The Older Criminal-Code Layer</h2>
+  <p class="section-intro">Before the FSS Act existed, food and drug adulteration were — and technically still are — offences under Chapter XIV of the Indian Penal Code, 1860 ("Of Offences Affecting the Public Health, Safety, Convenience, Decency and Morals"). Since 1 July 2024 the IPC has been replaced by the Bharatiya Nyaya Sanhita, 2023 (BNS), which renumbers and modestly re-penalises the same five offences. Both codes matter for this topic because the relationship between them and the FSS Act is now judicially settled — see Ram Nath's case below.</p>
+
+  <div class="tbl-wrap">
+    <div class="tbl-caption" style="padding:10px 14px 0;">TABLE — CORRESPONDENCE, IPC 1860 → BNS 2023</div>
+    <table>
+      <thead>
+        <tr><th class="sec-num">IPC (1860)</th><th class="sec-num">BNS (2023)</th><th>Offence</th><th>Punishment under IPC</th><th>Punishment under BNS</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sec-num">S.272</td><td class="sec-num">S.274</td>
+          <td>Adulteration of food or drink intended for sale — adulterating any article of food/drink so as to make it noxious, intending it be sold (or knowing it likely to be sold) as food/drink</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹1,000, or both</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹5,000, or both</td>
+        </tr>
+        <tr>
+          <td class="sec-num">S.273</td><td class="sec-num">S.275</td>
+          <td>Sale of noxious food or drink — selling, or offering/exposing for sale, any article rendered or become noxious, or unfit, as food/drink, knowing or having reason to believe it is noxious</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹1,000, or both</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹5,000, or both</td>
+        </tr>
+        <tr>
+          <td class="sec-num">S.274</td><td class="sec-num">S.276</td>
+          <td>Adulteration of drugs — adulterating a drug/medical preparation so as to lessen its efficacy, change its operation, or make it noxious, intending or knowing it likely to be sold/used for a medicinal purpose as if unadulterated</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹1,000, or both</td>
+          <td>Imprisonment ≤ 1 year, or fine ≤ ₹5,000, or both</td>
+        </tr>
+        <tr>
+          <td class="sec-num">S.275</td><td class="sec-num">S.277</td>
+          <td>Sale of adulterated drugs — selling, or offering/exposing for sale, a drug knowing it has been adulterated so as to lessen efficacy/change operation/render noxious, without disclosure</td>
+          <td>Imprisonment ≤ 6 months, or fine, or both</td>
+          <td>Imprisonment ≤ 1 year, or fine, or both (per parallel renumbering)</td>
+        </tr>
+        <tr>
+          <td class="sec-num">S.276</td><td class="sec-num">S.278</td>
+          <td>Sale of drug as a different drug or preparation — knowingly selling/offering/issuing a drug as a different drug or medical preparation</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹1,000, or both</td>
+          <td>Imprisonment ≤ 6 months, or fine ≤ ₹5,000, or both (per parallel renumbering)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">WHAT ACTUALLY CHANGED IN THE BNS RECAST</div>
+    <p>The BNS keeps the same conduct elements and the same imprisonment ceilings for food-adulteration offences (Ss.274–275 BNS) — the only change is that fines were <strong>quintupled</strong> (₹1,000 → ₹5,000) to correct for decades of monetary inflation since 1860. For drug-adulteration (S.276 BNS), Parliament also raised the imprisonment ceiling from 6 months to 1 year. None of these figures come close to the FSS Act's own penalty scale — which is precisely the doctrinal problem the courts and the Law Commission have had to resolve.</p>
+  </div>
+
+  <h3 class="sub-title" id="case-ramnath">Case Dossier — Ram Nath v. State of Uttar Pradesh</h3>
+  <div class="dossier">
+    <div class="dossier-head">
+      <div>
+        <div class="name">Ram Nath v. The State of Uttar Pradesh &amp; Ors.</div>
+        <div class="cite">Supreme Court of India · Criminal Appeal No. 472 of 2012 (with connected appeals) · 2024 INSC 138 / 2024 SCC OnLine SC 177 · decided 21–23 February 2024 · Bench: Abhay S. Oka &amp; Sanjay Karol, JJ.</div>
+      </div>
+      <div class="status">SUPPLEMENTARY — NOT IN DU MATERIAL</div>
+    </div>
+    <div class="dossier-body">
+      <h5>FACTS</h5>
+      <p>On 11 May 2010, the Uttar Pradesh Government issued an order directing prosecuting authorities to launch parallel prosecutions against food-business operators under <strong>both</strong> the Prevention of Food Adulteration Act, 1954 (and, after 2011, the FSS Act, 2006) <strong>and</strong> Sections 272/273 IPC for the very same act of food adulteration. The appellant and similarly situated accused persons across several consolidated Criminal Appeals and one Special Leave Petition challenged this dual-track prosecution, arguing that once the FSSA — a complete, self-contained code enacted specifically to regulate food safety — occupied the field, a simultaneous IPC prosecution for the same conduct was legally impermissible.</p>
+
+      <h5>ISSUE</h5>
+      <div class="issue-item">
+        <div class="q">Does the Food Safety and Standards Act, 2006 override Sections 272 and 273 of the IPC in matters of food adulteration, precluding simultaneous prosecution under both statutes for the same act?</div>
+      </div>
+
+      <div class="vs-split">
+        <div class="vs-col petitioner">
+          <div class="side-label">APPELLANTS' ARGUMENT</div>
+          <ul>
+            <li>The FSSA, 2006 is an exhaustive, self-contained regulatory code covering every stage of food production, sale and safety, with its own detailed procedural machinery (sampling, analysis, adjudication, appeal).</li>
+            <li>Section 89 FSSA expressly gives the Act an overriding effect over "any other law for the time being in force," which necessarily includes the IPC's general provisions on food/drink adulteration.</li>
+            <li>Section 59 FSSA covers the identical wrong (unsafe food) far more comprehensively and far more severely than Sections 272–273 IPC, so continuing an IPC prosecution alongside an FSSA one amounts to double jeopardy in substance and legislative redundancy in form.</li>
+          </ul>
+        </div>
+        <div class="vs-col respondent">
+          <div class="side-label">STATE'S ARGUMENT</div>
+          <ul>
+            <li>The IPC is a general penal code of general application; nothing in its text is expressly repealed by the FSSA, and general and special statutes can validly operate in their own spheres side by side.</li>
+            <li>Sections 272 and 273 IPC and Section 59 FSSA have different ingredients (IPC requiring specific intention/knowledge as to noxiousness; the FSSA turning on the statutory definition of "unsafe food"), so there is no true "inconsistency" triggering Section 89.</li>
+            <li>Simultaneous prosecution safeguards the State's ability to secure a conviction under whichever provision the evidence better supports.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h5>DECISION &amp; REASONING</h5>
+      <p>The Supreme Court held that Section 89 FSSA gives the Act an overriding effect over all other food-related laws, drawing an analogy to Section 26 of the General Clauses Act, 1897 (which permits punishment under either of two laws for the same act but bars punishment twice for the same offence). The Court reasoned that because the FSSA contains exhaustive substantive and procedural provisions specifically dealing with unsafe food — and because Section 59 FSSA is, on the Court's own assessment, "more stringent" than Sections 272–273 IPC for the same underlying wrong — the two cannot run in parallel. In the Court's words (as widely reported), <strong>"we have no manner of doubt that by virtue of Section 89 of the FSSA, Section 59 will override the provisions of Sections 272 and 273 of the IPC. Therefore, there will not be any question of simultaneous prosecution under both the statutes."</strong> The Court quashed the pending IPC prosecutions but left the authorities at liberty to proceed against the accused under the FSSA for offences under Section 59.</p>
+
+      <div class="principle-box">
+        <div class="lbl">PRINCIPLE ESTABLISHED</div>
+        <p>Where an act of food adulteration attracts both Sections 272–273 IPC (now Ss.274–275 BNS) and Section 59 of the FSS Act, 2006, the FSSA — being a complete, subsequent, and more stringent special code — overrides the IPC by virtue of Section 89 FSSA, and prosecution must proceed under the FSSA alone; simultaneous prosecution under both statutes for the same act is impermissible.</p>
+      </div>
+      <p class="verify-note verified">✓ Verified against multiple independent legal-reporting sources (LiveLaw, SCC Online, Verdictum, CaseMine) and cross-checked against the Supreme Court's own judgment text. This case does <strong>not</strong> appear in the WCC compilation or the LB-3034 course file examined for this project — it is included because it is the single most important recent authority tying the IPC/BNS provisions to the FSS Act, and any exhaustive answer on this topic should be able to invoke it.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">SO WHY STUDY IPC 272–276 / BNS 274–278 AT ALL?</div>
+    <p>Three reasons an examiner can still test them even after <em>Ram Nath</em>: (1) they remain <strong>good law on the statute books</strong> and apply of their own force to any food/drug adulteration that falls <em>outside</em> the FSS Act's field (e.g., non-food noxious drink cases, or drug adulteration where the Drugs and Cosmetics Act rather than the FSSA is the specialised code); (2) the Law Commission's 264th Report (below) specifically recommended reforming these very IPC sections, so they are part of the reform history of this topic; and (3) understanding why the FSSA needed an overriding clause in the first place requires understanding what it was overriding.</p>
+  </div>
+</section>
+<section class="block" id="case-nestle">
+  <div class="kicker"><span class="no">§ 10</span></div>
+  <h2 class="section-title">Case Dossiers</h2>
+  <p class="section-intro">Five judgments. The first is the only one formally prescribed by the DU syllabus for this topic, reproduced here in full detail from the actual course-material file; the rest are drawn from Krishna Murari Yadav's supplementary DU-LL.B. compilation or flagged as independent supplementary research.</p>
+
+  <div class="dossier">
+    <div class="dossier-head">
+      <div>
+        <div class="name">Nestlé India Ltd. v. The Food Safety and Standards Authority of India &amp; Ors.</div>
+        <div class="cite">High Court of Bombay · W.P.(L) No. 1688 of 2015 · Coram: V.M. Kanade &amp; B.P. Colabawalla, JJ. · decided 13 August 2015</div>
+      </div>
+      <div class="status prescribed">PRESCRIBED — DU OFFICIAL SYLLABUS</div>
+    </div>
+    <div class="dossier-body">
+
+      <h5>BACKGROUND — HOW MAGGI ENDED UP BANNED</h5>
+      <p>In May 2015, the Uttar Pradesh Food Safety Authority reported finding lead well above the permissible limit, and monosodium glutamate (MSG) despite a "No Added MSG" label, in samples of Nestlé's Maggi 2-Minute Noodles. On 4 June 2015 Nestlé voluntarily issued a press release announcing withdrawal of the product pending clarification, while maintaining the product was safe. The very next day, 5 June 2015, the CEO of FSSAI (Respondent No.2) passed an order (Exhibit-A) directing Nestlé to stop manufacture, sale and distribution of nine Maggi variants nationwide, and the Commissioner of Food Safety, Maharashtra (Respondent No.4) passed a parallel order (Exhibit-B). Nestlé challenged both orders by writ petition under Article 226 before the Bombay High Court.</p>
+
+      <h5>FACTS</h5>
+      <p>The petitioner sought quashing of the CEO's 5 June 2015 order and the Maharashtra Commissioner's parallel order, challenging them on five principal grounds: (i) both orders were passed in complete violation of natural justice — no show-cause notice was issued and no particulars of the adverse laboratory findings were disclosed before the ban; (ii) the food laboratories that tested the samples were either not NABL-accredited or not notified under Section 43 of the Act, and even where accredited, lacked specific accreditation for lead-testing in this product category; (iii) the product had not been tested according to its intended use (i.e., as reconstituted noodles, not the dry noodle cake alone); (iv) Nestlé's own accredited-laboratory tests showed lead well within permissible limits; and (v) an appeal under Section 46(4) was not a real alternative remedy since the impugned final orders had already pre-determined the very issue an appeal would raise.</p>
+
+      <h5>ISSUES FRAMED BY THE COURT</h5>
+      <div class="issue-item"><div class="q">I. Is the writ petition under Article 226 maintainable despite the alternative remedy of appeal under Section 46(4)?</div><div class="a"><strong>Held, yes.</strong> The impugned order was a ban, not merely a show-cause notice — the show-cause portion for cancelling product approval was only consequential to a ban already imposed in the same order. Alternative remedy is not an absolute bar where natural justice has been violated (relying on <em>Whirlpool Corporation v. Registrar of Trade Marks</em>).</div></div>
+      <div class="issue-item"><div class="q">II. Did Nestlé suppress facts or attempt to destroy evidence, disentitling it to relief?</div><div class="a"><strong>Held, no.</strong> Minutes of meetings — tendered across the bar and undisputed — showed Nestlé destroyed stock only pursuant to the Food Authority's own directions.</div></div>
+      <div class="issue-item"><div class="q">III. Could the ban rest on lead exceeding what Nestlé had represented in its product-approval application (0.1 ppm), even though it was below the Regulations' actual ceiling (2.5 ppm)?</div><div class="a"><strong>Held, no</strong> — answered in the negative. The Court called the Respondents' argument "preposterous," holding that Parliament-approved Regulations under Sections 92–93 cannot be overridden by a manufacturer's own product-approval representation; the statutory limit governs, not a self-declared figure.</div></div>
+      <div class="issue-item"><div class="q">IV. Does the Food Authority have unfettered discretion to fix ad hoc standards for proprietary foods, unbound by the Regulations' Schedules?</div><div class="a"><strong>Held, no</strong> — answered in the negative. Regulation 2.1.1(2) of the Contaminants, Toxins and Residues Regulations, 2011 fixes lead at <strong>2.5 ppm for "foods not specified"</strong> (a residuary category covering proprietary foods); accepting FSSAI's argument would render this entry — and the entire Parliamentary-approval mechanism under Section 93 — otiose.</div></div>
+      <div class="issue-item"><div class="q">V. Did Section 22 impose a complete ban on sale of the products in question?</div><div class="a">Left open — the Court found no need to decide this given its findings on other issues, expressly leaving it "to be argued in an appropriate case."</div></div>
+      <div class="issue-item"><div class="q">VI &amp; VII. Was there a natural-justice violation, and what was the source of statutory power for the impugned orders?</div><div class="a"><strong>Held, yes</strong> to the violation — no material was disclosed to Nestlé before the ban, and no real opportunity to respond was given. On source of power, the Court held the orders could only draw on Sections 10(5), 16(1), 16(5), 18, 22, 26, 28 and 29 read together, and that the impugned orders had not properly invoked or satisfied any of them.</div></div>
+      <div class="issue-item"><div class="q">VIII–XI. Were the testing laboratories properly accredited, could Nestlé's own lab reports be relied on, and was misbranding (the "No Added MSG" claim) established?</div><div class="a">The labs that tested the FSSAI samples were <strong>not shown to hold NABL accreditation for lead-testing specifically</strong>, so their reports could not be relied upon under Sections 3(p) and 43. On misbranding, the Court found <strong>no material</strong> that Nestlé had deliberately added MSG — glutamate occurs naturally in many foods — and noted Nestlé had already agreed to delete the "No Added MSG" claim, so the misbranding allegation could not survive; in any event, the maximum penalty for misbranding under <strong>Section 52 is only ₹3 lakh</strong>, disproportionate to a nationwide, indefinite product ban.</div></div>
+      <div class="issue-item"><div class="q">XII. Was the ban arbitrary, capricious and violative of Articles 14 and 19(1)(g)?</div><div class="a"><strong>Held, yes</strong> — answered in the affirmative. Combining the natural-justice violation, the invalid lab reports, non-compliance with the mandatory sampling procedure under Section 47(1), and the fact that Nestlé had already voluntarily recalled the product a day earlier, the Court found the ban arbitrary, non-transparent, and unconstitutional.</div></div>
+
+      <h5>ARGUMENTS OF THE PARTIES</h5>
+      <div class="vs-split">
+        <div class="vs-col petitioner">
+          <div class="side-label">NESTLÉ (PETITIONER) — SR. COUNSEL MR. IQBAL CHAGLA</div>
+          <ul>
+            <li>No show-cause notice or disclosure of adverse material before the ban — a clear breach of natural justice.</li>
+            <li>The testing laboratories lacked NABL accreditation specifically for lead-testing, so their reports were legally unreliable.</li>
+            <li>The product should have been tested as consumed (post-preparation), not merely as a dry noodle cake.</li>
+            <li>Nestlé's own accredited-lab results showed lead within the permissible 2.5 ppm limit.</li>
+            <li>The Section 46(4) appeal was not a genuine alternative remedy since the final orders had already pre-judged the very question an appeal would raise.</li>
+          </ul>
+        </div>
+        <div class="vs-col respondent">
+          <div class="side-label">FSSAI / STATE (RESPONDENTS) — SR. COUNSEL MR. DARIUS KHAMBATTA; MR. MEHMOOD PRACHA FOR RESPONDENT NO.2</div>
+          <ul>
+            <li>A manufacturer's own representation in its product-approval application (0.1 ppm) creates a "trust," breach of which justifies a ban even if the statutory ceiling (2.5 ppm) was not technically breached.</li>
+            <li>For proprietary/non-standardised foods under Section 22, the Food Authority has unfettered discretion over applicable safety limits, independent of the Regulations' general Schedules.</li>
+            <li>MSG was found despite the "No Added MSG" declaration, amounting to misbranding under Section 52.</li>
+            <li>One of the nine variants (Maggi Vegetable Atta Noodles) lacked product approval altogether.</li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:6px;">The Court described the Respondents' "unfettered discretion" argument as one that left it "amazed and astonished," holding it would render the Parliament-approved Regulations under Sections 92–93 meaningless.</p>
+
+      <h5>DECISION</h5>
+      <p>The Bombay High Court <strong>allowed the petition and quashed both impugned orders</strong>, holding them arbitrary and violative of Articles 14 and 19(1)(g), for four cumulative reasons: (a) breach of natural justice, compounded by the fact that Nestlé had already voluntarily recalled the product; (b) reliance on laboratory reports from labs not properly accredited for lead-testing; (c) non-compliance with the mandatory four-way sampling procedure under Section 47(1); and (d) the misbranding allegation could not independently justify an indefinite nationwide ban given its modest ₹3 lakh statutory ceiling under Section 52.</p>
+      <p>However, mindful of public health, the Court did not simply let Nestlé resume sale unconditionally. It <strong>directed fresh testing</strong>: five preserved samples of each batch were to be sent to three named NABL-accredited laboratories (Vimta Lab Hyderabad, Punjab Biotechnology Incubator Mohali, and CEG Test House Jaipur), following the Section 47(1) procedure properly this time. Only if lead was found within permissible limits could Nestlé resume manufacture — and newly manufactured stock had to clear the same three-laboratory test again before sale was permitted. The Vegetable Atta Noodles variant, lacking approval altogether, would need to go through the ordinary product-approval process afresh. Since Nestlé had already agreed to delete the "No Added MSG" claim, the misbranding allegation was treated as resolved.</p>
+
+      <div class="principle-box">
+        <div class="lbl">PRINCIPLES ESTABLISHED</div>
+        <p>(1) A food-safety ban is quasi-judicial state action and must satisfy natural justice — disclosure of the material relied upon, and an opportunity to respond, before (not merely after) the ban. (2) The Food Authority has <strong>no unfettered discretion</strong> to override Parliament-approved Regulations even for proprietary/non-standardised food under Section 22 — the Section 92–93 Regulations, once laid before Parliament, bind the Authority itself. (3) The mandatory sample-testing procedure under Section 47(1) (the four-way split, notified accredited laboratories) is not a mere formality — non-compliance vitiates the resulting order. (4) A disproportionality principle: the severity of executive action (an indefinite, nationwide product ban) must be proportionate to the maximum statutory penalty Parliament actually prescribed for the underlying contravention (here, ₹3 lakh for misbranding under S.52) — a ban cannot be used to achieve indirectly what the penalty structure itself would not support directly. (5) Article 226 remains available despite a statutory appeal remedy where natural justice has been breached or the order is wholly without jurisdiction.</p>
+      </div>
+      <p class="verify-note verified">✓ Reproduced from the full judgment text as it appears in the official LB-3034 course-material compilation (pp. 26–44), which the DU syllabus lists as the sole prescribed reading for Misbranding &amp; Adulteration, with the explicit instruction to "discuss the relevant provisions of the Food Safety and Standards Act, 2006."</p>
+    </div>
+  </div>
+</section>
+<section class="block" id="case-swami">
+  <div class="dossier">
+    <div class="dossier-head">
+      <div>
+        <div class="name">Swami Achyutanand Tirth &amp; Ors. v. Union of India &amp; Ors.</div>
+        <div class="cite">Supreme Court of India · AIR 2016 SC 3626 · Full Bench: T.S. Thakur, C.J.I., R. Banumathi &amp; U.U. Lalit, JJ. · decided 5 August 2016 · "The Milk Adulteration Case"</div>
+      </div>
+      <div class="status">DU SUPPLEMENTARY MATERIAL</div>
+    </div>
+    <div class="dossier-body">
+      <h5>FACTS</h5>
+      <p>The petitioners — residents of Uttarakhand, Uttar Pradesh, Rajasthan, Haryana and NCT of Delhi — filed writ petitions in the Supreme Court relying on FSSAI's own "Executive Summary on National Survey on Milk Adulteration, 2011" (dated 2 January 2011), which had found that <strong>68.4% of milk sold nationally was adulterated</strong>, with several States — Bihar, Chhattisgarh, Odisha, West Bengal, Mizoram, Jharkhand, and Daman &amp; Diu — showing adulteration up to 100%, and Uttarakhand and Uttar Pradesh at 88%. The petitioners alleged that both the concerned State Governments and the Union of India had failed to take effective measures against adulteration of milk with hazardous substances such as urea, detergent, refined oil, and caustic soda, and sought directions compelling effective enforcement. Since food safety is a matter of national importance, the Union of India was joined as a party-respondent alongside the States.</p>
+
+      <h5>ARGUMENTS / GROUNDS URGED</h5>
+      <div class="vs-split">
+        <div class="vs-col petitioner">
+          <div class="side-label">PETITIONERS</div>
+          <ul>
+            <li>Mass adulteration of milk with hazardous chemicals violates the fundamental right to life and health under <strong>Article 21</strong> of the consuming public at large.</li>
+            <li>Existing enforcement under the FSS Act, 2006 (Sections 50–65) and Sections 272–273 IPC has proved wholly inadequate given the scale FSSAI's own survey revealed.</li>
+            <li>Effective directions are needed for testing infrastructure, spot-checking, public awareness, and inter-agency accountability.</li>
+          </ul>
+        </div>
+        <div class="vs-col respondent">
+          <div class="side-label">UNION OF INDIA / STATES</div>
+          <ul>
+            <li>The existing statutory and regulatory framework (the FSS Act and the Food Safety and Standards (Food Products, Standards and Food Additives) Regulations, 2011, which define categories of milk products) was represented as adequate in principle, with implementation gaps attributable to State-level enforcement capacity.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h5>GUIDELINES ISSUED</h5>
+      <p>Rather than adjudicating a lis in the ordinary adversarial sense, the Court issued a comprehensive set of continuing-mandamus directions to the Union and States, including: (1) more effective implementation of the FSS Act, 2006; (2) informing dairy operators/retailers that stringent action will follow if chemical adulterants (pesticides, caustic soda, etc.) are found; (3) identifying high-risk areas and high-risk periods (e.g., around festivals) for intensified sampling; (4) ensuring adequate, NABL-accredited laboratory testing infrastructure at State and district level; (5) special spot-testing measures including Mobile Food Testing Vans with primary testing kits; (6) periodic (not one-off) snapshot surveys at both State and national level by FSSAI; (7) constitution of State-level committees (headed by the Chief Secretary or Dairy Department Secretary) and District-level committees (headed by the District Collector) to review anti-adulteration work, modelled on Maharashtra's practice; (8) a dedicated website in each State publicising food safety authorities' functions and complaint mechanisms, with toll-free and online complaint facilities and published contact details of Food Safety Commissioners; (9) consumer-awareness measures under Section 18(1)(f), including school workshops teaching simple adulteration-detection techniques (e.g., milk adulteration detection strips); and (10) a mechanism for the Union/States to address corruption or unethical practice among Food Authority officers themselves.</p>
+
+      <div class="principle-box">
+        <div class="lbl">PRINCIPLE ESTABLISHED / SIGNIFICANCE</div>
+        <p>Widespread food adulteration engages the <strong>fundamental right to life under Article 21</strong>, and the Supreme Court can issue structured, continuing-mandamus directions compelling proactive, not merely reactive, enforcement of the FSS Act — reinforcing Section 18(1)(f)'s duty on authorities to inform the public of health risks. The judgment directly triggered legislative reform: it is the proximate cause of the <strong>Law Commission of India's 264th Report (2017)</strong>, which the Court had itself effectively invited by calling on the Union to bring IPC penalties for food adulteration in line with the FSS Act and with the more stringent State amendments already made by Odisha, Uttar Pradesh and West Bengal.</p>
+      </div>
+      <p class="verify-note verified">✓ Facts, guidelines and the Report-264 linkage reproduced from Krishna Murari Yadav's DU-LL.B. compilation (pp. 109–111), cross-verified against the Supreme Court's own judgment (available at main.sci.gov.in).</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="case-mohammed">
+  <div class="dossier">
+    <div class="dossier-head">
+      <div>
+        <div class="name">M. Mohammed v. Union of India</div>
+        <div class="cite">High Court of Madras · Writ Appeal No. 1491 of 2014 · Division Bench (affirming a Single Bench decision) · decided 2015</div>
+      </div>
+      <div class="status">DU SUPPLEMENTARY MATERIAL</div>
+    </div>
+    <div class="dossier-body">
+      <h5>FACTS</h5>
+      <p>M. Mohammed imported 50,942 kg of raw, ungarbled Betel Nut (Areca Nut/Supari) from Sri Lanka, submitting a Bill of Entry at Chennai on 19 June 2014. The Commissioner of Customs, Chennai, passed an Examination Order the same day directing that, to obtain customs clearance, the consignment required a <strong>test report and a No Objection Certificate (NOC)</strong> from the Second Authorised Officer, FSSAI, Chennai. Mohammed challenged this direction by writ petition before a Single Judge of the Madras High Court, principally contending that raw, unprocessed Betel Nut was not "food" within the meaning of the FSS Act, 2006 and so could not be subjected to FSSAI clearance requirements at all.</p>
+      <p>The Single Bench held that Areca Nut, being an agricultural product, fell within the definition of "primary food," which is itself covered by "food" under Section 3(j) of the FSS Act, 2006, and dismissed the writ petition — also noting that the definition of "food" under the (then-repealed) Prevention of Food Adulteration Act, 1954 differed from, and was narrower than, the definition under the FSS Act. Mohammed then filed an intra-court Letters Patent (Writ) Appeal before a Division Bench.</p>
+
+      <h5>ISSUES &amp; THE COURT'S ANSWERS</h5>
+      <div class="issue-item"><div class="q">1. Is "ungarbled Betel Nut" the same thing as "Areca Nut/Betel Nut"?</div><div class="a">No — they are different (ungarbled/raw nut becomes Areca Nut only after processing) — <strong>but both fall within the statutory definition of "Food."</strong> Section 3(j) expressly covers substances "whether processed, partially processed or unprocessed," so the unprocessed raw nut is still "Food."</div></div>
+      <div class="issue-item"><div class="q">2. Does "ungarbled Betel Nut" fall under the definition of "Food"?</div><div class="a"><strong>Yes</strong> — as unprocessed food.</div></div>
+      <div class="issue-item"><div class="q">3. Is there a difference between "Food" under the PFA Act, 1954 and the FSS Act, 2006?</div><div class="a"><strong>Yes</strong> — the FSS Act, 2006 definition is significantly wider than the PFA Act's.</div></div>
+      <div class="issue-item"><div class="q">4. Does the ratio in Al Marwa Traders v. Assistant Commissioner of Imports (2007) apply?</div><div class="a"><strong>No</strong> — that case interpreted "food" under the narrower PFA Act, 1954, not the FSS Act, 2006, and is therefore distinguishable.</div></div>
+      <div class="issue-item"><div class="q">5. Can goods for which the FSS Act prescribes no specific standard still be withheld from release if found contaminated, unfit for consumption, or injurious to life?</div><div class="a"><strong>Yes</strong> — the State's constitutional duty to protect public health and life (drawing on <em>Centre for Public Interest Litigation</em>, <em>Nilabati Behera v. State of Orissa</em>, and <em>Vishaka v. State of Rajasthan</em>, the last two cited for the proposition that international law may guide interpretation in the absence of specific domestic provision) justifies withholding release even absent a codified standard for that specific product.</div></div>
+
+      <h5>ARGUMENTS</h5>
+      <div class="vs-split">
+        <div class="vs-col petitioner">
+          <div class="side-label">APPELLANT (M. MOHAMMED)</div>
+          <ul>
+            <li>Raw/ungarbled Betel Nut is a raw commodity, not "Food" as commonly understood, and should not require FSSAI clearance for customs release.</li>
+            <li>The narrower PFA Act, 1954 precedent (Al Marwa Traders) should govern the meaning of "food" for import-clearance purposes.</li>
+          </ul>
+        </div>
+        <div class="vs-col respondent">
+          <div class="side-label">RESPONDENT (UNION OF INDIA / CUSTOMS / FSSAI)</div>
+          <ul>
+            <li>Section 3(j)'s definition of "Food" is deliberately broad, covering unprocessed substances intended for human consumption, and expressly includes "primary food" under Section 3(zk).</li>
+            <li>FSSAI clearance is a legitimate, statutorily-grounded precondition to import clearance under Section 25, regardless of whether the specific product has a codified standard.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h5>DECISION</h5>
+      <p>The Division Bench <strong>rejected the appellant's arguments and dismissed the appeal</strong>, affirming the Single Bench's finding that raw, ungarbled Betel Nut is "Food" within Section 3(j) FSS Act, 2006, and upholding the requirement of an FSSAI test report and NOC as a precondition to customs clearance. Mohammed obtained no remedy.</p>
+
+      <div class="principle-box">
+        <div class="lbl">PRINCIPLE ESTABLISHED</div>
+        <p>The FSS Act, 2006's definition of "Food" under Section 3(j) is deliberately expansive — covering processed, partially processed, <strong>and unprocessed</strong> substances intended for human consumption — and is significantly wider than the definition previously used under the repealed Prevention of Food Adulteration Act, 1954. Consequently, raw agricultural commodities not yet processed for sale (here, raw Areca Nut) still qualify as "primary food" under Section 3(zk) and attract full FSSAI regulatory jurisdiction, including import-clearance requirements under Section 25, even where no product-specific standard has yet been codified for that commodity.</p>
+      </div>
+      <p class="verify-note verified">✓ Reproduced in full from Krishna Murari Yadav's DU-LL.B. compilation (pp. 101–103), which frames this as the leading authority on the statutory definition of "Food" and structures a full PYQ model-answer problem around its ratio.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="case-traders">
+  <div class="dossier">
+    <div class="dossier-head">
+      <div>
+        <div class="name">The Association of the Traders &amp; Ors. v. Union of India</div>
+        <div class="cite">High Court of Bombay · decided 16 September 2015</div>
+      </div>
+      <div class="status">DU SUPPLEMENTARY MATERIAL</div>
+    </div>
+    <div class="dossier-body">
+      <h5>CONTEXT &amp; HOLDING</h5>
+      <p>This case is preserved in the DU compilation specifically for its interpretation of <strong>Section 18</strong> (general principles), decided one day before the Nestlé judgment by the same High Court. The Bombay High Court articulated the purpose and legal character of Section 18 in terms later echoed almost verbatim in the Nestlé decision:</p>
+      <div class="statute" data-tag="HELD">
+        <p class="sec-text">"A perusal of Section 18 reveals that the foundation is preservation of human life and health while protecting the consumer's interest and by having fair practices in all kinds of food and trade and maintenance of food safety and standards and practices. A significant feature to be noted in this provision is that the entire endeavour is to take care of the harmful effects of food on the basis of scientific studies and taking appropriate measures to ensure availability of safe food for human consumption... The Parliament, in exercise of its legislative powers as conferred in Entry 18 of List III [Concurrent List — "Adulteration of foodstuffs and other goods"], has enacted the FSS Act in the interest of public health and to safeguard the constitutional guarantee to the citizens as conferred under Article 21 of the Constitution... It is clear that the authorities entrusted with the duty of implementing the [Act] are not merely to perform the negative duty of preventing food adulteration, but are required to play a very pro-active role for ensuring safe and wholesome food and to prevent and eliminate risk to health caused by unsafe food. It is, therefore, clear that [the FSS Act, 2006] is the comprehensive single special legislation for all food products on the subject of safety and standards."</p>
+      </div>
+      <div class="principle-box">
+        <div class="lbl">PRINCIPLE ESTABLISHED</div>
+        <p>Section 18 is not a mere administrative checklist — it embodies the Act's constitutional foundation in <strong>Article 21</strong> and casts food-safety authorities in a <strong>proactive, not merely reactive, role.</strong> The FSS Act, 2006 is confirmed as "the comprehensive single special legislation for all food products on the subject of safety and standards" — the doctrinal basis later relied on, both in Nestlé (to hold that Section 18 lays down guiding principles rather than an independent source of power) and, more consequentially, in <em>Ram Nath v. State of U.P.</em> (2024) to justify treating the FSS Act as displacing the IPC's older, general adulteration provisions.</p>
+      </div>
+      <p class="verify-note verified">✓ Reproduced from Krishna Murari Yadav's DU-LL.B. compilation, which quotes this passage directly as authority for the interpretation of Section 18 (p. 93).</p>
+    </div>
+  </div>
+</section>
+<section class="block" id="lci264">
+  <div class="kicker"><span class="no">§ 11</span></div>
+  <h2 class="section-title">Law Commission of India, Report No. 264 (2017)</h2>
+  <p class="section-intro">"The Criminal Law (Amendment) Bill, 2017 — Provisions Dealing with Food Adulteration." The direct legislative aftershock of <em>Swami Achyutanand Tirth</em>, and the missing link between the FSS Act's own graded penalty structure and the IPC's century-old flat fine.</p>
+
+  <h4 class="minor-title">HOW THE REPORT CAME TO BE WRITTEN</h4>
+  <p>In <em>Swami Achyutanand Tirth</em>, the Supreme Court had — in earlier orders dated 5 December 2013 and 10 December 2014, reiterated in the 2016 judgment — observed that it was <strong>"desirable to make penal provisions of IPC at par with the provisions contained in the State Amendments"</strong> made by Odisha, Uttar Pradesh and West Bengal, which had already enhanced the punishment for food adulteration under their state amendments to <strong>imprisonment for life, and fine.</strong> The Court further suggested the Union revisit the FSS Act's own penalty structure to make it more deterrent where the adulterant could adversely affect health. Pursuant to this, the Ministry of Home Affairs referred the specific question of amending Sections 272 and 273 IPC to the Law Commission by letter dated 2 November 2016, and the Commission — already engaged in a comprehensive review of the IPC, CrPC and Evidence Act — submitted Report No. 264 in January 2017.</p>
+
+  <h4 class="minor-title">THE COMMISSION'S DIAGNOSIS AND RECOMMENDATION</h4>
+  <div class="callout">
+    <div class="lbl">THE COMMISSION'S OWN WORDS</div>
+    <p>"After detailed discussions, the Commission felt that the punishment provided for is too inadequate in the present scenario. Therefore, the Commission is of the view that there must be more stringent punishment in offences relating to adulteration of food, which is a threat to human life. The Commission feels that the punishment must be seen in light of the harm caused to the consumer by consuming adulterated food items."</p>
+  </div>
+  <p>Rather than simply raising the flat penalty ceiling across the board, the Commission deliberately proposed a <strong>graded punishment structure</strong> — calibrated to (i) whether the adulteration was intentional or otherwise, and (ii) the actual extent of harm suffered by victims — explicitly reasoning that "merely raising the overall punishment may leave the matter free for courts to adopt lenient... attitudes from time to time," whereas a harm-graded structure forecloses that judicial leniency and "brings home to the criminal the reality of the consequences of crime." This is, notably, structurally identical to the graded model the FSS Act itself already used in Section 59 (no injury / non-grievous / grievous / death) — the Commission's recommendation was essentially to import the FSS Act's own architecture into the IPC.</p>
+
+  <div class="tbl-wrap">
+    <div class="tbl-caption" style="padding:10px 14px 0;">TABLE — THE PROPOSED AMENDMENT (MODELLED ON THE ODISHA STATE AMENDMENT)</div>
+    <table>
+      <thead><tr><th>Provision</th><th>1860 position (unamended)</th><th>264th Report's proposal</th></tr></thead>
+      <tbody>
+        <tr><td class="sec-num">Ss.272–276 IPC</td><td>Imprisonment ≤ 6 months, or fine ≤ ₹1,000, or both — flat, ungraded</td><td>Punishment graded by intention and by extent of harm to victims, up to <strong>imprisonment for life and fine</strong> in the gravest cases — court retains discretion to impose a lesser sentence for adequate and special reasons recorded in writing</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="lbl">THE REPORT ALREADY SAW THE S.89 PROBLEM</div>
+    <p>Report 264 itself expressly discusses <strong>Section 89 FSSA</strong> (overriding effect) alongside Section 97 (repeal and savings), engaging with the very question of how a reformed IPC would sit alongside the FSS Act's own more comprehensive scheme. In other words, the doctrinal tension the Supreme Court would eventually resolve in <em>Ram Nath v. State of U.P.</em> (2024) — seven years later — was already flagged, though not conclusively settled, in this 2017 Report.</p>
+  </div>
+
+  <p class="verify-note verified">✓ Report title, background, the Commission's quoted reasoning, and the Odisha-amendment structure verified against the Law Commission's own published Report No. 264 (Government of India, January 2017) and contemporaneous legal reporting (LiveLaw, TaxGuru). The Krishna Murari Yadav compilation references this Report by name and date in connection with the Swami Achyutanand Tirth case (p. 111) but does not reproduce its recommendations in detail — that additional detail here is drawn from the Report itself and independent legal reporting, flagged accordingly.</p>
+</section>
+<section class="block" id="pyq">
+  <div class="kicker"><span class="no">§ 12</span></div>
+  <h2 class="section-title">PYQ Bank &amp; Model Answers</h2>
+  <p class="section-intro">Every question below is reproduced from Krishna Murari Yadav's DU-LL.B. compilation, which labels each by the year it was actually asked — <strong>2015, 2017, or 2019</strong> — or, where the compilation itself could not confirm the year, marks it "Unknown Year." That labelling is preserved exactly as given; nothing here has been silently reassigned a year. A small number of additional questions, clearly marked <strong>PREDICTED</strong>, are added at the end for topics the syllabus and recent case law make likely future targets — these are not from any past paper.</p>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2015 · Q.5(a)</span><span class="qtext">What are the principles to be followed for food safety under the Food Safety and Standards Act, 2006?</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Answer with Section 18 in full — the three-clause structure (implementation principles under S.18(1)(a)–(g); standard-framing principles under S.18(2)(a)–(f); the farmer/fisherman carve-out under S.18(3)) set out in § 02 above, illustrated with the Bombay High Court's characterisation of Section 18 in <em>The Association of the Traders v. Union of India</em> and <em>Nestlé v. FSSAI</em> — that it lays down guiding principles rooted in Article 21, not an independent source of power, and casts the authorities in a proactive rather than merely reactive role.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2015 · Q.5(b)</span><span class="qtext">Define 'food'. Whether it can be analysed by the purchaser?</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Reproduce Section 3(j)'s three-part definition (main content / inclusions / exclusions) and Section 3(zk) "primary food," per § 01 above; illustrate the breadth of the definition with <em>M. Mohammed v. Union of India</em> (raw, unprocessed Betel Nut held to be "food"). Then answer the second limb directly from <strong>Section 40</strong>: yes — any purchaser other than an FSO may have a food article analysed by the Food Analyst on payment of a fee, provided the FBO is informed at the time of purchase, with a fee refund if non-compliance is found, and the DO-driven Section 42 prosecution procedure triggered automatically if the report shows a contravention.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2015 · Q.8</span><span class="qtext">Write short notes on any two — (a) Food Safety and Standard[s] Authority [of India]</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Establishment under S.4 (body corporate, HQ Delhi); composition under S.5 (Chairperson + 22 Members, one-third women, mix of ex-officio and expert/stakeholder members); Selection Committee under S.6; tenure/removal under Ss.7–8; CEO under Ss.9–10; Central Advisory Committee (Ss.11–12), Scientific Panels (S.13) and Scientific Committee (S.14); and the core S.16 duty "to regulate and monitor... so as to ensure safe and wholesome food" — see § 02 above for the full structure and organogram.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2017 · Q.5(a)</span><span class="qtext">Discuss in detail the definition of 'Food' under the Food Safety and Standards Act, 2006 in the context of decided cases.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Full Section 3(j)/3(zk) definitions (§ 01), then apply <em>M. Mohammed v. Union of India</em> in full — facts, the five framed issues, and the ratio that the FSS Act's definition is deliberately wider than the repealed PFA Act's, covering unprocessed primary food. This is the single most case-heavy definitional question in the bank — always anchor the answer in Mohammed's ratio, not the bare definition alone.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2017 · Q.5(b)</span><span class="qtext">What are the duties and functions of Food Authority under the Food Safety and Standards Act, 2006?</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Section 16 in full structure — S.16(1) the core duty, S.16(2)(a)–(i) regulation-making heads, S.16(3)(a)–(n) additional functions, S.16(4) transparency obligations, S.16(5) power to direct Commissioners, S.16(6) confidentiality. See § 02 above for the complete breakdown.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2017 · Q.8(b)</span><span class="qtext">Attempt any two — (b) The power, functions and liabilities of Food Safety Officer under the Food Safety and Standards Act, 2006.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Appointment under S.37; the eight-item power list under S.38 (sample, seize, enter/inspect, destroy perishables, CrPC-style search, seize unexplained adulterant + documents with burden-shifting, witness requirement, 30-day document return); and personal liability under S.39 for vexatious/malicious seizure (penalty ≤ ₹1 lakh), balanced by the mirror-image punishment for false complaints against an FSO. See § 04 above for full detail.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2019 · Q.3(b)</span><span class="qtext">Define 'Food' under the Food Safety and Standards Act, 2006 in the light of decided case law.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Same structure as the 2017 Q.5(a) answer above — Section 3(j)/(zk) plus <em>M. Mohammed v. Union of India</em> in full.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2019 · Q.4(b)</span><span class="qtext">What are the powers and liabilities of Food Safety Officer under the Food Safety and Standards Act, 2006? Explain with relevant provisions.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Identical structure to the 2017 Q.8(b) answer above — Sections 37, 38 and 39 in full, with the qualification requirements from FSS Rules, 2011, Para 2.1.3.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">2019 · Q.8(a)</span><span class="qtext">Write short notes on — (a) Definition of 'misbrand[ed] food'</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Section 3(zf)'s three-limb definition (A: false/misleading claims or fictitious-manufacturer sale; B: imitation/deceptive packaging or false ingredient statements; C: undisclosed artificial flavouring/colouring or non-compliant special-dietary labelling) — see § 01 above — plus the Section 52 penalty (≤ ₹3 lakh) and its central role in <em>Nestlé v. FSSAI</em>, where the Bombay HC held a mere ₹3 lakh misbranding exposure could not justify an indefinite nationwide product ban.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.4(a)</span><span class="qtext">Discuss in detail the definition of 'mis-branded food' and penalty for the same under the Food Safety and Standards Act, 2006 in the context of decided cases.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Combine the 2019 Q.8(a) answer (definition + S.52 penalty) with the full <em>Nestlé v. FSSAI</em> dossier's treatment of the "No Added MSG" misbranding allegation — the Court's finding of no material evidence of deliberate MSG addition, and its disproportionality reasoning tying the ₹3 lakh statutory ceiling to the impossibility of an indefinite ban resting on that ground alone.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.7(b) — problem question</span><span class="qtext">N was engaged in the business of import, processing and wholesale of raw areca nut, commonly called 'Betel Nuts', in ungarbled form. N imported 700 bags of Sri Lankan Betel Nuts per a Bill of Entry dated 10-09-17. The concerned authorities passed an 'Examination Order' directing N to obtain customs clearance for the consignment, a test report, and a No Objection Certificate from the Authorised Officer. N objected to these directions. Decide.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> This problem is built directly on <em>M. Mohammed v. Union of India</em>. N will not succeed: raw, ungarbled Betel Nut is "unprocessed" food within Section 3(j) and "primary food" within Section 3(zk); the FSS Act's definition of food is wider than the repealed PFA Act's (so any authority relying on the narrower <em>Al Marwa Traders</em> precedent would be distinguishable); and the FSSAI test-report/NOC requirement is a valid precondition to import clearance under Section 25, regardless of whether a codified standard exists for that specific commodity, given the State's constitutional duty to protect public health.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.8(a)</span><span class="qtext">Explain the process of licensing and registration of food business under the Food Safety and Standard Act, 2006.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Section 31 in full — the licence/registration two-track split (S.31(1)–(2)), the application-to-decision procedure at the Designated Officer (S.31(3)–(4), including the two-month deemed-licence rule), form and multi-premises rules (S.31(5)–(7)), appeal to the Commissioner (S.31(8)), validity/renewal (S.31(9)) and survivorship on death (S.31(10)) — see § 05 above. Add Improvement Notices (S.32) and Prohibition Orders (S.33) as the enforcement backstop against a licensed operator's non-compliance.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.2(a)</span><span class="qtext">Define 'food'. What are the principles to be followed for food safety under the Food Safety and Standards Act, 2006?</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Combine the Section 3(j)/(zk) definition (§ 01) with the full Section 18 principles (§ 02) — effectively a merger of the 2015 Q.5(a) and Q.5(b) answers above.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.5(b)</span><span class="qtext">Discuss the powers and functions of the Designated Officer under the Food Safety and Standards Act, 2006.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Section 3(h) definition, Section 29(6) (DO exercises FSO powers too), and the full nine-item S.36(3) function list (issue/cancel licences; prohibit sale; receive and route FSO reports; recommend/sanction prosecution depending on whether imprisonment is involved; maintain inspection records; investigate written complaints against FBOs and against FSOs; residual duties from the Commissioner) — plus the FSS Rules, 2011, Para 2.1.2 qualification and supervision-by-Collector requirements. See § 04 above.</p></div>
+  </div>
+
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr">Unknown Year · Q.8(a)</span><span class="qtext">In the light of M/s Nestle India Limited v. The Food Safety and Standards Authority of India, W.P.(L) No. 1688 of 2015, discuss the procedure of food analysis prescribed by the Food Safety and Standards Act, 2006.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> This is the question the DU syllabus itself points toward. Structure the answer around Sections 38 (FSO sampling/seizure), 47 (the mandatory four-way sample split and referral-lab mechanism), 43 (NABL accreditation requirement) and 46 (Food Analyst's functions and the 14-day reporting timeline) — then apply <em>Nestlé v. FSSAI</em> directly: the Bombay HC's finding that the ban orders were vitiated precisely because the Section 47(1) procedure was not followed and the testing laboratories lacked accreditation specifically for lead-testing, and its consequential direction for fresh, procedurally-compliant testing at three named NABL-accredited laboratories before Nestlé could resume manufacture and sale. This is the fullest possible answer combining statute and the prescribed case in one.</p></div>
+  </div>
+
+  <h4 class="minor-title">PREDICTED QUESTIONS — NOT FROM ANY VERIFIED PAST PAPER</h4>
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr pred">PREDICTED</span><span class="qtext">Discuss the adjudication and appellate machinery under the Food Safety and Standards Act, 2006.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Sections 68–76 in full — Adjudicating Officer (≥ ADM rank, civil-court powers), compounding under S.69, the Food Safety Appellate Tribunal (S.70–71, Presiding Officer = District Judge, CPC-free procedure with civil-court evidentiary powers), civil-court bar (S.72), and the two-tier appeal ladder culminating in a mandatory two-judge High Court bench under S.76. See § 08 above.</p></div>
+  </div>
+  <div class="pyq-card">
+    <div class="pyq-q"><span class="yr pred">PREDICTED</span><span class="qtext">"The FSS Act, 2006 has rendered Sections 272 and 273 IPC largely redundant in food-adulteration cases." Discuss with reference to decided case law.</span></div>
+    <div class="pyq-ans"><p><strong>Model answer:</strong> Trace the full arc from Sections 272–273 IPC (now 274–275 BNS) → <em>Swami Achyutanand Tirth</em> flagging the inadequacy of both statutes → Law Commission Report 264's graded-punishment proposal → Section 89 FSSA's overriding-effect clause → <em>Ram Nath v. State of Uttar Pradesh</em> (2024) holding that Section 59 FSSA overrides Ss.272–273 IPC and precludes simultaneous prosecution. See §§ 09–11 above for the complete doctrinal chain.</p></div>
+  </div>
+</section>
+<section class="block" id="sources">
+  <div class="kicker"><span class="no">§ 13</span></div>
+  <h2 class="section-title">Source Register</h2>
+  <p class="section-intro">Every source used in this file, and exactly what it was used for — so you can verify anything above against the original.</p>
+
+  <ul class="source-list">
+    <li><span class="kind core">DU COURSE FILE</span><span>LB-3034 — Law of Crimes III (2022), official course-material compilation. Source of the exact syllabus wording for Topic 3(D) and the <strong>complete, full-text judgment</strong> of <em>Nestlé India Ltd. v. FSSAI</em> (pp. 26–44) — the only case formally prescribed for this sub-topic.</span></li>
+    <li><span class="kind core">DU SUPPLEMENTARY</span><span>Krishna Murari Yadav (Assistant Professor, Law Centre-1, University of Delhi), "White Collar Crimes" compilation — chapter on the Food Safety and Standards Act, 2006 (pp. 82–112). Source of: the FSSAI/S.16/S.18 structure, the Designated Officer/FSO/S.40 provisions, the full case summaries of <em>M. Mohammed v. UOI</em> and <em>Swami Achyutanand Tirth v. UOI</em>, the <em>Association of the Traders v. UOI</em> extract, the Report 264 cross-reference, and the entire verified PYQ bank with years as labelled in the original.</span></li>
+    <li><span class="kind core">PROJECT FILE</span><span>Food Safety and Standards (Contaminants, Toxins and Residues) Regulations, 2011 — used to independently verify the 2.5 ppm lead limit for "foods not specified" (Regulation 2.1.1(2)) that is central to the Nestlé judgment's Issue IV finding.</span></li>
+    <li><span class="kind">BARE ACT</span><span>The Food Safety and Standards Act, 2006 (Act No. 34 of 2006) — full text (Sections 1–76 reproduced/paraphrased here) sourced from the Food Safety Appellate Tribunal, Rajasthan's published copy of the Act, cross-checked section-by-section against IndianKanoon.org and AdvocateKhoj.com bare-act mirrors. Used for every verbatim statutory provision in §§ 01–08 not already present in the DU course material (Commissioner of Food Safety S.30, Licensing S.31, Food Analyst Ss.45–46, the full Chapter IX offences Ss.48–67, and Chapter X adjudication Ss.68–76).</span></li>
+    <li><span class="kind">BARE ACT</span><span>Indian Penal Code, 1860, Sections 272–276, and Bharatiya Nyaya Sanhita, 2023, Sections 274–278 — cross-verified against multiple independent legal-reference sources for the IPC↔BNS correspondence table in § 09.</span></li>
+    <li><span class="kind">CASE LAW</span><span><em>Ram Nath v. State of Uttar Pradesh</em>, 2024 INSC 138 — independently sourced and verified via multiple legal-reporting outlets (LiveLaw, SCC Online, CaseMine, Verdictum) since it does not appear in the DU course material reviewed; included because it is the direct, decisive resolution of the IPC/FSSA overlap the topic requires.</span></li>
+    <li><span class="kind">LAW COMMISSION</span><span>Law Commission of India, Report No. 264 (January 2017) — "The Criminal Law (Amendment) Bill, 2017 (Provisions Dealing with Food Adulteration)." Independently sourced (Government of India publication + LiveLaw/TaxGuru reporting) to supplement the brief reference to this Report already present in the Krishna Murari Yadav compilation.</span></li>
+  </ul>
+
+  <div class="callout" style="margin-top:24px;">
+    <div class="lbl">A NOTE ON WHAT'S "DU MATERIAL" AND WHAT ISN'T</div>
+    <p>Everything tagged <span style="color:var(--amber-bright);font-family:var(--mono);font-size:.85em;">PRESCRIBED</span> or drawn from the two compilations above sits squarely inside your actual course material. The bare-Act provisions not covered by either compilation (Commissioner of Food Safety, Food Analyst, the full offences chapter, and adjudication/Tribunal machinery) were pulled from the Act's own text because your syllabus explicitly asks you to cover "all procedures, different offices and officers, their powers and functions" — material the two DU sources touch on only partially. <em>Ram Nath</em> and the LCI 264 detail are flagged supplementary because they do not appear in the files reviewed for this project; treat them as valuable context for a truly exhaustive answer, not as guaranteed exam-bank material.</p>
+  </div>
+</section>
+
+<footer>
+  LB-3034 · LAW OF CRIMES III (WHITE COLLAR CRIMES) · FACULTY OF LAW, UNIVERSITY OF DELHI<br>
+  Case-file notes compiled for revision purposes. Cross-check every provision against the current bare Act before relying on it in an examination — statutes are periodically amended by notification.
+</footer>
+
+</main>
+</div>
+
+<a href="#" class="back-to-top" id="backToTop">↑</a>
+
+<script>
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) { backToTop.classList.add('show'); }
+    else { backToTop.classList.remove('show'); }
+  });
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section.block[id]');
+  const navLinks = document.querySelectorAll('.navlink');
+  const setActive = () => {
+    let current = '';
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 120) { current = sec.id; }
+    });
+    navLinks.forEach(link => {
+      link.style.color = '';
+      link.style.borderLeftColor = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.color = 'var(--amber-bright)';
+        link.style.borderLeftColor = 'var(--amber-dim)';
+      }
+    });
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+</script>
+</body>
+</html>

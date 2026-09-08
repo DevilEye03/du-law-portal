@@ -15,6 +15,15 @@
     selectedUnitFilter: 'all',
     activeQuickFilter: 'all',
     darkMode: localStorage.getItem('du_law_theme') === 'dark',
+    starred: JSON.parse(localStorage.getItem('du_portal_starred') || '[]'),
+    personalNotes: JSON.parse(localStorage.getItem('du_portal_notes') || '{}'),
+    mockTimerSecs: 10800,
+    mockTimerInterval: null,
+    mockTimerRunning: false,
+    mockSelectedQuestions: new Set(),
+    audioSpeechRate: 1.0,
+    audioUtterance: null,
+    audioIsPlaying: false,
     completedUnits: JSON.parse(localStorage.getItem('du_law_completed_units') || '{}'),
     bookmarkedPyqs: JSON.parse(localStorage.getItem('du_law_bookmarked_pyqs') || '[]'),
     flashcards: {
@@ -33,6 +42,41 @@
   // DOM Elements Cache
   const elements = {
     // Header & Global
+    headerMockExamBtn: document.getElementById('headerMockExamBtn'),
+    headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
+    headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
+    headerStarBadge: document.getElementById('headerStarBadge'),
+    bnsModalOverlay: document.getElementById('bnsModalOverlay'),
+    bnsModal: document.getElementById('bnsModal'),
+    bnsCloseBtn: document.getElementById('bnsCloseBtn'),
+    bnsSearchInput: document.getElementById('bnsSearchInput'),
+    bnsCategoryPills: document.getElementById('bnsCategoryPills'),
+    bnsCardsContainer: document.getElementById('bnsCardsContainer'),
+    mockModalOverlay: document.getElementById('mockModalOverlay'),
+    mockModal: document.getElementById('mockModal'),
+    mockCloseBtn: document.getElementById('mockCloseBtn'),
+    mockSubjectSelect: document.getElementById('mockSubjectSelect'),
+    mockSelectionCounter: document.getElementById('mockSelectionCounter'),
+    mockSelectedCount: document.getElementById('mockSelectedCount'),
+    btnGenMockPaper: document.getElementById('btnGenMockPaper'),
+    btnEvaluateMock: document.getElementById('btnEvaluateMock'),
+    btnPrintMock: document.getElementById('btnPrintMock'),
+    mockPaperContent: document.getElementById('mockPaperContent'),
+    mockQuestionsList: document.getElementById('mockQuestionsList'),
+    mockTimerClock: document.getElementById('mockTimerClock'),
+    mockTimerToggleBtn: document.getElementById('mockTimerToggleBtn'),
+    mockTimerResetBtn: document.getElementById('mockTimerResetBtn'),
+    bookmarksOverlay: document.getElementById('bookmarksOverlay'),
+    bookmarksDrawer: document.getElementById('bookmarksDrawer'),
+    bookmarksCloseBtn: document.getElementById('bookmarksCloseBtn'),
+    bookmarksList: document.getElementById('bookmarksList'),
+    floatingAudioBar: document.getElementById('floatingAudioBar'),
+    audioPlayerTitle: document.getElementById('audioPlayerTitle'),
+    audioPlayerSubtitle: document.getElementById('audioPlayerSubtitle'),
+    audioPlayPauseBtn: document.getElementById('audioPlayPauseBtn'),
+    audioPlayPauseIcon: document.getElementById('audioPlayPauseIcon'),
+    audioStopBtn: document.getElementById('audioStopBtn'),
+    audioSpeedBtn: document.getElementById('audioSpeedBtn'),
     headerSemesterBtn: document.getElementById('headerSemesterBtn'),
     headerSemText: document.getElementById('headerSemText'),
     themeToggleBtn: document.getElementById('themeToggleBtn'),
@@ -756,7 +800,7 @@
                         <div class="case-citation">${c.citation || 'Prescribed DU Case Material Precedent'}</div>
                       </div>
                       <div class="case-badge-actions">
-                        <button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation">
+                        <button class="btn-card-audio" data-audio-title="${encodeURIComponent(c.name)}" data-audio-text="${encodeURIComponent((c.name || '') + '. ' + (c.ratio || c.facts || ''))}" title="Listen (Metro Mode)"><i class="fa-solid fa-headphones"></i> Listen</button><button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button><button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation">
                           <i class="fa-solid fa-copy"></i> Copy Citation
                         </button>
                         <span class="case-unit-tag">${c.unit}</span>
@@ -828,7 +872,36 @@
     });
 
     // Copy Citation buttons
+    
+    elements.casesContainer.querySelectorAll('.btn-card-audio').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const t = decodeURIComponent(btn.dataset.audioTitle);
+        const text = decodeURIComponent(btn.dataset.audioText);
+        playAudio(t, text);
+      });
+    });
+
+    elements.casesContainer.querySelectorAll('.btn-card-star').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleStar({
+          id: btn.dataset.starId,
+          type: 'case',
+          title: decodeURIComponent(btn.dataset.starTitle)
+        });
+      });
+    });
+
+    elements.casesContainer.querySelectorAll('.btn-card-note').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        promptNote(btn.dataset.noteId);
+      });
+    });
+
     elements.casesContainer.querySelectorAll('.btn-copy-cite').forEach(btn => {
+
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const cite = btn.dataset.cite;
@@ -1513,9 +1586,440 @@
       .replace(/'/g, '&#039;');
   }
 
+  
+  // ===================================================================
+  // FEATURE 1: AUDIO READ-ALOUD (Metro Mode)
+  // ===================================================================
+  function initAudioPlayer() {
+    if (!('speechSynthesis' in window)) {
+      if (elements.floatingAudioBar) elements.floatingAudioBar.style.display = 'none';
+      return;
+    }
+
+    if (elements.audioPlayPauseBtn) elements.audioPlayPauseBtn.addEventListener('click', toggleAudioPlayback);
+    if (elements.audioStopBtn) elements.audioStopBtn.addEventListener('click', stopAudioPlayback);
+    if (elements.audioSpeedBtn) elements.audioSpeedBtn.addEventListener('click', cycleAudioSpeed);
+  }
+
+  function playAudio(title, text) {
+    if (!('speechSynthesis' in window)) {
+      showToast('Speech synthesis not supported on this device');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const cleanText = text.replace(/<[^>]*>?/gm, ' ').replace(/\s+/g, ' ').trim();
+    if (!cleanText) return;
+
+    state.audioUtterance = new SpeechSynthesisUtterance(cleanText);
+    state.audioUtterance.rate = state.audioSpeechRate || 1.0;
+    state.audioUtterance.lang = 'en-IN';
+
+    state.audioUtterance.onstart = () => {
+      state.audioIsPlaying = true;
+      if (elements.floatingAudioBar) elements.floatingAudioBar.classList.add('active');
+      if (elements.audioPlayerTitle) elements.audioPlayerTitle.textContent = title;
+      if (elements.audioPlayerSubtitle) elements.audioPlayerSubtitle.textContent = 'Metro Audio Mode • ' + (state.audioSpeechRate || 1.0) + 'x speed';
+      if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-pause';
+    };
+
+    state.audioUtterance.onend = () => stopAudioPlayback();
+    state.audioUtterance.onerror = () => stopAudioPlayback();
+
+    window.speechSynthesis.speak(state.audioUtterance);
+    showToast('Metro Mode: Playing audio read-aloud 🎧');
+  }
+
+  function toggleAudioPlayback() {
+    if (!('speechSynthesis' in window)) return;
+    if (window.speechSynthesis.speaking) {
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+        state.audioIsPlaying = true;
+        if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-pause';
+      } else {
+        window.speechSynthesis.pause();
+        state.audioIsPlaying = false;
+        if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-play';
+      }
+    }
+  }
+
+  function stopAudioPlayback() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    state.audioIsPlaying = false;
+    state.audioUtterance = null;
+    if (elements.floatingAudioBar) elements.floatingAudioBar.classList.remove('active');
+  }
+
+  function cycleAudioSpeed() {
+    const speeds = [1.0, 1.25, 1.5, 0.9];
+    const currIdx = speeds.indexOf(state.audioSpeechRate || 1.0);
+    state.audioSpeechRate = speeds[(currIdx + 1) % speeds.length];
+    if (elements.audioSpeedBtn) elements.audioSpeedBtn.textContent = state.audioSpeechRate + 'x';
+    if (elements.audioPlayerSubtitle) elements.audioPlayerSubtitle.textContent = 'Metro Audio Mode • ' + state.audioSpeechRate + 'x speed';
+  }
+
+  // ===================================================================
+  // FEATURE 2: STARRED PRECEDENTS & PERSONAL NOTES
+  // ===================================================================
+  function updateStarBadge() {
+    if (elements.headerStarBadge) {
+      elements.headerStarBadge.textContent = state.starred.length;
+      elements.headerStarBadge.style.display = state.starred.length > 0 ? 'inline-block' : 'none';
+    }
+  }
+
+  function toggleStar(item) {
+    const idx = state.starred.findIndex(s => s.id === item.id);
+    if (idx >= 0) {
+      state.starred.splice(idx, 1);
+      showToast('Removed from Starred Precedents');
+    } else {
+      state.starred.push({ id: item.id, title: item.title, type: item.type });
+      showToast('Added to Starred Precedents! ⭐');
+    }
+    localStorage.setItem('du_portal_starred', JSON.stringify(state.starred));
+    updateStarBadge();
+    renderActiveTabContent();
+    if (elements.bookmarksDrawer && elements.bookmarksDrawer.classList.contains('active')) renderBookmarksList();
+  }
+
+  function promptNote(itemId) {
+    const existing = state.personalNotes[itemId] || '';
+    const note = window.prompt('Enter personal note or mnemonic for this card:', existing);
+    if (note !== null) {
+      if (note.trim()) {
+        state.personalNotes[itemId] = note.trim();
+        showToast('Personal note saved! 📌');
+      } else {
+        delete state.personalNotes[itemId];
+        showToast('Note deleted');
+      }
+      localStorage.setItem('du_portal_notes', JSON.stringify(state.personalNotes));
+      renderActiveTabContent();
+    }
+  }
+
+  function openBookmarksDrawer() {
+    if (elements.bookmarksDrawer) {
+      elements.bookmarksDrawer.classList.add('active');
+      if (elements.bookmarksOverlay) elements.bookmarksOverlay.classList.add('active');
+      renderBookmarksList();
+    }
+  }
+
+  function closeBookmarksDrawer() {
+    if (elements.bookmarksDrawer) elements.bookmarksDrawer.classList.remove('active');
+    if (elements.bookmarksOverlay) elements.bookmarksOverlay.classList.remove('active');
+  }
+
+  function renderBookmarksList() {
+    if (!elements.bookmarksList) return;
+    if (state.starred.length === 0) {
+      elements.bookmarksList.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);"><i class="fa-regular fa-star" style="font-size:2.5rem;color:#cbd5e1;margin-bottom:12px;"></i><h4 style="margin:0;font-size:1rem;color:var(--text-color);">No starred items yet</h4><p style="font-size:0.8rem;margin:6px 0 0;">Click the star on any Case or PYQ card to save it here for rapid exam revision.</p></div>';
+      return;
+    }
+    elements.bookmarksList.innerHTML = state.starred.map(item => {
+      const hasNote = state.personalNotes[item.id];
+      return '<div class="bm-item-card" data-id="' + item.id + '"><div class="bm-item-title">' + item.title + '</div><div class="bm-item-meta"><span><i class="fa-solid fa-tag"></i> ' + (item.type === 'case' ? 'Landmark Precedent' : 'PYQ Model Answer') + '</span><button class="btn-delete-note" data-remove-star="' + item.id + '" style="color:#ef4444;"><i class="fa-solid fa-trash-can"></i></button></div>' + (hasNote ? '<div class="personal-card-note" style="margin-top:4px;"><span><i class="fa-solid fa-thumbtack"></i> ' + hasNote + '</span></div>' : '') + '</div>';
+    }).join('');
+
+    elements.bookmarksList.querySelectorAll('[data-remove-star]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.removeStar;
+        const idx = state.starred.findIndex(s => s.id === id);
+        if (idx >= 0) {
+          state.starred.splice(idx, 1);
+          localStorage.setItem('du_portal_starred', JSON.stringify(state.starred));
+          updateStarBadge();
+          renderBookmarksList();
+          renderActiveTabContent();
+        }
+      });
+    });
+  }
+
+  // ===================================================================
+  // FEATURE 3: BNS 2023 ↔ IPC 1860 CONVERTER
+  // ===================================================================
+  function openBnsConverter() {
+    if (elements.bnsModal && elements.bnsModalOverlay) {
+      elements.bnsModal.classList.add('active');
+      elements.bnsModalOverlay.classList.add('active');
+      renderBnsConverterCards('all', '');
+      if (elements.bnsSearchInput) elements.bnsSearchInput.focus();
+    }
+  }
+
+  function closeBnsConverter() {
+    if (elements.bnsModal && elements.bnsModalOverlay) {
+      elements.bnsModal.classList.remove('active');
+      elements.bnsModalOverlay.classList.remove('active');
+    }
+  }
+
+  function renderBnsConverterCards(cat, query) {
+    if (!elements.bnsCardsContainer) return;
+    const db = window.BNS_CONVERTER_DB;
+    if (!db || !db.sections) {
+      elements.bnsCardsContainer.innerHTML = '<p style="padding:20px;">Converter database loading...</p>';
+      return;
+    }
+
+    let items = db.sections;
+    if (cat && cat !== 'all') {
+      items = items.filter(s => (s.chapter && s.chapter.includes(cat)) || (s.offense && s.offense.includes(cat)));
+    }
+
+    if (query) {
+      const q = query.toLowerCase();
+      items = items.filter(s =>
+        s.bns.toLowerCase().includes(q) ||
+        s.ipc.toLowerCase().includes(q) ||
+        s.offense.toLowerCase().includes(q) ||
+        s.summary.toLowerCase().includes(q) ||
+        (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
+      );
+    }
+
+    if (items.length === 0) {
+      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No penal section match found</h4><p>Try searching for section numbers (e.g. 302, 103, 34, 498A) or offence names.</p></div>';
+      return;
+    }
+
+    elements.bnsCardsContainer.innerHTML = items.map(s => {
+      return '<div class="bns-comp-card fade-in"><div class="bns-comp-header"><div class="bns-comp-offense"><i class="fa-solid fa-gavel" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div><span class="bns-comp-badge ' + (s.ipc === '[NEW IN BNS]' ? 'new-prov' : '') + '">' + (s.ipc === '[NEW IN BNS]' ? '★ Brand New in BNS' : 'Key Substitution') + '</span></div><div class="bns-comp-body"><div class="bns-section-box bns-side"><div class="bns-sec-tag">NEW STATUTE: BNS 2023</div><div class="bns-sec-num">' + s.bns + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);">' + s.summary + '</p></div><div class="bns-section-box ipc-side"><div class="bns-sec-tag">OLD STATUTE: IPC 1860</div><div class="bns-sec-num">' + s.ipc + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-muted);">' + (s.chapter || 'Indian Penal Code 1860 Reference') + '</p></div></div><div class="bns-comp-footer"><div class="bns-changes-text"><b>Legislative Transition:</b> ' + s.changes + '</div>' + (s.cases && s.cases.length > 0 ? '<div class="bns-precedents-row"><span><b>Landmark Cases:</b></span> ' + s.cases.map(c => '<span class="bns-case-tag">' + c + '</span>').join('') + '</div>' : '') + (s.duExamTip ? '<div class="bns-exam-tip"><i class="fa-solid fa-lightbulb" style="margin-right:4px;"></i> <b>DU Exam Tip:</b> ' + s.duExamTip + '</div>' : '') + '</div></div>';
+    }).join('');
+  }
+
+  // ===================================================================
+  // FEATURE 4: DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
+  // ===================================================================
+  function openMockExam() {
+    if (elements.mockModal && elements.mockModalOverlay) {
+      elements.mockModal.classList.add('active');
+      elements.mockModalOverlay.classList.add('active');
+      generateMockPaper();
+    }
+  }
+
+  function closeMockExam() {
+    if (elements.mockModal && elements.mockModalOverlay) {
+      elements.mockModal.classList.remove('active');
+      elements.mockModalOverlay.classList.remove('active');
+      pauseMockTimer();
+    }
+  }
+
+  function startMockTimer() {
+    if (state.mockTimerRunning) return;
+    state.mockTimerRunning = true;
+    if (elements.mockTimerToggleBtn) elements.mockTimerToggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    state.mockTimerInterval = setInterval(() => {
+      if (state.mockTimerSecs > 0) {
+        state.mockTimerSecs--;
+        updateMockTimerDisplay();
+      } else {
+        pauseMockTimer();
+        showToast('Time is up! 3 Hours completed.');
+      }
+    }, 1000);
+  }
+
+  function pauseMockTimer() {
+    state.mockTimerRunning = false;
+    clearInterval(state.mockTimerInterval);
+    if (elements.mockTimerToggleBtn) elements.mockTimerToggleBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+  }
+
+  function resetMockTimer() {
+    pauseMockTimer();
+    state.mockTimerSecs = 10800; // 3 hours
+    updateMockTimerDisplay();
+  }
+
+  function updateMockTimerDisplay() {
+    if (!elements.mockTimerClock) return;
+    const h = Math.floor(state.mockTimerSecs / 3600);
+    const m = Math.floor((state.mockTimerSecs % 3600) / 60);
+    const s = state.mockTimerSecs % 60;
+    const str = [h, m, s].map(v => String(v).padStart(2, '0')).join(':');
+    elements.mockTimerClock.textContent = str;
+
+    if (state.mockTimerSecs < 900) {
+      elements.mockTimerClock.classList.add('warning');
+    } else {
+      elements.mockTimerClock.classList.remove('warning');
+    }
+  }
+
+  function generateMockPaper() {
+    if (!elements.mockQuestionsList) return;
+    const subjId = elements.mockSubjectSelect ? elements.mockSubjectSelect.value : 'all';
+
+    let pool = [];
+    const subjects = window.DU_LAW_PORTAL_DATA.subjects;
+
+    if (subjId === 'all') {
+      ['juris', 'contract', 'bns', 'family', 'torts'].forEach(sid => {
+        if (subjects[sid] && subjects[sid].pyqs) {
+          pool.push(...subjects[sid].pyqs.map(q => ({ ...q, subjectName: subjects[sid].name })));
+        }
+      });
+    } else if (subjects[subjId] && subjects[subjId].pyqs) {
+      pool = subjects[subjId].pyqs.map(q => ({ ...q, subjectName: subjects[subjId].name }));
+    }
+
+    if (pool.length === 0) {
+      elements.mockQuestionsList.innerHTML = '<p style="padding:20px;">No questions found for this subject.</p>';
+      return;
+    }
+
+    // Shuffle and pick 8 realistic exam questions
+    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    const selected8 = shuffled.slice(0, 8);
+
+    state.mockSelectedQuestions.clear();
+    updateMockSelectionCounter();
+    resetMockTimer();
+    startMockTimer();
+
+    elements.mockQuestionsList.innerHTML = selected8.map((q, idx) => {
+      const qNum = idx + 1;
+      return '<div class="mock-question-card fade-in" id="mock-q-' + qNum + '">' +
+        '<div class="mock-q-header">' +
+          '<div class="mock-q-meta">' +
+            '<span class="mock-q-num">Q.' + qNum + '</span>' +
+            '<span class="mock-q-marks">[20 Marks]</span>' +
+            '<span class="mock-q-source"><i class="fa-solid fa-graduation-cap"></i> ' + (q.subjectName || '') + ' &bull; ' + (q.year || 'DU LL.B. Term Exam') + '</span>' +
+          '</div>' +
+          '<label class="mock-q-select-label">' +
+            '<input type="checkbox" class="mock-q-checkbox" data-q="' + qNum + '"> ' +
+            '<span>Attempt this Question</span>' +
+          '</label>' +
+        '</div>' +
+        '<div class="mock-q-text">' + q.question + '</div>' +
+        '<div class="mock-scratchpad">' +
+          '<label><i class="fa-solid fa-pencil"></i> Student Rough Outline &amp; Issue Spotting Scratchpad (Auto-saved):</label>' +
+          '<textarea placeholder="Type your 4-step IRAC outline, issues, sections to cite, and case names here..."></textarea>' +
+        '</div>' +
+        '<div class="mock-evaluated-answer" id="eval-ans-' + qNum + '">' +
+          '<div class="eval-rubric-grid">' +
+            '<div class="rubric-cell"><div class="rubric-label">Issue Spotting &amp; Facts</div><div class="rubric-pts">4 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Statutory Provisions Cited</div><div class="rubric-pts">5 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Landmark Precedents &amp; Ratios</div><div class="rubric-pts">7 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Logical Reasoning &amp; Conclusion</div><div class="rubric-pts">4 Marks</div></div>' +
+          '</div>' +
+          '<div style="background:var(--bg-tint);padding:16px;border-radius:8px;font-size:0.9rem;line-height:1.6;">' +
+            '<h4 style="margin:0 0 10px;color:var(--primary);"><i class="fa-solid fa-award"></i> DU Faculty Model Answer:</h4>' +
+            (q.answer ? q.answer : '<p>Consult the primary unit notes for detailed case ratios.</p>') +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    elements.mockQuestionsList.querySelectorAll('.mock-q-checkbox').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const qNum = cb.dataset.q;
+        const card = document.getElementById('mock-q-' + qNum);
+        if (cb.checked) {
+          if (state.mockSelectedQuestions.size >= 5) {
+            cb.checked = false;
+            showToast('DU Exam Rule: Maximum 5 questions can be attempted!');
+            return;
+          }
+          state.mockSelectedQuestions.add(qNum);
+          if (card) card.classList.add('selected-question');
+        } else {
+          state.mockSelectedQuestions.delete(qNum);
+          if (card) card.classList.remove('selected-question');
+        }
+        updateMockSelectionCounter();
+      });
+    });
+  }
+
+  function updateMockSelectionCounter() {
+    const cnt = state.mockSelectedQuestions.size;
+    if (elements.mockSelectedCount) elements.mockSelectedCount.textContent = cnt;
+    if (elements.mockSelectionCounter) {
+      if (cnt === 5) {
+        elements.mockSelectionCounter.className = 'mock-selection-counter ready';
+        elements.mockSelectionCounter.innerHTML = '<i class="fa-solid fa-circle-check"></i> Perfect! Exactly 5 Questions Selected';
+      } else {
+        elements.mockSelectionCounter.className = 'mock-selection-counter';
+        elements.mockSelectionCounter.innerHTML = 'Attempting: <b>' + cnt + '</b> / 5 Questions Chosen';
+      }
+    }
+  }
+
+  function evaluateMockExam() {
+    if (state.mockSelectedQuestions.size === 0) {
+      showToast('Please select the questions you attempted before evaluating!');
+      return;
+    }
+    pauseMockTimer();
+    document.querySelectorAll('.mock-evaluated-answer').forEach(el => el.classList.add('revealed'));
+    showToast('Exam Completed! All Model Answers & Evaluation Rubrics Unfolded. 🎉');
+    if (elements.mockPaperContent) elements.mockPaperContent.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+
   function init() {
     // Theme setup
     applyTheme(state.darkMode);
+    initAudioPlayer();
+    updateStarBadge();
+
+    // BNS Converter Modal
+    if (elements.headerBnsConverterBtn) {
+      elements.headerBnsConverterBtn.addEventListener('click', openBnsConverter);
+    }
+    if (elements.bnsCloseBtn) elements.bnsCloseBtn.addEventListener('click', closeBnsConverter);
+    if (elements.bnsModalOverlay) elements.bnsModalOverlay.addEventListener('click', closeBnsConverter);
+    if (elements.bnsSearchInput) {
+      elements.bnsSearchInput.addEventListener('input', (e) => {
+        const cat = elements.bnsCategoryPills ? elements.bnsCategoryPills.querySelector('.bns-pill.active').dataset.cat : 'all';
+        renderBnsConverterCards(cat, e.target.value);
+      });
+    }
+    if (elements.bnsCategoryPills) {
+      elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
+          renderBnsConverterCards(pill.dataset.cat, q);
+        });
+      });
+    }
+
+    // DU Mock Exam Simulator
+    if (elements.headerMockExamBtn) {
+      elements.headerMockExamBtn.addEventListener('click', openMockExam);
+    }
+    if (elements.mockCloseBtn) elements.mockCloseBtn.addEventListener('click', closeMockExam);
+    if (elements.mockModalOverlay) elements.mockModalOverlay.addEventListener('click', closeMockExam);
+    if (elements.btnGenMockPaper) elements.btnGenMockPaper.addEventListener('click', generateMockPaper);
+    if (elements.btnEvaluateMock) elements.btnEvaluateMock.addEventListener('click', evaluateMockExam);
+    if (elements.btnPrintMock) elements.btnPrintMock.addEventListener('click', () => window.print());
+    if (elements.mockTimerToggleBtn) {
+      elements.mockTimerToggleBtn.addEventListener('click', () => {
+        if (state.mockTimerRunning) pauseMockTimer();
+        else startMockTimer();
+      });
+    }
+    if (elements.mockTimerResetBtn) elements.mockTimerResetBtn.addEventListener('click', resetMockTimer);
+    if (elements.mockSubjectSelect) elements.mockSubjectSelect.addEventListener('change', generateMockPaper);
+
+    // Bookmarks Drawer
+    if (elements.headerBookmarksBtn) {
+      elements.headerBookmarksBtn.addEventListener('click', openBookmarksDrawer);
+    }
+    if (elements.bookmarksCloseBtn) elements.bookmarksCloseBtn.addEventListener('click', closeBookmarksDrawer);
+    if (elements.bookmarksOverlay) elements.bookmarksOverlay.addEventListener('click', closeBookmarksDrawer);
+
     
     // Precedent Flashcards & Bare Act Header / Hub Launchers
     if (elements.headerBareActBtn) {

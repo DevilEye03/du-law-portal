@@ -48,6 +48,19 @@
       </div>
 
       <div class="header-actions">
+        
+        <button class="header-action-btn" id="headerMockExamBtn" title="DU Exam Simulator (5 out of 8 Mode)">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span class="btn-lbl">Mock Exam</span>
+        </button>
+        <button class="header-action-btn" id="headerBnsConverterBtn" title="BNS 2023 ↔ IPC 1860 Live Section Converter">
+          <i class="fa-solid fa-scale-unbalanced-flip"></i>
+          <span class="btn-lbl">BNS ↔ IPC</span>
+        </button>
+        <button class="header-action-btn" id="headerBookmarksBtn" title="Starred Precedents & Notes">
+          <i class="fa-solid fa-star"></i>
+          <span class="btn-lbl">Starred <span class="badge-count" id="headerStarBadge">0</span></span>
+        </button>
         <button class="header-action-btn" id="headerBareActBtn" title="Open Quick Bare Act Drawer">
           <i class="fa-solid fa-book-bookmark"></i>
           <span class="btn-lbl">Bare Acts</span>
@@ -464,6 +477,161 @@
   <!-- ===================================================================
        FOOTER
        =================================================================== -->
+  
+  <!-- ===================================================================
+       BNS 2023 ↔ IPC 1860 CONVERTER MODAL
+       =================================================================== -->
+  <div class="bns-modal-overlay" id="bnsModalOverlay"></div>
+  <div class="bns-modal" id="bnsModal" role="dialog" aria-modal="true">
+    <div class="bns-modal-header">
+      <div class="bns-header-title">
+        <i class="fa-solid fa-scale-unbalanced-flip"></i>
+        <div>
+          <h3>BNS 2023 &harr; IPC 1860 Live Section Converter</h3>
+          <p>DU Faculty of Law Criminal Law Transition Guide &bull; Comparative Analysis</p>
+        </div>
+      </div>
+      <button class="bns-close-btn" id="bnsCloseBtn" title="Close Converter (Esc)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="bns-modal-toolbar">
+      <div class="bns-search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="bns-search-input" id="bnsSearchInput" placeholder="Search section number or offense name (e.g. 302, 103, murder, cruelty, 498A, theft)...">
+      </div>
+      <div class="bns-category-pills" id="bnsCategoryPills">
+        <button class="bns-pill active" data-cat="all">All Offenses</button>
+        <button class="bns-pill" data-cat="Life">Homicide &amp; Life</button>
+        <button class="bns-pill" data-cat="Women">Women &amp; Children</button>
+        <button class="bns-pill" data-cat="Property">Offences Against Property</button>
+        <button class="bns-pill" data-cat="State">State &amp; Public Peace</button>
+      </div>
+    </div>
+
+    <div class="bns-cards-container" id="bnsCardsContainer">
+      <!-- Comparative cards populated dynamically -->
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
+       =================================================================== -->
+  <div class="mock-modal-overlay" id="mockModalOverlay"></div>
+  <div class="mock-modal" id="mockModal" role="dialog" aria-modal="true">
+    <div class="mock-header">
+      <div class="mock-header-crest">
+        <i class="fa-solid fa-graduation-cap mock-crest-icon"></i>
+        <div class="mock-header-text">
+          <h2>Faculty of Law &bull; University of Delhi</h2>
+          <p>LL.B. Examination Simulator &bull; 5 out of 8 Question Pattern</p>
+        </div>
+      </div>
+      <div class="mock-timer-box">
+        <i class="fa-solid fa-clock" style="color:#fde047;"></i>
+        <span class="mock-timer-clock" id="mockTimerClock">03:00:00</span>
+        <button class="audio-ctrl-btn" id="mockTimerToggleBtn" title="Start/Pause Timer" style="width:26px;height:26px;font-size:0.75rem;">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="audio-ctrl-btn" id="mockTimerResetBtn" title="Reset Timer" style="width:26px;height:26px;font-size:0.75rem;">
+          <i class="fa-solid fa-rotate-left"></i>
+        </button>
+      </div>
+      <button class="bns-close-btn" id="mockCloseBtn" title="Exit Exam Hall (Esc)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="mock-toolbar">
+      <div class="mock-subject-picker">
+        <label for="mockSubjectSelect" style="font-size:0.78rem;font-weight:700;margin-right:6px;color:var(--text-muted);">Subject:</label>
+        <select id="mockSubjectSelect">
+          <option value="all">Mixed Semester I Exam Paper (Realistic)</option>
+          <option value="juris">Jurisprudence-I</option>
+          <option value="contract">Law of Contract</option>
+          <option value="bns">Law of Crimes-I (BNS 2023)</option>
+          <option value="family">Family Law-I</option>
+          <option value="torts">Law of Torts &amp; Consumer Protection</option>
+          <option value="company">Company Law (Semester 3)</option>
+        </select>
+      </div>
+
+      <div class="mock-selection-counter" id="mockSelectionCounter">
+        Attempting: <span id="mockSelectedCount">0</span> / 5 Questions Chosen
+      </div>
+
+      <div class="mock-actions">
+        <button class="btn-mock-action primary" id="btnGenMockPaper">
+          <i class="fa-solid fa-arrows-rotate"></i> Generate Fresh Paper
+        </button>
+        <button class="btn-mock-action evaluate" id="btnEvaluateMock">
+          <i class="fa-solid fa-square-poll-vertical"></i> Finish &amp; Reveal Model Answers
+        </button>
+        <button class="btn-mock-action outline" id="btnPrintMock">
+          <i class="fa-solid fa-print"></i> Print Paper / PDF
+        </button>
+      </div>
+    </div>
+
+    <div class="mock-paper-content" id="mockPaperContent">
+      <div class="mock-paper-watermark">
+        <h3>UNIVERSITY OF DELHI &bull; FACULTY OF LAW</h3>
+        <p>LL.B. FIRST TERM / ANNUAL EXAMINATION SIMULATOR</p>
+        <p>Time Allowed: 3 Hours &bull; Maximum Marks: 100</p>
+        <p style="margin-top:6px;color:var(--text-color);font-weight:700;">
+          Note: Answer any FIVE questions. All questions carry equal marks (20 Marks each).
+        </p>
+      </div>
+
+      <div id="mockQuestionsList">
+        <!-- 8 Questions dynamically generated here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       STARRED PRECEDENTS & BOOKMARKS DRAWER
+       =================================================================== -->
+  <div class="bare-act-overlay" id="bookmarksOverlay"></div>
+  <aside class="bookmarks-drawer" id="bookmarksDrawer">
+    <div class="bm-header">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <i class="fa-solid fa-star" style="color:#eab308;font-size:1.2rem;"></i>
+        <div>
+          <h3 style="margin:0;font-size:1rem;color:#fff;">Starred Precedents &amp; Notes</h3>
+          <p style="margin:2px 0 0;font-size:0.72rem;color:#cbd5e1;">Your personalized revision vault</p>
+        </div>
+      </div>
+      <button class="bns-close-btn" id="bookmarksCloseBtn" title="Close Drawer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="bm-list" id="bookmarksList">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       FLOATING AUDIO PLAYER BAR (Metro Mode)
+       =================================================================== -->
+  <div class="floating-audio-bar" id="floatingAudioBar">
+    <i class="fa-solid fa-headphones audio-pulse-icon"></i>
+    <div class="audio-info">
+      <div class="audio-title" id="audioPlayerTitle">Playing Case Brief</div>
+      <div class="audio-subtitle" id="audioPlayerSubtitle">Metro Audio Mode &bull; Text-to-Speech</div>
+    </div>
+    <div class="audio-controls">
+      <button class="audio-ctrl-btn" id="audioPlayPauseBtn" title="Pause/Play">
+        <i class="fa-solid fa-pause" id="audioPlayPauseIcon"></i>
+      </button>
+      <button class="audio-ctrl-btn" id="audioStopBtn" title="Stop Audio">
+        <i class="fa-solid fa-stop"></i>
+      </button>
+      <button class="audio-speed-btn" id="audioSpeedBtn" title="Change Speed">1.0x</button>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logo">Delhi University Law Notes Portal</div>
@@ -479,6 +647,18 @@
   <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/bare_acts.js"></script>
+  <script src="js/bns_converter.js"></script>
   <script src="js/app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .then(reg => console.log("[PWA] Service Worker registered:", reg.scope))
+          .catch(err => console.log("[PWA] SW registration failed:", err));
+      });
+    }
+  </script>
+
 </body>
 </html>
