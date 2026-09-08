@@ -1,0 +1,16 @@
+{
+  "name": "du-law-portal",
+  "version": "1.0.0",
+  "description": "Delhi University Law Notes Portal",
+  "private": true,
+  "scripts": {
+    "build": "echo Static build complete"
+  },
+  "keywords": [
+    "delhi-university",
+    "llb",
+    "law-notes"
+  ],
+  "author": "DevilEye03",
+  "license": "ISC"
+}
