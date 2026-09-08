@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 5 — Capacity to Contract | DU LL.B. LB-102 Law of Contract</title>
+<style>
+  :root{--ink:#1e1a2e;--sub:#4f4a66;--brand:#2a1e4d;--brand2:#5b47a8;
+    --accent:#c8102e;--gold:#b8860b;--bg:#f4f2fa;--card:#fff;--line:#ddd7ec;
+    --soft:#efeaf9;--green:#0b7a4b;--red:#c0392b;--amber:#b7791f;--purple:#6b3fa0;--navy:#0f4c81}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.63;font-size:16px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px 80px}
+  .hero{background:linear-gradient(135deg,#241741 0%,#3f2b63 55%,#5b47a8 100%);color:#fff;padding:44px 22px 40px;border-bottom:6px solid var(--gold);position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.07)}
+  .hero:after{content:"";position:absolute;right:60px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero .wrap{position:relative;z-index:2}
+  .kicker{display:inline-block;letter-spacing:2px;font-size:12px;text-transform:uppercase;background:rgba(255,255,255,.16);padding:5px 12px;border-radius:20px;margin-bottom:14px}
+  .hero h1{margin:.1em 0 .2em;font-size:clamp(26px,4.4vw,46px);line-height:1.12;font-weight:800}
+  .hero p.lead{font-size:clamp(15px,2.3vw,19px);opacity:.97;max-width:950px;margin:.3em 0 1.1em}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .chip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);padding:6px 13px;border-radius:22px;font-size:13px}
+  .chip b{color:#ffe08a}
+  .sourceband{background:var(--gold);color:#3a2a00;padding:11px 22px;font-size:13.5px;font-weight:600}
+  .sourceband .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-bottom:0}
+  nav.toc{position:sticky;top:0;z-index:50;background:#1d1236;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+  nav.toc .wrap{display:flex;gap:2px;overflow-x:auto;padding:0 22px}
+  nav.toc a{color:#ded4f3;text-decoration:none;font-size:13px;padding:13px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+  nav.toc a:hover{color:#fff;background:rgba(255,255,255,.07)}
+  section{background:var(--card);margin:26px 0;border-radius:16px;padding:30px 30px 34px;box-shadow:0 2px 14px rgba(63,43,99,.07);border:1px solid var(--line)}
+  .secnum{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#3f2b63,#5b47a8);color:#fff;font-weight:800;font-size:20px;margin-right:12px;vertical-align:middle}
+  h2{font-size:clamp(21px,3vw,28px);margin:0 0 6px;color:#241741;display:flex;align-items:center}
+  h2 .secnum{flex:0 0 auto}
+  .hsub{color:var(--sub);font-size:14px;margin:0 0 20px;padding-left:58px}
+  h3{color:#5b3f9e;margin:30px 0 10px;font-size:19px;border-left:5px solid var(--gold);padding-left:12px}
+  h4{color:#1b1b35;margin:20px 0 8px;font-size:16px}
+  p{margin:10px 0}
+  ul,ol{margin:8px 0 12px;padding-left:24px}
+  li{margin:5px 0}
+  a{color:var(--brand2)}
+  strong{color:#2a1b4d}
+  .statute{background:var(--soft);border-left:6px solid var(--brand2);padding:14px 18px;border-radius:0 10px 10px 0;margin:14px 0}
+  .statute .ref{display:block;font-style:normal;font-weight:700;color:var(--brand2);margin-bottom:4px;letter-spacing:.3px}
+  .statute p,.statute ul{margin:5px 0}
+  .casequote{background:#fbf3e6;border-left:6px solid var(--gold);padding:12px 18px;border-radius:0 10px 10px 0;margin:12px 0;font-style:italic;color:#5b4a24}
+  .note{background:#fff8e6;border:1px solid #f0ddab;border-left:6px solid var(--amber);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .tip{background:#eefaf2;border:1px solid #bfe8d3;border-left:6px solid var(--green);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .warn{background:#fdecec;border:1px solid #f0c4c4;border-left:6px solid var(--red);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .exam{background:#f1edfb;border:1px solid #d4c7ee;border-left:6px solid var(--purple);padding:12px 16px;border-radius:8px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;background:#fff}
+  th{background:#3f2b63;color:#fff;text-align:left;padding:9px 11px;font-size:13.5px}
+  td{border:1px solid var(--line);padding:9px 11px;vertical-align:top}
+  tr:nth-child(even) td{background:#f7f4fc}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:0 1px 6px rgba(63,43,99,.05);border-top:4px solid var(--brand2)}
+  .card h4{margin:0 0 6px;color:#5b3f9e;font-size:15.5px}
+  .card p{font-size:13.8px;margin:6px 0 0;color:var(--sub)}
+  .tone1{border-top-color:#5b47a8}.tone2{border-top-color:#c8102e}.tone3{border-top-color:#b8860b}.tone4{border-top-color:#0b7a4b}.tone5{border-top-color:#0f4c81}.tone6{border-top-color:#6b3fa0}
+  .fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0;overflow-x:auto;text-align:center}
+  .fig .caption{font-size:13px;color:var(--sub);margin-top:8px;text-align:center}
+  svg text{font-family:inherit}
+  .scene{background:linear-gradient(180deg,#f1ecfb,#fff);border:1px solid #ddd2f0;border-radius:14px;padding:14px;margin:16px 0;text-align:center;overflow-x:auto}
+  .scene .cap{font-size:12.5px;color:var(--sub);margin-top:6px;text-align:center}
+  .scene .badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;letter-spacing:1px;padding:3px 10px;border-radius:12px;margin-bottom:6px}
+  details{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:#fff}
+  summary{cursor:pointer;padding:13px 16px;font-weight:700;color:#241741;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:before{content:"\25B6";color:var(--accent);margin-right:9px;font-size:11px;display:inline-block}
+  details[open] summary:before{transform:rotate(90deg)}
+  details[open] summary{border-bottom:1px solid var(--line)}
+  details .body{padding:6px 16px 14px}
+  .pyqbox{border:1px solid #6b3fa055;border-left:8px solid var(--purple);border-radius:12px;margin:16px 0;background:#fffdf6}
+  .pyqbox .q{padding:14px 18px;background:#f6f1fd}
+  .pyqbox .q .tag{display:inline-block;background:var(--purple);color:#fff;font-size:11px;padding:2px 9px;border-radius:12px;margin-right:8px;letter-spacing:.5px;vertical-align:middle}
+  .pyqbox .q h4{display:inline;font-size:16px}
+  .pyqbox .model{padding:4px 20px 16px}
+  .case{border:1px solid var(--line);border-radius:14px;margin:18px 0;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(63,43,99,.05)}
+  .case .head{background:linear-gradient(120deg,#241741,#3f2b63);color:#fff;padding:13px 18px}
+  .case .head .t{font-weight:800;font-size:18px}
+  .case .head .r{font-size:13px;opacity:.92}
+  .case .tagrow{padding:8px 18px 0}
+  .case .full{padding:14px 18px;border-top:1px solid var(--line)}
+  .case h5{margin:2px 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#b8860b}
+  .case p{margin:6px 0}
+  .case li{margin:4px 0}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:12px;font-weight:700;margin:2px 3px 2px 0}
+  .t-v{background:#e5f6ec;color:#0b7a4b}.t-b{background:#eef3fa;color:#0f4c81}.t-va{background:#fff2d9;color:#b7791f}
+  .t-ill{background:#fde4e4;color:#c0392b}.t-u{background:#f0e6ff;color:#5b4a9e}
+  .verdict{display:inline-block;background:#0b7a4b;color:#fff;font-weight:700;padding:3px 12px;border-radius:14px;font-size:13px}
+  .verdict.r{background:#c8102e}
+  .footer{margin-top:34px;border-top:1px dashed var(--line);padding-top:16px;color:var(--sub);font-size:13px}
+  mark{background:#ffe9a8;padding:0 3px;border-radius:3px}
+  hr{border:none;border-top:1px solid var(--line);margin:24px 0}
+  .pill{display:inline-block;background:#3f2b63;color:#fff;font-size:11px;padding:3px 10px;border-radius:14px;margin:2px;letter-spacing:.4px}
+  .side{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.side{grid-template-columns:1fr}}
+  .args{background:#f6f3fe;border:1px solid #e0d6f4;border-radius:10px;padding:4px 14px 12px;margin:8px 0}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Law of Contract — LB-102 · First Term · DU Faculty of Law</span>
+    <h1>Capacity to Contract</h1>
+    <p class="lead">Comprehensive, examination-ready study notes for <b>Topic 5</b> of the Delhi University LL.B. I-Term paper <b>“Principles of Contract (General Principles)”</b> — <b>legal disability to contract</b> · <b>Minors</b> · <b>persons of unsound mind</b> (lunatics &amp; idiots) · persons under other legal disabilities · <b>restitution in a minor’s agreement</b> · <b>liability for necessaries</b> supplied to a minor — <b>Indian Contract Act, 1872 §§ 10, 11, 12, 64, 65, 68; Specific Relief Act, 1963 § 33; Indian Majority Act, 1875</b> — built strictly on the DU case material.</p>
+    <div class="chips">
+      <span class="chip">Exam basis: <b>DU case material (Jan 2023)</b></span>
+      <span class="chip">Syllabus: <b>Topic 5 · 3 classes</b></span>
+      <span class="chip">Cases: <b>18 Mohori · 19 Khan Gul · 20 Ajudhia Prasad</b></span>
+      <span class="chip">3 full case-digests + scene visuals</span>
+      <span class="chip">PYQs + model answers</span>
+    </div>
+  </div>
+</div>
+<div class="sourceband"><div class="wrap">📚 <b>Primary source:</b> <i>Principles of Contract (General Principles) — Cases Selected &amp; Edited, LL.B. I-Term, Faculty of Law, University of Delhi (Jan 2023)</i>, Topic 5 (pp. 65–86) + <i>The Indian Contract Act, 1872</i> §§ 10, 11, 12, 64, 65, 68. Topic shown in your image (image-1).</div></div>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#bp">Blueprint</a>
+    <a href="#cap11">1 · Capacity &amp; S.11</a>
+    <a href="#majority">2 · Majority &amp; minor</a>
+    <a href="#unsound">3 · Unsound mind</a>
+    <a href="#necessaries">4 · Necessaries</a>
+    <a href="#restitution">5 · Restitution</a>
+    <a href="#mohori">Case 18 · Mohori</a>
+    <a href="#khangui">Case 19 · Khan Gul</a>
+    <a href="#ajudhia">Case 20 · Ajudhia</a>
+    <a href="#compare">6 · Compare</a>
+    <a href="#pyq">7 · PYQs</a>
+    <a href="#revision">8 · Revision</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section id="bp">
+    <h2><span class="secnum">0</span> Exam Blueprint &amp; Scope of this unit</h2>
+    <p class="hsub">From the DU rubric and syllabus — orient your answer-writing here.</p>
+    <div class="grid">
+      <div class="card tone1"><h4>DU Paper pattern</h4><p>8 questions; answer <b>any 5</b>; each = <b>20 marks</b>; 3-hour descriptive exam; pass at <b>45/100</b>.</p></div>
+      <div class="card tone2"><h4>This unit’s content</h4><p><b>Capacity</b> — legal disability to contract: minors, persons of unsound mind (lunatics, idiots), persons under other legal disability; <b>restitution</b> in a minor’s agreement; <b>liability for necessaries</b> supplied to a minor.</p></div>
+      <div class="card tone3"><h4>Statutes</h4><p>ICA 1872 <b>§§ 10, 11, 12</b> (capacity), <b>64, 65</b> (restitution/restoration), <b>68</b> (necessaries); <b>SRA 1963 § 33</b> (cancellation); <b>Indian Majority Act, 1875</b>.</p></div>
+      <div class="card tone4"><h4>The 3 DU cases</h4><p><b>18 Mohori Bibee</b> (PC) — minor’s contract <i>void ab initio</i>; <b>19 Khan Gul</b> (Lahore FB) — estoppel &amp; restitution debate; <b>20 Ajudhia Prasad</b> (All. FB) — no restitution of money against a minor-defendant.</p></div>
+    </div>
+    <h3>0.1 How the three cases fit together</h3>
+    <p>They trace the law of <b>minor’s agreements</b> from its foundation to its most contested corner — restitution:</p>
+    <ul>
+      <li><b>Mohori Bibee (Privy Council, 1903):</b> an agreement by a minor is <b>void ab initio</b>, and he is not competent to contract under S.11; <b>Ss. 64 and 65 do not apply</b> to him.</li>
+      <li><b>Khan Gul (Lahore Full Bench, 1928):</b> a minor who misrepresented his age is <b>NOT estopped</b> from pleading minority, but (majority) he may in <b>equity</b> be compelled to make <b>restitution</b> of benefits obtained by fraud — even when he is a defendant.</li>
+      <li><b>Ajudhia Prasad (Allahabad Full Bench, 1937):</b> the Lahore restitution view <b>rejected</b> — a minor being <b>sued</b> cannot be made to refund money (that would indirectly enforce a void contract); restitution is confined to the case where the minor is a <b>plaintiff</b> seeking equity.</li>
+    </ul>
+    <div class="note"><b>Where the law now stands (per DU material):</b> A minor’s contract is <b>void ab initio</b> (Mohori). A minor is <b>not estopped</b> from pleading minority. A minor is <b>not personally liable</b>; the majority/prevailing view (Ajudhia Prasad) is that he <b>cannot be made to repay money</b> or have his property sold under a void mortgage, though a court may order <b>restitution of specific traceable property</b> and will put a minor-<b>plaintiff</b> on terms (“he who seeks equity must do equity”).</div>
+  </section>
+
+  <section id="cap11">
+    <h2><span class="secnum">1</span> Capacity to Contract — Sections 10 &amp; 11</h2>
+    <p class="hsub">Who may make a binding contract — and why the law shields the incapable.</p>
+
+    <div class="statute"><span class="ref">S.10 — What agreements are contracts</span>
+    “All agreements are contracts if they are made by the <b>free consent of parties competent to contract</b>, for a lawful consideration and with a lawful object, and are not hereby expressly declared to be void.”</div>
+
+    <div class="statute"><span class="ref">S.11 — Who are competent to contract</span>
+    “Every person is competent to contract who is of the <b>age of majority</b> according to the law to which he is subject, and who is of <b>sound mind</b>, and is not <b>disqualified from contracting</b> by any law to which he is subject.”</div>
+
+    <p>Capacity is the element that a person must be <b>legally able to enter</b> a binding relation. S.10 requires all contracting parties to be competent; S.11 then lists the <b>three cumulative conditions</b> of competence. If any one is absent, the person suffers a <b>legal disability to contract</b> and his agreement is <b>void</b> (not merely voidable).</p>
+
+    <h3>1.1 The three limbs of competence (S.11)</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>① Age of majority</h4><p>Must have reached majority under the law to which he is subject — in India the <b>Indian Majority Act, 1875</b> (age 18; <b>21</b> where a guardian has been appointed).</p></div>
+      <div class="card tone2"><h4>② Sound mind</h4><p>Must be capable of understanding the contract and of forming a rational judgment about its effect on his interests (S.12) — excluding lunatics, idiots, the drunk, the delirious.</p></div>
+      <div class="card tone3"><h4>③ Not otherwise disqualified by law</h4><p>Certain persons are disqualified from contracting by particular statutes or status (alien enemies during war, foreign sovereigns, convicts, insolvents, corporations beyond their powers).</p></div>
+    </div>
+
+    <h3>1.2 Persons under a legal disability to contract</h3>
+    <table>
+      <tr><th>Category</th><th>Disability</th><th>Basis</th></tr>
+      <tr><td><b>Minors</b></td><td>Agreement <b>void ab initio</b> (Mohori Bibee)</td><td>Want of age of majority — no capacity to contract at all</td></tr>
+      <tr><td><b>Persons of unsound mind</b></td><td>Agreement <b>void</b> if made while unsound (S.12); may contract in a lucid interval</td><td>Want of rational understanding</td></tr>
+      <tr><td><b>Lunatics / idiots</b></td><td>Same as unsound mind; an idiot is one wholly without understanding</td><td>Lack of capacity to judge interests</td></tr>
+      <tr><td><b>Alien enemy</b> (during war)</td><td>Cannot contract with a subject/other enemy national</td><td>Disqualified by law / public policy</td></tr>
+      <tr><td><b>Foreign sovereign &amp; ambassadors</b></td><td>May contract but cannot be <b>sued</b> without consent</td><td>Statutory immunity</td></tr>
+      <tr><td><b>Convicts</b> (while imprisoned)</td><td>Cannot make binding contracts</td><td>Disqualification by law</td></tr>
+      <tr><td><b>Insolvents</b></td><td>Property vesting in the official receiver; limited contracting power</td><td>Insolvency law</td></tr>
+      <tr><td><b>Corporations / companies</b></td><td>Beyond the powers in their constitution (<i>ultra vires</i>) — void</td><td>Disqualified by law creating them</td></tr>
+    </table>
+    <div class="tip"><b>Exam framing:</b> The syllabus phrase “person under legal disability” is the umbrella for all three categories the S.11 test captures — and of these the <b>minor</b> is the single most important for the DU paper, followed by <b>persons of unsound mind</b>.</div>
+  </section>
+
+  <section id="majority">
+    <h2><span class="secnum">2</span> Majority &amp; the Legal Position of a Minor’s Agreement</h2>
+    <p class="hsub">Who is a minor; and the settled consequences of a minor entering into an agreement.</p>
+
+    <h3>2.1 Age of majority — Indian Majority Act, 1875</h3>
+    <p>S.11 speaks of “the age of majority according to the law to which he is subject.” In India that law is the <b>Indian Majority Act, 1875</b>:</p>
+    <div class="statute"><span class="ref">Indian Majority Act, 1875 (9 of 1875) — summary</span>
+    <p>A person attains majority at the age of <b>eighteen years</b>; but where a <b>guardian of his person or property has been appointed</b> under the Guardians and Wards Act, 1890 (or the Court of Wards has assumed superintendence of his property), he does not attain majority until he completes the age of <b>twenty-one years</b>.</p></div>
+    <ul>
+      <li>Thus a minor in the eye of contract law is a person under <b>18</b> (or under <b>21</b> where a guardian has been appointed).</li>
+      <li>Both <b>Mohori Bibee</b> (where Dharmodas, aged between 18 and 21 with a certificated guardian, had not attained majority) and <b>Ajudhia Prasad</b> (defendants “more than 18 but under 21,” a certificated guardian having been appointed) were minors precisely because a guardian had been appointed, extending majority to 21.</li>
+      <li>The <b>date of the contract</b>, not of the suit, determines capacity — a person must be a major when he makes the agreement.</li>
+    </ul>
+
+    <h3>2.2 Position: a minor’s agreement is VOID AB INITIO</h3>
+    <p>After much early divergence (whether a minor’s contract was merely <b>voidable</b>), the Privy Council in <b>Mohori Bibee v. Dhurmodas Ghose</b> settled the law: a person who, by reason of infancy, is incompetent to contract under S.11 <b>cannot make a contract</b> within the meaning of the Act at all; the agreement is <b>void from the very beginning</b> (<i>void ab initio</i>) and cannot be recognised by law. The question whether an agreement is void or voidable <b>presupposes a contract</b>; in the case of an infant it <b>cannot arise</b>.</p>
+
+    <h3>2.3 The rules flowing from a minor’s incapacity</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>① No consideration &amp; no personal liability</h4><p>The minor cannot be made personally liable even for necessaries; S.68 creates a claim only <b>against his property</b>, not his person.</p></div>
+      <div class="card tone2"><h4>② No estoppel</h4><p>A minor is <b>not estopped</b> from pleading minority, even after falsely representing himself to be a major (Khan Gul; S.115 Evidence Act read subject to the Contract Act).</p></div>
+      <div class="card tone3"><h4>③ No ratification</h4><p>A void agreement <b>cannot be ratified</b> on attaining majority; a fresh contract after majority is needed (Bindeshri Bakhsh Singh v. Chandika Prasad).</p></div>
+      <div class="card tone4"><h4>④ Benefit may be enforced by the minor</h4><p>A minor can enforce contracts for his <b>benefit</b> (e.g. sue for his share, on a settlement) — incapacity protects, not penalises, him.</p></div>
+      <div class="card tone5"><h4>⑤ No liability in tort if the tort is really the contract</h4><p>A minor is not liable where the claim is in substance <i>ex contractu</i> disguised as a tort; independent torts are actionable (Leslie v. Sheill; Liverpool Adelphi Loan Assn. v. Fairhurst).</p></div>
+      <div class="card tone6"><h4>⑥ Property obtained by fraud — restitution</h4><p>Traceable property obtained by fraudulent misrepresentation may be restored in equity; whether the minor can be made to <b>repay money</b> is the disputed point (Khan Gul <i>vs</i> Ajudhia Prasad).</p></div>
+    </div>
+
+    <h3>2.4 Why the law protects a minor (the rationale)</h3>
+    <ul>
+      <li><b>Protection from exploitation:</b> a minor lacks mature judgment and can be taken advantage of, so the law shields him — even where occasionally a “juvenile knave” benefits (Lord Sumner: “It was thought necessary to safeguard the weakness of infants at large, even though here and there a juvenile knave slipped through”).</li>
+      <li><b>Shield, not sword:</b> Lord Kenyon — the protection is “to be used as a <b>shield and not as a sword</b>.” (Note how the judges in Khan Gul and Ajudhia Prasad debated this maxim.)</li>
+      <li><b>Consistency of the statute:</b> the Contract Act elsewhere assumes the minor cannot be bound — he cannot be an agent (Ss. 183–184), cannot be personally liable as a partner (Ss. 247–248), and even for necessaries only his property is answerable (S.68).</li>
+    </ul>
+
+    <div class="fig">
+      <svg width="920" viewBox="0 0 920 340" role="img" aria-label="Position of a minor's agreement flowchart">
+        <text x="460" y="26" text-anchor="middle" font-size="14" font-weight="800" fill="#241741">AN AGREEMENT BY A MINOR — legal consequences</text>
+        <rect x="290" y="46" width="340" height="54" rx="10" fill="#c0392b"/>
+        <text x="460" y="70" text-anchor="middle" font-size="12.5" font-weight="800" fill="#fff">VOID AB INITIO (Mohori Bibee)</text>
+        <text x="460" y="89" text-anchor="middle" font-size="10" fill="#ffe0e0">not enforceable by or against the minor; never was a contract</text>
+        <g font-size="11">
+          <rect x="30" y="130" width="272" height="150" rx="10" fill="#e5f6ec" stroke="#0b7a4b"/>
+          <text x="166" y="150" text-anchor="middle" font-weight="800" fill="#0b7a4b">PROTECTION IN MINOR'S FAVOUR</text>
+          <text x="166" y="172" text-anchor="middle" fill="#333">· minor NOT estopped from pleading</text>
+          <text x="166" y="190" text-anchor="middle" fill="#333">  minority (Khan Gul)</text>
+          <text x="166" y="208" text-anchor="middle" fill="#333">· cannot ratify on majority</text>
+          <text x="166" y="226" text-anchor="middle" fill="#333">· no personal liability even for</text>
+          <text x="166" y="242" text-anchor="middle" fill="#333">  necessaries (only property, S.68)</text>
+          <text x="166" y="262" text-anchor="middle" fill="#333">· may enforce contracts for his benefit</text>
+          <rect x="324" y="130" width="272" height="150" rx="10" fill="#fde4e4" stroke="#c0392b"/>
+          <text x="460" y="150" text-anchor="middle" font-weight="800" fill="#c0392b">NOT ENFORCEABLE AGAINST MINOR</text>
+          <text x="460" y="172" text-anchor="middle" fill="#333">· Ss. 64, 65 (restitution of a void</text>
+          <text x="460" y="190" text-anchor="middle" fill="#333">  agreement) do NOT apply (Mohori)</text>
+          <text x="460" y="208" text-anchor="middle" fill="#333">· no money-decree against a minor-</text>
+          <text x="460" y="226" text-anchor="middle" fill="#333">  defendant (Ajudhia Prasad)</text>
+          <text x="460" y="244" text-anchor="middle" fill="#333">· no sale of his property under a void</text>
+          <text x="460" y="260" text-anchor="middle" fill="#333">  mortgage</text>
+          <rect x="618" y="130" width="272" height="150" rx="10" fill="#fff2d9" stroke="#b7791f"/>
+          <text x="754" y="150" text-anchor="middle" font-weight="800" fill="#b7791f">WHERE EQUITY INTERVENES</text>
+          <text x="754" y="172" text-anchor="middle" fill="#333">· restitution of specific traceable</text>
+          <text x="754" y="190" text-anchor="middle" fill="#333">  property obtained by fraud</text>
+          <text x="754" y="208" text-anchor="middle" fill="#333">· minor-PLAINTIFF seeking to set aside</text>
+          <text x="754" y="226" text-anchor="middle" fill="#333">  a transaction may be put on terms</text>
+          <text x="754" y="244" text-anchor="middle" fill="#333">  ("he who seeks equity must do</text>
+          <text x="754" y="260" text-anchor="middle" fill="#333">  equity", SRA 1963 s.33)</text>
+          <text x="754" y="278" text-anchor="middle" font-style="italic" fill="#8a5a00">Khan Gul majority view (Lahore)</text>
+        </g>
+      </svg>
+      <div class="caption">Fig 2.1 — The tripartite position: minor protected, contract void against him, but equity may order restitution in limited cases.</div>
+    </div>
+  </section>
+
+  <section id="unsound">
+    <h2><span class="secnum">3</span> Persons of Unsound Mind — Section 12 (Lunatics &amp; Idiots)</h2>
+    <p class="hsub">Soundness of mind at the time of contracting; lucid intervals; the burden of proof.</p>
+
+    <div class="statute"><span class="ref">S.12 — What is a sound mind for the purposes of contracting</span>
+    <p>A person is said to be of sound mind for the purpose of making a contract if, <b>at the time when he makes it</b>, he is <b>capable of understanding it</b> and of <b>forming a rational judgment as to its effect upon his interests</b>.</p>
+    <p>A person who is <b>usually of unsound mind, but occasionally of sound mind</b>, may make a contract <b>when he is of sound mind</b>.</p>
+    <p>A person who is <b>usually of sound mind, but occasionally of unsound mind</b>, may not make a contract <b>when he is of unsound mind</b>.</p>
+    <p><b>Illustrations:</b> (a) A patient in a lunatic asylum, who is at intervals of sound mind, may contract during those intervals. (b) A sane man, who is delirious from fever, or who is so drunk that he cannot understand the terms of a contract or form a rational judgment as to its effect on his interests, cannot contract whilst such delirium or drunkenness lasts.</p></div>
+
+    <h3>3.1 The two-fold test of sound mind</h3>
+    <ol>
+      <li><b>Understanding:</b> the person must be capable of <b>understanding</b> the contract; and</li>
+      <li><b>Rational judgment:</b> capable of <b>forming a rational judgment as to its effect on his interests</b>.</li>
+    </ol>
+    <p>Both must be judged <b>at the time of making the contract</b>, not generally over the person’s life.</p>
+
+    <h3>3.2 Soundness judged at the time of the contract — lucid intervals</h3>
+    <ul>
+      <li>A <b>lunatic</b> is a person who has periods of unsoundness but may have <b>lucid intervals</b>. If he contracts during a lucid interval (usually sound at that moment), the contract is valid — S.12 Illustration (a) makes this explicit.</li>
+      <li>A person <b>usually sane</b> who becomes temporarily insane (delirium from fever, intoxication, temporary mental derangement) cannot contract <b>during</b> such unsoundness — S.12 Illustration (b).</li>
+      <li>Therefore the decisive enquiry is <b>the state of mind at the precise time of the agreement</b>.</li>
+    </ul>
+
+    <h3>3.3 Lunatics, idiots, and other states of mind — distinctions</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>Lunatic</h4><p>A person with intermittent unsoundness of mind who may contract during <b>lucid intervals</b>.</p></div>
+      <div class="card tone2"><h4>Idiot</h4><p>A person who is <b>congenital / permanently</b> without understanding — never capable of contracting; an extreme form of unsoundness.</p></div>
+      <div class="card tone3"><h4>Drunkard / delirious</h4><p>Temporary unsoundness at the time of contracting renders the contract void for the duration (S.12 Ill. (b)).</p></div>
+      <div class="card tone4"><h4>Mere weakness of mind / old age</h4><p>Not, by itself, incapacity — the test is inability to understand and judge, not weakness. Where a party is incapable of independent judgment, relief may come under <b>undue influence</b> (S.16) instead.</p></div>
+    </div>
+
+    <h3>3.4 Effects of unsoundness &amp; comparison with a minor</h3>
+    <p>By parity of reasoning with Mohori Bibee, an agreement made by a person who is incompetent (unsound of mind) is <b>void ab initio</b>. The same protective consequences generally follow:</p>
+    <ul>
+      <li>The incapable person is not personally liable on the agreement.</li>
+      <li>For <b>necessaries</b> supplied to him (or to persons he is bound to support), the supplier is reimbursed <b>from his property</b> under <b>S.68</b> — S.68 Illustration (a) is exactly a lunatic supplied with necessaries, Illustration (b) his wife and children.</li>
+      <li>The burden of proving unsoundness at the time of the contract is on the person who alleges it (he who asserts incapacity must prove it); when the transaction is on its face grossly unconscionable, the burden may shift to the party in a dominating position (S.16(3)).</li>
+    </ul>
+    <table>
+      <tr><th></th><th>Minor</th><th>Person of unsound mind</th></tr>
+      <tr><td><b>Source of rule</b></td><td>S.11 (age of majority) + Mohori Bibee</td><td>Ss. 11 &amp; 12</td></tr>
+      <tr><td><b>Nature of agreement</b></td><td>Void ab initio</td><td>Void if made while unsound; valid in a lucid interval</td></tr>
+      <tr><td><b>Determining moment</b></td><td>Age at the date of contract</td><td>State of mind at the time of the contract</td></tr>
+      <tr><td><b>Necessaries (S.68)</b></td><td>Reimbursement from minor’s property</td><td>Reimbursement from the incapable person’s property</td></tr>
+      <tr><td><b>Ongoing benefit</b></td><td>May enforce contracts for his benefit</td><td>Same protective principle applies</td></tr>
+    </table>
+    <div class="tip"><b>Exam one-liner:</b> “Sound mind under S.12 is tested at the moment of the contract — by understanding <i>plus</i> rational judgment as to its effect on the person’s interests; lucid intervals allow contracting, delirium/drunkenness forbid it.”</div>
+  </section>
+
+  <section id="necessaries">
+    <h2><span class="secnum">4</span> Liability for Necessaries Supplied to a Minor — Section 68</h2>
+    <p class="hsub">The one “contract-like” claim that survives a minor’s incapacity — but only against his property.</p>
+
+    <div class="statute"><span class="ref">S.68 — Claim for necessaries supplied to person incapable of contracting, or on his account</span>
+    “If a person, <b>incapable of entering into a contract</b>, or any one whom he is <b>legally bound to support</b>, is supplied by another person with <b>necessaries suited to his condition in life</b>, the person who has furnished such supplies is <b>entitled to be reimbursed from the property of such incapable person</b>.”
+    <p><b>Illustrations:</b> (a) A supplies B, a lunatic, with necessaries suitable to his condition in life. A is entitled to be reimbursed from B’s property. (b) A supplies the wife and children of B, a lunatic, with necessaries suitable to their condition in life. A is entitled to be reimbursed from B’s property.</p></div>
+
+    <h3>4.1 The nature of the liability</h3>
+    <p>S.68 is not a contract at all — a minor cannot contract — but a <b>quasi-contractual / statutory</b> claim created for the benefit of those who supply essentials to an incapable person. It is the direct statutory counterpart emphasised by the Privy Council in Mohori Bibee:</p>
+    <p class="casequote">“[I]t is clear from the Act that [an infant] is not to be liable even for necessaries, and that no demand in respect thereof is enforceable against him by law, though a <b>statutory claim is created against his property</b>.” — Mohori Bibee v. Dhurmodas Ghose</p>
+    <p>So the claim runs <b>against the minor’s property/estate</b>, <b>not against him personally</b> — an answer to a paper question on “Can a minor be made to pay for necessaries?”</p>
+
+    <h3>4.2 Essential conditions to recover under S.68</h3>
+    <ol>
+      <li><b>Person incapable:</b> the supply must be to a person incapable of contracting (a minor, a lunatic, an idiot) <b>or to one whom he is legally bound to support</b> (e.g. the wife/children of an incapable person — S.68 Ill. (b)).</li>
+      <li><b>Necessaries:</b> the things supplied must be <b>necessaries</b> — i.e. suited to the condition (station) of life of the person. Not everything supplied is “necessary”; the test asks what is reasonably required for that person’s needs and station.</li>
+      <li><b>Furnished by another:</b> a supplier other than the incapable person provides the goods.</li>
+      <li><b>Claim from property:</b> the remedy is reimbursement <b>from the property</b> of the incapable person, not a personal decree against him.</li>
+    </ol>
+
+    <h3>4.3 What counts as “necessaries suited to his condition in life”</h3>
+    <ul>
+      <li>Food, clothing, shelter and such essentials as are appropriate to the minor’s <b>station</b> — an <b>objective</b> test tempered by the person’s position.</li>
+      <li>Education and, in some cases, marriage expenses <b>may</b> count — <b>but</b> in <b>Ajudhia Prasad v. Chandan Lal</b> the marriage expenses for which money was lent were expressly held <b>not to be “necessaries”</b>, so S.68 had no application.</li>
+      <li>Items of <b>mere luxury</b>, or already amply supplied, are not necessaries; the supplier must show the minor did not already possess an adequate supply.</li>
+      <li>Follow the older English test (per Baron Parke): necessaries are things without which the person cannot reasonably exist, having regard to his condition in life.</li>
+    </ul>
+
+    <h3>4.4 Key limits and the exam contrast with Ss. 64/65</h3>
+    <div class="note"><b>Remember:</b> (i) S.68 is a claim against the <b>property</b>, not the person; (ii) it is confined to <b>necessaries suited to condition in life</b>; (iii) it is not a means to enforce the minor’s void contract — so money lent to a minor for an ordinary (non-necessity) purpose cannot be recovered, as in Ajudhia Prasad. The lender who advances cash for wedding expenses (not “necessaries”) gets <b>nothing</b> — neither on the contract nor under S.68.</div>
+    <table>
+      <tr><th>Provision</th><th>What it does</th><th>Applies to minor?</th></tr>
+      <tr><td><b>S.68</b></td><td>Reimbursement from property for necessaries supplied to an incapable person</td><td><b>Yes</b> — but only against property, only for necessaries</td></tr>
+      <tr><td><b>S.64</b></td><td>Restitution by a party who rescinds a <b>voidable</b> contract</td><td><b>No</b> — presupposes a contract by competent parties (Mohori)</td></tr>
+      <tr><td><b>S.65</b></td><td>Restoration/compensation for advantage under an agreement <b>discovered to be void</b> or contract that becomes void</td><td><b>No</b> — starts from a contract between competent parties (Mohori; Ajudhia Prasad)</td></tr>
+    </table>
+  </section>
+
+  <section id="restitution">
+    <h2><span class="secnum">5</span> Restitution in a Minor’s Agreement — Ss. 64, 65 &amp; SRA 1963 § 33</h2>
+    <p class="hsub">The contested question the three DU cases answer: can an adult who dealt with a minor recover what he gave when the contract is void?</p>
+
+    <h3>5.1 The general statutory scheme</h3>
+    <div class="statute"><span class="ref">S.64 — Consequences of rescission of voidable contract</span>
+    <p>When a person at whose option a contract is voidable rescinds it, the other party need not perform his part; and the party rescinding a voidable contract shall, if he has received any benefit thereunder from another party, <b>restore such benefit, so far as may be</b>, to the person from whom it was received.</p></div>
+    <div class="statute"><span class="ref">S.65 — Obligation of person who has received advantage under void agreement, or contract that becomes void</span>
+    <p>When an agreement is <b>discovered to be void</b>, or when a contract <b>becomes void</b>, any person who has received any advantage under such agreement or contract is <b>bound to restore it, or to make compensation</b> for it, to the person from whom he received it.</p></div>
+
+    <p>Read together, these sections make a party who took a benefit under a void(able) agreement restore it. The critical limitation — laid down in Mohori Bibee and followed in Ajudhia Prasad — is that <b>Ss. 64 and 65 presuppose an agreement or contract made by competent parties</b>:</p>
+    <p class="casequote">“This section [S.65], like S.64, starts from the basis of there being an agreement or contract between competent parties; and has no application to a case in which there never was, and never could have been, any contract.” — Privy Council in Mohori Bibee</p>
+    <p>Because a minor’s agreement is <b>void ab initio</b> — there never was a contract — neither S.64 nor S.65 can be invoked against him. To order a minor to repay money lent would be to <b>enforce the very contract the law declares void</b>.</p>
+
+    <h3>5.2 The Specific Relief Act route — cancellation on terms</h3>
+    <div class="statute"><span class="ref">Specific Relief Act, 1963, § 33 (formerly Ss. 38/39/41 of SRA 1877) — cancellation/relief on terms</span>
+    <p>On adjudging the <b>cancellation</b> of an instrument (or rescission of a contract), the Court <b>may require the party to whom such relief is granted</b> to make any <b>compensation to the other which justice may require</b>.</p></div>
+    <ul>
+      <li>Where a <b>minor sues as plaintiff</b> to have his void instrument (e.g. a mortgage) cancelled, the court — in its discretion — may grant the relief only <b>on terms</b>, e.g. that he refund the money actually received. This is the rule that “he who seeks equity must do equity.”</li>
+      <li>In Mohori Bibee itself, the Courts declined to order the return of the money because the <b>lender knew of the infancy</b>; the Privy Council saw no reason to interfere with that exercise of discretion under Ss. 38 &amp; 41 (SRA 1877).</li>
+      <li>The rationale (Lord Romer, quoted with approval): “A Court of equity cannot say that it is equitable to compel a person to pay any moneys in respect of a transaction which, as against that person, the Legislature has declared to be void.”</li>
+    </ul>
+
+    <h3>5.3 The two competing Full-Bench positions — Khan Gul vs Ajudhia Prasad</h3>
+    <div class="side">
+      <div>
+        <div class="card tone2"><h4>Khan Gul v. Lakha Singh (Lahore FB, 1928)</h4>
+        <p><b>On estoppel:</b> a minor is <b>not estopped</b> from pleading minority (answered unanimously in the negative).<br>
+        <b>On restitution:</b> the <b>majority</b> (Shadi Lal, C.J. &amp; three others; Harrison, J. dissenting) held that a minor who obtained a benefit by falsely representing his age <b>may be compelled in equity to make restitution</b> — even when he is a <b>defendant</b> — because an infant cannot be allowed to take advantage of his own fraud. Shadi Lal, C.J.: the protection is a shield, not a sword, and restitution restores the <i>status quo ante</i> without enforcing the contract.</p></div>
+      </div>
+      <div>
+        <div class="card tone3"><h4>Ajudhia Prasad v. Chandan Lal (Allahabad FB, 1937)</h4>
+        <p><b>Rejected the Khan Gul restitution-of-money view.</b> Sulaiman, C.J.: S.65 does not apply to a minor; a minor <b>being sued</b> cannot be made to repay money (a personal money-decree would be almost an enforcement of the void contract) nor have his mortgaged property sold. Restitution is confined to cases where the minor is a <b>plaintiff</b> seeking equity; where he is a defendant he is merely using his minority as a <b>shield</b>, not a sword. This is the view approved as the mainstream/prevailing Indian law.</p></div>
+      </div>
+    </div>
+
+    <h3>5.4 Reconciling the position — what a minor may be ordered to do</h3>
+    <table>
+      <tr><th>Situation</th><th>Can the minor be made to…</th><th>Basis</th></tr>
+      <tr><td>Restore <b>specific traceable property</b> obtained by fraud</td><td><span class="verdict">Yes ✅</span></td><td>Equitable restitution <i>in specie</i>; the property belongs to the other party and can be followed</td></tr>
+      <tr><td><b>Refund money</b> obtained by fraud (minor is <b>defendant</b>)</td><td><span class="verdict r">No ❌</span> (prevailing view — Ajudhia Prasad)</td><td>Money cannot be traced; a money-decree enforces the void contract; majority position</td></tr>
+      <tr><td>Refund money where he is a <b>plaintiff</b> seeking to set aside his own deed</td><td><span class="verdict">Yes ✅ (on terms)</span></td><td>“He who seeks equity must do equity” — SRA 1963 § 33 discretion</td></tr>
+      <tr><td>Be <b>estopped</b> from pleading minority after misrepresenting age</td><td><span class="verdict r">No ❌</span></td><td>Khan Gul — estoppel cannot override a statutory incapacity</td></tr>
+      <tr><td>Be made personally liable for <b>necessaries</b></td><td><span class="verdict r">No ❌</span></td><td>Only property is liable (S.68)</td></tr>
+    </table>
+    <div class="warn"><b>Exam caution (the distinction that matters):</b> The single most-quoted rule is that a minor is <b>not liable to make restitution of money</b> received, because to do so would indirectly enforce his void contract — yet he may be required to <b>restore specific property</b> that is still traceable, and if he comes to court as a <b>plaintiff</b> he may be put on terms to refund. Cite Mohori Bibee (foundation), Khan Gul (minority/equity view) and Ajudhia Prasad (prevailing view) precisely, and you will satisfy a full-mark answer.</div>
+  </section>
+
+  <section id="duccases">
+    <h2><span class="secnum">C</span> Full Case Digests — the 3 DU Cases on Capacity</h2>
+    <p class="hsub">Each digest is set out in the full DU format: Citation · Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are taken verbatim from the DU case material.</p>
+
+    <article class="case" id="mohori">
+      <div class="head"><div class="t">Case 18 · Mohori Bibee v. Dhurmodas Ghose</div><div class="r">(1903) 30 I.A. 114 · Privy Council (Sir Ford North) · minor’s contract void ab initio</div></div>
+      <div class="tagrow"><span class="tag t-ill">Minor</span><span class="tag t-v">Void ab initio</span><span class="tag t-va">Mortgage</span><span class="tag t-b">Ss. 11, 64, 65</span><span class="tag t-u">Estoppel</span><span class="tag t-va">Restitution</span></div>
+      <div class="scene">
+        <svg width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="Mohori Bibee scene - minor mortgaging property">
+          <rect width="640" height="300" fill="#fdf0f0"/>
+          <text x="320" y="30" text-anchor="middle" font-size="13.5" font-weight="800" fill="#3f2b63">20 July 1895 — Dhurmodas Ghose, a minor, executes a mortgage</text>
+          <text x="320" y="50" text-anchor="middle" font-size="11" fill="#7a5a00">of his houses for ₹20,000 @ 12% to money-lender Brahmo Dutt (via attorney Kedar Nath)</text>
+          <rect x="40" y="80" width="250" height="66" rx="10" fill="#cfe3f7" stroke="#0f4c81"/>
+          <text x="165" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#0f4c81">DHURMODAS (minor, ~18–20)</text>
+          <text x="165" y="118" text-anchor="middle" font-size="10" fill="#333">guardian appointed under Letters Patent →</text>
+          <text x="165" y="134" text-anchor="middle" font-size="10" fill="#333">majority at 21 (Indian Majority Act)</text>
+          <rect x="360" y="80" width="250" height="66" rx="10" fill="#f6e3c8" stroke="#b7791f"/>
+          <text x="485" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#b7791f">BRAHMO DUTT (money-lender)</text>
+          <text x="485" y="118" text-anchor="middle" font-size="10" fill="#333">absent; attorney Kedar Nath had been</text>
+          <text x="485" y="134" text-anchor="middle" font-size="10" fill="#333">warned by letter (15 July) of the minority</text>
+          <rect x="120" y="176" width="400" height="56" rx="10" fill="#fde4e4" stroke="#c0392b"/>
+          <text x="320" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#c0392b">MINOR SUES (via guardian) for a DECLARATION</text>
+          <text x="320" y="214" text-anchor="middle" font-size="10.5" fill="#c0392b">that the mortgage is void and should be cancelled</text>
+          <rect x="90" y="250" width="460" height="40" rx="10" fill="#e5f6ec" stroke="#0b7a4b"/>
+          <text x="320" y="274" text-anchor="middle" font-size="12" font-weight="800" fill="#0b5c39">HELD: agreement of a minor is VOID AB INITIO ✅</text>
+        </svg>
+        <div class="cap">Scene 18 — A minor mortgages his houses; the Privy Council holds the agreement void ab initio.</div>
+      </div>
+      <div class="full">
+        <h5>Facts</h5>
+        <p>On <b>20 July 1895</b>, the respondent <b>Dharmodas Ghose executed a mortgage</b> in favour of <b>Brahmo Dutt</b>, a Calcutta money-lender, to secure repayment of <b>₹20,000 at 12%</b> interest on certain houses belonging to him. At that time Dharmodas was an <b>infant</b>; he did not attain twenty-one until September following. A <b>certificated guardian</b> had been appointed for his person and property under the Letters Patent of the High Court. Throughout the transaction Brahmo Dutt was absent from Calcutta and the business was done by his attorney <b>Kedar Nath Mitter</b>, the money being found by <b>Dedraj</b>, the local manager.</p>
+        <p>On <b>15 July 1895</b>, a letter from <b>Bhupendra Nath Bose</b>, attorney for Dharmodas’s mother and guardian (Jogendranundinee Dasi), gave notice to Kedar Nath that Dharmodas was still an infant and that anyone lending money to him did so at his own risk. Kedar Nath denied receiving it, but both Courts below held that he did personally receive it, the evidence being conclusive. On the day of execution Kedar Nath got the infant to sign a long <b>declaration</b> stating he had come of age on 17 June; both Courts found Kedar Nath <b>did not act upon, and was not misled by</b>, that statement and was <b>fully aware of the minority</b>.</p>
+        <p>On <b>10 September 1895</b> the infant, by his mother and guardian as next friend, sued Brahmo Dutt for a declaration that the mortgage was <b>void and inoperative</b> and should be cancelled. Brahmo Dutt pleaded that the plaintiff was of full age; that there was no notice of infancy; that the declaration as to age was <b>fraudulent</b> and disentitled the plaintiff to relief; and that the court should not grant relief without repayment. Jenkins, J. granted the declaration, and the Appellate Court affirmed. Brahmo Dutt appealed to the Privy Council (prosecuted after his death by his executors, Mohori Bibee &amp; others).</p>
+        <h5>Issues</h5>
+        <ol>
+          <li>Was the <b>knowledge of Kedar Nath</b> (the attorney) to be <b>imputed to</b> the defendant, Brahmo Dutt?</li>
+          <li>Was the infant <b>estopped</b> by S.115, Evidence Act, from setting up his minority?</li>
+          <li>Was a minor’s agreement <b>void</b> (not merely voidable) under Ss. 2, 10 and 11 of the Contract Act?</li>
+          <li>Could the infant be refused relief, or made to <b>repay the money</b> advanced, under S.64, S.65 or the Specific Relief Act?</li>
+        </ol>
+        <h5>Arguments of both sides</h5>
+        <div class="args"><p><b>Appellant (money-lender/executors):</b> (i) Kedar Nath’s knowledge was not the defendant’s; the real representative was Dedraj who had no knowledge. (ii) The plaintiff was estopped by S.115 from denying he was of full age after the fraudulent declaration. (iii) In any event the Court ought not to have decreed in the respondent’s favour without ordering him to <b>repay the ₹10,500</b> actually advanced — relying on <b>S.64</b> (and, on appeal, S.65), since the infant’s contracts were (on the then-current Indian view) only <b>voidable</b>.</p></div>
+        <div class="args"><p><b>Respondent (minor):</b> He was a minor when he executed the mortgage; the agreement was void and inoperative and should be delivered up and cancelled. Knowledge of minority was fixed on the lender through his agent, so no estoppel and no equity to compel repayment.</p></div>
+        <h5>Decision</h5>
+        <p>The Privy Council <b>dismissed the appeal</b> and affirmed the declaration that the mortgage was void. The <b>knowledge of Kedar Nath was imputed</b> to the defendant — he stood in the place of the defendant and his acts and knowledge were the principal’s; Dedraj himself had left the matter of minority in Kedar Nath’s hands. On estoppel, their Lordships held <b>S.115 had no application</b> where the statement is made to a person who <b>knows the real facts and is not misled</b> (Nelson v. Stocker); a false representation to one who knows it false does not take away the privilege of infancy.</p>
+        <p>On the decisive point, re-argued before them, their Lordships held, from Ss. 2, 10 and 11, that the Act makes it essential that <b>all contracting parties be competent to contract</b>, and a person who by reason of infancy is incompetent <b>cannot make a contract</b> within the meaning of the Act. Considering Ss. 183–184 (agency), 247–248 (partnership) and 68 (necessaries), they concluded that an infant is not to be liable even for necessaries — only a statutory claim against his property exists. Accordingly:</p>
+        <ul>
+          <li>The question whether a contract is void or voidable <b>presupposes the existence of a contract</b>, which <b>cannot arise in the case of an infant</b> — so there is no <b>voidable</b> contract under <b>S.64</b>.</li>
+          <li><b>S.65</b>, like S.64, <b>starts from a contract between competent parties</b> and has no application where there never was, and never could have been, any contract.</li>
+          <li>Under Ss. 38 &amp; 41 of the Specific Relief Act (1877) the Court had a discretion, but the lower Courts rightly declined to order the return of money advanced <b>with full knowledge of the infancy</b>; the Privy Council saw no reason to interfere.</li>
+        </ul>
+        <h5>Principle evolved</h5>
+        <p class="casequote">An agreement made by a minor is <b>void ab initio</b> — the minor, being incompetent under S.11, cannot make a contract at all; the transaction cannot be recognised by law. Ss. 64 and 65 of the Contract Act do not apply to a minor because they presuppose a contract between competent parties, and a minor cannot be ordered to repay money lent to him with full knowledge of his minority. (Estoppel cannot run where the truth is known to the party relying on it.)</p>
+        <div class="tip"><b>Why it matters:</b> Mohori Bibee is the foundation of Indian law on a minor’s agreement — it settled the void/voidable controversy and declared that restitution provisions (Ss. 64/65) cannot be used to make a minor repay money. Every later case (Khan Gul, Ajudhia Prasad) builds on or refines this foundation. It also supports the rule that a minor is <b>not estopped</b> and, even for necessaries, is liable only through his property (S.68).</div>
+      </div>
+    </article>
+
+    <article class="case" id="khangui">
+      <div class="head"><div class="t">Case 19 · Khan Gul v. Lakha Singh</div><div class="r">AIR 1928 Lah. 609 · Lahore High Court, Full Bench (Shadi Lal, C.J.) · estoppel &amp; restitution of a minor</div></div>
+      <div class="tagrow"><span class="tag t-ill">Minor — misrepresentation of age</span><span class="tag t-va">Estoppel (S.115)</span><span class="tag t-u">Restitution in equity</span><span class="tag t-v">Sale of land</span></div>
+      <div class="scene">
+        <svg width="620" height="310" viewBox="0 0 620 310" role="img" aria-label="Khan Gul scene - minor selling land after misrepresenting age">
+          <rect width="620" height="310" fill="#f2effb"/>
+          <text x="310" y="28" text-anchor="middle" font-size="13.5" font-weight="800" fill="#3f2b63">Minor (D-1) sells land to the plaintiffs for ₹17,500</text>
+          <text x="310" y="47" text-anchor="middle" font-size="11" fill="#555">₹8,000 cash paid + ₹9,500 by promissory note (later partly discharged via brother-in-law)</text>
+          <rect x="40" y="75" width="250" height="64" rx="10" fill="#cfe3f7" stroke="#0f4c81"/>
+          <text x="165" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f4c81">KHAN GUL (minor seller)</text>
+          <text x="165" y="114" text-anchor="middle" font-size="10" fill="#333">stated his age as 19 at registration;</text>
+          <text x="165" y="130" text-anchor="middle" font-size="10" fill="#333">had earlier got a medical certificate</text>
+          <rect x="340" y="75" width="250" height="64" rx="10" fill="#e6f0fb" stroke="#1273b8"/>
+          <text x="465" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f4c81">LAKHA SINGH &amp; co (buyers)</text>
+          <text x="465" y="114" text-anchor="middle" font-size="10" fill="#333">deny knowledge of minority;</text>
+          <text x="465" y="130" text-anchor="middle" font-size="10" fill="#333">defendant refused possession</text>
+          <rect x="100" y="165" width="420" height="58" rx="10" fill="#fde4e4" stroke="#c0392b"/>
+          <text x="310" y="185" text-anchor="middle" font-size="11" font-weight="800" fill="#c0392b">REFERRED TO FULL BENCH</text>
+          <text x="310" y="203" text-anchor="middle" font-size="10.5" fill="#c0392b">(1) minor estopped from pleading minority? (2) minor may be made to make restitution?</text>
+          <rect x="40" y="244" width="270" height="56" rx="10" fill="#e5f6ec" stroke="#0b7a4b"/>
+          <text x="175" y="263" text-anchor="middle" font-size="10.5" font-weight="800" fill="#0b7a4b">Q1: NOT estopped (unanimous)</text>
+          <text x="175" y="282" text-anchor="middle" font-size="10" fill="#333">S.115 cannot override the statutory incapacity</text>
+          <rect x="330" y="244" width="270" height="56" rx="10" fill="#fff2d9" stroke="#b7791f"/>
+          <text x="465" y="263" text-anchor="middle" font-size="10.5" font-weight="800" fill="#b7791f">Q2: MAY be ordered to make</text>
+          <text x="465" y="282" text-anchor="middle" font-size="10.5" font-weight="800" fill="#b7791f">restitution in equity (MAJORITY)</text>
+        </svg>
+        <div class="cap">Scene 19 — A minor sells land; the Full Bench rules he is not estopped but (majority) may be made to make restitution.</div>
+      </div>
+      <div class="full">
+        <h5>Facts</h5>
+        <p>The plaintiffs sued for possession of half a square which had been <b>sold to them by defendant 1 (Khan Gul) for ₹17,500</b>, of which <b>₹8,000 was paid in cash</b> before the Sub-Registrar and <b>₹9,500 was secured by a promissory note</b> payable on demand. The plaintiffs alleged the price was duly paid because the promissory note had been discharged by a fresh promissory note executed in favour of the defendant’s brother-in-law, <b>Muhammad Hussain</b>, at the defendant’s request; ₹5,500 had been paid to Muhammad Hussain and the balance was offered. Defendant 1 refused to deliver possession. The plaintiffs sought possession or, alternatively, a decree for ₹17,500 with interest/damages.</p>
+        <p>Defendant 1 <b>pleaded minority</b>; his wife (defendant 2) pleaded minority and a prior gift to her. The trial Court decreed possession, holding defendant 1 was <b>estopped</b> by falsely representing that he was of full age (following <i>Wasinda Ram v. Sita Ram</i>), that the consideration was discharged, and that the gift to the wife was void. Defendants appealed. The Division Bench (Dalip Singh, J.) found there was no evidence the plaintiffs knew the representation was false, but — because of the conflict between the Calcutta view (<i>Dhurmo Dass v. Brahmo Dutt</i>, later Mohori Bibee) and the Lahore view on estoppel of minors, and the difficulty of the restitution point — <b>referred two questions to a Full Bench</b>.</p>
+        <h5>Issues (referred to the Full Bench)</h5>
+        <ol>
+          <li>Whether a minor, who by <b>falsely representing himself to be a major</b> has induced a person to contract with him, is <b>estopped</b> from pleading his minority to avoid the contract.</li>
+          <li>Whether a party who, when a minor, entered into a contract by a false representation as to age — whether he be defendant or plaintiff in later litigation — can <b>refuse to perform the contract and yet retain the benefit</b> derived from it.</li>
+        </ol>
+        <h5>Arguments of both sides</h5>
+        <div class="args"><p><b>Buyers (appellants before FB):</b> S.115, Evidence Act, is general and its word “person” includes a minor; having induced them to contract by a false statement of full age, the minor should be estopped and (alternatively) compelled to refund the consideration received.</p></div>
+        <div class="args"><p><b>Minor:</b> Being under 18 (and his incapacity governed by the Contract Act), he is not estopped; and, being a minor, he cannot be ordered to repay money — relying on Leslie Ltd. v. Sheill and Mahomed Syedol Ariffin v. Yeoh Ooi Gark (P.C.).</p></div>
+        <h5>Decision</h5>
+        <p><b>On the first question (estoppel) — answered unanimously in the NEGATIVE:</b> A minor is <b>not estopped</b> from pleading his minority. Shadi Lal, C.J. held that although the word “person” in S.115 is broad enough to include a minor, the general law of estoppel (a rule of evidence) must be read <b>subject to</b> the special law of contract which declares a minor incompetent; otherwise the protection deliberately created for minors would be taken away. He noted the English position (Levene v. Brougham) and that in every honest dealing there is an implied representation of capacity, so to apply estoppel would practically abolish the minor’s protection.</p>
+        <p><b>On the second question (restitution) — answered by the MAJORITY in the AFFIRMATIVE:</b> An infant, though not liable on the contract or in tort, <b>may in equity be required to return the benefit</b> he obtained by his false representation as to age. Shadi Lal, C.J. held that the minor is not liable on the contract or in tort if the tort is really the contract (Liverpool Adelphi Loan Assn.; Burnard v. Haggis), but a false representation of age raises an <b>equitable liability</b> — the Court, while relieving the infant, may restore the parties to the <i>status quo ante</i>. Where the benefit is traceable property it must be restored; where it is money, the jurisdiction in equity (founded on “an infant cannot take advantage of his own fraud”) may require repayment — he saw <b>no real difference</b> between restoring property and refunding money. He relied on the discretion under S.41, Specific Relief Act (1877), and distinguished Mohori Bibee (where restitution was refused because the <b>lender knew of the infancy</b>). He expressly rejected the distinction between minor-plaintiff and minor-defendant. <b>Tek Chand, J.</b> agreed the minor is not estopped and agreed with the Chief Justice on restitution; two other judges concurred. <b>Harrison, J. dissented</b> on restitution, holding (with Leslie Ltd. v. Sheill and Lord Sumner) that no suit in substance contractual can lead to an order for restitution by an infant-defendant.</p>
+        <h5>Principle evolved</h5>
+        <p class="casequote">(i) A minor who falsely represents himself to be a major is <b>not estopped</b> from pleading his minority, for the general rule of estoppel (S.115, Evidence Act) cannot override the special statutory incapacity of a minor to contract. (ii) But the equitable doctrine of <b>restitution</b> applies: where a minor has, by fraudulently misrepresenting his age, obtained a benefit, he may — even when a defendant — be compelled in equity to restore the benefit (traceable property in specie, or money where justice requires), so that he does not take advantage of his own fraud. <i>[Minority view of Harrison, J.: no restitution of money against an infant-defendant.]</i></p>
+        <div class="warn"><b>Exam pointer:</b> Khan Gul is <b>not</b> the last word. Although the Lahore Full Bench majority allowed restitution against a minor-defendant, the <b>Allahabad Full Bench in Ajudhia Prasad (next case) rejected that money-restitution view</b>, and the mainstream Indian law follows Ajudhia Prasad. When answering, present Khan Gul as the pro-restitution (Lahore) view and Ajudhia Prasad as the prevailing view that a minor-defendant cannot be made to refund money.</div>
+      </div>
+    </article>
+
+    <article class="case" id="ajudhia">
+      <div class="head"><div class="t">Case 20 · Ajudhia Prasad v. Chandan Lal</div><div class="r">AIR 1937 All. 610 · Allahabad High Court, Full Bench (Sulaiman, C.J.) · no restitution of money against a minor-defendant</div></div>
+      <div class="tagrow"><span class="tag t-ill">Minors (18–21)</span><span class="tag t-u">Ss. 65 &amp; 68 inapplicable</span><span class="tag t-va">Rejects Khan Gul</span><span class="tag t-b">Mortgage of minors</span><span class="tag t-v">No money-decree / sale</span></div>
+      <div class="scene">
+        <svg width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="Ajudhia Prasad scene - mortgage by minors not enforced">
+          <rect width="640" height="300" fill="#f4f0fb"/>
+          <text x="320" y="30" text-anchor="middle" font-size="13.5" font-weight="800" fill="#3f2b63">15 Oct 1925 — mortgage deed executed by two MINORS</text>
+          <text x="320" y="50" text-anchor="middle" font-size="11" fill="#555">(18–21 yrs; certificated guardian appointed) in favour of the mortgagee</text>
+          <rect x="40" y="76" width="250" height="64" rx="10" fill="#cfe3f7" stroke="#0f4c81"/>
+          <text x="165" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#0f4c81">CHANDAN LAL &amp; ORS (minor mortgagors)</text>
+          <text x="165" y="115" text-anchor="middle" font-size="10" fill="#333">guardian appointed; no necessity for</text>
+          <text x="165" y="131" text-anchor="middle" font-size="10" fill="#333">the debt (marriage expenses — not necessaries)</text>
+          <rect x="350" y="76" width="250" height="64" rx="10" fill="#e6f0fb" stroke="#1273b8"/>
+          <text x="475" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#0f4c81">AJUDHIA PRASAD (mortgagee)</text>
+          <text x="475" y="115" text-anchor="middle" font-size="10" fill="#333">sues for sale on the mortgage; says</text>
+          <text x="475" y="131" text-anchor="middle" font-size="10" fill="#333">minors concealed that a guardian existed</text>
+          <rect x="90" y="164" width="460" height="60" rx="10" fill="#fde4e4" stroke="#c0392b"/>
+          <text x="320" y="184" text-anchor="middle" font-size="11" font-weight="800" fill="#c0392b">MORTGAGEE'S GROUNDS REJECTED BY FULL BENCH</text>
+          <text x="320" y="202" text-anchor="middle" font-size="10.5" fill="#555">S.65 does NOT apply to minors · no estoppel against a statute</text>
+          <text x="320" y="218" text-anchor="middle" font-size="10.5" fill="#555">· equity restitution (Khan Gul) NOT followed · S.43 T.P. Act inapplicable</text>
+          <rect x="130" y="246" width="380" height="42" rx="10" fill="#e5f6ec" stroke="#0b7a4b"/>
+          <text x="320" y="271" text-anchor="middle" font-size="12" font-weight="800" fill="#0b5c39">HELD: appeal allowed, suit dismissed — no decree/sale against minors ✅</text>
+        </svg>
+        <div class="cap">Scene 20 — A mortgagee cannot obtain a money-decree or sale against minor-mortgagors.</div>
+      </div>
+      <div class="full">
+        <h5>Facts</h5>
+        <p>The plaintiffs (mortgagee) sued for <b>sale on the basis of a mortgage deed dated 15 October 1925</b> executed by the defendants in their favour. The defendants pleaded that they were <b>minors</b> at the date of the mortgage, a <b>certificated guardian</b> having been appointed for them, and that there was no necessity for contracting the debt. The mortgagee denied the minority and asserted liability under <b>S.68</b>.</p>
+        <p>The trial Court found the defendants were more than 18 but under 21, and that there was no evidence of any representation by them or their father; it held S.68 did not apply. The lower appellate Court held the defendants were minors (under 21), that the <b>marriage expenses</b> were <b>not “necessaries”</b>, so S.68 had no application — but, finding that the defendants and their father concealed the appointment of the guardian (the father even declaring before the Sub-Registrar that his younger son was over 18), it treated this as a <b>fraudulent misrepresentation</b> and, <b>following the Lahore Full Bench in Khan Gul v. Lakha Singh</b>, decreed the claim with interest and, in default, for sale of the mortgaged property. The mortgagee’s appeal came before the Allahabad Full Bench on the question whether such a decree could be made.</p>
+        <h5>Issue (referred to the Full Bench)</h5>
+        <p class="casequote">Where money has been borrowed by two minors under a mortgage deed at a time when they were minors (more than 18 but less than 21), under a fraudulent concealment of the fact that they were minors because a guardian had been appointed, can the mortgagee, in a suit against them, get a decree for the <b>principal money under S.65</b> or under any other equitable principle, and can he also get a <b>decree for sale</b> of the mortgaged property?</p>
+        <h5>Arguments of both sides</h5>
+        <div class="args"><p><b>Mortgagee:</b> Claim based on several alternative grounds — (i) <b>S.65, Contract Act</b> (restoration/compensation for advantage under a void agreement); (ii) <b>estoppel</b> of the minors for concealing minority; (iii) the equitable principle of restitution recognised by the Lahore Full Bench in Khan Gul; (iv) <b>S.43, Transfer of Property Act</b> (feeding the estoppel by transferor).</p></div>
+        <div class="args"><p><b>Minors (defendants):</b> The mortgage was made during minority and is <b>void ab initio</b> (Mohori Bibee); S.65 does not apply to them; there is no estoppel against a statute; and equity cannot be used to enforce a minor’s void contract.</p></div>
+        <h5>Decision</h5>
+        <p>Sulaiman, C.J. <b>answered the question in the negative — the appeal was allowed and the suit dismissed</b>. On each ground:</p>
+        <ul>
+          <li><b>S.65 does not apply:</b> Following the clear pronouncement in Mohori Bibee, both Ss. 64 and 65 presuppose an agreement/contract between <b>competent parties</b>; a minor’s agreement is void ab initio, so S.65 cannot be invoked against him. To hold otherwise would make a minor personally liable and nullify S.68’s protection (which confines even necessaries-liability to the property). The Legislature has not amended the section despite this settled construction.</li>
+          <li><b>No estoppel:</b> When the contract itself is void, the plea of estoppel fails — estoppel cannot be pleaded against a statute. S.115 cannot be used to prejudice a minor whom the law protects.</li>
+          <li><b>No equitable money-restitution against a minor-defendant:</b> The Allahabad Full Bench <b>declined to follow the majority restitution view in Khan Gul</b>. A Court of equity will not compel a person to pay money in respect of a transaction the Legislature has declared void (Lord Romer). The distinction between a minor as <b>plaintiff</b> and as <b>defendant</b> is well-recognised: restitution is ordered where the minor <b>seeks equity</b> (must do equity), not where he is being <b>sued</b> — there he merely uses his minority as a <b>shield</b>, not a sword. To pass a money-decree against him would be to enforce his void contract under the cloak of equity.</li>
+          <li><b>S.43, T.P. Act inapplicable:</b> It presupposes a transfer and estoppel, neither of which exists where a minor has made a void mortgage; a minor already owns the property, so no “subsequently acquired interest” can feed an estoppel.</li>
+        </ul>
+        <h5>Principle evolved</h5>
+        <p class="casequote">Neither S.65 of the Contract Act nor any equitable principle entitles a lender to a money-decree (or a decree for sale) against a minor on a void mortgage made during minority, even where minority was fraudulently concealed. A minor’s contract is void ab initio (Mohori Bibee); Ss. 64/65 do not apply; estoppel cannot run against the statutory incapacity; and restitution in equity is confined to the case where the minor is a <b>plaintiff</b> seeking to set aside his own transaction (where “he who seeks equity must do equity”), not where he is a <b>defendant</b> merely pleading his minority as a shield. In this respect the Allahabad Full Bench rejected the majority restitution view of Khan Gul.</p>
+        <div class="exam"><b>Exam link — the reconciliation:</b> Mohori (PC) settled that the minor’s agreement is void and Ss. 64/65 do not apply. Khan Gul (Lahore FB) added that the minor is not estopped but (majority) may be ordered in equity to make restitution. Ajudhia Prasad (All. FB) is the prevailing view that a minor-<b>defendant</b> cannot be made to repay money or lose his property on a void mortgage — restitution is only where the minor is the plaintiff or where specific traceable property is to be restored. State the three cases in this order for a complete, high-scoring answer.</div>
+      </div>
+    </article>
+  </section>
+
+  <section id="compare">
+    <h2><span class="secnum">6</span> Comparison Tables</h2>
+    <p class="hsub">Side-by-side tables that earn marks and make the doctrine easy to revise.</p>
+
+    <h3>6.1 The three DU cases at a glance</h3>
+    <table>
+      <tr><th>Case</th><th>Court</th><th>Core holding</th><th>Estoppel?</th><th>Restitution against minor?</th></tr>
+      <tr><td><b>18 Mohori Bibee</b> (1903)</td><td>Privy Council</td><td>Minor’s agreement <b>void ab initio</b>; Ss. 64/65 inapplicable; no estoppel where truth known</td><td>No (facts — lender knew)</td><td>No (lender knew of infancy; no repayment ordered)</td></tr>
+      <tr><td><b>19 Khan Gul</b> (1928)</td><td>Lahore FB</td><td>Minor <b>not estopped</b>; but (majority) may be compelled in <b>equity to make restitution</b> even as defendant</td><td><b>No</b> (unanimous)</td><td><b>Yes</b> — majority (Harrison, J. diss.)</td></tr>
+      <tr><td><b>20 Ajudhia Prasad</b> (1937)</td><td>Allahabad FB</td><td>No money-decree / sale against a minor-defendant; <b>rejects Khan Gul</b> restitution-of-money view</td><td>No</td><td><b>No</b> for money against minor-defendant (only where minor is plaintiff / specific property)</td></tr>
+    </table>
+
+    <h3>6.2 The three key dichotomies</h3>
+    <table>
+      <tr><th>Dichotomy</th><th>Position</th><th>Authority</th></tr>
+      <tr><td><b>Void vs voidable</b></td><td>Minor’s agreement is <b>void ab initio</b>, not merely voidable</td><td>Mohori Bibee (overruling earlier Calcutta “voidable” view)</td></tr>
+      <tr><td><b>Minor as plaintiff vs defendant</b></td><td>Plaintiff seeking equity may be put on terms to refund; defendant merely pleads minority as a <b>shield</b> and cannot be made to repay money</td><td>Ajudhia Prasad (distinguishing Mohori)</td></tr>
+      <tr><td><b>Restitution of property vs money</b></td><td>Traceable property may be restored in specie; <b>money</b> cannot be claimed back from a minor-defendant (a decree would enforce the void contract)</td><td>Ajudhia Prasad (rejecting Khan Gul)</td></tr>
+    </table>
+
+    <h3>6.3 Provisions &amp; their applicability to a minor</h3>
+    <table>
+      <tr><th>Provision</th><th>Content</th><th>To a minor</th></tr>
+      <tr><td><b>S.10</b></td><td>Agreements are contracts if by parties competent to contract…</td><td>No contract — minor not competent</td></tr>
+      <tr><td><b>S.11</b></td><td>Competence = majority + sound mind + no disqualification</td><td>Minor lacks the age requirement</td></tr>
+      <tr><td><b>S.12</b></td><td>Sound mind test; lucid intervals</td><td>Applies to unsound-mind persons (not minors)</td></tr>
+      <tr><td><b>S.64</b></td><td>Restitution on rescission of a voidable contract</td><td><b>Not applicable</b> (Mohori) — no voidable contract of a minor</td></tr>
+      <tr><td><b>S.65</b></td><td>Restore advantage under agreement discovered to be void</td><td><b>Not applicable</b> (Mohori; Ajudhia Prasad)</td></tr>
+      <tr><td><b>S.68</b></td><td>Reimbursement from property for necessaries to incapable person</td><td><b>Applies</b> — against property only, for necessaries suited to condition in life</td></tr>
+      <tr><td><b>SRA 1963 § 33</b></td><td>On cancellation, Court may require compensation from the party given relief</td><td>Applies where minor is <b>plaintiff</b> (may be put on terms)</td></tr>
+      <tr><td><b>Indian Majority Act 1875</b></td><td>Age of majority = 18; 21 where guardian appointed</td><td>Determines whether one is a minor</td></tr>
+    </table>
+
+    <h3>6.4 Minor vs person of unsound mind vs mere weakness — quick test</h3>
+    <table>
+      <tr><th>Person</th><th>Can he contract?</th><th>Test</th></tr>
+      <tr><td>Minor (under 18/21)</td><td>No — agreement void</td><td>Age at date of contract</td></tr>
+      <tr><td>Lunatic in a lucid interval</td><td>Yes</td><td>Sound at the time of contract</td></tr>
+      <tr><td>Idiot</td><td>No — never capable</td><td>Permanent want of understanding</td></tr>
+      <tr><td>Drunk / delirious during contract</td><td>No</td><td>Unable to understand/judge at the time (S.12 Ill. b)</td></tr>
+      <tr><td>Mere weak-minded / old person</td><td>Yes (subject to undue influence)</td><td>Capable of understanding &amp; judgment</td></tr>
+    </table>
+  </section>
+
+  <section id="pyq">
+    <h2><span class="secnum">7</span> DU Previous-Year Questions &amp; Model Answers</h2>
+    <p class="hsub">Representative questions in the DU pattern for Topic 5 (capacity). Note: your past-paper PDFs for this topic were not uploaded, so these are set in the standard DU descriptive form (answer any 5, 20 marks each) and cross-check the wording with your class handouts.</p>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>“An agreement by a minor is void ab initio.” Explain with reference to Mohori Bibee v. Dhurmodas Ghose. What are the consequences of such an agreement?</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>Ss. 10 &amp; 11: competence requires age of majority + sound mind; a minor is incompetent.</li>
+          <li><b>Mohori Bibee</b> (facts: minor mortgaged houses for ₹20,000; guardian appointed; lender’s attorney knew of minority) — Privy Council held the agreement <b>void ab initio</b>; the void/voidable question presupposes a contract, which cannot arise for an infant.</li>
+          <li><b>Consequences:</b> no contract enforceable by/against the minor; Ss. 64/65 inapplicable; no estoppel; no ratification; minor can enforce contracts for his benefit; liability for necessaries only against property (S.68).</li>
+          <li><b>Conclusion:</b> quote the Mohori principle verbatim.</li>
+        </ul></div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>Discuss the doctrine of restitution as applicable to a minor’s agreement. Can a minor be compelled to make restitution of the benefit obtained by him through misrepresentation of his age?</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>Explain Ss. 64/65 &amp; their limits: they presuppose competent parties (Mohori), so do not apply to a minor.</li>
+          <li><b>Equitable restitution:</b> Khan Gul (Lahore FB) — minor not estopped but (majority) may be made to restore benefit obtained by fraud, even as defendant (Harrison, J. dissenting).</li>
+          <li><b>Ajudhia Prasad</b> (All. FB) — rejected the money-restitution view against a minor-defendant; restitution confined to the minor-plaintiff (must do equity) or to specific traceable property; no money-decree/sale on a void mortgage.</li>
+          <li>State the prevailing law: minor may restore <b>specific traceable property</b>; may be put on terms where he is <b>plaintiff</b>; cannot be made to <b>repay money</b> as defendant.</li>
+          <li>Distinguish money (untraceable — would enforce the void contract) from property (traceable — may be restored in specie).</li>
+        </ul></div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>“The doctrine of estoppel cannot be pleaded against a minor.” Examine the statement with the help of decided cases.</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>S.115, Evidence Act — but the general law of estoppel must be read subject to the special statutory incapacity of a minor (Ss. 11, 10).</li>
+          <li><b>Mohori Bibee:</b> estoppel inapplicable where the lender knew the truth (not misled); the Privy Council left the wider question open.</li>
+          <li><b>Khan Gul (FB):</b> a minor who falsely represents his age is <b>not estopped</b> from pleading minority — S.115 cannot override the statute; otherwise the minor’s protection would be destroyed. Note the reason (Shadi Lal, C.J.).</li>
+          <li><b>Ajudhia Prasad:</b> estoppel cannot be pleaded against a statute; when the contract is void, the plea of estoppel fails.</li>
+          <li>Qualify: this does not mean the minor can keep property obtained by fraud — equity may order restitution (Khan Gul majority; Ajudhia as to specific property/plaintiff).</li>
+        </ul></div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>Explain who is competent to contract under the Indian Contract Act, 1872. Discuss the contractual position of (a) a minor and (b) a person of unsound mind.</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>S.11: age of majority + sound mind + no disqualification; S.10 requires competence.</li>
+          <li><b>Minor:</b> definition (Indian Majority Act: 18, or 21 with a guardian); agreement void ab initio (Mohori); no personal liability; necessaries via property (S.68); benefits enforceable; no estoppel/ratification.</li>
+          <li><b>Unsound mind (S.12):</b> test of understanding + rational judgment at the time; lunatics/idiots/drunks/delirious; lucid-interval contracts valid; effect — agreement void; necessaries (S.68 Ill. (a)/(b)); burden of proof.</li>
+          <li>Contrast the two and conclude.</li>
+        </ul></div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>Is a minor liable for necessaries supplied to him? Discuss the scope of Section 68 of the Indian Contract Act with the help of decided cases.</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>Position: a minor cannot contract even for necessaries, so S.68 creates a <b>quasi-contractual/statutory</b> claim.</li>
+          <li>Conditions: supply to incapable person (or one he is legally bound to support); necessaries suited to his condition in life; claim is <b>from the property</b> of the incapable person, not personally (Mohori Bibee — quote the observation).</li>
+          <li>What are “necessaries suited to condition in life”: food, clothing, shelter, education; not mere luxuries; and in Ajudhia Prasad <b>marriage expenses were held not “necessaries”</b>, so S.68 failed.</li>
+          <li>Illustrations (a) lunatic, (b) wife &amp; children.</li>
+        </ul></div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 marks</span><h4>Can a mortgagee enforce a mortgage executed by a minor against him after he attains majority? Discuss with reference to Mohori Bibee, Khan Gul and Ajudhia Prasad.</h4></div>
+      <div class="model"><h5>Model answer (skeleton)</h5>
+        <ul>
+          <li>Mohori: minor’s mortgage is void ab initio; no enforcement; Ss. 64/65 don’t apply.</li>
+          <li>Khan Gul: minor not estopped, but equity may order restitution (majority).</li>
+          <li>Ajudhia Prasad: the controlling case — a mortgagee cannot get a <b>money-decree or a decree for sale</b> against minor-mortgagors on a void mortgage, even for fraudulent concealment of minority; S.43 T.P. Act inapplicable.</li>
+          <li>Conclusion: after majority the void mortgage is still void (cannot be ratified); the mortgagee has no remedy in contract, and no restitution of money against the minor as defendant.</li>
+        </ul></div>
+    </div>
+    <div class="note"><b>On citations:</b> These are representative DU-pattern questions for Topic 5. Cross-check exact wording against your semester’s official question paper and class notes before the exam.</div>
+  </section>
+
+  <section id="revision">
+    <h2><span class="secnum">8</span> Rapid-Revision Pack</h2>
+    <p class="hsub">One-glance memory hooks for the last hour before the paper.</p>
+
+    <h3>8.1 One-line rules</h3>
+    <ul>
+      <li><b>S.11:</b> competent = majority + sound mind + not disqualified.</li>
+      <li><b>S.12:</b> sound mind judged <i>at the time</i> by understanding + rational judgment; lucid intervals allow contracts.</li>
+      <li><b>Minor’s agreement:</b> void ab initio (Mohori Bibee).</li>
+      <li><b>Ss. 64/65:</b> presuppose a contract between competent parties — do NOT apply to a minor (Mohori; Ajudhia).</li>
+      <li><b>S.68:</b> necessaries to an incapable person — reimbursement only <b>from his property</b>, not personally.</li>
+      <li><b>Estoppel:</b> a minor is not estopped from pleading minority (Khan Gul).</li>
+      <li><b>Restitution:</b> no money-decree against a minor-<b>defendant</b> (Ajudhia Prasad); specific traceable property may be restored; a minor-<b>plaintiff</b> must do equity (SRA § 33).</li>
+    </ul>
+
+    <h3>8.2 Case one-liners</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>Mohori Bibee (PC, 1903)</h4><p>Minor’s mortgage void ab initio; Ss. 64/65 inapplicable; no estoppel where the lender knew of infancy; no repayment ordered.</p></div>
+      <div class="card tone2"><h4>Khan Gul (Lahore FB, 1928)</h4><p>Minor NOT estopped from pleading minority; but majority held he may be compelled in equity to make restitution of the benefit obtained by fraud, even as defendant.</p></div>
+      <div class="card tone3"><h4>Ajudhia Prasad (All. FB, 1937)</h4><p>No money-decree/sale against minor-mortgagors on a void mortgage; S.65 &amp; S.43 T.P. Act inapplicable; rejects Khan Gul money-restitution; restitution only where minor is plaintiff/specific property.</p></div>
+    </div>
+
+    <h3>8.3 Self-test</h3>
+    <details><summary>Q1. X, aged 17, mortgages his house to Y for ₹50,000. Y knew X was a minor. Can Y enforce the mortgage?</summary><div class="body"><p><b>No.</b> The mortgage is void ab initio (Mohori Bibee). Ss. 64/65 don’t apply; and as Y knew of the minority there is no equity for repayment.</p></div></details>
+    <details><summary>Q2. Same facts, but X falsely stated he was 21 and Y did not know. After X attains majority, Y sues for sale. What is the result?</summary><div class="body"><p>X is not estopped (Khan Gul), and under Ajudhia Prasad a mortgagee cannot get a money-decree/sale against a minor (void ab initio, no ratification). The void mortgage remains unenforceable.</p></div></details>
+    <details><summary>Q3. A minor, misrepresenting his age, buys a bicycle and it is still with him, identifiable. Can the seller recover it?</summary><div class="body"><p><b>Yes</b> — restitution of <b>specific traceable property</b> may be ordered in equity, as the property belongs to the seller and can be followed; this does not enforce the void contract.</p></div></details>
+    <details><summary>Q4. A grocer supplies milk and clothes to a minor’s family. Can he recover the price from the minor?</summary><div class="body"><p>Not personally from the minor, but he is entitled to <b>reimbursement from the minor’s property</b> for necessaries suited to his condition in life (S.68) — including, by Illustration (b), supplies to those the minor is legally bound to support.</p></div></details>
+    <details><summary>Q5. A lunatic executes a sale deed during a period of lucidity. Is it valid?</summary><div class="body"><p><b>Yes.</b> Under S.12 a person usually of unsound mind may contract when of sound mind (lucid interval) — S.12 Ill. (a).</p></div></details>
+
+    <hr>
+    <div class="tip"><b>Parting tip:</b> For a full 20-mark answer on a minor’s agreement, open by quoting Ss. 10 &amp; 11, then march through the three DU cases in order — <b>Mohori</b> (void ab initio; Ss. 64/65 inapplicable) → <b>Khan Gul</b> (no estoppel; equity may order restitution) → <b>Ajudhia Prasad</b> (prevailing law: no money-restitution against a minor-defendant). Close with S.68 (necessaries, against property only) and SRA § 33 (minor-plaintiff must do equity).</div>
+  </section>
+
+  <div class="footer">
+    <p><b>DU LL.B. I-Term · Principles of Contract (General Principles) — LB-102 · Topic 5.</b> Primary source: <i>Cases Selected &amp; Edited, Faculty of Law, University of Delhi (Jan 2023)</i>, Topic 5 (Mohori Bibee, Khan Gul, Ajudhia Prasad) and <i>The Indian Contract Act, 1872</i> (Ss. 10, 11, 12, 64, 65, 68), the Specific Relief Act, 1963 (S.33) and the Indian Majority Act, 1875. Prepared as self-contained revision notes; cross-check statutes and case citations against your official handouts and report any needed corrections.</p>
+    <p style="margin-top:4px">Purpose: study aid only. Not a substitute for the DU casebook or the syllabus. Verify every citation before relying on it in the exam.</p>
+  </div>
+
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3774ac54dec54c5',t:'MTc4ODgwMDY2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

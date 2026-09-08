@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 8 · Defamation (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f4f7fa; --card:#ffffff;
+    --navy:#2b1c47; --navy2:#3c2f6b; --gold:#b0781f; --teal:#0f7a72;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e2ebf2;
+    --orange:#b9571f; --shadow:0 6px 24px rgba(18,40,62,.09);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#2b1c47 0%,#5b3a8e 55%,#0f7a72 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,132,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:940px; margin:0 0 22px; color:#ece5f6; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#f2ecfa}
+  .meta-strip{background:#1d1237; color:#cfd0e8; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#eae6f2; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fdf7e8; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#e9f5f2; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#3c2f6b; background:#ece6f4; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#eae6f2; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fbfbfe}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#2b1c47,#5b3a8e); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#eef6f2; border-left:3px solid var(--teal); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#e9f5f2; border:1px solid #cbe7e2; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfbfe; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#ece6f2; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#cfd0e8; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 8 — <span>Defamation</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering syllabus sub-heads (a) Meaning — libel &amp; slander, (b) Essential conditions, and (c) Defences (justification by truth, fair &amp; bonafide comments, privilege — absolute and qualified, consent, and apology) — with all 4 prescribed cases (41–44) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Defamation</span><span class="tag">Libel</span><span class="tag">Slander</span>
+      <span class="tag">Essential conditions</span><span class="tag">Innuendo</span>
+      <span class="tag">Justification / Fair comment</span><span class="tag">Absolute &amp; qualified privilege</span>
+      <span class="tag">4 Case Laws</span><span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Meaning — Libel and Slander · (b) Essential Conditions · (c) Defences — Justification by truth, fair and bonafide comments, privilege (absolute and qualified), consent and apology. Cases: 41. <i>Prof. Imtiaz Ahmad v. Durdana Zamir</i> (2009) 109 DRJ 357; 42. <i>Tushar Kanti Ghosh v. Bina Bhowmick</i> (1953) 57 CWN 378; 43. <i>Rustom K. Karanjia v. K.M.D. Thackersey</i>, AIR 1970 Bom. 424; 44. <i>Melepurath Sankunni Ezhuthassan v. Thekittil Geopalankutty Nair</i> (1986) 1 SCC 118.</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#meaning">1. Meaning of Defamation</a>
+    <a href="#libel">2. Libel v Slander (England &amp; India)</a>
+    <a href="#essential">3. Essential Conditions</a>
+    <a href="#innuendo">Innuendo &amp; Intention to Defame</a>
+    <a href="#publication">Publication &amp; Repetition</a>
+    <a href="#malice">Malice</a>
+    <a href="#defences">4. Defences</a>
+    <a href="#justification">Justification by Truth</a>
+    <a href="#faircomment">Fair Comment</a>
+    <a href="#privilege">Privilege (Absolute &amp; Qualified)</a>
+    <a href="#consent">Consent &amp; Apology</a>
+    <a class="n" href="#cases">The 4 Prescribed Case Laws</a>
+    <a href="#c41">41. Prof. Imtiaz Ahmad v. Durdana Zamir</a>
+    <a href="#c42">42. Tushar Kanti Ghosh v. Bina Bhowmick</a>
+    <a href="#c43">43. Rustom K. Karanjia v. Thackersey</a>
+    <a href="#c44">44. Melepurath Sankunni v. Nair</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims &amp; Terms</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Meaning — libel &amp; slander</td><td>Definition; distinction between libel &amp; slander in England and India</td><td>Definition; <i>Libel &amp; Slander</i>; s.499 IPC; <i>Parvathi v. Mannar</i></td></tr>
+        <tr><td>(b) Essential conditions</td><td>Defamatory words; reference to plaintiff; publication; malice</td><td>Lord Halsbury; <i>Cassidy</i>, <i>Newstead</i>, <i>Nemichand</i></td></tr>
+        <tr><td>(c) Defences</td><td>Justification; fair comment; privilege (absolute &amp; qualified); consent; apology</td><td>Radheyshyam Tiwari; <i>Tushar Kanti Ghosh</i>; <i>Rustom Karanjia</i>; <i>Toogood v. Spyring</i>; <i>Adam v. Ward</i></td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>Prof. Imtiaz Ahmad v. Durdana Zamir</b>, <b>Tushar Kanti Ghosh v. Bina Bhowmick</b> (Calcutta HC) and <b>Rustom K. Karanjia v. K.M.D. Thackersey</b> (Bombay HC). <b>Melepurath Sankunni Ezhuthassan v. Thekittil Geopalankutty Nair</b> appears in the syllabus list but is <b>not reproduced in the casebook</b> (the volume jumps to a consumer-protection case after <i>Rustom Karanjia</i>); its facts, issues, decision &amp; ratio are drawn from the standard report (AIR 1986 SC 411; 1986 SCR(3) 805) and the accompanying course notes, with a transparency note in the case box. The theory of defamation (meaning, libel &amp; slander, essential conditions, defences) follows the DU course notes and Ratanlal &amp; Dhirajlal.</div>
+    </section>
+
+    <!-- MEANING -->
+    <section id="meaning">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Meaning of Defamation</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The law recognises each person's right, during his lifetime, to the unimpairment of his <b>reputation</b> and good name. Reputation is not a man's own opinion of himself; it is the <b>opinion of others about him</b> — the esteem in which he is held by society. The law of defamation is based on the principle that reputation is a <b>valuable asset</b> deserving protection. A defamatory statement is one that tends to lower a person in the estimation of right-thinking members of society or to make them shun or avoid him.</p>
+      <blockquote class="quote">“A man's reputation is his property, and if possible, more valuable than other property.” — <i>Dixon v. Holden</i> (1869) 7 Eq. 488. Defamation is <b>injury to a person's reputation</b>. If a person injures the reputation of another he does so at his own risk.</blockquote>
+      <p><b>Definition</b> — <b>“Defamation is the publication of a statement which tends to lower a person in the estimation of right thinking members of society generally or which tends to make them shun or avoid that person.”</b> According to <b>Lord Halsbury</b>:</p>
+      <blockquote class="quote">“A defamatory statement is a statement which, if published concerning a person, is calculated to lower him in the estimation of right thinking men or causes him to be shunned or to expose him to hatred or contempt or ridicule or injurious to him in his office, profession, business, calling or trade.”</blockquote>
+      <p>Whether a statement is defamatory depends on how <b>right-thinking men of ordinary intelligence</b>, of average understanding, would take it. It is <b>no defence</b> that the statement was not intended or believed to be defamatory. As <i>Prof. Imtiaz Ahmad v. Durdana Zamir</i> (Case 41) reiterates, <b>injury to feelings alone is not enough</b>; the words must be offensive enough to lower the plaintiff's dignity in the eyes of others — mere insult or annoyance is not a cause of action.</p>
+      <div class="tipbox"><b>Distinguish — defamation is a</b> wrong to <b>reputation</b>, not to <b>feelings</b>. A statement is defamatory if it exposes the plaintiff to hatred, contempt, ridicule, fear, dislike or dis-esteem, or disparages him in his office, profession, calling, trade or business. The test is objective — the reaction of the <b>ordinary right-thinking reader/listener</b>.</div>
+    </section>
+
+    <!-- LIBEL VS SLANDER -->
+    <section id="libel">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Libel and Slander — English &amp; Indian Law</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>Defamation takes two forms according to the <b>form</b> in which the defamatory statement is made:</p>
+      <ul>
+        <li><b>Slander</b> — the publication of a defamatory statement in a <b>transient</b> form. Example: words <b>spoken</b>, or made by <b>gestures</b>.</li>
+        <li><b>Libel</b> — the publication of a defamatory statement in a <b>permanent</b> form. Example: <b>writing, printing, picture, effigy, statue</b>.</li>
+      </ul>
+      <table>
+        <tr><th style="width:20%">—</th><th style="width:40%">SLANDER</th><th>LIBEL</th></tr>
+        <tr><td>1. Form</td><td>Publication in a <b>transient</b> form (spoken words, gestures)</td><td>Publication in a <b>permanent</b> form (writing, printing, picture, statue)</td></tr>
+        <tr><td>2. Addressed to</td><td>The <b>ear</b></td><td>The <b>eye</b></td></tr>
+        <tr><td>3. In criminal law (England)</td><td>Generally <b>not</b> an offence</td><td>An <b>offence</b> (criminal libel)</td></tr>
+        <tr><td>4. In tort law (England)</td><td>Actionable only on proof of <b>special damage</b>, except in certain cases</td><td>Always actionable <b>per se</b> — no proof of special damage needed</td></tr>
+        <tr><td>5. In India (s.499 IPC)</td><td><b>Also a criminal offence</b></td><td>Also a criminal offence (no distinction)</td></tr>
+      </table>
+      <p><b>Special cases — notes on form:</b></p>
+      <ul>
+        <li>In a <b>film</b>, not only the photographic part but also the synchronized speech, if defamatory, is <b>libel</b> — <i>Youssoupoff v. M.G.M. Pictures Ltd.</i> (1934).</li>
+        <li>Broadcasting words by <b>wireless telegraphy</b> is treated as publication in permanent form, and therefore <b>libel</b> (s.1, Defamation Act 1952, England).</li>
+        <li>Matter recorded on a <b>gramophone disc</b> is in permanent form though addressed to the ear — <b>Winfield</b> regards it as slander, <b>Salmond</b> as libel. In India, under <b>s.499+500, IPC</b>, both words and signs/visible representations are included, and <b>libel and slander are both criminal</b>.</li>
+      </ul>
+      <h3>2.1 Importance of the distinction</h3>
+      <ol>
+        <li><b>Criminal law:</b> Under English law, <b>slander is not a criminal offence</b>, but <b>libel is</b>. <b>In India there is no such distinction</b> — both libel and slander are offences under <b>s.499 IPC</b>.</li>
+        <li><b>Tort law:</b> Under English law, <b>slander is actionable only on proof of special damage</b> (except in certain cases), while <b>libel is actionable per se</b>. The weight of Indian judicial opinion (<i>Parvathi v. Mannar</i>) <b>discards this distinction</b> and makes <b>both actionable per se</b>.</li>
+      </ol>
+      <h4>Circumstances where slander is actionable per se</h4>
+      <p>Under English law, slander is actionable <i>per se</i> (without proof of special damage) where it amounts to:</p>
+      <ul>
+        <li>Imputation of a <b>criminal offence</b> to the plaintiff;</li>
+        <li>Imputation of a <b>contagious or infectious disease</b>, which deters others from associating with the plaintiff;</li>
+        <li>Imputation that a person is <b>incompetent, dishonest or unfit</b> regarding the office, profession, trade or business carried on by him;</li>
+        <li>Imputation of <b>unchastity or adultery</b> to any woman or girl.</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 250" width="780" role="img" aria-label="Libel vs slander">
+          <rect x="20" y="20" width="360" height="200" rx="12" fill="#a83a3a"/>
+          <text x="200" y="50" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">SLANDER</text>
+          <text x="200" y="78" fill="#fbe5e5" text-anchor="middle" font-size="12">Transient form · the EAR</text>
+          <text x="200" y="102" fill="#fbe5e5" text-anchor="middle" font-size="12">Spoken words, gestures</text>
+          <text x="200" y="140" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">England:</text>
+          <text x="200" y="160" fill="#fbe5e5" text-anchor="middle" font-size="11">not an offence; needs special</text>
+          <text x="200" y="178" fill="#fbe5e5" text-anchor="middle" font-size="11">damage (except a few cases)</text>
+          <text x="200" y="205" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">India: offence u/s 499 IPC too</text>
+          <rect x="400" y="20" width="360" height="200" rx="12" fill="#5b3a8e"/>
+          <text x="580" y="50" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">LIBEL</text>
+          <text x="580" y="78" fill="#ece6f4" text-anchor="middle" font-size="12">Permanent form · the EYE</text>
+          <text x="580" y="102" fill="#ece6f4" text-anchor="middle" font-size="12">Writing, print, picture, statue</text>
+          <text x="580" y="140" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">England: an offence;</text>
+          <text x="580" y="160" fill="#ece6f4" text-anchor="middle" font-size="11">actionable PER SE (no special</text>
+          <text x="580" y="178" fill="#ece6f4" text-anchor="middle" font-size="11">damage needed)</text>
+          <text x="580" y="205" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">India: offence u/s 499 IPC too</text>
+        </svg>
+        <div class="cap">Libel vs Slander: form, the organ addressed, criminal/tort consequences (England) and the Indian position.</div>
+      </div>
+    </section>
+
+    <!-- ESSENTIAL CONDITIONS -->
+    <section id="essential">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Essential Conditions of Defamation</h2></div>
+      <p class="sec-sub">Syllabus (b).</p>
+      <p>The essentials of defamation are four:</p>
+      <ol>
+        <li>The words (or other representation) must be <b>defamatory</b>;</li>
+        <li>They must <b>refer to the plaintiff</b>;</li>
+        <li>They must be <b>published</b> (made known to a third person); and</li>
+        <li>The words must have been published <b>maliciously</b> (malice in law).</li>
+      </ol>
+      <h3>3.1 The words must be defamatory</h3>
+      <p>As noted above, the test is how <b>right-thinking men</b> of fair average intelligence would take the statement. It is no defence that the defendant did not <b>intend</b> to defame. A mere <b>hasty expression</b> spoken in anger, or <b>vulgar abuse</b> to which no hearer would attribute a defamatory character, is not actionable (<i>Parvathi v. Mannar</i>). Illustrations:</p>
+      <ul>
+        <li><b>Mst. Ramdhara v. Mst. Phulwatibai</b> — the defendant imputed that the plaintiff was a "kept" woman. <i>Held:</i> not mere vulgar abuse but defamatory.</li>
+        <li><b>South Indian Rly. Co. v. Ramkrishna</b> — a railway guard told the plaintiff he was travelling on a wrong ticket, which proved to be false. <i>Held:</i> statement made <b>bona fide</b>; not defamatory.</li>
+        <li><b>Capital &amp; County Bank v. Henty &amp; Sons</b> — a circular stating the defendants would not accept cheques on the plaintiff bank, which caused a run on the bank. <i>Held:</i> not defamatory, because reasonable people could not take the statement to mean the bank had become insolvent (the supposed innuendo was not made out).</li>
+      </ul>
+
+      <h3 id="innuendo">3.2 Innuendo — the latent or secondary meaning</h3>
+      <p>Sometimes a statement appears innocent on its face but, because of some <b>latent or secondary meaning</b>, it is defamatory. This is an <b>innuendo</b>. The plaintiff may sue, but <b>must prove the latent/secondary meaning</b>. Even a commendatory-sounding statement may be defamatory (e.g., saying a lady has given birth to a child is defamatory if she is unmarried). Where the words are not defamatory in their ordinary meaning and the plaintiff pleads an innuendo, the plaintiff <b>must lead evidence</b> that the words were understood by the readers, with knowledge of special facts, in the defamatory sense (<i>Prof. Imtiaz Ahmad</i>).</p>
+      <ul>
+        <li><b>Cassidy v. Daily Mirror Newspapers Ltd.</b> — a newspaper published a photograph of a married man with another lady, captioned as announcing their engagement. <i>Held (CA):</i> the innuendo (that the man was not really married to his wife and she lived with him in immoral cohabitation) was established through the evidence of friends who formed a bad impression; the defendant's <b>innocence and lack of intention were ineffectual defences</b>.</li>
+        <li><b>Morrison v. Ritchie &amp; Co.</b> — defendants in good faith published that the plaintiff had given birth to twins, though she had married only two months earlier. <i>Held:</i> they were liable despite ignorance.</li>
+      </ul>
+      <div class="tipbox"><b>Intention to defame is NOT necessary.</b> When the words are defamatory in the eyes of the persons to whom they are published, there is defamation even though the maker believed them innocent. It is immaterial that the defendant was unaware of the facts because of which an otherwise innocent statement is defamatory.</div>
+      <div class="warnbox"><b>Indian position:</b> In <b>T.V. Ramasubha Iyer v. A.M.A. Mohindeen</b> (AIR 1972 Mad. 398), the Madras High Court held that the rule in <i>Hulton &amp; Co. v. Jones</i> (holding innocent publishers liable) is against equity, justice and good conscience and is <b>not applicable in India</b>; it also noted that the rule was altered in England by the Defamation Act, 1952. <i>Held:</i> in India there is <b>no liability</b> for statements published innocently. (Under the English Defamation Act 1952, an innocent publisher may publish a <b>correction and apology</b>; if accepted, no action lies; if the plaintiff still sues, the defendant can escape if he proves the words were published innocently and the offer of amends was made promptly.)</div>
+      <div class="aobx"><b>Defamation of a class:</b> When defamatory words refer to a <b>group or class</b>, no member can sue unless he proves the words could reasonably be taken to refer to him (<i>Knupffer v. London Express Newspaper Ltd.</i>). In <i>Dhirendra Nath Sen v. Rajat Kanti Bhadra</i> (AIR 1970 Cal. 216), where an editorial defamed the spiritual head of a community, an individual member could not sue. A <b>partnership firm</b> is not a legal entity — defamation of the firm is defamation of its partners, who sue individually (<i>P.K. Oswal Hosiery Mill v. Tilak Chand</i>). <b>Defamation of a deceased person</b> does not constitute a civil tort, though it may be actionable under criminal law.</div>
+
+      <h3 id="publication">3.3 Publication</h3>
+      <p><b>Publication</b> means making the defamatory matter known to some person other than the person defamed. <b>Communication to the plaintiff himself is not publication</b>, because defamation is injury to reputation, and reputation consists in the estimation in which others hold a man, not his own opinion of himself (<i>Nemichand v. Khemraj</i>).</p>
+      <ul>
+        <li><b>Communication between husband and wife</b> — in law, husband and wife are one person, so communication of defamatory matter from one spouse to the other is <b>not publication</b> (<i>Wenhark v. Morgan</i>, and see <i>T.J. Ponner v. C. Verghese</i>).</li>
+        <li>But communication of a matter defamatory of <b>one spouse to the other</b> (e.g., a letter defaming the wife sent to the husband) <b>is</b> sufficient publication as to the person defamed (<i>Theaker v. Richardson</i>).</li>
+      </ul>
+      <h4>Repetition of defamatory matter</h4>
+      <p>Every <b>repetition</b> is a fresh publication giving rise to a fresh cause of action. It is not only the <b>originator</b> who is liable; the <b>editor, printer and publisher</b> of the defamatory matter are also liable, and their liability is <b>strict</b>. <b>Booksellers, newspaper vendors and librarians</b>, however, can escape liability if they prove that they <b>did not know</b>, or <b>even with due diligence could not have known</b>, that what they were circulating was defamatory. As <i>Tushar Kanti Ghosh</i> (Case 42) shows, the <b>editor</b>, the <b>printer &amp; publisher</b>, and the <b>owning company</b> may all be sued for the same publication.</p>
+
+      <h3 id="malice">3.4 Malice</h3>
+      <p>In an action for defamation, the plaintiff formally states that the defendant published the matter <b>"maliciously"</b>. Here, <b>malice in law</b> means <b>without any lawful justification or excuse</b> — it is merely doing an act intentionally without lawful justification. Whenever a prima facie wrongful act is clear, <b>the law imputes malice</b> (this covers even honest mistake — see <i>Morrison v. Ritchie &amp; Co.</i>, where an editor who honestly believed a news item was held liable for carelessness). Malice in law = <b>intention</b> (or recklessness); in its popular sense, malice = <b>spite, ill-will or bad motive</b>.</p>
+      <p>Malice in its popular sense (express malice) is particularly important in relation to <b>qualified privilege</b> and <b>fair comment</b>. <b>Proof of express malice defeats a plea of qualified privilege</b> as much as it defeats a plea of fair comment. Illustration: If A leaves B's service and C asks B about A's character, B's reply (even if defamatory) is protected by <b>qualified privilege</b>; but the privilege is <b>lost</b> if the writer is actuated by <b>spite or ill-will</b> (e.g., if B owed A money and resented A's demands, or if B sent the reply in an <b>unsealed postcard</b> instead of a sealed envelope — evidence of malice). Malice means <b>abusing the occasion for an indirect purpose</b>.</p>
+    </section>
+
+    <!-- DEFENCES -->
+    <section id="defences">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Defences to an Action for Defamation</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>The principal defences are: (1) Justification (truth); (2) Fair comment; (3) Privilege — absolute &amp; qualified; (4) Consent; and (5) Apology. There are also others (e.g., if the statement was made on a privileged occasion, or is a fair report of proceedings, or the plaintiff's own conduct).</p>
+
+      <h3 id="justification">4.1 Justification or Truth</h3>
+      <p>In a <b>civil action</b>, the <b>truth</b> of the defamatory matter is a <b>complete defence</b>. The reason is that “the law will not permit a man to recover damages in respect of an injury to a character which he either does not or ought not to possess.” (Under <b>criminal law</b>, besides being true, the imputation must be shown to have been made <b>for the public good</b>.)</p>
+      <ul>
+        <li>The defence is available <b>even though the publication was made maliciously</b>.</li>
+        <li>If the statement is <b>false</b>, it is <b>no justification</b> that the defendant honestly and on reasonable grounds believed it true.</li>
+        <li>In <b>Radheyshyam Tiwari v. Eknath</b> (AIR 1985 Bom. 285), the editor/printer/publisher of a newspaper published a series of articles alleging a Block Development Officer had issued false certificates, accepted bribes and used illegal means. In the action for defamation the defendant could <b>not prove the facts true</b>, and was therefore held liable.</li>
+        <li>In <i>Tushar Kanti Ghosh</i> (Case 42), the plea of <b>justification</b> (that the publication, e.g., "daylight robbery," was true) was also <b>negatived</b> — the facts could not be established.</li>
+        <li>Note: statements of <b>fact</b> (unlike comments) can only be excused by <b>justification</b> or <b>privilege</b>.</li>
+      </ul>
+
+      <h3 id="faircomment">4.2 Fair and Bonafide Comment</h3>
+      <p>Fair comment is a defence available to authors, editors, critics, etc. It is <b>critical appreciation of existing facts</b>, <b>not invention of new facts</b>. The comment must be <b>fair</b> (i.e., without malice) and must relate to a <b>matter of public interest</b>. The administration of government departments, public companies, public institutions and local authorities, public meetings, pictures, theatres, public entertainment, text-books, novels, etc., are matters of public interest.</p>
+      <p><b>Comment vs statement of fact:</b> "Comment" means an expression of <b>opinion</b> on certain facts, rather than a statement of fact. A fair comment is a defence by itself; but if it is a <b>statement of fact</b>, it can be excused only via <b>justification</b> or <b>privilege</b>.</p>
+      <ul>
+        <li>A says of a book by Z — “Z's book is foolish: Z must be a weak man.” This is a <b>comment</b> based on the book, and A is protected if said in good faith.</li>
+        <li>But A says — “I am not surprised that Z's book is foolish, for he is a weak man.” This is <b>not a comment</b> but a <b>statement of fact</b>, and cannot be a fair comment.</li>
+      </ul>
+      <p><b>McQuire v. Western Morning News Co.</b> (1903): a critic's words (“A three-act musical absurdity … nothing but nonsense … the music is far from attractive”) were held to be <b>criticism</b> (fair comment). But <b>criticism cannot be a cloak for mere invective</b> (sarcasm or satire); an art critic's opinion that “the world would be a happier place if [a dancer's] feet had ambitions other than dancing” amounted to <b>sarcasm</b>. <b>The comment cannot be fair when it is based on untrue facts</b> — in <i>Tushar Kanti Ghosh</i>, the article contained false statements of fact ("daylight robbery"), and therefore the defence of fair comment was defeated.</p>
+      <div class="tipbox"><b>Elements of fair comment:</b> (i) It must be a <b>comment</b> (opinion, not a statement of fact); (ii) it must be based on <b>facts truly stated</b>; (iii) the inference must be <b>reasonably warranted</b> by those facts and honestly drawn; (iv) it must be on a <b>matter of public interest</b>; and (v) it must be <b>without malice</b>. The <b>onus is on the defendant</b> to establish all these. As <i>Tushar Kanti Ghosh</i> holds: the defendant “must not only establish that the matter which he defends as comment is comment and is comment on a matter of public interest, but also that it is not founded on misstatements of facts in the so-called comment.”</div>
+
+      <h3 id="privilege">4.3 Privilege — Absolute and Qualified</h3>
+      <p>There are occasions on which the law recognises that the <b>right of free speech outweighs the plaintiff's right to reputation</b>; such occasions are <b>privileged</b>, and a defamatory statement made on them is not actionable.</p>
+      <div class="two-col">
+        <div class="aobx"><b style="color:var(--orange)">ABSOLUTE PRIVILEGE</b><p>It is an <b>absolute defence</b> — <b>no action lies</b> for the defamatory statement <b>even though it is false or has been made maliciously</b>. It is recognised in (i) <b>Parliamentary proceedings</b>; (ii) <b>Judicial proceedings</b>; and (iii) <b>State communications</b>.</p><p>In judicial proceedings there can be no action against <b>judges, counsel, witnesses or parties</b> for words (written or spoken) in the course of any proceedings before a court, even if made maliciously. <b>Exception:</b> a remark by a witness which is <b>wholly irrelevant</b> to the matter of enquiry is <b>not</b> privileged.</p></div>
+        <div class="aobx"><b style="color:var(--teal)">QUALIFIED PRIVILEGE</b><p>It differs from absolute privilege in two respects: (1) the statement must have been made <b>without malice</b>; and (2) there must be an <b>occasion</b> for making it. Generally it is available when the statement is made in the <b>discharge of a duty</b> or for the <b>protection of an interest</b>, or is a report of parliamentary, judicial or other public proceedings.</p><p>As <i>Toogood v. Spyring</i> holds: a person is protected when he fairly makes such statements in the discharge of some public or private duty (legal or moral), or in the conduct of his own affairs where his interest is concerned. The <b>occasion prevents the inference of malice</b>, but the privilege is <b>defeated by actual/express malice</b>.</p></div>
+      </div>
+      <p><b>The reciprocity requirement:</b> A privileged occasion (for qualified privilege) is occasion where the person making the communication has an <b>interest or a duty</b> (legal, social or moral) and the person to whom it is made has a <b>corresponding interest or duty to receive it</b>. This reciprocity is essential (<i>Adam v. Ward</i>).</p>
+      <ul>
+        <li>A shopkeeper says to B, who manages his business — “Sell nothing to Z unless he pays you ready money, for I have no opinion of his honesty.” A is protected if he made this imputation in <b>good faith for the protection of his own interest</b>.</li>
+        <li>A <b>former employer</b> has a moral duty to state a servant's character to a prospective employer. But if the former employer, without enquiry, publishes the character with a motive to <b>harm</b> the servant, the defence of qualified privilege is <b>not</b> available.</li>
+        <li>In the case of publication of defamatory matter in a <b>newspaper</b>, if a <b>duty to the public</b> exists — see <b>Rustom K. Karanjia v. K.M.D. Thackersey</b> (Case 43).</li>
+        <li>Confidential relationships (husband &amp; wife, father &amp; child, guardian &amp; ward, master &amp; servant/agent, solicitor &amp; client, partners, close friends) — e.g., a father may acquaint his daughter about the character of a man she is going to marry.</li>
+      </ul>
+      <div class="warnbox"><b>Malice defeats qualified privilege &amp; fair comment.</b> The plaintiff must prove <b>actual/express malice</b> (the actual wrong motive — spite, ill-will, prejudice, or knowledge that the statement was untrue, or reckless disregard whether true or false), as distinguished from <b>implied malice</b> which the law presumes simply from publication. In <b>Horrocks v. Lowe</b> (1964), the House of Lords held that however prejudiced or irrational the defendant may have been, if he <b>believed in the truth</b> of what he said on the privileged occasion, the defence of privilege succeeds. In <i>Rustom Karanjia</i>, <i>Blitz</i>'s editor was held to have acted in <b>express malice</b> (histle is both intrinsic — the irrelevant, grossly defamatory statements — and extrinsic — the 1947 episode when he was compelled to apologise).</div>
+      <div class="fig">
+        <svg viewBox="0 0 780 210" width="780" role="img" aria-label="Privilege">
+          <rect x="20" y="20" width="360" height="90" rx="10" fill="#a83a3a"/>
+          <text x="200" y="45" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">ABSOLUTE privilege</text>
+          <text x="200" y="70" fill="#fbe5e5" text-anchor="middle" font-size="11">No action even if false + malicious</text>
+          <text x="200" y="90" fill="#fbe5e5" text-anchor="middle" font-size="11">Parliament · Judicial · State</text>
+          <rect x="400" y="20" width="360" height="90" rx="10" fill="#0f7a72"/>
+          <text x="580" y="45" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">QUALIFIED privilege</text>
+          <text x="580" y="70" fill="#d8efe7" text-anchor="middle" font-size="11">Must be WITHOUT malice</text>
+          <text x="580" y="90" fill="#d8efe7" text-anchor="middle" font-size="11">Must be on a PRIVILEGED OCCASION</text>
+          <line x1="200" y1="110" x2="200" y2="140" stroke="#a83a3a" stroke-width="2"/>
+          <line x1="580" y1="110" x2="580" y2="140" stroke="#0f7a72" stroke-width="2"/>
+          <rect x="130" y="142" width="520" height="46" rx="10" fill="#2b1c47"/>
+          <text x="390" y="170" fill="#fff" text-anchor="middle" font-size="12">A privileged OCCASION arises when speaker has a DUTY/INTEREST and hearer has a CORRESPONDING duty/interest (Adam v. Ward)</text>
+        </svg>
+        <div class="cap">Absolute vs Qualified privilege — and the reciprocity test for a privileged occasion.</div>
+      </div>
+
+      <h3 id="consent">4.4 Consent and Apology</h3>
+      <p><b>Consent (leave and licence):</b> If the publication of the defamatory matter is made with the <b>plaintiff's consent</b>, there is no cause of action — the plaintiff is said to have consented (or even invited) the publication, and a person cannot complain of a wrong to which he agreed. Consent may be express (e.g., the plaintiff requested or authorised the publication) or implied from the plaintiff's conduct. This is a complete defence.</p>
+      <p><b>Apology:</b> An <b>apology</b> may (i) <b>mitigate damages</b> (obtained promptly), and (ii) under the <b>Defamation Act 1952</b> (England), an <b>offer of amends</b> combined with a correction and apology may be a defence to an action for <b>innocent</b> defamation — if the defendant proves the words were published <b>innocently</b> and the offer of amends was made as soon as he became aware of the defamatory nature of the words. An apology is <b>not</b>, however, a complete defence to publication made with malice or where the matter was knowingly false; it is relevant mainly to <b>mitigation of damages</b>.</p>
+      <div class="tipbox"><b>Note:</b> In <i>Rustom K. Karanjia</i> (Case 43), the third defendant (the printer) had <b>tendered an apology</b> early in the suit, and the plaintiff <b>withdrew</b> the suit against him — illustrating the practical effect of an apology in terminating the action or mitigating damages. (In <i>Tushar Kanti Ghosh</i>, the plaintiff recovered only Rs. 5,000 as the court held her object was to vindicate herself, not to make money.)</div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 4 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C41 -->
+      <div class="case" id="c41">
+        <div class="case-head">
+          <h4>41. Prof. Imtiaz Ahmad v. Durdana Zamir</h4>
+          <span class="cit">(2009) 109 DRJ 357 (Delhi High Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, <b>Prof. Imtiaz Ahmad</b>, a distinguished <b>Professor of Sociology at JNU</b> (an internationally renowned academic, visiting professor in the USA, Canada, Italy and the UK, a familiar voice on AIR, BBC, NDTV, ETV, etc.), sued the defendant, <b>Durdana Zamir</b>, for <b>damages of Rs. 20 lakh</b> for defamation and for a <b>permanent injunction</b>. The defamation arose from a <b>complaint</b> filed by the defendant before the <b>Crime Against Women (CAW) Cell</b>. The complaint alleged, inter alia, that on the issue of dowry the husband's mother, sisters (Nands) and his aunt-in-law and <b>uncle-in-law, "Khaloo Imtiaz Ahmad who lives in JNU,"</b> raised considerable <b>noise ("Hangama")</b> and had considerable <b>influence ("dakhal")</b> in the matrimonial home; it sought help to prevent interference from the aunt and uncle living in JNU. Based on the complaint, an <b>FIR No. 611</b> was registered under <b>ss. 406, 498A &amp; 34 IPC</b>, and the plaintiff had to obtain <b>anticipatory bail</b>. The plaintiff claimed he had been portrayed as a perpetrator of dowry demand, that the caste name <b>"Ansari"</b> had been deliberately added (since Ansaris belong to the <i>Julaha</i>/weaver community), and that his reputation was severely dented among his colleagues and in academic circles.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Does the plaint disclose a <b>cause of action</b> for defamation? (2) Whether the averments in the complaint to the CAW Cell, taken as true, were <b>defamatory</b> of the plaintiff (i.e., would lower him in the estimation of right-thinking members of society)? (3) Whether the mere mention of the caste name "Ansari" was per se defamatory?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The statements in the complaint portrayed him as a perpetrator of dowry demand, lowered his image in the eyes of society, and the addition of the caste name "Ansari" was intended to stigmatise him; his international reputation in academic circles and on TV/radio suffered a severe dent.</p>
+            <p><b>Defendant (under Order VII Rule 11 CPC):</b> The plaint disclosed <b>no cause of action</b> and was liable to be dismissed, because (a) the complaint was made to <b>lawful authorities</b> regarding a genuine grievance against in-laws, and the FIR was under investigation — no court had held the allegations false; (b) even taking the averments as true, <b>no case of defamation</b> was made out.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Delhi High Court</b> (Justice Shiv Narayan Dhingra) <b>allowed</b> the application and <b>dismissed the suit</b> as disclosing no cause of action.</p>
+            <p class="quote">“Under law of defamation, the test of defamatory nature of a statement is its tendency to incite an adverse opinion or feeling of other persons towards the Plaintiff. A statement is to be judged by the standard of the ordinary, right-thinking members of the society at the relevant time. … It is not enough for a person to sue for words which merely injure his feeling or cause annoyance to him. Injury to feeling of a man cannot be made a basis for claiming damages on the ground of defamation. … <b>Insult in itself is not a cause of action for damages on the ground of defamation.</b>”</p>
+            <p class="quote">“Whenever a person makes a complaint against someone to the lawful authorities and in that complaint he makes imputations against the person complained of, it cannot be considered that the person has <b>publicized or publicly made defamatory averments</b> against a person. … Unless and until a competent court holds that the complaint was false, no cause of action arises.”</p>
+            <p>The Court rejected the plea that merely mentioning the caste name "Ansari" was defamatory, observing that the Constitution does not recognise any caste as superior or inferior, and that the plaintiff's own caste-based notions were "painful." It also held that stating that a "Hangama" was created (where the plaintiff was admittedly present at the marriage) and that the defendant sought protection against interference were <b>not</b> defamatory imputations; there was no evidence that anyone shunned, boycotted, or changed their opinion of the plaintiff.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <b>Defamation is injury to reputation, not to feelings</b>; mere insult, annoyance or injury to feelings is not actionable — the words must prejudice the plaintiff's reputation and lower his dignity in the eyes of right-thinking members of society. (ii) The test is objective — the standard of an <b>ordinary, right-thinking person</b>; the plaintiff must show the statement led people to <b>shun, evaded or regard him with hatred, contempt, ridicule, fear, dislike or dis-esteem</b>, or disparaged him in his office/profession/calling/trade. (iii) <b>A complaint to a lawful authority is not a "publication"</b> in the defamatory sense; a defamation action against the complainant will lie only if and when a competent court holds the complaint to be <b>false</b> — otherwise no cause of action arises. (iv) Where the plaintiff pleads an <b>innuendo</b> (asking the court to read the words in a manner the plaintiff understands them), the <b>plaintiff must lead evidence</b> that the readers, with knowledge of special facts, understood the words in the defamatory sense.</div>
+        </div>
+      </div>
+
+      <!-- C42 -->
+      <div class="case" id="c42">
+        <div class="case-head">
+          <h4>42. Tushar Kanti Ghosh v. Bina Bhowmick</h4>
+          <span class="cit">(1953) 57 CWN 378 (Calcutta High Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Two plaintiffs (Mrs. <b>Bina Bhowmick</b>, sued "for self and as President, Amrit Bazar Patrika Press Workers' Union," and <b>Tarak Nath Thakur</b>, sued "for self and as Secretary") brought a suit for damages against three defendants arising from an alleged <b>libel</b> published in the English daily <b>"Amrit Bazar Patrika"</b> of <b>18 September 1948</b>. Defendant No. 1 was <b>Tushar Kanti Ghosh</b> (the Editor), Defendant No. 2 <b>Nirmal Kanti Ghosh</b> (printer &amp; publisher), and Defendant No. 3 the <b>Amrit Bazar Patrika Ltd.</b> (the owning company). The libellous matter was published under the headlines <b>"PATRIKA AND JUGANTAR COPIES LOOTED — HAZRA ROAD INCIDENT — Another Daylight Robbery by Discharged Employees,"</b> and stated, among other things, that "another daylight robbery was committed by <b>Mrs. Bina Bhowmik's Union members and their hirelings</b>," that the Union "was deliberately affiliated to the B.P.N.T.U.C as a subterfuge by some designing men," and that the strike being conducted under the plaintiff's guidance had "nothing to do with bona fide trade unionism." The plaintiff, in her personal capacity, sought damages and an injunction restraining further publication.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the words, on their <b>plain and ordinary meaning</b> (and/or by <b>innuendo</b>), defamatory of the plaintiff in her <b>personal capacity</b>? (2) Was the defence of <b>justification</b> made out? (3) Did the publication fall within the right of <b>fair comment</b>? (4) Was it protected by <b>qualified privilege</b>? (5) Was the publication actuated by <b>malice</b>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The article accused her, in her personal capacity, of trickery, coercion, disloyalty to trade-union principles and dishonest conduct — describing her Union as "Mrs. Bina Bhowmick's Union" whose members committed "daylight robbery" and who affiliated it to the B.P.N.T.U.C "as a subterfuge."</p>
+            <p><b>Defendants (via Mr. Chaudhuri):</b> The words were not defamatory of the plaintiff personally; they constituted <b>fair comment</b> on a matter of public interest; and in any event they were protected by <b>qualified privilege</b> attaching to a newspaper's duty to publish information of public interest and the right to protect its own interest with its subscribers and advertisers.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Calcutta High Court</b> <b>dismissed the appeal</b> and affirmed the decree for the plaintiff — <b>Rs. 5,000</b> damages plus an injunction restraining further publication.</p>
+            <p class="quote">“…it is impossible to say that the publication in question is not defamatory of the plaintiff in the sense of aiming at her personally and containing statements to her discredit. The Union is referred to not as the Amrit Bazar Press Workers' Union but as <b>'Mrs. Bina Bhowmick's Union'</b> … When the sentence proceeds to state that 'Mrs. Bina Bhowmick's Union members and their hirelings' committed 'another daylight robbery' … no reader of ordinary intelligence would take it as leaving the plaintiff out of the charge.”</p>
+            <p class="quote">“Personal capacity of a person is not limited to his character as an individual in private life, but comprises also his personal conduct in relation to the affairs of associations or concerns with which he may be connected.”</p>
+            <p class="quote">“Allegations that the plaintiff, as the leader of her Union, has employed hirelings or has been concerned in the commission of daylight robberies or that she got her Union affiliated to the B.P.N.T.U.C as a subterfuge are <b>not comments, but statements of facts</b>.”</p>
+            <p class="quote">“The right of fair comment is <b>not a special privilege of newspapers</b>, but is a right which every citizen or person has. … The comment must be fair in the sense that it must be based on facts truly stated and must consist in an inference, reasonably warranted by such facts and honestly drawn.”</p>
+            <p class="quote">“It is quite clear that judged by that test, almost all the offending passages will be found to fall outside the privilege [of qualified privilege]. … Nothing could justify the wholly irrelevant and grossly defamatory statements … and no plea of qualified privilege is sustainable in respect of them.”</p>
+            <p class="quote">“…we are satisfied that the whole article [the learned Judge having found] that in publishing the impugned paragraphs, the defendants had been actuated by <b>malice</b>.”</p>
+            <p>The Court held: the words were defamatory of the plaintiff personally, both in their plain meaning and by the innuendos; <b>justification</b> failed; the statements of fact could not be <b>fair comment</b>; and although a <b>privileged occasion</b> had arguably arisen (common interest &amp; protection of the defendants' own interest), the publication <b>exceeded the exigency</b> of the occasion and was actuated by <b>express malice</b>, so the qualified privilege was lost.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <b>Words referring to a person's association</b> can defame that person personally; the personal capacity in which a person is defamed includes his personal conduct in relation to the affairs of associations he leads/controls. (ii) The <b>right of fair comment is not a special privilege of newspapers</b> — it belongs to every citizen, but it must be a <b>comment</b> based on <b>facts truly stated</b>, reasonably warranted and honestly drawn; statements of fact (e.g., "daylight robbery," "hirelings," "subterfuge") cannot be fair comment — they can only be excused by <b>justification</b>. (iii) <b>Qualified privilege</b> is limited to the requisites of the occasion and carries an obligation to be fair; it cannot extend to statements exceeding the exigency, nor justify a malicious statement. (iv) <b>Malice</b> (express, i.e., an indirect/wrong motive — spite, ill-will, or knowledge/reckless disregard of falsity) <b>defeats both fair comment and qualified privilege</b>. (v) The <b>onus of proving fair comment</b> is on the defendant, who must show the matter is comment, is on a matter of public interest, and is not founded on misstatements of fact.</div>
+        </div>
+      </div>
+
+      <!-- C43 -->
+      <div class="case" id="c43">
+        <div class="case-head">
+          <h4>43. Rustom K. Karanjia v. K.M.D. Thackersey</h4>
+          <span class="cit">AIR 1970 Bom. 424 (Bombay High Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, <b>K.M.D. Thackersey</b>, was a prominent businessman and industrialist of Bombay — a partner in a firm of managing agents of four textile mills, a Director of the Bank of India and of several companies, the <b>Chairman of the Textile Control Board</b> (set up by the Government during the last World War), and the Chairman of the Indian Cotton Mills Federation. Defendant No. 1, <b>Rustom K. Karanjia</b>, was the <b>Editor of the English weekly "Blitz"</b> and accepted responsibility for a <b>grossly defamatory article</b> (written under the pen-name "Blitz's Racket-Buster") published in its issue of <b>24 September 1960</b>; Defendant No. 2 was the company owning the newspaper; Defendant No. 3 (the printer) <b>tendered an apology</b> and was withdrawn against; Defendant No. 4 (a joint tort-feasor) supplied the material for the article. The article attacked the <b>"House of Thackersey"</b>, alleging that the plaintiff (as the head of the business organisation) had built up, thanks to his official position as Chairman of the Textile Control Board, a vast empire of wealth by unlawful means — tax evasion on a colossal scale, financial jugglery, import-export rackets, customs and foreign-exchange violations — and that the investigations had been allowed to bog down because of the plaintiff's power and prestige. The plaintiff claimed <b>Rs. 3,00,000</b> as general damages and an injunction.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the defences of <b>justification</b> and <b>fair comment</b> made out? (2) Did the article enjoy <b>qualified privilege</b> — i.e., was it published on a privileged occasion? (3) Was the publication actuated by <b>express malice</b>? (4) Were the damages of Rs. 3,00,000 excessive?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff (through Mr. Mistry):</b> The article was grossly defamatory; no privileged occasion could be created by a person for himself merely to publish a defamatory statement he could not justify; a journalist has <b>no duty</b> to communicate the defamatory matter to the general public merely because it is of public interest — doing so without such a duty cannot be privileged. There was outward and intrinsic evidence of <b>malice</b>.</p>
+            <p><b>Defendants (through Mr. Chari):</b> The article was not an attack on the plaintiff's personal/private character but on the business organization ("House of Thackersey") in the <b>public interest</b>; the plea of <b>qualified privilege</b> was raised — the defendants honestly and without any indirect/improper motive, and for the general welfare of society, published the article as it was their duty as journalists to do, believing the allegations to be true; the single allegations were merely incidental to that purpose. It was also argued that the damages were excessive.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Bombay High Court</b> (Palekar J.) <b>partially allowed</b> the appeal. It affirmed the trial court's finding that the three defences (justification, fair comment, qualified privilege) failed, and that the plaintiff had been grossly defamed; it <b>reduced the damages from Rs. 3,00,000 to Rs. 1,50,000</b>. (The appellants pressed only the plea of qualified privilege and the excessiveness of damages; the findings on justification and fair comment were not pursued.)</p>
+            <p class="quote">“The person or the newspaper who wants to communicate to the general public must also have a <b>duty to communicate</b>, and if no such duty, apart from the fact that the matter is one of public interest, can be spelt out in the particular circumstances of the case, the publication could not be said to be upon a privileged occasion.”</p>
+            <p class="quote">“…the journalist like any other citizen has the right to comment fairly and if necessary severely on a matter of public interest, provided the <b>allegations of facts he has made are accurate and truthful</b>, however defamatory they may be otherwise. … Where the journalist himself makes an investigation he must make sure that all his facts are accurate and true, so that if challenged he would be able to prove the same. <b>We think public interests are better served that way.</b> … In our opinion therefore the plea of qualified privilege put forward on behalf of the defendants fails.”</p>
+            <p class="quote">“Having, therefore, given our careful consideration to the article and the aspect of malice put before us … we are satisfied that the whole article was conceived in <b>express malice</b> and therefore, <b>no qualified privilege can at all be claimed.</b>”</p>
+            <p>The Court relied on the <b>1947 episode</b>: on 31 May 1947 the defendant had published a defamatory article (accusing the plaintiff of involvement in a black-market swoop), and after a criminal complaint by the plaintiff, the defendant <b>published an "explanation"</b> (which the plaintiff called an apology) expressing regret and withdrawing the allegations. The Court found the defendant had <b>nursed a grievance</b> over being compelled to apologise to a person whom he believed was a black-marketer, and that this memory kept the episode alive. Hence the whole article of 1960 was conceived in <b>express malice</b> — the motive was not merely public interest.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <b>A newspaper does not enjoyed qualified privilege merely because the matter is of public interest.</b> For a publication to be on a <b>privileged occasion</b>, the publisher must have a <b>duty to communicate</b> the defamatory matter to the public, and the public a corresponding interest to receive it; where the material is gathered and published by the journalist himself, there is <b>no such duty</b>, and public interest alone is not enough. (ii) The Press Commission's report (1954) condemns <b>yellow journalism</b>, sensationalism, and malicious/irresponsible attacks even where the newspaper claims to be exposing evil; the journalist has the same right to fair comment as any citizen, but <b>must have his facts accurate and true</b>. (iii) <b>Malice</b> may be proved <b>intrinsically</b> (from irrelevant, grossly defamatory statements themselves) or <b>extrinsically</b> (from a previous dispute or prior defamatory episodes); proof of express malice defeats qualified privilege. (iv) In principle, a defence of <b>justification</b> and <b>fair comment</b> would require the facts to be substantiated. (This is the classic authority on <b>newspaper qualified privilege</b> and on media "public interest" defences.)</div>
+        </div>
+      </div>
+
+      <!-- C44 -->
+      <div class="case" id="c44">
+        <div class="case-head">
+          <h4>44. Melepurath Sankunni Ezhuthassan v. Thekittil Geopalankutty Nair</h4>
+          <span class="cit">(1986) 1 SCC 118 · AIR 1986 SC 411 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant, <b>Melepurath Sankunni Ezhuthassan</b>, filed a suit in the Court of the Subordinate Judge, <b>Ottappalam</b>, against the respondent, <b>Thekittil Geopalankutty Nair</b>, claiming <b>Rs. 5,500</b> as <b>damages for defamation</b>. The Trial Court <b>dismissed</b> the suit with costs. The appellant's first appeal to the <b>District Court of Palghat</b> was allowed, and the court decreed <b>Rs. 500</b> as damages with proportionate costs. The respondent then filed a <b>second appeal</b> to the High Court of Kerala, and the appellant filed <b>cross-objections</b>. The High Court <b>reversed</b> the District Court's decree and dismissed the appellant's cross-objections as also the <b>suit</b>, with no order as to costs throughout. The appellant obtained <b>special leave</b> and filed a civil appeal in the Supreme Court. During the pendency of the appeal, on <b>16 May 1983</b>, the appellant <b>died</b>, leaving surviving two grandsons and two grand-daughters. On <b>4 November 1985</b>, one grandson and one grand-daughter filed a civil miscellaneous petition to bring all four on record as legal representatives, and (as the application was time-barred) a further petition to condone the delay and set aside the abatement.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Whether the <b>death of the appellant</b> caused the <b>appeal to abate</b> — i.e., whether the right to sue for damages for defamation <b>survives</b> the death of the plaintiff (maxim <i>actio personalis moritur cum persona</i>)? (2) Whether the delay in filing the application for substitution was excusable, and whether the legal representatives were entitled to be brought on record? (3) The proper scope of <b>s.306, Indian Succession Act, 1925</b> and <b>Order XXII, Rules 1 &amp; 11, CPC</b>.</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant's legal representatives:</b> They sought to be brought on record as the appellant's heirs and to have the abatement set aside, so that the appeal could be prosecuted.</p>
+            <p><b>Respondent:</b> In a suit for defamation the cause of action is <b>personal</b>; it <b>does not survive</b> the death of the plaintiff. Since the appellant (as plaintiff) had <b>lost</b> in the trial court and (in effect) the suit was dismissed by the High Court, the appeal sought to enforce the appellant's <b>right to sue</b>, which died with him — so the appeal abated, and no substitution was permissible.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (Madon &amp; Oza JJ.) <b>dismissed the appeal as having abated</b>, and dismissed the two civil miscellaneous petitions as not maintainable, with no order as to costs.</p>
+            <p class="quote">“…it is clear that a <b>cause of action for defamation does not survive</b> the death of the appellant.” (reading s.306, Succession Act, with Order XXII Rules 1 &amp; 11, CPC)</p>
+            <p class="quote">“Where a suit for defamation is dismissed and the plaintiff has filed an appeal, what the appellant-plaintiff is seeking to enforce in the appeal is his <b>right to sue for damages for defamation</b> and as this right does not survive his death, his legal representative has <b>no right</b> to be brought on the record of the appeal in his place and stead if the appellant dies during the pendency of the appeal.”</p>
+            <p class="quote">“The position, however, is <b>different</b> where a suit for defamation has resulted in a <b>decree in favour of the plaintiff</b>, because in such a case the cause of action has <b>merged in the decree</b> and the decretal debt forms part of his estate, and the appeal from the decree by the defendant becomes a question of benefit or detriment to the estate of the plaintiff-respondent which his legal representative is entitled to uphold and defend …”</p>
+            <p>The Court traced the common-law maxim <i>actio personalis moritur cum persona</i> ("a personal action dies with the person") and the English Law Reform (Miscellaneous Provisions) Act 1934, under which all causes of action survive except those for <b>defamation</b> (and former actions for seduction). It held that s.306 of the Indian Succession Act excepts causes of action for defamation, assault or other personal injuries not causing death, from survival; and although s.306 speaks only of executors and administrators, the same position must prevail for other legal representatives. Since the High Court had dismissed the suit, the appellant in the appeal was seeking to enforce his right to sue for defamation — which did not survive his death — so the appeal abated automatically, and the legal representatives acquired no right to be substituted.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) The <b>right to sue for damages for defamation is personal and does not survive the plaintiff's death</b> — it abates under the maxim <i>actio personalis moritur cum persona</i> (s.306, Indian Succession Act, and Order XXII Rules 1, 3, 9(2) &amp; 11, CPC). (ii) This is so whether the plaintiff dies during the suit, during an appeal he has filed after the suit was dismissed, or during an appeal (by special leave) where he had lost — because in all such cases he is enforcing his <b>right to sue</b> for defamation. (iii) <b>Exception:</b> where the suit has resulted in a <b>decree in favour of the plaintiff</b>, the cause of action <b>merges in the decree</b>; the decretal debt forms part of his estate, and the legal representative <b>is</b> entitled to be substituted to protect/defend that estate in an appeal by the defendant. (iv) The principle that defamation is a <b>personal wrong</b> having the special rule of <b>abatement on death</b> is the same reason that <b>defamation of a deceased person is not a civil tort</b> — only the living may be defamed, and family members/friends cannot sue for a defamation of the dead (unless the words also defame them).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Classic DU Topic-8 questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Define defamation. Distinguish between libel and slander. What is the position in England and in India?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Definition.</b> Defamation is the publication of a statement which tends to lower a person in the estimation of right-thinking members of society generally, or which tends to make them shun or avoid that person. A man's reputation is "his property, and if possible, more valuable than other property" (<i>Dixon v. Holden</i>). Defamation is injury to reputation.</p>
+          <p><b>Libel and slander.</b> Defamation is classified by form. <b>Libel</b> is the publication of a defamatory statement in a <b>permanent</b> form (writing, printing, picture, effigy, statue). <b>Slander</b> is the publication of a defamatory statement in a <b>transient</b> form (spoken words, gestures). Libel is addressed to the <b>eye</b>; slander to the <b>ear</b>.</p>
+          <p><b>Difference in England.</b> (i) In criminal law, <b>libel is an offence</b> but <b>slander is not</b>. (ii) In tort law, <b>libel is actionable per se</b> (no proof of special damage), while <b>slander is actionable only on proof of special damage</b>, except where it imputes a crime, a contagious/infectious disease, unfitness in one's office/profession/trade, or unchastity/adultery to a woman. In films, the synchronized speech with the photographic part is libel (<i>Youssoupoff</i>); broadcasting by wireless telegraphy is libel (Defamation Act 1952, s.1); a gramophone record is in permanent form (Winfield: slander; Salmond: libel).</p>
+          <p><b>Position in India.</b> Under <b>s.499 + s.500 IPC</b>, both <b>libel and slander are criminal offences</b> — no distinction is made. In the law of torts, the weight of Indian judicial opinion (<i>Parvathi v. Mannar</i>) <b>discards the distinction</b> and makes <b>both actionable per se</b>. So in India, whereas the English distinction (criminal/no-criminal; per se/special damage) exists, it is largely irrelevant — both forms are offences and both are actionable without proof of special damage.</p>
+          <p><b>Conclusion.</b> The distinction between libel and slander turns on the form/permanence of the publication. It is of great significance in England (both criminally and in tort), but in India it has little practical effect because both are offences under the IPC and both are actionable per se.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What are the essential conditions of an action for defamation? Explain with case law.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p>To succeed in an action for defamation, the plaintiff must establish four essentials:</p>
+          <p><b>1. The words (or representation) must be defamatory.</b> The test is objective — how <b>right-thinking men of ordinary intelligence</b> take the statement. Per Lord Halsbury, a statement is defamatory if it lowers the person in the estimation of right-thinking men, or causes him to be shunned, or exposes him to hatred, contempt, ridicule, or injures him in his office/profession/trade. Hasty expressions in anger or mere vulgar abuse are not actionable (<i>Parvathi v. Mannar</i>); but imputing that a woman is a "kept" woman is (<i>Mst. Ramdhara v. Phulwatibai</i>); a bona-fide mistake by a railway guard is not (<i>South Indian Rly. v. Ramkrishna</i>). <b>Injury to feelings is not enough</b> — mere insult is not a cause of action (<i>Prof. Imtiaz Ahmad v. Durdana Zamir</i>).</p>
+          <p><b>2. The words must refer to the plaintiff.</b> It is immaterial that the defendant did not intend to defame; if reasonable persons could infer the statement referred to the plaintiff, he is liable (<i>Newstead v. London Express Newspapers</i> — a "Camberwell barman" named Harold Newstead; the "Camberwell barber" of the same name could sue). Where a <b>class</b> is defamed, no member can sue unless he proves the words refer to him (<i>Knupffer</i>; <i>Dhirendra Nath Sen</i>); a firm being no legal entity, its partners sue individually (<i>P.K. Oswal</i>).</p>
+          <p><b>3. The words must be published</b> — made known to a person other than the person defamed. Communication to the plaintiff himself is not publication (<i>Nemichand v. Khemraj</i>). Communication between husband and wife is not publication (they are one in law); but communication defaming one spouse to the other is publication (<i>Theaker v. Richardson</i>). Every repetition is a fresh publication; the editor, printer and publisher are strictly liable; booksellers/vendors/librarians may escape if they neither knew nor could have known (<i>Tushar Kanti Ghosh</i>).</p>
+          <p><b>4. Malice.</b> Malice in law means publication <b>without lawful justification or excuse</b> — it is implied once a prima facie wrongful act is shown; honest mistake is no defence (<i>Morrison v. Ritchie</i>). Malice in the popular sense (spite/ill-will) is relevant to <b>qualified privilege</b> and <b>fair comment</b>.</p>
+          <p><b>Additional concept — innuendo.</b> Where words are innocent on their face but carry a defamatory secondary/latent meaning, the plaintiff pleads an <b>innuendo</b> and must prove that the readers, with knowledge of special facts, understood the words in the defamatory sense (<i>Cassidy v. Daily Mirror</i>; <i>Prof. Imtiaz Ahmad</i>).</p>
+          <p><b>Conclusion.</b> The four essentials — defamatory character, reference to the plaintiff, publication, and malice — must all be proved. The intention to defame is not necessary, and the test of defamation is the objective reaction of right-thinking members of society.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Discuss the defence of "fair comment" and "privilege" with reference to <i>Tushar Kanti Ghosh v. Bina Bhowmick</i> and <i>Rustom K. Karanjia v. Thackersey</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Fair comment.</b> It is a defence available to authors, editors, critics, etc., in respect of <b>comments</b> (expressions of opinion) on a <b>matter of public interest</b>, made <b>fairly</b> (without malice). It must be <b>critical appreciation of existing facts</b>, not invention of new facts; it must be based on <b>facts truly stated</b>, and be an inference reasonably warranted by and honestly drawn from them. The right of fair comment is <b>not a special privilege of newspapers</b> — every citizen has it. Comment must be distinguished from a <b>statement of fact</b> (which can be excused only by justification or privilege). Criticism cannot be a cloak for <b>invective/sarcasm</b> (<i>McQuire v. Western Morning News</i>). The <b>onus is on the defendant</b> to show the matter is comment, on a matter of public interest, and not founded on misstatements of fact.</p>
+          <p><b>In Tushar Kanti Ghosh</b> — <i>Amrit Bazar Patrika</i> alleged that "Mrs. Bina Bhowmick's Union members and their hirelings" committed "another daylight robbery," that the Union was affiliated to the B.P.N.T.U.C "as a subterfuge," and that the strike under her guidance had "nothing to do with bona fide trade unionism." The Calcutta High Court held the words were <b>defamatory</b> of the plaintiff personally (both by plain meaning and by innuendo), and that <b>the statements of fact could not be fair comment</b>. The defence of <b>justification</b> failed, and although a <b>privileged occasion</b> had arguably arisen, the publication <b>exceeded the exigency</b> of the occasion and was actuated by <b>express malice</b>.</p>
+          <p><b>Privilege.</b> Privilege is either <b>absolute</b> (parliamentary, judicial proceedings, State communications — no action even if false or malicious) or <b>qualified</b> (the statement must be made <b>without malice</b> and on a <b>privileged occasion</b> — i.e., the maker has a duty/interest and the recipient a corresponding duty/interest to receive it; per <i>Toogood v. Spyring</i> and <i>Adam v. Ward</i>). The occasion rebuts the presumption of malice, but the plaintiff may destroy the privilege by proving <b>express malice</b> (an indirect/wrong motive — spite, ill-will, or knowledge/reckless disregard of falsity).</p>
+          <p><b>In Rustom K. Karanjia</b> — <i>Blitz</i> published a grossly defamatory article on the "House of Thackersey." The Bombay High Court rejected the plea of <b>qualified privilege</b>, holding that a newspaper has <b>no duty to communicate</b> to the general public merely because the matter is of public interest; the journalist's right is only to <b>comment fairly</b> on a matter of public interest, <b>provided his facts are accurate and true</b>. The whole article was conceived in <b>express malice</b> — (intrinsic, from the irrelevant grossly defamatory statements; and extrinsic, from the 1947 episode when the editor was compelled to apologise) — so no qualified privilege could be claimed. The Press Commission's report condemning yellow journalism and sensationalism reinforced this. The court reduced the damages from Rs. 3,00,000 to Rs. 1,50,000.</p>
+          <p><b>Conclusion.</b> Fair comment protects honest, fact-based opinion on matters of public interest; privilege protects statements made on occasions of duty/interest. Both are <b>defeated by express malice</b>, and in the case of newspapers neither creates a special licence — the journalist must get his facts right and cannot use "public interest" as a cloak for defamation.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Distinguish between "justification" and "fair comment" as defences. Can a newspaper claim protection merely because its publication is in the "public interest"?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Justification (truth).</b> In a civil action, <b>the truth of the defamatory matter is a complete defence</b> ("the law will not permit a man to recover damages in respect of an injury to a character which he either does not or ought not to possess"). It is available <b>even where the publication was malicious</b>. But if the statement is false, an honest and reasonable belief in its truth is <b>no</b> justification (<i>Radheyshyam Tiwari v. Eknath</i>). Under criminal law, besides truth, the imputation must be shown to have been made for the public good.</p>
+          <p><b>Fair comment.</b> Fair comment protects <b>expressions of opinion</b> (comments) on a <b>matter of public interest</b>, made <b>fairly and without malice</b>, and based on facts truly stated. It is critical appreciation of existing facts, not invention of new facts.</p>
+          <p><b>Distinction.</b> (i) Justification concerns <b>statements of fact</b> (that they are true); fair comment concerns <b>expressions of opinion</b>. (ii) In justification the defendant must prove the <b>facts are true</b>; in fair comment the facts must be <b>truly stated</b> and the comment must be an inference <b>reasonably warranted</b> by and honestly drawn from them. (iii) <b>Malice does not destroy</b> justification (truth is a complete defence even if malicious), but <b>malice destroys fair comment</b>. (iv) The <b>onus is on the defendant</b> to establish both; but for fair comment he must additionally establish that the matter is <b>comment</b>, is on a <b>matter of public interest</b>, and is <b>not founded on misstatements of fact</b>. As <i>Tushar Kanti Ghosh</i> holds, allegations like "daylight robbery" and "subterfuge" are <b>statements of fact</b>, not comment — they can only be excused by justification, and if unproven, they fail.</p>
+          <p><b>Can a newspaper claim protection merely because the matter is in the "public interest"?</b> <b>No.</b> As <i>Rustom K. Karanjia</i> holds, a newspaper does not enjoy qualified privilege merely because the matter is of public interest. The publisher must have a <b>duty to communicate</b> to the public and the public a corresponding interest; where the journalist himself investigates and publishes, there is <b>no such duty</b>. The journalist's right is only to <b>comment fairly</b> on a matter of public interest, provided his <b>facts are accurate and true</b>. A newspaper <b>cannot use "public interest" as a cloak</b> for a defamatory attack; it must be prepared to prove the facts it alleges. The Press Commission (1954) condemned yellow journalism, sensationalism, and malicious/irresponsible attacks even in the name of exposing evil in high places.</p>
+          <p><b>Conclusion.</b> Justification and fair comment are distinct — one for true facts, the other for honest opinion on true facts. A newspaper gets no automatic protection from "public interest"; it must have accurate facts and, for qualified privilege, a genuine duty to communicate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><b>Defamation</b> — publication of a statement that lowers a person in the estimation of right-thinking members of society or makes them shun/avoid him.</li>
+        <li><b>Libel</b> — defamatory statement in a <b>permanent</b> form (writing, printing, picture, statue), addressed to the eye; actionable per se; a criminal offence in England.</li>
+        <li><b>Slander</b> — defamatory statement in a <b>transient</b> form (spoken words, gestures), addressed to the ear; generally actionable only on proof of special damage in England.</li>
+        <li><b>Innuendo</b> — a latent/secondary defamatory meaning not apparent on the face of the words; must be proved by the plaintiff.</li>
+        <li><b>Publication</b> — making the defamatory matter known to a person other than the person defamed.</li>
+        <li><b>Malice (in law)</b> — publication without lawful justification or excuse; implied from a wrongful act.</li>
+        <li><b>Express / actual malice</b> — an indirect or wrong motive (spite, ill-will, prejudice, or knowledge/reckless disregard of falsity); defeats qualified privilege and fair comment.</li>
+        <li><b>Justification</b> — the defence of <b>truth</b>; a complete defence in a civil action even if the publication is malicious.</li>
+        <li><b>Fair comment</b> — honest expression of opinion on a matter of public interest, based on true facts and without malice.</li>
+        <li><b>Absolute privilege</b> — a complete defence: no action lies even if the statement is false and malicious (parliamentary, judicial proceedings; State communications).</li>
+        <li><b>Qualified privilege</b> — a defence where the statement is made <b>without malice</b> on a <b>privileged occasion</b> (duty/interest reciprocity, per <i>Toogood v. Spyring</i>, <i>Adam v. Ward</i>).</li>
+        <li><b>Consent / leave &amp; licence</b> — publication with the plaintiff's consent is not actionable.</li>
+        <li><b>Apology / offer of amends</b> — mitigates damages; under the Defamation Act 1952 a correction &amp; apology may be a defence to an <b>innocent</b> publication.</li>
+        <li><span class="lat">Actio personalis moritur cum persona</span> — "a personal action dies with the person"; the right to sue for defamation does not survive death (s.306, Succession Act; <i>Melepurath Sankunni</i>).</li>
+        <li><b>s.499 / s.500 IPC</b> — the Indian provision making defamation a criminal offence (both libel and slander).</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 470" width="900" role="img" aria-label="Full topic 8 revision flowchart">
+          <defs><marker id="ar8" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2b1c47"/></marker></defs>
+          <rect x="10" y="15" width="880" height="50" rx="12" fill="#2b1c47"/>
+          <text x="450" y="39" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">DEFAMATION — injury to reputation</text>
+          <line x1="450" y1="65" x2="450" y2="83" stroke="#2b1c47" stroke-width="2.5" marker-end="url(#ar8)"/>
+          <rect x="120" y="86" width="660" height="46" rx="12" fill="#5b3a8e"/>
+          <text x="450" y="112" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">LIBEL (permanent, the eye) · SLANDER (transient, the ear) — both offences u/s 499 IPC</text>
+          <line x1="450" y1="132" x2="450" y2="150" stroke="#2b1c47" stroke-width="2.5" marker-end="url(#ar8)"/>
+          <rect x="120" y="153" width="660" height="90" rx="12" fill="#b0781f"/>
+          <text x="450" y="180" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">FOUR ESSENTIAL CONDITIONS</text>
+          <text x="450" y="205" fill="#fdf7e8" text-anchor="middle" font-size="11">1. words DEFAMATORY (right-thinking test)  2. refer to PLAINTIFF</text>
+          <text x="450" y="225" fill="#fdf7e8" text-anchor="middle" font-size="11">3. PUBLISHED (to a 3rd person)  4. MALICE (in law). Innuendo must be proved.</text>
+          <line x1="230" y1="243" x2="230" y2="263" stroke="#0f7a72" stroke-width="2.5" marker-end="url(#ar8)"/>
+          <line x1="670" y1="243" x2="670" y2="263" stroke="#a83a3a" stroke-width="2.5" marker-end="url(#ar8)"/>
+          <rect x="30" y="266" width="400" height="120" rx="12" fill="#0f7a72"/>
+          <text x="230" y="292" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">LIABILITY</text>
+          <text x="230" y="318" fill="#d8efe7" text-anchor="middle" font-size="11">originator, editor, printer, publisher</text>
+          <text x="230" y="338" fill="#d8efe7" text-anchor="middle" font-size="11">(strict). Vendor/book-seller may escape</text>
+          <text x="230" y="358" fill="#d8efe7" text-anchor="middle" font-size="11">if no knowledge. Every repetition = fresh.</text>
+          <rect x="470" y="266" width="400" height="120" rx="12" fill="#a83a3a"/>
+          <text x="670" y="292" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DEFENCES</text>
+          <text x="670" y="318" fill="#fbe5e5" text-anchor="middle" font-size="11">Justification (truth) · Fair comment ·</text>
+          <text x="670" y="338" fill="#fbe5e5" text-anchor="middle" font-size="11">Privilege (absolute &amp; qualified) ·</text>
+          <text x="670" y="358" fill="#fbe5e5" text-anchor="middle" font-size="11">Consent · Apology</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 8.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill p">Complaint to a lawful authority is not "publication"; no defamation absent a finding that the complaint is false; insult ≠ injury to reputation</span> — Prof. Imtiaz Ahmad v. Durdana Zamir.<br>
+        · <span class="pill p">Words defaming a person's union can defame the person; fair comment must be on true facts; express malice defeats fair comment &amp; qualified privilege</span> — Tushar Kanti Ghosh v. Bina Bhowmick.<br>
+        · <span class="pill o">No qualified privilege for a newspaper on "public interest" alone; journalist must have accurate facts and a duty to communicate; express malice</span> — Rustom K. Karanjia v. K.M.D. Thackersey.<br>
+        · <span class="pill r">Right to sue for defamation dies with the plaintiff (actio personalis moritur cum persona); exception — decree already passed merges into estate</span> — Melepurath Sankunni Ezhuthassan v. Nair.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 8 (Defamation).</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>Prof. Imtiaz Ahmad v. Durdana Zamir</i>, <i>Tushar Kanti Ghosh v. Bina Bhowmick</i> and <i>Rustom K. Karanjia v. K.M.D. Thackersey</i>) together with the accompanying course notes. The theory of defamation (meaning, libel &amp; slander, essential conditions, innuendo, publication, malice, and the defences of justification, fair comment, privilege, consent &amp; apology) follows the DU framework sheet and Ratanlal &amp; Dhirajlal.</p>
+      <p style="margin:0"><b>Transparency note:</b> <i>Melepurath Sankunni Ezhuthassan v. Thekittil Geopalankutty Nair</i> (1986) 1 SCC 118 is <b>not reproduced in the casebook</b> (the volume jumps to a consumer-protection case after <i>Rustom K. Karanjia</i>). Its facts, issues, decision and ratio are taken from the standard report (AIR 1986 SC 411; 1985 Supp(3) SCR 805; 1985 SCALE (2) 1098) and the accompanying course notes, and cited accordingly. For revision only — refer to the full report for exact facts and citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

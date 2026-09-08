@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 1 · Introduction: Definition, Nature &amp; Scope of Law of Torts (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f5f6fb; --card:#ffffff;
+    --navy:#14224a; --navy2:#1f3675; --gold:#c8912b; --teal:#0f8a8a;
+    --red:#b13a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e2e6f0;
+    --shadow:0 6px 24px rgba(20,34,74,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px;
+  }
+  /* ===== HERO ===== */
+  .hero{
+    background:linear-gradient(135deg,#10203f 0%,#1f3675 55%,#2a4a8f 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden;
+  }
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%);}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,138,.30),transparent 70%);}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:860px; margin:0 0 22px; color:#dbe3f5; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#eaf0fc}
+  .meta-strip{background:#0d1830; color:#c9d4ec; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  /* ===== LAYOUT ===== */
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:240px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px;
+    border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#eef1fa; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fff8ea; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#eef6f6; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbeeee; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  code,.lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#12406b}
+  .lat{background:#eef2fb; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#eef1fa; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fafbfe}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  /* ===== CASE CARDS ===== */
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#182c5c,#2a4a8f); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f6f8ff; border-left:3px solid var(--navy2); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#eef6f6; border:1px solid #cfe8e8; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  /* ===== DIAGRAMS ===== */
+  .fig{background:#fbfcff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  /* ===== PYQ ===== */
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#f0f3fb; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#c9d4ec; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 1 — Introduction: <span>Definition, Nature &amp; Scope</span> of the Law of Torts</h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official case material</b> — syllabus sub-heads (a)–(g), all <b>8 prescribed case laws</b> in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), conceptual notes with diagrams &amp; flowcharts, and previous year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Origin in England</span><span class="tag">Evolution in India</span>
+      <span class="tag">Definition</span><span class="tag">Constituents of Tort</span>
+      <span class="tag">Injuria sine damno</span><span class="tag">Damnum sine injuria</span>
+      <span class="tag">Ubi jus ibi remedium</span><span class="tag">Tort vs Crime/Contract</span>
+      <span class="tag">Intention · Motive · Malice</span><span class="tag">8 Case Laws</span>
+      <span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Origin England · (b) Evolution India · (c) Meaning &amp; Function · (d) Definition · (e) Constituents · (f) Tort vis-à-vis other wrongs · (g) Intention, Motive &amp; Malice</span>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- ===== SIDEBAR TOC ===== -->
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#origin">1. Origins in England</a>
+    <a href="#forms">Forms of Action &amp; Writs</a>
+    <a href="#india">2. Evolution in India</a>
+    <a href="#function">3. Meaning &amp; Function</a>
+    <a href="#def">4. Definition of Tort</a>
+    <a href="#tortvsort">Law of Tort vs Law of Torts</a>
+    <a href="#constituents">5. Constituents of Tort</a>
+    <a href="#maxims">Injuria sine damnum &amp; Damnum sine injuria</a>
+    <a href="#ubi">Ubi jus ibi remedium</a>
+    <a href="#vs">6. Tort vs Other Wrongs</a>
+    <a href="#mental">7. Intention, Motive &amp; Malice</a>
+    <a class="n" href="#cases">The 8 Prescribed Case Laws</a>
+    <a href="#c1">1. White v John Warrick</a>
+    <a href="#c2">2. Town Area Committee v Prabhu Dayal</a>
+    <a href="#c3">3. Seetharamayya v Mahalakshmamma</a>
+    <a href="#c4">4. Rajkot MC v Manjulben</a>
+    <a href="#c5">5. Ashby v White</a>
+    <a href="#c6">6. Municipal Corpn Agra v Asharfi Lal</a>
+    <a href="#c7">7. Mayor of Bradford v Pickles</a>
+    <a href="#c8">8. Gloucester Grammar School</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims Glossary</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- ============ 0. OVERVIEW ============ -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:34%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Origin &amp; Development in England</td><td>Forms of action; specific remedies from case to case</td><td>Writ system, writ of trespass &amp; action on the case</td></tr>
+        <tr><td>(b) Evolution in India</td><td>Uncodified &amp; judge-made; advantages &amp; disadvantages</td><td>Justice, equity &amp; good conscience; fragmentary statutes</td></tr>
+        <tr><td>(c) Meaning &amp; function</td><td>Standards of human conduct; compensation; injunction</td><td>Debate over law of tort vs torts</td></tr>
+        <tr><td>(d) Definition of tort</td><td>Salmond, Winfield, Fraser</td><td>Definitions + elements</td></tr>
+        <tr><td>(e) Constituents</td><td>Wrongful act, legal damage, remedy</td><td><i>injuria sine damnum</i>, <i>damnum sine injuria</i>, <i>ubi jus ibi remedium</i></td></tr>
+        <tr><td>(f) Tort vs other wrongs</td><td>Crime, breach of contract, etc.</td><td>Comparison tables</td></tr>
+        <tr><td>(g) Intention, motive &amp; malice</td><td>Relevance in tort</td><td>Malice in law vs in fact; Bradford v Pickles</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> Case Nos. 1–4 are reproduced from the DU prescribed casebook; Case Nos. 5, 7 &amp; 8 draw on the DU course material and accompanying mind-maps/notes; Case No. 6 (<i>Municipal Corpn. of Agra v. Asharfi Lal</i>) appears in the syllabus list and is set out from the authoritative report (AIR 1921 All 202) read with Indian Law Reports head-notes. Wherever relevant, the passages quoted are the judge’s own words.</div>
+    </section>
+
+    <!-- ============ 1. ORIGIN ENGLAND ============ -->
+    <section id="origin">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Origin &amp; Development of the Law of Torts in England</h2></div>
+      <p class="sec-sub">Syllabus (a) — Forms of action; specific remedies from case to case.</p>
+
+      <h3>1.1 The term “Tort”</h3>
+      <p>The word <b>“tort”</b> is the <span class="accent">French equivalent of the English word “wrong”</span> and corresponds to the Roman law term <span class="lat">delict</span>. It was introduced into English law by the <b>Norman jurists after the Norman Conquest (1066)</b>. It derives from the Latin <span class="lat">tortum</span>, meaning <b>“to twist”</b> — i.e., conduct that is <span class="accent2">twisted, crooked or deviating from the straight path</span>. The law of torts thus concerns <b>civil wrongs</b> (as distinct from criminal wrongs) — a wrong committed by one private person against another, which is enforced not by the police but by the injured citizen (the plaintiff) suing in a court.</p>
+
+      <h3>1.2 Case-by-case growth — the foundation of the Common Law</h3>
+      <p>Before the development of a central legal system, disputes in England were settled <b>case-by-case according to local customs</b>. After the Norman Conquest, the King appointed <span class="accent">itinerant judges</span> who travelled around the realm on circuits, hearing cases and applying the best of local village customs. These judges, drawing on their own earlier rulings, began to refer to previous decisions — and when a ruling was relied upon often enough, it hardened into <b>precedent</b>. This is the origin of the <b>common law</b>: law made not by Parliament but by the decisions of courts, built incrementally from case to case. Tort law is therefore quintessentially a <b>judge-made</b> branch of law.</p>
+
+      <h3>1.3 Forms of Action and Writs</h3>
+      <p>The procedural engine of the early common law was the <b>writ</b> — a royal command issued by the King’s Court (later the Court of Chancery) authorising a person to bring an action. Each writ was a distinct <b>“form of action”</b>, each with <span class="accent">its own pleading, its own procedure, and its own remedy</span>. The two most important for tort were:</p>
+      <table>
+        <tr><th style="width:30%">Form of action</th><th>Nature &amp; use</th></tr>
+        <tr><td><b>Writ of Trespass</b></td><td>For direct, immediate and forcible interference — e.g., trespass to land, battery, false imprisonment. Lay at the root of assorted “trespass” torts.</td></tr>
+        <tr><td><b>Action on the Case</b> (<i>trespass on the case</i>)</td><td>For harm arising <b>indirectly</b> or consequentially, and for wrongs not causing direct force. This was the great remedial device from which <b>negligence, nuisance, deceit and many other torts</b> grew.</td></tr>
+      </table>
+      <div class="fig">
+        <svg viewBox="0 0 760 250" width="760" role="img" aria-label="Forms of action flowchart">
+          <defs><marker id="ar1" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#1f3675"/></marker></defs>
+          <rect x="10" y="30" width="200" height="70" rx="10" fill="#14224a"/>
+          <text x="110" y="61" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">Early Common Law</text>
+          <text x="110" y="82" fill="#dbe3f5" text-anchor="middle" font-size="12">case-by-case · custom · precedent</text>
+          <line x1="130" y1="100" x2="130" y2="120" stroke="#1f3675" stroke-width="2.5" marker-end="url(#ar1)"/>
+          <rect x="30" y="125" width="200" height="70" rx="10" fill="#1f3675"/>
+          <text x="130" y="156" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">Forms of Action (Writs)</text>
+          <text x="130" y="178" fill="#dbe3f5" text-anchor="middle" font-size="12">royal writs · each = own remedy</text>
+          <line x1="230" y1="160" x2="320" y2="160" stroke="#1f3675" stroke-width="2.5" marker-end="url(#ar1)"/>
+          <rect x="325" y="120" width="200" height="80" rx="10" fill="#c8912b"/>
+          <text x="425" y="152" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">Writ of Trespass</text>
+          <text x="425" y="174" fill="#fff" text-anchor="middle" font-size="11.5">direct / forcible</text>
+          <text x="425" y="190" fill="#fff" text-anchor="middle" font-size="11.5">battery, false imprison.</text>
+          <line x1="525" y1="160" x2="600" y2="160" stroke="#1f3675" stroke-width="2.5" marker-end="url(#ar1)"/>
+          <rect x="605" y="120" width="150" height="80" rx="10" fill="#0f8a8a"/>
+          <text x="680" y="152" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">Action on the Case</text>
+          <text x="680" y="174" fill="#fff" text-anchor="middle" font-size="11.5">indirect / consequential</text>
+          <text x="680" y="190" fill="#fff" text-anchor="middle" font-size="11.5">negligence, nuisance, deceit</text>
+          <line x1="130" y1="195" x2="130" y2="225" stroke="#1f3675" stroke-width="2.5" marker-end="url(#ar1)"/>
+          <rect x="30" y="228" width="200" height="18" rx="6" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="130" y="241" fill="#0f8a8a" text-anchor="middle" font-size="12">If a wrong fit no writ → no remedy</text>
+        </svg>
+        <div class="cap">The writ/forms-of-action system: a plaintiff could sue only if his complaint fell within an existing form.</div>
+      </div>
+
+      <h3>1.4 Specific remedies from case to case</h3>
+      <p>Because each form of action prescribed a <b>specific remedy</b>, the scope of tortious liability was for centuries confined to recognised “nominate torts.” If a harm could not be slotted into an existing writ, the plaintiff left court without a remedy. It is this historical fact that gave rise to the famous <b>pigeon-hole theory</b> of Sir John Salmond (see §5), and the opposing view that tort law is a single general principle of liability (Winfield). This “closed” character was progressively loosened by the great remedial writ of <i>action on the case</i>, which allowed the courts to create new causes of action to meet new wrongs.</p>
+
+      <h3>1.5 Modern development</h3>
+      <ul>
+        <li><b>Abolition of forms of action:</b> The <i>Common Law Procedure Act, 1852</i> and the <i>Judicature Acts, 1873–75</i> abolished the forms of action as procedural formalities. Substance triumphed over form. Lord Atkin famously cautioned against the “ghosts of the past … clanking their medieval chains” standing “in the path of justice.”</li>
+        <li><b>New torts judicially created:</b> <i>negligence</i> as a distinct tort (19th c.), <i>strict liability</i> in <span class="lat">Rylands v. Fletcher</span> (1868), <i>deceit</i> (<i>Pasley v. Freeman</i>), <i>inducement of breach of contract</i> (<i>Lumley v. Gye</i>), <i>intimidation</i> (<i>Rookes v. Barnard</i>), and the <i>neighbour principle</i> in <span class="lat">Donoghue v. Stevenson</span> (1932).</li>
+        <li><b>Statutory reform:</b> <i>Law Reform (Contributory Negligence) Act, 1945</i>; <i>Defamation Act</i> etc.; <i>Unfair Contract Terms Act, 1977</i> (limits exclusion clauses).</li>
+      </ul>
+      <div class="tipbox"><b>Exam point:</b> The historical link between “forms of action” and the modern debate is that <b>the writ system produced a set of distinct nominate torts</b> (<i>law of torts</i>), while the broadening of <i>action on the case</i> supports the <i>law of tort</i> theory. Lord Macmillan: <span class="lat">“The categories of negligence are never closed.”</span></div>
+    </section>
+
+    <!-- ============ 2. INDIA ============ -->
+    <section id="india">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Evolution of the Law of Torts in India</h2></div>
+      <p class="sec-sub">Syllabus (b) — Uncodified and judge-made; advantages and disadvantages.</p>
+
+      <h3>2.1 Reception of English common law</h3>
+      <p>The law of torts in India is <b>practically English law</b>. It came with the establishment of British courts — beginning with the <b>Mayor’s Courts</b> established under the Royal Charters. The Englishmen administering these courts drew upon the common law and statute law of England <b>“according to justice and right.”</b> The law of torts is thus administered in India <b>as rules of justice, equity and good conscience</b> — that is, Indian courts adopt English common-law principles <b>only to the extent they are consistent with Indian conditions and suited to Indian society</b>.</p>
+      <p>The Supreme Court in <i>Rajkot Municipal Corporation v. Manjulben</i> (see Case No. 4) expressly recognised this: since there is <b>no statutory law in India regulating tortious damages</b>, the courts “selectively applied the common law principles evolved by the courts in England on grounds of justice, equity and good conscience.”</p>
+      <div class="hint"><b>Not a blind import:</b> Indian courts first test whether a rule of English law suits Indian circumstances before applying it — e.g., the doctrine of <b>sovereign immunity</b> was rejected (<i>State of Rajasthan v. Vidhyawati</i>) and the <b>rule of strict liability</b> was broadened into <b>absolute liability</b> in <i>M.C. Mehta v. Union of India</i>.</div>
+
+      <h3>2.2 Uncodified and judge-made</h3>
+      <p>Unlike most branches of Indian law (contract, property, crime), the <b>law of torts is largely uncodified</b>. There is no single “Indian Torts Code” or “Indian Damages Act.” It is a <b>judge-made law</b>, developed through precedents. Tortious liability is codified <b>only to a very limited, fragmentary extent</b>:</p>
+      <table>
+        <tr><th>Statutory area</th><th>Statute</th></tr>
+        <tr><td>Workmen’s injury / employment</td><td>Employees’ Compensation Act, 1923; Workmen’s Compensation Act</td></tr>
+        <tr><td>Motor accidents</td><td>Motor Vehicles Act, 1988 (incl. no-fault &amp; hit-and-run compensation)</td></tr>
+        <tr><td>Consumer protection</td><td>Consumer Protection Act, 2019</td></tr>
+        <tr><td>Environment / hazardous activity</td><td>Environment (Protection) Act, 1986; Public Liability Insurance Act, 1991</td></tr>
+        <tr><td>Defamation (criminal), Railways, etc.</td><td>Indian Penal Code; Railways Act; specific statutes</td></tr>
+      </table>
+      <p>The Law Commission of India has repeatedly <b>recommended codification</b> (e.g., its <i>First Report on the Liability of the State in Tort</i>, 1956), but no general codification has followed. The House of Lords’ intended reform of damages law in <i>Lonrho</i>-type legislation has been described as a proposal that “died still-born,” leaving India to rely on judge-made principles.</p>
+
+      <h3>2.3 Advantages of an uncodified, judge-made law of torts</h3>
+      <ul>
+        <li><b>Flexibility &amp; adaptability:</b> It can grow to meet new circumstances, technological change and industrial hazards without waiting for Parliament.</li>
+        <li><b>Capacity to create new torts:</b> The courts can recognise new wrongs as society evolves — e.g., <b>constitutional torts</b>, <b>absolute liability</b> in <i>M.C. Mehta</i>, compensation for violation of <b>Article 21</b> (<i>Rudul Sah v. State of Bihar</i>; <i>Bhim Singh v. State of J&amp;K</i>).</li>
+        <li><b>Justice in individual cases:</b> A judge can do justice on the specific facts instead of being bound by rigid statutory categories.</li>
+        <li><b>Principles based on equity &amp; good conscience:</b> The courts can mould rules to Indian conditions — e.g., rejecting feudal sovereign immunity while expanding State liability in a welfare State.</li>
+        <li><b>No piecemeal rigidity:</b> Old maxims like <i>ubi jus ibi remedium</i> keep the law responsive to violations of rights that attract no statutory remedy.</li>
+      </ul>
+
+      <h3>2.4 Disadvantages</h3>
+      <ul>
+        <li><b>Uncertainty &amp; unpredictability:</b> Because there is no code, a litigant cannot be sure whether a particular harm is actionable until a court decides. This risk is high in a country with costly litigation.</li>
+        <li><b>Dependence on victims coming forward:</b> A judge-made law develops only if victims litigate; it is reactive, not forward-looking.</li>
+        <li><b>Cost &amp; delay:</b> The poor and marginalised cannot easily access courts, so the law remains under-developed in areas that are not litigated.</li>
+        <li><b>Reliance on English law:</b> Indian courts borrow English principles, some of which may not fit Indian social/economic realities.</li>
+        <li><b>Slow, uneven growth:</b> Development is haphazard and incremental — the law that a court creates in one State or one case may not be adopted uniformly.</li>
+        <li><b>Judicial activism not always a substitute:</b> Courts can fill gaps, but detailed prospective rules (e.g., compensation schemes) require legislation.</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 720 230" width="720" role="img" aria-label="India tort law advantages disadvantages">
+          <rect x="20" y="70" width="300" height="120" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="170" y="100" fill="#2e7d4f" text-anchor="middle" font-size="15" font-weight="700">Advantages</text>
+          <text x="170" y="122" fill="#1c5a3a" text-anchor="middle" font-size="12">Flexible &amp; adaptable</text>
+          <text x="170" y="140" fill="#1c5a3a" text-anchor="middle" font-size="12">Can create new torts</text>
+          <text x="170" y="158" fill="#1c5a3a" text-anchor="middle" font-size="12">Justice in individual cases</text>
+          <text x="170" y="176" fill="#1c5a3a" text-anchor="middle" font-size="12">Equity &amp; good conscience</text>
+          <rect x="400" y="70" width="300" height="120" rx="10" fill="#fbe5e5" stroke="#b13a3a"/>
+          <text x="550" y="100" fill="#b13a3a" text-anchor="middle" font-size="15" font-weight="700">Disadvantages</text>
+          <text x="550" y="122" fill="#7c2727" text-anchor="middle" font-size="12">Uncertainty / unpredictability</text>
+          <text x="550" y="140" fill="#7c2727" text-anchor="middle" font-size="12">Reactive — needs litigation</text>
+          <text x="550" y="158" fill="#7c2727" text-anchor="middle" font-size="12">Cost &amp; delay</text>
+          <text x="550" y="176" fill="#7c2727" text-anchor="middle" font-size="12">Uneven, haphazard growth</text>
+          <text x="360" y="40" fill="#14224a" text-anchor="middle" font-size="14" font-weight="700">Judge-made · uncodified · justice, equity &amp; good conscience</text>
+        </svg>
+        <div class="cap">Two faces of the same coin: the flexibility that makes tort law adaptable is also the source of its uncertainty.</div>
+      </div>
+    </section>
+
+    <!-- ============ 3. MEANING & FUNCTION ============ -->
+    <section id="function">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Meaning &amp; Function of the Law of Torts</h2></div>
+      <p class="sec-sub">Syllabus (c) — Prescribing standards of human conduct; redressal of wrongs by payment of compensation; injunction.</p>
+
+      <p>The law of torts performs two broad tasks that together define its <b>nature and scope</b>:</p>
+
+      <h3>3.1 Prescribing standards of human conduct</h3>
+      <p>Tort law sets a <b>minimum standard of behaviour</b> that reasonable persons must observe towards others. It is not a code of morality — it prescribes a standard of <b>reasonable care</b> and instructs people not to invade the legal rights of others (e.g., not to trespass, not to defame, not to be negligent). When a person falls below this standard and thereby injures another, tort law steps in. In this sense tort law is <b>“the law of duties”</b> — duties fixed by law, not by the consent of parties.</p>
+
+      <h3>3.2 Redressal of wrongs by payment of compensation</h3>
+      <p>The primary function is <b>compensation</b> (restorative, not punitive): the wrongdoer (<i>tort-feasor</i>) is made to pay <b>damages</b> to the injured party. Damages in tort are <span class="accent">unliquidated</span> — fixed by the court, not pre-agreed. Tort compensation serves to place the victim, so far as money can, in the position he would have been in but for the wrong. However, tort law is not merely compensatory — in cases of malicious or outrageous conduct, <b>exemplary/punitive damages</b> may also be awarded (e.g., <i>Ashby v. White</i>, <i>Bhim Singh v. State of J&amp;K</i>).</p>
+
+      <h3>3.3 Injunction</h3>
+      <p>Where damages would be inadequate — e.g., a continuing or threatened wrong — the court may grant an <b>injunction</b>, an equitable remedy that <b>restrains</b> the defendant from doing, or requires him to undo (mandatory injunction), a particular act. In <i>Seetharamayya</i> the plaintiffs framed their whole relief around <b>mandatory and permanent injunctions</b>; in <i>Prof. Imtiaz Ahmad v. Durdana Zamir</i> and <i>Rustom K. Karanjia</i> injunctions were sought against further publication.</p>
+      <table>
+        <tr><th>Function</th><th>Mechanism</th><th>Illustration</th></tr>
+        <tr><td>Prevent/deter harm</td><td>Standard of care; injunction</td><td>Neighbour principle (Donoghue)</td></tr>
+        <tr><td>Compensate the victim</td><td>Unliquidated damages</td><td>Rajkot MC (fatal fall of tree)</td></tr>
+        <tr><td>Restrain continuing wrong</td><td>Prohibitory / mandatory injunction</td><td>Seetharamayya (bunds &amp; trench)</td></tr>
+        <tr><td>Vindicate a violated right</td><td>Nominal / exemplary damages</td><td>Ashby v. White (right to vote)</td></tr>
+      </table>
+    </section>
+
+    <!-- ============ 4. DEFINITION ============ -->
+    <section id="def">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Definition of Tort</h2></div>
+      <p class="sec-sub">Syllabus (d).</p>
+
+      <h3>4.1 Salmond’s definition</h3>
+      <blockquote class="quote">“A civil wrong which is <b>not exclusively a breach of contract</b> or <b>breach of trust</b> or other merely equitable obligation.”</blockquote>
+      <p>This is a <span class="accent">negative / residual</span> definition. It tells us what a tort is <i>not</i> — it is a civil wrong that is neither a breach of contract nor a breach of trust nor a merely equitable obligation. It does not affirmatively state the basis of tortious obligation. The remedy for a tort is a <b>common-law action for unliquidated damages</b>.</p>
+
+      <h3>4.2 Winfield’s definition</h3>
+      <blockquote class="quote">“Tortious liability arises from the <b>breach of a duty primarily fixed by law</b>; this duty is <b>towards persons generally</b>; and its breach is <b>redressible by an action for unliquidated damages</b>.”</blockquote>
+      <p>Winfield’s <span class="accent">positive/affirmative</span> definition isolates the three essential attributes of a tort:</p>
+      <ol>
+        <li><b>Breach of a duty primarily fixed by law</b> — the duty is imposed by law itself, independent of any contract, agreement or consent between the parties.</li>
+        <li><b>The duty is towards persons generally</b> — it is owed to the <b>world at large</b>, a <span class="accent">right <i>in rem</i></span>, not merely to a particular individual (a <i>right in personam</i>).</li>
+        <li><b>Breach is redressible by an action for unliquidated damages</b> — damages are not pre-determined but fixed by the court.</li>
+      </ol>
+
+      <h3>4.3 Fraser’s definition</h3>
+      <blockquote class="quote">“A tort is an <b>infringement of a right in rem</b> of a private individual, giving a right of compensation at the suit of the injured party.”</blockquote>
+
+      <h3>4.4 Common elements distilled</h3>
+      <p>Taken together, definitions converge on the following: a tort is a <b>civil wrong</b> consisting of a <b>wrongful act or omission</b> which is a <b>breach of a legal duty</b> (a duty fixed by law, owed to persons generally), which causes <b>legal damage</b>, and for which the remedy is <b>unliquidated damages</b> at the suit of the injured party.</p>
+      <div class="tipbox"><b>Why both definitions matter:</b> Salmond’s definition (a civil wrong) is the one DU most often expects and is quoted in the Atul Bhardwaj mind-map. Winfield’s definition is preferred for examining the <b>nature</b> of tortious liability and for distinguishing tort from contract and crime.</div>
+    </section>
+
+    <!-- ============ LOV vs LOWS ============ -->
+    <section id="tortvsort">
+      <div class="sec-head"><div class="sec-num">5</div><h2>“Is it the Law of Tort or the Law of Torts?”</h2></div>
+      <p class="sec-sub">Foundation of tortious liability — Winfield &amp; Salmond’s competing theories.</p>
+      <p>Professor Salmond posed the question: does the law of torts consist of a <b>fundamental general principle</b> that it is wrongful to harm others absent justification, or does it consist of a <b>number of specific rules</b> prohibiting certain named harmful activities, leaving all else outside liability?</p>
+
+      <div class="two-col">
+        <div class="hint" style="background:#e7e9fb">
+          <b style="color:var(--navy)">(A) Larger theory — the Law of Tort (Winfield &amp; Pollock)</b>
+          <p>“All injuries done by one person to another are <b>torts</b>, unless there is some justification recognised by law.”</p>
+          <ul><li>Every unjustifiable harm is tortious.</li><li>Courts may <b>create new torts</b>; a plaintiff need not find a label.</li><li>Supported by <i>negligence</i> as a new tort, <i>Rylands v Fletcher</i>, <i>Donoghue v Stevenson</i>, <i>Ashby v White</i> (ubi jus ibi remedium).</li><li>Lord Macmillan: <i>“The categories of negligence are never closed.”</i></li><li>Holt CJ in <i>Ashby</i>: <i>“If man will multiply injuries, actions must be multiplied too.”</i></li></ul>
+        </div>
+        <div class="hint" style="background:#e2f3f3">
+          <b style="color:var(--teal)">(B) Narrower theory — the Law of Torts (Salmond)</b>
+          <p>There is no law of tort, only a <b>law of torts</b> — a set of <b>pigeon-holes</b>, each containing a labelled tort.</p>
+          <ul><li>Liability arises <b>only if</b> the wrong falls into one of the recognised (“nominate”) torts.</li><li>“Just as the criminal law consists of rules establishing specific offences, so the law of torts consists of rules establishing specific injuries.”</li><li>No general principle of liability; the plaintiff must prove the case falls within a specific rule.</li><li>Based on the early <b>writ/forms of action practice</b> (no writ → no remedy).</li><li>Dr Jenks supports Salmond but adds courts <b>can</b> create new torts (though substantially similar to existing ones).</li></ul>
+        </div>
+      </div>
+
+      <div class="fig">
+        <svg viewBox="0 0 760 210" width="760" role="img" aria-label="Law of tort vs law of torts comparison">
+          <rect x="20" y="30" width="340" height="150" rx="12" fill="#e7e9fb" stroke="#1f3675"/>
+          <text x="190" y="55" fill="#1f3675" text-anchor="middle" font-size="16" font-weight="700">LAW OF TORT (Winfield)</text>
+          <text x="190" y="80" fill="#2b3a63" text-anchor="middle" font-size="12.5">General principle:</text>
+          <text x="190" y="99" fill="#2b3a63" text-anchor="middle" font-size="12.5">all unjustifiable harm = tort</text>
+          <text x="190" y="124" fill="#2b3a63" text-anchor="middle" font-size="12.5">courts can create NEW torts</text>
+          <text x="190" y="149" fill="#2b3a63" text-anchor="middle" font-size="12.5">one risk → liability</text>
+          <rect x="400" y="30" width="340" height="150" rx="12" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="570" y="55" fill="#0f8a8a" text-anchor="middle" font-size="16" font-weight="700">LAW OF TORTS (Salmond)</text>
+          <text x="570" y="80" fill="#125b5b" text-anchor="middle" font-size="12.5">Pigeon-hole theory:</text>
+          <text x="570" y="99" fill="#125b5b" text-anchor="middle" font-size="12.5">only NOMINATE torts</text>
+          <text x="570" y="124" fill="#125b5b" text-anchor="middle" font-size="12.5">no fit in a pigeon-hole → no tort</text>
+          <text x="570" y="149" fill="#125b5b" text-anchor="middle" font-size="12.5">specific rules, no general principle</text>
+        </svg>
+        <div class="cap">Winfield’s broader view vs Salmond’s pigeon-hole view.</div>
+      </div>
+
+      <h3>Reconciliation</h3>
+      <p>The correct approach is a <b>middle ground</b>. There <i>are</i> a number of nominate torts, but a person sustaining a loss does <b>not</b> have to find a label to obtain compensation — courts have granted relief for new claims (e.g., nervous shock). Winfield himself modified his position: <span class="quote">“From a narrow and practical point of view, Salmond’s theory will suffice, but from a broader outlook, his theory is valid.”</span></p>
+      <p>An Indian decision, <i>Lala Pannalal v. Kasturi Chand Ramaji</i> (AIR 1946 Mad 147), holds that there is no exhaustive classification of torts beyond which courts should not proceed; new invasions of rights devised by human ingenuity may give rise to new torts (e.g., malicious house-search). Indian judiciary has favoured Winfield’s wider theory (see <i>M.C. Mehta</i> — “we have to evolve new principles … which will adequately deal with new problems which arise in a highly industrialised economy”).</p>
+    </section>
+
+    <!-- ============ 5. CONSTITUENTS ============ -->
+    <section id="constituents">
+      <div class="sec-head"><div class="sec-num">6</div><h2>Constituents of Tort</h2></div>
+      <p class="sec-sub">Syllabus (e) — Wrongful act, legal damage and remedy.</p>
+      <p>For an action to lie in tort, three ingredients must co-exist:</p>
+      <ol>
+        <li><b>Wrongful act (or omission)</b> — The defendant must have committed a legal wrong — a positive act (<i>misfeasance</i>) or a failure to act where a legal duty to act exists (<i>non-feasance</i>). An act that is merely a moral or social wrong, or that causes harm without violating any legal right, is not tortious.</li>
+        <li><b>Legal damage (violation of a legal right / <i>injuria</i>)</b> — There must be an infringement of a right recognised by law. Under the <span class="lat">ubi jus ibi remedium</span> principle, where there is a legal right there must be a remedy. The damage must be one the law will redress; mere loss or inconvenience the law does not regard is not <i>injuria</i>.</li>
+        <li><b>Legal remedy / <i>damnum</i> (actual damage, or actionable per se)</b> — Either the plaintiff has suffered actual loss (<i>damnum</i>), <b>or</b> the act is actionable <b>per se</b> without proof of damage (in case of <i>injuria sine damnum</i>). The remedy is usually <b>unliquidated damages</b> or an <b>injunction</b>.</li>
+      </ol>
+
+      <div class="fig">
+        <svg viewBox="0 0 720 200" width="720" role="img" aria-label="Constituents of tort flowchart">
+          <defs><marker id="ar2" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="40" width="150" height="90" rx="10" fill="#14224a"/>
+          <text x="85" y="75" fill="#fff" text-anchor="middle" font-size="13.5" font-weight="700">1. Wrongful act</text>
+          <text x="85" y="95" fill="#dbe3f5" text-anchor="middle" font-size="11">act / omission</text>
+          <text x="85" y="110" fill="#dbe3f5" text-anchor="middle" font-size="11">(breach of duty)</text>
+          <line x1="160" y1="85" x2="215" y2="85" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar2)"/>
+          <rect x="220" y="40" width="150" height="90" rx="10" fill="#1f3675"/>
+          <text x="295" y="75" fill="#fff" text-anchor="middle" font-size="13.5" font-weight="700">2. Legal damage</text>
+          <text x="295" y="95" fill="#dbe3f5" text-anchor="middle" font-size="11">violation of legal right</text>
+          <text x="295" y="110" fill="#dbe3f5" text-anchor="middle" font-size="11">(injuria)</text>
+          <line x1="370" y1="85" x2="425" y2="85" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar2)"/>
+          <rect x="430" y="40" width="150" height="90" rx="10" fill="#c8912b"/>
+          <text x="505" y="75" fill="#fff" text-anchor="middle" font-size="13.5" font-weight="700">3. Remedy</text>
+          <text x="505" y="95" fill="#fff" text-anchor="middle" font-size="11">damages / injunction</text>
+          <text x="505" y="110" fill="#fff" text-anchor="middle" font-size="11">(ubi jus ibi remedium)</text>
+          <rect x="10" y="160" width="570" height="20" rx="6" fill="#f6f8ff" stroke="#1f3675"/>
+          <text x="150" y="174" fill="#12406b" text-anchor="middle" font-size="12">Plus the two maxims of “damage”: injuria sine damnum (actionable) &amp; damnum sine injuria (not actionable)</text>
+        </svg>
+        <div class="cap">Three-step structure of tortious liability.</div>
+      </div>
+    </section>
+
+    <!-- ============ MAXIMS ============ -->
+    <section id="maxims">
+      <div class="sec-head"><div class="sec-num">7</div><h2>Injuria sine damnum &amp; Damnum sine injuria</h2></div>
+      <p class="sec-sub">Syllabus (e) — the two crucial maxims about “damage.”</p>
+
+      <h3>7.1 Injuria sine damnum (legal injury without damage)</h3>
+      <p><span class="lat">Injuria</span> = violation/infringement of a legal right; <span class="lat">sine</span> = without; <span class="lat">damnum</span> = actual loss or damage (money, comfort, health). Together: <b>infringement of a legal right without any actual loss or damage to the plaintiff.</b></p>
+      <blockquote class="quote">If a legal right is violated, the violation is <b>actionable even though the plaintiff has suffered no actual loss</b>. The plaintiff need only prove the infringement of the right — the action is <b>actionable per se</b>.</blockquote>
+      <ul>
+        <li><b>Examples:</b> trespass to land (actionable even if no damage); wrongful deprivation of the right to vote (<i>Ashby v. White</i>; <i>Municipal Corpn. of Agra v. Asharfi Lal</i>); wrongful detention of an MLA violating Article 21 (<i>Bhim Singh</i>) — in the last case the Supreme Court awarded <b>exemplary damages of ₹50,000</b>.</li>
+        <li><b>Remedy:</b> <b>nominal damages</b> are awarded to vindicate the right; if the violation is malicious or wicked, <b>exemplary/punitive damages</b> may be given.</li>
+        <li><b>Statutory recognition:</b> Under Section 42 (specific relief analogous) and the principle is also reflected in <span class="lat">ubi jus ibi remedium</span>.</li>
+      </ul>
+
+      <h3>7.2 Damnum sine injuria (damage without injury)</h3>
+      <p><b>Actual and substantial loss suffered without any infringement of the plaintiff’s legal right.</b> The harm may be real, even serious, but the law gives no remedy because <b>no legal injury</b> (<i>injuria</i>) has been done.</p>
+      <blockquote class="quote">“Law does not take into account all harms suffered by a person which caused no legal injury. Damage so done is called <i>damnum sine injuria</i>.” — <i>Town Area Committee v. Prabhu Dayal</i></blockquote>
+      <ul>
+        <li><b>Examples:</b> loss caused by lawful competition (<i>Gloucester Grammar School</i>); use of one’s own property however motivated (<i>Mayor of Bradford v. Pickles</i>); protection of one’s land against floodwater (<i>Seetharamayya</i>); demolition of an illegally-built structure (<i>Town Area Committee v. Prabhu Dayal</i>); trade combinations in furtherance of business (<i>Mogul Steamship Co. v. McGregor Gow &amp; Co.</i>); interception of percolating underground water (<i>Acton v. Blundell</i>; <i>Chasemore v. Richards</i>); loss from a negligently-delivered telegram to a stranger (<i>Dickson v. Reuter’s Telegraph Co.</i>); unlawful competition or hurt to one’s property from exercise of another’s lawful right.</li>
+      </ul>
+      <p>The often-quoted test (from <i>Town Area Committee</i>): a <b>legal act</b>, though motivated by malice, does <b>not</b> make the actor liable; the plaintiff can get compensation <b>only if he proves he suffered injury due to an <i>illegal</i> act</b> of the defendant.</p>
+
+      <div class="fig">
+        <svg viewBox="0 0 820 300" width="820" role="img" aria-label="Four-fold analysis of injuria and damnum">
+          <rect x="20" y="40" width="380" height="220" rx="14" fill="#fbfcff" stroke="#e2e6f0" stroke-width="2"/>
+          <rect x="420" y="40" width="380" height="220" rx="14" fill="#fbfcff" stroke="#e2e6f0" stroke-width="2"/>
+          <text x="40" y="40" fill="#14224a" font-size="14" font-weight="700">INJURIA (legal right violated)</text>
+          <text x="440" y="40" fill="#14224a" font-size="14" font-weight="700">NO INJURIA (no legal wrong)</text>
+          <rect x="40" y="60" width="340" height="85" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="210" y="88" fill="#2e7d4f" text-anchor="middle" font-size="14" font-weight="700">Injuria + Damnum</text>
+          <text x="210" y="108" fill="#1c5a3a" text-anchor="middle" font-size="12">ACTIONABLE (full damages)</text>
+          <text x="210" y="126" fill="#1c5a3a" text-anchor="middle" font-size="11">ordinary tort with actual loss</text>
+          <rect x="40" y="160" width="340" height="85" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="210" y="188" fill="#2e7d4f" text-anchor="middle" font-size="14" font-weight="700">Injuria + No Damnum</text>
+          <text x="210" y="208" fill="#1c5a3a" text-anchor="middle" font-size="12">ACTIONABLE PER SE (nominal/exemplary)</text>
+          <text x="210" y="226" fill="#1c5a3a" text-anchor="middle" font-size="11">Ashby v White · Asharfi Lal · Bhim Singh</text>
+          <rect x="440" y="60" width="340" height="85" rx="10" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="610" y="88" fill="#0f8a8a" text-anchor="middle" font-size="14" font-weight="700">Damnum + No Injuria</text>
+          <text x="610" y="108" fill="#125b5b" text-anchor="middle" font-size="12">NOT ACTIONABLE</text>
+          <text x="610" y="126" fill="#125b5b" text-anchor="middle" font-size="11">Gloucester · Pickles · Seetharamayya · Town Area</text>
+          <rect x="440" y="160" width="340" height="85" rx="10" fill="#f0f1f5" stroke="#b0b6c6"/>
+          <text x="610" y="188" fill="#6a7290" text-anchor="middle" font-size="14" font-weight="700">No Injuria + No Damnum</text>
+          <text x="610" y="208" fill="#6a7290" text-anchor="middle" font-size="12">NO CAUSE OF ACTION</text>
+          <text x="610" y="226" fill="#6a7290" text-anchor="middle" font-size="11">pure moral / social wrong</text>
+        </svg>
+        <div class="cap">Four-fold matrix of the two maxims (the pattern used in the DU revision flowchart).</div>
+      </div>
+
+      <h3>7.3 Table comparison — Injuria sine damnum vs Damnum sine injuria</h3>
+      <table>
+        <tr><th>Basis</th><th>Injuria sine damnum</th><th>Damnum sine injuria</th></tr>
+        <tr><td>Meaning</td><td>Legal injury without actual damage</td><td>Actual damage without legal injury</td></tr>
+        <tr><td>Legal right</td><td>Violated (legal right infringed)</td><td>Not violated (no legal wrong)</td></tr>
+        <tr><td>Actual loss</td><td>Absent / nominal</td><td>Present (may be substantial)</td></tr>
+        <tr><td>Actionable?</td><td><b>Yes</b> — actionable per se</td><td><b>No</b> — not actionable</td></tr>
+        <tr><td>Nature</td><td>Legal wrong</td><td>Moral/social wrong or justifiable harm</td></tr>
+        <tr><td>Damages</td><td>Nominal; exemplary if malicious</td><td>No compensation</td></tr>
+        <tr><td>Examples</td><td>Ashby v. White; Asharfi Lal; Bhim Singh; trespass to land</td><td>Gloucester Grammar School; Mayor of Bradford v. Pickles; Seetharamayya; Town Area Committee; Mogul Steamship</td></tr>
+      </table>
+    </section>
+
+    <!-- ============ UBI JUS ============ -->
+    <section id="ubi">
+      <div class="sec-head"><div class="sec-num">8</div><h2>Ubi Jus Ibi Remedium</h2></div>
+      <p class="sec-sub">“Where there is a right, there is a remedy.”</p>
+      <blockquote class="quote">“If the plaintiff has a right, he must of necessity have a means to vindicate and maintain it, and a remedy if he is injured in the exercise or enjoyment of it; and indeed it is a vain thing to imagine a right without a remedy; for want of right and want of remedy are reciprocal.” — <b>Lord Holt CJ</b>, <i>Ashby v. White</i> (1703)</blockquote>
+      <p>This maxim is the jurisprudential basis of <span class="accent">injuria sine damnum</span> and the whole remedial character of tort law. Every violation of a legal right must be redressed. The purpose of the law is served — and the violation of a legal right should <b>not remain without a remedy</b> — by awarding at least nominal damages.</p>
+      <div class="tipbox"><b>Its limits:</b> The maxim operates only where there is a <b>legal right</b>. It does <b>not</b> apply to mere damage without any violation of a legal right (<i>damnum sine injuria</i>) — e.g., loss from lawful competition in the <i>Gloucester Grammar School</i> case, or loss from a harm where the defendant exercised a legal right (<i>Pickles</i>).</div>
+    </section>
+
+    <!-- ============ 6. TORT VS OTHERS ============ -->
+    <section id="vs">
+      <div class="sec-head"><div class="sec-num">9</div><h2>Tort vis-à-vis other Wrongs</h2></div>
+      <p class="sec-sub">Syllabus (f) — Crime, breach of contract, breach of trust, quasi-contract.</p>
+
+      <h3>9.1 Tort vs Crime</h3>
+      <p>Blackstone’s classic division: <b>private wrongs</b> infringing private/civil rights (civil injuries = torts) vs <b>public wrongs</b> breaching public rights affecting the whole community (crimes).</p>
+      <table>
+        <tr><th>Basis</th><th>Tort</th><th>Crime</th></tr>
+        <tr><td>Nature</td><td>Civil / private wrong</td><td>Public wrong (against the community / State)</td></tr>
+        <tr><td>Right violated</td><td>Right <i>in rem</i> (private right)</td><td>Public right/duty</td></tr>
+        <tr><td>Who sues/acts</td><td>Injured party (plaintiff) sues</td><td>State prosecutes (prosecutor/police)</td></tr>
+        <tr><td>Object / sanction</td><td>Compensatory / restorative (damages)</td><td>Punitive / disciplinary (imprisonment, fine)</td></tr>
+        <tr><td>Damages</td><td>Unliquidated; court-fixed</td><td>Fine is fixed &amp; in addition to punishment</td></tr>
+        <tr><td>Compromise</td><td>Settlable with consent of injured party</td><td>Not generally compoundable (except a few)</td></tr>
+        <tr><td>Survival</td><td>May survive to successors (with exceptions — Rose v. Ford)</td><td>Dies with the person (actio personalis moritur cum persona)</td></tr>
+        <tr><td>Overlap</td><td colspan="2">Assault, defamation, nuisance, conspiracy are <b>both</b> tort and crime; <b>remedies are concurrent</b>, not alternative</td></tr>
+      </table>
+
+      <h3>9.2 Tort vs Breach of Contract</h3>
+      <table>
+        <tr><th>Basis</th><th>Tort</th><th>Breach of Contract</th></tr>
+        <tr><td>Source of duty</td><td>Duty fixed <b>by law</b></td><td>Duty fixed <b>by the agreement</b> of the parties</td></tr>
+        <tr><td>Owed to</td><td>Persons generally (right <i>in rem</i>)</td><td>Specific contracting party only (privity — right <i>in personam</i>)</td></tr>
+        <tr><td>Consent</td><td>Without consent</td><td>Based on consent</td></tr>
+        <tr><td>Privity</td><td>Not required (<i>Donoghue</i>)</td><td>Required</td></tr>
+        <tr><td>Damages</td><td>Unliquidated</td><td>Liquidated (pre-determined)</td></tr>
+        <tr><td>Wrong</td><td>Violation of a duty in rem</td><td>Violation of a duty in personam</td></tr>
+      </table>
+      <p><b>Important co-existence:</b> The <b>same facts</b> may give rise to liability in both tort and contract — e.g., a railway passenger injured by the company’s negligence (sue for <i>breach of contract of safe carriage</i> OR <i>negligence in tort</i>); a dentist who negligently extracts a tooth (<i>Edwards v. Mallan</i>); a surgeon called by a father to operate on his daughter (contractual duty to the father, tort duty to the daughter — <i>Pippin v. Sheppard</i>). The plaintiff cannot claim twice; he may choose either. This is settled by <b><i>White v. John Warrick</i></b> (Case No. 1) — an exemption clause barring contract liability does <b>not</b> bar an action in tort for negligence.</p>
+
+      <h3>9.3 Tort vs Breach of Trust &amp; Quasi-contract</h3>
+      <table>
+        <tr><th>Basis</th><th>Tort</th><th>Breach of Trust</th><th>Quasi-contract</th></tr>
+        <tr><td>Duty imposed by</td><td>Law</td><td>Obligation of the trustee (property law)</td><td>Law (unjust enrichment)</td></tr>
+        <tr><td>Owed to</td><td>Persons generally (<i>in rem</i>)</td><td>Beneficiary</td><td>A particular person</td></tr>
+        <tr><td>Remedy</td><td>Unliquidated damages</td><td>Liquidated (value of the property)</td><td>Liquidated (repayment of benefit)</td></tr>
+        <tr><td>Basis</td><td>Breach of duty</td><td>Misfeasance in respect of trust property</td><td>Unjust benefit received</td></tr>
+      </table>
+    </section>
+
+    <!-- ============ 7. INTENTION MOTIVE MALICE ============ -->
+    <section id="mental">
+      <div class="sec-head"><div class="sec-num">10</div><h2>Relevance of Intention, Motive &amp; Malice</h2></div>
+      <p class="sec-sub">Syllabus (g).</p>
+
+      <h3>10.1 Intention</h3>
+      <p><b>Intention</b> (the defendant’s deliberate desire that the consequence follow) is relevant in torts that are <b>intentional</b> — e.g., <i>battery, assault, false imprisonment, trespass, deceit, malicious prosecution, conspiracy</i>. It distinguishes an intentional tort from negligence or an accident. Intention is also relevant to the <b>quantum of damages</b> — a deliberate wrong may attract <b>unliquidated and exemplary damages</b>. But intention is <b>not an essential element</b> of tortious liability generally; liability may arise without any wrongful intention (see strict &amp; absolute liability below).</p>
+
+      <h3>10.2 Motive</h3>
+      <p><b>Motive</b> (why the act was done) is, as a general rule, <b>irrelevant</b> in tort. The law asks what the defendant <i>did</i>, not why he did it. <span class="accent">A good motive does not justify an act otherwise illegal; a bad motive does not make wrongful an act otherwise legal.</span></p>
+      <blockquote class="quote">“No use of property which would be legal if due to a proper motive can become illegal because it is prompted by a motive which is improper or even malicious.” — <b>Lord Watson</b>, <i>Mayor of Bradford v. Pickles</i><br><br>
+      “In such a case, motives are immaterial; it is the act, not the motive for the act, that must be regarded. If the act apart from the motive gives rise merely to damage without legal injury, the motive, however reprehensible, will not supply that element.” — <b>Lord Macnaghten</b>, same case.</blockquote>
+      <p>Similarly in <i>Allen v. Flood</i> (1896): an act lawful in itself is not converted into an unlawful act by a malicious motive. And in <i>Town Area Committee v. Prabhu Dayal</i>: “A legal act, though motivated by malice, will not make the actor liable … Mere malice cannot disentitle a person from taking recourse to law.”</p>
+
+      <h3>10.3 Malice — two senses</h3>
+      <div class="two-col">
+        <div class="hint" style="background:#fbe5e5">
+          <b style="color:var(--red)">Malice in law</b>
+          <p>Means more than mere evil motive. It signifies either (a) the <b>intentional doing of a wrongful act without just cause or excuse</b>, or (b) an action determined by an improper motive. It is <b>presumed</b> from an unlawful act.</p>
+          <p class="quote" style="font-size:13.5px">“Malice in common acceptation means ill-will against a person, but in its legal sense it means a wrongful act done intentionally without just cause or excuse.” — <b>Bayley J</b>, <i>Bromage v. Prosser</i> (1825)</p>
+        </div>
+        <div class="hint" style="background:#eef6f6">
+          <b style="color:var(--teal)">Malice in fact (evil motive)</b>
+          <p>Means an <b>evil motive</b> — a feeling of ill-will. When a wrongful act is done with ill-will, it is done “maliciously.”</p>
+          <p>Relevant in torts where a good motive is the <b>justification</b> — e.g., <b>malicious prosecution</b>, and in <b>defamation</b> where malice in fact defeats <b>qualified privilege</b> (see <i>Rustom K. Karanjia</i> — malice found; and <i>Prof. Imtiaz Ahmad</i> — no cause of action). It may escalate damages (exemplary) where the wrong is malicious (<i>Ashby</i>, <i>Bhim Singh</i>).</p>
+        </div>
+      </div>
+
+      <div class="fig">
+        <svg viewBox="0 0 800 150" width="800" role="img" aria-label="Malice in law vs fact">
+          <rect x="20" y="25" width="760" height="30" rx="8" fill="#14224a"/>
+          <text x="400" y="45" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">MALICE</text>
+          <line x1="400" y1="55" x2="400" y2="70" stroke="#14224a" stroke-width="2.5"/>
+          <rect x="30" y="75" width="360" height="60" rx="10" fill="#fbe5e5" stroke="#b13a3a"/>
+          <text x="210" y="102" fill="#b13a3a" text-anchor="middle" font-size="13.5" font-weight="700">MALICE IN LAW</text>
+          <text x="210" y="122" fill="#7c2727" text-anchor="middle" font-size="11.5">wrongful act done intentionally without just cause/excuse</text>
+          <rect x="420" y="75" width="360" height="60" rx="10" fill="#eef6f6" stroke="#0f8a8a"/>
+          <text x="600" y="102" fill="#0f8a8a" text-anchor="middle" font-size="13.5" font-weight="700">MALICE IN FACT (evil motive)</text>
+          <text x="600" y="122" fill="#125b5b" text-anchor="middle" font-size="11.5">ill-will / improper motive; rebuts good-faith defences</text>
+        </svg>
+        <div class="cap">Malice in law (presumed from the unlawful act) vs malice in fact (evil motive).</div>
+      </div>
+
+      <h3>10.4 When fault is relevant &amp; when irrelevant</h3>
+      <table>
+        <tr><th>Fault relevant</th><th>Fault irrelevant (liability without fault)</th></tr>
+        <tr><td>Intentional torts — assault, battery, false imprisonment, deceit, malicious prosecution, conspiracy, trespass</td><td>Tort of <b>conversion</b>; <b>defamation</b>; <b>vicarious liability</b>; <b>strict liability</b> (Rylands v. Fletcher); <b>absolute liability</b> (M.C. Mehta)</td></tr>
+        <tr><td>To distinguish intentional wrong from negligence/accident</td><td>In these, liability arises irrespective of the defendant’s intention, motive or negligence</td></tr>
+        <tr><td>For quantum of damages (exemplary for wilful/malicious wrongs)</td><td>For liability as such — harm alone suffices</td></tr>
+      </table>
+      <div class="hint"><b>Salmond’s fault theory vs modern law:</b> Salmond argued liability should rest on fault (intention or culpable negligence). Modern law has moved beyond this — strict &amp; absolute liability and vicarious liability impose liability <b>without</b> fault. Hence intention/motive/malice are relevant <i>selectively</i>, not universally.</div>
+    </section>
+
+    <!-- ============ THE 8 CASES ============ -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 8 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Each case is set out as: Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C1 -->
+      <div class="case" id="c1">
+        <div class="case-head">
+          <h4>1. White v. John Warrick &amp; Co. Ltd.</h4>
+          <span class="cit">(1953) 2 All ER 1021 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, a <b>newsagent and tobacconist</b> at Canonbury, entered into a written contract with the defendants (owners) that they would supply him a <b>tradesman’s tricycle</b> (with a large carrier in front) for delivering newspapers. The contract was on the defendants’ printed form. By cl. 1 the owners let the carrier cycle for three years at 5s per week; by cl. 2 the owners agreed to <b>maintain the machines</b> in working order and to supply spare carriers. The machine was in use for a considerable period. Towards the end of May 1950 it needed repair. On <b>Saturday, 3 June</b>, a representative of the owners went to the plaintiff’s shop, took away the faulty machine and <b>left a spare tricycle</b> in its place (i.e., purporting to perform cl. 2). The plaintiff did <b>not examine</b> it; he mounted it immediately for work. After about a <b>quarter of a mile</b> the saddle went forward, he was thrown off and injured (an injury to his knee — <b>synovitis</b> — requiring hospital care). The evidence (incl. the plaintiff’s employee Anthony) showed the saddle was loose and the <b>nuts under the seat were rusted and could not be moved</b>. Parker J. made a provisional assessment of <b>£505</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was the defendants’ conduct <b>negligent</b> in supplying a defective tricycle? (2) Did the contract contain a breach of warranty? (3) Did the <b>exemption clause (cl. 11)</b> bar the plaintiff’s claim?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> (i) The owners were in breach of <b>warranty/contract</b> — bound to supply a tricycle reasonably fit for its purpose; (ii) the owners owed a <b>duty of care</b> and were <b>negligent</b> — had they examined the tricycle they would have found the rusted nuts and loose saddle. Even if cl. 11 barred the contract claim, it did <b>not</b> bar an action for <b>negligence</b>.</p>
+            <p><b>Defendant (owners):</b> They denied negligence, breach of duty and breach of contract. They pleaded cl. 11: <i>“Nothing in this agreement shall render the owners liable for any personal injuries to the riders of the machines hired nor for any third party claims nor loss of any goods, belonging to the hirer, in the machines.”</i> Counsel conceded that cl. 11 barred the <b>contract</b> claim, but argued that the alleged negligence arose out of the <b>performance of the contract</b>, so the cause of action was founded on the agreement; since the same facts gave rise to both, the plaintiff should not recover merely by <b>framing his action in tort</b>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Court of Appeal (Singleton &amp; Denning LJJ)</b> held that cl. 11 exempted the owners only from <b>strict (contractual) liability</b>, <b>not</b> from liability for <b>negligence</b>. The claim for negligence was founded on <b>tort, not contract</b>.</p>
+            <p class="quote">“… negligence apart from contract gives a right of action to the party injured by that negligence … The fact that there is a contractual relationship between the parties … does not exclude the co-existence of a right of action founded on negligence … though arising out of the relationship.” — relying on <b>Lord Macmillan</b> in <i>Donoghue v. Stevenson</i></p>
+            <p class="quote">“If a person desires to exempt himself from a liability which the common law imposes on him, he can only do so by a contract freely and deliberately entered into by the injured party in words that are clear beyond the possibility of misunderstanding … if there are two possible heads of liability, one for negligence and the other a strict liability, an exemption clause will be construed, so far as possible, as exempting the defendant only from his strict liability and not from his liability for negligence.” — <b>Denning LJ</b></p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <span class="accent">The same set of facts can give rise to both a breach of contract and a tort</span>; the plaintiff may choose to sue in tort. (ii) An <b>exemption clause is construed strictly</b> — it will <span class="accent">not be read as excluding liability for negligence unless the words are clear beyond misunderstanding</span>; where there are two heads of liability, it exempts only the <b>strict</b> (contractual) one, leaving the tortious (negligence) claim intact. (iii) A duty of care owed to a third party’s servant shows a <i>fortiori</i> a like duty to the hirer himself.</div>
+          <div class="warnbox"><b>Exam linkage:</b> This is the authority for the DU 2024 PYQ on whether an <b>exclusion clause</b> in a contract restricts liability in <b>tort</b> for negligence.</div>
+        </div>
+      </div>
+
+      <!-- C2 -->
+      <div class="case" id="c2">
+        <div class="case-head">
+          <h4>2. Town Area Committee v. Prabhu Dayal</h4>
+          <span class="cit">AIR 1975 All 132</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff had <b>constructed 16 shops</b> on the old foundations of a building called “Garhi.” The defendant Town Area Committee (through its Chairman and Vice-Chairman, defendants 2 and 3) allegedly <b>demolished these constructions illegally</b>, causing a loss of <b>Rs. 1,000</b>. The plaintiff contended that the notice under <b>s. 186</b> of the U.P. Municipalities Act gave him only <b>two hours</b> to demolish, not the <b>reasonable time</b> contemplated by s. 302; that the notice was served when the plaintiff was <b>out of station</b>; and that the action was <b>mala fide</b>.</p>
+            <p><b>Defendants’ plea:</b> The constructions were made <b>without notice</b> under s. 178 and <b>without sanction</b> under s. 180 of the Act. The alleged mala fide was denied; notices had been given on 18 December, the District Magistrate directed action under s. 186, a second notice was given on 21 December, and only then was the building demolished in accordance with law.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was the demolition unlawful? (2) Is <b>malice</b> relevant to liability? (3) Did the plaintiff suffer <b>injuria</b> (a legal wrong) entitling him to compensation? (4) Was the damage <i>damnum sine injuria</i>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The demolition was mala fide and illegal because the notice gave only two hours; he had a <span class="accent">fundamental right to hold and enjoy property</span> even if built without sanction, and since the officer acted maliciously, the action was bad.</p>
+            <p><b>Defendants:</b> The building abutted a public street and was erected <b>without prior notice/sanction</b> — an offence under s. 185; the plaintiff therefore had <b>no right</b> to maintain it, and the demolition was lawful; hence no damages.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Hari Swarup J</b> held that the plaintiff could get compensation <b>only if he proved injury from an illegal act</b> of the defendant. The lower appellate court had <b>misdirected itself</b> by concentrating on <b>malice</b> instead of the <b>legality</b> of the action.</p>
+            <p class="quote">“A legal act, though motivated by malice, will not make the actor liable to pay damages … Merely because some officer has malice against a citizen who has committed a wrong will not render the action of the authority invalid if it is otherwise in accordance with law.”</p>
+            <p class="quote">“Law does not take into account all harms suffered by a person which caused no legal injury. Damage so done is called <i>damnum sine injuria</i> … The term ‘injuria’ is to be understood in its original and proper sense of wrong.”</p>
+            <p>The plaintiff had himself committed the wrong — he built without notice (s. 178) and sanction (s. 180), an offence under s. 185, and s. 186 empowered the Board to demolish. The <b>demolition of an illegally constructed building does not amount to injuria to the owner.</b> “No person has the right to enjoy the fruits of an act which is an offence under law.” <b>Appeal allowed</b>; the lower appellate court’s decree was set aside and the trial court’s restored.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <span class="accent">Damnum sine injuria</span> — damage without a legal wrong is <b>not actionable</b>. <span class="accent">Malice is irrelevant</span> where the act itself is legal — “a legal act, though motivated by malice, will not make the actor liable.” Compensation requires proof of <b>injury caused by an <i>illegal</i> act</b>, not merely loss. This is also a <span class="accent">damnum sine injuria</span> illustration and a concrete application of <i>ubi jus ibi remedium</i>’s converse.</div>
+        </div>
+      </div>
+
+      <!-- C3 -->
+      <div class="case" id="c3">
+        <div class="case-head">
+          <h4>3. P. Seetharamayya v. G. Mahalakshmamma</h4>
+          <span class="cit">AIR 1958 AP 103</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The parties owned <b>adjacent lands</b>. The appellants owned S. Nos. 86 &amp; 87/2 (shown in the plan as plots A and A-1); the respondents owned plots B and B-1, along the western boundary of which ran a <span class="lat">vagu</span> (a stream). The <b>fifth defendant</b> constructed a <b>bund</b> on her land to protect it from flood-water entering through a breach in the embankment of the vagu; <b>defendants 1–4</b> dug a <b>trench</b> and constructed another <b>bund</b> as additional safeguards. The effect was that the <b>rain/flood water flowed into the appellants’ plot A</b>, washing away their <span class="lat">variga</span> and groundnut crops. The appellants twice built bunds (about 150 ft) but each was washed away. They sought a <b>mandatory injunction</b> to demolish the bunds and fill the trench, a <b>permanent injunction</b> against future bunds/trenches, and <b>Rs. 300 damages</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the defendants entitled to erect bunds/trenches to protect their land from <b>flood-water</b>? (2) Did the damage arise from <b>normal rain-water</b> (which the lower owner may not obstruct) or from <b>flood-water</b> (a “common enemy” against which each may defend himself)? (3) Was this <i>damnum sine injuria</i>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments &amp; authorities</span>
+            <p><b>Appellants:</b> The bunds/trench on the defendants’ lands diverted water into plot A causing crop loss; the defendants’ acts were wrongful, so mandatory injunction and damages should be granted.</p>
+            <p><b>Defendants:</b> They were protecting their lands against flood-water — an apprehended danger — which is a lawful exercise of the right to self-protection.</p>
+            <p><b>Leading authority — <i>Nield v. N.W. Rly.</i> (1874):</b> “The flood is a <b>common enemy</b> against which every man has a right to defend himself … The law allows … a kind of <b>reasonable selfishness</b> … he who puts up a barricade against a flood is entitled to say to his neighbour who complains of it ‘why did not you do the same.’” — <b>Lord Bramwell B</b>.</p>
+            <p><b>Beven on Negligence:</b> The distinction is between water coming on land in the <b>normal way</b> (an incident of property from which a man may not relieve himself at his neighbour’s expense) and water coming <b>abnormally</b> (a <b>common enemy</b>, against which each may take precautions without regarding his neighbour — though he may protect his land, he may <b>not</b>, once the evil has befallen him, <b>shift</b> it to his neighbour’s land). Other authorities: <i>Gerrard v. Crowe</i> (PC — right to build fence against overflow), <i>Gopal Reddi v. Chenna Reddi</i> (no actionable wrong where no other practicable protection), <i>M.&amp;S.M. Rly. v. Maharaja of Pithapuram</i> (a landholder must not, once flood-water is on his land, actively turn it onto a neighbour’s land), <i>Sheik Hussain Sahib v. Subbayya</i> (a lower owner cannot obstruct the natural surface-flow from a higher land), <i>Kasia Pillai</i> (agriculturist’s customary right to drain). </p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Mohammed Ahmed Ansari J</b> held that the damage was caused by <b>flood-water</b> — the stream (vagu) being turbulent in flood season, the water entered through the breach, and the defendants were within their rights to protect their land. Once the right to protect against flood is ceded, the owner also enjoys the <b>power of reasonably choosing how</b> to protect his land. There was no evidence that the fifth defendant negligently chose the means or diverted accumulated water, nor that the vagu was obstructed.</p>
+            <p class="quote">“Therefore, this case is a clear one of <b><i>damnum sine injuria</i></b>, and the plaintiffs must adopt their own protective measures against the flood water.”</p>
+            <p>Both <b>appeals dismissed with costs</b>.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> A landowner has a <b>right to protect his land against flood-water</b> (the <span class="accent">“common enemy”</span>) even though, in doing so, the water is diverted to and damages the neighbouring land — such damage is <span class="accent">damnum sine injuria</span> and not actionable. Key distinction: <b>flood-water (abnormal)</b> may be warded off; <b>normal surface drainage</b> may <b>not</b> be obstructed to the neighbour’s prejudice; and water already on one’s land may <b>not</b> be actively cast onto a neighbour’s land.</div>
+        </div>
+      </div>
+
+      <!-- C4 -->
+      <div class="case" id="c4">
+        <div class="case-head">
+          <h4>4. Rajkot Municipal Corporation v. Manjulben Jayantilal Nakum &amp; ors.</h4>
+          <span class="cit">1997 (9) SCC 552</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>On <b>25 March 1975</b>, the deceased <b>Jayantilal</b>, a clerk in the office of the Director of Industries, Rajkot, was walking on a footpath in the Kothi compound of the Collectorate on his way to work when a <b>road-side tree suddenly fell on him</b>. He sustained injuries to his head and body and <b>died in hospital</b>. The respondents — his widow and children — sued the appellant Municipal Corporation for <b>Rs. 1 lakh</b>. The trial court decreed <b>Rs. 45,000</b>, holding that the Corporation had failed in its <b>statutory duty</b> to check the health of the trees and to protect the deceased. The Division Bench confirmed, holding there was a statutory duty to plant <b>and maintain</b> trees, that the tree fell due to decay, that the Corporation failed to prove no negligence, and that it had not made periodical inspections. The Corporation appealed by special leave.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Did the Corporation owe a <b>duty of care</b> to the deceased (or the class of pedestrians) in respect of the road-side trees? (2) Was there a <b>breach</b> of that duty, and was the breach the <b>cause</b> of the death? (3) Was the damage <b>reasonably foreseeable</b> and the causation sufficiently <b>proximate</b>, or was it <b>too remote</b>? (4) Does breach of a <b>statutory duty</b> ipso facto create <b>tortious liability</b>? (5) Is the standard of care such that the Corporation must inspect every tree?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant (Corporation — Mr. T.U. Mehta):</b> There is no unqualified/absolute duty to maintain trees; the burden is on the respondents to prove breach of duty. It is difficult to inspect every tree; the standard of care is not as high as in breach of a statutory duty. The Corporation could not foresee that a tree would suddenly fall; there was no <b>proximity</b> or <b>foreseeability</b> as per the “neighbour” principle in <i>Donoghue</i>. Following <i>Murphy v. Brentwood D.C.</i> (overruling <i>Anns v. Merton</i>), a breach of statutory duty does <b>not</b> ipso facto entail liability; the duty must be owed to the plaintiff himself or a class, which was not pleaded/proved. Knowledge of likely harm is a pre-requisite. The duty to plant trees is owed to the <b>public at large</b>, not an individual; there is no sanction for omission; the legislature did not intend a private cause of action. The duty is <b>discretionary</b>.</p>
+            <p><b>Respondents:</b> There is a statutory duty to plant and maintain trees; the tree fell due to <b>decay</b>, so the Corporation failed to prove the occurrence happened without its negligence; the statutory obligation being <b>absolute</b>, the respondents need not prove the exact negligence; the Corporation failed to make periodic inspections and seasonal treatment.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>K. Ramaswamy J</b> held that each case must be judged on its special circumstances — the existence of a duty of care, the class of persons owed, breach, and resultant damage. Public authorities discharge obligations to the public at large and owe a <b>common-law duty of care to avoid present or imminent danger</b>. However:</p>
+            <p class="quote">“But when the defendant was not in know of the discoverable defect or danger and it caused the damage by accident like sudden fall of the tree, it would be difficult to visualise that the defendant had knowledge of the danger and he omitted to perform the duty of care … There would be no special relationship between the statutory authority and the plaintiff who is a remote user of the foot-path … the defendant by his non-feasance is not responsible for the accident … since admittedly there was no visible sign that the tree was affected by disease.”</p>
+            <p class="quote">“… the Corporation or the authority is not liable to be sued for tort of negligence since the causation is <b>too remote</b>. <i>Novus actus</i> inconveniences snaps the link … It was difficult to foresee that a tree would fall on him.”</p>
+            <p>The tree fell <b>suddenly, in still weather</b>, with no visible sign of decay/disease; it was impossible to foresee; the conditions in India do not permit a Corporation to keep constant vigilance by testing every tree. Foreseeability alone does not create a duty; to impose an obligation of constant vigil would put an <b>intolerable burden</b> on the authority, detract from its normal duties, and cause a heavy financial burden. <b>Appeal allowed</b>; the trial court’s decree, as affirmed by the High Court, was set aside.</p>
+            <p><b>But see the court’s contrasting illustrations</b> (where liability <i>would</i> attach): (i) a branch/tree <b>gradually</b> falling and the authority failing to act; (ii) a <b>boy climbing</b> a dangerously leaning tree and getting hurt — defect apparent, negligence obvious; (iii) a <b>road being repaired</b> with no warning/signal and a cyclist falling into the ditch at night. In all these the defect is <b>apparent</b> and the damage <b>foreseeable</b>, so the authority is liable.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> For negligence the plaintiff must prove (i) a <b>duty of care</b> (fixed by the neighbour principle), (ii) <b>breach</b>, and (iii) <b>damage caused by</b> the breach. <span class="accent">Foreseeability and proximity are essential</span>; foreseeability alone is <b>not</b> sufficient, and <span class="accent">remote causation</span> — where the harm is not reasonably foreseeable to a reasonable prudent person — negates liability. A public authority is <b>not</b> liable for a sudden, unforeseen fall of a healthy-looking tree where no defect was discoverable; but it <b>is</b> liable when the danger is apparent (a tree visibly falling, a defective structure, an unmarked excavation). The case also clarifies that <b>breach of statutory duty does not automatically create tort liability</b> — a duty owed to the public at large does not necessarily create a private right of action.</div>
+        </div>
+      </div>
+
+      <!-- C5 -->
+      <div class="case" id="c5">
+        <div class="case-head">
+          <h4>5. Ashby v. White</h4>
+          <span class="cit">(1703) 2 Lord Raym 938</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff was a <b>qualified voter</b> in a parliamentary election. The defendants, the <b>returning officers</b>, wrongfully <b>prevented him from exercising his right to vote</b>. The candidate for whom the plaintiff wanted to vote nevertheless <b>won the election</b>, so no particular “cause” was lost. The plaintiff nevertheless brought an action claiming damages for the <b>malicious</b> prevention of his statutory right to vote.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>Is the wrongful deprivation of a legal right to vote <b>actionable even where the plaintiff has suffered no actual loss or damage</b>? That is, does the action lie under <span class="lat">injuria sine damnum</span> / <span class="lat">ubi jus ibi remedium</span>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendants:</b> The plaintiff suffered no loss; the candidate he favoured won anyway, so there was no damage.</p>
+            <p><b>Plaintiff:</b> There was an <b>infringement of a legal right</b> vested in him — the right to vote; that alone is actionable.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Lord Holt CJ</b> allowed the plaintiff damages, holding that the <b>violation of a legal right is itself actionable</b>, irrespective of proof of actual loss. The action is <b>actionable per se</b>.</p>
+            <p class="quote">“If the plaintiff has a right, he must of necessity have a means to vindicate and maintain it, and a remedy if he is injured in the exercise or enjoyment of it; and indeed it is a vain thing to imagine a right without a remedy; for want of right and want of remedy are reciprocal.”</p>
+            <p class="quote">“If man will multiply injuries, actions must be multiplied too: for every man who is injured ought to have recompense.”</p>
+            <p>(The principle was echoed in an English municipal-election case in 1957, <i>Tozer v. Child</i>.)</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <span class="accent">Injuria sine damnum</span> — the violation of a legal right is actionable even without actual damage; it is <span class="accent">actionable per se</span>, and the plaintiff is entitled at least to <b>nominal damages</b>, which may become <b>exemplary</b> if the conduct is malicious. It is the leading authority for <span class="accent">ubi jus ibi remedium</span> and for the Winfieldian “law of tort” theory.</div>
+          <div class="tipbox"><b>Indian parallel — <i>Bhim Singh v. State of J&amp;K</i> (AIR 1986 SC):</b> An MLA was wrongfully detained while on his way to the assembly session, deprived of his constitutional right to attend, and Article 21 was violated. The Supreme Court held there was a violation of a legal right due to a mischievous and malicious act and awarded <b>exemplary damages of ₹50,000</b> — a modern Indian application of <i>injuria sine damnum</i>.</div>
+        </div>
+      </div>
+
+      <!-- C6 -->
+      <div class="case" id="c6">
+        <div class="case-head">
+          <h4>6. Municipal Corpn. of Agra v. Asharfi Lal</h4>
+          <span class="cit">AIR 1921 All 202 · (1922) ILR 44 All 202 · F.A. 47 of 1921</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, <b>Asharfi Lal</b>, a duly qualified person <b>entitled to be on the electoral roll / candidates’ list</b> of the Agra Municipality, was <b>wrongfully omitted or misdescribed</b> on the candidates’ list. As the result of acts done <b>officially in the course of business, or wrongly with intention in the course of business, or as a result of the revengeful and malicious interference</b> of some individual (a member or employee of the Board), the plaintiff’s name on the list was so put and his description so fabricated as to represent him to be <b>somebody other than the person he was known to be</b>. Consequently, when he presented himself at nomination (between 31 January and 8 March), the <b>Nomination Officers had to reject his nomination</b>, because the person before them was not the son of the father recorded in the candidates’ list. The plaintiff sued for <b>correction of the list</b> (specific relief) and <b>damages</b> for the wrong done, later adding a claim that, because of the tampering, the <b>whole constitution of the Board was invalid</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Does the wrongful omission/misdescription of a duly qualified citizen on the electoral roll or candidates’ list amount to a <b>legal wrong</b> (<i>injuria</i>) entitling him to damages, even without proof of loss? (2) Against whom are damages recoverable — the <b>Municipality as principal</b> or the <b>individual members</b>? (3) Is the <b>constitution of the Board invalid</b> because of one wrongful entry? (4) What is the scope of <b>discovery</b> against a public body?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendants (Municipal Board &amp; members):</b> The plaintiff abandoned the claim for wrongful omission; there were too many documents for discovery and some might be lost; individual members cannot be liable in their own pocket unless they took part in / authorised the wrongful act; liability, if any, depends on the principles of <b>principal and agent</b>.</p>
+            <p><b>Plaintiff:</b> He did not know who was the author of his grievance, but it was impossible to resist the conclusion that his name was intentionally removed/replaced; he had the right to insist on production of the relevant documents by the public body.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Walsh J</b> (Allahabad High Court) held that <b>the law in India on the question is the same as the law in England</b>. Under the common law, if a duly qualified citizen is wrongfully omitted from the electoral roll (depriving him of the right to vote) or misdescribed (so that his nomination is rejected), he <b>has suffered a legal wrong</b> — he has been <b>deprived of a right recognised by law</b> — and has a remedy, what has always been called <b>“an action on the case”</b>, for <b>nominal damages</b> for the right he has lost. The damages may be made <b>punitive or exemplary</b> if the conduct is the result of a <b>malicious and wicked intention</b>, and he also recovers any <b>pecuniary expenses</b> reasonably incurred.</p>
+            <p class="quote">“… he has suffered a <b>legal wrong</b>; he has been deprived of a right recognised by law and he has against the person so depriving him a remedy by what has always been called ‘an action on the case’ for <b>nominal damages</b> for the right that he has lost, which may at the discretion of the court be <b>punitive or exemplary</b> if the conduct is the result of some malicious and wicked intention …”</p>
+            <p><b>On liability:</b> The liability must be decided according to the ordinary general principles of <span class="accent">principal and agent</span>. The Municipal Board, as principal, is liable for the acts of its servants/agents done in the course of their employment; an individual member is liable in his own pocket <b>only</b> if he expressly or indirectly encouraged, incited, directed, approved of, or <b>aided and abetted</b> the wrongful act. <b>On the invalid-constitution point:</b> “the ground on which the case was remanded, namely … whether the Board should be declared to be altogether invalid and improperly constituted because one of the names … is wrongly entered, is one which no court ought to have entertained at all,” and should be struck out. <b>On discovery:</b> The court directed discovery under <b>Order XI, Rule 12 CPC</b>, explaining that a <b>notice to produce</b> is not a subpoena and is not part of discovery machinery; discovery should be limited to relevant documents, and the affidavit on behalf of the Board should be made by the Chairman/Executive Officer.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <span class="accent">Injuria sine damnum</span> applied in India to the right to vote and to stand for election: <b>wrongful deprivation of an electoral right is a legal wrong actionable per se</b>, even without proof of pecuniary loss; damages are nominal, becoming <span class="accent">exemplary where the omission is malicious</span>. The liability of a public body and its members is fixed on <b>principal and agent</b> principles; a public body is liable for its servants’ acts within the scope of employment, while individual members are liable only if they <b>aided and abetted</b> the wrong. Foreshadows modern <b>vicarious liability of public authorities</b> and the <b>right of discovery</b> as an aid to justice against public bodies.</div>
+          <div class="warnbox"><b>Important:</b> This is the Indian illustration of <i>injuria sine damnum</i> corresponding to <i>Ashby v. White</i> — and is distinguished from <i>damnum sine injuria</i> cases such as <i>Town Area Committee</i>, <i>Gloucester</i> and <i>Pickles</i>. The status of the right to vote/stand has since been reinforced by <i>Bhim Singh v. State of J&amp;K</i>.</div>
+        </div>
+      </div>
+
+      <!-- C7 -->
+      <div class="case" id="c7">
+        <div class="case-head">
+          <h4>7. Mayor of Bradford Corporation v. Pickles</h4>
+          <span class="cit">(1895) AC 587 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The Bradford Corporation derived its water supply partly from water springs and from water <b>percolating through the soil</b> in undefined channels under the land of <b>Pickles</b>. Pickles was annoyed at the Corporation’s <b>refusal to purchase his land</b> at the price he demanded in connection with its scheme of water supply. Actuated by feelings of <b>revenge</b>, Pickles <b>sank a shaft on his own land</b> and abstracted the water which percolated through the soil of his land in unknown and undefined channels, thereby <b>diminishing and discolouring</b> the water flowing to the Corporation’s land. The Corporation sued for an <b>injunction</b> to restrain Pickles from diminishing or polluting their water, contending that his conduct was <b>unlawful because it was dictated by an evil motive</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>Is an act that is otherwise <b>lawful</b> — the exercise of a legal right over one’s own land — made <b>actionable</b> merely because it was done with a <b>malicious/bad motive</b>? Does <b>malice</b> supply the element of <b>injuria</b> where there is none?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Corporation (plaintiffs):</b> Pickles’ conduct was unlawful because its sole purpose was to injure them, since they had not bought his land at an exorbitant price. They sought an injunction. It was already settled law that the <b>interception of underground (percolating) water is not an actionable wrong</b>, even if done intentionally (<i>Chasemore v. Richards</i>, 1859) — but the Corporation attempted to establish an <b>exception</b> where the motive was malicious.</p>
+            <p><b>Pickles (defendant):</b> He was <b>acting within his legal rights</b> throughout — doing what he pleased with his own land; his motives were irrelevant.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>House of Lords</b> held that <b>no action lies</b>. An act lawful in itself is not converted into an unlawful act by a bad motive. Pickles was not liable.</p>
+            <p class="quote">“No use of property which would be legal if due to a proper motive can become illegal because it is prompted by a motive which is improper or even malicious.” — <b>Lord Watson</b></p>
+            <p class="quote">“In such a case, <b>motives are immaterial</b>; it is the act, not the motive for the act, that must be regarded. If the act apart from the motive gives rise merely to <b>damage without legal injury</b>, the motive, however reprehensible it may be, will not supply that element.” — <b>Lord Macnaghten</b></p>
+            <p class="quote">“Mr. Pickles has acted within his legal rights throughout; and is he to forfeit those rights and be punished for their legal exercise because certain motives are imputed to him? If his motives were the most generous and philanthropic in the world, they would not avail him when his actions were illegal. If his motives are selfish and mercenary, that is no reason why his rights should be confiscated when his actions are legal.” — <b>Lord Ashbourne</b></p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <span class="accent">Motive/malice is irrelevant in tort</span>. A <span class="accent">lawful act done with a malicious motive is not tortious</span>; where the act gives rise merely to <b>damage without any legal injury</b>, the motive however bad will not supply the missing <i>injuria</i> — this is a classic <span class="accent">damnum sine injuria</span> case and the leading authority on the <b>irrelevance of motive</b>. (Reinforced by <i>Allen v. Flood</i> (1896): an act lawful in itself is not made unlawful by a malicious motive.)</div>
+        </div>
+      </div>
+
+      <!-- C8 -->
+      <div class="case" id="c8">
+        <div class="case-head">
+          <h4>8. Gloucester Grammar School Case</h4>
+          <span class="cit">(1410) Y.B. 11 Hen. IV 47</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, a <b>school master</b>, kept a school. The defendant <b>set up a rival (new) school</b> in the same area, and as a result <b>drew away the plaintiff’s pupils</b>, causing the plaintiff to <b>lose his fees/profit</b>. The plaintiff sued for the loss.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>Is the <b>loss of profit caused by lawful competition</b> (the exercise of one’s own right to carry on business) <b>actionable</b>, where no legal right of the plaintiff has been violated?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments &amp; the analogy</span>
+            <p>The harm (loss of pupils and fees) is real, but it is the <b>ordinary consequence of fair competition</b>, not of any wrongful act. The rule was stated (in the analogous terms used by <b>Hankford J</b>) that if a man has a <b>mill</b> and his neighbour builds <b>another mill</b>, the diminishing of the first man’s profit is <b>not actionable</b> unless some wrong such as a <b>nuisance</b> is caused. Mere diminution of gain/profit by lawful means is <i>damnum absque injuria</i>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>No action lay.</b> The damage suffered was mere <span class="lat">damnum absque injuria</span> (damage without legal injury). The defendant had merely exercised his own lawful right to set up a business, and the resulting loss to the plaintiff was not actionable.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> Loss caused by <span class="accent">lawful competition or the lawful exercise of one’s own rights</span>, without violation of the plaintiff’s legal rights, is <span class="accent">damnum sine injuria</span> and is <b>not actionable</b>. This case is the foundation of the rule that <b>trade competition, however damaging, is not a tort</b> absent unlawful means — subsequently applied in <i>Mogul Steamship Co. v. McGregor Gow &amp; Co.</i> (1892), where a combination to monopolise the China tea trade by reducing freights was held no cause of action as it involved no unlawful means, being “a justifiable measure of self-protection.”</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PYQs ============ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes the actual DU (LB-103) December 2024 paper questions relevant to this topic, plus the classic Topic-1 questions DU regularly asks.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">DU · December 2024 · Q1 · 20 marks</span>ABC Textiles purchases a machine from TexaMach Ltd. A defect in the machine, caused by faulty assembly at TexaMach Ltd.’s factory, leads to an accident in which a worker loses a finger. ABC Textiles claims compensation from TexaMach Ltd. for the injury caused by their negligence. However, TexaMach Ltd. invokes the exclusion clause in the contract to deny liability. The clause reads: <i>“The supplier shall not be held liable for any personal loss, damage, or injury arising from the use of the machinery supplied, regardless of fault.”</i> Does the exclusion clause in the contract restrict/exclude the liability of TexaMach Ltd. in torts for their negligence? Discuss with the help of decided cases.</div>
+        <div class="ans">
+          <div class="lbl">Approach (structure)</div>
+          <p><b>1. State the rule (contra proferentem / strict construction of exemption clauses):</b> A clause exempting a party from the consequences of its own negligence is construed very strictly. A party may escape liability for negligence only if the clause is <b>freely and deliberately</b> entered into and is expressed in <b>words clear beyond the possibility of misunderstanding</b>.</p>
+          <p><b>2. The two-head rule:</b> Where a defendant is liable under <b>two heads</b> — one a negligence (tort) liability and the other a stricter (contractual) liability — the clause will, so far as possible, be construed as exempting only the <b>strict</b> liability and <b>not</b> the liability for negligence. <b>3. Co-existence of contract and tort on the same facts.</b> <b>4. Application &amp; conclusion.</b></p>
+          <div class="lbl">Model Answer</div>
+          <p>The liability of TexaMach Ltd. for the worker’s injury may arise on two heads: (i) a <b>contractual</b> liability (breach of the implied warranty that the machine is reasonably fit for the purpose, or breach of a warranty of quality), and (ii) a liability <b>in tort for negligence</b> (breach of a duty of care to take reasonable care in assembling/supplying a safe machine). The exclusion clause relied upon purports to exclude liability “regardless of fault.”</p>
+          <p>The governing authority is <b><i>White v. John Warrick &amp; Co. Ltd.</i> (1953) 2 All ER 1021</b>, where the plaintiff hirer of a defective tricycle was injured and the owners relied on a clause that said “nothing in this agreement shall render the owners liable for any personal injuries to the riders.” The Court of Appeal (Singleton &amp; Denning LJJ) laid down two principles:</p>
+          <p class="quote">“If a person desires to exempt himself from a liability which the common law imposes on him, he can only do so by a contract freely and deliberately entered into … in words that are clear beyond the possibility of misunderstanding. The second is that, if there are two possible heads of liability on the defendant, one for negligence, and the other a strict liability, an exemption clause will be construed, so far as possible, as exempting the defendant only from his strict liability and not as relieving him from his liability for negligence.” — Denning LJ</p>
+          <p>The court held the clause exempted the owners only from their <b>contractual</b> (stricter) liability, <b>not</b> from their liability for <b>negligence</b>, because the same facts can give rise to both a breach of contract and a tort, and the plaintiff may frame his claim in tort even where a contract exists (quoting <b>Lord Macmillan</b> in <i>Donoghue v. Stevenson</i> — “negligence apart from contract gives a right of action to the party injured by that negligence”; the presence of a contractual relationship does not exclude the co-existence of a right of action founded on negligence).</p>
+          <p>Applying this to the facts, the clause in the TexaMach contract is <b>not expressed in language clear enough to exclude liability for the suppliers’ own negligence</b>, even though it uses the words “regardless of fault.” Following <i>White v. John Warrick</i>, the clause will be construed as exempting the supplier only from its <b>contractual</b> liability and <b>not</b> from its <b>torious liability for negligence</b>. Since the defect arose from the supplier’s own faulty assembly — a failure to take reasonable care — <b>TexaMach Ltd. cannot exclude its tortious liability for negligence</b> by this clause. (See also <i>Grant v. Australian Knitting Mills</i>, <i>Donoghue v. Stevenson</i> for the duty of care of the manufacturer; and the statutory limit in England via the <i>Unfair Contract Terms Act, 1977</i>.)</p>
+          <div class="lbl">Conclusion</div>
+          <p>The exclusion clause restricts only the contractual liability of TexaMach Ltd.; it does <b>not</b> exclude the action in tort for negligence. The claim for negligence is founded on tort and will not be barred.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU Topic-1 long question</span>“Is the law of tort a law of tort or a law of torts?” Discuss the rival theories of Winfield and Salmond, and state which theory prevails in India. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Introduction.</b> The question posed by Prof. Salmond is whether tortious liability rests on a <b>general principle</b> (that it is wrongful to harm another absent justification) or consists of a <b>closed set of specific, nominate torts</b>. Two theories answer it.</p>
+          <p><b>1. The wider theory — Law of Tort (Winfield, supported by Pollock).</b> “All injuries done by one person to another are torts, unless there is some justification recognised by law.” Every unjustifiable harm is actionable; the plaintiff need not give the wrong a name. Courts can <b>create new torts</b>: negligence as a distinct tort, <i>Rylands v. Fletcher</i> (strict liability, 1868), deceit, inducement of breach of contract, intimidation (<i>Rookes v. Barnard</i>), and the neighbour principle in <i>Donoghue v. Stevenson</i>. Lord Macmillan: “The categories of negligence are never closed.” Holt CJ in <i>Ashby v. White</i>: “If man will multiply injuries, actions must be multiplied too.”</p>
+          <p><b>2. The narrower (pigeon-hole) theory — Law of Torts (Salmond).</b> There is no law of tort, only a law of torts — a set of pigeon-holes, each containing a labelled tort. Liability arises only if the wrong fits one of the recognised torts; otherwise there is no tort. Salmond: “Just as the criminal law consists of rules establishing specific offences, so the law of torts consists of rules establishing specific injuries.” It is founded on the historical <b>writs/forms of action</b>, under which no writ meant no remedy. Dr. Jenks supports Salmond but adds courts can create new torts substantially similar to existing ones.</p>
+          <p><b>3. Reconciliation.</b> A middle ground: there are nominate torts, but a claimant who has suffered a genuine legal wrong need not find a label. Winfield himself conceded, “From a narrow and practical point of view, Salmond’s theory will suffice, but from a broader outlook, his theory is valid.” In India, <i>Lala Pannalal v. Kasturi Chand</i> (AIR 1946 Mad 147) holds there is no exhaustive classification of torts; new invasions of rights may create new torts (e.g., malicious house-search).</p>
+          <p><b>4. Position in India.</b> Indian courts have favoured Winfield’s broader theory, evolving new principles and norms for a changing society — <b>absolute liability</b> in <i>M.C. Mehta v. Union of India</i>, <b>constitutional torts</b> and compensation for violation of Article 21 (<i>Rudul Sah</i>, <i>Bhim Singh</i>), and the expansion of State liability in a welfare State (<i>State of Rajasthan v. Vidhyawati</i>).</p>
+          <p><b>Conclusion.</b> It is a question of approach. For practical purposes the pigeon-hole idea is useful, but jurisprudentially the wider “law of tort” view better describes a body of law that is steadily growing, and it is the view Indian courts have adopted.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU Topic-1 long question</span>Define a tort. Explain the constituents of a tort, and distinguish between <i>injuria sine damnum</i> and <i>damnum sine injuria</i> with the help of case laws. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Definition.</b> (Give Salmond and Winfield’s definitions — see §4.) A tort is a civil wrong, consisting of a breach of a duty fixed by law, owed to persons generally, redressible by an action for unliquidated damages.</p>
+          <p><b>Constituents.</b> (i) <b>Wrongful act/omission</b>; (ii) <b>Legal damage</b> — violation of a legal right (<i>injuria</i>); (iii) <b>Remedy</b> (unliquidated damages or injunction) — governed by <i>ubi jus ibi remedium</i>.</p>
+          <p><b>Injuria sine damnum</b> — violation of a legal right <b>without</b> actual loss (actionable per se). Authorities: <i>Ashby v. White</i> (wrongful refusal of vote — damages though no loss); <i>Municipal Corpn. of Agra v. Asharfi Lal</i> (wrongful omission/misdescription of the plaintiff’s name on the municipal candidates’ list, causing rejection of his nomination — held a legal wrong actionable for nominal damages, punitive if malicious); <i>Bhim Singh v. State of J&amp;K</i> (wrongful detention of an MLA violating Article 21 — ₹50,000 exemplary damages); trespass to land.</p>
+          <p><b>Damnum sine injuria</b> — actual loss <b>without</b> violation of a legal right (not actionable). Authorities: <i>Gloucester Grammar School</i> (loss of pupils by rival school — no action); <i>Mayor of Bradford v. Pickles</i> (interception of percolating water by an act lawful in itself, however malicious the motive); <i>P. Seetharamayya v. G. Mahalakshmamma</i> (diversion of flood-water onto neighbour’s land by lawful self-protection — <i>damnum sine injuria</i>); <i>Town Area Committee v. Prabhu Dayal</i> (demolition of an illegally-constructed building — no injuria); <i>Mogul Steamship Co. v. McGregor Gow</i> (trade competition by lawful means); <i>Acton v. Blundell</i>, <i>Chasemore v. Richards</i> (percolating water).</p>
+          <p><b>Conclusion.</b> The distinction is whether a <b>legal right</b> (not merely a factual interest) has been violated. Where it has, the action lies even without damage; where it has not, no action lies however real the loss.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU Topic-1 long question</span>The law of torts in India is uncodified and judge-made. Discuss its advantages and disadvantages. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Introduction.</b> Tort law in India is essentially the English common law, received and administered as rules of <b>justice, equity and good conscience</b>. It remains largely <b>uncodified</b>, being developed by the courts through precedent; only fragmented areas (workmen’s compensation, motor accidents, consumer protection, environment, EPI Act) are codified.</p>
+          <p><b>Judge-made &amp; uncodified —</b> supported by <i>Rajkot Municipal Corporation v. Manjulben</i> (1997) where the Court noted that since there is no statutory law regulating tortious damages in India, it “selectively applied the common law principles evolved by the courts in England on grounds of justice, equity and good conscience.”</p>
+          <p><b>Advantages:</b> flexibility &amp; adaptability; capacity to create new torts (absolute liability, constitutional torts, Art. 21 compensation); justice in individual cases; principles moulded to Indian conditions (rejection of feudal sovereign immunity in a welfare State); responsiveness without waiting for Parliament.</p>
+          <p><b>Disadvantages:</b> uncertainty and unpredictability; dependence on litigants (reactive, not proactive); cost and delay exclude the poor; reliance on English rules that may not fit Indian realities; slow, uneven and haphazard growth; judicial activism is not a substitute for legislative schemes (e.g., compensation for hit-and-run, mass disasters).</p>
+          <p><b>Conclusion.</b> The flexibility of an uncodified, judge-made law is its greatest strength and simultaneously its greatest weakness. The Law Commission has repeatedly recommended codification, but until then the courts must balance development of law against certainty.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short/long question</span>Distinguish between tort and crime, and between tort and breach of contract. Can the same act give rise to liability in tort as well as in contract and crime? <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Tort vs crime:</b> tort is a <b>private wrong</b> (civil), crime a <b>public wrong</b>. Tort is enforced by the injured party (plaintiff) for <b>compensatory/unliquidated damages</b>; crime is prosecuted by the State for <b>punishment</b>. A tort concerns a right <i>in rem</i> (duty to persons generally) and may be settled; a crime generally is not compoundable. (See the full table in §9.1.)</p>
+          <p><b>Tort vs breach of contract:</b> in tort the duty is <b>fixed by law</b> and owed to persons generally (right in rem, no privity); in contract the duty is <b>fixed by the parties’ agreement</b> and owed only to the contracting party (privity, right in personam). Tort damages are <b>unliquidated</b>; contract damages are <b>liquidated</b>.</p>
+          <p><b>Co-existence:</b> The <b>same facts can give rise to both a tort and a breach of contract</b>. <i>White v. John Warrick</i> holds that an exemption clause barring contractual liability does not bar a claim in tort for negligence; the claim in negligence is founded on tort. Lord Macmillan in <i>Donoghue</i>: a contractual relationship does not exclude the co-existence of a right of action founded on negligence. A railway passenger may sue for <i>breach of contract of safe carriage</i> or <i>negligence</i>; a dentist (<i>Edwards v. Mallan</i>) or a surgeon (<i>Pippin v. Sheppard</i>) may be liable concurrently in contract to one person and in tort to another.</p>
+          <p><b>Co-existence of tort and crime:</b> Assault, defamation, nuisance and conspiracy are both tort and crime; the civil and criminal remedies are <b>concurrent, not alternative</b> — the victim may sue for damages and the State may prosecute.</p>
+          <p><b>Conclusion.</b> Though tort, contract and crime are distinct branches, a single wrong may generate liability in more than one; the plaintiff may not recover twice over but may choose the appropriate remedy.</p>
+        </div>
+      </div>
+
+      <!-- PYQ F -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short question (10 marks)</span>Discuss the relevance of intention, motive and malice in the law of torts. <span class="marks">10–20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Intention</b> is relevant in <b>intentional torts</b> (battery, assault, false imprisonment, trespass, deceit, malicious prosecution, conspiracy) and to the quantum of damages; but it is <b>not an essential element</b> of tortious liability (strict/absolute and vicarious liability arise without intention).</p>
+          <p><b>Motive is generally irrelevant.</b> The law asks what a person did, not why. A good motive does not justify an illegal act; a bad motive does not make a lawful act wrongful. <i>Mayor of Bradford v. Pickles</i>: “No use of property which would be legal if due to a proper motive can become illegal because it is prompted by a motive which is improper or even malicious” (Lord Watson); “motives are immaterial; it is the act, not the motive for the act, that must be regarded” (Lord Macnaghten). <i>Town Area Committee v. Prabhu Dayal</i>: “A legal act, though motivated by malice, will not make the actor liable.” <i>Allen v. Flood</i>: an act lawful in itself is not converted by a malicious motive into an actionable wrong.</p>
+          <p><b>Malice</b> has two meanings. <b>Malice in law</b> = a <b>wrongful act done intentionally without just cause or excuse</b>, presumed from an unlawful act (Bayley J, <i>Bromage v. Prosser</i>). <b>Malice in fact</b> = an <b>evil motive or ill-will</b>, relevant where good faith is a defence — e.g., malicious prosecution, and in defamation where it defeats <b>qualified privilege</b> (<i>Rustom K. Karanjia</i>) — and material to <b>exemplary damages</b> (<i>Ashby</i>, <i>Bhim Singh</i>).</p>
+          <p><b>Conclusion.</b> Motive is ordinarily irrelevant; intention and malice matter only in defined situations — for intentional torts, to negative good-faith defences, and for the measure of damages.</p>
+        </div>
+      </div>
+
+      <!-- PYQ G -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short question</span>Write a short note on <i>ubi jus ibi remedium</i> and its application. <span class="marks">10</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p>The maxim <i>ubi jus ibi remedium</i> means <b>“where there is a right, there is a remedy.”</b> Every violation of a legal right must be redressed; where law confers a right it also provides a means to vindicate it. Lord Holt CJ in <i>Ashby v. White</i>: “If the plaintiff has a right, he must of necessity have a means to vindicate and maintain it, and a remedy if he is injured in the exercise or enjoyment of it; and indeed it is a vain thing to imagine a right without a remedy; for want of right and want of remedy are reciprocal.”</p>
+          <p>It is the basis of <b>injuria sine damnum</b> and of the remedial character of tort law. Its limit: it operates only where a <b>legal right</b> exists. Where there is <b>no legal injury</b> — only factual damage (<i>damnum sine injuria</i>) — there is no remedy (<i>Gloucester Grammar School</i>, <i>Pickles</i>, <i>Seetharamayya</i>, <i>Town Area Committee</i>).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GLOSSARY ============ -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Tort</span> — French for “wrong”; a civil wrong independent of contract, remedy = action for unliquidated damages.</li>
+        <li><span class="lat">Tort-feasor</span> — the wrongdoer.</li>
+        <li><span class="lat">Injuria</span> — violation/infringement of a legal right.</li>
+        <li><span class="lat">Damnum</span> — actual loss/damage (money, comfort, health).</li>
+        <li><span class="lat">Injuria sine damnum</span> — infringement of a legal right without damage; <b>actionable per se</b> (Ashby, Asharfi Lal, Bhim Singh).</li>
+        <li><span class="lat">Damnum sine injuria</span> — actual damage without infringement of a legal right; <b>not actionable</b> (Gloucester, Pickles, Seetharamayya, Town Area, Mogul).</li>
+        <li><span class="lat">Ubi jus ibi remedium</span> — where there is a right, there is a remedy (Holt CJ, Ashby).</li>
+        <li><span class="lat">Volenti non fit injuria</span> — consent negatives liability (a voluntary assumption of risk); subject to rescue cases &amp; UCTA 1977.</li>
+        <li><span class="lat">Actio personalis moritur cum persona</span> — a personal action dies with the person (crime; tort has exceptions).</li>
+        <li><span class="lat">Res ipsa loquitur</span> — “the thing speaks for itself” (evidentiary rule in negligence).</li>
+        <li><span class="lat">Novus actus interveniens</span> — a new intervening act breaking the chain of causation (see Rajkot/Murphy discussion).</li>
+        <li><span class="lat">Malfeasance / misfeasance / non-feasance</span> — wrongful act / negligent performance / omission to act.</li>
+        <li><span class="lat">Right in rem</span> — right against the world at large (tort). <span class="lat">Right in personam</span> — right against a specific person (contract).</li>
+        <li><span class="lat">Malice in law</span> — wrongful act done intentionally without just cause or excuse. <span class="lat">Malice in fact</span> — evil motive/ill-will.</li>
+        <li><span class="lat">Exemplary/punitive damages</span> — damages to punish, awarded for malicious/wicked conduct (Ashby, Bhim Singh).</li>
+      </ul>
+    </section>
+
+    <!-- ============ REVISION ============ -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 360" width="900" role="img" aria-label="Full topic revision flowchart">
+          <defs><marker id="ar3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="20" width="420" height="120" rx="12" fill="#14224a"/>
+          <text x="220" y="50" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">WHERE IT CAME FROM</text>
+          <text x="220" y="75" fill="#dbe3f5" text-anchor="middle" font-size="12">England: Norman Conquest → common law →</text>
+          <text x="220" y="94" fill="#dbe3f5" text-anchor="middle" font-size="12">FORMS OF ACTION (writs) = specific remedies</text>
+          <text x="220" y="113" fill="#dbe3f5" text-anchor="middle" font-size="12">→ abolition 1852/1873-75 → judge-made growth</text>
+          <rect x="470" y="20" width="420" height="120" rx="12" fill="#1f3675"/>
+          <text x="680" y="50" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">HOW IT REACHED INDIA</text>
+          <text x="680" y="75" fill="#dbe3f5" text-anchor="middle" font-size="12">British courts → Mayor’s Courts →</text>
+          <text x="680" y="94" fill="#dbe3f5" text-anchor="middle" font-size="12">justice, equity &amp; good conscience →</text>
+          <text x="680" y="113" fill="#dbe3f5" text-anchor="middle" font-size="12">UNCODIFIED &amp; JUDGE-MADE (fragmented statutes)</text>
+          <line x1="220" y1="140" x2="220" y2="165" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <line x1="680" y1="140" x2="680" y2="165" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <rect x="10" y="168" width="880" height="70" rx="12" fill="#c8912b"/>
+          <text x="450" y="196" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">THE NATURE OF A TORT</text>
+          <text x="450" y="218" fill="#fff" text-anchor="middle" font-size="12.5">Duty fixed by law · owed to persons generally (in rem) · breach → unliquidated damages (Winfield)</text>
+          <text x="450" y="234" fill="#fff" text-anchor="middle" font-size="11.5">Law of TORT (Winfield — general principle)  vs  Law of TORTS (Salmond — pigeon-holes)</text>
+          <line x1="450" y1="238" x2="450" y2="255" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <rect x="10" y="258" width="430" height="90" rx="12" fill="#eef6f6" stroke="#0f8a8a"/>
+          <text x="225" y="282" fill="#0f8a8a" text-anchor="middle" font-size="13.5" font-weight="700">CONSTITUENTS</text>
+          <text x="225" y="303" fill="#125b5b" text-anchor="middle" font-size="11.5">1. Wrongful act  2. Legal damage  3. Remedy</text>
+          <text x="225" y="323" fill="#125b5b" text-anchor="middle" font-size="11.5">ubi jus ibi remedium</text>
+          <rect x="460" y="258" width="430" height="90" rx="12" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="675" y="282" fill="#0f8a8a" text-anchor="middle" font-size="13.5" font-weight="700">TWO MAXIMS OF DAMAGE</text>
+          <text x="675" y="303" fill="#125b5b" text-anchor="middle" font-size="11.5">injury + no damage → actionable (Ashby, Asharfi)</text>
+          <text x="675" y="323" fill="#125b5b" text-anchor="middle" font-size="11.5">damage + no injury → not actionable (Gloucester, Pickles)</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 1.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill g">Injuria sine damnum</span> — Ashby v. White; Municipal Corpn. Agra v. Asharfi Lal; Bhim Singh.<br>
+        · <span class="pill r">Damnum sine injuria</span> — Gloucester Grammar School; Mayor of Bradford v. Pickles; P. Seetharamayya; Town Area Committee; Mogul Steamship; Acton v. Blundell.<br>
+        · <span class="pill n">Tort &amp; contract — exemption clause</span> — White v. John Warrick.<br>
+        · <span class="pill t">Negligence &amp; remoteness / statutory duty</span> — Rajkot MC v. Manjulben.<br>
+        · <span class="pill n">Motive/malice irrelevant</span> — Pickles; Town Area; Allen v. Flood.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 1.</b></p>
+      <p style="margin:0">Built primarily on the <b>DU prescribed case material</b> (case reports for cases 1–4 reproduced in the official casebook), supplemented by the accompanying student mind-maps and notes. Definitions and theory follow Salmond, Winfield, Fraser and the standard Indian treatises (Ratanlal &amp; Dhirajlal; Atchuthen Pillai; Winfield &amp; Jolowicz). For revision only — refer to the full report for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#top" title="Back to top">↑</a>
+</body>
+</html>

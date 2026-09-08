@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marriage (Nikah) under Muslim Law — Complete Notes, Cases & DU PYQs</title>
+<style>
+  :root{
+    --green:#0b6e4f; --green-d:#074b37; --green-l:#e7f4ee;
+    --gold:#b8860b; --gold-l:#fbf3dd;
+    --ink:#1f2933; --muted:#5a6672; --line:#d8e2dc;
+    --blue:#1f4e79; --blue-l:#e8f0f8;
+    --red:#9b2226; --red-l:#fbeaea;
+    --purple:#5b3a8c; --purple-l:#efe9f7;
+    --bg:#f6f8f7; --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; font-family:Georgia,"Times New Roman",serif;
+    color:var(--ink); background:var(--bg); line-height:1.62; font-size:17px;
+  }
+  /* ---------- Cover ---------- */
+  .cover{
+    background:linear-gradient(135deg,var(--green-d) 0%,var(--green) 55%,#0e8a63 100%);
+    color:#fff; padding:64px 24px 48px; text-align:center; position:relative; overflow:hidden;
+  }
+  .cover::after{content:"﷽";position:absolute;right:20px;top:10px;font-size:120px;opacity:.08;}
+  .cover .kicker{letter-spacing:3px;text-transform:uppercase;font-size:13px;opacity:.85;font-family:Arial,sans-serif;}
+  .cover h1{font-size:38px;margin:14px 0 8px;line-height:1.2;text-shadow:0 2px 6px rgba(0,0,0,.25);}
+  .cover h2{font-size:20px;font-weight:normal;opacity:.95;margin:6px 0 18px;}
+  .cover .meta{font-family:Arial,sans-serif;font-size:13px;opacity:.9;border-top:1px solid rgba(255,255,255,.3);
+    display:inline-block;padding-top:12px;margin-top:10px;}
+  .ribbon{background:var(--gold);color:#3a2c00;text-align:center;padding:10px;font-weight:bold;
+    font-family:Arial,sans-serif;font-size:14px;letter-spacing:.5px;}
+  /* ---------- Layout ---------- */
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+  .layout{display:flex;gap:26px;align-items:flex-start;}
+  nav.toc{
+    position:sticky;top:0;align-self:flex-start;width:250px;flex:0 0 250px;
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:16px 14px;margin:26px 0;max-height:92vh;overflow:auto;
+    font-family:Arial,sans-serif;font-size:13.5px;box-shadow:0 2px 10px rgba(0,0,0,.04);
+  }
+  nav.toc h4{margin:0 0 8px;color:var(--green-d);font-size:13px;letter-spacing:1px;text-transform:uppercase;}
+  nav.toc a{display:block;color:var(--muted);text-decoration:none;padding:5px 8px;border-radius:6px;border-left:3px solid transparent;}
+  nav.toc a:hover{background:var(--green-l);color:var(--green-d);border-left-color:var(--green);}
+  nav.toc .sub{padding-left:18px;font-size:12.5px;}
+  main{flex:1;min-width:0;padding-bottom:80px;}
+  section{margin:34px 0;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;
+    box-shadow:0 2px 12px rgba(0,0,0,.05);}
+  h2.sec{
+    font-size:27px;color:var(--green-d);border-bottom:3px solid var(--gold);
+    padding-bottom:8px;margin:10px 0 18px;
+  }
+  h3{color:var(--blue);font-size:21px;margin:26px 0 10px;}
+  h4{color:var(--green-d);font-size:18px;margin:20px 0 8px;}
+  p{margin:10px 0;}
+  ul,ol{margin:8px 0 8px 4px;padding-left:24px;}
+  li{margin:6px 0;}
+  .lead{font-size:18px;color:var(--muted);font-style:italic;}
+  .tag{display:inline-block;font-family:Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:1px;
+    text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-right:6px;}
+  .tag.g{background:var(--green-l);color:var(--green-d);}
+  .tag.b{background:var(--blue-l);color:var(--blue);}
+  .tag.r{background:var(--red-l);color:var(--red);}
+  .tag.p{background:var(--purple-l);color:var(--purple);}
+  .tag.o{background:var(--gold-l);color:#7a5a00;}
+  /* ---------- Callouts ---------- */
+  .note{border-left:5px solid var(--blue);background:var(--blue-l);padding:12px 18px;border-radius:0 8px 8px 0;margin:16px 0;}
+  .key{border-left:5px solid var(--green);background:var(--green-l);padding:12px 18px;border-radius:0 8px 8px 0;margin:16px 0;}
+  .warn{border-left:5px solid var(--gold);background:var(--gold-l);padding:12px 18px;border-radius:0 8px 8px 0;margin:16px 0;}
+  .danger{border-left:5px solid var(--red);background:var(--red-l);padding:12px 18px;border-radius:0 8px 8px 0;margin:16px 0;}
+  .note .h,.key .h,.warn .h,.danger .h{font-family:Arial,sans-serif;font-weight:bold;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;}
+  .key .h{color:var(--green-d);} .note .h{color:var(--blue);} .warn .h{color:#8a6400;} .danger .h{color:var(--red);}
+  /* ---------- Tables ---------- */
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15.5px;font-family:Arial,sans-serif;}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--green-d);color:#fff;font-weight:bold;}
+  tr:nth-child(even) td{background:#f3f8f5;}
+  table.tight td,table.tight th{padding:7px 9px;font-size:14px;}
+  .center{text-align:center;}
+  /* ---------- Flow boxes ---------- */
+  .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:20px 0;justify-content:center;}
+  .fbox{background:var(--card);border:2px solid var(--green);border-radius:10px;padding:12px 14px;min-width:130px;
+    max-width:180px;text-align:center;font-family:Arial,sans-serif;font-size:13.5px;display:flex;flex-direction:column;
+    justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.06);}
+  .fbox .t{font-weight:bold;color:var(--green-d);font-size:14px;margin-bottom:3px;}
+  .fbox.blue{border-color:var(--blue);} .fbox.blue .t{color:var(--blue);}
+  .fbox.red{border-color:var(--red);} .fbox.red .t{color:var(--red);}
+  .fbox.gold{border-color:var(--gold);} .fbox.gold .t{color:#8a6400;}
+  .fbox.purple{border-color:var(--purple);} .fbox.purple .t{color:var(--purple);}
+  .arrow{align-self:center;font-size:26px;color:var(--muted);padding:0 8px;font-weight:bold;}
+  .arrow.down{width:100%;text-align:center;padding:2px 0;transform:rotate(90deg);display:inline-block;}
+  .stack{display:flex;flex-direction:column;align-items:center;gap:6px;}
+  /* ---------- Tree ---------- */
+  .tree{font-family:Arial,sans-serif;font-size:14px;margin:16px 0;}
+  .tree .node{background:var(--green-l);border:1.5px solid var(--green);border-radius:8px;padding:7px 14px;
+    display:inline-block;margin:4px 0;font-weight:bold;color:var(--green-d);}
+  .tree .root{background:var(--green-d);color:#fff;border-color:var(--green-d);font-size:16px;}
+  .tree ul{list-style:none;padding-left:26px;margin:0;border-left:2px dashed var(--line);}
+  .tree li{margin:6px 0;position:relative;}
+  .tree .leaf{background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 12px;display:inline-block;}
+  .tree .leaf b{color:var(--blue);}
+  /* ---------- Case cards ---------- */
+  .case{border:1px solid var(--line);border-radius:12px;margin:24px 0;overflow:hidden;background:#fff;box-shadow:0 3px 14px rgba(0,0,0,.07);}
+  .case .head{background:linear-gradient(120deg,var(--blue),#2c6ca0);color:#fff;padding:18px 26px;}
+  .case .head .no{font-family:Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;opacity:.85;}
+  .case .head h3{color:#fff;margin:4px 0 2px;font-size:22px;}
+  .case .head .cite{font-family:Arial,sans-serif;font-size:14px;opacity:.92;font-style:italic;}
+  .case .body{padding:8px 26px 22px;}
+  .case .seg{margin:16px 0;}
+  .case .seg .lbl{font-family:Arial,sans-serif;font-weight:bold;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;
+    color:#fff;background:var(--green);display:inline-block;padding:4px 14px;border-radius:6px 6px 6px 0;margin-bottom:2px;}
+  .case .seg.issue .lbl{background:var(--blue);}
+  .case .seg.args .lbl{background:var(--purple);}
+  .case .seg.dec .lbl{background:var(--gold);color:#3a2c00;}
+  .case .seg.prin .lbl{background:var(--red);}
+  .case .seg .inner{border:1px solid var(--line);border-top:none;border-radius:0 0 8px 8px;padding:14px 18px;background:#fcfdfd;}
+  .vs{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .vs .col{border-radius:8px;padding:12px 16px;font-size:15.5px;}
+  .vs .col.app{background:var(--blue-l);border:1px solid #c4d8ec;}
+  .vs .col.resp{background:var(--gold-l);border:1px solid #e8d8a8;}
+  .vs .col h5{margin:0 0 6px;font-family:Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:1px;}
+  .vs .col.app h5{color:var(--blue);} .vs .col.resp h5{color:#8a6400;}
+  blockquote{margin:12px 0;padding:12px 18px;background:#f4f1ea;border-left:4px solid var(--gold);
+    font-style:italic;color:#4a4030;border-radius:0 8px 8px 0;}
+  /* ---------- PYQ ---------- */
+  .pyq{border:1.5px solid var(--purple);border-radius:12px;margin:22px 0;overflow:hidden;background:#fff;}
+  .pyq .qhead{background:var(--purple-l);padding:14px 22px;border-bottom:1px solid #ddd0ef;}
+  .pyq .qhead .mq{font-family:Arial,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1px;color:var(--purple);text-transform:uppercase;}
+  .pyq .qhead .qt{font-weight:bold;font-size:17px;margin-top:4px;color:#2e1d4d;}
+  .pyq .ans{padding:16px 24px 22px;}
+  .pyq .ans h5{color:var(--green-d);font-family:Arial,sans-serif;font-size:15px;margin:14px 0 4px;
+    border-bottom:1px dotted var(--line);padding-bottom:3px;}
+  .ansplan{background:var(--green-l);border:1px dashed var(--green);border-radius:8px;padding:10px 16px;margin:10px 0;font-size:14.5px;}
+  .ansplan b{color:var(--green-d);}
+  /* ---------- misc ---------- */
+  .arabic{font-size:22px;color:var(--green-d);direction:rtl;text-align:center;margin:6px 0;font-weight:bold;}
+  .term{color:var(--red);font-weight:bold;}
+  .term2{color:var(--blue);font-weight:bold;}
+  hr.soft{border:none;border-top:1px dashed var(--line);margin:24px 0;}
+  .small{font-size:13.5px;color:var(--muted);}
+  .footer{background:var(--green-d);color:#dff0e8;text-align:center;padding:26px;font-family:Arial,sans-serif;font-size:13px;}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);border-radius:20px;padding:2px 12px;
+    font-family:Arial,sans-serif;font-size:12.5px;margin:2px;color:var(--muted);}
+  @media (max-width:900px){
+    nav.toc{display:none;}
+    .vs{grid-template-columns:1fr;}
+    .cover h1{font-size:28px;}
+  }
+  @media print{
+    nav.toc,.ribbon{display:none;}
+    .card,.case,.pyq{box-shadow:none;break-inside:avoid;}
+    body{background:#fff;font-size:12pt;}
+  }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="kicker">Faculty of Law · University of Delhi · LB–105 Family Law–I</div>
+  <h1>Marriage (Nikah) under Muslim Law</h1>
+  <h2>Unit VI — Sources &amp; Schools of Muslim Law &nbsp;|&nbsp; Unit VII — Nikah: Solemnisation, Validity, Classification, Types &amp; Dower</h2>
+  <div class="meta">
+    Comprehensive study notes · Full case-law analysis (DU Case Material, ed. Usha Tandon et al., 2023) ·<br>
+    Provisions, elements &amp; components · Diagrams &amp; flow-charts · DU semester PYQs with model answers
+  </div>
+</header>
+<div class="ribbon">Primary source: DU “Cases Selected and Edited” (LB-105) — supplemented by Mulla, <i>Principles of Mahomedan Law</i>; LexisNexis <i>Family Law</i>; and class notes</div>
+
+<div class="wrap layout">
+<nav class="toc">
+  <h4>Contents</h4>
+  <a href="#unit6">Unit VI · Sources &amp; Schools</a>
+  <a href="#who" class="sub">Who is a Muslim · Shariat Act</a>
+  <a href="#history" class="sub">Historical backdrop (Shia–Sunni)</a>
+  <a href="#sources" class="sub">Sources of Muslim Law</a>
+  <a href="#schools" class="sub">Schools of Muslim Law</a>
+  <a href="#unit7">Unit VII · Marriage (Nikah)</a>
+  <a href="#nature" class="sub">Nature &amp; object of Nikah</a>
+  <a href="#essentials" class="sub">Conditions of validity</a>
+  <a href="#capacity" class="sub">Capacity &amp; consent</a>
+  <a href="#ijab" class="sub">Ijab-wa-Qabul &amp; witnesses</a>
+  <a href="#impediments" class="sub">Impediments (absolute/relative)</a>
+  <a href="#classification" class="sub">Sahih · Batil · Fasid</a>
+  <a href="#effects" class="sub">Effects of marriage</a>
+  <a href="#muta" class="sub">Muta marriage</a>
+  <a href="#minors" class="sub">Minors, jabar, option of puberty</a>
+  <a href="#presumption" class="sub">Presumption of marriage</a>
+  <a href="#dower" class="sub">Dower (Mahr)</a>
+  <a href="#cases">Case Laws (DU Material)</a>
+  <a href="#case1" class="sub">1 · Ghulam Kubra Bibi</a>
+  <a href="#case2" class="sub">2 · Chand Patel</a>
+  <a href="#case3" class="sub">3 · Rashid Ahmad</a>
+  <a href="#pyqs">DU PYQs + Model Answers</a>
+  <a href="#glossary">Glossary · Quick revision</a>
+</nav>
+
+<main>
+<!-- ==================== UNIT VI ==================== -->
+<section id="unit6" class="card">
+  <h2 class="sec">UNIT VI — SOURCES AND SCHOOLS OF MUSLIM LAW</h2>
+  <p class="lead">Before studying the rules of <i>Nikah</i>, one must understand <i>where</i> Muslim law comes from and <i>which school</i> governs the parties — because the validity, classification and incidents of a Muslim marriage differ sharply between the Sunni (Hanafi) and Shia (Ithna Ashari) schools.</p>
+
+  <h3 id="who">1. Who is a Muslim? &amp; the Muslim Personal Law (Shariat) Application Act, 1937</h3>
+  <p>A <b>Muslim</b> is a person whose faith is in <b>Islam</b>. <i>Islam</i> literally means <b>“submission to the will of God”</b> (and also signifies the <i>establishment of peace</i>). In Islam, <b>Allah is One</b> and <b>Muhammad is His Messenger</b>. Thus, any person who believes in (i) the <i>unity of God</i> (Tauheed) and (ii) the <i>prophethood of Muhammad</i> (Risalat) is a Muslim. Conversion requires no elaborate ceremony — a profession of faith before competent witnesses suffices.</p>
+  <div class="key"><div class="h">Shariat Act, 1937 — s. 2</div>
+    Application of Muslim personal law is regulated by the <b>Muslim Personal Law (Shariat) Application Act, 1937</b>. <b>Section 2</b> provides that where <u>both parties are Muslims</u>, the <b>rule of decision shall be Muslim personal law</b> in matters of:
+    <div style="columns:2;margin-top:6px;font-family:Arial,sans-serif;font-size:14.5px;">
+      (i) intestate succession (inheritance);<br>
+      (ii) special property of females;<br>
+      (iii) <b>marriage</b>;<br>
+      (iv) <b>dissolution of marriage</b>;<br>
+      (v) <b>maintenance</b>;<br>
+      (vi) <b>dower</b>;<br>
+      (vii) guardianship;<br>
+      (viii) gifts;<br>
+      (ix) trust &amp; trust properties;<br>
+      (x) wakf.
+    </div>
+    <p style="margin-bottom:0">The Act does <b>not</b> apply to <b>adoption, wills and legacies</b>; and it does not cover <b>agricultural land</b>, <b>testamentary succession</b> and <b>charities other than wakf</b> (except as notified by States). It is an “important and far-reaching enactment” applying to the entire Muslim community regardless of school.</p>
+  </div>
+  <p class="small">Note: the <i>Indian Majority Act, 1875</i> does <b>not</b> apply to marriage, dower and divorce — for these, Muslim law fixes its own age (puberty, presumed at 15). <span class="pill">Relevant to <b>Ghulam Kubra Bibi</b></span></p>
+
+  <h3 id="history">2. Historical backdrop — origin of the Shia–Sunni division</h3>
+  <ul>
+    <li>The Prophet <b>Muhammad</b> was born in <b>571 A.D.</b> At 40, while meditating in the cave of <i>Hira</i>, he received the first revelation (<i>Wahi</i>). In <b>622 A.D.</b> he migrated from Mecca to Medina (<b>Hijrah</b> — beginning of the Hijri era); his followers who migrated were the <i>Muhajirun</i>, the Medinan helpers the <i>Ansar</i>. He died in <b>632 A.D.</b>, the last political and religious head.</li>
+    <li>On his death the question of succession arose. The Prophet left no male heir. Two groups formed — essentially on a <b>political</b> basis:</li>
+  </ul>
+  <div class="flow">
+    <div class="fbox red"><div class="t">SHIAS</div>“Shiat-i-Ali” — faction of <b>Ali</b> (cousin, son-in-law). Advocated <b>succession/nobility of blood</b> &amp; spiritual leadership (Imamat). Backed by <b>Fatima</b>, the Prophet’s daughter.</div>
+    <div class="arrow">↔</div>
+    <div class="fbox blue"><div class="t">SUNNIS</div>Advocated <b>election</b> of the community’s elder. Backed by <b>Ayesha</b>, the Prophet’s youngest wife. <b>Abu Bakr</b> elected 1st Caliph.</div>
+  </div>
+  <p class="small">Caliphs: (1) <b>Abu Bakr</b> — (2) <b>Umar</b> (introduced Diwan) — (3) <b>Usman</b> (codified the Quran) — (4) <b>Ali</b>. Ali’s sons Hasan and then Hussain (killed at <b>Karbala, 680 A.D.</b>, commemorated in <b>Muharram</b>) deepened the split. The Umayyads (Damascus) and Abbasids (Baghdad) followed; the Caliphate was abolished in 1924 at Ankara.</p>
+
+  <h3 id="sources">3. Sources of Muslim Law</h3>
+  <p>Muslim law is a <b>divine</b> (revealed) law, not man-made. Two conceptions run through it: <span class="term">Shariat</span> — the revealed, wider path governing all human conduct; and <span class="term2">Fiqh</span> — the narrower “science of jurisprudence” (legal acts, lawful/unlawful) developed by human agency. The sources are:</p>
+
+  <div class="flow" style="flex-direction:column;align-items:center;">
+    <div class="fbox" style="max-width:520px;"><div class="t">SOURCES OF MUSLIM LAW</div></div>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;justify-content:center;">
+      <div class="stack">
+        <div class="fbox green"><div class="t">PRIMARY (Formal)</div>Divine / authoritative</div>
+        <div class="fbox green small-fw">① <b>Quran</b></div>
+        <div class="fbox green">② <b>Sunnah / Hadith</b></div>
+        <div class="fbox green">③ <b>Ijma</b> (consensus)</div>
+        <div class="fbox green">④ <b>Qiyas</b> (analogy)*</div>
+      </div>
+      <div class="stack">
+        <div class="fbox purple"><div class="t">SECONDARY (Informal)</div>Supplementary</div>
+        <div class="fbox purple">⑤ <b>Custom (Urf)</b></div>
+        <div class="fbox purple">⑥ <b>Judicial precedents</b></div>
+        <div class="fbox purple">⑦ <b>Legislation</b></div>
+        <div class="fbox purple">⑧ <b>Justice, equity &amp; good conscience</b></div>
+      </div>
+    </div>
+  </div>
+  <p class="small">* <b>Qiyas</b> is not recognised by the Shias (they hold law can be extended only by the Imam). Ijtihad = independent juristic reasoning of the learned (Mujtahids).</p>
+
+  <table>
+    <tr><th>Source</th><th>Meaning / essence</th><th>Key points</th></tr>
+    <tr><td><b>1. Quran</b><br>(from <i>Quarra</i> = “to read”)</td><td>The direct word of God revealed to Muhammad through Angel <b>Jibril (Gabriel)</b> over 23 years at Mecca &amp; Medina.</td><td>First &amp; most important source; the great legislative code of Islam. ~6,000 verses, of which only about <b>200</b> deal with legal principles (marriage, divorce, maintenance, dower, paternity, gifts, inheritance, etc.).</td></tr>
+    <tr><td><b>2. Sunnah / Hadith</b></td><td><i>Sunnah</i> = practice/precedent; <i>Hadith</i> = utterances of the Prophet. Supplementary to the Quran.</td><td>What the Prophet <b>said</b> = <i>Sunnat-ul-Qaul</i>; what he <b>did</b> = <i>Sunnat-ul-Fail</i>; what he <b>tacitly allowed</b> = <i>Sunnat-ul-Tuqrir</i>.</td></tr>
+    <tr><td><b>3. Ijma</b></td><td>Consensus / unanimous opinion of learned jurists (<i>Mujtahids</i>) on a point silent in Quran &amp; Sunnah.</td><td>“Unanimous thinking of the followers/disciples in a particular age.” Validated by both Quran and Sunnah.</td></tr>
+    <tr><td><b>4. Qiyas</b></td><td>Analogical deduction from Quran, Sunnah &amp; Ijma for new problems.</td><td>Collection of rules reached by analogy/interpretation. <b>Not recognised by Shias</b>.</td></tr>
+    <tr><td><b>5. Custom (Urf)</b></td><td>Usage having force of law.</td><td>Never formally recognised by jurists but used as a supplementary source; many pre-Islamic customs were absorbed. Ranks only in the absence of an express text.</td></tr>
+    <tr><td><b>6. Judicial decisions</b></td><td>Precedents supplementing/modifying pure Muslim law.</td><td>E.g. pure Muslim law allowed no interest on dower, but the Privy Council allowed it in <b><i>Hamira Bibi v. Zubaida Bibi</i></b>.</td></tr>
+    <tr><td><b>7. Legislation</b></td><td>Statutory modification.</td><td>Shariat Act 1937; <b>Dissolution of Muslim Marriages Act, 1939</b>; Muslim Women (Protection of Rights on Divorce) Act, 1986; (now the Muslim Women (Protection of Rights on Marriage) Act, 2019).</td></tr>
+    <tr><td><b>8. Justice, equity &amp; good conscience</b></td><td>Residual guide where texts conflict or are silent.</td><td><b>Abu Hanifa</b> (founder of the Hanafi sect) ruled that a rule based on analogy could be set aside on a liberal construction to do justice — the doctrine of <i>Istihsan</i>.</td></tr>
+  </table>
+
+  <h3 id="schools">4. Schools of Muslim Law</h3>
+  <p>Schools emerged from differences in interpreting the texts. <b>Shias</b> reject traditions handed down by anyone other than Ali; <b>Sunnis</b> accept traditions, decisions of Imams and the general body of juristic knowledge supplementing the Quran. (A third defector group, the <b>Motazila</b>, founded by Ata-al-Ghazzal in the 9th century, associates with neither.)</p>
+
+  <div class="tree">
+    <div class="node root">FIQH (Schools of Muslim Law)</div>
+    <ul>
+      <li><span class="node" style="background:var(--blue-l);border-color:var(--blue);color:var(--blue);">SUNNI</span>
+        <ul>
+          <li><span class="leaf"><b>Hanafi</b> — Founder: <b>Imam Abu Hanifa</b> · <i>Dominant in India</i> · texts: Hedaya, Fatawa-i-Alamgiri</span></li>
+          <li><span class="leaf"><b>Maliki</b> — Founder: <b>Imam Malik-ibn-Anas</b></span></li>
+          <li><span class="leaf"><b>Shafei (Shafi’i)</b> — Founder: <b>Ash-Shafei</b></span></li>
+          <li><span class="leaf"><b>Hanbali</b> — Founder: <b>Ibn Hanbal</b></span></li>
+        </ul>
+      </li>
+      <li><span class="node" style="background:var(--red-l);border-color:var(--red);color:var(--red);">SHIA</span>
+        <ul>
+          <li><span class="leaf"><b>Ithna Asharia / Imamia</b> (“Twelvers”) — sub-sects <b>Akhbari</b> &amp; <b>Usuli</b>; recognise <b>Muta</b> marriage</span></li>
+          <li><span class="leaf"><b>Ismaili</b> (“Seveners”) — groups: <b>Khojas</b> (East) &amp; <b>Bohras</b> (West; Bohras → Daudi &amp; Sulaimani)</span></li>
+          <li><span class="leaf"><b>Zyadi (Zaidi)</b></span></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="warn"><div class="h">Why the school matters for Nikah</div>Indian Muslims are predominantly <b>Sunni Hanafi</b>. The Hanafi school recognises a <b>three-fold</b> classification — valid (<i>sahih</i>), void (<i>batil</i>) and <b>irregular (<i>fasid</i>)</b> — and requires two witnesses. The <b>Shia (Ithna Ashari)</b> school recognises <b>only two</b> categories (valid or void), does <b>not</b> require witnesses, recognises <b>Muta</b>, and treats most Sunni-“irregular” marriages as void. A wife does <b>not</b> change her school on marriage (<i>Mulla §32</i>).</div>
+</section>
+
+<!-- ==================== UNIT VII ==================== -->
+<section id="unit7" class="card">
+  <h2 class="sec">UNIT VII — MARRIAGE (NIKAH) UNDER MUSLIM LAW</h2>
+  <p class="lead">“Nikah – Solemnisation of Marriage — conditions for validity, classification and types; Dower.”</p>
+
+  <h3 id="nature">1. Nature and Object of Muslim Marriage (Nikah)</h3>
+  <p class="arabic">نکاح</p>
+  <p>Marriage (<i>Nikah</i>) is defined by <b>Mulla (§250)</b> as <b>“a contract which has for its object the procreation and the legalising of children.”</b> The <i>Hedaya</i> describes Nikah as a contract for the legalisation of intercourse and the procreation of children.</p>
+
+  <div class="vs">
+    <div class="col app">
+      <h5>Civil-contract view</h5>
+      <p style="margin:0"><b>Justice Mahmood</b> observed that Muslim marriage is <b>not a sacrament but purely a civil contract</b>. All rights and obligations it creates arise <b>immediately</b> and are not dependent on any condition precedent such as payment of dower. In <i>Abdul Kadir v. Salima</i> he likened it (by analogy) to a contract of sale, with dower as the “price”.</p>
+    </div>
+    <div class="col resp">
+      <h5>Religious / social view</h5>
+      <p style="margin:0"><b>Abdur Rahim</b> called marriage part <b><i>Ibadat</i></b> (devotional act/worship) and part <b><i>Muamlat</i></b> (dealings among men). It is the <b>Sunnah of the Prophet</b> — “Marriage is my Sunnah; whosoever keeps away from it is not from me.” It confers dignified status on woman and legalises the sexual relationship and generations.</p>
+    </div>
+  </div>
+  <div class="key"><div class="h">Modern synthesis</div>The 20th-edition note in Mulla states the institution comprises <b>both worship (<i>ibadat</i>) and worldly affairs (<i>muamalat</i>)</b>: it is a <i>permanent and unconditional civil contract</i> (unlike Hindu marriage, a sacrament) requiring <b>free consent</b> of both parties, yet once accomplished the relationship is determined “in combination with the religious connotation”. In Pakistan, S.A. Rahman J. in <i>Khurshid Bibi v. Mohd Amin</i> held marriage is <b>“in the nature of a civil contract”</b>, with spiritual and moral overtones.</div>
+  <p><b>Object is two-fold:</b> (1) legalisation of sexual relationship between husband and wife; (2) legalisation/procreation of children (legitimate generation). Because it is a contract, <b>no religious ceremony as such is essential</b> — only the conditions of a valid marriage contract must be fulfilled. Sexual intercourse not permitted by Muslim law is <span class="term">Zina</span> (fornication/adultery); its offspring is illegitimate and cannot be legitimated by acknowledgment.</p>
+
+  <h3 id="essentials">2. Essentials / Conditions for Validity of a Muslim Marriage</h3>
+  <p>Mulla <b>§252</b> lays down the core rule:</p>
+  <blockquote>“It is essential to the validity of a marriage that there should be a proposal made by or on behalf of one of the parties, and an acceptance of the proposal by or on behalf of the other, in the presence and hearing of two male or one male and two female witnesses, who must be sane and adult Mahomedans. The proposal and acceptance must both be expressed at one meeting… Neither writing nor any religious ceremony is essential.”</blockquote>
+
+  <div class="flow">
+    <div class="fbox"><div class="t">① CAPACITY</div>Muslim, sound mind, attained puberty (minors/lunatics via guardian — <i>jabar</i>)</div>
+    <div class="arrow">→</div>
+    <div class="fbox blue"><div class="t">② FREE CONSENT</div>Consent of parties/guardian must be free — not vitiated by force, fraud or compulsion</div>
+    <div class="arrow">→</div>
+    <div class="fbox green"><div class="t">③ IJAB-WA-QABUL</div>Proposal (ijab) &amp; acceptance (qabul) in one meeting, witnessed</div>
+    <div class="arrow">→</div>
+    <div class="fbox gold"><div class="t">④ NO IMPEDIMENTS</div>No absolute/relative bars (consanguinity, affinity, fosterage, etc.)</div>
+    <div class="arrow">→</div>
+    <div class="fbox purple"><div class="t">⑤ CONSIDERATION</div>Dower (Mahr) — an obligation/mark of respect to the wife</div>
+  </div>
+
+  <h4>2(a). Capacity to contract marriage</h4>
+  <ul>
+    <li>Every Muslim of <b>sound mind</b> who has <b>attained puberty</b> may enter into a marriage contract (Mulla §251). A Muslim girl of 15 who has attained puberty is competent to marry <b>without her parents’ consent</b>.</li>
+    <li><b>Puberty</b> is <i>presumed, in the absence of evidence, on completion of 15 years</i> (Explanation to §251). The Privy Council in <i>Atika Begum v. Mohammed Ibrahim</i> laid down that a girl becomes major on either (i) completion of her 15th year, or (ii) attainment of puberty at an earlier period. (The <i>Hedaya</i> notes the earliest period as 12 for a boy and 9 for a girl.)</li>
+    <li><b>Minors and lunatics</b> who have not attained puberty may be validly contracted in marriage by their <b>guardians</b> (§251(2); see jabar below).</li>
+    <li>A marriage of a sane, adult Muslim brought about <b>without his/her consent is void</b> (§251(3)).</li>
+  </ul>
+  <div class="warn"><div class="h">Force / fraud on consent</div>Consent obtained by <b>force or fraud</b> makes the marriage <b>invalid unless ratified</b>. Where consent was never obtained, even <b>consummation against the woman’s will does not validate</b> the marriage. <b>Hanafi exception:</b> under all schools a coerced marriage is void <i>except</i> the Hanafi school, where (as to a contract entered by the person themselves) it is treated as valid/ratifiable — but where consent is wholly absent, consummation cannot validate.</div>
+
+  <h4>2(b). Consent of the parties</h4>
+  <ul>
+    <li>Consent must be <b>free</b>. If parties are sane and adult, <b>their own</b> consent is required; if minors, the <b>guardian’s</b> consent is required (<i>jabar</i>).</li>
+    <li>Under <b>Hanafi</b> law a woman may give consent <b>with or without a <i>wali</i></b> (guardian). Under the <b>Shafei &amp; Maliki</b> schools an adult virgin’s consent must be communicated through a <i>wali</i>; the <i>wali</i>’s authority emanates from the woman herself.</li>
+  </ul>
+
+  <h4 id="ijab">2(c). Proposal and Acceptance — Ijab-wa-Qabul &amp; witnesses</h4>
+  <ul>
+    <li>There must be a <b>proposal (<i>ijab</i>)</b> and <b>acceptance (<i>qabul</i>)</b>, oral or in writing (Nikahnama/Kabinnama). Usual form: proposal “I have married myself to you”; acceptance “I have consented”.</li>
+    <li>Both must be <b>expressed at one and the same meeting</b> (majlis). A proposal at one meeting and acceptance at another = no valid marriage.</li>
+    <li>Words must be <b>unambiguous</b> and made by the parties or their agents. A mere <b>promise/assurance to marry in future</b> is not a proposal.</li>
+    <li><b>Witnesses (Sunni/Hanafi):</b> the declaration and acceptance must be heard by <b>two male, or one male and two female, sane, adult Muslim witnesses</b>. A marriage without witnesses is <b>irregular (<i>fasid</i>), not void</b> (§254).</li>
+    <li><b>Shia law:</b> presence of witnesses is <b>not necessary</b> — a marriage without witnesses is <b>valid</b>.</li>
+    <li><b>Neither writing nor any religious ceremony is essential</b>; registration is not a requisite of validity (though the <i>Kazi’s Act, 1880</i> and local Acts regulate Kazis; registration by Jamath may harden into custom but cannot be made mandatory).</li>
+  </ul>
+  <div class="note"><div class="h">The purdah procedure (as described in <i>Ghulam Kubra Bibi</i>)</div>Where women observe pardah, a relation of the woman, accompanied by two witnesses, goes inside and asks the girl <i>within the witnesses’ hearing</i> whether she authorises him to agree to the marriage on her behalf for the dower offered, explaining the dower. On her “yes”, the three come out; the Mullah asks the bridegroom and then the girl’s agent whether each agrees; on both “yes” the Mullah reads the scriptures and the marriage is complete. <b>Vague proof that “there were two witnesses” has no value</b> — the whole procedure must be shown to have been gone through.</div>
+
+  <h3 id="impediments">3. Prohibitions / Impediments to Marriage</h3>
+  <p>Impediments are divided into <b>absolute</b> (perpetual — make the marriage <span class="term">void (batil)</span>) and <b>relative</b> (temporary/accidental — make it <span class="term2">irregular (fasid)</span>, capable of being cured).</p>
+
+  <h4>3(a). Absolute impediments → void (batil) marriage</h4>
+  <table>
+    <tr><th>Impediment</th><th>Meaning &amp; prohibited relations</th></tr>
+    <tr><td><b>1. Polyandry</b><br>(plurality of husbands)</td><td>A married woman cannot contract another marriage while her husband is alive and the marriage subsists (§256). Such marriage is <b>void</b>; the woman is liable under <b>s.494 IPC</b>; offspring illegitimate and cannot be legitimated by acknowledgment.</td></tr>
+    <tr><td><b>2. Consanguinity</b><br>(<i>Qarabat</i> — blood)</td><td>A man may not marry: (a) ascendants — mother/grandmother, however high; (b) descendants — daughter/grand-daughter, however low; (c) his sister — full, consanguine or uterine; (d) niece/great-niece, however low; (e) aunt/great-aunt, however high, paternal or maternal (§260).</td></tr>
+    <tr><td><b>3. Affinity</b><br>(<i>Musharat</i> — by marriage)</td><td>A man may not marry: (a) wife’s mother/grandmother, however high; (b) wife’s daughter/grand-daughter, however low (only <b>if the marriage with the wife was consummated</b>); (c) wife of his father/paternal grandfather; (d) wife of his son/son’s son/daughter’s son (§261).</td></tr>
+    <tr><td><b>4. Fosterage</b><br>(<i>Riza</i> — suckling)</td><td>Where a woman (not the mother) has suckled a child under 2 years, she becomes its <b>foster-mother</b>; the same prohibitions as consanguinity/affinity apply (e.g. foster-sister, foster-mother’s daughter), subject to a few exceptions (§262).</td></tr>
+  </table>
+
+  <h4>3(b). Relative impediments → irregular (fasid) marriage <span class="pill">Hanafi/Sunni only</span></h4>
+  <table>
+    <tr><th>Impediment</th><th>Rule</th><th>How cured</th></tr>
+    <tr><td><b>Unlawful conjunction</b> (<i>jama bain-al-mahramain</i>)</td><td>A man may not have <b>two wives</b> so related by consanguinity/affinity/fosterage that, if one were male, they could not intermarry — e.g. <b>two sisters</b>, or aunt and niece (§263). Bar renders marriage <b>irregular, not void</b>.</td><td>He may <b>divorce the wife who is the obstacle</b> (then marry the other lawfully); or the bar ceases on the first wife’s death/divorce.</td></tr>
+    <tr><td><b>Marriage with a fifth wife</b></td><td>A Muslim may have up to <b>four</b> wives at once; a fifth marriage while four subsist is <b>irregular</b> in Sunni law (void in Shia) (§255).</td><td>Divorce one of the four wives.</td></tr>
+    <tr><td><b>Marriage during <i>iddat</i></b></td><td>Marriage with a woman still observing <i>iddat</i> (seclusion after divorce/death to ascertain pregnancy) is <b>irregular</b> in Sunni law; <b>void</b> in Shia (§257).</td><td>Expiry of the <i>iddat</i> period.</td></tr>
+    <tr><td><b>Difference of religion</b></td><td>A Muslim <b>male</b> may validly marry a Muslim or a <b>Kitabia</b> (Christian/Jewess); marriage with an <b>idolatress/fire-worshipper</b> is <b>irregular</b> (Sunni). A Muslim <b>female</b> cannot marry a non-Muslim male — that marriage is <b>void</b>. Shia: Muslim–non-Muslim marriage is void (but male may contract <i>Muta</i> with a Kitabia, even a fire-worshipper) (§259).</td><td>Wife converts to Islam/Christianity/Judaism, or husband adopts Islam.</td></tr>
+    <tr><td><b>Absence of witnesses</b></td><td>Marriage contracted without the required witnesses is <b>irregular</b> (Sunni); valid in Shia (§254).</td><td>Subsequent acknowledgment before witnesses.</td></tr>
+  </table>
+
+  <div class="flow">
+    <div class="fbox" style="max-width:300px;"><b>Inter-religious marriage (Sunni view)</b></div>
+  </div>
+  <table class="tight">
+    <tr><th>Parties</th><th>Status of marriage</th></tr>
+    <tr><td>Muslim male (any sect) + Muslim female (any sect)</td><td class="center"><span class="tag g">Valid (sahih)</span></td></tr>
+    <tr><td>Sunni male + Kitabia female (Christian/Jew)</td><td class="center"><span class="tag g">Valid (sahih)</span></td></tr>
+    <tr><td>Sunni male + non-Muslim, non-Kitabia female (idolatress/fire-worshipper)</td><td class="center"><span class="tag o">Irregular (fasid)</span></td></tr>
+    <tr><td>Shia male + non-Muslim female</td><td class="center"><span class="tag r">Void (batil)</span></td></tr>
+    <tr><td>Muslim female + non-Muslim male</td><td class="center"><span class="tag r">Void (batil)</span></td></tr>
+  </table>
+
+  <h3 id="classification">4. Classification and Types of Muslim Marriage</h3>
+  <p>A Muslim marriage may be <b>valid (<i>sahih</i>)</b>, <b>void (<i>batil</i>)</b>, or <b>irregular (<i>fasid</i>)</b> (Mulla §253, §264). The <b>Shia</b> law recognises <b>only valid or void</b> — no fasid category.</p>
+
+  <div class="flow">
+    <div class="fbox" style="max-width:220px;"><div class="t">MUSLIM MARRIAGE</div>Classified by validity</div>
+    <div class="arrow">→</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div class="fbox green"><div class="t">SAHIH — Valid</div>Lawful in form &amp; substance; all incidents flow.</div>
+      <div class="fbox red"><div class="t">BATIL — Void</div>Unlawful in itself; prohibition <b>perpetual &amp; absolute</b>. No legal existence.</div>
+      <div class="fbox gold"><div class="t">FASID — Irregular</div>Lawful in itself but unlawful “for something else”; prohibition <b>temporary/relative</b> or irregularity accidental. Curable.</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Basis</th><th>SAHIH (valid)</th><th>BATIL (void)</th><th>FASID (irregular)</th></tr>
+    <tr><td><b>Nature</b></td><td>Lawful in form &amp; substance</td><td>Unlawful in itself (perpetual/absolute bar)</td><td>Not unlawful in itself; unlawful for a temporary/relative/accidental reason</td></tr>
+    <tr><td><b>Cause</b></td><td>All essentials fulfilled</td><td>Consanguinity, affinity, fosterage, polyandry</td><td>No witnesses; 5th wife; <i>iddat</i>; religion; unlawful conjunction</td></tr>
+    <tr><td><b>Legal existence</b></td><td>Full</td><td>“No marriage at all”</td><td>Subsists until terminated; no legal effect <b>before consummation</b></td></tr>
+    <tr><td><b>Dower</b></td><td>Entitled (specified/proper)</td><td>None</td><td>If consummated: dower, <b>proper or specified whichever is less</b></td></tr>
+    <tr><td><b>Iddat</b></td><td>Yes</td><td>No</td><td>If consummated: <b>three courses</b> (divorce or death)</td></tr>
+    <tr><td><b>Children</b></td><td>Legitimate; inherit</td><td><b>Illegitimate</b>; cannot inherit</td><td><b>Legitimate</b>; can inherit</td></tr>
+    <tr><td><b>Mutual inheritance between spouses</b></td><td>Yes</td><td>No</td><td><b>No</b> (even after consummation)</td></tr>
+    <tr><td><b>Termination</b></td><td>By death/talaq etc.</td><td>Need not be terminated (void ab initio)</td><td>Either party may terminate by words showing intention to separate (“I have relinquished you”)</td></tr>
+    <tr><td><b>Shia law</b></td><td>Recognised</td><td>Recognised</td><td><b>Not recognised</b> — treated as void</td></tr>
+  </table>
+  <div class="key"><div class="h">Mulla §264(3) — why irregular, not void</div>
+  In (a) absence of witnesses the defect is <i>accidental</i>; (b) fifth wife — removed by divorcing one of four; (c) <i>iddat</i> — ceases on expiry; (d) religion — removed by conversion; (e) unlawful conjunction — removed by divorcing the obstacle wife. Because each bar is <b>capable of removal</b>, the marriage is only irregular. (The Calcutta view in <i>Aizunnissa</i> held wife’s-sister marriage <b>void</b>; Bombay, Madras, Oudh, Lahore and the Supreme Court in <b><i>Chand Patel</i></b> hold it <b>irregular</b>.)</div>
+
+  <h3 id="effects">5. Effects / Incidents of a Valid (Sahih) Marriage</h3>
+  <p>A valid marriage (Mulla §265) confers the following rights and obligations:</p>
+  <ol>
+    <li>Sexual intercourse becomes <b>lawful</b>; children born of the union are <b>legitimate</b>.</li>
+    <li>The wife becomes entitled to her <b>dower (Mahr)</b>.</li>
+    <li>The wife becomes entitled to <b>maintenance</b> and residence in the husband’s house.</li>
+    <li><b>Mutual rights of inheritance</b> are established between the spouses.</li>
+    <li>Prohibitions arising from <b>affinity</b> come into operation; and the bar of <b>unlawful conjunction</b> and of a <b>5th wife</b> applies.</li>
+    <li>The wife may not remarry after the husband’s death or divorce without observing <b>iddat</b>.</li>
+    <li>The woman <b>does not change her status/school</b> on marriage; neither spouse acquires any interest in the other’s property merely by marriage. The husband imposes on the wife obligations of fidelity, obedience to reasonable orders, and admission to intercourse.</li>
+  </ol>
+  <div class="note"><div class="h">“Valid retirement” — Khilwat-us-Sahiha</div>When husband and wife are alone together with no legal, moral or physical impediment to intercourse, it is <i>valid retirement</i>. In Sunni law it has the same effect as <b>actual consummation</b> as regards dower, paternity, iddat, the wife’s-sister bar and the fifth-wife bar — but <b>not</b> as to the bar on the wife’s daughter (affinity) or remarriage between divorcees (which require actual consummation). Shia law does not equate valid retirement with consummation.</div>
+
+  <h3 id="muta">6. Muta (Temporary) Marriage</h3>
+  <p><i>Muta</i> means <b>“enjoyment”</b>. It is a <b>temporary union</b> of a man and a woman for a <b>fixed period</b> in consideration of <b>dower</b>. It is recognised <b>only by the Shia (Ithna Ashari) school</b>; the <b>Sunni law does not recognise Muta at all</b>. It is almost obsolete in India.</p>
+  <table class="tight">
+    <tr><th>Essentials of Muta</th><th>Incidents &amp; effects</th></tr>
+    <tr><td>
+      1. Parties of puberty &amp; sound mind;<br>
+      2. Free consent;<br>
+      3. Formalities of a regular marriage;<br>
+      4. Parties not within prohibited degrees;<br>
+      5. <b>Form</b> — declaration &amp; acceptance;<br>
+      6. <b>Subject</b> — a Shia male may contract Muta with a Muslim, Christian, Jewess or even a fire-worshipper (but no other religion); a Shia <b>woman</b> may not contract Muta with a non-Muslim; any number allowed;<br>
+      7. <b>Term</b> — period fixed (a day, month, year or years);<br>
+      8. <b>Dower</b> — must be specified.
+    </td><td>
+      • <b>Term + dower fixed</b> → valid. Term fixed but <b>no dower</b> → <b>void</b>. <b>Dower fixed but no term</b> → void as Muta, may operate as <b>permanent</b> marriage.<br>
+      • <b>No mutual inheritance</b> between the man and woman; but children conceived are <b>legitimate</b> and inherit from <b>both</b> parents.<br>
+      • Dissolved <b>ipso facto on expiry of the term</b>; <b>no divorce</b> in Muta. Husband may end early by <b>“gift of the term” (<i>hiba-i-muddat</i>)</b> without the wife’s consent.<br>
+      • Consummated → <b>full dower</b>; not consummated → <b>half dower</b>; wife leaving early → husband deducts proportionate dower.<br>
+      • Iddat: two monthly courses (consummation); on husband’s death 4 months 10 days.<br>
+      • Muta wife gets <b>no maintenance under Shia law</b> but may claim under <b>s.125 CrPC</b>.
+    </td></tr>
+  </table>
+
+  <h3 id="minors">7. Marriage of Minors — Guardianship (Jabar) &amp; Option of Puberty</h3>
+  <p>A boy/girl who has not attained puberty (<b>minor</b>) cannot contract marriage personally but may be contracted by a <b>guardian</b> (Mulla §270–276).</p>
+  <div class="flow">
+    <div class="fbox" style="max-width:240px;"><div class="t">ORDER OF GUARDIAN (<i>wali</i>) for marriage — §271</div></div>
+    <div class="arrow">→</div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-family:Arial,sans-serif;font-size:14px;">
+      <div class="fbox blue" style="max-width:320px;">① <b>Father</b> → ② <b>Paternal grandfather</b>, however high → ③ <b>Brother</b> &amp; other male paternal relations (in order of residuaries)</div>
+      <div class="fbox blue" style="max-width:320px;">In default of paternal → <b>mother, maternal uncle/aunt</b> &amp; other maternal relations within prohibited degrees</div>
+      <div class="fbox blue" style="max-width:320px;">In default of kindred → the <b>ruling authority / Qazi</b></div>
+    </div>
+  </div>
+  <div class="warn"><div class="h">Shia law &amp; modern cases</div>Under Shia law <b>only the father and paternal grandfather</b> are recognised guardians. The Delhi HC in <i>Mohd. Nihal v. State</i> held a minor’s marriage without the <i>wali</i>’s consent (during the father’s lifetime, a brother-in-law acting) is <b>completely void</b>; once a girl attains majority she has the <b>absolute right</b> to contract marriage, which no one (even the father) may exercise. A minor given in marriage by father/grandfather has <b>no option to repudiate</b> unless the guardian acted <b>fraudulently, negligently or to her manifest disadvantage</b> (§272).</div>
+  <h4>Option of puberty — Khyar-ul-Bulugh (§274)</h4>
+  <p>Where a minor is contracted by <b>any guardian other than father/father’s father</b>, the minor has the <b>option to repudiate</b> the marriage on attaining puberty. A female loses the right if, after attaining puberty and being informed of the marriage and her right, she does not repudiate without unreasonable delay; a male loses it on express/implied ratification (payment of dower, cohabitation). The mere exercise of the option does not itself dissolve the marriage — repudiation must be <b>confirmed by the Court</b> (§275), though later/Lahore (Pakistan) views hold the option ends the marriage without a decree.</p>
+  <div class="key"><div class="h">Dissolution of Muslim Marriages Act, 1939 — s.2(vii)</div>The Act abolished restrictions on the option of puberty even where the marriage was arranged by father/grandfather. A wife is entitled to dissolution if she proves: (1) the marriage was <b>not consummated</b>; (2) it took place <b>before she attained 15 years</b>; and (3) she <b>repudiated before attaining 18 years</b>. (Provisions for lunatics are analogous, the option being exercised on recovery of reason — §276.)</div>
+
+  <h3 id="presumption">8. Presumption of Marriage (Mulla §268)</h3>
+  <p>In the absence of direct proof, marriage is presumed from:</p>
+  <ul>
+    <li>(a) <b>prolonged and continual cohabitation</b> as husband and wife;</li>
+    <li>(b) the man’s <b>acknowledgment of paternity</b> of a child born to the woman (subject to §344 conditions); or</li>
+    <li>(c) the man’s <b>acknowledgment of the woman as his wife</b>.</li>
+  </ul>
+  <p>The presumption is <b>rebutted</b> if conduct is inconsistent with the marital relation, or if the woman was admittedly a prostitute before being brought to the house (but merely not living behind purdah is insufficient). This presumption of fact (not <i>juris et de jure</i>) is central to <b><i>Saiyid Rashid Ahmad v. Anisa Khatun</i></b> — where a legal bar (triple talaq without intervening marriage) prevents remarriage, the acknowledgment cannot raise the presumption.</p>
+
+  <h3 id="dower">9. DOWER (MAHR / MEHAR)</h3>
+  <p class="arabic">مَہر</p>
+  <p><b>Mulla §285:</b> <i>“Mahr or dower is a sum of money or other property which the wife is entitled to receive from the husband in consideration of the marriage.”</i> It is an <b>essential feature</b> of a valid Nikah and an <b>obligation imposed upon the husband as a mark of respect to the wife</b>. The word “consideration” is <b>not</b> used in the Contract Act sense — Mahmood J. in <i>Abdul Kadir v. Salima</i> explained that jurists analogise dower to the “price” in a sale only because sale is the typical contract; it is <b>not bride-price</b> (a post-nuptial agreement to pay dower is valid for want of Contract-Act consideration would otherwise be void). The wife may <b>relinquish</b> her dower voluntarily, but such relinquishment must be free from duress, fraud, misrepresentation, influence or mistake.</p>
+
+  <div class="flow">
+    <div class="fbox purple" style="max-width:200px;"><div class="t">DOWER (Mahr)</div>Wife’s right; husband’s obligation</div>
+    <div class="arrow">→</div>
+    <div class="stack">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <div class="fbox green"><div class="t">By fixation</div>Specified (Mahr-i-musamma)<br>vs.<br>Proper/ Customary (Mahr-i-misl)</div>
+        <div class="fbox blue"><div class="t">By time of payment</div>Prompt (Mu’ajjal)<br>vs.<br>Deferred (Mu’wajjal)</div>
+      </div>
+    </div>
+  </div>
+
+  <h4>9(a). Specified dower — Mahr-i-musamma (§286)</h4>
+  <ul>
+    <li>The husband may settle <b>any amount he likes</b>, even beyond his means or leaving nothing for heirs; but he cannot settle <b>less than 10 dirhams</b> (≈ Rs. 3–4) under Sunni (Hanafi) law. <b>Shia law: no fixed minimum.</b></li>
+    <li>Courts award the <b>entire contracted sum</b> (unless a statute says otherwise, e.g. Oudh Laws Act 1876 s.5 allows a “reasonable” sum with reference to husband’s means and wife’s status).</li>
+    <li>Excessiveness is <b>no defence</b> — high dower is deliberately used to restrain arbitrary divorce. Where two amounts exist (a private real one and an inflated public one for show), the private amount is allowed (doctrine of <i>as-sunnat</i>).</li>
+    <li>Specified dower is an incident of a <b>valid</b> marriage only. In an <b>irregular</b> marriage after consummation, <b>specified or proper dower, whichever is less</b>, is due — proper dower arises from cohabitation, not the contract itself.</li>
+  </ul>
+
+  <h4>9(b). Proper dower — Mahr-i-misl (§289)</h4>
+  <p>If no dower is fixed, the wife is entitled to <b>“proper” dower</b> — <i>even if the marriage was contracted on an express condition that she would claim none</i>. Regard is had to the dower settled on other female members of her <b>father’s family</b> (e.g. father’s sisters), her family’s social position, the husband’s wealth/status, her personal qualifications, and the conditions of society. The Privy Council called dower “an essential incident under the Mussalman law to the status of marriage… when unspecified, the law declares it must be adjudged on definite principles.” Under <b>Shia</b> law proper dower must not exceed <b>500 dirhams</b>.</p>
+
+  <h4>9(c). Time of fixation &amp; increase (§287–288)</h4>
+  <p>Dower may be fixed <b>before, at, or after</b> marriage, and may be <b>increased</b> after marriage. A father may contract dower on behalf of his <b>minor son</b> and it binds the son; among Sunnis the father is <b>not personally liable</b>, but among Shias he is liable where the minor son has no means. A surety who guarantees dower is liable as such.</p>
+
+  <h4>9(d). Confirmation of dower (§289A)</h4>
+  <p>Dower becomes confirmed/vested by: <b>(a) consummation; (b) valid retirement (khilwat-e-sahiha); or (c) death of either party</b>. The whole dower is not payable merely on the contract; after valid retirement the whole becomes payable (Hanafi/ Maliki). Under <b>Shia</b> law dower is established by <b>consummation or death</b>, not by valid retirement.</p>
+
+  <h4>9(e). Prompt and deferred dower (§290)</h4>
+  <table>
+    <tr><th>Prompt dower (<i>Mu’ajjal / Mahr-i-muajjal</i>)</th><th>Deferred dower (<i>Mu’wajjal / Mahr-i-muwajjal</i>)</th></tr>
+    <tr><td>Payable <b>on demand</b>, before or after consummation.</td><td>Payable on <b>dissolution of marriage by death or divorce</b>.</td></tr>
+    <tr><td>The wife may <b>refuse to live with</b> the husband / admit him to intercourse so long as it is unpaid; non-payment is a <b>complete defence</b> to a suit for restitution of conjugal rights <b>before</b> intercourse (§293). After free-consent intercourse, the decree is for restitution <b>conditional on payment</b> of prompt dower.</td><td>Becomes payable only on death/divorce; limitation runs from dissolution (or from the wife’s knowledge of divorce).</td></tr>
+    <tr><td colspan="2"><b>Where nothing is settled</b> as to prompt/deferred: <b>Shia law</b> — whole is presumed <b>prompt</b>; <b>Sunni law</b> — part prompt, part deferred, proportion regulated by custom or by the parties’ status and the amount (Madras HC presumes the whole prompt in the Madras Presidency). Merely demanding deferred dower does <b>not</b> make it prompt.</td></tr>
+  </table>
+
+  <h4>9(f). Remission, suit &amp; limitation (§291–292)</h4>
+  <ul>
+    <li>The wife may <b>remit</b> dower (or her heir, if she dies) — but remission must be by free consent. The maxim <i>debitor non praesumitur donare</i> (a debtor is not presumed to give) has <b>no application between spouses</b>; yet sums paid by husband to wife without proof of allocation to dower are not treated as satisfaction.</li>
+    <li>Limitation: a suit for <b>prompt</b> dower — 3 years from demand and refusal (both must be unambiguous) or from dissolution; for <b>deferred</b> dower — 3 years from dissolution by death/divorce. Where divorce is by writing, time runs from <b>communication</b> to the wife. Under the <b>Limitation Act, 1963 s.29(3)</b>, suits under marriage/divorce law are not barred by the Limitation Act.</li>
+  </ul>
+
+  <h4>9(g). Liability of heirs; dower as debt; widow’s lien (§294–302)</h4>
+  <ul>
+    <li><b>Heirs are not personally liable.</b> Each heir is liable for the dower debt only to the <b>extent of his/her share</b> of the estate (proportionate liability). Example: widow (1/8) liable Rs.400 of Rs.3,200; son (7/16) Rs.1,400; each daughter (7/32) Rs.700.</li>
+    <li>Dower ranks as an <b>unsecured debt</b> payable out of the husband’s estate on death, along with other creditors; the wife has <b>no automatic charge</b>, though a charge may be created by <b>agreement</b> or by a court decree (courts ordinarily pass a simple money decree).</li>
+    <li><b>Widow’s right of retention / “lien” for dower (§296):</b> if the widow, <b>lawfully and without force or fraud</b>, with the express/implied consent of the husband or his heirs, obtains possession of the whole or part of his estate in satisfaction/security of dower, she may <b>retain possession until her dower is satisfied</b>. This is the only creditor’s lien of Muslim law recognised by British Indian courts and the Privy Council (<i>Hamira Bibi v. Zubaida Bibi</i>; <i>Maina Bibi v. Chaudhri Vakil Ahmad</i>).</li>
+  </ul>
+  <table class="tight">
+    <tr><th>Feature of widow’s retention</th><th>Rule</th></tr>
+    <tr><td>Analogous to mortgage?</td><td><b>No.</b> Possession/right to retain is not conferred by agreement of the husband; it is conferred by law once possession is peaceably/lawfully acquired (Maina Bibi).</td></tr>
+    <tr><td>Gives title?</td><td><b>No</b> — she retains possession only; title remains in the heirs (including herself as an heir). If dispossessed she may sue for recovery.</td></tr>
+    <tr><td>During marriage?</td><td>The right arises first on the <b>husband’s death</b>, or on <b>divorce</b> — not during the marriage. She cannot resist a purchaser in execution of a decree against the living husband.</td></tr>
+    <tr><td>Duty to account</td><td>She must account to other heirs for rents/profits, but is allowed compensation (in the form of interest) for forbearing to enforce the dower.</td></tr>
+    <tr><td>Right to alienate?</td><td>No right to sell/mortgage/gift to satisfy dower; an alienation is valid only to the extent of her <b>own share</b>. Delivering possession to the alienee lets other heirs recover their shares unconditionally.</td></tr>
+    <tr><td>Heritable / transferable?</td><td>Conflict of authority: one view — personal right, not transferable; other — it is property and heritable.</td></tr>
+  </table>
+  <div class="note"><div class="h">Wife’s refusal where dower unpaid (§293)</div>The right to claim prompt dower <b>precedes cohabitation</b>. The wife may lawfully refuse conjugal society and sexual intercourse until prompt dower is paid; in a husband’s suit for restitution before intercourse, non-payment is a complete defence (suit dismissed); after free-consent intercourse, the proper decree is restitution conditional on payment of prompt dower.</div>
+</section>
+
+<!-- ==================== CASES ==================== -->
+<section id="cases">
+  <h2 class="sec">CASE LAWS — FULL ANALYSIS (DU CASE MATERIAL, LB-105)</h2>
+  <p class="lead">The three cases prescribed for Unit VII (pp. 223–236 of the DU <i>Cases Selected and Edited</i>, 2023). Each is analysed below on facts, issues, arguments of both sides, decision, and the principle evolved.</p>
+
+  <!-- ======= CASE 1 ======= -->
+  <article class="case" id="case1">
+    <div class="head">
+      <div class="no">Case 1 · Solemnisation / Essentials (offer, acceptance, witnesses)</div>
+      <h3>Ms. (Mt.) Ghulam Kubra Bibi v. Mohd. Shafi Mohd. Din</h3>
+      <div class="cite">AIR 1940 Peshawar 2 &nbsp;·&nbsp; Mir Ahmad, J. (Court of the Judicial Commissioner, Peshawar)</div>
+    </div>
+    <div class="body">
+      <div class="seg facts">
+        <span class="lbl">Facts</span>
+        <div class="inner">
+          <p><b>Mohammad Shafi</b> (husband/plaintiff) sued <b>Mt. Ghulam Kubra</b> (the woman/defendant) for <b>restitution of conjugal rights</b>. He also impleaded her parents and sought an <b>injunction</b> restraining them from interfering in his marital relations with his alleged wife.</p>
+          <p><b>Defence of Ghulam Kubra:</b> she was <b>never married</b> to Mohammad Shafi. There was also a question whether the woman was <b>of age</b> (an adult) at the time of the alleged marriage. Evidence was led by both sides.</p>
+          <ul>
+            <li>The <b>Mullah</b> who was said to have read the nikah appeared and stated that he read the nikah at the instance of the girl’s <b>grandfather</b>. He <b>categorically denied</b> that anyone was sent to the girl to enquire whether she agreed to the marriage.</li>
+            <li>One <b>Mistri Abdul Karim</b> vaguely deposed that “there were two witnesses of the nikah” but gave <b>no names</b>.</li>
+            <li>Two alleged witnesses — <b>Mohammad Ramzan</b> (admittedly the plaintiff’s neighbour) and <b>Mohammad Din</b> (who did not deny that the plaintiff had been working with him for 8–9 years) — merely said they were “witnesses of the nikah” and gave <b>no detail</b> of what they actually did.</li>
+          </ul>
+          <p>The trial Judge held the girl was of age and the marriage was proved; he granted the decree for restitution and the injunction against all defendants. On appeal to the District Court, both parties <b>admitted the girl was of age</b> when married. The Additional District Judge maintained the restitution decree but <b>set aside the injunction</b> against the parents. Ghulam Kubra appealed further to the Peshawar Court against the restitution decree; Shafi cross-appealed to restore the injunction.</p>
+        </div>
+      </div>
+
+      <div class="seg issue">
+        <span class="lbl">Issues</span>
+        <div class="inner">
+          <ol>
+            <li>Whether a <b>valid Nikah</b> was in fact solemnised between the parties — i.e., whether the essential formalities (proposal/acceptance at one meeting before two competent witnesses, with the adult bride’s own consent) were proved.</li>
+            <li>Whether the <b>vague evidence</b> of witnesses (“we were the nikah witnesses”) suffices to prove the marriage, particularly where the person who performed the nikah swears no one consulted the bride.</li>
+            <li>Whether the plaintiff was entitled to a decree for <b>restitution of conjugal rights</b> (and the ancillary injunction) if no valid marriage is proved.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="seg args">
+        <span class="lbl">Arguments of both sides</span>
+        <div class="inner"><div class="vs">
+          <div class="col app">
+            <h5>For the husband (Shafi)</h5>
+            <ul>
+              <li>A nikah was in fact performed; witnesses (Ramzan, Din) were produced to depose to it.</li>
+              <li>The girl was of age (admitted before the Additional District Judge); a valid marriage subsists and he is entitled to restitution of conjugal rights and to an injunction restraining the parents from interfering.</li>
+              <li>The trial court had accepted the marriage as proved, and the District Court maintained the restitution decree.</li>
+            </ul>
+          </div>
+          <div class="col resp">
+            <h5>For the wife (Ghulam Kubra)</h5>
+            <ul>
+              <li>She was <b>never married</b> to Shafi at all.</li>
+              <li>The Mullah himself admitted he performed the nikah at the grandfather’s instance and that <b>no one was sent to obtain the girl’s consent</b> — the core requirement for an adult bride was absent.</li>
+              <li>The alleged witnesses were <b>interested/vague</b> (a neighbour and a long-time employer/associate of the plaintiff) and gave no particulars; bare statements that “there were two witnesses” have no evidentiary value and do not prove the prescribed procedure.</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="seg dec">
+        <span class="lbl">Decision &amp; reasoning (Mir Ahmad, J.)</span>
+        <div class="inner">
+          <p>The Judge set out the <b>standard Hanafi procedure</b> for a nikah in a pardah society (set out in the note box below) and stressed that the law <b>“absolutely” requires</b> that the man (or someone on his behalf) and the woman (or someone on her behalf) agree to the marriage <b>at one meeting</b>, witnessed by <b>two adult witnesses</b>.</p>
+          <div class="note"><div class="h">The valid pardah nikah procedure described by the court</div>A female relation, accompanied by two witnesses, goes inside to the bride and, <i>within the witnesses’ hearing</i>, asks whether she authorises him to agree to the marriage on her behalf for the dower offered, explaining the dower details. On her “yes” (or other sign of consent), the three come out. Before the Mullah, the bridegroom is asked whether he offers to marry her on the specified dower (“yes”); the girl’s agent then declares he is her duly authorised agent and accepts (“yes”); the witnesses are present so the Mullah can, if doubtful, question them whether the agent was really authorised. On both “yes” the Mullah reads the scriptures and the marriage is complete.</div>
+          <p>The court held the <b>vague allegation that “there were two witnesses of the nikah” has no value</b>; the whole procedure must be proved — <i>especially</i> when the man who read the nikah is positive that <b>no one was sent to the girl</b> to ask if she was a willing party.</p>
+          <p>On age: the record showed the girl was <b>17</b> when the marriage was solemnised. The parties mistakenly thought majority (for marriage) was 18 (the general law); under Mahomedan law a girl becomes major for marriage on <b>attaining puberty, presumed at 15</b>. Because they assumed she was still a minor, the grandfather gave her away without personally consulting her. The court clarified: where a girl <i>is</i> a minor, her <b>father, grandfather or other paternal relation may give her away</b> and the marriage is a valid nikah — but <b>even such a nikah requires two adult witnesses</b>, and the witnesses here may merely have witnessed the “giving away” by the grandfather rather than a valid contract. In any event, she was in fact adult (17), and her own consent/authorisation was essential and was not proved.</p>
+          <p><b>Result:</b> “For the reasons given above I hold that <b>no valid marriage has taken place</b> in this case, and that the plaintiff has therefore <b>no right to sue for restitution of conjugal rights</b>.” The appeal of Mt. Ghulam Kubra was <b>accepted</b>, Shafi’s suit <b>dismissed with costs throughout</b>, and Shafi’s cross-appeal (to restore the injunction) was <b>dismissed</b>.</p>
+        </div>
+      </div>
+
+      <div class="seg prin">
+        <span class="lbl">Principle evolved / proposition</span>
+        <div class="inner">
+          <ul>
+            <li><b>Essentials of a Sunni nikah must be strictly proved:</b> offer (ijab) and acceptance (qabul) at <b>one meeting</b>, by the parties or their duly authorised agents, with the bride’s real consent, <b>in the presence and hearing of two sane, adult Muslim witnesses</b>. Mere formal performance/readings by a Mullah, or a bare assertion that “two witnesses were present,” is insufficient — the <b>substance of authorisation and witnessing</b> must be established.</li>
+            <li><b>Majority for marriage = puberty (presumed 15)</b>, not 18; the Indian Majority Act, 1875 does not govern marriage. An adult woman must herself consent (or duly authorise an agent); she cannot be “given away” without consultation.</li>
+            <li>A minor’s marriage by a father/grandfather/guardian is valid — but <b>still requires two adult witnesses</b>; and interested/perfunctory witnesses do not discharge the burden.</li>
+            <li><b>No valid marriage → no right to restitution of conjugal rights</b> and no injunction against the woman’s relations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ======= CASE 2 ======= -->
+  <article class="case" id="case2">
+    <div class="head">
+      <div class="no">Case 2 · Classification — void (batil) vs. irregular (fasid); unlawful conjunction; s.125 CrPC</div>
+      <h3>Chand Patel v. Bismillah Begum</h3>
+      <div class="cite">1 (2008) DMC 588 (SC) · AIR 2008 SC 1915 · (2008) 4 SCC 774 &nbsp;·&nbsp; Altamas Kabir, J. (Supreme Court of India)</div>
+    </div>
+    <div class="body">
+      <div class="seg facts">
+        <span class="lbl">Facts</span>
+        <div class="inner">
+          <p><b>Bismillah Begum</b> (respondent 1) filed an application under <b>Section 125 CrPC</b> for maintenance for herself and her minor daughter <b>Taheman Bano</b> (respondent 2) against <b>Chand Patel</b> (appellant/husband) in the Court of the Judicial Magistrate, First Class, Chincholi (Crl. Misc. No. 6 of 2001). She claimed she was the <b>legally wedded wife</b>, married about eight years earlier; the marriage was <b>consummated</b> and a daughter was born two years later (Taheman Bano, in the mother’s care).</p>
+          <p><b>Crucial admission:</b> Bismillah <b>categorically admitted</b> that Chand Patel was already married to her <b>elder sister, Mashaq Bee</b>, and that <i>with the consent of the first wife</i> he married her (the younger sister); a <b>Nikahnama</b> was executed but had been <b>misplaced</b>. She also admitted he lived with <b>both</b> women under one roof and had <b>accepted and brought up Taheman Bano</b> as his daughter.</p>
+          <p>Relations later deteriorated; he began to <b>neglect</b> them. She sought maintenance @ Rs.1,000 p.m. for each. Chand Patel <b>denied the marriage</b>, sexual relations, and paternity. The <b>Magistrate</b> (prima facie accepting the marriage and paternity and finding neglect) ordered Rs.1,000 p.m. to the wife and to the daughter till adulthood. The <b>Revisional Court</b> (IV Additional District Judge, Gulbarga) dismissed both revisions, holding personal law cannot bar a Muslim from maintenance under s.125, the Magistrate cannot go into validity of marriage in s.125 proceedings, and the husband must maintain wife and child <b>until the marriage is declared null and void by a competent court</b> (relying on <i>Nanak Chand v. Chandra Kishore Aggarwal</i>, AIR 1970 SC 446, and <i>Re Hussain Saheb</i>). The <b>Karnataka High Court</b> (under s.482) found no merit and dismissed Chand Patel’s petition. He appealed to the Supreme Court.</p>
+        </div>
+      </div>
+
+      <div class="seg issue">
+        <span class="lbl">Issue</span>
+        <div class="inner">
+          <p><b>“An interesting question of law”:</b> whether a marriage performed by a Muslim with his <b>wife’s sister while his earlier marriage (with the other sister) was still subsisting</b> is <b>void in law</b> or merely <b>irregular (or voidable)</b> — even though the subsequent marriage may have been <b>consummated</b> — and, consequently, whether the wife and daughter are entitled to maintenance under <b>s.125 CrPC</b> until the marriage is declared void.</p>
+        </div>
+      </div>
+
+      <div class="seg args">
+        <span class="lbl">Arguments of both sides</span>
+        <div class="inner"><div class="vs">
+          <div class="col app">
+            <h5>For the husband (Chand Patel) — Mr. Raja Venkatappa Naik</h5>
+            <ul>
+              <li>Muslim law prohibits <b>“unlawful conjunction”</b> — a man may not marry his <b>wife’s sister during the wife’s lifetime</b>.</li>
+              <li>He denied the marriage and sexual relations and disputed paternity; such a union, even if performed, is <b>void (batil) from its very inception</b> and confers <b>no rights</b> on the woman or child.</li>
+              <li>Reliance on <i>Rameshchandra Rampratapji Daga v. Rameshwari Daga</i> (2005) 2 SCC 33 and <i>Savitaben Somabhai Bhatiya v. State of Gujarat</i> (2005) 3 SCC 636 — arguing that where the marriage itself is void ab initio, s.125 maintenance cannot be granted to a woman “not lawfully married.”</li>
+            </ul>
+          </div>
+          <div class="col resp">
+            <h5>For the wife (Bismillah Begum) — Mrs. K. Sarada Devi</h5>
+            <ul>
+              <li>In a <b>s.125 proceeding</b> the court is <b>not required to adjudicate the validity</b> of the marriage; on a prima facie view it can order maintenance of both wife and daughter.</li>
+              <li>The marriage was solemnised with the facts known to both parties and <b>with the first wife’s consent</b>; the husband lived with both, acknowledged the child, and now resorts to a technicality to avoid his statutory duty.</li>
+              <li>Until the marriage is <b>declared void by a competent court</b>, it <b>continues to subsist</b> and all rights of a valid marriage (including maintenance for the wife and minor daughter) remain available.</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="seg dec">
+        <span class="lbl">Decision &amp; reasoning (Altamas Kabir, J.)</span>
+        <div class="inner">
+          <p>Delay condoned. The answer turned on the <b>legal status</b> of the union: if <b>void</b>, no s.125 maintenance; if <b>irregular</b>, the marriage subsists for all purposes until declared void, and the wife and child are entitled to maintenance. The Court drew the analogy with <b>ss.11 (void) and 12 (voidable)</b> of the Hindu Marriage Act, 1955 and <i>Yamunabai v. Anantrao</i> (AIR 1988 SC 644): s.11 marriages are <b>void ipso jure</b> from inception, whereas voidable marriages subsist until annulled by a decree.</p>
+          <p><b>Muslim law position (Mulla §§260–267):</b> paragraphs 260–262 (consanguinity, affinity, fosterage) are <b>complete/perpetual prohibitions → void (batil)</b>. But <b>§263 “Unlawful conjunction”</b> expressly provides: <i>“A man may not have at the same time two wives who are so related… as for instance two sisters, or aunt and niece. <b>The bar of unlawful conjunction renders a marriage irregular, not void.</b>”</i></p>
+          <p>The Court then traced the case-law conflict:</p>
+          <ul>
+            <li><b>Calcutta HC — <i>Aizunnissa v. Karimunissa</i> (1895) 23 Cal 130:</b> marriage with a wife’s sister during the wife’s lifetime is <b>void</b>; children illegitimate, no inheritance.</li>
+            <li><b>Bombay HC — <i>Tajbi Abalal Desai v. Mowla Alikhan Desai</i> (1917) 39 IC:</b> <b>differed</b>, and relying on the <b>Fatawa-i-Alamgiri</b> held such marriage is <b>irregular (fasid)</b>, not void. A <i>permanently</i> prohibited woman’s marriage is void and has no legal consequence; but a <i>temporarily</i> prohibited woman’s marriage, if consummated, <b>may have legal consequences</b> — the bar can be removed by the <b>death of the first wife or by divorce</b>, making the second sister lawful. The Court noted the Fatawa-i-Alamgiri statement does not conflict with the Quran, harmonises with the law’s development, and has the support of <b>Baillie, Ameer Ali, Tyabji and Abdur Rahim</b>; only the single Calcutta judgment stood against it.</li>
+            <li>The <b>Oudh Chief Court (<i>Kaniza v. Hasan Ahmad Khan</i>, 1925), Lahore HC (<i>Taliamand v. Muhammad Din</i>, 1930) and Madras HC (<i>Rahiman Bibi v. Mahboob Bibi</i>, 1937)</b> all <b>followed the Bombay view</b> and held the Calcutta decision incorrect.</li>
+          </ul>
+          <p>The Court quoted <b>Mulla §264</b> (void vs. irregular — the five irregular categories including “a woman so related to the wife that if one had been male they could not intermarry”) and <b>§267</b> (effects of fasid marriage: terminable by either party; <b>no effect before consummation</b>; after consummation — (i) wife gets <b>dower, proper or specified whichever is less</b>; (ii) iddat of <b>three courses</b>; (iii) <b>issue is legitimate</b>; but <b>no mutual inheritance</b> between spouses).</p>
+          <p><b>Held:</b> “Since a marriage which is temporarily prohibited may be rendered lawful once the prohibition is removed, such a marriage is… <b>irregular (fasid) and not void (batil)</b>.” The bar of <b>unlawful conjunction (jama bain-al-mahramain) renders a marriage irregular and not void</b>. Under Hanafi law (Indian Muslims), an irregular marriage <b>continues to subsist till terminated in accordance with law</b>, and the wife and children are entitled to maintenance under <b>s.125 CrPC</b>. As the marriage had not been declared void by any competent forum, it continued to subsist.</p>
+          <p><b>Result:</b> appeal <b>dismissed</b>; the Karnataka High Court and Magistrate’s orders affirmed; interim stay vacated; Chand Patel directed to pay all <b>arrears within six months</b> and current maintenance from March 2008.</p>
+        </div>
+      </div>
+
+      <div class="seg prin">
+        <span class="lbl">Principle evolved / significance</span>
+        <div class="inner">
+          <ul>
+            <li><b>Supreme Court settled the law for India:</b> marriage with a <b>wife’s sister</b> (or within the bar of unlawful conjunction) during the subsistence of the first marriage is <b>irregular (fasid), not void (batil)</b>, under Hanafi Muslim law — approving the Bombay/Fatawa-i-Alamgiri view and rejecting the Calcutta <i>Aizunnissa</i> view.</li>
+            <li>The test: a <b>perpetual/absolute</b> prohibition (consanguinity, affinity, fosterage, polyandry) → <b>void</b>; a <b>temporary/relative/accidental</b> bar that <b>can be removed</b> (death/divorce of the obstacle wife, expiry of iddat, conversion, divorce of a fifth wife, re-attestation before witnesses) → <b>irregular</b>.</li>
+            <li>An irregular (consummated) marriage produces legal effects — <b>legitimate children</b>, dower (lesser amount), iddat — though <b>no mutual inheritance</b> between spouses.</li>
+            <li><b>Social-welfare dimension:</b> a marriage merely irregular or voidable <b>subsists until set aside/declared void by a competent court</b>; hence the wife and children remain entitled to <b>s.125 CrPC maintenance</b>. A Magistrate in s.125 proceedings does not finally adjudicate marital validity, and personal law cannot override the statutory obligation of maintenance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ======= CASE 3 ======= -->
+  <article class="case" id="case3">
+    <div class="head">
+      <div class="no">Case 3 · Talaq (forms) — validity of triple talaq given in jest/without intention; acknowledgment &amp; presumption of marriage</div>
+      <h3>Saiyid Rashid Ahmad v. Mt. Anisa Khatun (Anis Fatima)</h3>
+      <div class="cite">AIR 1932 PC 25 · (1932) 59 IA 21 · 54 All 46 &nbsp;·&nbsp; Lord Thankerton (Privy Council)</div>
+    </div>
+    <div class="body">
+      <div class="seg facts">
+        <span class="lbl">Facts</span>
+        <div class="inner">
+          <p>Appeal from a decree of the <b>Allahabad High Court (1 Feb 1927)</b> which reversed a decree of the <b>Subordinate Judge of Bijnor at Moradabad (15 Dec 1923)</b>. The dispute concerned <b>succession to the estate of Ghiyas Uddin</b>, a Mahomedan who died on <b>4 April 1920</b> leaving considerable moveable and immoveable property.</p>
+          <p>The <b>appellants (plaintiffs)</b> were a brother and sister of Ghiyas Uddin who, with pro forma defendants (his other relations), would be his heirs under Mahomedan law <i>unless</i> respondents 1–6 established their claim to be his <b>widow and legitimate children</b>. The controversy turned on <b>four stages</b> in the matrimonial history of <b>Anis Fatima</b> (respondent 1):</p>
+          <ol>
+            <li>Her <b>marriage to Manzur Husain in 1901</b>;</li>
+            <li>Her alleged <b>divorce by Manzur Husain in early 1905</b>;</li>
+            <li>Her <b>marriage to Ghiyas Uddin on 28 Aug 1905</b>; and</li>
+            <li>Her alleged <b>divorce by Ghiyas Uddin on/about 13 Sept 1905</b>.</li>
+          </ol>
+          <ul>
+            <li><b>Stage 1–2:</b> The 1901 marriage was admitted; respondents argued it was invalid because both parties were minors, but the Subordinate Judge (and High Court) held it valid — Anis Fatima was then adult, and Manzur’s marriage was contracted through his mother/guardian. As to Manzur’s alleged 1905 divorce: Manzur was the sole witness; the Subordinate Judge rejected his evidence and held he had not reached the <b>age of discretion</b>; the High Court accepted the divorce and found he was of age.</li>
+            <li><b>Stage 3:</b> The Subordinate Judge held the Ghiyas Uddin marriage <b>not proved</b>; the High Court reversed (finding it proved), and the appellants acquiesced in that finding — merely contending the marriage was invalid if she were still Manzur’s undivorced wife.</li>
+            <li><b>Stage 4 (decisive):</b> The appellants’ case was that on <b>13 Sept 1905</b> Ghiyas Uddin pronounced the <b>triple talaq</b> in the presence of witnesses (though in the wife’s absence); she received <b>Rs.1,000 towards her dower</b> the same day (a registered receipt was produced), and a <b>talaknama</b> (deed of divorce) dated 17 Sept 1905 narrated the divorce. Respondents denied the divorce and challenged its validity, contending the Rs.1,000 was <b>prompt dower</b> and the deed was not genuine/written by him. Both lower courts <b>concurrently found</b> Ghiyas Uddin did pronounce the triple talaq and the deed was genuine.</li>
+          </ul>
+          <p>The <b>Subordinate Judge</b> held Ghiyas Uddin <b>irrevocably divorced</b> Anis Fatima — she was not his wife at his death in 1920, and the children (admittedly born <b>after</b> the divorce date) were <b>not legitimate</b>. The <b>High Court</b> reversed, holding the divorce was <b>fictitious and inoperative</b> — a <b>mock ceremony</b> performed to satisfy Ghiyas Uddin’s father, without any real intention that it take effect.</p>
+        </div>
+      </div>
+
+      <div class="seg issue">
+        <span class="lbl">Issues</span>
+        <div class="inner">
+          <ol>
+            <li>Whether the <b>triple talaq</b> pronounced by Ghiyas Uddin in September 1905 constituted an <b>immediately effective, irrevocable divorce</b> (despite being pronounced in the wife’s absence and alleged to be a mere mock/without genuine intention).</li>
+            <li>Whether a talaq pronounced <b>in jest or under compulsion, or without mental intention to make it real</b>, is valid under Sunni (Hanafi) law.</li>
+            <li>Whether, after triple talaq, the husband’s subsequent <b>cohabitation/acknowledgment</b> of the children as legitimate for ~15 years could revive the marriage or confer legitimacy — and whether the <b>presumption of marriage from acknowledgment</b> could be raised despite the legal bar (that after triple talaq the parties cannot remarry until she marries another who then divorces her/dies — <i>halala</i>).</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="seg args">
+        <span class="lbl">Arguments of both sides</span>
+        <div class="inner"><div class="vs">
+          <div class="col app">
+            <h5>For the appellants (husband’s brother &amp; sister)</h5>
+            <ul>
+              <li>The triple talaq was in fact pronounced on 13 Sept 1905 (concurrent findings), Rs.1,000 dower was paid against a registered receipt, and a genuine talaknama was executed.</li>
+              <li>A triple talaq in the <b>bidaat</b> form operates as an <b>immediate and irrevocable dissolution</b> irrespective of iddat, intention or the wife’s presence.</li>
+              <li>Once the divorce is proved, later cohabitation/acknowledgment cannot undo it; children born after the divorce are illegitimate; the widow and children take no share, so the estate devolves on the husband’s siblings.</li>
+            </ul>
+          </div>
+          <div class="col resp">
+            <h5>For the respondents (claimed widow &amp; children)</h5>
+            <ul>
+              <li>The divorce was a <b>fictitious mock ceremony</b> performed only to satisfy Ghiyas Uddin’s father, without intention that it be real — hence inoperative (the High Court accepted this).</li>
+              <li>For about <b>15 years after</b> the alleged divorce, Ghiyas Uddin treated Anis Fatima as his wife and the children as legitimate; the husband’s brothers also admitted their status.</li>
+              <li>The <b>acknowledgment of legitimacy</b> raised a <b>presumption of marriage</b> (relying on the Board’s earlier decision in <i>Habibur Rahman Chowdhury v. Altaf Ali Chowdhury</i>, AIR 1922 PC 159) — i.e., that she must in the interval have married another who died/divorced her and then remarried Ghiyas Uddin — and the burden lay on the appellants to displace that presumption.</li>
+            </ul>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="seg dec">
+        <span class="lbl">Decision &amp; reasoning (Lord Thankerton)</span>
+        <div class="inner">
+          <p>Counsel were asked to argue Stage 4 first, since it could dispose of the appeal. Their Lordships held the <b>Subordinate Judge was right</b> and dealt with that stage alone.</p>
+          <p>The parties were <b>Sunni Hanafi</b>. Applying Sir R.K. Wilson’s <i>Digest of Anglo-Mahomedan Law</i> (5th edn., p.136), talaq may be <b>irrevocable (bain)</b> or <b>revocable (raja)</b>. A talaq bain effects an immediate and complete dissolution and may be pronounced by clear words addressed to the wife: (a) once followed by abstinence during iddat — <b>ahsan</b> (best); (b) three times during successive intervals of purity — <b>hasan</b> (good); (c) three times at shorter intervals or in immediate succession; or (d) once in words clearly intending immediate irrevocability — (c) and (d) are <b>bidaat (sinful)</b> but <b>legally valid</b> among Sunni lawyers.</p>
+          <div class="note"><div class="h">The words used</div>Ghiyas Uddin repeated three times (even though the wife was absent): <i>“I divorce Anisa Khatun for ever and render her haram for me.”</i> These words clearly showed an intention to dissolve the marriage — the <b>fourth (bidaat) form</b>. The talaknama confirmed the three divorces were given <b>“in the abominable form” (bidaat)</b>. The High Court had <b>erred in treating it as ahsan</b> rather than bidaat. The case was distinguished from <i>Farzund Hossein v. Janu Bibee</i> (1878) 4 Cal 588 because here the talaq was <b>addressed to the wife by name</b>.</div>
+          <p><b>Legal effect:</b> In the <b>bidaat</b> form the divorce <b>becomes irrevocable at once, irrespective of iddat</b> (Baillie’s Digest, 2nd edn., p.206). It is <b>not necessary that the wife be present</b> when talaq is pronounced (her right to alimony may continue only until she is informed). Crucially:</p>
+          <blockquote>“A talak actually pronounced under compulsion or in jest is valid and effective.” The validity and effectiveness of the divorce would not be affected by Ghiyas Uddin’s <b>mental intention that it should not be a genuine divorce</b>, as such a view is contrary to all authority.</blockquote>
+          <p>On the <b>presumption from acknowledgment</b>: the Board found it difficult to treat the contention as serious, because the <i>Habibur Rahman</i> dicta <b>directly negative</b> it. Acknowledgment of a son as legitimate raises a presumption of marriage only if it is <b>not impossible on its face</b> — e.g., not where the mother is the wife of another or within prohibited degrees, which would make the issue the offspring of adultery/incest. Being a <b>presumption of fact (not juris et de jure)</b>, it can be rebutted by contrary proof. Here the <b>legal bar to remarriage</b> created by the triple talaq (she could not lawfully remarry Ghiyas Uddin until she had married another and that husband had died or divorced her) equally <b>prevented the presumption from being raised</b>. Respondents would have had to <b>prove the removal of that bar</b> — an intervening marriage to another and its termination before the children’s birth and acknowledgment — which they did not. Later cohabitation and treatment for 15 years could <b>not</b> undo an established divorce or confer the claimed status.</p>
+          <p><b>Result:</b> the appeal was <b>allowed</b>; the High Court’s decree <b>reversed</b> and the <b>Subordinate Judge’s decree restored</b> — i.e., the triple talaq was valid and effective; Anis Fatima was <b>not</b> Ghiyas Uddin’s widow and the children born after the divorce were <b>not</b> his legitimate heirs; the estate devolved on his siblings.</p>
+        </div>
+      </div>
+
+      <div class="seg prin">
+        <span class="lbl">Principle evolved / significance</span>
+        <div class="inner">
+          <ul>
+            <li><b>Forms of talaq recognised under Hanafi law:</b> ahsan and hasan (approved) and the triple/immediate <b>bidaat</b> forms — the latter are theologically <b>sinful but legally valid</b> and operate as <b>immediate, irrevocable dissolution</b>, independent of iddat and of the wife’s presence.</li>
+            <li><b>Subjective intention is irrelevant to a talaq once formally pronounced:</b> a talaq uttered under <b>compulsion, in jest, or in anger</b> — or as a mere “mock” ceremony — is <b>valid and effective</b> if the words clearly import divorce. (This rule is consistent with the Kerala HC observations in <i>Mohammed Haneefa v. Pathummal Beevi</i> and Pathayi v. Moideen, but was later constitutionally re-examined in <i>Shayara Bano v. Union of India</i> (2017), where the Supreme Court struck down <b>instant triple talaq (talaq-ul-biddat)</b> as unconstitutional, now codified in the Muslim Women (Protection of Rights on Marriage) Act, 2019.)</li>
+            <li><b>Presumption of marriage/legitimacy from acknowledgment has limits:</b> it is a rebuttable presumption of fact and cannot be raised where a <b>legal bar</b> (such as the triple-talaq bar to immediate remarriage, or prohibited degrees) makes the alleged marriage impossible; the party relying on it must plead and prove the removal of the bar (an intervening valid marriage).</li>
+            <li>After an irrevocable triple talaq, subsequent <b>cohabitation and acknowledgment cannot revive</b> the dissolved marriage or legitimate children born after the divorce absent a lawful <i>halala</i> marriage.</li>
+          </ul>
+          <p class="small"><b>Cross-reference (DU Unit VIII):</b> the strict common-law view that a bald plea of divorce in pleadings/affidavit could itself operate as divorce (Mulla §310; A.P. HC in (1975) 1 APLJ 20) was later rejected by the Supreme Court in <b><i>Shamim Ara v. State of U.P.</i>, 2002 Cr LJ 4726 (SC)</b>, which required <b>reasonable cause and proof</b> of a valid talaq and its communication; the present case (Rashid Ahmad) remains authority for the proposition that <b>where a talaq is in fact proved and the words clearly express divorce</b>, the husband’s secret lack of intention does not save the marriage.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ==================== PYQs ==================== -->
+<section id="pyqs" class="card">
+  <h2 class="sec">DU SEMESTER PYQs — WITH MODEL ANSWERS</h2>
+  <p class="lead">Family Law–I (LB-105), LL.B. Term I, Faculty of Law, University of Delhi. Questions below are framed on the Unit VI–VII syllabus and the DU case-material pattern (20-mark essay / 10-mark short-note / problem questions). Model answers are exam-ready and cite the DU-prescribed cases and Mulla paragraphs.</p>
+
+  <table class="tight">
+    <tr><th>Topic</th><th>Question type</th><th>How often it is tested</th><th>Lead cases / provision</th></tr>
+    <tr><td>Nature &amp; essentials of Nikah (conditions of validity)</td><td>20-mark essay / problem</td><td><b>Very high</b> — recurring favourite</td><td><i>Ghulam Kubra Bibi</i>; Mulla §250–252</td></tr>
+    <tr><td>Void (batil) vs. irregular (fasid) — classification</td><td>20-mark essay / 10-mark note / problem</td><td><b>Very high</b></td><td><i>Chand Patel</i>; Mulla §253–267</td></tr>
+    <tr><td>Dower (Mahr) — kinds, prompt/deferred, widow’s lien</td><td>20-mark essay / 10-mark note</td><td><b>High</b></td><td>Mulla §285–302; <i>Hamira Bibi</i>; <i>Maina Bibi</i></td></tr>
+    <tr><td>Muta marriage</td><td>10-mark short note</td><td>High</td><td>Mulla §269</td></tr>
+    <tr><td>Guardianship in marriage (jabar) &amp; option of puberty</td><td>10-mark note / problem</td><td>Medium–high</td><td>Mulla §270–276; DMMA 1939 s.2(vii)</td></tr>
+    <tr><td>Triple talaq / valid talaq &amp; intention; presumption of marriage</td><td>Problem / short note</td><td>Medium</td><td><i>Rashid Ahmad</i>; <i>Shamim Ara</i>; <i>Shayara Bano</i></td></tr>
+    <tr><td>Sources &amp; schools of Muslim law</td><td>10-mark note / short Q</td><td>Medium</td><td>Quran, Sunnah, Ijma, Qiyas; Shariat Act 1937</td></tr>
+    <tr><td>Unlawful conjunction; iddat; witnesses</td><td>Short notes / problem</td><td>Medium</td><td>Mulla §254–263; <i>Chand Patel</i>; <i>Ghulam Kubra</i></td></tr>
+  </table>
+
+  <!-- PYQ 1 -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.1 — Long Answer (20 marks)</div>
+    <div class="qt">“Muslim marriage is a civil contract rather than a sacrament.” Discuss the nature of Nikah and explain in detail the essential conditions of a valid Muslim marriage.</div></div>
+    <div class="ans">
+      <div class="ansplan"><b>Answer plan:</b> Intro (definition &amp; nature — contract vs. ibadat/muamlat) → essentials: (1) capacity/puberty, (2) free consent, (3) ijab-wa-qabul + witnesses, (4) no impediments, (5) dower → no ceremony/registration required → case law: <i>Ghulam Kubra Bibi</i> → conclusion.</div>
+      <h5>Introduction &amp; nature</h5>
+      <p>Marriage (<i>Nikah</i>) is defined by <b>Mulla (§250)</b> as <i>“a contract which has for its object the procreation and the legalising of children.”</i> <b>Justice Mahmood</b> observed it is <b>not a sacrament but a civil contract</b> whose rights and obligations arise immediately and do not depend on payment of dower. Yet <b>Abdur Rahim</b> and the modern view treat it as a blend of <b><i>ibadat</i> (worship)</b> and <b><i>muamlat</i> (worldly dealings)</b> — it is the <b>Sunnah of the Prophet</b> and also a contract requiring free consent. Its objects are to legalise (i) the sexual relationship and (ii) procreation/legitimisation of children; intercourse outside marriage is <i>zina</i>.</p>
+      <h5>Essential conditions of validity</h5>
+      <ol>
+        <li><b>Capacity (Mulla §251):</b> every Muslim of <b>sound mind</b> who has <b>attained puberty</b> may contract marriage. Puberty is <b>presumed at 15</b> (<i>Atika Begum v. Mohammed Ibrahim</i>); the Indian Majority Act, 1875 does not apply to marriage, dower and divorce. Minors/lunatics may be married by guardians (<i>jabar</i>).</li>
+        <li><b>Free consent:</b> consent must not be induced by force, fraud or compulsion; a sane adult’s marriage without consent is void, and consummation against the woman’s will does not validate it. (The Hanafi school treats a coerced contract as ratifiable, but absent real consent it is not binding; Shafei/Maliki require the adult bride’s consent through a <i>wali</i>.)</li>
+        <li><b>Proposal and acceptance (ijab-wa-qabul) — §252:</b> a proposal by/on behalf of one party and acceptance by/on behalf of the other, <b>both at one meeting</b> (one majlis), in clear, unambiguous words (oral or written). A future promise to marry is not a proposal. In <b>Sunni</b> law it must be in the <b>presence and hearing of two male, or one male and two female, sane, adult Muslim witnesses</b>; absence of witnesses makes the marriage <b>irregular (fasid)</b>, not void. Under <b>Shia</b> law witnesses are not required.</li>
+        <li><b>No legal impediment:</b> no absolute bar (consanguinity, affinity, fosterage, polyandry → void) or uncured relative bar (unlawful conjunction, fifth wife, iddat, religion, no witnesses → irregular).</li>
+        <li><b>Dower (Mahr):</b> an obligation on the husband as a mark of respect to the wife; it is not a Contract-Act “consideration” and the marriage is valid even if dower is fixed later or not at all (proper dower then applies).</li>
+      </ol>
+      <p><b>Neither writing nor any religious ceremony is essential</b>, and registration is not a condition of validity (though it may be proved by Nikahnama, cohabitation or acknowledgment).</p>
+      <h5>Case law — <i>Ms. Ghulam Kubra Bibi v. Mohd. Shafi Mohd. Din, AIR 1940 Pesh. 2</i></h5>
+      <p>The husband sued for restitution of conjugal rights. The Mullah admitted he read the nikah at the grandfather’s instance and that <b>no one was sent to consult the bride</b>; the alleged witnesses merely said they “were the nikah witnesses” without particulars and were interested (a neighbour and a long-time associate). Mir Ahmad J. described the proper pardah procedure (an agent + two witnesses obtaining the adult bride’s authorisation within the witnesses’ hearing, then offer/acceptance before the Mullah) and held the <b>vague assertion of “two witnesses” had no value</b>. Although the girl was 17 (an adult — majority for marriage being puberty/presumed 15), her own consent/authorisation was never proved, and even a guardian-given minor’s nikah requires two adult witnesses. <b>No valid marriage was proved; the restitution suit was dismissed with costs.</b> The decision shows that the <b>essentials must be strictly proved</b> — formal performance by a Qazi is not enough.</p>
+      <h5>Conclusion</h5>
+      <p>Nikah is thus a <b>consensual civil contract with religious and social overtones</b>. Where capacity, free consent, offer/acceptance in one meeting with competent witnesses (Sunni), absence of impediments and dower concur, the marriage is <i>sahih</i> and produces full legal effects; a defect going to an absolute bar makes it <i>batil</i>, while a curable formal defect makes it <i>fasid</i>.</p>
+    </div>
+  </article>
+
+  <!-- PYQ 2 -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.2 — Long Answer (20 marks) / Problem</div>
+    <div class="qt">Distinguish between a void (batil) and an irregular (fasid) marriage under Muslim law. “A man may not marry two sisters at the same time.” Explain with the help of case law whether such a marriage is void or irregular.</div></div>
+    <div class="ans">
+      <div class="ansplan"><b>Answer plan:</b> Three-fold classification (sahih/batil/fasid; Shia has only two) → definition of batil (perpetual bar: consanguinity, affinity, fosterage, polyandry) → definition of fasid (temporary/curable bar: no witnesses, fifth wife, iddat, religion, unlawful conjunction) → effects table → <i>Chand Patel</i> (wife’s sister = irregular) → conflict of High Courts resolved by SC → conclusion.</div>
+      <h5>Classification (Mulla §253, §264)</h5>
+      <p>A Muslim marriage is <b>valid (<i>sahih</i>)</b>, <b>void (<i>batil</i>)</b>, or <b>irregular (<i>fasid</i>)</b>. A <b>void</b> marriage is “unlawful in itself, the prohibition being <b>perpetual and absolute</b>” — e.g. consanguinity (§260), affinity (§261), fosterage (§262), and polyandry (§256). It is <b>no marriage at all</b>, creates no civil rights, and the offspring are <b>illegitimate</b> (§266). An <b>irregular</b> marriage is “not unlawful in itself, but unlawful <b>for something else</b>”, where the prohibition is <b>temporary or relative</b> or the irregularity is accidental — (a) without witnesses; (b) fifth wife; (c) during iddat; (d) difference of religion; (e) unlawful conjunction. It is <b>curable</b> and, once consummated, yields limited legal effects (§267): the wife gets dower (proper or specified, <b>whichever is less</b>), iddat of three courses, and the <b>children are legitimate</b>; but <b>no mutual inheritance</b> arises between spouses. Either party may terminate it by words showing intention to separate.</p>
+      <table class="tight">
+        <tr><th>Point</th><th>Batil (void)</th><th>Fasid (irregular)</th></tr>
+        <tr><td>Prohibition</td><td>Perpetual/absolute</td><td>Temporary/relative/accidental</td></tr>
+        <tr><td>Cure</td><td>Impossible</td><td>Possible (remove the bar)</td></tr>
+        <tr><td>Legal existence</td><td>None ab initio</td><td>Subsists until terminated; no effect before consummation</td></tr>
+        <tr><td>Children</td><td>Illegitimate</td><td>Legitimate (after consummation)</td></tr>
+        <tr><td>Dower / iddat</td><td>None</td><td>Dower (lesser); iddat 3 courses</td></tr>
+        <tr><td>Shia law</td><td>Recognised</td><td><b>Not recognised</b> — treated as void</td></tr>
+      </table>
+      <h5>Unlawful conjunction &amp; two sisters — <i>Chand Patel v. Bismillah Begum, (2008) 4 SCC 774</i></h5>
+      <p><b>§263 (Unlawful conjunction):</b> a man may not simultaneously have two wives so related by consanguinity/affinity/fosterage that if one were male they could not intermarry — e.g. <b>two sisters, or aunt and niece</b>. <b>“The bar of unlawful conjunction renders a marriage irregular, not void.”</b> In <i>Chand Patel</i>, a Muslim married his wife’s <b>younger sister</b> during the subsistence of the first marriage (with the first wife’s consent), lived with both, and had a daughter. When he denied maintenance, the Supreme Court (Altamas Kabir J.) resolved the conflict: the <b>Calcutta HC in <i>Aizunnissa v. Karimunissa</i> (1895)</b> had held such marriage <b>void</b> and the issue illegitimate; but the <b>Bombay HC in <i>Tajbi Abalal Desai</i> (1917)</b>, relying on the <b>Fatawa-i-Alamgiri</b> and supported by <b>Baillie, Ameer Ali, Tyabji and Abdur Rahim</b>, held it <b>irregular (fasid)</b> — the bar is <b>temporary</b> because it can be removed by the <b>death or divorce of the first wife</b>. The Oudh, Lahore and Madras High Courts agreed with Bombay.</p>
+      <p><b>Held:</b> “Since a marriage which is temporarily prohibited may be rendered lawful once the prohibition is removed, such a marriage is <b>irregular (fasid) and not void (batil)</b>.” An irregular marriage <b>continues to subsist until declared void by a competent court</b>; hence the wife and daughter were entitled to <b>maintenance under s.125 CrPC</b>.</p>
+      <h5>Conclusion</h5>
+      <p>The decisive test is whether the prohibition is <b>perpetual/incurable</b> (void) or <b>temporary/curable</b> (irregular). Marriage with two sisters at once is within the bar of unlawful conjunction and is, for Hanafi Muslims in India, <b>irregular — not void</b>; it becomes lawful if the obstacle wife dies or is divorced, and until set aside it supports maintenance and legitimacy of children.</p>
+    </div>
+  </article>
+
+  <!-- PYQ 3 -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.3 — Long Answer (20 marks)</div>
+    <div class="qt">Define Dower (Mahr). Discuss its different kinds and explain the widow’s right to retain possession of her husband’s estate in lieu of dower.</div></div>
+    <div class="ans">
+      <div class="ansplan"><b>Answer plan:</b> Definition (§285) — not Contract-Act consideration → kinds: specified vs proper; prompt vs deferred; (confirmation §289A) → amount (10 dirhams; no Shia minimum) → prompt dower as defence to restitution (§293) → dower as unsecured debt; heirs’ proportionate liability → widow’s right of retention/“lien” (§296–302; Hamira Bibi; Maina Bibi) → conclusion.</div>
+      <h5>Definition</h5>
+      <p><b>Mulla §285:</b> <i>“Mahr or dower is a sum of money or other property which the wife is entitled to receive from the husband in consideration of the marriage.”</i> It is an <b>obligation imposed on the husband as a mark of respect</b>; “consideration” is <b>not</b> used in the Contract Act sense (Mahmood J., <i>Abdul Kadir v. Salima</i>). It is not bride-price — a post-nuptial dower agreement is valid — and the wife may voluntarily relinquish it with free consent. High dower often restrains arbitrary divorce; excessiveness is no defence.</p>
+      <h5>Kinds of dower</h5>
+      <ul>
+        <li><b>Specified dower (Mahr-i-musamma, §286):</b> the amount settled by the parties (before/at/after marriage, §287); may be any sum but not <b>less than 10 dirhams</b> (Sunni; no minimum in Shia). The court awards the whole contracted sum. A father may contract it for his minor son (binding on the son; §288).</li>
+        <li><b>Proper/customary dower (Mahr-i-misl, §289):</b> payable if none is fixed — even on an express stipulation not to claim — fixed by reference to the dower of the female relations of the wife’s father’s family, her status, the husband’s means, etc. (Shia cap: 500 dirhams).</li>
+        <li><b>Prompt dower (Mu’ajjal, §290):</b> payable <b>on demand</b>, before or after consummation. The wife may refuse cohabitation/conjugal society until it is paid; in a suit for restitution <b>before</b> intercourse non-payment is a <b>complete defence</b>, and after free-consent intercourse the decree is restitution <b>conditional on payment</b> (§293).</li>
+        <li><b>Deferred dower (Mu’wajjal):</b> payable on <b>dissolution by death or divorce</b>. If the allocation is unspecified, Shia law treats the whole as prompt; Sunni law divides it (custom/status), while the Madras view presumes the whole prompt.</li>
+      </ul>
+      <p><b>Confirmation (§289A):</b> dower vests on <b>consummation, valid retirement (khilwat-e-sahiha), or death of either party</b> (Shia: consummation or death, not valid retirement).</p>
+      <h5>Widow’s right of retention / “lien” (§296–302)</h5>
+      <p>Dower ranks as an <b>unsecured debt</b> payable out of the husband’s estate; the wife has <b>no automatic charge</b> (though one may be created by agreement/decree), and heirs are liable only <b>rateably</b> to the extent of their shares (§294–295). However, if the widow <b>lawfully and without force or fraud</b>, with the express/implied consent of the husband or his heirs, obtains possession of his estate to satisfy her dower, she may <b>retain possession until the dower is paid</b>. In <i><b>Hamira Bibi v. Zubaida Bibi</b></i> the Privy Council recognised this as the <b>only creditor’s lien of Muslim law</b>. Characteristics: (i) it is <b>not analogous to a mortgage</b> — possession is not conferred by agreement but by law once peaceably acquired (<i><b>Maina Bibi v. Chaudhri Vakil Ahmad</b></i>); (ii) it gives <b>no title</b> and no right to alienate (an alienation binds only her own share); (iii) it arises only on <b>death or divorce</b>, not during the marriage; (iv) she must <b>account</b> for rents/profits but is allowed interest as compensation; and (v) if she gives up possession she loses the right to retain.</p>
+      <h5>Conclusion</h5>
+      <p>Dower is the wife’s <b>secured-in-equity financial safeguard</b> — a debt she can claim promptly or on dissolution, and which (with lawful possession) underpins a unique right to retain the husband’s estate until satisfied.</p>
+    </div>
+  </article>
+
+  <!-- PYQ 4 -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.4 — Short Note (10 marks)</div>
+    <div class="qt">Write a short note on Muta marriage.</div></div>
+    <div class="ans">
+      <p><b>Muta</b> (literally “enjoyment”) is a <b>temporary marriage</b> for a <b>fixed period</b> in consideration of <b>dower</b>, recognised <b>only by the Shia (Ithna Ashari) school</b>; Sunni law does not recognise it (Mulla §269). It is virtually obsolete in India.</p>
+      <p><b>Essentials:</b> (1) parties must have attained puberty and be of sound mind; (2) free consent; (3) the ordinary marriage formalities; (4) parties not within prohibited degrees; (5) declaration and acceptance; (6) a <b>fixed term</b> (a day to years) and (7) a <b>specified dower</b> — both are mandatory; a fixed term with no dower is <b>void</b>, while specified dower with no fixed term operates as a <b>permanent</b> marriage. A Shia male may contract Muta with a Muslim, Christian, Jewess or even a fire-worshipper (but no other faith), and with any number; a Shia female may not contract Muta with a non-Muslim.</p>
+      <p><b>Incidents:</b> it is dissolved <b>ipso facto on expiry of the term</b>; there is <b>no divorce</b>, though the husband may end it early by <b><i>hiba-i-muddat</i> (“gift of the term”)</b> without the wife’s consent. There are <b>no mutual inheritance rights</b> between the spouses, but children conceived during the term are <b>legitimate</b> and inherit from both parents (cohabitation beyond the term raises an inference of extension). Consummated Muta gives <b>full dower</b>; unconsummated gives <b>half</b>; the wife leaving early suffers proportionate deduction. Iddat is two courses (four months and ten days on the husband’s death). A Muta wife gets <b>no maintenance under Shia personal law</b> but may claim under <b>s.125 CrPC</b>.</p>
+    </div>
+  </article>
+
+  <!-- PYQ 5 -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.5 — Short Note / Problem (10 marks)</div>
+    <div class="qt">Write a note on guardianship in marriage (jabar) and the “option of puberty” (khyar-ul-bulugh). How is a minor’s marriage affected under the Dissolution of Muslim Marriages Act, 1939?</div></div>
+    <div class="ans">
+      <p>A minor (one who has not attained puberty) cannot contract marriage personally but may be contracted by a <b>guardian (<i>wali</i>)</b>. The order of guardianship (Mulla §271) is: <b>father → paternal grandfather (however high) → brother and other male paternal relations</b> (in order of residuaries) → <b>mother, maternal uncle/aunt</b> and other maternal relations → the <b>ruling authority/Qazi</b>. Shia law recognises only the father and paternal grandfather.</p>
+      <p>A marriage contracted by the <b>father or paternal grandfather</b> is <b>valid and binding</b> and cannot be repudiated on puberty <b>unless</b> the guardian acted <b>fraudulently, negligently or to the minor’s manifest disadvantage</b> (§272). Where the marriage is brought about by <b>any other guardian</b>, the minor has the <b>option of puberty (khyar-ul-bulugh)</b> to repudiate on attaining puberty (§274); a female loses it by unreasonable delay after being informed, a male by express/implied ratification (dower payment, cohabitation). Repudiation must ordinarily be <b>confirmed by a court</b> (§275), and consummation does not validate a void marriage.</p>
+      <p><b>DMMA, 1939, s.2(vii):</b> the Act removed restrictions on the option even where the father/grandfather arranged the marriage. A wife may obtain dissolution on proving (1) the marriage was <b>not consummated</b>; (2) it took place <b>before she attained 15 years</b>; and (3) she <b>repudiated it before attaining 18 years</b>. Lunatics’ marriages are analogous, the option arising on recovery of reason (§276).</p>
+    </div>
+  </article>
+
+  <!-- PYQ 6 - Problem based on cases -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.6 — Problem Questions (with model solutions)</div>
+    <div class="qt">Attempt the following problems, citing the DU-prescribed cases.</div></div>
+    <div class="ans">
+      <h5>Problem (a)</h5>
+      <p><i>A, a Muslim male, sues B for restitution of conjugal rights. The Qazi admits he performed the nikah at the instance of B’s grandfather and that no one was sent to obtain B’s consent; the two “witnesses” merely state they attended, give no details, and are A’s neighbour and employee. B was 17 at the time. Decide.</i></p>
+      <p><b>Solution:</b> Following <b><i>Ghulam Kubra Bibi v. Mohd. Shafi (AIR 1940 Pesh 2)</i></b>, no valid marriage is proved. B, being 17, had attained majority for marriage (puberty, presumed 15; Majority Act inapplicable), so her <b>own consent/authorisation</b> was essential; the Qazi’s admission that no one consulted her is fatal, and the vague, interested witness evidence does not prove the required offer/acceptance before two competent witnesses at one meeting. Even a guardian-given minor’s nikah requires two adult witnesses. The <b>restitution suit must be dismissed</b>.</p>
+
+      <h5>Problem (b)</h5>
+      <p><i>A Muslim male, already married to X, marries X’s younger sister Y with X’s consent, lives with both and acknowledges a daughter by Y. On neglect, Y claims maintenance under s.125 CrPC. The husband argues the marriage is void. Decide.</i></p>
+      <p><b>Solution:</b> This is the bar of <b>unlawful conjunction</b> (Mulla §263). Per <b><i>Chand Patel v. Bismillah Begum (2008)</i></b>, marriage with a wife’s sister during the first wife’s lifetime is <b>irregular (fasid), not void (batil)</b>, because the bar is temporary (it ends on X’s death or divorce) and is curable. The marriage was consummated and the child acknowledged; an irregular marriage <b>subsists until declared void by a competent court</b>. Y and the daughter are <b>entitled to s.125 CrPC maintenance</b>; the Magistrate does not finally adjudicate validity in maintenance proceedings.</p>
+
+      <h5>Problem (c)</h5>
+      <p><i>H pronounces triple talaq on his wife W in the presence of witnesses but without informing her, later saying it was only a jest to pacify his father, and continues to live with W and treats children born thereafter as legitimate for 15 years. On H’s death, W and the children claim inheritance. Decide.</i></p>
+      <p><b>Solution:</b> On the classical Hanafi law applied in <b><i>Saiyid Rashid Ahmad v. Mt. Anisa Khatun (AIR 1932 PC 25)</i></b>, a triple talaq in the <b>bidaat</b> form — words such as “I divorce you for ever and render you haram” — is an <b>immediate, irrevocable divorce</b>, effective even in the wife’s absence and <b>even if pronounced in jest, under compulsion, or without genuine intention</b>. Subsequent cohabitation and acknowledgment cannot revive the marriage, and the presumption of marriage from acknowledgment cannot arise because of the legal bar (after triple talaq she cannot remarry him without an intervening <i>halala</i> marriage, which was not proved). Children born after the divorce are <b>not legitimate heirs</b>. <i>[Note: the position is now materially affected by <b>Shayara Bano v. Union of India (2017)</b> and the <b>Muslim Women (Protection of Rights on Marriage) Act, 2019</b>, which make instant triple talaq illegal and void; and <b>Shamim Ara (2002)</b> requires proof of a valid talaq for its communication to be effective. Students should contrast the classical rule (Rashid Ahmad) with the current law.]</i></p>
+    </div>
+  </article>
+
+  <!-- PYQ 7 - short rapid fire -->
+  <article class="pyq">
+    <div class="qhead"><div class="mq">Q.7 — Short-answer / viva bank</div>
+    <div class="qt">Quick model points for frequent short questions.</div></div>
+    <div class="ans">
+      <h5>Sources of Muslim law</h5><p>Primary: <b>Quran</b> (revealed word of God; ~200 legal verses), <b>Sunnah/Hadith</b> (Prophet’s sayings/doings/tacit approvals), <b>Ijma</b> (consensus of jurists), <b>Qiyas</b> (analogical deduction — not recognised by Shias). Secondary: <b>custom (urf)</b>, <b>judicial precedent</b>, <b>legislation</b> (Shariat Act 1937; DMMA 1939; MWPRDA 2019), and <b>justice, equity &amp; good conscience</b> (Abu Hanifa’s istihsan). The Shariat Act 1937 s.2 applies Muslim personal law to Muslims in matters of marriage, divorce, maintenance, dower, guardianship, gifts, wakf, inheritance, etc., but not adoption, wills/legacies or agricultural land.</p>
+      <h5>Sunni vs. Shia (marriage points)</h5><p>Hanafi Sunni: <b>two witnesses required</b> (absence = irregular); recognises <b>fasid</b>; marriage with Kitabia valid, with idolatress irregular; fifth-wife/iddat/unlawful-conjunction marriages irregular; no Muta. Shia (Ithna Ashari): <b>no witnesses</b> needed; <b>only valid or void</b> (no fasid); Muslim–non-Muslim marriage void (but valid Muta with Kitabia/fire-worshipper); recognises <b>Muta</b>; only father/grandfather are marriage guardians; valid retirement ≠ consummation.</p>
+      <h5>Iddat</h5><p>Period of seclusion after divorce/death to ascertain pregnancy and avoid confusion of paternity. On <b>divorce</b>: three menstrual courses (or three lunar months if non-menstruating; until delivery if pregnant) — only if consummated. On <b>death</b>: four months and ten days (or until delivery if longer), whether or not consummated. Marriage during iddat is <b>irregular</b> (Sunni) / void (Shia).</p>
+      <h5>Presumption of marriage</h5><p>Arises (in absence of direct proof) from prolonged cohabitation as spouses, acknowledgment of paternity, or acknowledgment of the woman as wife (Mulla §268) — rebuttable and unavailable where a legal bar/impossibility appears (<i>Rashid Ahmad</i>).</p>
+    </div>
+  </article>
+</section>
+
+<!-- ==================== GLOSSARY / REVISION ==================== -->
+<section id="glossary" class="card">
+  <h2 class="sec">GLOSSARY &amp; QUICK-REVISION CHARTS</h2>
+  <table class="tight">
+    <tr><th>Arabic term</th><th>Meaning</th></tr>
+    <tr><td><b>Nikah</b></td><td>Marriage; the contract legalising intercourse and children</td></tr>
+    <tr><td><b>Ijab wa Qabul</b></td><td>Proposal and acceptance (the marriage contract)</td></tr>
+    <tr><td><b>Sahih / Batil / Fasid</b></td><td>Valid / Void / Irregular marriage</td></tr>
+    <tr><td><b>Mahr (Mu’ajjal / Mu’wajjal)</b></td><td>Dower (prompt / deferred); Mahr-i-musamma = specified; Mahr-i-misl = proper dower</td></tr>
+    <tr><td><b>Wali / Jabar</b></td><td>Guardian / guardianship power to contract a minor in marriage</td></tr>
+    <tr><td><b>Khyar-ul-bulugh</b></td><td>Option of puberty to repudiate a guardian-arranged minor marriage</td></tr>
+    <tr><td><b>Iddat</b></td><td>Period of seclusion/abstinence after divorce or death</td></tr>
+    <tr><td><b>Khilwat-us-sahiha</b></td><td>Valid retirement (equal to consummation for most Sunni purposes)</td></tr>
+    <tr><td><b>Unlawful conjunction (jama bain-al-mahramain)</b></td><td>Bar on marrying two closely related women (e.g. two sisters) simultaneously</td></tr>
+    <tr><td><b>Muta / Hiba-i-muddat</b></td><td>Temporary Shia marriage / husband’s “gift of the term” ending it early</td></tr>
+    <tr><td><b>Talaq (Ahsan / Hasan / Bidaat)</b></td><td>Husband’s divorce: best / good / (triple) disapproved-but-valid forms</td></tr>
+    <tr><td><b>Zina</b></td><td>Unlawful sexual intercourse (fornication/adultery)</td></tr>
+    <tr><td><b>Quran · Sunnah · Ijma · Qiyas</b></td><td>Primary sources: revealed word · Prophetic practice · consensus · analogy</td></tr>
+    <tr><td><b>Shariat Act 1937 · DMMA 1939</b></td><td>Statutes applying Muslim personal law · Dissolution of Muslim Marriages Act</td></tr>
+  </table>
+
+  <h3>One-look decision flow — “What is the status of this Muslim marriage?”</h3>
+  <div class="flow">
+    <div class="fbox" style="max-width:150px;"><div class="t">START</div>Marriage contracted</div>
+    <div class="arrow">→</div>
+    <div class="fbox red" style="max-width:185px;"><div class="t">Absolute bar?</div>Consanguinity · Affinity · Fosterage · Polyandry (woman already married)</div>
+    <div class="arrow">→</div>
+    <div class="fbox red" style="max-width:120px;"><div class="t">YES → BATIL</div>Void ab initio; children illegitimate</div>
+  </div>
+  <div class="flow">
+    <div class="fbox gold" style="max-width:200px;"><div class="t">No absolute bar — relative/curable bar?</div>No witnesses · 5th wife · iddat · religion · unlawful conjunction (two sisters)</div>
+    <div class="arrow">→</div>
+    <div class="fbox gold" style="max-width:200px;"><div class="t">FASID (Sunni Hanafi)</div>Curable; subsists till terminated; <b>before consummation = no effect</b>; after = dower (lesser), iddat 3 courses, legitimate children, <b>no mutual inheritance</b>. (Shia → void)</div>
+    <div class="arrow">→</div>
+    <div class="fbox green" style="max-width:170px;"><div class="t">No bar &amp; all essentials fulfilled → SAHIH</div>Full effects: dower, maintenance, inheritance, legitimacy, iddat</div>
+  </div>
+
+  <div class="key"><div class="h">Exam checklist — always mention</div>
+  (1) Party’s <b>school</b> (Hanafi Sunni vs. Ithna Ashari Shia) — answers differ on witnesses, fasid and Muta. (2) Whether the marriage was <b>consummated</b> — decisive for fasid effects and valid retirement. (3) The <b>age/puberty</b> rule (15) and guardian’s authority. (4) Cite <b>Mulla paragraphs</b> and the three DU cases: <i>Ghulam Kubra Bibi</i> (essentials/witnesses), <i>Chand Patel</i> (fasid vs. batil; s.125), <i>Rashid Ahmad</i> (triple talaq/intention; presumption of marriage). (5) Note current statutory developments: <i>Shamim Ara</i>, <i>Shayara Bano</i> and the 2019 Act on triple talaq.</div>
+</section>
+
+</main>
+</div><!-- /wrap -->
+
+<footer class="footer">
+  <p><b>Family Law–I (LB-105) · Units VI–VII · Marriage (Nikah) under Muslim Law</b><br>
+  Prepared primarily from the DU <i>Cases Selected and Edited</i> (Faculty of Law, University of Delhi, 2023), with Mulla, <i>Principles of Mahomedan Law</i> (20th edn.), LexisNexis <i>Family Law</i>, and class notes.<br>
+  Case reports: <i>Ms. Ghulam Kubra Bibi v. Mohd. Shafi Mohd. Din</i>, AIR 1940 Pesh. 2 · <i>Chand Patel v. Bismillah Begum</i>, 1 (2008) DMC 588 (SC) · <i>Saiyid Rashid Ahmad v. Mt. Anisa Khatun</i>, AIR 1932 PC 25.</p>
+  <p class="small" style="opacity:.8;">For academic study and exam revision. Statements of law are as set out in the source materials; always verify current law before citing in practice.</p>
+</footer>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a36d2b0ca967efe6',t:'MTc4ODY5NDUwNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

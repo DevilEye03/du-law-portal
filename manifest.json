@@ -1,0 +1,17 @@
+{
+  "name": "Delhi University Law Notes Portal",
+  "short_name": "DU Law Portal",
+  "description": "Comprehensive study notes, landmark case briefs, previous year questions, and rapid revision capsules for Delhi University LL.B. students.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e1f3d",
+  "theme_color": "#183059",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2 · Defences against Tortious Liability (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f5f6fb; --card:#ffffff;
+    --navy:#14224a; --navy2:#1f3675; --gold:#c8912b; --teal:#0f8a8a;
+    --red:#b13a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e2e6f0;
+    --orange:#c0561f; --shadow:0 6px 24px rgba(20,34,74,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  /* HERO */
+  .hero{background:linear-gradient(135deg,#10203f 0%,#1f3675 55%,#2a4a8f 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,138,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:880px; margin:0 0 22px; color:#dbe3f5; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#eaf0fc}
+  .meta-strip{background:#0d1830; color:#c9d4ec; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  /* LAYOUT */
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:245px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#eef1fa; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fff8ea; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#eef6f6; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbeeee; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fdf1ec; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  code,.lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#12406b}
+  .lat{background:#eef2fb; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#eef1fa; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fafbfe}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  /* CASE CARDS */
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#182c5c,#2a4a8f); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f6f8ff; border-left:3px solid var(--navy2); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#eef6f6; border:1px solid #cfe8e8; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  /* DIAGRAMS */
+  .fig{background:#fbfcff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  /* PYQ */
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#f0f3fb; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#c9d4ec; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 2 — <span>Defences against Tortious Liability</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official case material</b> — syllabus sub-heads (a) Consent/<i>volenti non fit injuria</i>, (b) Statutory authority, and (c) Act of God/<i>vis major</i>, with all <b>7 prescribed cases</b> in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), conceptual notes with diagrams, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Consent / Volenti non fit injuria</span><span class="tag">Essentials</span>
+      <span class="tag">Exceptions — Rescue &amp; UCTA 1977</span><span class="tag">Statutory Authority</span>
+      <span class="tag">Act of God / Vis major</span><span class="tag">Inevitable accident</span>
+      <span class="tag">Volenti vs Contributory Negligence</span><span class="tag">7 Case Laws</span>
+      <span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Consent as defence — volenti non fit injuria — Essentials; Exceptions — Rescue cases &amp; Unfair Contract Terms Act, 1977 (UK) · (b) Statutory authority · (c) Act of God / vis major</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#gendef">General Defences — Overview</a>
+    <a href="#volenti">1. Consent / Volenti non fit injuria</a>
+    <a href="#essentials">Essentials of the Defence</a>
+    <a href="#knowledge">Knowledge ≠ Consent (scienti)</a>
+    <a href="#exceptions">Exceptions &amp; Limitations</a>
+    <a href="#rescue">Rescue Cases</a>
+    <a href="#ucta">Unfair Contract Terms Act, 1977</a>
+    <a href="#volentiVcn">Volenti vs Contributory Negligence</a>
+    <a href="#statutory">2. Statutory Authority</a>
+    <a href="#actgod">3. Act of God / Vis major</a>
+    <a href="#inevitable">Inevitable Accident</a>
+    <a class="n" href="#cases">The 7 Prescribed Case Laws</a>
+    <a href="#c9">9. Smith v Charles Baker</a>
+    <a href="#c10">10. South Indian Industrial</a>
+    <a href="#c11">11. Haynes v Harwood</a>
+    <a href="#c12">12. Ramchandraram v Purulia</a>
+    <a href="#c13">13. Manindra Nath Mukherjee</a>
+    <a href="#c14">14. Hall v Brooklands</a>
+    <a href="#c15">15. T.C. Balakrishnan</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims Glossary</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Consent as defence — volenti non fit injuria</td><td>Essentials for application of the defence; knowledge vs consent; who may consent</td><td>Smith v. Baker; Dann v. Hamilton; Hall v. Brooklands</td></tr>
+        <tr><td>Exceptions — Rescue cases</td><td>When the defence fails (rescuer)</td><td>Haynes v. Harwood; Baker v. T.E. Hopkins; Wagner</td></tr>
+        <tr><td>Exceptions — UCTA 1977 (UK)</td><td>Contractual exclusion limited; negligence liability not excluded</td><td>Unfair Contract Terms Act, 1977</td></tr>
+        <tr><td>(b) Statutory authority</td><td>Authorised act not actionable; absolute vs conditional</td><td>Vaughan v. Taff Vale; Metropolitan Asylum; Ramchandraram</td></tr>
+        <tr><td>(c) Act of God / vis major</td><td>Extraordinary natural event, no human intervention</td><td>Nichols v. Marsland; Manindra Nath; Greenock; Kallulal</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> Cases <b>9–13</b> are reproduced (with the judges’ own words) from the prescribed DU casebook; cases <b>14 (Hall v. Brooklands)</b> and <b>15 (T.C. Balakrishnan)</b> are set out from the accompanying DU notes/mind-maps and the authoritative reports. The theory of <i>volenti</i>, statutory authority and act of God follows the standard Indian treatises (Ratanlal &amp; Dhirajlal, Atchuthen Pillai, Winfield &amp; Jolowicz, Salmond) as reflected in the DU material.</div>
+    </section>
+
+    <!-- GENERAL DEFENCES OVERVIEW -->
+    <section id="gendef">
+      <div class="sec-head"><div class="sec-num">0</div><h2>General Defences — The Big Picture</h2></div>
+      <p class="sec-sub">What a defence is, and how it differs from a specific defence.</p>
+      <p>Although particular torts have their own <b>special defences</b> (e.g., <i>truth, fair comment and privilege</i> for defamation; <i>statutory authority</i> in nuisance; <i>justification</i> in malicious prosecution), there are certain <b>general defences</b> which are applicable to <b>all torts</b>. A person sued in tort can plead these to escape liability entirely (complete defence) or to reduce it.</p>
+      <h4>The classic list of general defences</h4>
+      <ol>
+        <li><b>Volenti non fit injuria</b> — harm suffered with the plaintiff’s own consent (assumption of risk).</li>
+        <li><b>Plaintiff the wrongdoer</b> — <i>ex turpi causa non oritur actio</i>.</li>
+        <li><b>Inevitable accident</b>.</li>
+        <li><b>Act of God / vis major</b>.</li>
+        <li><b>Private defence</b> (self-help / self-protection).</li>
+        <li><b>Mistake</b>.</li>
+        <li><b>Necessity</b>.</li>
+        <li><b>Statutory authority</b>.</li>
+      </ol>
+      <div class="fig">
+        <svg viewBox="0 0 780 190" width="780" role="img" aria-label="General defences overview">
+          <rect x="10" y="20" width="760" height="44" rx="10" fill="#14224a"/>
+          <text x="390" y="47" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">GENERAL DEFENCES IN TORT</text>
+          <text x="390" y="0" fill="#14224a" text-anchor="middle" font-size="0"></text>
+          <line x1="390" y1="64" x2="390" y2="78" stroke="#14224a" stroke-width="2.5"/>
+          <rect x="10" y="80" width="175" height="90" rx="10" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="97" y="112" fill="#0f8a8a" text-anchor="middle" font-size="12.5" font-weight="700">Volenti non fit</text>
+          <text x="97" y="128" fill="#0f8a8a" text-anchor="middle" font-size="11.5">injuria (consent)</text>
+          <text x="97" y="150" fill="#125b5b" text-anchor="middle" font-size="10.5">★ Topic 2 (a)</text>
+          <rect x="200" y="80" width="175" height="90" rx="10" fill="#fcefe6" stroke="#c0561f"/>
+          <text x="287" y="112" fill="#c0561f" text-anchor="middle" font-size="12.5" font-weight="700">Act of God /</text>
+          <text x="287" y="128" fill="#c0561f" text-anchor="middle" font-size="11.5">vis major</text>
+          <text x="287" y="150" fill="#8a3f17" text-anchor="middle" font-size="10.5">★ Topic 2 (c)</text>
+          <rect x="390" y="80" width="175" height="90" rx="10" fill="#e7e9fb" stroke="#1f3675"/>
+          <text x="477" y="112" fill="#1f3675" text-anchor="middle" font-size="12.5" font-weight="700">Statutory</text>
+          <text x="477" y="128" fill="#1f3675" text-anchor="middle" font-size="11.5">authority</text>
+          <text x="477" y="150" fill="#2b3a63" text-anchor="middle" font-size="10.5">★ Topic 2 (b)</text>
+          <rect x="580" y="80" width="190" height="90" rx="10" fill="#f3f3f6" stroke="#9aa1b5"/>
+          <text x="675" y="108" fill="#5d6478" text-anchor="middle" font-size="12" font-weight="700">Other defences</text>
+          <text x="675" y="126" fill="#5d6478" text-anchor="middle" font-size="10.5">Plaintiff the wrongdoer</text>
+          <text x="675" y="142" fill="#5d6478" text-anchor="middle" font-size="10.5">Inevitable accident</text>
+          <text x="675" y="158" fill="#5d6478" text-anchor="middle" font-size="10.5">Private defence · Mistake · Necessity</text>
+        </svg>
+        <div class="cap">Defences (those marked ★ are covered by Topic 2 in the DU syllabus).</div>
+      </div>
+      <div class="tipbox"><b>Burden of proof:</b> The burden of proving a <b>general defence</b> lies on the <b>defendant</b>. Until the plaintiff shows a prima facie tort, the defendant need not plead a defence; once a prima facie case is shown, the defendant must prove the defence on a balance of probabilities.</div>
+    </section>
+
+    <!-- VOLENTI -->
+    <section id="volenti">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Consent as a Defence — Volenti non fit injuria</h2></div>
+      <p class="sec-sub">Syllabus (a) — “to one who is willing, no injury is done.”</p>
+
+      <p>The maxim <span class="lat">volenti non fit injuria</span> literally means <b>“that to which a man consents cannot be complained of as an injury.”</b> No act is actionable as a tort at the suit of any person who has <b>expressly or impliedly assented</b> to it. A person who agrees with another, expressly or by implication, to run the risk of injury caused by that other, will not be permitted to complain or to claim damages for the risks he undertook.</p>
+
+      <h3>1.1 The two-fold application</h3>
+      <ol>
+        <li><b>Consent to intentional acts</b> (which would otherwise be tortious): consent to an entry on land or goods (would be <i>trespass</i>); consent to physical harm (would be <i>assault/battery</i>) — a boxing match or a surgical operation [<i>R. v. Donovan</i>]; consent to the publication of something defamatory [<i>Chapman v. Lord Ellesmere</i>].</li>
+        <li><b>Consent to run the risks of accidental harm</b> (which would otherwise be actionable): a spectator at a sports meeting takes upon himself the risk of the perils thereat, whether reasonably to be expected or improbable [<i>Hall v. Brooklands Auto Racing Club</i>].</li>
+      </ol>
+
+      <h3>1.2 Consent may be express or implied</h3>
+      <p>Consent may be <b>express</b> (words) or <b>implied</b> (inferred from conduct). A person who willingly takes a lift in a stranger’s car, or who buys a ticket for a motor race and stands near the track, thereby impliedly accepts the ordinary risks. Consent may also be given on behalf of a person incapable of consenting (minor, insane) by a parent or guardian.</p>
+
+      <h3>1.3 The act must not go beyond the consent</h3>
+      <p>For the defence to apply, the act causing the harm must <b>not have gone beyond the limit of what was consented to</b>:</p>
+      <ul>
+        <li>A hockey player cannot claim for being hit in the <b>normal course</b> of the game; but if he is hit <b>intentionally</b>, the defence fails.</li>
+        <li>If a surgeon is <b>negligent</b> in performing an operation, he cannot plead <i>volenti</i> — the patient consented only to the risks inherent in the operation, <b>not</b> to the doctor’s negligence.</li>
+      </ul>
+      <div class="warnbox"><b>Important:</b> The act to which assent is given must <b>not be unlawful in itself</b>. No man can lawfully consent to his own death; nor can the maxim apply where the act is <b>contrary to public policy</b>.</div>
+
+      <div class="fig">
+        <svg viewBox="0 0 780 220" width="780" role="img" aria-label="Volenti flowchart">
+          <defs><marker id="av" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="20" width="280" height="50" rx="10" fill="#0f8a8a"/>
+          <text x="150" y="42" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CONSENT — VOLUNTARY</text>
+          <text x="150" y="60" fill="#d8f2f2" text-anchor="middle" font-size="11">express OR implied; free &amp; fair</text>
+          <line x1="150" y1="70" x2="150" y2="88" stroke="#0f8a8a" stroke-width="2.5" marker-end="url(#av)"/>
+          <rect x="10" y="90" width="280" height="50" rx="10" fill="#1f3675"/>
+          <text x="150" y="112" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">KNOWLEDGE of the risk</text>
+          <text x="150" y="130" fill="#dbe3f5" text-anchor="middle" font-size="11">must prove he KNEW the risk</text>
+          <line x1="150" y1="140" x2="150" y2="158" stroke="#1f3675" stroke-width="2.5" marker-end="url(#av)"/>
+          <rect x="10" y="160" width="280" height="50" rx="10" fill="#2e7d4f"/>
+          <text x="150" y="182" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">ASSENT / ACCEPTANCE of it</text>
+          <text x="150" y="200" fill="#e3f3ea" text-anchor="middle" font-size="11">volens, not merely sciens</text>
+          <rect x="330" y="20" width="200" height="44" rx="10" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="430" y="46" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">Fails if: consent by fraud/coercion</text>
+          <rect x="330" y="75" width="200" height="44" rx="10" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="430" y="101" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">Fails if: act beyond consent / unlawful</text>
+          <rect x="330" y="130" width="200" height="44" rx="10" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="430" y="156" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">Fails in RESCUE cases; UCTA 1977</text>
+          <rect x="560" y="20" width="210" height="190" rx="10" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="665" y="45" fill="#0f8a8a" text-anchor="middle" font-size="13" font-weight="700">EFFECT</text>
+          <text x="665" y="70" fill="#125b5b" text-anchor="middle" font-size="11">COMPLETE DEFENCE →</text>
+          <text x="665" y="88" fill="#125b5b" text-anchor="middle" font-size="11">defendant NOT liable</text>
+          <text x="665" y="118" fill="#125b5b" text-anchor="middle" font-size="11">⇒ wholly bars the claim</text>
+          <text x="665" y="150" fill="#125b5b" text-anchor="middle" font-size="11">Contrast: contributory</text>
+          <text x="665" y="168" fill="#125b5b" text-anchor="middle" font-size="11">negligence reduces damages</text>
+        </svg>
+        <div class="cap">The two essentials (knowledge + assent) and the situations where the defence fails.</div>
+      </div>
+    </section>
+
+    <!-- ESSENTIALS -->
+    <section id="essentials">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Essentials for the Application of the Defence</h2></div>
+      <p class="sec-sub">Syllabus (a) — the conditions that must be satisfied before <i>volenti</i> can be pleaded.</p>
+      <p>Before <span class="lat">volenti non fit injuria</span> can be upheld, the defendant (on whom the burden lies) must prove all of the following:</p>
+      <ol>
+        <li><b>Knowledge of the risk.</b> The plaintiff must have known of the existence and nature of the risk. One cannot consent to a risk of which one is unaware. The plaintiff must have <b>appreciated</b> its extent, not merely known of it vaguely.</li>
+        <li><b>Consent must be free &amp; voluntary (volens).</b> The plaintiff must have <b>freely</b> and <b>deliberately</b> agreed to accept the risk. Consent obtained by <b>fraud</b> or <b>coercion/compulsion</b> is no consent.</li>
+        <li><b>Mere knowledge is not enough (scienti ≠ volenti).</b> The maxim is <i>volenti</i>, not <i>scienti</i> — knowledge of the danger is <b>not</b> the same as consent to it.</li>
+        <li><b>The act must not go beyond the consent.</b> Consent to one act does not authorise a different or excessive act.</li>
+        <li><b>Consent must not be to an unlawful act</b> or to one contrary to public policy.</li>
+        <li><b>Capacity to consent.</b> The plaintiff must be legally capable of giving consent; for minors/insane persons a parent or guardian may consent (subject to limits).</li>
+      </ol>
+      <div class="hint"><b>Memory aid — “KAFUC”:</b> <b>K</b>nowledge, <b>A</b>ssent/acceptance (free &amp; voluntary), act within the <b>F</b>our corners of consent, act <b>U</b>nlawful-not-consented, <b>C</b>apacity to consent.</div>
+    </section>
+
+    <!-- KNOWLEDGE != CONSENT -->
+    <section id="knowledge">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Knowledge is not Consent — volenti, not scienti</h2></div>
+      <p class="sec-sub">The single most-examined point of the whole defence.</p>
+      <p>The maxim is <span class="accent">volenti non fit injuria</span>, and <b>not</b> <span class="accent">scienti non fit injuria</span>. <b>Mere knowledge</b> of the impending wrongful act or of a wrongfully caused danger does <b>not</b>, by itself, amount to consent — even where the plaintiff makes no attempt to avoid it. The test is not whether the plaintiff <i>knew</i> of the danger, but whether in fact he <b>agreed to run the risk</b>, i.e., whether he exempted the defendant from the duty not to create the danger and took the chance of an accident.</p>
+      <blockquote class="quote">“It has been taken for granted that mere knowledge of the risk does not necessarily involve consent to the risk. … the maxim is not <i>scienti non fit injuria</i>, but <i>volenti non fit injuria</i>.” — <b>Bowen LJ</b>, in <i>Thomas v. Quartermaine</i>, approved in <i>Smith v. Charles Baker &amp; Sons</i></blockquote>
+      <blockquote class="quote">“The question in each case must be, not simply whether the plaintiff knew of the risk, but whether circumstances are such as necessarily to lead to the conclusion that the whole risk was voluntarily incurred by the plaintiff.” — <b>Lindley LJ</b>, in <i>Yarmouth v. France</i>, quoted in <i>Smith v. Charles Baker</i></blockquote>
+      <blockquote class="quote">“If nothing more is proved than that the workman saw danger, reported it, but on being told to go on went on as before in order to avoid dismissal, a jury may properly find that he had not agreed to take the risk and not acted voluntarily.” — <b>Lindley LJ</b>, <i>Yarmouth v. France</i></blockquote>
+      <p><b>Consequence:</b> A man is <b>not bound at his peril</b> to fly from a risk which it is another’s duty to protect him from, merely because the risk is known. In <i>Dann v. Hamilton</i> (1939), the passenger in a negligently-driven car was <b>sciens</b> (knew the risk) but could not be said to be <b>volens</b>; in <i>Bowater v. Rowley</i> (1944), a carter who protested and was ordered to drive a horse known to have run away was <b>not</b> volens — the corporation was liable.</p>
+      <div class="fig">
+        <svg viewBox="0 0 720 160" width="720" role="img" aria-label="sciens vs volens">
+          <rect x="30" y="30" width="280" height="100" rx="12" fill="#f3f3f6" stroke="#9aa1b5"/>
+          <text x="170" y="60" fill="#5d6478" text-anchor="middle" font-size="14" font-weight="700">SCIENS (knowledge)</text>
+          <text x="170" y="84" fill="#5d6478" text-anchor="middle" font-size="11.5">only knowing the danger</text>
+          <text x="170" y="106" fill="#5d6478" text-anchor="middle" font-size="11.5">→ NOT a defence</text>
+          <rect x="410" y="30" width="280" height="100" rx="12" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="550" y="60" fill="#2e7d4f" text-anchor="middle" font-size="14" font-weight="700">VOLENS (assent)</text>
+          <text x="550" y="84" fill="#1c5a3a" text-anchor="middle" font-size="11.5">knowledge + free acceptance</text>
+          <text x="550" y="106" fill="#1c5a3a" text-anchor="middle" font-size="11.5">→ complete defence</text>
+        </svg>
+        <div class="cap">The critical distinction: sciens ≠ volens.</div>
+      </div>
+    </section>
+
+    <!-- EXCEPTIONS -->
+    <section id="exceptions">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Exceptions &amp; Limitations to the Defence</h2></div>
+      <p class="sec-sub">Syllabus (a) — where the maxim cannot be invoked.</p>
+      <ol>
+        <li><b>Rescue cases.</b> The defence fails where the plaintiff is injured while rescuing a person from a danger created by the defendant’s wrong (see §5).</li>
+        <li><b>Unfair Contract Terms Act, 1977 (UK).</b> A person cannot by contract exclude liability for death or personal injury caused by negligence; and cannot exclude liability for other negligence unless reasonable (see §6).</li>
+        <li><b>Consent obtained by fraud or coercion.</b> Such consent is no consent.</li>
+        <li><b>Where the act is unlawful or contrary to public policy.</b> No one can consent to his own death, or to an act prohibited by law.</li>
+        <li><b>Where the defendant has been negligent in a way not consented to.</b> Consent to a surgical operation does not cover the doctor’s negligence.</li>
+        <li><b>Breach of a statutory duty</b> imposed for the protection of a class to which the claimant belongs cannot be negatived by consent, unless the statute allows it.</li>
+        <li><b>Where the plaintiff’s conduct was not truly voluntary</b> — e.g., where he is under a legal or moral duty, or acts on the spur of the moment rather than on a free choice.</li>
+      </ol>
+    </section>
+
+    <!-- RESCUE -->
+    <section id="rescue">
+      <div class="sec-head"><div class="sec-num">5</div><h2>The Rescue-Case Exception</h2></div>
+      <p class="sec-sub">Syllabus (a) — the most important limitation.</p>
+      <p>Rescue cases are those where the plaintiff <b>voluntarily undertakes a risk in the process of rescuing someone from an imminent danger created by the defendant’s wrongful act</b>. In such cases the defence of <i>volenti non fit injuria</i> is <b>inapplicable</b>, because a man cannot be deemed to have given real consent if he acts under the compulsion of a <b>legal or even a moral duty</b>.</p>
+      <blockquote class="quote">“The doctrine of the assumption of risk does not apply where the plaintiff has, under an exigency caused by the defendant’s wrongful misconduct, consciously and deliberately faced a risk, even of death, to rescue another from imminent danger of personal injury or death; whether the person endangered is one to whom he owes a duty of protection, as a member of his family, or is a mere stranger to whom he owes no such special duty.” — <b>Greer LJ</b>, <i>Haynes v. Harwood</i> (adopting the American rule from <i>Eckert v. Long Island R.R.</i>)</blockquote>
+      <p class="quote">“It would be absurd to say that if a man deliberately incurs a risk he is entitled to less protection than if he acts on sudden impulse without thinking whether he should do so or not.” — <b>Greer LJ</b>, <i>Haynes v. Harwood</i></p>
+      <h4>Leading rescue authorities</h4>
+      <table>
+        <tr><th>Case</th><th>Rule</th></tr>
+        <tr><td><b>Haynes v. Harwood</b> (1935)</td><td>Police constable injured stopping runaway horses to save a woman &amp; children — held entitled; volenti rejected.</td></tr>
+        <tr><td><b>Wagner v. International Rly.</b></td><td>“Danger invites rescue. The wrong that imperils life is a wrong to the imperilled victim; it is a wrong also to the rescuer.”</td></tr>
+        <tr><td><b>Baker v. T.E. Hopkins &amp; Co.</b> (1959)</td><td>A doctor who died rescuing men overcome by gas in a well — company liable; if a man by carelessness puts himself in peril that invites rescue, he is liable for injury to a foreseeable rescuer.</td></tr>
+        <tr><td><b>Brugh v. Bigelow</b> (US)</td><td>Extends the rule where the rescued party is the <b>defendant himself</b>.</td></tr>
+        <tr><td><b>Hyett v. GWR</b></td><td>The rescue principle extends to rescue of <b>property</b>, if the conduct is reasonable.</td></tr>
+        <tr><td><b>Chadwick v. British Railways Board</b> (1967)</td><td>Rescuer who suffered nervous shock from the rescue recovered.</td></tr>
+        <tr><td><b>Brandon v. Osborne Garrett</b> (1924)</td><td>A wife injured protecting her husband — recoverable.</td></tr>
+      </table>
+      <div class="tipbox"><b>Note on <i>Cutler v. United Dairies</i> (1933):</b> Greer LJ distinguished this case — there the plaintiff was merely helping the defendant’s servant in pacifying a horse in a field, <b>not</b> rescuing anyone; the defendant was not liable. This shows rescue must be for the purpose of <b>saving a person or property from a danger created by the defendant</b>, not mere meddling.</div>
+    </section>
+
+    <!-- UCTA -->
+    <section id="ucta">
+      <div class="sec-head"><div class="sec-num">6</div><h2>Unfair Contract Terms Act, 1977 (UK)</h2></div>
+      <p class="sec-sub">Syllabus (a) — statutory limitation on consent/exclusion clauses.</p>
+      <p>The <i>Unfair Contract Terms Act, 1977</i> (UK) restricts the extent to which a person can exclude or restrict liability by reference to a contract term or notice. Its relevance here is twofold:</p>
+      <ul>
+        <li><b>Section 2(1):</b> A person <b>cannot</b>, by contract or notice, exclude or restrict his liability for <b>death or personal injury</b> resulting from <b>negligence</b>.</li>
+        <li><b>Section 2(2):</b> As regards <b>other loss or damage</b> (e.g., property), a person cannot exclude or restrict liability for negligence except in so far as the term or notice satisfies the requirement of <b>reasonableness</b>.</li>
+        <li><b>Sections 3 &amp; 7:</b> Liability arising in the course of a business, or arising from breach of implied terms (e.g., in consumer contracts), cannot be excluded except where reasonable; and certain terms (e.g., the implied warranty of fitness of goods) cannot be excluded at all against a consumer.</li>
+      </ul>
+      <p><b>Effect:</b> A ticket or contract clause saying “spectators enter at their own risk” will not bar a claim for <b>negligently caused death or personal injury</b>. This is a statutory limit on a defence that historically (as in <i>Hall v. Brooklands</i>) operated through implied consent.</p>
+      <div class="warnbox"><b>Indian position:</b> India has no equivalent UCTA, and the Indian Contract Act, 1872 does <b>not</b> automatically strike down exemption clauses (though <b>Section 23</b> voids agreements contrary to public policy, and the <b>consumer protection</b> regime and the doctrine of <i>contra proferentem</i> in <i>White v. John Warrick</i> restrict such clauses).</div>
+    </section>
+
+    <!-- VOLENTI vs CN -->
+    <section id="volentiVcn">
+      <div class="sec-head"><div class="sec-num">7</div><h2>Volenti non fit injuria vs Contributory Negligence</h2></div>
+      <p class="sec-sub">A frequently-asked comparison.</p>
+      <table>
+        <tr><th>Basis</th><th>Volenti non fit injuria</th><th>Contributory Negligence</th></tr>
+        <tr><td>Nature</td><td>Complete defence — <b>wholly bars</b> the claim</td><td>Partial defence — <b>reduces damages</b> to the extent of the plaintiff’s fault</td></tr>
+        <tr><td>Principle</td><td>Consent / assumption of risk; defendant’s liability is negatived because the plaintiff <i>volens</i> accepted the risk</td><td>Plaintiff’s own negligence contributed; liability is apportioned on the basis of the defendant’s fault</td></tr>
+        <tr><td>State of mind</td><td>Plaintiff <b>knew</b> the risk and <b>freely accepted</b> it (sciens <b>and</b> volens)</td><td>Plaintiff <b>ought to have known</b> the risk; he did <b>not</b> knowingly accept it — a failure to take due care for his own safety</td></tr>
+        <tr><td>Who is negligent</td><td>Only the defendant is negligent; the plaintiff consents</td><td><b>Both</b> plaintiff and defendant are negligent</td></tr>
+        <tr><td>Result</td><td>No damages</td><td>Damages reduced proportionally</td></tr>
+        <tr><td>Presumption</td><td>Consent must be <b>positively</b> shown</td><td>Fault inferred from conduct; the plaintiff’s carelessness is the test</td></tr>
+      </table>
+    </section>
+
+    <!-- STATUTORY AUTHORITY -->
+    <section id="statutory">
+      <div class="sec-head"><div class="sec-num">8</div><h2>Statutory Authority</h2></div>
+      <p class="sec-sub">Syllabus (b) — an act authorised by law is not actionable.</p>
+      <p>When a statute <b>specially authorises</b> a certain act to be done by a certain person which would otherwise be unlawful and actionable, <b>no action will lie</b> at the suit of any person for the doing of that act. With the statutory authority comes a <b>statutory indemnity</b> taking away the legal remedies that the law of torts would otherwise provide to persons injuriously affected. The damage resulting from an act which the legislature authorises or directs is <b>not actionable</b>, even though it would otherwise be a tort.</p>
+      <div class="hint"><b>Scope:</b> The authority and indemnity extend not merely to the act itself but to <b>all its necessary consequences</b>. Thus if a bridge is built under statutory authority, and a person is denied his right of way for a period, no suit can be brought against the builders.</div>
+
+      <h3>8.1 Absolute vs Conditional authority</h3>
+      <table>
+        <tr><th>Type</th><th>Effect</th><th>Illustration</th></tr>
+        <tr><td><b>Absolute authority</b></td><td>No liability for the act, <b>even if</b> it causes some nuisance or slight harm — the legislature has authorised it unconditionally.</td><td>Running a railway under statutory powers — the smoke/vibration/noise necessarily incidental is not actionable (<i>Hammersmith Rail v. Brand</i>).</td></tr>
+        <tr><td><b>Conditional authority</b></td><td>The act may be done <b>only if</b> it does not cause nuisance or harm to others (the condition may be express or implied).</td><td><i>Metropolitan Asylum District v. Hill</i> (1881): authority to erect a smallpox hospital was construed as <b>conditional</b> — the authority was restrained from erecting one where it would be a danger to neighbours.</td></tr>
+      </table>
+
+      <h3>8.2 The act must be done with proper care</h3>
+      <p>Statutory authority is <b>no defence to negligence</b>. The act authorised by the legislature must be done with <b>proper care</b>; if it is done <b>negligently</b>, an action will lie. The principle (from <i>Geddis v. Bann Reservoir</i> via <b>Lord Blackburn</b> — quoted in <i>Ramchandraram</i>):</p>
+      <blockquote class="quote">“It is now thoroughly well established that no action will lie for doing that which the Legislature has authorised <b>if it be done without negligence</b>, although it does occasion damage to any one; but an action <b>does</b> lie for doing that which the Legislature has authorised, <b>if it be done negligently</b>.” — <b>Lord Blackburn</b>, <i>Geddis v. Proprietors of the Bann Reservoir</i></blockquote>
+      <blockquote class="quote">“Even in cases in which the nuisance complained of is prima facie authorised by statute, the party causing it will be liable if he does not take reasonable precautions to prevent damage resulting therefrom. Though exempt from the absolute liability which would attach to a person not acting under statutory powers, he is still liable if he exercises his powers negligently or unreasonably.” — <b>Clerk &amp; Lindsell on Torts</b></blockquote>
+      <p>Also, public authorities exercising statutory powers must act <b>bona fide</b> and <b>with judgment and discretion</b>; they must not act “capriciously, wantonly or oppressively” even within the limits of their authority (<i>Nagar Valab Narsi v. Municipality of Dhandhuka</i>; <i>Rup Lal Singh v. Secretary of State</i>: “when a statute confers a power it implies that the donee shall be competent to do all that is needful for its exercise, subject to the limitation that he cannot go beyond what is reasonable”).</p>
+      <div class="tipbox"><b>Summary rule (as stated in <i>Ramchandraram</i>):</b> “If a person is exercising his rights under a statute he is <b>not liable</b> unless it is proved that he acted <b>unreasonably or negligently</b>.” This is the final proposition the DU material distils from <i>Geddis</i>, <i>East Fremantle v. Annois</i> and the Indian decisions.</div>
+
+      <div class="fig">
+        <svg viewBox="0 0 760 190" width="760" role="img" aria-label="Statutory authority flowchart">
+          <rect x="10" y="25" width="250" height="130" rx="12" fill="#e7e9fb" stroke="#1f3675"/>
+          <text x="135" y="52" fill="#1f3675" text-anchor="middle" font-size="13" font-weight="700">STATUTORY AUTHORITY</text>
+          <text x="135" y="74" fill="#2b3a63" text-anchor="middle" font-size="11">Act authorised by legislature</text>
+          <text x="135" y="92" fill="#2b3a63" text-anchor="middle" font-size="11">→ NOT actionable (indemnity)</text>
+          <line x1="260" y1="90" x2="330" y2="90" stroke="#1f3675" stroke-width="2.5"/>
+          <rect x="335" y="25" width="200" height="60" rx="12" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="435" y="50" fill="#2e7d4f" text-anchor="middle" font-size="12.5" font-weight="700">Done WITH proper care</text>
+          <text x="435" y="70" fill="#1c5a3a" text-anchor="middle" font-size="11">→ NO liability (even if harm)</text>
+          <rect x="335" y="95" width="200" height="60" rx="12" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="435" y="120" fill="#b13a3a" text-anchor="middle" font-size="12.5" font-weight="700">Done NEGLIGENTLY /</text>
+          <text x="435" y="140" fill="#b13a3a" text-anchor="middle" font-size="11.5">unreasonably → LIABLE</text>
+          <rect x="560" y="25" width="190" height="130" rx="12" fill="#f0f1f5" stroke="#b0b6c6"/>
+          <text x="655" y="52" fill="#5d6478" text-anchor="middle" font-size="12.5" font-weight="700">Two kinds</text>
+          <text x="655" y="74" fill="#5d6478" text-anchor="middle" font-size="11">Absolute → no liability</text>
+          <text x="655" y="92" fill="#5d6478" text-anchor="middle" font-size="11">even for slight harm</text>
+          <text x="655" y="118" fill="#5d6478" text-anchor="middle" font-size="11">Conditional → act only</text>
+          <text x="655" y="136" fill="#5d6478" text-anchor="middle" font-size="11">if no nuisance/harm</text>
+        </svg>
+        <div class="cap">Statutory authority: absolute shield against liability for the authorised act, but no shield against negligence.</div>
+      </div>
+    </section>
+
+    <!-- ACT OF GOD -->
+    <section id="actgod">
+      <div class="sec-head"><div class="sec-num">9</div><h2>Act of God / Vis major</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>Act of God (the equivalent of the Scottish <span class="lat">damnum fatale</span>, also called <span class="lat">vis major</span>) may be defined as <b>an operation of natural forces so unexpected that no human foresight or skill could reasonably be expected to anticipate it</b>.</p>
+      <blockquote class="quote">“Act of God in its legal sense may be defined as an accident due to natural causes directly and exclusively without human intervention, and which could not have been avoided by any amount of foresight and pains and care reasonably to be expected of the person sought to be made liable for it.”</blockquote>
+      <p>It is a valid defence <b>even in cases of strict liability</b> (the rule in <i>Rylands v. Fletcher</i>) and to a charge of negligence.</p>
+
+      <h3>9.1 The two essentials</h3>
+      <ol>
+        <li><b>Working of natural forces.</b> The cause must be an act of nature — not human agency. If human intervention is involved, it is not an act of God. In <i>Ramlinga Nadar v. Narayana Reddiar</i>, an unruly mob robbing goods being transported was held <b>not</b> an act of God, because it was human intervention. “Accidents may happen by reason of the play of natural forces or by the intervention of human agency or by both; but it is only those acts which can be traced to natural forces and which do not have any intervention of human agencies that could be said to be acts of God.”</li>
+        <li><b>Occurrence must be extraordinary.</b> The event must be extraordinary and <b>not</b> one that could be reasonably anticipated and then guarded against. It need not be <b>unique</b> or happen for the first time — it is enough that it is extraordinary and such as could not reasonably be anticipated (<i>Nichols v. Marsland</i> as explained by Fry J).</li>
+      </ol>
+
+      <h3>9.2 Illustrative cases</h3>
+      <table>
+        <tr><th>Case</th><th>Holding</th></tr>
+        <tr><td><b>Nichols v. Marsland</b> (1876)</td><td>Extraordinary rainfall — the heaviest in human memory — bursting artificial lakes and washing away four bridges: <b>act of God</b>; defendant not liable.</td></tr>
+        <tr><td><b>Greenock Corp. v. Caledonian Rly.</b> (1917)</td><td>Rainfall of extraordinary violence, but such floods “must be anticipated as likely to take place from time to time” — <b>not</b> act of God (Lord Finlay); the question cannot be confined to the locality (Lord Dunedin).</td></tr>
+        <tr><td><b>City of Montreal v. Watt &amp; Scott</b> (1922)</td><td>A municipality must build sewers capable of coping with the water that may be expected from time to time over the years — <b>not</b> excused by ordinary heavy rainfall.</td></tr>
+        <tr><td><b>General Traders v. Pierce Leslie</b> (AIR 1987 Cal)</td><td>A storm at sea was merely an “irregularity of the sea,” not extraordinary — <b>not</b> act of God.</td></tr>
+        <tr><td><b>Kallulal v. Hemchand</b></td><td>Wall collapsed on a day of 2.66 inches of rainfall — such rainfall was ordinary in the rainy season; the defendant ought to have anticipated and guarded against it — <b>not</b> act of God.</td></tr>
+        <tr><td><b>Manindra Nath Mukherjee</b> (AIR 1946 Cal)</td><td>A banner fell in a gust of ~27 mph during the monsoon. Since wind of that velocity is <b>not uncommon in the monsoon</b>, it was foreseeable — <b>not</b> act of God; the defendant was liable.</td></tr>
+      </table>
+      <div class="warnbox"><b>Test:</b> For the defence to succeed, the natural event must be <b>extraordinary</b>, in the sense that it is so unexpected that no reasonable human foresight or skill could be expected to anticipate it. An event that is merely unusual in degree, or that could reasonably have been guarded against (like ordinary monsoon winds, moderate storms, or normal heavy rain), will <b>not</b> qualify.</div>
+    </section>
+
+    <!-- INEVITABLE ACCIDENT -->
+    <section id="inevitable">
+      <div class="sec-head"><div class="sec-num">10</div><h2>Inevitable Accident</h2></div>
+      <p class="sec-sub">A related, broader defence (often examined alongside act of God).</p>
+      <p>Damage is said to be caused by <b>inevitable accident</b> when it is <b>not caused intentionally</b> and <b>could not possibly have been avoided by the exercise of ordinary care and caution</b> on the part of the person who caused it. It need not have been <b>inevitable</b> in the stricter sense of being incapable of being prevented at all — for example, if a man drives a horse and, despite exercising all reasonable care, an accident happens, he may plead inevitable accident; it is no answer to say that the accident would not have happened had he not taken the horse out of the stable.</p>
+      <p><b>Shaw CJ</b> defined it as <b>“an accident such as the defendant could not have avoided by the use of the kind and degree of care necessary to the exigency and in the circumstances in which he was placed.”</b></p>
+      <p>Illustrations: in the <b>Nitroglycerine Case</b> (1872), a sudden unexpected explosion from a case of nitroglycerine (the inflammatory nature of which was not then well known) was an <b>inevitable accident</b>, and the carrier was held not liable. A sudden seizure of a driver is an inevitable accident; a lightning strike destroying property is an act of God — <b>act of God is the narrower category</b>, being a sub-species of inevitable accident.</p>
+      <div class="fig">
+        <svg viewBox="0 0 720 130" width="720" role="img" aria-label="Inevitable vs act of god">
+          <rect x="30" y="25" width="660" height="80" rx="12" fill="#f0f1f5" stroke="#9aa1b5"/>
+          <text x="360" y="50" fill="#5d6478" text-anchor="middle" font-size="14" font-weight="700">INEVITABLE ACCIDENT (no fault — broader)</text>
+          <rect x="240" y="60" width="240" height="38" rx="9" fill="#fcefe6" stroke="#c0561f"/>
+          <text x="360" y="84" fill="#c0561f" text-anchor="middle" font-size="12.5" font-weight="700">ACT OF GOD (natural forces — narrower)</text>
+        </svg>
+        <div class="cap">Act of God is a sub-category of inevitable accident — the difference is the cause (natural forces).</div>
+      </div>
+    </section>
+
+    <!-- THE 7 CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 7 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C9 -->
+      <div class="case" id="c9">
+        <div class="case-head">
+          <h4>9. Smith v. Charles Baker and Sons</h4>
+          <span class="cit">(1891) AC 325 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff was a workman employed <b>for two months</b> by the defendant railway contractors, working a drill for rock-cutting. While so employed, stones were being lifted from the cutting by a <b>crane</b>, and were sometimes passed <b>over the place where the plaintiff was working</b>. No warning was given that the stone would be jibbed in that direction. The plaintiff said in evidence that he got out of the way whenever he saw the men jibbing over his head, but at the time of the accident he was working the drill and <b>did not see the stone above</b>. A fellow workman had, in the plaintiff’s hearing, complained to the manager of the danger of slinging stones over their heads, and the plaintiff himself had told the crane driver that it was not safe. The plaintiff was a <b>navvy</b>, accustomed to such work for six or seven years, and <b>knew the work was dangerous</b>. A stone fell on him and caused serious injury. The county-court judge refused to nonsuit. The jury found (1) the machinery was not reasonably fit; (2) the omission to supply means of warning was a defect in the ways, works, machinery and plant; (3) the employers were negligent in not remedying the defect; and (4) <b>the plaintiff was not guilty of contributory negligence and did not voluntarily undertake a risky employment with knowledge of its risks</b>. They awarded £100. The Divisional Court dismissed the defendant’s appeal, but the Court of Appeal allowed it on the ground of no evidence of negligence. The plaintiff appealed to the <b>House of Lords</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Does <b>mere knowledge of the risk</b> (and continuance in the employment) bar the workman’s claim? (2) What must be proved to invoke <i>volenti non fit injuria</i>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendants:</b> The plaintiff knew the work was dangerous and continued in the employment with that knowledge, so he voluntarily assumed the risk — <i>volenti non fit injuria</i>; also, there was no evidence of negligence.</p>
+            <p><b>Plaintiff:</b> Knowledge of a risk is not the same as consent to it. He did <b>not</b> consent to the particular negligent act (slinging a stone over his head without warning). The employer’s duty to take reasonable care was not excluded merely because he continued to work; he could not look out for himself while attending the drill.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>House of Lords</b> (Lord Halsbury LC &amp; Lord Herschell) reversed the Court of Appeal and <b>restored judgment for the plaintiff</b>. The maxim had no application.</p>
+            <p class="quote">“I do not think the plaintiff did consent at all. His attention was fixed upon a drill, and while, therefore, he was unable to take precautions himself, a stone was negligently slung over his head without due precaution … a person who relies on the maxim must show a <b>consent to the particular thing done</b>.” — Lord Halsbury LC</p>
+            <p class="quote">“It is, of course, impossible to maintain a proposition so wide as … that wherever a person knows there is a risk of injury to himself, he debars himself from any right of complaint if an injury should happen to him … it has been taken for granted that <b>mere knowledge of the risk does not necessarily involve consent to the risk</b>; and the maxim is not <i>scienti non fit injuria</i>, but <i>volenti non fit injuria</i>.”</p>
+            <p class="quote">“Where a risk to the employed, which may or may not result in injury, has been created or enhanced by the negligence of the employer, does the mere continuance in service, with knowledge of the risks, preclude the employed, if he suffers from such negligence, from recovering? <b>I cannot assent to the proposition that the maxim applies to such a case.</b> … Whatever the dangers of the employment which the employed undertakes, amongst them is certainly not to be numbered the risk of the employer’s negligence.” — Lord Herschell</p>
+            <p class="quote">“In any case in which it was alleged that such a special contract had been entered into, I should require it to be clearly shown that the employed had brought home to his mind the nature of the risk he was undertaking, and that the accident to him arose from a danger <b>both foreseen and appreciated</b>.” — Lord Herschell</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Knowledge of a risk is not, by itself, consent to it.</b> To invoke <i>volenti</i>, the defendant must show the plaintiff (a) <b>full knowledge and appreciation</b> of the particular risk, and (b) <b>free and voluntary acceptance</b> of it — consent to the <b>particular thing done</b>. Mere continuance in employment with knowledge of risks, especially where the risk arises from the <b>employer’s breach of duty</b> (which is not one of the risks the workman undertakes), does <b>not</b> bar recovery. The maxim is <i>volenti</i>, not <i>scienti</i>.</div>
+        </div>
+      </div>
+
+      <!-- C10 -->
+      <div class="case" id="c10">
+        <div class="case-head">
+          <h4>10. South Indian Industrial Ltd., Madras v. Alamelu Ammal</h4>
+          <span class="cit">AIR 1923 Mad 565</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendants, for their own business, broke up cast iron by <b>dropping a heavy weight from a height of 35 feet</b> on pieces of iron resting on a bed of iron, intending to break them into smaller pieces. The inevitable result was that <b>pieces of iron flew about</b>, habitually to distances of four or five yards from the pit, and sometimes further. They put up a screen which was <b>obviously inadequate</b>, and issued warnings only to persons <b>nearby</b>, allowing their workmen at a distance to keep working at the risk of being hit. A piece of iron flew to a distance of some 70–90 feet and killed a workman (the deceased), the husband of the plaintiff. The defence argued that even human foresight and skill could not have discovered that pieces would fly so far.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the defendants <b>negligent</b> in carrying on dangerous operations without adequate precautions? (2) Did the defence of <i>volenti non fit injuria</i> apply, i.e., did the deceased voluntarily undertake the risk with full knowledge and appreciation of it?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The defendants were negligent — the screen was inadequate, and they failed to warn workmen at a distance. The mere happening of the accident is strong evidence of negligence; and the occurrence of such a dangerous practice shows want of ordinary care, caution and skill.</p>
+            <p><b>Defendants:</b> They exercised ordinary care — the pieces habitually flew 4–5 yards and could not be expected to go 70–90 feet; and the deceased, knowing the work was dangerous, voluntarily undertook the risk (<i>volenti</i>).</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Schwabe CJ</b> held the defendants liable; the appeal by the defendants was dismissed (with the quantum adjusted to Rs. 500).</p>
+            <p class="quote">“If a person chooses to carry on dangerous operations of that kind, it is their duty <b>not only to the public but to their servants</b> to take adequate precautions that those pieces shall not cause injury. … The <b>mere fact that an accident has happened is strong evidence</b> in a case of that kind that they had not taken the ordinary care, caution, and skill required for preventing the happening of the event … the failure to take further precautions since the accident is, to my mind, negligence of the grossest kind.”</p>
+            <p class="quote">“The defence … volenti non fit injuria; but for this to succeed it is necessary for the other party to prove that the person injured <b>knew of the danger, appreciated it, and voluntarily took the risk</b>. There is no evidence of any of these three things … Of course a man cannot voluntarily undertake a risk <b>the extent of which he does not appreciate</b>.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Volenti requires all three: knowledge, appreciation and voluntary acceptance</b> of the particular risk. A man cannot voluntarily undertake a risk whose <b>extent he does not appreciate</b>. Where even a skilled European manager did not appreciate the risk, the deceased workman certainly could not. Also, a person who carries on <b>dangerous operations owes a duty to take adequate precautions, not only to the public but to his servants</b>; the fact that an accident has happened is itself <b>prima facie evidence of negligence</b>.</div>
+        </div>
+      </div>
+
+      <!-- C11 -->
+      <div class="case" id="c11">
+        <div class="case-head">
+          <h4>11. Haynes v. Harwood</h4>
+          <span class="cit">(1935) 1 KB 146 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendants were owners of a <b>two-horse van</b> driven by their servant, Bird. On 24 August 1932, Bird took his van into Quiney’s Yard and Wharf on the left-hand side of Paradise Street, Rotherhithe, a <b>crowded street with several schools, a church and working-class dwellings</b>, to unload goods. After unloading, he needed a receipt; instead of leaving the horses in the yard, he drove them out into the street and <b>left them unattended</b> on the left-hand side facing the police station while he went for the receipt. Two boys came along and one, “with a mischievous propensity,” <b>threw a stone at the horses</b>, which bolted. They ran a considerable distance until opposite the police station, where the <b>plaintiff, a police constable in the charge room</b>, saw what was happening. He saw a woman and a number of <b>children in grave danger</b>. At great risk to life and limb he seized the off-side horse and tried to stop them both; after about fifteen yards he succeeded, but one of the horses fell on him and he suffered <b>serious personal injuries</b>. Finlay J awarded him £350. The defendants appealed.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was the driver <b>negligent</b> in leaving the horses unattended in a crowded street? (2) Was there a <b>novus actus interveniens</b> (the boy’s act / the horses’ running away) breaking the chain of causation? (3) Did the plaintiff, a rescuer, <b>assume the risk</b> (<i>volenti non fit injuria</i>) so as to bar his claim?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendants:</b> (i) No evidence of negligence — it is not always negligent to leave horses unattended; (ii) the accident was caused by the <b>intervention of consciously-acting persons</b> between the wrongful act and the accident (novus actus interveniens), breaking the chain; (iii) the plaintiff <b>assumed the risk</b> he ran, so he cannot recover (<i>volenti</i>).</p>
+            <p><b>Plaintiff:</b> The driver owed a duty to all lawfully using the highway (including a policeman stopping a runaway horse); the harm was the <b>natural and probable consequence</b> of the wrongful act; and a rescuer who acts under an exigency created by the defendant’s wrong is <b>not</b> volens.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Greer LJ</b> (Court of Appeal) dismissed the appeal. <b>Appeal dismissed.</b></p>
+            <p class="quote">“To leave horses unattended, even for such a short time as three minutes, in a place where mischievous children may be about, where something may be done which may result in the horses running away, seems to me to be <b>negligent</b> — having regard to the proved circumstances.”</p>
+            <p class="quote">“It is not true to say that where a plaintiff has suffered damage occasioned by a combination of the wrongful act of the defendant and some further conscious act by an intervening person, that of itself prevents the Court coming to a conclusion in the plaintiff’s favour <b>if the accident was the natural and probable consequence of the wrongful act</b>.”</p>
+            <p class="quote">“If what is relied upon as <i>novus actus interveniens</i> is the very kind of thing which is likely to happen if the want of care which is alleged takes place, the principle embodied in the maxim is no defence.”</p>
+            <p class="quote">“The doctrine of the assumption of risk does not apply where the plaintiff has, under an exigency caused by the defendant’s wrongful misconduct, consciously and deliberately faced a risk, even of death, to rescue another from imminent danger … It is, of course, all the more applicable here because the man injured was a policeman who might readily be anticipated to do the very thing which he did.”</p>
+            <p class="quote">“I think it would be absurd to say that if a man deliberately incurs a risk he is entitled to less protection than if he acts on sudden impulse without thinking whether he should do so or not.”</p>
+            <p>The court distinguished <i>Cutler v. United Dairies</i> (where the plaintiff was merely helping in pacifying a horse, not rescuing).</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <b>Rescue cases</b>: a person who, in an exigency caused by the defendant’s wrong, deliberately and consciously faces a risk to <b>rescue another from imminent danger</b> (whether a relation or a stranger) is <b>not</b> barred by <i>volenti non fit injuria</i>. It is immaterial whether he acts on impulse or from a sense of duty. (ii) <b>Novus actus interveniens</b>: an intervening human act does <b>not</b> break the chain of causation if it is the <b>very kind of thing likely to happen</b> as a result of the defendant’s want of care — the test is whether the accident was the <b>natural and probable consequence</b> of the breach of duty. (iii) A policeman (or anyone lawfully using the highway) is within the class to whom the driver owed a duty of care.</div>
+        </div>
+      </div>
+
+      <!-- C12 -->
+      <div class="case" id="c12">
+        <div class="case-head">
+          <h4>12. Ramchandraram Nagaram Rice &amp; Oil Mills Ltd., Gaya v. Municipal Commissioners of Purulia Municipality</h4>
+          <span class="cit">AIR 1943 Pat 408</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff company manufactured oil and rice for 14 years and sold mustard oil in canisters bearing the registered mark <b>“R.N. Bishnucharan.”</b> On 29 April 1938 it despatched a railway van marked <b>“Mustard Oil Tank”</b> carrying pure mustard oil to Purulia. About <b>1,000 canisters</b> were filled and metalled. On 4 May 1938, after about 400 tins had been delivered, the defendants applied under <b>S. 287, Municipal Act</b>, for a search warrant, alleging the oil had been brought in a crude-oil/kerosene tank and was contaminated. That afternoon the Sanitary Inspector with defendants 2–4 went to the station yard and <b>detained the oil</b>. The next day defendants ordered 613 tins to be carried in the <b>municipal motor-truck used for carrying rubbish and road-sweepings</b>, and the tins were <b>loaded by mehtars (sweepers)</b>. Samples were sent to the Government analyst at Patna, who <b>found the oil genuine</b>. In the interim the customers refused to buy the oil (because it had been seized and carried in the scavengers’ truck), and the plaintiff had to reduce the price by four annas per maund. The plaintiff claimed Rs. 3,984-8-0 for the oil, Rs. 82-8-0 interest, and Rs. 5,928 for loss of business and damage to reputation — total Rs. 9,995. The trial court dismissed the suit; the plaintiff appealed.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the defendants protected because they were <b>acting under statutory authority</b> (S. 287)? (2) Was their action <b>unreasonable or negligent</b>, making them liable despite being within the statute?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendants:</b> They were acting within the purview of the statute (S. 287), and were therefore protected from liability. They denied any malice or conspiracy.</p>
+            <p><b>Plaintiff:</b> The seizure and the removal of edible oil in the <b>scavengers’ truck</b> by <b>sweepers</b> was unreasonably and negligently done, causing loss and damage to reputation. Even a statutory authority must be exercised with <b>reasonable care</b>; the municipality is liable for the negligent acts of its agents.</p>
+            <p><b>Authorities relied on:</b> <i>Geddis v. Bann Reservoir</i> (Lord Blackburn: no liability if the authorised act is done <b>without negligence</b>, but an action lies <b>if it is done negligently</b>); <i>Mayor of East Fremantle v. Annois</i> (to be exercised <b>bona fide and with judgment and discretion</b>; arbitrary, careless or oppressive exercise gives a remedy); <i>Nagar Valab Narsi v. Municipality of Dhandhuka</i> (public authorities must not act capriciously, wantonly or tyrannically even within the limits of their powers); <i>Rup Lal Singh v. Secretary of State</i> (the donee of a statutory power cannot go beyond what is reasonable).</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Varma J</b> allowed the appeal. The plaintiff company was entitled to the difference between the actual price and the price realised at the auction sale (the appeal was allowed on the principle of unreasonableness/negligence; the court also noted the principle of <i>Painter v. Liverpool Oil Gas</i> — a litigant executing invalid legal process is liable notwithstanding honest mistake, and Salmond’s note that irregularity deprives the officer of all justification).</p>
+            <p class="quote">“The principle of law deducible from these decisions can be shortly stated as follows: <b>If a person is exercising his rights under a statute he is not liable unless it is proved that he acted unreasonably or negligently.</b>”</p>
+            <p class="quote">“The action of the municipality, if not actuated by malice or as a result of a conspiracy, was certainly <b>very unreasonable and negligent</b>. There were other methods available by which the same object could have been attained. But the one which the municipality adopted does make them liable for the loss which the plaintiff suffered. <b>The municipality is liable for the negligent acts of its agents.</b> Appeal allowed.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Statutory authority is a good defence only if the authorised act is done without negligence.</b> The defence does <b>not</b> extend to the unreasonable or negligent exercise of statutory powers. Where a public authority seizes goods and then handles them negligently (e.g., carrying edible oil in a scavengers’ truck), it is liable for the loss, and <b>a municipality is vicariously liable for the negligent acts of its agents</b>. The burden is on the authority to show the act was done reasonably.</div>
+        </div>
+      </div>
+
+      <!-- C13 -->
+      <div class="case" id="c13">
+        <div class="case-head">
+          <h4>13. Manindra Nath Mukherjee v. Mathuradas Chatturbhuj</h4>
+          <span class="cit">AIR 1946 Cal 175</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendant was the proprietor of the <b>Rupali Cinema</b>, a one-storeyed building abutting a street. On its roof stood a <b>sky-sign</b> (a permanent steel frame 12 ft high × 25 ft wide, covered with galvanised iron sheeting on which advertising designs were displayed) licensed under the Calcutta Municipal Act. Advertising <b>banners</b> (cloth within a wooden frame) were displayed from the sky-sign <b>without any contrivance to hold them securely</b> — no slots, bolts, grooves, flanges or screws. They were held by <b>coir ropes</b> tied to the four corners of the wooden frame and knotted around the metal frame and iron rods behind. On <b>5 July 1943</b>, at about 7.15 p.m., a banner 12 ft × 3½ ft within a wooden frame <b>fell onto the plaintiff</b>, who was passing along the pavement (only 4 ft intervened between the sky-sign and the edge of the roof). The wooden frame struck him on the head, causing a severe cut which bled profusely. The defendant contended there was a storm of <b>unusual severity</b> (act of God) and that all reasonable care had been taken.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Did the defendant, as an occupier adjoining a public thoroughfare, owe a <b>duty of care</b> to the plaintiff, a passer-by? (2) Did <b>res ipsa loquitur</b> apply, shifting the burden of proving due care onto the defendant? (3) Was the fall caused by an <b>act of God</b> (a storm of unusual severity)? (4) Was the defendant liable under the rule in <i>Rylands v. Fletcher</i>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defendant:</b> The plaintiff was struck not by the banner but by other material; and in any event, every reasonable care was taken — the banner was tied with 3 strands of new rope at each corner, the manager supervised the tying on 12 June and examined it on 5 July; the fall was caused by a <b>storm of unusual severity</b> (act of God).</p>
+            <p><b>Plaintiff:</b> The banner would not have fallen but for the defendant’s negligence in not securing it properly; he relied on <b>res ipsa loquitur</b> to shift the burden of proof onto the defendant, and on the principle in <i>Rylands v. Fletcher</i>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Khundkar J</b> held the defendant liable. The defence of act of God (unusual storm) failed, and the defendant was liable both under <i>Rylands v. Fletcher</i> and for negligence.</p>
+            <p class="quote">“I hold that the defendant is liable upon the principle in <i>Rylands v. Fletcher</i>, and I further find that there was negligence on the part of his servants for which he is responsible in law, inasmuch as <b>proper care was not taken to secure the banner</b> in such a way as to prevent it from being blown into the street during monsoon weather.”</p>
+            <p class="quote">“The evidence … puts an end to the plea of <b>act of God</b>; for if it is accepted, as I think it must be, then it is idle to say that the force of the wind was so unexpected that no foresight could reasonably be expected to anticipate it.” (Wind at the time was only ~27 mph — gusts of 28–33 mph are not uncommon in the monsoon; 31–48 mph occur in nor’wester squalls.)</p>
+            <p class="quote">“On the 5th July the weather was <b>not uncommonly windy for the monsoon</b>; and in not taking precautions against winds which are not unusual during the monsoon months, the defendants were prima facie negligent; and the fact that the banner fell in a wind which was not above 27 miles per hour in velocity goes a long way to discredit all the elaborate evidence … regarding the tying of the banner.”</p>
+            <p>The court also considered the definition of act of God — <i>“an operation of natural forces so unexpected that no human foresight or skill could reasonably be expected to anticipate it”</i> (Winfield, following Pollock) — and the authorities (<i>Nichols v. Marsland</i>, <i>Greenock Corp.</i>, <i>City of Montreal v. Watt &amp; Scott</i>, <i>GWR of Canada v. Braid/Fawcett</i>).</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Act of God / vis major</b> is an operation of natural forces so <b>unexpected that no human foresight or skill could reasonably be expected to anticipate it</b>. It is <b>not</b> enough that the event is unusual in degree; if it is of a kind <b>reasonably to be anticipated</b> in the circumstances (e.g., moderate monsoon winds), the defence fails. The defendant is liable under <i>Rylands v. Fletcher</i> (escape of a dangerous thing) and for <b>negligence</b> where <b>res ipsa loquitur</b> applies and is not rebutted — and the burden of proving due care (or an act of God) lies on the defendant once the thing itself speaks.</div>
+        </div>
+      </div>
+
+      <!-- C14 -->
+      <div class="case" id="c14">
+        <div class="case-head">
+          <h4>14. Hall v. Brooklands Auto Racing Club</h4>
+          <span class="cit">(1932/1933) 1 KB 205 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendants owned the <b>Brooklands</b> motor-racing track, an oval about two miles round, with a long finishing straight over a hundred feet wide. Named stands were provided for spectators who paid for admission, but <b>many preferred to stand outside the railing</b>. During a race, two cars were going along the finishing straight at about <b>a hundred miles an hour</b>; as they approached a sharp bend to the left, the leading car turned and the other did the same — the cars touched, one was shot into the air, went over the railing and fell among the spectators, <b>killing two and injuring others</b>, including the plaintiff, Mr. Hall, who had bought a ticket. It was the <b>first such accident in the over-20-year history</b> of the track.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Did the defendants owe a <b>duty of care</b> to safeguard spectators against <b>reasonably foreseeable</b> risks? (2) Did they breach it? (3) Did the spectators, by attending, <b>impliedly accept the risk</b> inherent in motor racing (<i>volenti non fit injuria</i>)?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The club failed to take adequate safety measures and gave no warning of the dangers; the barrier was too low and weak; experts said such accidents could happen again, so the risk was foreseeable and ought to have been guarded against.</p>
+            <p><b>Defendants:</b> The accident was an <b>extraordinary, unprecedented event</b> (23 years of racing without it); reasonable precautions (stands, railing) had been taken and worked; motor racing is inherently dangerous; and the plaintiff, by buying a ticket, <b>voluntarily assumed the risk</b> (<i>volenti</i>).</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Court of Appeal</b> (Scrutton, Greer &amp; Slesser LJJ) allowed the appeal of the club and <b>held the defendants not liable</b>.</p>
+            <p class="quote">The defendants are under a duty of care to protect spectators against <b>reasonably foreseeable</b> risks, but are <b>not</b> under a duty to guard against the risk that was <b>not reasonably foreseeable</b>, or against the danger <b>inherent in the sport</b>. The accident was the first of its kind in the track’s long history, so it could not reasonably have been foreseen — the defendants could not be expected to guard against it, and no amount of due diligence would have revealed it.</p>
+            <p class="quote">“When the spectators purchased tickets for witnessing the race, they had given <b>implied consent</b>. The doctrine of <i>volenti non fit injuria</i> was applicable since the victims had prior knowledge of the probable risks and had consented for the same.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> A spectator at a sports event <b>voluntarily assumes the risks inherent in the sport</b>, whether reasonably to be expected or improbable. The promoter’s duty is to take reasonable care against <b>reasonably foreseeable</b> dangers (the standard is <b>due care, not absolute safety</b>); he is <b>not</b> liable for an <b>extraordinary, unprecedented and unforeseeable</b> accident, nor for the <b>inherent dangers</b> of the activity. Where the harm is inherent and the event unforeseeable, the spectator’s presence amounts to <b>implied consent</b> and <i>volenti</i> defeats the claim. (In <i>Wooldridge v. Sumner</i>, the principle was refined: a participant’s duty is to take due care and <i>not to act with reckless disregard</i> for the spectator’s safety; a mere error of judgment or lapse of skill is not negligence.)</div>
+          <div class="warnbox"><b>Note:</b> Some sources describe this as a decision of the Court of Appeal (Scrutton, Greer, Slesser LJJ); certain student texts refer to it as the House of Lords. The syllabus lists it as <b>(1932) 1 KB 205</b>.</div>
+        </div>
+      </div>
+
+      <!-- C15 -->
+      <div class="case" id="c15">
+        <div class="case-head">
+          <h4>15. T.C. Balakrishnan v. T.R. Subramanian</h4>
+          <span class="cit">AIR 1968 Ker 151</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>During the <b>Trichur Pooram</b> festival (a public festive procession), fireworks were displayed. A <b>minnal gundu</b> is an explosive made from a coconut shell filled with an explosive substance, placed in a bamboo tube with gunpowder beneath; the tube is kept upright, tied to an iron peg, and when ignited the shell is ejected vertically into the sky where it explodes. Two processions — of the <b>Paramekkavu</b> and <b>Thiruvambadi Devaswoms</b> — met at the southern gopuram of the Vadakkunnatha Temple in the evening, and a few hundred <b>olappadakams</b> (fireworks) interspersed with about 20–25 minnal gundus were fired. On this occasion a minnal gundu <b>did not rise into the sky and explode</b>; instead it <b>ran at a tangent, fell amidst the crowd and exploded</b>, causing serious injuries to the <b>first respondent, a minor</b> (represented by his father). Both lower courts decreed the suit. The trial court held the <b>Celebration Committee</b> responsible (and the appellants, its members, liable); the District Judge confined liability to the appellants, the members of the <b>Pooram Celebration Committee</b>, who had <b>engaged the 20th defendant, an independent contractor</b>, to exhibit the fireworks.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was the 20th defendant (independent contractor) <b>negligent</b> — or does <i>res ipsa loquitur</i> apply? (2) Are the <b>appellants</b>, who engaged the independent contractor, <b>vicariously liable</b> for the negligence of the contractor in respect of a <b>hazardous/extra-hazardous</b> object? (3) Do the defences of <b>volenti non fit injuria</b> and <b>natural user</b> (excluding <i>Rylands</i> liability) and the <b>public benefit</b> argument apply?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellants:</b> (i) Collecting and exploding minnal gundus on the Maidan on a festival day was a <b>natural use</b> of the land, so the <i>Rylands</i> rule (which requires a non-natural user) did not apply; (ii) the first respondent <b>voluntarily came to witness</b> the Pooram and the fireworks, so he was a <b>volunteer</b> and <i>volenti</i> applied; (iii) the event was for the <b>public benefit</b>, so no individual could claim; (iv) since the Devaswom Committee and the Devaswom were exonerated, they should be too.</p>
+            <p><b>Respondent:</b> The 20th defendant was negligent — he failed to secure the tube and used weak tubes; even if negligence is not directly proved, <i>res ipsa loquitur</i> applies because minnal gundus normally fly vertically and explode in the air, and this one falling in the crowd and bursting speaks of negligence. The minnal gundu is an <b>extra-hazardous</b> explosive, and persons using it have a <b>non-delegable duty</b>; they cannot escape liability by engaging an independent contractor, and are liable under <i>Rylands v. Fletcher</i>. A person in a crowd of lakhs is not a <b>volenti</b>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>T.C. Raghavan J</b> (Kerala High Court) held the appellants liable; the suit was decreed with costs. The Lower Courts’ finding of negligence against the 20th defendant stood, and the appellants, who engaged him, were jointly and severally liable as <b>joint tort-feasors</b>.</p>
+            <p class="quote">“Since the gundu in question fell in the midst of the crowd and burst, there must have been negligence on the part of the 20th defendant … The minnal gundu is an explosive, and is therefore an <b>‘extra-hazardous’ object</b>; and persons who use such an object, which, in its very nature, involves special danger to others, must be liable for the negligence of their independent contractor. The duty to keep such a substance without causing injury to others is a <b>‘non-delegable’ duty</b>: the appellants could not have escaped liability for the breach of such a duty by engaging an independent contractor.”</p>
+            <p class="quote">“To collect minnal gundus and explode them on a Maidan on a festival day is <b>not a natural user</b> of the Maidan; because under the Indian Explosives Act, for making and storing explosive substances even on a Maidan on a festival day licences have to be taken from the prescribed authorities.” (No licence was taken for the day-time display.)</p>
+            <p class="quote">“<b>Volenti non fit injuria</b> cannot apply — everyone in the big crowd of a few lakhs witnessing the fireworks anywhere in the Maidan could not be considered a volunteer; the explosion that injured the respondent <b>fell outside the cordoned area</b> where the fireworks were safely ignited, and the injury was not within the risk he consented to.”</p>
+            <p class="quote">“The defendants … were all <b>joint tort-feasors</b> and each of them was jointly and severally liable in damages; the omission to grant a decree against some of the joint tort-feasors is no reason for exonerating the others.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) <b>Res ipsa loquitur</b> applies — where a minnal gundu (which should fly vertically and explode in the air) falls among the crowd and bursts, negligence is presumed (rebuttable, but not rebutted). (ii) <b>Liability for an independent contractor:</b> persons who use an <b>extra-hazardous</b> object in the very nature of which special danger to others is inherent, must be liable for the negligence of the independent contractor they engage — the duty is <b>non-delegable</b>; liability also rests on <i>Rylands v. Fletcher</i> (non-natural user, because statutory licences are required). (iii) <b>Volenti fails</b>: a member of a large crowd is not a volunteer; and a person injured by an explosion that <b>escapes the cordoned, consented-to area</b> has not consented to that risk. (iv) <b>Joint tort-feasors</b> are jointly and severally liable, and the omission to sue one does not exonerate the others.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes a question from the actual DU (LB-103) December 2024 paper plus the classic DU Topic-2 questions.</p>
+
+      <!-- PYQ A (actual Dec 2024) -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">DU · December 2024 · Q2 · 20 marks</span>Amada, a three-year-old child attending play school under the management of KB School was temporarily left unattended by the class teacher, Mr. White. He strayed from the premises to the public highway. A lorry driver saw the child running in the middle of the road. Mr. White suddenly swerved the lorry to save the child and in doing so he sustained multiple injuries. Mr. White sues KB for negligence. It was pleaded in defence that though KB might have owed a duty of care to the child, he owed no such duty to Mr. White and therefore the maxim <i>volenti non fit injuria</i> applies in this case. Decide.</div>
+        <div class="ans">
+          <div class="lbl">Approach (structure)</div>
+          <p><b>1. Identify the real defendant:</b> The question really concerns whether KB’s agent (the class teacher, Mr. White of KB) was negligent in leaving a three-year-old unattended, and whether KB is liable to the <b>rescuer</b>. <b>2. The duty of care:</b> KB owed a duty to the child (a pupil/visitor) and, as the driver’s injury shows, to a <b>rescuer</b> who is a foreseeable victim. <b>3. Volenti:</b> The driver did <b>not</b> voluntarily assume the risk — he was a <b>rescuer</b>, so the defence fails. <b>4. Conclusion.</b></p>
+          <div class="lbl">Model Answer</div>
+          <p>The defence of <i>volenti non fit injuria</i> cannot succeed. The maxim means “to a willing person no injury is done,” and requires the plaintiff to have <b>known</b> and <b>freely accepted</b> the risk (see <i>Smith v. Charles Baker</i>; <i>Dann v. Hamilton</i> — mere knowledge is <i>sciens</i>, not <i>volens</i>). Mr. White did not freely and voluntarily accept the risk of injury; he acted to save the life of a child in imminent danger created by the defendant’s negligence.</p>
+          <p>This is squarely a <b>rescue case</b>. In <i>Haynes v. Harwood</i> (1935), a police constable injured while stopping runaway horses to save a woman and children was held entitled to recover; <b>Greer LJ</b> held that the doctrine of assumption of risk <b>does not apply</b> where the plaintiff, under an exigency caused by the defendant’s wrongful misconduct, <b>consciously and deliberately faced a risk, even of death, to rescue another</b> from imminent danger — whether a relation or a stranger. Here Mr. White deliberately faced the risk to save the child.</p>
+          <p>Moreover, it is immaterial that KB owed a duty of care primarily to the <b>child</b>. The defendant’s negligence had placed both the child (a member of a class at risk) and, as a foreseeable consequence, anyone who might attempt a <b>reasonably foreseeable rescue</b> in danger. In <i>Baker v. T.E. Hopkins</i> the duty extends to a rescuer who "he ought to have foreseen would attempt to come to the defendant’s aid." The rescuer is a <b>foreseeable victim</b> of the negligence.</p>
+          <p>The defence also fails for the independent reason that Mr. White’s conduct was <b>not voluntary</b> in the relevant sense — he acted under the compulsion of a moral duty / on the spur of the moment, not as a free choice; and <i>volenti</i> cannot be invoked where the plaintiff is a rescuer responding to a danger created by the defendant.</p>
+          <div class="lbl">Conclusion</div>
+          <p>KB School is liable. As in <i>Haynes v. Harwood</i>, a <b>rescuer is not barred by volenti</b>; the defendant owed Mr. White a duty of care because his injury was the natural and probable consequence of the defendant’s negligence. <b>Volenti does not apply.</b></p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question</span>Explain the maxim <i>volenti non fit injuria</i>. What are the essentials for its application? Point out the exceptions to it, and how it differs from contributory negligence. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> <i>Volenti non fit injuria</i> = “to a willing person, no injury is done.” Where a person <b>expressly or impliedly consents</b> to an act or to run a risk, he cannot complain of the resulting harm. It is a <b>complete defence</b>. It applies to (i) intentional acts (trespass, assault) and (ii) the risks of accidental harm (watching sports).</p>
+          <p><b>Essentials.</b> (1) <b>Knowledge of the risk</b>; (2) <b>Consent must be free and voluntary</b> (not obtained by fraud or coercion); (3) <b>Assent, not mere knowledge</b> — <i>volenti</i>, not <i>scienti</i>; (4) the act must be <b>within the consent</b>; (5) the act must <b>not be unlawful</b> or contrary to public policy; (6) the person must have <b>capacity</b> to consent.</p>
+          <p><b>Exceptions.</b> The defence fails (a) in <b>rescue cases</b> (<i>Haynes v. Harwood</i>; <i>Wagner</i>; <i>Baker v. T.E. Hopkins</i>); (b) under the <b>Unfair Contract Terms Act, 1977</b> (liability for death/personal injury by negligence cannot be excluded; other loss only if reasonable); (c) where consent is obtained by <b>fraud or coercion</b>; (d) where the act is <b>unlawful</b> or against public policy; (e) where the defendant has been <b>negligent</b> in a way not consented to (e.g., the doctor’s negligence); (f) on a <b>breach of a statutory duty</b> owed to the claimant.</p>
+          <p>Authorities: <i>Smith v. Charles Baker</i> (knowledge ≠ consent; employer’s negligence not a risk the workman undertakes); <i>South Indian Industrial</i> (must know, appreciate and accept — a man cannot accept a risk whose extent he doesn’t appreciate); <i>Hall v. Brooklands</i> (spectator impliedly accepts the inherent risks); <i>Dann v. Hamilton</i>, <i>Bowater v. Rowley</i> (sciens but not volens).</p>
+          <p><b>Difference from contributory negligence.</b> Volenti is a <b>complete defence</b> (no damages); contributory negligence only <b>reduces</b> damages. In volenti only the defendant is negligent; in contributory negligence <b>both</b> are negligent. In volenti the plaintiff <b>knowingly</b> accepted the risk (sciens + volens); in contributory negligence the plaintiff <b>failed to take due care</b> (ought to have known). Volenti requires consent to be <b>positively</b> shown; contributory negligence is inferred from the plaintiff’s carelessness.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question</span>“The maxim <i>volenti non fit injuria</i> is not <i>scienti non fit injuria</i>.” Explain with reference to the case law. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p>The maxim is <i>volenti non fit injuria</i> — to a willing person no injury is done — and <b>not</b> <i>scienti non fit injuria</i> (to a knowing person no injury is done). The distinction lies between <b>knowledge of a risk</b> (<i>sciens</i>) and <b>free acceptance of it</b> (<i>volens</i>). Mere knowledge does not amount to consent.</p>
+          <p><b>Leading authority — <i>Smith v. Charles Baker and Sons</i> (1891):</b> A navvy, knowing the work was dangerous, continued to work at the quarry while stones were slung over his head by a crane; a stone fell and injured him. The House of Lords held that <b>mere knowledge of the risk (and continuance in service) did not bar his claim</b>; consent to the <b>particular act</b> must be shown. <b>Bowen LJ</b> (in <i>Thomas v. Quartermaine</i>) and <b>Lindley LJ</b> (in <i>Yarmouth v. France</i>) clarified: the maxim is <i>volenti</i>, not <i>scienti</i>; the question is whether the whole risk was <b>voluntarily</b> incurred.</p>
+          <p><b>South Indian Industrial</b> requires <b>knowledge, appreciation and voluntary acceptance</b>; a man cannot accept a risk whose <b>extent he does not appreciate</b> — and if even a skilled manager did not appreciate the risk, the workman certainly could not.</p>
+          <p><b>Dann v. Hamilton, Bowater v. Rowley:</b> The passenger/carter was <i>sciens</i> but not <i>volens</i> — so the defence failed. A man is <b>not bound at his peril to fly from a risk which it is another’s duty to protect him from</b>, merely because he knows of it.</p>
+          <p><b>Distinguish <i>Hall v. Brooklands</i>:</b> There, by contrast, the spectator's attendance and purchase of a ticket was held to amount to <b>implied acceptance</b> of the inherent risks of the sport, so <i>volenti</i> was upheld. The cases show the test is always whether the plaintiff <b>accepted</b> the risk, not merely knew of it.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question</span>What is the defence of <i>statutory authority</i>? Can an act authorised by a statute be actionable? Discuss with the help of cases. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> When a statute authorises a certain act to be done by a certain person, which would otherwise be unlawful and actionable, <b>no action lies</b> for the doing of that act. With the authority comes a <b>statutory indemnity</b> taking away the tort remedies of persons injuriously affected. The defence extends not only to the act but to its <b>necessary consequences</b> (e.g., the smoke, vibration and noise of an authorised railway — <i>Hammersmith Rail v. Brand</i>; sparks in <i>Vaughan v. Taff Vale</i>, where the company took proper care).</p>
+          <p><b>Its limit — no defence to negligence.</b> The act must be done <b>with proper care</b>; if done <b>negligently</b>, an action will lie. Lord Blackburn in <i>Geddis v. Bann Reservoir</i>: no action for what the legislature authorises <b>if done without negligence</b>, but an action lies <b>if done negligently</b>. In <i>Smith v. London &amp; South Western Rly.</i>, the railway was liable because its servants negligently left grass trimmings near the line which caught fire.</p>
+          <p><b>Indian application — <i>Ramchandraram Nagaram Rice &amp; Oil Mills v. Purulia Municipality</i>:</b> The municipality seized mustard oil under S. 287 of the Municipal Act and then had it carried in a <b>scavengers’ truck</b> loaded by <b>mehtars</b>; the customers refused to buy it and the miller suffered loss. The Patna High Court held that, while the authority acted under statutory power, it acted <b>unreasonably and negligently</b> in the manner of handling the oil, and was liable. The principle distilled: <b>“If a person is exercising his rights under a statute he is not liable unless it is proved that he acted unreasonably or negligently.”</b> The municipality is liable for the negligent acts of its agents.</p>
+          <p><b>Absolute vs conditional authority.</b> <i>Absolute</i>: no liability even if it causes some nuisance or slight harm. <i>Conditional</i>: the act may be done only if it causes no nuisance or harm — <i>Metropolitan Asylum District v. Hill</i> (authority to erect a smallpox hospital construed as conditional; restrained where it would be a danger to neighbours).</p>
+          <p><b>Conclusion.</b> Statutory authority is a complete defence to the <b>authorised act and its necessary consequences</b>, but <b>not</b> to its negligent, unreasonable, capricious or oppressive exercise.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question</span>What is the defence of <i>act of God</i>? What are its essentials? Explain with reference to decided cases. <span class="marks">20</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> Act of God (or <i>vis major</i>) is <b>an operation of natural forces so unexpected that no human foresight or skill could reasonably be expected to anticipate it</b> — it is an accident due to natural causes <b>directly and exclusively without human intervention</b>, which could not have been avoided by any amount of foresight and care reasonably expected. It is a good defence to negligence and even to strict liability (<i>Rylands v. Fletcher</i>).</p>
+          <p><b>Essentials.</b> (1) There must be the <b>working of natural forces</b> — no human intervention (in <i>Ramlinga Nadar</i>, an unruly mob robbing goods was <b>not</b> an act of God because it was human agency); (2) the occurrence must be <b>extraordinary</b> — not one that could reasonably be anticipated and guarded against. It need not be unique; it is enough that it is extraordinary and such as could not reasonably be anticipated.</p>
+          <p><b>Cases.</b> <i>Nichols v. Marsland</i> — extraordinary rainfall (heaviest in human memory) bursting lakes and washing away bridges: <b>act of God</b>. <i>Greenock Corp. v. Caledonian Rly.</i> — floods of extraordinary violence must be anticipated; <b>not</b> act of God. <i>City of Montreal v. Watt &amp; Scott</i> — a municipality must build sewers to cope with expected water; <b>not</b> excused. <i>Manindra Nath Mukherjee</i> — a banner fell in a gust of ~27 mph during the monsoon; since winds of that velocity are <b>not uncommon in the monsoon</b>, they were foreseeable; <b>not</b> act of God, and the defendant was liable (also under <i>Rylands</i> and for negligence via <i>res ipsa loquitur</i>). <i>General Traders v. Pierce Leslie</i> — a storm was merely an irregularity of the sea; <b>not</b> act of God. <i>Kallulal v. Hemchand</i> — 2.66 inches of rainfall in the rainy season was ordinary; <b>not</b> act of God.</p>
+          <p><b>Conclusion.</b> The defence succeeds only where the natural event is <b>extraordinary and unforeseeable</b> and <b>free from human intervention</b>; an event that is merely unusual in degree or that could reasonably have been guarded against will not do. It is the narrower sub-category of <b>inevitable accident</b>.</p>
+        </div>
+      </div>
+
+      <!-- PYQ F -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short/long question</span>Write a short note on the defence of <i>inevitable accident</i>, and distinguish it from <i>act of God</i>. <span class="marks">10</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Inevitable accident</b> is damage that is <b>not caused intentionally</b> and <b>could not possibly have been avoided by the exercise of ordinary care and caution</b> by the person who caused it. It need not be strictly incapable of being prevented (the <i>Nitroglycerine Case</i> — a sudden unexpected explosion of a substance whose dangerous nature was not then known was an inevitable accident). <b>Shaw CJ</b>: an accident the defendant could not have avoided “by the use of the kind and degree of care necessary to the exigency and in the circumstances in which he was placed.”</p>
+          <p><b>Distinction.</b> <i>Inevitable accident</i> is the <b>broader</b> defence — any accident unavoidable by reasonable care, whether caused by natural forces, human agency or both. <i>Act of God</i> is the <b>narrower</b> sub-category — caused <b>exclusively by natural forces</b> and extraordinary. A sudden seizure of a driver is an inevitable accident; a lightning strike is an act of God. Also, act of God is a good defence even to <b>strict liability</b>, while inevitable accident is essentially a defence to liability based on <b>fault</b>.</p>
+        </div>
+      </div>
+
+      <!-- PYQ G -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short question</span>What are the essentials of the defence of <i>volenti non fit injuria</i>? Can a person be said to have consented merely because he <b>knew</b> of the risk? <span class="marks">10</span></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Essentials:</b> (1) knowledge of the risk; (2) consent must be <b>free and voluntary</b> (no fraud or coercion); (3) there must be <b>acceptance/assent</b> — <i>volens</i>, not mere <i>sciens</i>; (4) the act must be within the consent; (5) the act must not be unlawful or against public policy; (6) the person must have the capacity to consent (a guardian may consent for a minor/insane person).</p>
+          <p><b>Knowledge alone is not consent.</b> The maxim is <i>volenti non fit injuria</i>, not <i>scienti non fit injuria</i>. In <i>Smith v. Charles Baker</i> the House of Lords held that a workman who knew of the danger and continued work did <b>not</b> thereby consent to the employer’s negligence; consent to the particular act must be shown. In <i>South Indian Industrial</i>, knowledge, appreciation and voluntary acceptance are all required. In <i>Dann v. Hamilton</i> and <i>Bowater v. Rowley</i> the plaintiff was <i>sciens</i> but not <i>volens</i>. By contrast, in <i>Hall v. Brooklands</i> the spectator's purchase of a ticket was <b>implied acceptance</b> of the sport’s inherent risks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Volenti non fit injuria</span> — to a willing person no injury is done; consent to the act/risk is a complete defence.</li>
+        <li><span class="lat">Scienti non fit injuria</span> — to a knowing person no injury is done; this is <b>not</b> the law — knowledge alone is not consent.</li>
+        <li><span class="lat">Volens / sciens</span> — one who <b>accepts</b> a risk (volens) vs one who merely <b>knows</b> of it (sciens).</li>
+        <li><span class="lat">Act of God / vis major / damnum fatale</span> — an extraordinary operation of natural forces which no human foresight or skill could reasonably anticipate, without human intervention.</li>
+        <li><span class="lat">Inevitable accident</span> — damage not caused intentionally and unavoidable by the exercise of ordinary care and caution.</li>
+        <li><span class="lat">Statutory authority</span> — an act authorised by statute is not actionable; carries a statutory indemnity; but no defence to negligence.</li>
+        <li><span class="lat">Res ipsa loquitur</span> — “the thing speaks for itself”; the occurrence itself raises a presumption of negligence.</li>
+        <li><span class="lat">Novus actus interveniens</span> — a new intervening act; breaks the chain of causation only if it is NOT the natural and probable consequence of the defendant’s negligence.</li>
+        <li><span class="lat">Rylands v. Fletcher</span> — strict liability for the escape of a dangerous thing brought onto land in a <b>non-natural</b> use; exceptions include act of God.</li>
+        <li><span class="lat">Ex turpi causa non oritur actio</span> — no action arises from an immoral/unlawful cause (plaintiff the wrongdoer).</li>
+        <li><span class="lat">Non-delegable duty</span> — a duty that cannot be discharged by entrusting it to an independent contractor (applies to extra-hazardous things).</li>
+        <li><span class="lat">Joint tort-feasors</span> — two or more persons jointly liable for the same tort; liability is joint and several.</li>
+        <li><span class="lat">Unfair Contract Terms Act, 1977 (UK)</span> — statute limiting the exclusion of liability for negligence.</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 400" width="900" role="img" aria-label="Full topic 2 revision flowchart">
+          <defs><marker id="ar3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="20" width="880" height="60" rx="12" fill="#14224a"/>
+          <text x="450" y="45" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">DEFENCES AGAINST TORTIOUS LIABILITY</text>
+          <text x="450" y="66" fill="#dbe3f5" text-anchor="middle" font-size="12">Burden of proof on the DEFENDANT · complete defence (no damages) or partial (reduction)</text>
+          <line x1="180" y1="80" x2="180" y2="100" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <line x1="450" y1="80" x2="450" y2="100" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <line x1="720" y1="80" x2="720" y2="100" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <rect x="20" y="105" width="320" height="150" rx="12" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="180" y="130" fill="#0f8a8a" text-anchor="middle" font-size="13.5" font-weight="700">VOLENTI NON FIT INJURIA</text>
+          <text x="180" y="152" fill="#125b5b" text-anchor="middle" font-size="11">Consent = knowledge + free assent</text>
+          <text x="180" y="170" fill="#125b5b" text-anchor="middle" font-size="11">volenti ≠ scienti · complete defence</text>
+          <text x="180" y="194" fill="#125b5b" text-anchor="middle" font-size="11">★ Exceptions: Rescue cases; UCTA 1977</text>
+          <text x="180" y="214" fill="#125b5b" text-anchor="middle" font-size="11">★ fraud/coercion; act beyond consent;</text>
+          <text x="180" y="232" fill="#125b5b" text-anchor="middle" font-size="11">unlawful act; breach of statutory duty</text>
+          <rect x="360" y="105" width="320" height="150" rx="12" fill="#fcefe6" stroke="#c0561f"/>
+          <text x="520" y="130" fill="#c0561f" text-anchor="middle" font-size="13.5" font-weight="700">ACT OF GOD / VIS MAJOR</text>
+          <text x="520" y="152" fill="#8a3f17" text-anchor="middle" font-size="11">Extraordinary natural forces</text>
+          <text x="520" y="170" fill="#8a3f17" text-anchor="middle" font-size="11">no human intervention</text>
+          <text x="520" y="194" fill="#8a3f17" text-anchor="middle" font-size="11">must be unforeseeable &amp; un-guardable</text>
+          <text x="520" y="214" fill="#8a3f17" text-anchor="middle" font-size="11">defence even to strict liability</text>
+          <text x="520" y="232" fill="#8a3f17" text-anchor="middle" font-size="11">sub-category of inevitable accident</text>
+          <rect x="700" y="105" width="190" height="150" rx="12" fill="#e7e9fb" stroke="#1f3675"/>
+          <text x="795" y="130" fill="#1f3675" text-anchor="middle" font-size="13.5" font-weight="700">STATUTORY</text>
+          <text x="795" y="148" fill="#1f3675" text-anchor="middle" font-size="13.5" font-weight="700">AUTHORITY</text>
+          <text x="795" y="174" fill="#2b3a63" text-anchor="middle" font-size="11">authorised act not actionable</text>
+          <text x="795" y="192" fill="#2b3a63" text-anchor="middle" font-size="11">covers necessary consequences</text>
+          <text x="795" y="216" fill="#2b3a63" text-anchor="middle" font-size="11">★ NO defence to negligence</text>
+          <text x="795" y="234" fill="#2b3a63" text-anchor="middle" font-size="11">absolute vs conditional</text>
+          <line x1="180" y1="255" x2="180" y2="278" stroke="#0f8a8a" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <line x1="520" y1="255" x2="520" y2="278" stroke="#c0561f" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <line x1="795" y1="255" x2="795" y2="278" stroke="#1f3675" stroke-width="2.5" marker-end="url(#ar3)"/>
+          <rect x="20" y="282" width="240" height="100" rx="12" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="140" y="308" fill="#2e7d4f" text-anchor="middle" font-size="12" font-weight="700">KEY CASES</text>
+          <text x="140" y="330" fill="#1c5a3a" text-anchor="middle" font-size="10.5">Smith v Baker · South Indian Ind.</text>
+          <text x="140" y="348" fill="#1c5a3a" text-anchor="middle" font-size="10.5">Haynes v Harwood (rescue)</text>
+          <text x="140" y="366" fill="#1c5a3a" text-anchor="middle" font-size="10.5">Hall v Brooklands · T.C. Balakrishnan</text>
+          <rect x="320" y="282" width="240" height="100" rx="12" fill="#fbe5e5" stroke="#b13a3a"/>
+          <text x="440" y="308" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">ACT OF GOD CASES</text>
+          <text x="440" y="330" fill="#7c2727" text-anchor="middle" font-size="10.5">Nichols v Marsland (a.o.g.)</text>
+          <text x="440" y="348" fill="#7c2727" text-anchor="middle" font-size="10.5">Greenock · Montreal · Kallulal</text>
+          <text x="440" y="366" fill="#7c2727" text-anchor="middle" font-size="10.5">Manindra Nath Mukherjee</text>
+          <rect x="620" y="282" width="270" height="100" rx="12" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="755" y="308" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">RESCUE RULE</text>
+          <text x="755" y="330" fill="#7c2727" text-anchor="middle" font-size="10.5">“The wrong that imperils life is a</text>
+          <text x="755" y="348" fill="#7c2727" text-anchor="middle" font-size="10.5">wrong to the imperilled victim; it is a</text>
+          <text x="755" y="366" fill="#7c2727" text-anchor="middle" font-size="10.5">wrong also to the rescuer.” (Wagner)</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 2.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">Volenti — knowledge ≠ consent</span> — Smith v. Charles Baker; South Indian Industrial; Dann v. Hamilton; Bowater v. Rowley.<br>
+        · <span class="pill t">Volenti — inherent risk / spectator</span> — Hall v. Brooklands; Wooldridge v. Sumner.<br>
+        · <span class="pill o">Rescue exception</span> — Haynes v. Harwood; Wagner; Baker v. T.E. Hopkins; Hyett; Chadwick.<br>
+        · <span class="pill n">Statutory authority (no defence to negligence)</span> — Ramchandraram v. Purulia; Geddis; Vaughan v. Taff Vale; Metropolitan Asylum.<br>
+        · <span class="pill r">Act of God</span> — Nichols v. Marsland (allowed); Manindra Nath (refused); Greenock; Montreal; Kallulal; General Traders.<br>
+        · <span class="pill o">Extra-hazardous / non-delegable duty</span> — T.C. Balakrishnan.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 2 (Defences against Tortious Liability).</b></p>
+      <p style="margin:0">Built primarily on the <b>DU prescribed case material</b> (case reports for cases 9–13 reproduced in the official casebook), supplemented by the accompanying student notes and mind-maps. Cases 14 (Hall v. Brooklands) and 15 (T.C. Balakrishnan) are set out from the DU notes and the authoritative reports. Theory follows the standard Indian treatises (Ratanlal &amp; Dhirajlal; Atchuthen Pillai; Winfield &amp; Jolowicz; Salmond). For revision only — refer to the full report for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#top" title="Back to top">↑</a>
+</body>
+</html>

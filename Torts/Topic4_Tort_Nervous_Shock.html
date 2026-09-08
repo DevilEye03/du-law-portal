@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 4 · Nervous Shock (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f6f5fb; --card:#ffffff;
+    --navy:#182447; --navy2:#243a72; --gold:#b0801f; --teal:#0f7f8a;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e5e2ef;
+    --orange:#b95a1f; --shadow:0 6px 24px rgba(24,36,71,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#221233 0%,#3b1f5e 55%,#5b3a8e 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,138,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:920px; margin:0 0 22px; color:#eee4f8; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#f3ecfb}
+  .meta-strip{background:#160d22; color:#d6c9ea; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#f0ecfa; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fbf5e6; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#eaf6f6; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#5b3a8e}
+  .lat{background:#f1ecf8; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#f2edf9; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fbfafd}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#2a1a44,#5b3a8e); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f5f1fb; border-left:3px solid var(--purple); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#eaf6f6; border:1px solid #cde7e7; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfaff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#f4f0fa; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#d6c9ea; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 4 — <span>Nervous Shock</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering syllabus sub-heads (a) Meaning, (b) Impact theory (from personal injury &amp; property damage), (c) Foreseeability of psychiatric illness, (d) Immediate aftermath test, (e) Primary and secondary victims — with all <b>7 prescribed cases</b> (22–28) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Meaning</span><span class="tag">Impact theory</span>
+      <span class="tag">Foreseeability</span><span class="tag">Immediate aftermath</span>
+      <span class="tag">Primary v Secondary victims</span><span class="tag">Proximity test</span>
+      <span class="tag">7 Case Laws</span><span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Meaning · (b) Impact theory — from personal injury, from property damage · (c) Foreseeability of psychiatric illness · (d) Immediate aftermath test · (e) Primary victims, secondary victims</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#meaning">1. Meaning of Nervous Shock</a>
+    <a href="#history">2. Historical Development</a>
+    <a href="#impact">3. Impact Theory</a>
+    <a href="#self">From Personal Injury</a>
+    <a href="#property">From Property Damage</a>
+    <a href="#foresee">4. Foreseeability of Psychiatric Illness</a>
+    <a href="#aftermath">5. Immediate Aftermath Test</a>
+    <a href="#primary">6. Primary v Secondary Victims</a>
+    <a href="#proximity">The 3-element Proximity Test</a>
+    <a href="#principles">Settled Propositions</a>
+    <a class="n" href="#cases">The 7 Prescribed Case Laws</a>
+    <a href="#c22">22. Hambrook v Stokes Bros</a>
+    <a href="#c23">23. Bourhill v Young</a>
+    <a href="#c24">24. McLoughlin v O'Brian</a>
+    <a href="#c25">25. Alcock v Chief Constable</a>
+    <a href="#c26">26. Page v Smith</a>
+    <a href="#c27">27. Dulieu v White</a>
+    <a href="#c28">28. King v Phillips</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims &amp; Terms</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Meaning</td><td>What "nervous shock" is; shock as a distinct kind of damage</td><td>Winfield; Lord Macmillan (<i>Bourhill</i>); <i>Alcock</i></td></tr>
+        <tr><td>(b) Impact theory</td><td>Early limitation to physical impact/contact; from personal injury &amp; property damage</td><td><i>Victorian Rly v. Coultas</i>; <i>Dulieu v. White</i>; <i>King v. Phillips</i></td></tr>
+        <tr><td>(c) Foreseeability of psychiatric illness</td><td>Reasonable foreseeability as the test of liability</td><td><i>Bourhill</i>; <i>McLoughlin</i> (Lord Bridge)</td></tr>
+        <tr><td>(d) Immediate aftermath test</td><td>Recovery where the plaintiff comes upon the aftermath soon after</td><td><i>McLoughlin</i>; <i>Alcock</i>; <i>Jaensch v. Coffey</i></td></tr>
+        <tr><td>(e) Primary v secondary victims</td><td>Distinction between those at risk of physical injury and those who suffer shock for others</td><td><i>Alcock</i>; <i>Page v. Smith</i>; <i>McLoughlin</i></td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>Hambrook, (Hay or) Bourhill, McLoughlin</b> and <b>Alcock</b> (the four leading English authorities), from which the quotations below are drawn. <b>Dulieu v. White</b> and <b>King v. Phillips</b> are not separately reproduced but are explained in the accompanying DU notes (their facts, holdings and the meaning and limits of the "impact"/"area of risk" approach are summarised under Cases 27–28). <b>Page v. Smith</b> is not reproduced in the provided casebook or notes; it is a leading House of Lords authority on <b>primary victims</b> and is summarised from its well-established principles (flagged below).</div>
+    </section>
+
+    <!-- MEANING -->
+    <section id="meaning">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Meaning of Nervous Shock</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p><b>Nervous shock</b> (also called <b>psychiatric illness</b>, <b>nervous shock</b>, or <b>psychiatric injury / mental shock</b>) is a tort of recent origin. It provides relief where a person suffers <b>physical injury not by impact</b> (e.g., by a stick, bullet or sword) <b>but merely by a nervous shock</b> through what has been seen or heard. In other words, it is injury <b>sustained through the medium of the eye or the ear, without direct contact</b>.</p>
+      <blockquote class="quote">“The crude view that the law should take cognizance only of physical injury resulting from actual impact has been discarded, and it is now well recognised that an action will lie for injury by shock sustained through the medium of the eye or the ear without direct contact.” — <b>Lord Macmillan</b>, <i>Bourhill v. Young</i> (quoting the older case law)</blockquote>
+      <p><b>Essential points to note:</b></p>
+      <ul>
+        <li><b>Shock is a separate kind of damage</b>, not merely a variant of physical injury. As stated in <i>Alcock</i>, “shock is no longer a variant of physical injury but a separate kind of damage.” It requires the <b>sudden appreciation by sight or sound of a horrifying event</b>, which violently agitates the mind.</li>
+        <li><b>It must be a genuine psychiatric illness</b>, not mere grief, sorrow, anxiety or distress. The law gives no damages “for grief and sorrow.” The first hurdle for a plaintiff is to show he suffers a <b>positive psychiatric illness</b> (an anxiety neurosis or reactive depression may qualify), not merely a normal emotional reaction.</li>
+        <li><b>Shock must be sudden.</b> It has yet to include psychiatric illness caused by the <b>accumulation over a period of time</b> of more gradual assaults on the nervous system (e.g., the stress and strain of caring for an injured relative over a long period does not found a claim).</li>
+        <li><b>It is a tort dependent on duty of care.</b> The defendant is liable only where he owed the plaintiff a duty to avoid inflicting psychiatric injury, which in turn depends on <b>reasonable foreseeability</b> and a relationship of <b>proximity</b> (see §§4–6).</li>
+      </ul>
+      <div class="warnbox"><b>No recovery for mere grief:</b> Damages are not awarded at common law for grief and sorrow. A plaintiff seeking damages must establish a recognisable psychiatric illness caused by shock, and must surmount the hurdles of causation and proximity — not merely show that he was upset, anxious or bereaved.</div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="history">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Historical Development of the Tort</h2></div>
+      <p class="sec-sub">The line of authority from 1861 to the modern law.</p>
+      <table>
+        <tr><th style="width:22%">Stage / Case</th><th>Position</th></tr>
+        <tr><td><b>Lynch v. Knight</b> (1861)</td><td>Lord Wensleydale: mental pain and anxiety are things “which the law cannot value and does not pretend to redress.”</td></tr>
+        <tr><td><b>Victorian Railway Comrs. v. Coultas</b> (1888, PC)</td><td>No recovery for nervous shock caused by fright of an impending collision — such damages were held <b>too remote</b>.</td></tr>
+        <tr><td><b>Wilkinson v. Downton</b> (1897)</td><td>Defendant liable where the plaintiff suffered shock on being <b>falsely told</b> (by way of a practical joke) that her husband had broken both legs.</td></tr>
+        <tr><td><b>Dulieu v. White &amp; Sons</b> (1901)</td><td>Action for nervous shock resulting in physical injuries <b>recognised</b>; but Kennedy J. limited it to shock “arising from reasonable fear of <b>immediate personal injury to oneself</b>.”</td></tr>
+        <tr><td><b>Hambrook v. Stokes Bros</b> (1925, CA)</td><td>The limitation in <i>Dulieu</i> was <b>disapproved</b>; recovery allowed for fear of injury to one’s <b>children</b>, not merely to oneself.</td></tr>
+        <tr><td><b>(Hay or) Bourhill v. Young</b> (1943, HL)</td><td>The action lying for shock “through the medium of the eye or the ear without direct contact” <b>confirmed</b>; but on facts the pursuer was outside the area of reasonable foresight and failed.</td></tr>
+        <tr><td><b>McLoughlin v. O’Brian</b> (1983, HL)</td><td>The <b>immediate aftermath</b> doctrine recognised; a mother who came upon the aftermath in hospital recovered.</td></tr>
+        <tr><td><b>Alcock v. Chief Constable</b> (1991, HL)</td><td>The <b>three-element proximity test</b> (class of persons, proximity in time &amp; space, means of shock) and the distinction between <b>primary and secondary victims</b> crystallised; television broadcast and delayed identification held insufficient.</td></tr>
+        <tr><td><b>Page v. Smith</b> (1995, HL)</td><td>The distinction between physical and psychiatric injury <b>abolished</b> for primary victims (those within the area of physical risk); such a person may recover for psychiatric illness even though no physical injury is sustained.</td></tr>
+      </table>
+      <div class="fig">
+        <svg viewBox="0 0 780 190" width="780" role="img" aria-label="Timeline of nervous shock development">
+          <line x1="30" y1="95" x2="750" y2="95" stroke="#b0801f" stroke-width="3"/>
+          <text x="90" y="60" fill="#a83a3a" text-anchor="middle" font-size="11" font-weight="700">1888 Coultas</text>
+          <text x="90" y="75" fill="#a83a3a" text-anchor="middle" font-size="10">NO recovery</text>
+          <circle cx="90" cy="95" r="6" fill="#a83a3a"/>
+          <text x="240" y="60" fill="#0f7f8a" text-anchor="middle" font-size="11" font-weight="700">1901 Dulieu</text>
+          <text x="240" y="75" fill="#0f7f8a" text-anchor="middle" font-size="10">shock recognised (limit)</text>
+          <circle cx="240" cy="95" r="6" fill="#0f7f8a"/>
+          <text x="400" y="60" fill="#243a72" text-anchor="middle" font-size="11" font-weight="700">1925 Hambrook</text>
+          <text x="400" y="75" fill="#243a72" text-anchor="middle" font-size="10">limit relaxed</text>
+          <circle cx="400" cy="95" r="6" fill="#243a72"/>
+          <text x="560" y="130" fill="#5b3a8e" text-anchor="middle" font-size="11" font-weight="700">1983 McLoughlin</text>
+          <text x="560" y="145" fill="#5b3a8e" text-anchor="middle" font-size="10">immediate aftermath</text>
+          <circle cx="560" cy="95" r="6" fill="#5b3a8e"/>
+          <text x="700" y="60" fill="#2e7d4f" text-anchor="middle" font-size="11" font-weight="700">1991 Alcock</text>
+          <text x="700" y="75" fill="#2e7d4f" text-anchor="middle" font-size="10">3-element test</text>
+          <circle cx="700" cy="95" r="6" fill="#2e7d4f"/>
+        </svg>
+        <div class="cap">From outright rejection (1888) to the modern three-element proximity test (1991).</div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact">
+      <div class="sec-head"><div class="sec-num">3</div><h2>The Impact Theory</h2></div>
+      <p class="sec-sub">Syllabus (b) — “From personal injury, from property damage.”</p>
+      <p>The <b>impact theory</b> (also called the <b>“impact rule”</b> or the <b>“direct contact”</b> requirement) was the original, restrictive approach. Under it, damages for <b>nervous shock</b> could be recovered only if the plaintiff had himself suffered some <b>physical impact / physical injury</b> or was actually and physically endangered. The shock itself had to be the consequence of an impact on the plaintiff’s person, or a reasonable fear of immediate physical injury to himself.</p>
+      <p>This is precisely the limitation imposed by <b>Kennedy J.</b> in <i>Dulieu v. White</i> (1901):</p>
+      <blockquote class="quote">“The shock, where it operates through the mind, must be shock which arises from a <b>reasonable fear of immediate injury to oneself</b>. A has, I conceive, no legal duty not to shock B’s nerves by the exhibition of negligence towards C, or towards the property of B or C.” — <b>Kennedy J.</b> in <i>Dulieu v. White &amp; Sons</i></blockquote>
+      <p>The impact theory has been eroded and ultimately abandoned, but it is useful to break it down as the syllabus suggests:</p>
+
+      <h3 id="self">3(a) Impact theory — from personal injury</h3>
+      <p>Originally, the plaintiff could recover for nervous shock only where the shock resulted from <b>actual or apprehended physical injury to himself</b>. If the plaintiff was himself struck, or was in the area of physical danger and feared immediate bodily harm, the shock was compensable. This was the position in <i>Dulieu</i>, and it was reflected in the notion of the <b>“area of risk”</b> (the area of possible physical impact).</p>
+      <p>In <i>King v. Phillips</i> (1953), this approach was still applied: a mother who heard her son scream and saw his tricycle under a taxi, but who was <b>70–80 yards away inside an upper room</b>, was held <b>wholly outside the area of reasonable apprehension</b> — the defendants were not liable. The shock occurred out of the “area of physical risk,” and she could not recover.</p>
+      <p>However, <i>Hambrook</i> showed the limits of this doctrine: recovery was allowed where the shock arose from <b>fear for one’s children</b>, even though the mother was not herself in the area of physical injury.</p>
+
+      <h3 id="property">3(b) Impact theory — from property damage</h3>
+      <p>Historically the law was even less willing to allow an action where the shock resulted from damage to <b>property</b> (rather than to the person). Under the impact theory, a person who suffered nervous shock on seeing his property (e.g., his house or goods) being damaged or destroyed by the defendant’s negligence had, generally, <b>no cause of action</b>. Kennedy J. in <i>Dulieu</i> expressly said a person has “no legal duty not to shock B’s nerves by the exhibition of negligence towards … <b>the property of B or C</b>.”</p>
+      <p>Even in modern law, recovery for psychiatric illness induced by fear for, or damage to, <b>property</b> is not generally recognised. The law is reluctant to compensate a plaintiff whose shock arises from a fear for his <b>chattels or land</b> rather than for a person. The shock must ordinarily arise from a risk of <b>personal</b> injury (to the plaintiff or a closely connected person), not from damage to property. (Compare the “property damage” bar under the impact theory — this is why a mere bystander whose goods are damaged cannot claim for shock.)</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Impact theory diagram">
+          <rect x="10" y="20" width="240" height="150" rx="12" fill="#a83a3a"/>
+          <text x="130" y="48" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">IMPACT THEORY</text>
+          <text x="130" y="70" fill="#fbe5e5" text-anchor="middle" font-size="11">(old / rejected)</text>
+          <text x="130" y="96" fill="#fbe5e5" text-anchor="middle" font-size="10.5">Only recover if plaintiff</text>
+          <text x="130" y="112" fill="#fbe5e5" text-anchor="middle" font-size="10.5">suffered personal impact</text>
+          <text x="130" y="128" fill="#fbe5e5" text-anchor="middle" font-size="10.5">OR feared immediate</text>
+          <text x="130" y="144" fill="#fbe5e5" text-anchor="middle" font-size="10.5">injury to SELF.</text>
+          <rect x="280" y="20" width="240" height="150" rx="12" fill="#0f7f8a"/>
+          <text x="400" y="48" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">FROM personal injury</text>
+          <text x="400" y="70" fill="#d8f2f2" text-anchor="middle" font-size="11">(hambrook)</text>
+          <text x="400" y="96" fill="#d8f2f2" text-anchor="middle" font-size="10.5">Shock from fear of injury</text>
+          <text x="400" y="112" fill="#d8f2f2" text-anchor="middle" font-size="10.5">to near relative (child)</text>
+          <text x="400" y="128" fill="#d8f2f2" text-anchor="middle" font-size="10.5">NOW allowed, even if</text>
+          <text x="400" y="144" fill="#d8f2f2" text-anchor="middle" font-size="10.5">mother not in area of risk.</text>
+          <rect x="550" y="20" width="230" height="150" rx="12" fill="#5b3a8e"/>
+          <text x="665" y="48" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">FROM property damage</text>
+          <text x="665" y="70" fill="#e8def4" text-anchor="middle" font-size="11">(dulieu: Kennedy J.)</text>
+          <text x="665" y="96" fill="#e8def4" text-anchor="middle" font-size="10.5">No duty "not to shock B's</text>
+          <text x="665" y="112" fill="#e8def4" text-anchor="middle" font-size="10.5">nerves" by negligence</text>
+          <text x="665" y="128" fill="#e8def4" text-anchor="middle" font-size="10.5">towards B's PROPERTY.</text>
+          <text x="665" y="150" fill="#e8def4" text-anchor="middle" font-size="10.5">Generally NOT recoverable.</text>
+        </svg>
+        <div class="cap">Impact theory: rejection for self-injury; relaxation for injury to near relatives; continued refusal for shock from property damage.</div>
+      </div>
+      <div class="tipbox"><b>Exam point:</b> The impact theory has been <b>rejected</b> as the governing test. Per Lord Macmillan in <i>Bourhill</i>, it is “no longer necessary to consider whether the infliction of what is called mental shock may constitute an actionable wrong. The crude view that the law should take cognizance only of physical injury resulting from actual impact has been discarded.” The modern test is <b>reasonable foreseeability of psychiatric illness</b> (subject to <b>proximity</b>), not the presence of physical impact. But shock from <b>property damage</b> remains excluded.</div>
+    </section>
+
+    <!-- FORESEEABILITY -->
+    <section id="foresee">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Foreseeability of Psychiatric Illness</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>Once the impact theory was discarded, the governing test of liability for nervous shock became <b>reasonable foreseeability</b> — whether injury by shock to the plaintiff was a reasonably foreseeable consequence of the defendant’s negligence. As Lord Denning said: “there can be no doubt since <i>Bourhill v. Young</i> that the test of liability is <b>foreseeability of injury by shock</b>.”</p>
+      <p><b>Bourhill v. Young</b> is the foundation. Lord Macmillan held the deceased motor-cyclist owed <b>no duty</b> to Mrs. Bourhill, because she was <b>not so placed</b> that there was any reasonable likelihood of her being affected by his careless driving; “such a result could not reasonably and probably be anticipated.” The defendant cannot be made liable to a plaintiff who was, to his reasonable contemplation, <b>outside the area of risk</b>.</p>
+      <p>But <b>foreseeability is necessary, not sufficient</b>. In <i>McLoughlin</i> Lord Wilberforce stressed that foreseeability “does not of itself, and automatically, lead to a duty of care.” The foreseeability must be <b>accompanied and limited by the law’s judgment</b> as to persons who ought, according to its standards of value and justice, to have been in contemplation. This is where the requirement of <b>proximity</b> enters (see §6).</p>
+      <div class="hint"><b>The decisive shift (McLoughlin, per Lord Wilberforce):</b> “To say that a person is owed a duty of care merely because injury is foreseeable, without more, is to ignore the limitation that only those who the law regards as ‘neighbours’ — those closely and directly affected — can claim. Foreseeability tells us something; <b>proximity</b>, and considerations of policy, define the class of persons to whom the duty is actually owed.”</div>
+      <div class="fig">
+        <svg viewBox="0 0 780 170" width="780" role="img" aria-label="Foreseeability test">
+          <rect x="20" y="30" width="220" height="100" rx="12" fill="#0f7f8a"/>
+          <text x="130" y="60" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">Foreseeability</text>
+          <text x="130" y="82" fill="#d8f2f2" text-anchor="middle" font-size="11">necessary BUT not</text>
+          <text x="130" y="100" fill="#d8f2f2" text-anchor="middle" font-size="11">sufficient (Alcock)</text>
+          <rect x="290" y="30" width="220" height="100" rx="12" fill="#5b3a8e"/>
+          <text x="400" y="60" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">+ Proximity</text>
+          <text x="400" y="82" fill="#e8def4" text-anchor="middle" font-size="11">class of persons · time/</text>
+          <text x="400" y="100" fill="#e8def4" text-anchor="middle" font-size="11">space · means of shock</text>
+          <rect x="560" y="30" width="200" height="100" rx="12" fill="#2e7d4f"/>
+          <text x="660" y="60" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">= Duty of care</text>
+          <text x="660" y="82" fill="#d8f2f2" text-anchor="middle" font-size="11">→ recover for</text>
+          <text x="660" y="100" fill="#d8f2f2" text-anchor="middle" font-size="11">psychiatric illness</text>
+        </svg>
+        <div class="cap">Liability for nervous shock = foreseeability + proximity.</div>
+      </div>
+    </section>
+
+    <!-- AFTERMATH -->
+    <section id="aftermath">
+      <div class="sec-head"><div class="sec-num">5</div><h2>The Immediate Aftermath Test</h2></div>
+      <p class="sec-sub">Syllabus (d).</p>
+      <p>Although the plaintiff need not have <b>seen or heard</b> the accident, the shock must be brought about by <b>direct perception</b> of the event or of its <b>immediate aftermath</b>. The <b>aftermath doctrine</b> lets a person who, <b>from close proximity</b>, <b>comes very soon upon</b> the scene of an accident recover for nervous shock.</p>
+      <blockquote class="quote">“Experience has shown that to insist on direct and immediate sight or hearing would be impractical and unjust and that under what may be called the ‘aftermath’ doctrine one who, from close proximity, comes very soon upon the scene should not be excluded.” — <b>Lord Wilberforce</b>, <i>McLoughlin</i></blockquote>
+      <p><b>Key elements of the aftermath test:</b></p>
+      <ul>
+        <li><b>Proximity in time and space must be close.</b> The plaintiff must come upon the aftermath <b>very soon</b> after the accident.</li>
+        <li>The aftermath extends to the scene <b>and to the hospital</b> where the victim is taken, and persists <b>so long as the victim remains in the state produced by the accident</b> — up to and including immediate post-accident treatment. (Deane J. in <i>Jaensch v. Coffey</i> (Australia): “the aftermath of the accident extended to the hospital to which the injured person was taken and persisted for so long as he remained in the state produced by the accident up to and including immediate post-accident treatment.”)</li>
+        <li>In <i>McLoughlin</i>, the mother came to the hospital <b>about two hours</b> after the accident and saw her injured children and husband in the “same condition” — this was held to be within the immediate aftermath, and she recovered.</li>
+        <li><b>Where the line is drawn:</b> In <i>Alcock</i>, identification of a body in a mortuary <b>about 8 hours</b> after the disaster was held <b>not</b> to be part of the “immediate aftermath.” Identification is only part of the immediate aftermath if made very soon after the accident (as in <i>McLoughlin</i>, where the plaintiff arrived within an hour or so).</li>
+        <li><b>Communication by a third party does not suffice.</b> Shock brought about by being <b>informed</b> of the accident (rather than perceiving it or its aftermath) is not compensated (following <i>Hambrook</i>; <i>Abramzik v. Brenner</i>). The shock “must come through sight or hearing of the event or its immediate aftermath.”</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 190" width="780" role="img" aria-label="Immediate aftermath test">
+          <rect x="10" y="20" width="180" height="120" rx="12" fill="#0f7f8a"/>
+          <text x="100" y="48" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">Hears about it</text>
+          <text x="100" y="70" fill="#d8f2f2" text-anchor="middle" font-size="10">3rd-party communication</text>
+          <text x="100" y="90" fill="#d8f2f2" text-anchor="middle" font-size="10">(Abramzik; Hambrook)</text>
+          <text x="100" y="116" fill="#d8f2f2" text-anchor="middle" font-size="10" font-weight="700">✗ NO recovery</text>
+          <circle cx="190" cy="80" r="4" fill="#0f7f8a"/>
+          <rect x="230" y="20" width="180" height="120" rx="12" fill="#b0801f"/>
+          <text x="320" y="48" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">Sees the event</text>
+          <text x="320" y="70" fill="#fff" text-anchor="middle" font-size="10">direct sight / sound</text>
+          <text x="320" y="90" fill="#fff" text-anchor="middle" font-size="10">(Bourhill; Alcock)</text>
+          <text x="320" y="116" fill="#fff" text-anchor="middle" font-size="10" font-weight="700">✓ recovery</text>
+          <circle cx="410" cy="80" r="4" fill="#b0801f"/>
+          <rect x="450" y="20" width="180" height="120" rx="12" fill="#5b3a8e"/>
+          <text x="540" y="48" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">Comes on aftermath</text>
+          <text x="540" y="70" fill="#e8def4" text-anchor="middle" font-size="10">very soon, close in time</text>
+          <text x="540" y="90" fill="#e8def4" text-anchor="middle" font-size="10">&amp; space (McLoughlin)</text>
+          <text x="540" y="116" fill="#e8def4" text-anchor="middle" font-size="10" font-weight="700">✓ recovery</text>
+          <circle cx="630" cy="80" r="4" fill="#5b3a8e"/>
+          <rect x="660" y="20" width="110" height="120" rx="12" fill="#a83a3a"/>
+          <text x="715" y="55" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">Sees on TV /</text>
+          <text x="715" y="75" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">late ID</text>
+          <text x="715" y="100" fill="#fbe5e5" text-anchor="middle" font-size="10">(Alcock)</text>
+          <text x="715" y="120" fill="#fbe5e5" text-anchor="middle" font-size="10" font-weight="700">✗ NO recovery</text>
+        </svg>
+        <div class="cap">The aftermath test: the shock must come from direct perception (sight/hearing) of the event or its immediate aftermath, not from being told about it.</div>
+      </div>
+    </section>
+
+    <!-- PRIMARY v SECONDARY -->
+    <section id="primary">
+      <div class="sec-head"><div class="sec-num">6</div><h2>Primary Victims v Secondary Victims</h2></div>
+      <p class="sec-sub">Syllabus (e) — the modern organising distinction.</p>
+      <p>The modern law divides claimants for nervous shock into <b>two categories</b>:</p>
+      <div class="two-col">
+        <div class="tipbox" style="background:#eaf6f6">
+          <b style="color:var(--teal)">(A) PRIMARY VICTIM</b>
+          <p>A person <b>within the area of physical danger / who was himself exposed to the risk of physical injury</b> (or who believes he is in danger) through the defendant’s negligence, and who suffers psychiatric illness as a result.</p>
+          <ul><li>He is involved in the accident as a <b>participant</b> (e.g., the driver or a passenger, or a rescuer in physical danger).</li><li>He need only show that <b>physical injury was reasonably foreseeable</b>; he need not show that <b>psychiatric injury</b> was foreseeable.</li><li>He may recover even though he <b>sustained no physical injury</b> (the distinction between physical and psychiatric injury has been abolished for him).</li></ul>
+          <p class="quote" style="font-size:13px">Authority: <i>Page v. Smith</i>; <i>Alcock</i>.</p>
+        </div>
+        <div class="tipbox" style="background:#f1ecf8">
+          <b style="color:var(--purple)">(B) SECONDARY VICTIM</b>
+          <p>A person <b>not himself within the area of physical danger</b>, who suffers psychiatric illness from <b>what he saw or heard</b> — e.g., a mother who sees her child run over, or a spouse who comes upon the aftermath.</p>
+          <ul><li>He is a <b>mere witness / spectator</b>, not a participant.</li><li>He must satisfy ALL the requirements (the <b>3-element proximity test</b>): (1) a close relationship of love and affection; (2) proximity in time and space; and (3) the shock must come through <b>sight or hearing</b> of the event or its immediate aftermath.</li><li>He must further show that <b>psychiatric injury to a person of ordinary fortitude</b> in his position was reasonably foreseeable.</li></ul>
+          <p class="quote" style="font-size:13px">Authority: <i>Alcock</i>; <i>McLoughlin</i>; <i>Bourhill</i>.</p>
+        </div>
+      </div>
+      <h3>6.1 The differences at a glance</h3>
+      <table>
+        <tr><th>Basis</th><th>Primary victim</th><th>Secondary victim</th></tr>
+        <tr><td>Position</td><td>In the area of physical danger (involved/participant)</td><td>Outside the area of danger (witness/spectator)</td></tr>
+        <tr><td>Must plead foreseeability of psychiatric injury</td><td><b>No</b> — only foreseeability of physical injury is needed</td><td><b>Yes</b> — psychiatric illness must be reasonably foreseeable</td></tr>
+        <tr><td>Must show a close relationship</td><td>Not necessary (he is the victim)</td><td><b>Yes</b> — close tie of love &amp; affection (presumed for spouse/parent/child)</td></tr>
+        <tr><td>Must show proximity in time &amp; space</td><td>Not necessary</td><td><b>Yes</b></td></tr>
+        <tr><td>Must show shock by sight/hearing</td><td>Not in the same way</td><td><b>Yes</b> — the event or its immediate aftermath</td></tr>
+        <tr><td>Can recover without physical injury</td><td><b>Yes</b> (<i>Page v. Smith</i>)</td><td>Yes, but subject to the 3 conditions</td></tr>
+        <tr><td>Authority</td><td><i>Page v. Smith</i>; <i>Alcock</i></td><td><i>Alcock</i>; <i>McLoughlin</i></td></tr>
+      </table>
+      <div class="warnbox"><b>Why the distinction matters — Alcock:</b> All the <i>Alcock</i> plaintiffs were <b>secondary victims</b> (none was in the pens; four were elsewhere in the ground; the rest were at home). Because none of them satisfied the class/proximity/means requirements, they failed — even though the risk of psychiatric illness was plainly foreseeable. Lord Keith: “injury by psychiatric illness is more subtle … it is a secondary sort of injury brought about by the infliction of physical injury, or the risk of physical injury, upon another person,” so “in addition to reasonable foreseeability, liability … must depend upon a requisite relationship of proximity.”</div>
+    </section>
+
+    <!-- PROXIMITY -->
+    <section id="proximity">
+      <div class="sec-head"><div class="sec-num">7</div><h2>The 3-Element Proximity Test (for secondary victims)</h2></div>
+      <p class="sec-sub">From <i>McLoughlin</i>, crystallised in <i>Alcock</i>.</p>
+      <p>Because “shock” in its nature can affect so wide a range of people, Lord Wilberforce in <i>McLoughlin</i> held there is a real need for the law to limit admissible claims by reference to <b>three elements</b> inherent in any claim:</p>
+      <ol>
+        <li><b>The class of persons whose claims should be recognised</b> — the closeness of the relationship (love and affection).</li>
+        <li><b>The proximity of such persons to the accident</b> — close in <b>both time and space</b>, including the immediate aftermath.</li>
+        <li><b>The means by which the shock is caused</b> — through <b>sight or hearing</b> of the event or its immediate aftermath.</li>
+      </ol>
+      <div class="fig">
+        <svg viewBox="0 0 780 230" width="780" role="img" aria-label="Three element proximity test">
+          <circle cx="170" cy="95" r="70" fill="#5b3a8e"/>
+          <text x="170" y="82" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">① CLASS</text>
+          <text x="170" y="102" fill="#e8def4" text-anchor="middle" font-size="10.5">relationship of</text>
+          <text x="170" y="120" fill="#e8def4" text-anchor="middle" font-size="10.5">love &amp; affection</text>
+          <circle cx="390" cy="95" r="70" fill="#0f7f8a"/>
+          <text x="390" y="82" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">② PROXIMITY</text>
+          <text x="390" y="102" fill="#d8f2f2" text-anchor="middle" font-size="10.5">close in time &amp;</text>
+          <text x="390" y="120" fill="#d8f2f2" text-anchor="middle" font-size="10.5">space (incl. aftermath)</text>
+          <circle cx="610" cy="95" r="70" fill="#b0801f"/>
+          <text x="610" y="82" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">③ MEANS</text>
+          <text x="610" y="102" fill="#fff" text-anchor="middle" font-size="10.5">by shock: sight or</text>
+          <text x="610" y="120" fill="#fff" text-anchor="middle" font-size="10.5">hearing of event /</text>
+          <text x="610" y="138" fill="#fff" text-anchor="middle" font-size="10.5">its immediate aftermath</text>
+          <text x="390" y="205" fill="#5b3a8e" text-anchor="middle" font-size="12.5" font-style="italic">All three must be satisfied for a SECONDARY victim to recover.</text>
+        </svg>
+        <div class="cap">The three-element proximity test.</div>
+      </div>
+      <h3>7.1 Applying each element</h3>
+      <ul>
+        <li><b>(1) Class of persons.</b> Close ties of love and affection are <b>presumed</b> for the closest relationships (spouses, parents and their children) — but the presumption is <b>rebuttable</b>. For <b>other</b> relatives (brothers, in-laws, grandchildren, fiancés) and friends, the closeness must be <b>proved</b>. In <i>Alcock</i>, the claims of those who lost <b>brothers, a brother-in-law or a grandson</b> failed for want of evidence of close ties; the claims of the <b>Copocs</b> (parents who lost a son) and <b>Alexandra Penk</b> (who lost her fiancé) were placed in the category where ties may be presumed. The <b>ordinary bystander</b> is generally denied recovery — though (per Lord Ackner) a bystander might recover if a catastrophically horrific scene would shock a person of reasonable fortitude.</li>
+        <li><b>(2) Proximity in time and space.</b> Must be close. Direct and immediate sight/hearing is not required, but it must be the <b>immediate aftermath</b>. In <i>McLoughlin</i>, two hours and the hospital sufficed; in <i>Alcock</i>, identification at the mortuary <b>some 8 hours</b> later did not.</li>
+        <li><b>(3) Means of shock.</b> Must come through <b>sight or hearing</b> of the event or its immediate aftermath. Communication by a third party is not enough. <b>Simultaneous television broadcast</b> is generally NOT the equivalent of sight or hearing of the event (per <i>Alcock</i>) — although a simultaneous broadcast of a disaster cannot be ruled out entirely in all circumstances (Nolan L.J.).</li>
+      </ul>
+    </section>
+
+    <!-- SETTLED PROPOSITIONS -->
+    <section id="principles">
+      <div class="sec-head"><div class="sec-num">8</div><h2>Settled Propositions of the Law</h2></div>
+      <p class="sec-sub">The summary stated in <i>McLoughlin</i> and refined in <i>Alcock</i>.</p>
+      <p>As recognised by the House of Lords, the settled position (post-<i>McLoughlin</i>, confirmed in <i>Alcock</i>) is as follows:</p>
+      <ol>
+        <li>While damages cannot be awarded at common law for <b>grief and sorrow</b>, a claim for damages for <b>nervous shock</b> caused by negligence can be made without the necessity of showing impact or fear of immediate personal injury to oneself (the <i>Dulieu</i> limitation having been abandoned).</li>
+        <li>A plaintiff may recover for nervous shock (psychiatric illness) brought on by <b>injury to a near relative</b> (a spouse, parent/child), or by the <b>fear</b> of such injury. This extends to foster children and, on the facts, others with close ties.</li>
+        <li>Subject to the aftermath exception, there is no English case in which a plaintiff has recovered where the injury to the near relative occurred <b>out of sight and earshot</b> of the plaintiff. A distinction is maintained between shock from what the plaintiff <b>saw with his own eyes</b> and what he was <b>told</b> by bystanders.</li>
+        <li><b>Exception / extension — the immediate aftermath:</b> Where the plaintiff does not see or hear the incident but <b>comes upon its immediate aftermath</b> (e.g., the hospital scene, as in <i>McLoughlin</i>, <i>Benson v. Lee</i>, <i>Marshall v. Lionel Enterprises</i>), recovery may be allowed.</li>
+        <li>A remedy has been given to a <b>rescuer</b> who came upon a serious accident and acted as a rescuer (<i>Chadwick v. British Railways Board</i>). The “rescuer” principle is accepted.</li>
+        <li>Damages are <b>not</b> recoverable for merely being <b>informed of</b> or <b>reading/hearing about</b> the accident (perception by the plaintiff is essential).</li>
+        <li>Mere mental suffering, unaccompanied by physical injury or psychiatric illness, is not a basis for damages; a narrow statutory right to <b>bereavement</b> damages exists under the Fatal Accidents Act 1976 (s. 1A, inserted by the Administration of Justice Act 1982) for a very limited class of relatives.</li>
+        <li>“Shock” involves the <b>sudden appreciation by sight or sound</b> of a horrifying event which violently agitates the mind. It does not include psychiatric illness caused by the <b>accumulation over time</b> of gradual assaults on the nervous system (e.g., prolonged caring for an injured relative).</li>
+      </ol>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 7 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C22 -->
+      <div class="case" id="c22">
+        <div class="case-head">
+          <h4>22. Hambrook v. Stokes Bros.</h4>
+          <span class="cit">[1925] 1 KB 141 · (1924) All ER Rep 110 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendants owned a motor lorry which their servant left <b>unattended and with the engine running</b> in a narrow street in Folkestone (in places only about 6 ft wide). It ran away and shot down the street. There was an admission that the servant was negligent. On the morning of 1 May 1923, Mrs. Hambrook had escorted her children — two boys and a girl, Mabel, aged 10 — to the pavement in Dover Street, where they joined other schoolchildren; they turned a corner a few yards away and passed out of her sight. The derelict lorry came down the street, ricocheting from side to side, and <b>dashed into the children, seriously injuring Mabel</b>. The progress of the lorry would be heard by Mrs. Hambrook. After injuring the child it shot round the corner and stopped within 15–20 feet of her. She at once showed signs of great mental disturbance, caused (the jury found) by <b>apprehension, not of injury to herself, but of injury to her child</b>. She was pregnant; she had a severe haemorrhage, became worse, and died after complications. Her husband (the plaintiff) claimed damages under the <b>Fatal Accidents Act</b> for the loss of his wife, alleging that her death resulted from nervous shock caused by the defendants’ negligence. The trial judge directed the jury that unless her death was the result of shock produced by <b>fear of harm to herself</b> (as opposed to fear of harm to her child), the plaintiff could not recover. The jury found for the defendants; the plaintiff appealed, contending this was a misdirection.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where a defendant negligently threatens or injures A, can B — who suffers nervous shock not from fear for her own safety but from <b>fear of injury to her child</b> — recover? In particular, is the limitation in <i>Dulieu v. White</i> (that the shock must arise from fear of <b>immediate personal injury to oneself</b>) good law?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff (husband):</b> His wife’s shock was due either to reasonable fear of immediate personal injury to herself or, alternatively, to fear of injury to her <b>children</b> — in either case her death resulted from the shock, and the defendants are liable. The judge wrongly told the jury that fear for the child would not do.</p>
+            <p><b>Defendants:</b> The shock was due to fear of injury to her children, which does not give rise to a cause of action (under <i>Dulieu</i>); and, further, the wife’s death was due to quite independent causes.</p>
+            <p><b>Bankes LJ</b> (in the third-party communication context) confined his decision to shock resulting from what the plaintiff’s wife <b>saw or realised by her own unaided senses</b>, and not from something someone told her; and held it enough that the shock was due to a reasonable fear of immediate personal injury <b>either to herself or to her children</b>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Court of Appeal</b> (Bankes, Atkin and Sargant LJJ) ordered a <b>new trial</b>, holding that the judge’s direction was a <b>misdirection</b>. The <i>Dulieu</i> limitation — that the shock must arise from fear of immediate personal injury to oneself — was <b>disapproved</b>.</p>
+            <p class="quote">Bankes LJ: “Can any real distinction be drawn from the point of view of what the defendant ought to have anticipated, and what, therefore, his duty was, between that case [fear for oneself] and the case of a woman whose fear is for her child, and not for herself? … Will the law recognise a cause of action in the case of the less deserving mother, and none in the case of the more deserving one? … I think not.”</p>
+            <p class="quote">Atkin LJ: “Personally I see no reason for excluding the bystander in the highway who receives injury in the same way from <b>apprehension of, or the actual sight of, injury to a third party</b>. There may well be cases where the sight of suffering will directly and immediately physically shock the most indurate heart; and, if the suffering of another be the result of an act wrongful to the spectator, I do not see why the wrongdoer should escape.”</p>
+            <p class="quote">Atkin LJ: “At one time the theory was held that damage at law could not be proved in respect of personal injuries unless there was some injury which was variously called ‘bodily’ or ‘physical’ but which necessarily excluded an injury which was only ‘mental.’ There can be no doubt at the present day that this theory is wrong.”</p>
+            <p>Atkin LJ also held that the driver’s duty was a duty to use <b>reasonable care to avoid injuring all wayfarers</b>, and that the breach could be complete <b>before</b> the actual impact (when the lorry was left unattended at the top of the hill). He also stressed that the <i>Dulieu</i> restriction was a self-imposed one and there was no principle to support it.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b><i>Dulieu</i> limitation is rejected</b>: a plaintiff may recover for nervous shock from <b>fear of injury to a near relative</b> (here a child), not merely from fear of harm to herself — provided the shock came through what she <b>saw or heard with her own senses</b>, not from being told by a bystander. The defendant must anticipate injury by shock not only to those actually in the area of physical danger but also to those threatened through the danger to a loved one. The “impact”/“area of risk” theory was thus eroded. (Note: this is a forerunner of the modern <b>secondary victim</b> rules; and the case is authority that <b>shock communicated by a third party</b> is not compensable.)</div>
+        </div>
+      </div>
+
+      <!-- C23 -->
+      <div class="case" id="c23">
+        <div class="case-head">
+          <h4>23. (Hay or) Bourhill v. Young</h4>
+          <span class="cit">[1943] AC 92 · (1942) 2 All ER 396 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defender was the executor of <b>John Young</b>, who rode a motor-cycle too fast along an Edinburgh road, overtook a stationary tram-car on the inside, and collided with an oncoming motor-car turning right across his path just in front of the tram-car. At the time, <b>Mrs. Euphemia Bourhill</b>, a <b>fish-wife eight months pregnant</b>, was standing at the offside of the tram-car; she could not see the crash (the tram-car was in the way), but she <b>heard it</b> and later said: “I just got a pack of nerves, and I did not know whether I was going to get it or not.” She subsequently <b>saw the blood left on the road</b> after Young’s corpse had been removed. She wrenched and injured her back, was thrown into a state of terror, and sustained a severe shock to her nervous system. Her terror did <b>not</b> involve any element of reasonable fear of immediate bodily injury to herself. She was about eight months pregnant and gave birth to a <b>still-born child</b> owing to the injuries she sustained.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Did John Young owe a <b>duty of care</b> to Mrs. Bourhill such that his representatives could be liable for the shock she suffered? In particular, was injury by shock to her <b>reasonably foreseeable</b> by a motor-cyclist in his position?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Pursuer (Mrs. Bourhill):</b> She suffered serious shock, injury and the loss of her child as an immediate result of the violent collision which occurred in her vicinity. Therefore Young, whose negligent driving caused it, must be accountable.</p>
+            <p><b>Defender (Young’s executor):</b> He was guilty of negligence only in relation to those to whom injury could reasonably be anticipated — i.e., the occupants of the motor-car he struck, or persons in the path of his cycle. Mrs. Bourhill was on the <b>other side of the tram-car</b>, could not see the accident, and expressly admitted her terror did not involve any fear of injury to herself. She was not within the area of potential danger he should reasonably have had in view.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>House of Lords</b> (Lord Macmillan, Lord Thankerton, Lord Wright, Lord Porter; Lord Russell dissented) <b>rejected</b> the pursuer’s claim. John Young owed her <b>no duty of care</b> because injury to her by shock was <b>not reasonably foreseeable</b>; she was outside the area of risk.</p>
+            <p class="quote">“She can recover damages only if she can show that in relation to her the late John Young acted negligently. To establish this she must show that he owed her a duty of care which he failed to observe, and that, as a result of this failure in duty on his part, she suffered as she did.” — Lord Macmillan</p>
+            <p class="quote">“The duty to take care is the duty to avoid doing or omitting to do anything the doing or omitting to do which may have as its reasonable and probable consequence injury to others, and the duty is owed to those to whom injury may reasonably and probably be anticipated if the duty is not observed.” — Lord Macmillan</p>
+            <p class="quote">“The appellant was not within his line of vision, for she was on the other side of a tram-car … The appellant did not see the accident and she expressly admits that her ‘terror did not involve any element of reasonable fear of immediate bodily injury to herself.’ She was not so placed that there was any reasonable likelihood of her being affected by the cyclist’s careless driving. In these circumstances … the late John Young was under no duty to the appellant … for such a result could not reasonably and probably be anticipated. He was, therefore, not guilty of negligence in a question with the appellant.” — Lord Macmillan</p>
+            <p>Lord Macmillan also affirmed the modern principle that the “crude view that the law should take cognizance only of physical injury resulting from actual impact has been discarded,” and that an action will lie for injury by shock sustained through the medium of the eye or the ear <b>without direct contact</b>. But foreseeability is essential. <b>Lord Porter</b> added the “fortitude” point: a driver is entitled to assume that the ordinary frequenter of the streets has sufficient fortitude to endure the noise of a collision and the sight of injury to others, and is not negligent towards one who does not possess the <b>customary phlegm</b>.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> For liability in nervous shock, the plaintiff must show that <b>injury by shock to him was reasonably foreseeable</b> and that the defendant <b>owed him a duty of care</b>. The defendant is not liable to a person wholly outside the <b>area of reasonable anticipation</b> of his negligence. This is the first case on nervous shock to reach the House of Lords and establishes <b>reasonable foreseeability</b> as the test of duty; but it also confirms the doctrine that a person <b>of ordinary fortitude</b> is presumed — the defendant is not liable to one of abnormal susceptibility or to a mere bystander who is unaffected in mind by the event. It also confirms that shock through <b>sight or hearing without direct contact</b> is actionable in principle.</div>
+        </div>
+      </div>
+
+      <!-- C24 -->
+      <div class="case" id="c24">
+        <div class="case-head">
+          <h4>24. McLoughlin v. O'Brian</h4>
+          <span class="cit">(1983) 1 AC 410 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>On 19 October 1973, near Withersfield, Suffolk, the appellant’s husband (Thomas McLoughlin) and three of her children (George, 17; Kathleen, 7; Gillian, nearly 3) were in a Ford car driven by George; it collided with a lorry, and that lorry had earlier been in collision with another — the accident being admittedly caused by the respondents’ negligence. The husband suffered bruising and shock; George suffered severe head and facial injuries, concussion and fractures; Kathleen suffered concussion and fractures; <b>Gillian was so seriously injured that she died almost immediately</b>. The appellant was at her home <b>about two miles away</b>. About an hour afterwards the accident was reported to her by Mr. Pilgrim, who took her to <b>Addenbrooke’s Hospital, Cambridge</b>. There she saw her son Michael (who was not in the accident), who told her Gillian was dead. She saw Kathleen through a window, crying, face cut and begrimed with dirt and oil; she heard George shouting and screaming; she was taken to her husband, sitting with his head in his hands, his shirt hanging off, covered in mud and oil, and he sobbed on seeing her; she was taken to see George, whose left face and side were covered, and who lapsed into unconsciousness; finally she saw Kathleen, who had been cleaned up and was too upset to speak. The trial judge assumed she suffered <b>severe shock, organic depression and a change of personality</b> caused or contributed to by shock (as distinct from grief or sorrow), and that she was a person of <b>reasonable fortitude</b>. Boreham J. gave judgment for the respondents, holding the possibility of injury to her by nervous shock was not reasonably foreseeable. The Court of Appeal upheld the result (Stephenson LJ on policy; Griffiths LJ holding no duty; Cumming-Bruce LJ agreeing).</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Can a person <b>not present at the scene</b> of an accident to her family, but who <b>comes upon the immediate aftermath</b> (at a hospital, about an hour or two later) and suffers nervous shock, recover damages against the tortfeasor?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant (mother):</b> Injury by nervous shock to her was reasonably foreseeable; she came upon the <b>immediate aftermath</b> of the accident, which the law treats as equivalent to witnessing it; denial would draw an arbitrary line that offends justice.</p>
+            <p><b>Respondents:</b> She was not present at the scene; the shock resulted from what she was <b>told</b> and from seeing the victims later, not from witnessing the accident itself. The duty of a driver is limited to persons in close proximity; to extend liability would open the floodgates, impose disproportionate burdens on defendants/insurers, increase evidentiary difficulty, and is a matter for the legislature.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>House of Lords</b> (Lord Wilberforce, Lord Edmund-Davies, Lord Russell, Lord Bridge; Lord Scarman agreeing with Lord Bridge) <b>reversed</b> the Court of Appeal and <b>allowed</b> the mother’s appeal. She was entitled to recover.</p>
+            <p class="quote">“I find … that there is a real need for the law to place some limitation upon the extent of admissible claims. It is necessary to consider three elements inherent in any claim: <b>the class of persons whose claims should be recognised; the proximity of such persons to the accident; and the means by which the shock is caused</b>.” — Lord Wilberforce</p>
+            <p class="quote">“Experience has shown that to insist on direct and immediate sight or hearing would be impractical and unjust and that under what may be called the ‘aftermath’ doctrine one who, from close proximity, comes very soon upon the scene should not be excluded.” — Lord Wilberforce</p>
+            <p class="quote">“She was not present at the accident, but she came very soon after upon its aftermath … if, from a distance of some 100 yards (cf. Benson v. Lee) she had found her family by the roadside, she would have come within principle [of the aftermath]. Can it make any difference that she comes upon them in an ambulance or, as here, in a nearby hospital, when … they were in the same condition, covered with oil and mud, and distraught with pain?” — Lord Wilberforce</p>
+            <p>On the policy arguments, Lord Wilberforce held that while fears of fraudulent claims, disproportionate burdens, evidentiary difficulty and the need for legislation all had some force, “proof of the floodgates” was exaggerated and “the scarcity of cases which have occurred in the past, and the modest sums recovered, give some indication that fears of a flood of litigation may be exaggerated.” He nevertheless accepted that <b>limitation is needed</b>, through the three elements. <b>Lord Bridge</b> rested liability squarely on <b>reasonable foreseeability</b> of psychiatric illness; <b>Lord Edmund-Davies</b> agreed with the result, though he expressed concern that policy might warrant limiting liability to parents and children, and noted the whole area “stands in urgent need of review.” It was also held that the shock must come through <b>sight or hearing</b> of the event or its immediate aftermath, and that <b>communication by a third party</b> is not compensated.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>immediate aftermath doctrine</b> was recognised: a plaintiff who (from close proximity, and very soon after) comes upon the scene of an accident — including the <b>hospital</b> to which the victims were taken (and, per <i>Jaensch v. Coffey</i>, so long as they remain in the state produced by the accident) — may recover for nervous shock. The <b>three elements</b> (class of persons, proximity in time and space, means of shock) were identified as the control upon foreseeability. Foreseeability alone does not automatically create a duty of care — <b>policy and proximity</b> limit it. The distinction between <b>grief and sorrow</b> (not compensable) and a <b>recognised psychiatric illness</b> (compensable) was affirmed. This case is the bridge from the narrow, accident-based cases to the modern <b>primary/secondary victim</b> framework.</div>
+        </div>
+      </div>
+
+      <!-- C25 -->
+      <div class="case" id="c25">
+        <div class="case-head">
+          <h4>25. Alcock v. Chief Constable of the South Yorkshire Police</h4>
+          <span class="cit">(1991) 4 All ER 907 · [1992] 1 AC 310 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>On <b>15 April 1989</b>, at the <b>Hillsborough Stadium</b>, Sheffield, a football semi-final between Liverpool and Nottingham Forest was arranged. The South Yorkshire police, responsible for crowd control, allowed an excessively large number of spectators to enter at the <b>Leppings Lane</b> end. They crammed into pens 3 and 4 below the West Stand, and in the resulting crush <b>95 people were killed and over 400 injured</b>. Scenes were broadcast live on television from time to time, and recordings were shown later. The Chief Constable admitted negligence in respect of the deaths and physical injuries. <b>Sixteen separate actions</b> were brought by persons <b>none of whom was present in the area where the disaster occurred</b> (although four were elsewhere in the ground), all connected in various ways to victims — a fiancé in one case, and relatives (brothers, a brother-in-law, a grandson, a son) in the others; in most cases the person concerned was killed. All claimed damages for nervous shock (psychiatric illness). Hidden J. found for 10 of 16; the Court of Appeal allowed the defendant’s appeals in 9 cases and rejected the 6 unsuccessful ones; 10 plaintiffs appealed to the House of Lords.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) What is the proper test of liability for nervous shock in the case of a <b>secondary victim</b> (one not in the area of physical danger)? (2) Does liability depend on reasonable foreseeability alone, or are there additional requirements of <b>proximity</b> (class of persons, proximity in time &amp; space, means of shock)? (3) Do the <b>television broadcasts</b> and the <b>late identification in a mortuary</b> satisfy the requirements?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiffs:</b> Reasonable foreseeability of the risk of psychiatric injury is all that is required (relying on Lord Bridge in <i>McLoughlin</i> and Brennan J. in <i>Jaensch v. Coffey</i>); the three elements are merely part of the factual inquiry into foreseeability. They saw horrifying scenes at the ground or on live television, or identified bodies later, and suffered psychiatric illness. They also relied on the “rescuer”/bystander dictum of Atkin LJ in <i>Hambrook</i>.</p>
+            <p><b>Defendant (Chief Constable):</b> Foreseeability does not itself create a duty; the three elements operate as <b>controls/limitations</b> introducing the requirement of <b>proximity</b> (relying on Lord Wilberforce and Lord Edmund-Davies in <i>McLoughlin</i>, and Gibbs CJ and Deane J. in <i>Jaensch v. Coffey</i>). He was not an insurer against the psychiatric illness of relatives/friends; the television broadcasts showed no recognisable victims (as required by the broadcasting code, which he knew); identification at the mortuary about 8 hours later was not the <i>immediate</i> aftermath; and the ordinary bystander is not to be compensated.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>House of Lords</b> (Lord Keith, Lord Ackner, Lord Jauncey, with whom Lord Oliver and Lord Lowry agreed) <b>dismissed all the appeals</b>. None of the plaintiffs recovered. The CLUB of liability was closed around the <b>three-element proximity test</b>.</p>
+            <p class="quote">“Injury by psychiatric illness is more subtle … In the present type of case it is a <b>secondary sort of injury</b> brought about by the infliction of physical injury, or the risk of physical injury, upon another person. … So I am of the opinion that <b>in addition to reasonable foreseeability</b> liability for injury in the particular form of psychiatric illness must depend in addition upon a <b>requisite relationship of proximity</b> between the claimant and the party said to owe the duty.” — Lord Keith</p>
+            <p class="quote">“The three elements are (1) the <b>class of persons</b> whose claims should be recognised; (2) the <b>proximity of such persons to the accident</b> — in time and space; (3) the <b>means by which the shock has been caused</b>.” — Lord Keith (adopting Lord Wilberforce)</p>
+            <p class="quote">“The kinds of relationship which may involve close ties of love and affection are numerous … they may be present in family relationships or those of close friendship. … The closeness of the tie would, however, require to be <b>proved</b> by a plaintiff, though no doubt being capable of being <b>presumed</b> in appropriate cases.” — Lord Keith</p>
+            <p class="quote">(On television) “The viewing of these scenes cannot be equiparated with the viewer being within ‘sight or hearing of the event or of its immediate aftermath’ … nor can the scenes reasonably be regarded as giving rise to shock, in the sense of a sudden assault on the nervous system. They were capable of giving rise to anxiety for the safety of relatives … but that is very different from seeing the fate of the relative or his condition shortly after the event. The viewing of the television scenes did not create the necessary degree of proximity.” — Lord Keith</p>
+            <p class="quote">(On the mortuary identification — Mr. Alcock) “Even if this identification could be described as part of the ‘aftermath’, it could not in my judgment be described as part of the <b>immediate</b> aftermath. … Mrs. McLoughlin had arrived at the hospital within an hour or so after the accident. Accordingly in the post-accident identification cases before your Lordships there was not sufficient proximity in time and space to the accident.” — Lord Keith</p>
+            <p>On the class of persons, Lord Keith noted that close ties are <b>presumed</b> for parent–child and husband–wife (and, in effect, for a fiancé such as Alexandra Penk), but must be <b>proved</b> for brothers, a brother-in-law, a grandson — and there was no evidence of particularly close ties in those cases. <b>Lord Ackner</b> set out the five propositions confirming that reasonable foreseeability simpliciter is not the operative test, and stressed that “shock” requires the <b>sudden appreciation by sight or sound</b> of a horrifying event. The claims of the <b>Copocs</b> and <b>Alexandra Penk</b> (parents who lost a son, and a fiancée) would have satisfied the class element (ties presumed) and they watched the TV, but the <b>television broadcasts</b> did not provide the required proximity — so they too failed.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> This is the leading modern authority. For a <b>secondary victim</b>, liability for nervous shock requires <b>more than reasonable foreseeability</b> — the claimant must satisfy a <b>three-element proximity test</b>: (1) a <b>close relationship of love and affection</b> with the primary victim (presumed for spouse/parent/child, rebuttably; otherwise must be proved); (2) <b>proximity in time and space</b> to the accident (which includes the <b>immediate aftermath</b>, but not a later identification); and (3) the shock must be caused by <b>sight or hearing of the event or its immediate aftermath</b> — a <b>simultaneous television broadcast</b>, and a communication by a third party, generally do not satisfy this. The distinction between <b>primary and secondary victims</b> was crystallised; a <b>primary victim</b> (in the area of physical danger) need only show foreseeability of physical injury. The ordinary <b>bystander</b> is ordinarily excluded, though not absolutely.</div>
+        </div>
+      </div>
+
+      <!-- C26 -->
+      <div class="case" id="c26">
+        <div class="case-head">
+          <h4>26. Page v. Smith</h4>
+          <span class="cit">(1995) 2 All ER 736 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, Mr. Page, was driving his car. The defendant negligently drove into the course of his car, causing a collision. Mr. Page was <b>not physically injured</b> in the collision and, indeed, had no recollection of it. Some time later he was found to be suffering from <b>chronic fatigue syndrome (myalgic encephalomyelitis / ME)</b>, a psychiatric illness, which he alleged was a result of the shock of the accident. The question was whether he, as a person who was <b>within the area of physical risk</b> created by the defendant’s negligent driving, could recover damages for the psychiatric illness even though he had suffered <b>no physical injury</b>.</p>
+            <p><span class="pill o">Note</span> This case is <b>not reproduced</b> in the provided DU casebook or course notes; it is summarised here from its well-established principles and is the leading authority on <b>primary victims</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where a defendant’s negligence exposes the plaintiff (a <b>primary victim</b>) to a risk of <b>physical injury</b> but the plaintiff in fact sustains only <b>psychiatric illness</b>, can he recover? Does the plaintiff need to show that <b>psychiatric</b> injury was reasonably foreseeable, or only that <b>physical</b> injury was?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> He was a participant in the accident and within the area of physical danger. The distinction between physical and psychiatric injury in the law of negligence should be abandoned; it is enough that physical injury was foreseeable. He should recover for the psychiatric illness.</p>
+            <p><b>Defendant:</b> The plaintiff must show that <b>psychiatric</b> illness was a reasonably foreseeable consequence, and on the facts it was not foreseeable that a person in Mr. Page’s position would suffer such an illness; the two types of harm are distinct and the plaintiff cannot claim for the latter without showing foreseeability of it.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>House of Lords</b> (Lord Lloyd of Berwick giving the leading speech) <b>allowed</b> the plaintiff’s claim and held that he could recover. <b>Lord Lloyd</b> said the distinction between physical and psychiatric injury in the law of negligence had been <b>abolished</b>: the law draws no general distinction between them. Where the defendant’s negligence <b>exposes the plaintiff to a risk of physical injury</b>, the plaintiff is a <b>primary victim</b>; and for a primary victim it is sufficient that injury of some kind — <b>physical injury</b> — is reasonably foreseeable. Once that is shown, the defendant is liable for the psychiatric illness which in fact results, whether or not psychiatric injury was itself foreseeable. Mr. Page, as a participant in the accident who was physically at risk, was a primary victim, and so recovered.</p>
+            <p>The rationale: it is unjust to make recovery for psychiatric illness depend on a fortuitous distinction — whether the foreseeability is classified as physical or psychiatric. What matters is whether the plaintiff was <b>within the range of foreseeable physical injury</b>; if so, he is a primary victim and can recover for the psychiatric consequences.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>primary/secondary victim</b> distinction is decisive. A <b>primary victim</b> is a person who was <b>within the area of physical danger</b> (i.e., exposed to a risk of physical injury) created by the defendant’s negligence. For a primary victim, the defendant’s duty is to take reasonable care; it is enough that <b>physical injury</b> was reasonably foreseeable — the defendant is then liable for the <b>psychiatric illness</b> that in fact results, even though no physical injury occurs and even though psychiatric illness was not itself foreseeable. The old distinction between physical and psychiatric injury, so far as it affected the foreseeability test, was <b>abolished</b>. This is in contrast to a <b>secondary victim</b>, who must satisfy the further <b>proximity requirements</b> (close relationship, proximity in time and space, and shock through sight/hearing of the event or its immediate aftermath).</div>
+        </div>
+      </div>
+
+      <!-- C27 -->
+      <div class="case" id="c27">
+        <div class="case-head">
+          <h4>27. Dulieu v. White &amp; Sons</h4>
+          <span class="cit">(1901) 2 KB 669 (Divisional Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendant’s servant negligently drove a horse-drawn van into a public house. The plaintiff, a <b>pregnant woman</b>, was standing behind the bar. She was <b>not physically injured</b>, but the shock of the van crashing into the house caused her to suffer nervous shock and become seriously ill, with the result that she gave <b>premature birth to a still-born child</b>. She sued the defendants for damages. The defendants contended the statement of claim disclosed no cause of action (since the shock did not arise from physical impact on her). The Divisional Court refused to follow the earlier Privy Council decision in <i>Victorian Railway Comrs. v. Coultas</i>. <span class="pill o">Note</span> Not separately reproduced in the casebook; summarised here from the DU notes.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Is an action for <b>nervous shock</b> resulting in physical injury maintainable where the plaintiff was not herself physically struck but was alarmed by a danger created by the defendant’s negligence?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> She suffered physical injury (a miscarriage/still-birth) and illness as the result of shock caused by the defendant’s negligence; this should be actionable despite the absence of direct physical impact, because the threat was to her own safety.</p>
+            <p><b>Defendants:</b> Under the then-current law, damages could be recovered only for physical injury resulting from actual impact; mere fright or mental shock without contact was too remote and gave no cause of action.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The Divisional Court (Kennedy J. and Phillimore J.) held for the plaintiff: an action for nervous shock resulting in physical injury was <b>recognised</b>. However, <b>Kennedy J.</b> imposed a <b>great limitation</b>:</p>
+            <p class="quote">“It is not … to be taken that in my view every nervous shock occasioned by negligence and producing physical injury to the sufferer gives a cause of action. There is, I am inclined to think, at least one limitation. <b>The shock, where it operates through the mind, must be shock which arises from a reasonable fear of immediate injury to oneself.</b> A has, I conceive, no legal duty not to shock B’s nerves by the exhibition of negligence towards C, or towards the property of B or C.”</p>
+            <p>Thus recovery was allowed, but confined to cases where the plaintiff’s shock arose from <b>fear of injury to herself</b>, not from fear for another or for property. The defendant could not be liable for shocking a person who was not herself endangered.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> Nervous shock caused by negligence and producing physical injury is <b>actionable in principle</b> — the crude “impact rule” is abandoned, and injury through the medium of the mind (fear) is recognised. But <b>Kennedy J.’s limitation</b> confined the action to shock arising from a <b>reasonable fear of immediate personal injury to oneself</b>. This restriction was later <b>disapproved</b> in <i>Hambrook</i> and abandoned in <i>McLoughlin</i> (Lord Wilberforce said it “has not gained acceptance”). <i>Dulieu</i> is thus the starting point of modern nervous-shock liability but is significant today chiefly for the limitation it imposed, and for the proposition that shock from <b>damage to property</b> or from danger to a <b>third party</b> was not then compensable.</div>
+        </div>
+      </div>
+
+      <!-- C28 -->
+      <div class="case" id="c28">
+        <div class="case-head">
+          <h4>28. King v. Phillips</h4>
+          <span class="cit">(1953) 1 QB 429 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The defendant’s servant was negligently backing a taxicab into a boy on a tricycle. The boy’s mother, who was at an <b>upstairs window of a house about 70–80 yards away</b>, could see only the tricycle under the taxicab and heard the boy scream, but could not see the boy. The boy and the tricycle were only slightly damaged, but the mother suffered serious nervous shock as a result. She claimed damages. <span class="pill o">Note</span> Not separately reproduced in the casebook; summarised here from the DU notes.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Was the mother within the <b>area of reasonable apprehension</b> (the area of risk) such that the defendant owed her a duty of care, or was she wholly outside it?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff (mother):</b> She was a close relative of the child (whose injury was foreseeable) and suffered serious nervous shock as a result of the negligent act; she should recover on the <i>Hambrook</i> principle (shock from fear of injury to one’s child).</p>
+            <p><b>Defendant:</b> She was 70–80 yards away, in a room, and could not see the boy or the accident clearly; she was <b>outside the area of reasonable apprehension</b> — the shock was too remote, and the defendant’s duty was confined to persons within the area where physical injury to the child was apprehended.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Court of Appeal</b> held for the defendants: the mother was held to be <b>wholly outside the area of reasonable apprehension</b>, and the defendants were <b>not liable</b>. The facts were distinguished from <i>Hambrook</i>, where the mother was in close proximity to the threatened child and the shock arose from what she saw and heard with her own senses. Here the mother was at a distance of 70–80 yards, could not see the boy, and was not so placed that injury by shock to her was reasonably foreseeable. Per <b>Denning LJ</b>: “there can be no doubt since <i>Bourhill v. Young</i> that the test of liability is foreseeability of injury by shock.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The test of liability for nervous shock is <b>reasonable foreseeability of injury by shock</b>, and the plaintiff must be <b>within the area of reasonable apprehension</b>. Where a plaintiff is at a substantial distance and cannot actually perceive the injury to the victim, she is <b>outside the area of risk</b> and cannot recover. The DU notes observe that the facts here are not very different from <i>Hambrook</i> (where a mother recovered for fear of injury to her children), and that <i>King v. Phillips</i> appears to require reconsideration. It is authority for the requirement of <b>proximity / area of risk</b> and for limiting recovery to those in close enough spatial relation to the accident.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes the classic DU Topic-4 questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the meaning of "nervous shock" and trace its historical development. How has the "impact theory" been superseded?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> Nervous shock is a tort of recent origin, giving relief where a person suffers physical injury not by impact (e.g., by a stick, bullet or sword) but merely by a nervous shock through what has been seen or heard. It is injury sustained through the medium of the eye or the ear, without direct contact (per Lord Macmillan in <i>Bourhill v. Young</i>). It must be a genuine psychiatric illness, not mere grief, sorrow, anxiety or distress, and must be a <b>sudden</b> shock (the sudden appreciation by sight or sound of a horrifying event).</p>
+          <p><b>Historical development.</b> (i) <i>Lynch v. Knight</i> (1861): mental pain and anxiety were regarded as not redressable. (ii) <i>Victorian Railway Comrs. v. Coultas</i> (1888): no recovery for shock from fright — too remote. (iii) <i>Wilkinson v. Downton</i> (1897): defendant liable for shock from a false statement. (iv) <i>Dulieu v. White</i> (1901): shock recognised, but limited to fear of immediate injury to oneself. (v) <i>Hambrook v. Stokes Bros</i> (1925): limitation disapproved — recovery allowed for fear of injury to one’s child. (vi) <i>Bourhill v. Young</i> (1943): House confirmed the action, but on facts no duty because no foreseeability. (vii) <i>McLoughlin v. O’Brian</i> (1983): the immediate aftermath doctrine and the three-element test. (viii) <i>Alcock</i> (1991): the three-element proximity test and the primary/secondary victim distinction. (ix) <i>Page v. Smith</i> (1995): the distinction between physical and psychiatric injury was abolished for primary victims.</p>
+          <p><b>Supersession of the impact theory.</b> The impact theory required that the shock result from physical impact or a fear of immediate personal injury to oneself. It has been rejected. Per Lord Macmillan in <i>Bourhill</i>, “the crude view that the law should take cognizance only of physical injury resulting from actual impact has been discarded, and it is now well recognised that an action will lie for injury by shock sustained through the medium of the eye or the ear without direct contact.” The modern test of liability is <b>reasonable foreseeability of psychiatric illness</b>, subject to the requirement of <b>proximity</b>.</p>
+          <p><b>Conclusion.</b> Nervous shock is now an established tort; the plaintiff no longer needs to show physical impact, but must show a recognised psychiatric illness caused by shock, that it was reasonably foreseeable, and (for a secondary victim) that the proximity requirements are satisfied.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What is the "immediate aftermath" test? Explain with reference to <i>McLoughlin v. O'Brian</i> and <i>Alcock v. Chief Constable of South Yorkshire Police</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The test.</b> Although a plaintiff claiming for nervous shock need not have seen or heard the accident, the shock must be brought about by <b>direct perception</b> of the event or of its <b>immediate aftermath</b>. Per Lord Wilberforce in <i>McLoughlin</i>: “Experience has shown that to insist on direct and immediate sight or hearing would be impractical and unjust and that under what may be called the ‘aftermath’ doctrine one who, from close proximity, comes very soon upon the scene should not be excluded.” The plaintiff must be <b>close in both time and space</b>.</p>
+          <p><b>Application in McLoughlin.</b> The mother was at home about two miles away when her husband and three children were gravely injured in a collision (one child died). She came to the hospital about an hour or two later and saw her husband and children covered in mud and oil, distressed and in pain. The House of Lords held she came upon the <b>immediate aftermath</b> — the hospital scene — and could recover. It was immaterial that she had not been at the roadside; she was in the same condition-affected state as if she had arrived at the scene. The aftermath extends to the hospital to which the victims are taken, and persists so long as they remain in the state produced by the accident (Deane J. in <i>Jaensch v. Coffey</i>).</p>
+          <p><b>Application in Alcock.</b> The claimants were relatives/friends of those crushed at Hillsborough. Those who watched on television failed, because a <b>simultaneous television broadcast</b> is not equivalent to being within sight or hearing of the event or its immediate aftermath: “the viewing of the television scenes did not create the necessary degree of proximity.” Those who identified bodies at the mortuary <b>about eight hours</b> after also failed, because although identification may be part of the aftermath, it was <b>not</b> part of the <i>immediate</i> aftermath. In contrast, in <i>McLoughlin</i> the plaintiff arrived within about an hour or so.</p>
+          <p><b>Limits of the test.</b> The shock must come through sight or hearing of the event or its immediate aftermath; shock from <b>communication by a third party</b> (being told about the accident) is not compensated (<i>Hambrook</i>; <i>Abramzik v. Brenner</i>). The distinction between the <b>aftermath</b> and the <b>immediate aftermath</b> is crucial: identification after several hours, and viewing recorded or broadcast images, are generally insufficient.</p>
+          <p><b>Conclusion.</b> The immediate aftermath test allows a plaintiff who comes very soon upon the accident’s aftermath to recover, extending the traditional requirement of direct sight or hearing — but only within close limits of time and space.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Distinguish between a "primary victim" and a "secondary victim" of nervous shock. Explain the requirements for a secondary victim to recover, with reference to <i>Alcock</i> and <i>Page v. Smith</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Primary victim.</b> A person who is himself <b>within the area of physical danger</b> created by the defendant’s negligence (a participant in the accident), and who suffers psychiatric illness as a result. Because he was exposed to a risk of physical injury, the defendant owed him a duty of care. It is enough that <b>physical</b> injury was reasonably foreseeable; it is not necessary to show that <b>psychiatric</b> injury was foreseeable. Under <i>Page v. Smith</i>, the distinction between physical and psychiatric injury has been <b>abolished</b> for such a victim, and he may recover for psychiatric illness even though he suffered <b>no physical injury</b>.</p>
+          <p><b>Secondary victim.</b> A person who is <b>not himself within the area of physical danger</b> but who suffers psychiatric illness from what he saw or heard — e.g., a mother who sees her child run over, or a relative who comes upon the aftermath. He is a mere witness/spectator, and his claim is subject to <b>additional requirements</b>.</p>
+          <p><b>Requirements for a secondary victim (the three-element proximity test, from <i>Alcock</i>).</b> (1) <b>Class of persons</b> — a close relationship of love and affection with the primary victim, which is <b>presumed</b> for spouse/parent/child (and generally for a fiancé) but must be <b>proved</b> for other relatives and friends. (2) <b>Proximity in time and space</b> — the claimant must be close to the accident, including its immediate aftermath. (3) <b>Means by which the shock is caused</b> — through sight or hearing of the event or its immediate aftermath, not by being told about it. In addition, the psychiatric illness must be reasonably foreseeable (in a person of ordinary fortitude) and must be a genuine illness.</p>
+          <p><b>Application.</b> In <i>Alcock</i>, all the claimants were secondary victims. Those who lost brothers, a brother-in-law or a grandson failed for want of proof of close ties; those who watched on television failed because a broadcast is not proximity; those who identified bodies eight hours later failed because it was not the <i>immediate</i> aftermath. In contrast, a primary victim (as in <i>Page v. Smith</i>) need satisfy none of these — he recovers on proof of foreseeability of physical injury.</p>
+          <p><b>Conclusion.</b> The distinction is fundamental. It determines both the test to be applied (foreseeability of physical injury for a primary victim; the three-element proximity test for a secondary victim) and the burden on the claimant.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the "foreseeability of psychiatric illness" as the test of liability for nervous shock. Is reasonable foreseeability alone sufficient? Refer to <i>Bourhill v. Young</i> and <i>Alcock</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The test.</b> After the impact theory was discarded, the governing test of liability for nervous shock became <b>reasonable foreseeability of psychiatric illness</b>. Per Denning LJ in <i>King v. Phillips</i>: “there can be no doubt since <i>Bourhill v. Young</i> that the test of liability is foreseeability of injury by shock.”</p>
+          <p><b>Bourhill v. Young.</b> A fish-wife standing by a tram-car heard a collision (which she could not see) in which a motor-cyclist was killed, and suffered shock and a still-birth. The House of Lords held the motor-cyclist owed her no duty because injury by shock to her was <b>not reasonably foreseeable</b> — she was outside the area of reasonable anticipation. Lord Macmillan: the duty is owed “to those to whom injury may reasonably and probably be anticipated if the duty is not observed.” Lord Porter added that a driver is entitled to assume the ordinary frequenter of the streets has “sufficient fortitude” and is not negligent towards one who lacks “the customary phlegm.”</p>
+          <p><b>Foreseeability alone is not sufficient.</b> In <i>McLoughlin</i>, Lord Wilberforce held that foreseeability “does not of itself, and automatically, lead to a duty of care.” It must be accompanied and limited by the law’s judgment as to persons who ought, according to its standards of value and justice, to have been in contemplation. In <i>Alcock</i>, Lord Keith and Lord Ackner made this explicit: for a secondary victim, <b>in addition to reasonable foreseeability</b>, liability depends on a <b>requisite relationship of proximity</b> — the class of persons, proximity in time and space, and the means by which the shock is caused. As Lord Reid put it: “A defender is not liable for a consequence of a kind which is not foreseeable. But it does not follow that he is liable for every consequence which a reasonable man could foresee.”</p>
+          <p><b>Conclusion.</b> Reasonable foreseeability of psychiatric illness is the foundation of liability, but it is <b>necessary, not sufficient</b>. It must be supplemented by proximity and, for secondary victims, by the three-element test. This prevents the law from extending liability to the world at large and keeps claims within just limits.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short/medium question · 10–20 marks</span>Explain the "impact theory" of nervous shock, both from personal injury and from property damage, and state to what extent it applies today.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The impact theory.</b> Under the original restrictive rule, damages for nervous shock could be recovered only where the plaintiff had himself suffered <b>physical impact</b> / physical injury, or at least a reasonable fear of immediate personal injury to himself. This was the impact rule, and it reflected the older view that the law should take cognizance only of physical injury from actual impact.</p>
+          <p><b>From personal injury.</b> Where the plaintiff was himself struck or physically endangered, the shock was compensable. The doctrine was in substance the position in <i>Dulieu v. White</i> (1901): Kennedy J. held the shock must arise from a reasonable fear of immediate injury to oneself. It was relaxed in <i>Hambrook v. Stokes Bros</i> (1925), where a mother was allowed to recover for shock from fear of injury to her child, and abandoned in <i>McLoughlin</i> (1983), where Lord Wilberforce said the reservation “has not gained acceptance.”</p>
+          <p><b>From property damage.</b> The impact theory went further and excluded recovery for shock arising from damage to <b>property</b>. Kennedy J. in <i>Dulieu</i> expressly said a person has “no legal duty not to shock B’s nerves by the exhibition of negligence towards … the property of B or C.” Even today, shock arising from a risk of harm to one’s <b>property</b> (rather than to a person) is generally not compensable, since the law is reluctant to compensate psychiatric injury induced by fear for chattels or land.</p>
+          <p><b>Extent today.</b> The impact theory has been <b>rejected</b> as the governing test. Per Lord Macmillan in <i>Bourhill</i>, “the crude view that the law should take cognizance only of physical injury resulting from actual impact has been discarded.” The modern test is <b>reasonable foreseeability of psychiatric illness</b> subject to <b>proximity</b>. But two vestiges remain: (i) the plaintiff must suffer a <b>recognised psychiatric illness</b>, not mere distress; and (ii) a <b>secondary victim</b> (one outside the area of physical danger) must still satisfy the proximity requirements. And, in the context of <b>property damage</b>, shock for fear of property remains generally uncompensated.</p>
+          <p><b>Conclusion.</b> The impact theory is obsolete; it survives only in the requirement of a genuine psychiatric illness and in the proximity controls on secondary victims.</p>
+        </div>
+      </div>
+
+      <!-- PYQ F -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Discuss the liability for nervous shock with reference to <i>Hambrook v. Stokes Bros</i> and <i>(Hay or) Bourhill v. Young</i>. Is the "bystander" entitled to claim?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Hambrook.</b> A negligent servant left a lorry unattended with its engine running; it ran down a narrow street and struck a child, and the mother, who heard the commotion and apprehended injury to her child (not to herself), died of shock. The Court of Appeal (Bankes and Atkin LJJ) held the judge had misdirected the jury and ordered a new trial. The <i>Dulieu</i> limitation (shock must arise from fear of injury to oneself) was rejected: a plaintiff may recover for shock from <b>fear of injury to a near relative</b> (a child), provided the shock came from what she saw or heard with her own senses and not from being told. Atkin LJ: “Personally I see no reason for excluding the bystander in the highway who receives injury in the same way from apprehension of, or the actual sight of, injury to a third party.”</p>
+          <p><b>Bourhill.</b> A fish-wife standing behind a tram-car heard (but could not see) a collision in which a motor-cyclist was killed; she suffered shock and a still-birth, but admitted her terror did not involve any fear for herself. The House of Lords held the motor-cyclist owed her <b>no duty</b> because injury by shock to her was <b>not reasonably foreseeable</b>. Lord Macmillan laid down the foreseeability test; Lord Porter added the “fortitude” point — the ordinary frequenter of the street is presumed to have sufficient fortitude, and the defendant is not negligent towards one who lacks the customary phlegm.</p>
+          <p><b>Is the bystander entitled to claim?</b> The modern position (as stated in <i>Alcock</i>) is that the <b>ordinary bystander</b> is generally <b>excluded</b>, either because such persons are assumed to have sufficient fortitude to endure the calamities of modern life, or because defendants cannot be expected to compensate the world at large. However, the exclusion is not absolute: Lord Ackner in <i>Alcock</i> said he would not rule out a claim by a passer-by who is so shocked by a particularly horrific scene (e.g., a petrol tanker careering into a school) as to suffer psychiatric illness; and a <b>rescuer</b> who comes upon an accident is in a special category and may recover (<i>Chadwick v. British Railways Board</i>). Thus, while a bystander cannot ordinarily claim, a close relative who perceives the event or its immediate aftermath may do so.</p>
+          <p><b>Conclusion.</b> <i>Hambrook</i> extended recovery to those who fear for loved ones; <i>Bourhill</i> confined it within the area of reasonable foreseeability. The bystander is ordinarily excluded, but a rescuer, and (exceptionally) a person shocked by a particularly horrific scene, may fall within the protection of the law.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Nervous shock</span> — injury to the nervous system by shock, sustained through the medium of the eye or ear without direct contact; a distinct kind of damage (psychiatric illness), not mere grief.</li>
+        <li><span class="lat">Impact theory</span> — the obsolete rule that shock was compensable only on physical impact or a reasonable fear of immediate injury to oneself.</li>
+        <li><span class="lat">Actual impact</span> — physical contact; the older requirement, now discarded.</li>
+        <li><span class="lat">Foreseeability</span> — whether injury by shock to the plaintiff was a reasonably foreseeable consequence of the defendant’s negligence; the foundation of duty, but not sufficient alone.</li>
+        <li><span class="lat">Proximity</span> — the requirement that the plaintiff be closely and directly affected (in relationship, time and space) so as to be within the defendant’s contemplation.</li>
+        <li><span class="lat">Immediate aftermath</span> — the scene (including the hospital) very soon after an accident, within close proximity of time and space; coming upon it may suffice for recovery.</li>
+        <li><span class="lat">Primary victim</span> — a person within the area of physical danger, exposed to a risk of physical injury; need only show foreseeability of physical injury.</li>
+        <li><span class="lat">Secondary victim</span> — one outside the area of physical danger who suffers shock from what he saw or heard; must satisfy the three-element proximity test.</li>
+        <li><span class="lat">Three-element test</span> — (1) class of persons (close tie of love &amp; affection); (2) proximity in time &amp; space; (3) shock by sight or hearing of the event or its immediate aftermath.</li>
+        <li><span class="lat">Area of risk</span> — the zone of potential physical danger; a person outside it cannot ordinarily recover for shock.</li>
+        <li><span class="lat">Customary phlegm / fortitude</span> — the presumed ordinary mental robustness of a person; the defendant is not liable to one of abnormal susceptibility.</li>
+        <li><span class="lat">Rescuer</span> — a person who goes to the scene to assist; the law recognises a duty of care (and recovery for shock) to him.</li>
+        <li><span class="lat">Bereavement damages</span> — a narrow statutory right (Fatal Accidents Act 1976, s. 1A) for certain close relatives; distinct from damages for nervous shock.</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 460" width="900" role="img" aria-label="Full topic 4 revision flowchart">
+          <defs><marker id="ar4" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#182447"/></marker></defs>
+          <rect x="10" y="15" width="880" height="52" rx="12" fill="#182447"/>
+          <text x="450" y="41" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">NERVOUS SHOCK — meaning &amp; </text>
+          <line x1="450" y1="67" x2="450" y2="85" stroke="#182447" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="120" y="88" width="660" height="52" rx="12" fill="#b0801f"/>
+          <text x="450" y="114" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">TEST = reasonable foreseeability of psychiatric illness + PROXIMITY</text>
+          <line x1="200" y1="140" x2="200" y2="160" stroke="#0f7f8a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <line x1="700" y1="140" x2="700" y2="160" stroke="#5b3a8e" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="40" y="163" width="390" height="120" rx="12" fill="#0f7f8a"/>
+          <text x="235" y="190" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">PRIMARY VICTIM</text>
+          <text x="235" y="214" fill="#d8f2f2" text-anchor="middle" font-size="11">in the area of physical danger</text>
+          <text x="235" y="234" fill="#d8f2f2" text-anchor="middle" font-size="11">only fright physical injury needs</text>
+          <text x="235" y="252" fill="#d8f2f2" text-anchor="middle" font-size="11">to be foreseeable (Page v Smith)</text>
+          <text x="235" y="272" fill="#d8f2f2" text-anchor="middle" font-size="11" font-weight="700">✓ RECOVERS</text>
+          <rect x="470" y="163" width="430" height="120" rx="12" fill="#5b3a8e"/>
+          <text x="685" y="190" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">SECONDARY VICTIM</text>
+          <text x="685" y="214" fill="#e8def4" text-anchor="middle" font-size="11">outside the area of danger; must</text>
+          <text x="685" y="234" fill="#e8def4" text-anchor="middle" font-size="11">satisfy the 3-element test</text>
+          <line x1="685" y1="283" x2="685" y2="300" stroke="#5b3a8e" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="430" y="305" width="420" height="120" rx="12" fill="#b0801f"/>
+          <text x="640" y="330" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">① CLASS — close ties of love &amp;</text>
+          <text x="640" y="350" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">affection (presumed for spouse/</text>
+          <text x="640" y="370" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">parent/child)</text>
+          <text x="640" y="394" fill="#fff" text-anchor="middle" font-size="11">② PROXIMITY in time &amp; space</text>
+          <text x="640" y="412" fill="#fff" text-anchor="middle" font-size="11">③ MEANS = sight/hearing of event</text>
+          <text x="640" y="428" fill="#fff" text-anchor="middle" font-size="11">      or its IMMEDIATE AFTERMATH</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 4.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">Foundation / foreseeability test</span> — (Hay or) Bourhill v. Young.<br>
+        · <span class="pill t">Fear for a near relative / "impact" rejected</span> — Hambrook v. Stokes Bros; Dulieu v. White.<br>
+        · <span class="pill p">Immediate aftermath / 3-element test</span> — McLoughlin v. O'Brian.<br>
+        · <span class="pill p">Secondary victims / proximity (TV, late ID)</span> — Alcock v. Chief Constable.<br>
+        · <span class="pill n">Primary victims / psychiatric injury without physical injury</span> — Page v. Smith.<br>
+        · <span class="pill o">Area of risk / out of sight &amp; sound</span> — King v. Phillips.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 4 (Nervous Shock).</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>Hambrook v. Stokes Bros.</i>, <i>(Hay or) Bourhill v. Young</i>, <i>McLoughlin v. O'Brian</i> and <i>Alcock v. Chief Constable of South Yorkshire Police</i>) together with the accompanying course notes, which also explain <i>Dulieu v. White</i> and <i>King v. Phillips</i>. Theory (meaning, impact theory, foreseeability, aftermath, primary/secondary victims) follows Ratanlal &amp; Dhirajlal, Winfield &amp; Jolowicz and the modern House of Lords authorities as reflected in the DU material.</p>
+      <p style="margin:0"><b>Note:</b> <i>Page v. Smith</i> (Case 26) is not reproduced in the provided casebook or course notes; it is summarised from its well-established principles as the leading authority on <b>primary victims</b> (the abolition of the physical/psychiatric injury distinction). For revision only — refer to the full reports for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

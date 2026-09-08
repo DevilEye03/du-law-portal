@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jurisprudence-I (LB-106) | Unit 1 – Evolution of Bharatiya Jurisprudence - I | Topper Notes</title>
+<style>
+  :root{
+    --ink:#1b2430; --muted:#5b6b7c; --line:#d9dee5;
+    --bg:#f7f8fa; --card:#ffffff;
+    --navy:#12355b; --gold:#a37c08;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;line-height:1.62;font-size:16px;}
+  .page{max-width:960px;margin:0 auto;padding:18px 16px 60px;}
+  header.doc{background:linear-gradient(135deg,#12355b 0%,#1f5f8b 60%,#2c7fa0 100%);
+    color:#fff;padding:26px 24px;border-radius:14px;margin:8px 0 18px;}
+  header.doc h1{margin:0 0 6px;font-size:1.65rem;line-height:1.25;letter-spacing:.2px;}
+  header.doc .sub{opacity:.95;font-size:.98rem;font-style:italic;margin-bottom:10px;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .chip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);
+    border-radius:999px;padding:3px 12px;font-size:.78rem;font-family:Verdana,Arial,sans-serif;}
+  h2{font-size:1.35rem;color:var(--navy);border-bottom:3px solid var(--navy);
+    padding-bottom:5px;margin:34px 0 12px;}
+  h3{font-size:1.08rem;color:#1d4970;margin:22px 0 8px;}
+  h4{font-size:1rem;color:#333;margin:16px 0 6px;}
+  p{margin:8px 0;}
+  ul,ol{margin:6px 0 10px;padding-left:26px;}
+  li{margin:3px 0;}
+  a{color:#1d5fa8;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  code,.mono{font-family:'Courier New',monospace;background:#eef1f5;padding:0 4px;border-radius:3px;font-size:.88em;}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem;background:#fff;}
+  th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left;}
+  th{background:#eef2f7;color:#1d3a5f;}
+  tr:nth-child(even) td{background:#fafbfc;}
+  .tblwrap{overflow-x:auto;}
+  blockquote{margin:10px 0;padding:8px 16px;border-left:4px solid #b9c4d0;
+    background:#f1f4f8;font-style:italic;color:#33475b;}
+  .small{font-size:.85rem;color:var(--muted);}
+  .tag{display:inline-block;font-family:Verdana,Arial,sans-serif;font-size:.68rem;
+    font-weight:bold;letter-spacing:.4px;text-transform:uppercase;
+    background:#dfe6ee;color:#334;border-radius:4px;padding:1px 7px;margin-right:4px;}
+  /* ---- box colour system ---- */
+  .bx{border-left:6px solid #000;border-radius:6px;padding:10px 14px;margin:12px 0;
+    box-shadow:0 1px 2px rgba(20,30,50,.06);}
+  .bx h4{margin:0 0 6px;font-family:Verdana,Arial,sans-serif;font-size:.78rem;
+    letter-spacing:.8px;text-transform:uppercase;}
+  .bx ul{margin:4px 0;}
+  .bx p{margin:5px 0;}
+  .bx-facts{background:#eef6ff;border-color:#2f6fd0;}
+  .bx-facts h4{color:#1d4f9e;}
+  .bx-issues{background:#fff7e0;border-color:#d9a406;}
+  .bx-issues h4{color:#8a6506;}
+  .bx-app{background:#edf9ee;border-color:#2e9e4f;}
+  .bx-app h4{color:#1c6b34;}
+  .bx-resp{background:#fdeeee;border-color:#d64545;}
+  .bx-resp h4{color:#a32929;}
+  .bx-obs{background:#f5efff;border-color:#7b4fd0;}
+  .bx-obs h4{color:#5a34ac;}
+  .bx-ratio{background:#e9faf1;border-color:#0f9d63;}
+  .bx-ratio h4{color:#0a6b44;}
+  .bx-obiter{background:#fdf2e6;border-color:#e07b2e;}
+  .bx-obiter h4{color:#a65310;}
+  .bx-note{background:#f1f4f8;border-color:#5b7sky;}
+  .bx-note{background:#f1f4f8;border-color:#64748b;}
+  .bx-note h4{color:#3f4d5c;}
+  .bx-flag{background:#fff1f1;border-color:#c0392b;}
+  .bx-flag h4{color:#a02820;}
+  .bx-add{background:#e9f9fc;border-color:#0891b2;}
+  .bx-add h4{color:#0b6e88;}
+  .bx-prov{background:#eef6ff;border-color:#2f6fd0;}
+  .bx-prov h4{color:#1d4f9e;}
+  .bx-source{background:#fbf7ea;border-color:#b08900;}
+  .bx-source h4{color:#7a5e00;}
+  /* ---- details/summary ---- */
+  details.case{background:#fff;border:1px solid var(--line);border-radius:10px;
+    margin:14px 0;overflow:hidden;}
+  details.case>summary{cursor:pointer;padding:13px 16px;font-weight:bold;color:#12355b;
+    background:#f4f7fb;list-style:none;font-size:1.02rem;border-bottom:1px solid transparent;}
+  details.case>summary::-webkit-details-marker{display:none}
+  details.case>summary::before{content:"▸ ";color:#c09a2c;font-size:1rem;}
+  details.case[open]>summary{border-bottom:1px solid var(--line);background:#eef3f9;}
+  details.case[open]>summary::before{content:"▾ ";}
+  details.case .body{padding:14px 18px;}
+  details.pyq{background:#fff;border:1px solid #e2c76f;border-left:6px solid #c9a227;
+    border-radius:8px;margin:12px 0;overflow:hidden;}
+  details.pyq>summary{cursor:pointer;padding:11px 14px;font-weight:bold;background:#fdf8e7;
+    color:#5c4500;list-style:none;}
+  details.pyq>summary::-webkit-details-marker{display:none}
+  details.pyq>summary::before{content:"▸ ";}
+  details.pyq[open]>summary::before{content:"▾ ";}
+  details.pyq .body{padding:12px 18px;}
+  .cv{font-variant:small-caps;letter-spacing:.4px;}
+  /* TOC */
+  nav.toc{background:#fff;border:1px solid var(--line);border-radius:10px;
+    padding:14px 18px;margin:16px 0;}
+  nav.toc h2{ border:none;margin:0 0 6px;padding:0;font-size:1.05rem;}
+  nav.toc ul{columns:2;column-gap:30px;padding-left:20px;margin:6px 0;}
+  nav.toc li{break-inside:avoid;}
+  @media(max-width:640px){nav.toc ul{columns:1;} header.doc h1{font-size:1.3rem;} body{font-size:15px;}}
+  @media print{
+    body{background:#fff;font-size:11pt;}
+    details.case{break-inside:avoid-page;}
+    .page{max-width:100%;}
+    nav.toc{display:none;}
+  }
+  .pill-ok{color:#0a6b44;font-weight:bold;}
+  .pill-warn{color:#a02820;font-weight:bold;}
+  .rule{height:2px;background:repeating-linear-gradient(90deg,#c9a227 0 10px,transparent 10px 20px);
+    margin:26px 0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header class="doc">
+  <h1>Unit 1 — Evolution of Bharatiya Jurisprudence – I</h1>
+  <div class="sub">Jurisprudence-I (Legal Method) · LL.B. I Term · University of Delhi Faculty of Law</div>
+  <div class="meta">
+    <span class="chip">Course: LB-106</span>
+    <span class="chip">Semester: 1st</span>
+    <span class="chip">Syllabus: DU Case Material (Aug 2025 edn.)</span>
+    <span class="chip">Basis: 3 prescribed Readings + 1 supplementary uploaded reading</span>
+  </div>
+</header>
+<div class="bx bx-prov" id="syl">
+  <h4>Topic as notified (mirrors the syllabus screenshot) — official scope of this note set</h4>
+  <p><b>Unit 1. Evolution of Bharatiya Jurisprudence &ndash; I</b><br>
+  (a) Environmental Consciousness in Vedic Age<br>
+  (b) Codification of Law &ndash; Dharmashastras, Smritis<br>
+  (c) Dispute Resolution System in Ancient India</p>
+  <p><b>READINGS (authoritative; followed strictly below):</b><br>
+  1. Mohan Parasain, &ldquo;Indian Jurisprudence: A Philosophical Overview&rdquo;<br>
+  2. S.N. Dhyani, &ldquo;Indian Legal Theory &ndash; Past and Present&rdquo; in <i>Fundamentals of Jurisprudence: The Indian Approach</i> 48&ndash;75 (Central Law Agency, Prayagraj, 2023)<br>
+  3. Seema Singh &amp; Madhu Yadav, &ldquo;Customary Dispute Resolution Mechanism in Bharat&rdquo;</p>
+  <p class="small">Coverage map: (a) &rarr; &sect;1.2 module below + PYQ-Q2 &middot; (b) &rarr; &sect;1.3 (ancient &lsquo;provisions&rsquo;) + comparative table &sect;4.3 + PYQ-Q3 &middot; (c) &rarr; &sect;3 hierarchy/source-map, Case C-4, PYQ-Q4. Overarching philosophy (the &ldquo;why&rdquo; of the Unit) &rarr; &sect;1.1 and Cases C-1 to C-3.</p>
+</div>
+
+
+<div class="bx bx-flag">
+  <h4>⚑ Read this first — source-status &amp; honesty flags</h4>
+  <ul>
+    <li>This Unit in the DU Case Material is <b>essay/doctrinal</b> in character — it rests on three readings (Parasain; Dhyani; Singh &amp; Yadav). <b>It contains no full 'case study' texts.</b> Every court decision that appears in the material is cited <i>as a supporting footnote or passing illustration</i>, never with facts/holdings.</li>
+    <li>Accordingly, in §2 below: (i) <b>four cases</b> that the material actually quotes or relies upon in its body are given <b>full IRAC-style blocks</b>; (ii) <b>every remaining citation</b> appearing anywhere in the Unit-1 pages of the material is inventoried in a table with the use to which the material puts it. Facts/holdings of the four core cases were verified against the reported judgments and are marked as <span class="tag">Additional Context</span> where they go beyond what the DU file itself narrates.</li>
+    <li><b>Incomplete info you should supply (flagged in gold) is listed at the very end</b> — several footnote cases (e.g., <i>S.P. Gupta, Vishaka, Antulay, Bangalore Medical Trust</i>) belong to other courses/units; if your exam requires them, send the relevant DU excerpts and full blocks will be added.</li>
+    <li>Known internal slips in the DU material itself are flagged where relevant (e.g., <i>Vytla Sitanna</i> — 'Supreme Court' vs. actual forum; mis-typed years for <i>R.C. Cooper</i> and <i>Golak Nath</i>).</li>
+  </ul>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#s1">1. Topic Overview (scope · provisions · scheme)</a></li>
+    <li><a href="#s1c">1.2 Module (a): Vedic environmental consciousness</a></li>
+    <li><a href="#s1b">1.3 'Provisions' studied: ancient texts &amp; modern anchors</a></li>
+    <li><a href="#s2">2. Case Law Analysis</a></li>
+    <li><a href="#c1">C-1 Rattan Lal v. Vardesh Chander (1976)</a></li>
+    <li><a href="#c2">C-2 Dr. Surajmani Stella Kujur v. Durga Charan Hansdah (2001)</a></li>
+    <li><a href="#c3">C-3 Ashok Kumar @ Golu v. Union of India (1991)</a></li>
+    <li><a href="#c4">C-4 Vytla Sitanna v. Marivada Viranna (1934)</a></li>
+    <li><a href="#s2b">2.2 All other cases mentioned (footnote inventory)</a></li>
+    <li><a href="#s3">3. Related Provisions / connected sources</a></li>
+    <li><a href="#s4">4. Comparative &amp; cross-reference tables</a></li>
+    <li><a href="#s5">5. DU previous-year &amp; practice questions (model IRAC answers)</a></li>
+    <li><a href="#s6">6. Quick revision summary + mnemonics</a></li>
+    <li><a href="#flags">Flags: incomplete information — action needed</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================== -->
+<h2 id="s1">1. TOPIC OVERVIEW</h2>
+
+<h3>1.1 What the Unit is about — definition, scope, relevance</h3>
+<p><b>Definition.</b> "Bharatiya Jurisprudence" denotes the <i>dhārmika</i> (dharma-centred) tradition of law, justice and statecraft that developed on the Indian subcontinent from the Vedic age onward, viewed as a body of legal philosophy in its own right rather than as a pre-history of Western jurisprudence. The Unit asks, with Mohan Parasain, whether there <i>is</i> an Indian philosophy of law; with S.N. Dhyani, how ancient Indian legal theory looked "past and present"; and with Seema Singh &amp; Madhu Yadav, how customary dispute-resolution of Bharat survives in modern law.</p>
+<p><b>Syllabus content of the Unit (verbatim from the DU syllabus).</b></p>
+<ul>
+  <li>(a) Environmental Consciousness in the Vedic Age;</li>
+  <li>(b) Codification of Law — Dharmashastras, Smritis;</li>
+  <li>(c) Dispute Resolution System in Ancient India.</li>
+</ul>
+<p><b>Scope.</b> The three prescribed readings develop these sub-topics as follows:</p>
+<table>
+<tr><th style="width:24%">Reading (source pages in DU file)</th><th>Core contribution to Unit 1</th></tr>
+<tr><td>Mohan Parasain, <i>"Indian Jurisprudence: A Philosophical Overview"</i> (pp. 1–11)</td>
+<td>Replies to "Is there an Indian way of thinking / philosophy of law?"; the <i>misconception</i> of no Indian analytical tradition; Dharma as the foundational concept and "institutional a-priori" of the legal system; metaphysics of law (Karma, self, Dharma, consciousness, Ahimsa); <i>East v. West</i>: dharma v. sovereign-command; rights v. duties (kartavya/Ṛṇa); cosmic order (Ṛta/Shruti) v. human construct; Purushārthas.</td></tr>
+<tr><td>S.N. Dhyani, <i>"Indian Legal Theory – Past and Present"</i>, in <i>Fundamentals of Jurisprudence: The Indian Approach</i>, 48–75 (pp. 12–28)</td>
+<td>Early law-givers; Śruti/Smṛti; three kāṇḍas (Āchāra, Vyavahāra, Prāyaśchitta); Yājñavalkya Smṛti &amp; legal theory; Western misrepresentations &amp; colonial disruption; nine "fundamentals" of traditional legal theory (harmony; supremacy of Dharma over the King; ancient rule of law; broad-based law; trusteeship; materialism not ignored; indigenous values; welfare State; human-rights jurisprudence).</td></tr>
+<tr><td>Seema Singh &amp; Madhu Yadav, <i>"Customary Dispute Resolution Mechanism in Bharat"</i> (pp. 29–37)</td>
+<td>Dharma/Ahimsa/Samvāda as Grundnorm; Vedic Sabha/Samiti; Dharmashastra era; Yājñavalkya's Kula–Śreṇī–Puga courts; Panchayats; Arthashastra formalisation; colonial disruption (IPC 1860, CrPC, Contract Act); tribal systems (Bhils' Nyaya Panchayat/Chapai, Khasi Dorbars, Garo Nokma councils); modern revival (Art. 40; 73rd Amendment — Arts. 243–243O; Fifth/Sixth Schedules; Art. 371A; Mediation Act 2023; Lok Adalats — Legal Services Authorities Act 1987; A&amp;C regime); <i>Vytla Sitanna</i>.</td></tr>
+</table>
+<p class="small">Supplementary uploaded reading used only to fill gaps (never to override the DU file): <i>S.S. Dhavan, "The Indian Judicial System — A Historical Survey, Part A: Judicial System in Ancient India"</i> (12 pp.) — provides the hierarchy of courts, procedure, evidence and judicial-conduct detail for sub-topic (c).</p>
+<p><b>Relevance.</b> Unit 1 supplies the <i>Indian Knowledge System (IKS)</i> foundation of the whole course. It (i) prepares the contrast with Western schools in Units 6–7 (Austin–Hart–Kelsen; Savigny; Pound); (ii) feeds Unit 5's sources of law (Dharma, custom, precedent, legislation); (iii) links forward to Unit 2 (Ṛta &amp; Kartavya; Kautilya; Rāmarājya); and (iv) grounds modern access-to-justice institutions (Unit 4: Legal Services, Lok Adalat) in indigenous custom. Examiners repeatedly test the East–West distinctions, the King-under-law thesis, and ancient-to-modern institutional continuity.</p>
+
+<h3 id="s1c">1.2 Deep module &mdash; Sub-topic (a): Environmental Consciousness in the Vedic Age</h3>
+<p class="small">Directly addressed to syllabus bullet (a). The DU readings treat the Vedic world-view as the <i>root</i> of Bharatiya jurisprudence, so this module supplies the doctrinal core; passages attributed to the Vedic texts themselves are given with <span class="tag">Additional Context</span> where the DU file paraphrases rather than quotes them.</p>
+
+<div class="bx bx-facts"><h4>1.2.1 The thesis (as the readings frame it)</h4>
+<ul>
+<li>Parasain: <b>&ldquo;Dharma is the ecology of well-being which emerges organically from devotional relationships with all elements and creatures.&rdquo;</b> Central Indic texts describe the human&ndash;nature relationship &ldquo;not as that of domination, but of friendship and harmony.&rdquo;</li>
+<li>The <b>unity of man, life and world</b> is &ldquo;the single most distinguishing feature of the Indian mind&rdquo; &mdash; the West splits reality into autonomous compartments (reason/faith/emotion) and so misses the ecosystem; the Indian vision sees the whole, and this colours law-as-Dharma, legal philosophising, and interpretation of sources.</li>
+<li><b>Ahimsa</b> is fundamental &ldquo;not only in action or deed, but also in thought and language&hellip; extend[ing] to animals and all living beings.&rdquo;</li>
+<li>Law&rsquo;s purpose is to maintain cosmic order (&Rcedil;ta) and social order (Dharma) &mdash; preservation, harmony and restraint, not merely rights-protection. (Parasain, &ldquo;East and West&rdquo;; Singh &amp; Yadav, Introduction.)</li>
+</ul></div>
+
+<div class="bx bx-app"><h4>1.2.2 Textual evidence-bank (quote-ready)</h4>
+<ul>
+<li><b>&#298;&#347;&#257;v&#257;sya Upanishad (I.1):</b> &ldquo;this entire cosmos is immersed in God&hellip; enjoy it by way of sacrifice without greed or desire&rdquo; &mdash; Dhyani reads this as the ethic of non-appropriation (<i>ty&#257;gena bhu&#241;j&#299;th&#257;h</i>).</li>
+<li><b>Manu (trusteeship &#347;loka):</b> &ldquo;Take whatever is essential for bodily sustenance. To take more is an act of theft and deserves to be punished&rdquo; &mdash; man as <b>trustee</b>, excess acquisition = theft.</li>
+<li><b>Vedic temper (Rigveda/Atharvaveda as expounded by Dhyani):</b> earth as <i>karmabh&#363;mi</i> (field of action) and <i>m&#257;t&#7771;bh&#363;mi</i> (mother); the ideal of &ldquo;a happy, healthy and full life of a hundred years&rdquo; (<i>&#347;arada&#7717; &#347;atam</i>) described as <i>am&#7771;tatva</i> (immortality); the Rigvedic prayer that &ldquo;our intellect and wealth be for the good of humanity and universal peace.&rdquo;</li>
+<li><b>Rigveda (unity hymn):</b> &ldquo;Meet together, speak together, let your minds be of one accord&hellip;&rdquo; &mdash; law as harmonisation of diversity, the cardinal principle of social stability.</li>
+<li><b>Yajurveda:</b> &ldquo;may we live for a hundred years without poverty&rdquo;; <b>Mahabharata:</b> &ldquo;one really becomes a man only when one is prosperous&rdquo; &mdash; material well-being is affirmed, <i>but</i> only within Dharma (the readings use these to rebut the &ldquo;other-worldly escapist India&rdquo; caricature).</li>
+<li><span class="tag">Additional Context</span> &mdash; textbook staples (not in the DU file, safe to add): Atharvaveda <b>P&#7771;thiv&#299; S&#363;kta 12.1</b> &mdash; &ldquo;Truth, greatness and universal order (&#7771;ta)&hellip; dwell on the Earth&rdquo;; the Earth-mother verse &ldquo;m&#257;t&#257; bh&#363;mi&#7717; putro aha&#7749; p&#7771;thivy&#257;&#7717;&rdquo; (&ldquo;Earth is my mother, I am her son&rdquo;); reverence for <i>vanaspati</i> (lord of the forest) and the concept of sacred groves; and Manu&rsquo;s injunctions against polluting water and felling trees.</li>
+</ul></div>
+
+<div class="bx bx-obs"><h4>1.2.3 How the idea translates into jurisprudence (three moves)</h4>
+<ol>
+<li><b>From domination to trusteeship.</b> The West&rsquo;s anthropocentric mastery (Parasain contrasts the contractarian, self-interest tradition) is replaced by stewardship: private acquisition is legitimate (Artha, K&#257;ma) only inside Dharma, and &ldquo;to claim more than need is theft against society&rdquo; (Manu; Dhyani). This is the philosophical ancestor of modern doctrines of sustainable use, intergenerational equity and the public trust.</li>
+<li><b>From rights to duties of restraint.</b> Because well-being is collective, environmental obligation is not derived from a victim&rsquo;s right but is built into the agent&rsquo;s kartavya &mdash; a duty-based environmental ethic, close in structure to Directive Principles &amp; fundamental duties (Arts. 48A, 51A(g): <span class="tag">Additional Context</span>) rather than to rights-claims.</li>
+<li><b>Restorative, not punitive, relation to nature.</b> Disharmony with &Rcedil;ta is a breach of cosmic order requiring atonement/reconciliation (pr&#257;ya&#347;chitta logic in the Sm&#7771;ti scheme), not merely punishment &mdash; an early instinct of what is today called restorative and ecological justice (Singh &amp; Yadav on restorative justice).</li>
+</ol></div>
+
+<div class="bx bx-ratio"><h4>1.2.4 Critical assessment &amp; exam framing</h4>
+<ul>
+<li>Do not overclaim: Vedic literature is primarily ritual-poetic; &ldquo;environmental consciousness&rdquo; appears as <b>value-orientation (harmony, reverence, restraint)</b> rather than a codified environmental statute, and scholars caution against reading modern conservation science anachronistically into the hymns.</li>
+<li>The strongest exam formulation: ancient India&rsquo;s contribution is the <i>normative premise</i> &mdash; that law is an instrument of harmony between man and the cosmos (&ldquo;Dharma is the ecology of well-being&rdquo;), from which a modern environmental ethic (and its constitutional echo) can be retrieved without treating &#347;&#257;stra as a Bare Act.</li>
+<li>Link forward: Unit 2&rsquo;s &Rcedil;ta &amp; Kartavya reading deepens this; Unit 4&rsquo;s welfare-state and Unit 5&rsquo;s Dharma-as-source complete the arc.</li>
+</ul></div>
+
+<h3 id="s1b">1.3 'Statutory provisions' for this Unit — exact texts &amp; plain-language explanation</h3>
+<p class="small">This is <i>not</i> a CPC/statute unit. Its normative 'provisions' are (A) <b>ancient textual provisions</b> quoted by the DU readings, and (B) <b>modern constitutional/statutory anchors</b> that the readings themselves cite as the contemporary recognition of these ideas. Both are tabulated with plain-language explanation.</p>
+
+<h4>(A) Ancient texts treated as 'provisions' in the DU material</h4>
+<div class="tblwrap"><table>
+<tr><th style="width:22%">Text / verse</th><th style="width:40%">Exact statement as found in the material</th><th>Plain-language meaning &amp; note</th></tr>
+<tr><td><b>Manu (Manusmṛti)</b> — the four roots of dharma</td>
+<td>Dhyani: "Sruti, the Smriti, customs and sayings of virtuous men and one's own conscience (self-approval) are the four sources of the sacred law" (Code of Manu).</td>
+<td>Dharma is not a single sovereign command: revelation (Śruti), remembered texts (Smṛti), custom/conduct of the good (sadāchāra), and conscience each feed law — anticipates modern source-hierarchies (legislation, precedent, custom, morality).</td></tr>
+<tr><td><b>Manu VIII.126</b></td>
+<td>Parasain: "punishment should be inflicted after examining the circumstances, place, and time as well as the worth and offence of the culprit."</td>
+<td>Context-sensitivity (<i>ritusamyata</i>/appropriateness): the same act is judged by its setting — a doctrinal ancestor of proportionality and individualised sentencing.</td></tr>
+<tr><td><b>Manu (trusteeship śloka)</b></td>
+<td>Dhyani: "Take whatever is essential for bodily sustenance. To take more is an act of theft and deserves to be punished."</td>
+<td>Individual is only a trustee of society's wealth — the ancient basis of the trusteeship idea later used by Gandhi and of distributive justice.</td></tr>
+<tr><td><b>Yājñavalkya Smṛti</b> — three kāṇḍas</td>
+<td>Dhyani: Āchāra (rites &amp; general duties), Vyavahāra (civil law — protection of life/property), Prāyaśchitta (atonement).</td>
+<td>An early classification separating ritual-religious rules, secular justiciable law, and penance — showing emergence of 'law' as a distinct category within Dharma.</td></tr>
+<tr><td><b>Yājñavalkya Smṛti</b> — graded courts</td>
+<td>Singh &amp; Yadav: "Yajnavalkya Smriti is divided into 4 types of court — <i>Shreni</i> (for artisans), <i>Puga</i> (for traders), and <i>Kula</i> (for family) — [civil matters]; appeals … heard by Judges (Highest Court) appointed by the King."</td>
+<td>Corporatist/family tribunals first; royal appellate courts above — the ancestral scheme of our forum hierarchy and of ADR.</td></tr>
+<tr><td><b>Rigveda</b> — ideals of unity</td>
+<td>Dhyani: "Meet together, speak together, let your minds be of one accord…"; "our intellect and wealth be for the good of humanity and universal peace."</td>
+<td>Law (Dharma) as a harmonising norm for a diverse society — collective well-being, not atomistic rights, is the telos.</td></tr>
+<tr><td><b>Īśāvāsya Upanishad</b></td>
+<td>Dhyani: "this entire cosmos is immersed in God… enjoy it by way of sacrifice without greed or desire."</td>
+<td>Restraint on acquisition — ecological-ethical limit to private appropriation.</td></tr>
+<tr><td><b>Bṛhadāraṇyaka Upanishad</b> — "DA DA DA"</td>
+<td>Parasain: gods hear <i>damyata</i> (control), demons hear <i>dayadhvam</i> (compassion), humans hear <i>datta</i> (give).</td>
+<td>Context-perception of one norm — supports interpretive contextuality.</td></tr>
+<tr><td><b>Bṛhadāraṇyaka / Dharmashastra</b> — law above kings</td>
+<td>Dhyani: "law is king of kings… there is nothing higher than the law; with its aid even the weakling overcomes the strong."</td>
+<td>The ancient rule-of-law proposition: dharma binds the sovereign (compare Dicey's supremacy of law — see §1.3).</td></tr>
+<tr><td><b>Mahabharata / Śānti Parva</b></td>
+<td>Dhyani: kingship as trust; revolt sanctioned against a king who fails to protect; <i>matsya-nyāya</i> (rule of fish) is the evil that the State/danda prevents.</td>
+<td>Popular-origin/social-compact view of kingship and the legitimacy of resistance — the danda-nyāya state.</td></tr>
+<tr><td><b>Bhagavad-gītā</b></td>
+<td>Parasain: "Twofold dharma is the cause of stability of the world order…" (XVIII.78); Krishna rebukes Arjuna's "lowness of spirit" (II.2–3).</td>
+<td>Pravṛtti (activity) and Nivṛtti (renunciation); performance of svadharma without attachment — duty-ethics behind legal obligation.</td></tr>
+<tr><td><b>Nārada &amp; Arthashastra</b> — bases of decision</td>
+<td>Dhavan: decision may rest on (i) Dharmashastra, (ii) vyavahāra/charitra (prior judicial decisions/custom), (iii) royal edicts — authority "in the reverse order," each later source superseding the earlier.</td>
+<td>Ancient hierarchy conceding that statute/decree and judicial practice can supersede śāstra — evolutionary, not static, law.</td></tr>
+<tr><td><b>Kautilya's Arthashastra</b> (c. 4th c. BCE)</td>
+<td>Singh &amp; Yadav: "formalized customary dispute resolution and institutionalised community-based arbitration as the central conflict-resolution mode"; Dhavan: king's happiness lies in subjects' happiness.</td>
+<td>Welfare-state conception; state regulation of economy, guilds, wages, customs-record; Kantakaśodhana (administrative) courts.</td></tr>
+</table></div>
+
+<h4>(B) Modern constitutional &amp; statutory anchors cited by the Unit-1 readings</h4>
+<div class="tblwrap"><table>
+<tr><th style="width:26%">Provision</th><th style="width:34%">Text (relevant extract)</th><th>Interaction with the Unit</th></tr>
+<tr><td><b>Art. 40, Constitution</b></td><td>"The State shall take steps to organise <i>village panchayats</i> and endow them with such powers and authority as may be necessary to enable them to function as units of self-government."</td><td>Post-independence constitutionalisation of the ancient panchayat as self-government (Singh &amp; Yadav).</td></tr>
+<tr><td><b>Arts. 243–243O + Eleventh Schedule</b> (73rd Amendment, 1992)</td><td>Constitutional scheme of Panchayati Raj; 11th Schedule includes social justice, rural development, etc.</td><td>Panchayats given explicit authority over grassroots justice-related functions — continuity of customary bodies.</td></tr>
+<tr><td><b>Arts. 244(1) &amp; 244(2) — Fifth &amp; Sixth Schedules</b></td><td>Special administration of Scheduled/Tribal Areas.</td><td>Honours traditional governance/judicial systems of tribal areas.</td></tr>
+<tr><td><b>Art. 371A</b></td><td>Special provision for Nagaland — no Act of Parliament on Naga customary law &amp; practice applies without the State Assembly's assent (subject to public order/morality standards).</td><td>Statutory shield for customary law of Nagas.</td></tr>
+<tr><td><b>Legal Services Authorities Act, 1987</b> (esp. ss. 19–22 on <b>Lok Adalats</b>)</td><td>Lok Adalat — a non-adversarial forum; award deemed decree of civil court; no appeal (s. 21).</td><td>Readings treat Lok Adalat as the modern "Elders' Panchayat" — settlement-driven people's court.</td></tr>
+<tr><td><b>Arbitration &amp; Conciliation Act, 1996</b> and <b>A&amp;C (Amendment) Act, 2025</b></td><td>Framework for arbitration/conciliation; 2025 Amendment expands institutional arbitration.</td><td>Modern codification of consent-based (panchayat-like) resolution; §7 (arbitration agreement) tracks the ancient reference to the forum.</td></tr>
+<tr><td><b>Mediation Act, 2023</b></td><td>Institutionalised, legally recognised mediation for civil/commercial disputes; enforceability of mediated settlement agreements.</td><td>Singh &amp; Yadav: codifies mediation while accommodating local custom — "bridges age-old tradition and modern legal needs."</td></tr>
+<tr><td><b>(Relevant to cases below)</b> Delhi Rent Control Act 1958 s.14(1)(b)&amp;(h); TP Act ss.106, 111; HMA 1955 ss.2(2), 3(a); IPC s.494; CrPC ss.428, 432, 433, 433A</td><td>Quoted within the case blocks (§2).</td><td>—</td></tr>
+</table></div>
+<p class="small"><b>Additional Context (not in the DU file — commonly added by textbooks):</b> the "environmental consciousness" sub-topic (a) is conventionally supported by the Atharvaveda's <i>Pṛthivī Sūkta</i> (12.1: "Earth is my mother, I am her son"; "Truth, greatness and universal order dwell on the earth") and the Vedic reverence for <i>vanaspati</i>/trees; modern text-basis is Directive Principle Art. 48A and Fundamental Duty Art. 51A(g). These are safe to quote as <i>supplementary</i> material only.</p>
+
+<h3>1.4 Where the topic fits in the scheme of the paper (LB-106)</h3>
+<div class="tblwrap"><table>
+<tr><th>Unit</th><th>Focus</th><th>Linkage with Unit 1</th></tr>
+<tr><td><b>Unit 1 — Evolution of Bharatiya Jurisprudence - I</b></td><td>Vedic environmental consciousness; Dharmashastra/Smṛti codification; ancient dispute-resolution</td><td>Foundational Indian (dhārmika) lens</td></tr>
+<tr><td>Unit 2 — Evolution of Bharatiya Jurisprudence - II</td><td>Ṛta &amp; Kartavya; Kautilya; Mahabharata; Rāmarājya</td><td>Continues the same lens — state &amp; duty</td></tr>
+<tr><td>Unit 3 — Major Legal Systems</td><td>Common/Civil/Hybrid/Islamic/Socialist; "Legal System in Ancient India"</td><td>Ancient system compared with world systems</td></tr>
+<tr><td>Unit 4 — Principles, Institutions &amp; Personnel</td><td>Preamble; hierarchy of courts; Legal Services; Advocates Act 1961</td><td>Lok Adalat/legal aid = modern retrieval of Unit 1 institutions</td></tr>
+<tr><td>Unit 5 — Sources of Law</td><td>Dharma, custom, precedent, legislation</td><td>Unit 1 supplies the Dharma/custom content</td></tr>
+<tr><td>Units 6–7 — Western schools</td><td>Positivism (Austin, Hart, Kelsen); Natural Law/Historical/Sociological (Fuller, Savigny, Pound)</td><td>Contrast-terms for "Bharatiya" claims (e.g., no Austinian sovereign in Dharmashastra)</td></tr>
+</table></div>
+<p class="small"><b>Reading order tip:</b> read Unit 1 with Unit 5's "Dharma / custom" and Unit 2's "Ṛta &amp; Kartavya" for cross-questions; read it against Austin (Unit 6) for the "sovereign v. king-under-dharma" contrast, which is the single most-repeated exam theme.</p>
+
+<div class="rule"></div>
+<!-- ============================================================== -->
+<h2 id="s2">2. CASE LAW ANALYSIS</h2>
+
+<div class="bx bx-note">
+  <h4>How this section is organised (read before the cases)</h4>
+  <p>The DU Case Material for this Unit contains <b>no case-summary paragraphs</b>. It mentions court decisions in two ways: (i) <b>quotes/reliance in the body text</b> — four cases receive full structured analysis below (C-1 to C-4); and (ii) <b>footnote support-citations and passing illustrations</b> — all of them inventoried in the table at §2.2. For every block the exact location in the DU file is given so you can verify; material narrated outside the DU file (verified against the reported judgments) is marked <span class="tag">Additional Context</span>.</p>
+  <p class="small">Colour key used inside every case block: <span class="bx-facts" style="display:inline-block;padding:2px 8px">Facts</span> · <span class="bx-issues" style="display:inline-block;padding:2px 8px">Issues</span> · <span class="bx-app" style="display:inline-block;padding:2px 8px">Appellant/Plaintiff contentions</span> · <span class="bx-resp" style="display:inline-block;padding:2px 8px">Respondent contentions</span> · <span class="bx-obs" style="display:inline-block;padding:2px 8px">Observations</span> · <span class="bx-ratio" style="display:inline-block;padding:2px 8px">Ratio</span> · <span class="bx-obiter" style="display:inline-block;padding:2px 8px">Obiter</span></p>
+</div>
+
+<!-- ================= CASE 1 ================= -->
+<details class="case" id="c1" open>
+<summary>C-1 · Rattan Lal v. Vardesh Chander &amp; Ors. — AIR 1976 SC 589 (quoted in the DU reading for Krishna Iyer's thesis on 'justice, equity and good conscience')</summary>
+<div class="body">
+
+<div class="bx bx-source"><h4>Case name &amp; citation</h4>
+<p><b>Rattan Lal v. Vardesh Chander &amp; Ors.</b>, <i>(1976) 2 SCC 103 : AIR 1976 SC 589</i> (Supreme Court of India; Bench: V.R. Krishna Iyer, Y.V. Chandrachud and A.C. Gupta JJ.; judgment 9 December 1975, reported 1976).</p>
+<p class="small"><b>Where it appears in the DU material:</b> Dhyani, "Indian Legal Theory – Past and Present," body-text discussion on colonial inheritance and 'justice, equity and good conscience' — concluding "Free India has to find its conscience in our rugged realities and no more in alien thought" — footnoted to <i>Rattan Lal v. Vardesh Chander, AIR 1976 SC 589 at 597</i> (footnote 6 of the reading).</p></div>
+
+<div class="bx bx-facts"><h4>Facts of the case</h4>
+<ol>
+<li>In 1954 the respondent-landlord let out a building in Delhi to the appellant-tenant for a term of less than one year. At that time the Transfer of Property Act, 1882 was <b>not yet in force in Delhi</b>; it was extended to Delhi only in 1962. Tenancy disputes were governed by the Delhi Rent Control Act, 1958.</li>
+<li>In 1967 the landlord filed an <b>eviction suit</b> against the tenant under the Rent Act on two grounds: <b>unauthorised sub-letting</b> (s. 14(1)(b)) and the tenant having <b>acquired vacant possession of alternative residential accommodation</b> (s. 14(1)(h)). The landlord had given <b>no notice terminating the tenancy</b> under the Transfer of Property Act (no notice to quit under s. 106, and no notice of forfeiture under s. 111(g)).</li>
+<li>The Rent Controller ordered eviction; the Appellate Tribunal affirmed; the High Court dismissed the tenant's challenge but certified fitness for appeal to the Supreme Court under <b>Article 133</b> of the Constitution.</li>
+</ol>
+<p class="small"><span class="tag">Additional Context</span> — facts above reconstructed from the reported judgment; the DU file itself only invokes the case at p. 597 for Krishna Iyer J.'s approach to English law.</p></div>
+
+<div class="bx bx-prov"><h4>Relevant articles/provisions involved</h4>
+<ul>
+<li>Delhi Rent Control Act, 1958 — <b>s. 14(1)(b)</b> (eviction for sub-letting without landlord's written consent) and <b>s. 14(1)(h)</b> (eviction where tenant has acquired vacant possession of suitable alternative residence).</li>
+<li>Transfer of Property Act, 1882 — <b>s. 106</b> (notice to quit; duration of leases), <b>s. 111(a)</b> (determination by efflux of time) and <b>s. 111(g)</b> (determination by forfeiture on breach of condition — requiring a written notice).</li>
+<li>Constitution of India — <b>Art. 133</b> (certificate of appeal to the Supreme Court).</li>
+</ul></div>
+
+<div class="bx bx-issues"><h4>Issues raised</h4>
+<ol>
+<li>Whether a landlord suing for eviction on the statutory grounds of the Delhi Rent Control Act must first terminate the tenancy by a <b>written notice</b> under ss. 106/111(g) of the Transfer of Property Act, when the sub-letting ground and the Rent Act are made out.</li>
+<li>Whether <b>institution of the legal proceedings itself</b>, or forfeiture occasioned by sub-letting, operates to determine the lease without any notice.</li>
+<li>Whether the <b>technical rules of English landlord-tenant law</b> (or of the English-based Transfer of Property Act) can be read into a transaction governed by "justice, equity and good conscience" where the Act was not in force.</li>
+<li>(Procedure) Whether the certificate under Art. 133, being limited to a particular point, precluded the other points from being argued.</li>
+</ol></div>
+
+<div class="bx bx-app"><h4>Contentions of the appellant (tenant)</h4>
+<ul>
+<li>The lease had never been lawfully determined: neither a notice to quit (s. 106) nor a notice of forfeiture (s. 111(g)) was served, and mere institution of the suit does not terminate a tenancy; hence the landlord had no present right to possession.</li>
+<li>The Transfer of Property Act being inapplicable to Delhi at the material time, only "principles of justice, equity and good conscience" governed; the High Court had wrongly imported the English technical doctrine of forfeiture-without-notice.</li>
+<li>The eviction order based on grounds under the Rent Act could not cure the absence of determination of lease under the general law.</li>
+</ul></div>
+
+<div class="bx bx-resp"><h4>Contentions of the respondent (landlord)</h4>
+<ul>
+<li>Sub-letting without consent was admitted and substantiated — a mandatory ground of eviction under the Rent Act, which is a complete code for eviction of tenants in Delhi.</li>
+<li>The lease expired by efflux of time (s. 111(a)); alternatively forfeiture was incurred by the unauthorised sub-letting, and the written notice contemplated by s. 111(g) is not a requirement of any principle of justice, equity and good conscience but a technical English rule.</li>
+<li>The essential principles of the Transfer of Property Act — not its technicalities — are part of "justice, equity and good conscience" and govern even where the Act itself does not apply.</li>
+</ul></div>
+
+<div class="bx bx-obs"><h4>Observations of the Court (reasoning stages)</h4>
+<ol>
+<li><b>Statutory ground is self-executing.</b> Once sub-letting within s. 14(1)(b) of the Rent Act is proved, the tenant has incurred liability to eviction; the Rent Act, not the general law of property, is the governing law for eviction in Delhi.</li>
+<li><b>Determination of tenancy — without technical notice.</b> The Court held that the landlord's termination of the tenancy was good <i>even without a written notice</i>: forfeiture by sub-letting operates as determination, and the notice requirement of s. 111(g) is not founded on any principle of justice, equity and good conscience.</li>
+<li><b>'Justice, equity and good conscience' = essential principles, not English technicality.</b> The Court drew the crucial distinction: "It is axiomatic that the courts must apply the principles of justice, equity and good conscience… even though the statutory provisions of the Transfer of Property Act are not made applicable." But "it is erroneous to suppose that every provision… and every amendment… is necessarily based on principles of justice, equity and good conscience. The essential principles, not the technical rules, of the TP Act form part of justice, equity and good conscience. The irrelevance of the English law as such to notions of good conscience in India notwithstanding, we agree that a written notice is no part of equity."</li>
+<li><b>Human element.</b> Although the appeal failed, the Court directed that the eviction order be executed only on or after 1 March 1976 — a small act of judicial mercy consistent with Krishna Iyer J.'s social-justice jurisprudence.</li>
+</ol></div>
+
+<div class="bx bx-ratio"><h4>Ratio decidendi / principle evolved</h4>
+<p>A tenant who has incurred a statutory ground of eviction under rent-control law can be evicted even without a written notice of determination of tenancy under ss. 106/111(g), Transfer of Property Act; only the <b>essential principles</b> — never the technical rules — of the Transfer of Property Act form part of the residual Indian law of "justice, equity and good conscience."</p>
+<p class="small"><b>For this Unit:</b> the DU reading invokes the case (with Krishna Iyer J.'s allied observations in his Mehr Chand Mahajan Memorial Lectures) to argue that transplanted English law, euphemistically "justice, equity and good conscience," cannot be the permanent conscience of free India — conscience must be woven from the ethos of the community (compare Unit 1's dharma-grounded conception of law).</p></div>
+
+<div class="bx bx-obiter"><h4>Obiter dicta (as used by the DU material)</h4>
+<p>Krishna Iyer J.'s remarks on neo-colonial jurisprudence — quoted by Dhyani: "unfortunately even after liberation many former colonies including India, did not shake off this neo-colonial jurisprudence"; and the allied observation (from the same cluster of his writings) that "[t]ransplantation of English system cannot succeed except in a limited way in India… the colonial heritage is now a hindrance to socialist progress and development of our essentially Indian people-oriented legal system." <i>Note:</i> the former sentence is from the judge's Memorial Lectures cited in footnote 5 of the reading; page 597 of <i>Rattan Lal</i> is footnoted for the 'justice, equity and good conscience' reasoning, so treat the two quotations as a paired statement of the judge's philosophy rather than one single paragraph of the report.</p></div>
+
+</div>
+</details>
+
+<!-- ================= CASE 2 ================= -->
+<details class="case" id="c2">
+<summary>C-2 · Dr. Surajmani Stella Kujur v. Durga Charan Hansdah &amp; Anr. — AIR 2001 SC 938 (cited in the DU reading on custom &amp; indigenous moorings)</summary>
+<div class="body">
+
+<div class="bx bx-source"><h4>Case name &amp; citation</h4>
+<p><b>Dr. Surajmani Stella Kujur v. Durga Charan Hansdah &amp; Anr.</b>, <i>(2001) 3 SCC 13 : AIR 2001 SC 938</i> (Supreme Court of India; judgment 14 February 2001).</p>
+<p class="small"><b>Where it appears in the DU material:</b> Dhyani, fn. 7 — cited at AIR p. 939 as support for the proposition that the Indian jurist must synthesise modern ideals "keeping in view the <b>moorings of our indigenous culture, traditions and needs</b>" (the passage introduces the Īśāvāsya Upanishad ideal before Dhyani's survey of traditional fundamentals).</p></div>
+
+<div class="bx bx-facts"><h4>Facts of the case</h4>
+<ol>
+<li>The appellant (complainant), an <b>Oraon</b> tribal woman, and the respondent, a <b>Santhal</b> tribal man, both "professed Hinduism" and married in Delhi according to Hindu rites. Both tribes were notified Scheduled Tribes under Article 342 (Constitution (Scheduled Tribes) Order, 1950 as amended).</li>
+<li>The appellant alleged that the respondent contracted a <b>second marriage during the subsistence of the first</b>, contrary to an alleged tribal custom mandating monogamy, and lodged a complaint before the Chief Metropolitan Magistrate, Delhi seeking prosecution for <b>bigamy under s. 494 IPC</b>.</li>
+<li>The trial court <b>dismissed the complaint</b>: "there is no mention of any such custom in the complaint nor is there evidence of such custom. In the absence of pleadings and evidence reference to Book alone is not sufficient." The High Court affirmed. The appellant appealed to the Supreme Court.</li>
+</ol>
+<p class="small"><span class="tag">Additional Context</span> — facts per the reported judgment; the DU file itself cites the case only in a footnote.</p></div>
+
+<div class="bx bx-prov"><h4>Relevant articles/provisions involved</h4>
+<ul>
+<li>Constitution of India — <b>Art. 342</b> (Scheduled Tribes) and the Scheduled Tribes Order thereunder.</li>
+<li>Hindu Marriage Act, 1955 — <b>s. 2(2)</b> (Act does not apply to members of Scheduled Tribes unless the Central Government so notifies) and <b>s. 3(a)</b> (definition of "custom" and "usage" — continuous and uniform observance giving force of law; must be certain, not unreasonable/opposed to public policy).</li>
+<li>Indian Penal Code, 1860 — <b>s. 494</b> (marrying again during lifetime of husband/wife — offence only where the second marriage is <i>void</i> by reason of the first being alive).</li>
+<li>General Clauses Act, 1897 — s. 3(37) (definition of offence) — adverted to in reasoning.</li>
+</ul></div>
+
+<div class="bx bx-issues"><h4>Issues raised</h4>
+<ol>
+<li>Whether the Hindu Marriage Act, 1955 — and therefore s. 494 IPC through it — applies to the marriage of the parties, given s. 2(2) and the absence of any notification extending the Act to their Scheduled Tribes.</li>
+<li>Whether an alleged <b>tribal custom of monogamy</b>, not pleaded or proved with the requisite certainty, can render the second marriage "void" so as to constitute the offence of bigamy.</li>
+<li>(Collateral) Whether the appellant could claim maintenance/succession as the legally-wedded wife in the same criminal proceedings.</li>
+</ol></div>
+
+<div class="bx bx-app"><h4>Contentions of the appellant</h4>
+<ul>
+<li>Both parties are Hindus by religion; the marriage was solemnised under Hindu rites, so the monogamy rule applies; the tribal rule against second marriage makes the second marriage void; the respondent must therefore be punished under s. 494 IPC.</li>
+<li>A custom having the force of law within the tribe (monogamy) was in existence, so the second marriage was void and the ingredient of s. 494 was satisfied.</li>
+<li>In any event she is entitled to maintenance, succession and other benefits as the legally-wedded wife.</li>
+</ul></div>
+
+<div class="bx bx-resp"><h4>Contentions of the respondent</h4>
+<ul>
+<li>The parties being Scheduled Tribe members and no notification under s. 2(2), Hindu Marriage Act being in force, the marriage is governed only by Santhal custom and usage — the HMA does not touch it.</li>
+<li>No custom making the second marriage void was pleaded in the complaint, nor established by evidence; a bare reference to a book or a general assertion of monogamy is insufficient.</li>
+</ul></div>
+
+<div class="bx bx-obs"><h4>Observations of the Court (reasoning stages)</h4>
+<ol>
+<li><b>HMA inapplicable to Scheduled Tribes.</b> Section 2(2) excludes Scheduled Tribes from the Act unless a notification extends it; none existed, so the marriage was governed only by tribal custom and usage (conceded even by the appellant).</li>
+<li><b>Custom — the strict test.</b> Recalling the classic test (per the Privy Council line, e.g., <i>Ramalakshmi Ammal</i>, and <i>Mirza Raja Pushpavati Gajapathiraj v. Sri Visweswar Gajapathiraj, AIR 1964 SC 118</i>): a custom in derogation of the general law must be <b>ancient, certain, reasonable and proved by clear and unambiguous evidence</b>; the party relying on it must plead and prove it. Mere assertion will not do.</li>
+<li><b>Custom cannot by itself create an offence.</b> Custom may determine civil rights/status and thereby supply an ingredient of a statutory offence, but a custom must first be fully established; here the complaint nowhere pleaded the alleged custom prohibiting second marriage "and the consequences thereof," and no evidence of it was led.</li>
+<li><b>Voidity is the sine qua non.</b> For s. 494 the second marriage must be void by operation of law; absent a statutory provision or a proved custom, voidity fails — "In the absence of pleadings, evidence and proof of the alleged custom making the second marriage void, no offence under Section 494 of the IPC can possibly be made out."</li>
+<li><b>Civil claims are separate.</b> Maintenance/succession claims could not be adjudicated in the criminal complaint; the appellant was left free to pursue civil remedies in a competent court.</li>
+</ol></div>
+
+<div class="bx bx-ratio"><h4>Ratio decidendi / principle evolved</h4>
+<p>No new ratio in the strict sense — the Court <b>applied the settled law</b> that (i) the Hindu Marriage Act does not automatically apply to notified Scheduled Tribes (s. 2(2)); and (ii) a custom relied upon to override the general law or to supply the voidity ingredient of s. 494 IPC must be <b>pleaded, proved and established as ancient, certain and reasonable</b> — a bare assertion of a monogamous custom cannot ground a prosecution for bigamy.</p>
+<p class="small"><b>For this Unit:</b> the case is the DU reading's authority that when a modern legal problem is judged, the court keeps in view the "moorings of our indigenous culture, traditions and needs" — yet a customary rule only enters the legal order when it meets the strict criteria of certainty, reasonableness and proof. It therefore bridges Unit 1's "custom as Grundnorm-ish heritage" with Unit 5's formal doctrine of custom as a source of law.</p></div>
+
+</div>
+</details>
+
+<!-- ================= CASE 3 ================= -->
+<details class="case" id="c3">
+<summary>C-3 · Ashok Kumar @ Golu v. Union of India — AIR 1991 SC 1792 (quoted in the DU reading for Ahmadi J.'s liberty passage)</summary>
+<div class="body">
+
+<div class="bx bx-source"><h4>Case name &amp; citation</h4>
+<p><b>Ashok Kumar @ Golu v. Union of India</b>, <i>(1991) 3 SCC 498 : AIR 1991 SC 1792</i> (Supreme Court of India; Ahmadi J.; 10 July 1991).</p>
+<p class="small"><b>Where it appears in the DU material:</b> Dhyani, "Human Rights Jurisprudence" (fundamental IX), fn. 34 — "In <i>Ashok Kumar</i> [AIR 1991 SC 1792 at 1793], Justice Ahmadi vividly echoes the concern of the Apex Court regarding protection of liberty…" followed by the quotation reproduced below.</p></div>
+
+<div class="bx bx-facts"><h4>Facts of the case</h4>
+<ol>
+<li>The petitioner, a convict sentenced to <b>imprisonment for life</b>, had actually served about 9 years 3 months; under the (Delhi) Premature Release Rules, 1958 he claimed he was eligible for consideration for premature release once his total sentence (including remissions) worked out to 14 years.</li>
+<li>By s. 433A CrPC (inserted 1978), a life-convict in the specified categories <b>cannot be released before completing 14 years of actual imprisonment</b> under the remission powers in ss. 432/433 CrPC.</li>
+<li>The authorities refused to consider his case for premature release under ss. 432/433 read with the 1958 Rules until 14 years of actual incarceration were completed. The petitioner had earlier approached the Governor under <b>Article 161</b> (clemency); when that was not decided he moved the Supreme Court for (i) a mandamus to consider premature release using the 1958 Rules, and (ii) a declaration that his continued detention was illegal.</li>
+</ol>
+<p class="small"><span class="tag">Additional Context</span> — facts per the reported judgment; the DU file cites only the liberty passage.</p></div>
+
+<div class="bx bx-prov"><h4>Relevant articles/provisions involved</h4>
+<ul>
+<li>Constitution of India — <b>Arts. 72 &amp; 161</b> (executive clemency of President/Governor).</li>
+<li>Code of Criminal Procedure, 1973 — <b>ss. 428</b> (set-off of pre-conviction detention), <b>432</b> &amp; <b>433</b> (suspension/remission/commutation of sentences) and <b>433A</b> (restriction — 14 years' actual imprisonment before release for life-sentences in capital/commuted cases).</li>
+<li>Premature Release Rules, 1958 (Delhi).</li>
+</ul></div>
+
+<div class="bx bx-issues"><h4>Issues raised</h4>
+<ol>
+<li>Whether s. 433A CrPC bars the executive from considering premature release of the petitioner before he completes 14 years of <b>actual</b> imprisonment, notwithstanding the 1958 Rules.</li>
+<li>Whether the accumulated remissions convert the life sentence into a finite term so that continued detention after "14 years with remissions" is illegal.</li>
+<li>Whether s. 428 (set-off) benefits a life-convict.</li>
+</ol></div>
+
+<div class="bx bx-app"><h4>Contentions of the petitioner</h4>
+<ul>
+<li>Under the 1958 Rules he had earned eligibility (total sentence with remissions = 14 years); s. 433A cannot override the constitutional power of pardon/commutation under Arts. 72/161, which the State was bound to exercise treating the Rules as guidelines.</li>
+<li>Failure to consider the Article 161 representation rendered his continued detention illegal and void.</li>
+</ul></div>
+
+<div class="bx bx-resp"><h4>Contentions of the respondent (Union of India)</h4>
+<ul>
+<li>Section 433A is a legislative policy restricting the s. 432/433 powers: two specified categories of life-convicts cannot be released before 14 years of actual imprisonment, whatever the remissions earned.</li>
+<li>The 1958 Rules cannot be invoked in the teeth of s. 433A; only the constitutional clemency power (Arts. 72/161) remained, which is a matter for the executive's discretion.</li>
+</ul></div>
+
+<div class="bx bx-obs"><h4>Observations of the Court (reasoning stages)</h4>
+<ol>
+<li><b>Overture on liberty.</b> Ahmadi J. opened with the human-rights frame later quoted by the DU material: "Liberty is the life line of every human being. Life without liberty is 'lasting' [sic — the reports commonly print 'lingering'] but not 'living.' Liberty is, therefore, considered one of the most precious and cherished possessions of a human being. Any attempt to take liberties with the liberty of a human being is visited with resistance."</li>
+<li><b>Nature of life sentence.</b> Following the Constitution Bench in <i>Maru Ram v. Union of India</i> (AIR 1980 SC 2147) and <i>Gopal Vinayak Godse</i>: a judicial sentence of life imprisonment is incarceration for the remainder of natural life; it is not converted into a finite term by accumulating remissions. Release before death occurs only by commutation/remission under ss. 432/433 or by clemency under Arts. 72/161.</li>
+<li><b>Section 433A.</b> The provision validly restricts the ss. 432/433 power — no premature release consideration under those sections before 14 years of actual incarceration for the covered categories; the Court upheld its constitutional validity, noting the proviso power of revocation and that it does not touch Arts. 72/161.</li>
+<li><b>No set-off for life-sentences.</b> Section 428 set-off applies only where a term of imprisonment is imposed; it has no application to a sentence of life imprisonment.</li>
+</ol></div>
+
+<div class="bx bx-ratio"><h4>Ratio decidendi / principle evolved</h4>
+<p>No new ratio for this Unit — the Court <b>applied the settled principle</b> of <i>Maru Ram</i>/<i>Godse</i> that life imprisonment means imprisonment for life unless remitted/commuted under ss. 432/433 CrPC or clemency under Arts. 72/161; s. 433A (14 years' actual detention) validly restricts the ss. 432/433 power and s. 428 has no application to life sentences.</p></div>
+
+<div class="bx bx-obiter"><h4>Obiter dicta (as used by the DU material)</h4>
+<p>The liberty passage is strictly <b>obiter</b> to the holding — it is Ahmadi J.'s jurisprudential overture. Dhyani uses it precisely as an <i>obiter</i> illustration: it shows that the post-Emergency Supreme Court (the "A.S. Anand… Krishna Iyer, Bhagwati, D.A. Desai, O. Chinnappa Reddy, Ranganath Misra" generation of judges the reading names) opens its reasoning from the value of human liberty — the "new legal philosophy," <i>human-rights jurisprudence</i>, which the reading treats as the present-day continuation of India's dharma-and-dignity tradition. Quote it in any answer on "contemporary Indian legal theory and liberty/human rights."</p></div>
+
+</div>
+</details>
+
+<!-- ================= CASE 4 ================= -->
+<details class="case" id="c4">
+<summary>C-4 · Vytla Sitanna v. Marivada Viranna — ILR 57 Mad 749 (1934); affirmed AIR 1934 PC 105 (cited in the DU reading on panchayat awards)</summary>
+<div class="body">
+
+<div class="bx bx-source"><h4>Case name &amp; citation</h4>
+<p><b>(Vytla) Sitanna v. Marivada Viranna &amp; Ors.</b> — Madras High Court: <i>ILR 57 Mad 749 (1934)</i>; on further appeal, <b>Judicial Committee of the Privy Council: AIR 1934 PC 105, 61 IA 200, (1934) 36 Bom LR 563</b> (judgment 19 February 1934).</p>
+<p class="small"><b>Where it appears in the DU material:</b> Singh &amp; Yadav, "Customary Dispute Resolution Mechanism in Bharat," Conclusion — "Courts at several occasions have accepted settlements mediated locally and awards by Panchayats without demur, for example in the case <i>Vytla Sitanna v. Marivada Viranna</i> wherein the award by the Panchayat was upheld… This approach… gave a formal recognition and an element of enforceability [to panchayat awards]."</p>
+<div class="bx bx-flag" style="margin:8px 0"><h4>Flag — internal inconsistency in the DU file</h4><p>The DU text says the award was upheld "by the Supreme Court," while its own footnote 31 cites <i>(1934) ILR 57 Mad 749</i>, which is a <b>Madras High Court</b> report; the final appellate affirmation of the panchayat-award reasoning came from the <b>Privy Council</b> (AIR 1934 PC 105) on appeal from Madras. In an exam, describe the case as "upheld by the Madras High Court and affirmed by the Privy Council" — do not repeat "Supreme Court."</p></div></div>
+
+<div class="bx bx-facts"><h4>Facts of the case</h4>
+<ol>
+<li>In 1880, Tirupayya died, leaving a widow, Venkataramanamma, who survived him for 41 years, and disputes arose over his estate. The disputes were <b>referred to a village panchayat</b>, which gave an award partitioning the estate between the widow and Ammanna — a man married to Tirupayya's sister and alleged (by the defendants) to have been adopted by Tirupayya's father, Dorayya, as an <i>illatom</i> son-in-law, thereby acquiring a share in the family estate.</li>
+<li>Both the widow and Ammanna signed a <i>muchilika</i> addressed to the Sub-Collector binding themselves to abide by the award; it was never questioned for 41 years, until the widow's death in 1921.</li>
+<li>Years after the award the widow had executed a conveyance in favour of Ammanna's branch; upon her death, reversionary claimants (the plaintiff line) sued to challenge the panchayat partition and the conveyances.</li>
+<li>The Additional Sub-Judge, Cocanada, decreed for the plaintiff in part; both sides appealed to the Madras High Court (<i>ILR 57 Mad 749</i>), which dismissed the plaintiff's appeal and further held part of the claim barred by limitation; the matter reached the Privy Council.</li>
+</ol>
+<p class="small"><span class="tag">Additional Context</span> — facts per the reported judgments; the DU file gives only the citation and the "award upheld" proposition.</p></div>
+
+<div class="bx bx-prov"><h4>Relevant articles/provisions involved</h4>
+<ul>
+<li>No statute — the case turns on the <b>customary institution of the village panchayat</b> as a binding private adjudicatory/arbitral forum recognised in Hindu law and practice (the "time-honoured method of deciding disputes of this kind"), plus the Hindu law of widow's estate/surrender and reversioners' rights, and the law of limitation.</li>
+<li>Conceptually relevant to modern provisions: Arbitration Act (reference to forum + award binding both parties), s. 21 Legal Services Authorities Act 1987 (Lok Adalat award finality) — see §3.</li>
+</ul></div>
+
+<div class="bx bx-issues"><h4>Issues raised</h4>
+<ol>
+<li>Whether the award of the unofficial village panchayat, accepted by the parties for decades, was a <b>bona fide and binding settlement</b> of the disputes so as to bar reopening of the estate partition.</li>
+<li>Whether the alleged <i>illatom</i> adoption of Ammanna (and his resultant share) was established, or whether the award and subsequent conveyances could be supported irrespective of that claim.</li>
+<li>(Consequential) Limitation of the plaintiff's suit filed after the widow's death.</li>
+</ol></div>
+
+<div class="bx bx-app"><h4>Contentions of the appellant-plaintiff (reversioners challenging the award)</h4>
+<ul>
+<li>The panchayat award was not a binding arbitration: the issues (especially the alleged illatom adoption) were never properly before the panchayat, and the widow could not bind the estate/remaindermen by a private compromise or by surrendering properties beyond her life-interest without legal necessity.</li>
+<li>The conveyances by the widow were not supported by any authority recognised in Hindu law and must be set aside in favour of the reversioners.</li>
+</ul></div>
+
+<div class="bx bx-resp"><h4>Contentions of the defendants (claiming under Ammanna/the award)</h4>
+<ul>
+<li>The reference to the panchayat was a genuine submission of the family disputes and the award was acted upon by everyone for over four decades — a fair settlement that must stand.</li>
+<li>Ammanna had in substance been treated as a member of Dorayya's family (illatom son-in-law), giving up rights in his own family and managing the estate; the widow's later conveyance expressly recited her husband's arrangements.</li>
+<li>The plaintiff's challenge was barred by lapse of time.</li>
+</ul></div>
+
+<div class="bx bx-obs"><h4>Observations of the Court (reasoning stages)</h4>
+<ol>
+<li><b>Panchayat adjudication is a legitimate, time-honoured institution.</b> "Reference to a village panchayat is the time-honoured method of deciding disputes of this kind, and has these advantages, that it is generally comparatively easy for the panchayatdars to ascertain the true facts, and that, as in this case, it avoids protracted litigation which… might have proved ruinous to the estate."</li>
+<li><b>Facts found against the challenge.</b> The claim that Ammanna was Dorayya's illatom son-in-law had not been set up at the time of the award and was not proved; but that did not matter — the award did not in terms decide the adoption question, and the widow's later conveyance was made in accordance with her husband's directions and family arrangements.</li>
+<li><b>Award treated as fair settlement, not lightly reopened.</b> The award was signed up to by the parties (muchilika), never questioned for 41 years, and was a "fair and honest settlement of a doubtful claim based both on legal and moral grounds" — no ground to interfere with it.</li>
+<li><b>Widow's estate.</b> The related question of the widow's surrender was decided on the settled Hindu-law basis (effacement of the widow's interest passes succession to the next heir), with no differentiation against female heirs.</li>
+</ol></div>
+
+<div class="bx bx-ratio"><h4>Ratio decidendi / principle evolved</h4>
+<p>No new statutory ratio — the case is the classic authority that an <b>award of an unofficial village panchayat, honestly made on a bona fide reference and long accepted by the parties, is a binding settlement of the disputes referred and will not be reopened</b> by the courts. It judicially recognises panchayat (community) adjudication as a legitimate part of the Indian legal order — the proposition on which the DU reading relies.</p>
+<p class="small"><b>For this Unit:</b> use <i>Vytla Sitanna</i> to prove (i) the continuity of customary dispute resolution into the colonial-modern courts; (ii) that courts respect indigenous solutions "for indigenous problems"; and (iii) the bridge to modern Lok Adalat/mediation awards (§3).</p></div>
+
+</div>
+</details>
+
+<!-- ============ 2.2 footnote inventory ============ -->
+<h3 id="s2b">2.2 Every other case mentioned anywhere in the Unit-1 pages of the DU Case Material</h3>
+<p class="small">Category: (I) full block above; (II) footnote support-citation in Dhyani's "Human Rights Jurisprudence" and allied pages; (III) name-only illustration in the body text; (IV) citation attached to a specific proposition elsewhere in the readings. "Relevance to Unit 1" states the argumentative use in an exam answer. None of these contains facts/holdings in the DU file — treat as citation-only until you supply excerpts if your exam treats them as full cases (see <a href="#flags">final flag list</a>).</p>
+<div class="tblwrap"><table>
+<tr><th>Case &amp; citation (as in DU material)</th><th>Where / how the material uses it</th><th>What it stands for (brief; <span class="tag">Add. Context</span> where not from the DU file)</th><th>Category</th></tr>
+<tr><td><i>A.K. Gopalan v. State of Madras</i> (1950)</td><td>Dhyani IX — illustration of the pre-Emergency court's limited response in safeguarding liberty.</td><td>Early Art. 21 jurisprudence; law vs. procedure for deprivation of liberty (largely overruled later).</td><td>III (name-only)</td></tr>
+<tr><td><i>R.C. Cooper</i> ("Bank Nationalisation", AIR 1970 SC 564)</td><td>Dhyani IX — same illustration list; <b>DU file prints "(1978)" — incorrect year (actual 1970).</b></td><td>Direct effect on fundamental rights; Art. 31 compensation jurisprudence.</td><td>III</td></tr>
+<tr><td><i>Golak Nath v. State of Punjab</i> (AIR 1967 SC 1643)</td><td>Dhyani IX — same list; <b>DU file prints "(1979)" — incorrect (actual 1967).</b></td><td>Parliament cannot abridge Part III rights; prospectivity; led to 24th–25th Amendments.</td><td>III</td></tr>
+<tr><td><i>A.D.M. Jabalpur v. Shiv Kant Shukla</i> (AIR 1976 SC 1207)</td><td>Dhyani IX (body) and fn. 35 (with <i>Makhan Singh</i>).</td><td>Emergency habeas case (overruled by <i>Puttaswamy</i>/later Art. 21 doctrine); cited to show judicial restraint the reading criticises.</td><td>III + II</td></tr>
+<tr><td><i>Makhan Singh v. State of Punjab</i> (AIR 1964 SC 381)</td><td>Dhyani fn. 35.</td><td>Habeas corpus and preventive detention during proclamation of Emergency.</td><td>II</td></tr>
+<tr><td><i>Delhi Judicial Service Assn., Tis Hazari Courts v. State of Gujarat</i> (AIR 1991 SC 2176)</td><td>Dhyani fn. 22 ("judicial explosion" cluster).</td><td>Contempt power &amp; judicial authority vis-à-vis High Court.</td><td>II</td></tr>
+<tr><td><i>Khedat Mazdoor Chetna Sangathan v. State of M.P.</i> (AIR 1995 SC 31)</td><td>Dhyani fn. 22.</td><td>PIL — bonded/agricultural labour welfare.</td><td>II</td></tr>
+<tr><td><i>In re: Vinay Chandra Mishra</i> (AIR 1995 SC 2448)</td><td>Dhyani fn. 22 and fn. 24 (judicial independence).</td><td>Contempt of court by an advocate; power to punish summarily.</td><td>II</td></tr>
+<tr><td><i>S.P. Gupta v. Union of India</i> (AIR 1982 SC 149)</td><td>Dhyani fn. 23 ("open government").</td><td>Judges' transfer case; widened locus standi — birth of broad PIL.</td><td>II</td></tr>
+<tr><td><i>G.C. Kanungo v. State of Orissa</i> (AIR 1995 SC 1655)</td><td>Dhyani fn. 24.</td><td>Independence of judiciary / judicial review of disciplinary orders.</td><td>II</td></tr>
+<tr><td><i>Abdul Rehman Antulay v. R.S. Nayak</i> (AIR 1992 SC 1701)</td><td>Dhyani fn. 25 ("right of speedy trial").</td><td>Right to speedy trial part of Art. 21; guidelines for quashing on delay.</td><td>II</td></tr>
+<tr><td><i>Consumer Education &amp; Research Centre v. Union of India</i> (AIR 1995 SC 992)</td><td>Dhyani fn. 26 ("right to life").</td><td>Health/right to life under Art. 21.</td><td>II</td></tr>
+<tr><td><i>State of Maharashtra v. Manubhai Pragaji Vashi</i> (AIR 1996 SC 1)</td><td>Dhyani fn. 26.</td><td>Right to education/equal opportunity (Art. 21 read with Art. 19 etc.).</td><td>II</td></tr>
+<tr><td><i>Secretary, MIB v. Cricket Assn. of Bengal</i> (AIR 1995 SC 1236)</td><td>Dhyani fn. 27 ("right to information").</td><td>Freedom of speech &amp; right to receive information.</td><td>II</td></tr>
+<tr><td><i>L.I.C. v. Manubhai D. Shah</i> (AIR 1993 SC 171)</td><td>Dhyani fn. 27.</td><td>Right to reply; freedom of speech.</td><td>II</td></tr>
+<tr><td><i>R.C. Poudiyal v. Union of India</i> (AIR 1993 SC 1805)</td><td>Dhyani fn. 28 ("democracy").</td><td>Democratic governance/rule of law cluster.</td><td>II</td></tr>
+<tr><td><i>Nilabati Behera v. State of Orissa</i> (AIR 1993 SC 1963)</td><td>Dhyani fn. 28.</td><td>Compensation for custodial death — public-law remedy.</td><td>II</td></tr>
+<tr><td><i>Apparel Export Promotion Council v. A.K. Chopra</i> (AIR 1999 SC 624)</td><td>Dhyani fn. 28, fn. 30 and fn. 33.</td><td>Sexual harassment at workplace; gender equality; Human Rights jurisprudence.</td><td>II</td></tr>
+<tr><td><i>Neelima Mathur v. L.I.C.</i> (AIR 1992 SC 392)</td><td>Dhyani fn. 29 ("non-discrimination").</td><td>Equal treatment in service matters.</td><td>II</td></tr>
+<tr><td><i>Vishaka v. State of Rajasthan</i> ((1997) 6 SCC 241)</td><td>Dhyani fn. 30.</td><td>Sexual-harassment guidelines till legislation (now POSH Act, 2013).</td><td>II</td></tr>
+<tr><td><i>Bangalore Medical Trust v. B.S. Muddappa</i> (AIR 1991 SC 1902)</td><td>Dhyani fn. 31 ("conservation of humane environment").</td><td>Public interest in open spaces; environment &amp; town planning.</td><td>II</td></tr>
+<tr><td><i>D. Vyas v. Ghaziabad Development Authority</i> (AIR 1993 All 57)</td><td>Dhyani fn. 31.</td><td>Environmental jurisprudence at HC level.</td><td>II</td></tr>
+<tr><td><i>M.J. Sivani v. State of Karnataka</i> (AIR 1995 SC 1770)</td><td>Dhyani fn. 32 ("new moral, social and political values").</td><td>Highways/road safety regulation.</td><td>II</td></tr>
+<tr><td><i>Mohd. Aslam v. Union of India</i> (AIR 1995 SC 548)</td><td>Dhyani fn. 32.</td><td>Ayodhya/Ram Janmabhoomi orders; secularism as basic structure.</td><td>II</td></tr>
+<tr><td><i>Ramon Services Pvt. Ltd. v. Subhash Kapoor</i> (AIR 2001 SC 207)</td><td>Dhyani fn. 36 — quoted: "Law is no trade of briefs or merchandise of litigants' claims… legal aid to the poor… the profession's tryst with people of India."</td><td>Role of the Bar; legal-aid duty; the Court's words used to close the reading on the lawyer's social role.</td><td>II (quoted)</td></tr>
+<tr><td><i>Mandal / Ayodhya / Common Civil Code cases</i> (unnamed cluster)</td><td>Dhyani IX — "in the late 1990s… judiciary adopted a more vigorous and aggressive stance… in Mandal, Ayodhya, Common Civil Code cases."</td><td>Indira Sawhney (Mandal); Mohd. Aslam/S.R. Bommai line; Shah Bano lineage — judicial assertion of social justice &amp; secularism.</td><td>III (name-only)</td></tr>
+</table></div>
+<p class="small"><b>Practical note for revision:</b> For Unit-1 purposes you only need to <i>cite</i> the category-II/III cases as evidence that "the Supreme Court has woven a human-rights jurisprudence suited to India's socio-economic realities" (Dhyani). Their full facts belong to constitutional-law courses, not to this paper.</p>
+
+<div class="rule"></div>
+
+<!-- ============================================================== -->
+<h2 id="s3">3. RELATED 'ORDERS/RULES' — ANCIENT ↔ MODERN SOURCE-MAP</h2>
+<p class="small">This is <b>not</b> a CPC-based topic, so instead of Order/Rule analysis this section maps every connected ancient <i>source/forum/procedure</i> to its modern counterpart, and lists the modern provisions that interact with the material's doctrines. Examiners love this mapping.</p>
+
+<h3>3.1 Hierarchy of courts &amp; fora — ancient India (Dhavan; Brihaspati Smṛti; Arthashastra)</h3>
+<div class="tblwrap"><table>
+<tr><th>Ancient forum / source</th><th>Authority &amp; function</th><th>Modern counterpart</th></tr>
+<tr><td><b>Family / kin forum (Kula)</b></td><td>Lowest tier — disputes within the joint family; elders; family judge concept (Dhavan compares modern Japan's family courts).</td><td>Family courts / family mediation; s. 89 CPC &amp; mediation referral (conceptually).</td></tr>
+<tr><td><b>Śreṇī (artisans' guild)</b> &amp; <b>Puga (traders' assembly)</b></td><td>Occupational/trade courts under Yājñavalkya; commercial disputes settled by peers.</td><td>Institutional/commercial arbitration; sectoral dispute bodies (chambers, IAC-type fora).</td></tr>
+<tr><td><b>Village panchayat</b> ("assembly of five"; sabhā)</td><td>Grass-root adjudication + mediation; collective wisdom, restorative justice; recognised in <i>Vytla Sitanna</i>.</td><td>Gram Nyayalayas; Panchayati Raj (Arts. 243 ff.); Lok Adalats; Nyaya Panchayat revival proposals.</td></tr>
+<tr><td><b>Court of the judge / Chief Justice (<i>Prāḍvivāka</i>/<i>Adhyakṣa</i>)</b></td><td>Professional judges; review over lower fora; appeals per Vāchaspati Misra — decisions bind in ascending order of learning.</td><td>Civil Judges/District Judges and appellate hierarchy; doctrine of precedent (Art. 141).</td></tr>
+<tr><td><b>King's court (fountain of justice)</b></td><td>Apex court; King decides with sabhāsada assessors/jurors and under law; last-resort appellate + original jurisdiction.</td><td>Supreme Court of India (apex); residuary/plenary justice powers (Arts. 32, 136, 141).</td></tr>
+<tr><td><b>Sabhā &amp; Samiti (Vedic assemblies)</b></td><td>Legislative-cum-judicial public councils (Atharvaveda elaboration).</td><td>Legislature + deliberative democracy; argumentative tradition (Sen).</td></tr>
+<tr><td><b>Kantakaśodhana courts</b> (Arthashastra)</td><td>Administrative/special criminal courts — officials' misconduct, weights &amp; measures, adulteration, wages.</td><td>Administrative tribunals; economic-offence courts; ombudsman-type vigilance.</td></tr>
+</table></div>
+
+<h3>3.2 Procedure &amp; evidence rules mapped</h3>
+<div class="tblwrap"><table>
+<tr><th>Ancient rule (source)</th><th>Content</th><th>Modern analogue</th></tr>
+<tr><td>Four stages of civil trial (Dhavan on the texts)</td><td>Plaint → reply → hearing → decree.</td><td>CPC: Order VI (pleadings) → Order VIII → Order XVIII (hearing) → Order XX (decree).</td></tr>
+<tr><td><i>Pūrva-nyāya</i> / decided-matter bar</td><td>"Prang nyaya" — res judicata familiar to ancient jurisprudence.</td><td>CPC s. 11; res judicata.</td></tr>
+<tr><td>Proof: witness (sākṣī), document (lekha), circumstantial (kāryapramāṇa)</td><td>Truth-finding; ordeal discouraged where oral/documentary proof available.</td><td>Indian Evidence Act 1872; Best-evidence rule.</td></tr>
+<tr><td>Champerty/personation barred</td><td>Citizens forbidden to instigate/finance suits in which they are not interested.</td><td>Maintenance &amp; champerty doctrine; abuse of process; PIL standing rules.</td></tr>
+<tr><td>Basis of decision — Nārada</td><td>Dharmashastra → judicial practice (vyavahāra)/custom (charitra) → royal decree; reverse-order supremacy.</td><td>Hierarchy: Constitution → legislation → precedent → custom (valid if not inconsistent) → justice-equity-conscience.</td></tr>
+<tr><td>Judge's code (Kātyāyana, Bṛhaspati, Śukra)</td><td>Open court; no private dealings with parties; benches of 3/5/7; harsh penalties for corrupt judges.</td><td>Judicial conduct/accountability; CPC Open-court principle; contempt; in-house procedures.</td></tr>
+</table></div>
+
+<h3>3.3 Interaction of the Unit's doctrines with modern provisions</h3>
+<ul>
+<li><b>Panchayat/Lok Adalat finality:</b> <i>Vytla Sitanna</i> (panchayat award not reopened) is the doctrinal ancestor of the finality granted to Lok Adalat awards (s. 21, LSA Act 1987 — deemed decree of a civil court, no appeal) and to mediated settlement agreements (Mediation Act 2023 — enforceability).</li>
+<li><b>Custom as law — conditions:</b> <i>Surajmani Stella Kujur</i> enforces the strict conditions (ancient, certain, reasonable, proved) before any custom — however deeply "indigenous" — operates as law; cf. Art. 13(3)(a) Constitution (custom with force of law as "law"), s. 3(a) HMA 1955.</li>
+<li><b>Duty-to-rights architecture:</b> the readings' duties-first stance (kartavya/Ṛṇa; "Honour the law (Dharma), the root of state and wealth") contrasts with the rights-based Part III regime but is argued to survive through the Directive Principles and fundamental duties (Part IVA) — a favourite examiner bridge.</li>
+<li><b>Exceptions/provisos to note:</b> (i) s. 2(2) HMA proviso — tribal custom excluded <i>unless notified</i>; (ii) custom must not be unreasonable or opposed to public policy (s. 3(a) proviso); (iii) constitutional shields for tribal customary justice (Arts. 244(1)-(2), 371A) operate only "so long as [customs] meet general standards of justice" — the material expressly qualifies Art. 371A protection in this way; (iv) colonial-era statutes (IPC 1860, CrPC, Contract Act) displaced customary law — a historical proviso to every continuity claim.</li>
+</ul>
+
+<div class="rule"></div>
+
+<!-- ============================================================== -->
+<h2 id="s4">4. COMPARATIVE &amp; CROSS-REFERENCE TABLES</h2>
+
+<h3>4.1 The four analysed cases at a glance</h3>
+<div class="tblwrap"><table>
+<tr><th>Case (year)</th><th>Core issue</th><th>Holding</th><th>Principle for Unit 1</th></tr>
+<tr><td><b>Rattan Lal v. Vardesh Chander</b> (1976 SC)</td><td>Eviction without TP-Act notice; role of "justice, equity and good conscience."</td><td>Eviction valid; essential principles (not technical rules) of TP Act are part of JEGC.</td><td>Residual Indian law need not be an English transplant — conscience must be found in Indian realities.</td></tr>
+<tr><td><b>Surajmani Stella Kujur</b> (2001 SC)</td><td>Does tribal custom of monogamy make second marriage void for s. 494 IPC?</td><td>Appeal dismissed; HMA inapplicable to notified STs; custom unproved → no bigamy.</td><td>Indigenous custom enters law only if pleaded, proved, ancient, certain, reasonable.</td></tr>
+<tr><td><b>Ashok Kumar @ Golu</b> (1991 SC)</td><td>Premature release of lifer before 14 years' actual detention (s. 433A CrPC).</td><td>s. 433A valid; life = natural life; only ss. 432/433 or Arts. 72/161 can cut it short.</td><td>Liberty-overture (obiter) illustrates modern human-rights jurisprudence the reading endorses.</td></tr>
+<tr><td><b>Vytla Sitanna</b> (1934 Mad/PC)</td><td>Whether village-panchayat partition award binds and bars reopening.</td><td>Award upheld — bona fide, accepted for 41 years, fair settlement on legal &amp; moral grounds.</td><td>Courts respect customary panchayat justice — "indigenous solutions for indigenous problems."</td></tr>
+</table></div>
+
+<h3>4.2 East (Bharatiya) v. West — the four distinctions in Parasain (core exam table)</h3>
+<div class="tblwrap"><table>
+<tr><th>Dimension</th><th>Western jurisprudence</th><th>Bharatiya (dhārmika) jurisprudence</th></tr>
+<tr><td>Foundational concept</td><td>"Law" as command/rule of sovereign or human construct</td><td><b>Dharma</b> — righteousness/cosmic-social order; "institutional a-priori" of the legal system</td></tr>
+<tr><td>Source of validity</td><td>Sovereign will / human reason / convention</td><td>Inherent cosmic order — <b>Ṛta</b>; revealed as <b>Śruti</b>; law cannot be divorced from morality</td></tr>
+<tr><td>Anthropology</td><td>Individualistic; self-interest central (Hobbes→Rawls contractarians)</td><td>Communitarian; inherent goodness; collective well-being; unity of man-life-world</td></tr>
+<tr><td>Sovereign / king</td><td>State as foundation of law — "Honour the State, the root of law and wealth"</td><td>King <i>under</i> law — "Honour the law (Dharma), the root of state and wealth"; king subject to Dharma</td></tr>
+<tr><td>Rights v. duties</td><td>Rights-based; enforcement of contractual obligations</td><td>Duties-first (kartavya, Ṛṇa); ends through Purushārthas (Dharma-Artha-Kāma-Moksha)</td></tr>
+<tr><td>Goal of law</td><td>Social order, dispute-resolution, protection of rights</td><td>Maintain cosmic &amp; social order — harmony, righteousness, moksha-orientation</td></tr>
+</table></div>
+
+<h3>4.3 Sources of Dharma v. sources of modern law</h3>
+<div class="tblwrap"><table>
+<tr><th>Manu's four sources of dharma</th><th>Modern analogue (Unit 5)</th><th>Notable condition</th></tr>
+<tr><td>Śruti (Veda — "heard")</td><td>Constitution / foundational values; natural law</td><td>On conflict with Smṛti, Śruti prevails</td></tr>
+<tr><td>Smṛti ("remembered/written")</td><td>Legislation / codified law</td><td>Where no conflict with Śruti, act on Smṛti</td></tr>
+<tr><td>Sadāchāra / custom (conduct of the good)</td><td>Custom as source (M.P. Jain)</td><td>Valid if ancient, certain, reasonable (s. 3(a) HMA; <i>Surajmani</i>)</td></tr>
+<tr><td>Ātmanas tuṣṭiḥ (self-approval/conscience)</td><td>Justice, equity &amp; good conscience</td><td>"If two texts differ, reason must prevail"</td></tr>
+</table></div>
+
+<div class="rule"></div>
+<!-- ============================================================== -->
+<h2 id="s5">5. DU PREVIOUS-YEAR QUESTIONS (PYQs) &amp; MODEL ANSWERS</h2>
+
+<div class="bx bx-flag">
+  <h4>PYQ status — honest note</h4>
+  <p><b>No official DU previous-year question paper for Unit 1 of the new LB-106 syllabus (2023–24 onwards) is present in the uploaded material or in the public domain.</b> Unit-1 topics of this NEP course have been examined only since the course began; the older LB-101 files attached with you carry "Questions to Ponder" for the <i>old</i> syllabus, none of which maps onto this Unit. Consequently the questions below are of two kinds: (A) <b>predicted questions</b> drawn straight from the three sub-topics and the readings' own self-posed questions (Parasain literally asks "Is there an Indian philosophy of law?"), and (B) <b>short-revision prompts</b>. Each model answer is exam-length (~250–400 words), IRAC-structured, and cites the reading-authors and the §2 cases. <i>If you obtain an actual DU answer-script question paper for LB-106, share it and I will tag it as a genuine PYQ.</i></p>
+</div>
+
+<h3>5.1 Model answers (predictive, exam-pattern)</h3>
+
+<!-- ===== PYQ 1 ===== -->
+<details class="pyq" open>
+<summary>Q1 (Unit overview/Dharma) — "Is there an Indian philosophy of law? Discuss the foundational concept of <i>dharma</i> and the principal distinctions between Bharatiya and Western jurisprudence." (15 marks)</summary>
+<div class="body">
+<p class="small"><b>Model answer — IRAC.</b></p>
+<p><b>Issue.</b> Whether a distinct, philosophically defensible Indian (Bharatiya) jurisprudence exists, and what foundational idea — if any — gives it coherence as against the Western analytical tradition.</p>
+<p><b>Rule.</b> Parasain's answer is affirmative but disciplined. Following A.K. Ramanujan's "Is there an Indian way of thinking?" he insists Indian thought is <i>context-sensitive</i> and must be studied on its own epistemic terms, not as raw material for Western categories (Derrett's "local informants"; Spivak's "epistemic violence"). Jurisprudence being the philosophy of law — its nature, sources, obligation — the Indian tradition supplies all three: its source-texts are the Dharmashastras ("the teaching/science of righteousness"); its foundational concept is <b>Dharma</b>, the "institutional a-priori" of even the modern legal system; and its metaphysics rests on Karma, the nature of the self, consciousness and Ahimsa.</p>
+<p><b>Application.</b> Four distinctions follow. <i>First</i>, West builds law on sovereign command or human construct; Bharatiya law is Dharma, inseparable from morality, flowing from cosmic order (Ṛta) revealed as Śruti. <i>Second</i>, the Western sovereign stands above law; in the Dharmashastras the king is subject to Dharma — "Honour the law (Dharma), the root of state and wealth," against "Honour the State, the root of law and wealth." <i>Third</i>, the West is rights-centred and individualistic (contractarians from Hobbes to Rawls); Indian thought is duties-first (kartavya, Ṛṇa) and communitarian, pursuing well-being through Purushārthas (Dharma, Artha, Kāma, Moksha), where Artha/Kāma are legitimate but subordinated to Dharma. <i>Fourth</i>, Western jurisprudence is realistic/analytic; Indian jurisprudence is an "integrated vision of man, life and world," law as the integrity of existence. Dhyani adds historical proof: no Austinian sovereign existed in Hindu legal theory — law rested on "general acceptance of constituent rules," the king being only the highest enforcer; even sovereignty was a trust, breach of which forfeited kingship (Mahabharata; social-compact reading of kingship).</p>
+<p><b>Conclusion.</b> Indian jurisprudence exists and is coherent — its centre is Dharma, and it differs structurally from Western law on sovereignty, rights, source-of-validity and the relation of law to morality. Its spirit, not the letter of the śāstras, remains a living resource for a modern, secular and culturally rooted legal order.</p>
+</div>
+</details>
+
+<!-- ===== PYQ 2 ===== -->
+<details class="pyq">
+<summary>Q2 (Sub-topic a) — "Explain the environmental consciousness reflected in the Vedic age and assess its relevance to contemporary law." (10 marks)</summary>
+<div class="body">
+<p><b>Issue.</b> Whether the Vedic-Bharatiya worldview contained an environmental ethic, and whether that ethic can inform modern environmental law and policy.</p>
+<p><b>Rule.</b> The prescribed reading grounds the claim conceptually: Parasain defines Dharma itself as "the ecology of well-being which emerges organically from devotional relationships with all elements and creatures." Indic texts describe the human–nature relationship "not as that of domination, but of friendship and harmony," and Ahimsa extends "not only in action or deed, but also in thought and language… to animals and all living beings." The Vedic temper is life-affirming — the Atharvavedic sages seek "a happy, healthy and full life of a hundred years," described as immortality; the Rigvedic ideal is that "our intellect and wealth be for the good of humanity and universal peace." Dhyani adds the Īśāvāsya Upanishad's command — enjoy creation "by way of sacrifice without greed or desire" — and Manu's trusteeship verse: to take more than one's need "is an act of theft and deserves to be punished," making man a trustee of society.</p>
+<p><b>Application.</b> From these texts a coherent ethic emerges: (i) nature is not a res nullius but a shared trust (trusteeship, restraint, no exploitation of man by man — the same value extended to beasts and elements); (ii) material pursuit (Artha) is lawful only within Dharma — hence the "acquisitive West" and its unlimited-accumulation ethos is contrasted; (iii) individual well-being is derivative of collective well-being — "let everyone be happy, let everyone be free from all ills" (sarve bhavantu sukhinaḥ); (iv) the unit's own sub-title "environmental consciousness" is thus not an appendix but the root of the dhārmika legal imagination. <span class="tag">Additional Context</span> — standard textbooks bolster this with the Atharvaveda <i>Pṛthivī Sūkta</i> ("Earth is my mother, I am her son") and the modern constitutional expression in Arts. 48A and 51A(g), which can be quoted as supplementary.</p>
+<p><b>Conclusion.</b> The Vedic age possessed a genuinely ecological jurisprudence built on harmony, non-injury and trusteeship rather than domination. Restated in modern idiom — intergenerational equity, sustainable use, and the environmental duties of citizen and State — it remains directly relevant, and shows the contemporary relevance of rediscovering indigenous values that the whole Unit urges.</p>
+</div>
+</details>
+
+<!-- ===== PYQ 3 ===== -->
+<details class="pyq">
+<summary>Q3 (Sub-topic b) — "Codification of law in ancient India: examine the Dharmashastras and Smritis as law-codes — their content, internal divisions and jurisprudential character." (15 marks)</summary>
+<div class="body">
+<p><b>Issue.</b> Whether the Dharmashastras/Smritis constitute a developed, coherent system of law — "codification" in a meaningful sense — and what their jurisprudential character (law, religion, morality?) is.</p>
+<p><b>Rule.</b> Dhyani's framework: the Vedic age's law was "theological," described as <i>Ṛta</i> (universal order); the succeeding <b>Dharmashastra era — "the Golden Age of Hindu legal theory"</b> — crystallised customary-traditional law into the Smritis ("retold, remembered and written"). The Smritis inter-mix religion, morality and law, but — crucially — begin to separate law as a distinct category. Manu's four sources (Śruti, Smṛti, sadāchāra/custom, conscience) show the dharma-mix; the smṛti-writers then classify into three kāṇḍas: <b>Āchāra</b> (rites &amp; general duties), <b>Vyavahāra</b> (civil law — "protection of life and property"), and <b>Prāyaśchitta</b> (atonement). Yājñavalkya Smṛti displays "a highly developed legal theory with a system of rules of law (vyavahāra)… in both substantive and procedural forms."</p>
+<p><b>Application.</b> As codification, the genre worked through: (i) <i>canonical law-givers</i> — Manu, Yājñavalkya, Nārada, Bṛhaspati, Kātyāyana, Viṣṇu, etc.; (ii) <i>interpretive rules of conflict</i> — special over general; Śruti over Smṛti; "if the two texts differ, reason must prevail"; (iii) <i>royal digests</i> resolving contradictions (Mitakshara of Vijnāneśvara, the nibandhas of Bhoja/Aparārka, royal-commissioned digests under Todar Mal, Warren Hastings, Colebrooke) — giving Smṛti law the practical status of law-books "under royal direction"; (iv) <i>sanction</i> — Danda from the sovereign, but obligation resting primarily on acceptance of Dharma and public opinion, so that the Austinian test is inapplicable; law was "of popular origin" (Medhātithi, Vijnāneśvara, Mahabharata, Arthashastra). Its ideal: a socio-legal order "free from conflicts, exploitations and miseries," a natural law "with a changing content" (Stammler).</p>
+<p><b>Conclusion.</b> The Dharmashastras/Smritis were ethical-religious codes that nonetheless attained the rank of law — codifying custom, procedure and substantive vyavahāra with interpretive canons. They show that ancient India's law was normative, ordered and secularisable at its core, and they justify the Unit's thesis that Dharma, not the sovereign, was the ultimate legal reference-point.</p>
+</div>
+</details>
+
+<!-- ===== PYQ 4 ===== -->
+<details class="pyq">
+<summary>Q4 (Sub-topic c) — "Discuss the customary dispute-resolution system of ancient Bharat — institutions, hierarchy, procedure — and its continuity in the modern legal order." (15 marks)</summary>
+<div class="body">
+<p><b>Issue.</b> What institutions and procedures ancient Bharat evolved for resolving disputes, how the colonial state disrupted them, and the extent to which modern Indian law has revived/absorbed them.</p>
+<p><b>Rule.</b> Singh &amp; Yadav: dispute resolution was rooted in Dharma, Ahimsa and Samvāda (dialogue); "Rule of Dharma was the Grundnorm"; amicable settlement was the first objective, punishment the last resort. Institutions: Vedic <b>Sabhā/Samiti</b>; Dharmashastra-era Kula (family), Śreṇī (artisans), Puga (traders) with appeals to royal judges (Yājñavalkya); the <b>panchayat</b> ("assembly of five") — adjudicatory and mediatory; and Kautilya's Arthashastra (4th c. BCE), which formalised community arbitration and procedural norms of equality and participation. Dhavan (supplementary) adds the appellate hierarchy of Bṛhaspati — family arbitrator → judge → Chief Justice (Prāḍvivāka) → King's court — with open trial, benches of 3/5/7, assessors (sabhāsada), the four-stage civil trial (plaint, reply, hearing, decree), res-judicata familiarity, strict judicial-conduct codes, and hostility to ordeal where oral/documentary proof existed.</p>
+<p><b>Application.</b> Continuity operates at three levels. <i>(1) Judicial recognition:</i> in <i>Vytla Sitanna v. Marivada Viranna</i> (Madras HC, ILR 57 Mad 749; affirmed by the Privy Council, AIR 1934 PC 105) a village-panchayat partition award, accepted for 41 years, was held a "fair and honest settlement of a doubtful claim based both on legal and moral grounds" — panchayat reference being "the time-honoured method" of deciding such disputes. <i>(2) Constitutional revival:</i> Art. 40 (village panchayats as self-government); 73rd Amendment (Arts. 243–243O, Eleventh Schedule); Fifth/Sixth Schedules (Arts. 244(1)-(2)) for tribal areas; Art. 371A for Nagaland customary law. <i>(3) Statutory absorption:</i> Lok Adalats under the Legal Services Authorities Act 1987 (non-adversarial, elder-led, award-final — the modern "Elders' Panchayat"); the Mediation Act 2023 (institutional mediation accommodating local custom, enforceability of settlements); the Arbitration &amp; Conciliation regime (2025 Amendment) as codification of consent-based resolution. Against this stands the colonial rupture — courts staffed by officials, IPC/CrPC/Contract Act (1860–72) displacing customary law, the shift "from community feeling to individual rights."</p>
+<p><b>Conclusion.</b> Bharat's customary dispute-resolution system was elaborate, participatory and restorative; colonial law displaced but never destroyed it; and modern statute and precedent have consciously retrieved it, proving that "a legal system can be both grounded in Bharatiya tradition and adaptive to the dynamic needs of society."</p>
+</div>
+</details>
+
+<!-- ===== PYQ 5 ===== -->
+<details class="pyq">
+<summary>Q5 (Cross-unit, very likely) — "'Law is the king of kings.' Analyse the position of the king under ancient Indian legal theory and contrast it with Austin's doctrine of sovereignty." (10/15 marks)</summary>
+<div class="body">
+<p><b>Issue.</b> Where did supreme normative authority lie in ancient Indian legal theory — with a sovereign or with Dharma — and how does this bear on the positivist (Austinian) picture of law?</p>
+<p><b>Rule.</b> The proposition is textually grounded: Bṛhadāraṇyaka Upanishad / the Dharmashastra tradition declare law "king of kings," so that "no one is above the law, not even the King; with the aid of the law even a weakling overcomes the strong" (Dhyani). Hindu thinkers held "law or Dharma superior to the ruler or the State"; kingship was a <b>trust</b> — the king had only partial, limited sovereignty, <b>no legislative power</b> ("the king was invested with powers to inflict punishment (danda) not capriciously but constitutionally"); interpretation of Dharma lay with the rishis/parishad, whose rulings bound the king "no less… than the decisions of the Supreme Court of India in modern times." The Mahabharata even sanctions rebellion against a worthless king. Austin, by contrast, defines law as command of a sovereign — a determinate superior habitually obeyed, above positive law.</p>
+<p><b>Application.</b> <i>Contrast:</i> (i) in Dharmashastra, the king is subject to and an enforcer of Dharma — he is "never above law but under law," whereas for Austin the sovereign cannot be subject to law it commands; (ii) ancient law's validity rested on "general acceptance of constituent rules" and popular origin (Medhātithi; Vijnāneśvara; Arthashastra) — not on a habit of obedience to determinate persons; (iii) sanctions (danda) existed but moral/religious sanction and public opinion were equally constitutive — Bryce's point that "the power of imposing penalties of the State is not always necessary"; (iv) Parasain's aphorism: the West says "Honour the State, the root of law and wealth," ancient India "Honour the law (Dharma), the root of state and wealth." <i>Nevertheless,</i> Dhyani concedes the Dharmashastras "can be said to have attained the rank of a law book" even in the Austinian sense, because royal digests gave them state-backed force; and the readings note the ancient system was "a government of laws," embodying what Dicey would call the supremacy of law — binding ruler and ruled alike. Illustration: the Shantiparva/Manu danda doctrine and Dhavan's episodes (Bhishma's vow; the fisherman's condition to King Śantanu) show the sovereign bargaining with and bowing to the legal order.</p>
+<p><b>Conclusion.</b> Ancient Indian theory is a "rule of dharma/law" theory — the sovereign is below the norm — which is structurally incompatible with Austinian sovereignty but strikingly convergent with modern constitutionalism (supremacy of the Constitution; basic structure; judicial review). It thereby answers why Unit 1 insists that Bharatiya jurisprudence is not a primitive forerunner but an alternative, normatively richer model of legal order.</p>
+</div>
+</details>
+
+<h3>5.2 Short-revision prompts (frame in one paragraph + case name)</h3>
+<ul>
+<li>"Was there separation of powers and rule of law in ancient India?" (answer: Dharma above king; no royal law-making; rishis/parishad interpret — Dhyani §§II–III).</li>
+<li>"Trace 'customary dispute resolution' from Sabha/Samiti to the Mediation Act 2023 / Lok Adalat." (Singh &amp; Yadav + <i>Vytla Sitanna</i>).</li>
+<li>"Kautilya's Arthashastra and the institutionalisation of grassroots justice." (4th c. BCE; equality, participation; Kantakaśodhana courts; Dhavan).</li>
+<li>"What is the significance of Yājñavalkya's three kāṇḍas (Āchāra–Vyavahāra–Prāyaśchitta) for the emergence of 'law' as a distinct concept?"</li>
+<li>"Trusteeship ideal of Manu and its modern relevance (welfare State; ecological consciousness)."</li>
+<li>"Critically evaluate the view that India received law only from colonial rulers — with reference to Krishna Iyer's observations in <i>Rattan Lal v. Vardesh Chander</i>."</li>
+<li>"Matsya-nyāya, Danda and the social-contract reading of kingship in the Mahabharata."</li>
+</ul>
+
+<div class="rule"></div>
+
+<!-- ============================================================== -->
+<h2 id="s6">6. QUICK REVISION SUMMARY</h2>
+
+<h3>6.1 One-paragraph summary</h3>
+<p>Unit 1 establishes that Bharat developed an independent, philosophically grounded jurisprudence millennia before the modern West, whose cornerstone is <b>Dharma</b> — understood not as sovereign command but as righteousness, cosmic order (Ṛta) and "the ecology of well-being" — so that in ancient India "law was king of kings," the ruler being only a trustee-enforcer under Dharma, with law's validity resting on popular acceptance and custom rather than on any Austinian sovereign. The unit's three sub-topics give this claim substance: (a) the <i>Vedic age</i> supplies an environmental consciousness of harmony, non-injury and trusteeship rather than domination; (b) the <i>Dharmashastras and Smritis</i> effect an early, sophisticated codification — Manu's four sources of dharma, the three kāṇḍas (Āchāra, Vyavahāra, Prāyaśchitta), Yājñavalkya's procedural-systematic law, and the interpretive canons that allowed law to evolve (special over general, reason over texts, custom recorded and reviewable by the sovereign); (c) the <i>ancient dispute-resolution system</i> ran from Vedic Sabha/Samiti through Kula–Śreṇī–Puga courts and village panchayats up to the King's court, with open benches, appeals, assessors, res judicata and truth-based evidence, was recognised even by colonial-era courts (panchayat awards honoured in <i>Vytla Sitanna</i>), and is consciously revived today through Arts. 40, 243–243O, the Fifth/Sixth Schedules, Art. 371A, Lok Adalats (LSA Act 1987), arbitration law and the Mediation Act 2023. Against this heritage, the readings situate the colonial rupture and call for an integrative, decolonised Indian legal theory that synthesises indigenous moorings with assimilated Western values — a jurisprudence of duties, harmony and dignity.</p>
+
+<h3>6.2 Must-remember cases — one-line principles</h3>
+<ul>
+<li><b><i>Rattan Lal v. Vardesh Chander</i>, AIR 1976 SC 589</b> — only <i>essential principles</i>, not technical English rules, form "justice, equity and good conscience"; cited for Krishna Iyer's thesis that free India's legal conscience must be indigenous ("no more in alien thought").</li>
+<li><b><i>Dr. Surajmani Stella Kujur v. Durga Charan Hansdah</i>, AIR 2001 SC 938</b> — custom (even indigenous tribal custom) binds as law only if pleaded &amp; proved, and is ancient, certain and reasonable; HMA does not apply to Scheduled Tribes without notification (s. 2(2)).</li>
+<li><b><i>Ashok Kumar @ Golu v. Union of India</i>, AIR 1991 SC 1792</b> — (holding) life sentence = life; s. 433A CrPC restricts ss. 432/433; (obiter, quoted in the DU material) Ahmadi J.'s liberty passage illustrating modern human-rights jurisprudence.</li>
+<li><b><i>Vytla Sitanna v. Marivada Viranna</i>, ILR 57 Mad 749 / AIR 1934 PC 105</b> — an honest village-panchayat award, long accepted, is a binding settlement and will not be reopened; judicial recognition of customary panchayat justice.</li>
+</ul>
+<p class="small">(Optional memory aid for the four: <b>"R–S–A–V = Revival Stories of Ancient Values"</b> — Residual-law (Rattan), Source/custom (Surajmani), Aks (Ashok), Village forum (Vytla Sitanna).)</p>
+
+<h3>6.3 Key-term bank (write these in answers)</h3>
+<div class="tblwrap"><table>
+<tr><th>Term</th><th>Meaning in Unit context</th><th>Term</th><th>Meaning in Unit context</th></tr>
+<tr><td>Ṛta</td><td>Cosmic/moral order — natural law of the universe, basis of Dharma</td><td>Danda</td><td>Coercive sanction/king's power to punish — constitutionalised, not capricious</td></tr>
+<tr><td>Dharma</td><td>Righteousness; duty; law — "that which sustains" (dhāraṇāt)</td><td>Vyavahāra</td><td>Law-suit; civil law; also "transaction/litigation"</td></tr>
+<tr><td>Śruti / Smṛti</td><td>"Heard" revelation (Vedas) / "remembered" texts (codes)</td><td>Kula / Śreṇī / Puga</td><td>Family / artisan-guild / trader-assembly courts</td></tr>
+<tr><td>Purushārthas</td><td>Dharma–Artha–Kāma–Moksha: four ends of life</td><td>Kartavya / Ṛṇa</td><td>Duty / obligation-debt owed to others</td></tr>
+<tr><td>Matsya-nyāya</td><td>"Rule of the fish" — anarchy the State prevents</td><td>Sabhā / Samiti / Sabhāsada</td><td>Assembly / council / assessor-jurors</td></tr>
+<tr><td>Sadāchāra</td><td>Custom / conduct of the virtuous — a source of dharma</td><td>Prāḍvivāka</td><td>Chief Justice in the ancient hierarchy</td></tr>
+<tr><td>Samvāda</td><td>Dialogue — the spirit of mediation/consensus justice</td><td>Āchāra / Prāyaśchitta</td><td>Ritual-duties division / atonement division of Smṛti</td></tr>
+<tr><td>Ahimsa</td><td>Non-violence in action, word &amp; thought — to all beings</td><td>Kantakaśodhana</td><td>Ancient administrative/special criminal courts</td></tr>
+</table></div>
+
+<h3>6.4 Mnemonics</h3>
+<ul>
+<li><b>Manu's four sources = "ŚS, SŚ": Ś</b>ruti, <b>S</b>mṛti, <b>S</b>adāchāra(custom), <b>S</b>elf-conscience — the "four-S" of sacred law.</li>
+<li><b>Three kāṇḍas = "A–V–P": Ā</b>chāra · <b>V</b>yavahāra · <b>P</b>rāyaśchitta (rites · civil law · atonement).</li>
+<li><b>Purushārthas ascending = "D–A–K–M": D</b>harma · <b>A</b>rtha · <b>K</b>āma · <b>M</b>oksha — "Do Artha Kama, but only for Moksha."</li>
+<li><b>Courts ladder (low→high) = "K-K-S-…-King": K</b>ula → <b>Ś</b>reṇī → <b>P</b>uga (order by closeness: family→guild→trade) → judge → Prāḍvivāka → <b>King's Court</b>.</li>
+<li><b>East–West contrasts = "S-D-R-S": S</b>ource (Ṛta/Dharma v. sovereign), <b>D</b>uties v. rights, <b>R</b>uler under law, <b>S</b>elf-integrated vision (Parasain's four).</li>
+<li><b>Modern revival route = "40–243–244–371": A</b>rt. 40 (panchayats) → 73rd Amendment Arts. 243 ff. → Schedules V/VI (Art. 244) → Art. 371A (Nagaland) → LSA Act 1987 (Lok Adalat) → Mediation Act 2023.</li>
+</ul>
+
+<div class="rule"></div>
+
+<!-- ============================================================== -->
+<h2 id="flags">FLAGS — INFORMATION INCOMPLETE IN THE PROVIDED FILES (action needed)</h2>
+<div class="bx bx-flag">
+  <h4>Please supply the following to complete the notes</h4>
+  <ol>
+    <li><b>Footnote-only cases with no facts in the DU file:</b> S.P. Gupta; Antulay; Vishaka; Bangalore Medical Trust; Manubhai (both); AEPC v. Chopra; Nilabati Behera; R.C. Poudiyal; LIC v. Manubhai Shah; Cricket Assn. of Bengal; Vinay Chandra Mishra; Delhi Judicial Service Assn.; Khedat Mazdoor Chetna; G.C. Kanungo; Neelima Mathur; D. Vyas; M.J. Sivani; Mohd. Aslam; Consumer Education &amp; Research Centre; Makhan Singh; A.D.M. Jabalpur (Shiv Kant Shukla); Ramon Services. If your faculty's examination expects <i>full case analysis</i> of any of these (they are primarily constitutional-law citations used to illustrate Dhyani's "human-rights jurisprudence" passage), send the relevant DU case-sheets and full structured blocks will be added.</li>
+    <li><b>Verify the DU file's internal slips before you reproduce them in an exam:</b> (i) <i>Vytla Sitanna</i> — body text says the panchayat award was upheld by the "Supreme Court," but footnote 31 cites ILR 57 Mad 749 (Madras HC) and the final appellate affirmation was by the <b>Privy Council</b> (AIR 1934 PC 105); (ii) Dhyani's parenthetical years for <i>R.C. Cooper</i> ("1978") and <i>Golak Nath</i> ("1979") are incorrect — actual years 1970 and 1967 respectively; (iii) the liberty quotation in <i>Ashok Kumar</i> prints "lasting" where reports commonly read "lingering."</li>
+    <li><b>No PYQ paper for the new LB-106 Unit-1 exists in the uploaded set</b> — §5 questions are predicted. If you have the genuine DU answer-script QP (even a photocopy), upload it and it will be re-tagged PYQ with year.</li>
+    <li><b>Surajmani Stella Kujur</b> neutral citation is (2001) 3 SCC 13 (not given in the DU file; verified externally).</li>
+    <li>Optional completeness: Dhyani's fn. 4 cites M.C. Setalvad's "Law and Culture" and fn. 17 K.M. Panikkar's "The State and the Citizen" — if your faculty tests historiographical positions (Setalvad/Panikkar on the East–West synthesis), a short supplementary note can be added.</li>
+  </ol>
+</div>
+
+<footer style="margin:30px 0 10px;text-align:center;color:#7c8a99;font-size:.8rem;font-family:Verdana,Arial,sans-serif;border-top:1px solid #d9dee5;padding-top:12px">
+  Jurisprudence-I (Legal Method) · LB-106 · Sem 1 · Unit 1 — Evolution of Bharatiya Jurisprudence - I · Compiled from DU Case Material (2025), readings of Parasain, Dhyani, Singh &amp; Yadav (+ Dhavan supplement). Verbatim quotations reproduced for study only. Cross-checked citations flagged where the DU file is silent or inconsistent.
+</footer>
+
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a35393084c203029',t:'MTc4ODQyNjEzMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

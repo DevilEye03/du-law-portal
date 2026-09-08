@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi University Law Notes Portal — DU LL.B Study Hub</title>
+  <meta name="description" content="DU LL.B Study Portal for Delhi University Law Students. Syllabus unit notes, landmark case briefs, previous year questions with model answers, and quick revision capsules.">
+  <meta name="theme-color" content="#183059">
+
+  <!-- Open Graph & Social Cards (WhatsApp, Telegram, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Delhi University Law Notes Portal — DU LL.B Study Hub">
+  <meta property="og:description" content="Comprehensive syllabus notes, DU case briefs, 3D precedent recall flashcards, bare act drawer, and previous year model answers for CLC, LC-1, and LC-2.">
+  <meta property="og:image" content="favicon.svg">
+
+  <!-- Favicon & PWA App Manifest -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Google Fonts: Playfair Display + EB Garamond + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================================================================
+       SITE HEADER
+       =================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-wrap" id="brandLogo" title="Go to Home">
+        <div class="brand-crest">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div class="brand-text">
+          <h1>DU <span>Law Notes</span> Portal</h1>
+          <p>Faculty of Law &bull; University of Delhi</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="header-action-btn" id="headerBareActBtn" title="Open Quick Bare Act Drawer">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <span class="btn-lbl">Bare Acts</span>
+        </button>
+        <button class="header-action-btn" id="headerFlashcardBtn" title="Precedent Recall Flashcards">
+          <i class="fa-solid fa-brain"></i>
+          <span class="btn-lbl">Flashcards</span>
+        </button>
+        <button class="semester-badge-btn" id="headerSemesterBtn" title="Switch Semester">
+          <span class="sem-indicator"></span>
+          <span id="headerSemText">Semester I</span>
+          <i class="fa-solid fa-chevron-down arrow-down"></i>
+        </button>
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================================================
+       MAIN WRAPPER & ROUTER VIEWS
+       =================================================================== -->
+  <main class="main-wrapper">
+
+    <!-- ---------------------------------------------------------------
+         VIEW 1: SEMESTER SELECTION — CINEMATIC LANDING
+         --------------------------------------------------------------- -->
+    <section class="semester-view active" id="semesterView">
+
+      <!-- Cinematic Dark Hero -->
+      <div class="sem-hero-cinematic">
+        <div class="sem-hero-content">
+          <div class="sem-hero-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            LL.B. Three-Year Degree Programme
+          </div>
+          <h2>Study Smarter,<br><em>Pass with Distinction.</em></h2>
+          <p>Comprehensive syllabus-anchored notes, DU case material briefs, previous year question bank, and last-minute revision capsules — all in one place.</p>
+          <div class="sem-hero-ornament">Faculty of Law &bull; University of Delhi</div>
+        </div>
+      </div>
+
+      <!-- Semester Cards Below Hero -->
+      <div class="sem-selection-section">
+        <div class="sem-section-label">Choose your semester</div>
+        <div class="semester-grid" id="semesterGrid">
+          <!-- Injected dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
+         VIEW 2: SUBJECTS SELECTION DASHBOARD
+         --------------------------------------------------------------- -->
+    <section class="subjects-view" id="subjectsView">
+      <div class="view-header">
+        <div class="view-header-top">
+          <div class="view-title-group">
+            <h2 id="currentSemHeading">Semester I &mdash; Core Subjects</h2>
+            <p id="currentSemDesc">Academic Session 2025&ndash;2026 &bull; 5 Core Subjects with 42 Comprehensive Units</p>
+          </div>
+          <button class="semester-badge-btn" id="changeSemBtn">
+            <i class="fa-solid fa-arrow-left"></i> Change Semester
+          </button>
+        </div>
+      </div>
+
+      <div class="subjects-grid" id="subjectsGrid">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
+         VIEW 3: SUBJECT HUB VIEW (4 Specialized Tabs)
+         --------------------------------------------------------------- -->
+    <section class="subject-hub-view" id="subjectHubView">
+
+      <!-- Immersive Hub Banner -->
+      <div class="hub-banner" id="hubBanner">
+        <div class="hub-breadcrumbs">
+          <a href="javascript:void(0)" id="hubBackBtn">&larr; Back to Subjects</a>
+          <span>/</span>
+          <span id="hubBreadcrumbSem">Semester I</span>
+          <span>/</span>
+          <span id="hubBreadcrumbSub">Subject</span>
+        </div>
+
+        <div class="hub-title-row">
+          <div class="hub-title-content">
+            <div class="hub-tags-wrap">
+              <span class="hub-code-tag" id="hubCodeTag">LB-102 &bull; DU Case Material</span>
+              <span class="hub-motto-tag" id="hubMottoTag"></span>
+            </div>
+            <h2 id="hubTitle">Subject Name</h2>
+            <p class="hub-sub" id="hubTagline">Syllabus tagline and course description.</p>
+          </div>
+        </div>
+
+        <!-- Metric Counter Pills -->
+        <div class="hub-pills-row">
+          <div class="hub-pill" id="hubUnitsPill">&#128218; <b>0</b> Units / Topics</div>
+          <div class="hub-pill" id="hubCasesPill">&#9878; <b>0</b> Landmark Cases</div>
+          <div class="hub-pill" id="hubPyqsPill">&#128221; <b>0</b> DU PYQs with Answers</div>
+          <div class="hub-pill" id="hubRevPill">&#9889; <b>0</b> Revision Capsules</div>
+        </div>
+
+        <!-- Quick Study Actions: Flashcards & Bare Acts -->
+        <div class="hub-action-btns-row">
+          <button class="hub-action-btn flashcard-btn" id="hubStartFlashcardsBtn" title="Launch Precedent Recall Flashcards">
+            <i class="fa-solid fa-brain"></i>
+            <span><b>Precedent Recall</b> Flashcards (3D Drill)</span>
+          </button>
+          <button class="hub-action-btn bareact-btn" id="hubOpenBareActBtn" title="Open Quick Bare Act Drawer">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <span><b>Statutory Reference</b> (Quick Bare Act)</span>
+          </button>
+        </div>
+
+        <!-- Study Progress Tracker -->
+        <div class="hub-progress-card">
+          <div class="progress-info-row">
+            <span><i class="fa-solid fa-list-check"></i> <b>Study &amp; Revision Progress</b> (<span id="subjectProgressCount">0 of 0 topics</span>)</span>
+            <span class="progress-percent" id="subjectProgressText">0% Done</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="subjectProgressBar" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Tabs Navigation -->
+      <div class="hub-tabs-container">
+        <div class="hub-tabs">
+          <button class="hub-tab-btn active" data-tab="topics">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <span>All Topics &amp; Notes</span>
+          </button>
+          <button class="hub-tab-btn" data-tab="cases">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span>Landmark Cases</span>
+          </button>
+          <button class="hub-tab-btn" data-tab="pyqs">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>PYQs &amp; Model Answers</span>
+          </button>
+          <button class="hub-tab-btn" data-tab="revision">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <span>Last-Minute Revision</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="hub-filter-bar">
+        <div class="search-box-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="hubSearchInput" class="search-input" placeholder="Search topics, cases, doctrines, questions...">
+          <button class="search-clear-btn" id="searchClearBtn" title="Clear search" style="display:none;">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <select id="unitFilterSelect" class="unit-filter-select">
+          <option value="all">All Units / Topics</option>
+        </select>
+      </div>
+
+      <!-- Quick Filter Chips -->
+      <div class="quick-filter-chips" id="quickFilterChips"></div>
+
+      <!-- Tab Content Area -->
+      <div class="hub-content-container">
+        <div class="tab-content-pane active" id="topicsTabPane">
+          <div id="topicsContainer"></div>
+        </div>
+        <div class="tab-content-pane" id="casesTabPane">
+          <div id="casesContainer"></div>
+        </div>
+        <div class="tab-content-pane" id="pyqsTabPane">
+          <div id="pyqsContainer"></div>
+        </div>
+        <div class="tab-content-pane" id="revisionTabPane">
+          <div id="revisionContainer"></div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       EMBEDDED NOTES READER MODAL
+       =================================================================== -->
+  <div class="reader-modal" id="readerModal" role="dialog" aria-modal="true">
+    <div class="reader-window">
+      <div class="reader-header">
+        <div class="reader-title-box">
+          <h3 id="readerTitle">Comprehensive Study Notes</h3>
+          <p id="readerSubInfo">Faculty of Law, University of Delhi</p>
+        </div>
+        <div class="reader-controls">
+          <button class="btn-reader-action" id="readerNewTabBtn" title="Open in new tab">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <span>Open Full Screen</span>
+          </button>
+          <button class="btn-reader-close" id="readerCloseBtn" title="Close (Esc)">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="reader-iframe-wrap">
+        <iframe class="reader-iframe" id="readerIframe" src="about:blank" title="Study Notes Reader"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       PRECEDENT RECALL FLASHCARDS MODAL (3D Flip Deck)
+       =================================================================== -->
+  <div class="flashcards-modal" id="flashcardsModal" role="dialog" aria-modal="true">
+    <div class="flashcards-window">
+      <!-- Modal Header -->
+      <div class="flashcards-header">
+        <div class="flashcards-title-box">
+          <div class="flashcards-badge"><i class="fa-solid fa-brain"></i> Precedent Recall System</div>
+          <h3 id="fcSubjectTitle">Law of Contract — Case Flashcards</h3>
+          <p id="fcDeckInfo">Active Deck: 29 Landmark Authorities</p>
+        </div>
+        <div class="flashcards-controls-top">
+          <button class="btn-fc-tool" id="fcShuffleBtn" title="Shuffle Cards">
+            <i class="fa-solid fa-shuffle"></i> <span>Shuffle</span>
+          </button>
+          <button class="btn-fc-close" id="fcCloseBtn" title="Close Flashcards (Esc)">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress Meter -->
+      <div class="flashcards-progress-bar">
+        <div class="fc-progress-fill" id="fcProgressFill" style="width: 0%;"></div>
+      </div>
+
+      <!-- 3D Card Scene -->
+      <div class="flashcard-scene" id="flashcardScene">
+        <div class="flashcard" id="activeFlashcard">
+          
+          <!-- Front Face: Legal Dilemma / Clues -->
+          <div class="flashcard-face flashcard-front">
+            <div class="fc-face-header">
+              <span class="fc-chip" id="fcFrontUnit">Topic 2: Formation</span>
+              <span class="fc-hint-tag"><i class="fa-solid fa-eye"></i> Prompt &amp; Fact Clues</span>
+            </div>
+            <div class="fc-face-body">
+              <div class="fc-prompt-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <h4 class="fc-prompt-title">Can you recall the landmark authority?</h4>
+              <div class="fc-prompt-box">
+                <div class="fc-dilemma-label">Case Dilemma &amp; Facts</div>
+                <p class="fc-dilemma-text" id="fcFrontFacts">Loading legal dilemma...</p>
+              </div>
+              <div class="fc-issue-box">
+                <div class="fc-dilemma-label">Core Issue Examined</div>
+                <p class="fc-issue-text" id="fcFrontIssue">Loading issue...</p>
+              </div>
+            </div>
+            <div class="fc-face-footer">
+              <span class="fc-flip-instruction"><i class="fa-solid fa-arrows-rotate"></i> Click card or press <b>Spacebar</b> to reveal Precedent</span>
+            </div>
+          </div>
+
+          <!-- Back Face: Ratio Decidendi & Judicial Principle -->
+          <div class="flashcard-face flashcard-back">
+            <div class="fc-face-header">
+              <span class="fc-chip precedent" id="fcBackUnit">Precedent Revealed</span>
+              <span class="fc-cite-badge" id="fcBackCite">(1893) 1 QB 256</span>
+            </div>
+            <div class="fc-face-body">
+              <div class="fc-case-name-wrap">
+                <span class="fc-landmark-tag">Landmark Authority</span>
+                <h3 class="fc-case-name" id="fcBackCaseName">Carlill v. Carbolic Smoke Ball Co.</h3>
+              </div>
+
+              <div class="fc-ratio-box">
+                <div class="fc-ratio-label"><i class="fa-solid fa-gavel"></i> Ratio Decidendi &amp; Core Doctrine</div>
+                <p class="fc-ratio-text" id="fcBackRatio">Loading ratio...</p>
+              </div>
+
+              <div class="fc-exam-tip-box" id="fcBackTipBox">
+                <div class="fc-exam-tip-label"><i class="fa-solid fa-lightbulb"></i> DU Semester Exam Application Rule</div>
+                <p class="fc-exam-tip-text" id="fcBackTip">Loading rule...</p>
+              </div>
+            </div>
+            <div class="fc-face-footer">
+              <div class="fc-mastery-actions">
+                <button class="fc-btn-mastery review" id="fcBtnReview" title="Review Again (Key: 1)">
+                  <i class="fa-solid fa-rotate-left"></i> <span>Needs Review</span>
+                </button>
+                <button class="fc-btn-mastery mastered" id="fcBtnMastered" title="Mastered (Key: 2)">
+                  <i class="fa-solid fa-check"></i> <span>Got It Mastered!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Navigation & Shortcuts Bar -->
+      <div class="flashcards-bottom-bar">
+        <button class="fc-nav-btn" id="fcPrevBtn" title="Previous Card (←)">
+          <i class="fa-solid fa-arrow-left"></i> <span>Prev</span>
+        </button>
+        <div class="fc-counter-wrap">
+          <span class="fc-counter-text" id="fcCounterText">Card 1 of 29</span>
+          <span class="fc-mastery-badge" id="fcMasteryStats">0 Mastered</span>
+        </div>
+        <button class="fc-nav-btn" id="fcNextBtn" title="Next Card (→)">
+          <span>Next</span> <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="fc-shortcuts-hint">
+        <span><b>Shortcuts:</b></span>
+        <span><kbd>Space</kbd> Flip</span>
+        <span><kbd>&larr;</kbd> <kbd>&rarr;</kbd> Navigate</span>
+        <span><kbd>1</kbd> Review</span>
+        <span><kbd>2</kbd> Mastered</span>
+        <span><kbd>Esc</kbd> Close</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       QUICK BARE ACT DRAWER (Instant Statutory Lookup)
+       =================================================================== -->
+  <div class="bare-act-overlay" id="bareActOverlay"></div>
+  <aside class="bare-act-drawer" id="bareActDrawer" role="dialog" aria-modal="true" aria-label="Quick Bare Act Drawer">
+    <div class="bare-act-drawer-header">
+      <div class="bad-title-group">
+        <div class="bad-crest"><i class="fa-solid fa-book-bookmark"></i></div>
+        <div>
+          <h3>Quick Bare Act Drawer</h3>
+          <p>Instant Statutory Reference &bull; Verbatim Bare Acts</p>
+        </div>
+      </div>
+      <button class="bad-close-btn" id="bareActCloseBtn" title="Close Drawer (Esc)">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Act Selection Tabs -->
+    <div class="bad-act-tabs" id="badActTabs">
+      <button class="bad-tab active" data-act="all">All Acts</button>
+      <button class="bad-tab" data-act="ica">ICA 1872</button>
+      <button class="bad-tab" data-act="bns">BNS 2023</button>
+      <button class="bad-tab" data-act="hma">HMA 1955</button>
+      <button class="bad-tab" data-act="hama">HAMA 1956</button>
+      <button class="bad-tab" data-act="hmga">HMGA 1956</button>
+      <button class="bad-tab" data-act="cpa">CPA 2019</button>
+      <button class="bad-tab" data-act="ca">CA 2013</button>
+    </div>
+
+    <!-- Search Input -->
+    <div class="bad-search-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="bareActSearchInput" placeholder="Search section number, keywords, doctrine (e.g. S. 56, frustration, cruelty)...">
+      <button class="bad-search-clear" id="bareActClearSearch" style="display:none;" title="Clear search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Sections List Container -->
+    <div class="bad-list-container" id="bareActListContainer">
+      <div id="bareActList"></div>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Action completed</span>
+  </div>
+
+  <!-- Floating Scroll-to-Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <button class="mobile-nav-item" data-action="back-subjects">
+      <i class="fa-solid fa-grid-2"></i>
+      <span>Subjects</span>
+    </button>
+    <button class="mobile-nav-item active" data-tab="topics">
+      <i class="fa-solid fa-book-open"></i>
+      <span>Topics</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="cases">
+      <i class="fa-solid fa-scale-balanced"></i>
+      <span>Cases</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="pyqs">
+      <i class="fa-solid fa-file-lines"></i>
+      <span>PYQs</span>
+    </button>
+    <button class="mobile-nav-item" data-tab="revision">
+      <i class="fa-solid fa-bolt"></i>
+      <span>Revision</span>
+    </button>
+  </nav>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">Delhi University Law Notes Portal</div>
+      <p class="footer-text">
+        An academic initiative for LL.B. students of Campus Law Centre (CLC), Law Centre&ndash;I (LC-1), and Law Centre&ndash;II (LC-2). Strictly aligned with University of Delhi Faculty of Law case materials, syllabus guidelines, and past examination papers.
+      </p>
+      <p class="footer-credits">
+        &copy; 2026 Delhi University Law Portal &bull; Crafted with editorial precision for serious law students.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/bare_acts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

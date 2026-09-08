@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 7 · Vicarious Liability of the State (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f4f7fa; --card:#ffffff;
+    --navy:#12283e; --navy2:#1f4c6e; --gold:#b0781f; --teal:#0f7a72;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e2ebf2;
+    --orange:#b9571f; --shadow:0 6px 24px rgba(18,40,62,.09);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#12283e 0%,#1f4c6e 55%,#3d6d5e 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,132,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:920px; margin:0 0 22px; color:#dcebe6; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#eef6f2}
+  .meta-strip{background:#0b1f2e; color:#cfe0ec; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#e7f0f5; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fdf7e8; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#e9f5f2; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#1f4c6e}
+  .lat{background:#e8f0f5; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#e9f1f6; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fbfdfe}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#13324a,#3d6d5e); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#eef6f2; border-left:3px solid var(--teal); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#e9f5f2; border:1px solid #cbe7e2; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfdfc; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#ecf3f6; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#cfe0ec; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 7 — <span>Vicarious Liability of the State</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering syllabus sub-heads (a) Meaning &amp; basis of vicarious liability (position in England and India), (b) Government liability in torts (constitutional provisions; sovereign &amp; non-sovereign functions), (c) the Law Commission of India's <b>First Report on the Liability of the State in Tort</b> (May 1956), and (d) the violation of fundamental rights &amp; sovereign immunity and the concept of constitutional torts — with all 4 prescribed cases (37–40) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Vicarious liability</span><span class="tag">Sovereign immunity</span>
+      <span class="tag">Article 300</span><span class="tag">Sovereign v non-sovereign</span>
+      <span class="tag">Law Commission Report</span><span class="tag">Constitutional torts</span>
+      <span class="tag">4 Case Laws</span><span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Meaning &amp; basis of vicarious liability — position in England and India · (b) Government liability in torts — (1) constitutional provisions; (2) sovereign and non-sovereign functions · (c) Law Commission of India, "First Report on the Liability of the State in Tort" (May 1956) · (d) Violation of fundamental rights and sovereign immunity; concept of constitutional torts</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#vicarious">1. Vicarious Liability — Meaning &amp; Basis</a>
+    <a href="#relationship">The Requisite Relationship</a>
+    <a href="#course">Course of Employment</a>
+    <a href="#england">2. Position in England</a>
+    <a href="#india">3. Position in India — Government Liability</a>
+    <a href="#art300">Constitutional Provisions (Article 300)</a>
+    <a href="#sovereign">Sovereign v Non-Sovereign Functions</a>
+    <a href="#pandor">The P &amp; O Case and the Origin</a>
+    <a href="#lawcomm">4. Law Commission First Report (1956)</a>
+    <a href="#constort">5. Constitutional Torts &amp; Sovereign Immunity</a>
+    <a class="n" href="#cases">The 4 Prescribed Case Laws</a>
+    <a href="#c37">37. State of Rajasthan v. Vidhyawati</a>
+    <a href="#c38">38. Kasturilal v. State of U.P.</a>
+    <a href="#c39">39. N. Nagendra Rao v. State of A.P.</a>
+    <a href="#c40">40. Chairman, Railway Board v. Chandrima Das</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims &amp; Terms</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Meaning &amp; basis</td><td>Vicarious liability; why it is imposed; England &amp; India</td><td>General principles; Crown Proceedings Act 1947; Article 300</td></tr>
+        <tr><td>(b) Government liability</td><td>Constitutional provisions; sovereign &amp; non-sovereign functions</td><td>Article 300; <i>Vidhyawati</i>; <i>Kasturilal</i>; <i>P &amp; O v. Secretary of State</i></td></tr>
+        <tr><td>(c) Law Commission Report</td><td>The First Report (May 1956) on State liability in tort</td><td>Law Commission of India, First Report (1956)</td></tr>
+        <tr><td>(d) Constitutional torts</td><td>Violation of fundamental rights &amp; sovereign immunity</td><td><i>Rudul Sah</i>; <i>Nilabati Behera</i>; <i>Nagendra Rao</i>; <i>Chandrima Das</i></td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>State of Rajasthan v. Vidhyawati</b>, <b>Kasturilal Ralia Ram Jain v. State of U.P.</b>, <b>N. Nagendra Rao &amp; Co. v. State of A.P.</b>, and <b>Chairman, Railway Board v. Chandrima Das</b> — all four prescribed cases. The theory of vicarious liability (basis, master-servant, course of employment) follows the DU course notes; the sovereign/non-sovereign distinction and the Law Commission recommendation are explained from the casebook's own reasoning and the notes.</div>
+    </section>
+
+    <!-- VICARIOUS LIABILITY -->
+    <section id="vicarious">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Vicarious Liability — Meaning &amp; Basis</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The rule of <b>vicarious liability</b> imposes liability on <b>one person for the act done by another</b>. Normally, a person who has done the wrongful act should alone be made liable for the injurious consequences arising out of it; the principle of vicarious liability is an <b>exception</b> to this rule. The master (principal / employer) is made liable for the torts committed by the <b>servant (agent / employee)</b>.</p>
+      <blockquote class="quote">“The rule of vicarious liability imposes liability on one person for the act done by another person. … In order that the liability of a person for the act done by another person can arise it is necessary that there should be a certain kind of relationship between the two persons and the wrongful act done should be, in a certain way, connected with that relationship.” — DU course notes</blockquote>
+      <h3 id="relationship">1.1 The requisite relationship</h3>
+      <p>Vicarious liability arises within certain recognised relationships between the parties:</p>
+      <ul>
+        <li><b>Principal &amp; Agent</b> — the principal is liable for torts committed by the agent within the scope of the agency.</li>
+        <li><b>Master &amp; Servant</b> — the master is liable for torts committed by the servant <b>in the course of his employment</b>.</li>
+        <li><b>Partners</b> — partners are jointly and severally liable for torts committed by one partner in the ordinary course of the firm's business.</li>
+      </ul>
+      <h3>1.2 Reasons / basis for the rule</h3>
+      <p>The rule is based on <b>public policy</b> and on the following reasons:</p>
+      <ol>
+        <li>It is more reasonable that the <b>master</b> (who trusts and selects his servants, and benefits from their work) should suffer for their wrongs than the injured party.</li>
+        <li>No man shall be allowed to <b>take advantage of his own wrong</b>.</li>
+        <li><span class="lat">Qui facit per alium facit per se</span> — <b>he who acts through another is deemed to act in person</b>.</li>
+        <li><span class="lat">Respondeat superior</span> — <b>let the principal answer</b>.</li>
+        <li>The <b>employer is usually financially capable</b>; the servant is usually not — so the employer should bear the burden.</li>
+        <li>It is the <b>employer who has set the whole thing in motion</b> by employing the servant.</li>
+      </ol>
+      <p>As Shaw CJ said in <i>Farwell v. Boston &amp; Worcester Rly. Co.</i>: "This rule is obviously founded on the great principle of social duty, that every man in the management of his own affairs … should so conduct them as not to injure another." The true basis is <b>public policy</b>.</p>
+      <div class="tipbox"><b>Note:</b> In <b>modern criminal law</b> the rule of vicarious liability is seldom applied — penal liabilities are not vicarious, except in very special circumstances and in some less serious forms. Vicarious liability is a principle of the <b>civil law of torts</b>.</div>
+
+      <h3 id="course">1.3 Course of employment and State liability</h3>
+      <p>For vicarious liability to attach, the wrongful act must be done by the servant <b>in the course of his employment</b> (i.e., within the scope of his authority). This is the key test. For the <b>State</b>, the same principle applies, but with the additional question (discussed in §3) of whether the act was done in the exercise of <b>sovereign</b> or <b>non-sovereign</b> functions — because the State alone may claim <b>sovereign immunity</b>.</p>
+    </section>
+
+    <!-- ENGLAND -->
+    <section id="england">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Position in England</h2></div>
+      <p class="sec-sub">Syllabus (a) — the Crown's liability before and after 1947.</p>
+      <p><b>Under the common law</b>, the Crown could <b>not</b> be sued in tort. The maxim <span class="lat">"The King can do no wrong"</span> was the basis of this immunity — the King was incapable of personal negligence or misconduct, and could not be sued in his own courts. As Lord Lyndhurst held in <i>Viscount Canterbury v. Attorney-General</i>, the Crown could not be made liable for damages for the tortious acts of its servants either by petition of right or in any other manner.</p>
+      <p><b>Reform — the Crown Proceedings Act, 1947.</b> The common-law immunity became outmoded in the context of modern developments in statecraft, and Parliament intervened with the <b>Crown Proceedings Act, 1947</b> (in force from 1 January 1948). <b>Section 2(1)</b> provides that the Crown shall be <b>subject to all those liabilities in tort</b> to which it would be subject if it were <b>a private person of full age and capacity</b>, in respect of torts committed by its <b>servants or agents</b> (subject to other provisions of the Act). This placed the Crown (the State) on the same footing as an ordinary employer.</p>
+      <p>In <i>Vidhyawati</i> (see Case 37), the Supreme Court noted: "the very citadel of the absolute rule of immunity of the sovereign has now been <b>blown up</b>" by the Crown Proceedings Act.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 180" width="780" role="img" aria-label="Position in England">
+          <rect x="20" y="25" width="350" height="130" rx="12" fill="#a83a3a"/>
+          <text x="195" y="55" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">BEFORE 1947 (common law)</text>
+          <text x="195" y="82" fill="#fbe5e5" text-anchor="middle" font-size="11">"The King can do no wrong"</text>
+          <text x="195" y="102" fill="#fbe5e5" text-anchor="middle" font-size="11">Crown immune in tort; could</text>
+          <text x="195" y="122" fill="#fbe5e5" text-anchor="middle" font-size="11">not be sued. No remedy for</text>
+          <text x="195" y="142" fill="#fbe5e5" text-anchor="middle" font-size="11">torts of servants.</text>
+          <rect x="410" y="25" width="350" height="130" rx="12" fill="#2e7d4f"/>
+          <text x="585" y="55" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">AFTER 1947 (statute)</text>
+          <text x="585" y="82" fill="#d8efe7" text-anchor="middle" font-size="11">Crown Proceedings Act 1947,</text>
+          <text x="585" y="102" fill="#d8efe7" text-anchor="middle" font-size="11">s.2(1): Crown subject to all</text>
+          <text x="585" y="122" fill="#d8efe7" text-anchor="middle" font-size="11">liabilities in tort "as if it were</text>
+          <text x="585" y="142" fill="#d8efe7" text-anchor="middle" font-size="11">a private person" (servants)</text>
+        </svg>
+        <div class="cap">England: the Crown's immunity abolished by the Crown Proceedings Act, 1947.</div>
+      </div>
+      <div class="tipbox"><b>India vs England:</b> In <i>Vidhyawati</i>, the Court held that India's position was actually <b>more advanced</b> than the common law even before the Crown Proceedings Act. In India, ever since the time of the <b>East India Company</b>, the sovereign has been <b>held liable to be sued in tort or contract</b>, and the common-law immunity never operated. Article 300 of the Constitution preserves this position (see §3).</div>
+    </section>
+
+    <!-- INDIA -->
+    <section id="india">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Position in India — Government Liability in Torts</h2></div>
+      <p class="sec-sub">Syllabus (b) — constitutional provisions and sovereign/non-sovereign functions.</p>
+      <p>In India, there is <b>no statutory provision</b> (like the Crown Proceedings Act) regulating the liability of the State in tort. The liability of the Union and the States is instead determined by <b>Article 300</b> of the Constitution, read with the pre-Constitution law deriving from the <b>East India Company</b> and the <b>Secretary of State for India</b> (under ss. 65 of the Government of India Act 1858, 32 of the Act 1915, and 176 of the Act 1935).</p>
+
+      <h3 id="art300">3.1 Constitutional provisions — Article 300</h3>
+      <p><b>Article 300(1)</b> of the Constitution provides:</p>
+      <blockquote class="quote">“The Government of India may sue or be sued by the name of the Union of India and the Government of a State may sue or be sued by the name of the State and may, subject to any provisions which may be made by Act of Parliament or of the Legislature of such State enacted by virtue of powers conferred by this Constitution, sue or be sued in relation to their respective affairs <b>in the like cases as the Dominion of India and the corresponding Provinces or the corresponding Indian States might have sued or been sued</b> if this Constitution had not been enacted.”</blockquote>
+      <p>As <i>Vidhyawati</i> and <i>Kasturilal</i> held, Article 300 consists of <b>three parts</b>: (1) it provides the <b>form</b> and cause-title — the State may sue or be sued by the name of the State; (2) the State may sue or be sued in relation to its affairs in <b>like cases</b> as the corresponding Province or Indian State might have sued or been sued if the Constitution had not been enacted (i.e., we must ask: could such a suit have been brought against the corresponding Province/predecessor State before the Constitution?); and (3) this is <b>subject to any law</b> that Parliament or a State Legislature may make in this behalf.</p>
+      <p>Since <b>no such law</b> has been enacted by the legislature to regulate the State's tort liability, the question whether the State is liable is determined by reference to the <b>pre-Constitution law</b> — i.e., the law of the East India Company and the Secretary of State, as laid down in <i>P &amp; O Steam Navigation Co. v. Secretary of State for India</i> (1861).</p>
+
+      <h3 id="sovereign">3.2 Sovereign and non-sovereign functions</h3>
+      <p>The crucial distinction, laid down by <b>Chief Justice Peacock</b> in the <i>P &amp; O</i> case (1861) and consistently followed, is between:</p>
+      <div class="two-col">
+        <div class="aobx"><b style="color:var(--orange)">(A) SOVEREIGN functions (acts of State)</b><p>Acts done in the exercise of <b>powers which cannot lawfully be exercised except by a sovereign</b>, or by a private individual delegated by a sovereign to exercise them (e.g., defence of the country, making war or peace, foreign affairs, maintaining law and order, repressing crime, administering justice). For torts committed in the discharge of such functions, <b>no action will lie</b> — the State is immune.</p></div>
+        <div class="aobx"><b style="color:var(--teal)">(B) NON-SOVEREIGN functions</b><p>Acts done in the conduct of <b>undertakings which might be carried on by private individuals</b> without any delegation of sovereign power (e.g., running a railway, a dockyard, state trading, transport, industry, a hospital, providing cars for civil servants). For torts committed in such functions, <b>an action will lie</b> — the State is liable like any ordinary employer.</p></div>
+      </div>
+      <blockquote class="quote">“There is a great and clear distinction between acts done in the exercise of what are usually termed sovereign powers, and acts done in the conduct of undertakings which might be carried on by private individuals without having such powers delegated to them. … Where an act is done, or a contract is entered into, in the exercise of powers usually called sovereign powers, by which we mean powers which cannot be lawfully exercised except by a sovereign, or private individual delegated by a sovereign to exercise them, <b>no action will lie</b>.” — Chief Justice Peacock, <i>P &amp; O Steam Navigation Co. v. Secretary of State</i> (1861)</blockquote>
+      <p>This distinction has been the source of much difficulty. <b>Vidhyawati</b> (Case 37) held a State liable for the negligent driving of a government jeep (a non-sovereign, civil activity); <b>Kasturilal</b> (Case 38) held the State <b>immuned</b> for the loss of gold seized under the Criminal Procedure Code (a sovereign function — the power to arrest, search and seize); and <b>Nagendra Rao</b> (Case 39) substantially <b>eroded</b> the sovereign-immunity doctrine, holding that the distinction has "largely disappeared" in a Welfare State and that the State is liable for the negligence of its officers in the discharge of statutory duties (except for truly "acts of State" such as war and foreign affairs). <b>Chandrima Das</b> (Case 40) held the Railways (a commercial undertaking) liable for the rape of a woman by its employees, applying the <b>constitutional tort</b> / public-law remedy.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 190" width="780" role="img" aria-label="Sovereign vs non-sovereign">
+          <rect x="20" y="25" width="360" height="130" rx="12" fill="#a83a3a"/>
+          <text x="200" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">SOVEREIGN functions</text>
+          <text x="200" y="78" fill="#fbe5e5" text-anchor="middle" font-size="11">defence, war/peace, foreign</text>
+          <text x="200" y="96" fill="#fbe5e5" text-anchor="middle" font-size="11">affairs, law &amp; order,</text>
+          <text x="200" y="114" fill="#fbe5e5" text-anchor="middle" font-size="11">administration of justice.</text>
+          <text x="200" y="140" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">NO action lies → IMMUNE</text>
+          <rect x="400" y="25" width="360" height="130" rx="12" fill="#2e7d4f"/>
+          <text x="580" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">NON-SOVEREIGN functions</text>
+          <text x="580" y="78" fill="#d8efe7" text-anchor="middle" font-size="11">railways, dockyards, industry,</text>
+          <text x="580" y="96" fill="#d8efe7" text-anchor="middle" font-size="11">transport, state trading,</text>
+          <text x="580" y="114" fill="#d8efe7" text-anchor="middle" font-size="11">hospital / cars for officials.</text>
+          <text x="580" y="140" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">action lies → LIABLE</text>
+        </svg>
+        <div class="cap">The sovereign/non-sovereign distinction (Peacock CJ, 1861).</div>
+      </div>
+      <div class="tipbox"><b>Modern position:</b> The Watertight compartmentalization of the State's functions as "sovereign" and "non-sovereign" has been <b>criticised</b> and substantially <b>abandoned</b> (Nagendra Rao). Barring functions such as the administration of justice, maintenance of law and order, and the repression of crime (the primary and inalienable functions of a constitutional government), <b>the State cannot claim immunity</b>. The most important modern development is the <b>constitutional tort</b> — where the State's officers violate a citizen's <b>fundamental right</b> (life &amp; personal liberty, Article 21), the State is liable to pay compensation under public law (Article 32 / 226), <b>without</b> the defence of sovereign immunity.</div>
+
+      <h3 id="pandor">3.3 The P &amp; O case — the origin in India</h3>
+      <p>The leading Indian authority is <b>Peninsular and Oriental Steam Navigation Co. v. Secretary of State for India</b> (1861) (5 Bom. HCR App. A. p.1, pronounced by <b>Chief Justice Peacock</b> of the Supreme Court at Calcutta). A servant of the plaintiff company was proceeding along a highway in Calcutta; the defendants' servants, carrying an iron funnel from the government dockyard at Kidderpore, negligently caused the funnel to frighten the plaintiff's horse, which was injured. The court held the Secretary of State <b>liable</b>, because the <b>maintenance of the dockyard</b> was a <b>non-sovereign</b> function — and laid down the classic sovereign/non-sovereign distinction quoted above. This was the first case in which the liability of the State in tort was authoritatively established in India, and it is the foundation on which <i>Vidhyawati</i> and <i>Kasturilal</i> rest.</p>
+    </section>
+
+    <!-- LAW COMMISSION -->
+    <section id="lawcomm">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Law Commission of India — First Report on the Liability of the State in Tort (May 1956)</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>The <b>Law Commission of India</b>, in its <b>First Report on the Liability of the State in Tort (May 1956)</b>, examined the unsatisfactory state of the law on the Government's liability in tort and made recommendations for reform, with a view to placing the State on the same footing as an <b>ordinary employer</b>.</p>
+      <p><b>Key recommendations / points of the Report:</b></p>
+      <ul>
+        <li>It reviewed the position in India in the light of the <b>English Crown Proceedings Act, 1947</b>, and the pre-Constitution case law (the <i>P &amp; O</i> case, <i>Hari Bhanji</i>, <i>Nobin Chander Dey</i>, <i>Shivabhajan Durgaprasad</i>), and recommended that India should adopt a statutory framework on the same lines as the English Act.</li>
+        <li>It recommended that the <b>State should be made liable in tort</b> for the wrongful acts of its servants done <b>in the course of their employment</b>, in the same manner as a private employer, <b>subject to certain exceptions</b>.</li>
+        <li>The proposed exceptions to State liability were narrowly confined — broadly, liability should not attach for acts done in the exercise of <b>sovereign</b> powers (e.g., acts of war, foreign relations, and the like), but <b>not</b> for ordinary torts committed in the discharge of statutory or administrative duties.</li>
+        <li>It emphasised that the victim should <b>not be left without a remedy</b> merely because the wrongdoer was a public servant, and that the State's resources make it best able to bear the burden.</li>
+      </ul>
+      <div class="hint"><b>Why the Report matters:</b> The Law Commission's recommendations still await full legislative implementation — the Government has <b>not yet enacted</b> a comprehensive law on the State's liability in tort. Consequently, <b>Article 300</b> and the <b>pre-Constitution case law</b> (the sovereign/non-sovereign distinction) continue to govern. This gap is precisely what the Supreme Court has sought to remedy by developing <b>constitutional torts</b> (see §5) — where, on the violation of fundamental rights, the State is made liable without the defence of sovereign immunity. In <i>Kasturilal</i>, the Court itself said: "We have been disturbed by the thought that a citizen … has to be told … that he can make no claim against the State. That … is not a very satisfactory position in law. The remedy to cure this position, however, lies in the hands of the Legislature."</div>
+    </section>
+
+    <!-- CONSTITUTIONAL TORTS -->
+    <section id="constort">
+      <div class="sec-head"><div class="sec-num">5</div><h2>Violation of Fundamental Rights, Sovereign Immunity &amp; Constitutional Torts</h2></div>
+      <p class="sec-sub">Syllabus (d).</p>
+      <p>The most important modern development is the concept of the <b>constitutional tort</b> — where public officials, acting under the colour of authority, violate a citizen's <b>fundamental rights</b> (especially the right to <b>life and personal liberty</b> under <b>Article 21</b>), the State is liable to pay <b>compensation under public law</b>, and the defence of <b>sovereign immunity is not available</b>.</p>
+      <blockquote class="quote">“Award of compensation in a proceeding under Article 32 by this Court or by the High Court under Article 226 of the Constitution is a remedy available in <b>public law</b>, based on <b>strict liability for contravention of fundamental rights</b>, to which the principle of <b>sovereign immunity does not apply</b>, even though it may be available as a defence in private law in an action based on tort.” — <b>J.S. Verma J.</b>, <i>Nilabati Behera v. State of Orissa</i> (quoted in <i>Nagendra Rao</i>)</blockquote>
+      <p><b>Key principles:</b></p>
+      <ul>
+        <li><b>Public law remedy in tort:</b> The Supreme Court (Article 32) and the High Courts (Article 226) may award compensation for violation of fundamental rights by public officials, in <b>public-law</b> proceedings, without the need for a separate civil suit. This began with <b>Rudul Sah v. State of Bihar</b> (1983) (illegal detention) and has been applied in <i>Nilabati Behera</i> (death in police custody), <i>Bhim Singh</i>, and others.</li>
+        <li><b>Sovereign immunity is not a defence:</b> Where a fundamental right (Article 21 — life and personal liberty) is violated by the State or its officers, the State is liable to compensate; the defence of sovereign immunity <b>does not apply</b>. This is a "strict liability" in public law.</li>
+        <li><b>Rape as a violation of Article 21:</b> In <i>Bodhisattwa Gautam v. Subhra Chakraborty</i>, the Supreme Court held that <b>rape</b> is an offence violative of the fundamental right to life and human dignity under Article 21. In <i>Chandrima Das</i> (Case 40), this was applied to award compensation (Rs. 10 lakh) to a woman gang-raped by railway employees, the State being held vicariously liable.</li>
+        <li><b>Availability to non-citizens:</b> The right to life and personal liberty (Articles 20, 21, 22) is available to <b>"persons"</b>, not merely <b>"citizens"</b>, and therefore to foreign nationals present in India (per <i>Anwar v. State of J&amp;K</i>). In <i>Chandrima Das</i>, the victim was a Bangladeshi national, yet she was entitled to the protection of her life (Article 21).</li>
+        <li><b>Constitutional tort vs private-law tort:</b> A citizen may, in addition to a public-law claim, file a suit for damages under the <b>private law of torts</b>; but where public functionaries are involved and the violation is of fundamental rights, the <b>public-law remedy is also available</b>, and is not barred merely because a suit in tort lies.</li>
+        <li><b>Public-interest litigation (locus standi):</b> The <b>scope of standing</b> is relaxed for public-law remedies — a petition may be filed by a public-spirited person (like an advocate) for the enforcement of the rights of victims, and the courts have upheld such writ petitions (<i>Chandrima Das</i>: <b>Mrs. Chandrima Das</b>, a practising advocate of the Calcutta High Court, could validly file; the petition was in substance a <b>public-interest</b> petition).</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Constitutional tort">
+          <rect x="20" y="25" width="340" height="140" rx="12" fill="#a83a3a"/>
+          <text x="190" y="55" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">PRIVATE-LAW TORT</text>
+          <text x="190" y="82" fill="#fbe5e5" text-anchor="middle" font-size="11">suit for damages in civil court;</text>
+          <text x="190" y="102" fill="#fbe5e5" text-anchor="middle" font-size="11">must prove duty-breach-damage;</text>
+          <text x="190" y="122" fill="#fbe5e5" text-anchor="middle" font-size="11">sovereign immunity MAY be a</text>
+          <text x="190" y="142" fill="#fbe5e5" text-anchor="middle" font-size="11">defence (Kasturilal)</text>
+          <rect x="420" y="25" width="340" height="140" rx="12" fill="#2e7d4f"/>
+          <text x="590" y="55" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CONSTITUTIONAL TORT (public law)</text>
+          <text x="590" y="82" fill="#d8efe7" text-anchor="middle" font-size="11">writ under Art 226/32; violation of</text>
+          <text x="590" y="102" fill="#d8efe7" text-anchor="middle" font-size="11">FUNDAMENTAL RIGHT (Art 21);</text>
+          <text x="590" y="122" fill="#d8efe7" text-anchor="middle" font-size="11">STRICT liability; sovereign immunity</text>
+          <text x="590" y="142" fill="#d8efe7" text-anchor="middle" font-size="11">NOT a defence (Chandrima Das)</text>
+        </svg>
+        <div class="cap">The constitutional tort remedy: compensation for violation of fundamental rights without sovereign immunity.</div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 4 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C37 -->
+      <div class="case" id="c37">
+        <div class="case-head">
+          <h4>37. State of Rajasthan v. Vidhyawati</h4>
+          <span class="cit">AIR 1962 SC 933 · (1962) Supp 2 SCR 989 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant was the <b>State of Rajasthan</b>. One <b>Lokumal</b> was a <b>temporary employee</b> of the State as a <b>motor driver (on probation)</b>. In February 1952 he was employed as the driver of a <b>government jeep car</b> (No. RUM 49) under the Collector of Udaipur. The car had been sent to a workshop for repairs. After repairs, on the evening of 11 February 1952, while driving the car back along a public road, the driver <b>knocked down one Jagdishlal</b>, who was walking on the footpath in Udaipur city. Jagdishlal suffered multiple injuries, including fractures of the skull and backbone, and died three days later in hospital. His widow and a minor 3-year-old daughter sued the driver and the State of Rajasthan for damages (Rs. 25,000). The trial court dismissed the claim against the State; the High Court of Rajasthan reversed and allowed <b>Rs. 15,000</b> against the State. The State appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Under Article 300 of the Constitution, is the State of Rajasthan liable for the tortious act of its employee? (2) Was the jeep car, which was being driven rashly and negligently, being used <b>"in the exercise of sovereign powers"</b> so that the State would be immune?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>State (appellant):</b> (i) Under Article 300, the State was not liable, since the corresponding Indian State (Udaipur) would not have been liable before the Constitution; and (ii) the jeep car was being maintained <b>"in the exercise of sovereign powers"</b> (it was for the Collector's use in his official duties), and not as part of any commercial activity — so the State is immune.</p>
+            <p><b>Respondents (widow &amp; daughter):</b> The tortious act was committed by the driver in circumstances <b>wholly dissociated from the exercise of sovereign powers</b> — the car was being taken from the repair shop to the Collector's residence, a purely civil/administrative activity. The State should be liable like any ordinary employer. The High Court took the correct view.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (Sinha CJ) <b>dismissed</b> the appeal and held the State liable, affirming the High Court.</p>
+            <p class="quote">“The car was being used for the use of the Collector in the discharge of his official duties; but that circumstance alone was not sufficient to take the case out of the category of cases where vicarious liability of the employer could arise, even though the car was not being used at the time of the occurrence for any purposes of the State.” (endorsing the High Court's view)</p>
+            <p class="quote">“Viewing the case from the point of view of first principles, there should be no difficulty in holding that the State should be <b>as much liable for tort in respect of a tortious act committed by its servant within the scope of his employment</b> and functioning as such, as any other employer.”</p>
+            <p class="quote">“The immunity of the Crown in the United Kingdom was based on the old feudalistic notions of justice, namely, that the King was incapable of doing a wrong … In India, ever since the time of the East India Company, the sovereign has been <b>held liable to be sued in tort or in contract</b>, and the common-law immunity never operated in India. Now that we have, by our Constitution, established a Republican form of Government, and one of the objectives is to establish a Socialistic State with its varied industrial and other activities, employing a large army of servants, <b>there is no justification, in principle or in public interest, that the State should not be held liable vicariously for the tortious act of its servant</b>.”</p>
+            <p class="quote">“Hence the very <b>citadel of the absolute rule of immunity of the sovereign has now been blown up.</b>”</p>
+            <p>On Article 300, the Court held that it consists of three parts (form/style of suit; "like cases" — i.e., could the corresponding Indian State have been sued before the Constitution; and subject to legislation). Since India's pre-Constitution law (from the East India Company, via s. 65 of the Government of India Act 1858) made the sovereign liable in tort, and no exonerating rule had been shown for the Rajasthan Union, the State was liable. The driver was employed on a task (driving a car for a civil servant) that <b>cannot be said to be referable to sovereign or governmental powers</b>.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>State is vicariously liable</b> for the tortious acts of its servants committed <b>within the scope of their employment</b>, in the same manner as any ordinary employer. The <b>doctrine of sovereign immunity</b> has <b>no application</b> where a public servant is employed on a task or undertaking that is <b>not referable to the exercise of sovereign (or delegated sovereign) power</b> — e.g., driving a car for the use of a civil servant. The driving of a jeep car for a civil servant's use is <b>not</b> a sovereign function. Article 300 continues the pre-Constitution position that the State is liable in tort in like cases; and the Crown's immunity has been "blown up." This was the first Constitution Bench ruling to affirm State liability for non-sovereign (civil) activities.</div>
+        </div>
+      </div>
+
+      <!-- C38 -->
+      <div class="case" id="c38">
+        <div class="case-head">
+          <h4>38. Kasturilal Ralia Ram Jain v. State of U.P.</h4>
+          <span class="cit">AIR 1965 SC 1039 · (1965) 1 SCR 375 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant, a firm dealing in bullion and goods at Amritsar, had one partner <b>Ralia Ram</b>. On the midnight of <b>20 September 1947</b> he arrived at Meerut by the Frontier Mail with the object of selling gold, silver and other goods. While passing through Chaupla Bazar, he was <b>taken into custody by three police constables</b> on the suspicion of possessing stolen property. He was searched and taken to the police station, where his belongings — <b>gold (103 tolas 6 mashas 1 ratti) and silver (2 maunds 6½ seers)</b> — were seized and kept in police custody. He was released on bail the next day, and the silver was returned to him. He made repeated demands for the return of the <b>gold</b>, which had been kept in the police <b>Malkhana</b> under the charge of Head Constable <b>Mohd. Amir</b>. Mohd. Amir <b>misappropriated</b> the gold and fled to Pakistan on 17 October 1947. Ralia Ram sued the State of U.P. for the return of the gold or, in the alternative, its value (about Rs. 11,075 as the price of the gold, plus interest). The trial court found negligence against the police officers and passed a decree for Rs. 11,430-10-0. The Allahabad High Court reversed; the appellant appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Were the police officers negligent in dealing with the seized property? (2) Is the State of U.P. liable to compensate the appellant for the loss caused by the negligence of police officers, or is it <b>immune</b> because the police were acting in the exercise of <b>sovereign powers</b>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant:</b> The police officers were grossly negligent — despite regulation 166 requiring valuable property (gold) to be kept in a box under lock and key in the Treasury, it was not done; no list was made; the gold was kept in the Malkhana and misappropriated. Once negligence of the State's servants is established, the State is vicariously liable, following <i>Vidhyawati</i>.</p>
+            <p><b>State of U.P. (respondent):</b> The gold was misappropriated by Head Constable Mohd. Amir (a felonious, unauthorised act); and in any event, the police officers were acting in the discharge of <b>statutory functions</b> (arrest under s. 54(1)(iv), search under s. 51, seizure under s. 550 of the CrPC), which are referable to the <b>sovereign power</b> of the State — so the State is <b>immune</b>. It relied on <i>Vidhyawati</i>, but distinguished it on the facts.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (Gajendragadkar CJ) held that, although the police officers were undoubtedly negligent, the <b>State was not liable</b>, because the acts were done in the exercise of <b>sovereign power</b>. The appeal was dismissed (parties to bear their own costs).</p>
+            <p class="quote">“…it is clear that this case recognises a material distinction between acts committed by the servants employed by the State where such acts are referable to the exercise of <b>sovereign powers</b> delegated to public servants, and acts committed by public servants which are not referable to the delegation of any sovereign powers. … The question to ask is: was the tortious act committed by the public servant in discharge of statutory functions which are referable to, and ultimately based on, the <b>delegation of the sovereign powers of the State</b> to such public servant? <b>If the answer is in the affirmative, the action for damages … will not lie.</b> On the other hand, if the tortious act has been committed by a public servant in discharge of duties assigned to him not by virtue of the delegation of any sovereign power, an action for damages would lie.”</p>
+            <p class="quote">“The power to arrest a person, to search him, and to seize property found with him, are powers conferred on the specified officers by statute and in the last analysis, they are powers which can be properly characterised as <b>sovereign powers</b>; and so … the claim cannot be sustained.”</p>
+            <p>The Court also distinguished <i>Vidhyawati</i>: there the driving of a jeep for the Collector's use was an employment <b>not connected in any manner with the sovereign power of the State</b>, whereas here the police were discharging functions directly referable to delegated sovereign power. It expressly noted that the area of employment referable to sovereign power must be <b>strictly determined</b> before upholding a plea of immunity. It also observed that the state of affairs (citizens without a remedy) was unsatisfactory and urged the <b>Legislature</b> to enact a law on the lines of the English Crown Proceedings Act, 1947.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>sovereign-immunity doctrine</b> applies in India: where a tortious act is committed by a public servant in the discharge of <b>statutory functions referable to the delegation of the sovereign powers of the State</b> (e.g., the powers to arrest, search and seize under the Criminal Procedure Code), the <b>State is immune</b> from a claim for damages. But the immunity is <b>strictly confined</b> to such functions; in relation to <b>non-sovereign</b> activities (as in <i>Vidhyawati</i>), the State is liable like an ordinary employer. The test: is the act <b>referable to the sovereign power</b> delegated to the public servant? This case is the classical authority for <b>sovereign immunity</b>, and stands in contrast to <i>Vidhyawati</i> — but it also laid the seeds of its own erosion, by urging legislative reform and by insisting that the area of immunity must be strictly limited.</div>
+        </div>
+      </div>
+
+      <!-- C39 -->
+      <div class="case" id="c39">
+        <div class="case-head">
+          <h4>39. N. Nagendra Rao &amp; Co. v. State of A.P.</h4>
+          <span class="cit">AIR 1994 SC 2663 · (1994) 6 SCC 205 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant carried on business in fertiliser and foodgrains under a licence. On <b>11 August 1975</b>, the Police Inspector (Vigilance Cell) visited its premises and <b>seized huge stocks of fertilisers, foodgrains and non-essential goods</b>. On 31 August 1975 the District Revenue Officer (DRO), in the exercise of powers under <b>s. 6-A of the Essential Commodities Act, 1955</b>, directed the fertiliser to be kept in the custody of the Assistant Agricultural Officer (AAO) for distribution, and the foodgrains and non-essential goods in the custody of the Tehsildar for immediate disposal. The <b>AAO took no steps to dispose of the fertiliser</b>. The appellant repeatedly warned (17 &amp; 21 September 1975; 11 February 1976) that the fertiliser would deteriorate and become useless. <b>No order was passed and no action was taken.</b> On 29 June 1976 the s. 6-A proceedings were decided: part of the foodgrain was confiscated, and part of the stock (fertiliser) was <b>released</b> in favour of the appellant. Despite the Collector's order and the appellate order, the AAO did <b>not</b> release the stock. In the last week of March 1977, the AAO issued a notice to the appellant to take delivery — but the appellant found that the stock had been <b>spoilt both in quality and quantity</b>. The appellant demanded compensation for the value of the released stock; when it got no response, it filed a suit, which the trial court decreed for <b>Rs. 1,06,125.72</b> with interest. The High Court of Andhra Pradesh reversed, relying on the <b>sovereign immunity</b> of the State (per <i>Kasturilal</i>). The appellant appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Does seizure of goods in the exercise of statutory powers under the Essential Commodities Act completely immunise the State from liability for loss or damage suffered by the owner? (2) Does the confiscation of part of the goods absolve the State from any claim for the loss/damage suffered by the owner for the goods which were ordered to be released/returned? (3) Is the State vicariously liable for the negligence of its officers in the discharge of their statutory duties, or is it protected by sovereign immunity?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant:</b> The State held the seized goods as <b>custodia legis</b> (custody of the law / bailee) and had a statutory duty to maintain and dispose of them; the officers' gross negligence (non-disposal, deterioration) caused the loss; the State is vicariously liable. The doctrine of sovereign immunity cannot be pleaded for negligence in the discharge of statutory duties.</p>
+            <p><b>State of A.P. (respondent):</b> The goods were seized in the exercise of statutory power for violation of the Control Orders (which was found valid, at least for part); the seizure was in the exercise of <b>sovereign</b> power, so the State is immune (<i>Kasturilal</i>); and since part was confiscated, the owner had no right to claim the value of the remainder.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (R.M. Sahai J.) <b>allowed</b> the appeal and held the State <b>vicariously liable</b>, substantially <b>eroding</b> the sovereign-immunity doctrine.</p>
+            <p class="quote">“Since 1965 when this decision [<i>Kasturilal</i>] was rendered the law on vicarious liability has marched ahead. … Such infringements [of constitutional guarantees] have been held to be wrong in public law which do not brook any barrier and the State has been held liable to compensate the victims.”</p>
+            <p class="quote">“Sovereign immunity as a defence was, thus, never available where the State was involved in commercial or private undertaking nor it is available where its officers are guilty of interfering with life and liberty of a citizen not warranted by law. In both such infringements the State is vicariously liable and bound, constitutionally, legally and morally, to compensate and indemnify the wronged person.”</p>
+            <p class="quote">“In the modern sense the distinction between sovereign or non-sovereign power thus <b>does not exist</b>. It all depends on the nature of power and the manner of its exercise. … Any watertight compartmentalization of the functions of the State as ‘sovereign and non-sovereign’ or ‘governmental and non-governmental’ is not sound. It is contrary to modern jurisprudential thinking.”</p>
+            <p class="quote">“Therefore, barring functions such as <b>administration of justice, maintenance of law and order and repression of crime etc.</b> which are among the primary and inalienable functions of a constitutional Government, the <b>State cannot claim any immunity.</b>”</p>
+            <p class="quote">“Ratio of Kasturi Lal is available to those <b>rare and limited cases</b> where the statutory authority acts as a delegate of such function for which it cannot be sued in court of law.” (e.g., a search/seizure under the CrPC, an inalienable function).</p>
+            <p>Applying these principles, the Court held that the power to regulate and control essential commodities — and to inspect, search and seize property to carry out that object — is <b>not</b> a sovereign power for negligent exercise of which the State can claim immunity. The officers were negligent; the State held the goods as a <b>bailee</b> and could not return them; the owner was entitled to the value of the goods with interest. The trial court's decree was restored.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The doctrine of <b>sovereign immunity has been substantially whittled down.</b> In a <b>Welfare State</b>, the watertight distinction between sovereign and non-sovereign functions has <b>largely disappeared</b>; the State is <b>vicariously liable</b> for the negligence of its officers in the discharge of their <b>statutory duties</b> (e.g., mishandling of seized goods under the Essential Commodities Act), and can claim immunity only for the truly <b>primary and inalienable functions</b> of a constitutional government (administration of justice, maintenance of law and order, repression of crime) — and even then subject to the constitutional-tort exception where fundamental rights are violated. Where the goods are seized and later ordered to be returned but are lost/deteriorated, the State (as a bailee/custodia legis) is liable for their value. This case is the bridge from <i>Kasturilal</i> (immunity) to <i>Chandrima Das</i> (State liability), and lays the groundwork for the <b>constitutional tort</b> doctrine.</div>
+        </div>
+      </div>
+
+      <!-- C40 -->
+      <div class="case" id="c40">
+        <div class="case-head">
+          <h4>40. Chairman, Railway Board v. Chandrima Das</h4>
+          <span class="cit">(2000) 2 SCC 465 · (2002) 2 SCC 465 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Mrs. <b>Chandrima Das</b>, a practising advocate of the Calcutta High Court, filed a petition under <b>Article 226</b> of the Constitution against the Chairman, Railway Board, claiming compensation for the victim, <b>Smt. Hanuffa Khatoon</b>, a <b>Bangladeshi national</b> who was <b>gang-raped</b> by several persons, <b>including employees of the Railways</b>, in a room at <b>Yatri Niwas at Howrah Station</b> of the Eastern Railway (GRPS Case No. 19 of 1998, registered on 27 February 1998). She also claimed other reliefs, including a direction to the respondents to eradicate anti-social and criminal activities at Howrah Railway Station. The High Court awarded <b>Rs. 10 lakh</b> as compensation, holding that the rape was committed at a building (Rail Yatri Niwas) belonging to the Railways and was perpetrated by its employees. The Railways/Union of India appealed, contending (i) that no relief could be granted to a foreign national; (ii) that the matter lay in <b>private law</b>, not public law; (iii) that an advocate with no connection to the victim had <b>no locus standi</b>; and (iv) that the Railways could not be held <b>vicariously liable</b> for the criminal act of rape.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is a writ petition under Article 226 maintainable for the award of compensation in a case of rape by public employees, or must the victim sue in private law? (2) Does Mrs. Chandrima Das have locus standi to file the petition? (3) Can a foreign national claim the protection of fundamental rights (Article 21)? (4) Can the Railways/Union of India be held <b>vicariously liable</b> for the rape committed by its employees?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellants (Railways/Union):</b> (i) No relief under public law was available to a foreign national, since fundamental rights in Part III are available only to citizens; (ii) the remedy lay in private law (a suit for damages), not a writ under Article 226; (iii) Mrs. Chandrima Das, not being connected with the victim, lacked locus standi; and (iv) the commission of an offence (rape) is the individual act of the persons concerned — the Railways cannot be vicariously liable, and rape cannot be said to be an official act done in the course of employment.</p>
+            <p><b>Respondent (Chandrima Das) / the Court's approach:</b> The petition was in substance a <b>public-interest</b> petition (it claimed compensation and also sought the eradication of criminal activities at the station). Public-law remedies (Article 226/32) extend to the realm of tort, and compensation has been awarded for tortious acts of government officers ever since <i>Rudul Sah</i>. <b>Rape</b> is an offence violative of the fundamental right to life and dignity (Art. 21) (per <i>Bodhisattwa Gautam</i>). The right to life and personal liberty (Arts. 20, 21, 22) is available to <b>"persons"</b>, not merely "citizens" (per <i>Anwar v. State of J&amp;K</i>), and is in consonance with the Universal Declaration of Human Rights, 1948. The Railways run a <b>commercial activity</b>; the running of Yatri Niwas is part of that commercial activity, <b>not</b> the exercise of sovereign power — so <i>Kasturilal</i> cannot be pressed into aid, and the State is vicariously liable.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (S. Saghir Ahmad J.) <b>dismissed</b> the appeal and affirmed the award of <b>Rs. 10 lakh</b> compensation. The Court directed that the amount be paid over to the <b>High Commissioner for Bangladesh in India</b> for payment to the victim.</p>
+            <p class="quote">“Where public functionaries are involved and the matter relates to the violation of fundamental rights or the enforcement of public duties, the remedy would still be available under the <b>public law</b> notwithstanding that a suit could be filed for damages under private law.”</p>
+            <p class="quote">“Rape is a crime not only against the person of a woman, it is a crime against the entire society. … It is a crime against basic human rights and is <b>violative of the victim's most cherished right</b>, namely, right to life which includes right to live with human dignity contained in <b>Article 21</b>.” (quoting <i>Bodhisattwa Gautam</i>)</p>
+            <p class="quote">“The fundamental rights are available to all the ‘citizens’ of the country but a few of them are also available to ‘persons’. … Fundamental right guaranteed under Article 15 is restricted to ‘citizens’; so also Article 16 … and Article 19 … are available only to ‘citizens’. But rights under <b>Articles 20, 21 and 22 are available not only to ‘citizens’ but also to ‘persons’</b> which would include ‘non-citizens’.” (citing <i>Anwar v. State of J&amp;K</i>)</p>
+            <p class="quote">“Smt. Hanuffa Khatoon … nevertheless, was entitled to all the constitutional rights available to a citizen so far as ‘right to life’ was concerned. … The state was under a <b>constitutional liability to pay compensation</b> to her.”</p>
+            <p class="quote">“The theory of sovereign power which was propounded in Kasturi Lal case has <b>yielded to new theories and is no longer available in a Welfare State</b>. … Running of the Railways is a <b>commercial activity</b>. Establishing the Yatri Niwas … to provide lodging and boarding facilities to passengers on payment of charges is a part of the commercial activity of the Union of India and <b>this activity cannot be equated with the exercise of sovereign power</b>.”</p>
+            <p class="quote">“If any of such employees commits an act of tort, the Union Government, of which they are the employees, can, subject to other legal requirements being satisfied, be held <b>vicariously liable</b> in damages to the person wronged by those employees. Kasturi Lal decision, therefore, cannot be pressed into aid.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> This is the leading authority on the <b>constitutional tort</b> and on State liability in a Welfare State. (i) <b>Constitutional remedy:</b> compensation can be awarded in <b>public-law</b> proceedings (Article 226/32) for violation of a fundamental right (here, the right to life &amp; dignity under Article 21, violated by rape), even where a private-law suit for damages also lies. (ii) <b>Locus standi:</b> a public-spirited person may file a <b>public-interest</b> petition. (iii) <b>Availability to non-citizens:</b> the right to life and personal liberty (Arts. 20, 21, 22) is available to "persons," including foreign nationals. (iv) <b>State vicarious liability &amp; abrogation of sovereign immunity:</b> the sovereign-immunity doctrine <b>no longer applies in a Welfare State</b>; running the railways and establishing a Yatri Niwas is a <b>commercial (non-sovereign)</b> activity, and the Union of India is <b>vicariously liable</b> for the tort of rape committed by its employees. (v) The Court also recognised the <b>human-rights dimension</b> (Universal Declaration of Human Rights, 1948).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes the classic DU Topic-7 questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the meaning and basis of vicarious liability. What is the position in England and India regarding the vicarious liability of the State?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> Vicarious liability is liability imposed on <b>one person for the tort committed by another</b>. Normally only the actual wrongdoer is liable; vicarious liability is an exception. It arises within recognised relationships (principal–agent, master–servant, partners), and the wrongful act must be committed <b>in the course of the relationship</b> (for a master, in the course of employment).</p>
+          <p><b>Basis.</b> The rule is based on <b>public policy</b> and on these reasons: the master trusts and benefits from the servant's work and should bear the loss; no one should take advantage of his own wrong; <i>qui facit per alium facit per se</i> (he who acts through another is deemed to act personally); <i>respondeat superior</i> (let the principal answer); the master is better able to pay; and the master set the whole thing in motion.</p>
+          <p><b>Position in England.</b> Under the common law the Crown could not be sued in tort, on the maxim "the King can do no wrong." This immunity was abolished by the <b>Crown Proceedings Act, 1947</b> (in force 1 January 1948), s. 2(1) of which makes the Crown subject to all liabilities in tort "as if it were a private person of full age and capacity," in respect of torts committed by its servants or agents. As <i>Vidhyawati</i> observed, the "citadel of the absolute rule of immunity of the sovereign has now been blown up."</p>
+          <p><b>Position in India.</b> There is no statutory provision (like the Crown Proceedings Act). The liability of the State is governed by <b>Article 300</b> of the Constitution, which provides that the Union and the States may sue or be sued <b>in like cases</b> as the Dominion of India and the corresponding Provinces/Indian States before the Constitution. Since India's pre-Constitution position (from the East India Company, under s. 65 of the Government of India Act 1858, and the <i>P &amp; O</i> case) made the sovereign liable in tort and contract, the State is generally liable like an ordinary employer — subject to the exception of <b>sovereign functions</b>. In <i>Vidhyawati</i> the State was held liable for the negligent driving of a government jeep; in <i>Kasturilal</i> it was held immune for loss of gold seized by police (a sovereign function); and in <i>Nagendra Rao</i> and <i>Chandrima Das</i> the doctrine of sovereign immunity was substantially whittled down.</p>
+          <p><b>Conclusion.</b> Vicarious liability is the principle by which a master (including the State) is made answerable for the torts of his servant. In England it is now governed by the Crown Proceedings Act 1947; in India by Article 300 and the sovereign/non-sovereign distinction, now largely abandoned in favour of State liability in a Welfare State.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Discuss the distinction between sovereign and non-sovereign functions of the State with reference to <i>State of Rajasthan v. Vidhyawati</i> and <i>Kasturilal Ralia Ram Jain v. State of U.P.</i></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The distinction.</b> The sovereign/non-sovereign distinction was laid down by Chief Justice Peacock in the <i>P &amp; O Steam Navigation Co. v. Secretary of State for India</i> (1861): “There is a great and clear distinction between acts done in the exercise of what are usually termed sovereign powers, and acts done in the conduct of undertakings which might be carried on by private individuals.” Where an act is done in the exercise of sovereign power (which cannot lawfully be exercised except by a sovereign or his delegate), <b>no action lies</b>; where the function could be performed by a private individual, <b>an action lies</b>.</p>
+          <p><b>Vidhyawati (State liable).</b> A government driver, taking a jeep car from a repair shop to the Collector's residence, negligently knocked down and killed a pedestrian. The Supreme Court held the State was <b>liable</b> — the driving of a car for the use of a civil servant is an activity <b>not connected in any manner with the sovereign power of the State</b>; it is a non-sovereign/civil activity. The Court held the State should be "as much liable for tort … as any other employer," and that the Crown's immunity was "blown up."</p>
+          <p><b>Kasturilal (State immune).</b> Gold seized from a jewellery firm under the Criminal Procedure Code was kept in the police Malkhana and misappropriated by a Head Constable. The Supreme Court held the State was <b>not liable</b>, because the powers to <b>arrest, search and seize</b> property are conferred by statute and are, "in the last analysis, powers which can be properly characterised as <b>sovereign powers</b>." The test: was the tortious act committed in discharge of statutory functions referable to the <b>delegation of the sovereign powers of the State</b>? If yes, no action lies; if not, it does.</p>
+          <p><b>The tension.</b> The two cases illustrate the difficulty of drawing the line. The Court in <i>Kasturilal</i> insisted that the area of employment referable to sovereign power must be <b>strictly determined</b>, and that the immunity must be confined to genuinely sovereign functions. It also expressed dissatisfaction that a citizen whose property was seized by process of law could be told he had no remedy, and urged the Legislature to enact a law on the lines of the Crown Proceedings Act 1947.</p>
+          <p><b>Conclusion.</b> The distinction, though historically the basis of State immunity, has proved difficult to apply and has been substantially abandoned in a Welfare State (see <i>Nagendra Rao</i>): barring the primary and inalienable functions of a constitutional government (defence, law &amp; order, administration of justice, repression of crime), the State now cannot claim immunity.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What is a "constitutional tort"? Explain the concept of sovereign immunity in relation to the violation of fundamental rights, with reference to <i>N. Nagendra Rao</i> and <i>Chairman, Railway Board v. Chandrima Das</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Constitutional tort.</b> A constitutional tort is a wrong committed by a public authority or its officers in violation of a citizen's <b>fundamental rights</b>, for which compensation is available in <b>public law</b> (by way of a writ under Article 32 or Article 226), and to which the defence of <b>sovereign immunity does not apply</b>. As the Supreme Court said in <i>Nilabati Behera</i> (quoted in <i>Nagendra Rao</i>): “Award of compensation in a proceeding under Article 32 … or under Article 226 … is a remedy available in <b>public law</b>, based on <b>strict liability for contravention of fundamental rights</b>, to which the principle of <b>sovereign immunity does not apply</b>, even though it may be available as a defence in private law in an action based on tort.”</p>
+          <p><b>Nagendra Rao (sovereign immunity whittled down).</b> Goods seized under the Essential Commodities Act were negligently kept and deteriorated; the owner was denied compensation by the High Court on sovereign immunity. The Supreme Court <b>allowed</b> the claim, holding that: the watertight distinction between sovereign and non-sovereign functions has largely disappeared in a Welfare State; the State is <b>vicariously liable</b> for the negligence of its officers in the discharge of statutory duties; sovereign immunity is available only for the truly <b>primary and inalienable functions</b> (administration of justice, maintenance of law and order, repression of crime) — and even then not where fundamental rights are violated.</p>
+          <p><b>Chandrima Das (constitutional tort applied).</b> A Bangladeshi national was gang-raped by railway employees at Yatri Niwas, Howrah. The Supreme Court upheld the award of Rs. 10 lakh, holding: (i) <b>rape</b> is violative of the right to life and dignity (Article 21); (ii) the right to life and personal liberty (Articles 20, 21, 22) is available to <b>"persons"</b>, including foreign nationals; (iii) the remedy is available under <b>public law</b> notwithstanding a private-law suit; (iv) the sovereign-immunity doctrine "has yielded to new theories and is no longer available in a Welfare State"; running the railways and the Yatri Niwas is a <b>commercial</b>, non-sovereign activity; and (v) the Union of India is <b>vicariously liable</b> for the tort of its employees.</p>
+          <p><b>Conclusion.</b> The concept of the constitutional tort is the modern mechanism by which the State is made directly and strictly liable — in public law, without the shield of sovereign immunity — when its officers violate a citizen's fundamental rights (especially life and personal liberty). It represents the final erosion of the sovereign-immunity doctrine.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Examine the recommendations of the Law Commission of India in its "First Report on the Liability of the State in Tort" (May 1956). To what extent have they been implemented?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Background.</b> Before the Constitution, the liability of the State in tort in India was based on the <i>P &amp; O Steam Navigation Co. v. Secretary of State for India</i> (1861) and the sovereign/non-sovereign distinction. In England, the Crown Proceedings Act, 1947 abolished the Crown's immunity. The Law Commission of India, in its <b>First Report on the Liability of the State in Tort (May 1956)</b>, examined this subject with a view to reform.</p>
+          <p><b>Recommendations.</b> The Report recommended that India should adopt a <b>statutory framework on the lines of the English Crown Proceedings Act, 1947</b>, so that the State is liable for the tortious acts of its servants done <b>in the course of their employment</b>, in the same manner as a private employer. Liability was to be subject to narrow exceptions — principally for acts done in the exercise of <b>sovereign</b> powers (war, foreign relations, etc.). It emphasised that the <b>victim should not be left without a remedy</b> merely because the wrongdoer was a public servant, and that the State is best able to bear the burden.</p>
+          <p><b>Extent of implementation.</b> The recommendations of the Law Commission have <b>not been fully implemented</b> — no comprehensive statute on the State's liability in tort has been enacted. Consequently, the law is still governed by <b>Article 300</b> of the Constitution and the <b>pre-Constitution case law</b> (the sovereign/non-sovereign distinction). The gaps identified by the Law Commission and by the courts have been partly filled by judicial development: the <b>constitutional tort</b> doctrine, under which the State is made strictly liable (without sovereign immunity) for violations of fundamental rights — as in <i>Rudul Sah</i>, <i>Nilabati Behera</i>, <i>Nagendra Rao</i>, and <i>Chandrima Das</i>.</p>
+          <p><b>Judicial observation.</b> In <i>Kasturilal</i>, the Supreme Court observed that the doctrine of sovereign immunity was borrowed from the English common law (the King commits no wrong), that this principle has been "substantially modified by the Crown Proceedings Act," and that "the remedy to cure this position lies in the hands of the Legislature." The Court was "disturbed by the thought that a citizen … has to be told … that he can make no claim against the State."</p>
+          <p><b>Conclusion.</b> The Law Commission's First Report recommended statutory reform on the English model, but it has not been enacted; the judiciary has instead progressively expanded State liability, culminating in the constitutional-tort doctrine.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Can a foreign national claim compensation from the State for violation of fundamental rights? Discuss with reference to <i>Chairman, Railway Board v. Chandrima Das</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The general rule.</b> Some fundamental rights are available only to <b>citizens</b> (e.g., Articles 15, 16, 19 — equality of opportunity, the basic freedoms), while others are available to <b>all "persons"</b>, including non-citizens. The Supreme Court in <i>Chandrima Das</i> (following <i>Anwar v. State of J&amp;K</i>) held that the rights under <b>Articles 20, 21 and 22</b> are available not only to "citizens" but also to <b>"persons,"</b> which includes non-citizens. These correspond to Articles 3, 7 and 9 of the Universal Declaration of Human Rights, 1948.</p>
+          <p><b>The application in Chandrima Das.</b> Smt. Hanuffa Khatoon, a Bangladeshi national, was gang-raped by railway employees at the Yatri Niwas, Howrah. The Court held that, although she was not a citizen of India, she was <b>entitled to the protection of her life</b> (Article 21) while in India. As a national of another country, she "could not be subjected to a treatment which was below dignity nor could she be subjected to physical violence at the hands of government employees who outraged her modesty." Her right under Article 21 was violated, and the State was under a <b>constitutional liability to pay compensation</b>.</p>
+          <p><b>Basis.</b> The right to <b>life</b> under Article 21 has been interpreted expansively (in <i>Kharak Singh</i>, <i>Bandhua Mukti Morcha</i>, <i>Bodhisattwa Gautam</i>) to mean the right to live with <b>human dignity</b>, free from exploitation. This right is not confined to citizens. As the Court put it: “Just as the State is under an obligation to protect the life of every citizen in this country, so also the State is under an obligation to protect the life of the persons who are not citizens.”</p>
+          <p><b>Conclusion.</b> A foreign national present in India is entitled to the protection of the right to life and personal liberty (Articles 20, 21, 22) and can claim compensation from the State for their violation, including by way of a constitutional-tort (public-law) remedy. The State is vicariously liable, and sovereign immunity is no defence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Vicarious liability</span> — liability of one person for the tort of another (e.g., master for servant).</li>
+        <li><span class="lat">Qui facit per alium facit per se</span> — "he who acts through another is deemed to act in person"; a basis of vicarious liability.</li>
+        <li><span class="lat">Respondeat superior</span> — "let the principal answer"; the master is responsible for the acts of the servant.</li>
+        <li><span class="lat">Course of employment</span> — the scope within which a servant's act must fall for the master's vicarious liability to arise.</li>
+        <li><span class="lat">Sovereign immunity</span> — the State's exemption from liability for acts done in the exercise of sovereign (governmental) powers.</li>
+        <li><span class="lat">Sovereign function</span> — a function which cannot lawfully be exercised except by the State (defence, law &amp; order, justice).</li>
+        <li><span class="lat">Non-sovereign function</span> — an activity which could be carried on by a private individual (railways, trade, hospitals).</li>
+        <li><span class="lat">Act of State</span> — an act of a sovereign or his delegate outside the jurisdiction of municipal courts (war, foreign relations).</li>
+        <li><span class="lat">Article 300</span> — the constitutional provision enabling the Union/States to sue and be sued in like cases as before the Constitution.</li>
+        <li><span class="lat">Constitutional tort</span> — a violation of a fundamental right by a public authority, for which compensation is payable in public law.</li>
+        <li><span class="lat">Parens patriae / custodia legis</span> — the State holding property in custody for the owner; the State is a bailee and must return it.</li>
+        <li><span class="lat">Crown Proceedings Act, 1947</span> — the English Act abolishing the Crown's immunity from tort liability.</li>
+        <li><span class="lat">Locus standi / PIL</span> — standing to sue; relaxed in public-interest litigation.</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 470" width="900" role="img" aria-label="Full topic 7 revision flowchart">
+          <defs><marker id="ar7" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#12283e"/></marker></defs>
+          <rect x="10" y="15" width="880" height="50" rx="12" fill="#12283e"/>
+          <text x="450" y="39" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">VICARIOUS LIABILITY OF THE STATE</text>
+          <line x1="450" y1="65" x2="450" y2="83" stroke="#12283e" stroke-width="2.5" marker-end="url(#ar7)"/>
+          <rect x="120" y="86" width="660" height="46" rx="12" fill="#b0781f"/>
+          <text x="450" y="112" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">Master (incl. State) liable for torts of servant in course of employment (qui facit / respondeat superior)</text>
+          <line x1="220" y1="132" x2="220" y2="152" stroke="#0f7a72" stroke-width="2.5" marker-end="url(#ar7)"/>
+          <line x1="680" y1="132" x2="680" y2="152" stroke="#a83a3a" stroke-width="2.5" marker-end="url(#ar7)"/>
+          <rect x="30" y="155" width="400" height="130" rx="12" fill="#0f7a72"/>
+          <text x="230" y="182" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">NON-SOVEREIGN → STATE LIABLE</text>
+          <text x="230" y="206" fill="#d8efe7" text-anchor="middle" font-size="11">railways, cars for officials,</text>
+          <text x="230" y="224" fill="#d8efe7" text-anchor="middle" font-size="11">trade, hospital, commercial</text>
+          <text x="230" y="248" fill="#d8efe7" text-anchor="middle" font-size="11" font-weight="700">Vidhyawati · Nagendra Rao · Chandrima Das</text>
+          <rect x="470" y="155" width="400" height="130" rx="12" fill="#a83a3a"/>
+          <text x="670" y="182" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">SOVEREIGN → IMMUNITY</text>
+          <text x="670" y="206" fill="#fbe5e5" text-anchor="middle" font-size="11">arrest/search/seizure, defence,</text>
+          <text x="670" y="224" fill="#fbe5e5" text-anchor="middle" font-size="11">law &amp; order, justice (Kasturilal)</text>
+          <text x="670" y="248" fill="#fbe5e5" text-anchor="middle" font-size="11" font-weight="700">NOW strictly limited (Nagendra Rao)</text>
+          <line x1="450" y1="285" x2="450" y2="303" stroke="#2e7d4f" stroke-width="2.5" marker-end="url(#ar7)"/>
+          <rect x="150" y="306" width="600" height="130" rx="12" fill="#2e7d4f"/>
+          <text x="450" y="332" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CONSTITUTIONAL TORT (public law)</text>
+          <text x="450" y="356" fill="#d8efe7" text-anchor="middle" font-size="11">writ under Art 32/226; violation of FUNDAMENTAL RIGHT (Art 21)</text>
+          <text x="450" y="378" fill="#d8efe7" text-anchor="middle" font-size="11">STRICT liability; SOVEREIGN IMMUNITY NOT a defence; available</text>
+          <text x="450" y="398" fill="#d8efe7" text-anchor="middle" font-size="11">to "persons" incl. non-citizens; PIL standing (Chandrima Das)</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 7.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">State liable for non-sovereign acts; Crown immunity "blown up"</span> — State of Rajasthan v. Vidhyawati.<br>
+        · <span class="pill r">State immune for sovereign acts (arrest/search/seizure)</span> — Kasturilal v. State of U.P.<br>
+        · <span class="pill t">Sovereign immunity whittled down; State liable for statutory negligence</span> — N. Nagendra Rao &amp; Co.<br>
+        · <span class="pill g">Constitutional tort; State vicariously liable for rape; non-citizens; PIL</span> — Chairman, Railway Board v. Chandrima Das.<br>
+        · <span class="pill o">Origin of the distinction (P &amp; O); Law Commission First Report 1956</span> — P &amp; O Steam Navigation Co.; Law Commission.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 7 (Vicarious Liability of the State).</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>State of Rajasthan v. Vidhyawati</i>, <i>Kasturilal Ralia Ram Jain v. State of U.P.</i>, <i>N. Nagendra Rao &amp; Co. v. State of A.P.</i> and <i>Chairman, Railway Board v. Chandrima Das</i>) together with the accompanying course notes. The theory of vicarious liability (basis, master–servant, course of employment) and the sovereign/non-sovereign distinction follow the DU framework sheet and Ratanlal &amp; Dhirajlal. The Law Commission's First Report (May 1956) and the constitutional-tort doctrine are explained from the casebook's own reasoning and the notes.</p>
+      <p style="margin:0"><b>Note:</b> The casebook citation for Case 40 is given in the running head as <i>Chairman Railway Board v. Chandrima Das</i>; the syllabus lists it as (2002) 2 SCC 465 — reference is made here accordingly. The Law Commission's First Report (1956) is summarised from standard references as it is not reproduced in the casebook. For revision only — refer to the full reports for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

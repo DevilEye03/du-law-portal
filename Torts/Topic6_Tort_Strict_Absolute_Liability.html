@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 6 · No Fault Liability — Strict &amp; Absolute Liability (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#fbf7f3; --card:#ffffff;
+    --navy:#2a1a2e; --navy2:#4a2a57; --gold:#b0781f; --teal:#0f7a72;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#6b3a8e; --line:#ede4e8;
+    --orange:#b9571f; --shadow:0 6px 24px rgba(42,26,46,.09);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#2a1a2e 0%,#4a2a57 55%,#8a5a2e 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,132,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:920px; margin:0 0 22px; color:#f0e6e4; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#f7f0ee}
+  .meta-strip{background:#1c101f; color:#dccfe0; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#f3ecf0; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fdf7e8; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#e9f5f2; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#4a2a57}
+  .lat{background:#f2ecf4; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#f5edf1; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fdfbfa}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e9e5f6; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#3a1d3f,#6b3a8e); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f5eef6; border-left:3px solid var(--purple); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#e9f5f2; border:1px solid #cbe7e2; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fdfcfa; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#f6edf2; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#dccfe0; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 6 — <span>No Fault Liability: Strict &amp; Absolute Liability</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering syllabus sub-heads (a) Meaning &amp; rationale of no-fault liability, (b) the Rule of Strict Liability (<i>Rylands v. Fletcher</i> — origin, scope, exceptions and application in India), (c) the Rule of Absolute Liability (<i>M.C. Mehta v. Union of India</i>), (d) the Bhopal Gas Leak Disaster, (e) no-fault liability under the Public Liability Insurance Act 1991, and (f) no-fault liability in hit-and-run cases under the Motor Vehicles Act 1988 — with all 4 prescribed cases (33–36) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">No-fault liability</span><span class="tag">Strict liability (Rylands)</span>
+      <span class="tag">Absolute liability (M.C. Mehta)</span><span class="tag">Bhopal Gas Disaster</span>
+      <span class="tag">Public Liability Insurance Act 1991</span><span class="tag">Motor Vehicles Act 1988</span>
+      <span class="tag">4 Case Laws</span><span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Meaning &amp; rationale of no-fault liability · (b) Rule of Strict Liability — <i>Rylands v. Fletcher</i>: origin, scope, exceptions, application in India · (c) Rule of Absolute Liability — <i>M.C. Mehta v. Union of India</i> · (d) Bhopal Gas Leak Disaster · (e) No-fault liability under the Public Liability Insurance Act, 1991 · (f) No-fault liability in hit-and-run cases under the Motor Vehicles Act, 1988</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#nofault">1. No-Fault Liability — Meaning &amp; Rationale</a>
+    <a href="#faultvs">Fault vs No-Fault Liability</a>
+    <a href="#strict">2. Strict Liability — the Rule in Rylands v. Fletcher</a>
+    <a href="#essentials">The 3 Essentials</a>
+    <a href="#exceptions">Exceptions to the Rule</a>
+    <a href="#india">Application of the Rule in India</a>
+    <a href="#absolute">3. Absolute Liability — M.C. Mehta</a>
+    <a href="#strictvsabsolute">Strict vs Absolute Liability</a>
+    <a href="#bhopal">4. The Bhopal Gas Leak Disaster</a>
+    <a href="#plia">5. Public Liability Insurance Act 1991</a>
+    <a href="#mva">6. Motor Vehicles Act 1988 — No-Fault &amp; Hit-and-Run</a>
+    <a class="n" href="#cases">The 4 Prescribed Case Laws</a>
+    <a href="#c33">33. Rylands v. Fletcher</a>
+    <a href="#c34">34. M.C. Mehta v. Union of India</a>
+    <a href="#c35">35. M.P. Electricity Board v. Shail Kumar</a>
+    <a href="#c36">36. Madras Railway Co. v. Zemindar of Carvatenagarum</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims &amp; Terms</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Meaning &amp; rationale</td><td>Why liability attaches without proof of fault</td><td><i>Rylands v. Fletcher</i>; <i>M.C. Mehta</i></td></tr>
+        <tr><td>(b) Strict liability</td><td>Origin, scope, exceptions of the rule in <i>Rylands</i>; application in India</td><td><i>Rylands</i>; <i>M.P. Electricity Board</i>; <i>Madras Railway</i></td></tr>
+        <tr><td>(c) Absolute liability</td><td>Stricter rule for hazardous industries (<i>M.C. Mehta</i>)</td><td><i>M.C. Mehta v. Union of India</i></td></tr>
+        <tr><td>(d) Bhopal Gas Leak</td><td>The disaster that catalysed the law</td><td>Bhopal Gas Leak Disaster (1984); <i>Union Carbide</i> settlement</td></tr>
+        <tr><td>(e) PLIA 1991</td><td>Statutory no-fault scheme for hazardous substances</td><td>Public Liability Insurance Act, 1991</td></tr>
+        <tr><td>(f) Motor Vehicles Act 1988</td><td>No-fault &amp; hit-and-run compensation</td><td>Sections 140, 161, 163A, MVA 1988</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>Rylands v. Fletcher</b> and <b>M.C. Mehta v. Union of India</b>, and <b>M.P. Electricity Board v. Shail Kumar</b>. <b>The Madras Railway Co. v. Zemindar of Carvatenagarum</b> is a leading Indian authority (the classic "common benefit / natural use" application of the rule) and is covered from the accompanying course notes. The doctrine of strict/absolute liability, its essentials and exceptions, follow the DU course notes (Ratanlal &amp; Dhirajlal; framework sheet). Statutory material (Bhopal, PLIA 1991, MVA 1988) is supported by the notes and the statutory text.</div>
+    </section>
+
+    <!-- NO FAULT -->
+    <section id="nofault">
+      <div class="sec-head"><div class="sec-num">1</div><h2>No-Fault Liability — Meaning &amp; Rationale</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The law of torts traditionally rests on the principle of <b>fault</b> — a person is liable only if he was <b>negligent</b> or <b>intentional</b> in causing harm. This is the "no liability without fault" principle. <b>No-fault (strict) liability</b> is an exception to this principle. In certain classes of cases the law imposes liability <b>irrespective of the defendant's state of mind</b> — without regard to whether he was careful or negligent, intended the harm or not. Liability is based on <b>blameworthiness</b> alone? No — it is based <b>not</b> on blameworthiness at all, but on the <span class="accent">dangerous nature of the thing or activity</span> which the defendant brought about.</p>
+      <blockquote class="quote">“There are certain classes of cases in which the liabilities of the defendants are stricter than in the ordinary cases. In these cases of strict liability, liability is imposed on the defendants irrespective of consideration of their mental state. Liability is not based on blameworthiness. Even innocent persons are held liable for harm caused to others on account of the escape of things from their land.” — DU course notes</blockquote>
+      <h3 id="faultvs">1.1 The rationale for no-fault liability</h3>
+      <p class="sec-sub" style="margin-top:-14px; margin-bottom:10px">Fault liability vs no-fault liability — at a glance.</p>
+      <ul>
+        <li><b>Social cost of dangerous activities:</b> Where an activity is inherently hazardous, the person undertaking it for <b>private profit</b> must absorb the <b>cost of any accident</b> as an item of overheads. (First justification in <i>M.C. Mehta</i>.)</li>
+        <li><b>The enterprise alone has the resources:</b> The enterprise carries on the hazardous activity has the <b>resources to discover and guard against hazards</b> and to warn against potential dangers. (Second justification in <i>M.C. Mehta</i>.)</li>
+        <li><b>Fairness to the victim:</b> The victim may be entirely innocent and have no means of proving fault; it is just that the person who created the risk should bear the loss.</li>
+        <li><b>Deterrence:</b> Imposing strict liability encourages the highest standards of safety in dangerous enterprises.</li>
+        <li><b>The "knowledge of danger" principle:</b> The person who brings a dangerous thing onto his land knows of its dangerous character and should be answerable if it escapes and causes harm.</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 230" width="780" role="img" aria-label="Fault vs no-fault liability">
+          <rect x="10" y="25" width="360" height="180" rx="12" fill="#b9571f"/>
+          <text x="190" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">FAULT LIABILITY</text>
+          <text x="190" y="78" fill="#fbe7dc" text-anchor="middle" font-size="11">(negligence — normal rule)</text>
+          <text x="190" y="106" fill="#fbe7dc" text-anchor="middle" font-size="11">Liability requires proof of</text>
+          <text x="190" y="124" fill="#fbe7dc" text-anchor="middle" font-size="11">fault (negligence/intention)</text>
+          <text x="190" y="150" fill="#fbe7dc" text-anchor="middle" font-size="11">Careful defendant → NOT liable</text>
+          <rect x="410" y="25" width="360" height="180" rx="12" fill="#0f7a72"/>
+          <text x="590" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">NO-FAULT (STRICT) LIABILITY</text>
+          <text x="590" y="78" fill="#d8efe7" text-anchor="middle" font-size="11">(exception — Rylands / Mehta)</text>
+          <text x="590" y="106" fill="#d8efe7" text-anchor="middle" font-size="11">Liability WITHOUT proof of fault</text>
+          <text x="590" y="124" fill="#d8efe7" text-anchor="middle" font-size="11">based on dangerous thing/activity</text>
+          <text x="590" y="150" fill="#d8efe7" text-anchor="middle" font-size="11">Careful defendant → STILL liable</text>
+        </svg>
+        <div class="cap">No-fault liability imposes liability without proof of negligence or intention.</div>
+      </div>
+      <div class="tipbox"><b>Key terminology:</b> <b>Strict liability</b> (from <i>Rylands v. Fletcher</i>) is "no-fault" liability, but it is <b>not absolute</b> — it is subject to <b>exceptions</b>. <b>Absolute liability</b> (from <i>M.C. Mehta</i>) is a still stricter form for <b>hazardous or inherently dangerous activities</b>, and is <b>subject to no exceptions</b>. Strict liability is a creature of the <b>common law</b>; no-fault liability in the statute books (PLIA 1991, MVA 1988) is a <b>statutory</b> extension.</div>
+    </section>
+
+    <!-- STRICT -->
+    <section id="strict">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Strict Liability — the Rule in Rylands v. Fletcher</h2></div>
+      <p class="sec-sub">Syllabus (b) — origin, scope, exceptions, application in India.</p>
+      <p>The rule of <b>strict liability</b> was laid down in <i>Rylands v. Fletcher</i> (1868) LR 3 HL 330. It is the origin of "no-fault liability" in English and Indian tort law, and is called <b>strict</b> rather than <b>absolute</b> liability precisely because of the <b>exceptions</b> that accompany it.</p>
+      <blockquote class="quote">“We think that the true rule of law is, that the person who, for his own purposes, brings on his land and collects and keeps there anything likely to do mischief if it escapes, must keep it in at his peril; and if he does not do so, is prima facie answerable for all the damage which is the natural consequence of its escape. He can excuse himself by showing that the escape was owing to the plaintiff’s default; or, perhaps, that the escape was the consequence of vis major, or the act of God…” — <b>Blackburn J</b>, <i>Rylands v. Fletcher</i> (Exchequer Chamber)</blockquote>
+      <blockquote class="quote">“If a person brings, or accumulates, on his land anything which, if it should escape, may cause damage to his neighbour, he does so at his peril. If it does escape, and cause damage, he is responsible, however careful he may have been, and whatever precautions he may have taken to prevent the damage.” — <b>Lord Cranworth</b>, <i>Rylands v. Fletcher</i> (House of Lords)</blockquote>
+      <p><b>Key features of the rule:</b></p>
+      <ul>
+        <li>It is a rule of <b>strict liability</b> — the defendant is liable even though he took every care and was not negligent.</li>
+        <li>It is <b>not absolute</b> — it is subject to well-defined exceptions.</li>
+        <li>The liability attaches because of the <b>dangerous nature of the thing</b> which the defendant brought onto his land, not because of any fault.</li>
+      </ul>
+
+      <h3 id="essentials">2.1 The three essentials of the rule</h3>
+      <p>For the rule in <i>Rylands v. Fletcher</i> to apply, <b>three requirements</b> must be satisfied:</p>
+      <ol>
+        <li><b>Some dangerous thing</b> must have been brought by a person onto (or collected and kept on) his land.</li>
+        <li>The thing must <b>escape</b> (from the area within the defendant's occupation and control).</li>
+        <li>The use of the land must be a <b>non-natural</b> use.</li>
+      </ol>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Rylands essentials">
+          <defs><marker id="an6" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2a1a2e"/></marker></defs>
+          <rect x="10" y="45" width="240" height="90" rx="12" fill="#2a1a2e"/>
+          <text x="130" y="72" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(1) DANGEROUS THING</text>
+          <text x="130" y="96" fill="#dccfe0" text-anchor="middle" font-size="11">brought/collected on land</text>
+          <text x="130" y="114" fill="#dccfe0" text-anchor="middle" font-size="11">(mischief if it escapes)</text>
+          <line x1="250" y1="90" x2="295" y2="90" stroke="#2a1a2e" stroke-width="2.5" marker-end="url(#an6)"/>
+          <rect x="300" y="45" width="240" height="90" rx="12" fill="#0f7a72"/>
+          <text x="420" y="72" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(2) ESCAPE</text>
+          <text x="420" y="96" fill="#d8efe7" text-anchor="middle" font-size="11">out of the area of</text>
+          <text x="420" y="114" fill="#d8efe7" text-anchor="middle" font-size="11">occupation &amp; control</text>
+          <line x1="540" y1="90" x2="585" y2="90" stroke="#2a1a2e" stroke-width="2.5" marker-end="url(#an6)"/>
+          <rect x="590" y="45" width="180" height="90" rx="12" fill="#b0781f"/>
+          <text x="680" y="72" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(3) NON-NATURAL</text>
+          <text x="680" y="96" fill="#fff" text-anchor="middle" font-size="11">use of the land</text>
+          <text x="680" y="114" fill="#fff" text-anchor="middle" font-size="11">(special use + danger)</text>
+          <text x="390" y="175" fill="#4a2a57" text-anchor="middle" font-size="12.5" font-style="italic">All three must co-exist for the rule to apply.</text>
+        </svg>
+        <div class="cap">The three essentials of the rule in Rylands v. Fletcher.</div>
+      </div>
+
+      <h4>(1) Dangerous thing</h4>
+      <p>The rule applies only when the thing collected is <b>dangerous</b> — i.e., a thing <b>likely to do mischief if it escapes</b>. The rule has been applied to <b>gas, electricity, oil, noxious fumes, colliery spoil, rusty wire from a decayed fence, vibrations, poisonous vegetation and flagpoles</b>, and (in <i>Attorney-General v. Corke</i>) even to <b>human beings</b>.</p>
+
+      <h4>(2) Escape</h4>
+      <p>The dangerous thing must <b>escape</b> beyond the area of the defendant's occupation and control. Where there is no escape, there is no liability. In <i>Read v. J. Lyons &amp; Co.</i> (1947), an explosion inside the defendant's factory injured a person lawfully on the premises — there was <b>no escape</b>, so the rule did not apply. In <i>Crowhurst v. Amersham Burial Board</i>, branches of a poisonous tree projecting onto the neighbour's land (which the neighbour's cattle ate) amounted to an escape; but in <i>Ponting v. Noakes</i>, where the plaintiff's <b>own</b> horses intruded over the boundary and died, there was no escape and no liability.</p>
+
+      <h4>(3) Non-natural use of land</h4>
+      <p>The use must be <b>non-natural</b> — a <b>special use</b> bringing with it <b>increased danger</b> to others, and not merely the ordinary use of land or such use as is proper for the general benefit of the community. What is natural or non-natural depends on <b>time and locality</b>. The rule has <b>no application</b> to things <b>naturally</b> on the land. In <i>Noble v. Harrison</i> and <i>Caminer v. Northern &amp; London Investment Trust</i>, the defendants were held <b>not</b> liable for the fall of a branch of a naturally growing, apparently sound tree.</p>
+      <div class="hint"><b>Scrutton LJ</b> on the rule's exceptions: “When stated without the exceptions it is a rule of absolute liability, but there are <b>so many exceptions</b> to it, that it is doubtful whether there is much of the rule left.”</div>
+
+      <h3 id="exceptions">2.2 Exceptions to the rule</h3>
+      <p>The main exceptions to the rule in <i>Rylands v. Fletcher</i> are:</p>
+      <div class="two-col">
+        <div class="aobx"><b style="color:var(--orange)">(1) Plaintiff's own default</b><p>Where the escape is due to the <b>fault of the plaintiff</b>, the defendant is not liable. If a person courts a known danger he cannot complain. Also, if the plaintiff's property is of <b>unusual sensitiveness</b>, the defendant may not be liable (<i>Eastern &amp; S. African Telegraph Co. v. Cape Town Tramways</i>).</p><p class="quote" style="font-size:13px"><i>Ponting v. Noakes</i>: plaintiff's horse intruded over the boundary and died — no recovery.</p></div>
+        <div class="aobx"><b style="color:var(--orange)">(2) Consent of the plaintiff (volenti)</b><p>Where the plaintiff has <b>expressly or impliedly agreed</b> to the presence of the dangerous thing, he cannot claim. <i>Peters v. Prince of Wales Theatre</i>: a plaintiff who knew a sprinkler system extended to his shop impliedly consented; its burst (due to severe frost) gave no claim.</p></div>
+      </div>
+      <div class="two-col">
+        <div class="aobx"><b style="color:var(--orange)">(3) Act of God (vis major)</b><p>An operation of <b>natural forces so unexpected</b> that no human foresight or skill could reasonably anticipate it. One is bound to provide only against the <b>ordinary</b> operations of nature, not against <b>her miracles</b>. <i>Nichols v. Marsland</i>: artificial lakes burst in an extraordinary, unprecedented rainfall — defendant not liable.</p></div>
+        <div class="aobx"><b style="color:var(--orange)">(4) Act of a stranger</b><p>The rule does <b>not</b> apply to damage caused by the act of a <b>stranger</b> (one who is neither the defendant's servant nor under his control). <i>Box v. Jubb</i>; <i>Rickards v. Lothian</i> (malicious third person blocked a pipe); <i>Perry v. Kendrick's Transport</i> (mischievous boys). But where the act comes to the defendant's <b>knowledge</b> and the damage could be prevented, he must take care — <i>North-Western Utilities v. London Guarantee</i> (public utility liable for a gas leak caused by conspicuous city works which it ought to have guarded against).</p></div>
+      </div>
+      <div class="two-col">
+        <div class="aobx"><b style="color:var(--orange)">(5) Common benefit</b><p>Where the dangerous thing is maintained for the <b>common benefit</b> of the plaintiff and the defendant, the latter is not liable. <i>Carstairs v. Taylor</i> (a rat gnawed a water box serving the common stair); <i>Anderson v. Oppenheimer</i>; <i>Kiddle v. City Business Properties</i>.</p></div>
+        <div class="aobx"><b style="color:var(--orange)">(6) Statutory authority</b><p>Where the escape is authorised by statute, and there is no negligence, the rule does not apply. <i>Green v. Chelsea Water Works Co.</i>: a main authorised by Parliament burst without negligence — the company was not liable. But statutory authority is <b>not</b> a defence where there is <b>negligence</b>.</p></div>
+      </div>
+      <div class="tipbox"><b>Note on the Madras Railway case (Case 36):</b> The "common benefit" and "non-natural use" exceptions were applied in India in <i>The Madras Railway Co. v. Zemindar of Carvatenagarum</i> — where irrigation tanks, necessary for the sustenance of <b>thousands of ryots</b> and for the <b>paramount collective interest</b>, burst, the landowner was held <b>not</b> liable under the rule (the water was a <b>natural/necessary</b> use, and the escape was by <i>vis major</i>).</div>
+
+      <h3 id="india">2.3 Application of the rule in India</h3>
+      <p>The rule in <i>Rylands v. Fletcher</i> has been applied, with its exceptions, in India. The leading Indian cases are <i>M.P. Electricity Board v. Shail Kumar</i> (Case 35) — where the exception of "act of a stranger" was <b>not</b> allowed because the Board ought to have anticipated the pilferage and guarded against the consequences of a live wire falling on a road — and <i>The Madras Railway Co. v. Zemindar of Carvatenagarum</i> (Case 36) — where the "common benefit"/"natural use" exception applied. In <i>M.C. Mehta</i>, the Supreme Court went <b>beyond</b> the rule and laid down <b>absolute liability</b> for hazardous industries, with <b>no exceptions</b> (see §3).</p>
+      <p>Per <i>M.P. Electricity Board</i>: “The doctrine of strict liability has its origin in English Common Law when it was propounded in the celebrated case of <i>Rylands v. Fletcher</i>.” The Board applied the rule to a case of electrocution by a live wire lying on a public road.</p>
+    </section>
+
+    <!-- ABSOLUTE -->
+    <section id="absolute">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Absolute Liability — the Rule in M.C. Mehta v. Union of India</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>In <b>M.C. Mehta v. Union of India</b> (AIR 1987 SC 1086), the <b>Oleum Gas Leak case</b>, the Supreme Court evolved a rule of <b>absolute liability</b> — a stricter standard than the rule in <i>Rylands v. Fletcher</i> — for enterprises engaged in <b>hazardous or inherently dangerous activities</b>. The Court refused to be bound by the English rule and its exceptions, holding that in a modern industrial society the law must evolve to meet the needs of the present-day economy.</p>
+      <blockquote class="quote">“We have to evolve new principles and lay down new norms which would adequately deal with the new problems which arise in a highly industrialised economy. We cannot allow our judicial thinking to be constricted by reference to the law as it prevails in England or for the matter of that in any other foreign country. We no longer need the crutches of a foreign legal order.” — <b>M.C. Mehta</b> (Chief Justice R.S. Pathak and the Bench)</blockquote>
+      <blockquote class="quote">“We are of the view that an enterprise which is engaged in a hazardous or inherently dangerous industry which poses a potential threat to the health and safety of the persons working in the factory and residing in the surrounding areas owes an <b>absolute and non-delegable duty</b> to the community to ensure that no harm results to anyone on account of the hazardous or inherently dangerous nature of the activity which it has undertaken. … if any harm results on account of such activity, the enterprise must be <b>absolutely liable</b> to compensate for such harm and it should be <b>no answer</b> to the enterprise to say that it had taken all reasonable care and that the harm occurred without any negligence on its part.” — <b>M.C. Mehta</b></blockquote>
+      <p><b>The rule:</b></p>
+      <blockquote class="quote">“Where an enterprise is engaged in a hazardous or inherently dangerous activity and harm results to anyone on account of an accident in the operation of such hazardous or inherently dangerous activity resulting, for example, in the escape of toxic gas, the enterprise is <b>strictly and absolutely liable</b> to compensate all those who are affected by the accident and <b>such liability is not subject to any of the exceptions</b> which operate vis-à-vis the tortious principle of strict liability under the rule in Rylands v. Fletcher.”</blockquote>
+      <h3>3.1 Two justifications for the rule</h3>
+      <ol>
+        <li><b>Social obligation / cost of the activity:</b> The enterprise carrying on a hazardous activity for <b>private profit</b> must compensate those who suffer, absorbing the loss as an <b>item of overheads</b>. Such activity can be tolerated only on the condition that the enterprise indemnifies all who suffer, regardless of whether it was carried on carefully.</li>
+        <li><b>The enterprise alone has the resources:</b> The enterprise alone has the <b>resources to discover and guard against hazards</b> and to provide warnings; if it makes any profit from the activity, it must bear the cost. The compensation must be correlated to the <b>magnitude and capacity of the enterprise</b> so that it has a <b>deterrent effect</b> — “the larger and more prosperous the enterprise, the greater must be the amount of compensation.”</li>
+      </ol>
+      <div class="warnbox"><b>Why it is called "absolute":</b> Unlike strict liability (which has the six exceptions discussed above), the rule in <i>M.C. Mehta</i> is <b>subject to no exceptions</b>. The defence that the defendant took all reasonable care (i.e., was not negligent) is <b>no answer</b>. The liability is <b>non-delegable</b> — the enterprise cannot escape by showing that the harm was due to an independent contractor or another.</div>
+    </section>
+
+    <!-- STRICT vs ABSOLUTE -->
+    <section id="strictvsabsolute">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Strict Liability vs Absolute Liability</h2></div>
+      <p class="sec-sub">A key exam distinction.</p>
+      <table>
+        <tr><th>Basis</th><th>Strict Liability (<i>Rylands</i>)</th><th>Absolute Liability (<i>M.C. Mehta</i>)</th></tr>
+        <tr><td>Source</td><td>Common law (English), 1868</td><td>Indian Supreme Court, 1987</td></tr>
+        <tr><td>Applies to</td><td>A <b>dangerous thing</b> brought on land, escaping, from non-natural use</td><td>An enterprise engaged in a <b>hazardous or inherently dangerous activity</b></td></tr>
+        <tr><td>Exceptions</td><td><b>Six exceptions</b> (plaintiff's default, consent, act of God, act of stranger, common benefit, statutory authority)</td><td><b>No exceptions</b> — "not subject to any of the exceptions"</td></tr>
+        <tr><td>Defence of "no negligence / took all care"</td><td>Available in some form</td><td><b>No answer</b> — the enterprise is liable even if it took all reasonable care</td></tr>
+        <tr><td>Nature of duty</td><td>Duty to keep the thing in at one's peril</td><td><b>Absolute and non-delegable duty</b> to the community</td></tr>
+        <tr><td>Measure of compensation</td><td>Ordinary damages</td><td><b>Correlated to the magnitude and capacity of the enterprise</b> (deterrent effect)</td></tr>
+        <tr><td>Key authority</td><td><i>Rylands v. Fletcher</i> (1868); <i>M.P. Electricity Board</i>; <i>Madras Railway</i></td><td><i>M.C. Mehta v. Union of India</i> (1987)</td></tr>
+      </table>
+    </section>
+
+    <!-- BHOPAL -->
+    <section id="bhopal">
+      <div class="sec-head"><div class="sec-num">4</div><h2>The Bhopal Gas Leak Disaster</h2></div>
+      <p class="sec-sub">Syllabus (d) — the catastrophic catalyst.</p>
+      <p>On the night of <b>2–3 December 1984</b>, a catastrophic leak of <b>methyl isocyanate (MIC) gas</b> occurred from the pesticide plant of <b>Union Carbide India Ltd. (UCIL)</b> at Bhopal, Madhya Pradesh. It is regarded as the <b>worst industrial disaster in history</b>: thousands of people were killed and hundreds of thousands were injured or permanently disabled; livestock and the environment were devastated. The plant was situated in a densely populated area, and the disaster revealed grave deficiencies in safety systems and in corporate responsibility.</p>
+      <p><b>The disaster's legal significance:</b></p>
+      <ul>
+        <li>The Bhopal tragedy <b>shook off the lethargy</b> of governments and industries, and <b>triggered a new wave of consciousness</b> about the hazards of industries using dangerous technology. As the Court noted in <i>M.C. Mehta</i>, “The Bhopal disaster shook off the lethargy of everyone and triggered off a new wave of consciousness and every government became alerted to the necessity of examining whether industries employing hazardous technology and producing dangerous commodities were equipped with proper and adequate safety and pollution control devices.”</li>
+        <li>It prompted the <b>evolution of the absolute liability principle</b> in Indian law (in <i>M.C. Mehta</i>, decided shortly after), and the enactment of <b>statutes</b>, including the <b>Environment (Protection) Act, 1986</b>, the <b>Public Liability Insurance Act, 1991</b>, and the <b>National Green Tribunal Act, 2010</b>.</li>
+        <li><b>Litigation and settlement:</b> The Union of India, acting as <i>parens patriae</i>, sued <b>Union Carbide Corporation (UCC)</b>. In 1989 the Supreme Court approved a settlement by which UCC paid <b>US $470 million</b> in <b>full and final settlement of all claims, rights and liabilities</b> arising out of the disaster. In <b>Union Carbide Corporation v. Union of India</b> (1991), the Supreme Court <b>upheld the validity of the settlement</b> (though it set aside the condition quashing the criminal proceedings). The settlement is criticised as grossly inadequate; the Court directed that if the fund was insufficient, the <b>deficiency was to be made good by the Union of India</b>, and ordered <b>group medical insurance</b> (no upper limit) for those who might later manifest gas-related ailments.</li>
+      </ul>
+      <div class="hint"><b>Why it matters for the exam:</b> The Bhopal disaster is the <b>factual and moral background</b> to the rule of <b>absolute liability</b>. It is the reason the Supreme Court in <i>M.C. Mehta</i> held that an enterprise engaged in a hazardous activity is liable <b>without exceptions</b>, and it directly led to the <b>Public Liability Insurance Act, 1991</b> (see §5).</div>
+    </section>
+
+    <!-- PLIA -->
+    <section id="plia">
+      <div class="sec-head"><div class="sec-num">5</div><h2>No-Fault Liability under the Public Liability Insurance Act, 1991</h2></div>
+      <p class="sec-sub">Syllabus (e).</p>
+      <p>The <b>Public Liability Insurance Act, 1991</b> was enacted in the wake of the <b>Bhopal gas leak disaster</b> to provide <b>immediate relief</b> to persons affected by accidents occurring while <b>handling hazardous substances</b>, and for matters connected therewith.</p>
+      <p><b>Key features (no-fault basis):</b></p>
+      <ul>
+        <li><b>No-fault liability:</b> Where death, injury or damage to property is caused by an accident while handling a <b>hazardous substance</b>, the <b>owner</b> is liable to give <b>relief</b> — without the need to prove negligence or fault. This is a <b>statutory recognition of the no-fault/absolute-liability doctrine</b> arising out of a hazardous activity.</li>
+        <li><b>Compulsory insurance:</b> Every owner who handles, or is likely to handle, a hazardous substance must <b>take out one or more insurance policies</b> before he starts handling the substance and <b>renew</b> them from time to time. This shifts the burden of compensation to the insurer and ensures that relief is <b>immediate and assured</b>.</li>
+        <li><b>Relief without barring a larger claim:</b> The relief under the Act is <b>in addition to</b> (and does not bar) the victim's right to seek <b>larger compensation</b> by way of a civil suit or under any other law; the amount received under the Act is to be <b>set off/reduced</b> from any higher recovery.</li>
+        <li><b>Schemes for relief:</b> The Act empowers the Central Government to establish a <b>relief fund</b> and to make rules for providing relief, and to prescribe the <b>amount of relief</b> for death, permanent/total disablement, injury and damage to property.</li>
+        <li><b>Purpose:</b> To balance the victim's urgent need for compensation against the owner's liability, by using <b>insurance</b> to fund immediate relief while preserving the victim's right to full compensation.</li>
+      </ul>
+      <div class="tipbox"><b>Significance:</b> The PLIA 1991 is the <b>statutory</b> embodiment of no-fault liability for hazardous industries. It is the legislative answer to the problem raised by the Bhopal and Oleum gas disasters — making insurance mandatory and relief swift, so that victims are not left to prove fault or embroiled in long litigation.</div>
+    </section>
+
+    <!-- MVA -->
+    <section id="mva">
+      <div class="sec-head"><div class="sec-num">6</div><h2>No-Fault Liability &amp; Hit-and-Run under the Motor Vehicles Act, 1988</h2></div>
+      <p class="sec-sub">Syllabus (f).</p>
+      <p>The <b>Motor Vehicles Act, 1988</b>, under <b>Chapter X (Sections 140–144)</b>, provides a statutory scheme of <b>no-fault liability</b> for motor-accident victims. This is a departure from the common-law principle that a claimant must prove rashness/negligence; it gives <b>speedy, fixed relief</b> without proof of fault.</p>
+      <h3>6.1 Section 140 — Liability on the principle of no-fault</h3>
+      <p>Where <b>death or permanent disablement</b> of any person results from an accident arising out of the use of a motor vehicle, the <b>owner of the vehicle(s)</b> is <b>jointly and severally</b> liable to pay compensation. The amount is a <b>fixed sum</b>:</p>
+      <table>
+        <tr><th>Head</th><th>Amount (fixed sum)</th></tr>
+        <tr><td>Death</td><td><b>Rs. 50,000</b> (raised from Rs. 25,000 with effect from 14-11-1994)</td></tr>
+        <tr><td>Permanent disablement</td><td><b>Rs. 25,000</b> (raised from Rs. 12,500)</td></tr>
+      </table>
+      <p><b>Non-requirement of fault:</b> The claimant is <b>not required to plead or prove</b> that the death/disablement was due to any <b>wrongful act, neglect or default</b> of the owner/driver or of any other person. Moreover, the claim is <b>not defeated</b> by the victim's own contributory negligence — the compensation is <b>not reduced</b> on account of the victim's share of responsibility. A claim under s. 140 is payable <b>at the threshold</b> of proceedings. (If larger compensation is later awarded under s. 166/s. 163A, the amount received under s. 140 is deducted.)</p>
+
+      <h3>6.2 Section 163A — Structured formula compensation</h3>
+      <p><b>Section 163A</b> provides for compensation on a <b>structured formula</b> basis in respect of accidents involving death or permanent disablement arising out of the use of a motor vehicle, <b>irrespective of the fault</b> of the parties. It is another no-fault mechanism giving a <b>fixed, formula-based</b> award (based on the "second schedule"), which the claimant need not litigate fully. It reflects the legislative intent to protect victims without subjecting them to prolonged proof of fault.</p>
+
+      <h3>6.3 Section 161 — Hit-and-run cases</h3>
+      <p><b>Section 161</b> deals with the special case of <b>hit-and-run motor accidents</b> — accidents arising from the use of a motor vehicle <b>the identity of which cannot be ascertained</b> in spite of reasonable efforts. Where the identity of the offending vehicle is unknown, the scheme provides for payment of a fixed sum of compensation as <b>ex gratia relief</b>:</p>
+      <table>
+        <tr><th>Head</th><th>Compensation (fixed sum)</th></tr>
+        <tr><td>Death</td><td><b>Rs. 25,000</b> (raised later to Rs. 40,000 / Rs. 2,00,000 by subsequent amendments)</td></tr>
+        <tr><td>Grievous hurt / injury</td><td><b>Rs. 12,500</b></td></tr>
+      </table>
+      <p><b>Essential feature of hit-and-run:</b> The offending vehicle is <b>untraceable</b>, so the compensation must come from the <b>Government/Solatium Fund</b> (the "Motor Vehicles Accident Fund" / "Solanum Fund" now administered under the Central Government's scheme), and the owner/insurer cannot be made liable since the vehicle is unidentified.</p>
+      <div class="hint"><b>Contrast — negligence vs no-fault in motor accidents:</b> A claim under <b>s. 166</b> (fault-based) requires proof of negligence; under <b>s. 140 / s. 163A</b> (no-fault) no proof of fault is needed and the amount is fixed/formula-based; under <b>s. 161</b> (hit-and-run) the vehicle is untraceable and the relief comes from the State fund. As the DU notes observe, in no-fault claims the right to compensation is <b>not affected</b> by the victim's wrongful act, neglect or default, and the quantum is <b>not reduced</b> on account of the victim's contributory negligence.</div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 4 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C33 -->
+      <div class="case" id="c33">
+        <div class="case-head">
+          <h4>33. Rylands v. Fletcher</h4>
+          <span class="cit">(1868) LR 3 HL 330</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Near Ainsworth in Lancashire, the defendants had a mill whose water supply they wanted to improve. They obtained <b>permission from Lord Wilton</b> to construct a <b>reservoir</b> on his land and retained <b>reputable engineers</b> to build it. Unknown to the defendants, the plaintiff, who had a <b>mineral lease</b> from Lord Wilton, had carried his workings to a point not far distant (though separated by the land of third parties). During construction the engineers came across some <b>disused mine shafts</b> and did not seal them properly, with the result that, when the completed reservoir was filled, <b>water flowed down those shafts and into the plaintiff's coal-mine</b>, causing damage later agreed at <b>£937</b>. The arbitrator stated a special case for the Court of Exchequer, which found for the defendants (Bramwell B. dissenting). The plaintiff took a writ of error to the Court of Exchequer Chamber, which gave him judgment; the defendants' appeal to the House of Lords was dismissed.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Is the obligation of a person who lawfully brings on his land something likely to do mischief if it escapes an <b>absolute duty to keep it in at his peril</b>, or merely a duty to take all reasonable and prudent precautions? In other words, is the defendant liable <b>without proof of negligence</b>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff (Fletcher):</b> The escape of water flooded his mine, causing damage, although he was free from all blame. The defendants brought the water onto the land and failed to keep it in; they are liable for the natural consequences of its escape, regardless of negligence.</p>
+            <p><b>Defendants (Rylands):</b> They were not negligent; they employed competent engineers, had no knowledge of the disused shafts, and had taken reasonable care. They should be liable only on proof of negligence, and could not be liable for a latent defect which ordinary prudence and skill could not detect.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Court of Exchequer Chamber</b> (Blackburn J.) and, on appeal, the <b>House of Lords</b> (Lord Cairns LC, Lord Cranworth) held for the plaintiff, laying down the rule of <b>strict liability</b>.</p>
+            <p class="quote">“We think that the true rule of law is, that the person who, for his own purposes, brings on his land and collects and keeps there anything likely to do mischief if it escapes, must keep it in at his peril; and if he does not do so, is prima facie answerable for all the damage which is the natural consequence of its escape. He can excuse himself by showing that the escape was owing to the plaintiff's default; or, perhaps, that the escape was the consequence of vis major, or the act of God…” — Blackburn J.</p>
+            <p class="quote">“The person whose grass or corn is eaten down by the escaping cattle of his neighbour, or whose mine is flooded by the water from his neighbour's reservoir, or whose cellar is invaded by the filth of his neighbour's privy … is damnified without any fault of his own; and it seems but reasonable and just that the neighbour who has brought something on his own property (which was not naturally there), harmless to others so long as it is confined to his own property, but which he knows will be mischievous if it gets on his neighbour's, should be obliged to make good the damage.” — Blackburn J.</p>
+            <p class="quote">“If a person brings, or accumulates, on his land anything which, if it should escape, may cause damage to his neighbour, he does so at his peril. If it does escape, and cause damage, he is responsible, however careful he may have been, and whatever precautions he may have taken.” — Lord Cranworth</p>
+            <p class="quote">Lord Cairns LC explained that a person may lawfully use his land in the "natural user" of it, and is not liable for the natural operations of the laws of nature; but if he uses it for a purpose which is a "non-natural use" — introducing into the land that which in its natural condition was not there, e.g. water in quantities and in a manner not the result of natural operations — he does so <b>at his own peril</b>, and is liable for the consequences of its escape.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>rule of strict liability</b>: a person who, for his own purposes, brings on his land and collects and keeps there anything <b>likely to do mischief if it escapes</b> must keep it in <b>at his peril</b>, and is <b>prima facie liable</b> for all the damage which is the natural consequence of its escape — <b>even though he was not negligent</b> and took every care. The liability arises from the <b>dangerous nature</b> of the thing, not from any fault. It is, however, subject to exceptions (plaintiff's default, act of God/vis major, consent, act of stranger, common benefit, statutory authority), and requires a <b>non-natural use</b> of land. It established the modern concept of <b>no-fault (strict) liability</b>.</div>
+        </div>
+      </div>
+
+      <!-- C34 -->
+      <div class="case" id="c34">
+        <div class="case-head">
+          <h4>34. M.C. Mehta v. Union of India</h4>
+          <span class="cit">AIR 1987 SC 1086 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p><b>Delhi Cloth &amp; General Mills Ltd. (DCM)</b> runs an enterprise called <b>Shriram Foods and Fertiliser Industries</b>, with several units engaged in manufacturing <b>caustic soda, chlorine, hydrochloric acid, stable bleaching powder, superphosphate, vanaspati, soap, sulphuric acid</b> and others. These units were set up in a single complex of about <b>76 acres</b>, surrounded by thickly populated colonies (Punjabi Bagh, West Patel Nagar, Karampura, Ashok Vihar, Tri Nagar, Shastri Nagar). The <b>caustic chlorine plant</b> had been commissioned in 1949, with about 263 employees.</p>
+            <p>Until the <b>Bhopal tragedy</b>, neither the management of Shriram nor the government seemed to have bothered about the hazardous character of the plant. The Bhopal disaster "shook off the lethargy of everyone." The Union Government commissioned a UK firm ("Technica") to report on the plant, and the Delhi Administration appointed the <b>Manmohan Singh Committee</b>; later the Court appointed the <b>Nilay Choudhary Committee</b>, and the Lt. Governor appointed the <b>Seturaman Committee</b>.</p>
+            <p>On <b>4 December 1985</b>, a <b>major leakage of oleum gas</b> took place from one of Shriram's units, affecting a large number of workers and the public — an advocate practising in the Tis Hazari Courts died of oleum inhalation. It resulted from the bursting of a tank containing oleum gas due to the collapse of the structure on which it was mounted. Within two days a <b>minor leakage</b> occurred from the joints of a pipe. The District Magistrate ordered Shriram to cease the manufacture and processing of hazardous chemicals within two days and to remove them within seven days. The matter came before the Court; since it raised substantial questions regarding <b>Articles 21 and 32</b> of the Constitution, it was referred to a <b>five-judge Bench</b>. The Court was asked, among other things, whether Shriram came within Article 12 ("State") and what was the <b>measure of liability of an enterprise engaged in a hazardous or inherently dangerous industry</b>.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Whether a private corporation under the <b>functional control of the State</b> and engaged in a hazardous activity is a "State" within Article 12 (so as to be subject to fundamental-rights discipline). (2) Whether the rule in <b>Rylands v. Fletcher</b> applies to determine the liability of an enterprise engaged in a <b>hazardous or inherently dangerous industry</b>, or whether a <b>new principle</b> should be evolved. (3) What is the <b>measure of compensation</b> in such cases?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Petitioner (M.C. Mehta):</b> Shriram, engaging in an activity that has the potential to invade the <b>right to life</b> (Article 21) of large sections of the people, should be subject to constitutional discipline; and the enterprise must be made liable for the harm caused by the escape of dangerous gas, on a principle stricter than <i>Rylands v. Fletcher</i>.</p>
+            <p><b>Respondents / management:</b> Shriram may not be a "State" under Article 12; the liability, if any, should be governed by the English rule in <i>Rylands v. Fletcher</i> with its exceptions (act of God, act of a stranger, statutory authority, etc.); and Shriram took all reasonable care.</p>
+            <p><b>Court's approach:</b> The Court declined to finally decide the Article 12 question, but held that it was <b>not bound</b> to follow the 19th-century English rule. It refused to remain constricted by foreign law, saying, "We no longer need the crutches of a foreign legal order," and evolved a principle suited to a modern industrial economy.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> laid down the rule of <b>absolute liability</b>.</p>
+            <p class="quote">“We are of the view that an enterprise which is engaged in a hazardous or inherently dangerous industry which poses a potential threat to the health and safety of the persons working in the factory and residing in the surrounding areas owes an <b>absolute and non-delegable duty</b> to the community to ensure that no harm results to anyone on account of the hazardous or inherently dangerous nature of the activity which it has undertaken. … if any harm results on account of such activity, the enterprise must be <b>absolutely liable</b> to compensate for such harm and it should be no answer to the enterprise to say that it had taken all reasonable care and that the harm occurred without any negligence on its part.”</p>
+            <p class="quote">“Where an enterprise is engaged in a hazardous or inherently dangerous activity and harm results to anyone on account of an accident in the operation of such hazardous or inherently dangerous activity resulting, for example, in the escape of toxic gas, the enterprise is <b>strictly and absolutely liable</b> to compensate all those who are affected by the accident and <b>such liability is not subject to any of the exceptions</b> which operate vis-à-vis the tortious principle of strict liability under the rule in Rylands v. Fletcher.”</p>
+            <p class="quote">“The measure of compensation … must be <b>correlated to the magnitude and capacity of the enterprise</b> because such compensation must have a <b>deterrent effect</b>. The larger and more prosperous the enterprise, greater must be the amount of compensation payable by it.”</p>
+            <p>The Court also held that, as the liability is an <b>item of overheads</b> of the enterprise (the enterprise has the resources to discover and guard against hazards), the enterprise must indemnify all who suffer. Since the Court did not decide the Article 12 question, it did not set up a special machinery for investigation of claims, but directed the <b>Delhi Legal Aid and Advice Board</b> to file actions for compensation on behalf of the victims against Shriram.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>rule of absolute liability</b> — a distinct, stricter Indian rule. An enterprise engaged in a <b>hazardous or inherently dangerous activity</b> owes an <b>absolute and non-delegable duty</b> to the community; if harm results (e.g., from the escape of toxic gas), the enterprise is <b>strictly and absolutely liable</b> to compensate, and such liability is <b>subject to no exceptions</b> (unlike strict liability under <i>Rylands v. Fletcher</i>). The defences of "reasonable care"/"no negligence" are <b>no answer</b>. The measure of compensation is <b>correlated to the magnitude and capacity of the enterprise</b> to have a <b>deterrent effect</b>. The Court also (implicitly) wedded tort liability to the <b>right to life (Article 21)</b>. This case is the Indian answer to the Bhopal disaster and the foundation of modern environmental/hazardous-industry liability in India.</div>
+        </div>
+      </div>
+
+      <!-- C35 -->
+      <div class="case" id="c35">
+        <div class="case-head">
+          <h4>35. M.P. Electricity Board v. Shail Kumar</h4>
+          <span class="cit">AIR 2002 SC 551 (SC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p><b>Jogendra Singh</b>, a 37-year-old workman, was riding a bicycle on the night of 23 August 1997 while returning from his factory, without any premonition of the impending disaster. The disaster lay on the road in the form of a <b>live electric wire</b>. There was rain and the road was partially inundated with water. The cyclist did not notice the live wire and rode over it; the wire twitched, snatched him, and he was <b>instantaneously electrocuted</b>, dying within minutes. His widow and minor son sued for compensation. It was not disputed that he was electrocuted by the live wire lying on the road. The <b>M.P. Electricity Board</b> contended that one <b>Hari Gaikwad</b> (third respondent) had tapped a wire from the main supply line to <b>siphon energy</b> for his own use, clandestinely, without the Board's notice, and that the line got unfastened and fell on the road over which the deceased rode, causing the electrocution. The trial court and the High Court held the Board liable under the rule of <b>strict liability</b>; the Board appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is the Board liable under the rule of <b>strict liability</b> for the electrocution? (2) Is the exception of "<b>act of a stranger</b>" (the pilferer) available to the Board as a defence?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Board (appellant):</b> The accident was caused by the <b>clandestine act of a third person</b> (the pilferer) of which the Board had no notice — a <b>novus actus / act of a stranger</b> — so it should be absolved from liability under the exception to the rule in <i>Rylands v. Fletcher</i>.</p>
+            <p><b>Claimants (respondents):</b> The Board, which deals with the dangerous commodity of electricity, has a duty to prevent pilferage and to ensure that a live wire on a public road does not electrocute a passer-by. The exception of "act of a stranger" is <b>not</b> available because the Board ought to have anticipated the risk and prevented its consequences. The Board is liable under the rule of <b>strict liability</b>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (<b>Thomas J.</b>) held the <b>exception of "act of a stranger" was not available</b> to the Board and <b>dismissed</b> the appeal, holding the Board liable.</p>
+            <p class="quote">“It is the look out of the managers of the supply system to prevent such pilferage by installing necessary devices. At any rate, if any live wire got snapped and fell on the public road the electric current thereon should automatically have been disrupted. Authorities manning such dangerous commodities have extra duty to chalk out measures to prevent such mishaps.”</p>
+            <p class="quote">“Even assuming that all such measures have been adopted, a person undertaking an activity involving hazardous or risky exposure to human life is liable under law of torts to compensate for the injury suffered by any other person, <b>irrespective of any negligence or carelessness</b> on the part of the managers of such undertaking. The basis of such liability is the foreseeable risk inherent in the very nature of such activity. The liability cast on such person is known, in law, as <b>‘strict liability’</b>.”</p>
+            <p class="quote">“The doctrine of strict liability has its origin in English Common Law when it was propounded in the celebrated case of Rylands v. Fletcher.”</p>
+            <p class="quote">“(13) In the present case, the Board made an endeavour to rely on the exception to the rule of strict liability (Rylands v. Fletcher) being ‘an act of stranger’. <b>The said exception is not available to the Board</b> as the act attributed to the third respondent should reasonably have been anticipated, or at any rate its consequences should have been prevented by the appellant-Board.” (citing <i>North-Western Utilities, Ltd. v. London Guarantee and Accident Co.</i>)</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> (i) The rule of <b>strict liability</b> applies in India to an undertaking carrying on an activity involving a <b>hazardous or risky exposure to human life</b> (here, the supply of electricity); the undertaking is liable for injury <b>irrespective of negligence or carelessness</b>. (ii) The exception of <b>"act of a stranger"</b> is <b>not</b> available where the act <b>ought to have been reasonably anticipated</b> or its <b>consequences prevented</b> — those who manage dangerous commodities (electricity) have an <b>extra duty</b> to prevent such mishaps. (iii) The Board was therefore liable to compensate the widow and son of the electrocuted workman. This case is the leading modern Indian application of the rule in <i>Rylands v. Fletcher</i> and of the limitation on the "act of stranger" exception.</div>
+        </div>
+      </div>
+
+      <!-- C36 -->
+      <div class="case" id="c36">
+        <div class="case-head">
+          <h4>36. The Madras Railway Co. v. The Zemindar of Carvatenagarum</h4>
+          <span class="cit">LR (1874) 1 IA 364 (PC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The <b>Zemindar</b> (landowner) of Karvetinagaram had large <b>irrigation tanks</b> in which water was stored. This system of tanks was followed throughout India, particularly in hilly districts, as it was <b>lawful and governed by custom and usage</b> — the water stored in the tanks was the <b>primary and only source of living and farming</b> for the ryots (farmers) living in those areas. On one such occasion, the <b>bulky water stored in the tanks burst and escaped</b>, damaging the plaintiff-appellant's property and <b>destroying three bridges of a railway</b>. The Railway Company brought a suit against the Zemindar for the recovery of damages. The defendant contended that the injury was not due to his negligence but was an effect of <b>vis major / act of God</b>, and that he should be absolved. <span class="pill o">Note</span> This case is not reproduced in the provided DU casebook; it is summarised here from the accompanying course notes.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is the storage and retention of water in the tanks a <b>natural or non-natural use</b> of land for the purposes of the rule in <i>Rylands v. Fletcher</i>? (2) Is the defendant (Zemindar) liable for the damage caused by the bursting of the tanks?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments &amp; reasoning below</span>
+            <p><b>Appellant (Railway Co.):</b> The water escaped from the defendant's land and damaged the railway bridges; under <i>Rylands v. Fletcher</i> the defendant must keep the dangerous thing in at his peril and is liable for the consequences of its escape.</p>
+            <p><b>Respondent (Zemindar):</b> The water was stored for the <b>benefit of the community</b> in a lawful manner; the injury was due to <b>vis major / act of God</b>; he took all reasonable precautions. The storage was not a non-natural use of the land.</p>
+            <p>The High Court reasoned on two grounds: (i) the water in the tanks was used by all the ryots of the area and was in the benefit of society, catering to the <b>"paramount collective interest"</b> — "the existence of these tanks is absolutely necessary, not only for the beneficial enjoyment of the defendant's land, but for the sustenance of thousands of his ryots"; so it would be inequitable to impose liability on the landowner. (ii) Particularly in Indian conditions, water is required to be stored in larger quantities; it is a <b>necessity</b>, so the exception of <b>non-natural use</b> applies; the notion of non-natural use varies from place to place and situation to situation.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The court held that, here, the <b>exception to the rule of strict liability applies</b>, and the defendant (Zemindar) <b>could not be directed to pay compensation</b> to the Railway Company, because the water was stored for a <b>natural use / common benefit</b> (essential for the sustenance of thousands of ryots — the <b>paramount collective interest</b>), and the escape was by <b>vis major / act of God</b>. The appeal of the Railway Company was dismissed.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The rule in <i>Rylands v. Fletcher</i> is <b>not absolute</b>, and in India the <b>exceptions of "common benefit"/"natural use"</b> and <b>"act of God"</b> were applied. Where a dangerous thing (water) is stored for the <b>benefit of the community</b> — here large irrigation tanks essential for the sustenance of thousands of ryots and for the <b>paramount collective interest</b> — the storage is a <b>natural/necessary use</b>, not a non-natural use, and the owner is <b>not liable</b> for an escape due to <i>vis major</i> (an extraordinary act of nature) if he took reasonable precautions. <b>What is "natural" or "non-natural" use depends on the time, place and circumstances</b> — a use that is natural in one society (e.g., large-scale water storage in India) may be non-natural in another. This is a leading Indian authority illustrating the <b>qualification of the strict-liability rule by its exceptions</b> and the <b>application of the rule in India</b>.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes the classic DU Topic-6 questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>State the essentials of the rule of strict liability as laid down in <i>Rylands v. Fletcher</i>. What are the exceptions to this rule? Give illustrations.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The rule.</b> In <i>Rylands v. Fletcher</i> (1868) LR 3 HL 330, Blackburn J. laid down the rule: “The person who, for his own purposes, brings on his land and collects and keeps there anything likely to do mischief if it escapes, must keep it in at his peril; and if he does not do so, is prima facie answerable for all the damage which is the natural consequence of its escape.” Lord Cranworth added: “If a person brings or accumulates on his land anything which, if it should escape, may cause damage to his neighbour, he does so at his peril.”</p>
+          <p><b>Essentials (the three conditions).</b> (1) <b>Dangerous thing:</b> some dangerous thing (likely to do mischief if it escapes) must be brought on/collected and kept on the land — e.g., gas, electricity, oil, noxious fumes, water, poisonous vegetation. (2) <b>Escape:</b> the thing must escape from the area within the defendant's occupation and control; if there is no escape (as in <i>Read v. J. Lyons &amp; Co.</i>, where a person was injured by an explosion on the defendant's own premises), there is no liability. (3) <b>Non-natural use of land:</b> a special use bringing with it increased danger to others, not the ordinary use or a use proper for the general benefit of the community (<i>Noble v. Harrison</i>; <i>Caminer</i>).</p>
+          <p><b>Exceptions (six).</b> (1) <b>Plaintiff's own default</b> — where the escape is due to the plaintiff's own fault or his property is of unusual sensitiveness (<i>Ponting v. Noakes</i>). (2) <b>Consent of the plaintiff</b> (volenti) — <i>Peters v. Prince of Wales Theatre</i>. (3) <b>Act of God</b> (vis major) — an operation of natural forces so unexpected that no human foresight could anticipate it, e.g., an unprecedented rainfall (<i>Nichols v. Marsland</i>). (4) <b>Act of a stranger</b> — of one not under the defendant's control; but not available where the act ought to have been anticipated or its consequences prevented (<i>North-Western Utilities</i>; <i>M.P. Electricity Board v. Shail Kumar</i>). (5) <b>Common benefit</b> — where the thing is maintained for the common benefit of both parties (<i>Carstairs v. Taylor</i>; <i>Madras Railway Co. v. Zemindar of Carvatenagarum</i>). (6) <b>Statutory authority</b> — where the escape is authorised by statute and there is no negligence (<i>Green v. Chelsea Water Works</i>).</p>
+          <p><b>Scope.</b> The rule is one of <b>strict</b>, not absolute, liability — as Scrutton LJ observed, "when stated without the exceptions it is a rule of absolute liability, but there are so many exceptions to it that it is doubtful whether there is much of the rule left."</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the rule of absolute liability laid down in <i>M.C. Mehta v. Union of India</i>. How does it differ from the rule of strict liability in <i>Rylands v. Fletcher</i>?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The rule of absolute liability.</b> In <i>M.C. Mehta v. Union of India</i> (AIR 1987 SC 1086), the "Oleum gas leak case", the Supreme Court evolved the rule of <b>absolute liability</b>. The Court held: “Where an enterprise is engaged in a hazardous or inherently dangerous activity and harm results to anyone on account of an accident in the operation of such hazardous or inherently dangerous activity resulting, for example, in the escape of toxic gas, the enterprise is <b>strictly and absolutely liable</b> to compensate all those who are affected by the accident and <b>such liability is not subject to any of the exceptions</b> which operate vis-à-vis the tortious principle of strict liability under the rule in Rylands v. Fletcher.” The enterprise owes an <b>absolute and non-delegable duty</b> to the community, and it is <b>no answer</b> to say it took all reasonable care and that the harm occurred without negligence.</p>
+          <p><b>Justifications.</b> (i) An enterprise carrying on a hazardous activity for <b>private profit</b> must absorb the cost of any accident as an <b>item of overheads</b>; it must indemnify all who suffer, regardless of whether it was carried on carefully. (ii) The enterprise <b>alone has the resources</b> to discover and guard against hazards and to warn. The measure of compensation must be <b>correlated to the magnitude and capacity of the enterprise</b> so that it has a <b>deterrent effect</b>.</p>
+          <p><b>Difference from strict liability.</b> Strict liability (Rylands): (i) requires a <b>dangerous thing</b> to escape from a <b>non-natural use</b> of land; (ii) is subject to <b>six exceptions</b> (plaintiff's default, consent, act of God, act of a stranger, common benefit, statutory authority); and (iii) the ordinary measure of damages. Absolute liability (Mehta): (i) applies to an enterprise engaged in a <b>hazardous or inherently dangerous activity</b>; (ii) is <b>subject to no exceptions</b> — not even the defence of "reasonable care"; and (iii) the compensation is <b>correlated to the magnitude/capacity of the enterprise</b> (deterrent). Strict liability is a common-law rule of the 19th century; absolute liability is an Indian rule evolved to meet the needs of a modern industrial economy, and is not bound by the English exceptions. The Court expressly said: “We no longer need the crutches of a foreign legal order.”</p>
+          <p><b>Conclusion.</b> Absolute liability is a <b>stricter and broader</b> rule than strict liability, designed to protect the community from the hazards of dangerous industries and to ensure full, uncompromised compensation.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What is no-fault liability? Explain its rationale, and its statutory recognition under the Public Liability Insurance Act, 1991, and in hit-and-run cases under the Motor Vehicles Act, 1988.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>No-fault liability.</b> It is liability imposed <b>irrespective of proof of negligence or intention</b> — the defendant is liable even if he was careful, because his conduct or activity is dangerous. It is an exception to the ordinary "no liability without fault" principle. Liability is based <b>not on blameworthiness</b> but on the dangerous nature of the thing or activity.</p>
+          <p><b>Rationale.</b> (i) The <b>social cost</b> of dangerous activities must be borne by those who profit from them; such an activity can be tolerated only if the enterprise indemnifies all who suffer (absorbing loss as an overhead). (ii) The <b>enterprise has the resources</b> to discover and guard against hazards. (iii) It is <b>fair to the innocent victim</b>, who may have no means of proving fault. (iv) It has a <b>deterrent effect</b>. (v) The person who brings a dangerous thing onto his land knows of its dangerous character and must keep it in at his peril.</p>
+          <p><b>Public Liability Insurance Act, 1991.</b> Enacted after the Bhopal disaster, it gives <b>no-fault</b> relief to persons affected by accidents while handling <b>hazardous substances</b>. The owner is liable to give <b>relief</b> without proof of fault. It makes <b>compulsory insurance</b> mandatory (before handling a hazardous substance and renewed periodically) so that relief is immediate and assured. The relief under the Act is <b>in addition to</b> the victim's right to claim larger compensation (the amount is set off). It is the <b>statutory embodiment of the absolute/no-fault liability doctrine</b> for hazardous industries.</p>
+          <p><b>Motor Vehicles Act, 1988 (no-fault &amp; hit-and-run).</b> Section 140 imposes <b>no-fault liability</b> on the owner(s) — joint and several — where death or permanent disablement results from a motor-accident; the amount is a fixed sum (Rs. 50,000 for death; Rs. 25,000 for permanent disablement). The claimant need <b>not plead or prove</b> any wrongful act, neglect or default of the owner/driver; and the claim is <b>not defeated or reduced</b> on account of the victim's own contributory negligence. Section 163A provides <b>structured-formula</b> compensation irrespective of fault. Section 161 deals with <b>hit-and-run</b> cases (where the offending vehicle cannot be identified): a fixed sum is payable (Rs. 25,000 for death; Rs. 12,500 for grievous injury, as increased by later amendments) from the <b>State/Solatium Fund</b>, since the owner/insurer cannot be identified.</p>
+          <p><b>Conclusion.</b> No-fault liability, born in the common law (Rylands, refined by M.C. Mehta), is now reinforced by statute — protecting victims of hazardous industries (PLIA 1991) and of road accidents (MVA 1988) by assuring swift, fault-free compensation.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Explain the Bhopal Gas Leak Disaster and its contribution to the development of the rule of absolute liability in India.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The disaster.</b> On the night of 2–3 December 1984, a catastrophic leak of <b>methyl isocyanate (MIC) gas</b> occurred from the pesticide plant of <b>Union Carbide India Ltd. (UCIL)</b> at Bhopal, Madhya Pradesh — the <b>worst industrial disaster in history</b>. Thousands died and hundreds of thousands were injured or permanently disabled; the plant was in a densely populated area. It exposed grave deficiencies in safety systems and in corporate responsibility.</p>
+          <p><b>Legal aftermath.</b> The Union of India, as <i>parens patriae</i>, sued <b>Union Carbide Corporation (UCC)</b>. In 1989 the Supreme Court approved a settlement by which UCC paid <b>US $470 million</b> in full and final settlement of all claims arising out of the disaster. In <i>Union Carbide Corporation v. Union of India</i> (1991) the Court <b>upheld the settlement</b> (though it set aside the condition quashing the criminal proceedings). The settlement is criticised as grossly inadequate; the Court directed that any deficiency in the fund be made good by the Union of India, and ordered group medical insurance (with no upper limit) for those who might later manifest gas-related ailments.</p>
+          <p><b>Contribution to the rule of absolute liability.</b> (i) Bhopal <b>catalysed a new awareness</b> about the hazards of industries using dangerous technology — as the Court said in <i>M.C. Mehta</i>, “The Bhopal disaster shook off the lethargy of everyone and triggered off a new wave of consciousness.” (ii) It directly led the Supreme Court, in the Oleum gas leak case (<i>M.C. Mehta</i>), to evolve the rule of <b>absolute liability</b> — an enterprise engaged in a hazardous/inherently dangerous activity is absolutely and non-delegably liable to compensate, and such liability is <b>not subject to any of the exceptions</b> of the rule in <i>Rylands v. Fletcher</i>, with compensation correlated to the magnitude/capacity of the enterprise (deterrent effect). (iii) It prompted <b>legislation</b>, including the <b>Environment (Protection) Act, 1986</b>, the <b>Public Liability Insurance Act, 1991</b> (making insurance mandatory and relief fault-free), and later the <b>National Green Tribunal Act, 2010</b>.</p>
+          <p><b>Conclusion.</b> The Bhopal disaster was the moral and factual spur for the Indian law of absolute liability and for statutory no-fault schemes; it fundamentally changed the way hazardous-industry liability and the right to life (Article 21) are understood in India.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Discuss the application of the rule of strict liability in India with reference to <i>M.P. Electricity Board v. Shail Kumar</i> and <i>The Madras Railway Co. v. Zemindar of Carvatenagarum</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Application in India.</b> The rule in <i>Rylands v. Fletcher</i> is applied in India, but with the Indian courts' own understanding of its scope and exceptions. Two contrasting cases illustrate its application.</p>
+          <p><b>M.P. Electricity Board v. Shail Kumar (AIR 2002 SC 551).</b> A workman was electrocuted by a live electric wire lying on a waterlogged road. The Board pleaded the exception of "<b>act of a stranger</b>" (a pilferer had tapped the line). The Supreme Court held the exception was <b>not available</b> because the Board ought to have anticipated the pilferage and prevented its consequences; those who manage such <b>dangerous commodities</b> as electricity have an <b>extra duty</b> to prevent such mishaps. The Court affirmed the rule of <b>strict liability</b>: “a person undertaking an activity involving hazardous or risky exposure to human life is liable … to compensate for the injury suffered by any other person, irrespective of any negligence or carelessness … The liability cast on such person is known, in law, as ‘strict liability’.” Thus the <b>limitation on the "act of stranger" exception</b> was applied.</p>
+          <p><b>The Madras Railway Co. v. Zemindar of Carvatenagarum (LR 1874 1 IA 364).</b> Irrigation tanks on the defendant's land burst and destroyed three railway bridges. The Railway Company invoked <i>Rylands v. Fletcher</i>. But the court applied the <b>exceptions of "common benefit"/"natural use"</b> and <b>"act of God"</b>. The water in the tanks was necessary for the <b>sustenance of thousands of ryots</b> and for the <b>paramount collective interest</b>; in Indian conditions the large-scale storage of water is a <b>necessity</b>, not a non-natural use; and the escape was by <i>vis major</i>. The landowner was held <b>not liable</b>. This shows that <b>what is "natural" or "non-natural" use depends on time, place and circumstances</b>.</p>
+          <p><b>Contrast.</b> In <i>M.P. Electricity Board</i>, the dangerous activity (electricity supply) was held to attract strict liability and the "stranger" exception was rejected; in <i>Madras Railway</i>, the storage of water for community benefit attracted the "common benefit"/"act of God" exceptions and the owner escaped. Both show the rule's operation <b>together with its exceptions</b> in India.</p>
+          <p><b>Conclusion.</b> The rule in <i>Rylands v. Fletcher</i> is applied in India, but Indian courts apply it pragmatically — insisting on high standards of care for dangerous activities (electricity), while recognising the exceptions (common benefit, act of God, natural use) where the dangerous thing is a necessity for the community.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">No-fault liability</span> — liability imposed irrespective of proof of negligence or intention; an exception to the fault principle.</li>
+        <li><span class="lat">Strict liability</span> — the rule in <i>Rylands v. Fletcher</i>: a person who keeps a dangerous thing on land at his peril, liable for its escape, subject to exceptions.</li>
+        <li><span class="lat">Absolute liability</span> — the rule in <i>M.C. Mehta</i>: the enterprise engaged in a hazardous/inherently dangerous activity is liable without exceptions.</li>
+        <li><span class="lat">Non-natural use of land</span> — a special use bringing increased danger to others, not the ordinary use of land.</li>
+        <li><span class="lat">Escape</span> — the dangerous thing leaving the area within the defendant's occupation and control.</li>
+        <li><span class="lat">Dangerous thing</span> — something likely to do mischief if it escapes (gas, electricity, water, oil, noxious fumes, etc.).</li>
+        <li><span class="lat">Act of God (vis major)</span> — an extraordinary operation of natural forces which no human foresight could anticipate.</li>
+        <li><span class="lat">Act of a stranger</span> — an act of a person not under the defendant's control; an exception, but not available if the act was foreseeable/proventable.</li>
+        <li><span class="lat">Common benefit</span> — the exception where the dangerous thing is maintained for the common benefit of both parties.</li>
+        <li><span class="lat">Statutory authority</span> — the exception where the escape is authorised by statute and there is no negligence.</li>
+        <li><span class="lat">Volenti non fit injuria</span> — consent; that to which a person consents cannot be an injury to him.</li>
+        <li><span class="lat">Parens patriae</span> — the State acting as guardian of the people (as in the Bhopal litigation).</li>
+        <li><span class="lat">Hit-and-run</span> — a motor accident where the offending vehicle's identity cannot be ascertained.</li>
+        <li><span class="lat">Non-delegable duty</span> — a duty which the defendant cannot discharge by delegating to another (used in <i>M.C. Mehta</i>).</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 470" width="900" role="img" aria-label="Full topic 6 revision flowchart">
+          <defs><marker id="ar6" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2a1a2e"/></marker></defs>
+          <rect x="10" y="15" width="880" height="50" rx="12" fill="#2a1a2e"/>
+          <text x="450" y="39" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">NO-FAULT LIABILITY — Strict &amp; Absolute Liability</text>
+          <line x1="450" y1="65" x2="450" y2="83" stroke="#2a1a2e" stroke-width="2.5" marker-end="url(#ar6)"/>
+          <rect x="140" y="86" width="620" height="46" rx="12" fill="#b0781f"/>
+          <text x="450" y="112" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">Liability WITHOUT proof of fault — based on dangerous thing / activity</text>
+          <line x1="220" y1="132" x2="220" y2="152" stroke="#0f7a72" stroke-width="2.5" marker-end="url(#ar6)"/>
+          <line x1="680" y1="132" x2="680" y2="152" stroke="#6b3a8e" stroke-width="2.5" marker-end="url(#ar6)"/>
+          <rect x="30" y="155" width="400" height="150" rx="12" fill="#0f7a72"/>
+          <text x="230" y="182" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">STRICT LIABILITY (Rylands 1868)</text>
+          <text x="230" y="206" fill="#d8efe7" text-anchor="middle" font-size="11">3 essentials: dangerous thing +</text>
+          <text x="230" y="224" fill="#d8efe7" text-anchor="middle" font-size="11">escape + non-natural use</text>
+          <text x="230" y="248" fill="#d8efe7" text-anchor="middle" font-size="11">6 EXCEPTIONS: default, consent,</text>
+          <text x="230" y="266" fill="#d8efe7" text-anchor="middle" font-size="11">act of God, stranger, common</text>
+          <text x="230" y="284" fill="#d8efe7" text-anchor="middle" font-size="11">benefit, statutory authority</text>
+          <rect x="470" y="155" width="400" height="150" rx="12" fill="#6b3a8e"/>
+          <text x="670" y="182" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">ABSOLUTE LIABILITY (M.C. Mehta 1987)</text>
+          <text x="670" y="206" fill="#e8def4" text-anchor="middle" font-size="11">applies to hazardous / inherently</text>
+          <text x="670" y="224" fill="#e8def4" text-anchor="middle" font-size="11">dangerous activity</text>
+          <text x="670" y="248" fill="#e8def4" text-anchor="middle" font-size="11">NO exceptions; "all reasonable care"</text>
+          <text x="670" y="266" fill="#e8def4" text-anchor="middle" font-size="11">is no answer; non-delegable duty;</text>
+          <text x="670" y="284" fill="#e8def4" text-anchor="middle" font-size="11">compensation ∝ size of enterprise</text>
+          <rect x="30" y="330" width="400" height="110" rx="12" fill="#b9571f"/>
+          <text x="230" y="356" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">STATUTORY NO-FAULT LIABILITY</text>
+          <text x="230" y="380" fill="#fbe7dc" text-anchor="middle" font-size="11">PLIA 1991: hazardous substances,</text>
+          <text x="230" y="398" fill="#fbe7dc" text-anchor="middle" font-size="11">compulsory insurance, immediate relief</text>
+          <text x="230" y="418" fill="#fbe7dc" text-anchor="middle" font-size="11">(no proof of fault)</text>
+          <rect x="470" y="330" width="400" height="110" rx="12" fill="#2e7d4f"/>
+          <text x="670" y="356" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">MVA 1988</text>
+          <text x="670" y="380" fill="#d8efe7" text-anchor="middle" font-size="11">s.140 no-fault (₹50,000 death/₹25,000</text>
+          <text x="670" y="398" fill="#d8efe7" text-anchor="middle" font-size="11">disablement); s.163A formula; </text>
+          <text x="670" y="418" fill="#d8efe7" text-anchor="middle" font-size="11">s.161 hit-and-run from State fund</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 6.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">Strict liability — origin (dangerous thing, escape, non-natural use; 6 exceptions)</span> — Rylands v. Fletcher.<br>
+        · <span class="pill p">Absolute liability — hazardous industry, no exceptions</span> — M.C. Mehta v. Union of India.<br>
+        · <span class="pill o">Strict liability application + "act of stranger" rejected (live wire)</span> — M.P. Electricity Board v. Shail Kumar.<br>
+        · <span class="pill o">"Common benefit"/"natural use"/"act of God" exceptions applied</span> — Madras Railway Co. v. Zemindar of Carvatenagarum.<br>
+        · <span class="pill r">Catalyst for absolute liability / statutory scheme</span> — Bhopal Gas Leak Disaster (1984).
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 6 (No-Fault Liability — Strict &amp; Absolute Liability).</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>Rylands v. Fletcher</i> and <i>M.C. Mehta v. Union of India</i>, and <i>M.P. Electricity Board v. Shail Kumar</i>) together with the accompanying course notes, which also explain <i>The Madras Railway Co. v. Zemindar of Carvatenagarum</i>. The doctrine, essentials and exceptions follow the DU framework sheet (Ratanlal &amp; Dhirajlal). Statutory material (Bhopal, PLIA 1991, MVA 1988) is supported by the notes and statutory text.</p>
+      <p style="margin:0"><b>Note:</b> <i>The Madras Railway Co. v. Zemindar of Carvatenagarum</i> (Case 36) is not reproduced in the provided casebook (which ends its strict-liability section with <i>M.P. Electricity Board</i>); it is summarised from the accompanying course notes as the leading Indian authority on the <b>common benefit / natural use / act of God</b> exceptions. Statutory amounts (MVA s.140, s.161) are as amended up to the standard DU reference; refer to the current statute for the latest figures. For revision only — refer to the full reports for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

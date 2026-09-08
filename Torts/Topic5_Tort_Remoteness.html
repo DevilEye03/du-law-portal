@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 5 · Remoteness of Damage (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f6f9f7; --card:#ffffff;
+    --navy:#10243a; --navy2:#1f4368; --gold:#b0781f; --teal:#0f7a6a;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e3ece7;
+    --orange:#b9571f; --shadow:0 6px 24px rgba(16,36,58,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#0c2338 0%,#1f4368 55%,#2f6d5a 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,138,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:920px; margin:0 0 22px; color:#dcebe6; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#eaf5f0}
+  .meta-strip{background:#081a2a; color:#c8dcec; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#e8f2ee; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fdf7e8; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#eaf6f3; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#1f4368}
+  .lat{background:#eaf1f6; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#e9f2ee; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fbfdfc}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#102c44,#2f6d5a); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f1f6f2; border-left:3px solid var(--teal); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#eaf6f3; border:1px solid #cce8e0; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfdfc; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#edf4f0; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#c8dcec; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 5 — <span>Remoteness of Damage</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering syllabus sub-heads (a) Causation (but-for test, concurrent &amp; consecutive causes, proof of causation), (b) Novus actus interveniens, (c) Tests of Remoteness (natural &amp; proximate consequence, directness, foreseeability), and (d) the Eggshell Skull Rule — with all 4 prescribed cases (29–32) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Causation</span><span class="tag">But-for test</span>
+      <span class="tag">Concurrent &amp; consecutive causes</span><span class="tag">Novus actus</span>
+      <span class="tag">Directness</span><span class="tag">Foreseeability</span>
+      <span class="tag">Eggshell skull</span><span class="tag">4 Case Laws</span>
+      <span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Causation — but-for test, concurrent causes, consecutive causes, proof of causation · (b) Novus actus interveniens · (c) Tests of Remoteness of Damage — natural &amp; proximate consequence, directness and foreseeability · (d) Eggshell Skull Rule</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#intro">1. What is Remoteness?</a>
+    <a href="#causation">2. Causation</a>
+    <a href="#butfor">The But-For Test</a>
+    <a href="#concurrent">Concurrent Causes</a>
+    <a href="#consecutive">Consecutive Causes</a>
+    <a href="#proof">Proof of Causation</a>
+    <a href="#novus">3. Novus Actus Interveniens</a>
+    <a href="#tests">4. Tests of Remoteness</a>
+    <a href="#directness">Directness (Polemis)</a>
+    <a href="#foresee">Foreseeability (Wagon Mound)</a>
+    <a href="#naturally">Natural &amp; Proximate</a>
+    <a href="#synthesis">Which test applies?</a>
+    <a href="#eggshell">5. The Eggshell Skull Rule</a>
+    <a class="n" href="#cases">The 4 Prescribed Case Laws</a>
+    <a href="#c29">29. Re Polemis</a>
+    <a href="#c30">30. The Wagon Mound</a>
+    <a href="#c31">31. Hughes v Lord Advocate</a>
+    <a href="#c32">32. Smith v Leech Brain</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims &amp; Terms</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Causation</td><td>But-for test; concurrent &amp; consecutive causes; proof of causation</td><td><i>Re Polemis</i>; <i>Liesbosch</i>; Lord Reid (<i>Dorset Yacht</i>)</td></tr>
+        <tr><td>(b) Novus actus interveniens</td><td>When an intervening act breaks the chain of causation</td><td><i>Haynes v. Harwood</i>; Greer LJ; Lord Reid (<i>Dorset Yacht</i>)</td></tr>
+        <tr><td>(c) Tests of Remoteness</td><td>Natural &amp; proximate consequence; directness; foreseeability</td><td><i>Re Polemis</i>; <i>Wagon Mound</i>; <i>Hughes v. Lord Advocate</i></td></tr>
+        <tr><td>(d) Eggshell Skull Rule</td><td>Taking the victim as you find him</td><td><i>Smith v. Leech Brain</i>; Lord Parker</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>Re Polemis</b>, <b>The Wagon Mound</b> and <b>Hughes v. Lord Advocate</b>. <b>Smith v. Leech Brain &amp; Co.</b> is not reproduced in the casebook but is explained in the accompanying course notes (facts and the application of the <b>eggshell skull rule</b>), summarised here. The theory of causation, novus actus and remoteness follows the DU casebook's own reasoning (via <i>Haynes v. Harwood</i>, <i>Dorset Yacht Co.</i>, <i>Rajkot Municipal Corp.</i> and Ratanlal &amp; Dhirajlal).</div>
+    </section>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <div class="sec-head"><div class="sec-num">1</div><h2>What is Remoteness of Damage?</h2></div>
+      <p class="sec-sub">The "too remote" limitation on the right to recover.</p>
+      <p>Even where a defendant has been <b>negligent</b> (i.e., owed the plaintiff a duty of care and breached it), he is not liable for <b>all</b> the consequences of his breach. The law limits recovery to damage which is <b>not too remote</b> a consequence of the negligence. <b>Remoteness of damage</b> is the doctrine that a tortfeasor is liable only for such consequences of his wrongful act as are <b>not too remote</b>, and it is a question of <b>law</b> (for the judge), not of fact.</p>
+      <p>The concept of remoteness is closely linked to, but distinct from, <b>causation</b>. Causation is about whether the breach <b>in fact caused</b> the damage; remoteness is about whether the damage was the <b>right kind</b> of consequence to make the defendant responsible. As the casebook notes (via <i>The Wagon Mound</i>), “There can be no liability until the damage has been done. It is not the act but the consequences on which tortious liability is founded. Just as there is no such thing as negligence in the air, so there is no such thing as liability in the air.”</p>
+      <p>Three questions arise in sequence in a negligence action:</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 150" width="780" role="img" aria-label="Sequence of liability">
+          <defs><marker id="an" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#10243a"/></marker></defs>
+          <rect x="10" y="45" width="230" height="70" rx="12" fill="#10243a"/>
+          <text x="125" y="70" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(1) Wrongful ACT</text>
+          <text x="125" y="90" fill="#cfe0ec" text-anchor="middle" font-size="11">duty + breach</text>
+          <line x1="240" y1="80" x2="285" y2="80" stroke="#10243a" stroke-width="2.5" marker-end="url(#an)"/>
+          <rect x="290" y="45" width="230" height="70" rx="12" fill="#1f4368"/>
+          <text x="405" y="70" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(2) CAUSATION</text>
+          <text x="405" y="90" fill="#cfe0ec" text-anchor="middle" font-size="11">but-for; no novus actus</text>
+          <line x1="520" y1="80" x2="565" y2="80" stroke="#10243a" stroke-width="2.5" marker-end="url(#an)"/>
+          <rect x="570" y="45" width="200" height="70" rx="12" fill="#2f6d5a"/>
+          <text x="670" y="70" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">(3) REMOTENESS</text>
+          <text x="670" y="90" fill="#d8efe7" text-anchor="middle" font-size="11">kind of damage foreseeable</text>
+        </svg>
+        <div class="cap">Liability in negligence = wrongful act + causation + non-remoteness.</div>
+      </div>
+    </section>
+
+    <!-- CAUSATION -->
+    <section id="causation">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Causation — The First Requirement</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The plaintiff must establish a <b>causal link</b> between the defendant’s breach of duty and the damage. This is the question of <b>causation in fact</b>, addressed by the <b>but-for test</b>. But causation is not confined to the but-for test; the law also deals with <b>concurrent</b> and <b>consecutive</b> causes, and requires the defendant’s breach to be a <b>substantial / real</b> cause, not merely a backdrop.</p>
+      <p>Lord Reid in <i>Dorset Yacht Co. v. Home Office</i> (1970) drew a vital distinction for the entire doctrine:</p>
+      <blockquote class="quote">“There is an <b>obvious difference</b> between a case where all the links between the carelessness and the damage are inanimate so that, looking back after the event, it can be seen that the damage was in fact the inevitable result of the careless act or omission, and a case where <b>one of the links is some human action</b>. In the former case, the damage was in fact caused by the careless conduct, however unforeseeable it might have been at the time that anything like that would happen. … On the other hand, if human action (other than an instinctive reaction) is one of the links in the chain, it cannot be said that, looking back, the damage was the inevitable result of the careless conduct.” — <b>Lord Reid</b></blockquote>
+      <p>The <b>convenient phrase</b> <i>novus actus interveniens</i> denotes those cases where such human action is regarded as <b>breaking the chain</b> and preventing the damage from being held to have been caused by the careless conduct (see §3). But not every human intervention breaks the chain.</p>
+
+      <h3 id="butfor">2.1 The But-For Test</h3>
+      <p>The <b>but-for test</b> (the “sine qua non” test) asks: <b>would the damage have occurred but for the defendant’s breach?</b> If the answer is <b>no</b> (the damage would not have happened but for the breach), the breach is a cause in fact. If the damage would have occurred <b>anyway</b> (even without the breach), the breach is not a cause. This is the basic, and in most cases sufficient, test of causation in fact.</p>
+      <ul>
+        <li>It is a <b>necessary</b>, not always sufficient, condition: a breach may satisfy the but-for test and yet be too remote, or a <i>novus actus</i> may intervene.</li>
+        <li>Where there is <b>evidence</b> that the damage would have happened regardless (e.g., the natural progress of an illness), the but-for test fails and the defendant is not liable for that portion.</li>
+        <li><b>Proof of causation</b> is on the plaintiff on the balance of probabilities; where the defendant has raised the possibility of the damage occurring anyway, the plaintiff must show the breach materially contributed.</li>
+      </ul>
+
+      <h3 id="concurrent">2.2 Concurrent Causes</h3>
+      <p><b>Concurrent causes</b> are two or more <b>independent</b> causes that operate <b>at the same time</b> to produce a single result. Each is a cause if the damage would not have occurred without it (the but-for test is satisfied as to each independently). Two situations arise:</p>
+      <ul>
+        <li><b>Two independent tortious acts combine</b> to cause a single indivisible injury. Each wrongdoer may be liable (joint and several liability of <b>joint tort-feasors</b> — cf. <i>Khenyei</i>, Topic 3). This is the situation of <b>composite negligence</b>.</li>
+        <li><b>An independent cause also operates</b>, e.g., the defendant’s negligence and a <b>supervening</b> event both contribute. In such cases the court apportions or determines the dominant cause.</li>
+      </ul>
+
+      <h3 id="consecutive">2.3 Consecutive Causes</h3>
+      <p><b>Consecutive causes</b> operate <b>one after the other</b> (in sequence), each adding to or altering the damage. The law must determine whether the later cause is an <b>independent intervening cause</b> (breaking the chain) or merely a <b>development</b> of the risk created by the defendant. For example, if the defendant injures the plaintiff and the plaintiff later suffers further injury in a <b>spontaneous, unforeseeable</b> event, that later event may be a supervening cause; but if the later injury is a <b>foreseeable consequence</b> of the first (e.g., complications, or an injury during reasonable medical treatment), the defendant remains liable for the whole.</p>
+      <div class="tipbox"><b>Distinction:</b> <b>Concurrent</b> causes operate <b>simultaneously</b> to produce one result; <b>consecutive</b> causes operate <b>successively</b>, each producing (or adding to) damage. Concurrent causes = joint liability; consecutive causes = the later event may sever liability.</div>
+
+      <h3 id="proof">2.4 Proof of Causation</h3>
+      <p>Causation is a question of fact, to be proved by the plaintiff on the <b>balance of probabilities</b>. It must be proved as a <b>real and effective</b> cause — the breach must be a <b>substantial factor</b> in producing the damage, not merely a trivial or background condition. Where the precise cause is within the defendant’s knowledge, the difficulty of proof may be alleviated (cf. <i>res ipsa loquitur</i>), but the burden of establishing the causal link remains on the plaintiff.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Causation tests">
+          <rect x="10" y="25" width="240" height="140" rx="12" fill="#1f4368"/>
+          <text x="130" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">BUT-FOR test</text>
+          <text x="130" y="76" fill="#cfe0ec" text-anchor="middle" font-size="11">"Would damage have</text>
+          <text x="130" y="94" fill="#cfe0ec" text-anchor="middle" font-size="11">occurred but for the breach?"</text>
+          <text x="130" y="118" fill="#cfe0ec" text-anchor="middle" font-size="11">if NO → breach caused it</text>
+          <text x="130" y="136" fill="#cfe0ec" text-anchor="middle" font-size="11">if YES → not a cause</text>
+          <rect x="270" y="25" width="240" height="140" rx="12" fill="#0f7a6a"/>
+          <text x="390" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CONCURRENT causes</text>
+          <text x="390" y="76" fill="#d8efe7" text-anchor="middle" font-size="11">two+ independent causes</text>
+          <text x="390" y="94" fill="#d8efe7" text-anchor="middle" font-size="11">operating at the SAME time</text>
+          <text x="390" y="118" fill="#d8efe7" text-anchor="middle" font-size="11">→ joint liability</text>
+          <rect x="530" y="25" width="240" height="140" rx="12" fill="#b9571f"/>
+          <text x="650" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CONSECUTIVE causes</text>
+          <text x="650" y="76" fill="#fbe7dc" text-anchor="middle" font-size="11">causes operating one</text>
+          <text x="650" y="94" fill="#fbe7dc" text-anchor="middle" font-size="11">after another</text>
+          <text x="650" y="118" fill="#fbe7dc" text-anchor="middle" font-size="11">→ later event may break</text>
+          <text x="650" y="136" fill="#fbe7dc" text-anchor="middle" font-size="11">   the chain (novus actus)</text>
+        </svg>
+        <div class="cap">The but-for test and the treatment of concurrent/consecutive causes.</div>
+      </div>
+    </section>
+
+    <!-- NOVUS ACTUS -->
+    <section id="novus">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Novus Actus Interveniens</h2></div>
+      <p class="sec-sub">Syllabus (b) — the "new intervening act" that breaks the chain.</p>
+      <p>A <span class="lat">novus actus interveniens</span> (or <i>nova causa</i>) is a <b>new, independent intervening act</b> — human action (or sometimes a supervening event) — which <b>breaks the chain of causation</b> between the defendant’s negligence and the damage, so that the defendant is not liable. It is an act of a <b>third party</b> (not the defendant, and not the plaintiff’s instinctive reaction) which is <b>not foreseeable</b> and which supersedes the defendant’s negligence.</p>
+      <blockquote class="quote">“If what is relied upon as novus actus interveniens is <b>the very kind of thing which is likely to happen</b> if the want of care which is alleged takes place, the principle embodied in the maxim <b>is no defence</b>. The whole question is whether or not … the accident can be said to be the ‘natural and probable result’ of the breach of duty. If it is the very thing which ought to be anticipated … it is no defence; it is only a step in the way of proving that the damage is the result of the wrongful act.” — <b>Greer LJ</b>, <i>Haynes v. Harwood</i> (approved in <i>Dorset Yacht Co.</i>)</blockquote>
+      <p><b>Key rules:</b></p>
+      <ul>
+        <li>It is <b>not</b> true that any intervening act of a third person automatically breaks the chain. As Greer LJ put it (in <i>Haynes</i>, citing <i>Lynch v. Nurdin</i>): “the law having been accepted since 1841 … it is sufficient by itself to decide the question that there is <b>no absolute rule that an intervening act of some third person who is not the defendant is in itself enough to break the chain of causation</b>.”</li>
+        <li>The test is whether the intervening act was <b>reasonably foreseeable</b>. If the intervening act is <b>the very kind of thing</b> that the defendant ought to have anticipated (e.g., mischievous children setting a cart in motion, a rescuer coming to help), it is <b>not</b> a novus actus — the defendant is still liable.</li>
+        <li>A <b>rescue</b> undertaken in response to the danger the defendant created is <b>not</b> a novus actus — the wrongdoer is liable to the rescuer (<i>Haynes v. Harwood</i>; <i>Chadwick v. British Railways Board</i>). As <b>Cardozo J.</b> said (quoted in <i>Alcock</i>): “Danger invites rescue. The cry of distress is the summons to relief. … The wrong that imperils life is a wrong to the imperilled victim; <b>it is a wrong also to his rescuer</b>.”</li>
+        <li>Where the intervening act is <b>unforeseeable</b> and <b>independent</b> (e.g., a deliberate, unforeseeable act of a third party, or a wholly independent natural event), it may break the chain and the defendant escapes liability.</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 210" width="780" role="img" aria-label="Novus actus flowchart">
+          <rect x="10" y="20" width="230" height="80" rx="12" fill="#10243a"/>
+          <text x="125" y="48" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">D's negligent act</text>
+          <text x="125" y="68" fill="#cfe0ec" text-anchor="middle" font-size="11">creates a risk</text>
+          <line x1="240" y1="60" x2="290" y2="60" stroke="#10243a" stroke-width="2.5"/>
+          <rect x="290" y="20" width="230" height="80" rx="12" fill="#b9571f"/>
+          <text x="405" y="48" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">Intervening act?</text>
+          <text x="405" y="68" fill="#fbe7dc" text-anchor="middle" font-size="11">by a 3rd party / event</text>
+          <line x1="520" y1="40" x2="575" y2="40" stroke="#2e7d4f" stroke-width="2.5"/>
+          <rect x="575" y="10" width="195" height="55" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="672" y="38" fill="#2e7d4f" text-anchor="middle" font-size="11" font-weight="700">Foreseeable &amp; likely</text>
+          <text x="672" y="54" fill="#2e7d4f" text-anchor="middle" font-size="11">→ NOT a novus actus → D liable</text>
+          <line x1="520" y1="80" x2="575" y2="80" stroke="#a83a3a" stroke-width="2.5"/>
+          <rect x="575" y="70" width="195" height="55" rx="10" fill="#fbeeee" stroke="#a83a3a"/>
+          <text x="672" y="98" fill="#a83a3a" text-anchor="middle" font-size="11" font-weight="700">Unforeseeable &amp; independent</text>
+          <text x="672" y="114" fill="#a83a3a" text-anchor="middle" font-size="11">→ chain broken → NOT liable</text>
+          <text x="405" y="180" fill="#1f4368" text-anchor="middle" font-size="12.5" font-style="italic">The intervening act must be the kind of thing which the defendant ought to have anticipated.</text>
+        </svg>
+        <div class="cap">When an intervening act does or does not break the chain of causation.</div>
+      </div>
+    </section>
+
+    <!-- TESTS -->
+    <section id="tests">
+      <div class="sec-head"><div class="sec-num">4</div><h2>Tests of Remoteness of Damage</h2></div>
+      <p class="sec-sub">Syllabus (c) — three competing formulations.</p>
+      <p>Three tests have been advanced to determine whether the damage is recoverable or too remote: the <b>natural and proximate consequence</b> test, the <b>directness</b> test, and the <b>foreseeability</b> test. The two great authorities (<i>Re Polemis</i> and <i>The Wagon Mound</i>) represent the directness test and the foreseeability test respectively.</p>
+
+      <h3 id="directness">4.1 The Directness Test (Re Polemis)</h3>
+      <p>Under this test, once the defendant’s act is <b>negligent</b>, he is liable for <b>all</b> damage that is the <b>direct</b> consequence of the act, <b>whether or not it was reasonably foreseeable</b>. This was laid down in <i>Re Polemis</i> (1921):</p>
+      <blockquote class="quote">“Given the breach of duty which constitutes the negligence, and given the damage as a direct result of that negligence, the anticipation of the person whose negligent act has produced the damage appear to me to be irrelevante.” — <b>Bankes LJ</b><br><br>
+      “The presence or absence of reasonable anticipation of damage determines the legal quality of the act as negligent or innocent. If it be thus determined to be negligent, then the question whether particular damages are recoverable depends only on the answer to the question whether they are the <b>direct consequence</b> of the act.” — <b>Warrington LJ</b></blockquote>
+      <p>Under this test, in <i>Re Polemis</i>, the defendants were liable for the destruction of a ship by fire, even though the fire was not foreseeable, because the fire was the <b>direct</b> physical consequence of the negligent dropping of a plank.</p>
+
+      <h3 id="foresee">4.2 The Foreseeability Test (The Wagon Mound)</h3>
+      <p>Under this test, the defendant is liable only for damage of a <b>kind that was reasonably foreseeable</b>. Foreseeability replaces directness. It was laid down by the Judicial Committee of the Privy Council in <i>Overseas Tankship (U.K.) Ltd. v. Morts Dock &amp; Engineering Co.</i> (<i>The Wagon Mound</i>, 1961), which <b>overruled</b> <i>Re Polemis</i>.</p>
+      <blockquote class="quote">“For it does not seem consonant with current ideas of justice or morality that for an act of negligence, however slight or venial, which results in some trivial foreseeable damage the actor should be liable for <b>all consequences however unforeseeable and however grave</b>, so long as they can be said to be ‘direct.’ It is a principle of civil liability … that a man must be considered to be responsible for the <b>probable consequences</b> of his act.” — <b>Viscount Simonds</b></blockquote>
+      <blockquote class="quote">“The essential factor in determining liability is whether the damage is of such a kind as the <b>reasonable man should have foreseen</b>. … It is a departure from this sovereign principle if liability is made to depend solely on the damage being the ‘direct’ or ‘natural’ consequence of the precedent act.” — <b>Viscount Simonds</b><br>“Thus <b>foreseeability becomes the effective test</b>.”</blockquote>
+
+      <h3 id="naturally">4.3 Natural and Proximate Consequence</h3>
+      <p>The test that damage must be the <b>natural and probable (proximate) consequence</b> of the negligence is a way of expressing that the damage must be one that <b>could reasonably have been anticipated</b> — i.e., it is largely equivalent to the foreseeability test. It finds expression in <i>Hadley v. Baxendale</i> (in contract) and, in tort, in the rule that the defendant is liable for consequences that are the “natural and probable result” of his breach (Greer LJ in <i>Haynes v. Harwood</i>). Scrutton LJ in <i>Re Polemis</i> was, however, critical of the phrase, saying that one cannot tell whether “natural” and “probable” mean the same thing; if they differ, the phrase is unhelpful.</p>
+      <p>In <i>Hughes v. Lord Advocate</i>, the House of Lords held that where the damage is of a <b>type</b> that was foreseeable, the defendant is liable even though the <b>manner</b> of its occurrence (an explosion rather than a conflagration) was not — the damage was “only a variant of the foreseeable.”</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Remoteness tests comparison">
+          <rect x="10" y="25" width="245" height="150" rx="12" fill="#a83a3a"/>
+          <text x="132" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DIRECTNESS</text>
+          <text x="132" y="72" fill="#fbe5e5" text-anchor="middle" font-size="11">(Re Polemis 1921)</text>
+          <text x="132" y="98" fill="#fbe5e5" text-anchor="middle" font-size="11">liable for all DIRECT</text>
+          <text x="132" y="116" fill="#fbe5e5" text-anchor="middle" font-size="11">consequences, whether</text>
+          <text x="132" y="134" fill="#fbe5e5" text-anchor="middle" font-size="11">foreseeable or not</text>
+          <text x="132" y="160" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">→ REJECTED</text>
+          <rect x="273" y="25" width="235" height="150" rx="12" fill="#2f6d5a"/>
+          <text x="390" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">FORESEEABILITY</text>
+          <text x="390" y="72" fill="#d8efe7" text-anchor="middle" font-size="11">(Wagon Mound 1961)</text>
+          <text x="390" y="98" fill="#d8efe7" text-anchor="middle" font-size="11">liable only for damage</text>
+          <text x="390" y="116" fill="#d8efe7" text-anchor="middle" font-size="11">of a KIND the reasonable</text>
+          <text x="390" y="134" fill="#d8efe7" text-anchor="middle" font-size="11">man could foresee</text>
+          <text x="390" y="160" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">→ ADOPTED</text>
+          <rect x="525" y="25" width="245" height="150" rx="12" fill="#b0801f"/>
+          <text x="648" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">NATURAL &amp; PROXIMATE</text>
+          <text x="648" y="72" fill="#fff" text-anchor="middle" font-size="11">(Hadley; Hughes)</text>
+          <text x="648" y="98" fill="#fff" text-anchor="middle" font-size="11">damage must be "natural</text>
+          <text x="648" y="116" fill="#fff" text-anchor="middle" font-size="11">&amp; probable" = foreseeable;</text>
+          <text x="648" y="134" fill="#fff" text-anchor="middle" font-size="11">only TYPE need be</text>
+          <text x="648" y="156" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">→ ALIGNED w/ foresight</text>
+        </svg>
+        <div class="cap">The three tests; directness has been superseded by foreseeability.</div>
+      </div>
+
+      <h3 id="synthesis">4.4 Which test applies today?</h3>
+      <p>The <b>foreseeability test</b> is the governing test (per <i>The Wagon Mound</i>). The old <i>Re Polemis</i> directness rule has been overruled. However, the law has been refined:</p>
+      <ul>
+        <li><b>Kind vs. manner:</b> The defendant is not liable for a different <b>type/kind</b> of damage than was foreseeable; but he is liable where the <b>same kind</b> of damage occurs in an unexpected <b>manner</b>. (<i>Hughes v. Lord Advocate</i>: burning occurred by explosion rather than conflagration — still within the foreseeable risk; but <i>Doughty v. Turner Manufacturing</i> — a foreseeable fire is different from an unforeseeable explosion/submersion — held too remote.)</li>
+        <li><b>Degree vs. kind:</b> Forseeability is of the <b>type</b> of damage, not its <b>extent</b>. Once the type is foreseeable, the defendant is liable for the full extent, even if (absent the eggshell rule) the extent was greater than expected.</li>
+        <li><b>Foreseeability of the tort as a whole:</b> Viscount Simonds stressed that “there is no such thing as liability in the air”; the liability is for the specific damage, and if it is unforeseeable, liability cannot be restored merely because some other (foreseeable) damage also occurred.</li>
+      </ul>
+    </section>
+
+    <!-- EGGSHELL -->
+    <section id="eggshell">
+      <div class="sec-head"><div class="sec-num">5</div><h2>The Eggshell Skull Rule</h2></div>
+      <p class="sec-sub">Syllabus (d) — "take your victim as you find him."</p>
+      <p>The <b>eggshell skull rule</b> (also called the <b>thin skull</b> rule) provides that a tortfeasor takes his <b>victim as he finds him</b>. If the defendant’s negligence causes <b>any</b> injury to the victim, the defendant is liable for the <b>full consequences</b> of that injury, even if the victim had an <b>unusual susceptibility</b> or <b>pre-existing condition</b> (e.g., a thin skull, a heart condition, a pre-cancerous condition) that made the consequences <b>far more severe</b> than they would have been in a normal person. The defendant cannot escape or reduce liability by arguing that the degree of harm was greater than foreseeable because of the victim’s peculiar vulnerability.</p>
+      <blockquote class="quote">“The eggshell skull rule and <b>taking the victim as you find them</b> has always been the established law and this was not affected by the ruling in the Wagon Mound case.” — <b>Lord Parker</b>, <i>Smith v. Leech Brain &amp; Co.</i></blockquote>
+      <p><b>How it interacts with <i>Wagon Mound</i>:</b> Foreseeability concerns the <b>kind</b> of damage (e.g., a burn), not its <b>magnitude</b>. If a burn is foreseeable, the defendant is liable for <b>all</b> the damage flowing from that burn, including death from cancer, even though the cancer (and death) were not foreseeable and resulted from the victim’s pre-existing latent condition. The rule does <b>not</b> create liability for a <b>different kind</b> of harm; it amplifies liability for the <b>same kind of harm</b> where the victim is unusually vulnerable.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 170" width="780" role="img" aria-label="Eggshell skull rule">
+          <rect x="40" y="30" width="200" height="110" rx="12" fill="#10243a"/>
+          <text x="140" y="58" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">D's negligence</text>
+          <text x="140" y="80" fill="#cfe0ec" text-anchor="middle" font-size="11">causes a burn</text>
+          <text x="140" y="106" fill="#cfe0ec" text-anchor="middle" font-size="11">(foreseeable kind:</text>
+          <text x="140" y="124" fill="#cfe0ec" text-anchor="middle" font-size="11">   personal injury)</text>
+          <line x1="240" y1="85" x2="300" y2="85" stroke="#10243a" stroke-width="2.5"/>
+          <rect x="305" y="30" width="210" height="110" rx="12" fill="#b9571f"/>
+          <text x="410" y="58" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">Victim's PRE-EXISTING</text>
+          <text x="410" y="80" fill="#fbe7dc" text-anchor="middle" font-size="11">condition (pre-cancerous)</text>
+          <text x="410" y="106" fill="#fbe7dc" text-anchor="middle" font-size="11">→ burn triggers cancer</text>
+          <text x="410" y="124" fill="#fbe7dc" text-anchor="middle" font-size="11">→ death (unforeseeable)</text>
+          <line x1="515" y1="85" x2="575" y2="85" stroke="#10243a" stroke-width="2.5"/>
+          <rect x="580" y="30" width="180" height="110" rx="12" fill="#2e7d4f"/>
+          <text x="670" y="64" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">D liable for the</text>
+          <text x="670" y="86" fill="#d8efe7" text-anchor="middle" font-size="11">WHOLE damage</text>
+          <text x="670" y="112" fill="#d8efe7" text-anchor="middle" font-size="11">(take victim as</text>
+          <text x="670" y="130" fill="#d8efe7" text-anchor="middle" font-size="11">   you find him)</text>
+        </svg>
+        <div class="cap">The eggshell skull rule: the victim's vulnerability does not reduce the defendant's liability.</div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 4 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C29 -->
+      <div class="case" id="c29">
+        <div class="case-head">
+          <h4>29. In Re An Arbitration between Polemis &amp; Furness, Withy &amp; Co.</h4>
+          <span class="cit">(1921) 3 KB 560 · (1921) All ER Rep 40 (CA)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The dispute arose between the <b>charterers</b> and the <b>owners</b> of a ship that was <b>destroyed</b> while under charter. At Casablanca, the charterers had employed <b>Arab stevedores</b> to unload the cargo. One of them <b>dropped a heavy plank into the hold</b>, which was <b>full of petrol vapour</b>. On impact the plank caused a <b>spark</b>; the spark ignited the vapour, and the <b>ship was destroyed</b>. The arbitrator found that it was <b>careless to drop the plank</b>, and that <b>some damage to the ship was foreseeable</b>, but that the causing of the <b>spark and the ensuing fire were not</b> foreseeable. He awarded the owners damages of £196,165 (equivalent to twenty months’ hire). Sankey J. confirmed the award and so did the Court of Appeal.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where a negligent act is followed by damage that is the <b>direct</b> consequence of the negligence but was <b>not reasonably foreseeable</b> (here, fire caused by a spark, rather than the foreseeable damage from the fall of the plank), is the defendant liable? Or is the unforeseeability of the <b>type</b> of damage a defence?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellants (charterers):</b> Although it was negligent to drop the plank, they could not reasonably have anticipated the <b>type</b> of damage — a fire caused by a spark igniting petrol vapour. They accepted they could not rely on foreseeing the <b>extent</b> of damage, but contended that the <b>type</b> of damage was unforeseeable and therefore too remote.</p>
+            <p><b>Respondents (owners):</b> The falling of the plank was due to the defendants’ negligence; the fire was <b>directly caused by</b> the falling of the plank; it is immaterial that the spark could not have been reasonably anticipated. The defendants must take the direct consequences of their negligence.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Court of Appeal</b> (Bankes, Warrington and Scrutton LJJ) <b>confirmed</b> the award, holding that the damage was <b>not too remote</b>.</p>
+            <p class="quote">“Given the breach of duty which constitutes the negligence, and given the damage as a direct result of that negligence, the anticipation of the person whose negligent act has produced the damage appear to me to be irrelevant. I consider that the damages claimed are not too remote.” — Bankes LJ</p>
+            <p class="quote">“The presence or absence of reasonable anticipation of damage determines the legal quality of the act as negligent or innocent. If it be thus determined to be negligent, then the question whether particular damages are recoverable depends only on the answer to the question whether they are the <b>direct consequence</b> of the act.” — Warrington LJ</p>
+            <p class="quote">“To determine whether an act is negligent, it is relevant to determine whether any reasonable person would foresee that the act would cause damage; if he would not, the act is not negligent. But <b>if the act would or might probably cause damage, the fact that the damage it in fact causes is not the exact kind of damage one would expect is immaterial</b>, so long as the damage is in fact directly traceable to the negligent act…” — Scrutton LJ</p>
+            <p>Scrutton LJ was also critical of the “natural and probable” formulation: “I cannot think it useful to say the damage must be the natural and probable result. This suggests that there are results which are natural but not probable, and other results which are probable but not natural. I am not sure what either adjective means in this connection.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>directness test</b>: once an act is <b>negligent</b> (i.e., some damage was foreseeable), the defendant is liable for <b>all</b> the damage that is the <b>direct consequence</b> of the act, even though the <b>type</b> and <b>extent</b> of the actual damage could not have been reasonably anticipated. Foreseeability goes to the question of <b>negligence</b> (whether the act is wrongful), but once negligence is established, <b>directness</b>, not foreseeability, governs the recoverable damage. This is the classic statement of the “direct consequence” rule — later <b>overruled by <i>The Wagon Mound</i></b> (1961).</div>
+        </div>
+      </div>
+
+      <!-- C30 -->
+      <div class="case" id="c30">
+        <div class="case-head">
+          <h4>30. Overseas Tankship (U.K.) Ltd. v. Morts Dock &amp; Engineering Co. [The Wagon Mound]</h4>
+          <span class="cit">(1961) 1 All ER 404 (PC)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>On 30 October 1951, a large quantity of <b>oil was carelessly allowed to spill</b> from <b>The Wagon Mound</b>, a ship under the defendant’s control, during <b>bunkering operations</b> in Sydney Harbour. The oil spread to the plaintiff’s wharf, about <b>200 yards</b> away, where a ship (<i>The Corrimal</i>) was being repaired. The plaintiff asked whether it was safe to continue welding and was assured (in accordance with the best scientific opinion of the day) that the oil <b>could not be ignited when spread on water</b>. On 1 November, a drop of molten metal fell on a piece of floating waste, which <b>ignited the oil</b>, and the plaintiff’s <b>wharf was consumed by fire</b>. Kinsella J. found that the destruction of the wharf by fire was a <b>direct but unforeseeable</b> consequence of the carelessness in spilling the oil, but that <b>some damage by fouling</b> might have been anticipated. He gave judgment for the plaintiff; the Full Court of New South Wales affirmed. The defendant appealed to the Judicial Committee of the Privy Council.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where a negligent act (spilling oil) results in some foreseeably <b>minor</b> damage (fouling) but also in <b>unforeseeable</b> damage (destruction by fire), is the defendant liable for the unforeseeable damage because it is a “direct” consequence (the rule in <i>Polemis</i>)? Or is the test of liability <b>reasonable foreseeability</b> of the damage?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Respondents (wharf owners):</b> The fire was the direct consequence of the negligent spillage (per <i>Polemis</i>); even if unforeseeable, the defendants are liable; the ordinary man in the street would unhesitatingly assign the cause of the fire to the spillage.</p>
+            <p><b>Appellants (shipowners):</b> The damage by fire was <b>not reasonably foreseeable</b> (the best scientific evidence said the oil could not ignite on water); the rule in <i>Polemis</i> is unsound and should be overruled; liability should be confined to consequences which a reasonable man would foresee. It is unjust to hold a man liable for unforeseeable, grave consequences merely because his negligence also caused some trivial foreseeable damage.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Judicial Committee of the Privy Council</b> (<b>Viscount Simonds</b>) <b>allowed the appeal</b> and <b>overruled the rule in <i>Re Polemis</i></b>. The defendant was liable only for the foreseeable damage (by fouling); not for the unforeseeable damage by fire.</p>
+            <p class="quote">“The authority of Polemis has been severely shaken though lip service has from time to time been paid to it. In their Lordships’ opinion <b>it should no longer be regarded as good law</b>. … For it does not seem consonant with current ideas of justice or morality that for an act of negligence, however slight or venial, which results in some trivial foreseeable damage the actor should be liable for all consequences however unforeseeable and however grave, so long as they can be said to be ‘direct.’” — Viscount Simonds</p>
+            <p class="quote">“The essential factor in determining liability is whether the damage is of such a kind as the reasonable man should have foreseen. … Thus <b>foreseeability becomes the effective test</b>.”</p>
+            <p class="quote">“It is not the act but the consequences on which tortious liability is founded. Just as (as it has been said) there is no such thing as negligence in the air, so <b>there is no such thing as liability in the air</b>.”</p>
+            <p class="quote">“To hold B liable for consequences however unforeseeable of a careless act, if but only if, he is at the same time liable for some other damage however trivial, appears to be neither logical nor just. … It is irrelevant to the question whether B is liable for unforeseeable damage that he is liable for foreseeable damage.”</p>
+            <p>The Board also clarified: “After the event even a fool is wise. But it is not the hindsight of a fool; it is the <b>foresight of the reasonable man</b> which alone can determine responsibility.” It distinguished the rule of strict liability in <i>Rylands v. Fletcher</i>, which it left undisturbed.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>foreseeability test</b> replaces the directness test. A defendant is liable only for damage of a <b>kind</b> that was <b>reasonably foreseeable</b> by a reasonable man. The fact that some <b>other, foreseeably minor</b> damage was also caused does not make the defendant liable for <b>unforeseeable, grave</b> damage arising from the same act. Foreseeability is now the effective test of remoteness, and the historic rule in <i>Re Polemis</i> is <b>no longer good law</b>. This is the modern foundation of the law of remoteness of damage in negligence.</div>
+        </div>
+      </div>
+
+      <!-- C31 -->
+      <div class="case" id="c31">
+        <div class="case-head">
+          <h4>31. Hughes v. Lord Advocate</h4>
+          <span class="cit">(1963) AC 837 (HL)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Post Office workmen opened a <b>manhole</b> in a public street in the heart of Edinburgh to maintain underground telephone equipment. They covered it with a <b>tent</b> and, in the evening, left it <b>unguarded</b>, surrounded by <b>warning paraffin lamps</b> and with a <b>ladder</b> going down into the hole. An <b>eight-year-old boy</b> entered the tent and knocked or lowered one of the lamps into the hole. An <b>explosion</b> occurred, causing him to fall into the hole and be <b>severely burned</b>. The boy (through his father, the pursuer) sued the Lord Advocate (representing the Post Office) for negligence. The Lord Ordinary and the majority of the First Division rejected the claim, holding the accident was not reasonably foreseeable (because the explosion could not be foreseen). The pursuer appealed to the House of Lords.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where the defendant negligently leaves a dangerous <b>allurement to children</b> (an open manhole with a paraffin lamp), and the child suffers burns caused by an <b>unforeseeable explosion</b> (rather than a foreseeable conflagration), is the damage <b>too remote</b> — i.e., was it a different <b>kind</b> of damage from that which was foreseeable?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Pursuer (boy):</b> The dangerous allurement (the lamp, tent, ladder and open manhole) was left unguarded in a public street where children were to be expected. It was foreseeable that a child would be burnt or suffer a conflagration; the explosion was merely an unusual <b>manner</b> of causing burn injury — the damage was of the same <b>kind</b> (burning) as was foreseeable. He relied on <i>Harvey v. Singer Manufacturing Co.</i> and <i>Miller v. South of Scotland Electricity Board</i>: the precise concatenation of circumstances need not be foreseen.</p>
+            <p><b>Defenders (Lord Advocate):</b> The explosion could not have been reasonably foreseen; it was caused in a unique fashion by paraffin vapour igniting. Following <i>The Wagon Mound</i>, the damage (by explosion) was of a different <b>type and kind</b> from anything foreseen, and was therefore too remote. They relied on <i>Muir v. Glasgow Corporation</i>.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>House of Lords</b> (Lord Reid, Lord Guest, Lord Pearce, Lord Donovan; Lord Tucker concurring) <b>allowed</b> the appeal. The Post Office was liable.</p>
+            <p class="quote">“An explosion is only one way in which burning can be caused … I cannot see that these are two different types of accident. They are both burning accidents and in both cases the injuries would be burning injuries. Upon this view the explosion was an <b>immaterial event in the chain of causation</b>. It was simply one way in which burning might be caused by the potentially dangerous paraffin lamp.” — Lord Guest</p>
+            <p class="quote">“To demand too great precision in the test of foreseeability would be unfair to the pursuer since the facets of misadventure are innumerable. … The obvious risks were burning and conflagration and a fall. All these in fact occurred, but unexpectedly the mishandled lamp, instead of causing an ordinary conflagration, produced a violent explosion. Did the explosion create an accident and damage of a <b>different type</b> from the misadventure and damage that could be foreseen? In my judgment it did not. The accident was but a <b>variant of the foreseeable</b>. It was, to quote the words of Denning LJ in Roe v. Minister of Health, ‘within the risk created by the negligence.’” — Lord Pearce</p>
+            <p class="quote">“In order to establish a coherent chain of causation it is not necessary that the precise details leading up to the accident should have been reasonably foreseeable: it is sufficient if the accident which occurred is of a <b>type</b> which should have been foreseeable by a reasonably careful person.” — (approving <i>Miller</i> / <i>Harvey</i>)</p>
+            <p>Lord Pearce distinguished <i>Muir v. Glasgow Corporation</i> because there the tea-urn was not a potentially dangerous allurement and the precise risk was unknown.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The distinction between the <b>kind/type</b> of damage and the <b>manner</b> of its occurrence. Under the foreseeability test, the defendant is liable where the damage is of a <b>foreseeable type</b>, even though it came about in an <b>unforeseeable way</b>. The explosion was an “immaterial event in the chain of causation” because the resulting damage (burning) was of the same kind as the foreseeable risk (fire/burning). This reconciles <i>The Wagon Mound</i> with justice: it is enough that the <b>general type</b> of harm is foreseeable; the precise concatenation of circumstances or the exact mechanism need not be. The case also illustrates liability for a <b>dangerous allurement to children</b> (a special duty to protect against foreseeable childish mischief).</div>
+        </div>
+      </div>
+
+      <!-- C32 -->
+      <div class="case" id="c32">
+        <div class="case-head">
+          <h4>32. Smith v. Leech Brain &amp; Co. Ltd.</h4>
+          <span class="cit">(1961) 3 All ER 1159</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff’s deceased husband was <b>employed as a galvaniser of steel</b> by the defendants, Leech Brain &amp; Co. Ltd. While operating a machine in the workplace, he stepped out from behind the protective shield, and a <b>piece of molten metal burnt his lip</b>. Although the burn was treated, he <b>developed cancer</b> and <b>died three years later</b>. The deceased had a <b>pre-cancerous condition</b> before the burn took place (the burn triggered the cancer, which caused his death). When he died, his widow brought a claim under the <b>Fatal Accidents Act</b> against the defendants. The question was whether the employers could be liable for the full extent of the burn <b>and the cancer</b> that developed, or whether the victim’s <b>predisposition</b> to cancer would matter in the award of damages. <span class="pill o">Note</span> This case is not reproduced in the provided DU casebook; it is summarised here from the accompanying course notes.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Where the defendant’s negligence causes a <b>foreseeable</b> injury (a burn), but that injury, because of the victim’s <b>pre-existing abnormal condition</b> (a pre-cancerous state), leads to <b>unforeseeable</b> and far more serious consequences (cancer and death), is the defendant liable for the <b>full</b> consequences, or is the victim’s unusual susceptibility a defence?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Widow (plaintiff):</b> Under the <b>eggshell skull rule</b>, the defendants must take the victim as they find him. A burn to the lip was clearly foreseeable; the defendants are liable for the full consequences of that burn, including the cancer and death which resulted from the victim’s pre-existing condition.</p>
+            <p><b>Employers (defendants):</b> The cancer and death were <b>not reasonably foreseeable</b> and were due to the victim’s pre-existing susceptibility; under <i>The Wagon Mound</i> test of foreseeability, they should not be liable for the unforeseeable consequences.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The court held the defendants were <b>negligent and liable</b> for the full extent of the damage, including the death. <b>Lord Parker CJ</b> applied the <b>eggshell skull rule</b>:</p>
+            <p class="quote">“The eggshell skull rule and <b>taking the victim as you find them</b> has always been the established law and this was not affected by the ruling in the Wagon Mound case.”</p>
+            <p>The question was whether the defendant could reasonably foresee the injury (the burn). The victim’s predisposition to cancer did not matter, nor did the results of the injury. Because the <b>type</b> of harm (a burn / personal injury) was foreseeable, the defendants were liable for the <b>whole</b> of the damage, including the cancer and death — the victim’s abnormal susceptibility could not be relied on to limit liability.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>eggshell skull rule</b> (thin skull rule): a negligent defendant <b>takes his victim as he finds him</b>. Once the <b>kind</b> of damage is foreseeable (here a burn), the defendant is liable for the <b>full extent</b> of the consequences, even though they are <b>far greater than foreseeable</b> because of the victim’s <b>pre-existing abnormal condition</b> (a pre-cancerous state). The rule is <b>not affected by <i>The Wagon Mound</i></b>: foreseeability governs the <b>type</b> of damage, not its <b>magnitude</b>. The victim’s unusual susceptibility does not reduce or defeat the defendant’s liability.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes the classic DU Topic-5 questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What is "remoteness of damage"? Discuss the test of directness (<i>Re Polemis</i>) and the test of reasonable foreseeability (<i>The Wagon Mound</i>). Which test is now accepted?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Remoteness of damage.</b> Even where a defendant is negligent, he is not liable for all the consequences of his act; he is liable only for damage that is <b>not too remote</b>. Remoteness is a question of law. It determines the <b>scope</b> of liability — the kind of damage for which the defendant is responsible — as distinct from causation, which asks whether the breach <b>in fact</b> caused the damage.</p>
+          <p><b>The directness test (Re Polemis, 1921).</b> Once the act is negligent, the defendant is liable for all the <b>direct</b> consequences, whether or not foreseeable. In <i>Re Polemis</i>, a plank was negligently dropped into a hold full of petrol vapour; the spark caused a fire and the ship was destroyed. The Court of Appeal held the defendants liable because the fire was a direct consequence, even though the spark/fire was not foreseeable. Warrington LJ: “The presence or absence of reasonable anticipation of damage determines the legal quality of the act as negligent … If it be thus determined to be negligent, then the question whether particular damages are recoverable depends only on the answer to the question whether they are the direct consequence of the act.” Foreseeability goes to <b>negligence</b>; directness governs <b>damages</b>.</p>
+          <p><b>The foreseeability test (The Wagon Mound, 1961).</b> The defendant is liable only for damage of a <b>kind</b> that was <b>reasonably foreseeable</b>. In <i>The Wagon Mound</i>, oil was negligently spilled in a harbour; some damage by fouling was foreseeable, but the oil ignited and the wharf was destroyed by fire, which was not foreseeable (the best scientific opinion said the oil could not ignite on water). The Privy Council <b>overruled</b> <i>Re Polemis</i> and held the defendant liable only for the foreseeable fouling damage, not the fire. Viscount Simonds: “It does not seem consonant with current ideas of justice or morality that for an act of negligence, however slight or venial, which results in some trivial foreseeable damage the actor should be liable for all consequences however unforeseeable and however grave, so long as they can be said to be ‘direct’ … Thus foreseeability becomes the effective test.”</p>
+          <p><b>Which test is accepted?</b> The <b>foreseeability test</b> is now the governing test; the rule in <i>Re Polemis</i> is no longer good law. As clarified in <i>Hughes v. Lord Advocate</i>, the defendant is liable for foreseeable <b>types</b> of damage even if the <b>manner</b> of their occurrence was not foreseen (an explosion rather than a conflagration); and the <b>eggshell skull rule</b> (<i>Smith v. Leech Brain</i>) means foreseeability governs the kind, not the extent, of damage. But the damage must be one of a <b>kind</b> reasonably foreseeable; a different kind of damage remains too remote.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the doctrine of <i>novus actus interveniens</i>. When does an intervening act break the chain of causation and relieve the defendant of liability? Refer to <i>Haynes v. Harwood</i> and other cases.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The doctrine.</b> A <i>novus actus interveniens</i> is a new, independent intervening act (human action or a supervening event) which <b>breaks the chain of causation</b> between the defendant’s negligence and the damage, so that the defendant is not liable. Lord Reid in <i>Dorset Yacht Co. v. Home Office</i> explained the distinction: where all the links between carelessness and damage are inanimate, the damage is the inevitable result of the careless conduct; but where <b>human action</b> is one of the links, the damage cannot be said to be the inevitable result. He added: “The convenient phrase <i>novus actus interveniens</i> denotes those cases where such action is regarded as breaking the chain and preventing the damage from being held to be caused by the careless conduct.”</p>
+          <p><b>When it does NOT break the chain.</b> The intervening act must be <b>the very kind of thing which is likely to happen</b> if the want of care takes place. In <i>Haynes v. Harwood</i>, Greer LJ said: “If what is relied upon as novus actus interveniens is the very kind of thing which is likely to happen if the want of care which is alleged takes place, the principle embodied in the maxim is <b>no defence</b>. The whole question is whether … the accident can be said to be the ‘natural and probable result’ of the breach of duty.” The defendants left horses unattended in a crowded street; a boy threw a stone, the horses bolted, and a policeman was injured stopping them. The court held the policeman’s intervention (a rescue) was <b>not</b> a novus actus — it was precisely what a reasonable person would anticipate, and the policeman was within the class of persons to whom the duty was owed. The doctrine also does not apply where the act is an <b>instinctive reaction</b> or a <b>rescue</b> (Cardozo J.: “Danger invites rescue. The cry of distress is the summons to relief … the wrong that imperils life is a wrong to the imperilled victim; it is a wrong also to his rescuer”).</p>
+          <p><b>When it DOES break the chain.</b> Where the intervening act is <b>unforeseeable and independent</b> (a deliberate act of a third party outside the risk, or an independent natural event), it may break the chain. Also, there must be a <b>probable</b> causal link; the act must be such that the resultant damage was not the natural and probable consequence of the defendant’s breach. In <i>Lynch v. Nurdin</i>, the mischievous act of a child (starting a horse) was held not to break the chain because mischievous children were to be anticipated.</p>
+          <p><b>Conclusion.</b> The test is foreseeability. If the intervening act is of a kind which the defendant ought to have anticipated (including rescues and the mischief of children), it is not a novus actus and the defendant remains liable; if it is unforeseeable and independent, it breaks the chain and relieves the defendant.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the "but-for" test of causation and the treatment of concurrent and consecutive causes.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The but-for test.</b> The plaintiff must show a <b>causal link</b> between the defendant’s breach of duty and the damage. The basic test is the <b>but-for</b> test (sine qua non): would the damage have occurred <b>but for</b> the defendant’s breach? If the answer is <b>no</b>, the breach is a cause in fact; if the damage would have occurred <b>anyway</b>, the breach is not a cause. It is a necessary, though not always sufficient, condition — the defendant must also be shown not to be relieved by remoteness or a novus actus.</p>
+          <p><b>Concurrent causes.</b> Two or more <b>independent</b> causes operate <b>simultaneously</b> to produce a single result. Where each satisfies the but-for test, each is a cause. Two situations arise: (i) two (or more) <b>tortious</b> acts combine to cause one indivisible injury — the wrongdoers are <b>joint tort-feasors</b>, jointly and severally liable, and the claimant may recover from any of them (cf. <i>Khenyei</i>, Topic 3); and (ii) a tortious act and some <b>other</b> cause both contribute — the court determines the extent of each cause.</p>
+          <p><b>Consecutive causes.</b> Causes operate <b>one after another</b>, each adding to or altering the damage. The law determines whether the later event is an <b>independent intervening cause</b> (breaking the chain — a novus actus) or merely a <b>development</b> of the risk created by the defendant. If the later injury is a <b>foreseeable consequence</b> of the first (e.g., complications of medical treatment, or an injury during reasonable rescue), the defendant remains liable for the whole; if the later event is <b>unforeseeable and independent</b>, it severs the chain.</p>
+          <p><b>Proof of causation.</b> Causation is a question of fact, proved on the <b>balance of probabilities</b>. The defendant’s breach must be a <b>substantial</b> (real and effective) cause, not a mere background condition. The burden is on the plaintiff; where the exact cause is within the defendant’s knowledge, <i>res ipsa loquitur</i> may assist, but the plaintiff must still establish the causal link.</p>
+          <p><b>Conclusion.</b> The but-for test is the starting point; it is qualified by the law’s treatment of concurrent causes (joint liability) and consecutive causes (a later unforeseen event may sever liability). Causation in fact is a necessary condition of liability, distinct from the question of remoteness.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>What is the "eggshell skull rule"? How does it reconcile with the test of reasonable foreseeability laid down in <i>The Wagon Mound</i>? Refer to <i>Smith v. Leech Brain &amp; Co.</i></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The eggshell skull rule.</b> A negligent defendant <b>takes his victim as he finds him</b>. If the defendant’s negligence causes injury, he is liable for the <b>full consequences</b> of that injury, even where the victim had an <b>unusual susceptibility</b> or a <b>pre-existing condition</b> (a thin skull, a weak heart, a pre-cancerous state) which made the consequences <b>far more severe</b> than they would have been in a normal person. The defendant cannot rely on the victim’s peculiar vulnerability to escape or reduce liability.</p>
+          <p><b>Application: Smith v. Leech Brain &amp; Co.</b> An employee burnt his lip when a piece of molten metal struck him. He had a <b>pre-cancerous condition</b>; the burn triggered cancer and he died three years later. Held: the employers were liable for the full extent of the damage, including the cancer and death, because the <b>type</b> of injury (a burn) was foreseeable. Lord Parker: “The eggshell skull rule and taking the victim as you find them has always been the established law and this was not affected by the ruling in the Wagon Mound case.” The victim’s predisposition to cancer did not matter.</p>
+          <p><b>Reconciliation with <i>The Wagon Mound</i>.</b> The foresight test governs the <b>kind</b> of damage, not its <b>extent</b> or <b>magnitude</b>. In <i>Smith v. Leech Brain</i>, a burn/personal injury was reasonably foreseeable; since the kind of harm was foreseeable, the defendant was liable for the entire damage that flowed from it, including the cancer and death caused by the victim’s pre-existing condition. The rule does <b>not</b> make the defendant liable for a <b>different kind</b> of harm — it only amplifies liability for the <b>same kind</b> of harm where the victim is unusually vulnerable. Thus the eggshell rule is a <b>complement</b> to, not a contradiction of, the foreseeability test.</p>
+          <p><b>Conclusion.</b> Foreseeability determines the type of harm for which the defendant is responsible; the eggshell skull rule determines that, once that type is foreseeable, the defendant is answerable for the full extent of the consequences, taking the victim with all his peculiar susceptibilities.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Discuss <i>Hughes v. Lord Advocate</i>. How does the distinction between the "kind" of damage and the "manner" of its occurrence operate under the test of foreseeability?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Facts.</b> Post Office workmen opened a manhole in a street, covered it with a tent, and left it unguarded with warning paraffin lamps and a ladder. An eight-year-old boy entered, knocked a lamp into the hole, and an <b>explosion</b> occurred, causing severe burn injuries. The lower courts dismissed the claim because the explosion was unforeseeable, but the House of Lords <b>allowed</b> the appeal.</p>
+          <p><b>Decision and reasoning.</b> The House of Lords held the Post Office was liable. The damage (burning) was of the same <b>kind</b> as was foreseeable (fire/burning from the lamp). Lord Guest: “An explosion is only one way in which burning can be caused … I cannot see that these are two different types of accident. They are both burning accidents … the explosion was an immaterial event in the chain of causation.” Lord Pearce: “The accident was but a <b>variant of the foreseeable</b> … ‘within the risk created by the negligence.’” It was enough that the accident was of a <b>type</b> that a reasonably careful person should have foreseen; the precise concatenation of circumstances need not be envisaged.</p>
+          <p><b>The kind vs. manner distinction.</b> Under the foreseeability test (<i>Wagon Mound</i>), the defendant is liable for a foreseeable <b>kind</b> of damage, but not for damage of a <b>different kind</b>. <i>Hughes</i> clarifies that where the <b>same kind</b> of damage occurs in an <b>unforeseeable manner</b> (an explosion rather than a conflagration, both causing burning), the defendant is still liable. The unforeseeability of the <b>exact mechanism</b> or the <b>precise pathway</b> does not sever liability. Only where the resulting damage is of a <b>different type</b> would it be too remote (e.g., <i>Doughty v. Turner</i>: an unforeseeable explosion was a different type from a foreseeable fire).</p>
+          <p><b>Conclusion.</b> <i>Hughes v. Lord Advocate</i> refines the foreseeability test: the defendant is liable for foreseeable <b>types</b> of harm, even when they arise in an unforeseen <b>manner</b>. The requirement of foresight is of the <b>kind</b> of damage, not of the precise way it comes about.</p>
+        </div>
+      </div>
+
+      <!-- PYQ F -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Distinguish between "causation" and "remoteness of damage." How is causation proved? Explain the natural and proximate consequence test.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Causation vs. remoteness.</b> <b>Causation</b> asks whether the damage was in fact caused by the defendant’s breach (a question of fact, answered by the but-for test). <b>Remoteness</b> asks whether the damage is of a kind for which the defendant ought to be held responsible (a question of law, answered by foreseeability). A breach may cause damage in fact and yet be too remote; or the damage may be foreseeable but not caused. Causation is a <b>necessary condition</b>; remoteness limits the <b>scope</b> of liability.</p>
+          <p><b>Proof of causation.</b> Causation is proved on the balance of probabilities. The plaintiff must show the breach was a <b>real and effective</b> (substantial) cause of the damage, not a mere background. The but-for test is the primary means: would the damage have occurred but for the breach? If not, the breach is a cause. Where the defendant’s negligence and another cause are both present (concurrent causes), and where a later event follows (consecutive causes / novus actus), the law determines whether liability is joint, severed, or remains whole. Difficulty of proof may be alleviated where the cause is within the defendant’s knowledge (<i>res ipsa loquitur</i>), but the burden stays on the plaintiff.</p>
+          <p><b>The natural and proximate consequence test.</b> This expresses the idea that the defendant is liable for damage which is the <b>natural and probable (proximate) consequence</b> of his breach. It is largely equivalent to the foreseeability test: the damage must be one that could reasonably have been anticipated. It is stated in <i>Hadley v. Baxendale</i> (the leading case on the "natural and probable result" of a breach of duty) and in <i>Haynes v. Harwood</i>, where Greer LJ said the whole question is whether the accident can be said to be the “natural and probable result” of the breach of duty. Scrutton LJ in <i>Re Polemis</i>, however, criticised the phrase as obscure. In substance, the test requires that the damage be a <b>proximate</b> (not too remote) and <b>foreseeable</b> consequence of the negligence.</p>
+          <p><b>Conclusion.</b> Causation establishes the factual link; remoteness (governed by foreseeability, in its "natural and proximate" form) sets the legal limit on recovery. Both must be satisfied.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Remoteness of damage</span> — the doctrine limiting a tortfeasor’s liability to damage that is not too remote a consequence of his negligence; a question of law.</li>
+        <li><span class="lat">Causation</span> — the requirement that the defendant’s breach in fact caused the damage; a question of fact.</li>
+        <li><span class="lat">But-for test</span> — would the damage have occurred but for the breach? If no, the breach is a cause.</li>
+        <li><span class="lat">Concurrent causes</span> — two or more independent causes operating simultaneously to produce one result; generally joint liability.</li>
+        <li><span class="lat">Consecutive causes</span> — causes operating one after another; a later unforeseen event may sever liability.</li>
+        <li><span class="lat">Novus actus interveniens</span> — a new intervening act that breaks the chain of causation; only if it is unforeseeable and independent.</li>
+        <li><span class="lat">Direct consequence (Polemis)</span> — the overruled rule that a defendant is liable for all direct consequences, whether foreseeable or not.</li>
+        <li><span class="lat">Foreseeability (Wagon Mound)</span> — the governing test: the defendant is liable only for damage of a kind that was reasonably foreseeable.</li>
+        <li><span class="lat">Kind vs. manner</span> — the defendant is liable for a foreseeable kind of damage even if it occurs in an unforeseen manner (Hughes).</li>
+        <li><span class="lat">Natural &amp; proximate consequence</span> — damage that is the natural and probable result of the breach; essentially equivalent to foreseeability.</li>
+        <li><span class="lat">Eggshell skull / thin skull rule</span> — the defendant takes the victim as he finds him; liable for the full extent of consequences despite the victim’s abnormal susceptibility.</li>
+        <li><span class="lat">Nova causa</span> — alternative term for a new intervening cause breaking the chain.</li>
+        <li><span class="lat">Sine qua non</span> — “without which not”; the thing without which the damage would not have occurred (the but-for cause).</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 430" width="900" role="img" aria-label="Full topic 5 revision flowchart">
+          <defs><marker id="ar5" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#10243a"/></marker></defs>
+          <rect x="10" y="15" width="880" height="52" rx="12" fill="#10243a"/>
+          <text x="450" y="41" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">REMOTENESS OF DAMAGE — D's breach → </text>
+          <line x1="450" y1="67" x2="450" y2="85" stroke="#10243a" stroke-width="2.5" marker-end="url(#ar5)"/>
+          <rect x="120" y="88" width="660" height="52" rx="12" fill="#b0781f"/>
+          <text x="450" y="114" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CAUSATION (but-for) + NO novus actus + damage NOT TOO REMOTE</text>
+          <line x1="200" y1="140" x2="200" y2="160" stroke="#0f7a6a" stroke-width="2.5" marker-end="url(#ar5)"/>
+          <line x1="450" y1="140" x2="450" y2="160" stroke="#b9571f" stroke-width="2.5" marker-end="url(#ar5)"/>
+          <line x1="700" y1="140" x2="700" y2="160" stroke="#2e7d4f" stroke-width="2.5" marker-end="url(#ar5)"/>
+          <rect x="30" y="163" width="270" height="120" rx="12" fill="#0f7a6a"/>
+          <text x="165" y="190" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">CAUSATION</text>
+          <text x="165" y="214" fill="#d8efe7" text-anchor="middle" font-size="11">but-for test; concurrent</text>
+          <text x="165" y="232" fill="#d8efe7" text-anchor="middle" font-size="11">causes (joint liability);</text>
+          <text x="165" y="250" fill="#d8efe7" text-anchor="middle" font-size="11">consecutive causes</text>
+          <rect x="315" y="163" width="270" height="120" rx="12" fill="#b9571f"/>
+          <text x="450" y="190" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">NOVUS ACTUS</text>
+          <text x="450" y="214" fill="#fbe7dc" text-anchor="middle" font-size="11">intervening act breaks</text>
+          <text x="450" y="232" fill="#fbe7dc" text-anchor="middle" font-size="11">the chain IF unforeseeable</text>
+          <text x="450" y="250" fill="#fbe7dc" text-anchor="middle" font-size="11">&amp; independent (Haynes)</text>
+          <rect x="600" y="163" width="280" height="120" rx="12" fill="#2e7d4f"/>
+          <text x="740" y="190" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">REMOTENESS</text>
+          <text x="740" y="214" fill="#d8efe7" text-anchor="middle" font-size="11">Foreseeability (Wagon</text>
+          <text x="740" y="232" fill="#d8efe7" text-anchor="middle" font-size="11">Mound) — of the KIND,</text>
+          <text x="740" y="250" fill="#d8efe7" text-anchor="middle" font-size="11">not manner (Hughes)</text>
+          <line x1="740" y1="283" x2="740" y2="300" stroke="#a83a3a" stroke-width="2.5" marker-end="url(#ar5)"/>
+          <rect x="600" y="303" width="280" height="90" rx="12" fill="#a83a3a"/>
+          <text x="740" y="330" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">EGGSHELL RULE</text>
+          <text x="740" y="352" fill="#fbe5e5" text-anchor="middle" font-size="11">take victim as you find</text>
+          <text x="740" y="370" fill="#fbe5e5" text-anchor="middle" font-size="11">him; full consequences</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 5.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill r">Directness test (overruled)</span> — Re Polemis.<br>
+        · <span class="pill t">Foreseeability test (adopted)</span> — The Wagon Mound.<br>
+        · <span class="pill t">Kind vs manner of damage</span> — Hughes v. Lord Advocate.<br>
+        · <span class="pill o">Eggshell skull rule</span> — Smith v. Leech Brain.<br>
+        · <span class="pill n">Novus actus / causation</span> — Haynes v. Harwood; Dorset Yacht Co.; Lynch v. Nurdin.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 5 (Remoteness of Damage).</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>Re Polemis</i>, <i>The Wagon Mound</i> and <i>Hughes v. Lord Advocate</i>) together with the accompanying course notes, which also explain <i>Smith v. Leech Brain &amp; Co.</i> and the <b>eggshell skull rule</b>. Theory of causation, novus actus and remoteness follows the DU casebook’s own reasoning (via <i>Haynes v. Harwood</i>, <i>Dorset Yacht Co.</i>, <i>Rajkot Municipal Corp.</i>) and Ratanlal &amp; Dhirajlal.</p>
+      <p style="margin:0"><b>Note:</b> <i>Smith v. Leech Brain &amp; Co.</i> (Case 32) is not reproduced in the provided casebook (it ends with <i>Hughes v. Lord Advocate</i>); it is summarised from the accompanying course notes as the leading authority on the <b>eggshell skull rule</b>. For revision only — refer to the full reports for exact citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

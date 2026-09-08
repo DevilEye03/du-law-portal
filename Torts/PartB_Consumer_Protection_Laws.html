@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part B · Consumer Protection Laws (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#33504a; --bg:#f3f8f6; --card:#ffffff;
+    --navy:#0c3f3a; --navy2:#11625a; --gold:#b0791f; --teal:#0f7a72;
+    --red:#a83a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e0efe9;
+    --orange:#b9571f; --shadow:0 6px 24px rgba(12,63,58,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#0c3f3a 0%,#11625a 55%,#0f7a72 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,132,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:960px; margin:0 0 22px; color:#dcefe9; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.13); border:1px solid rgba(255,255,255,.28);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#e6f5f0}
+  .meta-strip{background:#082b28; color:#cde6df; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#e4f2ed; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fdf7e8; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#e9f5f2; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbecec; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fcf0e8; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#0c3f3a; background:#e4f0eb; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#e2f0ea; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#f9fcfb}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .pill.p{background:#efe7f8; color:var(--purple)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#0c3f3a,#11625a); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#eef6f2; border-left:3px solid var(--teal); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#e9f5f2; border:1px solid #cbe7e2; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfdfc; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#e2f0ea; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#cde6df; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · LL.B. · Part B</div>
+    <h1>Part B — <span>Consumer Protection Laws</span></h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official casebook</b> — covering (a) the evolution of the consumer protection movement and the aims &amp; objectives of the Consumer Protection Act, 1986; (b) the objectives &amp; reasons for the enactment of the Consumer Protection Act, 2019; and (c) the <b>eleven new dimensions</b> of the CPA, 2019 as compared to the CPA, 1986 — with all prescribed cases (45–50: <i>Faqir Chand Gulati</i>, <i>IMA v. V.P. Shantha</i>, <i>Medicos Legal Action Group</i>, <i>Laxmi Engineering</i>, <i>Lucknow Development Authority</i>, <i>J.J. Merchant</i>, <i>Neena Aneja</i>) in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), concept notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">CP Act 1986</span><span class="tag">CP Act 2019</span><span class="tag">Consumer</span>
+      <span class="tag">Deficiency in service</span><span class="tag">CCPA</span><span class="tag">Product liability</span>
+      <span class="tag">Mediation</span><span class="tag">6 rights</span><span class="tag">7 Case Laws</span>
+      <span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Evolution of the Consumer Protection Movement; Aim &amp; objectives of the Consumer Protection Act, 1986 · (b) The objectives &amp; reasons for enactment of the Consumer Protection Act, 2019 · (c) New dimensions of the CPA, 2019 as compared to the CPA, 1986 (11 points) · (d) Cases 45–50.</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#evolution">1. Evolution of Consumer Protection</a>
+    <a href="#aim1986">2. Aim &amp; Objectives of the CPA, 1986</a>
+    <a href="#aim2019">3. Objectives &amp; Reasons for the CPA, 2019</a>
+    <a href="#newdim">4. New Dimensions of CPA 2019 (11)</a>
+    <a href="#d1">4.1 Definitions</a>
+    <a href="#d2">4.2 Three-tier &amp; Pecuniary limits</a>
+    <a href="#d3">4.3 Consumer Protection Councils</a>
+    <a href="#d4">4.4 Central Consumer Protection Authority</a>
+    <a href="#d5">4.5 E-commerce</a>
+    <a href="#d6">4.6 Six rights</a>
+    <a href="#d7">4.7 Product Liability</a>
+    <a href="#d8">4.8 Misleading Advertisements</a>
+    <a href="#d9">4.9 Mediation</a>
+    <a href="#d10">4.10 Unfair Contracts</a>
+    <a href="#d11">4.11 Unfair Trade Practices</a>
+    <a class="n" href="#cases">The Prescribed Case Laws</a>
+    <a href="#c45">45. Faqir Chand Gulati v. Uppal Agencies</a>
+    <a href="#c46">46. IMA v. V.P. Shantha</a>
+    <a href="#c46a">46A. Medicos Legal Action Group</a>
+    <a href="#c47">47. Laxmi Engineering Works v. P.S.G.</a>
+    <a href="#c48">48. Lucknow Dev. Authority v. M.K. Gupta</a>
+    <a href="#c49">49. J.J. Merchant v. Shrinath Chaturvedi</a>
+    <a href="#c50">50. Neena Aneja v. Jai Prakash Associates</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Terms — Quick Glossary</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">Part B of the paper — Consumer Protection Laws. What is asked and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Evolution; aims &amp; objectives of CPA 1986</td><td>Why consumer protection; the background; the scheme &amp; purpose of the 1986 Act</td><td>Consumer movement; UN guidelines (1985); CPA 1986 (three-tier fora, definitions)</td></tr>
+        <tr><td>(b) Objectives &amp; reasons for CPA 2019</td><td>Why the 1986 Act was replaced</td><td>Statement of Objects &amp; Reasons; e-commerce, misleading ads, product liability, CCPA, mediation</td></tr>
+        <tr><td>(c) New dimensions (11 points)</td><td>The changes 2019 over 1986</td><td>CPA 2019 ss.2, 10–27, 34, 47, 58, 74, 84–88, 89; CCPA; E-Commerce Rules 2020</td></tr>
+        <tr><td>(d) Cases 45–50</td><td>Key rulings on consumer, deficiency, service, jurisdiction</td><td>Casebook + supplementary</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> The casebook reproduces in full <b>Faqir Chand Gulati v. Uppal Agencies</b> (2008) 10 SCC 345, <b>Indian Medical Association v. V.P. Shantha</b> (1995) 6 SCC 651 / AIR 1996 SC 550, <b>Laxmi Engineering Works v. P.S.G. Industrial Institute</b> (1995) 3 SCC 583, and <b>Lucknow Development Authority v. M.K. Gupta</b> (1994) 1 SCC 243. Three cases are <b>listed in the syllabus but not reproduced in the casebook</b>: <b>Medicos Legal Action Group v. Union of India</b> (2021 SCC OnLine Bom 3696), <b>J.J. Merchant v. Shrinath Chaturvedi</b> (AIR 2002 SC 2931) and <b>Neena Aneja v. Jai Prakash Associates Ltd.</b> (2022) 2 SCC 161 — these are drawn from the official reports/judgment texts (with transparency notes). The CPA 1986/2019 theory follows the accompanying course notes, the casebook's own reasoning, and the bare Act.</div>
+    </section>
+
+    <!-- EVOLUTION -->
+    <section id="evolution">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Evolution of the Consumer Protection Movement</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The consumer is the <b>end-user</b> of goods and services and is the "centre of gravity of all business and industrial activity." In every society, he needs protection from the manufacturer, producer, supplier, wholesaler and retailer (<i>Morgan Stanley Mutual Fund v. Kartick Das</i>, quoted in <i>Laxmi Engineering</i>). The consumer's age-old problem has been <b>exploitation</b> — through defective goods, deficient services, spurious products, misleading advertisements, unreasonable prices and one-sided contracts.</p>
+      <p><b>The rise of the consumer movement.</b> Historically, the consumer's protection lay in the <b>law of contract</b> and the <b>law of torts</b> (e.g., the <i>Donoghue v. Stevenson</i> neighbour principle). But these remedies were slow, technical, formal and expensive. In the twentieth century there arose a distinct <b>consumer movement</b> — a broad social, economic and legal movement to organise consumers and secure them <b>rights</b> and <b>redressal</b> against unfair trade practices. This was reinforced internationally by the <b>UN Guidelines for Consumer Protection (General Assembly Resolution, 9 April 1985)</b> (referred to by the Supreme Court in <i>IMA v. V.P. Shantha</i>), which urged States to legislate for consumer protection.</p>
+      <p><b>India.</b> India's first and most important legislative response was the <b>Consumer Protection Act, 1986</b> (Act 68 of 1986). Its object, as set out in the long title and Statement of Objects and Reasons, was “<b>to provide for better protection of the interests of consumers</b>” and to establish <b>consumer councils and other authorities</b> for the settlement of consumers' disputes and for matters connected therewith. It was a landmark <b>social-welfare</b> and <b>consumer-oriented</b> piece of legislation, enacted broadly on the lines of the UN Guidelines. It has been called a <b>"benevolent piece of legislation intended to protect a large body of consumers from exploitation"</b> (per the Supreme Court in <i>J.J. Merchant</i>).</p>
+      <p>The 1986 Act provided the <b>three-tier</b> grievance-redressal machinery (<b>District Forum → State Commission → National Commission</b>), defined key expressions (consumer, service, defect, deficiency, unfair trade practice), and created <b>Consumer Protection Councils</b> at the Central and State levels. It was subsequently amended in 1991, 1993, 2002 (and further), and was finally <b>repealed and replaced by the Consumer Protection Act, 2019</b>.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Evolution of consumer protection">
+          <rect x="20" y="25" width="160" height="150" rx="10" fill="#8a6d3b"/>
+          <text x="100" y="52" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">Pre-1986</text>
+          <text x="100" y="76" fill="#fdf7e8" text-anchor="middle" font-size="10">Law of contract; law</text>
+          <text x="100" y="92" fill="#fdf7e8" text-anchor="middle" font-size="10">of torts (Donoghue v</text>
+          <text x="100" y="108" fill="#fdf7e8" text-anchor="middle" font-size="10">Stevenson); MPs/IPC</text>
+          <text x="100" y="132" fill="#fdf7e8" text-anchor="middle" font-size="10">Slow, technical,</text>
+          <text x="100" y="148" fill="#fdf7e8" text-anchor="middle" font-size="10">expensive, formal</text>
+          <rect x="200" y="25" width="160" height="150" rx="10" fill="#8a6d3b"/>
+          <text x="280" y="52" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">UN 1985</text>
+          <text x="280" y="76" fill="#fdf7e8" text-anchor="middle" font-size="10">UN Guidelines for</text>
+          <text x="280" y="92" fill="#fdf7e8" text-anchor="middle" font-size="10">Consumer Protection</text>
+          <text x="280" y="108" fill="#fdf7e8" text-anchor="middle" font-size="10">(UN GA Resolution</text>
+          <text x="280" y="124" fill="#fdf7e8" text-anchor="middle" font-size="10">of 9.4.1985)</text>
+          <text x="280" y="150" fill="#fdf7e8" text-anchor="middle" font-size="10">Urges States to</text>
+          <text x="280" y="166" fill="#fdf7e8" text-anchor="middle" font-size="10">legislate</text>
+          <rect x="380" y="25" width="180" height="150" rx="10" fill="#0f7a72"/>
+          <text x="470" y="52" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">CPA 1986</text>
+          <text x="470" y="76" fill="#d8efe7" text-anchor="middle" font-size="10">Three-tier fora;</text>
+          <text x="470" y="92" fill="#d8efe7" text-anchor="middle" font-size="10">consumer, service,</text>
+          <text x="470" y="108" fill="#d8efe7" text-anchor="middle" font-size="10">deficiency; councils;</text>
+          <text x="470" y="124" fill="#d8efe7" text-anchor="middle" font-size="10">Amdts 1991/93/02.</text>
+          <text x="470" y="150" fill="#d8efe7" text-anchor="middle" font-size="10">Social-welfare &amp;</text>
+          <text x="470" y="166" fill="#d8efe7" text-anchor="middle" font-size="10">benevolent law</text>
+          <rect x="580" y="25" width="180" height="150" rx="10" fill="#b0791f"/>
+          <text x="670" y="52" fill="#fff" text-anchor="middle" font-size="11" font-weight="700">CPA 2019</text>
+          <text x="670" y="76" fill="#fdf7e8" text-anchor="middle" font-size="10">Repeals 1986; CCPA;</text>
+          <text x="670" y="92" fill="#fdf7e8" text-anchor="middle" font-size="10">e-commerce; product</text>
+          <text x="670" y="108" fill="#fdf7e8" text-anchor="middle" font-size="10">liability; mediation;</text>
+          <text x="670" y="124" fill="#fdf7e8" text-anchor="middle" font-size="10">strict penalties;</text>
+          <text x="670" y="150" fill="#fdf7e8" text-anchor="middle" font-size="10">6 rights; enhanced</text>
+          <text x="670" y="166" fill="#fdf7e8" text-anchor="middle" font-size="10">pecuniary limits</text>
+        </svg>
+        <div class="cap">The evolution of consumer protection (pre-1986 → UN Guidelines → CPA 1986 → CPA 2019).</div>
+      </div>
+    </section>
+
+    <!-- AIM 1986 -->
+    <section id="aim1986">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Aim &amp; Objectives of the Consumer Protection Act, 1986</h2></div>
+      <p class="sec-sub">Syllabus (a).</p>
+      <p>The Consumer Protection Act, 1986 was enacted to <b>protect the interests of consumers</b> in a simple, speedy and inexpensive manner. The Supreme Court (in <i>Lucknow Development Authority</i>, <i>IMA v. V.P. Shantha</i>, <i>J.J. Merchant</i>) has held the Act to be a <b>social-welfare / benevolent</b> legislation and has repeatedly insisted that its provisions be construed <b>liberally</b>, in favour of the consumer.</p>
+      <p><b>Objects of the 1986 Act:</b></p>
+      <ul>
+        <li>To provide <b>better protection of the interests of consumers</b>; to protect the consumer against <b>unfair trade practices</b>, <b>restrictive trade practices</b>, defective goods and deficient services.</li>
+        <li>To establish <b>Consumer Protection Councils</b> at the Central and State levels (to promote and protect the rights of consumers) and <b>Consumer Disputes Redressal Agencies</b> (District Forum, State Commission, National Commission).</li>
+        <li>To provide a <b>simple, inexpensive and speedy remedy</b> (an "alternative forum") — so that a consumer need not go through the delay of a regular civil court.</li>
+        <li>The remedy under the Act is <b>in addition to</b> (not in derogation of) any other remedy available under any other law (s.3).</li>
+      </ul>
+      <p><b>Widening the definitions.</b> As <i>Lucknow Development Authority</i> (1994) emphasised, the definitions of <b>'consumer'</b> (s.2(1)(d)) and <b>'service'</b> (s.2(1)(o)) were deliberately drawn wide: "<i>the entire purpose of widening the definitions is to include in it not only day-to-day buying of goods by a common man but even such activities which are otherwise not commercial but professional or service-oriented in nature.</i>" Housing construction, and services rendered by public/statutory authorities (e.g., development authorities), were held to be 'service'. In <i>IMA v. V.P. Shantha</i>, the Court held that medical services rendered for a fee are 'service' within the Act — even though medicine is a profession and not a "commercial enterprise."</p>
+      <div class="tipbox"><b>Three-tier redressal machinery under the 1986 Act (as amended in 2002):</b> <b>District Forum</b> (claims ≤ Rs. 20 lakh) → <b>State Commission</b> (Rs. 20 lakh – Rs. 1 crore) → <b>National Commission</b> (claims > Rs. 1 crore); appeal from District to State, from State to National, and from National to the Supreme Court. The object of setting up a three-tier system is to make quick disposal possible and to keep the remedy inexpensive.</div>
+      <div class="hint"><b>Why the object matters:</b> The Supreme Court in <i>J.J. Merchant</i> held that because the object of the Act is to render "simple, inexpensive and speedy remedy," a consumer complaint must not be non-suited merely because it raises complicated questions of fact, or because the forum has delayed — the forums are <i>alternative</i> forums discharging the functions of a civil court, and must dispose of complaints expeditiously within the time prescribed by the Act.</div>
+    </section>
+
+    <!-- AIM 2019 -->
+    <section id="aim2019">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Objectives &amp; Reasons for the Enactment of the Consumer Protection Act, 2019</h2></div>
+      <p class="sec-sub">Syllabus (b).</p>
+      <p>The Consumer Protection Act, 2019 (Act 35 of 2019) received the assent of the President on <b>9 August 2019</b> and its main provisions were brought into force on <b>20 July 2020</b>. It <b>repeals and replaces the Consumer Protection Act, 1986</b>. The <b>Statement of Objects and Reasons</b> of the Bill explains that the 2019 Act was enacted because the 1986 Act, despite amendments, was no longer adequate to deal with the <b>changing commercial landscape</b> — especially the growth of <b>e-commerce</b>, the proliferation of <b>misleading advertisements</b>, and the need to strengthen remedies, streamline the disposal of complaints and make the forums accountable.</p>
+      <p><b>Objective / reasons for the 2019 Act:</b></p>
+      <ul>
+        <li><b>To strengthen the existing consumer-protection framework</b>, which had become inadequate due to delays and a lack of executive enforcement.</li>
+        <li>To regulate <b>e-commerce</b> and <b>direct selling</b> — a new, fast-growing arena of consumer transactions.</li>
+        <li>To <b>prohibit and punish misleading advertisements</b> (including by celebrity endorsers) and the <b>manufacture/sale of spurious and adulterated goods</b>.</li>
+        <li>To create <b>executive</b> machinery — the <b>Central Consumer Protection Authority (CCPA)</b> — to protect the rights of consumers <b>as a class</b> (to inquire, investigate, order recall of unsafe goods, order discontinuance of unfair trade practices, and impose penalties), complementing the judicial/quasi-judicial redressal fora.</li>
+        <li>To introduce the concept of <b>product liability</b>, making manufacturers, product-service-providers and product-sellers liable for injury caused by defective products or deficient services.</li>
+        <li>To introduce <b>mediation</b> as an <b>alternate dispute-resolution</b> mechanism to secure early, amicable settlement.</li>
+        <li>To <b>enhance pecuniary jurisdiction</b> (so more claims go to the higher, better-equipped commissions), to provide <b>e-filing</b>, filing from one's place of residence/work, and <b>video-conferencing</b> to ease access.</li>
+        <li>To specify the <b>six rights of consumers</b> and to define several new concepts (<b>unfair contract</b>, misleama advertisement, product, etc.).</li>
+      </ul>
+      <p>As <i>Neena Aneja</i> (Case 50) points out, the Statement of Objects &amp; Reasons of the 2019 Act states that the new legislation was enacted to "<i>strengthen the remedies available to consumers</i>," reflecting the legislature's awareness of delays under the erstwhile law.</p>
+      <div class="warnbox"><b>Note on the repeal:</b> Because the 2019 Act <b>repeals</b> the 1986 Act, the question of pending proceedings arose. In <b>Neena Aneja v. Jai Prakash Associates</b> (2022) 2 SCC 161, the Supreme Court held that proceedings <b>instituted before</b> the commencement of the 2019 Act continue to be governed by the <b>1986 Act</b> — the change in pecuniary jurisdiction is <b>not retrospective</b>, and the rights of consumers who had filed under the old law are protected under <b>s.6 of the General Clauses Act, 1897</b>.</div>
+    </section>
+
+    <!-- NEW DIMENSIONS -->
+    <section id="newdim">
+      <div class="sec-head"><div class="sec-num">4</div><h2>The New Dimensions of the CPA, 2019 vis-à-vis the CPA, 1986</h2></div>
+      <p class="sec-sub">Syllabus (c) — the eleven changes.</p>
+      <p>The following are the principal new dimensions introduced/strengthened by the Consumer Protection Act, 2019 as compared to the 1986 Act. The section references are to the 2019 Act.</p>
+    </section>
+
+    <!-- D1 -->
+    <section id="d1">
+      <div class="sec-head"><div class="sec-num">4.1</div><h2>Definitions</h2></div>
+      <p>The 2019 Act redefines and, in several cases, <b>widens</b> the key expressions. The syllabus lists them expressly.</p>
+      <table>
+        <tr><th style="width:24%">Term (Section)</th><th>Meaning under the CPA, 2019</th></tr>
+        <tr><td><b>Consumer</b> — s.2(7)</td><td>Any person who (i) <b>buys any goods</b> for consideration (paid/promised/partly or by deferred payment) and includes any <b>user</b> of such goods with the buyer's approval; or (ii) <b>hires or avails of any service</b> for consideration and includes any <b>beneficiary</b> of such service with the hirer's approval — but <b>does not include</b> a person who obtains goods for <b>resale</b> or for <b>any commercial purpose</b>. (The 1993 "self-employment for livelihood" clarification is retained; see <i>Laxmi Engineering</i>.)</td></tr>
+        <tr><td><b>Goods</b> — s.2(21)</td><td>Every kind of <b>movable property</b>, and includes "food" as defined in the Food Safety &amp; Standards Act, 2006.</td></tr>
+        <tr><td><b>Service</b> — s.2(42)</td><td>Service of <b>any description</b> made available to <b>potential users</b>, including (but not limited to) facilities in connection with banking, financing, insurance, transport, processing, supply of electrical/other energy, <b>telecom</b> (newly added), boarding/lodging, <b>housing construction</b>, entertainment, amusement, and the purveying of news/information — but <b>does not include</b> any service <b>free of charge</b> or under a <b>contract of personal service</b>.</td></tr>
+        <tr><td><b>Defect</b> — s.2(10)</td><td>Any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard required to be maintained by law, or under a contract, or as claimed by the trader, in relation to goods or product.</td></tr>
+        <tr><td><b>Deficiency</b> — s.2(11)</td><td>Any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance required by law or undertaken under a contract or otherwise — and includes (i) any act of <b>negligence/omission/commission</b> causing loss or injury to the consumer, and (ii) <b>deliberate withholding of relevant information</b>.</td></tr>
+        <tr><td><b>Misleading advertisement</b> — s.2(28)</td><td>An advertisement which (i) <b>falsely describes</b> a product/service; (ii) gives a false guarantee or is likely to <b>mislead</b> as to nature, substance, quantity or quality; (iii) conveys a representation that would constitute an <b>unfair trade practice</b>; or (iv) <b>deliberately conceals important information</b>.</td></tr>
+        <tr><td><b>Unfair trade practice</b> — s.2(47)</td><td>A trade practice which, to promote the sale/use/supply of goods or provision of services, adopts any <b>unfair or deceptive practice</b> (false representations, false guarantees, misrepresentations, hoarding, spurious goods, <b>not issuing a bill/cash-memo</b>, refusing to take back defective goods, <b>disclosing personal information</b>, etc.) — see §4.11.</td></tr>
+        <tr><td><b>Unfair contract</b> — s.2(46) <span class="pill n">NEW</span></td><td>A contract between a manufacturer/trader/service-provider and a consumer having terms which <b>significantly change the consumer's rights</b> — e.g., manifestly excessive security deposits; penalties wholly disproportionate to the loss; refusing early repayment of debts; unilateral termination without reasonable cause; assignment to the consumer's detriment; or any unreasonable charge/obligation/condition — see §4.10.</td></tr>
+        <tr><td><b>Complaint / Complainant</b></td><td>A "complaint" is an allegation (in writing) by a complainant about an unfair contract/unfair/restrictive trade practice, a defect in goods, a deficiency in service, or excessive pricing; a "complainant" is the consumer or the recognised consumer association or the Central/State Government or its agencies.</td></tr>
+        <tr><td><b>Manufacturer</b> — s.2(24)</td><td>A person who (i) makes any goods or parts; (ii) assembles goods made by others; or (iii) puts his own mark on goods made by another.</td></tr>
+        <tr><td><b>Restrictive trade practice</b> — s.2(40)</td><td>A trade practice which tends to bring about <b>manipulation of price or conditions of delivery</b>, or imposes unjustified costs/restrictions on consumers (e.g., delay in supply, tie-in clauses).</td></tr>
+        <tr><td><b>Product</b> — s.2(34)</td><td>Any article, commodity or service produced, manufactured or provided for use by consumers.</td></tr>
+      </table>
+      <div class="tipbox"><b>Note:</b> The definition of <b>'service'</b> under s.2(42) of the 2019 Act is substantially the same as s.2(1)(o) of the 1986 Act (the only difference is the addition of <b>'telecom'</b>). As the Bombay High Court held in <i>Medicos Legal Action Group</i> (2021), the principles laid down in <i>IMA v. V.P. Shantha</i> continue to apply <i>ex proprio vigore</i> to the new definition — so <b>health-care services rendered by doctors for a fee are 'service'</b> even under the 2019 Act.</div>
+    </section>
+
+    <!-- D2 -->
+    <section id="d2">
+      <div class="sec-head"><div class="sec-num">4.2</div><h2>Three-tier Redressal Mechanism &amp; Enhancement of Pecuniary Jurisdiction</h2></div>
+      <p>The 1986 Act provided a three-tier structure (<b>District Forum → State Commission → National Commission</b>). The 2019 Act <b>retains the three-tier structure</b> but renames the bodies <b>District/State/National <u>Commission</u></b> (not "Forum"), and <b>substantially enhances the pecuniary jurisdiction</b>.</p>
+      <table>
+        <tr><th style="width:26%">Level</th><th style="width:37%">CPA 1986 (as amended 2002)</th><th>CPA 2019</th></tr>
+        <tr><td><b>District</b> Commission/Forum</td><td>Claims ≤ Rs. 20 lakh</td><td>Value of goods/services &amp; compensation claimed ≤ <b>Rs. 1 crore</b> (s.34)</td></tr>
+        <tr><td><b>State</b> Commission</td><td>Rs. 20 lakh – Rs. 1 crore</td><td>Value <b>above Rs. 1 crore but ≤ Rs. 10 crore</b> (s.47)</td></tr>
+        <tr><td><b>National</b> Commission</td><td>&gt; Rs. 1 crore</td><td>Value <b>above Rs. 10 crore</b> (s.58)</td></tr>
+      </table>
+      <p><b>Other procedural improvements (2019):</b> complaints may be filed where the complainant <b>resides or works for gain</b> (territorial-easing); <b>e-filing</b> is permitted; hearings may be held by <b>video-conferencing</b>; a complaint is <b>deemed admitted</b> after 21 days if not rejected/admitted earlier; the Commissions may <b>review their own orders</b>; and <b>appeals</b> lie — from District to State, State to National, and National to the <b>Supreme Court</b> — and after the second stage only on <b>questions of law</b>.</p>
+      <p>As <i>J.J. Merchant</i> emphasised, the Act mandates that complaints be disposed of <b>as expeditiously as possible</b> — "endeavour shall be made to decide the complaint within a period of <b>three months</b> from the date of receipt of notice by the opposite party" (and within five months where testing/analysis is required), with the opposite party to file its version within <b>30 days</b> (extendable by at most 15 days).</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 220" width="780" role="img" aria-label="Three tier">
+          <rect x="250" y="15" width="280" height="55" rx="10" fill="#0f7a72"/>
+          <text x="390" y="38" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">NATIONAL COMMISSION</text>
+          <text x="390" y="56" fill="#d8efe7" text-anchor="middle" font-size="11">value &gt; Rs. 10 crore · s.58</text>
+          <line x1="390" y1="70" x2="390" y2="90" stroke="#0c3f3a" stroke-width="2.5"/>
+          <rect x="250" y="92" width="280" height="55" rx="10" fill="#11625a"/>
+          <text x="390" y="115" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">STATE COMMISSION</text>
+          <text x="390" y="133" fill="#d8efe7" text-anchor="middle" font-size="11">Rs. 1 – 10 crore · s.47</text>
+          <line x1="390" y1="147" x2="390" y2="167" stroke="#0c3f3a" stroke-width="2.5"/>
+          <rect x="250" y="169" width="280" height="50" rx="10" fill="#b0791f"/>
+          <text x="390" y="190" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">DISTRICT COMMISSION</text>
+          <text x="390" y="208" fill="#fdf7e8" text-anchor="middle" font-size="11">value ≤ Rs. 1 crore · s.34</text>
+        </svg>
+        <div class="cap">The three-tier redressal structure and enhanced pecuniary jurisdiction under the CPA, 2019.</div>
+      </div>
+    </section>
+
+    <!-- D3 -->
+    <section id="d3">
+      <div class="sec-head"><div class="sec-num">4.3</div><h2>Establishment of Consumer Protection Councils</h2></div>
+      <p>The 2019 Act provides for <b>Consumer Protection Councils</b> at three levels, to promote and protect the rights of consumers and to render advice to the Government:</p>
+      <ul>
+        <li><b>Central Consumer Protection Council</b> — constituted by the Central Government (chaired by the Minister of Consumer Affairs, Food and Public Distribution; includes official and non-official members).</li>
+        <li><b>State Consumer Protection Councils</b> — constituted by each State Government (chaired by the State Minister in charge of Consumer Affairs).</li>
+        <li><b>District Consumer Protection Councils</b> — constituted in each district (chaired by the District Collector).</li>
+      </ul>
+      <p>These Councils are <b>advisory</b> bodies, promoting and protecting the <b>six consumer rights</b> (§4.6). In the 2019 Act, the District-level council is newly/expressly provided for, and the Councils are given an express role in ensuring the effective functioning of the statute (as the Supreme Court has also directed the Central Consumer Protection Council to survey, review and advise on measures needed for the effective functioning of the Act).</p>
+    </section>
+
+    <!-- D4 -->
+    <section id="d4">
+      <div class="sec-head"><div class="sec-num">4.4</div><h2>Establishment of the Central Consumer Protection Authority (CCPA)</h2></div>
+      <p>The <b>CCPA</b> (ss.10–27) is the most significant new institution. It is an <b>executive/regulatory authority</b> established by the Central Government (by notification) to regulate matters relating to violation of consumer rights, unfair trade practices and <b>false or misleading advertisements</b> prejudicial to the interests of the public and consumers, and to <b>promote, protect and enforce the rights of consumers as a class</b>.</p>
+      <p><b>Powers &amp; functions of the CCPA (s.18):</b></p>
+      <ul>
+        <li>Protect, promote and enforce the rights of consumers <b>as a class</b> and prevent violation of consumer rights;</li>
+        <li>Conduct <b>investigations</b> into violations of consumer rights and institute complaints/prosecutions;</li>
+        <li>Order <b>recall of unsafe goods/services</b> and their reimbursement of the price;</li>
+        <li>Order <b>discontinuance of unfair trade practices</b> and <b>misleading advertisements</b>;</li>
+        <li><b>Impose penalties</b> on manufacturers, endorsers and publishers of misleading advertisements;</li>
+        <li>Issue warnings/safety notices; pass orders to prevent unfair trade practices; and direct the recall, refund or discontinuance.</li>
+      </ul>
+      <p>The CCPA has an <b>Investigation Wing</b> and may also initiate class-action-like "class complaints." This marks a shift from a purely <b>reactive/civil-redressal</b> model under the 1986 Act to one with a <b>proactive executive</b> enforcement arm.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 190" width="780" role="img" aria-label="CCPA">
+          <rect x="20" y="25" width="740" height="140" rx="12" fill="#0c3f3a"/>
+          <text x="390" y="52" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">CENTRAL CONSUMER PROTECTION AUTHORITY (CCPA) — s.10–27</text>
+          <text x="390" y="78" fill="#d8efe7" text-anchor="middle" font-size="11">Investigate violations of consumer rights · institute complaints/prosecution</text>
+          <text x="390" y="98" fill="#d8efe7" text-anchor="middle" font-size="11">Order recall of unsafe goods/services · order discontinuance of unfair trade</text>
+          <text x="390" y="118" fill="#d8efe7" text-anchor="middle" font-size="11">practices &amp; misleading advertisements · impose penalties on manufacturers,</text>
+          <text x="390" y="140" fill="#d8efe7" text-anchor="middle" font-size="11">endorsers &amp; publishers of misleading ads · protect consumers AS A CLASS</text>
+        </svg>
+        <div class="cap">The new executive/regulatory arm — CCPA.</div>
+      </div>
+    </section>
+
+    <!-- D5 -->
+    <section id="d5">
+      <div class="sec-head"><div class="sec-num">4.5</div><h2>Inclusion of E-commerce Transactions</h2></div>
+      <p>The 2019 Act is the first consumer statute to expressly address <b>e-commerce</b> and <b>direct selling</b>. The definition of 'service' (s.2(42)) and the definition of 'unfair trade practice' (s.2(47)) are wide enough to cover transactions through electronic/digital platforms. The Central Government has framed rules for this new-age commerce, notably the <b>Consumer Protection (E-Commerce) Rules, 2020</b> (and the Direct Selling Rules).</p>
+      <ul>
+        <li>"<b>E-commerce</b>" is defined to mean buying/selling of goods and services including digital products over digital/electronic networks; it now expressly covers online marketplaces and sellers on those platforms.</li>
+        <li>An <b>e-commerce entity</b> has <b>duties</b> — to provide correct information, display invoice/bill, not to adopt unfair trade practices, ensure that goods/services conform to advertised features, provide a grievance-redressal mechanism (a grievance officer), and disclose the seller's identity and contact details.</li>
+        <li>Complaints against e-commerce platforms/sellers fall within the jurisdiction of the Commissions, and the consumer can file the complaint from the place of his residence.</li>
+      </ul>
+    </section>
+
+    <!-- D6 -->
+    <section id="d6">
+      <div class="sec-head"><div class="sec-num">4.6</div><h2>Specific Recognition of the Six Rights of Consumers</h2></div>
+      <p>The 2019 Act expressly defines "<b>consumer rights</b>" (s.2(9)) and the six rights are set out — though they echo the UN Guidelines and the 1986 Act in spirit, the 2019 Act gives them <b>statutory articulation</b>. The six rights are:</p>
+      <ol>
+        <li><b>The right to be protected</b> against the marketing of goods, products or services which are <b>hazardous to life and property</b> (right to safety).</li>
+        <li><b>The right to be informed</b> about the quality, quantity, potency, purity, standard and price of goods, products or services, so as to protect the consumer against unfair trade practices (right to information).</li>
+        <li><b>The right to be assured</b>, wherever possible, of <b>access to a variety</b> of goods, products or services at <b>competitive prices</b> (right to choice).</li>
+        <li><b>The right to be heard</b> and to be assured that the consumer's interests will receive due consideration at appropriate fora (right to be heard).</li>
+        <li><b>The right to seek redressal</b> against unfair or restrictive trade practices or <b>unscrupulous exploitation</b> of consumers (right to redressal).</li>
+        <li><b>The right to consumer awareness</b> (right to consumer education).</li>
+      </ol>
+      <div class="hint"><b>Why it matters:</b> The 2019 Act's definition of "consumer rights" gives the CCPA and the Consumer Protection Councils an explicit statutory mandate to promote and protect these rights; and a violation of consumer rights is itself a ground on which the CCPA can act (and the CCPA can ask the government to safeguard them as a class).</div>
+    </section>
+
+    <!-- D7 -->
+    <section id="d7">
+      <div class="sec-head"><div class="sec-num">4.7</div><h2>Introduction of the Concept of Product Liability</h2></div>
+      <p>The 2019 Act for the first time codifies <b>product liability</b> (Chapter VI, ss.84–88), making a <b>product manufacturer</b>, <b>product service-provider</b> and <b>product seller</b> liable to compensate for <b>harm</b> caused by a <b>defective product</b> or <b>deficient service</b>. "Harm" includes personal injury, illness or death, damage to property (other than the product itself), and loss of consortium/services.</p>
+      <p><b>Bases for a product-liability action against a manufacturer:</b></p>
+      <ul>
+        <li><b>Manufacturing defect</b>;</li>
+        <li><b>Design defect</b>;</li>
+        <li><b>Deviation from manufacturing specifications</b>;</li>
+        <li>Not conforming to an <b>express warranty</b>;</li>
+        <li>Failing to contain <b>adequate instructions for correct use</b> (or failing to warn against the risk of the product's use); or</li>
+        <li>where the product is unsafe because of the manufacturer's failure to exercise reasonable care.</li>
+      </ul>
+      <p>A <b>product service-provider</b> is liable for a <b>faulty, imperfect or deficient service</b>; a <b>product seller</b> is liable where he exercised substantial control over the product, or where he failed to exercise reasonable care, or made an express warranty. The provision is a <b>deterrent</b> to manufacturers and service-providers from delivering defective products/deficient services, and reflects a move towards <b>strict/statutory product liability</b> in Indian consumer law.</p>
+    </section>
+
+    <!-- D8 -->
+    <section id="d8">
+      <div class="sec-head"><div class="sec-num">4.8</div><h2>Stringent Penalties for Misleading Advertisements</h2></div>
+      <p>The 2019 Act defines "<b>misleading advertisement</b>" (s.2(28)) and imposes <b>strict penalties</b>, including on <b>endorsers</b> (celebrities), which the 1986 Act did not provide.</p>
+      <ul>
+        <li><b>Manufacturer or service-provider</b> who causes a false/misleading advertisement: imprisonment up to <b>2 years</b> and fine up to <b>Rs. 10 lakh</b>; for a subsequent offence, imprisonment up to <b>5 years</b> and fine up to <b>Rs. 50 lakh</b> (s.89).</li>
+        <li><b>Endorser</b> of a misleading advertisement (who has not exercised due diligence / verified claims, or has endorsed without being able to substantiate): penalty up to <b>Rs. 10 lakh</b>, and <b>disqualification from making endorsements for 1 year</b> (and <b>3 years</b> for a subsequent offence).</li>
+        <li>The <b>CCPA</b> may also order the <b>discontinuance</b> of the advertisement, impose a penalty, and direct the recall of the goods or a corrective advertisement.</li>
+      </ul>
+      <p>This is a marked expansion over the 1986 Act, which had no penal provisions for misleading advertisements.</p>
+    </section>
+
+    <!-- D9 -->
+    <section id="d9">
+      <div class="sec-head"><div class="sec-num">4.9</div><h2>Introduction of Mediation as an Alternate Dispute-Resolution Mechanism</h2></div>
+      <p>The 2019 Act introduces <b>mediation</b> (Chapter V, ss.74–81) as an <b>ADR</b> mechanism, with <b>Consumer Mediation Cells</b> attached to the Commissions. The Consumer Commission may <b>refer the dispute to mediation</b> where there is scope for early settlement and the <b>parties agree</b>.</p>
+      <ul>
+        <li><b>Mediation cell</b> attached to each District/State/National Commission;</li>
+        <li>A <b>panel of mediators</b> selected by a <b>selection committee</b> consisting of the President and a member of the Commission;</li>
+        <li>Mediation is held in the <b>consumer mediation cell</b>;</li>
+        <li>The <b>settlement agreement</b> reached through mediation is binding and <b>no appeal lies</b> against it;</li>
+        <li>Mediation helps in the <b>early disposal</b> of cases and in reducing the burden on the Commissions.</li>
+      </ul>
+      <p>The Supreme Court has also reaffirmed the value of mediation for expeditious resolution of consumer disputes (e.g., in <i>Neena Aneja</i>-type real-estate matters).</p>
+    </section>
+
+    <!-- D10 -->
+    <section id="d10">
+      <div class="sec-head"><div class="sec-num">4.10</div><h2>Remedies for Unfair Contracts</h2></div>
+      <p>The 2019 Act creates a new concept of the "<b>unfair contract</b>" (s.2(46)) — a contract between a manufacturer/trader/service-provider on one hand and a consumer on the other, having terms that <b>significantly change the consumer's rights</b> — including:</p>
+      <ul>
+        <li>Requiring <b>manifestly excessive security deposits</b>;</li>
+        <li>Imposing a <b>penalty wholly disproportionate</b> to the loss caused by breach;</li>
+        <li>Refusing to <b>accept early repayment of debts</b> on payment of applicable penalty;</li>
+        <li>Entitling a party to terminate the contract <b>unilaterally without reasonable cause</b>;</li>
+        <li>Permitting assignment of the contract <b>to the consumer's detriment</b> without consent;</li>
+        <li>Imposing on the consumer any <b>unreasonable charge, obligation or condition</b> which puts him at a disadvantage.</li>
+      </ul>
+      <p>Where a complaint alleges an unfair contract, the Commission may grant appropriate relief — including <b>setting aside</b> such terms, ordering <b>refund</b> of money, and compensation. This is a significant new remedy that did not exist under the 1986 Act. In <i>Neena Aneja</i>-type and <i>Parsvnath</i>-type cases, courts have held that <b>one-sided contractual terms</b> which operate to the consumer's detriment and give the builder a disproportionately low compensation for delay amount to unfair terms, and the consumer fora may award <b>just and reasonable compensation</b> notwithstanding such clauses.</p>
+    </section>
+
+    <!-- D11 -->
+    <section id="d11">
+      <div class="sec-head"><div class="sec-num">4.11</div><h2>Expansion of the Definition of Unfair Trade Practices</h2></div>
+      <p>The definition of "<b>unfair trade practice</b>" (s.2(47)) is <b>broader</b> than under the 1986 Act (s.2(1)(r)). It now expressly covers, among others:</p>
+      <ul>
+        <li>Making false or misleading statements about the standard, quality, quantity, grade, composition, style or model of goods;</li>
+        <li>Falsely representing that services are of a particular standard, quality or grade;</li>
+        <li>Falsely representing <b>rebuilt, second-hand, renovated or reconditioned goods as new</b>;</li>
+        <li>Representing that goods/services have a <b>sponsorship, approval, performance or benefit they do not have</b>;</li>
+        <li>Giving a <b>warranty/guarantee</b> not based on an adequate test;</li>
+        <li>Materially misleading the public as to price;</li>
+        <li>False/disparaging facts about another's goods/services;</li>
+        <li><b>Hoarding or destruction of goods</b> or refusal to sell/ provide services to raise cost;</li>
+        <li><b>Manufacturing/offering spurious goods</b> and adopting deceptive practices in services;</li>
+        <li><b>Not issuing a bill/cash-memo/receipt</b>;</li>
+        <li><b>Refusing to take back defective goods</b> or refusing to refund;</li>
+        <li><b>Disclosing the personal information</b> of a consumer given in confidence (a new head reflecting e-commerce/data concerns).</li>
+      </ul>
+      <p>The expanded definition, read with the definition of <b>misleading advertisement</b>, gives the CCPA and the Commissions a much wider net to catch modern unfair practices, including those in e-commerce and through digital platforms.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 250" width="780" role="img" aria-label="New dimensions">
+          <rect x="20" y="20" width="230" height="210" rx="10" fill="#0c3f3a"/>
+          <text x="135" y="46" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">NEW/EXPANDED</text>
+          <text x="135" y="70" fill="#d8efe7" text-anchor="middle" font-size="10">CCPA (executive)</text>
+          <text x="135" y="88" fill="#d8efe7" text-anchor="middle" font-size="10">Product liability</text>
+          <text x="135" y="106" fill="#d8efe7" text-anchor="middle" font-size="10">Misleading ad penalties</text>
+          <text x="135" y="124" fill="#d8efe7" text-anchor="middle" font-size="10">Mediation (ADR)</text>
+          <text x="135" y="142" fill="#d8efe7" text-anchor="middle" font-size="10">Unfair contract</text>
+          <text x="135" y="160" fill="#d8efe7" text-anchor="middle" font-size="10">E-commerce/direct selling</text>
+          <text x="135" y="178" fill="#d8efe7" text-anchor="middle" font-size="10">Six rights (s.2(9))</text>
+          <text x="135" y="196" fill="#d8efe7" text-anchor="middle" font-size="10">District Consumer</text>
+          <text x="135" y="214" fill="#d8efe7" text-anchor="middle" font-size="10">Protection Council</text>
+          <rect x="275" y="20" width="230" height="210" rx="10" fill="#0f7a72"/>
+          <text x="390" y="46" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">STRENGTHENED</text>
+          <text x="390" y="70" fill="#d8efe7" text-anchor="middle" font-size="10">Pecuniary limits raised</text>
+          <text x="390" y="88" fill="#d8efe7" text-anchor="middle" font-size="10">(1 cr / 10 cr / &gt;10 cr)</text>
+          <text x="390" y="106" fill="#d8efe7" text-anchor="middle" font-size="10">E-filing; video hearing;</text>
+          <text x="390" y="124" fill="#d8efe7" text-anchor="middle" font-size="10">place of residence/work</text>
+          <text x="390" y="142" fill="#d8efe7" text-anchor="middle" font-size="10">Review of own orders</text>
+          <text x="390" y="160" fill="#d8efe7" text-anchor="middle" font-size="10">21-day deemed admission</text>
+          <text x="390" y="178" fill="#d8efe7" text-anchor="middle" font-size="10">Time-bound disposal</text>
+          <text x="390" y="196" fill="#d8efe7" text-anchor="middle" font-size="10">Appeal on question</text>
+          <text x="390" y="214" fill="#d8efe7" text-anchor="middle" font-size="10">of law after 2nd stage</text>
+          <rect x="530" y="20" width="230" height="210" rx="10" fill="#b0791f"/>
+          <text x="645" y="46" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">DEFINITIONS</text>
+          <text x="645" y="70" fill="#fdf7e8" text-anchor="middle" font-size="10">consumer · goods · service</text>
+          <text x="645" y="88" fill="#fdf7e8" text-anchor="middle" font-size="10">defect · deficiency</text>
+          <text x="645" y="106" fill="#fdf7e8" text-anchor="middle" font-size="10">manufacturer</text>
+          <text x="645" y="124" fill="#fdf7e8" text-anchor="middle" font-size="10">misleading advertisement</text>
+          <text x="645" y="142" fill="#fdf7e8" text-anchor="middle" font-size="10">restrictive trade practice</text>
+          <text x="645" y="160" fill="#fdf7e8" text-anchor="middle" font-size="10">unfair contract · unfair</text>
+          <text x="645" y="178" fill="#fdf7e8" text-anchor="middle" font-size="10">trade practice · product ·</text>
+          <text x="645" y="196" fill="#fdf7e8" text-anchor="middle" font-size="10">complaint/complainant ·</text>
+          <text x="645" y="214" fill="#fdf7e8" text-anchor="middle" font-size="10">spurious goods</text>
+        </svg>
+        <div class="cap">The eleven new dimensions of the CPA, 2019 (grouped).</div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C45 -->
+      <div class="case" id="c45">
+        <div class="case-head">
+          <h4>45. Faqir Chand Gulati v. Uppal Agencies (P.) Ltd.</h4>
+          <span class="cit">(2008) 10 SCC 345 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant, <b>Faqir Chand Gulati</b>, was the <b>owner</b> of premises (No. L-3, Kailash Colony, New Delhi). He entered into a <b>"collaboration agreement"</b> dated 17 May 1991 with the first respondent, <b>Uppal Agencies (P.) Ltd.</b>, a builder. Under the agreement: the owner was to place vacant possession of his land at the builder's disposal and authorise him to obtain sanctions; the builder was to construct an apartment building (ground floor + two upper floors) at its own cost and as per specified plans; the <b>owner was to get the entire ground floor</b> (rooms, etc.) with a servant room and parking as his share, while the <b>builder was to get the first and second floors</b>, two servant rooms and two car parkings; and the builder was to pay the owner <b>Rs. 8 lakh</b> as non-refundable consideration. The appellant alleged that the builder secured sanction of the plan from the Municipal Corporation of Delhi (MCD) but made <b>several unauthorised deviations</b>, resulting in deviation notices; MCD even passed an order to seal the premises, later de-sealed to enable rectification. The ground floor was delivered to the owner's son during the owner's absence; on his return the owner pointed out several shortcomings and violations and called on the builder to rectify them and to <b>furnish the completion certificate and the C&amp;D forms</b>. The builder did not comply.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Where a landowner enters into a collaboration/joint-development agreement with a builder for the construction of a building and the <b>sharing of the constructed area</b>, is the landowner a <b>"consumer"</b> and the builder a <b>"service-provider"</b>, and is a complaint under the Consumer Protection Act <b>maintainable</b>? (2) Is the builder under an obligation to obtain the <b>completion certificate and C&amp;D forms</b> and to rectify deviations?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Owner/appellant:</b> There is a <b>contract for construction</b> of the owner's ground floor for <b>consideration</b> flowing from the owner to the builder (transfer of undivided share/payment), so the owner <b>avails of the builder's services</b>; the builder's deviations and failure to obtain completion certificate amount to <b>deficiency in service</b> and the complaint is maintainable. The lower fora had wrongly held the agreement to be a "joint venture" outside the Act.</p>
+            <p><b>Builder/respondent:</b> The agreement is in the nature of a <b>joint venture</b> (not a service contract) and therefore outside the purview of the Consumer Protection Act; and the builder is only bound to <b>apply</b> for a completion certificate, hence no deficiency arises.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court expressly set aside</b> the orders of the National Commission, State Commission and District Forum; held the <b>complaint maintainable</b>; and directed the District Forum to decide the matter on merits within six months. Costs of Rs. 25,000 were awarded to the appellant against the respondents.</p>
+            <p class="quote">“The basic underlying purpose of the agreement is the construction of a house or an apartment (ground floor) in accordance with the specifications, by the builder for the owner, the consideration for such construction being the transfer of undivided share in land to the builder and grant of permission to the builder to construct two floors.”</p>
+            <p class="quote">“There is a contract for construction of an apartment or house for the appellant, in accordance with the specifications and in terms of the contract. There is a consideration for such construction, flowing from the landowner to the builder … But the important aspect is the <b>availing of services of the builder by the land-owner</b> for house construction for a consideration. To that extent, the land owner is a <b>consumer</b>, the builder is a <b>service-provider</b> and if there is deficiency in service … the dispute raised by the land owner will be a <b>consumer dispute</b>.”</p>
+            <p class="quote">“It is true that a <i>collaboration agreement</i> is not a <i>joint venture</i> … it makes no difference … whether the collaboration agreement is for construction and delivery of one apartment or one floor to the owner or whether it is for construction and delivery of multiple apartments … The principle would be the same.”</p>
+            <p class="quote">“The obligation on the part of the builder to secure a sanctioned plan and construct a building, carries with it an <b>implied obligation to comply with the requirements of municipal and building laws and secure the mandatory permissions/certificates</b>.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> A <b>landowner who enters into a collaboration/development agreement with a builder for the construction of a building (or a part of it) and the sharing of the constructed area IS a 'consumer'</b> — he <b>avails of the builder's services</b> for a consideration — and the builder is the <b>'service-provider'</b>; disputes about construction, deviations, and failure to provide the completion certificate/C&amp;D forms are <b>'consumer disputes'</b> maintainable before the consumer fora. A collaboration agreement is <b>not</b> a 'joint venture'. The builder's obligation to follow the sanctioned plan and comply with municipal laws carries an <b>implied duty to secure the completion certificate and other mandatory permissions</b>; "the builder cannot be permitted to avoid or escape the consequences of his illegal acts." (It also reaffirms that the remedy under the Act (s.3) is <b>in addition to</b>, and does not exclude, a civil suit for specific performance/damages.)</div>
+        </div>
+      </div>
+
+      <!-- C46 -->
+      <div class="case" id="c46">
+        <div class="case-head">
+          <h4>46. Indian Medical Association v. V.P. Shantha</h4>
+          <span class="cit">(1995) 6 SCC 651 · AIR 1996 SC 550 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The case arose from a batch of appeals/transferred petitions from several High Courts and from the National Commission, raising a common question: <b>whether, and in what circumstances, a medical practitioner / hospital / nursing home renders 'service' under s.2(1)(o) of the Consumer Protection Act, 1986</b>. The Indian Medical Association and several doctors contended that the medical profession (subject to the disciplinary control of the Medical Council of India/State Medical Councils) could not be subjected to the consumer fora. The Supreme Court considered this against the backdrop of the <b>UN Guidelines for Consumer Protection (9 April 1985)</b> and the wide definitions of 'consumer' (s.2(1)(d)) and 'service' (s.2(1)(o)).</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is the service rendered by a <b>medical practitioner</b> for a fee a 'service' under s.2(1)(o)? (2) Is the service at a <b>hospital/nursing home</b> a 'service'? (3) Does a doctor render service under a <b>'contract of personal service'</b> (excluded by the definition)? (4) What is the position where the service is rendered <b>free of charge</b>, or partly free / partly paid, or under an <b>insurance / employer-paid</b> scheme?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>IMA/doctors (for exclusion):</b> (i) The words "made available to potential users" suggest only institutional/commercial service, not professional medical care; (ii) a deficiency (s.2(1)(g)) can be judged only against fixed norms, which medical treatment cannot be; (iii) the doctor–patient relationship is one of <b>trust and confidence</b> and is a <b>contract of personal service</b>, excluded by the definition.</p>
+            <p><b>Consumers (for inclusion):</b> 'Service' is of any description and is wide; the doctor–patient relationship is a <b>contract for personal services</b>, not a contract of personal service; the Act is a welfare legislation to be construed liberally; and a consumer who pays for medical treatment should not be driven to a civil court.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> held that <b>medical services rendered for a fee are 'service'</b> within s.2(1)(o), and laid down a detailed <b>12-point ratio</b> on when medical service is/is not covered. In substance:</p>
+            <p class="quote">“It is, therefore, not possible to hold that in view of the definition of 'deficiency' as contained in section 2(1)(g), medical practitioners must be treated to be excluded from the ambit of the Act and the service rendered by them is not covered under section 2(1)(o).”</p>
+            <p class="quote">“A 'contract of personal service' has to be distinguished from a 'contract for personal services'. In the absence of a relationship of master and servant between the patient and medical practitioner, the service rendered by a medical practitioner to the patient cannot be regarded as service rendered under a 'contract of personal service'.”</p>
+            <p>The Court summarised the position as follows — a medical service is <b>'service'</b> under the Act where it is rendered for a consideration (even partly for consideration), i.e.: (1) service for a <b>fee/charges</b> is service; (2) it is service notwithstanding the doctor is subject to the Medical Council's disciplinary control; (3) it is not a <b>contract of personal service</b> (only a <b>contract for personal services</b>) unless a <b>master–servant</b> relationship exists; (4) a <b>medical officer employed</b> by an employer (who renders medical service solely to his employer) is under a contract of employment and is outside the Act; (5) service rendered <b>free of charge to everyone</b> (e.g., a charitable hospital giving free treatment to all, or a government hospital treating all free) is <b>outside</b> the Act — a token registration charge does not alter this; (7) service at a <b>non-government hospital where charges are paid</b> is 'service'; (8) service at a non-government hospital where some pay and some can't afford (free) is 'service' (the free service is also 'service' and the recipient a 'consumer'); (9)/(10) the same distinction applies to <b>government hospitals</b>; (11) where charges are borne by an <b>insurance company</b>, the service is not free and is 'service'; (12) where the <b>employer</b> bears medical expenses as a condition of service, the service is not free and is 'service'.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> Medical practitioners and hospitals/nursing homes <b>render 'service'</b> under the Consumer Protection Act <b>when they charge for it (wholly or partly)</b>, and may be sued before the consumer fora for <b>deficiency in service</b> (medical negligence). A doctor–patient relationship is a <b>contract for personal services</b>, not a contract of personal service (unless a master–servant relation exists), so it is not excluded. In effect, the doctor-patient relationship is one of <b>trust and confidence</b> — but the patient, having paid, is a consumer. Service is <b>outside</b> the Act only where it is rendered <b>completely free</b> (charitable towards all, or a government hospital charging nobody), or under a true <b>contract of employment</b>. "Deficiency" is to be tested by the standards of the medical profession, and the determination is made on the same test as an action for negligence. This is the foundational authority extending the Consumer Protection Act to <b>health-care services</b>.</div>
+        </div>
+      </div>
+
+      <!-- C46A -->
+      <div class="case" id="c46a">
+        <div class="case-head">
+          <h4>46A. Medicos Legal Action Group v. Union of India</h4>
+          <span class="cit">2021 SCC OnLine Bom 3696 (Bombay HC) — SLP dismissed by SC (2022)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The petitioner, <b>Medicos Legal Action Group</b>, a registered trust, filed a <b>Public Interest Litigation</b> (PIL No. 58 of 2021) before the Bombay High Court seeking a declaration that services performed by <b>health-care service-providers</b> (doctors) are <b>not</b> within the purview of the <b>Consumer Protection Act, 2019</b>, and an order directing all consumer commissions in Maharashtra not to entertain complaints against health-care providers under the 2019 Act. The Trust relied on the fact that <b>'health care'</b> was initially included in the definition of 'service' in the Consumer Protection Bill, 2018, but was <b>deleted</b> after parliamentary debates, and on a statement of the Union Minister (Consumer Affairs) that health care had been deliberately kept out of the 2019 Act.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Does the repeal of the 1986 Act by the 2019 Act and the absence of the words 'health care' in s.2(42) of the 2019 Act exclude doctors' services from the definition of 'service'? (2) Can parliamentary debates / a Minister's statement restrict the operation of the statute? (3) Does <i>IMA v. V.P. Shantha</i> survive the 2019 Act?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Petitioner (Medicos Group):</b> Parliament's deliberate exclusion of 'health care' from the definition of 'service' in s.2(42) shows an intent to take medical services out of the consumer fora; the Minister's statement supports this; therefore complaints against doctors under the 2019 Act are illegal.</p>
+            <p><b>Union of India:</b> The definition of 'service' in s.2(42) is wide and is essentially the same as s.2(1)(o) of the 1986 Act (except for the addition of 'telecom'); if Parliament had intended to exclude health care it would have said so expressly; a Minister's speech cannot restrict the ambit of a statute.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Bombay High Court</b> (Datta CJ &amp; Kulkarni J.) dismissed the PIL as a <b>"thoroughly misconceived Public Interest Litigation,"</b> holding that <b>doctors'/health-care services are covered by the Consumer Protection Act, 2019</b>; it imposed costs of <b>Rs. 50,000</b> on the petitioner. The matter reached the Supreme Court, which <b>dismissed the special leave petition</b> (SLP (C) 19374 of 2021), affirming the High Court.</p>
+            <p class="quote">“We see no reason to hold that merely because of enactment of the 2019 Act upon repeal of the 1986 Act as well as the parliamentary debates referred to by the petitioning Trust, the efficacy of the law laid down in the decision in <i>Indian Medical Association</i> (supra) as a binding precedent would stand eroded.”</p>
+            <p class="quote">“The definition of 'service' in both the enactments (repealed and new) are more or less similar and what has been said of 'service' as defined in section 2(1)(o) of the 1986 Act would apply <i>ex proprio vigore</i> to the definition of the term 'service' in section 2(42) of the 2019 Act.”</p>
+            <p class="quote">“…if at all the Parliament while repealing and replacing the 1986 Act with the 2019 Act had intended to give a meaning to the term 'service' different from the one given by the Supreme Court, such intention ought to have been reflected in clear words by a specific exclusion of 'health care' from the purview of the 2019 Act.”</p>
+            <p class="quote">“We are of the clear opinion that the contention raised by the learned counsel for the petitioning Trust, of the Hon'ble Minister having made certain statements in course of parliamentary debates on the Bill that preceded the 2019 Act, is of little relevance.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Medical/health-care services rendered by doctors for a fee/charges are covered by the Consumer Protection Act, 2019.</b> There is no material difference between 'service' under s.2(1)(o) of the 1986 Act and s.2(42) of the 2019 Act (except the addition of 'telecom'); hence the law laid down in <i>IMA v. V.P. Shantha</i> continues to govern <i>ex proprio vigore</i>. <b>Parliamentary debates and a Minister's statement cannot restrict the plain, wide operation of the statute</b>; if Parliament had wanted to exclude health care it would have said so expressly ("what has not been said is equally important as what has been said"). This is the definitive post-2019 authority confirming that doctors remain amenable to consumer jurisdiction.</div>
+        </div>
+      </div>
+
+      <!-- C47 -->
+      <div class="case" id="c47">
+        <div class="case-head">
+          <h4>47. Laxmi Engineering Works v. P.S.G. Industrial Institute</h4>
+          <span class="cit">(1995) 3 SCC 583 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellant, <b>Laxmi Engineering Works</b>, a proprietary concern established under the <b>Employment Promotion Programme</b>, registered as a <b>small-scale industry</b> with the Directorate of Industries, Maharashtra, and having obtained a term loan of <b>Rs. 22.10 lakh</b> from the Maharashtra State Finance Corporation, placed an order on <b>28 May 1990</b> with the respondent, <b>P.S.G. Industrial Institute</b>, for the supply of a <b>PSG 450 CNC Universal Turning Centre machine</b>. The appellant alleged the respondent supplied the machine <b>six months late</b> and <b>defective</b>: soon after installation several defects came to light; the respondent sent persons to rectify them but the machine could not be put in proper order. The appellant lodged a complaint before the Maharashtra State Commission claiming <b>Rs. 4,00,000</b>. The respondent pleaded that since the machine was bought for <b>commercial purposes</b>, the appellant was <b>not a 'consumer'</b>. The State Commission partly allowed the claim (Rs. 2.48 lakh); the National Commission set it aside solely on the ground that the appellant was not a 'consumer'.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) What is the meaning and ambit of the expression <b>'any commercial purpose'</b> in the definition of 'consumer' in s.2(1)(d) of the Consumer Protection Act, 1986? (2) Is the <b>Explanation</b> added by the Consumer Protection (Amendment) Act 50 of 1993 (w.e.f. 18.6.1993) clarificatory/retrospective? (3) Does an individual who buys goods for use by himself <b>exclusively for earning his livelihood by self-employment</b> fall within 'consumer'? (4) Are the fora under the Act empowered to decide whether the complainant is a 'consumer'?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant:</b> A narrow construction of 'commercial purpose' is not warranted by the scheme and object of a social-welfare Act; a widow/an old or invalid person who buys a car or machine to be operated by another for a livelihood should not be excluded; and the Explanation (self-employment exemption) supports this.</p>
+            <p><b>Respondent:</b> The machine (a CNC turning centre) was bought for commercial/production purposes, so the appellant falls within the exclusion clause and is <b>not</b> a 'consumer'; the object of the Act is to protect the ordinary consumer, not commercial entrepreneurs.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (B.P. Jeevan Reddy J.) <b>dismissed the appeal</b> (without costs), upholding the National Commission — the appellant, having purchased a large CNC machine for commercial production, was <b>not a 'consumer'</b>; it could file a civil suit, but could claim the benefit of <b>s.14 of the Limitation Act</b> to exclude the period spent in the consumer proceedings. The Court laid down the following <b>conclusions</b>:</p>
+            <p class="quote">“The explanation added by The Consumer Protection (Amendment) Act 50 of 1993 … is <b>clarificatory in nature and applies to all pending proceedings</b>.”</p>
+            <p class="quote">“Whether the purpose for which a person has bought goods is a 'commercial purpose' within the meaning of the definition of 'consumer' in Section 2(d) of the Act is <b>always a question of fact</b> to be decided in the facts and circumstances of each case.”</p>
+            <p class="quote">“A person who buys goods and uses them himself, exclusively for the purpose of <b>earning his livelihood by means of self-employment</b>, is within the definition of 'consumer'.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>'commercial purpose' exclusion</b> in the definition of 'consumer' means a person who buys goods <b>for resale or for a commercial purpose</b> is not a consumer, <b>unless</b> the goods are bought and used by the buyer himself <b>exclusively for earning his livelihood by self-employment</b> (the 1993 Explanation). Whether a purchase is for a 'commercial purpose' is <b>always a question of fact</b>, to be determined in the circumstances of each case (there must be a close nexus between the purchase and a large-scale commercial/profit-making activity). The 1993 Explanation is <b>clarificatory</b> and applies retrospectively to pending proceedings. The <b>consumer fora have the jurisdiction</b> to decide whether the complainant is a 'consumer', and their orders (subject to the statutory appeal) cannot be questioned in a civil court. An individual buying a small machine for self-employment (e.g., a copier, a small machine) is a consumer; a firm buying a large CNC machine for commercial production is not.</div>
+        </div>
+      </div>
+
+      <!-- C48 -->
+      <div class="case" id="c48">
+        <div class="case-head">
+          <h4>48. Lucknow Development Authority v. M.K. Gupta</h4>
+          <span class="cit">(1994) 1 SCC 243 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The respondent, <b>M.K. Gupta</b>, had applied to / was allotted a house/flat or a plot by the <b>Lucknow Development Authority</b> (a statutory authority under the Lucknow Development Act). The Authority failed to deliver possession within the stipulated time and the case involved <b>harassment and mental agony</b> caused by the Authority's officers. The question arose whether a <b>statutory/public authority</b> like a Development Authority, or a <b>builder/contractor</b>, renders a 'service' under the Consumer Protection Act, 1986 (s.2(1)(o)) and whether the Commission can award compensation for <b>harassment and agony</b>. The matter reached the Supreme Court in a batch of appeals.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Do <b>Development Authorities and housing</b> (and statutory public authorities in general) come within the ambit of the Consumer Protection Act, 1986 (and its pre-1993 amendments) as 'service'? (2) Does the Commission have power to award <b>compensation</b> for deficiency in service, and can such compensation be for <b>mental harassment/agony</b>? (3) Whether any <b>vested right</b> was affected by the 1993 amendments (which added 'housing construction' and 'avails of' — were they retrospective/clarificatory)? (4) Whether the delay in disposal of cases or the presence of complicated questions warrants directing the consumer to a civil court?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Development / public authority:</b> Powers exercised under a statute are not 'service'; 'service' is confined to commercial activities; the 1993 amendment (adding 'housing construction' to clause (o) and 'avails of' to clause (d)) was <b>prospective</b>; and the authority being a public functionary is not liable in the same way as a private trader.</p>
+            <p><b>Consumer:</b> 'Service' is of any description and is to be construed widely to include statutory functions that serve the public; developing land, allotting sites and constructing houses for citizens is 'service'; the wide definitions were deliberately expanded; and the authority is liable for harassment and delay.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> <b>dismissed</b> the appeals and held that <b>housing and development activity by statutory/public authorities is 'service'</b>, and that the Commission can award <b>compensation for harassment and mental agony</b> — and should recover the amount from the responsible public officers. On the 1993 amendment, the Court held it was added by way of <b>abundant caution</b> (housing construction was already 'service') and was <b>clarificatory</b>, not a source of new law.</p>
+            <p class="quote">“The entire purpose of widening the definitions is to include in it not only day-to-day buying of goods by a common man but even such activities which are otherwise not commercial but <b>professional or service-oriented in nature</b>.”</p>
+            <p class="quote">“When a statutory authority develops land or allots a site or constructs a house for the benefit of common man it is as much service as by a builder or contractor. The one is contractual service and other statutory service.”</p>
+            <p class="quote">“When possession of property is not delivered within stipulated period the delay so caused is <b>denial of service</b>. Such disputes or claims are not in respect of immoveable property as argued but <b>deficiency in rendering of service</b> of particular standard, quality or grade.”</p>
+            <p class="quote">“In a modern society no authority can arrogate to itself the power to act in a manner which is arbitrary. … When a citizen seeks to recover compensation from a public authority in respect of injuries suffered by him for capricious exercise of power and the National Commission finds it duly proved then it has a <b>statutory obligation to award the same</b>.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> A statutory/public authority (such as a Development Authority) that develops land, allots sites or constructs houses for citizens renders <b>'service'</b> under the Consumer Protection Act; a person who applies for an allotment or enters into an agreement with such an authority (or with a builder) is a <b>potential user / consumer</b>. A failure to deliver possession in time is a <b>deficiency in service</b>. The consumer fora may award <b>compensation not only for the loss caused but also for the harassment, mental agony and oppression</b> suffered, and should fix the responsibility on and recover the amount from the officers responsible. The 1993 amendments were <b>clarificatory</b>. The Court also rejected the plea that a summary trial or a delay in disposal is a ground to drive the consumer to a civil court. (This is the authority for the <b>consumer protection of housing/allotment</b> and for <b>compensation for mental agony</b> under the Act.)</div>
+        </div>
+      </div>
+
+      <!-- C49 -->
+      <div class="case" id="c49">
+        <div class="case-head">
+          <h4>49. Dr. J.J. Merchant &amp; Ors. v. Shrinath Chaturvedi</h4>
+          <span class="cit">AIR 2002 SC 2931 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The complainant's <b>son (aged 21)</b> was admitted to a <b>hospital in Mumbai</b> (Branch Candy Hospital) on <b>4 August 1992</b> for an operation for a <b>slip disc</b> as he was suffering from a backache. He <b>died on 29 August 1992</b> in the hospital. The father attributed this to <b>medical negligence</b> and filed a complaint before the <b>National Commission</b> (Original Petition No. 252 of 1993) against the doctors. Before the complaint was decided, the doctors (the appellants) filed an application (Misc. Petition No. 53 of 2000) seeking dismissal of the complaint, or a stay, on the ground that (a) there was an <b>inordinate delay</b> (of ~9 years) in disposal of the complaint, and (b) the case involved <b>complicated questions of law and fact</b> requiring the examination and cross-examination of expert witnesses, which a summary proceeding could not properly decide — hence the complainant should be directed to approach the <b>civil court</b>. The National Commission rejected this application; the doctors appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is a <b>delay in disposal</b> by the consumer forum a ground for directing the complainant to approach the civil court? (2) Where a complaint involves <b>complicated questions of fact</b> requiring expert evidence, should the consumer forum decline jurisdiction and direct the complainant to a civil court? (3) What are the guidelines for <b>speedy disposal</b> of consumer complaints?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Doctors/appellants:</b> The complaint raises complicated questions of medical negligence and will consume considerable time in recording expert evidence; the summary procedure under the Act is unsuitable; the delay has been inordinate; therefore the complainant must be directed to the civil court.</p>
+            <p><b>Complainant:</b> The consumer forum is an <b>alternative forum</b> discharging the function of a civil court, and should not be denied jurisdiction; the Act provides an adequate, expeditious procedure (affidavits, commissions to examine witnesses, etc.); the object of the Act (simple, inexpensive, speedy remedy) would be defeated if consumers are non-suited for these reasons.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (M.B. Shah, B.P. Singh &amp; H.K. Sema JJ.) <b>allowed the complaint and rejected the doctors' plea</b>, holding that neither delay in disposal nor the presence of complicated questions of fact is a ground to direct the consumer to the civil court. It laid down guidelines for expeditious disposal.</p>
+            <p class="quote">“The consumer forum is an <b>alternative forum</b> established under the Act to discharge the functions of a Civil Court. Therefore, <b>delay in disposal of the complaint would not be a ground for rejecting it and directing the complainant to approach the civil court</b>.”</p>
+            <p class="quote">“…the object and purpose of enacting the Act is to render <b>simple, inexpensive and speedy remedy</b> to the consumers with complaints against defective goods and deficient services and the benevolent piece of legislation intended to protect a large body of consumers from exploitation would be defeated [if consumers are non-suited].”</p>
+            <p class="quote">“It would also be totally wrong assumption that because summary trial is provided, justice cannot be done when some questions of facts are required to be dealt with or decided. The Act provides sufficient safeguards.”</p>
+            <p class="quote">“The Consumer Forums must take <b>expeditious steps</b> to deal with the complaints filed before them and not keep them pending for years. … Steps in this direction are required to be taken in right earnest.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The consumer fora are <b>alternative forums</b> discharging the functions of a civil court. <b>A complaint cannot be rejected, nor the complainant driven to a civil court, merely because there has been a delay in disposal, or because the complaint involves complicated questions of fact requiring expert evidence.</b> The Act lays down an adequate, though summary, procedure (evidence on affidavit under s.13(4)(iii); commissions to examine witnesses under s.13(4)(v)), and the Commissions are headed by retired Judges competent to decide complicated issues. The Act mandates <b>expeditious disposal</b> — the opposite party must file its version within 30 days (extendable by at most 15 days) and the complaint is to be decided as far as possible within <b>3 months</b> (5 months if analysis/testing required). The guidelines emphasise strict adherence to the prescribed time-lines, filing of documents/affidavits along with the complaint and defence, and the Bar &amp; parties not seeking unnecessary adjournments.</div>
+        </div>
+      </div>
+
+      <!-- C50 -->
+      <div class="case" id="c50">
+        <div class="case-head">
+          <h4>50. Neena Aneja &amp; Anr. v. Jai Prakash Associates Ltd.</h4>
+          <span class="cit">(2022) 2 SCC 161 (Supreme Court)</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The appellants, <b>Neena Aneja and another</b>, had <b>booked an apartment</b> in the respondents' (<b>Jai Prakash Associates Ltd.</b>) housing project. The <b>total consideration was fixed at Rs. 56.45 lakh</b> and possession was to be conveyed within <b>42 months</b> from the execution of the agreement/provisional allotment letter (with a grace period of about 90 days). Between December 2011 and thereafter, the purchasers paid <b>Rs. 53.84 lakh</b> out of the total consideration. The builder <b>failed to deliver possession</b> within the stipulated or reasonable time. The purchasers filed consumer complaints; the <b>NCDRC by its order dated 30 July 2020 dismissed the consumer case</b> on the ground that after the enforcement of the Consumer Protection Act, <b>2019</b>, its <b>pecuniary jurisdiction had been enhanced</b> (from Rs. 1 crore to Rs. 10 crore) and the complaint should be re-filed before the appropriate forum. The purchasers appealed to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Whether a consumer complaint <b>pending</b> at the commencement of the Consumer Protection Act, 2019 continues to be governed by the <b>1986 Act</b> (i.e., is the change in pecuniary jurisdiction <b>retrospective</b>)? (2) Whether the rights of consumers who had filed under the old law are protected on the repeal (s.6 of the General Clauses Act)? (3) Whether the builder's delay in giving possession amounts to <b>deficiency in service</b>.</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Purchasers/appellants:</b> The 2019 Act is not retrospective; the complaint was filed before the 2019 Act came into force and must be decided under the 1986 Act; the change in pecuniary jurisdiction cannot take away the right of the consumer; the delay is a deficiency in service.</p>
+            <p><b>Builder/respondent:</b> After the 2019 Act came into force, the pecuniary jurisdiction of the National Commission was enhanced; since the claim (Rs. 56.45 lakh) was below the new threshold, the NCDRC could not retain the complaint. (The builder also relied on the Statement of Objects &amp; Reasons of the 2019 Act — that it was enacted to strengthen remedies and was conscious of delays.)</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p>The <b>Supreme Court</b> (D.Y. Chandrachud, M.R. Shah &amp; Sanjiv Khanna JJ.) <b>allowed the appeal</b>, holding that <b>proceedings instituted before the commencement of the 2019 Act continue to be governed by the 1986 Act</b>; the enhanced pecuniary jurisdiction under the 2019 Act is <b>not retrospective</b>; and the rights accrued under the old law are protected under <b>s.6 of the General Clauses Act, 1897</b>. The matter was remitted for disposal under the 1986 Act, and the builder's delay was treated as a <b>deficiency in service</b>.</p>
+            <p class="quote">“The Statement of Objects and Reasons underlying the enactment of the Act of 2019 indicates that the new legislation has been enacted to <b>strengthen the remedies available to consumers</b> and that the legislature was conscious of the delays in the disposal of cases under the erstwhile legislation.”</p>
+            <p class="quote">“A consumer who has instituted proceedings under the 1986 Act before the commencement of the 2019 Act cannot be deprived of the benefit of the provisions of the 1986 Act; the change in pecuniary jurisdiction is <b>not retrospective</b>, and the protection of <b>s.6 of the General Clauses Act, 1897</b> applies.”</p>
+            <p class="quote">“The failure of the developer to comply with the contractual obligation to provide the flat within the contractually stipulated period would amount to a <b>deficiency of service</b>.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The Consumer Protection Act, 2019 <b>does not have retrospective effect</b>. <b>Proceedings instituted before its commencement are to be decided under the Consumer Protection Act, 1986</b> — the enhanced pecuniary jurisdiction under the 2019 Act cannot be applied to pending complaints, and the rights/obligations accrued under the repealed law are protected under <b>s.6 of the General Clauses Act, 1897</b>. The case also reaffirms (for real-estate/consumer disputes) that a builder's <b>failure to deliver possession within the stipulated or reasonable period is a deficiency in service</b>, the buyer cannot be made to wait indefinitely, and <b>one-sided clauses that disproportionately favour the builder / give a nominal compensation for delay are unfair</b>, so the consumer fora may award <b>just and reasonable compensation</b> (interest at a fair rate) regardless of such clauses.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Classic Part B questions with detailed model answers.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Discuss the aims and objectives of the Consumer Protection Act, 1986. What were the reasons for enacting the Consumer Protection Act, 2019?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Aim &amp; objectives of the CPA, 1986.</b> The Consumer Protection Act, 1986 was enacted to provide <b>better protection of the interests of consumers</b> and was a benevolent, social-welfare legislation. Its objects were: (i) to protect the consumer against defective goods, deficient services, unfair trade practices and restrictive trade practices; (ii) to establish <b>Consumer Protection Councils</b> (Central &amp; State) and a <b>three-tier consumer disputes redressal machinery</b> (District Forum → State Commission → National Commission); and (iii) to provide a <b>simple, inexpensive and speedy remedy</b> as an <b>alternative forum</b> — a remedy which is <b>in addition to</b> (not in derogation of, s.3) the remedies under other laws. The Supreme Court has repeatedly held its definitions to be <b>widely</b> and <b>liberally</b> construed (e.g., housing construction &amp; statutory authorities in <i>Lucknow Development Authority</i>; medical services in <i>IMA v. V.P. Shantha</i>).</p>
+          <p><b>Reasons for the CPA, 2019.</b> The 2019 Act (assent 9 August 2019; in force for the main provisions 20 July 2020) <b>replaces</b> the 1986 Act. The Statement of Objects &amp; Reasons states it was enacted to <b>strengthen the remedies available to consumers</b>, the legislature being conscious of the <b>delays</b> and lacunae under the old law. The principal reasons were: (i) the <b>unregulated growth of e-commerce and direct selling</b>; (ii) the need to prohibit and punish <b>misleading advertisements</b> (including by celebrity endorsers) and the manufacture/ sale of <b>spurious goods</b>; (iii) the need for an <b>executive authority</b> (the <b>CCPA</b>) to protect consumers <b>as a class</b> (investigate, order recall, impose penalties); (iv) the introduction of <b>product liability</b>; (v) the introduction of <b>mediation</b> as an ADR mechanism; (vi) <b>enhanced pecuniary jurisdiction</b>, e-filing, video-conferencing and other procedural simplifications; (vii) the express recognition of the <b>six rights</b> and the definition of new concepts (unfair contract, misleading advertisement, etc.).</p>
+          <p><b>Conclusion.</b> The 1986 Act laid the foundation of a simple, speedy and inexpensive consumer remedy; the 2019 Act modernises and strengthens it for the digital and e-commerce era, adding executive enforcement (CCPA), product liability, mediation and strict penalties for misleading advertisements.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Define "consumer," "service," "defect" and "deficiency" under the Consumer Protection Act, 2019. Is a medical practitioner rendering "service" within the Act?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Consumer (s.2(7)).</b> A person who (i) <b>buys any goods</b> for consideration (paid/promised/partly paid or by deferred payment), and includes any <b>user</b> of such goods with the buyer's approval; or (ii) <b>hires or avails of any service</b> for consideration and includes any <b>beneficiary</b> with the hirer's approval — but <b>excludes</b> a person who obtains goods for <b>resale or for any commercial purpose</b> (subject to the self-employment-for-livelihood exception).</p>
+          <p><b>Service (s.2(42)).</b> Service of <b>any description</b> made available to <b>potential users</b>, including facilities in banking, financing, insurance, transport, processing, electrical/other energy, <b>telecom</b>, boarding/lodging, <b>housing construction</b>, entertainment, amusement, purveying of news/information — but <b>does not include</b> any service <b>free of charge</b> or under a <b>contract of personal service</b>.</p>
+          <p><b>Defect (s.2(10)).</b> Any fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard required by law, by contract, or as claimed by the trader, in relation to goods or product.</p>
+          <p><b>Deficiency (s.2(11)).</b> Any fault, imperfection, shortcoming or inadequacy in the quality, nature and manner of performance required by law or undertaken under a contract — and includes (i) an act of <b>negligence/omission/commission</b> causing loss or injury to the consumer, and (ii) <b>deliberate withholding of relevant information</b>.</p>
+          <p><b>Medical practitioner and 'service'.</b> Yes. In <b>IMA v. V.P. Shantha</b> (1995), the Supreme Court held that the service rendered by a medical practitioner or hospital/nursing home <b>for a fee/charges is 'service'</b> under the Act. A doctor–patient relationship is a <b>contract for personal services</b> (not a contract of personal service, unless a master–servant relation exists), so it is not excluded. Service is <b>outside</b> the Act only where it is rendered <b>completely free of charge</b> (a charitable hospital treating all free, or a government hospital charging nobody), or under a true <b>contract of employment</b>. Where charges are borne by an <b>insurance company</b> or the <b>employer</b>, the service is not free and is 'service'. The Court in <b>Medicos Legal Action Group v. Union of India</b> (Bombay HC, 2021; affirmed by the SC) held that this continues to hold good <b>under the 2019 Act as well</b> — there is no material difference between 'service' under s.2(1)(o) of the 1986 Act and s.2(42) of the 2019 Act (except the addition of 'telecom'), so <i>IMA v. V.P. Shantha</i> applies <i>ex proprio vigore</i>; and a Minister's statement in Parliament cannot restrict the wide meaning of the statute.</p>
+          <p><b>Conclusion.</b> The definitions are wide and consumer-oriented; a medical practitioner rendering service for a fee is a 'service-provider' and is amenable to the consumer fora for deficiency in service (medical negligence).</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the three-tier Consumer Dispute Redressal mechanism and the enhanced pecuniary jurisdiction under the Consumer Protection Act, 2019. Can a consumer be directed to a civil court on the ground of complicated questions of fact?</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Three-tier mechanism.</b> The 2019 Act retains a <b>three-tier (hierarchical)</b> consumer dispute redressal structure — <b>District Commission → State Commission → National Commission</b> — and provides for appeals up to the Supreme Court. Under the 1986 Act (as amended in 2002), the pecuniary limits were: District Forum ≤ Rs. 20 lakh; State Commission Rs. 20 lakh – Rs. 1 crore; National Commission &gt; Rs. 1 crore.</p>
+          <p><b>Enhanced pecuniary jurisdiction (2019).</b> The 2019 Act enhances these limits substantially: <b>District Commission</b> (s.34) — value of the goods/services and compensation claimed ≤ <b>Rs. 1 crore</b>; <b>State Commission</b> (s.47) — value <b>above Rs. 1 crore but ≤ Rs. 10 crore</b>; <b>National Commission</b> (s.58) — value <b>above Rs. 10 crore</b>. Combined with this, the Act provides for <b>e-filing</b>, filing from the <b>place of residence/work</b>, <b>video-conferencing</b> hearings, <b>deemed admission</b> of a complaint after 21 days, the power of the commissions to <b>review their own orders</b>, and appeals after the second stage being limited to <b>questions of law</b>.</p>
+          <p><b>Can the consumer be directed to the civil court?</b> <b>No.</b> In <b>Dr. J.J. Merchant v. Shrinath Chaturvedi</b> (AIR 2002 SC 2931), the Supreme Court held that the consumer forum is an <b>alternative forum</b> discharging the functions of a civil court — therefore <b>delay in disposal</b> of a complaint is <b>not</b> a ground to reject it and direct the complainant to the civil court. Likewise, the mere fact that a complaint involves <b>complicated questions of fact</b> requiring expert evidence is <b>not</b> a ground to non-suit the consumer, because the Act provides an adequate (if summary) procedure (evidence on affidavit under s.13(4)(iii), commissions to examine witnesses under s.13(4)(v)), the commissions are headed by competent retired judges, and the object of the Act — a <b>simple, inexpensive and speedy remedy</b> — would be defeated otherwise. The Court emphasised that the forums must dispose of complaints <b>expeditiously</b> within the prescribed time (3 months, or 5 months where testing is needed), with the opposite party filing its version within 30 days.</p>
+          <p><b>Conclusion.</b> The 2019 Act modernises the three-tier structure and greatly enhances pecuniary jurisdiction; and following <i>J.J. Merchant</i>, consumers cannot be driven away from the summary, inexpensive consumer remedy merely on the ground of delay or the existence of complicated questions of fact.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Discuss the concept of product liability and the establishment, powers and functions of the Central Consumer Protection Authority (CCPA) under the Consumer Protection Act, 2019.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Product liability.</b> The 2019 Act introduces (Chapter VI, ss.84–88) a statutory <b>product liability</b> regime. A <b>product manufacturer</b>, <b>product service-provider</b> or <b>product seller</b> is liable to compensate for <b>harm</b> (personal injury, illness/death, damage to property other than the product itself, or loss of consortium/services) caused by a <b>defective product</b> or <b>deficient service</b>. Against a manufacturer, the bases are: <b>manufacturing defect</b>, <b>design defect</b>, <b>deviation from specifications</b>, <b>not conforming to an express warranty</b>; <b></b>failure to provide adequate instructions/warnings for correct use, or failure to exercise reasonable care. A product service-provider is liable for a <b>faulty, imperfect or deficient service</b>; a product seller is liable where he had substantial control over the product, failed to exercise reasonable care, or made an express warranty. The provision acts as a <b>deterrent</b> and moves the law towards <b>statutory product liability</b> (a form of strict liability) in India.</p>
+          <p><b>CCPA — establishment.</b> Under s.10, the <b>Central Government establishes the Central Consumer Protection Authority (CCPA)</b> to regulate matters relating to the violation of consumers' rights, unfair trade practices and <b>false/misleading advertisements</b> prejudicial to public and consumer interests, and to <b>promote, protect and enforce the rights of consumers as a class</b>. It has an Investigation Wing.</p>
+          <p><b>Powers &amp; functions (s.18).</b> The CCPA: (i) protects, promotes and enforces consumer rights as a class and prevents violations; (ii) <b>investigates</b> violations of consumer rights and <b>institutes complaints/prosecutions</b>; (iii) <b>orders the recall</b> of unsafe goods/services and their reimbursement; (iv) <b>orders the discontinuance</b> of unfair trade practices and misleading advertisements; (v) <b>imposes penalties</b> on manufacturers, endorsers and publishers of misleading advertisements; and (vi) issues safety notices/warnings and takes measures to prevent unfair trade practices. This makes the CCPA a <b>proactive executive/regulatory</b> arm, complementing the quasi-judicial redressal commissions — a marked departure from the purely redressal (reactive) model of the 1986 Act.</p>
+          <p><b>Conclusion.</b> Product liability and the CCPA together give the consumer a statutory right to claim for harm from defective products/deficient services, and an executive authority capable of acting <b>suo motu</b> and <b>as a class</b> to curb misleading advertisements and unfair trade practices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><b>Consumer</b> (s.2(7)) — a person who buys goods or hires/avails of services for consideration (and any user/beneficiary), excluding a person who obtains goods for resale or for a commercial purpose (except self-employment for livelihood).</li>
+        <li><b>Goods</b> (s.2(21)) — every kind of movable property, including "food."</li>
+        <li><b>Service</b> (s.2(42)) — service of any description made available to potential users (banking, insurance, transport, telecom, housing construction, etc.), excluding free service and a contract of personal service.</li>
+        <li><b>Defect</b> (s.2(10)) — fault, imperfection or shortcoming in the quality, quantity, potency, purity or standard of goods.</li>
+        <li><b>Deficiency</b> (s.2(11)) — fault, imperfection, shortcoming or inadequacy in the performance of a service, including negligence and deliberate withholding of information.</li>
+        <li><b>Misleading advertisement</b> (s.2(28)) — an advertisement that falsely describes, gives a false guarantee, constitutes an unfair trade practice, or deliberately conceals important information.</li>
+        <li><b>Unfair trade practice</b> (s.2(47)) — any unfair/deceptive practice to promote sale or services (false representations, spurious goods, no bills, refusal to take back, disclosure of personal information, etc.).</li>
+        <li><b>Unfair contract</b> (s.2(46)) — a contract with terms that significantly change the consumer's rights (excessive security, disproportionate penalty, unilateral termination, etc.).</li>
+        <li><b>Restrictive trade practice</b> — a practice that manipulates price or conditions of delivery or imposes unjustified costs/restrictions.</li>
+        <li><b>CCPA</b> — the Central Consumer Protection Authority (ss.10–27), the executive authority to protect consumers as a class.</li>
+        <li><b>Product liability</b> — the statutory liability (ss.84–88) of a manufacturer/service-provider/seller for harm from a defective product/deficient service.</li>
+        <li><b>Consumer Protection Council</b> — advisory bodies (Central, State, District) promoting the six consumer rights.</li>
+        <li><b>Six consumer rights</b> — safety; information; choice; being heard; redressal; and consumer awareness.</li>
+        <li><b>Mediation</b> — the ADR mechanism (ss.74–81) with Consumer Mediation Cells attached to the commissions; the settlement is binding and no appeal lies.</li>
+        <li><b>Pecuniary jurisdiction (2019)</b> — District: ≤ Rs. 1 crore; State: Rs. 1–10 crore; National: &gt; Rs. 10 crore.</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 480" width="900" role="img" aria-label="Full Part B revision flowchart">
+          <defs><marker id="arB" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#0c3f3a"/></marker></defs>
+          <rect x="10" y="15" width="880" height="50" rx="12" fill="#0c3f3a"/>
+          <text x="450" y="39" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">CONSUMER PROTECTION — CPA 1986 → CPA 2019</text>
+          <line x1="450" y1="65" x2="450" y2="84" stroke="#0c3f3a" stroke-width="2.5" marker-end="url(#arB)"/>
+          <rect x="130" y="87" width="640" height="54" rx="12" fill="#0f7a72"/>
+          <text x="450" y="110" fill="#fff" text-anchor="middle" font-size="12.5" font-weight="700">OBJECT: simple, speedy, inexpensive remedy for consumers (benevolent law)</text>
+          <text x="450" y="130" fill="#d8efe7" text-anchor="middle" font-size="11">three-tier commissions · councils · CCPA · product liability · mediation · 6 rights</text>
+          <line x1="450" y1="141" x2="450" y2="160" stroke="#0c3f3a" stroke-width="2.5" marker-end="url(#arB)"/>
+          <rect x="130" y="163" width="640" height="70" rx="12" fill="#b0791f"/>
+          <text x="450" y="188" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">KEY CONCEPTS</text>
+          <text x="450" y="210" fill="#fdf7e8" text-anchor="middle" font-size="11">consumer · service · defect · deficiency · unfair/restrictive trade practice</text>
+          <text x="450" y="228" fill="#fdf7e8" text-anchor="middle" font-size="11">unfair contract · misleading advertisement · product · spurious goods</text>
+          <line x1="450" y1="233" x2="450" y2="252" stroke="#0c3f3a" stroke-width="2.5" marker-end="url(#arB)"/>
+          <rect x="120" y="256" width="300" height="120" rx="12" fill="#11625a"/>
+          <text x="270" y="282" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">THREE-TIER + JURISDICTION</text>
+          <text x="270" y="306" fill="#d8efe7" text-anchor="middle" font-size="11">District ≤ 1 crore (s.34)</text>
+          <text x="270" y="324" fill="#d8efe7" text-anchor="middle" font-size="11">State 1–10 crore (s.47)</text>
+          <text x="270" y="342" fill="#d8efe7" text-anchor="middle" font-size="11">National &gt; 10 crore (s.58)</text>
+          <text x="270" y="360" fill="#d8efe7" text-anchor="middle" font-size="11">e-filing, video hearing,</text>
+          <text x="270" y="376" fill="#d8efe7" text-anchor="middle" font-size="11">place of residence/work</text>
+          <rect x="480" y="256" width="300" height="120" rx="12" fill="#5b3a8e"/>
+          <text x="630" y="282" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DEFENCES / REDRESSAL</text>
+          <text x="630" y="306" fill="#ece6f4" text-anchor="middle" font-size="11">compensation, refund, removal of</text>
+          <text x="630" y="324" fill="#ece6f4" text-anchor="middle" font-size="11">defects/deficiency, set aside unfair</text>
+          <text x="630" y="342" fill="#ece6f4" text-anchor="middle" font-size="11">contract, punitive damages, product</text>
+          <text x="630" y="360" fill="#ece6f4" text-anchor="middle" font-size="11">liability; CCPA penalties</text>
+        </svg>
+        <div class="cap">One-page revision map of Part B — Consumer Protection Laws.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">Landowner + builder "collaboration" = consumer &amp; service-provider; complaint maintainable</span> — Faqir Chand Gulati v. Uppal Agencies.<br>
+        · <span class="pill t">Medical service for a fee = 'service'; 12-point test</span> — IMA v. V.P. Shantha.<br>
+        · <span class="pill g">Health care covered under CPA 2019; ministerial statement <i>cannot</i> restrict statute</span> — Medicos Legal Action Group.<br>
+        · <span class="pill r">"Commercial purpose" excludes commercial buyers; self-employment for livelihood = consumer</span> — Laxmi Engineering Works v. P.S.G.<br>
+        · <span class="pill t">Statutory/public housing authorities render 'service'; compensation for harassment/agony</span> — Lucknow Development Authority v. M.K. Gupta.<br>
+        · <span class="pill n">Consumer forum is an alternative court; delay/complicated facts ≠ ground to drive to civil court</span> — J.J. Merchant v. Shrinath Chaturvedi.<br>
+        · <span class="pill o">Pending proceedings under 1986 Act continue under it; enhanced pecuniary jurisdiction not retrospective</span> — Neena Aneja v. Jai Prakash Associates.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Part B, Consumer Protection Laws.</b></p>
+      <p style="margin:0 0 8px">Built primarily on the <b>DU prescribed casebook</b> (which reproduces in full <i>Faqir Chand Gulati v. Uppal Agencies</i>, <i>Indian Medical Association v. V.P. Shantha</i>, <i>Laxmi Engineering Works v. P.S.G. Industrial Institute</i> and <i>Lucknow Development Authority v. M.K. Gupta</i>) together with the accompanying course notes and the bare Act. The consumer-protection theory (evolution, aims &amp; objectives of the CPA 1986, the CPA 2019 and its eleven new dimensions, the CCPA, product liability, mediation, the six rights and the enhanced pecuniary limits) follows the DU framework sheet and the casebook's own reasoning.</p>
+      <p style="margin:0"><b>Transparency note:</b> Three syllabus cases are <b>not reproduced in the casebook</b> and are therefore summarised from the official reports/judgment texts (with a note in each case box): <i>Medicos Legal Action Group v. Union of India</i> (2021 SCC OnLine Bom 3696; SC SLP dismissed 2022), <i>J.J. Merchant v. Shrinath Chaturvedi</i> (AIR 2002 SC 2931) and <i>Neena Aneja v. Jai Prakash Associates Ltd.</i> (2022) 2 SCC 161. For revision only — refer to the full reports for exact facts and citations.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

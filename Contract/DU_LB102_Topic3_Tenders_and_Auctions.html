@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 3 — Making of an Agreement: Tenders &amp; Auctions (Special Situations) | DU LL.B. LB-102</title>
+<style>
+  :root{--ink:#1b2430;--sub:#4a5a6a;--brand:#0f4c81;--brand2:#1273b8;
+    --accent:#0a7a3d;--gold:#b8860b;--bg:#f3f7f4;--card:#fff;--line:#d5e4da;
+    --soft:#eef5f1;--green:#0b7a4b;--red:#c0392b;--amber:#b7791f;--purple:#5b4a9e}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.62;font-size:16px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 22px 80px}
+  .hero{background:linear-gradient(135deg,#04301c 0%,#0a4a2e 45%,#0a7a3d 100%);color:#fff;padding:44px 22px 40px;border-bottom:6px solid var(--gold);position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;background:rgba(255,255,255,.07)}
+  .hero:after{content:"";position:absolute;right:60px;bottom:-120px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero .wrap{position:relative;z-index:2}
+  .kicker{display:inline-block;letter-spacing:2px;font-size:12px;text-transform:uppercase;background:rgba(255,255,255,.16);padding:5px 12px;border-radius:20px;margin-bottom:14px}
+  .hero h1{margin:.1em 0 .2em;font-size:clamp(26px,4.4vw,46px);line-height:1.12;font-weight:800}
+  .hero p.lead{font-size:clamp(15px,2.3vw,19px);opacity:.97;max-width:920px;margin:.3em 0 1.1em}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+  .chip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);padding:6px 13px;border-radius:22px;font-size:13px}
+  .chip b{color:#ffe08a}
+  .sourceband{background:var(--gold);color:#3a2a00;padding:11px 22px;font-size:13.5px;font-weight:600}
+  .sourceband .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-bottom:0}
+  nav.toc{position:sticky;top:0;z-index:50;background:#032a18;box-shadow:0 3px 12px rgba(0,0,0,.25)}
+  nav.toc .wrap{display:flex;gap:2px;overflow-x:auto;padding:0 22px}
+  nav.toc a{color:#cfeee0;text-decoration:none;font-size:13px;padding:13px 11px;white-space:nowrap;border-bottom:3px solid transparent}
+  nav.toc a:hover{color:#fff;background:rgba(255,255,255,.07)}
+  .progress{height:4px;background:var(--gold);width:0%;position:sticky;top:44px;z-index:60}
+  section{background:var(--card);margin:26px 0;border-radius:16px;padding:30px 30px 34px;box-shadow:0 2px 14px rgba(10,80,45,.07);border:1px solid var(--line)}
+  .secnum{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#0a4a2e,#0a7a3d);color:#fff;font-weight:800;font-size:20px;margin-right:12px;vertical-align:middle}
+  h2{font-size:clamp(21px,3vw,28px);margin:0 0 6px;color:#04301c;display:flex;align-items:center}
+  h2 .secnum{flex:0 0 auto}
+  .hsub{color:var(--sub);font-size:14px;margin:0 0 20px;padding-left:58px}
+  h3{color:#0a5a34;margin:30px 0 10px;font-size:19px;border-left:5px solid var(--gold);padding-left:12px}
+  h4{color:#123;margin:20px 0 8px;font-size:16px}
+  p{margin:10px 0}
+  ul,ol{margin:8px 0 12px;padding-left:24px}
+  li{margin:5px 0}
+  a{color:var(--brand2)}
+  strong{color:#04260f}
+  .statute{background:var(--soft);border-left:6px solid var(--brand2);padding:14px 18px;border-radius:0 10px 10px 0;margin:14px 0;font-style:italic}
+  .statute .ref{display:block;font-style:normal;font-weight:700;color:var(--brand2);margin-bottom:4px;letter-spacing:.3px}
+  .casequote{background:#fbf3e6;border-left:6px solid var(--gold);padding:12px 18px;border-radius:0 10px 10px 0;margin:12px 0;font-style:italic;color:#5b4a24}
+  .note{background:#fff8e6;border:1px solid #f0ddab;border-left:6px solid var(--amber);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .tip{background:#eefaf2;border:1px solid #bfe8d3;border-left:6px solid var(--green);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .warn{background:#fdecec;border:1px solid #f0c4c4;border-left:6px solid var(--red);padding:12px 16px;border-radius:8px;margin:14px 0}
+  .exam{background:#eef0fd;border:1px solid #c9cfee;border-left:6px solid var(--purple);padding:12px 16px;border-radius:8px;margin:14px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;background:#fff}
+  th{background:#0a5a34;color:#fff;text-align:left;padding:9px 11px;font-size:13.5px}
+  td{border:1px solid var(--line);padding:9px 11px;vertical-align:top}
+  tr:nth-child(even) td{background:#f3faf5}
+  .twocol th:first-child{width:22%}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:16px 0}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:15px 17px;box-shadow:0 1px 6px rgba(10,80,45,.05);border-top:4px solid var(--brand2)}
+  .card h4{margin:0 0 6px;color:#0a5a34;font-size:15.5px}
+  .card .bignum{font-size:26px;font-weight:800;color:var(--green)}
+  .card p{font-size:14px;margin:6px 0 0;color:var(--sub)}
+  .tone1{border-top-color:#1273b8}.tone2{border-top-color:#0a7a3d}.tone3{border-top-color:#b8860b}.tone4{border-top-color:#5b4a9e}.tone5{border-top-color:#c0392b}
+  .fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0;overflow-x:auto;text-align:center}
+  .fig .caption{font-size:13px;color:var(--sub);margin-top:8px;text-align:center}
+  svg text{font-family:inherit}
+  .scene{background:linear-gradient(180deg,#f0faf3,#fff);border:1px solid #d7eadf;border-radius:14px;padding:14px;margin:16px 0;text-align:center;overflow-x:auto}
+  .scene .cap{font-size:12.5px;color:var(--sub);margin-top:6px;text-align:center}
+  .scene .badge{display:inline-block;background:var(--gold);color:#fff;font-size:11px;letter-spacing:1px;padding:3px 10px;border-radius:12px;margin-bottom:6px}
+  details{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:#fff}
+  summary{cursor:pointer;padding:13px 16px;font-weight:700;color:#04301c;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:before{content:"\25B6";color:var(--green);margin-right:9px;font-size:11px;display:inline-block}
+  details[open] summary:before{transform:rotate(90deg)}
+  details[open] summary{border-bottom:1px solid var(--line)}
+  details .body{padding:6px 16px 14px}
+  .pyqbox{border:1px solid #0a7a3d55;border-left:8px solid var(--green);border-radius:12px;margin:16px 0;background:#fffdf6}
+  .pyqbox .q{padding:14px 18px;background:#f2faf4}
+  .pyqbox .q .tag{display:inline-block;background:var(--green);color:#fff;font-size:11px;padding:2px 9px;border-radius:12px;margin-right:8px;letter-spacing:.5px;vertical-align:middle}
+  .pyqbox .q h4{display:inline;font-size:16px}
+  .pyqbox .model{padding:4px 20px 16px}
+  .case{border:1px solid var(--line);border-radius:14px;margin:18px 0;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(10,80,45,.05)}
+  .case .head{background:linear-gradient(120deg,#04301c,#0a5a34);color:#fff;padding:13px 18px}
+  .case .head .t{font-weight:800;font-size:18px}
+  .case .head .r{font-size:13px;opacity:.92}
+  .case .tagrow{padding:8px 18px 0}
+  .case .full{padding:14px 18px;border-top:1px solid var(--line)}
+  .case .cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .case .cell{padding:14px 18px;border-top:1px solid var(--line)}
+  .case h5{margin:2px 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#0a5a34}
+  .case p{margin:6px 0}
+  .case li{margin:4px 0}
+  @media(max-width:760px){.case .cols{grid-template-columns:1fr}}
+  .case .full h5,.case .cell h5{color:#b8860b}
+  .tag{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:12px;font-weight:700;margin:2px 3px 2px 0}
+  .t-v{background:#e5f6ec;color:#0b7a4b}.t-b{background:#eef3fa;color:#0f4c81}.t-va{background:#fff2d9;color:#b7791f}
+  .t-ill{background:#fde4e4;color:#c0392b}.t-u{background:#f0e6ff;color:#5b4a9e}
+  .verdict{display:inline-block;background:#0b7a4b;color:#fff;font-weight:700;padding:3px 12px;border-radius:14px;font-size:13px}
+  .verdict.r{background:#c8102e}
+  .footer{margin-top:34px;border-top:1px dashed var(--line);padding-top:16px;color:var(--sub);font-size:13px}
+  mark{background:#ffe9a8;padding:0 3px;border-radius:3px}
+  hr{border:none;border-top:1px solid var(--line);margin:24px 0}
+  .pill{display:inline-block;background:#0a5a34;color:#fff;font-size:11px;padding:3px 10px;border-radius:14px;margin:2px;letter-spacing:.4px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Law of Contract — LB-CC-102 · First Term · DU Faculty of Law</span>
+    <h1>Making of an Agreement<br>Special Situations — Tenders &amp; Auctions</h1>
+    <p class="lead">Comprehensive, examination-ready study notes for <b>Topic 3</b> of the Delhi University (DU) LL.B. I-Term compulsory paper <b>“Principles of Contract (General Principles)”</b> — how agreements are made through <b>tenders</b> and <b>auctions</b> (and the special contract of carriage), built strictly on the DU case material — <b>Indian Contract Act, 1872, Sections 2–10</b>.</p>
+    <div class="chips">
+      <span class="chip">Exam basis: <b>DU case material (Jan 2023)</b></span>
+      <span class="chip">Syllabus: <b>Topic 3 · 3 classes</b></span>
+      <span class="chip">Law: <b>ICA 1872 §§ 2–10</b></span>
+      <span class="chip">5 full case-digests + scene visuals</span>
+      <span class="chip">Real DU PYQs + model answers</span>
+    </div>
+  </div>
+</div>
+<div class="sourceband"><div class="wrap">📚 <b>Primary source:</b> <i>Principles of Contract (General Principles) — Cases Selected &amp; Edited, LL.B. I-Term, Faculty of Law, University of Delhi (Jan 2023)</i>, Topic 3 (pp. 30–54) + <i>The Indian Contract Act, 1872</i> §§ 2–10. Topic shown in your image (image-1).</div></div>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#bp">Blueprint</a>
+    <a href="#map">1 · Map</a>
+    <a href="#tender-law">2 · Tender law</a>
+    <a href="#auction-law">3 · Auction law</a>
+    <a href="#maddala">Case 8 · Maddala</a>
+    <a href="#rajendra">Case 9 · Rajendra</a>
+    <a href="#kanhaiya">Case 10 · Kanhaiya</a>
+    <a href="#haridwar">Case 11 · Haridwar</a>
+    <a href="#indianair">Case 12 · Indian Airlines</a>
+    <a href="#compare">4 · Compare</a>
+    <a href="#pyq">5 · PYQs</a>
+    <a href="#revision">6 · Revision</a>
+  </div>
+</nav>
+<div class="progress" id="prog"></div>
+
+<div class="wrap">
+
+  <section id="bp">
+    <h2><span class="secnum">0</span> Exam Blueprint &amp; Scope of this unit</h2>
+    <p class="hsub">From the DU rubric and syllabus — orient your answer-writing here.</p>
+    <div class="grid">
+      <div class="card tone1"><h4>DU Paper pattern</h4><p>8 questions; answer <b>any 5</b>; each = <b>20 marks</b>; 3-hour descriptive exam; pass at <b>45/100</b>.</p></div>
+      <div class="card tone2"><h4>This unit’s content</h4><p>“Making of an Agreement – Special Situations: <b>Tenders and Auctions</b>” — applying the offer–acceptance machinery of Ss. 2–10 to these special modes of contracting.</p></div>
+      <div class="card tone3"><h4>The 5 DU cases</h4><p>Maddala Thathiah (standing offer/tender), Rajendra Kumar Verma (withdrawal of tender), Kanhaiya Lal (conditional/rebate tender), Haridwar Singh (auction subject to confirmation), Indian Airlines v. Madhuri (ticket/standard-form contract).</p></div>
+      <div class="card tone4"><h4>How to score full marks</h4><p>Distinguish invitation to treat from offer in the tender/auction setting; explain “standing offer” and “provisional/conditional acceptance”; apply the controlling case to the facts; conclude.</p></div>
+    </div>
+    <div class="warn"><b>Note on the syllabus.</b> The DU syllabus lists Topic 3 as “Tenders and Auctions,” but the fifth compiled case (<i>Indian Airlines v. Madhuri Chowdhuri</i>) deals with a <b>ticket / standard-form carriage contract</b> — a further “special situation” in the same unit. It is included and analysed fully below as the DU material does.</div>
+  </section>
+
+  <section id="map">
+    <h2><span class="secnum">1</span> Conceptual Map — how the ordinary rules apply to tenders &amp; auctions</h2>
+    <p class="hsub">The same Ss. 2–10 machinery, applied to special contracting processes.</p>
+    <div class="fig">
+      <svg width="960" viewBox="0 0 960 560" role="img" aria-label="Tender and auction formation map">
+        <defs><marker id="a5" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#0a7a3d"/></marker></defs>
+        <!-- TENDER branch -->
+        <rect x="40" y="20" width="400" height="46" rx="12" fill="#0a4a2e"/>
+        <text x="240" y="38" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">TENDER PROCESS</text>
+        <text x="240" y="56" text-anchor="middle" font-size="10.5" fill="#cfeee0">advertisement inviting tenders</text>
+        <line x1="240" y1="66" x2="240" y2="90" stroke="#0a7a3d" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="60" y="90" width="360" height="44" rx="10" fill="#fff2d9" stroke="#b7791f"/>
+        <text x="240" y="108" text-anchor="middle" font-size="12.5" font-weight="800" fill="#b7791f">Invitation to tender = INVITATION TO TREAT</text>
+        <text x="240" y="125" text-anchor="middle" font-size="10.5" fill="#6a6a6a">(not an offer)</text>
+        <line x1="240" y1="134" x2="240" y2="156" stroke="#0a7a3d" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="60" y="156" width="360" height="44" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+        <text x="240" y="174" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f4c81">The tender submitted = OFFER (S.2(a))</text>
+        <text x="240" y="191" text-anchor="middle" font-size="10.5" fill="#6a6a6a">by the tenderer</text>
+        <line x1="240" y1="200" x2="240" y2="222" stroke="#0a7a3d" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="60" y="222" width="360" height="66" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+        <text x="240" y="240" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0b7a4b">ACCEPTANCE of the tender</text>
+        <text x="240" y="257" text-anchor="middle" font-size="10.5" fill="#555">Case A — definite qty: acceptance = binding contract (trader bound to deliver)</text>
+        <text x="240" y="274" text-anchor="middle" font-size="10.5" fill="#555">Case B — "may require up to X": creates a STANDING OFFER; each order = separate acceptance (Maddala)</text>
+        <line x1="240" y1="288" x2="240" y2="310" stroke="#0b7a4b" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="60" y="310" width="360" height="44" rx="10" fill="#fdecec" stroke="#c0392b"/>
+        <text x="240" y="328" text-anchor="middle" font-size="12.5" font-weight="800" fill="#c0392b">Tender may be WITHDRAWN before acceptance</text>
+        <text x="240" y="345" text-anchor="middle" font-size="10.5" fill="#555">(Rajendra Kumar Verma)</text>
+        <!-- AUCTION branch -->
+        <rect x="520" y="20" width="400" height="46" rx="12" fill="#7a3b00"/>
+        <text x="720" y="38" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">AUCTION PROCESS</text>
+        <text x="720" y="56" text-anchor="middle" font-size="10.5" fill="#ffe6c2">notice &amp; lots put up</text>
+        <line x1="720" y1="66" x2="720" y2="90" stroke="#b8860b" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="560" y="90" width="320" height="44" rx="10" fill="#fff2d9" stroke="#b7791f"/>
+        <text x="720" y="108" text-anchor="middle" font-size="12" font-weight="800" fill="#b7791f">Auctioneer's request for bids = INVITATION</text>
+        <text x="720" y="125" text-anchor="middle" font-size="10.5" fill="#6a6a6a">to treat; reserve price announced</text>
+        <line x1="720" y1="134" x2="720" y2="156" stroke="#0a7a3d" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="560" y="156" width="320" height="44" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+        <text x="720" y="174" text-anchor="middle" font-size="12" font-weight="800" fill="#0f4c81">Each BID = an OFFER (S.2(a))</text>
+        <text x="720" y="191" text-anchor="middle" font-size="10.5" fill="#6a6a6a">by the bidder; may be revoked before acceptance</text>
+        <line x1="720" y1="200" x2="720" y2="222" stroke="#0a7a3d" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="560" y="222" width="320" height="66" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+        <text x="720" y="240" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0b7a4b">Fall of the hammer = ACCEPTANCE</text>
+        <text x="720" y="257" text-anchor="middle" font-size="10.5" fill="#555">highest bid may be refused unless reserve is reached</text>
+        <text x="720" y="274" text-anchor="middle" font-size="10.5" fill="#555">auction "subject to confirmation" = only PROVISIONAL acceptance</text>
+        <line x1="720" y1="288" x2="720" y2="310" stroke="#0b7a4b" stroke-width="3" marker-end="url(#a5)"/>
+        <rect x="560" y="310" width="320" height="44" rx="10" fill="#fdecec" stroke="#c0392b"/>
+        <text x="720" y="328" text-anchor="middle" font-size="12" font-weight="800" fill="#c0392b">No concluded contract till confirmation</text>
+        <text x="720" y="345" text-anchor="middle" font-size="10.5" fill="#555">(Haridwar Singh)</text>
+        <!-- bottom -->
+        <rect x="120" y="400" width="720" height="120" rx="12" fill="#eef3fa" stroke="#1273b8"/>
+        <text x="480" y="424" text-anchor="middle" font-size="13" font-weight="800" fill="#0f4c81">KEY S.2–10 TOOLS APPLIED IN BOTH</text>
+        <g font-size="11.5">
+          <rect x="150" y="440" width="160" height="62" rx="8" fill="#fff" stroke="#1273b8"/><text x="230" y="460" text-anchor="middle" font-weight="700">S.2(a)</text><text x="230" y="476" text-anchor="middle" fill="#555">tender/bid = offer</text><text x="230" y="491" text-anchor="middle" fill="#555">only if definite</text>
+          <rect x="330" y="440" width="160" height="62" rx="8" fill="#fff" stroke="#1273b8"/><text x="410" y="460" text-anchor="middle" font-weight="700">S.5–6</text><text x="410" y="476" text-anchor="middle" fill="#555">revocation before</text><text x="410" y="491" text-anchor="middle" fill="#555">acceptance</text>
+          <rect x="510" y="440" width="160" height="62" rx="8" fill="#fff" stroke="#1273b8"/><text x="590" y="460" text-anchor="middle" font-weight="700">S.7</text><text x="590" y="476" text-anchor="middle" fill="#555">acceptance must be</text><text x="590" y="491" text-anchor="middle" fill="#555">absolute</text>
+          <rect x="690" y="440" width="130" height="62" rx="8" fill="#fff" stroke="#1273b8"/><text x="755" y="460" text-anchor="middle" font-weight="700">S.4</text><text x="755" y="476" text-anchor="middle" fill="#555">completion of</text><text x="755" y="491" text-anchor="middle" fill="#555">communication</text>
+        </g>
+      </svg>
+      <div class="caption">Fig 1.1 — Tenders &amp; auctions apply ordinary offer–acceptance principles. Master each stage and the controlling case.</div>
+    </div>
+  </section>
+  <section id="tender-law">
+    <h2><span class="secnum">2</span> The Law of Tenders — invitation, offer, acceptance &amp; the standing offer</h2>
+    <p class="hsub">The classic DU framework: a tender is an offer; its “acceptance” may or may not create an immediate contract.</p>
+
+    <h3>2.1 The four-stage structure of a tender</h3>
+    <ul>
+      <li><b>Stage 1 — Invitation to tender:</b> the advertisement/notice inviting tenders is only an <b>invitation to treat</b> (it invites offers), not an offer. A person cannot be bound merely because he “accepts” an invitation.</li>
+      <li><b>Stage 2 — Submission of the tender:</b> each <b>tender is an offer</b> (S.2(a)) made by the tenderer, capable of acceptance and revocable before acceptance (S.5).</li>
+      <li><b>Stage 3 — Acceptance of the tender:</b> the effect depends on the invitation’s terms — this is the crux of <i>Union of India v. Maddala Thathiah</i> (see the two cases below).</li>
+      <li><b>Stage 4 — Formal order / contract:</b> where a formal order is contemplated (as in Government contracts), the real contract may arise only when an order is placed; the “acceptance” of a tender for a maximum quantity creates only a <b>standing offer</b>.</li>
+    </ul>
+
+    <h3>2.2 Tender accepted for a definite quantity — immediate contract</h3>
+    <div class="casequote">Cheshire &amp; Fifoot, <i>Law of Contract</i> (5th ed., p. 36), quoted in <i>Maddala Thathiah</i>: <br><b>Case 1:</b> “the corporation may have stated that it will definitely require a specific quantity… here the ‘acceptance’ of the tender is an acceptance in the legal sense, and it creates an obligation. The trader is bound to deliver, the corporation is bound to accept [the full quantity], and the fact that delivery is to be by instalments as and when demanded does not disturb the existence of the obligation.”</div>
+
+    <h3>2.3 Tender for a maximum quantity (“if and when required”) — the standing offer</h3>
+    <div class="casequote">Cheshire &amp; Fifoot, ibid., in <i>Maddala Thathiah</i>: <br><b>Case 2:</b> “the corporation advertises that it may require articles… up to a maximum amount… The trader has made what is called a <b>standing offer</b>. Until revocation he stands ready and willing to deliver… The ‘acceptance’ of the tender, however, does not convert the offer into a binding contract… the corporation has not agreed to take… any quantity… It has merely stated that it may require supplies up to a maximum limit.” <br>“In this latter case the standing offer may be revoked at any time provided that it has not been accepted in the legal sense, and acceptance… is complete as soon as a <b>requisition for a definite quantity</b> of goods is made. Each requisition… is an individual act of acceptance which creates a separate contract.”</div>
+
+    <div class="tip"><b>Standing offer — the examination point.</b> A “standing offer” (a tender to supply up to a maximum if and when required) is not a binding contract in itself. It is an offer that the offeree (the buyer) may <b>accept from time to time</b> by placing orders; <b>each order creates a separate contract</b>. Until an order is placed, the tenderer may <b>revoke</b> the standing offer (subject to contractual terms to keep it open, which require consideration). This doctrine explains <i>Maddala Thathiah</i>.</div>
+
+    <h3>2.4 Government tenders &amp; the right to cancel</h3>
+    <p>Government and statutory bodies frequently reserve, in the tender, a right to cancel an outstanding contract or to reject any tender. The validity and effect of such a clause must be construed in the light of the whole tender and the stage reached. If a <b>formal order</b> for a definite quantity has been placed, the administration is generally bound to accept the goods ordered; the cancellation clause covers only such contemplated supplies for which no order has yet been placed (<i>Maddala Thathiah</i>). Courts are normally reluctant to interfere in the <b>award of Government contracts</b> but will set aside an award that is <b>unreasonable, arbitrary, mala fide, or in disregard of mandatory procedure</b> (<i>Kanhaiya Lal Aggarwal</i>; also <i>Tata Cellular v. Union of India</i>, AIR 1996 SC 11).</p>
+
+    <h3>2.5 Essentials of a valid tender (per the note in the DU material)</h3>
+    <div class="statute"><span class="ref">Requisites of a valid tender — as noted after Maddala Thathiah (from Tata Cellular v. Union of India)</span>
+    1. It must be <b>unconditional</b>. · 2. Made at the <b>proper place</b>. · 3. Must <b>conform to the terms</b> of the obligation. · 4. Made at the <b>proper time</b>. · 5. Made in the <b>proper form</b>. · 6. The tenderer must be <b>able and willing to perform</b>. · 7. There must be a reasonable <b>opportunity for inspection</b>. · 8. Made to the <b>proper person</b>. · 9. It must be of the <b>full amount</b>.</div>
+
+    <h3>2.6 Essential v. collateral conditions &amp; withdrawal of tender</h3>
+    <ul>
+      <li><b>Essential vs collateral conditions:</b> whether a tender condition is essential or collateral is judged by the <b>consequence of non-compliance</b> — if non-fulfilment leads to rejection, it is essential; otherwise it is only collateral (<i>G.J. Fernandez v. State of Karnataka</i>, AIR 1990 SC 958, applied in <i>Kanhaiya Lal</i>).</li>
+      <li><b>Withdrawal of a tender before opening/acceptance:</b> a tenderer may withdraw his tender <b>before it is accepted</b>, and no term in the tender notice can take away that legal right; once withdrawn there is no offer and hence no contract (<i>Rajendra Kumar Verma v. State of M.P.</i>).</li>
+    </ul>
+  </section>
+
+  <section id="auction-law">
+    <h2><span class="secnum">3</span> The Law of Auctions</h2>
+    <p class="hsub">When do bids and the fall of the hammer create a binding contract?</p>
+
+    <h3>3.1 The ordinary (English &amp; Indian) rules of auction sale</h3>
+    <ul>
+      <li><b>Notice of auction / putting up lots:</b> only an <b>invitation to treat</b>, not an offer.</li>
+      <li><b>Each bid</b> by a bidder is an <b>offer</b> (S.2(a)); it may be withdrawn before acceptance.</li>
+      <li><b>Fall of the hammer</b> is the <b>acceptance</b>, ordinarily creating a concluded contract at once.</li>
+      <li><b>With a reserve price:</b> the auctioneer may <b>refuse</b> the highest (or any) bid below the reserve; the sale is not complete until the hammer falls on an acceptable bid.</li>
+      <li><b>By the highest bidder:</b> if the auction is expressly “without reserve” or “to the highest bidder,” special rules may apply, but generally the auctioneer is not bound to accept any bid.</li>
+    </ul>
+
+    <h3>3.2 Auction “subject to confirmation / approval” — provisional acceptance</h3>
+    <p>In Government and forest auctions the acceptance of a bid is frequently <b>subject to confirmation by a higher authority</b>. The legal effect is crucial (this is the heart of <i>Haridwar Singh v. Bagun Sumbrui</i>):</p>
+    <ul>
+      <li>A bid accepted <b>“subject to confirmation”</b> is only a <b>conditional/provisional acceptance</b> — it does <b>not</b>, by itself, conclude a contract.</li>
+      <li>Whether a binding contract arises on later confirmation depends on whether the confirmation was given and <b>communicated</b>; and on whether the <b>offer was actually accepted on the same terms</b>.</li>
+      <li>A person who makes an offer may <b>withdraw it before acceptance</b> (in the absence of a supported condition to keep it open); a provisional/conditional acceptance cannot itself create a binding bargain (<i>Somasundaram Pillai v. Provincial Govt. of Madras</i>).</li>
+      <li>Following <b>Williston on Contracts</b> (as quoted in the DU material), distinguish: (1) an “acceptance” that introduces a new condition — this is a <b>counter-offer</b>; from (2) an acceptance that unequivocally adopts the offer but states it will only become effective on a future contingency — an <b>“acceptance in escrow”</b> — neither party is bound, and each may withdraw until the contingency occurs.</li>
+    </ul>
+
+    <h3>3.3 When is the contract concluded in a confirmation-auction?</h3>
+    <p>A concluded contract requires (i) a definite <b>offer</b>, (ii) an <b>acceptance</b> of that same offer by the competent authority, and (iii) <b>communication</b> (or dispatch in course of transmission) of that acceptance to the offeror. If the “confirmation” merely accepts a <i>different, later</i> offer (e.g., an offer to take the property at the reserve price rather than the original bid), and that acceptance is <b>never communicated</b>, then no contract is concluded — and the bidder may also have <b>revoked</b> his later offer (<i>Haridwar Singh</i>).</p>
+    <div class="warn"><b>Key takeaway:</b> an auction “subject to confirmation” gives the bidder <b>no enforceable contract merely by being the highest bidder</b>; the Government must confirm <b>and communicate</b> the acceptance of a subsisting offer. This protects the public authority but means the bidder is not locked in until then.</div>
+  </section>
+  <section id="cases">
+    <h2><span class="secnum">C</span> The Five DU Case-Digests</h2>
+    <p class="hsub">Each in the DU format — Facts · Issue(s) · Arguments (both sides) · Decision · Principle. A “hypothetical scene” visual accompanies each case.</p>
+
+    <!-- ============ MADDALA ============ -->
+    <div class="case" id="maddala">
+      <div class="head">
+        <div class="t">CASE 8 · Union of India v. Maddala Thathiah</div>
+        <div class="r">AIR 1966 SC 1724 (Supreme Court of India)</div>
+      </div>
+      <div class="tagrow"><span class="tag t-b">Tender = offer</span><span class="tag t-va">Standing offer</span><span class="tag t-v">Right to cancel clause</span><span class="tag t-u">Each order = separate contract</span></div>
+      <div class="scene">
+        <span class="badge">Hypothetical scene — the railway jaggery tender</span>
+        <svg width="920" viewBox="0 0 920 290" role="img" aria-label="Scene Maddala tender timeline">
+          <g font-size="10.5">
+            <rect x="30" y="24" width="240" height="90" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+            <text x="150" y="44" text-anchor="middle" font-weight="800" fill="#0f4c81">TENDER INVITED</text>
+            <text x="150" y="62" text-anchor="middle" fill="#333">Railway needs 14,000 maunds</text>
+            <text x="150" y="77" text-anchor="middle" fill="#333">jaggery (Feb–Mar 1948). Note in</text>
+            <text x="150" y="92" text-anchor="middle" fill="#333">para 2: railway reserves right to</text>
+            <text x="150" y="107" text-anchor="middle" fill="#333">"cancel the contract at any stage"</text>
+            <line x1="270" y1="60" x2="310" y2="60" stroke="#1273b8" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="316" y="24" width="250" height="90" rx="8" fill="#fff2d9" stroke="#b7791f"/>
+            <text x="441" y="44" text-anchor="middle" font-weight="800" fill="#b7791f">TENDER ACCEPTED (29 Jan)</text>
+            <text x="441" y="62" text-anchor="middle" fill="#333">respondent’s tender accepted;</text>
+            <text x="441" y="77" text-anchor="middle" fill="#333">security ₹7,900 asked; formal order</text>
+            <text x="441" y="92" text-anchor="middle" fill="#333">only on deposit. Letter of 16 Feb:</text>
+            <text x="441" y="107" text-anchor="middle" fill="#333">4 instalments of 3,500 maunds each</text>
+            <line x1="566" y1="60" x2="606" y2="60" stroke="#b7791f" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="612" y="24" width="280" height="90" rx="8" fill="#fdecec" stroke="#c0392b"/>
+            <text x="752" y="44" text-anchor="middle" font-weight="800" fill="#c0392b">CANCELLED (8 Mar)</text>
+            <text x="752" y="62" text-anchor="middle" fill="#333">"balance outstanding… treated as</text>
+            <text x="752" y="77" text-anchor="middle" fill="#333">cancelled &amp; the contract closed" —</text>
+            <text x="752" y="92" text-anchor="middle" fill="#333">respondent sued for damages for</text>
+            <text x="752" y="107" text-anchor="middle" fill="#333">breach of contract</text>
+            <!-- SC -->
+            <rect x="150" y="150" width="620" height="110" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+            <text x="460" y="172" text-anchor="middle" font-size="13" font-weight="800" fill="#0b7a4b">SUPREME COURT — for the respondent; appeal dismissed</text>
+            <text x="460" y="196" text-anchor="middle" font-size="11" fill="#333">• Tender = an offer. Where an invitation promises a definite quantity, acceptance of the tender = binding contract.</text>
+            <text x="460" y="214" text-anchor="middle" font-size="11" fill="#333">• Here the arrangement was of the "standing offer" type: no binding contract for the whole 14,000 maunds till orders placed.</text>
+            <text x="460" y="232" text-anchor="middle" font-size="11" fill="#333">• The cancellation clause covered only supplies for which NO formal order had yet been placed.</text>
+            <text x="460" y="250" text-anchor="middle" font-size="11" fill="#0b7a4b" font-weight="700">• Once a definite order was placed for specific qty/date, the railway was bound to take that supply.</text>
+        </svg>
+        <div class="cap">Fig C8 — The tender/standing-offer doctrine: an order for a definite quantity creates a binding contract.</div>
+      </div>
+      <div class="full"><h5>Facts</h5>
+        <p>The Dominion of India, as owner of the Madras &amp; Southern Mahratta Railway (acting through the General Manager), invited tenders for the supply of jaggery to railway grain shops. The respondent (Thathiah) tendered to supply <b>14,000 imperial maunds of cane jaggery</b> for February–March 1948. The tender form’s para 2 contained a note reserving to the administration the right <b>“to cancel the contract at any stage during the tenure of the contract without calling up the outstandings on the unexpired portion.”</b> By a letter of 29 Jan 1948 the Deputy General Manager “accepted” the tender and asked for a security deposit of ₹7,900, adding that on receipt of the remittance a formal order would be placed. By a letter of 16 Feb 1948 the DGM reiterated acceptance, <b>subject to</b> the respondent’s acceptance of terms printed on the reverse — the supply was divided into <b>four instalments of 3,500 maunds</b> on stated dates (later slightly changed by a letter of 28 Feb). On 8 Mar 1948 the DGM wrote that the balance of jaggery outstanding under the order of 16 Feb was <b>“treated as cancelled and the contract closed.”</b> Despite protests, the railway relied on the reserved right to cancel. The respondent sued for damages for breach. The trial court dismissed the suit; the High Court held the cancellation clause void and remanded on damages. The Union appealed to the Supreme Court.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue(s)</h5>
+          <ul><li>Whether the arrangement was a binding contract for the supply of the whole <b>14,000 maunds</b>, or merely an agreement to supply such quantity as the railway might order (a <b>standing offer</b>).</li>
+          <li>Whether the reserved right to cancel allowed the railway to escape liability for instalments already the subject of a <b>formal order</b>.</li></ul>
+          <h5>Arguments for the Union (appellant)</h5>
+          <ul><li>The railway agreed to buy only such jaggery as it required, up to 14,000 maunds — hence no enforceable obligation to take the whole.</li>
+            <li>The respondent had expressly agreed to the cancellation clause, which was a valid stipulation providing for discharge/determination of the contract.</li></ul>
+          <h5>Arguments for the respondent (Thathiah)</h5>
+          <ul><li>The contract was a complete one for a definite 14,000 maunds deliverable on the dates in the order of 16 Feb / 28 Feb.</li>
+            <li>The cancellation clause was repugnant to the contract; even if valid, the railway could rescind only for good and reasonable grounds, not arbitrarily.</li></ul>
+        </div>
+        <div class="cell"><h5>Decision</h5>
+          <p><span class="verdict">Appeal dismissed — for the respondent</span> (Raghubar Dayal J.). The High Court’s order stood.</p>
+          <h5>Reasoning &amp; Principle evolved</h5>
+          <ul><li><b>A tender is an offer.</b> But its “acceptance” creates a binding contract only if it relates to a <b>definite quantity</b> the buyer is bound to take; where the buyer merely states it <b>may require up to a maximum</b>, the “acceptance” creates only a <b>standing offer</b>, not a contract of sale.</li>
+            <li>Applying the Cheshire &amp; Fifoot two-case test: the instant arrangement was of the <b>second (standing-offer) type</b> — a formal order was contemplated (paras 8–9 of the tender).</li>
+            <li>The cancellation clause governed only contemplated supplies for which <b>no formal order</b> had yet been placed; once a formal order for a definite quantity on definite dates was placed, it constituted a <b>binding contract</b> — the supplier must deliver and the railway must accept that supply.</li>
+            <li>Hence the railway could not arbitrarily cancel the deliveries covered by the placed orders.</li></ul>
+          <div class="casequote">Per the Court (adopting Cheshire &amp; Fifoot): “each requisition by the offeree is an individual act of acceptance which creates a separate contract.” The standing offer may be revoked only until so accepted.</div></div>
+      </div>
+    </div>
+
+    <!-- ============ RAJENDRA ============ -->
+    <div class="case" id="rajendra">
+      <div class="head">
+        <div class="t">CASE 9 · Rajendra Kumar Verma v. State of Madhya Pradesh</div>
+        <div class="r">AIR 1972 MP 131 (Madhya Pradesh High Court, Bishambhar Dayal CJ)</div>
+      </div>
+      <div class="tagrow"><span class="tag t-b">Tender revocable before acceptance</span><span class="tag t-va">Withdrawal of tender</span><span class="tag t-v">S.5 ICA</span></div>
+      <div class="scene">
+        <span class="badge">Hypothetical scene — withdrawing the tendu-leaf tender</span>
+        <svg width="920" viewBox="0 0 920 260" role="img" aria-label="Scene Rajendra withdrawal of tender">
+          <g font-size="10.5">
+            <rect x="30" y="30" width="250" height="100" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+            <text x="155" y="50" text-anchor="middle" font-weight="800" fill="#0f4c81">PETITIONER tenders</text>
+            <text x="155" y="68" text-anchor="middle" fill="#333">for Tendu-patta, unit No.7, Budni,</text>
+            <text x="155" y="83" text-anchor="middle" fill="#333">@ ₹38.25 per standard bag;</text>
+            <text x="155" y="98" text-anchor="middle" fill="#333">deposits security. Tenders to be</text>
+            <text x="155" y="113" text-anchor="middle" fill="#333">opened 9 April 1969</text>
+            <rect x="330" y="30" width="250" height="100" rx="8" fill="#fff2d9" stroke="#b7791f"/>
+            <text x="455" y="50" text-anchor="middle" font-weight="800" fill="#b7791f">BEFORE opening, he WITHDRAWS</text>
+            <text x="455" y="68" text-anchor="middle" fill="#333">application (Annexure A) resiling</text>
+            <text x="455" y="83" text-anchor="middle" fill="#333">from tender: "since I have</text>
+            <text x="455" y="98" text-anchor="middle" fill="#333">withdrawn my tender, please do</text>
+            <text x="455" y="113" text-anchor="middle" fill="#333">not open it"</text>
+            <line x1="280" y1="70" x2="326" y2="70" stroke="#b7791f" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="630" y="30" width="260" height="100" rx="8" fill="#fdecec" stroke="#c0392b"/>
+            <text x="760" y="50" text-anchor="middle" font-weight="800" fill="#c0392b">Government OPENED &amp; ACCEPTED</text>
+            <text x="760" y="68" text-anchor="middle" fill="#333">(only tender); when he refused to</text>
+            <text x="760" y="83" text-anchor="middle" fill="#333">execute, recovered ₹24,846.12 —</text>
+            <text x="760" y="98" text-anchor="middle" fill="#333">balance after re-sale at loss. Clause</text>
+            <text x="760" y="113" text-anchor="middle" fill="#333">10(b)(i): withdrawal allowed only if ≥1</text>
+            <text x="760" y="128" text-anchor="middle" fill="#333">valid tender remains</text>
+            <!-- result -->
+            <rect x="150" y="160" width="620" height="60" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+            <text x="460" y="184" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0b7a4b">HIGH COURT — writ allowed; recovery quashed; security refunded</text>
+            <text x="460" y="204" text-anchor="middle" font-size="10.5" fill="#333">A person making an offer may withdraw it before acceptance is intimated; a tender clause cannot take away that right (S.5). Once withdrawn, there was no offer → no contract.</text>
+        </svg>
+        <div class="cap">Fig C9 — A tender (offer) may be withdrawn before acceptance; a tender-notice clause cannot deprive the tenderer of this right.</div>
+      </div>
+      <div class="full"><h5>Facts</h5>
+        <p>The State of M.P. advertised for tenders for the sale of <b>Tendu-patta (leaves)</b> from unit No. 7, Budni. The petitioner gave a tender at ₹38.25 per standard bag and deposited security. The tenders were to be opened on <b>9 April 1969</b>, but before they were opened the petitioner applied to <b>withdraw/ resile</b> from his tender, asking that it not be opened at all. The tender was nevertheless opened — it was the <b>only</b> tender for that unit — and the Government accepted it. When the petitioner refused to execute the purchaser’s agreement, recovery proceedings were taken for <b>₹24,846.12</b> on the ground that the leaves had later been sold to someone else at a loss and the balance was recoverable from him. He filed a writ petition under Art. 226 challenging the recovery.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue</h5><p>Whether the petitioner could validly <b>withdraw his tender before it was opened/ accepted</b>, and whether the tender condition restricting withdrawal took away that right, so that the recovery was unsustainable.</p>
+        <h5>Arguments for the petitioner</h5>
+        <ul><li>He withdrew his tender before it was opened and accepted — hence there was no subsisting offer by him and no contract.</li></ul>
+        <h5>Arguments for the State (respondent)</h5>
+        <ul><li>Under tender condition 10(b)(i) a tenderer may withdraw only if, after withdrawal, at least <b>one valid tender</b> remains for the unit; since his was the only tender, withdrawal was not permitted.</li></ul></div>
+        <div class="cell"><h5>Decision</h5><p><span class="verdict">Writ allowed — recovery quashed; security refunded</span>.</p>
+        <h5>Reasoning &amp; Principle evolved</h5>
+        <ul><li>A person who makes an offer (a tender is an offer) is entitled to <b>withdraw it before its acceptance is intimated to him</b> (S.5 ICA).</li>
+          <li>The Government, by merely providing a clause in the tender notice, <b>could not take away that legal right</b> of the tenderer.</li>
+          <li>Since the petitioner had validly withdrawn, when the tenders were opened there was in truth <b>no offer</b> by him; accordingly there could be <b>no contract</b>, express or implied, between the parties, and no liability for the alleged loss.</li></ul>
+        <div class="casequote">Bishambhar Dayal CJ: “A person who makes an offer is entitled to withdraw his offer or tender before its acceptance is intimated to him. The Government, by merely providing such a clause in [the] tender notice, could not take away that legal right.”</div></div>
+      </div>
+    </div>
+    <!-- ============ KANHAIYA ============ -->
+    <div class="case" id="kanhaiya">
+      <div class="head">
+        <div class="t">CASE 10 · Kanhaiya Lal Aggarwal v. Union of India</div>
+        <div class="r">AIR 2002 SC 2766 (Supreme Court of India, S. Rajendra Babu J.)</div>
+      </div>
+      <div class="tagrow"><span class="tag t-b">Government contracts</span><span class="tag t-va">Rebate/conditional offer in tender</span><span class="tag t-v">Essential vs collateral conditions</span></div>
+      <div class="scene">
+        <span class="badge">Hypothetical scene — the rail-ballast tender &amp; the rebate offer</span>
+        <svg width="920" viewBox="0 0 920 300" role="img" aria-label="Scene Kanhaiya Lal tender rebate">
+          <g font-size="10.5">
+            <rect x="30" y="24" width="260" height="110" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+            <text x="160" y="44" text-anchor="middle" font-weight="800" fill="#0f4c81">RAILWAYS INVITE TENDERS</text>
+            <text x="160" y="62" text-anchor="middle" fill="#333">supply 75,000 m³ crushed track</text>
+            <text x="160" y="77" text-anchor="middle" fill="#333">ballast, 24 months. Terms: rates in</text>
+            <text x="160" y="92" text-anchor="middle" fill="#333">words+figures; no alterations; offer</text>
+            <text x="160" y="107" text-anchor="middle" fill="#333">open ≥90 days; breach → forfeiture</text>
+            <text x="160" y="122" text-anchor="middle" fill="#333">of security; reject if non-compliant</text>
+            <!-- two tenderers -->
+            <rect x="340" y="24" width="270" height="110" rx="8" fill="#fff2d9" stroke="#b7791f"/>
+            <text x="475" y="44" text-anchor="middle" font-weight="800" fill="#b7791f">APPELLANT (Kanhaiya Lal)</text>
+            <text x="475" y="62" text-anchor="middle" fill="#333">tender 27-2-2001 WITH covering letter</text>
+            <text x="475" y="77" text-anchor="middle" fill="#333">offering REBATE if accepted quickly:</text>
+            <text x="475" y="92" text-anchor="middle" fill="#333">5% in 45 d · 3% in 60 d · 2% in 75 d</text>
+            <text x="475" y="107" text-anchor="middle" fill="#333">(rebate = part of the tender itself)</text>
+            <rect x="650" y="24" width="250" height="110" rx="8" fill="#f0e6ff" stroke="#5b4a9e"/>
+            <text x="775" y="44" text-anchor="middle" font-weight="800" fill="#5b4a9e">RESPONDENT No. 5</text>
+            <text x="775" y="62" text-anchor="middle" fill="#333">tender; only LATER (5 days after</text>
+            <text x="775" y="77" text-anchor="middle" fill="#333">opening) offered to cut rates by</text>
+            <text x="775" y="92" text-anchor="middle" fill="#333">1.25% (30d)/1%(45d) — but claimed</text>
+            <text x="775" y="107" text-anchor="middle" fill="#333">his original rates were "lowest"</text>
+            <!-- SC -->
+            <rect x="120" y="160" width="680" height="110" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+            <text x="460" y="182" text-anchor="middle" font-size="13" font-weight="800" fill="#0b7a4b">SUPREME COURT — appeal allowed; award to the appellant upheld</text>
+            <text x="460" y="204" text-anchor="middle" font-size="11" fill="#333">• Courts rarely interfere in Government contract awards, but will if unreasonable/arbitrary/mala fide/disregard of mandatory procedure.</text>
+            <text x="460" y="222" text-anchor="middle" font-size="11" fill="#333">• The rebate was offered WITH the tender (not a later alteration) — clear rates + clear acceptance-time; it did not violate the tender terms.</text>
+            <text x="460" y="240" text-anchor="middle" font-size="11" fill="#333">• The 90-day "keep open" condition was satisfied; giving a rebate for quick finalisation is commercial prudence, not a vitiating condition.</text>
+            <text x="460" y="258" text-anchor="middle" font-size="11" fill="#0b7a4b" font-weight="700">• Respondent No.5’s post-opening reduction was of no consequence; accepting the appellant’s offer was not arbitrary.</text>
+        </svg>
+        <div class="cap">Fig C10 — An offer (with a rebate for early acceptance) made with the tender is valid; essential vs collateral conditions and fairness govern Government contract awards.</div>
+      </div>
+      <div class="full"><h5>Facts</h5>
+        <p>The Railway invited tenders for five items of work, including supply, delivery and stacking of <b>75,000 m³ of machine-crushed track ballast</b> at its Naurozabad depot over 24 months. The tender notice required rates to be stated in words and figures, rejected tenders with alterations, permitted only signed corrections, required the offer to remain open for a <b>minimum 90 days</b> from opening, and provided for forfeiture of security and rejection for non-compliance. The appellant (Kanhaiya Lal Aggarwal) submitted his tender on <b>27-2-2001</b> with a covering letter offering a <b>rebate</b> if his offer was accepted quickly — 5% within 45 days, 3% within 60 days, 2% within 75 days. Respondent No. 5 also offered a rebate but only <b>after</b> the tenders had been opened (1.25% if accepted in 30 days, 1% in 45 days). The Railway <b>accepted the appellant’s tender</b> subject to the rebate and an agreement was executed on 19-4-2001. Respondent No. 5 filed a writ claiming his tender should have been accepted as his base rates were the lowest. The single judge and the Division Bench of the High Court, holding that the rebate amounted to an impermissible alteration of the tender and that all tenderers must be treated equally, preferred respondent No. 5 and ordered fresh/alternative sourcing. The appellant appealed to the Supreme Court.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue(s)</h5>
+          <ul><li>Whether the Railway could accept the appellant’s tender accompanied by a <b>rebate offer</b>, consistent with the tender conditions.</li>
+          <li>Whether the essential-v-collateral test and the duty to treat tenderers fairly and equally governed the award.</li></ul>
+          <h5>Arguments for the appellant</h5>
+          <ul><li>The rebate was part of the tender submitted on time; rates were clear and the acceptance time clear; it did not militate against the tender terms.</li>
+            <li>Respondent No. 5’s reduction came after opening — an offer of no consequence.</li></ul>
+          <h5>Arguments for respondent No. 5</h5>
+          <ul><li>His rates were the lowest; the appellant’s rebate was a condition altering the tender documents (impermissible); all tenderers must be treated equally.</li></ul></div>
+        <div class="cell"><h5>Decision</h5>
+          <p><span class="verdict">Appeals allowed — order of the High Court set aside; the writ petition dismissed</span>.</p>
+          <h5>Reasoning &amp; Principle evolved</h5>
+          <ul><li>Courts are normally reluctant to interfere in the award of Government contracts, but will set aside awards that are <b>unreasonable, arbitrary, mala fide or in disregard of mandatory procedure</b>.</li>
+            <li><b>Essential v. collateral condition:</b> when a tender condition is not complied with, the inviter may reject; whether the condition is essential or collateral depends on the <b>consequence of non-compliance</b> — if it leads to rejection it is essential, else collateral (<i>G.J. Fernandez</i>).</li>
+            <li>The rebate was <b>offered with the tender itself</b>, gave clear reduced rates for clear early-acceptance windows, and did not militate against the (90-day keep-open) tender terms; it was merely commercial prudence and an inducement to accept expeditiously. It was therefore within scope.</li>
+            <li>The appellant complied with the 90-day condition. Respondent No. 5’s rebate, made only <b>after opening</b>, was of no consequence. Accepting the appellant’s offer was neither illegal nor arbitrary.</li></ul>
+          <div class="casequote">S. Rajendra Babu J.: an offer of concessional rates for quick finalisation is “part of commercial prudence”; as long as it does not militate against the terms of inviting the tender, “it cannot be said that such offer is not within its scope.”</div></div>
+      </div>
+    </div>
+
+    <!-- ============ HARIDWAR ============ -->
+    <div class="case" id="haridwar">
+      <div class="head">
+        <div class="t">CASE 11 · Haridwar Singh v. Bagun Sumbrui</div>
+        <div class="r">(1973) 3 SCC 889 (Supreme Court of India, K.K. Mathew J.)</div>
+      </div>
+      <div class="tagrow"><span class="tag t-b">Auction subject to confirmation</span><span class="tag t-va">Provisional acceptance ≠ contract</span><span class="tag t-v">Communication of acceptance</span><span class="tag t-va">Withdrawal of offer</span></div>
+      <div class="scene">
+        <span class="badge">Hypothetical scene — the bamboo coup auction (a chronology)</span>
+        <svg width="940" viewBox="0 0 940 360" role="img" aria-label="Scene Haridwar auction chronology">
+          <g font-size="9.5">
+            <rect x="20" y="20" width="150" height="64" rx="6" fill="#eef3fa" stroke="#1273b8"/><text x="95" y="36" text-anchor="middle" font-weight="800" fill="#0f4c81">7 Aug 1970</text><text x="95" y="52" text-anchor="middle" fill="#333">Auction of Bantha coup; reserve ₹95,000</text><text x="95" y="66" text-anchor="middle" fill="#333">appellant highest bid ₹92,001</text>
+            <line x1="170" y1="50" x2="196" y2="50" stroke="#b7791f" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="200" y="20" width="150" height="64" rx="6" fill="#fff2d9" stroke="#b7791f"/><text x="275" y="36" text-anchor="middle" font-weight="800" fill="#b7791f">DFO provisionally accepts</text><text x="275" y="52" text-anchor="middle" fill="#333">security ₹23,800 + agreement;</text><text x="275" y="66" text-anchor="middle" fill="#333">report to Conservator</text>
+            <line x1="350" y1="50" x2="376" y2="50" stroke="#b7791f" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="380" y="20" width="150" height="64" rx="6" fill="#f0e6ff" stroke="#5b4a9e"/><text x="455" y="36" text-anchor="middle" font-weight="800" fill="#5b4a9e">needs Govt confirmation</text><text x="455" y="52" text-anchor="middle" fill="#333">(sale &gt; ₹5,000, below reserve) →</text><text x="455" y="66" text-anchor="middle" fill="#333">referred to Finance</text>
+            <line x1="530" y1="50" x2="556" y2="50" stroke="#5b4a9e" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="560" y="20" width="150" height="64" rx="6" fill="#eaf5ee" stroke="#0b7a4b"/><text x="635" y="36" text-anchor="middle" font-weight="800" fill="#0b7a4b">26 Oct: appellant offers</text><text x="635" y="52" text-anchor="middle" fill="#333">₹95,000 (reserve) · 3 Nov: asks</text><text x="635" y="66" text-anchor="middle" fill="#333">settlement on highest bid</text>
+            <line x1="710" y1="50" x2="736" y2="50" stroke="#0b7a4b" stroke-width="2" marker-end="url(#a5)"/>
+            <rect x="740" y="20" width="180" height="64" rx="6" fill="#fff2d9" stroke="#b7791f"/><text x="830" y="36" text-anchor="middle" font-weight="800" fill="#b7791f">27 Nov: Minister directs settlement</text><text x="830" y="52" text-anchor="middle" fill="#333">at reserve ₹95,000; telegram 28 Nov</text><text x="830" y="66" text-anchor="middle" fill="#333">to Conservator (not appellant)</text>
+            <!-- second row -->
+            <rect x="20" y="120" width="150" height="64" rx="6" fill="#fdecec" stroke="#c0392b"/><text x="95" y="136" text-anchor="middle" font-weight="800" fill="#c0392b">4 Dec: Md Yakub offers</text><text x="95" y="152" text-anchor="middle" fill="#333">₹1,01,125 → 5 Dec: Govt cancels</text><text x="95" y="166" text-anchor="middle" fill="#333">its 28 Nov telegram</text>
+            <rect x="200" y="120" width="170" height="64" rx="6" fill="#fdecec" stroke="#c0392b"/><text x="285" y="136" text-anchor="middle" font-weight="800" fill="#c0392b">13 Dec: Minister cancels</text><text x="285" y="152" text-anchor="middle" fill="#333">settlement with appellant; settles</text><text x="285" y="166" text-anchor="middle" fill="#333">with Md Yakub for ₹1,01,125</text>
+            <rect x="410" y="120" width="180" height="64" rx="6" fill="#fdecec" stroke="#c0392b"/><text x="500" y="136" text-anchor="middle" font-weight="800" fill="#c0392b">Appellant: "I had a concluded</text><text x="500" y="152" text-anchor="middle" fill="#333">contract once Govt confirmed" —</text><text x="500" y="166" text-anchor="middle" fill="#333">writ before the High Court</text>
+            <!-- outcome -->
+            <rect x="120" y="210" width="700" height="118" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+            <text x="470" y="232" text-anchor="middle" font-size="13" font-weight="800" fill="#0b7a4b">SUPREME COURT — NO concluded contract with the appellant</text>
+            <text x="470" y="254" text-anchor="middle" font-size="11" fill="#333">• DFO’s acceptance was conditional, subject to confirmation → not itself a contract.</text>
+            <text x="470" y="272" text-anchor="middle" font-size="11" fill="#333">• The Minister (27 Nov) did NOT confirm the ₹92,001 bid; he accepted a different offer — the appellant’s 26 Oct offer at ₹95,000.</text>
+            <text x="470" y="290" text-anchor="middle" font-size="11" fill="#333">• That acceptance was never communicated to the appellant (telegram went to the Conservator, not put in transmission to him).</text>
+            <text x="470" y="308" text-anchor="middle" font-size="11" fill="#0b7a4b" font-weight="700">• The appellant had also revoked that offer (3 Nov). Hence no concluded contract — he could not insist on the settlement.</text>
+        </svg>
+        <div class="cap">Fig C11 — An auction subject to confirmation gives no binding contract until the competent authority accepts a subsisting offer AND communicates that acceptance.</div>
+      </div>
+      <div class="full"><h5>Facts</h5>
+        <p>The Bihar Forest Department advertised for settlement of the right to exploit the “Bantha Bamboo coup” (Chatra North Division, Hazaribagh) by public auction held on <b>7 August 1970</b>. Five persons, including the appellant, bid. Though the reserve price was <b>₹95,000</b>, the appellant’s bid of <b>₹92,001</b> (the highest) was accepted by the Divisional Forest Officer (DFO). The appellant deposited ₹23,800 security and executed an agreement. Because the provisional settlement exceeded ₹5,000, the papers were forwarded for Government confirmation; and because it was below the reserve, the matter also went to the Finance Department. The DFO explained the lower settlement. On <b>26 October 1970</b> the appellant expressed willingness to take the settlement at the reserve price of ₹95,000; on <b>3 November 1970</b> he applied for settlement on his highest bid. On <b>27 November</b> the Minister of Forests directed settlement with the highest bidder at the reserve price; a telegram was sent on 28 November to the Conservator confirming the sale — but the DFO did not receive/communicate it to the appellant. Meanwhile Md. Yakub (respondent No. 6) on <b>4 December</b> offered ₹1,01,125. The Government cancelled its earlier telegram and, by proceedings of <b>13 December 1970</b>, cancelled the settlement with the appellant and settled with Md. Yakub. The appellant filed a writ.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue</h5><p>Whether there was a <b>concluded contract</b> between the appellant and the Government (so that the later settlement with Md. Yakub was illegal), given that the DFO’s acceptance was subject to confirmation by the Government.</p>
+        <h5>Arguments for the appellant</h5>
+        <ul><li>The DFO’s acceptance was a conditional acceptance, which became unconditional on Government confirmation (27 Nov) — so a concluded contract arose even though confirmation was not communicated to him.</li>
+          <li>Alternatively, the settlement with Md. Yakub violated statutory rules and was invalid.</li></ul>
+        <h5>Arguments for the Government/respondents</h5>
+        <ul><li>No concluded contract: the DFO’s acceptance was only provisional/subject to confirmation; the Minister’s 27 Nov proceedings did not confirm the ₹92,001 bid but accepted a different (26 Oct) offer at ₹95,000; that acceptance was never communicated to the appellant; and the appellant himself revoked that offer on 3 Nov.</li></ul></div>
+        <div class="cell"><h5>Decision</h5><p><span class="verdict r">No concluded contract between the appellant and the Government</span>; the appeal was disposed of without disturbing the settlement with Md. Yakub (no order as to costs).</p>
+        <h5>Reasoning &amp; Principle evolved</h5>
+        <ul><li>A <b>conditional/provisional acceptance</b> (subject to a higher authority’s confirmation) does not by itself create a binding contract; there must be an unconditional acceptance of the offer.</li>
+          <li>The Court considered <i>Rajanagaram Village Co-op. Society v. Veerasami Mudaly</i> and <i>Somasundaram Pillai</i>: a person who makes an offer may withdraw it before acceptance in the absence of a supported contrary condition; a provisional acceptance cannot make a binding bargain.</li>
+          <li>Following <b>Williston</b>, where an acceptance is not to take effect until a future contingency, neither party is bound and either may withdraw; if the contingency occurs, a contract arises.</li>
+          <li>Here the impediment was <b>want of confirmation by the Government</b>, not merely want of communication: the Minister accepted the <b>different</b> offer of 26 Oct (₹95,000), not the bid of ₹92,001; and that acceptance was <b>not communicated to the appellant</b> (the telegram went to the Conservator, and was not even put into course of transmission to the appellant). Further, the appellant <b>revoked</b> his offer on 3 Nov.</li>
+          <li><b>Principle:</b> an auction “subject to confirmation” yields no concluded contract until the competent authority confirms a subsisting offer and that acceptance is communicated (or at least put in course of transmission) to the bidder.</li></ul>
+        <div class="casequote">The Court: the want of confirmation by the Government — not the want of communication — was decisive; and “the appellant cannot contend that there was a concluded contract… as the acceptance of that offer was not put in the course of transmission [to him].”</div></div>
+      </div>
+    </div>
+    <!-- ============ INDIAN AIRLINES ============ -->
+    <div class="case" id="indianair">
+      <div class="head">
+        <div class="t">CASE 12 · Indian Airlines Corporation v. Sm. Madhuri Chowdhuri</div>
+        <div class="r">AIR 1965 Cal. 252 (Calcutta High Court, P.B. Mukharji J.)</div>
+      </div>
+      <div class="tagrow"><span class="tag t-b">Standard-form / ticket contract</span><span class="tag t-va">Exemption clause</span><span class="tag t-v">Common carrier</span><span class="tag t-u">S.23 ICA does not apply to carriers</span></div>
+      <div class="scene">
+        <span class="badge">Hypothetical scene — the ill-fated flight &amp; the ticket’s fine print</span>
+        <svg width="920" viewBox="0 0 920 300" role="img" aria-label="Scene Indian Airlines crash and ticket">
+          <!-- plane -->
+          <rect x="60" y="30" width="240" height="150" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="180" y="52" text-anchor="middle" font-size="11" font-weight="800" fill="#0f4c81">12 Dec 1953 · Nagpur</text>
+          <text x="180" y="70" text-anchor="middle" font-size="9.5" fill="#333">Dakota VT-CHF flying Nagpur→Madras</text>
+          <text x="180" y="85" text-anchor="middle" font-size="9.5" fill="#333">crashes at 3.25 a.m. just after take-off;</text>
+          <text x="180" y="100" text-anchor="middle" font-size="9.5" fill="#333">all aboard killed except the pilot</text>
+          <text x="180" y="116" text-anchor="middle" font-size="9.5" fill="#333">(engine trouble → attempt to land → crash)</text>
+          <text x="180" y="136" text-anchor="middle" font-size="9.5" fill="#c0392b" font-weight="700">Sunil Baran Chowdhuri (passenger) died</text>
+          <text x="180" y="152" text-anchor="middle" font-size="9.5" fill="#333">widow + 2 minor children sue for ₹20,00,000</text>
+          <!-- ticket -->
+          <rect x="380" y="30" width="300" height="180" rx="8" fill="#fdf6ec" stroke="#b7791f"/>
+          <text x="530" y="54" text-anchor="middle" font-size="12" font-weight="800" fill="#7a3b00">AIR TICKET — terms &amp; conditions</text>
+          <text x="530" y="74" text-anchor="middle" font-size="9" fill="#333">"The carrier shall be under NO liability whatsoever to the passenger,</text>
+          <text x="530" y="88" text-anchor="middle" font-size="9" fill="#333">his/her heirs, legal representatives or dependants… for death, injury</text>
+          <text x="530" y="102" text-anchor="middle" font-size="9" fill="#333">or delay… arising out of the carriage… whether or not caused or</text>
+          <text x="530" y="116" text-anchor="middle" font-size="9" fill="#333">occasioned by the act, neglect, negligence or default of the Carrier,</text>
+          <text x="530" y="130" text-anchor="middle" font-size="9" fill="#333">or of pilot flying operational or other staff…"</text>
+          <text x="530" y="156" text-anchor="middle" font-size="9.5" fill="#b7791f">Defence: exemption clause bars all liability (incl. negligence)</text>
+          <!-- outcome -->
+          <rect x="720" y="40" width="180" height="110" rx="8" fill="#fdecec" stroke="#c0392b"/>
+          <text x="810" y="62" text-anchor="middle" font-size="10" font-weight="800" fill="#c0392b">Trial Judge</text>
+          <text x="810" y="78" text-anchor="middle" font-size="8.5" fill="#555">exemption clause void (S.23)</text>
+          <text x="810" y="92" text-anchor="middle" font-size="8.5" fill="#555">&amp; pilot negligent</text>
+          <rect x="700" y="160" width="200" height="60" rx="8" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="800" y="180" text-anchor="middle" font-size="10" font-weight="800" fill="#0b7a4b">High Court</text>
+          <text x="800" y="196" text-anchor="middle" font-size="8.5" fill="#555">appeal ALLOWED; clause valid;</text>
+          <text x="800" y="210" text-anchor="middle" font-size="8.5" fill="#555">no negligence → suit dismissed</text>
+        </svg>
+        <div class="cap">Fig C12 — A standard-form ticket is a contract on the carrier’s printed terms; its exemption clause (if duly brought to notice and not barred by statute) is valid.</div>
+      </div>
+      <div class="full"><h5>Facts</h5>
+        <p>On <b>12 December 1953</b> a Dakota aircraft (VT-CHF) of the Indian Airlines Corporation crashed at Nagpur shortly after taking off for Madras; all aboard were killed except the pilot, Captain Cartner. One passenger, <b>Sunil Baran Chowdhuri</b>, a young Calcutta businessman, died. His widow and two minor children sued the Corporation for damages, relying both on <b>breach of contract</b> (failure safely to carry) and on <b>negligence</b> (defective supervision/check-up; the pilots’ handling of the engine failure), claiming roughly <b>₹20,00,000</b> for loss of dependency plus ₹5,000 lost in cash/kind. The Corporation relied on the <b>exemption clause</b> in the passenger’s air ticket, which purported to exclude <b>all liability</b> — even for the carrier’s or its servants’ negligence — for death, injury or delay. The trial judge held the exemption clause <b>illegal, invalid and void</b> (inter alia under S.23 ICA) and found the pilot negligent, so the Corporation was liable. The Corporation appealed.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue(s)</h5>
+          <ul><li>Whether the <b>exemption clause</b> in the air ticket (excluding liability even for negligence) is valid, or void as being opposed to S.23 ICA / public policy.</li>
+            <li>Whether the <b>Indian Contract Act</b> applies at all to a common carrier’s contract of carriage.</li>
+            <li>Whether the Corporation or the pilot was <b>negligent</b> on the facts.</li></ul>
+          <h5>Arguments for the plaintiffs (respondents)</h5>
+          <ul><li>The clause is void under <b>S.23 ICA</b> (opposed to public policy / unjust).</li>
+            <li>It cannot bind the heirs/legal representatives, who were not parties to the contract (action under the Fatal Accidents Act).</li>
+            <li>The broad principles of the Warsaw Convention (applied as justice, equity and good conscience) should strike it down.</li>
+            <li>Even if goods could be so exempted, a clause excluding liability for <b>loss of life</b> is bad.</li></ul>
+          <h5>Arguments for the Corporation (appellant)</h5>
+          <ul><li>The ICA does not govern common carriers at all (Privy Council in <i>Irrawaddy Flotilla Co.</i>); hence S.23 does not apply.</li>
+            <li>Under the common law a carrier may contract out of liability, even for negligence, if the clause is clear and duly brought to the passenger’s notice.</li>
+            <li>There was no negligence; the pilots exercised reasonable judgment in an emergency.</li></ul></div>
+        <div class="cell"><h5>Decision</h5>
+          <p><span class="verdict r">Appeal allowed — for the Corporation; the suit dismissed</span>.</p>
+          <h5>Reasoning &amp; Principle evolved</h5>
+          <ul><li><b>The ICA does not govern common carriers.</b> Relying on the Privy Council in <i>Irrawaddy Flotilla Co. v. Bugwandas</i> (18 IA 121), the liability of a common carrier arises from public employment, not contract, and is outside the Indian Contract Act — so <b>S.23 cannot be invoked</b> to strike down the clause.</li>
+            <li>Following <i>Indian Airlines v. Keshavlal F. Gandhi</i> (Cal.), the Corporation is a common carrier; its relationship with passengers is governed by the <b>common law</b>, which permits carriers to contract out of liability — including for negligence — through a clear, duly-notified clause.</li>
+            <li>No distinction in law between carriage of goods and carriage of passengers: a carrier of passengers “is neither an insurer nor precluded from making a special contract” (<i>Ludditt v. Ginger Coote Airways</i>; <i>Grand Trunk Ry. v. Robinson</i>).</li>
+            <li><b>Notice/consent:</b> a condition printed on the ticket binds the passenger if the carrier did what was reasonably sufficient to bring it to his notice (Parker v. S.E. Ry.; Hood v. Anchor Line). Here the conditions were duly brought to the passenger’s notice and he had every opportunity to know them.</li>
+            <li>The clause clearly covered negligence and was not barred by any statute (the Carriage by Air Act / Warsaw Convention did not apply to internal carriage; no Indian statute prohibited such exemption). On the merits, there was <b>no negligence</b> by the Corporation or the pilot.</li></ul>
+          <div class="casequote">Per the Court: “On this overwhelming mass of authority we are bound to hold that both in respect of Contract Act and Tort the present exemption clause is good and valid and it legally excludes all liability for negligence. We also hold that it cannot be held to be bad under Section 23 of the Contract Act.”</div></div>
+      </div>
+      <div class="full"><h5>Modern significance &amp; the two-pronged rule on exemption clauses</h5>
+        <p>The case is authority for two things that recur in later consumer/aviation law: (i) a <b>standard-form ticket contract</b> is binding on the terms printed on it, <b>provided the terms were reasonably brought to the passenger’s notice</b> and he accepted the ticket; and (ii) such exemption clauses are construed strictly — following Denning LJ in <i>White v. John Warwick &amp; Co.</i> (quoted in the case), a clause is construed, so far as possible, as excluding only <b>strict liability</b> and <b>not</b> negligence, unless the words clearly exclude negligence. In India today, statutes (e.g., the Carriage by Air Act amendments, consumer-protection law) may restrict such clauses; the common-law freedom to contract out is subject to those statutory interventions.</p></div>
+    </div>
+  </section>
+  <section id="compare">
+    <h2><span class="secnum">4</span> Comparison Corner</h2>
+    <p class="hsub">The distinctions this unit keeps asking you to make.</p>
+
+    <h3>4.1 Tender for a definite quantity v. tender for a maximum quantity (standing offer)</h3>
+    <table class="twocol">
+      <tr><th>Basis</th><th>Definite-quantity tender</th><th>Maximum-quantity tender (standing offer)</th></tr>
+      <tr><td>Buyer’s obligation</td><td>Buyer is bound to take the stated quantity.</td><td>Buyer is not bound to order anything.</td></tr>
+      <tr><td>Effect of “acceptance”</td><td>Creates a binding contract at once.</td><td>Creates only a standing offer; each order = a separate acceptance &amp; contract.</td></tr>
+      <tr><td>Revocability</td><td>Not revocable once contract formed.</td><td>Standing offer may be revoked until accepted by an order.</td></tr>
+      <tr><td>Illustration</td><td>Railway needs a definite 1,000 tons by a date.</td><td>Railway “may require up to X if and when needed” (Maddala Thathiah).</td></tr>
+    </table>
+
+    <h3>4.2 Offer v. Invitation to treat in special settings</h3>
+    <table class="twocol">
+      <tr><th>Situation</th><th>Nature</th><th>Authority</th></tr>
+      <tr><td>Advertisement inviting tenders</td><td><b>Invitation to treat</b></td><td>general law (Maddala framework)</td></tr>
+      <tr><td>The tender submitted</td><td><b>Offer</b> (revocable pre-acceptance)</td><td>S.2(a), S.5; Rajendra Kumar Verma</td></tr>
+      <tr><td>Auctioneer calling for bids / lots</td><td><b>Invitation to treat</b></td><td>general law</td></tr>
+      <tr><td>Each bid at auction</td><td><b>Offer</b></td><td>S.2(a)</td></tr>
+      <tr><td>Fall of the hammer</td><td><b>Acceptance</b> (subject to reserve / confirmation)</td><td>Haridwar Singh (confirmation auctions)</td></tr>
+      <tr><td>Air/rail ticket with printed terms</td><td>Formation on carrier’s standard terms (if notice given)</td><td>Indian Airlines v. Madhuri</td></tr>
+    </table>
+
+    <h3>4.3 Which case fixes which principle</h3>
+    <div class="grid">
+      <div class="card tone2"><h4>Tender &amp; standing offer</h4><p><b>Maddala Thathiah</b> — tender = offer; a maximum-quantity tender creates a standing offer; each order = a separate contract; cancellation clause covers only un-ordered supplies.</p></div>
+      <div class="card tone1"><h4>Withdrawal of tender</h4><p><b>Rajendra Kumar Verma</b> — a tender may be withdrawn before acceptance; a tender clause cannot take away that right (S.5).</p></div>
+      <div class="card tone3"><h4>Government contract awards</h4><p><b>Kanhaiya Lal Aggarwal</b> — courts rarely interfere; but set aside arbitrary/ mala fide awards; essential vs collateral conditions; rebate offered with the tender is valid.</p></div>
+      <div class="card tone4"><h4>Auction subject to confirmation</h4><p><b>Haridwar Singh</b> — provisional acceptance ≠ contract; needs confirmation of a subsisting offer + communication to the bidder.</p></div>
+      <div class="card tone5"><h4>Ticket / exemption clause</h4><p><b>Indian Airlines v. Madhuri</b> — standard-form ticket binding if terms noticed; ICA S.23 does not govern common carriers; exemption (even for negligence) can be valid.</p></div>
+    </div>
+  </section>
+
+  <section id="pyq">
+    <h2><span class="secnum">5</span> Previous-Year Questions (PYQs) + Best Model Answers</h2>
+    <p class="hsub">Real DU-semester questions on this unit, each with a complete model answer.</p>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Whether acceptance of A’s tender by a Government Department for supply of coal up to 10,000 tons during the calendar year 2012 creates contractual obligations? Discuss with the help of the Indian Contract Act and case law. (DU, Dec 2011)</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Setting.</b> In a tender process, the advertisement inviting tenders is only an <b>invitation to treat</b>; each tender submitted is an <b>offer</b> (S.2(a)); and the legal effect of the buyer’s “acceptance” depends on the terms of the invitation.</p>
+        <p><b>The controlling principle (Union of India v. Maddala Thathiah, AIR 1966 SC 1724).</b> Adopting the Cheshire &amp; Fifoot analysis, the Court distinguished two situations: (i) where the buyer states it <b>definitely requires a specific quantity</b> — acceptance of the tender is an acceptance “in the legal sense” creating a binding obligation to take the whole quantity; and (ii) where the buyer states it <b>“may require” goods up to a maximum amount</b>, “if and when required” — acceptance of the tender creates only a <b>standing offer</b>. In the second case, the standing offer may be revoked until it is “accepted in the legal sense,” i.e., until a <b>requisition for a definite quantity</b> is made; each such requisition is an individual act of acceptance creating a <b>separate contract</b>.</p>
+        <p><b>Application.</b> Here A’s tender is “for supply of coal <b>up to 10,000 tons</b> during the year 2012” — i.e., a maximum-quantity, “if and when required” arrangement. Merely “accepting” this tender does <b>not</b> by itself oblige the Department to take 10,000 tons, nor does it bind A for the whole. It creates a <b>standing offer</b>. Contractual obligations arise <b>only when the Department places orders/requisitions for specific quantities</b>; each order produces a separate binding contract for that quantity. Until such an order, either side is not bound for the whole, and A may revoke the standing offer (subject to any supported term keeping it open).</p>
+        <p><b>Conclusion.</b> Acceptance of a maximum-quantity (“up to 10,000 tons … if and when required”) tender does <b>not</b> create immediate contractual obligations for the entire quantity; obligations crystallise only on each actual requisition/order, each being a separate contract. If, however, the Department had committed to take the entire 10,000 tons, acceptance would have created a binding contract for the whole.</p>
+      </div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>“An advertisement inviting tenders is not an offer; the tender is the offer and a person making it may withdraw it before acceptance.” Examine with reference to the Indian Contract Act and the relevant case law.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Invitation to treat.</b> By <b>S.2(a)</b> an offer is a signified willingness to be bound on assent. An <b>advertisement inviting tenders</b> does not express such willingness; it merely invites others to make offers. It is therefore an <b>invitation to treat</b>, and nobody can “accept” it to form a contract.</p>
+        <p><b>The tender is the offer.</b> Each tender submitted in response is an <b>offer</b> made by the tenderer, containing the terms on which he will contract (see <i>Union of India v. Maddala Thathiah</i>). It becomes capable of forming a contract only when accepted by the inviting party in the manner discussed in that case (definite quantity → contract; maximum quantity → standing offer).</p>
+        <p><b>Withdrawal before acceptance (S.5; Rajendra Kumar Verma v. State of M.P., AIR 1972 MP 131).</b> Under S.5, a proposal may be revoked at any time before the communication of its acceptance is complete as against the proposer. In <i>Rajendra Kumar Verma</i>, a tenderer withdrew his tendu-patta tender <b>before</b> the tenders were opened; the State nevertheless opened and accepted it (it was the only one) and sought to recover on the tenderer’s refusal to execute. The High Court quashed the recovery: a person who makes an offer is entitled to withdraw it before acceptance is intimated to him, and <b>a clause in the tender notice cannot take away that legal right</b>. Once withdrawn, there was no offer and hence no contract.</p>
+        <p><b>Conclusion.</b> The tender notice is only an invitation to treat; the tender is an offer revocable before acceptance; and the tenderer’s statutory right of revocation (S.5) cannot be ousted by a mere condition in the invitation.</p>
+      </div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Critically examine the law relating to Government contracts with special reference to the concept of “provisional acceptance” and its consequences. (DU, Topic 3)</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Introduction.</b> Government contracts (tenders and auction settlements by the State) are concluded on the same principles as private contracts, but two features complicate them: (i) the State often reserves powers to reject tenders or cancel, and awards are subject to confirmation by superior authorities; and (ii) the courts are reluctant to interfere in the award of contracts except where the decision is arbitrary, unreasonable, mala fide or in disregard of mandatory procedure (see <i>Kanhaiya Lal Aggarwal v. Union of India</i>, AIR 2002 SC 2766; <i>Tata Cellular v. Union of India</i>).</p>
+        <p><b>Tender law &amp; standing offers.</b> An invitation to tender is an invitation to treat; a tender is an offer; and its acceptance creates a binding contract only for a definite quantity, otherwise a standing offer (<i>Maddala Thathiah</i>). The State’s reserved right to cancel operates on supplies not yet covered by a formal order.</p>
+        <p><b>Provisional / conditional acceptance.</b> In auctions and tenders, the State frequently accepts a bid/tender <b>“subject to confirmation”</b> by a higher authority. The leading authority is <b>Haridwar Singh v. Bagun Sumbrui (1973) 3 SCC 889</b>.</p>
+        <p><b>Consequences of provisional acceptance (Haridwar Singh).</b> A provisional or conditional acceptance (subject to confirmation) does <b>not</b>, by itself, conclude a contract. To have an enforceable contract there must be an offer and an <b>unconditional acceptance</b>; a person making an offer may withdraw it before acceptance in the absence of a supported contrary condition. As Williston explains, an acceptance “in escrow” (not to take effect until a contingency) binds neither party, and either may withdraw until the contingency occurs. Applying this, the Court held there was <b>no concluded contract</b> where (a) the confirming authority accepted a <b>different offer</b> (at the reserve price) rather than confirming the original bid, (b) that acceptance was <b>never communicated</b> to the bidder (not even put into course of transmission to him), and (c) the bidder had himself <b>revoked</b> his later offer.</p>
+        <p><b>Conclusion.</b> Provisional acceptance in Government contracts is merely a step toward, not the creation of, a contract. A binding contract arises only when the competent authority gives an <b>unconditional acceptance of a subsisting offer</b> and that acceptance is <b>communicated</b> (or at least put into course of transmission) to the tenderer/bidder. Until then the bidder is not bound, and the State may not be compelled to settle with him.</p>
+      </div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Explain how far a “bid” at an auction and the “fall of the hammer” are governed by the rules of offer and acceptance under the Indian Contract Act. What is the effect when the auction is held “subject to confirmation”?</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Offer &amp; acceptance in an auction.</b> By <b>S.2(a)</b>, a proposal is a signified willingness to obtain another’s assent. In an auction: the <b>auctioneer’s request for bids and the putting up of lots are an invitation to treat</b> (not offers); <b>each bid is an offer</b> made by the bidder; and the <b>fall of the hammer</b> is the auctioneer’s acceptance, which, in an ordinary auction, concludes the contract. The bidder may withdraw his bid before the hammer falls; the auctioneer is not bound to accept any bid (and, where there is a reserve price, may refuse bids below it). Once the hammer falls on an acceptable bid, there is a concluded contract on the bidder’s terms.</p>
+        <p><b>Auction “subject to confirmation.”</b> Where the acceptance is expressed to be <b>subject to confirmation by a higher authority</b>, it is only a <b>provisional or conditional acceptance</b> and does not by itself conclude the contract. This is illustrated by <b>Haridwar Singh v. Bagun Sumbrui (1973) 3 SCC 889</b>: the bidder’s bid at ₹92,001 was provisionally accepted by the Divisional Forest Officer subject to Government confirmation, but the Court held there was <b>no concluded contract</b> — the Government never confirmed that bid (it instead accepted the bidder’s separate offer at the reserve price), that acceptance was never communicated to the bidder, and the bidder had revoked his offer. Following Williston and <i>Somasundaram Pillai</i>, a provisional acceptance cannot make a binding bargain; an “acceptance in escrow” binds neither party until the contingency (confirmation) occurs.</p>
+        <p><b>Conclusion.</b> Bids and the fall of the hammer follow ordinary offer–acceptance rules; but an auction expressly <b>subject to confirmation</b> postpones the contract — there must be an <b>unconditional confirmation of a subsisting offer, communicated</b> to the bidder, before any enforceable contract arises.</p>
+      </div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Write a short note on “Standard form contracts” / “Exemption clauses,” with special reference to Indian Airlines Corporation v. Sm. Madhuri Chowdhuri.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>What is a standard-form contract?</b> A standard-form contract is one whose terms are fixed in advance by one party (usually a large enterprise or a carrier) and are not open to negotiation by the other — e.g., tickets, insurance policies, rail/air carriage. The weaker party “adheres” to the printed terms (hence “contract of adhesion”). Such contracts are valid if the terms were <b>reasonably brought to the notice</b> of the other party and he accepted them.</p>
+        <p><b>Exemption (exclusion) clauses.</b> These are clauses that exclude or limit one party’s liability. The courts construe them <b>strictly</b>: following Denning LJ in <i>White v. John Warwick &amp; Co.</i> (cited in Madhuri), an exemption clause is construed, so far as possible, as excluding only strict liability and not negligence, unless the words clearly exclude negligence. The party relying on it must show the term was a term of the contract (adequate notice) and that the wording clearly covers the liability in question.</p>
+        <p><b>Indian Airlines v. Sm. Madhuri Chowdhuri (AIR 1965 Cal. 252).</b> A passenger died in an air crash; his widow sued for damages. The airline relied on an exemption clause in the ticket excluding all liability, even for negligence. The trial judge held the clause void (inter alia under S.23 ICA). The High Court reversed and allowed the appeal. It held: (i) the liability of a common carrier arises from public employment and is <b>outside the Indian Contract Act</b> — following the Privy Council in <i>Irrawaddy Flotilla Co. v. Bugwandas</i>, so <b>S.23 ICA does not apply</b>; (ii) under the common law a carrier may, by a clear and duly-noticed clause, contract out of liability even for negligence; (iii) there is no legal distinction between goods and passengers in this respect (<i>Ludditt v. Ginger Coote Airways</i>); and (iv) the terms were duly brought to the passenger’s notice. On the merits no negligence was established. The suit was dismissed.</p>
+        <p><b>Conclusion.</b> A standard-form ticket binds the passenger on its printed terms where adequate notice is given; and — subject to clear wording and any statutory bar (e.g., consumer or carriage-by-air legislation) — an exemption clause may validly exclude a carrier’s liability, including for negligence.</p>
+      </div>
+    </div>
+
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>“Every agreement, the meaning of which is not certain, or capable of being made certain, is void” — with reference to S.29 ICA. Explain how certainty/definiteness is ensured in tenders and reward-style offers, citing the DU cases on this unit.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Section 29.</b> S.29 provides that agreements whose meaning is not certain, or capable of being made certain, are void. An offer must be sufficiently definite to be capable of acceptance; vagueness prevents a binding contract. In tender practice this is why invitations require precise specifications (quantity, quality, price in words and figures, delivery dates, validity period).</p>
+        <p><b>Certainty in tenders (Kanhaiya Lal Aggarwal v. Union of India).</b> The Railway’s tender notice required definite specifications and stated that non-compliance could lead to rejection. The appellant’s tender with a rebate scheme was held valid because the <b>rates were clear and the acceptance-time clear</b> — it did not render the offer uncertain. The Court also applied the <b>essential-vs-collateral</b> test (from <i>G.J. Fernandez v. State of Karnataka</i>): whether a condition is essential or collateral is judged by the consequence of non-compliance. A definite tender (for a stated quantity, price and period) is capable of acceptance and is not void for uncertainty.</p>
+        <p><b>Definiteness in the tender/quantity sense (Maddala Thathiah).</b> Certainty also goes to <b>quantity</b>: a tender for a definite quantity is enforceable, whereas a maximum-quantity (“up to X, if and when required”) tender creates only a standing offer, each order being a separate, definite contract. The very reason the standing-offer doctrine exists is that there is no definite obligation until a requisition fixes the quantity.</p>
+        <p><b>Conclusion.</b> Certainty (S.29) is satisfied where the terms are definite or capable of being made definite. Tenders that specify quantity, price, delivery and duration are enforceable; vague or merely discretionary (“if and when”) arrangements are not immediate contracts but standing offers requiring definite subsequent orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="revision">
+    <h2><span class="secnum">6</span> Rapid-Revision Pack</h2>
+    <p class="hsub">Memory kit for Topic 3.</p>
+    <h3>6.1 One-line takeaway from each case</h3>
+    <ul>
+      <li><b>Maddala Thathiah</b> — tender = offer; definite-quantity acceptance = contract; maximum-quantity acceptance = standing offer; each order = separate contract; cancellation clause covers only un-ordered supplies.</li>
+      <li><b>Rajendra Kumar Verma</b> — a tender may be withdrawn before acceptance; a tender clause cannot take away S.5’s right of revocation.</li>
+      <li><b>Kanhaiya Lal Aggarwal</b> — courts rarely interfere in Government awards unless arbitrary/mala fide; essential-vs-collateral condition test; a rebate offered with the tender is valid.</li>
+      <li><b>Haridwar Singh</b> — auction “subject to confirmation”: provisional acceptance ≠ contract; needs confirmation of a subsisting offer + communication to the bidder.</li>
+      <li><b>Indian Airlines v. Madhuri</b> — standard-form ticket binds if terms noticed; ICA (incl. S.23) does not govern common carriers; a clear exemption clause may exclude even negligence.</li>
+    </ul>
+    <h3>6.2 Quick formulas</h3>
+    <ul>
+      <li><b>Invitation to tender / auction notice → invitation to treat.</b></li>
+      <li><b>Tender / bid → offer (S.2(a)), revocable before acceptance (S.5).</b></li>
+      <li><b>Acceptance of definite-quantity tender → contract; of maximum-quantity tender → standing offer.</b></li>
+      <li><b>Fall of hammer → acceptance (subject to reserve &amp; confirmation).</b></li>
+      <li><b>“Subject to confirmation” → provisional acceptance → no contract till confirmed &amp; communicated.</b></li>
+      <li><b>Ticket with printed terms → standard-form contract binding if notice given.</b></li>
+    </ul>
+    <h3>6.3 Traps to avoid</h3>
+    <ul>
+      <li>Do not treat the advertisement inviting tenders, or the auctioneer’s call for bids, as an offer.</li>
+      <li>Do not say “acceptance of a tender always creates a contract” — for a maximum quantity it creates only a standing offer (Maddala).</li>
+      <li>Do not treat provisional acceptance in a confirmation-auction as a concluded contract (Haridwar).</li>
+      <li>Do not forget <b>communication</b> of the acceptance to the bidder — it is essential (Haridwar).</li>
+      <li>Do not apply S.23 ICA to strike down a common carrier’s exemption clause (Madhuri) — the ICA does not govern carriers; construe the clause strictly.</li>
+      <li>Do not say a tenderer can never withdraw — he may withdraw before acceptance, and a tender clause cannot remove that right (Rajendra).</li>
+    </ul>
+    <h3>6.4 Glossary</h3>
+    <ul>
+      <li><b>Invitation to treat:</b> an inducement inviting offers (tender notice, auction).</li>
+      <li><b>Tender / bid:</b> an offer to contract on stated terms.</li>
+      <li><b>Standing offer:</b> an open offer to supply up to a maximum; accepted piecemeal by orders.</li>
+      <li><b>Provisional/conditional acceptance:</b> acceptance subject to confirmation — does not conclude the contract.</li>
+      <li><b>Reserve price:</b> the minimum below which an auctioneer may refuse bids.</li>
+      <li><b>Standard-form / exemption clause:</b> pre-printed terms (often excluding liability) in a ticket/contract.</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <p><b>Sources:</b> DU LL.B. I-Term case material — <i>Principles of Contract (General Principles)</i>, Faculty of Law, University of Delhi (Jan 2023), Topic 3 (pp. 30–54) incl. the rubric and the quoted authorities (Cheshire &amp; Fifoot, Tata Cellular, G.J. Fernandez, Irrawaddy Flotilla Co., Ludditt, etc.); <i>The Indian Contract Act, 1872</i> (Act 9 of 1872) §§ 2–10. Case extracts and quotations are from the DU case-material reproduction of the judgments.</p>
+    <p><b>Prepared for exam revision of Topic 3 — “Making of an Agreement — Special Situations: Tenders and Auctions.”</b> This is a study aid; it does not replace the primary statute or the official DU case material. Verify citations against the latest editions. Hypothetical “scene” visuals are schematic learning aids, not official depictions.</p>
+    <p style="margin-top:10px">◉ All diagrams and scene visuals are inline SVG; the file needs no external resources.</p>
+  </div>
+</div>
+<script>
+  var bar=document.getElementById('prog');
+  window.addEventListener('scroll',function(){var h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';});
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3770564881d59a0',t:'MTc4ODc5NzgxOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

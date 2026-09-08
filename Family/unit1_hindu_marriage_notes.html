@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1 — Marriage under Hindu Law | DU Family Law I</title>
+<style>
+  :root{
+    --ink:#1c1b2e; --navy:#151a3d; --navy2:#242b5c; --accent:#c0392b; --accent2:#e05d3f;
+    --gold:#e0a422; --teal:#0f7b6c; --teal2:#2bb3a3; --purple:#6c3fa0;
+    --bg:#f4f1ec; --card:#ffffff; --line:#e2dcd2; --muted:#6b6570;
+    --dark:#11132a;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.66; font-size:16.5px;
+  }
+  a{color:var(--teal); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,var(--purple) 130%);
+    color:#fff; padding:46px 28px 40px; position:relative; overflow:hidden;
+  }
+  .hero::after{
+    content:""; position:absolute; right:-60px; top:-60px; width:280px; height:280px;
+    border-radius:50%; background:radial-gradient(circle,rgba(224,164,34,.35),transparent 70%);
+  }
+  .hero .tag{display:inline-block; background:var(--gold); color:var(--dark); font-weight:700;
+    padding:4px 12px; border-radius:20px; font-size:13px; letter-spacing:.5px; text-transform:uppercase}
+  .hero h1{font-size:34px; margin:14px 0 6px; line-height:1.2; max-width:900px}
+  .hero p.sub{font-size:17px; opacity:.92; max-width:820px; margin:6px 0 20px}
+  .hero .meta{font-size:13.5px; opacity:.8; border-top:1px solid rgba(255,255,255,.25); padding-top:14px; max-width:980px}
+  .hero .meta b{color:var(--gold)}
+
+  /* ---------- WRAPPER ---------- */
+  .wrap{max-width:1180px; margin:0 auto; padding:30px 20px 80px}
+
+  /* ---------- TOC ---------- */
+  .toc{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin:10px 0 34px; box-shadow:0 6px 20px rgba(20,20,50,.05)}
+  .toc h2{margin:0 0 12px; font-size:20px; color:var(--navy)}
+  .toc.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:8px 20px}
+  .toc a{display:block; padding:6px 8px; border-left:3px solid var(--teal); margin:3px 0; background:#fbfaf7; border-radius:0 6px 6px 0; font-size:15px; color:var(--ink)}
+  .toc a small{color:var(--muted); font-size:12.5px}
+
+  /* ---------- SECTIONS ---------- */
+  section.block{margin:0 0 42px}
+  .sec-head{
+    display:flex; align-items:center; gap:14px; background:var(--navy); color:#fff;
+    padding:16px 22px; border-radius:12px; margin-bottom:20px; box-shadow:0 5px 14px rgba(20,20,50,.12)
+  }
+  .sec-head .num{background:var(--gold); color:var(--dark); font-weight:800; min-width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px}
+  .sec-head h2{margin:0; font-size:23px; line-height:1.2}
+  .sec-head .zh{font-size:13px; opacity:.8; letter-spacing:.3px}
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px 24px; margin:0 0 22px; box-shadow:0 4px 14px rgba(20,20,50,.05)}
+  .card h3{margin:0 0 12px; color:var(--navy); font-size:19px; border-bottom:2px solid var(--line); padding-bottom:8px}
+  .card h4{margin:18px 0 8px; color:var(--accent2); font-size:16.5px}
+  .card h5{margin:14px 0 6px; color:var(--navy2); font-size:15.5px}
+  p{margin:9px 0}
+  ul,ol{margin:8px 0; padding-left:24px}
+  li{margin:5px 0}
+  .lead{font-size:17px; color:#3a3550}
+
+  /* stat text */
+  .stat{background:#fbf4e6; border-left:4px solid var(--gold); padding:10px 14px; border-radius:0 8px 8px 0; margin:12px 0; font-size:15px}
+  .law{background:#eef6f4; border-left:4px solid var(--teal); padding:12px 16px; border-radius:0 8px 8px 0; margin:12px 0; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:14px; line-height:1.7; white-space:pre-wrap; color:#11413a}
+  .case{background:#fdf0ef; border-left:4px solid var(--accent); padding:12px 16px; border-radius:0 8px 8px 0; margin:12px 0; font-size:14.5px}
+  .case .cite{font-weight:700; color:var(--accent)}
+  .note{background:#f3f0fb; border-left:4px solid var(--purple); padding:10px 14px; border-radius:0 8px 8px 0; margin:12px 0; font-size:14.5px}
+  .crit{background:#fff5e6; border-left:4px solid #d8840a; padding:10px 14px; border-radius:0 8px 8px 0; margin:12px 0; font-size:14.5px}
+
+  /* badges */
+  .b{display:inline-block; padding:2px 9px; border-radius:6px; font-size:12px; font-weight:700; letter-spacing:.3px}
+  .b.void{background:#fbdad6; color:#8f2317}
+  .b.voidable{background:#fff0cf; color:#8a5a00}
+  .b.valid{background:#dcf3ec; color:#0b5b4c}
+  .b.punish{background:#efe0fb; color:#5b2b8a}
+  .b.imp{background:#ffe8d1; color:#9a4a00}
+  .b.high{background:#dbe7ff; color:#1c3d8f}
+
+  /* tables */
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.8px}
+  th,td{border:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top}
+  th{background:var(--navy); color:#fff; font-weight:700}
+  tbody tr:nth-child(even){background:#faf8f4}
+  td.center,th.center{text-align:center}
+  .tbl-caption{font-size:13px; color:var(--muted); margin:4px 0 2px; font-style:italic}
+
+  /* diagrams */
+  .flow{display:flex; flex-wrap:wrap; gap:8px; align-items:stretch; justify-content:center; margin:16px 0}
+  .node{background:#fff; border:2px solid var(--navy); border-radius:10px; padding:10px 13px; font-size:14px; text-align:center; min-width:140px; max-width:210px; box-shadow:0 3px 8px rgba(0,0,0,.06)}
+  .node.acc{background:var(--navy); color:#fff; border-color:var(--navy); font-weight:700}
+  .node.gold{background:var(--gold); color:var(--dark); border-color:var(--gold); font-weight:700}
+  .node.teal{background:var(--teal); color:#fff; border-color:var(--teal)}
+  .node.red{background:#fbdad6; color:#7d1d12; border-color:#c0392b}
+  .node.violet{background:#efe0fb; color:#4c2373; border-color:#6c3fa0}
+  .node.small{min-width:100px; font-size:12.5px}
+  .arrow{align-self:center; font-size:22px; color:var(--accent); font-weight:800}
+  .arrow.lbl{font-size:11px; color:var(--muted); display:flex; flex-direction:column; align-items:center; line-height:1.1}
+  .down{font-size:22px; color:var(--accent); text-align:center; margin:2px 0; font-weight:800}
+
+  .tree{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:14px 0}
+  .branch{background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 14px; min-width:200px}
+  .branch .root{font-weight:800; color:var(--navy); border-bottom:2px solid var(--navy); padding-bottom:6px; margin-bottom:8px}
+  .branch ul{margin:0; padding-left:18px; font-size:14px}
+
+  /* toggles */
+  details{border:1px solid var(--line); border-radius:10px; margin:12px 0; background:#fff; overflow:hidden}
+  summary{cursor:pointer; padding:12px 16px; font-weight:700; background:#f4f1ec; color:var(--navy); font-size:15.5px}
+  details[open] summary{border-bottom:1px solid var(--line)}
+  details .d-in{padding:14px 18px}
+
+  /* case study blocks */
+  .cassheet{border:1px solid var(--line); border-radius:14px; margin:0 0 26px; background:#fff; overflow:hidden; box-shadow:0 4px 14px rgba(20,20,50,.05)}
+  .cassheet .ch{background:linear-gradient(90deg,var(--accent) 0%,var(--accent2) 100%); color:#fff; padding:14px 20px}
+  .cassheet .ch .n{opacity:.85; font-size:12.5px; letter-spacing:1px; text-transform:uppercase}
+  .cassheet .ch h3{margin:2px 0 0; font-size:20px}
+  .cassheet .ch .cite{font-size:14px; opacity:.95; margin-top:3px}
+  .cassheet .cb{padding:18px 22px}
+  .cassheet .cb h4{color:var(--navy); font-size:15.5px; margin:16px 0 6px; text-transform:uppercase; letter-spacing:.4px}
+  .cassheet .cb h4:first-child{margin-top:0}
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0}
+  .pill{background:#f0ede7; border:1px solid var(--line); border-radius:20px; padding:4px 12px; font-size:13px}
+  .principle{background:linear-gradient(135deg,#eef6f4,#fbfcfb); border:1px solid #b8ddd4; border-radius:10px; padding:12px 16px; margin:14px 0; border-left:5px solid var(--teal)}
+  .principle .l{font-weight:800; color:var(--teal); font-size:13px; text-transform:uppercase; letter-spacing:.5px}
+
+  /* PYQ */
+  .pyq{border:1px solid var(--line); border-radius:12px; margin:0 0 22px; background:#fff; overflow:hidden}
+  .pyq .qh{background:var(--purple); color:#fff; padding:12px 18px; font-weight:700}
+  .pyq .qh .freq{float:right; background:var(--gold); color:var(--dark); padding:2px 10px; border-radius:16px; font-size:12px; font-weight:800}
+  .pyq .qb{padding:16px 20px}
+  .model{background:#f7f4ee; border:1px solid var(--line); border-radius:10px; padding:14px 18px; margin-top:12px}
+  .model .mh{font-weight:800; color:var(--navy); border-bottom:1px dashed #c9c0b2; padding-bottom:6px; margin-bottom:10px}
+  .points{list-style:none; padding-left:0}
+  .points li{position:relative; padding-left:26px; margin:7px 0}
+  .points li:before{content:"●"; position:absolute; left:2px; top:0; color:var(--accent); font-size:12px}
+
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+
+  .footer{text-align:center; color:var(--muted); font-size:13.5px; padding:30px 0 0; border-top:1px solid var(--line); margin-top:30px}
+
+  .legend{display:flex; flex-wrap:wrap; gap:14px; font-size:13px; margin:12px 0}
+  .legend span{display:flex; align-items:center; gap:6px}
+  .sw{width:15px; height:15px; border-radius:4px; display:inline-block}
+  .toplink{position:fixed; bottom:20px; right:20px; background:var(--navy); color:#fff; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:18px; box-shadow:0 4px 12px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<a class="toplink" href="#top" title="Back to top">↑</a>
+
+<header class="hero" id="top">
+  <span class="tag">DU · Family Law I · LB-105 · Semester Exam Notes</span>
+  <h1>Unit 1 — Marriage under Hindu Law</h1>
+  <p class="sub">Concept &amp; Nature of Hindu Marriage · Applicability of Legislation · Conditions for Validity · Solemnisation &amp; Live-in Relationships · Registration · Void &amp; Voidable Marriages · Full Case-Briefings (DU Case Material) · PYQs with Model Answers</p>
+  <div class="meta">
+    <b>Statutes:</b> Hindu Marriage Act, 1955 (ss. 2, 3, 5, 7, 8, 11, 12, 13, 17, 18); Indian Penal Code, 1860 (ss. 494, 495); Indian Evidence Act, 1872 (s. 114); Prohibition of Child Marriage Act, 2006; Protection of Women from Domestic Violence Act, 2005.
+    <br><b>Prepared from &amp; grounded in:</b> DU Case Material/Notes (Ankit Vashishth, Family Law I notes), LexisNexis <i>Family Law Lectures – Family Law I</i>, and the DU Semester-I PYQ Analysis capsule.
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>📚 Table of Contents</h2>
+  <div class="grid">
+    <a href="#A">A · Concept &amp; Nature of Hindu Marriage</a>
+    <a href="#B">B · Applicability of Legislation (s. 2 HMA)</a>
+    <a href="#C">C · Conditions for Valid Marriage (s. 5 HMA)</a>
+    <a href="#D">D · Solemnisation &amp; Live-in Relationship (s. 7 &amp; s. 114)</a>
+    <a href="#E">E · Registration of Marriage (s. 8 HMA)</a>
+    <a href="#F">F · Void Marriages (s. 11 r/w ss. 17, 18 &amp; ss. 494–495 IPC)</a>
+    <a href="#G">G · Voidable Marriages (s. 12 HMA)</a>
+    <a href="#H">H · Detailed Case Law (10 cases) <small>— Facts · Issues · Arguments · Decision · Principle</small></a>
+    <a href="#I">I · Comparative Tables &amp; Diagrams</a>
+    <a href="#J">J · DU PYQs &amp; Best Model Answers</a>
+    <a href="#K">K · Exam-Smart Revision Grid</a>
+  </div>
+</nav>
+
+<!-- ============ A ============ -->
+<section class="block" id="A">
+  <div class="sec-head"><div class="num">A</div><div><h2>Concept &amp; Nature of Hindu Marriage</h2><div class="zh">Marriage as a sacred institution · From sacrament to statute</div></div></div>
+
+  <div class="card">
+    <h3>1.1 What is Marriage?</h3>
+    <p class="lead">Marriage is the <b>foundation of a stable family</b>; it accords <b>status and security</b> to the parties and their offspring. All legal systems lay down certain <b>prerequisites and conditions</b> for a valid marriage, but the legal rules differ from personal law to personal law. Marriage is both a <i>sacred institution</i> and a <b>legal contract</b> — in Hindu law it has traditionally been regarded primarily as a <b>sacrament (samskāra)</b>.</p>
+
+    <div class="stat">📖 <b>Definitional insight (LexisNexis/Grounding):</b> "Marriage is a sacred institution; it is the very foundation of a stable family and civilised society. There are, however, certain prerequisites and conditions for a valid marriage."</div>
+
+    <h4>Right to Marry — a Fundamental Right</h4>
+    <p>The <b>right to marry</b> is a component of the <b>right to life under Article 21</b> of the Constitution. It is recognised under <b>Article 16 of the Universal Declaration of Human Rights, 1948</b>, which states that men and women of full age have the right to marry and found a family, with equal rights as to marriage, during marriage and at its dissolution, and that marriage shall be entered into only with the <b>free and full consent</b> of the intending spouses.</p>
+    <ul>
+      <li><b>Lata Singh v. State of U.P.</b> — the right of marriage is viewed as a component of the right to life under Article 21. <i>"This is a free and democratic country, and once a person becomes a major he or she can marry whosoever he/she likes."</i></li>
+      <li><b>"X" v. Hospital "Z"</b> (later partly overruled) — the right to marry is <b>not absolute</b>; it is suspended while a person is afflicted with a serious communicable disease. A three-judge Bench later held there is no complete bar where a healthy spouse gives <b>informed consent</b> to marry an HIV+ partner.</li>
+      <li><b>Re: Indian Woman says gang-raped on orders of Village Court</b> — "an inherent aspect of Article 21 would be the <b>freedom of choice in marriage</b>."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>1.2 Nature of Hindu Marriage — Sacrament vs. Contract</h3>
+    <div class="grid2">
+      <div>
+        <h4>Traditional View — a Sacrament (Samskāra)</h4>
+        <ul>
+          <li>Marriage was <b>indissoluble</b> and sacred; a <b>samskāra</b> (the 13th of the 16 sacraments) performed by religious rites.</li>
+          <li>The union was regarded as a tie for <b>spiritual and religious purposes</b> — not a mere bargain.</li>
+          <li>Under classical law, <b>divorce was not recognised</b>; the marriage continued even after death (a widow being part of the husband's gotra).</li>
+          <li>Consent under the <i>kanyādān</i> focused on the <b>free will</b> of the guardian, and the <i>saptapadi</i> (seven steps) consecrated the bond.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Modern/Statutory View — a Civil Status + Contract</h4>
+        <ul>
+          <li>The <b>Hindu Marriage Act, 1955</b> codified and transformed marriage: it is now <b>monogamous</b> (s. 5(i)) and <b>dissoluble</b> on fault grounds (s. 13), by mutual consent (s. 13-B), and by judicial separation (s. 10).</li>
+          <li>It is <b>not a mere contract</b> in the strict sense — but it has essential <b>contractual elements</b> (consent, capacity, age) regulated by statute.</li>
+          <li><b>Consent</b> is now an express condition (s. 5(ii)), and fraud/force can render the marriage <b>voidable</b> (s. 12(1)(c)).</li>
+          <li>The law has moved from <b>indissolubility</b> → <b>fault-based divorce</b> → practical <b>divorce on breakdown/demand</b>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">⚖️ <b>Judicial position:</b> A marriage is <b>not a contract</b> creating mere civil obligations, but a <b>status</b> annexed by law to which rights and duties attach. Hindu law treats it as <b>both a sacrament and a civil status</b> — the HMA 1955 preserves the spiritual essence while injecting statutory conditions, reliefs and crimes.</div>
+  </div>
+
+  <div class="card">
+    <h3>1.3 Evolution of Divorce / Matrimonial Relief (context for Unit-I conditions)</h3>
+    <p>Hindu law moved from an indissoluble sacrament to a statutory scheme:</p>
+    <div class="flow">
+      <div class="node acc">Indissolubility<br><small>(ancient/classical)</small></div><div class="arrow">→</div>
+      <div class="node gold">Customary divorce<br><small>(limited communities)</small></div><div class="arrow">→</div>
+      <div class="node teal">Fault-based divorce<br><small>(HMA 1955, s. 13)</small></div><div class="arrow">→</div>
+      <div class="node violet">Mutual consent<br><small>(s. 13-B, Add. 1976)</small></div><div class="arrow">→</div>
+      <div class="node acc">Breakdown<br><small>(de facto via Art. 142)</small></div>
+    </div>
+    <p>The 1976 Amendment added <b>s. 13-B (divorce by mutual consent)</b> and liberalised <b>s. 13(1A)</b> (non-resumption of cohabitation after a decree — reduced from two years to <b>one year</b>). Divorce per se is still <b>not a ground</b> under the Act, though courts increasingly grant relief on irretrievable breakdown under <b>Article 142</b>.</p>
+  </div>
+</section>
+
+<!-- ============ B ============ -->
+<section class="block" id="B">
+  <div class="sec-head"><div class="num">B</div><div><h2>Applicability of Legislation (Section 2, HMA 1955)</h2><div class="zh">Who is a Hindu · Tribals · Conversion · Domicile</div></div></div>
+
+  <div class="card">
+    <h3>2.1 Section 2 — Application of the Act</h3>
+    <div class="law">[s 2] Application of Act.—
+(1) This Act applies—
+ (a) to any person who is a Hindu by religion in any of its forms or developments, including a
+     Virashaiva, a Lingayat or a follower of the Brahmo, Prarthana or Arya Samaj;
+ (b) to any person who is a Buddhist, Jaina or Sikh by religion; and
+ (c) to any other person domiciled in the territories to which this Act extends who is not a
+     Muslim, Christian, Parsi or Jew by religion, unless it is proved that any such person would
+     not have been governed by the Hindu law or by any custom or usage as part of that law in
+     respect of any of the matters dealt with herein.
+(2) Notwithstanding anything contained in sub-section (1), this Act shall not apply to the
+     members of any Scheduled Tribe within the meaning of clause (25) of Article 366 of the
+     Constitution, unless the Central Government, by notification in the Official Gazette,
+     otherwise directs.
+(3) ... [Explanation as to who is a Hindu/Buddhist/Jain/Sikh]</div>
+
+    <p><b>Section 1(2)</b> extends the Act to Hindus domiciled in the territories to which it extends who are outside those territories. Thus the Act is <b>territorial-cum-personal</b> in scope.</p>
+  </div>
+
+  <div class="card">
+    <h3>2.2 The term "Hindu" — is it defined?</h3>
+    <p>The word <b>"Hindu" is not defined</b> in the Act or in any cognate legislation. The Privy Council in <b>Bhagwan Koer v. J.C. Bose</b> observed the <b>difficulty of defining Hinduism</b> owing to its diverse practices, sects and beliefs — it is not a single creed but a conglomeration of systems.</p>
+    <p>The Act works on an <b>inclusive, negative-and-positive test</b> rather than a definition:</p>
+    <div class="tree">
+      <div class="branch"><div class="root">Positive Inclusions</div><ul>
+        <li>Hindu by religion in any form/development</li>
+        <li>Virashaiva, Lingayat</li>
+        <li>Brahmo, Prarthana, Arya Samaj</li>
+        <li>Buddhist, Jaina, Sikh</li>
+      </ul></div>
+      <div class="branch"><div class="root">Negative/Presumptive</div><ul>
+        <li>Any person domiciled in India who is <b>NOT</b> Muslim, Christian, Parsi or Jew</li>
+        <li>Presumed Hindu unless the contrary is proved</li>
+      </ul></div>
+      <div class="branch"><div class="root">Article 25 (Constitution)</div><ul>
+        <li>Expl. II: reference to Hindus includes Sikhs, Jains, Buddhists</li>
+        <li>Guarantees freedom of religion</li>
+      </ul></div>
+    </div>
+    <p><b>Explanation to s. 2(1):</b> a child born to a Hindu/Buddhist/Jain/Sikh parent, whether legitimate or not, is also a Hindu — hence <b>even if one parent is a Muslim</b>, the child of a Hindu is treated as a Hindu for the Act (see <i>Surendra Bhatia v. Poonam Bhatia</i>).</p>
+  </div>
+
+  <div class="card">
+    <h3>2.3 Applicability to Scheduled Tribes &amp; Custom</h3>
+    <div class="case"><span class="cite">Dr. Surajmani Stella Kujur v. Durga Charan Hansdah, AIR 2001 SC 938</span> — the Bench (R.P. Sethi, J.) laid down the following on "Hindu" and custom:<ul>
+      <li>The Act applies to Hindus in various forms, and to <b>Buddhists, Jains, Sikhs</b> and other persons domiciled in India who are <b>not Muslims, Christians, Parsis or Jews</b>.</li>
+      <li>The term <b>"Hindu" is not defined</b> in the Act; the Privy Council in <i>Bhagwan Koer</i> noted the difficulty in defining Hinduism.</li>
+      <li><b>Tribals are deemed Hindus</b> in the absence of a specific notification under <b>Article 342</b> of the Constitution; and even with such a notification the Act can apply to Scheduled Tribes through <b>further notifications</b> (s. 2(2)).</li>
+      <li>Since the parties belonged to tribes included in the <b>Constitution (Scheduled Tribes) Order, 1950</b> (as amended), and no contrary notification / custom excluding the Act was proved, the Act applied.</li>
+    </ul></div>
+
+    <h4>Definition of "Custom and Usage"</h4>
+    <div class="law">[s 3(a) HMA] "custom" and "usage" denote any rule which, having been continuously and
+uniformly observed for a long time, has obtained the force of law among Hindus in any local
+area, tribe, community, group or family: provided that the rule is certain and not unreasonable
+or opposed to public policy; and provided further that in the case of a rule applicable only to a
+family it has not been discontinued by the family.</div>
+    <p>For a custom to be legally recognised it must be <b>ancient, certain and reasonable</b>, and established by <b>clear and unambiguous evidence</b>.</p>
+    <ul>
+      <li><b>Section 29</b> saves the validity of marriages solemnised <b>before</b> the Act's commencement.</li>
+      <li>Custom may <b>affect the validity</b> of a Hindu marriage, even without meeting the conditions in ss. 10–13.</li>
+      <li>Custom can also <b>carve out exceptions</b> to the statutory bars of prohibited relationship (s. 5(iv)) and sapinda relationship (s. 5(v)).</li>
+    </ul>
+
+    <div class="crit">🚩 <b>Key takeaway (Surajmani):</b> <i>"No custom can create a criminal offence"</i> — offences are created only by legislative enactment. Hence, to sustain a prosecution for bigamy under <b>s. 494 IPC</b>, the prosecution must prove (a) a subsisting first marriage and (b) the validity of the second marriage — <b>not a mere customary ceremony</b> unless custom itself renders the second marriage void. The burden of proving the custom lies on the <b>prosecution/complainant</b>. On the facts, the complaint failed for want of specific pleading, evidence and proof of the alleged custom making the second marriage void.</div>
+  </div>
+
+  <div class="card">
+    <h3>2.4 Conversion &amp; the "crucial time" rule</h3>
+    <ul>
+      <li>The <b>crucial time</b> to determine the religious status of the parties is the <b>date of marriage</b>.</li>
+      <li>A <b>non-Hindu who converts to Hinduism</b> before marriage (with facts showing he/she practised Hinduism) — the plea of absence of proof of conversion cannot be raised (<i>Madhavi Ramesh Dudani</i>; <i>Neeta Kirit Desai</i>).</li>
+      <li>A Hindu woman converted to Islam who divorces and <b>reverts to Hinduism</b> can validly marry a Hindu male; the former husband's plea of nullity under s. 5 fails (<i>Flg. Officer Rajiv Gakhar v. Bhavna</i>).</li>
+      <li>A marriage between a <b>Hindu and a Christian</b> is <b>void</b> under the Act (both must be Hindus) — <i>Gullipilli Sowria Raj v. Bhandaru Pavani</i>; even registration under s. 8 does <b>not</b> cure the defect.</li>
+      <li>Where a person <b>ceases to be a Hindu by conversion</b> after marriage, the Act <b>still applies</b> to him — and his prior marriage subsists (see Lily Thomas below).</li>
+    </ul>
+    <div class="note">⚖️ The Act also <b>applies to a person who, though a Hindu at the time of marriage, ceases to be so thereafter</b> by conversion to another religion (<i>Vilayat Raj v. Sunita</i>).</div>
+  </div>
+</section>
+
+<!-- ============ C ============ -->
+<section class="block" id="C">
+  <div class="sec-head"><div class="num">C</div><div><h2>Conditions for the Validity of Marriage (Section 5, HMA 1955)</h2><div class="zh">Section 5 read with ss. 3, 11, 12, 13 · Strict vs. relaxed conditions</div></div></div>
+
+  <div class="card">
+    <h3>3.1 Section 5 — Conditions for a Hindu Marriage</h3>
+    <div class="law">[s 5] Conditions for a Hindu marriage.—A marriage may be solemnized between any two
+Hindus if the following conditions are fulfilled, namely:—
+ (i)   neither party has a spouse living at the time of the marriage; [MONOGAMY]
+ (ii)  at the time of the marriage, neither party—
+       (a) is incapable of giving a valid consent to it in consequence of unsoundness of mind; or
+       (b) though capable of giving a valid consent, has been suffering from mental disorder of
+           such a kind or to such an extent as to be unfit for marriage and the procreation
+           of children; or
+       (c) has been subject to recurrent attacks of insanity; [MENTAL CAPACITY]
+ (iii) the bridegroom has completed the age of twenty-one years and the bride the age of
+       eighteen years at the time of the marriage; [AGE]
+ (iv)  the parties are not within the degrees of prohibited relationship unless the custom or
+       usage governing each of them permits a marriage between the two; [PROHIBITED DEGREES]
+ (v)   the parties are not sapindas of each other unless the custom or usage governing each of
+       them permits a marriage between the two. [SAPINDA]</div>
+    <p class="tbl-caption">(Clause (ii) substituted by the Marriage Laws (Amendment) Act, 1976; the age in (iii) raised to 21/18 by Act 2 of 1978 (with the earlier 18/15 figures); clause (vi) — the old bar on an incurably dumb, deaf or leprosy-afflicted spouse — was <b>omitted by Act 2 of 1978</b>.)</p>
+
+    <div class="overview">
+      <h4>Structure — the five conditions</h4>
+      <table>
+        <thead><tr><th>Condition</th><th>Requirement</th><th>Defined in</th><th>Consequence of breach</th></tr></thead>
+        <tbody>
+          <tr><td><b>(i)</b> No spouse living</td><td>Monogamy</td><td>s. 5(i)</td><td><span class="b void">VOID</span> (s. 11) + <span class="b punish">PUNISHABLE</span> (ss. 17, 18 HMA; ss. 494–495 IPC)</td></tr>
+          <tr><td><b>(ii)</b> Mental capacity</td><td>Sound mind / no mental disorder / no insanity</td><td>s. 5(ii)</td><td><span class="b voidable">VOIDABLE</span> (s. 12(1)(b))</td></tr>
+          <tr><td><b>(iii)</b> Age</td><td>Bridegroom 21, bride 18</td><td>s. 5(iii)</td><td><span class="b valid">NOT void/voidable</span> — only <span class="b punish">PUNISHABLE</span> (s. 18; PCMA 2006)</td></tr>
+          <tr><td><b>(iv)</b> Not prohibited degrees</td><td>Custom exception possible</td><td>ss. 3(g), 5(iv)</td><td><span class="b void">VOID</span> (s. 11) + <span class="b punish">PUNISHABLE</span> (s. 18)</td></tr>
+          <tr><td><b>(v)</b> Not sapindas</td><td>Custom exception possible</td><td>ss. 3(f), 5(v)</td><td><span class="b void">VOID</span> (s. 11) + <span class="b punish">PUNISHABLE</span> (s. 18)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="crit">🚩 <b>Important nuance:</b> The Act does <b>not</b> treat every violation of s. 5 as void. Only <b>(i), (iv) and (v)</b> render a marriage void under s. 11. Breach of <b>(ii)</b> makes it <b>voidable</b> (s. 12(1)(b)). Breach of <b>(iii)</b> (age) makes it <b>neither void nor voidable</b> — only punishable under s. 18 HMA read with the Prohibition of Child Marriage Act, 2006.</div>
+  </div>
+
+  <div class="card">
+    <h3>3.2 Condition (i) — Monogamy &amp; Bigamy</h3>
+    <p><b>Neither party has a spouse living at the time of the marriage.</b> This statutorily imposes <b>monogamy</b> on Hindus. A second marriage during the subsistence of an earlier one is <b>void ab initio</b> and constitutes the offence of <b>bigamy</b>.</p>
+    <ul>
+      <li><b>Bigamy</b> = the offence of having more than one spouse at the same time.</li>
+      <li><b>Polygamy</b> = a male taking more than one wife; <b>polyandry</b> = a female having more than one husband. Both are now prohibited for Hindus.</li>
+      <li><b>Exception/proviso concept:</b> a marriage is void for bigamy only if the prior marriage was <b>valid and subsisting</b>; a void prior marriage is "no marriage" and a later marriage is not bigamy.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3.3 Condition (ii) — Mental Capacity</h3>
+    <p>Neither party at the time of the marriage may be <b>(a) incapable of giving valid consent by reason of unsoundness of mind</b>, or <b>(b)</b> though capable of consenting, suffering from <b>mental disorder</b> of such a kind or extent as to be <b>unfit for marriage and procreation of children</b>, or <b>(c)</b> subject to <b>recurrent attacks of insanity</b>. (The words "or epilepsy" were omitted in 1999, so epilepsy is no longer a bar.)</p>
+    <ul>
+      <li>Breach renders the marriage <b>voidable</b> under <b>s. 12(1)(b)</b> — not void.</li>
+      <li>"Mental disorder" is defined in the Explanation to s. 13(1)(iii) (and similar definitions appear in other statutes) to include <b>mental illness, arrested/incomplete development of mind, psychopathic disorder</b> and any other disorder or disability of mind, including <b>schizophrenia</b>.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3.4 Condition (iii) — Minimum Age (and its important consequences)</h3>
+    <p>Bridegroom <b>21</b>, bride <b>18</b>. Unlike the Special Marriage Act (where age violation is <b>void</b> under s. 24 r/w s. 4(c)) and Parsi law (invalid under s. 3(c)), under the HMA a non-age marriage is <b>neither void nor voidable</b> — it is only <b>punishable</b> under s. 18 HMA and the <b>Prohibition of Child Marriage Act, 2006</b>.</p>
+
+    <h4>The position in the DU case material</h4>
+    <div class="case"><span class="cite">P. Venkataramana v. State, AIR 1977 AP 43 (FB)</span> — <b>Held:</b> a Hindu marriage governed by the HMA where the parties (or either of them) are below the ages prescribed in s. 5(iii) is <b>NOT void ab initio</b>. The Full Bench reasoned:<ul>
+      <li>If the legislature had intended such marriages to be void, it would not have given a <b>wife the right to repudiate</b> a marriage solemnised before she attained 15 (a right that pre-supposes the marriage exists).</li>
+      <li>If <i>every</i> breach of s. 5 made a marriage void, the legislature would not have made <b>different provisions for different clauses</b> (ss. 11, 12, 13 treat them differently).</li>
+      <li>Neither <b>s. 11 nor s. 12</b> refers to a marriage in contravention of s. 5(iii).</li></ul></div>
+    <div class="case"><span class="cite">V. Mallikarjunaiah v. H.C. Gowramma, AIR 1997 Kant 77</span> — a husband (20 years, 1 month, 12 days) sought a declaration that his marriage was void. <b>Held:</b> the legislature <b>deliberately excluded s. 5(iii)</b> from ss. 11, 12 and 13. Striking down such marriages would render "a large number of girls or young women virtually unmarried or destitute" — with disastrous social consequences. The court, however, urged <b>harsher penalties</b> for those responsible.</div>
+    <div class="case"><span class="cite">Ravi Kumar v. State, (2005) 1 DLT 124 (Delhi HC)</span> — two girls of ~16 married boys of their choice; the girls' families filed kidnapping cases. <b>Held:</b> a marriage in contravention of s. 5(iii) is <b>neither void nor illegal</b>; it is only punishable under s. 18. Minor girls above the age of discretion could <b>not</b> be detained in a remand home against their will; the criminal cases were quashed. <i>(Later clarified in Manish Singh v. State; the Apex Court stayed broad applicability in National Commission for Women v. Govt. of NCT.)</i></div>
+    <div class="case"><span class="cite">Gindan v. Barelal, AIR 1976 MP 83</span> — a marriage in breach of the age condition remains <b>valid, enforceable and recognisable in courts of law</b>.</div>
+
+    <div class="note">⚖️ <b>Prohibition of Child Marriage Act, 2006:</b> Under s. 3, a <b>child marriage is voidable at the option of the contracting party who was a child at the time of marriage</b> (now extending to the husband as well). Under s. 12, marriages of minors are <b>void</b> where the child is taken/enticed from the keeper of a lawful guardian, or by force/deceit induced to go, or <b>sold for the purpose of marriage</b>. Under s. 14, a child marriage in contravention of an injunction is <b>void ab initio</b>. Children born of such marriages remain <b>legitimate</b> (s. 6).</div>
+  </div>
+
+  <div class="card">
+    <h3>3.5 Condition (iv) — Degrees of Prohibited Relationship</h3>
+    <p>Two persons are within the <b>degrees of prohibited relationship</b> [s. 3(g)] if:</p>
+    <ol>
+      <li>one is a <b>lineal ascendant</b> of the other; or</li>
+      <li>one was the <b>wife or husband of a lineal ascendant or descendant</b> of the other; or</li>
+      <li>one was the <b>wife of the brother</b> or of the <b>father's/mother's brother</b> or of the <b>grandfather's/grandmother's brother</b> of the other; or</li>
+      <li>the two are <b>brother and sister, uncle and niece, aunt and nephew, or children of brother and sister or of two brothers or of two sisters</b>.</li>
+    </ol>
+    <p>Relationship includes <b>relationship by half or uterine blood</b> as well as full blood; <b>illegitimate blood relationship</b> as well as legitimate; and <b>relationship by adoption</b> as well as by blood.</p>
+    <div class="case">Marriage in breach of s. 5(iv) is <b>void</b> and entails punishment (s. 18, simple imprisonment up to one month and/or fine up to ₹1,000). See <i>Prabhjot Singh v. Prabhjit Kaur</i> (marriage within prohibited degrees held void where husband failed to prove custom).</div>
+  </div>
+
+  <div class="card">
+    <h3>3.6 Condition (v) — Sapinda Relationship</h3>
+    <div class="law">[s 3(f)] (i) "Sapinda relationship" with reference to any person extends as far as the third
+generation (inclusive) in the line of ascent through the mother, and the fifth (inclusive) in the
+line of ascent through the father, the line being traced upwards in each case from the person
+concerned, who is to be counted as the first generation;
+(ii) two persons are said to be "sapindas" of each other if one is a lineal ascendant of the other
+within the limits of sapinda relationship, or if they have a common lineal ascendant who is
+within the limits of sapinda relationship with reference to each of them.</div>
+    <div class="flow">
+      <div class="node acc">SAPINDA<br>RULES</div><div class="arrow">→</div>
+      <div class="node">Mother's side<br><b>3 generations</b><br>upward</div><div class="arrow">→</div>
+      <div class="node">Father's side<br><b>5 generations</b><br>upward</div>
+    </div>
+    <p>The sapinda relationship includes: (i) relationship by <b>half or uterine blood</b> as well as full blood; (ii) <b>illegitimate</b> as well as legitimate blood relationship; (iii) relationship by <b>adoption</b> as well as by blood. Marriage between sapindas is <b>void</b> under s. 11 and is punishable; the party seeking to rely on a <b>custom</b> permitting such marriage must prove it. See <i>Arun Laxmanrao v. Meena Arun</i> (marriage held void where the wife could not prove custom merely by showing two couples married within the relationship).</p>
+  </div>
+
+  <div class="card">
+    <h3>3.7 The Custom Exception — s. 5(iv) &amp; (v)</h3>
+    <p>The bar of prohibited relationship and sapinda relationship <b>yields to an established custom or usage</b> governing each of the parties. To succeed, the custom must be <b>ancient, certain, reasonable and continuous</b>, proved by <b>clear and unambiguous evidence</b>. A mere assertion or an isolated instance does not suffice.</p>
+    <div class="note">⚖️ A <b>Karewa</b> marriage of a Hindu Jat woman with her deceased husband's brother, performed per recognised rituals and customs of the parties, was held <b>valid</b> in <i>Darbara Singh v. Jaswant Kaur</i>.</div>
+  </div>
+</section>
+
+<!-- ============ D ============ -->
+<section class="block" id="D">
+  <div class="sec-head"><div class="num">D</div><div><h2>Solemnisation of Marriage (Section 7) &amp; the Presumption under Section 114, Evidence Act</h2><div class="zh">Ceremonies · Saptapadi · Customary rites · Live-in relationships</div></div></div>
+
+  <div class="card">
+    <h3>4.1 Section 7 — Ceremonies for a Hindu Marriage</h3>
+    <div class="law">[s 7] Ceremonies for a Hindu marriage.—
+(1) A Hindu marriage may be solemnized in accordance with the customary rites and
+    ceremonies of either party thereto.
+(2) Where such rites and ceremonies include the saptapadi (that is, the taking of seven steps by
+    the bridegroom and the bride jointly before the sacred fire), the marriage becomes complete
+    and binding when the seventh step is taken.</div>
+    <p>Thus the statutory scheme is <b>facultative</b> about ceremonies: it requires compliance with the <b>customary rites and ceremonies of either party</b>. Where those rites include <b>saptapadi</b>, the marriage becomes binding at the <b>seventh step</b>.</p>
+    <ul>
+      <li><b>Kanyādān is not a mandatory ceremony</b> for a valid marriage (<i>Ramlal Agarwal v. Shanta Devi</i>).</li>
+      <li><b>Homa and saptapadi</b> are generally regarded as the <b>essential ceremonies</b> of a valid Hindu marriage (see <i>Laxmi Devi v. Satya Narayan</i>).</li>
+      <li>Where all witnesses depose in unison about the performance of a marriage and the wife gives a vivid description, <b>minor discrepancies</b> about saptapadi/kanyādān do not displace the presumption of a valid marriage (<i>Ranjan Kumari v. Santosh Kumar Singh</i>).</li>
+      <li>Taking <b>pheras around burning agarbattis</b> amounts to saptapadi around the sacred fire and constitutes a valid marriage ceremony (<i>Samit Subhash Agarwal v. Kamalesh Lalita Prasad Gupta</i>, Bom HC).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>4.2 What Constitutes a Valid Solemnisation — case-law guidance</h3>
+    <table>
+      <thead><tr><th>Scenario</th><th>Outcome</th><th>Authority</th></tr></thead>
+      <tbody>
+        <tr><td>Marriage in customary form (some ceremonies, no saptapadi)</td><td><span class="b valid">VALID</span></td><td>Chandrabhagabai Ganpati v. S.N. Kanwar</td></tr>
+        <tr><td>Karewa marriage (Jat widow + husband's brother)</td><td><span class="b valid">VALID</span></td><td>Darbara Singh v. Jaswant Kaur</td></tr>
+        <tr><td>Man &amp; woman lived as husband &amp; wife for 33 years</td><td><span class="b valid">VALID — presumption</span></td><td>K. Parthasaradhi v. G. Ramanna</td></tr>
+        <tr><td>Long cohabitation as husband &amp; wife</td><td><span class="b valid">Presumed marriage</span></td><td>Dhanmulal v. Ganeshan</td></tr>
+        <tr><td>Physical relationship + applying sindur &amp; mangalsutra before an idol, no proper ceremonies</td><td><span class="b void">NOT a marriage</span></td><td>Bombay HC (2017)</td></tr>
+        <tr><td>Mere joint living without any ceremonies</td><td><span class="b void">NOT a marriage</span></td><td>Surjit Kaur v. Garja Singh</td></tr>
+        <tr><td>Intimate relationship by a registered agreement before a sub-registrar, no ceremonies</td><td><span class="b void">NOT a marriage</span></td><td>S.M. Syed Abdul Basith v. ACP, Ernakulam</td></tr>
+      </tbody>
+    </table>
+    <p><b>Core principle:</b> The <b>factum of marriage</b> must be established — an intimate or physical relationship alone does not confer the status of husband and wife. However, the law raises a <b>presumption in favour of marriage</b> where a man and woman have lived together as husband and wife for a long period.</p>
+  </div>
+
+  <div class="card">
+    <h3>4.3 Presumption of Marriage — Section 114, Indian Evidence Act, 1872</h3>
+    <p>Section 114 of the Evidence Act empowers the court to <b>presume the existence of certain facts</b> from the proved circumstances. One well-settled presumption is that <b>when a man and woman cohabit and live as husband and wife, there is a strong presumption that a valid marriage took place</b> and that the necessary ceremonies were duly performed.</p>
+    <div class="case"><span class="cite">K. Parthasaradhi v. G. Ramanna, AIR 2015 SC 891</span> — a claim to succession to the deceased's property by the brother, who denied the deceased was legally married. The deceased man and woman had lived together for over <b>33 years</b>; evidence of bank accounts, nominations, voter card, and recognition by society and neighbourhood bore testimony to the marriage. On the <b>"totality of circumstances"</b> the woman was held to be the legally wedded wife.</div>
+    <div class="case"><span class="cite">Dhanmulal v. Ganeshan, (2014) SC</span> — where a man and woman are proved to have lived together as husband and wife for long, the law presumes they are living together in consequence of a <b>valid marriage</b> unless the contrary is proved. The presumption can be rebutted only by <b>unimpeachable evidence</b>, and a <b>heavy burden</b> lies on the party seeking to deprive the relationship of its legal origin.</div>
+    <div class="note">⚖️ <b>Limits of the presumption:</b> It is a presumption <i>juris</i> (of fact) that can be rebutted. A person cannot invoke a <b>void</b> relationship as a marriage — e.g., where there is an existing spouse (bigamy) or the parties are within prohibited degrees, the presumption cannot validate a nullity. The presumption is strongest where <b>neither force nor fraud</b> is practised.</div>
+  </div>
+
+  <div class="card">
+    <h3>4.4 The Dispute over "Essential" Ceremonies — Where the real battle lies</h3>
+    <p>Because the HMA speaks only of "customary rites and ceremonies," there is genuine debate over which ceremonies are <b>mandatory</b>. Courts have consistently held:</p>
+    <div class="flow">
+      <div class="node acc">Essential ceremonies (if custom includes them)</div><div class="arrow">→</div>
+      <div class="node">Homa (sacred fire)</div><div class="arrow">→</div>
+      <div class="node">Saptapadi<br>(7 steps — 7th binds)</div>
+    </div>
+    <p><b>Bhaurao Shankar Lokhande</b> (detailed in Part H) holds that for the purpose of <b>bigamy</b> the second marriage must be "solemnised" — i.e., performed with the requisite ceremonies (sacred fire + saptapadi) — else it is not a valid marriage and no offence under s. 494 IPC arises.</p>
+    <div class="case"><span class="cite">S. Nagalingam v. Sivagami, (2001) 7 SCC 487</span> — in <b>Tamil Nadu</b>, <b>s. 7-A</b> (inserted by the Madras Act of 1967) dispenses with the need for a priest and permits a valid marriage to be solemnised in the presence of <b>relatives or friends</b> or by exchange of garlands / tying of thali. Hence proof of such a marriage for the offence of bigamy need not establish homa/saptapadi. This is exactly why the <b>State amendment is critical</b>.</div>
+  </div>
+
+  <div class="card">
+    <h3>4.5 Live-in Relationships — "Relationship in the nature of marriage"</h3>
+    <p>The Act does not recognise a live-in relationship as a marriage, but <b>contemporary law has given it recognition</b> in limited contexts. The key instrument is <b>Section 2(f) of the Protection of Women from Domestic Violence Act, 2005</b>, which defines <b>"domestic relationship"</b> to include a relationship between two persons who live or have lived together in a shared household and are related by consanguinity, marriage, or <b>through a relationship in the nature of marriage</b>, adoption, or are family members living as a joint family.</p>
+    <div class="case"><span class="cite">D. Velusamy v. D. Patchaiammal, AIR 2011 SC 479</span> — for a "relationship in the nature of marriage" the parties must: <ul>
+      <li>hold themselves out to society as <b>spouses</b>;</li>
+      <li>be of <b>legal age</b> to marry;</li>
+      <li>be <b>otherwise qualified</b> to marry (i.e., not already married, within prohibited degrees, etc.);</li>
+      <li>have <b>voluntarily cohabited</b> and lived together in a <b>shared household</b>.</li></ul>
+      Mere occasional cohabitation or a one-night stand does <b>not</b> constitute a domestic relationship; the couple must have lived together <b>for a reasonable period</b>. The court remanded the matter for a fresh determination.</div>
+    <div class="note">⚖️ The term <b>"relationship in the nature of marriage"</b> is deliberately broader than a "live-in relationship"; Parliament chose the former phrase to give legal protection to women in such de facto unions, especially for maintenance, protection and residence orders.</div>
+  </div>
+</section>
+
+<!-- ============ E ============ -->
+<section class="block" id="E">
+  <div class="sec-head"><div class="num">E</div><div><h2>Registration of Marriage (Section 8, HMA 1955)</h2><div class="zh">Optional registration · Validity not affected · Seema v. Ashwani Kumar</div></div></div>
+
+  <div class="card">
+    <h3>5.1 Section 8 — Registration of Hindu Marriages</h3>
+    <div class="law">[s 8] Registration of Hindu marriages.—
+(1) For the purpose of facilitating the proof of Hindu marriages, the State Government may
+    make rules providing that the parties to any such marriage may have the particulars relating
+    to the marriage entered in a register kept for the purpose.
+(2) ... (3) ... (4) ...
+(5) The validity of any marriage shall not be affected by the omission to make an entry in the
+    register.</div>
+    <p>A marriage is <b>not solemnised by the Registrar</b>; the Registrar merely <b>certifies</b> a marriage already solemnised on the basis of an application. <b>Registration is optional</b> and <b>non-registration does not affect validity</b> (s. 8(5)).</p>
+    <ul>
+      <li>Any rule invalidating a marriage for failure to enter it in the register is <b>repugnant to s. 8(5)</b> — <i>Kamal Kant Panduranga Chibde v. Susheela</i> (Bom).</li>
+      <li>A valid marriage must still satisfy all conditions; registration <b>does not cure</b> a defect of illegality (e.g., a Hindu–Christian marriage remains void even if registered) — <i>Gullipilli Sowria Raj</i>.</li>
+      <li>Physical presence requirements in the Rules may be relaxed given modern technology (<i>Charanjit Kaur Nagi</i>).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>5.2 Why Compulsory Registration — the Case for Reform</h3>
+    <div class="case"><span class="cite">Kangavalli v. Saroja, AIR 2002 Mad 73</span> — the court lamented that the HMA neither prescribes the procedure for solemnisation nor makes registration compulsory. Exchange of garlands / tying of thali in movies creates a false impression of a valid marriage. Non-registration leaves many women in relationships that demand all duties of a wife but grant no rights. In divorce or bigamy proceedings, a man can admit/deny the first or second marriage at will, placing the woman in a vulnerable position. <b>Compulsory registration</b> would check fraudulent, non-age and bigamous marriages and help establish the paternity of children.</div>
+  </div>
+
+  <div class="card">
+    <h3>5.3 Seema v. Ashwani Kumar, AIR 2006 SC 1158 : (2006) 2 SCC 578</h3>
+    <div class="case">
+      <div class="cite">Seema v. Ashwani Kumar (2006) 2 SCC 578</div>
+      <p><b>Background:</b> The <b>CEDAW</b> (Convention on the Elimination of All Forms of Discrimination Against Women) was adopted in 1979; India <b>ratified it in 1993</b> with reservations, including one regarding the compulsory registration of marriages. Under the Constitution's <b>Seventh Schedule, List III</b> (Concurrent List), "marriage" and "vital statistics" (including registration of births and deaths) are subjects of concurrent competence.</p>
+      <h4>Held / Directions</h4>
+      <ul>
+        <li>Marriages of <b>all citizens of India, irrespective of religion</b>, should be made <b>compulsorily registrable</b> in the State where the marriage is solemnised.</li>
+        <li>Compulsory registration is necessary to <b>avoid disputes</b> over solemnisation of marriage and to <b>protect women's rights</b>.</li>
+        <li>It has <b>great evidentiary value</b> in matters of <b>custody of children, rights of children, and the age of parties</b> to the marriage.</li>
+        <li>Registration squarely falls under <b>"vital statistics"</b> in the Constitution.</li>
+        <li>States were directed to <b>notify procedures for registration within three months</b>, inviting public objections;</li>
+        <li><b>Authorised officers</b> were to be appointed and <b>consequences for non-registration / false declaration</b> defined;</li>
+        <li>The <b>Central Government</b> was urged to enact a <b>comprehensive statute</b> on the subject (subject to scrutiny by the court).</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> Compulsory registration of marriages is a desirable reform that advances women's rights, prevents fraudulent and bigamous marriages, and provides evidentiary proof for custody, succession and age-related issues. It flows from the State's Concurrent power over "vital statistics."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ F ============ -->
+<section class="block" id="F">
+  <div class="sec-head"><div class="num">F</div><div><h2>Void Marriages — Section 11 r/w ss. 17, 18 HMA &amp; ss. 494–495 IPC</h2><div class="zh">Void ab initio · Bigamy · Locus standi · Penal consequences</div></div></div>
+
+  <div class="card">
+    <h3>6.1 What is a Void Marriage?</h3>
+    <p>A <b>void marriage</b> is one which <b>has no legal status</b>. The courts regard it as <b>never having taken place</b>, and <b>no rights or obligations ensue</b>. It is <b>void ab initio</b> (from its inception). Consequently, the parties are at liberty to contract another marriage <b>without seeking a decree of nullity</b> of the first so-called marriage.</p>
+  </div>
+
+  <div class="card">
+    <h3>6.2 Section 11 — Void Marriages</h3>
+    <div class="law">[s 11] Void marriages.—Any marriage solemnized after the commencement of this Act shall
+be null and void and may, on a petition presented by either party thereto against the other, be
+so declared by a decree of nullity if it contravenes any one of the following conditions
+specified in section 5, namely:—
+ (i)   the condition specified in clause (i) [no spouse living]; or
+ (ii)  the conditions specified in clause (iv) [prohibited relationship]; or
+ (iii) the conditions specified in clause (v) [sapinda relationship].</div>
+    <p><b>Only a party to the marriage can seek annulment.</b> The relief of annulment can be sought only by <b>"either party to the marriage, against the other."</b> Hence a <b>prior spouse</b> (e.g., the first wife) who is <b>not party to the second (bigamous) marriage has no locus standi</b> to file a petition for annulment under s. 11; her remedy lies in a suit for declaration under <b>s. 34 of the Specific Relief Act, 1963</b>.</p>
+    <div class="case"><span class="cite">Ajay Chandrakar v. Ushabai</span> — first wife's petition for annulment of the husband's second marriage under s. 11 was dismissed; she was not a party to that marriage. Her remedy is a civil suit for declaration.</div>
+    <div class="case"><span class="cite">Prashant Kumar Verma v. Babita</span> — a person not party to the second marriage has no locus standi to have the second marriage declared void.</div>
+  </div>
+
+  <div class="card">
+    <h3>6.3 Section 17 — Punishment for Bigamy (Penal consequences)</h3>
+    <div class="law">[s 17] Punishment for bigamy.—Any marriage between two Hindus solemnized after the
+commencement of this Act is void if at the date of such marriage either party had a husband or
+wife living; and the provisions of sections 494 and 495 of the Indian Penal Code, 1860 shall
+apply accordingly.</div>
+  </div>
+
+  <div class="card">
+    <h3>6.4 Sections 494 &amp; 495, Indian Penal Code, 1860</h3>
+    <div class="law">[s 494] Marrying again during lifetime of husband or wife.—Whoever having a husband or
+wife living, marries in any case in which such marriage is void by reason of its taking place
+during the life of such husband or wife, shall be punished with imprisonment of either
+description for a term which may extend to seven years, and shall also be liable to fine.
+Exception.—This section does not extend to any person whose marriage with such husband or
+wife has been declared void by a court of competent jurisdiction, nor to any person who
+contracts a marriage during the life of a former husband or wife, if such former husband or
+wife, at the time of the subsequent marriage, had been continuously absent from such person
+for seven years and has not been heard of by such person as being alive within that period:
+Provided that in the latter case the person contracting the subsequent marriage shall, before
+marrying, communicate to the former husband or wife the facts of the intended marriage.
+
+[s 495] Same offence with concealment of former marriage.—Whoever commits the offence
+defined in the last preceding section having concealed from the person with whom the
+subsequent marriage is contracted, the fact of the former marriage, shall be punished with
+imprisonment of either description for a term which may extend to ten years, and shall also be
+liable to fine.</div>
+    <p><b>Section 18 HMA</b> separately prescribes the penalty for contravention of the other conditions: for breach of condition (iii) (age) — rigorous imprisonment up to <b>2 years</b> and/or fine up to <b>₹1 lakh</b> (as substituted by the PCMA 2006, s. 20); for breach of (iv)/(v) (prohibited relationship/sapinda) — simple imprisonment up to one month and/or fine up to ₹1,000.</p>
+  </div>
+
+  <div class="card">
+    <h3>6.5 Essential Ingredients of the Offence of Bigamy (s. 494 IPC)</h3>
+    <div class="case"><span class="cite">S. Nagalingam v. Sivagami, (2001) 7 SCC 487</span> — the essential ingredients of the offence are:<ol>
+      <li>The accused <b>contracted the first marriage</b> (valid marriage);</li>
+      <li>He contracted a <b>second marriage while the first was subsisting</b>;</li>
+      <li><b>Both marriages must be valid</b>, with the necessary ceremonies performed (though in TN, s. 7-A modifies this).</li></ol></div>
+    <div class="flow">
+      <div class="node acc">Ingredients of s. 494 IPC</div><div class="arrow">→</div>
+      <div class="node">Prior valid<br>&amp; subsisting marriage</div><div class="arrow">→</div>
+      <div class="node">Second marriage <br>while first alive</div><div class="arrow">→</div>
+      <div class="node">Second marriage<br>valid &amp; <b>solemnised</b></div>
+    </div>
+    <p>The <b>prosecution must prove the validity of the second marriage under the personal law</b> — i.e., that it was <b>solemnised with the essential ceremonies</b> (homa + saptapadi), unless a State amendment (like s. 7-A in TN, or a regional custom) relaxes the requirement. Mere cohabitation or a private agreement is not enough.</p>
+  </div>
+
+  <div class="card">
+    <h3>6.6 Void but Bigamous Marriage — Judicial Position in the DU Material</h3>
+    <ul>
+      <li><b>Bigamous marriage is void</b> (s. 5(i) r/w s. 11) and constitutes a matrimonial wrong and an offence; but it is <b>hard to prove</b> because of the requirement to prove essential ceremonies.</li>
+      <li>If the <b>first marriage is itself void</b> (e.g., the husband's "first wife" was already married — her prior marriage being no marriage in law), then the "second" marriage is <b>not bigamy</b>; the man cannot be held guilty of plural marriage.</li>
+      <li>A bigamous "wife" cannot assume the character of a wife and hence <b>cannot be a "relative"</b> for the purposes of <b>s. 498-A IPC</b> — <i>Ranjana Thorat v. State of Maharashtra</i>.</li>
+      <li>The second wife is generally <b>not entitled</b> to terminal benefits / MV Act compensation, though a compassionate appointment may be allowed where the first wife has no objection.</li>
+    </ul>
+    <div class="note">⚖️ The <b>spouse of the first marriage</b> being the most affected by a bigamous marriage, commentators have urged an <b>exception</b> to the locus-standi rule so the first spouse may petition for nullity under s. 11.</div>
+  </div>
+
+  <div class="card">
+    <h3>6.7 Bigamy after Conversion — Sarla Mudgal &amp; Lily Thomas</h3>
+    <p>A recurring scenario: a Hindu husband, already married under the HMA, <b>embraces Islam</b> (a faith permitting polygamy) and marries again. Does this escape the offence of bigamy?</p>
+    <div class="case"><span class="cite">Sarla Mudgal v. Union of India, AIR 1995 SC 1531</span> — <b>Held:</b><ul>
+      <li>A marriage celebrated under <b>one personal law</b> cannot be dissolved by the application of <b>another personal law</b> to which only one of the spouses converts.</li>
+      <li>Where marriage takes place under Hindu law, the parties acquire a status and rights under that law. Allowing one party to dissolve the marriage by adopting a new personal law amounts to <b>destroying the existing rights of the other spouse</b>.</li>
+      <li>A Hindu marriage can be dissolved <b>only on the grounds specified in the Act</b>; until then neither party can marry again. <b>Conversion to Islam and marrying again does not, by itself, dissolve a Hindu marriage.</b></li>
+      <li>The real reason for the voidness of the second marriage is the <b>subsistence of the first marriage</b>.</li>
+      <li>Such a marriage is also violative of <b>justice, equity and good conscience</b>, and the court emphasised the need for a <b>Uniform Civil Code</b>.</li></ul></div>
+    <div class="case"><span class="cite">Lily Thomas v. Union of India, AIR 2000 SC 1650 : (2000) 6 SCC 224</span> — <b>Facts:</b> a Hindu man, already married under the HMA, embraced Islam and married again under Islamic rites while continuing to practise Hinduism for all practical purposes. <b>Issue:</b> whether a Hindu who converts to Islam without genuine change of belief and marries again commits bigamy. <b>Held:</b><ul>
+      <li>Conversion to Islam does <b>not</b> affect the status of his earlier Hindu marriage.</li>
+      <li>The first wife can proceed against him under the <b>HMA, 1955</b> and the <b>IPC, 1860</b> for entering into another marriage.</li>
+      <li>The offence of bigamy must be <b>investigated and tried under the law governing the first marriage</b> — i.e., the HMA, 1955 (s. 17) read with s. 494 IPC.</li>
+      <li>A <b>distinction</b> was drawn between (a) a polygamous marriage by a Muslim under Muslim law (permitted) and (b) one contracted by a non-Muslim <b>after converting to Islam</b> (a device to evade monogamy — punishable).</li></ul></div>
+    <div class="principle"><span class="l">Principle evolved</span> A person who is married under a <b>monogamous law</b> cannot escape the offence of bigamy by converting to a polygamous faith merely to contract a second marriage. The first marriage subsists until dissolved by law; the second marriage is void and punishable under s. 17 HMA read with s. 494 IPC.</div>
+  </div>
+</section>
+
+<!-- ============ G ============ -->
+<section class="block" id="G">
+  <div class="sec-head"><div class="num">G</div><div><h2>Voidable Marriages — Section 12, HMA 1955</h2><div class="zh">Binding until annulled · Grounds (a)–(d) · Legitimacy of children</div></div></div>
+
+  <div class="card">
+    <h3>7.1 What is a Voidable Marriage?</h3>
+    <p>A <b>voidable marriage</b> is one which is <b>binding and valid</b>, and continues to subsist for all purposes <b>until a decree is passed</b> by the court annulling it. So long as no decree is obtained, the parties enjoy <b>all the rights and obligations</b> attendant on the status of marriage. <b>A remarriage by either party without a decree of nullity is illegal</b> and amounts to bigamy.</p>
+
+    <div class="tree">
+      <div class="branch"><div class="root">Section 12 — Grounds</div><ul>
+        <li>12(1)(a) — Non-consummation due to <b>impotence</b> of respondent</li>
+        <li>12(1)(b) — <b>Unsoundness of mind / mental disorder / insanity</b></li>
+        <li>12(1)(c) — <b>Consent obtained by force or fraud</b></li>
+        <li>12(1)(d) — Respondent <b>pregnant by another at the time of marriage</b></li>
+      </ul></div>
+    </div>
+    <p><b>12(2):</b> A decree of nullity under this section does <b>not</b> render children born of the marriage illegitimate; they are deemed <b>legitimate</b>.</p>
+  </div>
+
+  <div class="card">
+    <h3>7.2 Section 12(1) — Full Text</h3>
+    <div class="law">[s 12] Voidable marriages.—(1) Any marriage solemnized, whether before or after the
+commencement of this Act, shall be voidable and may be annulled by a decree of nullity on any
+of the following grounds, namely:—
+ (a) that the marriage has not been consummated owing to the impotence of the respondent; or
+ (b) that the marriage is in contravention of the condition specified in clause (ii) of section 5;
+     or
+ (c) that the consent of the petitioner, or where the consent of the guardian in marriage of the
+     petitioner is required under section 5, the consent of such guardian was obtained by force
+     or by fraud as defined in the Indian Contract Act, 1872; or
+ (d) that the respondent was at the time of the marriage pregnant by some person other than
+     the petitioner.
+ (2) ... children to be deemed legitimate.</div>
+  </div>
+
+  <div class="card">
+    <h3>7.3 Ground (a) — Impotence (including the DU case P. v. K.)</h3>
+    <p><b>Impotence</b> (not merely sterility) — the inability to consummate the marriage by reason of physical/mental incapacity — is a ground for annulment. The ground exists when the marriage <b>has not been consummated owing to the impotence of the respondent</b>.</p>
+    <div class="case"><span class="cite">P. v. K., AIR 1982 Bom 400</span> — <b>Facts:</b> the husband sought annulment on the ground of the wife's alleged <b>impotency</b>, she having a <b>prolapsed uterus</b>. The wife had refused sexual intercourse, and the husband suspected fraud and misrepresentation. <b>Issue:</b> whether the wife's condition amounted to impotency, or whether non-disclosure of the prolapse amounted to consent obtained by fraud. <b>Held:</b> <ul>
+      <li>The wife's resistance to intercourse, coupled with the physical condition of a prolapsed uterus, was considered <b>indicative of impotency</b>.</li>
+      <li>Intercourse requiring <b>manipulation of the uterus</b> cannot be considered normal; the husband's frustration due to the condition warranted annulment.</li>
+      <li>The trial judge's failure to consider evidence, including <b>medical reports</b>, led to erroneous conclusions.</li>
+      <li><b>Held:</b> the trial court's judgment and decree were set aside, and the petitioner's plea for <b>annulment</b> was granted.</li></ul></div>
+  </div>
+
+  <div class="card">
+    <h3>7.4 Ground (c) — Consent by Force or Fraud (Babui Panmato, Asha Qureshi, Som Dutt)</h3>
+    <p>Fraud, as defined in the Indian Contract Act, 1872, includes <b>suggesting as a fact that which is not true</b>, or <b>actively concealing a fact</b> to deceive. A marriage is voidable where consent was obtained by <b>force or fraud</b>.</p>
+    <div class="case"><span class="cite">Babui Panmato Kuer v. Ram Agya Singh, AIR 1968 Pat 190</span> — <b>Facts:</b> the appellant-wife's petition for dissolution was dismissed; she alleged her <b>father misled her about the groom's age and financial status</b>, and upon discovering the truth after marriage she sought dissolution. <b>Issue:</b> whether the misrepresentation by her father amounted to <b>fraud under s. 12(1)(c)</b> of the HMA. <b>Held:</b> <ul>
+      <li>Fraud, as defined in the Contract Act, includes suggesting untrue facts or actively concealing facts to deceive.</li>
+      <li>The appellant's father <b>misrepresented the groom's age and financial status</b>, which he knew to be false.</li>
+      <li>The appellant, <b>under a veil during marriage</b>, had no opportunity to withdraw consent upon discovering the truth.</li>
+      <li>The case fell under <b>clause (c) of s. 12(1)</b>; the marriage was <b>annulled</b>.</li></ul>
+      <div class="principle"><span class="l">Principle evolved</span> A misrepresentation of a material fact (such as the age or financial status of the groom), made by a guardian and relied upon by the bride who is prevented (e.g., by being under a veil) from discovering the truth, amounts to <b>fraud</b> vitiating consent and renders the marriage <b>voidable</b> under s. 12(1)(c).</div></div>
+    <div class="case"><span class="cite">Asha Qureshi v. Afaq Qureshi, AIR 2002 MP 263</span> — <b>Facts:</b> an appeal under s. 29 of the Special Marriage Act, 1954 against a judgment declaring the marriage null and void for the appellant's alleged <b>suppression of her widowhood</b>. <b>Issue:</b> whether the wife suppressed her widowhood and married by fraud; whether the husband's consent was obtained by fraud. <b>Held:</b><ul>
+      <li>The appellant's <b>varying statements</b> about disclosing her widowhood were unreliable.</li>
+      <li>There was a <b>lack of specific pleading or evidence</b> that she informed the respondent of her earlier marriage.</li>
+      <li>It was <b>her duty to disclose her widowhood</b>; her failure constituted <b>material misrepresentation</b>.</li>
+      <li>She was entitled to a <b>decree of nullity under s. 25(iii) of the Special Marriage Act, 1954</b>, justifying the trial court's decision.</li></ul></div>
+    <div class="case"><span class="cite">Som Dutt v. Raj Kumari (1986)</span> — the husband sought annulment for fraud: the wife <b>concealed her true age</b>, leading him to marry a much older woman. Discrepancies existed between the wife's <b>date of birth per horoscope</b> and her <b>matriculation certificate</b>. She also suffered from <b>recurrent hysteria and garroting</b>. <b>Held:</b> there was <b>gross matrimonial fraud</b> regarding age and mental state, justifying annulment.</div>
+  </div>
+
+  <div class="card">
+    <h3>7.5 Comparison — Void vs. Voidable Marriage</h3>
+    <table>
+      <thead><tr><th>Basis</th><th>Void Marriage (s. 11)</th><th>Voidable Marriage (s. 12)</th></tr></thead>
+      <tbody>
+        <tr><td>Legal status</td><td>No legal status from inception — <b>void ab initio</b></td><td>Valid &amp; subsisting until annulled</td></tr>
+        <tr><td>Rights &amp; obligations</td><td>None flow</td><td>Full rights &amp; obligations of matrimony until decree</td></tr>
+        <tr><td>Decree required?</td><td>No — parties may remarry without a decree</td><td>Decree of nullity required; remarriage without it is bigamy</td></tr>
+        <tr><td>Who can seek relief</td><td>Either party against the other (decree of nullity)</td><td>Aggrieved party</td></tr>
+        <tr><td>Effco of children</td><td>Legitimacy generally not protected (except child-marriage provisions)</td><td>s. 12(2) — children deemed <b>legitimate</b></td></tr>
+        <tr><td>Grounds</td><td>s. 5(i), (iv), (v)</td><td>s. 12(1)(a)–(d)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ H ============ -->
+<section class="block" id="H">
+  <div class="sec-head"><div class="num">H</div><div><h2>Detailed Case Law — The 10 DU Cases</h2><div class="zh">Facts · Issues · Arguments of both sides · Decision · Principle evolved</div></div></div>
+
+  <p class="lead">These ten decisions are the <b>case material for Unit 1</b>. Each is presented in a standard "case sheet" format so you can reproduce it confidently in the exam. Where the DU material does not separately label the "arguments," they are reconstructed faithfully from the issues, the contentions recorded in the notes, and the reasoning of the court.</p>
+
+  <!-- Case 1 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 01</div><h3>Dr. Surajmani Stella Kujur v. Durga Charan Hansdah</h3><div class="cite">AIR 2001 SC 938 : (2001) 3 SCC 13 · Bench: R.P. Sethi, J.</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>The appellant (wife) complained that the respondent had married a second time while the first marriage subsisted. Her complaint was dismissed by the trial court <b>and</b> by the High Court on the ground that there was no specific pleading, evidence or proof of the <b>custom</b> alleged to render the second marriage void. The matter reached the Supreme Court, which had to consider who is a "Hindu," whether the Act applies to tribals, and how custom affects the validity/voidness of a marriage for a bigamy prosecution.</p>
+      <h4>Issues</h4>
+      <ol>
+        <li>Whether the parties, being members of Scheduled Tribes, are governed by the Hindu Marriage Act, 1955.</li>
+        <li>Whether the alleged custom made the second marriage void so as to sustain a prosecution for bigamy under s. 494 IPC.</li>
+        <li>Whether the complaint disclosed sufficient pleading, evidence and proof of such custom.</li>
+      </ol>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Appellant / Complainant (wife)</h5><ul>
+          <li>The Act applies to "any person who is a Buddhist, Jain or Sikh" and to persons domiciled in India who are not Muslim, Christian, Parsi or Jew — hence the parties (tribal-Hindus) are governed by the Act.</li>
+          <li>As members of tribes included in the Constitution (Scheduled Tribes) Order, 1950, they are Hindus.</li>
+          <li>The second marriage, being in breach of the custom/usage of the community, is void and therefore constitutes bigamy under s. 494 IPC — so the respondent must be prosecuted.</li>
+        </ul></div>
+        <div><h5>Respondent / State (opposing the complaint)</h5><ul>
+          <li>There is no specific notification under Article 342 applying the Act; the tribal community may not be governed by the HMA.</li>
+          <li>No custom rendering the second marriage void was pleaded, proved or established by clear and unambiguous evidence.</li>
+          <li>An offence must be created by the legislature; a "custom" cannot create a criminal offence. Absent a custom making the second marriage void, no case under s. 494 IPC arises.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>The Act applies to Hindus in various forms (including Virashaiva, Lingayat, Brahmo, Prarthana Samaj, Arya Samaj) and to Buddhists, Jains and Sikhs, and to other persons domiciled in India who are not Muslims, Christians, Parsis or Jews.</li>
+        <li>The term <b>"Hindu" is not defined</b>; the Privy Council in <i>Bhagwan Koer v. J.C. Bose</i> noted the difficulty of defining Hinduism.</li>
+        <li>In the absence of a specific notification under <b>Article 342</b>, <b>tribals are deemed Hindus</b>; and even with such notification, the Act can apply to Scheduled Tribes through further notifications (s. 2(2) HMA).</li>
+        <li><b>Custom &amp; usage</b> means rules continuously and uniformly observed for a long time having the force of law in an area/tribe/community/group/family; to be recognised it must be <b>ancient, certain and reasonable</b>, established by clear and unambiguous evidence.</li>
+        <li><b>Section 29</b> saves the validity of marriages solemnised before the Act; custom may affect the validity of a Hindu marriage even without meeting ss. 10–13.</li>
+        <li><b>No custom can create a criminal offence</b> — offences are defined by statute. To prosecute under s. 494 IPC, the prosecution must prove the existence of a custom making the second marriage void, and the <b>burden lies on the prosecution/complainant</b>.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> (i) Scheduled-Tribe members are Hindus under the HMA unless excluded by a valid Article 342 notification; (ii) the term "Hindu" is incapable of precise definition; (iii) a custom, to be valid, must be ancient, certain, reasonable and clearly proved; and (iv) <b>custom cannot create a criminal offence</b> — so a s. 494 IPC conviction requires positive proof of the custom rendering the second marriage void. Since such proof was lacking, the appeal was dismissed.</div>
+    </div>
+  </div>
+
+  <!-- Case 2 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 02</div><h3>S. Nagalingam v. Sivagami</h3><div class="cite">(2001) 7 SCC 487 · Bench: K.G. Balakrishnan, J.</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>The appellant (husband) married the respondent (wife) in <b>1970</b> and they had three children. Allegations of ill-treatment and torture led the wife to <b>leave the marital home</b>. In <b>1984</b>, the wife learned of the husband's second marriage and filed a <b>criminal complaint</b>. The trial court <b>acquitted</b> the accused for want of evidence; a Single Judge <b>remitted</b> the matter for further evidence on the manner of the second marriage; the trial court again acquitted; the <b>High Court convicted</b> the husband of bigamy, holding the second marriage valid under Hindu law.</p>
+      <h4>Issue</h4>
+      <p>Whether the husband's second marriage constituted the offence of <b>bigamy under s. 494 IPC</b>, i.e., was the second marriage a <b>valid</b> marriage.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>For the prosecution / wife</h5><ul>
+          <li>The first marriage was valid and subsisting.</li>
+          <li>The second marriage was contracted while the first was alive, and was performed according to the ceremonies in vogue.</li>
+          <li>The offence under s. 494 is made out once the second marriage is proved to be valid under personal law.</li>
+        </ul></div>
+        <div><h5>For the accused / husband</h5><ul>
+          <li>The prosecution must prove <b>both</b> marriages were valid with the necessary ceremonies (saptapadi etc.).</li>
+          <li>There was no cogent evidence of the performance of essential ceremonies for the second marriage.</li>
+          <li>Unless the second marriage was "solemnised" with rites, it is not a valid marriage and no bigamy arises.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>The <b>essential ingredients</b> of s. 494 IPC are: (a) the accused contracted the first marriage; (b) he contracted a second marriage while the first subsisted; and (c) both marriages are valid, with the necessary ceremonies performed.</li>
+        <li>The prosecution <b>must prove the validity of the second marriage under the personal law</b>; the ceremony required for a valid marriage must have been performed. Earlier decisions established the necessity of essential ceremonies like <b>saptapadi</b>.</li>
+        <li>However, the court applied the <b>State (Tamil Nadu) amendment in s. 7-A</b> of the HMA (inserted by the Madras Act, 1967): under it, the <b>presence of a priest is not necessary</b>; a marriage may be solemnised <b>in the presence of relatives or friends</b> or by exchange of garlands / thali, and an <b>oral declaration</b> suffices.</li>
+        <li>Since the second marriage was performed per s. 7-A, it was <b>deemed valid</b>, and the offence of bigamy was made out.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> For bigamy under s. 494 IPC, the prosecution must prove the validity of both marriages. Where a State amendment (s. 7-A, TN) dispenses with priest/saptapadi and permits a marriage by exchange of garlands/thali or oral declaration in the presence of relatives/friends, compliance with that provision is sufficient proof of a valid marriage. The High Court's conviction was upheld; the appeal dismissed.</div>
+    </div>
+  </div>
+
+  <!-- Case 3 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 03</div><h3>Bhaurao Shankar Lokhande v. State of Maharashtra</h3><div class="cite">AIR 1965 SC 1564 : (1965) 2 SCR 837 · Bench: Raghubar Dayal, J.</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>Appellant-1 married <b>Indubai</b> around 1956. He subsequently married <b>Kamlabai</b> in February 1962, during Indubai's lifetime. Appellant-2 is the brother of Appellant-1. All the appellants, along with Kamlabai and her father, were tried for an offence under <b>s. 494 IPC</b>. The question was whether the second marriage was <b>valid</b>.</p>
+      <h4>Issue</h4>
+      <p>Whether the second marriage of Appellant-1 with Kamlabai was valid (solemnised with due ceremonies), and if so whether it constituted an offence under s. 494 IPC.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Appellants (defence)</h5><ul>
+          <li>The prosecution must prove the validity of the second marriage <b>according to the applicable religious rites</b>.</li>
+          <li>There is no proof that the essential ceremonies (invocation before the sacred fire and <b>saptapadi</b>) were performed.</li>
+          <li>Mere absence of certain ceremonies does not indicate a custom abrogating them; the alleged custom modifying the ceremonies was not proved.</li>
+        </ul></div>
+        <div><h5>State (prosecution)</h5><ul>
+          <li>The marriage was valid under the custom of the community, and validity is not strictly necessary for s. 494 IPC.</li>
+          <li>Witnesses did testify about the marriage ceremonies.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>The expression <b>"whoever … marries"</b> implies a <b>valid marriage</b>, not merely a ceremonial one.</li>
+        <li>The HMA declares a marriage during the lifetime of a spouse to be <b>void</b>, but the validity of the marriage depends upon proper <b>ceremonial observance</b>.</li>
+        <li>For a marriage to be valid, it must be <b>"solemnised"</b> with proper ceremonies and due form.</li>
+        <li>The <b>essential ceremonies</b> for a valid Hindu marriage are the <b>invocation before the sacred fire (homa)</b> and <b>saptapadi</b>.</li>
+        <li>On the facts, the prosecution <b>failed to establish</b> that the marriage between appellant-1 and Kamlabai was performed according to customary rites or Hindu law. Mere absence of ceremonies does not prove a custom; specific evidence of a custom <b>modifying/abrogating</b> the essential ceremonies is required.</li>
+        <li>Therefore the marriage did not fall within the expression <b>"solemnised marriage"</b> in s. 17 HMA, and no offence under s. 494 IPC was made out. Convictions were <b>set aside</b>.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> <b>"Marriage" for the purposes of s. 17 HMA / s. 494 IPC means a valid marriage "solemnised" with the essential rites of the parties (homa and saptapadi).</b> The prosecution must prove the second marriage was solemnised per the applicable ceremonies/custom; it cannot rely on a claim of custom without direct evidence of a custom modifying the essential ceremonies. Held: acquittal of both appellants.</div>
+    </div>
+  </div>
+
+  <!-- Case 4 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 04</div><h3>Lily Thomas v. Union of India</h3><div class="cite">AIR 2000 SC 1650 : (2000) 6 SCC 224</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>A Hindu man, already married under the Hindu Marriage Act, 1955, converted to Islam and married again under <b>Islamic rites</b>, while continuing to practise Hinduism for <b>all practical purposes</b> (as revealed by electoral records, maternity-hospital records of a child and visa application forms). The complainant-wife alleged the husband had <b>only feigned conversion</b> to solemnise a second marriage.</p>
+      <h4>Issue</h4>
+      <p>Whether a Hindu who converts to Islam <b>without a genuine change of belief</b> and marries again commits the offence of <b>bigamy</b>.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Complainant / first wife + Union position</h5><ul>
+          <li>The first marriage subsists despite the husband's conversion; it could be dissolved only on the grounds under the HMA.</li>
+          <li>The second marriage is in breach of monogamy and is void; it constitutes bigamy under s. 17 HMA read with s. 494 IPC.</li>
+          <li>Conversion to Islam here was a mere device to evade monogamy.</li>
+        </ul></div>
+        <div><h5>Husband's position</h5><ul>
+          <li>Having embraced Islam, he is no longer a "Hindu" so s. 17 (which speaks of "a marriage between two Hindus") does not apply.</li>
+          <li>Islam permits polygamy, so no offence of bigamy arises.</li>
+          <li>As a Muslim he is governed by Muslim personal law.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>Conversion to Islam does <b>not</b> affect the status of his earlier Hindu marriage — the marriage subsists.</li>
+        <li>The first wife can proceed against him under the <b>HMA, 1955</b> and the <b>IPC, 1860</b> for entering into another marriage.</li>
+        <li>The effect of the second marriage on the first is considered for the <b>limited purpose</b> of determining criminal liability under the HMA and the IPC.</li>
+        <li>If he marries a second wife under another religion after conversion, the offence of bigamy must be <b>investigated and tried under the HMA, 1955</b> — the law governing the first marriage.</li>
+        <li>The court distinguished (a) a polygamous marriage contracted by a Muslim under Muslim law (valid) from (b) one contracted by a non-Muslim <b>after conversion to Islam</b> (a device to escape monogamy — punishable under s. 17 HMA r/w s. 494 IPC).</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> <b>Conversion of one spouse does not dissolve a marriage governed by a monogamous personal law, and cannot be used to contract a second marriage.</b> A Hindu man who converts to Islam only to marry again remains liable for bigamy, and the offence is triable under the law governing the first marriage (s. 17 HMA read with s. 494 IPC). First marriage remains valid; first wife's remedies preserved.</div>
+    </div>
+  </div>
+
+  <!-- Case 5 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 05</div><h3>Pinninti Venkataramana v. State</h3><div class="cite">AIR 1977 AP 43 (Full Bench)</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>A wife filed a complaint against her husband and ten others alleging that he had committed the offence of <b>bigamy under s. 494 IPC</b> by marrying another girl. The husband's defence was that his first marriage with the complainant was <b>void</b> because he was only <b>13 years</b> and she was only <b>9 years</b> at the time of their marriage; and that being void, no offence was committed by his marrying again. The trial court held the first marriage legal and convicted the husband; the conviction was confirmed (with slight modification) in appeal; the matter went in revision and was referred to a <b>Full Bench</b> because of the significance of the question.</p>
+      <h4>Issue</h4>
+      <p>Whether a Hindu marriage governed by the HMA, where the parties (or either of them) are <b>below the minimum ages prescribed in s. 5(iii)</b>, is <b>void ab initio</b>.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Husband (defence)</h5><ul>
+          <li>His first marriage was in breach of s. 5(iii); being void, it is "no marriage" in the eyes of law.</li>
+          <li>Since the first marriage was void, his later marriage cannot amount to bigamy under s. 494 IPC.</li>
+        </ul></div>
+        <div><h5>Prosecution</h5><ul>
+          <li>The first marriage, though contracted when the parties were below age, was a <b>valid, subsisting marriage</b>.</li>
+          <li>Violation of the age condition does <b>not</b> render a marriage void under s. 11 or voidable under s. 12; it attracts only s. 18 (punishment).</li>
+          <li>Therefore the second marriage during the subsistence of the first is bigamy.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio (Full Bench)</h4>
+      <ul>
+        <li>Such a marriage is <b>NOT void ab initio</b>.</li>
+        <li>If the legislature had intended the result to follow, it would not have given a <b>wife a right to repudiate</b> a marriage solemnised before she attained 15 years (such a right presupposes the marriage exists).</li>
+        <li>If violation of <i>each</i> clause of s. 5 rendered a marriage void, the legislature would not have made <b>different provisions for different clauses</b>.</li>
+        <li>Neither <b>s. 11</b> nor <b>s. 12</b> mentions a marriage in contravention of <b>s. 5(iii)</b>.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> A marriage in contravention of the minimum-age condition in <b>s. 5(iii) is neither void nor voidable</b>; it remains a valid marriage and is only <b>punishable</b> (under s. 18 HMA and the PCMA, 2006). Consequently, a person already so married <b>can</b> be guilty of bigamy if he marries again while the first marriage subsists. (The prosecution's view prevailed; the husband could not use the non-age of the first marriage to escape s. 494.)</div>
+    </div>
+  </div>
+
+  <!-- Case 6 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 06</div><h3>Asha Qureshi v. Afaq Qureshi</h3><div class="cite">AIR 2002 MP 263</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>This was an appeal under <b>s. 29 of the Special Marriage Act, 1954</b> against a judgment declaring the marriage between the parties <b>null and void</b> due to the appellant-wife's alleged <b>suppression of her widowhood</b> at the time of marriage. The question arose whether the husband's consent was obtained by <b>fraud</b>.</p>
+      <h4>Issue</h4>
+      <p>Whether the appellant/wife <b>suppressed her widowhood</b> and married the respondent through fraud; and whether the respondent/husband's consent was obtained by fraud within the meaning of the Indian Contract Act, 1872.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Respondent / husband</h5><ul>
+          <li>The wife never disclosed that she was a widow before the marriage.</li>
+          <li>It was her duty to disclose this material fact; suppression of it constitutes <b>misrepresentation/fraud</b>.</li>
+          <li>Consent was therefore vitiated and the marriage is a nullity.</li>
+        </ul></div>
+        <div><h5>Appellant / wife</h5><ul>
+          <li>She had informed the respondent / the parties knew of her previous marriage.</li>
+          <li>Her statements were consistent to that effect.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>The appellant's <b>varying statements</b> regarding the disclosure of her widowhood were <b>unreliable</b>.</li>
+        <li>There was a <b>lack of specific pleading or evidence</b> that the appellant informed the respondent about her earlier marriage.</li>
+        <li>It was the appellant's <b>duty to disclose her widowhood</b>; her failure constituted <b>material misrepresentation</b>, i.e., fraud.</li>
+        <li>Accordingly, the appellant was entitled to a decree of nullity under <b>s. 25(iii) of the Special Marriage Act, 1954</b>, justifying the trial court's decision to declare the marriage null and void.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> <b>Concealment of an existing prior marriage (e.g., the fact of widowhood) is material misrepresentation amounting to fraud</b> that vitiates consent, entitling the aggrieved party to a decree of nullity. The duty to disclose a prior marital status is on the party concealing it, and inconsistent/varying statements about disclosure will not assist that party. (Though decided under the Special Marriage Act, the rule is equally applied to s. 12(1)(c) of the HMA.)</div>
+    </div>
+  </div>
+
+  <!-- Case 7 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 07</div><h3>Court On Its Own Motion Lajja … v. State</h3><div class="cite">2012 (193) DLT 61 (Delhi HC)</div></div>
+    <div class="cb">
+      <h4>Facts / Sittings</h4>
+      <p>Taking suo motu cognisance, a <b>Division Bench</b> formulated <b>five questions</b> regarding the <b>status of marriages under Hindu law when one party is below the prescribed age</b>, and the <b>custody of minor wives</b> in such cases. The court examined the interplay of the <b>Prohibition of Child Marriage Act, 2006 (PCMA)</b>, the Hindu Marriage Act, and the Code of Criminal Procedure in cases of girls who had married of their own choice.</p>
+      <h4>Issues</h4>
+      <ol>
+        <li>Validity of marriages contracted with individuals <b>below the age of consent</b> and the custody of minor wives in such cases.</li>
+        <li>Whether a minor can walk away from parental guardianship and seek <b>protective custody of the State</b>.</li>
+        <li>Quashing of FIRs under <b>ss. 363 and 376 IPC</b> based on the minor's statement of marriage consent.</li>
+        <li>Existence of other presumptions regarding such marriages.</li>
+      </ol>
+      <h4>Arguments / Considerations</h4>
+      <div class="grid2">
+        <div><h5>Strict position (invoking PCMA)</h5><ul>
+          <li>The PCMA, 2006 deems marriages involving minors <b>voidable</b> (and in certain cases void).</li>
+          <li>Punishment is prescribed for adults who contract, and for those who perform or abet, child marriages.</li>
+          <li>Compulsory marriage registration with age details could deter underage marriages.</li>
+        </ul></div>
+        <div><h5>Liberal position (child's autonomy / welfare)</h5><ul>
+          <li>Marriages of minors remain <b>voidable until annulled</b> by a petition filed within time; they are <b>not ipso facto void</b>.</li>
+          <li>The Act's applicability to marriages under different religious customs is unclear.</li>
+          <li>Custody decisions must prioritise the <b>child's welfare</b>, irrespective of legal-guardianship claims (especially in elopement cases).</li>
+          <li>Consent matters where the girl is <b>above 16 but below 18</b>, provided <b>coercion is ruled out</b>.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Observations</h4>
+      <ul>
+        <li>The PCMA, 2006 <b>does not render such marriages void</b> but only <b>voidable</b> (s. 3) until annulled; marriages of females below 18 or males below 21 are <b>voidable until annulled</b>.</li>
+        <li>Punishment is prescribed for adults contracting child marriages and for those who perform/abet them.</li>
+        <li>Compulsory registration of marriages with age details would be a useful deterrent.</li>
+        <li>In custody matters, the <b>welfare of the child is paramount</b>, and custody must be decided on that basis, not on legal-guardianship claims alone.</li>
+        <li>Consent is relevant where the girl is 16–18, but coercion must be excluded.</li>
+        <li>The court has discretion to <b>quash proceedings</b> in appropriate circumstances, considering the minor's statement and consent; there is <b>no rigid formula</b> — decisions must be made cautiously, respecting the minor's rights under the PCMA.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> A marriage involving a minor is <b>voidable (not void)</b> under the PCMA, 2006 and (under the HMA) is <b>neither void nor voidable — only punishable</b>. The <b>welfare of the child</b> is the paramount consideration in custody; the court retains discretion in quashing criminal proceedings where a minor of the age of discretion has consented to marriage and coercion is absent.</div>
+    </div>
+  </div>
+
+  <!-- Case 8 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 08</div><h3>P. v. K.</h3><div class="cite">AIR 1982 Bom 400 (Bombay HC)</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>The appellant-husband sought <b>annulment of the marriage</b> on the ground of the alleged <b>impotency</b> of the respondent-wife, who had a <b>prolapsed uterus</b>. The wife had refused sexual intercourse, and the husband suspected <b>fraud and misrepresentation</b> (i.e., that the condition was concealed before marriage).</p>
+      <h4>Issue</h4>
+      <p>Whether the wife's condition amounted to <b>impotency</b> (grounding annulment under s. 12(1)(a) HMA), or whether the non-disclosure of the prolapse amounted to <b>consent obtained by fraud</b>.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Petitioner / husband</h5><ul>
+          <li>The marriage was not consummated because of the wife's physical condition (prolapsed uterus) and her refusal.</li>
+          <li>This amounts to impotency; alternatively, the concealment of the condition amounts to fraud vitiating consent.</li>
+          <li>Medical reports and evidence support the claim.</li>
+        </ul></div>
+        <div><h5>Respondent / wife</h5><ul>
+          <li>The condition did not amount to impotency; the wife was capable of marital intercourse.</li>
+          <li>There was no fraud — the condition was not deliberately concealed.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li>The wife's <b>resistance to intercourse</b>, coupled with the physical condition of a <b>prolapsed uterus</b>, was considered <b>indicative of impotency</b>.</li>
+        <li>Intercourse requiring <b>manipulation of the uterus</b> cannot be regarded as normal; the husband's frustration due to the condition warranted annulment.</li>
+        <li>The trial judge's <b>failure to consider evidence, including medical reports</b>, led to erroneous conclusions.</li>
+        <li><b>Held:</b> the trial court's judgment and decree were <b>set aside</b>, and the petitioner's plea for <b>annulment</b> was granted.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> Impotency for the purposes of s. 12(1)(a) is assessed by the <b>capacity to consummate the marriage in a normal manner</b>. Where the wife's physical condition (a prolapsed uterus} prevents normal intercourse and she refuses it, the marriage is voidable for impotency. Medical evidence must be considered; a trial court that ignores such evidence errs.</div>
+    </div>
+  </div>
+
+  <!-- Case 9 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 09</div><h3>Babui Panmato Kuer v. Ram Agya Singh</h3><div class="cite">AIR 1968 Pat 190 (Patna HC)</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>The appellant-wife's <b>marriage petition was dismissed</b> on the ground that no fraud under the Hindu Marriage Act, 1955 was established. She alleged that her <b>father misled her about the groom's age and financial status</b>, and upon discovering the truth <b>after marriage</b> she sought dissolution. The relevant provision is <b>s. 12(1)(c)</b> (consent obtained by fraud).</p>
+      <h4>Issue</h4>
+      <p>Whether the misrepresentation made by the appellant's father amounted to <b>fraud under s. 12(1)(c)</b> of the Hindu Marriage Act, so as to make the marriage voidable.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>Petitioner / wife</h5><ul>
+          <li>The groom's age and financial status were misrepresented by her father (who acted for the bride).</li>
+          <li>Being <b>under a veil</b> at the time of marriage, she had no opportunity to discover the truth or withdraw consent.</li>
+          <li>This concealment/misrepresentation constitutes fraud that vitiates consent.</li>
+        </ul></div>
+        <div><h5>Respondent / husband</h5><ul>
+          <li>The misrepresentation, if any, was by the bride's own father, and not by the husband's side.</li>
+          <li>There was no fraud within the meaning of s. 12(1)(c).</li>
+          <li>Marriage should not be lightly annulled.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Ratio</h4>
+      <ul>
+        <li><b>Fraud</b>, as defined in the Contract Act, includes suggesting as true a fact that is false, or actively concealing a fact to deceive.</li>
+        <li>The appellant's father <b>misrepresented the groom's age and financial status</b>, which he knew to be false.</li>
+        <li>The appellant, <b>under a veil during marriage</b>, had <b>no opportunity to withdraw consent</b> upon discovering the truth.</li>
+        <li>The case fell squarely within <b>clause (c) of s. 12(1)</b>, and the marriage was <b>annulled</b>. The petition succeeded.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> Fraud under s. 12(1)(c) is measured by the Contract Act definition and includes the active concealment of a material fact. A material misrepresentation (as to the groom's age and financial standing) made by the guardian and relied upon by a bride who, being veiled, could not verify it, vitiates consent and renders the marriage <b>voidable</b>. The misrepresentation need not be by the other spouse — it suffices that consent was obtained by fraud.</div>
+    </div>
+  </div>
+
+  <!-- Case 10 -->
+  <div class="cassheet">
+    <div class="ch"><div class="n">Case 10</div><h3>Seema v. Ashwani Kumar</h3><div class="cite">(2006) 2 SCC 578</div></div>
+    <div class="cb">
+      <h4>Facts</h4>
+      <p>The case arose out of the implementation of <b>CEDAW</b> (adopted 1979; India ratified in <b>1993</b> with reservations, including one on compulsory registration of marriages). Under the Constitution's <b>Seventh Schedule, List III</b>, "marriage" and "vital statistics" (including registration of births and deaths) are matters of concurrent competence. The issue reached the Supreme Court about <b>compulsory registration of marriages</b>.</p>
+      <h4>Issue</h4>
+      <p>Whether registration of marriages should be made <b>compulsory</b> for all Indian citizens, and whether it falls within the legislative competence of the State/Centre under "vital statistics"; and what directions should follow.</p>
+      <h4>Arguments</h4>
+      <div class="grid2">
+        <div><h5>In favour of compulsory registration</h5><ul>
+          <li>Registration would <b>avoid disputes</b> over the fact and date of solemnisation.</li>
+          <li>It protects <b>women's rights</b> relating to marriage (maintenance, custody, succession).</li>
+          <li>It has great <b>evidentiary value</b> in the custody of children, the rights of children, and establishing the age of the parties.</li>
+          <li>It falls under <b>"vital statistics"</b> (List III), a concurrent subject, so both Centre and States may legislate.</li>
+        </ul></div>
+        <div><h5>Against / reservations</h5><ul>
+          <li>India had entered a <b>reservation</b> to CEDAW on compulsory registration.</li>
+          <li>Personal-law autonomy and the absence of a single-register procedure.</li>
+          <li>Practical difficulties of implementation across varied communities.</li>
+        </ul></div>
+      </div>
+      <h4>Decision &amp; Directions</h4>
+      <ul>
+        <li>Marriages of <b>all citizens of India, irrespective of religion</b>, should be made <b>compulsorily registrable</b> in their respective States where the marriage is solemnised.</li>
+        <li>Registration is necessary for <b>evidentiary purposes</b> (custody, rights, and age of parties).</li>
+        <li>Marriage registration falls under <b>"vital statistics"</b> in the Constitution.</li>
+        <li>States were directed to <b>notify procedures for registration within three months</b>, inviting objections from the public.</li>
+        <li><b>Authorised officers</b> should be appointed for registration and, importantly, the <b>consequences of non-registration or false declaration</b> were to be defined.</li>
+        <li>The <b>Central Government</b> was urged to enact a <b>comprehensive statute</b>, subject to scrutiny by the court.</li>
+      </ul>
+      <div class="principle"><span class="l">Principle evolved</span> Compulsory registration of marriages is a reform that advances <b>women's rights</b>, prevents fraudulent, non-age and <b>bigamous</b> marriages, and provides reliable <b>evidence</b> for custody, succession and age. It is squarely within the Concurrent power over <b>"vital statistics."</b> The court issued binding directions for progressive implementation, while noting that the HMA itself still leaves registration optional (s. 8(5)).</div>
+    </div>
+  </div>
+</section>

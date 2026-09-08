@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 3 · Negligence — Liability at Common Law &amp; Statutory Law (DU)</title>
+<style>
+  :root{
+    --ink:#1a2233; --ink2:#3c4a63; --bg:#f5f6fb; --card:#ffffff;
+    --navy:#14224a; --navy2:#1f3675; --gold:#c8912b; --teal:#0f8a8a;
+    --red:#b13a3a; --green:#2e7d4f; --purple:#5b3a8e; --line:#e2e6f0;
+    --orange:#c0561f; --shadow:0 6px 24px rgba(20,34,74,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px}
+  .hero{background:linear-gradient(135deg,#10203f 0%,#1f3675 55%,#2a4a8f 100%);
+    color:#fff; padding:52px 24px 40px; position:relative; overflow:hidden}
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px;
+    background:radial-gradient(circle,rgba(200,145,43,.35),transparent 70%)}
+  .hero:after{content:""; position:absolute; left:-60px; bottom:-120px; width:300px; height:300px;
+    background:radial-gradient(circle,rgba(15,138,138,.30),transparent 70%)}
+  .hero .wrap{max-width:1180px; margin:0 auto; position:relative; z-index:2}
+  .kicker{letter-spacing:.18em; text-transform:uppercase; font-size:12px; font-weight:700; color:#ffd98a; margin-bottom:10px}
+  .hero h1{font-size:clamp(26px,4vw,44px); margin:0 0 12px; line-height:1.15}
+  .hero h1 span{color:#ffd98a}
+  .hero p.sub{max-width:900px; margin:0 0 22px; color:#dbe3f5; font-size:clamp(15px,1.6vw,18px)}
+  .hero .tags{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25);
+    padding:5px 12px; border-radius:30px; font-size:12.5px; color:#eaf0fc}
+  .meta-strip{background:#0d1830; color:#c9d4ec; font-size:13px; padding:12px 0}
+  .meta-strip .wrap{max-width:1180px; margin:0 auto; padding:0 24px; display:flex; flex-wrap:wrap; gap:8px 26px}
+  .meta-strip b{color:#ffd98a}
+  .layout{max-width:1180px; margin:0 auto; padding:0 20px; display:grid; grid-template-columns:248px 1fr; gap:26px}
+  @media(max-width:900px){.layout{grid-template-columns:1fr}}
+  .toc{position:sticky; top:18px; align-self:start; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px 16px; box-shadow:var(--shadow); max-height:88vh; overflow:auto}
+  .toc h2{font-size:13px; text-transform:uppercase; letter-spacing:.12em; margin:0 0 12px; color:var(--navy)}
+  .toc a{display:block; color:var(--ink2); text-decoration:none; font-size:13.5px; padding:7px 10px; border-radius:8px; margin-bottom:2px}
+  .toc a:hover{background:#eef1fa; color:var(--navy)}
+  .toc a.n{font-weight:700; color:var(--navy); border-bottom:1px solid var(--line); margin-top:8px; padding-bottom:4px}
+  main{padding:26px 0 70px; min-width:0}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:30px 28px;
+    margin-bottom:30px; box-shadow:var(--shadow); scroll-margin-top:20px}
+  .sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .sec-num{min-width:46px; height:46px; border-radius:12px; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:19px}
+  .sec-head h2{margin:0; font-size:clamp(19px,2.2vw,26px); color:var(--navy); line-height:1.2}
+  .sec-sub{color:var(--ink2); margin:2px 0 20px; font-size:14px; border-left:3px solid var(--gold); padding-left:12px}
+  h3{color:var(--navy); margin:26px 0 8px; font-size:19px}
+  h4{color:var(--navy2); margin:18px 0 6px; font-size:16px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0; padding-left:22px}
+  li{margin:5px 0}
+  .accent{color:var(--teal); font-weight:600}
+  .accent2{color:var(--gold); font-weight:600}
+  .hint{background:#fff8ea; border-left:4px solid var(--gold); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .hint b{color:var(--navy)}
+  .tipbox{background:#eef6f6; border-left:4px solid var(--teal); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .warnbox{background:#fbeeee; border-left:4px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  .aobx{background:#fdf1ec; border-left:4px solid var(--orange); padding:12px 16px; border-radius:8px; margin:14px 0; font-size:14.5px}
+  code,.lat{font-family:Georgia,"Times New Roman",serif; font-style:italic; color:#12406b}
+  .lat{background:#eef2fb; padding:1px 6px; border-radius:5px}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14px}
+  th,td{border:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top}
+  th{background:#eef1fa; color:var(--navy); font-weight:700}
+  tr:nth-child(even) td{background:#fafbfe}
+  .pill{display:inline-block; padding:2px 10px; border-radius:20px; font-size:11.5px; font-weight:700; letter-spacing:.03em}
+  .pill.g{background:#e3f3ea; color:var(--green)}
+  .pill.r{background:#fbe5e5; color:var(--red)}
+  .pill.n{background:#e7e9fb; color:var(--navy2)}
+  .pill.t{background:#e2f3f3; color:var(--teal)}
+  .pill.o{background:#fcefe6; color:var(--orange)}
+  .case{border:1px solid var(--line); border-radius:12px; margin:18px 0; overflow:hidden; background:#fff}
+  .case-head{background:linear-gradient(90deg,#182c5c,#2a4a8f); color:#fff; padding:13px 16px; display:flex;
+    justify-content:space-between; align-items:flex-start; gap:10px; flex-wrap:wrap}
+  .case-head h4{margin:0; color:#fff; font-size:16.5px; line-height:1.3; flex:1; min-width:200px}
+  .case-head .cit{font-size:12px; color:#ffd98a; white-space:nowrap; font-weight:600}
+  .case-body{padding:14px 16px}
+  .field{margin:9px 0}
+  .field .lbl{font-weight:700; color:var(--navy); font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; display:inline-block; margin-bottom:3px}
+  .field .lbl.f{color:var(--navy)} .field .lbl.i{color:var(--purple)}
+  .field .lbl.a{color:var(--teal)} .field .lbl.d{color:var(--green)} .field .lbl.p{color:var(--gold)}
+  .field p{margin:3px 0 0}
+  .quote{background:#f6f8ff; border-left:3px solid var(--navy2); padding:10px 14px; margin:8px 0; border-radius:0 8px 8px 0; font-style:italic; color:var(--ink2); font-size:14.5px}
+  .principle{background:#eef6f6; border:1px solid #cfe8e8; padding:10px 14px; border-radius:8px; margin:10px 0}
+  .principle b{color:var(--teal)}
+  .fig{background:#fbfcff; border:1px solid var(--line); border-radius:12px; padding:16px; margin:18px 0; overflow-x:auto; text-align:center}
+  .fig .cap{font-size:13px; color:var(--ink2); margin-top:8px; font-weight:600}
+  .fig svg{max-width:100%; height:auto}
+  .legend{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:8px; font-size:12.5px; color:var(--ink2)}
+  .legend span{display:inline-flex; align-items:center; gap:5px}
+  .sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+  .pyq{background:#fff; border:1px solid var(--line); border-radius:12px; margin:16px 0; overflow:hidden}
+  .pyq-q{background:#f0f3fb; padding:13px 16px; font-weight:700; color:var(--navy)}
+  .pyq-q .qm{color:var(--gold); font-size:13px; display:block; text-transform:uppercase; letter-spacing:.08em; margin-bottom:5px}
+  .pyq-q .marks{color:var(--ink2); font-weight:600; font-size:12.5px; float:right}
+  .ans{padding:14px 18px}
+  .ans .lbl{font-weight:700; color:var(--teal); font-size:12px; text-transform:uppercase; letter-spacing:.06em; margin:10px 0 3px}
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  @media(max-width:640px){.two-col{grid-template-columns:1fr}}
+  .glossary li{margin:6px 0}
+  footer{background:var(--navy); color:#c9d4ec; text-align:center; padding:30px 20px; font-size:13px}
+  footer b{color:#ffd98a}
+  .divider{height:1px; background:var(--line); margin:20px 0; border:none}
+  a{color:var(--teal)}
+  .scrolltop{position:fixed; right:18px; bottom:18px; background:var(--navy); color:#fff; border-radius:50%;
+    width:46px; height:46px; display:flex; align-items:center; justify-content:center; text-decoration:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25); font-size:20px; z-index:99}
+</style>
+</head>
+<body>
+
+<div class="hero" id="pageTop">
+  <div class="wrap">
+    <div class="kicker">University of Delhi · Law of Torts (LB-103) · Part A</div>
+    <h1>Topic 3 — <span>Negligence</span>: Liability at Common Law &amp; Statutory Law</h1>
+    <p class="sub">A comprehensive, exam-ready compilation built largely on the <b>DU official case material</b> — syllabus sub-heads (a) Theories, (b) Meaning &amp; Definition, (c) Essential Ingredients, (d) Proof — <i>res ipsa loquitur</i>, (e) Manufacturer’s Negligence, (f) Medical Negligence — with all <b>6 prescribed cases</b> in detail (facts, issues, arguments of both sides, decision &amp; principle evolved), conceptual notes with diagrams &amp; flowcharts, and previous-year questions with model answers.</p>
+    <div class="tags">
+      <span class="tag">Theories of Negligence</span><span class="tag">Meaning &amp; Definition</span>
+      <span class="tag">Essential Ingredients</span><span class="tag">Duty of Care</span>
+      <span class="tag">Res ipsa loquitur</span><span class="tag">Manufacturer's Negligence</span>
+      <span class="tag">Medical Negligence</span><span class="tag">Bolam test</span>
+      <span class="tag">6 Case Laws</span><span class="tag">PYQs + Model Answers</span>
+    </div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <div class="wrap">
+    <span><b>Syllabus:</b> (a) Theories of Negligence · (b) Meaning &amp; Definition · (c) Essential Ingredients — duty to take care, breach of duty, consequent damage · (d) Proof of Negligence — res ipsa loquitur · (e) Manufacturer’s Negligence · (f) Medical Negligence</span>
+  </div>
+</div>
+
+<div class="layout">
+  <nav class="toc">
+    <h2>Contents</h2>
+    <a class="n" href="#overview">Topic Map &amp; Sources</a>
+    <a href="#theories">1. Theories of Negligence</a>
+    <a href="#meaning">2. Meaning &amp; Definition</a>
+    <a href="#ingredients">3. Essential Ingredients</a>
+    <a href="#duty">The Duty of Care</a>
+    <a href="#breach">Breach of Duty &amp; Standard</a>
+    <a href="#damage">Consequent Damage</a>
+    <a href="#resipsa">4. Proof — Res ipsa loquitur</a>
+    <a href="#manufacturer">5. Manufacturer's Negligence</a>
+    <a href="#medical">6. Medical Negligence</a>
+    <a href="#bolam">The Bolam Test</a>
+    <a href="#criminal">Civil vs Criminal Negligence</a>
+    <a class="n" href="#cases">The 6 Prescribed Case Laws</a>
+    <a href="#c16">16. Donoghue v Stevenson</a>
+    <a href="#c17">17. MCD v Subhagwanti</a>
+    <a href="#c18">18. P. Narasimha Rao</a>
+    <a href="#c19">19. Jacob Mathew</a>
+    <a href="#c20">20. Malay Kumar Ganguly</a>
+    <a href="#c21">21. Khenyei v New India</a>
+    <a class="n" href="#pyq">Previous Year Questions &amp; Answers</a>
+    <a href="#glossary">Key Maxims Glossary</a>
+    <a href="#revise">Quick Revision Flow</a>
+  </nav>
+
+  <main>
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <div class="sec-head"><div class="sec-num">◈</div><h2>Topic Map &amp; Sources Used</h2></div>
+      <p class="sec-sub">What the syllabus demands and where each answer comes from.</p>
+      <table>
+        <tr><th style="width:30%">Syllabus Sub-head</th><th>What it asks</th><th>Key material / authority</th></tr>
+        <tr><td>(a) Theories of Negligence</td><td>Subjective vs objective; negligence as state of mind vs conduct</td><td>Winfield; Salmond; Charlesworth &amp; Percy</td></tr>
+        <tr><td>(b) Meaning &amp; Definition</td><td>Definition; negligence as tort &amp; as mode of committing torts</td><td>Ratanlal &amp; Dhirajlal; Winfield</td></tr>
+        <tr><td>(c) Essential Ingredients</td><td>Duty to take care; breach; consequent damage</td><td>Donoghue v. Stevenson</td></tr>
+        <tr><td>(d) Proof — res ipsa loquitur</td><td>When the thing speaks for itself; shifting of burden</td><td>MCD v. Subhagwanti; Byrne v. Boadle</td></tr>
+        <tr><td>(e) Manufacturer’s Negligence</td><td>Duty of a manufacturer to the ultimate consumer</td><td>Donoghue v. Stevenson; Grant v. Australian Knitting Mills</td></tr>
+        <tr><td>(f) Medical Negligence</td><td>Standard of care of professionals; Bolam test</td><td>Narasimha Rao; Jacob Mathew; Malay Kumar Ganguly</td></tr>
+      </table>
+      <div class="hint"><b>Primacy of DU case material:</b> All six cases (<b>16–21</b>) are reproduced from the prescribed DU casebook with the judges’ own words. The theory of negligence (ingredients, standard of care, res ipsa loquitur, medical negligence, Bolam) follows the DU course notes and the standard Indian treatises (Ratanlal &amp; Dhirajlal, Winfield &amp; Jolowicz, Charlesworth &amp; Percy, Salmond).</div>
+    </section>
+
+    <!-- THEORIES -->
+    <section id="theories">
+      <div class="sec-head"><div class="sec-num">1</div><h2>Theories of Negligence</h2></div>
+      <p class="sec-sub">Syllabus (a) — how negligence is conceptualised.</p>
+      <p>“Negligence” is used in two senses in the law of torts:</p>
+      <ol>
+        <li><b>Negligence as the mode of committing certain torts</b> — it denotes a <b>mental element</b>, e.g., negligently or carelessly committing trespass (a state of mind).</li>
+        <li><b>Negligence as a separate, independent tort</b> — it means a <b>conduct</b> which creates a risk of causing damage, rather than a state of mind. This is the modern, dominant meaning.</li>
+      </ol>
+
+      <h3>1.1 The two competing theories</h3>
+      <div class="two-col">
+        <div class="hint" style="background:#e2f3f3">
+          <b style="color:var(--teal)">(A) Subjective theory</b>
+          <p>Negligence is purely a <b>state of mind</b> — a blameworthy mental condition. Liability is based on the defendant’s <b>actual foresight or intention</b>.</p>
+          <ul><li>Supported by the view that negligence is the breach of a duty to take care adverted to in the defendant’s mind.</li><li>Looks at what the defendant <b>actually knew or foresaw</b>.</li></ul>
+          <p class="quote" style="font-size:13.5px">Criticism: It would exempt the careless but well-meaning, and make proof of negligence very hard (one cannot easily prove what was in the defendant’s mind).</p>
+        </div>
+        <div class="hint" style="background:#e7e9fb">
+          <b style="color:var(--navy)">(B) Objective theory — the modern rule</b>
+          <p>Negligence is <b>not a state of mind</b> but a <b>conduct</b> falling below a standard — the failure to take the care that a <b>reasonable man</b> would take.</p>
+          <ul><li>The test is the <b>objective</b> standard of the “reasonable man” (the man on the Clapham omnibus).</li><li>Liability does not depend on the defendant’s subjective foresight but on what a reasonable person <b>ought</b> to have foreseen.</li><li>This is the approach adopted by Ratanlal &amp; Dhirajlal, Winfield &amp; the leading cases.</li></ul>
+        </div>
+      </div>
+      <blockquote class="quote">“Negligence is the breach of a duty caused by the omission to do something which a reasonable man, guided by those considerations which ordinarily regulate the conduct of human affairs would do, or doing something which a prudent and reasonable man would not do.” — Ratanlal &amp; Dhirajlal, Law of Torts (adopted in <i>Jacob Mathew</i>)</blockquote>
+      <div class="fig">
+        <svg viewBox="0 0 760 180" width="760" role="img" aria-label="Theories of negligence">
+          <rect x="20" y="25" width="340" height="130" rx="12" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="190" y="55" fill="#0f8a8a" text-anchor="middle" font-size="14" font-weight="700">SUBJECTIVE</text>
+          <text x="190" y="78" fill="#125b5b" text-anchor="middle" font-size="11.5">negligence = state of mind</text>
+          <text x="190" y="98" fill="#125b5b" text-anchor="middle" font-size="11.5">focus on defendant's actual</text>
+          <text x="190" y="116" fill="#125b5b" text-anchor="middle" font-size="11.5">foresight / intention</text>
+          <rect x="400" y="25" width="340" height="130" rx="12" fill="#e7e9fb" stroke="#1f3675"/>
+          <text x="570" y="55" fill="#1f3675" text-anchor="middle" font-size="14" font-weight="700">OBJECTIVE (modern)</text>
+          <text x="570" y="78" fill="#2b3a63" text-anchor="middle" font-size="11.5">negligence = conduct below standard</text>
+          <text x="570" y="98" fill="#2b3a63" text-anchor="middle" font-size="11.5">test = "reasonable man"</text>
+          <text x="570" y="116" fill="#2b3a63" text-anchor="middle" font-size="11.5">basis = what he OUGHT to foresee</text>
+        </svg>
+        <div class="cap">The law now adopts the objective standard — negligence is judged by the reasonable-man test, not the defendant's mind.</div>
+      </div>
+      <div class="tipbox"><b>Exam point:</b> The <b>objective</b> standard is the accepted one. Lord Macmillan in <i>Donoghue</i>: “The law takes no cognizance of carelessness in the abstract. It concerns itself with carelessness only where there is a duty to take care and where failure in that duty has caused damage.”</div>
+    </section>
+
+    <!-- MEANING -->
+    <section id="meaning">
+      <div class="sec-head"><div class="sec-num">2</div><h2>Meaning &amp; Definition of Negligence</h2></div>
+      <p class="sec-sub">Syllabus (b).</p>
+      <p>According to <b>Charlesworth &amp; Percy</b>, in current forensic speech negligence has <b>three meanings</b>: (i) a state of mind, as opposed to intention; (ii) careless conduct; and (iii) the breach of a duty to take care imposed by common or statute law. All three apply in different circumstances, and any one does not necessarily exclude the others.</p>
+      <h3>2.1 Definitions</h3>
+      <table>
+        <tr><th>Authority</th><th>Definition</th></tr>
+        <tr><td><b>Ratanlal &amp; Dhirajlal</b> (as adopted in <i>Jacob Mathew</i>)</td><td>Negligence is the breach of a duty caused by <b>omitting to do something which a reasonable man would do</b>, or doing something which a prudent and reasonable man would not do. <b>Actionable negligence</b> = neglect of the use of ordinary care or skill towards a person to whom the duty of observing ordinary care and skill is owed, by which neglect the plaintiff has suffered injury.</td></tr>
+        <tr><td><b>Winfield</b></td><td>Negligence as a tort is “the <b>breach of a legal duty to take care</b> which results in damage, undesired by the defendant, to the plaintiff.”</td></tr>
+        <tr><td><b>Lord Macmillan</b> (<i>Donoghue</i>)</td><td>The law takes no cognizance of carelessness in the abstract; carelessness becomes <b>negligence</b> only where there is a duty to take care and failure in that duty has caused damage.</td></tr>
+        <tr><td><b>Sir Frederick Pollock</b></td><td>Negligence is a <b>specific tort</b> — the failure to take reasonable care to avoid injuring another, where a duty of care exists.</td></tr>
+      </table>
+      <p><b>Essential legal nature:</b> Negligence is <b>not</b> mere carelessness or inadvertence in the moral sense. It is <b>conduct</b> — an act or omission — that breaches a <b>legal duty of care</b> owed to another, and that breach causes <b>legal damage</b>. There is no liability for carelessness <span class="accent">in the air</span> (Greer LJ, <i>Haynes v. Harwood</i>: “Negligence in the air will not do”).</p>
+    </section>
+
+    <!-- INGREDIENTS -->
+    <section id="ingredients">
+      <div class="sec-head"><div class="sec-num">3</div><h2>Essential Ingredients of Negligence</h2></div>
+      <p class="sec-sub">Syllabus (c) — duty to take care, breach of duty, consequent damage.</p>
+      <p>In an action for negligence the plaintiff must prove the following <b>three essentials</b>:</p>
+      <ol>
+        <li><b>Existence of a legal duty to take care</b>, owed by the defendant to the plaintiff.</li>
+        <li><b>Breach of that duty</b> — failure to attain the standard of care prescribed by law.</li>
+        <li><b>Damage</b>, both causally connected with the breach and recognised by law, suffered by the plaintiff.</li>
+      </ol>
+      <blockquote class="quote">“The essential components of negligence are three: ‘duty’, ‘breach’ and ‘resulting damage’ … (1) the existence of a duty to take care, which is owed by the defendant to the complainant; (2) the failure to attain that standard of care, prescribed by the law, thereby committing a breach of such duty; and (3) damage, which is both causally connected with such breach and recognised by the law, has been suffered by the complainant.” — <i>Jacob Mathew</i>, adopting Charlesworth &amp; Percy</blockquote>
+      <div class="fig">
+        <svg viewBox="0 0 780 200" width="780" role="img" aria-label="Three ingredients of negligence">
+          <defs><marker id="an" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="40" width="230" height="100" rx="12" fill="#14224a"/>
+          <text x="125" y="75" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">1. DUTY of care</text>
+          <text x="125" y="100" fill="#dbe3f5" text-anchor="middle" font-size="11.5">a legal duty owed by</text>
+          <text x="125" y="118" fill="#dbe3f5" text-anchor="middle" font-size="11.5">defendant to plaintiff</text>
+          <line x1="240" y1="90" x2="285" y2="90" stroke="#14224a" stroke-width="2.5" marker-end="url(#an)"/>
+          <rect x="290" y="40" width="230" height="100" rx="12" fill="#1f3675"/>
+          <text x="405" y="75" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">2. BREACH of duty</text>
+          <text x="405" y="100" fill="#dbe3f5" text-anchor="middle" font-size="11.5">failure to reach the standard</text>
+          <text x="405" y="118" fill="#dbe3f5" text-anchor="middle" font-size="11.5">of the reasonable man</text>
+          <line x1="520" y1="90" x2="565" y2="90" stroke="#14224a" stroke-width="2.5" marker-end="url(#an)"/>
+          <rect x="570" y="40" width="200" height="100" rx="12" fill="#c8912b"/>
+          <text x="670" y="75" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">3. DAMAGE</text>
+          <text x="670" y="100" fill="#fff" text-anchor="middle" font-size="11.5">caused by the breach</text>
+          <text x="670" y="118" fill="#fff" text-anchor="middle" font-size="11.5">&amp; not too remote</text>
+          <text x="390" y="175" fill="#12406b" text-anchor="middle" font-size="12.5" font-style="italic">If all three are proved → the defendant is liable in negligence</text>
+        </svg>
+        <div class="cap">The classic three-step chain of negligence liability.</div>
+      </div>
+    </section>
+
+    <!-- DUTY -->
+    <section id="duty">
+      <div class="sec-head"><div class="sec-num">4</div><h2>The Duty of Care — the Neighbour Principle</h2></div>
+      <p class="sec-sub">Syllabus (c) — the first and most crucial ingredient.</p>
+      <p>A duty of care means a <b>legal duty</b> (not a mere moral, religious or social duty) to take care. The plaintiff must establish that the defendant owed him a specific legal duty of care, of which he made a breach. The modern foundation of this duty is the <b>neighbour principle</b> laid down by <b>Lord Atkin</b> in <i>Donoghue v. Stevenson</i>:</p>
+      <blockquote class="quote">“You must take reasonable care to avoid acts or omissions which you can reasonably foresee would be likely to injure your neighbour. Who, then, in law is my neighbour? The answer seems to be — <b>persons who are so closely and directly affected by my act that I ought reasonably to have them in contemplation as being so affected</b> when I am directing my mind to the acts or omissions which are called in question.” — <b>Lord Atkin</b></blockquote>
+      <p>Key features of the duty of care:</p>
+      <ul>
+        <li>It is a duty to <b>avoid foreseeable harm</b> to a person in a relationship of <b>proximity</b> (“nearness”), which is not confined to physical proximity but extends to such close and direct relations that the defendant would know his careless act directly affects the other.</li>
+        <li>For a duty to arise, the harm must be <b>reasonably foreseeable</b> — the defendant need only take precautions against what a reasonable person could foresee.</li>
+        <li>It is <b>not enough</b> that the defendant owed a duty of care generally; the duty must be <b>owed to the plaintiff himself</b>, or to a class of which the plaintiff is a member (Greer LJ in <i>Haynes</i>: negligence must be the neglect of some duty owed to the person who claims).</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 760 220" width="760" role="img" aria-label="Neighbour principle diagram">
+          <circle cx="380" cy="95" r="60" fill="#14224a"/>
+          <text x="380" y="90" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DEFENDANT</text>
+          <text x="380" y="110" fill="#dbe3f5" text-anchor="middle" font-size="11">"my act"</text>
+          <circle cx="150" cy="95" r="52" fill="#0f8a8a"/>
+          <text x="150" y="92" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">NEIGHBOUR</text>
+          <text x="150" y="112" fill="#d8f2f2" text-anchor="middle" font-size="10.5">closely &amp; directly</text>
+          <circle cx="610" cy="95" r="52" fill="#0f8a8a"/>
+          <text x="610" y="92" fill="#fff" text-anchor="middle" font-size="12" font-weight="700">NEIGHBOUR</text>
+          <text x="610" y="112" fill="#d8f2f2" text-anchor="middle" font-size="10.5">affected by the act</text>
+          <text x="380" y="185" fill="#12406b" text-anchor="middle" font-size="12.5" font-style="italic">Duty = to avoid acts/omissions which you can reasonably foresee</text>
+          <text x="380" y="205" fill="#12406b" text-anchor="middle" font-size="12.5" font-style="italic">would be likely to injure your neighbour</text>
+        </svg>
+        <div class="cap">Lord Atkin's neighbour principle.</div>
+      </div>
+    </section>
+
+    <!-- BREACH -->
+    <section id="breach">
+      <div class="sec-head"><div class="sec-num">5</div><h2>Breach of Duty &amp; the Standard of Care</h2></div>
+      <p class="sec-sub">Syllabus (c) — the second ingredient.</p>
+      <p><b>Breach</b> is the failure to reach the standard of care prescribed by law. Negligence is not mere inadvertence; it is conduct falling short of the standard of the <span class="accent">reasonable man</span> (an ordinary, prudent person). If the defendant acted like a reasonably prudent man, there is no negligence.</p>
+      <p>To determine the standard of care required, the law takes two factors into account:</p>
+      <ol>
+        <li><b>The importance of the object to be attained.</b> The law does not require the greatest possible care, but the care of a reasonable man in the circumstances. It permits the taking of some risks so that socially useful activities may proceed. A certain speed may not be negligent for a fire-brigade vehicle, though the same speed would be negligent for an ordinary car.</li>
+        <li><b>The magnitude of the risk.</b> The degree of care varies directly with the risk involved. A driver must take greater care when it is drizzling; a person carrying a loaded gun is expected to take greater precautions than one carrying a stick.</li>
+      </ol>
+      <p><b>Reasonable foreseeability:</b> The defendant is not required to guard against a risk that is <b>so remote</b> that a reasonable man would ignore it. In <i>Bolton v. Stone</i>, the likelihood of injury was so slight that the cricket club was held not negligent.</p>
+      <table>
+        <tr><th>Factor</th><th>Principle</th><th>Illustration</th></tr>
+        <tr><td>Object to be attained</td><td>Care required is that of a reasonable man; some risk taken in public interest</td><td>Fire brigade vs ordinary car (speed); <i>Latimer v. AEC</i> (not liable for an unpreventable &amp; unforeseeable danger)</td></tr>
+        <tr><td>Magnitude of risk</td><td>Degree of care varies directly with the risk</td><td>Drizzling: greater care; loaded gun vs stick</td></tr>
+        <tr><td>Foreseeability</td><td>No duty against a risk too remote to anticipate</td><td><i>Bolton v. Stone</i> (cricket ball); <i>Rajkot MC v. Manjulben</i> (sudden fall of tree)</td></tr>
+        <tr><td>Special skill</td><td>Higher standard where the defendant professes special skill</td><td>Medical/surgical negligence — see §6, <i>Bolam</i></td></tr>
+      </table>
+    </section>
+
+    <!-- DAMAGE -->
+    <section id="damage">
+      <div class="sec-head"><div class="sec-num">6</div><h2>Consequent Damage — the Third Ingredient</h2></div>
+      <p class="sec-sub">Syllabus (c).</p>
+      <p>The defendant’s breach of duty must <b>cause damage</b> to the plaintiff. Negligence is <b>not actionable per se</b> (unlike trespass) — <b>damage is a necessary ingredient</b> of this tort. The plaintiff must show:</p>
+      <ul>
+        <li>The damage was <b>caused by</b> the breach (causation — the “but for” test);</li>
+        <li>It is <span class="accent">not too remote</span> a consequence (i.e., it is of a kind that was reasonably foreseeable).</li>
+      </ul>
+      <p>The damage may be to the plaintiff’s <b>person or property</b>; in the case of negligence, purely economic loss is generally not recoverable unless it flows from physical damage or is otherwise recognised by law. Damage must be actually suffered — no damage, no cause of action.</p>
+      <div class="tipbox"><b>Contrast:</b> Some torts (trespass, defamation, wrongs actionable <i>per se</i>) do not require proof of damage. Negligence is <b>not</b> such a tort — it always requires consequent damage.</div>
+    </section>
+
+    <!-- RES IPSA -->
+    <section id="resipsa">
+      <div class="sec-head"><div class="sec-num">7</div><h2>Proof of Negligence — Res ipsa loquitur</h2></div>
+      <p class="sec-sub">Syllabus (d) — “the thing speaks for itself.”</p>
+      <p>As a general rule it is for the plaintiff to prove that the defendant was negligent; the initial burden of making out a <b>prima facie case</b> of negligence lies heavily on the plaintiff. But there are cases where the plaintiff need not prove negligence — the <b>inference of negligence is drawn from the facts</b> themselves.</p>
+      <blockquote class="quote">“An exception to the general rule that the burden of proof of the alleged negligence is in the first instance on the plaintiff occurs wherever the facts already established are such that the proper and natural inference immediately arising from them is that the injury complained of was caused by the defendant’s negligence, or where the event charged as negligence ‘tells its own story’ … To these cases the maxim <i>res ipsa loquitur</i> applies. Where the doctrine applies, a presumption of fault is raised against the defendant, which, if he is to succeed in his defence, must be overcome by contrary evidence; the burden on the defendant being to show how the act complained of could reasonably happen without negligence on his part.” — Halsbury’s Laws of England (quoted in <i>MCD v. Subhagwanti</i>)</blockquote>
+      <h3>7.1 When the maxim applies</h3>
+      <p>For <i>res ipsa loquitur</i> to apply, <b>two conditions</b> must be present:</p>
+      <ol>
+        <li>The thing causing the damage was at the material time <b>exclusively under the control/management of the defendant or his servants</b>; and</li>
+        <li>The happening is such as <b>does not occur in the ordinary course of things without negligence</b> on the defendant’s part.</li>
+      </ol>
+      <p>It is then sufficient for the plaintiff to prove <b>the accident and nothing more</b>; the burden of proof shifts to the defendant to disprove negligence.</p>
+      <h3>7.2 Nature &amp; effect of the maxim</h3>
+      <ul>
+        <li>It is <b>not a rule of law</b> — it is a <b>rule of evidence</b> benefiting the plaintiff by not requiring him to prove negligence.</li>
+        <li>It <b>only shifts the burden of proof</b>; instead of the plaintiff proving negligence, the defendant must disprove it.</li>
+        <li>The presumption is <b>rebuttable</b>. To rebut it the defendant must prove that the apparent negligence was due to factors <b>beyond his control</b> — merely showing some event (heavy rain, flood) occurred is <b>not enough</b>; he must also show necessary preventive measures were taken.</li>
+        <li>The maxim does <b>not apply</b> when <b>different inferences</b> are possible — it applies only when the <b>only</b> inference from the facts is that the accident could not have happened but for the defendant’s negligence.</li>
+      </ul>
+      <div class="fig">
+        <svg viewBox="0 0 780 220" width="780" role="img" aria-label="Res ipsa loquitur flowchart">
+          <rect x="10" y="30" width="240" height="90" rx="12" fill="#c8912b"/>
+          <text x="130" y="60" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">Accident occurs</text>
+          <text x="130" y="82" fill="#fff" text-anchor="middle" font-size="11">(in defendant's control;</text>
+          <text x="130" y="100" fill="#fff" text-anchor="middle" font-size="11">doesn't happen w/o negligence)</text>
+          <line x1="250" y1="75" x2="310" y2="75" stroke="#14224a" stroke-width="2.5"/>
+          <rect x="315" y="30" width="200" height="90" rx="12" fill="#1f3675"/>
+          <text x="415" y="60" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">Thing "speaks"</text>
+          <text x="415" y="82" fill="#fff" text-anchor="middle" font-size="11">→ presumption of</text>
+          <text x="415" y="100" fill="#fff" text-anchor="middle" font-size="11">negligence shifted to D</text>
+          <line x1="515" y1="45" x2="580" y2="45" stroke="#2e7d4f" stroke-width="2.5"/>
+          <rect x="585" y="20" width="180" height="50" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="675" y="50" fill="#2e7d4f" text-anchor="middle" font-size="12" font-weight="700">D rebuts → not liable</text>
+          <line x1="515" y1="105" x2="580" y2="105" stroke="#b13a3a" stroke-width="2.5"/>
+          <rect x="585" y="90" width="180" height="50" rx="10" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="675" y="120" fill="#b13a3a" text-anchor="middle" font-size="12" font-weight="700">D fails to rebut → liable</text>
+          <text x="390" y="185" fill="#12406b" text-anchor="middle" font-size="12.5" font-style="italic">The maxim is a rule of EVIDENCE, not of law — it only shifts the onus of proof.</text>
+        </svg>
+        <div class="cap">The operation of res ipsa loquitur.</div>
+      </div>
+      <h3>7.3 Illustrative cases where the maxim was applied</h3>
+      <table>
+        <tr><th>Case</th><th>Application</th></tr>
+        <tr><td><b>MCD v. Subhagwanti</b> (1966)</td><td>Fall of an 80-year-old Clock Tower — tells its own story; burden shifted to MCD.</td></tr>
+        <tr><td><b>Byrne v. Boadle</b> (1863)</td><td>A barrel fell from a warehouse window onto a passer-by — prima facie negligence.</td></tr>
+        <tr><td><b>Gangaram v. Kamla Bai</b></td><td>Burst of an old, unroadworthy tyre at high speed — res ipsa applied.</td></tr>
+        <tr><td><b>Bihar SRTC v. Smt. Manju Bhushan</b></td><td>Bus dashing into a cycle-rickshaw, throwing the deceased 10 ft — rash &amp; negligent driving.</td></tr>
+        <tr><td><b>MPSRTC v. Sudhakar</b></td><td>Bus going off a clean, visible road and hitting trees — res ipsa applied.</td></tr>
+        <tr><td><b>Manindra Nath Mukherjee</b></td><td>Banner fell from cinema sky-sign — res ipsa raised presumption of negligence, not rebutted.</td></tr>
+      </table>
+    </section>
+
+    <!-- MANUFACTURER -->
+    <section id="manufacturer">
+      <div class="sec-head"><div class="sec-num">8</div><h2>Manufacturer’s Negligence</h2></div>
+      <p class="sec-sub">Syllabus (e) — the duty of a manufacturer to the ultimate consumer.</p>
+      <p>This is the subject-matter of <i>Donoghue v. Stevenson</i> (Case 16). A <b>manufacturer</b> who puts up an article of food or drink in a form intended to reach the consumer in the condition in which it left him, with <b>no reasonable possibility of intermediate examination</b>, owes a duty to the ultimate consumer to take reasonable care that the article is free from defect likely to cause injury to health.</p>
+      <blockquote class="quote">“A manufacturer of products, which he sells in such a form as to show that he intends them to reach the ultimate consumer in the form in which they left him, with no reasonable possibility of intermediate examination, and with the knowledge that the absence of reasonable care in the preparation or putting up of the products will result in an injury to the consumer’s life or property, owes a duty to the consumer to take that reasonable care.” — <b>Lord Atkin</b>, <i>Donoghue v. Stevenson</i></blockquote>
+      <ul>
+        <li>The duty arises <b>even though there is no contract / privity</b> between the manufacturer and the ultimate consumer — for an action in tort, a contractual relationship is not required.</li>
+        <li>The duty extends not only to the immediate purchaser but to <b>all persons whom the manufacturer intends or contemplates will consume the product</b> (and, in cases of articles of common household use, to members of the family, servants and guests).</li>
+        <li><b>Quality of the product:</b> In <i>Grant v. Australian Knitting Mills</i>, the same principle was applied to goods (woollen underwear) which reached the consumer in the same state — a latent defect made the manufacturer liable.</li>
+        <li><b>Exception:</b> Responsibility <b>ceases when control ceases</b> — where an intermediate person has the means and opportunity of examining the product before re-issuing it, or where the product is exposed to vicissitudes after leaving the manufacturer’s hands, the manufacturer may not be liable.</li>
+      </ul>
+      <div class="tipbox"><b>Manufacturer’s duty is not absolute — it is a duty of reasonable care.</b> The manufacturer is not an insurer of the product; he is liable only where there was <b>negligence</b> in manufacture, and the defect was present when the article left his hands.</div>
+    </section>
+
+    <!-- MEDICAL NEGLIGENCE -->
+    <section id="medical">
+      <div class="sec-head"><div class="sec-num">9</div><h2>Medical Negligence</h2></div>
+      <p class="sec-sub">Syllabus (f) — professional negligence.</p>
+      <p>Medical (or <b>professional</b>) negligence arises where a doctor or other medical professional fails to exercise the standard of care expected of a reasonably competent professional in that branch. A professional is held to the standard of the <span class="accent">ordinary skilled man exercising and professing to have that special skill</span>; it is <b>not</b> the standard of the most highly skilled professional.</p>
+      <blockquote class="quote">“A professional may be held liable for negligence on one of the two findings: either he was <b>not possessed of the requisite skill which he professed to have possessed</b>, or, he did <b>not exercise, with reasonable competence in the given case, the skill which he did possess</b>. The standard … would be that of an <b>ordinary competent person exercising ordinary skill</b> in that profession.” — <i>Jacob Mathew</i></blockquote>
+      <h3>9.1 The Bolam test</h3>
+      <blockquote class="quote">“He is not guilty of negligence if he has acted in accordance with a practice accepted as proper by a responsible body of medical men skilled in that particular art … There may be more than one accepted practice; conformity with any of which would absolve a doctor from a charge of negligence.” — <b>McNair J</b>, <i>Bolam v. Friern Hospital Management Committee</i> (1957)</blockquote>
+      <p><b>Three main duties of a doctor</b> (derived from the case law): a duty of care in (i) deciding whether to undertake the case; (ii) deciding what treatment to give; and (iii) administering the treatment.</p>
+      <h3>9.2 What is NOT negligence</h3>
+      <ul>
+        <li>A <b>simple lack of care, an error of judgment, or an accident</b> is not proof of negligence.</li>
+        <li>So long as a doctor follows a practice <b>acceptable to the medical profession of that day</b>, he cannot be held negligent merely because a <b>better alternative</b> was available, or because a more skilled doctor would not have chosen that procedure.</li>
+        <li>The standard of care is judged by the <b>knowledge available at the time of the incident</b>, not at the date of trial. If the equipment was <b>not generally available</b> at that time, the charge of negligence will fail.</li>
+        <li>A failure to take <b>special or extraordinary</b> precautions cannot be the standard; the test is whether <b>ordinary precautions</b>, which common experience has found sufficient, were taken.</li>
+      </ul>
+      <h3>9.3 Negligence vs error of judgment</h3>
+      <p>The law carefully distinguishes a mere <b>error of judgment</b> (not negligent) from <b>professional negligence</b> (actionable). <i>R. v. Bateman</i> and later authorities draw the line at whether the professional acted with the care of a reasonably competent member of the profession. A doctor is not liable merely because his diagnosis or choice of treatment was wrong, if that choice was one a competent body of professional opinion would have accepted.</p>
+      <div class="fig">
+        <svg viewBox="0 0 780 220" width="780" role="img" aria-label="Medical negligence flowchart">
+          <rect x="10" y="25" width="240" height="170" rx="12" fill="#14224a"/>
+          <text x="130" y="52" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DOCTOR'S</text>
+          <text x="130" y="70" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DUTIES</text>
+          <text x="130" y="96" fill="#dbe3f5" text-anchor="middle" font-size="11">1. decide whether to</text>
+          <text x="130" y="114" fill="#dbe3f5" text-anchor="middle" font-size="11">   undertake the case</text>
+          <text x="130" y="136" fill="#dbe3f5" text-anchor="middle" font-size="11">2. decide what treatment</text>
+          <text x="130" y="154" fill="#dbe3f5" text-anchor="middle" font-size="11">3. administer treatment</text>
+          <rect x="280" y="25" width="230" height="170" rx="12" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="395" y="52" fill="#0f8a8a" text-anchor="middle" font-size="13" font-weight="700">BOLAM TEST</text>
+          <text x="395" y="78" fill="#125b5b" text-anchor="middle" font-size="11">Not negligent if he acted in</text>
+          <text x="395" y="96" fill="#125b5b" text-anchor="middle" font-size="11">accordance with a practice</text>
+          <text x="395" y="114" fill="#125b5b" text-anchor="middle" font-size="11">accepted as proper by a</text>
+          <text x="395" y="132" fill="#125b5b" text-anchor="middle" font-size="11">responsible body of medical</text>
+          <text x="395" y="150" fill="#125b5b" text-anchor="middle" font-size="11">men (may be &gt;1 accepted</text>
+          <text x="395" y="168" fill="#125b5b" text-anchor="middle" font-size="11">practice)</text>
+          <rect x="540" y="25" width="230" height="170" rx="12" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="655" y="52" fill="#b13a3a" text-anchor="middle" font-size="13" font-weight="700">WHEN LIABLE</text>
+          <text x="655" y="78" fill="#7c2727" text-anchor="middle" font-size="11">lacked the skill he</text>
+          <text x="655" y="96" fill="#7c2727" text-anchor="middle" font-size="11">professed, OR failed to</text>
+          <text x="655" y="114" fill="#7c2727" text-anchor="middle" font-size="11">exercise it reasonably.</text>
+          <text x="655" y="140" fill="#7c2727" text-anchor="middle" font-size="11">Standard = ordinary</text>
+          <text x="655" y="158" fill="#7c2727" text-anchor="middle" font-size="11">competent person in that</text>
+          <text x="655" y="176" fill="#7c2727" text-anchor="middle" font-size="11">branch of the profession</text>
+        </svg>
+        <div class="cap">Medical negligence: the doctor's duties, the Bolam test, and the standard for liability.</div>
+      </div>
+    </section>
+
+    <!-- BOLAM -->
+    <section id="bolam">
+      <div class="sec-head"><div class="sec-num">10</div><h2>The Bolam Test &amp; its Indian Reception</h2></div>
+      <p class="sec-sub">Syllabus (f) — the governing test for professional/medical negligence.</p>
+      <p>The <b>Bolam test</b> (from <i>Bolam v. Friern Hospital Management Committee</i>, 1957) is the classical statement of the standard of care owed by a medical professional. In <i>Jacob Mathew v. State of Punjab</i>, the Supreme Court of India <b>expressly held that the Bolam test holds good in its applicability in India</b>.</p>
+      <blockquote class="quote">“(4) The test for determining medical negligence as laid down in Bolam case <b>holds good in its applicability in India</b>.” — <i>Jacob Mathew</i></blockquote>
+      <h3>How the Bolam test is applied</h3>
+      <ol>
+        <li>Identify the <b>practice</b> followed by the doctor.</li>
+        <li>Ask whether that practice is <b>accepted as proper</b> by a <b>responsible body of medical men</b> skilled in that particular art.</li>
+        <li>If yes, the doctor is <b>not negligent</b> — even if there is a different (perhaps better) body of medical opinion.</li>
+      </ol>
+      <p>The test is <b>objective</b>, judged by the standards of the profession at the time of the incident, and it protects the doctor from liability for choosing between alternative accepted courses of treatment. It is designed to prevent the court from substituting its own (lay) view of what medical practice should be for the view of responsible medical opinion.</p>
+      <div class="hint"><b>Criticism &amp; narrowing:</b> The Bolam test has been criticised as giving too much deference to the medical profession and as protecting negligent practices. Later English decisions (e.g., <i>Bolitho v. City &amp; Hackney HA</i>) require that the professional opinion relied on be <b>logical / reasonable</b>, and in India the <b>Bolam test</b>, while adopted, is read with the requirement that the doctor’s conduct must be such that <b>no medical professional of ordinary prudence</b> would have acted that way before liability attaches.</div>
+    </section>
+
+    <!-- CRIMINAL -->
+    <section id="criminal">
+      <div class="sec-head"><div class="sec-num">11</div><h2>Civil Negligence vs Criminal Negligence</h2></div>
+      <p class="sec-sub">A key distinction (central to <i>Jacob Mathew</i>).</p>
+      <p>Negligence is used both to fasten <b>civil</b> liability (damages) and, at times, <b>criminal</b> liability (e.g., under s. 304-A IPC for causing death by a rash or negligent act). The two are <b>not the same</b>.</p>
+      <table>
+        <tr><th>Basis</th><th>Civil negligence (tort)</th><th>Criminal negligence</th></tr>
+        <tr><td>Determinative factor</td><td>The <b>amount of damages</b> incurred determines the extent of liability</td><td>The <b>amount &amp; degree of negligence</b> determines liability</td></tr>
+        <tr><td>Degree of negligence</td><td>Simple lack of care (a failure to take due care) suffices</td><td>Negligence must be <b>gross</b> — of a very high degree; mens rea must be shown</td></tr>
+        <tr><td>Mens rea</td><td>Not required</td><td>The element of <b>mens rea</b> cannot be excluded</td></tr>
+        <tr><td>Standard for a doctor</td><td>Ordinary competence (Bolam)</td><td>The accused must have done/failed to do something <b>no medical professional of ordinary prudence would have</b>; the hazard taken must be such that injury was <b>most likely imminent</b></td></tr>
+        <tr><td>Effect of <i>res ipsa</i></td><td>Operates as a rule of evidence (shifts onus)</td><td>Has, at best, limited application; cannot per se fix criminal liability</td></tr>
+        <tr><td>Quotes</td><td colspan="2">“Simple lack of care such as will constitute civil liability is not enough.” — Lord Atkin, <i>Andrews v. DPP</i></td></tr>
+      </table>
+      <div class="warnbox"><b>On s. 304-A IPC:</b> The word “gross” is not used in the section, but in <i>Jacob Mathew</i> the Court held that “rash or negligent act” must be read as <b>qualified by the word “grossly.”</b> For a doctor to be prosecuted, it must be shown he did something <b>no prudent medical professional would have done</b>, and that the hazard was of a kind such that injury was most likely imminent. <b>Res ipsa loquitur</b> has a limited application in criminal trials.</div>
+    </section>
+
+    <!-- THE 6 CASES -->
+    <section id="cases">
+      <div class="sec-head"><div class="sec-num">§</div><h2>The 6 Prescribed Case Laws — Full Analysis</h2></div>
+      <p class="sec-sub">Facts · Issues · Arguments of both sides · Decision · Principle evolved. Quotations are from the judgments.</p>
+
+      <!-- C16 -->
+      <div class="case" id="c16">
+        <div class="case-head">
+          <h4>16. Donoghue (or M'Alister) v. Stevenson</h4>
+          <span class="cit">[1932] AC 562 (HL) · (1932) All ER Rep 1</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Mrs. <b>Donoghue</b> averred that a <b>friend purchased a bottle of ginger-beer</b> for her in Minchella’s café in Paisley. The friend took the metal cap off the bottle (which was made of <b>dark opaque glass</b>) and poured some contents into a tumbler. Having no reason to suspect it was anything other than pure ginger-beer, she drank some. When her friend refilled her glass, <b>there floated out the decomposed remains of a snail</b>. She suffered <b>shock and severe gastro-enteritis</b> from the nauseating sight and from the impurities already consumed. The ginger-beer was manufactured by the <b>defender</b> (Stevenson) to be sold to the public, was bottled and labelled with his name, and sealed with a metal cap. She claimed it was the defender’s duty to provide a system preventing snails entering his bottles and an efficient system of inspecting the bottles, and that his failure in both caused the accident. There was <b>no privity of contract</b> between her and the manufacturer (her friend, not she, had bought the bottle).</p>
+          </div>
+          <div class="field"><span class="lbl i">Issue</span>
+            <p>Do the averments, if true, disclose a <b>cause of action</b>? Specifically — does the manufacturer of an article of drink sold to a distributor in circumstances which prevent the ultimate purchaser/consumer from discovering any defect <b>by inspection</b>, owe a <b>legal duty</b> to the ultimate consumer to take reasonable care that the article is free from defect likely to cause injury to health?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Defender (manufacturer):</b> No duty was owed to the pursuer because (i) there was <b>no contract</b> between them (privity of contract); and (ii) the manufacturer owed a duty only to his <b>immediate buyer</b>, not to a remote consumer.</p>
+            <p><b>Pursuer (consumer):</b> The manufacturer intended the ginger-beer to reach the ultimate consumer in the form in which it left him; there was <b>no reasonable possibility of intermediate inspection</b> (the bottle was dark and sealed). Therefore the manufacturer owed a duty of care to the consumer, and his negligence (allowing a snail/poison into the bottle) caused her injury.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>House of Lords</b> (by a bare majority, Lord Atkin and Lord Macmillan among the majority) <b>allowed the appeal</b> and held that the averments disclosed a cause of action.</p>
+            <p class="quote">“The rule that you are to love your neighbour becomes in law <b>you must not injure your neighbour</b>; and the lawyer’s question, ‘Who is my neighbour?’ receives a restricted reply. You must take reasonable care to avoid acts or omissions which you can reasonably foresee would be likely to injure your neighbour. Who, then, in law is my neighbour? The answer seems to be — <b>persons who are so closely and directly affected by my act that I ought reasonably to have them in contemplation as being so affected</b> when I am directing my mind to the acts or omissions which are called in question.” — Lord Atkin</p>
+            <p class="quote">“A manufacturer of products, which he sells in such a form as to show that he intends them to reach the ultimate consumer in the form in which they left him with <b>no reasonable possibility of intermediate examination</b>, and with the knowledge that the absence of reasonable care in the preparation or putting up of the products will result in an injury to the consumer’s life or property, owes a duty to the consumer to take that reasonable care.” — Lord Atkin</p>
+            <p class="quote">“The law takes no cognizance of carelessness in the abstract. It concerns itself with carelessness only where there is a <b>duty to take care</b> and where failure in that duty has caused damage. … The categories of negligence are <b>never closed</b>.” — Lord Macmillan</p>
+            <p>Lord Macmillan also noted that <b>res ipsa loquitur</b> had no application here — negligence, in this case, must be both averred and proved; and that responsibility <b>ceases when control ceases</b>, but here the manufacturer’s control remained effective until the sealed container was opened by the consumer.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> The <b>neighbour principle</b> — a person owes a duty of care to those so closely and directly affected by his act that he ought reasonably to have them in contemplation. This duty exists <b>independently of contract</b> (no privity required). <span class="accent">Manufacturer’s negligence</span>: a manufacturer of an article of food/drink, intending it to reach the ultimate consumer in the same form <b>with no reasonable possibility of intermediate examination</b>, owes a duty to take reasonable care that it is free from hidden defects; breach of that duty makes him liable to the consumer. The case is the foundation of the modern tort of <b>negligence</b> and of the <b>duty of care</b> ingredient.</div>
+        </div>
+      </div>
+
+      <!-- C17 -->
+      <div class="case" id="c17">
+        <div class="case-head">
+          <h4>17. Municipal Corporation of Delhi v. Subhagwanti</h4>
+          <span class="cit">AIR 1966 SC 1750</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>Three persons died when the <b>Clock Tower</b>, situated opposite the Town Hall in the main Bazar of <b>Chandni Chowk, Delhi</b>, collapsed. The Clock Tower belonged to the appellant, formerly the <b>Municipal Committee of Delhi</b> (now MCD). The trial court held it was the duty of the Committee to take proper care of the buildings so that they should not be a source of danger to persons using the highway as of right; the Committee was liable in negligence if it did not take proper care to maintain the buildings in a safe condition, whether the defect was <b>patent or latent</b>. The trial court also rejected the plea that for latent defects it could not be held liable. The High Court held that <b>res ipsa loquitur</b> applied, and relied on the evidence of the retired Chief Engineer (Shri B.S. Puri) that the building was <b>80 years old</b>, the safe life of the top storey (given the mortar used) was only <b>40–45 years</b>, the middle storey could be saved for another 10 years, and the collapse was due to the <b>thrust of the arches on the top portion</b>; the mortar had deteriorated to powder with no cementing properties. If an expert had examined the building he might have found it likely to fall.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Did <b>res ipsa loquitur</b> apply, so as to raise a presumption of negligence against the MCD and shift the burden of proof onto it? (2) Was the MCD, as owner of a building abutting the highway, bound to maintain it in a proper state of repair, and liable <b>whether the defect was patent or latent</b>?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant (MCD):</b> The High Court was wrong to apply <i>res ipsa loquitur</i>; the fall was due to an <b>inevitable accident</b> which could not have been prevented by reasonable care; and there was nothing in the appearance of the Clock Tower which should have put it on notice of the probability of danger (i.e., the defect was <b>latent</b>).</p>
+            <p><b>Respondents (heirs):</b> The Clock Tower was exclusively under the control of the Committee; it was 80 years old and had long passed its safe life; no proper periodical inspection was carried out (only casual, perfunctory ones); the Committee therefore failed in its duty and is liable, irrespective of whether the defect was patent or latent.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Ramaswami J</b> (Supreme Court) <b>dismissed</b> the appeals, holding the MCD liable.</p>
+            <p class="quote">“The normal rule is that it is for the plaintiff to prove negligence and not for the defendant to disprove it. But there is an exception … where the circumstances surrounding the thing which causes the damage are at the material time <b>exclusively under the control or management of the defendant or his servant</b> and the happening is such as <b>does not occur in the ordinary course of things without negligence</b> on the defendant’s part.”</p>
+            <p class="quote">“The mere fact that there was fall of the Clock Tower <b>tells its own story</b> in raising an inference of negligence so as to establish a prima facie case against the appellant.”</p>
+            <p class="quote">“In view of the fact that the building had passed its normal age at which the mortar could be expected to deteriorate, it was the duty of the appellant to carry out <b>careful and periodical inspection</b> for the purpose of determining whether, in fact, deterioration had taken place and whether any precautions were necessary to strengthen the building.”</p>
+            <p class="quote">“The legal position is that there is a <b>special obligation on the owner of adjoining premises for the safety of the structures which he keeps besides the highway</b>. If these structures fall into disrepair so as to be of potential danger to the passer-by or to be a nuisance, the owner is liable to anyone using the highway who is injured by reason of the disrepair. In such a case it is <b>no defence for the owner to prove that he neither knew nor ought to have known of the danger</b>. In other words, the owner is legally responsible <b>irrespective of whether the damage is caused by a patent or a latent defect</b>.” (citing <i>Wringe v. Cohen</i> (1940); <i>Reg v. Bradford Navigation Co.</i>; Lindley LJ in <i>Rapier v. London Tramways</i>.)</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Res ipsa loquitur</b> applies where the thing causing the damage was <b>exclusively under the defendant’s control</b> and the happening is such as <b>does not occur without negligence</b> — a presumption of fault arises and the burden shifts to the defendant to disprove negligence. <b>Owner’s liability for structures adjoining a highway:</b> an owner is under a <b>special obligation</b> to keep such structures safe for persons lawfully using the highway, and is liable whether the defect is <b>patent or latent</b>; it is <b>no defence</b> that he did not know (and could not have known) of the danger. The failure to carry out <b>careful &amp; periodical inspection</b> of an old building is itself negligence.</div>
+        </div>
+      </div>
+
+      <!-- C18 -->
+      <div class="case" id="c18">
+        <div class="case-head">
+          <h4>18. P. Narasimha Rao v. Gundavarapu Jayaprakasu</h4>
+          <span class="cit">AIR 1990 AP 207</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The plaintiff, a <b>brilliant 17-year-old student</b> who had secured <b>100% in Mathematics and 93.5% in Physical Sciences</b> in the P.U.C. examination, was a Government merit scholar and had been offered a seat in B.E. in four engineering colleges. He had a minor ailment — <b>chronic nasal discharge</b> — for which his mother took him to the second defendant, Dr. P. Narasimha Rao, an E.N.T. surgeon. Dr. Narasimha Rao diagnosed <b>nasal allergy</b> and suggested a <b>tonsillectomy</b>. The plaintiff was admitted on 6-7-66 to the Government General Hospital, Guntur, and operated upon the next morning. No relation was allowed inside the operation theatre, so what happened was <b>within the exclusive knowledge of the defendants 2 and 3</b>. The third defendant, Dr. S. Shankar Rao, was the Chief Anaesthetist.</p>
+            <p>About an hour and a half after the plaintiff was taken in, he was brought out <b>unconscious</b>. He did not regain consciousness for three days and could not speak coherently for another fifteen days. He was eventually discharged on 28-8-66, able only to recognise people and utter a few words — <b>he had lost all his knowledge and learning</b>. On examination at Vellore (Dr. Mathai, neurosurgeon) and Bangalore (Dr. Ansari), he was found to have <b>cerebral damage / organic brain damage due to cerebral anoxia</b> — his I.Q. was only 60 (against a normal 100) and the damage was <b>total and irreversible</b>, caused by anoxia during the operation. The plaintiff’s father noticed that at one point the patient had suffered <b>respiratory and cardiac arrest for about 3–4 minutes</b> during general anaesthesia, leading to irreversible brain damage. The plaintiff claimed Rs. 50,000 in damages. The trial judge awarded <b>Rs. 22,000</b> (Rs. 20,000 general + Rs. 2,000 special). The surgeon and State appealed; the plaintiff cross-objected for higher damages.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was the brain damage (cerebral anoxia) caused by the <b>negligence of defendants 2 and 3</b> (the surgeon and the anaesthetist)? (2) If so, were the damages awarded insufficient? (3) Was the <b>State (defendant 1)</b> vicariously liable as the employer/owner of the hospital?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Plaintiff:</b> The defendants were reckless and negligent — the respiratory and cardiac arrest during anaesthesia led to cerebral anoxia causing irreversible brain damage. The anaesthetist removed the tube without giving fresh oxygen, delayed re-intubation, failed to record the pre-anaesthetic assessment, and failed to record blood pressure after resuscitation. The surgeon, knowing of the arrest and that the patient had almost reached the point of death, nevertheless <b>continued the operation</b> merely because the anaesthetist said the patient was fit — no prudent surgeon would have done so; the operation aggravated the damage. Tonsillectomy is a <b>minor, elective operation</b> involving no risk; the damage speaks for itself (<i>res ipsa loquitur</i>). The State is vicariously liable as owner of the hospital.</p>
+            <p><b>Defendants:</b> The mental depression and brain damage were <b>functional psychosis</b>, not caused by negligence; the pulse returned to normalcy after resuscitation, so it was proper to proceed. They denied any want of care.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>M.N. Rao J</b> (Andhra Pradesh High Court) accepted the finding that the plaintiff suffered <b>irreversible cerebral anoxia</b> caused by the improper induction of anaesthetics and the failure to take immediate steps to reduce anaesthesia and anoxia. Both the anaesthetist and the surgeon were guilty of <b>actionable negligence</b>:</p>
+            <p class="quote">“The anaesthetist … was clearly negligent in discharging his duties towards the patient … The third defendant … failed to maintain any record of either the condition of the patient or the level of anaesthesia and what anaesthetics were administered. … A duty was cast on the anaesthetist … while resuscitating the patient …”</p>
+            <p class="quote">“The second defendant … failed in his duty to conform to the standard of conduct expected of an ordinary surgeon although he is an experienced specialist. Without bothering to verify the state of the plaintiff he started and completed the operation despite the fact that tonsillectomy was an <b>elective operation</b>. Had he not proceeded with the operation there was every possibility of the plaintiff being saved.”</p>
+            <p class="quote">“The Government being the owner of the Hospital cannot escape their <b>vicarious liability</b>.” (citing <i>Gold v. Essex County Council</i> and <b>Denning LJ</b> in <i>Cassidy v. Ministry of Health</i>: “authorities who run a hospital … are in law under the self-same duty as the humblest doctor; whenever they accept a patient for treatment, they must use reasonable care and skill to cure him of his ailment.”)</p>
+            <p>On damages, the court held the trial judge was wrong to limit compensation. The plaintiff was entitled to <b>Rs. 2 lakhs</b> under <b>future pecuniary loss</b> (he would have had a brilliant engineering career) and <b>Rs. 2 lakhs</b> for <b>loss of amenities</b>; but since he had claimed only Rs. 50,000, the <b>cross-objection was allowed and a decree for Rs. 50,000 with 12% interest</b> was granted.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>Medical negligence</b> — a surgeon and anaesthetist are liable for actionable negligence where they fail to exercise the care of an ordinary competent practitioner. <b>Res ipsa loquitur</b> applies where the operation theatre and the treatment are within the <b>exclusive knowledge/control</b> of the doctors, and a minor operation leaving a patient with irreversible brain damage “speaks for itself.” The standard of care for a specialist is that of an <b>ordinary practitioner of that standard</b>; a surgeon who continues an <b>elective</b> operation despite the patient having suffered cardiac/respiratory arrest is negligent. <b>Vicarious liability of the State/hospital</b> for the negligence of its doctors is established (<i>Gold</i>, <i>Cassidy</i>). Damages cover <b>pecuniary</b> (past &amp; future loss) and <b>non-pecuniary</b> loss (pain &amp; suffering, loss of amenities).</div>
+        </div>
+      </div>
+
+      <!-- C19 -->
+      <div class="case" id="c19">
+        <div class="case-head">
+          <h4>19. Jacob Mathew v. State of Punjab</h4>
+          <span class="cit">(2005) 6 SCC 1</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>On 15-2-1995, <b>Jiwan Lal Sharma</b> was admitted as a patient in a private ward of CMC Hospital, Ludhiana. On 22-2-1995 at about 11 p.m., he felt difficulty in breathing. His son Vijay Sharma contacted the duty nurse, who called a doctor, but <b>no doctor turned up for 20–25 minutes</b>. Then <b>Dr. Jacob Mathew</b> (the appellant) and Dr. Allen Joseph came to the room. An <b>oxygen cylinder</b> was brought and connected to the patient’s mouth, but the breathing problem increased. The patient tried to get up but the staff told him to stay in bed. The oxygen cylinder was found to be <b>empty</b>; no other cylinder was available in the room. Vijay went to an adjoining room and brought another cylinder, but there was <b>no arrangement to make it functional</b>, and 5–7 minutes were wasted. By then another doctor arrived and <b>declared the patient dead</b>.</p>
+            <p>An FIR was registered under <b>s. 304-A read with s. 34 IPC</b> against the two doctors. The Magistrate framed charges; the Sessions Judge dismissed the doctors’ revision; the High Court dismissed the petition under s. 482 CrPC to quash the proceedings. Two issues arose: (i) is there a difference between civil and criminal negligence? (ii) is a different standard applicable to find a professional (doctor) guilty of negligence? The Bench referred the matter to a larger Bench, doubting <i>Dr. Suresh Gupta</i>, which had held that the doctor’s act could be described only as “lack of due care and precaution” and, while he may be liable in tort, it could not be described as “so reckless or grossly negligent as to make him criminally liable.”</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Is there a <b>difference in civil and criminal law</b> on the concept of negligence? (2) Is a <b>different standard</b> applicable for recording a finding of negligence when a <b>professional, particularly a doctor</b>, is to be held guilty of negligence? (3) Did the facts disclose <b>criminal negligence</b> against the appellant?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Appellant (Dr. Mathew):</b> There was no specific allegation of any act of omission/commission against the accused; the deceased was suffering from terminal cancer and was admitted only on the persistent request of influential relatives; every conceivable effort was made; the complaint was wholly unwarranted. Also, following <i>Suresh Gupta</i>, a doctor may be liable in <b>tort</b> but not criminally for mere carelessness; and <b>gross</b> negligence is required for s. 304-A.</p>
+            <p><b>Respondents (State &amp; complainant):</b> There is no jurisprudential distinction between civil and criminal negligence; the word “gross” is not in s. 304-A and should not be read in; and a doctor should not be placed on a different pedestal in the matter of finding rashness or negligence.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>R.C. Lahoti CJ</b> (Three-Judge Bench, Supreme Court) spelt out the law on the concept of negligence. The Court <b>reaffirmed the principles in <i>Suresh Gupta</i></b> (the legal principles, though not finally deciding the facts) and laid down the governing propositions:</p>
+            <p class="quote">“(1) Negligence is the breach of a duty caused by the omission to do something which a reasonable man, guided by those considerations which ordinarily regulate the conduct of human affairs would do, or doing something which a prudent and reasonable man would not do. … The essential components of negligence are three: ‘duty’, ‘breach’ and ‘resulting damage’.”</p>
+            <p class="quote">“(2) Negligence in the context of the medical profession necessarily calls for a treatment with a difference. … A simple lack of care, an error of judgment or an accident, is <b>not proof of negligence</b> on the part of a medical professional. So long as a doctor follows a practice acceptable to the medical profession of that day, he cannot be held liable merely because a better alternative … was also available, or simply because a more skilled doctor would not have chosen to follow that practice.”</p>
+            <p class="quote">“(3) A professional may be held liable on one of two findings: either he was <b>not possessed of the requisite skill</b> which he professed, or, he did <b>not exercise with reasonable competence</b> the skill which he did possess. The standard is that of an <b>ordinary competent person exercising ordinary skill</b> in that profession.”</p>
+            <p class="quote">“(5) The jurisprudential concept of negligence differs in <b>civil and criminal law</b>. What may be negligence in civil law may not necessarily be negligence in criminal law. … For an act to amount to criminal negligence, the degree of negligence should be <b>much higher, i.e., gross or of a very high degree</b>. Negligence which is neither gross nor of a higher degree may provide a ground for action in civil law but cannot form the basis for prosecution.”</p>
+            <p class="quote">“(6) The word ‘gross’ has not been used in s. 304-A IPC, yet it is settled that negligence must be of such a high degree as to be ‘gross’. The expression ‘rash or negligent act’ as occurring in s. 304-A IPC <b>has to be read as qualified by the word ‘grossly’</b>.”</p>
+            <p class="quote">“(7) To prosecute a medical professional for negligence under criminal law it must be shown that the accused did something or failed to do something which <b>in the given facts and circumstances no medical professional in his ordinary senses and prudence would have done or failed to do</b>. The hazard taken should be of such a nature that the injury which resulted was <b>most likely imminent</b>.”</p>
+            <p class="quote">“(8) <b>Res ipsa loquitur</b> is only a rule of evidence and operates in the domain of civil law … It cannot be pressed in service for determining per se the liability for negligence within the domain of criminal law.”</p>
+            <p>The Court also laid down <b>guidelines</b>: a private complaint against a doctor should not be entertained unless the complainant produces <b>prima facie evidence</b> in the form of a <b>credible opinion of another competent doctor</b>; the investigating officer should obtain an <b>independent and competent medical opinion</b> (preferably from a government doctor) applying the <b>Bolam test</b>; and a doctor should <b>not ordinarily be arrested in a routine manner</b>.</p>
+            <p class="quote">(Case at hand) “We are satisfied that all the averments … do not make out a case of criminal rashness or negligence on the part of the accused-appellant. … It is a case of <b>non-availability of the oxygen cylinder</b>, either because of the hospital having failed to keep one available or because the cylinder was found empty. … The accused-appellant cannot be proceeded against under s. 304-A IPC on the parameters of the Bolam test.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> This is the <b>authoritative Indian statement on professional/medical negligence</b>. (i) The <b>Bolam test</b> holds good in India. (ii) Negligence must be proved by the <b>three ingredients</b> (duty, breach, damage). (iii) A doctor is <b>not liable</b> for a simple error of judgment, accident, or for following a practice accepted by a responsible body of medical opinion. (iv) The standard of care is that of an <b>ordinary competent professional</b>, not the most skilled. (v) <b>Civil and criminal negligence differ</b> — criminal negligence requires <b>gross</b> negligence (read into s. 304-A); a mere civil wrong does not found a prosecution. (vi) <b>Res ipsa loquitur</b> is a rule of evidence for civil law and has limited application in a criminal charge. (vii) There must be <b>prima facie credible medical opinion</b> before prosecuting a doctor, and doctors should not be routinely arrested — protecting them from frivolous and malicious prosecutions.</div>
+        </div>
+      </div>
+
+      <!-- C20 -->
+      <div class="case" id="c20">
+        <div class="case-head">
+          <h4>20. Malay Kumar Ganguly v. Sukumar Mukherjee</h4>
+          <span class="cit">AIR 2010 SC 1162</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p><b>Anuradha</b>, a child psychologist and graduate of Columbia University, and her husband <b>Dr. Kunal Saha</b> (a researcher on HIV/AIDS) were settled in the USA. They came to Calcutta on 1-4-1998. Anuradha developed <b>fever and skin rash</b> on 25-4-1998. On 26-4-1998, <b>Dr. Sukumar Mukherjee</b> (respondent 1) examined her and, assuring quick recovery, advised rest but prescribed no specific medicine. Two weeks later (7-5-1998) the <b>rash reappeared more aggressively</b>. Dr. Mukherjee prescribed <b>Depomedrol injection 80 mg twice daily for the next three days</b>. Despite this, her condition deteriorated rapidly. She was admitted to <b>AMRI hospital</b> on 11-5-1998 under Dr. Mukherjee, and was also seen by Dr. Baidyanath Halder (respondent 2) and Dr. Abani Roy Chowdhury (respondent 3). Her condition deteriorated further. On <b>17-5-1998</b> she was shifted to <b>Breach Candy Hospital, Mumbai</b>, where she <b>died on 28-5-1998</b>.</p>
+            <p>Dr. Kunal Saha sent a lawyer’s notice to 26 persons; a relative, <b>Malay Kumar Ganguly</b>, filed a criminal complaint under <b>s. 304-A IPC</b> against Dr. Mukherjee, Dr. Halder and Dr. Abani Roy Chowdhury before the CJM. Kunal also filed a consumer complaint (OP No. 240/1999) before the <b>National Commission</b> claiming <b>Rs. 77,76,73,500</b> for deficiency in service. He also complained to the West Bengal Medical Council. The CJM found Dr. Mukherjee and Dr. Halder <b>guilty under s. 304-A IPC</b> (3 months’ SI + Rs. 3,000 fine) and acquitted Dr. Abani Roy Chowdhury. On appeal, the <b>Calcutta High Court allowed the appeals</b> of the doctors and dismissed the complainant’s revisions. The matter came to the Supreme Court.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) Was there <b>medical negligence</b> on the part of the doctors in diagnosing/ treating Anuradha, rendering them criminally liable under s. 304-A IPC? (2) Was there a <b>deficiency in service</b> under the Consumer Protection Act, and was the hospital (AMRI)/doctors liable in compensation? (3) Whether the evidence (opinion of experts, treatment records, deviation from the treatment protocol) established negligence.</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments &amp; evidence before the Court</span>
+            <p><b>Complainant/respondent (Dr. Kunal Saha):</b> The doctors failed to follow the accepted <b>treatment protocol for TEN (toxic epidermal necrolysis)</b> and administered <b>steroids</b> (Depomedrol 80 mg twice daily), against the accepted medical view that steroids are detrimental to TEN patients; no <b>IV fluid replacement</b> (mandatory in the first 48 hours of treating TEN), no supportive/symptomatic therapy, no <b>monitoring of vital signs</b> (temperature, pulse, BP, intake–output), <b>no records</b> properly maintained, no regular skin-wound swabs/blood tests, and occlusive dressings that aggravated infection — this was gross negligence leading to her death.</p>
+            <p><b>Doctors/hospital:</b> There is a <b>cleavage of opinion</b> in the medical profession between the pro-steroid and anti-steroid groups, so no negligence can be attributed; the National Commission had held there was no negligence (a dermatologist had prescribed the same treatment; TEN is extremely rare — 1 case in 1.3 million per year — so an error of judgment in diagnosis is not negligence). The Calcutta High Court had allowed the doctors’ appeals. Dr. Kaushik Nandy (the plastic surgeon) relied on the treatment protocol of the globally accepted expert Prof. Jean Claude Roujeau.</p>
+            <p>Dr. Kunal Saha examined several experts (Drs. Anil Shinde, Udwadia, Salil Kumar Bhattacharyya), while the respondents examined none — the <b>onus of proof</b> therefore shifted to the respondents (Nizam Institute of Medical Sciences).</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>S.B. Sinha J</b> (Supreme Court) — the Court made a <b>critical distinction between civil/consumer liability and criminal negligence</b>.</p>
+            <p class="quote">“In view of our discussions made hereinbefore, we are of the opinion that for the death of Anuradha although Dr. Mukherjee, Dr. Halder, Dr. Abani Roy Chowdhury, AMRI, Dr. B. Prasad <b>were negligent</b>, the extent thereof … it cannot be said that they should be held guilty for commission of an offence under <b>Section 304-A</b> of the Indian Penal Code.”</p>
+            <p class="quote">“The jurisprudential concept of negligence differs in civil and criminal law. What may be negligence in civil law may not necessarily be negligence in criminal law. For negligence to amount to an offence the element of <b>mens rea</b> must be shown to exist. … the degree of negligence should be much high degree … To prosecute a medical professional … it must be shown that the accused did something or failed to do something which … <b>no medical professional in his ordinary senses and prudence</b> would have done or failed to do.”</p>
+            <p>On the facts the Court found <b>deficiencies</b>: vital parameters of Anuradha were not examined between 11-5-1998 and 16-5-1998; <b>IV fluid was not administered</b> (absolutely necessary in the first 48 hours of treating TEN); Dr. Halder failed to provide supportive therapy and to monitor the patient; the occlusive dressing increased infection; Dr. B. Prasad added more steroids (fast-acting Prednisolone) <b>beyond the maximum recommended dose</b>, stood “second fiddle” to the treatment and failed to apply his own mind. However, <b>Dr. Kaushik Nandy</b> was held <b>not</b> negligent — his course met the treatment protocol of Prof. Jean Claude Roujeau.</p>
+            <p class="quote">“In a case of this nature, the court must deal with the consequences the patient faced keeping in view the <b>cumulative effect</b>.”</p>
+            <p class="quote">“It is to be noted that the doctrine of <b>cumulative effect is not available in criminal law</b>. The complexities … as also the differing nature of negligence exercised by various actors, make it very difficult to distil individual extent of negligence with respect to each of the respondents. In such a scenario, finding of medical negligence under section 304-A cannot be objectively determined.”</p>
+            <p><b>Final order:</b> The <b>criminal appeals were dismissed</b> (the doctors were <b>not</b> criminally liable under s. 304-A), but the <b>civil/consumer appeal was allowed</b> to the extent that the matter was <b>remitted to the National Commission</b> (NCDRC) only for determining the <b>quantum of compensation</b>. The Court directed <b>costs of Rs. 5,00,000 and Rs. 1,00,000</b> payable by <b>AMRI and Dr. Mukherjee</b> respectively, and that any examination of foreign experts be done <b>only through video-conferencing</b> at the cost of the respondents.</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <b>The distinction between civil and criminal negligence is decisive.</b> The same medical conduct may establish <b>negligence in civil/consumer law</b> (deficiency in service — entitling compensation) and yet <b>not amount to gross negligence</b> under s. 304-A IPC. Criminal liability requires proof of a <b>very high degree</b> of negligence and an element of <b>mens rea</b>, and cannot be grounded on the <b>doctrine of cumulative effect</b> (which applies in civil/consumer cases but not in criminal law). <b>Treatment protocol must be followed:</b> a doctor/ hospital is negligent where they depart from the accepted treatment protocol (e.g., failing to administer mandatory IV fluids and supportive therapy in TEN; administering a drug beyond the maximum recommended dose; failing to monitor vital signs or maintain records). <b>Expert evidence must be adduced</b> — the onus of proof may shift to the respondent hospital/doctors; and a specialist who acts in accordance with the judgment and protocol of a responsible body of experts (as Dr. Nandy did) is <b>not</b> negligent. This case also establishes that courts may award costs against a negligent hospital/doctor even while refusing criminal conviction.</div>
+        </div>
+      </div>
+
+      <!-- C21 -->
+      <div class="case" id="c21">
+        <div class="case-head">
+          <h4>21. Khenyei v. New India Assurance Co. Ltd.</h4>
+          <span class="cit">(2015) 9 SCC 273</span>
+        </div>
+        <div class="case-body">
+          <div class="field"><span class="lbl f">Facts</span>
+            <p>The claimants were injured when a <b>bus and a trailer-truck collided</b> — an accident caused by <b>composite negligence</b> of the two drivers, found to be <b>2/3rd and 1/3rd</b> respectively. The <b>New India Assurance Co. Ltd.</b> was the insurer of the <b>bus</b>. On the basis of additional evidence, the High Court concluded that the insurance company was <b>not the insurer of the trailer-truck</b>, and therefore was not liable to satisfy the 2/3rd of the award. The question before the Supreme Court was whether it is open to a claimant to <b>recover the entire compensation from one of the joint tort-feasors</b>, particularly where the composite negligence of the two drivers had been found to be 2/3rd and 1/3rd.</p>
+          </div>
+          <div class="field"><span class="lbl i">Issues</span>
+            <p>(1) In <b>composite negligence</b> (per two or more wrongdoers causing a single, indivisible injury), can the claimant recover the <b>entire compensation from any one</b> of the joint tort-feasors? (2) What is the difference between <b>composite negligence</b> and <b>contributory negligence</b>? (3) What is the remedy of a joint tort-feasor who has paid the whole amount — can he recover <b>contribution</b> from the other?</p>
+          </div>
+          <div class="field"><span class="lbl a">Arguments</span>
+            <p><b>Insurer of the bus:</b> It was not the insurer of the trailer-truck; its liability was confined to its own insured’s share (1/3rd); it should not have to satisfy the 2/3rd attributable to the owner/insurer of the trailer-truck.</p>
+            <p><b>Claimant:</b> The two drivers were <b>joint tort-feasors</b>; their liability was <b>joint and several</b>, so the claimant was entitled to recover the whole compensation from any one of them (the “easiest target”), leaving it to that tort-feasor to claim contribution.</p>
+            <p><b>Authorities relied on:</b> Winfield &amp; Jolowicz (in <i>Performance Cars v. Abraham</i>, <i>Baker v. Willoughby</i>): where two or more breaches of duty cause a <b>single, indivisible injury</b>, the claimant is entitled to sue <b>all or any of them for the full amount</b>, and each is jointly and severally liable; the impleaded defendant may seek <b>contribution</b> from the others, but that is a matter among the defendants and does not affect the claimant. Also <i>T.O. Anthony v. Karvarnan</i> (2008) and <i>Pawan Kumar v. Harkishan Dass</i> (2014) distinguishing composite from contributory negligence; and Charlesworth &amp; Percy on joint tort-feasors.</p>
+          </div>
+          <div class="field"><span class="lbl d">Decision</span>
+            <p><b>Arun Mishra J</b> (Supreme Court) <b>allowed the appeals</b> and set aside the High Court’s judgment, holding that the claimant was entitled to recover the entire compensation from the insurer of the bus, and the insurer could recover the 2/3rd from the owner of the trailer-truck. The Court summarised the law as follows:</p>
+            <p class="quote">“22.1 In the case of <b>composite negligence</b>, plaintiff/claimant is entitled to sue both or any one of the joint tort-feasors and to recover the entire compensation as liability of joint tort-feasors is <b>joint and several</b>.”</p>
+            <p class="quote">“22.2 In the case of composite negligence, <b>apportionment of compensation between two tort-feasors vis-à-vis the plaintiff/claimant is not permissible</b>. He can recover at his option whole damages from any of them.”</p>
+            <p class="quote">“22.3 In case all the joint tort-feasors have been impleaded and evidence is sufficient, it is open to the court/tribunal to determine <b>inter se</b> extent of composite negligence of the drivers. However, determination of the extent of negligence between the joint tort-feasors is only for the purpose of their <b>inter se liability</b> so that one may recover the sum from the other after making whole of the payment to the plaintiff/claimant … one joint tort-feasor can recover the amount from the other in the <b>execution proceedings</b>.”</p>
+            <p class="quote">“22.4 It would <b>not</b> be appropriate for the court/tribunal to determine the extent of composite negligence of the drivers of two vehicles <b>in the absence of impleadment of the other joint tort-feasor</b>. In such a case, the impleaded joint tort-feasor should be left, in case he so desires, to sue the other joint tort-feasor in independent proceedings after passing of the decree or award.”</p>
+            <p class="quote">“There is a difference between <b>contributory and composite negligence</b>. In the case of contributory negligence, a person who has himself contributed to the extent cannot claim compensation … to the extent of his own negligence; whereas in the case of composite negligence, a person who has suffered has <b>not contributed to the accident</b> but the outcome is the combination of negligence of two or more other persons.”</p>
+          </div>
+          <div class="principle"><b>Principle evolved:</b> <span class="accent">Composite negligence vs contributory negligence</span>: in composite negligence the injured person has <b>not</b> contributed to the accident — it is the combination of negligence of two or more wrongdoers causing a <b>single, indivisible injury</b>; in contributory negligence the injured person has himself partly contributed, and his damages are <b>reduced</b> proportionally. <span class="accent">Joint tort-feasors</span>: their liability is <b>joint and several</b>, so the claimant may recover the <b>whole</b> amount from any one of them; <b>apportionment is not permissible vis-à-vis the claimant</b>. The determination of the shares between the joint tort-feasors is only for <b>inter se</b> contribution — one tort-feasor who has paid the whole may recover the excess from the other (in execution proceedings if both were impleaded and shares determined, otherwise by a separate suit).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PYQ -->
+    <section id="pyq">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Previous Year Questions &amp; Model Answers</h2></div>
+      <p class="sec-sub">Includes questions from the actual DU (LB-103) December 2024 paper plus the classic DU Topic-3 questions.</p>
+
+      <!-- PYQ A -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Define negligence. What are the essential ingredients of the tort of negligence? Explain with reference to case law (duty to take care, breach of duty, consequent damage).</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Definition.</b> Negligence is the breach of a legal duty to take care which results in damage undesired by the defendant to the plaintiff (Winfield); or, as per Ratanlal &amp; Dhirajlal (adopted in <i>Jacob Mathew</i>), the breach of a duty caused by omitting to do something a reasonable man would do, or doing something a prudent and reasonable man would not do. As <b>Lord Macmillan</b> said in <i>Donoghue</i>, the law takes no cognizance of carelessness in the abstract — carelessness becomes negligence only where there is a duty to take care and failure in that duty has caused damage.</p>
+          <p><b>Three essential ingredients.</b> (1) <b>Duty of care</b>; (2) <b>Breach of that duty</b>; (3) <b>Consequent damage</b> (caused by the breach, and not too remote).</p>
+          <p><b>(1) Duty of care.</b> A legal duty to take care, owed by the defendant to the plaintiff (or a class of which the plaintiff is a member). Its foundation is the <b>neighbour principle</b> of <b>Lord Atkin</b> in <i>Donoghue v. Stevenson</i>: “You must take reasonable care to avoid acts or omissions which you can reasonably foresee would be likely to injure your neighbour”; a neighbour is “persons who are so closely and directly affected by my act that I ought reasonably to have them in contemplation as being so affected.” The duty arises independently of contract (no privity required).</p>
+          <p><b>(2) Breach of duty.</b> Failure to attain the standard of care of the <b>reasonable man</b>. The standard is objective and is determined by (i) the importance of the object to be attained, and (ii) the magnitude of the risk. The defendant is not required to guard against a risk too remote to foresee (<i>Bolton v. Stone</i>), but a professional must exercise the care of an ordinarily skilled member of his profession (<i>Bolam</i>).</p>
+          <p><b>(3) Consequent damage.</b> Negligence is <b>not actionable per se</b> — damage is a necessary ingredient. The damage must be <b>caused</b> by the breach and must be <b>not too remote</b> a consequence of it.</p>
+          <p><b>Application.</b> In <i>MCD v. Subhagwanti</i> the collapse of the Clock Tower established a prima facie case (<i>res ipsa loquitur</i>), the burden shifted to the MCD, and it failed to discharge it — so it was liable. In <i>P. Narasimha Rao</i> the surgeon and anaesthetist were negligent in performing a tonsillectomy that led to irreversible brain damage — duty, breach and damage all proved. <b>Conclusion.</b> All three ingredients must co-exist; if any is missing, the action fails.</p>
+        </div>
+      </div>
+
+      <!-- PYQ B -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Explain the maxim <i>res ipsa loquitur</i>. When does it apply? What is its effect, and how may it be rebutted? Refer to <i>MCD v. Subhagwanti</i> and other cases.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Meaning.</b> <i>Res ipsa loquitur</i> = “the thing speaks for itself.” As a general rule the burden of proving negligence is on the plaintiff; but in certain cases the plaintiff need not prove negligence — the event itself raises a presumption of negligence against the defendant.</p>
+          <p><b>When it applies (two conditions).</b> (i) The thing causing the damage was at the material time <b>exclusively under the control/management of the defendant or his servant</b>; and (ii) the happening is such as <b>does not occur in the ordinary course of things without negligence</b> on the defendant’s part. (Halsbury, quoted in <i>MCD v. Subhagwanti</i>.)</p>
+          <p><b>Effect.</b> The maxim is a <b>rule of evidence, not a rule of law</b>. It benefits the plaintiff by not requiring him to prove negligence — the burden of proof is shifted to the defendant, who must <b>disprove</b> negligence. A presumption of fault is raised against the defendant.</p>
+          <p><b>Rebutting.</b> The presumption is rebuttable. The defendant may succeed by showing the apparent negligence was due to factors <b>beyond his control</b>. Merely showing that some event (heavy rain, flood, storm) occurred is <b>not enough</b> — he must also show that necessary preventive measures were taken. The maxim does <b>not</b> apply where <b>different inferences</b> are possible from the facts; it applies only when the <b>only</b> reasonable inference is negligence.</p>
+          <p><b>Application.</b> In <i>MCD v. Subhagwanti</i>, an 80-year-old Clock Tower (exclusively under the MCD’s control) collapsed in the busy Chandni Chowk bazar, killing three. The fall “tells its own story,” so a prima facie case of negligence was made out; the MCD failed to discharge the burden (no proper periodical inspection), so it was liable. Other illustrations: <i>Byrne v. Boadle</i> (barrel fell from a window), the bursting of an old unroadworthy tyre (<i>Gangaram v. Kamla Bai</i>), a bus leaving a clean road and hitting trees (<i>MPSRTC v. Sudhakar</i>), a banner falling from a cinema sky-sign (<i>Manindra Nath</i>).</p>
+          <p><b>Conclusion.</b> <i>Res ipsa loquitur</i> assists the plaintiff by shifting the onus of proof, but it is only a prima facie inference which the defendant may rebut by showing he exercised due care or that the accident had another explanation.</p>
+        </div>
+      </div>
+
+      <!-- PYQ C -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">DU 2024-style · 20 marks</span>Discuss the law relating to medical negligence. To what extent is a doctor liable for negligence? What is the difference between a mere error of judgment and negligence? (Refer to the Bolam test, <i>Jacob Mathew</i>, <i>P. Narasimha Rao</i>, <i>Malay Kumar Ganguly</i>.)</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Medical negligence</b> is the failure of a medical professional to exercise the standard of care of an ordinarily competent member of that branch of the profession. It is a form of <b>professional negligence</b>.</p>
+          <p><b>The Bolam test.</b> A doctor is <b>not</b> guilty of negligence if he acted in accordance with a practice accepted as proper by a <b>responsible body of medical men</b> skilled in that particular art; there may be more than one accepted practice, and conformity with any of them absolves the doctor. This was adopted in India in <i>Jacob Mathew v. State of Punjab</i> (2005).</p>
+          <p><b>Standard of liability (Jacob Mathew).</b> A doctor is liable if (i) he <b>lacked the skill he professed</b>, or (ii) he <b>failed to exercise, with reasonable competence, the skill he did possess</b>. The standard is that of an <b>ordinary competent person exercising ordinary skill</b>, not the most highly skilled. A doctor is <b>not</b> liable for an <b>error of judgment</b>, a <b>simple lack of care</b>, or an <b>accident</b>; nor is he liable merely because a better alternative was available or a more skilled doctor would have done differently, nor for failing to use equipment not generally available at the time. The standard is judged by the knowledge available at the time of the incident.</p>
+          <p><b>Error of judgment vs negligence.</b> The distinction is between a wrong but <b>honest choice</b> among accepted courses of treatment (an error of judgment — not negligent) and a <b>failure to exercise the care</b> of a reasonably competent practitioner (negligence). A doctor who chooses a course which a competent body of professional opinion would accept is not negligent even if the result is unfortunate; a doctor who proceeds with an operation despite knowing the patient has suffered cardiac/respiratory arrest is negligent (as in <i>P. Narasimha Rao</i>, where the surgeon continued a tonsillectomy despite the patient almost dying — this aggravated irreversible brain damage).</p>
+          <p><b>Civil vs criminal negligence.</b> The same conduct may be actionable in tort but not criminal. Criminal negligence requires a <b>much higher (gross)</b> degree of negligence — such that <b>no medical professional of ordinary prudence would have acted thus</b> and the hazard was such that injury was most likely imminent. In <i>Malay Kumar Ganguly</i>, the doctors were held <b>not</b> criminally negligent where there was no acceptable expert evidence and the patient’s family had themselves interfered with the treatment (administering unprescribed medicines, rejecting prescribed treatment) — so the doctors/hospital could not be blamed for the death.</p>
+          <p><b>Conclusion.</b> A doctor is protected so long as he acts in accordance with a practice accepted by a responsible body of medical opinion; he is liable only for a genuine departure from the standard of care of an ordinarily competent professional, and for criminal negligence only where the negligence is gross.</p>
+        </div>
+      </div>
+
+      <!-- PYQ D -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU long question · 20 marks</span>Discuss the liability of a manufacturer for negligence. Can a person who is a stranger to the contract sue the manufacturer? Explain with reference to <i>Donoghue v. Stevenson</i> and <i>Grant v. Australian Knitting Mills</i>.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>The duty.</b> A manufacturer of an article of food or drink (or of goods for personal use), who intends it to reach the ultimate consumer in the same form in which it left him, <b>with no reasonable possibility of intermediate examination</b>, owes a duty to the ultimate consumer to take reasonable care that the article is free from latent (hidden) defects likely to cause injury.</p>
+          <p><b>Privity of contract is not required.</b> The leading authority is <i>Donoghue v. Stevenson</i> (1932), where Mrs. Donoghue’s friend bought her a bottle of ginger-beer; she drank it and found the decomposed remains of a snail, and suffered gastro-enteritis. There was <b>no contract</b> between her and the manufacturer, yet the <b>House of Lords</b> held the manufacturer owed her a duty of care and she could sue <b>in tort</b>. Lord Atkin laid down the <b>neighbour principle</b> and the <b>manufacturer’s duty</b> — the ultimate consumer need not be a party to the contract. For an action in tort, a contractual relationship between the parties is <b>not necessary</b>.</p>
+          <p><b>Extension to goods.</b> In <i>Grant v. Australian Knitting Mills</i>, the principle was applied to goods (woollen underwear) containing a latent defect (irritant chemical) which reached the consumer in the same state — the manufacturer was held liable. The duty is not confined to food and drink; it extends to any article of common household use which the manufacturer knows will be consumed/used by persons other than the immediate purchaser.</p>
+          <p><b>Limits.</b> The duty is a duty of <b>reasonable care</b>, not an absolute duty; the manufacturer is not an insurer. <b>Responsibility ceases when control ceases</b> — where an intermediate person has the means and opportunity to examine the product before re-issuing it, or the product is exposed to vicissitudes after leaving the manufacturer’s hands, the manufacturer may not be liable (Lord Macmillan in <i>Donoghue</i>). And the defect must be <b>present when the article left the manufacturer’s hands</b>.</p>
+          <p><b>Conclusion.</b> A stranger to the contract (the ultimate consumer) can sue the manufacturer in tort for negligence, provided the product was intended to reach him in the same state with no reasonable opportunity for intermediate inspection. The duty rests on the <b>neighbour principle</b>, not on privity of contract.</p>
+        </div>
+      </div>
+
+      <!-- PYQ E -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU short question · 10–20 marks</span>Distinguish between "contributory negligence" and "composite negligence," and state the liability of joint tort-feasors. Refer to <i>Khenyei v. New India Assurance Co. Ltd.</i></div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Composite negligence</b> is the negligence of <b>two or more persons</b> which, by combination, causes a single, indivisible injury to the victim — the victim himself has <b>not</b> contributed to the accident.</p>
+          <p><b>Contributory negligence</b> is the negligence of the <b>injured person himself</b>, which (partly) contributed to the injury. There, the claim is <b>not defeated</b> but the damages recoverable are <b>reduced in proportion</b> to the injured person’s negligence.</p>
+          <p><b>Liability of joint tort-feasors (<i>Khenyei</i>).</b> Where two or more wrongdoers cause a single, indivisible injury (composite negligence), their liability is <b>joint and several</b>. The claimant is entitled to sue <b>all or any one</b> of them for the <b>entire compensation</b>; <b>apportionment vis-à-vis the claimant is not permissible</b>. The determination of the extent of each tort-feasor’s negligence is only for their <b>inter se</b> (between themselves) liability — so that one who has paid the whole may recover <b>contribution</b> from the other. If both were impleaded and the shares determined, recovery may be in <b>execution proceedings</b>; if the other joint tort-feasor was not impleaded, the paying tort-feasor may sue separately.</p>
+          <p>In <i>Khenyei</i>, the bus and trailer-truck drivers were negligently 1/3rd and 2/3rd respectively; the claimant was entitled to recover the <b>whole</b> compensation from the insurer of the bus, which could then recover the 2/3rd from the owner of the trailer-truck.</p>
+          <p><b>Conclusion.</b> The distinction is whether the victim himself contributed (contributory — damages reduced) or whether two or more others caused the harm (composite — joint &amp; several, the claimant may recover the whole from any).</p>
+        </div>
+      </div>
+
+      <!-- PYQ F -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>What is the standard of care expected of a professional (a doctor)? Is an error of judgment negligence? Explain the "Bolam" test and the difference between civil and criminal negligence.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Standard of care of a professional.</b> A professional is judged by the standard of the <b>ordinary skilled man exercising and professing to have that special skill</b> — not the most highly skilled, and not the layperson. In <i>Jacob Mathew</i>, the Supreme Court held a professional liable only if (i) he <b>lacked the skill he professed</b>, or (ii) he <b>failed to exercise, with reasonable competence, the skill he did possess</b>. The professional need not possess the highest level of expertise; he must be an ordinarily competent member of his profession.</p>
+          <p><b>The Bolam test.</b> From <i>Bolam v. Friern Hospital Management Committee</i>: a doctor is not guilty of negligence if he acted in accordance with a practice <b>accepted as proper by a responsible body of medical men</b> skilled in that art; there may be more than one accepted practice. This test <b>holds good in India</b> (<i>Jacob Mathew</i>). It means a doctor is protected even where a different (arguably better) course was available, so long as his course was one a responsible body of medical opinion would accept.</p>
+          <p><b>Error of judgment vs negligence.</b> A mere <b>error of judgment</b> is <b>not</b> negligence. A doctor who, acting honestly and in accordance with accepted practice, makes a choice that turns out badly is not negligent; a patient’s death or injury is not, by itself, proof of negligence. Negligence is a <b>departure from the standard of care</b> of a reasonably competent professional in the same circumstances. In <i>P. Narasimha Rao</i>, the surgeon’s decision to continue an elective operation despite the patient having suffered cardiac/respiratory arrest was <b>negligence</b>, because no prudent surgeon would have proceeded.</p>
+          <p><b>Civil vs criminal negligence.</b> Civil negligence (tort) requires only a failure to take due care causing damage. <b>Criminal negligence</b> (e.g., s. 304-A IPC) requires a much higher, <b>gross</b> degree of negligence — such that no professional of ordinary prudence would have acted as the accused did, and the hazard taken was such that injury was <b>most likely imminent</b>. The same conduct may be actionable in tort but <b>not</b> be criminal. <b>Res ipsa loquitur</b> is a rule of evidence for civil law and has little application in a criminal trial.</p>
+          <p><b>Conclusion.</b> The standard of care is that of an ordinarily competent professional; an honest error of judgment is not negligence; and criminal negligence requires a much higher degree of fault than civil negligence.</p>
+        </div>
+      </div>
+
+      <!-- PYQ G -->
+      <div class="pyq">
+        <div class="pyq-q"><span class="qm">Classic DU question · 20 marks</span>Explain the theories of negligence. Is negligence a state of mind or a conduct? Discuss.</div>
+        <div class="ans">
+          <div class="lbl">Model Answer</div>
+          <p><b>Two senses.</b> Negligence has two meanings: (i) as the <b>mode of committing certain torts</b> — an element of the mental state (e.g., negligently committing trespass); and (ii) as <b>an independent tort</b> — a <b>conduct</b> that creates an unreasonable risk of causing damage.</p>
+          <p><b>Subjective theory.</b> Negligence is a <b>state of mind</b> — a blameworthy mental condition; liability depends on the defendant’s <b>actual</b> foresight/intention. This is rejected because it would exempt the careless but well-meaning and make proof difficult.</p>
+          <p><b>Objective theory (modern).</b> Negligence is <b>conduct</b> falling short of the standard of the <b>reasonable man</b>. The test is objective — what a reasonable person would <b>ought</b> to have foreseen and done. This is the accepted approach in English and Indian law. Ratanlal &amp; Dhirajlal define negligence in terms of a reasonable man’s conduct; <i>Jacob Mathew</i> adopts it.</p>
+          <p><b>Conclusion.</b> While negligence can describe a mental element, as a <b>tort</b> it is best understood as <b>conduct</b> — a failure to take the care a reasonable man would take, judged objectively. It is not mere carelessness in the abstract, but a breach of a legal duty to take care which results in damage to the person to whom the duty is owed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <div class="sec-head"><div class="sec-num">✎</div><h2>Key Maxims &amp; Terms — Quick Glossary</h2></div>
+      <ul class="glossary">
+        <li><span class="lat">Negligence</span> — the breach of a legal duty to take care which results in damage, undesired by the defendant, to the plaintiff.</li>
+        <li><span class="lat">Duty of care</span> — a legal duty (not a mere moral/social duty) to take reasonable care to avoid foreseeable injury to a person in a relationship of proximity.</li>
+        <li><span class="lat">Neighbour principle</span> — Lord Atkin: persons so closely and directly affected by my act that I ought reasonably to have them in contemplation as being so affected.</li>
+        <li><span class="lat">Breach of duty</span> — failure to attain the reasonable-man standard of care prescribed by law.</li>
+        <li><span class="lat">Res ipsa loquitur</span> — “the thing speaks for itself”; a rule of evidence raising a presumption of negligence and shifting the burden of proof.</li>
+        <li><span class="lat">Bolam test</span> — a doctor is not negligent if he acts in accordance with a practice accepted as proper by a responsible body of medical men.</li>
+        <li><span class="lat">Error of judgment</span> — a wrong but honest choice among accepted courses; <b>not</b> negligence.</li>
+        <li><span class="lat">Criminal negligence</span> — negligence of a gross/high degree, such that no medical professional of ordinary prudence would have acted as the accused did; requires mens rea.</li>
+        <li><span class="lat">Composite negligence</span> — negligence of two or more persons causing a single, indivisible injury to a victim who did not contribute; joint &amp; several liability.</li>
+        <li><span class="lat">Contributory negligence</span> — the injured person’s own negligence contributing to the injury; damages are reduced proportionally.</li>
+        <li><span class="lat">Joint tort-feasors</span> — wrongdoers jointly &amp; severally liable for the same tort (agency, vicarious liability, or common purpose); the claimant may sue any of them for the whole.</li>
+        <li><span class="lat">Privity of contract</span> — the relationship between contracting parties; <b>not required</b> for an action in tort against a manufacturer.</li>
+        <li><span class="lat">Standard of care</span> — the objective reasonable-man standard, gauged by the importance of the object to be attained and the magnitude of the risk.</li>
+      </ul>
+    </section>
+
+    <!-- REVISION -->
+    <section id="revise">
+      <div class="sec-head"><div class="sec-num">◆</div><h2>Quick Revision Flowchart — The Whole Topic at a Glance</h2></div>
+      <div class="fig">
+        <svg viewBox="0 0 900 430" width="900" role="img" aria-label="Full topic 3 revision flowchart">
+          <defs><marker id="ar4" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#14224a"/></marker></defs>
+          <rect x="10" y="20" width="880" height="50" rx="12" fill="#14224a"/>
+          <text x="450" y="45" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">NEGLIGENCE — definition &amp; </text>
+          <line x1="450" y1="70" x2="450" y2="88" stroke="#14224a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="150" y="92" width="600" height="70" rx="12" fill="#c8912b"/>
+          <text x="450" y="118" fill="#fff" text-anchor="middle" font-size="14" font-weight="700">3 ESSENTIAL INGREDIENTS</text>
+          <text x="450" y="140" fill="#fff" text-anchor="middle" font-size="12">DUTY of care → BREACH → CONSEQUENT DAMAGE</text>
+          <line x1="180" y1="162" x2="180" y2="185" stroke="#0f8a8a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <line x1="450" y1="162" x2="450" y2="185" stroke="#c8912b" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <line x1="720" y1="162" x2="720" y2="185" stroke="#b13a3a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="25" y="188" width="300" height="150" rx="12" fill="#0f8a8a"/>
+          <text x="175" y="214" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DUTY (neighbour principle)</text>
+          <text x="175" y="238" fill="#d8f2f2" text-anchor="middle" font-size="11">Lord Atkin, Donoghue v Stevenson</text>
+          <text x="175" y="262" fill="#d8f2f2" text-anchor="middle" font-size="11">foreseeability + proximity</text>
+          <text x="175" y="286" fill="#d8f2f2" text-anchor="middle" font-size="11">→ manufacturer's duty; consumer</text>
+          <text x="175" y="306" fill="#d8f2f2" text-anchor="middle" font-size="11">   can sue w/o privity</text>
+          <rect x="340" y="188" width="300" height="150" rx="12" fill="#c8912b"/>
+          <text x="490" y="214" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">BREACH (standard of care)</text>
+          <text x="490" y="238" fill="#fff" text-anchor="middle" font-size="11">objective reasonable-man test</text>
+          <text x="490" y="262" fill="#fff" text-anchor="middle" font-size="11">magnitude of risk; foreseeability</text>
+          <text x="490" y="286" fill="#fff" text-anchor="middle" font-size="11">PROOF: res ipsa loquitur</text>
+          <text x="490" y="306" fill="#fff" text-anchor="middle" font-size="11">  shifts burden to defendant</text>
+          <rect x="655" y="188" width="235" height="150" rx="12" fill="#b13a3a"/>
+          <text x="772" y="214" fill="#fff" text-anchor="middle" font-size="13" font-weight="700">DAMAGE</text>
+          <text x="772" y="238" fill="#fbe5e5" text-anchor="middle" font-size="11">caused by breach</text>
+          <text x="772" y="258" fill="#fbe5e5" text-anchor="middle" font-size="11">not too remote</text>
+          <text x="772" y="286" fill="#fbe5e5" text-anchor="middle" font-size="11">COMposite vs CONTRIButory</text>
+          <text x="772" y="306" fill="#fbe5e5" text-anchor="middle" font-size="11">joint &amp; several (Khenyei)</text>
+          <line x1="175" y1="338" x2="175" y2="360" stroke="#0f8a8a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <line x1="490" y1="338" x2="490" y2="360" stroke="#c8912b" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <line x1="772" y1="338" x2="772" y2="360" stroke="#b13a3a" stroke-width="2.5" marker-end="url(#ar4)"/>
+          <rect x="25" y="363" width="270" height="55" rx="10" fill="#e3f3ea" stroke="#2e7d4f"/>
+          <text x="160" y="385" fill="#2e7d4f" text-anchor="middle" font-size="11" font-weight="700">CASE RECALL</text>
+          <text x="160" y="403" fill="#1c5a3a" text-anchor="middle" font-size="10">Donoghue · MCD v Subhagwanti · Narasimha Rao</text>
+          <rect x="340" y="363" width="300" height="55" rx="10" fill="#e2f3f3" stroke="#0f8a8a"/>
+          <text x="490" y="385" fill="#0f8a8a" text-anchor="middle" font-size="11" font-weight="700">MEDICAL NEGLIGENCE</text>
+          <text x="490" y="403" fill="#125b5b" text-anchor="middle" font-size="10">Bolam test · Jacob Mathew · Malay Kumar Ganguly</text>
+          <rect x="655" y="363" width="235" height="55" rx="10" fill="#fbeeee" stroke="#b13a3a"/>
+          <text x="772" y="385" fill="#b13a3a" text-anchor="middle" font-size="11" font-weight="700">KNOW</text>
+          <text x="772" y="403" fill="#7c2727" text-anchor="middle" font-size="10">civil vs criminal negligence (gross)</text>
+        </svg>
+        <div class="cap">One-page revision map of Topic 3.</div>
+      </div>
+
+      <div class="hint"><b>Quick case-type recall:</b><br>
+        · <span class="pill t">Duty of care / manufacturer — neighbour principle</span> — Donoghue v. Stevenson.<br>
+        · <span class="pill t">Res ipsa loquitur — burden shifts</span> — MCD v. Subhagwanti; Byrne v. Boadle; Gangaram; MPSRTC v. Sudhakar.<br>
+        · <span class="pill n">Medical negligence — Bolam / error of judgment</span> — P. Narasimha Rao; Jacob Mathew; Malay Kumar Ganguly.<br>
+        · <span class="pill o">Contributory vs composite negligence — joint tort-feasors</span> — Khenyei v. New India Assurance.
+      </div>
+    </section>
+
+    <footer style="border-radius:16px; text-align:left">
+      <p style="margin:0 0 8px"><b>Prepared for DU LL.B. — Law of Torts (LB-103), Topic 3 (Negligence — Liability at Common Law &amp; Statutory Law).</b></p>
+      <p style="margin:0">Built primarily on the <b>DU prescribed case material</b> (case reports for cases 16–21 reproduced in the official casebook), supplemented by the accompanying student notes. Theory of negligence (ingredients, standard of care, res ipsa loquitur, medical negligence, Bolam test) follows Ratanlal &amp; Dhirajlal, Winfield &amp; Jolowicz, Charlesworth &amp; Percy and Salmond as reflected in the DU material. For revision only — refer to the full report for exact citations. Note: the syllabus lists <i>Khenyei</i> as (2005) 9 SCC 273; the report reproduced in the casebook gives (2015) 9 SCC 273.</p>
+    </footer>
+  </main>
+</div>
+
+<a class="scrolltop" href="#pageTop" title="Back to top">↑</a>
+</body>
+</html>

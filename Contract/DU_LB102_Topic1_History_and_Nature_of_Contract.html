@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 1 — General Introduction: History &amp; Nature of Contractual Obligations | DU LL.B. LB-102</title>
+<style>
+  :root{
+    --ink:#1b2430; --sub:#4a5a6a; --brand:#0f4c81; --brand2:#1273b8;
+    --accent:#c8102e; --gold:#b8860b; --bg:#f4f6fb;
+    --card:#ffffff; --line:#dbe3ee; --soft:#eef3fa;
+    --green:#0b7a4b; --red:#c0392b; --amber:#b7791f; --purple:#5b4a9e;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px;
+  }
+  /* ---------- LAYOUT ---------- */
+  .wrap{max-width:1180px; margin:0 auto; padding:0 22px 80px;}
+
+  /* hero */
+  .hero{
+    background:linear-gradient(135deg,#0b2e4f 0%,#0f4c81 55%,#1273b8 100%);
+    color:#fff; padding:44px 22px 40px; border-bottom:6px solid var(--accent);
+    position:relative; overflow:hidden;
+  }
+  .hero:before{content:""; position:absolute; right:-80px; top:-80px; width:340px; height:340px; border-radius:50%; background:rgba(255,255,255,.06)}
+  .hero:after{content:""; position:absolute; right:60px; bottom:-120px; width:260px; height:260px; border-radius:50%; background:rgba(255,255,255,.05)}
+  .hero .wrap{position:relative; z-index:2}
+  .kicker{display:inline-block; letter-spacing:2px; font-size:12px; text-transform:uppercase; background:rgba(255,255,255,.15); padding:5px 12px; border-radius:20px; margin-bottom:14px}
+  .hero h1{margin:.1em 0 .2em; font-size:clamp(26px,4.4vw,46px); line-height:1.12; font-weight:800}
+  .hero p.lead{font-size:clamp(15px,2.3vw,19px); opacity:.95; max-width:900px; margin:.3em 0 1.1em}
+  .chips{display:flex; flex-wrap:wrap; gap:9px; margin-top:14px}
+  .chip{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); padding:6px 13px; border-radius:22px; font-size:13px}
+  .chip b{color:#ffe08a}
+  .du{color:#ffe08a; font-weight:700}
+
+  /* source box under hero */
+  .sourceband{background:var(--accent); color:#fff; padding:10px 22px; font-size:13.5px}
+  .sourceband .wrap{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+
+  /* ---------- NAV (sticky) ---------- */
+  nav.toc{
+    position:sticky; top:0; z-index:50; background:#0b2e4f; box-shadow:0 3px 12px rgba(0,0,0,.2);
+  }
+  nav.toc .wrap{display:flex; gap:2px; overflow-x:auto; padding:0 22px}
+  nav.toc a{color:#cfe0f0; text-decoration:none; font-size:13px; padding:13px 11px; white-space:nowrap; border-bottom:3px solid transparent}
+  nav.toc a:hover{color:#fff; background:rgba(255,255,255,.06)}
+  .progress{height:4px; background:var(--accent); width:0%; position:sticky; top:40px; z-index:60}
+
+  /* ---------- SECTIONS ---------- */
+  section{background:var(--card); margin:26px 0; border-radius:16px; padding:30px 30px 34px; box-shadow:0 2px 14px rgba(15,76,129,.07); border:1px solid var(--line)}
+  .secnum{display:inline-flex; align-items:center; justify-content:center; width:46px;height:46px; border-radius:12px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#fff; font-weight:800; font-size:20px; margin-right:12px; vertical-align:middle}
+  h2{font-size:clamp(21px,3vw,28px); margin:0 0 6px; color:#0b2e4f; display:flex; align-items:center}
+  h2 .secnum{flex:0 0 auto}
+  .hsub{color:var(--sub); font-size:14px; margin:0 0 20px; padding-left:58px}
+  h3{color:#0f4c81; margin:30px 0 10px; font-size:19px; border-left:5px solid var(--accent); padding-left:12px}
+  h4{color:#123; margin:20px 0 8px; font-size:16px}
+  p{margin:10px 0}
+  ul,ol{margin:8px 0 12px; padding-left:24px}
+  li{margin:5px 0}
+  a{color:var(--brand2)}
+  strong{color:#0b2e4f}
+
+  /* quote / statutory */
+  .statute{background:var(--soft); border-left:6px solid var(--brand2); padding:14px 18px; border-radius:0 10px 10px 0; margin:14px 0; font-style:italic}
+  .statute .ref{display:block; font-style:normal; font-weight:700; color:var(--brand2); margin-bottom:4px; letter-spacing:.3px}
+  .casequote{background:#fbf3e6; border-left:6px solid var(--gold); padding:12px 18px; border-radius:0 10px 10px 0; margin:12px 0; font-style:italic; color:#5b4a24}
+
+  /* callouts */
+  .note{background:#fff8e6; border:1px solid #f0ddab; border-left:6px solid var(--amber); padding:12px 16px; border-radius:8px; margin:14px 0}
+  .tip{background:#eefaf2; border:1px solid #bfe8d3; border-left:6px solid var(--green); padding:12px 16px; border-radius:8px; margin:14px 0}
+  .warn{background:#fdecec; border:1px solid #f0c4c4; border-left:6px solid var(--red); padding:12px 16px; border-radius:8px; margin:14px 0}
+  .exam{background:#eef0fd; border:1px solid #c9cfee; border-left:6px solid var(--purple); padding:12px 16px; border-radius:8px; margin:14px 0}
+  .note b,.tip b,.warn b,.exam b{display:inline}
+
+  /* tables */
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; background:#fff}
+  th{background:#0f4c81; color:#fff; text-align:left; padding:9px 11px; font-size:13.5px}
+  td{border:1px solid var(--line); padding:9px 11px; vertical-align:top}
+  tr:nth-child(even) td{background:#f8fafd}
+  .twocol th:first-child{width:24%}
+
+  /* cards */
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin:16px 0}
+  .card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:15px 17px; box-shadow:0 1px 6px rgba(15,76,129,.06); border-top:4px solid var(--brand2)}
+  .card h4{margin:0 0 6px; color:#0f4c81; font-size:15.5px}
+  .card .bignum{font-size:26px; font-weight:800; color:var(--accent)}
+  .card p{font-size:14px; margin:6px 0 0; color:var(--sub)}
+  .tone1{border-top-color:#1273b8}.tone2{border-top-color:#c8102e}.tone3{border-top-color:#b8860b}.tone4{border-top-color:#5b4a9e}.tone5{border-top-color:#0b7a4b}
+
+  /* SVG containers */
+  .fig{background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; margin:16px 0; overflow-x:auto; text-align:center}
+  .fig .caption{font-size:13px; color:var(--sub); margin-top:8px; text-align:center}
+  svg text{font-family:inherit}
+
+  /* details/accordion */
+  details{border:1px solid var(--line); border-radius:10px; margin:10px 0; background:#fff}
+  summary{cursor:pointer; padding:13px 16px; font-weight:700; color:#0b2e4f; list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary:before{content:"\25B6"; color:var(--accent); margin-right:9px; font-size:11px; display:inline-block}
+  details[open] summary:before{transform:rotate(90deg)}
+  details[open] summary{border-bottom:1px solid var(--line)}
+  details .body{padding:6px 16px 14px}
+  .pyqbox{border:1px solid #c8102e55; border-left:8px solid var(--accent); border-radius:12px; margin:16px 0; background:#fffdf6}
+  .pyqbox .q{padding:14px 18px; background:#fff5f5}
+  .pyqbox .q .tag{display:inline-block; background:var(--accent); color:#fff; font-size:11px; padding:2px 9px; border-radius:12px; margin-right:8px; letter-spacing:.5px; vertical-align:middle}
+  .pyqbox .q h4{display:inline; font-size:16px}
+  .pyqbox .model{padding:4px 20px 16px}
+
+  /* case digest */
+  .case{border:1px solid var(--line); border-radius:14px; margin:18px 0; overflow:hidden; background:#fff; box-shadow:0 2px 10px rgba(15,76,129,.05)}
+  .case .head{background:linear-gradient(120deg,#0f4c81,#1273b8); color:#fff; padding:12px 18px}
+  .case .head .t{font-weight:800; font-size:17px}
+  .case .head .r{font-size:13px; opacity:.9}
+  .case .cols{display:grid; grid-template-columns:1fr 1fr; gap:0}
+  .case .cell{padding:14px 18px; border-top:1px solid var(--line)}
+  .case .cell h5{margin:2px 0 6px; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--brand2)}
+  .case .full{padding:14px 18px; border-top:1px solid var(--line)}
+  .case .full h5{margin:2px 0 6px; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:var(--brand2)}
+  @media(max-width:760px){.case .cols{grid-template-columns:1fr}}
+
+  .tag{display:inline-block; font-size:11.5px; padding:2px 9px; border-radius:12px; font-weight:700; margin:2px 3px 2px 0}
+  .t-v{background:#e5f6ec;color:#0b7a4b}.t-b{background:#eef3fa;color:#0f4c81}.t-va{background:#fff2d9;color:#b7791f}
+  .t-ill{background:#fde4e4;color:#c0392b}.t-u{background:#f0e6ff;color:#5b4a9e}
+  .pill{display:inline-block;background:#0f4c81;color:#fff;font-size:11px;padding:3px 10px;border-radius:14px;margin:2px;letter-spacing:.4px}
+
+  .footer{margin-top:34px; border-top:1px dashed var(--line); padding-top:16px; color:var(--sub); font-size:13px}
+  .legend{font-size:13px;color:var(--sub);text-align:center;margin-top:6px}
+  mark{background:#ffe9a8; padding:0 3px; border-radius:3px}
+  hr{border:none; border-top:1px solid var(--line); margin:24px 0}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Law of Contract — LB-CC-102 · First Term · DU Faculty of Law</span>
+    <h1>General Introduction:<br>History &amp; Nature of Contractual Obligations</h1>
+    <p class="lead">Comprehensive, examination-ready study notes for <b>Topic 1</b> of the Delhi University (DU) LL.B. I-Term compulsory paper <b>“Principles of Contract (General Principles)”</b> — built on the DU case material, the Indian Contract Act 1872 (Sections 1–10, 2(a)–(j)), and the course’s prescribed texts.</p>
+    <div class="chips">
+      <span class="chip">Exam basis: <b>DU case material (Jan 2023)</b></span>
+      <span class="chip">Syllabus: <b>Topic 1 · 2 classes</b></span>
+      <span class="chip">Foundations: <b>ICA 1872 §§ 1–10, 2(a)–(j)</b></span>
+      <span class="chip">Everywhere: <b>diagrams · PYQs · model answers</b></span>
+    </div>
+  </div>
+</div>
+<div class="sourceband"><div class="wrap">📚 <b>Primary source:</b> <i>Principles of Contract (General Principles) — Cases Selected &amp; Edited, LL.B. I-Term, Faculty of Law, University of Delhi (January 2023)</i>; <i>The Indian Contract Act, 1872 (Act 9 of 1872)</i>. This notes-file covers the <b>Topic 1</b> excerpt shown in your image.</div></div>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#bp">Exam Blueprint</a>
+    <a href="#nature">1 · Nature of Obligation</a>
+    <a href="#ladder">2 · From Promise to Contract</a>
+    <a href="#essentials">3 · Essentials (S.10)</a>
+    <a href="#history">4 · History</a>
+    <a href="#timeline">4B · Timeline</a>
+    <a href="#classification">5 · Classification</a>
+    <a href="#sources">6 · Sources &amp; Scheme</a>
+    <a href="#definitions">7 · S.2 Definitions</a>
+    <a href="#cases">8 · Foundational Cases</a>
+    <a href="#pyq">9 · PYQs + Model Answers</a>
+    <a href="#revision">10 · Revision Pack</a>
+  </div>
+</nav>
+<div class="progress" id="prog"></div>
+
+<div class="wrap">
+
+  <!-- ============ EXAM BLUEPRINT ============ -->
+  <section id="bp">
+    <h2><span class="secnum">0</span> Exam Blueprint — what the DU paper expects</h2>
+    <p class="hsub">Straight from the rubric in the DU casebook — orient your answer-writing around this.</p>
+    <div class="grid">
+      <div class="card tone1"><h4>Paper weight</h4><p>Each theory paper (non-CLE) carries <b>100 marks</b>; 3-hour descriptive end-semester exam.</p></div>
+      <div class="card tone2"><h4>Pattern</h4><p>8 questions (English &amp; Hindi). Answer <b>any 5</b>. Each question = <b>20 marks</b>.</p></div>
+      <div class="card tone3"><h4>Pass mark</h4><p>Minimum <b>45 / 100</b> to pass the paper.</p></div>
+      <div class="card tone4"><h4>Language</h4><p>Answer in English <i>or</i> Hindi — same medium throughout the paper.</p></div>
+    </div>
+    <div class="tip"><b>How to score full marks on a 20-mark theory question:</b> Open with the statutory definition + section number; state the concept clearly; support every rule with <b>one well-developed case</b> (facts → issue → holding → principle) drawn from the DU case material; include a short diagram if time permits; conclude crisply. On descriptive DU papers a structured, self-contained answer — <i>definition, proposition, explanation, illustration/case, distinction (if any), conclusion</i> — earns the most.</div>
+    <div class="note"><b>What “based on DU case material” means for Topic 1:</b> In the DU casebook, <b>Topic 1 (General Introduction – History &amp; Nature of Contractual Obligations) is a conceptual unit with no separate compiled case-list</b> — the case compilations run from <b>Topic 2 onwards</b>. So this unit is examined conceptually (history, definition, essentials, obligation, classification), while its <i>illustrative</i> case-law (e.g., <i>Balfour v. Balfour</i> on intention to create legal relations) is drawn from the broader DU material and is treated in §8 below in full case-digest form.</div>
+  </section>
+
+  <!-- ============ NATURE ============ -->
+  <section id="nature">
+    <h2><span class="secnum">1</span> The Nature of Contractual Obligation</h2>
+    <p class="hsub">What law of contract is about — promises, obligations and why the law enforces them.</p>
+
+    <h3>1.1 What is the “law of contract”?</h3>
+    <p>As the DU course-material frames it, the law of contracts is <b>one of the basic laws every law student studies</b> — it touches equally the lives of ordinary persons and the activities of business. In substance it is the branch of law that deals with <b>promises</b>, their <b>formation</b>, <b>performance</b> and <b>enforceability</b>. The DU course captures this in a single sentence — it is the study of:</p>
+    <div class="statute"><span class="ref">DU Course-objective formulation</span>“This branch of law deals with law relating to <b>promises</b>, their <b>formation</b>, <b>performance</b> and <b>enforceability</b>. … this paper will include a study of general principles of contracts spelt out in <b>Sections 1–75 of the Indian Contract Act, 1872</b>.”</div>
+    <p>The field creates and regulates <b>voluntarily-created civil obligations</b> — a hallmark emphasized in the DU “Course Outcomes” (“the concept of voluntarily created civil obligations”). Because most commercial relations rest on contract, a sound grasp of its underlying principles is indispensable for every lawyer.</p>
+
+    <h3>1.2 “Obligation” — the idea at the core</h3>
+    <p>A <b>legal obligation</b> is a tie of law binding one person (the <i>obligor / promisor</i>) to do or forbear from doing something for another (the <i>obligee / promisee</i>). Every obligation is a <b>jural relationship of right and duty</b>: the promisee holds a <b>right</b>; correspondingly the promisor is under a <b>duty</b>. Salmond taught that a <b>contract</b> is precisely <i>“an agreement creating and defining obligations between the parties.”</i> A contractual obligation is thus a <b>right in personam</b> (available against a specific person) — unlike a right in rem which avails against the world.</p>
+    <div class="fig">
+      <svg width="860" viewBox="0 0 860 210" role="img" aria-label="The obligation (right-duty) relationship diagram">
+        <defs>
+          <marker id="arw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#1273b8"/></marker>
+        </defs>
+        <rect x="40" y="30" width="300" height="70" rx="12" fill="#0f4c81"/>
+        <text x="190" y="60" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">PROMISOR (Debtor / Obligor)</text>
+        <text x="190" y="80" fill="#cfe0f0" text-anchor="middle" font-size="12">must perform the promise</text>
+        <rect x="520" y="30" width="300" height="70" rx="12" fill="#1273b8"/>
+        <text x="670" y="60" fill="#fff" text-anchor="middle" font-size="15" font-weight="700">PROMISEE (Creditor / Obligee)</text>
+        <text x="670" y="80" fill="#e6eef6" text-anchor="middle" font-size="12">may enforce the promise</text>
+        <line x1="345" y1="65" x2="515" y2="65" stroke="#1273b8" stroke-width="3" marker-end="url(#arw)"/>
+        <text x="430" y="50" text-anchor="middle" font-size="13" fill="#0b7a4b" font-weight="700">DUTY →</text>
+        <text x="430" y="96" text-anchor="middle" font-size="13" fill="#b7791f" font-weight="700">← RIGHT</text>
+        <rect x="210" y="135" width="440" height="48" rx="10" fill="#eef3fa" stroke="#1273b8" stroke-dasharray="5 4"/>
+        <text x="430" y="156" text-anchor="middle" font-size="13" fill="#0b2e4f" font-weight="700">= LEGAL OBLIGATION (a right–duty jural relationship)</text>
+        <text x="430" y="174" text-anchor="middle" font-size="12" fill="#4a5a6a">Enforceable through the courts when promise is broken (Sections 73–75 ICA)</text>
+      </svg>
+      <div class="caption">Fig 1.1 — Every contract creates a legal obligation: correlative right (promisee) and duty (promisor).</div>
+    </div>
+
+    <h3>1.3 Kinds of obligation — where contract sits</h3>
+    <p>Not all obligations arise from agreement. Classically, obligations are divided by their <b>source</b> into four kinds. The law of contract governs only <b>one</b> of them — but the boundaries matter for a precise answer.</p>
+    <div class="grid">
+      <div class="card tone1"><h4>① Contractual (voluntary)</h4><p>Created by the <b>agreement</b> of the parties. The promisor is bound because he freely chose to bind himself. — ICA 1872 governs.</p></div>
+      <div class="card tone2"><h4>② Quasi-contractual / Restitution</h4><p>Imposed by law to prevent unjust enrichment — “obligations resembling those created by contract.” ICA <b>§§ 68–72</b> (Ch. V). Not based on agreement.</p></div>
+      <div class="card tone3"><h4>③ Tortious (delictual)</h4><p>Imposed by law for breach of a <b>duty fixed by law</b> (e.g., negligence, defamation) — not by promise.</p></div>
+      <div class="card tone4"><h4>④ Criminal / status obligations</h4><p>Imposed on citizens generally by the State (offences, and duties arising from status such as parent–child).</p></div>
+    </div>
+    <table class="twocol">
+      <tr><th>Basis</th><th>Contractual obligation</th><th>Tortious obligation</th></tr>
+      <tr><td><b>Source</b></td><td>Created by the <b>agreement/consent</b> of the parties.</td><td>Imposed by <b>law</b> independently of any agreement.</td></tr>
+      <tr><td><b>Duties</b></td><td>Fixed by the parties themselves (self-imposed).</td><td>Fixed by law — a duty to all (e.g., to take reasonable care).</td></tr>
+      <tr><td><b>Breach remedy</b></td><td>Generally damages for <b>loss of the bargain</b> (S.73).</td><td>Damages to compensate for injury caused by the wrong (not loss of expectations).</td></tr>
+      <tr><td><b>Illegality/fault</b></td><td>Strict — a promise is kept or compensation paid even without fault.</td><td>Generally requires <b>fault / negligence / wrongful act</b>.</td></tr>
+      <tr><td><b>Example</b></td><td>A promises to deliver 50 maunds of saltpetre; on default he compensates B (S.73 illus. (a)).</td><td>A negligently runs over B; A compensates B though no promise existed.</td></tr>
+    </table>
+
+    <h3>1.4 Why does the law enforce promises? (theories)</h3>
+    <p>Several theories explain <i>why</i> a bare promise should be binding. No single one is exhaustive; the Indian statute is a blend. Be able to name them:</p>
+    <ol>
+      <li><b>Will / Autonomy theory:</b> A contract is enforced because it expresses the <b>free will</b> of the parties; the law gives effect to self-imposed obligation. (Links to ICA emphasis on <b>free consent</b>, S.14.)</li>
+      <li><b>Promise / “Promise principle” theory:</b> A promise binds because making a serious promise to another raises an expectation the other relies on; the promisor has voluntarily undertaken the duty.</li>
+      <li><b>Bargain / consideration theory:</b> Only promises given in exchange for something (<b>consideration</b>) are enforced; gratuitous promises are not generally enforced (S.25: agreement without consideration is void).</li>
+      <li><b>Reliance / injurious-reliance (equity) theory:</b> Promises are enforced where the other party has <i>reasonably relied</i> to his detriment (doctrine of <b>promissory estoppel</b> — an equitable supplement).</li>
+      <li><b>Economic / utilitarian theory:</b> Enforcing promises facilitates exchange, credit and planning, serving social and commercial welfare — which is why contract law is called the foundation of modern commerce.</li>
+    </ol>
+    <div class="note"><b>Exam tip:</b> Indian law gives primacy to the <b>bargain</b> theory (consideration, Ss. 2(d), 25) but qualifies the will theory through the doctrine of <b>free consent</b> (Ss. 13–22) and public policy (S.23). Always mention that “all agreements are not contracts” because <b>enforceability by law</b> is the deciding test (S.2(h), S.10).</div>
+  </section>
+
+  <!-- ============ LADDER ============ -->
+  <section id="ladder">
+    <h2><span class="secnum">2</span> From Proposal → Promise → Agreement → Contract</h2>
+    <p class="hsub">The conceptual “ladder” that links every definitional clause in Section 2.</p>
+    <p>The entire architecture of Section 2 is a <b>staircase of concepts</b>. Learn this sequence — it answers the classic DU question “<i>All contracts are agreements, but all agreements are not contracts — comment</i>.”</p>
+
+    <div class="fig">
+      <svg width="900" viewBox="0 0 900 540" role="img" aria-label="Ladder from proposal to contract">
+        <defs>
+          <marker id="arw2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 z" fill="#c8102e"/></marker>
+        </defs>
+        <!-- step 1 -->
+        <rect x="150" y="40" width="600" height="62" rx="12" fill="#eef3fa" stroke="#1273b8" stroke-width="2"/>
+        <text x="170" y="66" font-size="17" font-weight="800" fill="#c8102e">STEP 1</text>
+        <text x="250" y="66" font-size="15" font-weight="700" fill="#0b2e4f">PROPOSAL / OFFER  — S.2(a)</text>
+        <text x="170" y="88" font-size="12.5" fill="#4a5a6a">Signifying willingness to do / abstain, to obtain the other’s assent. A makes a proposal.</text>
+        <!-- arrow -->
+        <line x1="450" y1="102" x2="450" y2="132" stroke="#c8102e" stroke-width="3" marker-end="url(#arw2)"/>
+        <text x="470" y="122" font-size="12" fill="#c8102e" font-weight="700">+ ACCEPTANCE</text>
+        <!-- step 2 -->
+        <rect x="150" y="132" width="600" height="62" rx="12" fill="#eef3fa" stroke="#1273b8" stroke-width="2"/>
+        <text x="170" y="158" font-size="17" font-weight="800" fill="#c8102e">STEP 2</text>
+        <text x="250" y="158" font-size="15" font-weight="700" fill="#0b2e4f">PROMISE  — S.2(b), (c)</text>
+        <text x="170" y="180" font-size="12.5" fill="#4a5a6a">Proposal + assent = promise. B (acceptor/promisee) is bound; A (proposer/promisor) is bound. Express or implied (S.9).</text>
+        <!-- arrow -->
+        <line x1="450" y1="194" x2="450" y2="224" stroke="#c8102e" stroke-width="3" marker-end="url(#arw2)"/>
+        <text x="470" y="214" font-size="12" fill="#c8102e" font-weight="700">+ CONSIDERATION (S.2(d)) / set of reciprocal promises</text>
+        <!-- step 3 -->
+        <rect x="150" y="224" width="600" height="62" rx="12" fill="#eaf5ee" stroke="#0b7a4b" stroke-width="2"/>
+        <text x="170" y="250" font-size="17" font-weight="800" fill="#0b7a4b">STEP 3</text>
+        <text x="250" y="250" font-size="15" font-weight="700" fill="#0b2e4f">AGREEMENT  — S.2(e)</text>
+        <text x="170" y="272" font-size="12.5" fill="#4a5a6a">Every promise &amp; set of promises forming consideration for each other is an agreement.</text>
+        <!-- arrow split: enforceable vs not -->
+        <line x1="450" y1="286" x2="450" y2="318" stroke="#0b7a4b" stroke-width="3" marker-end="url(#arw2)"/>
+        <rect x="150" y="318" width="250" height="84" rx="10" fill="#fdecec" stroke="#c0392b" stroke-width="2"/>
+        <text x="275" y="342" text-anchor="middle" font-size="14" font-weight="800" fill="#c0392b">NOT enforceable by law</text>
+        <text x="275" y="364" text-anchor="middle" font-size="13" fill="#4a5a6a">= VOID AGREEMENT — S.2(g)</text>
+        <text x="275" y="384" text-anchor="middle" font-size="12" fill="#4a5a6a">(e.g., no consideration, unlawful, minor)</text>
+        <rect x="470" y="318" width="280" height="84" rx="10" fill="#e5f6ec" stroke="#0b7a4b" stroke-width="2"/>
+        <text x="610" y="342" text-anchor="middle" font-size="14" font-weight="800" fill="#0b7a4b">ENFORCEABLE by law</text>
+        <text x="610" y="366" text-anchor="middle" font-size="14" font-weight="800" fill="#0b2e4f">= CONTRACT — S.2(h)</text>
+        <text x="610" y="386" text-anchor="middle" font-size="12" fill="#4a5a6a">if all essentials of S.10 are present</text>
+        <!-- step 4 final -->
+        <line x1="610" y1="402" x2="610" y2="436" stroke="#0b7a4b" stroke-width="3" marker-end="url(#arw2)"/>
+        <rect x="470" y="436" width="280" height="80" rx="12" fill="#0b2e4f"/>
+        <text x="610" y="462" text-anchor="middle" font-size="15" font-weight="800" fill="#ffe08a">VALID CONTRACT</text>
+        <text x="610" y="484" text-anchor="middle" font-size="12.5" fill="#cfe0f0">Binding; both parties may enforce it (S.10)</text>
+        <!-- voidable note -->
+        <line x1="275" y1="402" x2="275" y2="440" stroke="#b7791f" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arw2)"/>
+        <text x="275" y="462" text-anchor="middle" font-size="12" font-weight="700" fill="#b7791f">VOIDABLE CONTRACT — S.2(i)</text>
+        <text x="275" y="480" text-anchor="middle" font-size="11" fill="#6a6a6a">enforceable at option of aggrieved party only</text>
+      </svg>
+      <div class="caption">Fig 2.1 — Proposal + Acceptance = Promise; Promise(s) + Consideration = Agreement; enforceable Agreement = Contract. Not every agreement is enforceable → hence “all contracts are agreements, but not all agreements are contracts.”</div>
+    </div>
+
+    <h3>2.1 The key “closed” statements to memorise</h3>
+    <ul>
+      <li><b>Every promise and set of promises</b> forming consideration for each other = <b>agreement</b> [S.2(e)].</li>
+      <li>An agreement <b>not enforceable</b> by law is <b>void</b> [S.2(g)].</li>
+      <li>An agreement <b>enforceable</b> by law is a <b>contract</b> [S.2(h)].</li>
+      <li>An agreement enforceable at the option of <b>one party only</b> is a <b>voidable contract</b> [S.2(i)].</li>
+      <li>A contract which <b>ceases</b> to be enforceable becomes <b>void</b> when it so ceases [S.2(j)].</li>
+    </ul>
+    <div class="exam"><b>Classic result:</b> <i>Proposal + Acceptance = Promise; Promise + Consideration = Agreement; Agreement + Enforceability by law = Contract.</i> Therefore <mark>a contract is an enforceable agreement; every contract is an agreement but the converse is not true.</mark> A social arrangement (e.g., a dinner invitation) is an agreement in common parlance but not a contract because the parties never intended legal consequences.</div>
+  </section>
+
+  <!-- ============ ESSENTIALS ============ -->
+  <section id="essentials">
+    <h2><span class="secnum">3</span> Essential Elements of a Valid Contract — Section 10</h2>
+    <p class="hsub">The statutory heart of “enforceability.” Section 10 lists the conditions that turn an agreement into a contract.</p>
+    <div class="statute"><span class="ref">Section 10, Indian Contract Act, 1872</span>
+    “All agreements are contracts if they are made by the <b>free consent</b> of parties <b>competent to contract</b>, for a <b>lawful consideration</b> and with a <b>lawful object</b>, and are not hereby expressly declared to be void.<br>
+    <i>Proviso:</i> Nothing herein shall affect any law requiring a contract to be made in <b>writing</b>, in the presence of <b>witnesses</b>, or any law relating to <b>registration</b> of documents.”</div>
+    <p>Section 10 itself names only the core conditions (free consent, capacity, lawful consideration &amp; object, not expressly void). But a complete 20-mark answer should integrate the <b>non-express essentials</b> read into S.10 from the other provisions — two parties, offer &amp; acceptance, intention to create legal relations, certainty, and possibility of performance.</p>
+
+    <div class="fig">
+      <svg width="940" viewBox="0 0 940 560" role="img" aria-label="The 10 essentials of a valid contract">
+        <rect x="300" y="16" width="340" height="52" rx="14" fill="#c8102e"/>
+        <text x="470" y="48" text-anchor="middle" font-size="17" font-weight="800" fill="#fff">VALID &amp; ENFORCEABLE CONTRACT (S.10)</text>
+        <line x1="470" y1="68" x2="470" y2="96" stroke="#c8102e" stroke-width="3"/>
+        <!-- left col boxes -->
+        <g font-size="13">
+          <rect x="40" y="96" width="270" height="52" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="175" y="118" text-anchor="middle" font-weight="700" fill="#0b2e4f">1. Two or more parties</text>
+          <text x="175" y="137" text-anchor="middle" fill="#4a5a6a">proposer + acceptor (S.2)</text>
+          <rect x="40" y="160" width="270" height="52" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="175" y="182" text-anchor="middle" font-weight="700" fill="#0b2e4f">2. Offer / Proposal (S.2(a))</text>
+          <text x="175" y="201" text-anchor="middle" fill="#4a5a6a">signifying willingness</text>
+          <rect x="40" y="224" width="270" height="52" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="175" y="246" text-anchor="middle" font-weight="700" fill="#0b2e4f">3. Acceptance (S.2(b), S.7)</text>
+          <text x="175" y="265" text-anchor="middle" fill="#4a5a6a">absolute &amp; unqualified</text>
+          <rect x="40" y="288" width="270" height="52" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="175" y="310" text-anchor="middle" font-weight="700" fill="#0b2e4f">4. Intention to create legal relations</text>
+          <text x="175" y="329" text-anchor="middle" fill="#4a5a6a">Balfour v. Balfour</text>
+          <rect x="40" y="352" width="270" height="52" rx="10" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="175" y="374" text-anchor="middle" font-weight="700" fill="#0b2e4f">5. Consideration (S.2(d), S.25)</text>
+          <text x="175" y="393" text-anchor="middle" fill="#4a5a6a">something in return</text>
+        </g>
+        <!-- right col boxes -->
+        <g font-size="13">
+          <rect x="630" y="96" width="270" height="52" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="765" y="118" text-anchor="middle" font-weight="700" fill="#0b2e4f">6. Competency / Capacity (S.11–12)</text>
+          <text x="765" y="137" text-anchor="middle" fill="#4a5a6a">majority, sound mind, not disqualified</text>
+          <rect x="630" y="160" width="270" height="52" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="765" y="182" text-anchor="middle" font-weight="700" fill="#0b2e4f">7. Free consent (S.13–14, S.15–22)</text>
+          <text x="765" y="201" text-anchor="middle" fill="#4a5a6a">not vitiated by coercion, U.I., fraud, misrep., mistake</text>
+          <rect x="630" y="224" width="270" height="52" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="765" y="246" text-anchor="middle" font-weight="700" fill="#0b2e4f">8. Lawful consideration &amp; object (S.23)</text>
+          <text x="765" y="265" text-anchor="middle" fill="#4a5a6a">not forbidden / immoral / opposed to public policy</text>
+          <rect x="630" y="288" width="270" height="52" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="765" y="310" text-anchor="middle" font-weight="700" fill="#0b2e4f">9. Not expressly declared void</text>
+          <text x="765" y="329" text-anchor="middle" fill="#4a5a6a">Ss. 24–30, 56 (restraint, wager, uncertainty…)</text>
+          <rect x="630" y="352" width="270" height="52" rx="10" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="765" y="374" text-anchor="middle" font-weight="700" fill="#0b2e4f">10. Certainty &amp; possibility + formalities</text>
+          <text x="765" y="393" text-anchor="middle" fill="#4a5a6a">S.29 (certain), S.56 (possible), S.10 proviso</text>
+        </g>
+        <line x1="470" y1="96" x2="470" y2="440" stroke="#d9e2ee" stroke-width="1"/>
+        <!-- bottom gate -->
+        <line x1="470" y1="404" x2="470" y2="470" stroke="#0b7a4b" stroke-width="3"/>
+        <rect x="300" y="470" width="340" height="56" rx="12" fill="#0f4c81"/>
+        <text x="470" y="492" text-anchor="middle" font-size="14" font-weight="800" fill="#fff">ALL essentials present → CONTRACT</text>
+        <text x="470" y="512" text-anchor="middle" font-size="12" fill="#cfe0f0">any essential missing → void / voidable / illegal / unenforceable</text>
+        <!-- right connector lines to gate -->
+        <line x1="900" y1="378" x2="640" y2="452" stroke="#0b7a4b" stroke-width="2"/>
+      </svg>
+      <div class="caption">Fig 3.1 — Ten essentials of a valid contract read from Ss. 2, 7, 10–14, 23, 25–30, 56.</div>
+    </div>
+
+    <h3>3.1 The essentials explained one-by-one (with authority)</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>① Parties / Offer &amp; Acceptance</h4><p>There must be at least two parties — one making a <b>proposal</b> (S.2(a)) and another <b>accepting</b> it (S.2(b)). A man cannot contract with himself. Acceptance must be <b>absolute &amp; unqualified</b> (S.7) and communicated.</p></div>
+      <div class="card tone2"><h4>② Intention to create legal relations</h4><p>Parties must intend that their agreement create a <b>legal obligation</b>. Purely <b>social/domestic</b> agreements (husband–wife allowances) are not contracts — <i>Balfour v. Balfour</i> (see §8).</p></div>
+      <div class="card tone3"><h4>③ Consideration</h4><p>At the desire of the promisor the promisee (or another) has done/abstains/promises something — S.2(d). S.25: an agreement <b>without consideration is void</b> (subject to 3 exceptions).</p></div>
+      <div class="card tone4"><h4>④ Capacity</h4><p>S.11: competent = <b>age of majority</b> (Indian Majority Act, 1875), of <b>sound mind</b> (S.12), and not disqualified by law. Minors’ agreements are void — <i>Mohori Bibee v. Dhurmodas</i> (Topic 5).</p></div>
+      <div class="card tone5"><h4>⑤ Free consent</h4><p>S.13 consent = agreeing on the same thing in the same sense; S.14 it is <b>free</b> unless caused by coercion (S.15), undue influence (S.16), fraud (S.17), misrepresentation (S.18) or mistake (Ss.20–22).</p></div>
+      <div class="card tone1"><h4>⑥ Lawful object &amp; consideration</h4><p>S.23: consideration/object is lawful unless forbidden by law, defeats a law, is fraudulent, involves injury, or is <b>immoral / opposed to public policy</b> — then the agreement is void.</p></div>
+      <div class="card tone2"><h4>⑦ Not expressly void</h4><p>The agreement must not be one the Act expressly declares void — e.g., S.24 (partly unlawful), S.26 (restraint of marriage), S.27 (restraint of trade), S.28 (restraint of legal proceedings), S.29 (uncertainty), S.30 (wager).</p></div>
+      <div class="card tone3"><h4>⑧ Certainty &amp; possibility</h4><p>S.29: meaning must be <b>certain or capable of being made certain</b>; S.56: an agreement to do an <b>impossible act is void</b>.</p></div>
+      <div class="card tone4"><h4>⑨ Legal formalities (Proviso to S.10)</h4><p>Where a special law requires writing, registration or attestation, these formalities must be complied with — e.g., S.25 contracts in writing &amp; registered, transfer of immovable property, negotiable instruments.</p></div>
+    </div>
+    <div class="tip"><b>Examiner’s favourite formula (S.10):</b> “All agreements are contracts if made by (i) the <b>free consent</b> of (ii) parties <b>competent to contract</b>, (iii) for a <b>lawful consideration</b> and (iv) with a <b>lawful object</b>, and (v) are not hereby expressly declared to be void.” Quote it verbatim, then expand each limb.</div>
+  </section>
+
+  <!-- ============ HISTORY ============ -->
+  <section id="history">
+    <h2><span class="secnum">4</span> History &amp; Evolution of the Law of Contract</h2>
+    <p class="hsub">From Roman stipulation and the English action of assumpsit to the Indian Contract Act, 1872.</p>
+
+    <h3>4.1 Why study the history?</h3>
+    <p>Understanding history explains <b>why</b> modern Indian contract law looks the way it does: why consideration is central (England), why some promises were enforced without it (the sealed deed/covenant), why equitable remedies and “justice, equity and good conscience” matter, and why we have one unified Indian statute rather than many community laws.</p>
+
+    <h3>4.2 The ancient foundations</h3>
+    <p>No single civilization invented “the contract.” Each legal system recognised certain <b>categories of binding promises</b> long before a general law of contract existed.</p>
+    <ul>
+      <li><b>Roman law:</b> Early Roman law enforced only specific, formalised transactions. Later, the <b>stipulatio</b> — a formal question-and-answer promise — became enforceable. Roman jurists developed the idea of obligations (<i>obligatio</i>) and classified them by their source (contract, quasi-contract, delict, quasi-delict) — a scheme that later shaped common-law and Indian thought.</li>
+      <li><b>Hindu (ancient Indian) law:</b> Before the Act, Indian contractual relations were governed largely by <b>personal/community laws</b> — Hindus by Dharmaśāstra-derived rules (the <i>Vyavahāramayukha</i> and other <i>smṛti</i> texts dealing with loans, deposits, sales, pledges), Muslims by Muslim law, merchants by <b>trade custom and usage</b> (protected even today by the saving clause in S.1). Ancient Indian texts emphasised <b>free consent and consensus</b> on terms; certain formalities were laid down.</li>
+      <li><b>Medieval English law:</b> For a long time the common law enforced few promises. A promise under <b>seal</b> (covenant/deed) was enforceable simply because of its form. But <b>simple or parol promises</b> — today’s everyday contracts — were not enforceable until the writ of <b><i>assumpsit</i></b> developed.</li>
+    </ul>
+
+    <h3>4.3 The rise of the enforceable simple contract in England</h3>
+    <ol>
+      <li><b>The old actions (debt &amp; covenant):</b> An action of <b>covenant</b> lay for breach of a promise <i>under seal</i>; the action of <b>debt</b> lay for a fixed sum owed, but required the actual giving of value, not merely a promise to pay in future.</li>
+      <li><b>Slade’s Case (1602):</b> The decisive turning point. A <b>mere promise to pay for goods</b> (an “executory” contract) became actionable in <b><i>indebitatus assumpsit</i></b>. Henceforth, reciprocal promises — even where nothing had yet been performed — were enforceable. This is the birth of the modern simple contract.</li>
+      <li><b>The doctrine of consideration:</b> As assumpsit grew, the courts required that a promise be <b>bought</b> — supported by <b>consideration</b> (something given, done or promised in exchange). Gratuitous promises came to be generally unenforceable, except deeds under seal.</li>
+      <li><b>Form &amp; evidence legislation:</b> The <b>Statute of Frauds, 1677</b> required certain contracts (e.g., guarantees, land, marriage) to be in writing — the origin of the “writing / registration” proviso in S.10.</li>
+      <li><b>Equity:</b> The Chancellor’s courts supplied equitable remedies (<b>specific performance, injunction, rescission</b>) where common-law damages were inadequate, and doctrines of good conscience (fraud, undue influence, restitution) which later reached India through English law.</li>
+      <li><b>19th-century rationalisation:</b> English judges and writers (notably <b>Anson</b>, <b>Pollock</b>, <b>Holdsworth</b> as historians) systematised contract law around agreement, consideration and breach — the model India codified.</li>
+    </ol>
+    <div class="casequote">Sir William Holdsworth, <i>History of English Law</i>, Vol. III (p. 55), on how the common law &amp; equity <b>evolved through changing principle</b>: a body of law that grows with the nation necessarily acquires fixed principles, yet must remain able to suppress practices that, “under ever new disguises, seek to weaken or negative them.” <span style="font-style:normal">(Quoted in the DU casebook in the context of the expansion of doctrine.)</span></div>
+
+    <h3>4.4 The road to the Indian Contract Act, 1872</h3>
+    <ul>
+      <li><b>Pre-1872 India:</b> In the <b>Presidency towns</b> (Calcutta, Madras, Bombay) English common law applied; in the <b>mofussil</b> (interior), courts applied personal laws and, in gaps, <b>“justice, equity and good conscience”</b> (largely meaning English rules of equity &amp; good conscience adapted to Indian conditions). There was <b>no single, uniform law of contract</b> — different communities were governed by different rules, and trade depended on local <b>usage and custom</b>.</li>
+      <li><b>Charter Act 1833 &amp; the Law Commissions:</b> The Charter Act 1833 set up the first Indian Law Commission to consolidate and codify the law. The <b>First Law Commission (1834–35)</b> and later Commissions worked toward codification.</li>
+      <li><b>The 1866 Commissioners’ draft:</b> The Bill was based on <b>“a report of Her Majesty’s Commissioners appointed to prepare a body of substantive law for India, dated 6 July 1866.”</b> (See the footnote to the Act’s title.) The draft was discussed in Council (1867–1872) and vetted by a Select Committee (report dated 28 March 1872).</li>
+      <li><b>Enactment:</b> The Indian Contract Act was enacted as <b>Act IX of 1872 on 25 April 1872</b> and came into force on <b>1 September 1872</b> across the whole of British India. It was a codification of the English common law of contract, suitably Indianised.</li>
+    </ul>
+    <div class="statute"><span class="ref">Preamble, Indian Contract Act, 1872 (Act No. 9 of 1872)</span>
+    “Whereas it is expedient to <b>define and amend certain parts of the law relating to contracts</b>; It is hereby enacted as follows….”</div>
+    <div class="statute"><span class="ref">Section 1 — Short title, extent &amp; commencement; Saving</span>
+    “…It extends to the whole of India and it shall come into force on the <b>first day of September, 1872</b>.<br><i>Saving —</i> Nothing herein shall affect the provisions of any Statute, Act or Regulation not hereby expressly repealed, <b>nor any usage or custom of trade</b>, nor any incident of any contract, not inconsistent with this Act.”</div>
+
+    <h3>4.5 Original structure of the 1872 Act &amp; later amendments</h3>
+    <p>The original Act also contained chapters later hived off into separate statutes as commerce grew more specialised:</p>
+    <ul>
+      <li><b>Chs. I–VI (retained in the parent Act):</b> Communication/acceptance/revocation (Ss.3–9); Contracts, voidable contracts &amp; void agreements (Ss.10–30); Contingent contracts (Ss.31–36); Performance (Ss.37–67); Relations resembling those created by contract / quasi-contracts (Ss.68–72); Consequences of breach (Ss.73–75).</li>
+      <li><b>Ch. VII (Sale of Goods)</b> — repealed &amp; replaced by the <b>Indian Sale of Goods Act, 1930</b> (from 1 July 1930).</li>
+      <li><b>Ch. XI (Partnership)</b> — repealed &amp; replaced by the <b>Indian Partnership Act, 1932</b> (from 1 October 1932).</li>
+      <li>Chapters on <b>Indemnity &amp; Guarantee</b> (Ch. VIII, Ss.124–147), <b>Bailment &amp; Pledge</b> (Ch. IX, Ss.148–181) and <b>Agency</b> (Ch. X, Ss.182–238) remain within the Act.</li>
+    </ul>
+    <div class="note"><b>Post-1872 supplementation (the statutes the DU syllabus lists as “Prescribed”):</b> the <b>Specific Relief Act, 1963</b> (equitable remedies — specific performance &amp; injunction); the <b>Indian Majority Act, 1875</b> (fixes the age of majority for capacity, S.11); and the <b>Information Technology Act, 2000</b> (legal recognition of <b>e-contracts</b> and electronic records) — reflecting how the law of contract has evolved into the digital age (studied as E-Contracts, Topic 11).</div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section id="timeline">
+    <h2><span class="secnum">4B</span> Visual Timeline of the Law of Contract</h2>
+    <p class="hsub">From antiquity to the modern Indian statute — a condensed roadmap.</p>
+    <div class="fig">
+      <svg width="980" viewBox="0 0 980 470" role="img" aria-label="Timeline of contract law history">
+        <!-- line -->
+        <line x1="60" y1="40" x2="60" y2="430" stroke="#1273b8" stroke-width="4"/>
+        <!-- nodes -->
+        <g font-size="12.5">
+          <circle cx="60" cy="60" r="8" fill="#c8102e"/>
+          <rect x="90" y="40" width="300" height="42" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="100" y="57" font-weight="700" fill="#0b2e4f">Ancient Rome</text>
+          <text x="100" y="73" fill="#4a5a6a">Formal stipulatio; obligations classified by source</text>
+
+          <circle cx="60" cy="130" r="8" fill="#c8102e"/>
+          <rect x="90" y="108" width="300" height="42" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="100" y="125" font-weight="700" fill="#0b2e4f">Ancient India (Vedic→medieval)</text>
+          <text x="100" y="141" fill="#4a5a6a">Personal laws, Dharmaśāstra &amp; trade custom</text>
+
+          <circle cx="60" cy="200" r="8" fill="#c8102e"/>
+          <rect x="90" y="176" width="300" height="42" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="100" y="193" font-weight="700" fill="#0b2e4f">Medieval England</text>
+          <text x="100" y="209" fill="#4a5a6a">Covenant (sealed deeds) &amp; action of debt</text>
+
+          <circle cx="60" cy="258" r="8" fill="#c8102e"/>
+          <rect x="90" y="238" width="300" height="42" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="100" y="255" font-weight="700" fill="#0b2e4f">Slade’s Case (1602)</text>
+          <text x="100" y="271" fill="#4a5a6a">Executory promises enforceable in assumpsit</text>
+
+          <circle cx="60" cy="316" r="8" fill="#c8102e"/>
+          <rect x="90" y="294" width="300" height="42" rx="8" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="100" y="311" font-weight="700" fill="#0b2e4f">Statute of Frauds 1677 · Equity</text>
+          <text x="100" y="327" fill="#4a5a6a">Writing for certain contracts; equitable remedies</text>
+
+          <circle cx="60" cy="374" r="8" fill="#0b7a4b"/>
+          <rect x="90" y="352" width="300" height="42" rx="8" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="100" y="369" font-weight="700" fill="#0b2e4f">1866 Commissioners’ draft</text>
+          <text x="100" y="385" fill="#4a5a6a">First/Second law commissions → draft bill</text>
+
+          <circle cx="60" cy="432" r="10" fill="#c8102e" stroke="#fff" stroke-width="2"/>
+          <rect x="90" y="408" width="330" height="50" rx="8" fill="#fdecec" stroke="#c0392b"/>
+          <text x="100" y="428" font-weight="800" fill="#0b2e4f">INDIAN CONTRACT ACT, 1872 (Act IX)</text>
+          <text x="100" y="446" fill="#4a5a6a">Enacted 25 Apr 1872 · in force 1 Sep 1872 — codification of contract law</text>
+        </g>
+        <!-- right side modern branch -->
+        <g font-size="12.5">
+          <line x1="470" y1="432" x2="920" y2="432" stroke="#c8102e" stroke-dasharray="6 4"/>
+          <circle cx="560" cy="432" r="7" fill="#1273b8"/>
+          <text x="575" y="428" fill="#0b2e4f" font-weight="700">Sale of Goods Act, 1930</text>
+          <text x="575" y="444" fill="#4a5a6a">(hives off Ch. VII)</text>
+          <circle cx="720" cy="432" r="7" fill="#1273b8"/>
+          <text x="735" y="428" fill="#0b2e4f" font-weight="700">Partnership Act, 1932</text>
+          <text x="735" y="444" fill="#4a5a6a">(hives off Ch. XI)</text>
+          <circle cx="880" cy="432" r="7" fill="#5b4a9e"/>
+          <text x="895" y="428" fill="#5b4a9e" font-weight="700">SRA 1963 · IT Act 2000</text>
+          <text x="895" y="444" fill="#4a5a6a">remedies &amp; e-contracts</text>
+        </g>
+      </svg>
+      <div class="caption">Fig 4.1 — Historical timeline: the enforceable promise travels from Roman &amp; ancient-Indian formal transactions through English assumpsit to a single Indian codified Act, then breaks out into specialised statutes.</div>
+    </div>
+  </section>
+
+  <!-- ============ CLASSIFICATION ============ -->
+  <section id="classification">
+    <h2><span class="secnum">5</span> Classification / Kinds of Contracts</h2>
+    <p class="hsub">Classify a contract by validity, formation, and performance — a guaranteed DU question.</p>
+
+    <div class="fig">
+      <svg width="960" viewBox="0 0 960 520" role="img" aria-label="Classification tree of contracts">
+        <rect x="360" y="16" width="240" height="44" rx="10" fill="#0b2e4f"/>
+        <text x="480" y="43" text-anchor="middle" font-size="15" font-weight="800" fill="#fff">CONTRACTS</text>
+        <!-- three branches -->
+        <line x1="480" y1="60" x2="160" y2="100" stroke="#5b4a9e" stroke-width="3"/>
+        <line x1="480" y1="60" x2="480" y2="100" stroke="#b8860b" stroke-width="3"/>
+        <line x1="480" y1="60" x2="800" y2="100" stroke="#0b7a4b" stroke-width="3"/>
+        <text x="120" y="96" font-size="12" font-weight="700" fill="#5b4a9e">VALIDITY</text>
+        <text x="430" y="96" font-size="12" font-weight="700" fill="#b8860b">FORMATION</text>
+        <text x="780" y="96" font-size="12" font-weight="700" fill="#0b7a4b">PERFORMANCE</text>
+
+        <!-- VALIDITY column -->
+        <g font-size="12">
+          <rect x="30" y="120" width="250" height="34" rx="7" fill="#eaf5ee" stroke="#0b7a4b"/>
+          <text x="155" y="142" text-anchor="middle" font-weight="700" fill="#0b2e4f">Valid</text>
+          <rect x="30" y="160" width="250" height="34" rx="7" fill="#fff2d9" stroke="#b7791f"/>
+          <text x="155" y="182" text-anchor="middle" font-weight="700" fill="#0b2e4f">Voidable (S.2(i))</text>
+          <rect x="30" y="200" width="250" height="48" rx="7" fill="#fdecec" stroke="#c0392b"/>
+          <text x="155" y="220" text-anchor="middle" font-weight="700" fill="#0b2e4f">Void agreement (S.2(g))</text>
+          <text x="155" y="238" text-anchor="middle" fill="#4a5a6a">unenforceable ab initio</text>
+          <rect x="30" y="254" width="250" height="34" rx="7" fill="#f0e6ff" stroke="#5b4a9e"/>
+          <text x="155" y="276" text-anchor="middle" font-weight="700" fill="#0b2e4f">Void contract (S.2(j))</text>
+          <rect x="30" y="294" width="250" height="34" rx="7" fill="#fdecec" stroke="#c0392b"/>
+          <text x="155" y="316" text-anchor="middle" font-weight="700" fill="#0b2e4f">Illegal</text>
+          <rect x="30" y="334" width="250" height="34" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="155" y="356" text-anchor="middle" font-weight="700" fill="#0b2e4f">Unenforceable</text>
+        </g>
+        <!-- FORMATION column -->
+        <g font-size="12">
+          <rect x="380" y="120" width="200" height="34" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="480" y="142" text-anchor="middle" font-weight="700" fill="#0b2e4f">Express (S.9)</text>
+          <rect x="380" y="160" width="200" height="34" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="480" y="182" text-anchor="middle" font-weight="700" fill="#0b2e4f">Implied (S.9)</text>
+          <rect x="380" y="200" width="200" height="48" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="480" y="220" text-anchor="middle" font-weight="700" fill="#0b2e4f">Quasi-contract (Ss.68–72)</text>
+          <text x="480" y="238" text-anchor="middle" fill="#4a5a6a">imposed by law</text>
+          <rect x="380" y="254" width="200" height="34" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="480" y="276" text-anchor="middle" font-weight="700" fill="#0b2e4f">E-contract (IT Act 2000)</text>
+          <rect x="380" y="294" width="200" height="34" rx="7" fill="#eef3fa" stroke="#1273b8"/>
+          <text x="480" y="316" text-anchor="middle" font-weight="700" fill="#0b2e4f">Standard-form / adhesion</text>
+        </g>
+        <!-- PERFORMANCE column -->
+        <g font-size="12">
+          <rect x="730" y="120" width="200" height="34" rx="7" fill="#eef3fa" stroke="#0b7a4b"/>
+          <text x="830" y="142" text-anchor="middle" font-weight="700" fill="#0b2e4f">Executed</text>
+          <rect x="730" y="160" width="200" height="34" rx="7" fill="#eef3fa" stroke="#0b7a4b"/>
+          <text x="830" y="182" text-anchor="middle" font-weight="700" fill="#0b2e4f">Executory</text>
+          <rect x="730" y="200" width="200" height="48" rx="7" fill="#eef3fa" stroke="#0b7a4b"/>
+          <text x="830" y="220" text-anchor="middle" font-weight="700" fill="#0b2e4f">Unilateral (one-sided)</text>
+          <text x="830" y="238" text-anchor="middle" fill="#4a5a6a">promise for an act</text>
+          <rect x="730" y="254" width="200" height="48" rx="7" fill="#eef3fa" stroke="#0b7a4b"/>
+          <text x="830" y="274" text-anchor="middle" font-weight="700" fill="#0b2e4f">Bilateral (two-sided)</text>
+          <text x="830" y="292" text-anchor="middle" fill="#4a5a6a">promise for a promise</text>
+        </g>
+      </svg>
+      <div class="caption">Fig 5.1 — Three ways to classify any contract. A single contract may be, e.g., a valid, express, bilateral contract.</div>
+    </div>
+
+    <h3>5.1 On the basis of validity</h3>
+    <table class="twocol">
+      <tr><th>Type</th><th>Meaning</th><th>Section</th><th>Example / note</th></tr>
+      <tr><td><b>Valid contract</b></td><td>Satisfies all essentials of S.10; enforceable by both parties.</td><td>S.10</td><td>A agrees to sell a house for ₹10,000 (S.23 illus. (a)).</td></tr>
+      <tr><td><b>Void agreement</b></td><td>Not enforceable from the very start (<i>ab initio</i>); no legal effect.</td><td>S.2(g)</td><td>Agreement with a minor; agreement without consideration; wagering agreements (S.30).</td></tr>
+      <tr><td><b>Void contract</b></td><td>Valid when made, later ceases to be enforceable and becomes void.</td><td>S.2(j)</td><td>Supervening impossibility (S.56); e.g., a contract to marry becomes void when one party goes mad (S.56 illus. (b)).</td></tr>
+      <tr><td><b>Voidable contract</b></td><td>Enforceable at the option of <b>one</b> party only (the aggrieved party); valid until rescinded.</td><td>S.2(i)</td><td>Consent caused by coercion, fraud, misrepresentation (S.19) or undue influence (S.19A).</td></tr>
+      <tr><td><b>Illegal agreement</b></td><td>Object/consideration forbidden or immoral; <b>void</b> and the parties may even be punished.</td><td>Ss.23–24</td><td>Every illegal agreement is void, but not every void agreement is illegal (e.g., a wager is void but not illegal).</td></tr>
+      <tr><td><b>Unenforceable contract</b></td><td>Good in substance but defective in form/evidence (e.g., not registered/not in writing) — enforceable once the defect is cured.</td><td>Proviso to S.10; S.25</td><td>An agreement required to be registered but unregistered.</td></tr>
+    </table>
+
+    <h3>5.2 Void v. Voidable — the comparison examiners demand</h3>
+    <table class="twocol">
+      <tr><th>Basis</th><th>Void agreement / contract</th><th>Voidable contract</th></tr>
+      <tr><td><b>Section</b></td><td>S.2(g) (void agreement) &amp; S.2(j) (void contract)</td><td>S.2(i)</td></tr>
+      <tr><td><b>Nature</b></td><td>Void <i>ab initio</i> or becomes void; has <b>no legal effect</b>.</td><td>Valid &amp; binding until the aggrieved party rescinds.</td></tr>
+      <tr><td><b>Option</b></td><td>Void for both parties; no one can enforce it.</td><td>Only the party whose consent was not free may enforce or rescind.</td></tr>
+      <tr><td><b>Cause</b></td><td>Minority, no consideration, unlawful object, impossibility, mistake of both parties (S.20).</td><td>Coercion, undue influence, fraud, misrepresentation (Ss.19, 19A).</td></tr>
+      <tr><td><b>Remedy</b></td><td>Generally no damages; restitution of advantage may be ordered under S.65.</td><td>Aggrieved party may claim damages or rescind (Ss.64–66, 75).</td></tr>
+      <tr><td><b>Illustration</b></td><td>A horse is dead at the time of sale but neither party knows → void (S.20 illus. (b)).</td><td>A forces B by threat to sell a scooter at ₹50 → voidable at B’s option.</td></tr>
+    </table>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section id="sources">
+    <h2><span class="secnum">6</span> Sources of Indian Contract Law &amp; the Scheme of the Act</h2>
+    <p class="hsub">Where the rules come from, and how the statute is organised.</p>
+    <h3>6.1 Sources</h3>
+    <ol>
+      <li><b>The Indian Contract Act, 1872</b> — the primary, codified source for general principles (Ss.1–75 of present structure).</li>
+      <li><b>Special statutes</b> governing particular contracts — e.g., <b>Sale of Goods Act, 1930</b>; <b>Indian Partnership Act, 1932</b>; <b>Negotiable Instruments Act, 1881</b>; <b>Transfer of Property Act, 1882</b> (contracts relating to immovable property are to be read as part of the Act in places where that Act is in force, per the note to the ICA title).</li>
+      <li><b>Statutes supplementing capacity &amp; remedies</b> — <b>Indian Majority Act, 1875</b> (S.11 capacity); <b>Specific Relief Act, 1963</b> (equitable remedies); <b>Limitation Act, 1963</b>; <b>Evidence Act, 1872</b>.</li>
+      <li><b>E-contracts law</b> — <b>Information Technology Act, 2000</b> (Ss.3–5, 10–17 etc.), which legally recognises electronic records &amp; signatures.</li>
+      <li><b>English common law &amp; equity</b> — the ICA is drafted on English lines; courts may look to English authorities <b>“so far as they are applicable to Indian conditions”</b> where the statute is silent (a principle echoed throughout the DU casebook).</li>
+      <li><b>Usage &amp; custom of trade</b> — expressly saved by S.1 (e.g., the <i>damdupat</i> custom limiting interest, long recognised in Calcutta &amp; Bombay).</li>
+      <li><b>Judicial precedent</b> — case-law (including the DU case-material cases) interprets and develops the statute.</li>
+    </ol>
+
+    <h3>6.2 Scheme of the Indian Contract Act, 1872 (as it stands)</h3>
+    <div class="grid">
+      <div class="card tone1"><h4>Preliminary — Ss.1–2</h4><p>Short title, extent, commencement, saving (S.1); the master <b>interpretation-clause</b> defining proposal, promise, agreement, void, contract, voidable (S.2).</p></div>
+      <div class="card tone2"><h4>Ch. I — Ss.3–9</h4><p>Communication, acceptance &amp; revocation of proposals; when communication is complete; modes of revocation; acceptance must be absolute; express &amp; implied promises.</p></div>
+      <div class="card tone3"><h4>Ch. II — Ss.10–30</h4><p>Contracts, voidable contracts &amp; void agreements: capacity, free consent, coercion, undue influence, fraud, misrepresentation, mistake; what consideration/object is unlawful; void agreements (no consideration, restraint of marriage/trade/legal proceedings, uncertainty, wager).</p></div>
+      <div class="card tone4"><h4>Ch. III — Ss.31–36</h4><p>Contingent contracts.</p></div>
+      <div class="card tone5"><h4>Ch. IV — Ss.37–67</h4><p>Performance of contracts (obligation, by whom performed, time &amp; place, reciprocal promises, frustration S.56, novation S.62, restitution S.65).</p></div>
+      <div class="card tone1"><h4>Ch. V — Ss.68–72</h4><p>Certain relations resembling those created by contract (quasi-contracts): necessaries, reimbursement, non-gratuitous acts, finder of goods, money paid by mistake/coercion.</p></div>
+      <div class="card tone2"><h4>Ch. VI — Ss.73–75</h4><p>Consequences of breach — compensation for loss/damage (S.73), penalty/liquidated damages (S.74), party rightfully rescinding entitled to compensation (S.75).</p></div>
+      <div class="card tone3"><h4>Chs. VIII–X</h4><p>Indemnity &amp; guarantee (Ss.124–147); bailment &amp; pledge (Ss.148–181); agency (Ss.182–238).</p></div>
+    </div>
+  </section>
+
+  <!-- ============ DEFINITIONS ============ -->
+  <section id="definitions">
+    <h2><span class="secnum">7</span> Master Definitions — Section 2, Interpretation Clause</h2>
+    <p class="hsub">“Unless a contrary intention appears from the context, the following words are used in the following senses.”</p>
+    <div class="grid">
+      <div class="card tone1"><h4>S.2(a) Proposal</h4><p>One person <b>signifies to another his willingness</b> to do/abstain from doing anything <b>with a view to obtaining that other’s assent</b>. (≈ an “offer”.)</p></div>
+      <div class="card tone2"><h4>S.2(b) Acceptance</h4><p>When the offeree <b>signifies assent</b> to the proposal. A proposal when accepted becomes a <b>promise</b>.</p></div>
+      <div class="card tone3"><h4>S.2(c) Promisor / Promisee</h4><p>The person making the proposal = <b>promisor</b>; the person accepting it = <b>promisee</b>.</p></div>
+      <div class="card tone4"><h4>S.2(d) Consideration</h4><p>When, at the <b>desire of the promisor</b>, the promisee or any other person <b>has done/abstained, or does/abstains, or promises to do/abstain</b> from something — that act/abstinence/promise is consideration.</p></div>
+      <div class="card tone5"><h4>S.2(e) Agreement</h4><p>Every <b>promise and every set of promises</b> forming consideration for each other.</p></div>
+      <div class="card tone1"><h4>S.2(f) Reciprocal promises</h4><p>Promises which form the consideration or part of the consideration <b>for each other</b>.</p></div>
+      <div class="card tone2"><h4>S.2(g) Void agreement</h4><p>An agreement <b>not enforceable by law</b> — it is void from the start.</p></div>
+      <div class="card tone3"><h4>S.2(h) Contract</h4><p>An agreement <b>enforceable by law</b>.</p></div>
+      <div class="card tone4"><h4>S.2(i) Voidable contract</h4><p>Enforceable by law <b>at the option of one or more parties</b>, but not at the option of the other(s).</p></div>
+      <div class="card tone5"><h4>S.2(j) Void contract</h4><p>A contract which <b>ceases to be enforceable by law</b> becomes void when it so ceases.</p></div>
+    </div>
+    <div class="tip"><b>Memory hook for S.2(d) consideration:</b> it must be at the <i>desire of the promisor</i>, may move from the promisee <b>or any other person</b>, may be past / present / future, and may be an act, abstinence or a promise. Every limb is examinable — e.g., “consideration must move at the desire of the promisor” (see <i>Abdul Aziz</i>, Topic 4) and “may move from a stranger” (<i>Chinnaya v. Ramayya</i>, Topic 4).</div>
+  </section>
+
+  <!-- ============ CASES ============ -->
+  <section id="cases">
+    <h2><span class="secnum">8</span> Foundational Case-Law for the “Nature of Obligation”</h2>
+    <p class="hsub">Case digests in the DU format — Facts · Issue · Arguments · Decision · Principle.</p>
+    <div class="warn"><b>Scope note (read first):</b> Topic 1 is conceptual, so the DU casebook compiles no separate cases under it. The cases below are those that <b>best illuminate this unit’s themes — the nature of obligation and the requirement of intention to create legal relations — and are drawn from the DU case material / the wider DU syllabus.</b> (Offer-centred cases such as <i>Carlill</i> and <i>Harvey v. Facey</i> are formally examined under Topic 2.) Treat §8 as the bridge that makes Topic 1 concepts exam-ready.</div>
+
+    <!-- BALFOUR -->
+    <div class="case">
+      <div class="head"><span class="t">1 · Balfour v. Balfour</span> <span class="r">(1918–19) All ER 860 (CA) · Topic 2 DU material · Intention to create legal relations</span></div>
+      <div class="full"><h5>Facts</h5>
+        <p>Mr. and Mrs. Balfour married in 1900 and lived in Ceylon, where the husband was Director of Irrigation under the Government. In November 1915 the couple returned together to England on leave. In August 1916 the husband’s leave ended and he had to return to Ceylon, but on medical advice the wife (suffering from rheumatoid arthritis) was to remain in England. Just before he sailed (8 August 1916) the husband orally agreed to pay his wife <b>£30 a month</b> as an allowance while she stayed in England, and she agreed to support herself without claiming maintenance from him. Later their relationship broke down, the husband stopped paying, and the wife sued him for the monthly allowance as money due under the agreement. The trial judge (Sargant J.) held there was a binding contract supported by consideration and gave judgment for the wife. The husband appealed.</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Issue(s)</h5><p>Whether an arrangement between a husband and wife living in amity — for an allowance while temporarily separated — constitutes a <b>contract enforceable in law</b>.</p>
+        <h5>Arguments for the wife (respondent)</h5><ul><li>A definite bargain existed (letters and parol evidence); she promised to maintain herself in exchange for the £30/month — i.e., sufficient <b>consideration</b>.</li><li>Such agreements are capable in modern law of being contracts between spouses.</li></ul>
+        <h5>Arguments for the husband (appellant)</h5><ul><li>No contract in law was ever intended; it was merely a domestic/friendly arrangement.</li><li>No real bargain by the wife — no evidence she agreed to accept £30 in satisfaction of his duty to maintain her in all circumstances.</li><li>It would be absurd to imply such permanent mutual obligations.</li></ul>
+        </div>
+        <div class="cell"><h5>Decision</h5><p>Court of Appeal (Warrington, Atkin, Duke LJJ) allowed the husband’s appeal; judgment was entered for the husband. No enforceable contract existed.</p>
+        <h5>Reasoning / Principle evolved</h5><ul><li><b>Intention to create legal relations is essential.</b> Agreements that are purely <b>domestic or social</b>, or made between spouses living in amity, do <b>not</b> result in contracts even though consideration in form may exist.</li><li>Atkin LJ: “They are not contracts because <b>the parties did not intend that they should be attended by legal consequences</b>… such arrangements are outside the realm of contracts altogether.”</li><li>Spousal agreements are enforced by the domestic code of honour, not by the King’s writ — “each house is a domain into which the King’s writ does not seek to run.”</li></ul></div>
+      </div>
+    </div>
+
+    <!-- CARLILL short -->
+    <div class="case">
+      <div class="head"><span class="t">2 · Carlill v. Carbolic Smoke Ball Co. (bridge case)</span> <span class="r">[1891–4] All ER 127 (CA) · Topic 2 DU material · Offer to the world / unilateral contract</span></div>
+      <div class="full"><h5>Why it is cited in “Nature of Obligation”</h5><p>It shows that a <b>promise addressed to the whole world</b> can nonetheless create a binding obligation once a person performs the stipulated condition — illustrating that <b>the essence of contract is a promise capable of enforcement, not a face-to-face negotiation.</b> (Its full offer–acceptance analysis is examined under Topic 2.)</p></div>
+      <div class="cols">
+        <div class="cell"><h5>Facts</h5><p>The defendants advertised that they would pay <b>£100 reward</b> to anyone who used their Carbolic Smoke Ball as directed and still contracted influenza, and stated £1,000 had been deposited at the Alliance Bank to show sincerity. Mrs. Carlill bought and used the ball as directed, yet caught influenza. When she claimed the £100, the company refused, arguing the advertisement was only a “puff”, not an offer to any particular person, and if an offer it was not binding for want of acceptance/consideration.</p>
+        <h5>Issue</h5><p>Whether the advertisement was a <b>binding offer</b> which could be accepted by performance, and whether there was valid consideration.</p></div>
+        <div class="cell"><h5>Decision &amp; principle (CA — Lindley, Bowen, A.L. Smith LJJ)</h5><ul><li>The advertisement was an <b>offer to the world</b>, not a mere puff — the deposit of £1,000 negatived “puffery” and showed a real intention to pay.</li><li>It was a <b>unilateral offer</b>; <b>performance of the condition = acceptance</b>, and no communication of acceptance was needed.</li><li>Consideration existed in the <b>inconvenience/act of using the ball</b> as requested, and the company gained the benefit of the public buying &amp; using the ball.</li><li>The company was liable for the £100.</li></ul></div>
+      </div>
+    </div>
+
+    <div class="tip"><b>Remember:</b> <i>Balfour</i> is the key case proving that a <b>valid consideration alone is not enough</b> — there must also be an <b>intention to create legal relations</b>. This is why a “contractual obligation” is narrower than a mere moral or social promise. For a one-line classic on offer, quote <i>Carlill</i>: a general advertisement promising a reward is a binding offer accepted by performing its conditions.</div>
+  </section>
+
+  <!-- ============ PYQ ============ -->
+  <section id="pyq">
+    <h2><span class="secnum">9</span> Previous-Year Questions (PYQs) + Best Model Answers</h2>
+    <p class="hsub">DU-semester style 20-mark questions on this unit, each with a full model answer.</p>
+    <div class="note"><b>How to use:</b> These are drawn from DU / DU-affiliated past-paper collections and the classic question-bank for this unit. Reproduce the structure — each model answer opens with definition+section, develops the concept, cites cases, distinguishes where needed, and concludes. In the exam you answer <b>5 of 8</b> questions.</div>
+
+    <!-- PYQ 1 -->
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>State briefly the purpose, evolution and nature of the law of contract (or: describe the history and nature of contractual obligation).</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Introduction / purpose.</b> The law of contract is the law of binding <b>promises</b>. Its purpose is to give legal effect to deliberately created obligations, so that a man is compelled to perform what he has led another to expect. As the DU course notes, it “deals with law relating to promises, their formation, performance and enforceability,” and protects <b>voluntarily created civil obligations</b>. It is foundational because ordinary life and nearly all commerce rest on enforceable bargains.</p>
+        <p><b>Evolution (history).</b> Ancient systems enforced only selected promises: Roman law enforced the formal <i>stipulatio</i>; ancient Indian law applied personal/community rules (Dharmaśāstra &amp; Muslim law) plus trade custom. In England a promise under <b>seal</b> was enforced by the action of <b>covenant</b>, and a fixed debt by the action of <b>debt</b>; but ordinary (“simple”) promises were enforceable only after <b>Slade’s Case (1602)</b> recognised <i>assumpsit</i> for executory promises. Consideration became the test of enforceability, the <b>Statute of Frauds (1677)</b> imposed writing for some contracts, and <b>equity</b> supplied specific performance and like remedies. In India, before 1872 there was no uniform law: the Presidency towns applied English law and the mofussil applied personal laws and “justice, equity and good conscience.” Codification came through the Law Commissions and the 1866 draft of Her Majesty’s Commissioners; the result was the <b>Indian Contract Act, 1872 (Act IX), in force 1 September 1872</b>, based on the English common law. Specialised parts were later split into the <b>Sale of Goods Act, 1930</b> and the <b>Partnership Act, 1932</b>, while the <b>Specific Relief Act, 1963</b> and <b>IT Act, 2000</b> modernised remedies and e-contracts.</p>
+        <p><b>Nature of contractual obligation.</b> A contract is “an agreement enforceable by law” [S.2(h)]. Not every agreement is enforceable: only an agreement that creates a <b>legal obligation</b> is a contract. A contractual obligation is a <b>right–duty relationship in personam</b>, voluntarily created, and enforceable by the courts. It is distinguished from obligations in <b>tort</b> (imposed by law), <b>quasi-contract</b> (imposed to prevent unjust enrichment, Ss.68–72) and <b>criminal/status</b> obligations. The essential conditions of enforceability are collected in <b>S.10</b>: free consent, capacity, lawful consideration &amp; object, and not being an agreement expressly declared void.</p>
+        <p><b>Conclusion.</b> The law of contract is thus the enforceable-promise law of a commercial society — historical in origin, codified in 1872, and ever-evolving — whose central idea is the <b>voluntarily created legal obligation</b>.</p>
+      </div>
+    </div>
+
+    <!-- PYQ 2 -->
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>“An agreement enforceable by law is a contract.” Define contract and explain the essential elements of a valid contract under the Indian Contract Act, 1872.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Definition.</b> <b>S.2(h)</b> of the ICA defines a contract as <b>“an agreement enforceable by law.”</b> Salmond adds that a contract is “an agreement creating and defining obligations between the parties,” and Pollock stresses the element of enforceability. Hence <b>Contract = Agreement + Enforceability by law.</b> Every contract is an agreement, but not every agreement is a contract — a purely social arrangement creates no legal obligation.</p>
+        <p><b>Steps of formation.</b> Proposal [S.2(a)] + Acceptance [S.2(b)] = Promise; promises + consideration [S.2(d)–(e)] = Agreement; Agreement + enforceability = Contract [S.2(h)].</p>
+        <p><b>Essential elements (S.10 read with allied sections).</b> An agreement is a contract if made — (i) by the <b>free consent</b> of parties (S.14; consent not caused by coercion, undue influence, fraud, misrepresentation or mistake); (ii) by parties <b>competent to contract</b> (S.11 — majority, sound mind, not disqualified); (iii) for a <b>lawful consideration</b> (S.2(d)); (iv) with a <b>lawful object</b> (S.23); and (v) the agreement is <b>not expressly declared void</b> (Ss.24–30, 56). To these the courts add the <b>non-express</b> essentials: two or more parties; a <b>valid offer and an absolute acceptance</b> (Ss.7–8); an <b>intention to create legal relations</b> (<i>Balfour v. Balfour</i>); <b>certainty</b> of terms (S.29); <b>possibility of performance</b> (S.56); and compliance with any required <b>legal formalities</b> — writing, registration or attestation (Proviso to S.10). If any essential is absent, the agreement is void, voidable, illegal or unenforceable accordingly.</p>
+        <p><b>Illustration of the operation of S.10:</b> A agrees to sell his house to B for ₹10,000 — there is offer, acceptance, lawful consideration and object; it is a valid contract (S.23 illus. (a)). But an agreement to discover treasure by magic is void for impossibility (S.56), and a wagering agreement is void (S.30).</p>
+        <p><b>Conclusion.</b> The essentials of S.10 together determine enforceability; a contract is simply an enforceable agreement that satisfies them.</p>
+      </div>
+    </div>
+
+    <!-- PYQ 3 -->
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>“All contracts are agreements, but all agreements are not contracts.” Explain with reference to the Indian Contract Act, 1872.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Propositions.</b> Under <b>S.2(e)</b> an agreement is “every promise and every set of promises forming the consideration for each other.” Under <b>S.2(h)</b> “an agreement enforceable by law is a contract.” Therefore a <b>contract is that subset of agreements which the law will enforce.</b></p>
+        <p><b>Why all contracts are agreements:</b> a contract cannot exist without an agreement — it is an agreement that has become legally enforceable. So every contract necessarily contains the element of agreement.</p>
+        <p><b>Why not all agreements are contracts:</b> an agreement is a contract only if it is enforceable. An agreement fails to become a contract where — (i) it is made <b>without consideration</b> (S.25, with three exceptions); (ii) by an <b>incompetent person</b>, e.g., a minor (S.11); (iii) with an <b>unlawful object or consideration</b> (S.23); (iv) it is <b>expressly declared void</b> (e.g., restraint of marriage S.26, restraint of trade S.27, restraint of legal proceedings S.28, uncertainty S.29, wager S.30); or (v) the parties lacked an <b>intention to create legal relations</b> — e.g., a social/domestic arrangement (<i>Balfour v. Balfour</i>). Such an agreement is merely a <b>void agreement</b> [S.2(g)] and is no contract at all.</p>
+        <p><b>Illustration:</b> A invites B to dinner and B accepts — there is an agreement in daily speech but no legal obligation and hence no contract. By contrast, A agreeing to sell his car to B for ₹2,00,000 is a contract because it is enforceable.</p>
+        <p><b>Conclusion.</b> The test that separates an agreement from a contract is <b>enforceability by law</b>; hence while every contract is an agreement, the converse does not hold.</p>
+      </div>
+    </div>
+
+    <!-- PYQ 4 -->
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Distinguish between (a) an agreement and a contract; and (b) a void agreement, a void contract and a voidable contract, with illustrations.</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>(a) Agreement v. Contract.</b> An <b>agreement</b> (S.2(e)) is every promise or set of promises forming consideration for each other; it may or may not be enforceable. A <b>contract</b> (S.2(h)) is an agreement enforceable by law. Basis of distinction: (i) <b>Definition</b> — agreement is the broader genus; contract is the narrower enforceable species; (ii) <b>Enforceability</b> — every agreement is not enforceable, but every contract is; (iii) <b>Legal effect</b> — an unenforceable agreement is a void agreement (S.2(g)) creating no rights, whereas a contract creates rights and duties; (iv) <b>Test</b> — S.10 essentials must be satisfied for enforceability. Hence, <i>all contracts are agreements but not all agreements are contracts.</i></p>
+        <p><b>(b) Void agreement v. Void contract v. Voidable contract.</b></p>
+        <table class="twocol">
+          <tr><th>Basis</th><th>Void agreement — S.2(g)</th><th>Void contract — S.2(j)</th><th>Voidable contract — S.2(i)</th></tr>
+          <tr><td><b>Validity in time</b></td><td>Void <i>ab initio</i> (void from the start).</td><td>Valid when made; becomes void on a later event.</td><td>Valid until the aggrieved party rescinds.</td></tr>
+          <tr><td><b>Enforceability</b></td><td>Not enforceable by either party.</td><td>Ceases to be enforceable.</td><td>Enforceable at the option of one party only.</td></tr>
+          <tr><td><b>Cause</b></td><td>Minority, no consideration, unlawful object, wager, uncertainty.</td><td>Supervening impossibility (S.56) etc.</td><td>Coercion, undue influence, fraud, misrepresentation (Ss.19, 19A).</td></tr>
+          <tr><td><b>Remedy</b></td><td>No damages; S.65 restitution of advantage may apply.</td><td>No damages; S.65 applies.</td><td>Aggrieved party may avoid or affirm &amp; claim damages.</td></tr>
+          <tr><td><b>Illustration</b></td><td>A’s agreement with a minor to sell a scooter is void.</td><td>A contracts to marry B; A goes mad before the date — contract void (S.56 illus. (b)).</td><td>B is forced by threat to sell his scooter for ₹50 — voidable at B’s option.</td></tr>
+        </table>
+        <p><b>Conclusion.</b> Understanding these four concepts is the foundation of the whole subject, since every later topic (capacity, free consent, illegality, frustration) is expressed in their language.</p>
+      </div>
+    </div>
+
+    <!-- PYQ 5 -->
+    <div class="pyqbox">
+      <div class="q"><span class="tag">20 MARKS</span><h4>Explain the historical background and development of the Indian Contract Act, 1872, and state why it is described as a codification of the law of contracts. What has been the contribution of common law and equity to it?</h4></div>
+      <div class="model">
+        <p><b>Model answer —</b></p>
+        <p><b>Background.</b> Before 1872 there was no uniform law of contract in India. Different communities (Hindu, Muslim) and different regions followed divergent personal and customary rules; in the Presidency towns (Calcutta, Madras, Bombay) English common law applied, while the mofussil courts administered personal laws and, in the gaps, <b>“justice, equity and good conscience.”</b> Trade and commerce therefore lacked a single, predictable legal framework.</p>
+        <p><b>Codification movement.</b> The <b>Charter Act, 1833</b> established the first Indian Law Commission to codify the law. After several Commissions and drafts — the bill rested on <b>the report of Her Majesty’s Commissioners (6 July 1866)</b> to prepare a body of substantive law for India, revised by a Select Committee (report 28 March 1872) — the <b>Indian Contract Act, 1872</b> was enacted as <b>Act IX of 1872 (25 April 1872)</b> and brought into force on <b>1 September 1872</b> over the whole of India. Its preamble states that it was expedient “to <b>define and amend</b> certain parts of the law relating to contracts.”</p>
+        <p><b>Contribution of English common law and equity.</b> The Act is a codification of the English common law of contract, which developed through the action of <b>covenant</b> (sealed promises), <b>debt</b>, and — after <b>Slade’s Case (1602)</b> — <b>assumpsit</b> for simple executory promises. Central English doctrines (the requirement of <b>consideration</b>, <b>offer and acceptance</b>, breach and damages under the rule in <i>Hadley v. Baxendale</i>) were enacted in the Indian statute (Ss.2(d), 3–9, 73). <b>Equity</b> contributed the ideas of good conscience — relief from <b>fraud, undue influence, coercion</b> (Ss.15–17), the <b>void/voidable</b> distinction, and equitable remedies later consolidated in the <b>Specific Relief Act, 1963</b>. The saving clause in S.1 preserves <b>trade usage and custom</b> not inconsistent with the Act.</p>
+        <p><b>Development since 1872.</b> The Act’s specialised chapters were hived off: <b>Sale of Goods Act, 1930</b> (Ch. VII) and the <b>Indian Partnership Act, 1932</b> (Ch. XI). Capacity was aligned with the <b>Indian Majority Act, 1875</b>, and modern electronic transactions were recognised through the <b>Information Technology Act, 2000</b>. Because it restates the general principles of contract in one comprehensive code, the ICA 1872 is described as the foundation statute of Indian contract law.</p>
+        <p><b>Conclusion.</b> The 1872 Act unified India’s fragmented contract law by codifying, in adapted form, the English common law of contract enriched by equitable principles — and it continues to govern general principles of contract to this day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVISION ============ -->
+  <section id="revision">
+    <h2><span class="secnum">10</span> Rapid-Revision Pack</h2>
+    <p class="hsub">One-page memory kit — formulas, mnemonics, and do/don’t for the exam.</p>
+
+    <h3>10.1 The three golden formulas</h3>
+    <ul>
+      <li><b>Proposal (S.2(a)) + Acceptance (S.2(b)) = Promise</b></li>
+      <li><b>Promise(s) + Consideration (S.2(d)–(e)) = Agreement</b></li>
+      <li><b>Agreement + Enforceability by law = Contract (S.2(h), S.10)</b></li>
+    </ul>
+
+    <h3>10.2 Mnemonic for the essentials of a valid contract</h3>
+    <div class="exam"><b>“O A I C C · F C L O P” —</b> <u>O</u>ffer, <u>A</u>cceptance (absolute), <u>I</u>ntention to create legal relations, <u>C</u>onsideration, <u>C</u>apacity; then <u>F</u>ree consent, <u>L</u>awful object &amp; consideration, <u>O</u>therwise not expressly void, <u>P</u>ossibility &amp; certainty (+ formalities). <br><br>
+    <b>Alternative — “2CC · F3L”:</b> <u>2</u> parties, <u>C</u>onsent (free), <u>C</u>apacity, then legal — <u>F</u>ormality, consideration lawfulness, object lawfulness, and law-not-expressly-void. Use whichever sticks.</div>
+
+    <h3>10.3 Quick revision table</h3>
+    <table class="twocol">
+      <tr><th>Concept</th><th>Section</th><th>One-line takeaway</th></tr>
+      <tr><td>Proposal</td><td>S.2(a)</td><td>Willingness to do/abstain, to get the other’s assent.</td></tr>
+      <tr><td>Acceptance → promise</td><td>S.2(b)</td><td>Assent turns a proposal into a promise.</td></tr>
+      <tr><td>Consideration</td><td>S.2(d)</td><td>Act/abstinence/promise at the promisor’s desire.</td></tr>
+      <tr><td>Agreement</td><td>S.2(e)</td><td>Promises forming consideration for each other.</td></tr>
+      <tr><td>Void agreement</td><td>S.2(g)</td><td>Not enforceable — void ab initio.</td></tr>
+      <tr><td>Contract</td><td>S.2(h)</td><td>Agreement enforceable by law.</td></tr>
+      <tr><td>Voidable</td><td>S.2(i)</td><td>Enforceable at the option of one party.</td></tr>
+      <tr><td>Void contract</td><td>S.2(j)</td><td>Valid → later ceases to be enforceable.</td></tr>
+      <tr><td>When agreements are contracts</td><td>S.10</td><td>Free consent + capacity + lawful consideration &amp; object + not expressly void.</td></tr>
+      <tr><td>Intention to create legal relations</td><td>— (common law)</td><td><i>Balfour v. Balfour</i>; social/domestic promises not contracts.</td></tr>
+    </table>
+
+    <h3>10.4 Common traps to avoid in the exam</h3>
+    <ul>
+      <li>Do <b>not</b> call a void agreement and a void contract the same thing — void agreement is void from the start (S.2(g)); void contract was valid but became void (S.2(j)).</li>
+      <li>Do <b>not</b> say consideration must move only from the promisee — S.2(d) allows it to move “from any other person” (used in privity exceptions, Topic 4).</li>
+      <li>Do <b>not</b> forget the saving of <b>trade usage/custom</b> in S.1 — a good extra point in a history answer.</li>
+      <li>Quote the <b>exact words</b> of S.2(h) and S.10 — examiners reward statutory accuracy.</li>
+      <li>Always tie the “nature” discussion back to <b>enforceability</b> and the difference between legal and merely moral/social obligations.</li>
+    </ul>
+
+    <h3>10.5 Glossary of the unit</h3>
+    <ul>
+      <li><b>Obligation:</b> legal tie binding a person to do/forbear for another; a right–duty relationship.</li>
+      <li><b>In personam:</b> right against a specific person (contractual rights are in personam).</li>
+      <li><b>Assumpsit / indebitatus assumpsit:</b> the historical common-law action that made simple promises enforceable.</li>
+      <li><b>Covenant:</b> promise under seal, enforceable at common law.</li>
+      <li><b>Consideration:</b> the price (act/abstinence/promise) for which a promise is bought.</li>
+      <li><b>Codification:</b> restating scattered/customary law into one enacted statute (the 1872 Act).</li>
+      <li><b>Void ab initio:</b> void from the very beginning, of no legal effect.</li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <p><b>Sources:</b> DU LL.B. I-Term case material — <i>Principles of Contract (General Principles)</i>, Faculty of Law, University of Delhi (Jan 2023), incl. the examination rubric; <i>The Indian Contract Act, 1872</i> (Act 9 of 1872), Preamble, Ss.1–30 &amp; allied; foundational authorities (<i>Balfour v. Balfour</i>, <i>Carlill v. Carbolic Smoke Ball Co.</i>) as reproduced in the DU material; and standard prescribed texts (Pollock &amp; Mulla, Anson, Avtar Singh, Dutt on Contract).</p>
+    <p><b>Prepared for exam revision of Topic 1 — “General Introduction: History &amp; Nature of Contractual Obligations.”</b> This is a study aid, not a substitute for the primary statute and the official DU case material. Verify citations against the latest editions.</p>
+    <p style="margin-top:10px">◉ All diagrams are inline SVG and require no external resources.</p>
+  </div>
+</div>
+
+<script>
+  // reading progress bar
+  var bar=document.getElementById('prog');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement;
+    var sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+    bar.style.width=sc+'%';
+  });
+</script>
+</body>
+</html>
