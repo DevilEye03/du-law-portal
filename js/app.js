@@ -1862,7 +1862,7 @@
     const subjects = window.DU_LAW_PORTAL_DATA.subjects;
 
     if (subjId === 'all') {
-      ['juris', 'contract', 'bns', 'family', 'torts'].forEach(sid => {
+      Object.keys(subjects).forEach(sid => {
         if (subjects[sid] && subjects[sid].pyqs) {
           pool.push(...subjects[sid].pyqs.map(q => ({ ...q, subjectName: subjects[sid].name })));
         }
@@ -1913,7 +1913,7 @@
           '</div>' +
           '<div style="background:var(--bg-tint);padding:16px;border-radius:8px;font-size:0.9rem;line-height:1.6;">' +
             '<h4 style="margin:0 0 10px;color:var(--primary);"><i class="fa-solid fa-award"></i> DU Faculty Model Answer:</h4>' +
-            (q.answer ? q.answer : '<p>Consult the primary unit notes for detailed case ratios.</p>') +
+            (q.modelAnswer ? renderMarkdown(q.modelAnswer) : (q.answer ? q.answer : '<p>Consult the primary unit notes for detailed case ratios.</p>')) +
           '</div>' +
         '</div>' +
       '</div>';
