@@ -46,6 +46,9 @@
     headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
     headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
     headerStarBadge: document.getElementById('headerStarBadge'),
+    heroExploreBtn: document.getElementById('heroExploreBtn'),
+    heroMockBtn: document.getElementById('heroMockBtn'),
+    heroBnsBtn: document.getElementById('heroBnsBtn'),
     bnsModalOverlay: document.getElementById('bnsModalOverlay'),
     bnsModal: document.getElementById('bnsModal'),
     bnsCloseBtn: document.getElementById('bnsCloseBtn'),
@@ -1971,6 +1974,20 @@
     applyTheme(state.darkMode);
     initAudioPlayer();
     updateStarBadge();
+
+    // Hero Action Buttons
+    if (elements.heroExploreBtn) {
+      elements.heroExploreBtn.addEventListener('click', () => {
+        const semSec = document.querySelector('.sem-selection-section');
+        if (semSec) semSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    if (elements.heroMockBtn) {
+      elements.heroMockBtn.addEventListener('click', openMockExam);
+    }
+    if (elements.heroBnsBtn) {
+      elements.heroBnsBtn.addEventListener('click', openBnsConverter);
+    }
 
     // BNS Converter Modal
     if (elements.headerBnsConverterBtn) {

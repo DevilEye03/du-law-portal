@@ -91,16 +91,32 @@
          --------------------------------------------------------------- -->
     <section class="semester-view active" id="semesterView">
 
-      <!-- Cinematic Dark Hero -->
-      <div class="sem-hero-cinematic">
+      <!-- Cinematic Dark Hero with Interactive GPU Particles -->
+      <div class="sem-hero-cinematic" id="heroCinematicContainer">
+        <!-- GPU Particles Canvas Layer -->
+        <div id="interactiveParticlesContainer" class="hero-particles-bg"></div>
+
         <div class="sem-hero-content">
           <div class="sem-hero-badge">
             <i class="fa-solid fa-graduation-cap"></i>
-            LL.B. Three-Year Degree Programme
+            <span>LL.B. THREE-YEAR DEGREE PROGRAMME</span>
           </div>
           <h2>Study Smarter,<br><em>Pass with Distinction.</em></h2>
           <p>Comprehensive syllabus-anchored notes, DU case material briefs, previous year question bank, and last-minute revision capsules — all in one place.</p>
           <div class="sem-hero-ornament">Faculty of Law &bull; University of Delhi</div>
+
+          <!-- Quick Access Navigation Buttons -->
+          <div class="sem-hero-actions">
+            <button class="hero-btn-primary" id="heroExploreBtn">
+              <i class="fa-solid fa-compass"></i> Explore Semester Notes
+            </button>
+            <button class="hero-btn-secondary" id="heroMockBtn">
+              <i class="fa-solid fa-graduation-cap"></i> Mock Exam Hall
+            </button>
+            <button class="hero-btn-secondary" id="heroBnsBtn">
+              <i class="fa-solid fa-scale-unbalanced-flip"></i> BNS &harr; IPC
+            </button>
+          </div>
         </div>
       </div>
 
@@ -645,6 +661,9 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/interactive_particles.js"></script>
   <script src="js/data.js"></script>
   <script src="js/bare_acts.js"></script>
   <script src="js/bns_converter.js"></script>
