@@ -100,15 +100,39 @@ button{font-family:inherit;cursor:pointer}
   position:absolute;inset:0;pointer-events:none;z-index:1;
   background:radial-gradient(circle at 50% 45%,rgba(6,11,25,.35) 0%,rgba(3,7,18,.75) 70%,rgba(2,4,10,.92) 100%)}
 
-.hero-title-stage{margin:6px auto 16px;position:relative;z-index:3}
-.hero-wave-title{font-family:'Playfair Display','Cinzel',Georgia,serif;
-  font-size:clamp(2.6rem,5.8vw,4.4rem);font-weight:800;color:#fff;line-height:1.15;
-  margin-bottom:8px;letter-spacing:-.02em;text-shadow:0 4px 28px rgba(0,0,0,.95),0 2px 8px rgba(0,0,0,.9)}
-.hero-wave-title em{font-family:'EB Garamond','Playfair Display',serif;
-  font-style:italic;color:#e5b869;
-  background:linear-gradient(135deg,#fcedc7 0%,#e5b869 50%,#c59b27 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;font-weight:600;
-  text-shadow:0 0 35px rgba(229,184,105,.5)}
+/* Interactive GPU Particles Stage for "Made Law Easy." */
+.hero-particle-text-stage{
+  position: relative;
+  width: 100%;
+  max-width: 860px;
+  min-height: clamp(130px, 18vw, 190px);
+  margin: 2px auto 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  cursor: default;
+  z-index: 3;
+}
+.hero-particle-text-stage .interactive-particles-canvas{
+  position: absolute;
+  inset: 0;
+  width: 100%!important;
+  height: 100%!important;
+  display: block;
+  pointer-events: auto;
+  z-index: 2;
+}
+.hero-particle-fallback{
+  width: 100%;
+  transition: opacity .3s ease;
+}
+.hero-particle-text-stage.particles-active .hero-particle-fallback{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
 
 .sem-hero-content{position:relative;z-index:2;text-align:center;max-width:840px;pointer-events:none}
 .sem-hero-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 22px;

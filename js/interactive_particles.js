@@ -243,7 +243,7 @@
 
     createTextCanvas() {
       const c = document.createElement('canvas');
-      c.width = 960;
+      c.width = 980;
       c.height = 240;
       const ctx = c.getContext('2d');
 
@@ -252,13 +252,13 @@
 
       ctx.textBaseline = 'middle';
 
-      const fontWhite = '700 96px "Playfair Display", "Cinzel", Georgia, serif';
-      const fontGold = 'italic 700 102px "Playfair Display", "Cinzel", Georgia, serif';
+      const fontWhite = '700 96px "Playfair Display", Georgia, serif';
+      const fontGold = 'italic 700 98px "Playfair Display", Georgia, serif';
 
       ctx.font = fontWhite;
       const w1 = ctx.measureText('Made Law ').width;
       ctx.font = fontGold;
-      const w2 = ctx.measureText('Easy').width;
+      const w2 = ctx.measureText('Easy.').width;
       const totalW = w1 + w2;
 
       const startX = Math.max(20, (c.width - totalW) / 2);
@@ -270,10 +270,14 @@
       ctx.font = fontWhite;
       ctx.fillText('Made Law ', startX, cy);
 
-      // "Easy" in radiant gold italic
-      ctx.fillStyle = '#e5b869';
+      // "Easy." in radiant gold italic with period dot matching reference
+      const goldGrad = ctx.createLinearGradient(startX + w1, cy - 40, startX + w1 + w2, cy + 40);
+      goldGrad.addColorStop(0, '#fcedc7');
+      goldGrad.addColorStop(0.45, '#e5b869');
+      goldGrad.addColorStop(1, '#c59b27');
+      ctx.fillStyle = goldGrad;
       ctx.font = fontGold;
-      ctx.fillText('Easy', startX + w1, cy);
+      ctx.fillText('Easy.', startX + w1, cy);
 
       return c;
     }
