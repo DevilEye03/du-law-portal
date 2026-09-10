@@ -2149,6 +2149,15 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Liquid Metal Header Tabs: Dynamic Specular Reflection
+    document.querySelectorAll('.header-actions .liquid-metal-btn, .header-actions .header-action-btn, .header-actions .semester-badge-btn, .header-actions .theme-toggle-btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+    });
+
     // Initial Routing: Check saved semester in localStorage
     const savedSem = localStorage.getItem('du_law_selected_semester');
     if (savedSem) {

@@ -22,6 +22,17 @@
   --radius-lg:18px; --radius-xl:24px; --radius-pill:9999px;
   --transition-fast:all .16s cubic-bezier(.4,0,.2,1);
   --transition:all .26s cubic-bezier(.16,1,.3,1);
+
+  /* Liquid Metal Tabs Theme Tokens (colorBack: #3b82f6, colorTint: #93c5fd) */
+  --metal-back: #3b82f6;
+  --metal-tint: #93c5fd;
+  --metal-btn-bg: #ffffff;
+  --metal-btn-bg-hover: #f8fafc;
+  --metal-icon-bg: #eff6ff;
+  --metal-icon-color: #2563eb;
+  --metal-text: #0f172a;
+  --metal-shadow: rgba(59, 130, 246, 0.28);
+  --metal-shadow-hover: rgba(59, 130, 246, 0.52);
 }
 
 [data-theme="dark"] {
@@ -32,6 +43,15 @@
   --shadow-sm:0 2px 8px rgba(0,0,0,.4); --shadow-md:0 6px 20px rgba(0,0,0,.5);
   --shadow-lg:0 14px 38px rgba(0,0,0,.6); --shadow-xl:0 24px 56px rgba(0,0,0,.75);
   --sub-bg-tint:#12161e;
+
+  /* Liquid Metal Dark Mode Tokens */
+  --metal-btn-bg: #14110d;
+  --metal-btn-bg-hover: #1f1b15;
+  --metal-icon-bg: #252018;
+  --metal-icon-color: #93c5fd;
+  --metal-text: #f0ebe0;
+  --metal-shadow: rgba(59, 130, 246, 0.38);
+  --metal-shadow-hover: rgba(59, 130, 246, 0.65);
 }
 
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -884,44 +904,268 @@ body[data-active-subject="company"] {
 }
 
 /* ==========================================================================
-   HEADER ACTION BUTTONS (Bare Acts & Flashcards Quick Launch)
+   LIQUID METAL HEADER NAVIGATION BUTTONS (VengeanceUI Liquid Metal)
    ========================================================================== */
-.header-action-btn {
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.liquid-metal-btn,
+.header-action-btn,
+.header-actions .semester-badge-btn,
+.header-actions .theme-toggle-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--border-color, #d4dbe0);
-  background: var(--card-bg, #ffffff);
-  color: var(--text-color, #1a202c);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  font-weight: 600;
+  gap: 8px;
+  padding: 4px 14px 4px 5px;
+  border-radius: 9999px;
+  background: var(--metal-btn-bg, #ffffff);
+  border: none;
   cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  min-height: 40px;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s ease,
+              background 0.2s ease;
+  box-shadow: 0 6px 20px -4px var(--metal-shadow), 0 2px 6px rgba(0, 0, 0, 0.06);
+  z-index: 1;
 }
 
-.header-action-btn:hover {
-  border-color: var(--primary, #183059);
-  color: var(--primary, #183059);
+.liquid-metal-btn:active,
+.header-action-btn:active,
+.header-actions .semester-badge-btn:active,
+.header-actions .theme-toggle-btn:active {
+  transform: scale(0.97);
+}
+
+/* 3px Flowing Liquid Metal Outer Border (colorBack: #3b82f6, colorTint: #93c5fd) */
+.liquid-metal-btn::before,
+.header-action-btn::before,
+.header-actions .semester-badge-btn::before,
+.header-actions .theme-toggle-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 2.8px;
+  background: linear-gradient(
+    115deg,
+    #1d4ed8 0%,
+    #2563eb 15%,
+    #3b82f6 30%,
+    #93c5fd 46%,
+    #ffffff 54%,
+    #93c5fd 64%,
+    #3b82f6 80%,
+    #1d4ed8 100%
+  );
+  background-size: 260% 260%;
+  animation: liquid-metal-flow 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+  transition: filter 0.3s ease;
+}
+
+.liquid-metal-btn:hover::before,
+.header-action-btn:hover::before,
+.header-actions .semester-badge-btn:hover::before,
+.header-actions .theme-toggle-btn:hover::before {
+  animation-duration: 2s;
+  filter: drop-shadow(0 0 7px rgba(147, 197, 253, 0.95)) brightness(1.22);
+}
+
+.liquid-metal-btn:hover,
+.header-action-btn:hover,
+.header-actions .semester-badge-btn:hover,
+.header-actions .theme-toggle-btn:hover {
+  box-shadow: 0 10px 28px -4px var(--metal-shadow-hover), 0 0 16px rgba(59, 130, 246, 0.35);
+  background: var(--metal-btn-bg-hover, #f8fafc);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(24, 48, 89, 0.12);
 }
 
-.header-action-btn i {
-  font-size: 0.92rem;
-  color: var(--accent, #c59b27);
+@keyframes liquid-metal-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
+/* Dynamic Glossy Specular Light Sheen */
+.liquid-metal-btn::after,
+.header-action-btn::after,
+.header-actions .semester-badge-btn::after,
+.header-actions .theme-toggle-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle 55px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.38),
+    transparent 70%
+  );
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.25s ease;
+}
+
+.liquid-metal-btn:hover::after,
+.header-action-btn:hover::after,
+.header-actions .semester-badge-btn:hover::after,
+.header-actions .theme-toggle-btn:hover::after {
+  opacity: 1;
+}
+
+/* Circular Inset Icon Badge */
+.liquid-metal-btn .btn-icon-wrap,
+.header-action-btn .btn-icon-wrap,
+.header-action-btn > i:not(.arrow-down) {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--metal-icon-bg, #eff6ff);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), background 0.2s ease;
+  line-height: 1;
+}
+
+.liquid-metal-btn:hover .btn-icon-wrap,
+.header-action-btn:hover .btn-icon-wrap,
+.header-action-btn:hover > i:not(.arrow-down) {
+  transform: scale(1.08);
+}
+
+.liquid-metal-btn .btn-icon-wrap i,
+.header-action-btn .btn-icon-wrap i,
+.header-action-btn > i:not(.arrow-down) {
+  font-size: 0.84rem;
+  color: var(--metal-icon-color, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tab Text Label */
+.liquid-metal-btn .btn-lbl,
+.header-action-btn .btn-lbl,
+.header-actions .semester-badge-btn .btn-lbl {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--metal-text, #0f172a);
+  white-space: nowrap;
+}
+
+/* Starred Badge Count */
+.header-action-btn .badge-count,
+.liquid-metal-btn .badge-count {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 9999px;
+  margin-left: 3px;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
+
+/* Semester Selector Variant in Header */
+.header-actions .semester-badge-btn {
+  padding: 4px 14px 4px 12px;
+  gap: 9px;
+}
+
+.header-actions .semester-badge-btn .sem-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
+  animation: pulse-emerald 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-emerald {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25); }
+  50% { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.1); }
+}
+
+.header-actions .semester-badge-btn i.arrow-down {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.header-actions .semester-badge-btn:hover i.arrow-down {
+  transform: translateY(1px);
+}
+
+/* Theme Toggle Button in Header (Circular) */
+.header-actions .theme-toggle-btn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-actions .theme-toggle-btn i {
+  font-size: 0.95rem;
+  color: var(--metal-icon-color, #2563eb);
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.header-actions .theme-toggle-btn:hover i {
+  transform: rotate(20deg) scale(1.12);
+}
+
+/* Mobile Responsive Collapse */
 @media (max-width: 768px) {
-  .header-action-btn .btn-lbl {
+  .header-actions {
+    gap: 6px;
+  }
+  .header-action-btn.liquid-metal-btn {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+  .header-action-btn.liquid-metal-btn .btn-lbl {
     display: none;
   }
-  .header-action-btn {
-    padding: 8px 10px;
-    border-radius: 50%;
+  .header-action-btn.liquid-metal-btn .badge-count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    margin-left: 0;
+    font-size: 0.6rem;
+    padding: 1px 5px;
+  }
+  .header-actions .semester-badge-btn {
+    padding: 4px 10px;
   }
 }
 
