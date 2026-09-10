@@ -87,58 +87,35 @@ button{font-family:inherit;cursor:pointer}
 .semester-view.active,.subjects-view.active,.subject-hub-view.active{display:block}
 
 .semester-view{padding-top:0}
-.sem-hero-cinematic{position:relative;min-height:480px;margin:0 -24px;padding:85px 40px 70px;
+.sem-hero-cinematic{position:relative;min-height:490px;margin:0 -24px;padding:85px 40px 70px;
   display:flex;align-items:center;justify-content:center;overflow:hidden;
-  background:radial-gradient(ellipse 75% 65% at 50% 45%, #2a1207 0%, #170904 55%, #0d0402 100%)}
-.sem-hero-cinematic::before{content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(168,40,20,.35) 0%,transparent 65%),
-    radial-gradient(ellipse 60% 80% at 80% 30%,rgba(229,184,105,.18) 0%,transparent 60%),
-    radial-gradient(ellipse 50% 50% at 50% 100%,rgba(168,40,20,.25) 0%,transparent 70%);
-  pointer-events:none;z-index:0}
-.sem-hero-cinematic::after{content:'';position:absolute;inset:0;
-  background-image:linear-gradient(rgba(229,184,105,.055) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(229,184,105,.055) 1px,transparent 1px);
-  background-size:52px 52px;pointer-events:none;z-index:0}
+  background:#030712}
 
-/* Interactive GPU Particles Stage for "Made Law Easy" */
-.hero-particle-text-stage{
-  position: relative;
-  width: 100%;
-  max-width: 860px;
-  min-height: clamp(130px, 18vw, 190px);
-  margin: 2px auto 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  cursor: default;
-}
-.hero-particle-text-stage .interactive-particles-canvas{
-  position: absolute;
-  inset: 0;
-  width: 100%!important;
-  height: 100%!important;
-  display: block;
-  pointer-events: auto;
-  z-index: 2;
-}
-.hero-particle-fallback{
-  width: 100%;
-  transition: opacity .3s ease;
-}
-.hero-particle-text-stage.particles-active .hero-particle-fallback{
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  visibility: hidden;
-}
+/* 3D Wave Grid Interactive Background */
+.wave-grid-bg-container{
+  position:absolute;inset:0;width:100%;height:100%;overflow:hidden;z-index:0;pointer-events:auto}
+.wave-grid-bg-container canvas{
+  position:absolute;inset:0;width:100%!important;height:100%!important;display:block;pointer-events:auto}
+.wave-grid-vignette{
+  position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(circle at 50% 45%,rgba(6,11,25,.35) 0%,rgba(3,7,18,.75) 70%,rgba(2,4,10,.92) 100%)}
+
+.hero-title-stage{margin:6px auto 16px;position:relative;z-index:3}
+.hero-wave-title{font-family:'Playfair Display','Cinzel',Georgia,serif;
+  font-size:clamp(2.6rem,5.8vw,4.4rem);font-weight:800;color:#fff;line-height:1.15;
+  margin-bottom:8px;letter-spacing:-.02em;text-shadow:0 4px 28px rgba(0,0,0,.95),0 2px 8px rgba(0,0,0,.9)}
+.hero-wave-title em{font-family:'EB Garamond','Playfair Display',serif;
+  font-style:italic;color:#e5b869;
+  background:linear-gradient(135deg,#fcedc7 0%,#e5b869 50%,#c59b27 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;font-weight:600;
+  text-shadow:0 0 35px rgba(229,184,105,.5)}
 
 .sem-hero-content{position:relative;z-index:2;text-align:center;max-width:840px;pointer-events:none}
 .sem-hero-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 22px;
-  border-radius:9999px;background:rgba(201,168,76,.08);
-  border:1px solid rgba(201,168,76,.42);color:#e5b869;font-size:.76rem;
+  border-radius:9999px;background:rgba(201,168,76,.12);
+  border:1px solid rgba(201,168,76,.5);color:#e5b869;font-size:.76rem;
   font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;
-  box-shadow:0 0 24px rgba(201,168,76,.08);pointer-events:auto}
+  box-shadow:0 0 24px rgba(201,168,76,.15);pointer-events:auto}
 .sem-hero-content h2{font-family:'Playfair Display','Cinzel',Georgia,serif;
   font-size:clamp(2.5rem,5.8vw,4.4rem);font-weight:700;color:#fff;line-height:1.15;
   margin-bottom:18px;letter-spacing:-.02em;text-shadow:0 4px 20px rgba(0,0,0,.6)}

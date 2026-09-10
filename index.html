@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=2.6">
+  <link rel="stylesheet" href="css/styles.css?v=3.0">
 </head>
 <body>
 
@@ -91,19 +91,23 @@
          --------------------------------------------------------------- -->
     <section class="semester-view active" id="semesterView">
 
-      <!-- Cinematic Dark Hero with Interactive GPU Particles -->
+      <!-- Cinematic 3D Wave Grid Hero -->
       <div class="sem-hero-cinematic" id="heroCinematicContainer">
+        <!-- 3D Wave Grid Interactive Background Canvas -->
+        <div class="wave-grid-bg-container" id="waveGridContainer">
+          <canvas id="waveGridCanvas"></canvas>
+          <div class="wave-grid-vignette"></div>
+        </div>
+
         <div class="sem-hero-content">
           <div class="sem-hero-badge">
             <i class="fa-solid fa-graduation-cap"></i>
             <span>STUDY SMARTER</span>
           </div>
 
-          <!-- Interactive GPU Particle Text Area: Made Law Easy -->
-          <div class="hero-particle-text-stage" id="interactiveParticlesContainer">
-            <div class="hero-particle-fallback">
-              <h2>Made Law <em>Easy.</em></h2>
-            </div>
+          <!-- Hero Typography: Made Law Easy -->
+          <div class="hero-title-stage">
+            <h2 class="hero-wave-title">Made Law <em>Easy.</em></h2>
           </div>
 
           <p>Comprehensive syllabus-anchored notes, DU case material briefs, previous year question bank, and last-minute revision capsules — all in one place.</p>
@@ -647,11 +651,11 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="js/interactive_particles.js?v=2.6"></script>
-  <script src="js/data.js?v=2.6"></script>
-  <script src="js/bare_acts.js?v=2.6"></script>
-  <script src="js/bns_converter.js?v=2.6"></script>
-  <script src="js/app.js?v=2.6"></script>
+  <script src="js/wave_grid_background.js?v=3.0"></script>
+  <script src="js/data.js?v=3.0"></script>
+  <script src="js/bare_acts.js?v=3.0"></script>
+  <script src="js/bns_converter.js?v=3.0"></script>
+  <script src="js/app.js?v=3.0"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
