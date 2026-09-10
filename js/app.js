@@ -684,42 +684,84 @@
     }
 
     elements.topicsContainer.innerHTML = `
-      <div class="topics-grid">
-        ${units.map(u => {
+      <div class="topics-bento-grid">
+        ${units.map((u, idx) => {
           const isDone = completedList.includes(u.number);
+          const spanMod = idx % 5;
+          const spanClass = spanMod === 0 ? 'bento-span-7' : spanMod === 1 ? 'bento-span-5' : 'bento-span-4';
+          const unitCases = sub.cases ? sub.cases.filter(c => c.unitNumber === u.number) : [];
+          const unitPyqs = sub.pyqs ? sub.pyqs.filter(p => p.unitNumber === u.number) : [];
+          const unitRev = sub.revisions ? sub.revisions.filter(r => r.unitNumber === u.number) : [];
+          const formattedNum = u.number < 10 ? `0${u.number}` : `${u.number}`;
+
           return `
-            <div class="unit-card fade-in ${isDone ? 'is-completed' : ''}" data-unit="${u.number}">
-              <div>
-                <div class="unit-card-header">
-                  <div class="unit-badge-number">${u.number}</div>
-                  <div class="unit-card-titles">
-                    <div style="display:flex; align-items:center; justify-content:space-between; gap:6px;">
-                      <h4>${u.title}</h4>
-                      <button class="unit-check-btn ${isDone ? 'checked' : ''}" data-unit="${u.number}" title="Toggle revision status">
-                        <i class="fa-solid ${isDone ? 'fa-check' : 'fa-circle'}"></i>
-                        <span>${isDone ? 'Revised' : 'Mark Done'}</span>
-                      </button>
-                    </div>
-                    ${u.subtitle ? `<div class="unit-sub">${u.subtitle}</div>` : ''}
+            <div class="bento-topic-card ${spanClass} fade-in ${isDone ? 'is-completed' : ''}" data-unit="${u.number}">
+              <div class="bento-card-header">
+                <div class="bento-top-row">
+                  <div class="bento-badge-group">
+                    <span class="bento-unit-badge">UNIT ${formattedNum}</span>
+                    <span class="bento-stats-pill">
+                      <i class="fa-solid fa-scale-balanced"></i> ${unitCases.length} Cases &bull; <i class="fa-solid fa-feather-pointed"></i> ${unitPyqs.length} PYQs
+                    </span>
                   </div>
+                  <button class="unit-check-btn liquid-metal-btn ${isDone ? 'checked' : ''}" data-unit="${u.number}" title="Toggle revision status">
+                    <i class="fa-solid ${isDone ? 'fa-check' : 'fa-circle'}"></i>
+                    <span>${isDone ? 'Revised' : 'Mark Done'}</span>
+                  </button>
                 </div>
 
+                <h3 class="bento-card-title">${u.title}</h3>
+                ${u.subtitle ? `<p class="bento-card-sub">${u.subtitle}</p>` : ''}
+              </div>
+
+              <!-- Inner Bento Visual Stage with dotted canvas & syllabus pipeline -->
+              <div class="bento-inner-stage">
+                <svg class="bento-dotted-bg" aria-hidden="true">
+                  <defs>
+                    <pattern id="clean-grid-${u.number}" width="16" height="16" patternUnits="userSpaceOnUse">
+                      <circle cx="1.5" cy="1.5" r="0.85" fill="currentColor" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#clean-grid-${u.number})" />
+                </svg>
+
                 ${u.statutes ? `
-                  <div class="unit-statutes">
-                    <strong>📜 Bare Acts / Provisions:</strong> ${u.statutes}
+                  <div class="bento-statutes-box">
+                    <span class="bento-statutes-tag"><i class="fa-solid fa-book-bookmark"></i> Bare Acts</span>
+                    <span class="bento-statutes-text">${u.statutes}</span>
                   </div>
                 ` : ''}
 
                 ${u.topics && u.topics.length ? `
-                  <ul class="unit-topics-list">
-                    ${u.topics.map(t => `<li>${t}</li>`).join('')}
-                  </ul>
+                  <div class="bento-pipeline-wrap">
+                    <div class="bento-pipeline-header">
+                      <i class="fa-solid fa-diagram-project"></i> <span>TOPIC SYLLABUS PIPELINE</span>
+                    </div>
+                    <div class="bento-topics-chips">
+                      ${u.topics.map(t => `
+                        <div class="bento-topic-node">
+                          <span class="node-dot"></span>
+                          <span class="node-text">${t}</span>
+                        </div>
+                      `).join('')}
+                    </div>
+                  </div>
                 ` : ''}
+
+                <div class="bento-stage-footer">
+                  <div class="bento-status-indicator">
+                    <span class="status-pulse ${isDone ? 'done' : 'ready'}"></span>
+                    <span class="status-text">${isDone ? 'Topic Revised &amp; Mastered' : 'Comprehensive Dossier Ready'}</span>
+                  </div>
+                  ${unitRev.length ? `<span class="bento-capsule-badge"><i class="fa-solid fa-bolt"></i> Revision Capsule</span>` : ''}
+                </div>
               </div>
 
-              <div class="unit-actions-row">
-                <button class="btn-read-notes" data-file="${u.file}" data-title="${u.title}" data-unit="${u.number}">
-                  <i class="fa-solid fa-book-open"></i> Read Full Notes
+              <div class="bento-actions-row">
+                <button class="btn-read-notes liquid-metal-btn" data-file="${u.file}" data-title="${u.title}" data-unit="${u.number}">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span>Read Comprehensive Notes</span>
+                  <i class="fa-solid fa-arrow-right"></i>
                 </button>
                 <button class="btn-open-newtab" data-file="${u.file}" title="Open standalone note in new window">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i>
