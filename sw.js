@@ -1,9 +1,11 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v1";
+const CACHE_NAME = "du-law-portal-v2";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./css/styles.css",
+  "./js/interactive_particles.js",
+  "./particles.png",
   "./js/data.js",
   "./js/bare_acts.js",
   "./js/bns_converter.js",
@@ -38,10 +40,27 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Fetch Event — Cache First, then Network
+// Fetch Event — Network-First for HTML navigation, Cache-First for static assets
 self.addEventListener("fetch", (event) => {
-  // Only cache GET requests
   if (event.request.method !== "GET") return;
+
+  const isHtml = event.request.mode === "navigate" || 
+    (event.request.headers.get("accept") && event.request.headers.get("accept").includes("text/html"));
+
+  if (isHtml) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
@@ -49,7 +68,6 @@ self.addEventListener("fetch", (event) => {
         return cachedResponse;
       }
       return fetch(event.request).then((networkResponse) => {
-        // Cache external fonts or CDN icons dynamically
         if (
           networkResponse &&
           networkResponse.status === 200 &&
@@ -63,11 +81,6 @@ self.addEventListener("fetch", (event) => {
           });
         }
         return networkResponse;
-      }).catch(() => {
-        // Offline fallback for HTML navigation
-        if (event.request.headers.get("accept") && event.request.headers.get("accept").includes("text/html")) {
-          return caches.match("./index.html");
-        }
       });
     })
   );
