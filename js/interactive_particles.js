@@ -198,12 +198,12 @@
       this.container = typeof options.container === 'string' ? document.querySelector(options.container) : options.container;
       if (!this.container) return;
 
-      this.size = options.size || 1.8;
+      this.size = options.size || 2.1;
       this.randomness = options.randomness || 1.3;
       this.depth = options.depth || 3.6;
       this.touchRadius = options.touchRadius || 0.24;
       this.threshold = options.threshold || 25;
-      this.maxDimension = options.maxDimension || 340;
+      this.maxDimension = options.maxDimension || 420;
 
       this.disposed = false;
       this.isInViewport = true;
@@ -243,7 +243,7 @@
 
     createTextCanvas() {
       const c = document.createElement('canvas');
-      c.width = 980;
+      c.width = 1120;
       c.height = 240;
       const ctx = c.getContext('2d');
 
@@ -252,8 +252,8 @@
 
       ctx.textBaseline = 'middle';
 
-      const fontWhite = '700 96px "Playfair Display", Georgia, serif';
-      const fontGold = 'italic 700 98px "Playfair Display", Georgia, serif';
+      const fontWhite = '700 134px "Playfair Display", Georgia, serif';
+      const fontGold = 'italic 700 138px "Playfair Display", Georgia, serif';
 
       ctx.font = fontWhite;
       const w1 = ctx.measureText('Made Law ').width;
@@ -261,7 +261,7 @@
       const w2 = ctx.measureText('Easy.').width;
       const totalW = w1 + w2;
 
-      const startX = Math.max(20, (c.width - totalW) / 2);
+      const startX = Math.max(12, (c.width - totalW) / 2);
       const cy = c.height / 2;
 
       // "Made Law " in pure white
@@ -271,7 +271,7 @@
       ctx.fillText('Made Law ', startX, cy);
 
       // "Easy." in radiant gold italic with period dot matching reference
-      const goldGrad = ctx.createLinearGradient(startX + w1, cy - 40, startX + w1 + w2, cy + 40);
+      const goldGrad = ctx.createLinearGradient(startX + w1, cy - 50, startX + w1 + w2, cy + 50);
       goldGrad.addColorStop(0, '#fcedc7');
       goldGrad.addColorStop(0.45, '#e5b869');
       goldGrad.addColorStop(1, '#c59b27');
@@ -453,9 +453,9 @@
     applyScale() {
       if (!this.object3D || !this.hitArea || !this.imgHeight || !this.imgWidth) return;
       const width = this.container.clientWidth || 800;
-      const height = this.container.clientHeight || 200;
-      const scaleH = (this.fovHeight / this.imgHeight) * 0.86;
-      const scaleW = ((this.fovHeight * (width / height)) / this.imgWidth) * 0.90;
+      const height = this.container.clientHeight || 220;
+      const scaleH = (this.fovHeight / this.imgHeight) * 1.08;
+      const scaleW = ((this.fovHeight * (width / height)) / this.imgWidth) * 1.02;
       const scale = Math.min(scaleH, scaleW);
       this.object3D.scale.set(scale, scale, 1);
       this.hitArea.scale.set(scale, scale, 1);

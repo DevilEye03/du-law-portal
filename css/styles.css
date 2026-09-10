@@ -104,9 +104,9 @@ button{font-family:inherit;cursor:pointer}
 .hero-particle-text-stage{
   position: relative;
   width: 100%;
-  max-width: 860px;
-  min-height: clamp(130px, 18vw, 190px);
-  margin: 2px auto 14px;
+  max-width: 980px;
+  min-height: clamp(160px, 22vw, 240px);
+  margin: 0 auto 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +134,7 @@ button{font-family:inherit;cursor:pointer}
   visibility: hidden;
 }
 
-.sem-hero-content{position:relative;z-index:2;text-align:center;max-width:840px;pointer-events:none}
+.sem-hero-content{position:relative;z-index:2;text-align:center;max-width:960px;pointer-events:none}
 .sem-hero-badge{display:inline-flex;align-items:center;gap:9px;padding:7px 22px;
   border-radius:9999px;background:rgba(201,168,76,.12);
   border:1px solid rgba(201,168,76,.5);color:#e5b869;font-size:.76rem;
