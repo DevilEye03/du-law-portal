@@ -1,10 +1,10 @@
 /**
  * DELHI UNIVERSITY LAW NOTES PORTAL — INTERACTIVE GPU PARTICLES
  * 
- * Ported from Bruno Imbrizi's Three.js Interactive Particles & VengeanceUI
- * Samples an image or procedural Scales of Justice emblem into thousands of
- * WebGL GPU particles that scatter and flow around the cursor via an off-screen
- * touch-texture with simplex-noise displacement and smooth GSAP entrance animations.
+ * Ported from Bruno Imbrizi's Three.js Interactive Particles & VengeanceUI.
+ * Renders the headline text "Study Smarter, Pass with Distinction." directly
+ * into thousands of WebGL GPU particles that disperse and scatter under cursor
+ * hover and seamlessly re-assemble with 2D simplex noise and glowing gold stardust.
  */
 
 (function () {
@@ -60,6 +60,7 @@
 
     varying vec2 vPUv;
     varying vec2 vUv;
+    varying vec3 vColor;
 
     ${SIMPLEX_2D}
 
@@ -74,11 +75,11 @@
       vPUv = puv;
 
       vec4 colA = texture2D(uTexture, puv);
-      float grey = max(max(colA.r, colA.g), colA.b);
+      vColor = colA.rgb;
 
       vec3 displaced = offset;
       displaced.xy += vec2(random(pindex) - 0.5, random(offset.x + pindex) - 0.5) * uRandom;
-      float rndz = (random(pindex) + snoise(vec2(pindex * 0.1, uTime * 0.12)));
+      float rndz = (random(pindex) + snoise(vec2(pindex * 0.1, uTime * 0.14)));
       displaced.z += rndz * (random(pindex) * 2.0 * uDepth);
       displaced.xy -= uTextureSize * 0.5;
 
@@ -87,8 +88,7 @@
       displaced.x += cos(angle) * t * 38.0 * rndz;
       displaced.y += sin(angle) * t * 38.0 * rndz;
 
-      float psize = (snoise(vec2(uTime * 0.25, pindex * 0.2)) * 0.45 + 2.2);
-      psize *= max(grey, 0.4);
+      float psize = (snoise(vec2(uTime * 0.25, pindex * 0.2)) * 0.4 + 2.4);
       psize *= uSize;
 
       vec4 mvPosition = modelViewMatrix * vec4(displaced, 1.0);
@@ -103,25 +103,24 @@
     precision highp float;
 
     uniform sampler2D uTexture;
-    uniform vec3 uColor;
-
     varying vec2 vPUv;
     varying vec2 vUv;
+    varying vec3 vColor;
 
     void main() {
-      // Soft, circular feathered particle dot
+      // Feathered circular particle dot
       float dist = 0.5 - distance(vUv, vec2(0.5));
       if (dist < 0.0) discard;
       float t = smoothstep(0.0, 0.35, dist);
 
-      vec4 colA = texture2D(uTexture, vPUv);
-      float bright = max(max(colA.r, colA.g), colA.b);
-      float alpha = t * clamp(bright * 1.5, 0.55, 1.0);
+      float bright = max(max(vColor.r, vColor.g), vColor.b);
+      if (bright < 0.08) discard;
 
-      // Radiant gold / amber tint with warm sparkling core
-      vec3 goldTint = mix(uColor, vec3(1.0, 0.96, 0.82), t * 0.35);
+      // Radiant sparkling core
+      vec3 finalColor = mix(vColor, vec3(1.0, 0.98, 0.92), t * 0.35);
+      float alpha = t * clamp(bright * 1.5, 0.65, 1.0);
 
-      gl_FragColor = vec4(goldTint, alpha);
+      gl_FragColor = vec4(finalColor, alpha);
     }
   `;
 
@@ -129,7 +128,7 @@
    * Touch trail canvas encoder
    */
   class TouchTexture {
-    constructor(radius = 0.22) {
+    constructor(radius = 0.24) {
       this.size = 64;
       this.maxAge = 120;
       this.radius = radius;
@@ -178,11 +177,11 @@
       } else {
         intensity = this.easeOutSine(1 - (point.age - this.maxAge * 0.3) / (this.maxAge * 0.7), 0, 1, 1);
       }
-      intensity *= Math.max(point.force, 0.4);
+      intensity *= Math.max(point.force, 0.45);
 
       const radius = this.size * this.radius * intensity;
       const grd = this.ctx.createRadialGradient(pos.x, pos.y, radius * 0.2, pos.x, pos.y, radius);
-      grd.addColorStop(0, "rgba(255, 255, 255, 0.4)");
+      grd.addColorStop(0, "rgba(255, 255, 255, 0.45)");
       grd.addColorStop(1, "rgba(0, 0, 0, 0.0)");
       this.ctx.beginPath();
       this.ctx.fillStyle = grd;
@@ -199,20 +198,17 @@
       this.container = typeof options.container === 'string' ? document.querySelector(options.container) : options.container;
       if (!this.container) return;
 
-      this.src = options.src || 'particles.png';
-      this.color = options.color || '#e5b869'; // Radiant Gold
       this.size = options.size || 1.8;
-      this.randomness = options.randomness || 1.4;
-      this.depth = options.depth || 3.8;
-      this.touchRadius = options.touchRadius || 0.22;
+      this.randomness = options.randomness || 1.3;
+      this.depth = options.depth || 3.6;
+      this.touchRadius = options.touchRadius || 0.24;
       this.threshold = options.threshold || 25;
-      this.maxDimension = options.maxDimension || 260;
-      this.allowUpload = options.allowUpload !== false;
+      this.maxDimension = options.maxDimension || 340;
 
       this.disposed = false;
       this.isInViewport = true;
       this.lastRender = 0;
-      this.frameInterval = 1000 / 30; // 30fps throttle for silky-smooth performance
+      this.frameInterval = 1000 / 30; // 30fps smooth GPU throttle
 
       this.init();
     }
@@ -227,120 +223,45 @@
       this.setupThree();
       this.setupEvents();
 
-      // Start with the procedural emblem canvas immediately (0ms latency fallback)
-      const fallbackCanvas = this.createDefaultEmblemCanvas();
-      this.buildParticlesFromCanvas(fallbackCanvas);
+      // Render the typographic text into particles immediately
+      const textCanvas = this.createTextCanvas();
+      this.buildParticlesFromCanvas(textCanvas);
 
-      // Also attempt to load external image if provided
-      if (this.src) {
-        this.loadExternalImage(this.src);
+      // Listen for custom web font load to re-rasterize if font was pending
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => {
+          if (!this.disposed) {
+            const fontCanvas = this.createTextCanvas();
+            this.buildParticlesFromCanvas(fontCanvas);
+          }
+        });
       }
+
+      // Mark container as active to transition from HTML fallback
+      this.container.classList.add('particles-active');
     }
 
-    createDefaultEmblemCanvas() {
+    createTextCanvas() {
       const c = document.createElement('canvas');
-      c.width = 280;
-      c.height = 280;
+      c.width = 960;
+      c.height = 360;
       const ctx = c.getContext('2d');
+
       ctx.fillStyle = '#000000';
-      ctx.fillRect(0, 0, 280, 280);
+      ctx.fillRect(0, 0, c.width, c.height);
 
-      ctx.strokeStyle = '#ffffff';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      // Line 1: Study Smarter, (Pure White Serif)
       ctx.fillStyle = '#ffffff';
-      ctx.lineWidth = 3;
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
+      ctx.font = '700 92px "Playfair Display", "Cinzel", Georgia, serif';
+      ctx.fillText('Study Smarter,', c.width / 2, 115);
 
-      const cx = 140, cy = 140;
-
-      // Pedestal Base
-      ctx.beginPath();
-      ctx.rect(cx - 50, cy + 85, 100, 12);
-      ctx.rect(cx - 30, cy + 75, 60, 10);
-      ctx.fill();
-
-      // Central Column
-      ctx.beginPath();
-      ctx.moveTo(cx - 6, cy + 75);
-      ctx.lineTo(cx - 5, cy - 70);
-      ctx.lineTo(cx + 5, cy - 70);
-      ctx.lineTo(cx + 6, cy + 75);
-      ctx.closePath();
-      ctx.fill();
-
-      // Top Finial
-      ctx.beginPath();
-      ctx.arc(cx, cy - 80, 7, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Cross Beam
-      ctx.beginPath();
-      ctx.lineWidth = 4.5;
-      ctx.moveTo(cx - 95, cy - 55);
-      ctx.lineTo(cx + 95, cy - 55);
-      ctx.stroke();
-
-      // Center pivot
-      ctx.beginPath();
-      ctx.arc(cx, cy - 55, 8, 0, Math.PI * 2);
-      ctx.stroke();
-
-      // Left & right beam tips
-      ctx.beginPath();
-      ctx.arc(cx - 95, cy - 55, 5, 0, Math.PI * 2);
-      ctx.arc(cx + 95, cy - 55, 5, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Left Strings
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(cx - 95, cy - 55);
-      ctx.lineTo(cx - 118, cy + 10);
-      ctx.moveTo(cx - 95, cy - 55);
-      ctx.lineTo(cx - 72, cy + 10);
-      ctx.stroke();
-
-      // Left Pan
-      ctx.beginPath();
-      ctx.lineWidth = 3;
-      ctx.arc(cx - 95, cy + 10, 24, 0, Math.PI);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(cx - 120, cy + 10);
-      ctx.lineTo(cx - 70, cy + 10);
-      ctx.stroke();
-
-      // Right Strings
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(cx + 95, cy - 55);
-      ctx.lineTo(cx + 72, cy + 10);
-      ctx.moveTo(cx + 95, cy - 55);
-      ctx.lineTo(cx + 118, cy + 10);
-      ctx.stroke();
-
-      // Right Pan
-      ctx.beginPath();
-      ctx.lineWidth = 3;
-      ctx.arc(cx + 95, cy + 10, 24, 0, Math.PI);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.moveTo(cx + 70, cy + 10);
-      ctx.lineTo(cx + 120, cy + 10);
-      ctx.stroke();
-
-      // Constellation Stardust Ring
-      const numStars = 200;
-      for (let i = 0; i < numStars; i++) {
-        const angle = (i / numStars) * Math.PI * 2;
-        const dist = 115 + (Math.sin(i * 14.5) * 0.5 + 0.5) * 24;
-        const sx = cx + Math.cos(angle) * dist;
-        const sy = cy + Math.sin(angle) * dist;
-        const rad = (i % 4 === 0) ? 2.2 : 1.4;
-        ctx.beginPath();
-        ctx.arc(sx, sy, rad, 0, Math.PI * 2);
-        ctx.fill();
-      }
+      // Line 2: Pass with Distinction. (Radiant Gold Italic Serif)
+      ctx.fillStyle = '#e5b869';
+      ctx.font = 'italic 700 96px "Playfair Display", "Cinzel", Georgia, serif';
+      ctx.fillText('Pass with Distinction.', c.width / 2, 245);
 
       return c;
     }
@@ -350,45 +271,12 @@
       this.canvas = document.createElement('canvas');
       this.canvas.className = 'interactive-particles-canvas';
       this.container.appendChild(this.canvas);
-
-      // Create Upload Control if allowed
-      if (this.allowUpload) {
-        this.fileInput = document.createElement('input');
-        this.fileInput.type = 'file';
-        this.fileInput.accept = 'image/*';
-        this.fileInput.style.display = 'none';
-        this.container.appendChild(this.fileInput);
-
-        this.uploadBtn = document.createElement('button');
-        this.uploadBtn.type = 'button';
-        this.uploadBtn.className = 'particles-upload-btn';
-        this.uploadBtn.innerHTML = '<i class="fa-solid fa-cloud-arrow-up"></i> <span>Custom Emblem</span>';
-        this.uploadBtn.title = 'Upload any image to morph the interactive particle field';
-        this.container.appendChild(this.uploadBtn);
-
-        this.uploadBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.fileInput.click();
-        });
-        this.fileInput.addEventListener('change', (e) => {
-          const file = e.target.files?.[0];
-          if (file && file.type.startsWith('image/')) {
-            const reader = new FileReader();
-            reader.onload = (ev) => {
-              const img = new Image();
-              img.onload = () => this.buildParticlesFromImage(img);
-              img.src = ev.target.result;
-            };
-            reader.readAsDataURL(file);
-          }
-        });
-      }
     }
 
     setupThree() {
       const rect = this.container.getBoundingClientRect();
       const width = rect.width || this.container.clientWidth || window.innerWidth || 800;
-      const height = rect.height || this.container.clientHeight || 520;
+      const height = rect.height || this.container.clientHeight || 220;
 
       this.scene = new THREE.Scene();
       this.camera = new THREE.PerspectiveCamera(50, width / height, 1, 10000);
@@ -412,32 +300,6 @@
       this.mouseNDC = new THREE.Vector2();
     }
 
-    loadExternalImage(src) {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = () => {
-        if (!this.disposed) this.buildParticlesFromImage(img);
-      };
-      img.onerror = () => {
-        console.log('[InteractiveParticles] Fallback procedural emblem active.');
-      };
-      img.src = src;
-    }
-
-    buildParticlesFromImage(image) {
-      const longest = Math.max(image.width, image.height);
-      const scaleDown = longest > this.maxDimension ? this.maxDimension / longest : 1;
-      const w = Math.max(1, Math.round(image.width * scaleDown));
-      const h = Math.max(1, Math.round(image.height * scaleDown));
-
-      const c = document.createElement('canvas');
-      c.width = w;
-      c.height = h;
-      const ctx = c.getContext('2d');
-      ctx.drawImage(image, 0, 0, w, h);
-      this.buildParticlesFromCanvas(c);
-    }
-
     buildParticlesFromCanvas(canvas) {
       if (this.disposed) return;
 
@@ -454,8 +316,9 @@
         this.hitArea = null;
       }
 
-      this.imgWidth = canvas.width;
-      this.imgHeight = canvas.height;
+      const aspect = canvas.width / canvas.height;
+      this.imgWidth = this.maxDimension;
+      this.imgHeight = Math.max(1, Math.round(this.maxDimension / aspect));
       const numPoints = this.imgWidth * this.imgHeight;
 
       // Inverted read canvas for WebGL texture orientation
@@ -472,9 +335,8 @@
         const r = colors[i * 4];
         const g = colors[i * 4 + 1];
         const b = colors[i * 4 + 2];
-        const a = colors[i * 4 + 3];
         const bright = Math.max(r, g, b);
-        if (bright > this.threshold || (a > 40 && bright > 15)) numVisible++;
+        if (bright > this.threshold) numVisible++;
       }
 
       const texture = new THREE.CanvasTexture(canvas);
@@ -489,7 +351,6 @@
         uTextureSize: { value: new THREE.Vector2(this.imgWidth, this.imgHeight) },
         uTexture: { value: texture },
         uTouch: { value: null },
-        uColor: { value: new THREE.Color(this.color) },
       };
 
       const material = new THREE.RawShaderMaterial({
@@ -528,9 +389,8 @@
         const r = colors[i * 4];
         const g = colors[i * 4 + 1];
         const b = colors[i * 4 + 2];
-        const a = colors[i * 4 + 3];
         const bright = Math.max(r, g, b);
-        if (bright <= this.threshold && !(a > 40 && bright > 15)) continue;
+        if (bright <= this.threshold) continue;
         offsets[j * 3 + 0] = i % this.imgWidth;
         offsets[j * 3 + 1] = Math.floor(i / this.imgWidth);
         indices[j] = i;
@@ -544,7 +404,7 @@
       this.object3D = new THREE.Mesh(geometry, material);
       this.container3D.add(this.object3D);
 
-      // Hit plane for cursor raycasting — must have transparent opacity: 0 with visible: true
+      // Hit plane for cursor raycasting — transparent opacity: 0 with visible: true
       const hitGeo = new THREE.PlaneGeometry(this.imgWidth, this.imgHeight, 1, 1);
       const hitMat = new THREE.MeshBasicMaterial({
         transparent: true,
@@ -566,7 +426,7 @@
       if (typeof gsap !== 'undefined') {
         gsap.fromTo(this.uniforms.uSize, { value: 0.3 }, { value: this.size, duration: 1.2, ease: "power2.out" });
         gsap.to(this.uniforms.uRandom, { value: this.randomness, duration: 1.2, ease: "power2.out" });
-        gsap.fromTo(this.uniforms.uDepth, { value: 30.0 }, { value: this.depth, duration: 1.6, ease: "power3.out" });
+        gsap.fromTo(this.uniforms.uDepth, { value: 25.0 }, { value: this.depth, duration: 1.5, ease: "power3.out" });
       } else {
         this.uniforms.uSize.value = this.size;
         this.uniforms.uRandom.value = this.randomness;
@@ -575,8 +435,12 @@
     }
 
     applyScale() {
-      if (!this.object3D || !this.hitArea || !this.imgHeight) return;
-      const scale = (this.fovHeight / this.imgHeight) * 0.95;
+      if (!this.object3D || !this.hitArea || !this.imgHeight || !this.imgWidth) return;
+      const width = this.container.clientWidth || 800;
+      const height = this.container.clientHeight || 200;
+      const scaleH = (this.fovHeight / this.imgHeight) * 0.86;
+      const scaleW = ((this.fovHeight * (width / height)) / this.imgWidth) * 0.90;
+      const scale = Math.min(scaleH, scaleW);
       this.object3D.scale.set(scale, scale, 1);
       this.hitArea.scale.set(scale, scale, 1);
     }
@@ -602,7 +466,7 @@
         if (!this.container || !this.camera || !this.renderer) return;
         const rect = this.container.getBoundingClientRect();
         const width = rect.width || this.container.clientWidth || window.innerWidth || 800;
-        const height = rect.height || this.container.clientHeight || 520;
+        const height = rect.height || this.container.clientHeight || 220;
         this.camera.aspect = width / height;
         this.camera.updateProjectionMatrix();
         this.fovHeight = 2 * Math.tan((this.camera.fov * Math.PI) / 180 / 2) * this.camera.position.z;
@@ -665,20 +529,17 @@
   // Export globally
   window.InteractiveParticlesController = InteractiveParticlesController;
 
-  // Bulletproof auto-boot
+  // Auto-boot
   function bootInteractiveParticles() {
     const container = document.getElementById('interactiveParticlesContainer');
     if (container && !window.activeParticles) {
       window.activeParticles = new InteractiveParticlesController({
         container: container,
-        src: 'particles.png',
-        color: '#e5b869', // Radiant Gold
         size: 1.8,
-        randomness: 1.4,
-        depth: 3.8,
-        touchRadius: 0.22,
-        threshold: 25,
-        allowUpload: true
+        randomness: 1.3,
+        depth: 3.6,
+        touchRadius: 0.24,
+        threshold: 25
       });
     }
   }
