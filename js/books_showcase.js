@@ -1202,7 +1202,7 @@
     pageGeo = new THREE.PlaneGeometry(PW, PH);
     spineGeo = new THREE.BoxGeometry(0.028, H + OV * 2, T + CT * 2 + 0.006);
     hitGeo = new THREE.BoxGeometry(1.8, 2.5, 1.15);
-    hitMat = new THREE.MeshBasicMaterial({ visible: false });
+    hitMat = new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false });
   }
 
   function buildBook(cfg, index) {
@@ -1697,6 +1697,14 @@
       canvasEl.addEventListener('click', (e) => {
         if (Math.abs(dragDeltaX) > 10) return; // ignore if dragging
 
+        const rect = canvasEl.getBoundingClientRect();
+        const clientX = e.clientX - rect.left;
+        const clientY = e.clientY - rect.top;
+        if (dims.w > 0 && dims.h > 0) {
+          mouseNorm.x = (clientX / dims.w) * 2 - 1;
+          mouseNorm.y = -(clientY / dims.h) * 2 + 1;
+        }
+
         raycaster.setFromCamera(mouseNorm, camera);
         const hits = raycaster.intersectObjects(hitMeshes, false);
 
@@ -1704,8 +1712,8 @@
           const hit = hits[0].object;
           const found = bookInstances.find((b) => b.hit === hit);
           if (found) {
-            if (selectedBook === found) {
-              closeSelectedBook();
+            if (onExploreSubjectCallback) {
+              onExploreSubjectCallback(found.cfg);
             } else {
               openBook(found);
             }
@@ -1760,6 +1768,12 @@
     openBookByIndex: function (idx) {
       if (bookInstances[idx]) {
         openBook(bookInstances[idx]);
+      }
+    },
+
+    exploreSubjectByIndex: function (idx) {
+      if (bookInstances[idx] && onExploreSubjectCallback) {
+        onExploreSubjectCallback(bookInstances[idx].cfg);
       }
     },
 

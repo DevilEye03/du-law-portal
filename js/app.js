@@ -485,7 +485,10 @@
   function openSubjectHub(subId) {
     const data = window.DU_LAW_PORTAL_DATA;
     const sub = data.subjects[subId];
-    if (!sub) return;
+    if (!sub) {
+      showToast('Comprehensive notes for this subject are uploading soon!', 'fa-clock');
+      return;
+    }
 
     state.currentSubject = sub;
     state.currentTab = 'topics';
@@ -2243,10 +2246,18 @@
 
     // Initial Routing: Check URL query parameters, then saved semester in localStorage
     const urlParams = new URLSearchParams(window.location.search);
+    const querySub = urlParams.get('subject') || urlParams.get('sub');
     const querySem = urlParams.get('sem');
     const queryView = urlParams.get('view');
 
-    if (querySem) {
+    if (querySub) {
+      const data = window.DU_LAW_PORTAL_DATA;
+      if (data) {
+        const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(querySub));
+        if (foundSem) state.currentSemester = foundSem.id;
+      }
+      openSubjectHub(querySub);
+    } else if (querySem) {
       selectSemester(parseInt(querySem, 10) || 1);
     } else if (queryView === 'subjects') {
       const savedSem = localStorage.getItem('du_law_selected_semester');
@@ -2258,13 +2269,6 @@
       } else {
         showView('semester');
       }
-    }
-
-    const queryOpen = urlParams.get('open');
-    if (queryOpen !== null && window.DUBooksShowcase) {
-      setTimeout(() => {
-        window.DUBooksShowcase.openBookByIndex(parseInt(queryOpen, 10) || 0);
-      }, 450);
     }
   }
 
