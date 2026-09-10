@@ -94,15 +94,15 @@ button{font-family:inherit;cursor:pointer}
   background:radial-gradient(ellipse 80% 60% at 20% 50%,rgba(168,40,20,.35) 0%,transparent 65%),
     radial-gradient(ellipse 60% 80% at 80% 30%,rgba(229,184,105,.18) 0%,transparent 60%),
     radial-gradient(ellipse 50% 50% at 50% 100%,rgba(168,40,20,.25) 0%,transparent 70%);
-  pointer-events:none}
+  pointer-events:none;z-index:0}
 .sem-hero-cinematic::after{content:'';position:absolute;inset:0;
   background-image:linear-gradient(rgba(229,184,105,.055) 1px,transparent 1px),
     linear-gradient(90deg,rgba(229,184,105,.055) 1px,transparent 1px);
-  background-size:52px 52px;pointer-events:none}
+  background-size:52px 52px;pointer-events:none;z-index:0}
 
 /* Interactive GPU Particles Canvas Layer */
-.hero-particles-bg{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:auto}
-.interactive-particles-canvas{width:100%!important;height:100%!important;display:block}
+.hero-particles-bg{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+.interactive-particles-canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;pointer-events:none}
 .particles-upload-btn{position:absolute;top:20px;right:24px;z-index:15;display:inline-flex;
   align-items:center;gap:7px;padding:7px 15px;border-radius:9999px;
   background:rgba(229,184,105,.08);border:1px solid rgba(229,184,105,.3);
