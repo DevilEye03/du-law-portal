@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=3.3">
+  <link rel="stylesheet" href="css/styles.css?v=3.4">
 </head>
 <body>
 
@@ -142,19 +142,95 @@
     <!-- ---------------------------------------------------------------
          VIEW 2: SUBJECTS SELECTION DASHBOARD
          --------------------------------------------------------------- -->
+    <!-- ---------------------------------------------------------------
+         VIEW 2: SUBJECTS SELECTION DASHBOARD (3D Books Showcase & Grid)
+         --------------------------------------------------------------- -->
     <section class="subjects-view" id="subjectsView">
       <div class="view-header">
         <div class="view-header-top">
           <div class="view-title-group">
             <h2 id="currentSemHeading">Semester I &mdash; Core Subjects</h2>
-            <p id="currentSemDesc">Academic Session 2025&ndash;2026 &bull; 5 Core Subjects with 42 Comprehensive Units</p>
+            <p id="currentSemDesc">Academic Session 2025&ndash;2026 &bull; Select any subject treatise below to open syllabus, landmark cases, and PYQ dossier.</p>
           </div>
-          <button class="semester-badge-btn" id="changeSemBtn">
-            <i class="fa-solid fa-arrow-left"></i> Change Semester
-          </button>
+          <div class="view-controls-bar">
+            <div class="view-mode-toggle" id="viewModeToggle">
+              <button class="view-mode-btn active" id="viewModeBooksBtn" title="3D Books Showcase Mode">
+                <i class="fa-solid fa-book-journal-whills"></i> <span>3D Books</span>
+              </button>
+              <button class="view-mode-btn" id="viewModeGridBtn" title="Standard Grid View">
+                <i class="fa-solid fa-table-cells-large"></i> <span>Grid View</span>
+              </button>
+            </div>
+            <button class="semester-badge-btn liquid-metal-btn" id="changeSemBtn" title="Change Semester">
+              <i class="fa-solid fa-arrow-left"></i> Change Semester
+            </button>
+          </div>
         </div>
       </div>
 
+      <!-- 3D Interactive Books Showcase (VengeanceUI Inspired) -->
+      <div class="books-showcase-container-wrap active" id="booksShowcaseWrap">
+        <div class="books-showcase-stage" id="booksShowcaseContainer">
+          <canvas class="books-showcase-canvas" id="booksCanvas"></canvas>
+
+          <!-- Nav Chevrons -->
+          <button class="bs-nav-arrow bs-arrow-prev" id="bsPrev" title="Previous Subject" aria-label="Previous Subject">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="bs-nav-arrow bs-arrow-next" id="bsNext" title="Next Subject" aria-label="Next Subject">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Floating Open Slip on Hover -->
+          <div class="bs-open-slip" id="bsOpenSlip">
+            <span>Open Book</span>
+          </div>
+
+          <!-- Close Selected Book Button -->
+          <button class="bs-close-btn" id="bsCloseBtn" title="Close Book" aria-label="Close Book">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!-- Slide-out Subject Detail Panel -->
+          <div class="bs-detail-panel" id="bsDetailPanel">
+            <div class="bs-detail-badges">
+              <span class="bs-code-badge" id="bsCodeBadge">LB-106</span>
+              <span class="bs-sem-badge" id="bsSemBadge">Semester I</span>
+            </div>
+            <h1 class="bs-detail-title" id="bsDetailTitle">Jurisprudence–I</h1>
+            <p class="bs-detail-desc" id="bsDetailDesc">
+              Legal Method, Indian Legal System, Bharatiya Jurisprudence & Judicial Hierarchy.
+            </p>
+            <div class="bs-detail-meta">
+              <div class="bs-stars-row">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="bs-meta-divider"></span>
+              <span class="bs-units-count" id="bsUnitsCount">5 Core Units</span>
+              <span class="bs-meta-divider"></span>
+              <span class="bs-year" id="bsYear">Session 2025–26</span>
+            </div>
+            <div class="bs-detail-actions">
+              <button class="bs-action-explore" id="bsActionExplore">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span>Explore Subject Notes & Cases</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="books-showcase-hint">
+          <i class="fa-solid fa-hand-pointer"></i>
+          <span>Click any subject book to open &amp; inspect syllabus chapters &bull; Drag horizontally to rotate the carousel</span>
+        </div>
+      </div>
+
+      <!-- Standard Subjects Grid (Fallback / Toggle Mode) -->
       <div class="subjects-grid" id="subjectsGrid">
         <!-- Injected dynamically by app.js -->
       </div>
@@ -653,12 +729,13 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="js/wave_grid_background.js?v=3.3"></script>
-  <script src="js/interactive_particles.js?v=3.3"></script>
-  <script src="js/data.js?v=3.3"></script>
-  <script src="js/bare_acts.js?v=3.3"></script>
-  <script src="js/bns_converter.js?v=3.3"></script>
-  <script src="js/app.js?v=3.3"></script>
+  <script src="js/wave_grid_background.js?v=3.4"></script>
+  <script src="js/interactive_particles.js?v=3.4"></script>
+  <script src="js/books_showcase.js?v=3.4"></script>
+  <script src="js/data.js?v=3.4"></script>
+  <script src="js/bare_acts.js?v=3.4"></script>
+  <script src="js/bns_converter.js?v=3.4"></script>
+  <script src="js/app.js?v=3.4"></script>
 
   <script>
     if ("serviceWorker" in navigator) {

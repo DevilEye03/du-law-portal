@@ -36,7 +36,8 @@
       activeAct: 'all',
       searchQuery: '',
       expandedId: null
-    }
+    },
+    subjectsViewMode: localStorage.getItem('du_subjects_view_mode') || 'books'
   };
 
   // DOM Elements Cache
@@ -93,9 +94,26 @@
     // Semester View Elements
     semesterGrid: document.getElementById('semesterGrid'),
 
-    // Subjects View Elements
+    // Subjects View Elements & 3D Books Showcase
     currentSemHeading: document.getElementById('currentSemHeading'),
     currentSemDesc: document.getElementById('currentSemDesc'),
+    viewModeBooksBtn: document.getElementById('viewModeBooksBtn'),
+    viewModeGridBtn: document.getElementById('viewModeGridBtn'),
+    booksShowcaseWrap: document.getElementById('booksShowcaseWrap'),
+    booksShowcaseContainer: document.getElementById('booksShowcaseContainer'),
+    booksCanvas: document.getElementById('booksCanvas'),
+    bsPrev: document.getElementById('bsPrev'),
+    bsNext: document.getElementById('bsNext'),
+    bsCloseBtn: document.getElementById('bsCloseBtn'),
+    bsOpenSlip: document.getElementById('bsOpenSlip'),
+    bsDetailPanel: document.getElementById('bsDetailPanel'),
+    bsCodeBadge: document.getElementById('bsCodeBadge'),
+    bsSemBadge: document.getElementById('bsSemBadge'),
+    bsDetailTitle: document.getElementById('bsDetailTitle'),
+    bsDetailDesc: document.getElementById('bsDetailDesc'),
+    bsUnitsCount: document.getElementById('bsUnitsCount'),
+    bsYear: document.getElementById('bsYear'),
+    bsActionExplore: document.getElementById('bsActionExplore'),
     subjectsGrid: document.getElementById('subjectsGrid'),
     changeSemBtn: document.getElementById('changeSemBtn'),
 
@@ -363,6 +381,26 @@
   // =========================================================================
   // 2. SUBJECTS SELECTION VIEW
   // =========================================================================
+  function applySubjectsViewMode(mode) {
+    state.subjectsViewMode = mode;
+    localStorage.setItem('du_subjects_view_mode', mode);
+
+    if (elements.subjectsView) {
+      elements.subjectsView.classList.remove('mode-books', 'mode-grid');
+      elements.subjectsView.classList.add(mode === 'grid' ? 'mode-grid' : 'mode-books');
+    }
+
+    if (elements.viewModeBooksBtn && elements.viewModeGridBtn) {
+      elements.viewModeBooksBtn.classList.toggle('active', mode !== 'grid');
+      elements.viewModeGridBtn.classList.toggle('active', mode === 'grid');
+    }
+
+    // If switching to books mode, ensure Three.js canvas resizes appropriately
+    if (mode !== 'grid' && window.DUBooksShowcase) {
+      window.dispatchEvent(new Event('resize'));
+    }
+  }
+
   function renderSubjectsGrid() {
     const data = window.DU_LAW_PORTAL_DATA;
     if (!data || !state.currentSemester) return;
@@ -371,7 +409,15 @@
     if (!currentSemObj) return;
 
     elements.currentSemHeading.textContent = `${currentSemObj.name} — Core Subjects`;
-    elements.currentSemDesc.textContent = `${currentSemObj.term} • Select any subject below to explore detailed topic notes, landmark cases, previous year question bank, and quick revision capsules.`;
+    elements.currentSemDesc.textContent = `${currentSemObj.term} • Select any subject treatise below to open syllabus, landmark cases, and PYQ dossier.`;
+
+    // Apply active view mode (3D Books or Standard Grid)
+    applySubjectsViewMode(state.subjectsViewMode || 'books');
+
+    // Load current semester into 3D Books Showcase
+    if (window.DUBooksShowcase) {
+      window.DUBooksShowcase.loadSemester(state.currentSemester);
+    }
 
     const subjectIds = currentSemObj.subjectIds;
     const subjectsList = subjectIds.map(id => data.subjects[id]).filter(Boolean);
@@ -2158,12 +2204,67 @@
       });
     });
 
-    // Initial Routing: Check saved semester in localStorage
-    const savedSem = localStorage.getItem('du_law_selected_semester');
-    if (savedSem) {
-      selectSemester(parseInt(savedSem, 10));
+    // Initialize 3D Books Showcase Engine
+    if (window.DUBooksShowcase && elements.booksShowcaseContainer && elements.booksCanvas) {
+      window.DUBooksShowcase.init({
+        container: elements.booksShowcaseContainer,
+        canvas: elements.booksCanvas,
+        prevBtn: elements.bsPrev,
+        nextBtn: elements.bsNext,
+        closeBtn: elements.bsCloseBtn,
+        openSlip: elements.bsOpenSlip,
+        detailPanel: elements.bsDetailPanel,
+        codeBadge: elements.bsCodeBadge,
+        semBadge: elements.bsSemBadge,
+        detailTitle: elements.bsDetailTitle,
+        detailDesc: elements.bsDetailDesc,
+        unitsCount: elements.bsUnitsCount,
+        yearBadge: elements.bsYear,
+        actionBtn: elements.bsActionExplore,
+        onExploreSubject: (book) => {
+          if (book && book.id) {
+            openSubjectHub(book.id);
+          }
+        }
+      });
+    }
+
+    // View Mode Toggle Listeners (3D Books vs Grid)
+    if (elements.viewModeBooksBtn) {
+      elements.viewModeBooksBtn.addEventListener('click', () => {
+        applySubjectsViewMode('books');
+      });
+    }
+    if (elements.viewModeGridBtn) {
+      elements.viewModeGridBtn.addEventListener('click', () => {
+        applySubjectsViewMode('grid');
+      });
+    }
+
+    // Initial Routing: Check URL query parameters, then saved semester in localStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    const querySem = urlParams.get('sem');
+    const queryView = urlParams.get('view');
+
+    if (querySem) {
+      selectSemester(parseInt(querySem, 10) || 1);
+    } else if (queryView === 'subjects') {
+      const savedSem = localStorage.getItem('du_law_selected_semester');
+      selectSemester(savedSem ? parseInt(savedSem, 10) : 1);
     } else {
-      showView('semester');
+      const savedSem = localStorage.getItem('du_law_selected_semester');
+      if (savedSem) {
+        selectSemester(parseInt(savedSem, 10));
+      } else {
+        showView('semester');
+      }
+    }
+
+    const queryOpen = urlParams.get('open');
+    if (queryOpen !== null && window.DUBooksShowcase) {
+      setTimeout(() => {
+        window.DUBooksShowcase.openBookByIndex(parseInt(queryOpen, 10) || 0);
+      }, 450);
     }
   }
 
