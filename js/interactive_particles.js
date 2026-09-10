@@ -244,24 +244,36 @@
     createTextCanvas() {
       const c = document.createElement('canvas');
       c.width = 960;
-      c.height = 360;
+      c.height = 240;
       const ctx = c.getContext('2d');
 
       ctx.fillStyle = '#000000';
       ctx.fillRect(0, 0, c.width, c.height);
 
-      ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
 
-      // Line 1: Study Smarter, (Pure White Serif)
-      ctx.fillStyle = '#ffffff';
-      ctx.font = '700 92px "Playfair Display", "Cinzel", Georgia, serif';
-      ctx.fillText('Study Smarter,', c.width / 2, 115);
+      const fontWhite = '700 96px "Playfair Display", "Cinzel", Georgia, serif';
+      const fontGold = 'italic 700 102px "Playfair Display", "Cinzel", Georgia, serif';
 
-      // Line 2: Pass with Distinction. (Radiant Gold Italic Serif)
+      ctx.font = fontWhite;
+      const w1 = ctx.measureText('Made Law ').width;
+      ctx.font = fontGold;
+      const w2 = ctx.measureText('Easy').width;
+      const totalW = w1 + w2;
+
+      const startX = Math.max(20, (c.width - totalW) / 2);
+      const cy = c.height / 2;
+
+      // "Made Law " in pure white
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#ffffff';
+      ctx.font = fontWhite;
+      ctx.fillText('Made Law ', startX, cy);
+
+      // "Easy" in radiant gold italic
       ctx.fillStyle = '#e5b869';
-      ctx.font = 'italic 700 96px "Playfair Display", "Cinzel", Georgia, serif';
-      ctx.fillText('Pass with Distinction.', c.width / 2, 245);
+      ctx.font = fontGold;
+      ctx.fillText('Easy', startX + w1, cy);
 
       return c;
     }

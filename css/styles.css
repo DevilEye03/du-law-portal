@@ -100,13 +100,13 @@ button{font-family:inherit;cursor:pointer}
     linear-gradient(90deg,rgba(229,184,105,.055) 1px,transparent 1px);
   background-size:52px 52px;pointer-events:none;z-index:0}
 
-/* Interactive GPU Particles Stage for "Study Smarter, Pass with Distinction." */
+/* Interactive GPU Particles Stage for "Made Law Easy" */
 .hero-particle-text-stage{
   position: relative;
   width: 100%;
-  max-width: 840px;
-  min-height: clamp(160px, 24vw, 240px);
-  margin: 4px auto 16px;
+  max-width: 860px;
+  min-height: clamp(130px, 18vw, 190px);
+  margin: 2px auto 14px;
   display: flex;
   align-items: center;
   justify-content: center;
