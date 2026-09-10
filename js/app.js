@@ -803,7 +803,7 @@
                         <div class="case-citation">${c.citation || 'Prescribed DU Case Material Precedent'}</div>
                       </div>
                       <div class="case-badge-actions">
-                        <button class="btn-card-audio" data-audio-title="${encodeURIComponent(c.name)}" data-audio-text="${encodeURIComponent((c.name || '') + '. ' + (c.ratio || c.facts || ''))}" title="Listen (Metro Mode)"><i class="fa-solid fa-headphones"></i> Listen</button><button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button><button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation">
+                        <button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button><button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation">
                           <i class="fa-solid fa-copy"></i> Copy Citation
                         </button>
                         <span class="case-unit-tag">${c.unit}</span>
@@ -875,15 +875,6 @@
     });
 
     // Copy Citation buttons
-    
-    elements.casesContainer.querySelectorAll('.btn-card-audio').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const t = decodeURIComponent(btn.dataset.audioTitle);
-        const text = decodeURIComponent(btn.dataset.audioText);
-        playAudio(t, text);
-      });
-    });
 
     elements.casesContainer.querySelectorAll('.btn-card-star').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -1591,76 +1582,25 @@
 
   
   // ===================================================================
-  // FEATURE 1: AUDIO READ-ALOUD (Metro Mode)
+  // FEATURE 1: AUDIO READ-ALOUD (Metro Mode - Disabled)
   // ===================================================================
   function initAudioPlayer() {
-    if (!('speechSynthesis' in window)) {
-      if (elements.floatingAudioBar) elements.floatingAudioBar.style.display = 'none';
-      return;
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
     }
-
-    if (elements.audioPlayPauseBtn) elements.audioPlayPauseBtn.addEventListener('click', toggleAudioPlayback);
-    if (elements.audioStopBtn) elements.audioStopBtn.addEventListener('click', stopAudioPlayback);
-    if (elements.audioSpeedBtn) elements.audioSpeedBtn.addEventListener('click', cycleAudioSpeed);
   }
 
   function playAudio(title, text) {
-    if (!('speechSynthesis' in window)) {
-      showToast('Speech synthesis not supported on this device');
-      return;
-    }
-    window.speechSynthesis.cancel();
-    const cleanText = text.replace(/<[^>]*>?/gm, ' ').replace(/\s+/g, ' ').trim();
-    if (!cleanText) return;
-
-    state.audioUtterance = new SpeechSynthesisUtterance(cleanText);
-    state.audioUtterance.rate = state.audioSpeechRate || 1.0;
-    state.audioUtterance.lang = 'en-IN';
-
-    state.audioUtterance.onstart = () => {
-      state.audioIsPlaying = true;
-      if (elements.floatingAudioBar) elements.floatingAudioBar.classList.add('active');
-      if (elements.audioPlayerTitle) elements.audioPlayerTitle.textContent = title;
-      if (elements.audioPlayerSubtitle) elements.audioPlayerSubtitle.textContent = 'Metro Audio Mode • ' + (state.audioSpeechRate || 1.0) + 'x speed';
-      if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-pause';
-    };
-
-    state.audioUtterance.onend = () => stopAudioPlayback();
-    state.audioUtterance.onerror = () => stopAudioPlayback();
-
-    window.speechSynthesis.speak(state.audioUtterance);
-    showToast('Metro Mode: Playing audio read-aloud 🎧');
+    // Disabled for now
   }
 
-  function toggleAudioPlayback() {
-    if (!('speechSynthesis' in window)) return;
-    if (window.speechSynthesis.speaking) {
-      if (window.speechSynthesis.paused) {
-        window.speechSynthesis.resume();
-        state.audioIsPlaying = true;
-        if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-pause';
-      } else {
-        window.speechSynthesis.pause();
-        state.audioIsPlaying = false;
-        if (elements.audioPlayPauseIcon) elements.audioPlayPauseIcon.className = 'fa-solid fa-play';
-      }
-    }
-  }
-
+  function toggleAudioPlayback() {}
   function stopAudioPlayback() {
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     state.audioIsPlaying = false;
     state.audioUtterance = null;
-    if (elements.floatingAudioBar) elements.floatingAudioBar.classList.remove('active');
   }
-
-  function cycleAudioSpeed() {
-    const speeds = [1.0, 1.25, 1.5, 0.9];
-    const currIdx = speeds.indexOf(state.audioSpeechRate || 1.0);
-    state.audioSpeechRate = speeds[(currIdx + 1) % speeds.length];
-    if (elements.audioSpeedBtn) elements.audioSpeedBtn.textContent = state.audioSpeechRate + 'x';
-    if (elements.audioPlayerSubtitle) elements.audioPlayerSubtitle.textContent = 'Metro Audio Mode • ' + state.audioSpeechRate + 'x speed';
-  }
+  function cycleAudioSpeed() {}
 
   // ===================================================================
   // FEATURE 2: STARRED PRECEDENTS & PERSONAL NOTES

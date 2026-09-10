@@ -2095,7 +2095,12 @@ body.drawer-open {
   padding: 2px 6px;
 }
 
-/* Floating Audio Player (Metro Mode) */
+/* Floating Audio Player (Metro Mode - Disabled) */
+.floating-audio-bar,
+.btn-card-audio {
+  display: none !important;
+}
+
 .floating-audio-bar {
   position: fixed;
   bottom: 80px;
