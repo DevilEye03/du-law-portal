@@ -366,10 +366,36 @@
         ]
       },
       {
+        id: "specialcontracts",
+        code: "LB-304",
+        title: "Special Contracts",
+        author: "LB-304 • Faculty of Law, DU",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "5 Comprehensive Units",
+        casesCount: "48 Landmark Cases",
+        desc: "Sale of Goods Act 1930, Indian Partnership Act 1932, Contracts of Indemnity, Guarantee, Bailment, Pledge & Agency.",
+        spineBg: "#1a2c38",
+        spineInk: "#d2e9f7",
+        spineFont: "700 38px Georgia",
+        backBg: "#0c1820",
+        backInk: "210,233,247",
+        edge: "#dbe8f0",
+        chapters: [
+          "Contract of Indemnity & Guarantee (Ss. 124–147)",
+          "Bailment & Pledge Rights and Duties (Ss. 148–181)",
+          "Law of Agency & Principal-Agent Relations (Ss. 182–238)",
+          "Sale of Goods Act: Conditions, Warranties & Unpaid Seller",
+          "Indian Partnership Act: Relations of Partners & Dissolution"
+        ]
+      }
+    ],
+    4: [
+      {
         id: "adminlaw",
-        code: "LB-305",
+        code: "LB-404",
         title: "Administrative Law",
-        author: "LB-305 • Faculty of Law, DU",
+        author: "LB-404 • Faculty of Law, DU",
         year: "2025–26",
         stars: 5,
         unitsCount: "5 Comprehensive Units",
@@ -388,9 +414,7 @@
           "Principles of Natural Justice & Fair Hearing",
           "Judicial Review & Ombudsman Institutions"
         ]
-      }
-    ],
-    4: [
+      },
       {
         id: "labour",
         code: "LB-401",

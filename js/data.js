@@ -51,7 +51,7 @@ window.DU_LAW_PORTAL_DATA = {
       "term": "IV Term (Spring)",
       "active": false,
       "badge": "Coming Soon",
-      "description": "Labour Law, Alternative Dispute Resolution (ADR), Law of Evidence (BSA), and Corporate Taxation.",
+      "description": "Administrative Law, Labour Law, Alternative Dispute Resolution (ADR), Law of Evidence (BSA), and Corporate Taxation.",
       "subjectIds": []
     },
     {
