@@ -37,7 +37,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=3.5">
+  <link rel="stylesheet" href="css/styles.css?v=3.6">
 </head>
 <body>
 
@@ -57,6 +57,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="contact-header-btn liquid-metal-btn" id="headerContactBtn" title="Contact & Support (Email &amp; Telegram)" aria-label="Contact and Support">
+          <span class="btn-icon-wrap"><i class="fa-solid fa-headset"></i></span>
+          <span class="btn-lbl">Contact</span>
+        </button>
         <button class="semester-badge-btn liquid-metal-btn" id="headerSemesterBtn" title="Switch Semester">
           <span class="sem-indicator"></span>
           <span class="btn-lbl" id="headerSemText">Semester I</span>
@@ -769,9 +773,106 @@
           </div>
           <i class="fa-solid fa-chevron-right mtd-arrow"></i>
         </button>
+        <button class="mtd-action-card" id="mtdContactBtn">
+          <div class="mtd-card-icon contact" style="background:linear-gradient(135deg,#0284c7,#0369a1);color:#fff;"><i class="fa-solid fa-headset"></i></div>
+          <div class="mtd-card-text">
+            <h4>Contact &amp; Telegram Community</h4>
+            <p>Email ankur@makelaweasy.in &amp; join Telegram group</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
       </div>
     </div>
   </aside>
+
+  <!-- ===================================================================
+       CONTACT & SUPPORT MODAL
+       =================================================================== -->
+  <div class="contact-modal-overlay" id="contactModalOverlay" aria-hidden="true"></div>
+  <div class="contact-modal-dialog" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle" aria-hidden="true">
+    <div class="contact-modal-header">
+      <div class="contact-modal-title-group">
+        <div class="contact-modal-icon-badge">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+        <div>
+          <h3 id="contactModalTitle">Contact &amp; Support</h3>
+          <p>Make Law Easy &bull; DU Law Notes Community</p>
+        </div>
+      </div>
+      <button class="contact-modal-close-btn" id="contactModalCloseBtn" aria-label="Close Contact Dialog" title="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="contact-modal-body">
+      <p class="contact-intro-text">
+        Have questions on semester syllabus, case briefs, note contributions, or feedback? Reach out directly through Telegram or Email:
+      </p>
+
+      <div class="contact-channels-grid">
+        <!-- Telegram Channel Card -->
+        <div class="contact-channel-card telegram-card">
+          <div class="channel-card-top">
+            <div class="channel-icon-pill telegram-pill">
+              <i class="fa-brands fa-telegram"></i>
+            </div>
+            <div class="channel-badge telegram-badge">
+              <span class="live-pulse-dot"></span> Active Community
+            </div>
+          </div>
+          <div class="channel-card-info">
+            <h4>Official Telegram Channel</h4>
+            <p>Join for instant DU LL.B updates, study materials, case summaries &amp; exam discussion.</p>
+            <div class="channel-address-box">
+              <code>t.me/+5suDyPQc065jYWY1</code>
+            </div>
+          </div>
+          <div class="channel-card-actions">
+            <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer" class="contact-action-btn telegram-btn">
+              <i class="fa-brands fa-telegram"></i> Join Telegram Channel <i class="fa-solid fa-arrow-up-right-from-square small-external-icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Email Channel Card -->
+        <div class="contact-channel-card email-card">
+          <div class="channel-card-top">
+            <div class="channel-icon-pill email-pill">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="channel-badge email-badge">Official Correspondence</div>
+          </div>
+          <div class="channel-card-info">
+            <h4>Direct Email Support</h4>
+            <p>For editorial queries, syllabus corrections, collaborations, or study guidance.</p>
+            <div class="channel-address-box email-address-box">
+              <code id="contactEmailAddress">ankur@makelaweasy.in</code>
+            </div>
+          </div>
+          <div class="channel-card-actions two-buttons">
+            <a href="mailto:ankur@makelaweasy.in" class="contact-action-btn email-primary-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Email
+            </a>
+            <button class="contact-action-btn email-copy-btn" id="copyContactEmailBtn" type="button" title="Copy email address">
+              <i class="fa-regular fa-copy" id="copyEmailIcon"></i> <span id="copyEmailText">Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-modal-footer-note">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>Faculty of Law &bull; Campus Law Centre (CLC) &bull; Law Centre-I &bull; Law Centre-II</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMsg">Action completed</span>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
@@ -779,6 +880,11 @@
       <p class="footer-text">
         An academic initiative for LL.B. students of Campus Law Centre (CLC), Law Centre&ndash;I (LC-1), and Law Centre&ndash;II (LC-2). Strictly aligned with University of Delhi Faculty of Law case materials, syllabus guidelines, and past examination papers.
       </p>
+      <div class="footer-contact-bar">
+        <span class="footer-contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></span>
+        <span class="footer-contact-sep">&bull;</span>
+        <span class="footer-contact-item"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">Telegram Channel</a></span>
+      </div>
       <p class="footer-credits">
         &copy; 2026 Delhi University Law Portal &bull; Crafted with editorial precision for serious law students.
       </p>
@@ -794,7 +900,7 @@
   <script src="js/data.js?v=3.5"></script>
   <script src="js/bare_acts.js?v=3.5"></script>
   <script src="js/bns_converter.js?v=3.5"></script>
-  <script src="js/app.js?v=3.5"></script>
+  <script src="js/app.js?v=3.6"></script>
 
   <script>
     if ("serviceWorker" in navigator) {

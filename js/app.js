@@ -14,7 +14,7 @@
     searchQuery: '',
     selectedUnitFilter: 'all',
     activeQuickFilter: 'all',
-    darkMode: localStorage.getItem('du_law_theme') === 'dark',
+    darkMode: localStorage.getItem('du_law_theme') === 'dark' || (new URLSearchParams(window.location.search)).get('theme') === 'dark',
     starred: JSON.parse(localStorage.getItem('du_portal_starred') || '[]'),
     personalNotes: JSON.parse(localStorage.getItem('du_portal_notes') || '{}'),
     mockTimerSecs: 10800,
@@ -93,6 +93,14 @@
     mtdFlashcardsBtn: document.getElementById('mtdFlashcardsBtn'),
     mtdBookmarksBtn: document.getElementById('mtdBookmarksBtn'),
     mtdSemesterBtn: document.getElementById('mtdSemesterBtn'),
+    mtdContactBtn: document.getElementById('mtdContactBtn'),
+    headerContactBtn: document.getElementById('headerContactBtn'),
+    contactModalOverlay: document.getElementById('contactModalOverlay'),
+    contactModal: document.getElementById('contactModal'),
+    contactModalCloseBtn: document.getElementById('contactModalCloseBtn'),
+    copyContactEmailBtn: document.getElementById('copyContactEmailBtn'),
+    copyEmailIcon: document.getElementById('copyEmailIcon'),
+    copyEmailText: document.getElementById('copyEmailText'),
     themeToggleBtn: document.getElementById('themeToggleBtn'),
     brandLogo: document.getElementById('brandLogo'),
 
@@ -1896,6 +1904,66 @@
   }
 
   // ===================================================================
+  // FEATURE 2.8: CONTACT & SUPPORT MODAL
+  // ===================================================================
+  function openContactModal() {
+    if (elements.contactModal && elements.contactModalOverlay) {
+      elements.contactModalOverlay.classList.add('active');
+      elements.contactModal.classList.add('active');
+      elements.contactModal.setAttribute('aria-hidden', 'false');
+      elements.contactModalOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeContactModal() {
+    if (elements.contactModal && elements.contactModalOverlay) {
+      elements.contactModal.classList.remove('active');
+      elements.contactModalOverlay.classList.remove('active');
+      elements.contactModal.setAttribute('aria-hidden', 'true');
+      elements.contactModalOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  function copyContactEmail() {
+    const email = 'ankur@makelaweasy.in';
+    const performCopy = (text) => {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-999999px';
+        textarea.style.top = '-999999px';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        return new Promise((resolve, reject) => {
+          document.execCommand('copy') ? resolve() : reject(new Error('Copy failed'));
+          textarea.remove();
+        });
+      }
+    };
+
+    performCopy(email).then(() => {
+      if (elements.copyEmailText) elements.copyEmailText.textContent = 'Copied!';
+      if (elements.copyEmailIcon) elements.copyEmailIcon.className = 'fa-solid fa-check';
+      if (elements.copyContactEmailBtn) elements.copyContactEmailBtn.classList.add('copied');
+      showToast('Email copied to clipboard! 📋', 'fa-copy');
+      setTimeout(() => {
+        if (elements.copyEmailText) elements.copyEmailText.textContent = 'Copy';
+        if (elements.copyEmailIcon) elements.copyEmailIcon.className = 'fa-regular fa-copy';
+        if (elements.copyContactEmailBtn) elements.copyContactEmailBtn.classList.remove('copied');
+      }, 2200);
+    }).catch(err => {
+      console.error('Failed to copy email:', err);
+      showToast('ankur@makelaweasy.in', 'fa-envelope');
+    });
+  }
+
+  // ===================================================================
   // FEATURE 3: BNS 2023 ↔ IPC 1860 CONVERTER
   // ===================================================================
   function openBnsConverter() {
@@ -2217,6 +2285,21 @@
     if (elements.mtdSemesterBtn) {
       elements.mtdSemesterBtn.addEventListener('click', () => { closeMobileTools(); showView('semester'); });
     }
+    if (elements.mtdContactBtn) {
+      elements.mtdContactBtn.addEventListener('click', () => { closeMobileTools(); openContactModal(); });
+    }
+    if (elements.headerContactBtn) {
+      elements.headerContactBtn.addEventListener('click', openContactModal);
+    }
+    if (elements.contactModalCloseBtn) {
+      elements.contactModalCloseBtn.addEventListener('click', closeContactModal);
+    }
+    if (elements.contactModalOverlay) {
+      elements.contactModalOverlay.addEventListener('click', closeContactModal);
+    }
+    if (elements.copyContactEmailBtn) {
+      elements.copyContactEmailBtn.addEventListener('click', copyContactEmail);
+    }
 
     
     // Precedent Flashcards & Bare Act Header / Hub Launchers
@@ -2375,6 +2458,7 @@
       if (e.key === 'Escape') {
         if (elements.readerModal && elements.readerModal.classList.contains('active')) closeReader();
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
+        if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
       }
     });
 
@@ -2469,6 +2553,10 @@
       } else {
         showView('semester');
       }
+    }
+
+    if (window.location.hash === '#contact' || params.get('contact') === 'true') {
+      setTimeout(openContactModal, 250);
     }
   }
 
