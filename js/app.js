@@ -2249,6 +2249,7 @@
     const querySub = urlParams.get('subject') || urlParams.get('sub');
     const querySem = urlParams.get('sem');
     const queryView = urlParams.get('view');
+    const queryTab = urlParams.get('tab');
 
     if (querySub) {
       const data = window.DU_LAW_PORTAL_DATA;
@@ -2257,6 +2258,12 @@
         if (foundSem) state.currentSemester = foundSem.id;
       }
       openSubjectHub(querySub);
+      if (queryTab && ['topics', 'cases', 'pyqs', 'revision'].includes(queryTab)) {
+        setTimeout(() => {
+          const targetBtn = Array.from(elements.hubTabs).find(b => b.dataset.tab === queryTab);
+          if (targetBtn) targetBtn.click();
+        }, 50);
+      }
     } else if (querySem) {
       selectSemester(parseInt(querySem, 10) || 1);
     } else if (queryView === 'subjects') {
