@@ -659,6 +659,118 @@
   // -------------------------------------------------------------------------
   // TAB 1: ALL TOPICS / COMPREHENSIVE NOTES
   // -------------------------------------------------------------------------
+  const TOPIC_MAXIMS = {
+    // Jurisprudence
+    'juris-1': 'Yato Dharmastato Jayah • Where there is Dharma, there is Victory',
+    'juris-2': 'Lex Loci • The Law of the Land',
+    'juris-3': 'Audi Alteram Partem • Hear the other side (Universal Natural Justice)',
+    'juris-4': 'Stare Decisis et non quieta movere • Stand by decisions and do not disturb settled law',
+    'juris-5': 'Consuetudo pro lege servatur • Custom is observed as law',
+    'juris-6': 'Quod principi placuit, legis habet vigorem • What pleases the sovereign has the force of law',
+    'juris-7': 'Lex injusta non est lex • An unjust law is not law',
+
+    // Contract
+    'contract-1': 'Pacta Sunt Servanda • Agreements must be kept',
+    'contract-2': 'Consensus Ad Idem • Meeting of minds on the same thing in the same sense',
+    'contract-3': 'Invitatio ad offerendum • An invitation to treat is not an offer',
+    'contract-4': 'Ex Nudo Pacto Non Oritur Actio • No action arises from a bare agreement without consideration',
+    'contract-5': 'Privilegium personae non praejudicat juri alii • Infancy protection against contractual liability',
+    'contract-7': 'Ex Turpi Causa Non Oritur Actio • No action arises from an unlawful cause',
+    'contract-8': 'Lex Non Cogit Ad Impossibilia • The law does not compel the impossible (Doctrine of Frustration)',
+    'contract-9': 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy',
+    'contract-10': 'Nemo debet locupletari ex aliena jactura • No one should be enriched at another\'s expense',
+
+    // BNS / Criminal Law
+    'bns-1': 'Actus Non Facit Reum Nisi Mens Sit Rea • An act does not make one guilty unless the mind is guilty',
+    'bns-2': 'Ignorantia facti excusat, ignorantia juris non excusat • Mistake of fact excuses, mistake of law does not',
+    'bns-3': 'Vim vi repellere licet • It is lawful to repel force with force (Private Defence)',
+    'bns-4': 'Qui Facit Per Alium Facit Per Se • He who acts through another acts himself (Joint Liability)',
+    'bns-5': 'Noli me tangere • Inviolability of bodily integrity and dignity of women',
+    'bns-6': 'Furiosus solo furore punitur • An act with malice aforethought defines murder',
+    'bns-7': 'Injuria Sine Damno • Infringement of absolute personal rights is punishable',
+    'bns-8': 'Salus Populi Suprema Lex • The welfare and safety of the people is the supreme law',
+    'bns-9': 'Animus Furandi • The intention to steal is the essence of theft',
+    'bns-10': 'Fraus Omnia Corrumpit • Fraud vitiates and corrupts everything',
+
+    // Family Law
+    'family-1': 'Semper praesumitur pro matrimonio • Law always presumes in favour of marriage',
+    'family-2': 'Restitutio In Integrum • Restoration of conjugal rights and matrimonial relief',
+    'family-3': 'Jus In Personam • Maintenance is an inherent personal legal right',
+    'family-4': 'Adoptio naturam imitatur • Adoption imitates nature (CARA Guidelines)',
+    'family-5': 'Parens Patriae • The welfare of the child is paramount',
+    'family-6': 'Mahr est donatio propter nuptias • Dower is an unconditional right of the wife',
+    'family-8': 'Divortium inter invitos non facile conceditur • Irretrievable breakdown and dissolution',
+
+    // Law of Torts
+    'torts-1': 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a legal remedy',
+    'torts-2': 'Volenti Non Fit Injuria • To a willing person, no legal injury is done',
+    'torts-3': 'Res Ipsa Loquitur • The thing speaks for itself (Prima facie negligence)',
+    'torts-4': 'Actio personalis moritur cum persona • Duty of care extends to psychiatric injury',
+    'torts-5': 'In jure non remota causa sed proxima spectatur • Look to proximate, not remote cause',
+    'torts-6': 'Sic Utere Tuo Ut Alienum Non Laedas • Use your property so as not to injure another (Strict Liability)',
+    'torts-7': 'Respondeat Superior • Let the principal or master answer for the agent',
+    'torts-8': 'Bonam famam praestare est optimum • Defamation protects reputation as property',
+    'torts-9': 'Caveat Venditor • Let the seller beware (Consumer Protection Act)',
+
+    // Company Law
+    'company-1': 'Salomon v. Salomon Principle • Corporate personality distinct from its members',
+    'company-2': 'Uberrima Fides • Promoters stand in a fiduciary position of utmost good faith',
+    'company-3': 'Ultra Vires • Acts beyond the constitutional charter of the company are void',
+    'company-4': 'Fidei Commissum • Golden Rule of full disclosure in prospectuses',
+    'company-5': 'Delegatus Non Potest Delegare • Directors hold fiduciary powers for the company',
+    'company-6': 'Quod omnes tangit ab omnibus approbetur • Democratic majority rule in corporate meetings',
+    'company-7': 'Foss v. Harbottle Rule & Exceptions • Protection of minority against oppression',
+    'company-8': 'Pari Passu • Equal and rateable distribution in corporate winding-up',
+    'company-9': 'Nemo Debet Esse Judex In Propria Causa • Quasi-judicial integrity before NCLT / NCLAT',
+    'company-10': 'Salus Populi Suprema Lex • Corporate Social Responsibility and ESG standards',
+
+    // CPC & Limitation
+    'cpc-1': 'Res Judicata Pro Veritate Accipitur • A matter judged is accepted as true (Section 11)',
+    'cpc-2': 'Appellatio est provocatio de minori judice ad majorem • An appeal is a statutory right to a higher court',
+    'cpc-3': 'Actus Curiae Neminem Gravabit • An act of the court shall prejudice no man (Section 151)',
+    'cpc-4': 'Ut Res Magis Valeat Quam Pereat • Liberal amendment of pleadings to determine the real controversy',
+    'cpc-5': 'Audi Alteram Partem • No decree without affording full opportunity of hearing',
+    'cpc-6': 'Vigilantibus Non Dormientibus Jura Subveniunt • The law assists the vigilant in summary debts (O. 37)',
+    'cpc-7': 'Status Quo Ante • Prima facie balance of convenience in temporary injunctions (O. 39)',
+    'cpc-8': 'Interest Reipublicae Ut Sit Finis Litium • It is in the public interest that litigation must end',
+    'cpc-9': 'Lex Non Cogit Ad Impossibilia • Sufficient cause excuses delay in limitation computation',
+    'cpc-10': 'Nec Vi, Nec Clam, Nec Precario • Acquisition of easement: without force, secrecy, or licence',
+    'cpc-11': 'Expressio Unius Est Exclusio Alterius • Strict interpretation of the limitation schedule',
+
+    // White Collar Crimes
+    'wcc-1': 'Strict Liability in Socio-Economic Offences • Exclusion of common law mens rea',
+    'wcc-2': 'Differential Association Theory • Crime in upper socio-economic strata is learned',
+    'wcc-3': 'Pecunia Non Olet • Statutory presumption of corruption under Section 20 PC Act',
+    'wcc-4': 'Commodum Ex Injuria Sua Nemo Habere Debet • No one shall profit from money-laundering crime (PMLA)',
+    'wcc-5': 'Salus Populi Suprema Lex Esto • Public health and food adulteration strict liability (FSSA)',
+    'wcc-6': 'Reversa Onus Probandi • Reverse burden of proof for psychotropic substances (NDPS S. 35 & 54)'
+  };
+
+  function getTopicMaxim(subId, unitNumber, unitTitle, subTheme) {
+    if (!subId) return 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy';
+    const key = `${subId}-${unitNumber}`;
+    if (TOPIC_MAXIMS[key]) return TOPIC_MAXIMS[key];
+
+    // Smart keyword matching for future upcoming topics
+    const t = (unitTitle || '').toLowerCase();
+    if (t.includes('res judicata')) return 'Res Judicata Pro Veritate Accipitur • A matter judged is accepted as true';
+    if (t.includes('injunction') || t.includes('interlocutory')) return 'Status Quo Ante • Preserve the subject-matter in dispute';
+    if (t.includes('appeal') || t.includes('revision')) return 'Appellatio est provocatio de minori judice ad majorem';
+    if (t.includes('contract') || t.includes('agreement')) return 'Pacta Sunt Servanda • Agreements must be kept';
+    if (t.includes('consideration')) return 'Ex Nudo Pacto Non Oritur Actio • Consideration is essential';
+    if (t.includes('negligence') || t.includes('tort')) return 'Ubi Jus Ibi Remedium • Where there is a right, there is a remedy';
+    if (t.includes('mens rea') || t.includes('crime') || t.includes('offence')) return 'Actus Non Facit Reum Nisi Mens Sit Rea';
+    if (t.includes('defamation')) return 'Bonam famam praestare est optimum • Protection of reputation';
+    if (t.includes('constitution') || t.includes('state')) return 'Salus Populi Suprema Lex • Welfare of the people is the supreme law';
+    if (t.includes('director') || t.includes('fiduciary')) return 'Delegatus Non Potest Delegare • Fiduciary duty';
+    if (t.includes('evidence')) return 'Affirmatis est probare • The burden of proof lies on the affirmant';
+    if (t.includes('property') || t.includes('transfer')) return 'Nemo dat quod non habet • No one gives what he does not have';
+
+    // Fallback to subject's motto or quote
+    if (subTheme && subTheme.motto) return subTheme.motto;
+    return 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy';
+  }
+
   function renderTopicsTab(sub) {
     let units = sub.units || [];
     const completedList = state.completedUnits[sub.id] || [];
@@ -679,12 +791,16 @@
     // Filter by search query
     if (state.searchQuery) {
       const q = state.searchQuery.toLowerCase();
-      units = units.filter(u =>
-        u.title.toLowerCase().includes(q) ||
-        (u.subtitle && u.subtitle.toLowerCase().includes(q)) ||
-        (u.statutes && u.statutes.toLowerCase().includes(q)) ||
-        (u.topics && u.topics.some(t => t.toLowerCase().includes(q)))
-      );
+      units = units.filter(u => {
+        const m = u.maxim || getTopicMaxim(sub.id, u.number, u.title, sub.theme);
+        return (
+          u.title.toLowerCase().includes(q) ||
+          (m && m.toLowerCase().includes(q)) ||
+          (u.subtitle && u.subtitle.toLowerCase().includes(q)) ||
+          (u.statutes && u.statutes.toLowerCase().includes(q)) ||
+          (u.topics && u.topics.some(t => t.toLowerCase().includes(q)))
+        );
+      });
     }
 
     if (units.length === 0) {
@@ -702,34 +818,31 @@
       <div class="topics-grid">
         ${units.map(u => {
           const isDone = completedList.includes(u.number);
+          const maxim = u.maxim || getTopicMaxim(sub.id, u.number, u.title, sub.theme);
           return `
-            <div class="unit-card fade-in ${isDone ? 'is-completed' : ''}" data-unit="${u.number}">
+            <div class="unit-card fade-in ${isDone ? 'is-completed' : ''}" data-unit="${u.number}" data-file="${u.file}" data-title="${u.title}">
               <div>
                 <div class="unit-card-header">
                   <div class="unit-badge-number">${u.number}</div>
                   <div class="unit-card-titles">
                     <div style="display:flex; align-items:center; justify-content:space-between; gap:6px;">
-                      <h4>${u.title}</h4>
+                      <span class="unit-subject-tag">${sub.shortName || sub.name}</span>
                       <button class="unit-check-btn ${isDone ? 'checked' : ''}" data-unit="${u.number}" title="Toggle revision status">
                         <i class="fa-solid ${isDone ? 'fa-check' : 'fa-circle'}"></i>
                         <span>${isDone ? 'Revised' : 'Mark Done'}</span>
                       </button>
                     </div>
-                    ${u.subtitle ? `<div class="unit-sub">${u.subtitle}</div>` : ''}
+                    <h4 class="unit-card-title">${u.title}</h4>
                   </div>
                 </div>
 
-                ${u.statutes ? `
-                  <div class="unit-statutes">
-                    <strong>📜 Bare Acts / Provisions:</strong> ${u.statutes}
+                <div class="unit-maxim-box">
+                  <div class="unit-maxim-header">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Legal Maxim</span>
                   </div>
-                ` : ''}
-
-                ${u.topics && u.topics.length ? `
-                  <ul class="unit-topics-list">
-                    ${u.topics.map(t => `<li>${t}</li>`).join('')}
-                  </ul>
-                ` : ''}
+                  <div class="unit-maxim-text">"${maxim}"</div>
+                </div>
               </div>
 
               <div class="unit-actions-row">
@@ -747,6 +860,20 @@
     `;
 
     // Attach listeners
+    elements.topicsContainer.querySelectorAll('.unit-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.unit-check-btn') || e.target.closest('.btn-open-newtab') || e.target.closest('.btn-read-notes')) {
+          return;
+        }
+        const file = card.dataset.file;
+        const title = card.dataset.title;
+        const unit = card.dataset.unit;
+        if (file) {
+          openReader(file, `Unit ${unit}: ${title}`, `${sub.name} • DU Notes`);
+        }
+      });
+    });
+
     elements.topicsContainer.querySelectorAll('.unit-check-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -756,7 +883,8 @@
     });
 
     elements.topicsContainer.querySelectorAll('.btn-read-notes').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         const file = btn.dataset.file;
         const title = btn.dataset.title;
         const unit = btn.dataset.unit;
@@ -765,7 +893,8 @@
     });
 
     elements.topicsContainer.querySelectorAll('.btn-open-newtab').forEach(btn => {
-      btn.addEventListener('click', () => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
         window.open(btn.dataset.file, '_blank');
       });
     });
