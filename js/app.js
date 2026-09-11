@@ -83,6 +83,16 @@
     audioSpeedBtn: document.getElementById('audioSpeedBtn'),
     headerSemesterBtn: document.getElementById('headerSemesterBtn'),
     headerSemText: document.getElementById('headerSemText'),
+    headerMobileMenuBtn: document.getElementById('headerMobileMenuBtn'),
+    mobileToolsOverlay: document.getElementById('mobileToolsOverlay'),
+    mobileToolsDrawer: document.getElementById('mobileToolsDrawer'),
+    mobileToolsCloseBtn: document.getElementById('mobileToolsCloseBtn'),
+    mtdMockBtn: document.getElementById('mtdMockBtn'),
+    mtdBnsBtn: document.getElementById('mtdBnsBtn'),
+    mtdBareActBtn: document.getElementById('mtdBareActBtn'),
+    mtdFlashcardsBtn: document.getElementById('mtdFlashcardsBtn'),
+    mtdBookmarksBtn: document.getElementById('mtdBookmarksBtn'),
+    mtdSemesterBtn: document.getElementById('mtdSemesterBtn'),
     themeToggleBtn: document.getElementById('themeToggleBtn'),
     brandLogo: document.getElementById('brandLogo'),
 
@@ -222,6 +232,11 @@
     if (!/<(?:p|div|table|h[1-6]|ul|ol|blockquote)[>\s]/i.test(html)) {
       html = html.replace(/\n\n+/g, '<br><br>').replace(/\n/g, '<br>');
     }
+
+    // Ensure any raw HTML <table> is enclosed in a responsive scroll wrapper
+    html = html.replace(/(<table\b[^>]*>[\s\S]*?<\/table>)/gi, (tbl) => {
+      return `<div class="table-responsive" style="width:100%; overflow-x:auto; margin:14px 0; -webkit-overflow-scrolling:touch;">${tbl}</div>`;
+    });
 
     return html;
   }
@@ -1733,6 +1748,25 @@
   }
 
   // ===================================================================
+  // FEATURE 2.5: MOBILE QUICK TOOLS MENU
+  // ===================================================================
+  function openMobileTools() {
+    if (elements.mobileToolsDrawer && elements.mobileToolsOverlay) {
+      elements.mobileToolsDrawer.classList.add('active');
+      elements.mobileToolsOverlay.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeMobileTools() {
+    if (elements.mobileToolsDrawer && elements.mobileToolsOverlay) {
+      elements.mobileToolsDrawer.classList.remove('active');
+      elements.mobileToolsOverlay.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  // ===================================================================
   // FEATURE 3: BNS 2023 ↔ IPC 1860 CONVERTER
   // ===================================================================
   function openBnsConverter() {
@@ -2026,6 +2060,35 @@
     if (elements.bookmarksCloseBtn) elements.bookmarksCloseBtn.addEventListener('click', closeBookmarksDrawer);
     if (elements.bookmarksOverlay) elements.bookmarksOverlay.addEventListener('click', closeBookmarksDrawer);
 
+    // Mobile Quick Tools Drawer
+    if (elements.headerMobileMenuBtn) {
+      elements.headerMobileMenuBtn.addEventListener('click', openMobileTools);
+    }
+    if (elements.mobileToolsCloseBtn) {
+      elements.mobileToolsCloseBtn.addEventListener('click', closeMobileTools);
+    }
+    if (elements.mobileToolsOverlay) {
+      elements.mobileToolsOverlay.addEventListener('click', closeMobileTools);
+    }
+    if (elements.mtdMockBtn) {
+      elements.mtdMockBtn.addEventListener('click', () => { closeMobileTools(); openMockExam(); });
+    }
+    if (elements.mtdBnsBtn) {
+      elements.mtdBnsBtn.addEventListener('click', () => { closeMobileTools(); openBnsConverter(); });
+    }
+    if (elements.mtdBareActBtn) {
+      elements.mtdBareActBtn.addEventListener('click', () => { closeMobileTools(); openBareActDrawer(); });
+    }
+    if (elements.mtdFlashcardsBtn) {
+      elements.mtdFlashcardsBtn.addEventListener('click', () => { closeMobileTools(); openFlashcardsModal(); });
+    }
+    if (elements.mtdBookmarksBtn) {
+      elements.mtdBookmarksBtn.addEventListener('click', () => { closeMobileTools(); openBookmarksDrawer(); });
+    }
+    if (elements.mtdSemesterBtn) {
+      elements.mtdSemesterBtn.addEventListener('click', () => { closeMobileTools(); showView('semester'); });
+    }
+
     
     // Precedent Flashcards & Bare Act Header / Hub Launchers
     if (elements.headerBareActBtn) {
@@ -2178,10 +2241,11 @@
       if (e.target === elements.readerModal) closeReader();
     });
 
-    // Keyboard ESC to close reader
+    // Keyboard ESC to close reader or mobile tools
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && elements.readerModal.classList.contains('active')) {
-        closeReader();
+      if (e.key === 'Escape') {
+        if (elements.readerModal && elements.readerModal.classList.contains('active')) closeReader();
+        if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
       }
     });
 

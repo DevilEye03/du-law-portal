@@ -454,8 +454,10 @@
       if (!this.object3D || !this.hitArea || !this.imgHeight || !this.imgWidth) return;
       const width = this.container.clientWidth || 800;
       const height = this.container.clientHeight || 220;
-      const scaleH = (this.fovHeight / this.imgHeight) * 1.08;
-      const scaleW = ((this.fovHeight * (width / height)) / this.imgWidth) * 1.02;
+      // Responsive padding margin factor so particle text never clips on mobile
+      const marginFactor = width < 480 ? 0.70 : (width < 768 ? 0.80 : 0.94);
+      const scaleH = (this.fovHeight / this.imgHeight) * 0.92;
+      const scaleW = ((this.fovHeight * (width / height)) / this.imgWidth) * marginFactor;
       const scale = Math.min(scaleH, scaleW);
       this.object3D.scale.set(scale, scale, 1);
       this.hitArea.scale.set(scale, scale, 1);
@@ -467,8 +469,10 @@
       this.onPointerMove = (e) => {
         if (!this.hitArea || !this.touch || !this.canvas) return;
         const rect = this.canvas.getBoundingClientRect();
-        this.mouseNDC.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-        this.mouseNDC.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+        const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+        const clientY = e.clientY !== undefined ? e.clientY : (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+        this.mouseNDC.x = ((clientX - rect.left) / rect.width) * 2 - 1;
+        this.mouseNDC.y = -((clientY - rect.top) / rect.height) * 2 + 1;
         this.raycaster.setFromCamera(this.mouseNDC, this.camera);
         const hits = this.raycaster.intersectObject(this.hitArea);
         if (hits.length > 0 && hits[0].uv) {
@@ -477,6 +481,8 @@
       };
 
       hero.addEventListener('pointermove', this.onPointerMove, { passive: true });
+      hero.addEventListener('pointerdown', this.onPointerMove, { passive: true });
+      hero.addEventListener('touchmove', this.onPointerMove, { passive: true });
 
       this.onResize = () => {
         if (!this.container || !this.camera || !this.renderer) return;

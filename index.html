@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=3.4">
+  <link rel="stylesheet" href="css/styles.css?v=3.5">
 </head>
 <body>
 
@@ -68,6 +68,10 @@
         <button class="header-action-btn liquid-metal-btn" id="headerFlashcardBtn" title="Precedent Recall Flashcards">
           <span class="btn-icon-wrap"><i class="fa-solid fa-brain"></i></span>
           <span class="btn-lbl">Flashcards</span>
+        </button>
+        <button class="header-action-btn liquid-metal-btn mobile-tools-trigger" id="headerMobileMenuBtn" title="Quick Tools Menu" aria-label="Open Quick Tools Menu">
+          <span class="btn-icon-wrap"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <span class="btn-lbl">Tools</span>
         </button>
         <button class="semester-badge-btn liquid-metal-btn" id="headerSemesterBtn" title="Switch Semester">
           <span class="sem-indicator"></span>
@@ -714,6 +718,77 @@
     </div>
   </aside>
 
+  <!-- ===================================================================
+       MOBILE QUICK TOOLS DRAWER / ACTION SHEET
+       =================================================================== -->
+  <div class="mobile-tools-overlay" id="mobileToolsOverlay"></div>
+  <aside class="mobile-tools-drawer" id="mobileToolsDrawer" role="dialog" aria-modal="true" aria-label="Quick Tools Menu">
+    <div class="mtd-header">
+      <div class="mtd-title-box">
+        <div class="mtd-crest"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+        <div>
+          <h3>Quick Study Tools</h3>
+          <p>DU Faculty of Law Study Utilities</p>
+        </div>
+      </div>
+      <button class="mtd-close-btn" id="mobileToolsCloseBtn" title="Close Tools Menu" aria-label="Close Tools Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mtd-body">
+      <div class="mtd-grid">
+        <button class="mtd-action-card" id="mtdMockBtn">
+          <div class="mtd-card-icon mock"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="mtd-card-text">
+            <h4>Mock Exam Hall</h4>
+            <p>5 out of 8 exam simulator with timer &amp; model answers</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdBnsBtn">
+          <div class="mtd-card-icon bns"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
+          <div class="mtd-card-text">
+            <h4>BNS &harr; IPC Live Converter</h4>
+            <p>Compare new Bharatiya Nyaya Sanhita with IPC sections</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdBareActBtn">
+          <div class="mtd-card-icon bareact"><i class="fa-solid fa-book-bookmark"></i></div>
+          <div class="mtd-card-text">
+            <h4>Quick Bare Act Drawer</h4>
+            <p>Instant statutory reference (ICA, BNS, HMA, CPC, CA &amp; more)</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdFlashcardsBtn">
+          <div class="mtd-card-icon flashcard"><i class="fa-solid fa-brain"></i></div>
+          <div class="mtd-card-text">
+            <h4>Precedent Recall Flashcards</h4>
+            <p>3D case law recall drills &amp; landmark ratio memory tests</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdBookmarksBtn">
+          <div class="mtd-card-icon star"><i class="fa-solid fa-star"></i></div>
+          <div class="mtd-card-text">
+            <h4>Starred Revision Vault</h4>
+            <p>View your saved precedents, questions &amp; study capsules</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdSemesterBtn">
+          <div class="mtd-card-icon semester"><i class="fa-solid fa-rotate"></i></div>
+          <div class="mtd-card-text">
+            <h4>Switch Semester</h4>
+            <p>Choose Semester I or Semester 3 curriculum</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-logo">Delhi University Law Notes Portal</div>
@@ -729,13 +804,13 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="js/wave_grid_background.js?v=3.4"></script>
-  <script src="js/interactive_particles.js?v=3.4"></script>
-  <script src="js/books_showcase.js?v=3.4"></script>
-  <script src="js/data.js?v=3.4"></script>
-  <script src="js/bare_acts.js?v=3.4"></script>
-  <script src="js/bns_converter.js?v=3.4"></script>
-  <script src="js/app.js?v=3.4"></script>
+  <script src="js/wave_grid_background.js?v=3.5"></script>
+  <script src="js/interactive_particles.js?v=3.5"></script>
+  <script src="js/books_showcase.js?v=3.5"></script>
+  <script src="js/data.js?v=3.5"></script>
+  <script src="js/bare_acts.js?v=3.5"></script>
+  <script src="js/bns_converter.js?v=3.5"></script>
+  <script src="js/app.js?v=3.5"></script>
 
   <script>
     if ("serviceWorker" in navigator) {

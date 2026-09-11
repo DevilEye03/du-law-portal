@@ -1381,10 +1381,12 @@
 
     // Carousel 3-slot presentation
     if (portrait) {
+      const mobScale = dims.w < 380 ? 0.96 : (dims.w < 500 ? 1.05 : 1.15);
+      const mobSpacing = dims.w < 380 ? 1.12 : 1.35;
       return [
-        { p: [-1.35, -0.45, -0.15], r: [-0.04, 0.42, 0.18], s: 1.1 },
-        { p: [0.0, -0.15, 0.55], r: [-0.05, -0.08, -0.03], s: 1.25 },
-        { p: [1.35, -0.5, -0.3], r: [-0.04, -0.42, -0.16], s: 1.1 }
+        { p: [-mobSpacing, -0.42, -0.15], r: [-0.04, 0.42, 0.18], s: mobScale },
+        { p: [0.0, -0.15, 0.55], r: [-0.05, -0.08, -0.03], s: mobScale * 1.12 },
+        { p: [mobSpacing, -0.46, -0.3], r: [-0.04, -0.42, -0.16], s: mobScale }
       ];
     } else {
       return [
