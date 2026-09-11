@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2: White Collar Criminality & Social Learning Theories | DU Case Material</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a3e 40%, #24243e 100%);
+  color: #e0e0e0;
+  line-height: 1.8;
+  min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+.main-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 60px 40px;
+  text-align: center;
+  border-bottom: 4px solid #e94560;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e94560' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.main-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3em;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(233, 69, 96, 0.3);
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.main-header .subtitle {
+  font-size: 1.3em;
+  color: #a8d8ea;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+
+.main-header .course-info {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #8892b0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-bar {
+  background: rgba(15, 52, 96, 0.9);
+  padding: 15px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.nav-bar a {
+  color: #a8d8ea;
+  text-decoration: none;
+  padding: 8px 18px;
+  border: 1px solid rgba(168, 216, 234, 0.3);
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.nav-bar a:hover {
+  background: #e94560;
+  color: #fff;
+  border-color: #e94560;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 30px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  background: rgba(26, 26, 62, 0.8);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(233, 69, 96, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2em;
+  color: #e94560;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title .icon {
+  font-size: 1.2em;
+}
+
+.sub-section {
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 3px solid rgba(233, 69, 96, 0.4);
+}
+
+.sub-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  color: #a8d8ea;
+  margin-bottom: 15px;
+}
+
+/* ===== TEXT STYLES ===== */
+p {
+  margin-bottom: 15px;
+  color: #c5c6d0;
+  font-size: 1.02em;
+  text-align: justify;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(15, 52, 96, 0.2));
+  border: 1px solid rgba(233, 69, 96, 0.3);
+  border-radius: 12px;
+  padding: 20px 25px;
+  margin: 20px 0;
+}
+
+.highlight-box.important {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(15, 52, 96, 0.15));
+}
+
+.highlight-box .label {
+  color: #e94560;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.highlight-box.important .label {
+  color: #ffd700;
+}
+
+/* ===== DEFINITION BOX ===== */
+.definition-box {
+  background: linear-gradient(135deg, #1a1a3e, #2d2d6e);
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin: 20px 0;
+  border: 2px solid #e94560;
+  position: relative;
+  overflow: hidden;
+}
+
+.definition-box::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2em;
+  opacity: 0.3;
+}
+
+.definition-box .def-title {
+  color: #e94560;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.definition-box .def-text {
+  color: #fff;
+  font-size: 1.1em;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.definition-box .def-source {
+  color: #a8d8ea;
+  font-size: 0.85em;
+  margin-top: 10px;
+  font-style: normal;
+}
+
+/* ===== CASE LAW CARD ===== */
+.case-card {
+  background: linear-gradient(135deg, rgba(26, 26, 62, 0.9), rgba(15, 52, 96, 0.4));
+  border-radius: 16px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 1px solid rgba(168, 216, 234, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.case-card .case-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(233, 69, 96, 0.3);
+}
+
+.case-card .case-header .gavel {
+  font-size: 2em;
+}
+
+.case-card .case-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4em;
+  color: #e94560;
+  font-weight: 700;
+}
+
+.case-card .case-citation {
+  color: #a8d8ea;
+  font-size: 0.9em;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.case-detail {
+  margin: 15px 0;
+  padding: 12px 15px;
+  background: rgba(15, 52, 96, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.case-detail.facts { border-color: #4CAF50; }
+.case-detail.issues { border-color: #FF9800; }
+.case-detail.arguments { border-color: #2196F3; }
+.case-detail.decision { border-color: #9C27B0; }
+.case-detail.principle { border-color: #e94560; }
+
+.case-detail .detail-label {
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.case-detail.facts .detail-label { color: #4CAF50; }
+.case-detail.issues .detail-label { color: #FF9800; }
+.case-detail.arguments .detail-label { color: #2196F3; }
+.case-detail.decision .detail-label { color: #9C27B0; }
+.case-detail.principle .detail-label { color: #e94560; }
+
+/* ===== PYQ BOX ===== */
+.pyq-box {
+  background: linear-gradient(135deg, rgba(0, 77, 64, 0.3), rgba(0, 150, 136, 0.1));
+  border: 2px solid #009688;
+  border-radius: 16px;
+  padding: 30px;
+  margin: 25px 0;
+}
+
+.pyq-box .year-tag {
+  display: inline-block;
+  background: #009688;
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.pyq-box .question {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.pyq-box .answer-title {
+  color: #009688;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 15px 0 10px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 150, 136, 0.3);
+}
+
+/* ===== DIAGRAM / FLOWCHART ===== */
+.diagram-box {
+  background: linear-gradient(135deg, rgba(26, 26, 62, 0.95), rgba(45, 45, 110, 0.3));
+  border-radius: 16px;
+  padding: 30px;
+  margin: 25px 0;
+  border: 2px dashed rgba(168, 216, 234, 0.3);
+  text-align: center;
+  overflow-x: auto;
+}
+
+.diagram-box .diagram-title {
+  color: #a8d8ea;
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* SVG Diagrams */
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* ===== TABLE ===== */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.95em;
+}
+
+.comparison-table th {
+  background: linear-gradient(135deg, #e94560, #c62828);
+  color: #fff;
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comparison-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(233, 69, 96, 0.15);
+  color: #c5c6d0;
+}
+
+.comparison-table tr:nth-child(even) td {
+  background: rgba(15, 52, 96, 0.2);
+}
+
+.comparison-table tr:hover td {
+  background: rgba(233, 69, 96, 0.1);
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+  margin: 10px 0 15px 25px;
+  color: #c5c6d0;
+}
+
+ul li, ol li {
+  margin-bottom: 8px;
+  padding-left: 5px;
+}
+
+ul li::marker {
+  color: #e94560;
+}
+
+ol li::marker {
+  color: #a8d8ea;
+  font-weight: 700;
+}
+
+/* ===== FRAUD TRIANGLE ===== */
+.triangle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+/* ===== HYPOTHETICAL VISUAL ===== */
+.hypo-visual {
+  background: linear-gradient(135deg, rgba(156, 39, 176, 0.1), rgba(233, 69, 96, 0.05));
+  border: 1px solid rgba(156, 39, 176, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.hypo-visual::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-size: 1.5em;
+}
+
+.hypo-visual .hypo-title {
+  color: #CE93D8;
+  font-weight: 700;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
+.hypo-visual .scenario {
+  color: #e0e0e0;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* ===== TOC ===== */
+.toc {
+  background: rgba(26, 26, 62, 0.9);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+.toc h3 {
+  color: #e94560;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.toc ol {
+  list-style: none;
+  counter-reset: toc-counter;
+}
+
+.toc ol li {
+  counter-increment: toc-counter;
+  margin-bottom: 10px;
+}
+
+.toc ol li::before {
+  content: counter(toc-counter, decimal) ". ";
+  color: #e94560;
+  font-weight: 700;
+}
+
+.toc a {
+  color: #a8d8ea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.toc a:hover {
+  color: #e94560;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .main-header h1 { font-size: 1.8em; }
+  .section { padding: 20px; }
+  .section-title { font-size: 1.6em; }
+  .nav-bar { padding: 10px; }
+  .nav-bar a { font-size: 0.75em; padding: 6px 12px; }
+  .case-card { padding: 20px; }
+  .container { padding: 20px 15px; }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  body { background: #fff; color: #000; }
+  .section { background: #fff; border: 1px solid #ddd; }
+  .nav-bar { display: none; }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Inline SVG styles */
+.svg-flow { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="main-header">
+  <h1>Topic 2: White Collar Criminality &amp; Social Learning Theories</h1>
+  <div class="subtitle">Edwin H. Sutherland's Concept · Differential Association Theory · Donald Cressey's Fraud Triangle</div>
+  <div class="course-info">LL.B. Semester Examination Notes · Faculty of Law, University of Delhi · Based on DU Case Material by Prof. Krishna Murari Yadav</div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav-bar">
+  <a href="#toc">Table of Contents</a>
+  <a href="#part-a">A. WCC Concept</a>
+  <a href="#part-b">B. Differential Association</a>
+  <a href="#part-c">C. Fraud Triangle</a>
+  <a href="#case-laws">Case Laws</a>
+  <a href="#pyq">PYQs &amp; Answers</a>
+  <a href="#diagrams">Diagrams</a>
+</nav>
+
+<div class="container">
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div id="toc" class="toc">
+  <h3>📋 Table of Contents</h3>
+  <ol>
+    <li><a href="#part-a"><strong>Part A:</strong> Edwin H. Sutherland's Concept of 'White Collar Criminality' (Pages 1-13)</a></li>
+    <li><a href="#part-b"><strong>Part B:</strong> The Theory of Differential Association by Edwin H. Sutherland (Pages 14-20)</a></li>
+    <li><a href="#part-c"><strong>Part C:</strong> Rationalization of White Collar Crimes – Fraud Triangle by Donald Cressey</a></li>
+    <li><a href="#case-laws"><strong>Case Laws</strong> – Detailed Analysis (Facts, Issues, Arguments, Decision, Principle)</a></li>
+    <li><a href="#pyq"><strong>Previous Year Questions</strong> with Model Answers (DU Semester Exams)</a></li>
+    <li><a href="#diagrams"><strong>Diagrams &amp; Flowcharts</strong> for Visual Understanding</a></li>
+  </ol>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART A: SUTHERLAND'S CONCEPT OF WHITE COLLAR CRIMINALITY -->
+<!-- ============================================================ -->
+<div id="part-a" class="section">
+  <h2 class="section-title"><span class="icon">⚖️</span> Part A: Edwin H. Sutherland's Concept of 'White Collar Criminality'</h2>
+
+  <!-- Introduction -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">1. Historical Background &amp; Origin</h3>
+    <p>The term <strong>"White Collar Crime"</strong> was coined by <strong>Edwin H. Sutherland</strong>, a prominent American sociologist and criminologist. He first introduced this concept in his <strong>Presidential Address to the American Sociological Society on December 27, 1939</strong>, and subsequently published it in the article <em>"White Collar Criminality"</em> in the <strong>American Sociological Review, Vol. 5(1), February 1940</strong>.</p>
+
+    <div class="highlight-box important">
+      <div class="label">📌 Why is Sutherland's work revolutionary?</div>
+      <p style="margin:0;">Before Sutherland, it was universally presumed that crime was committed exclusively by the lower class – the poor, the uneducated, the socially disadvantaged. Sutherland's empirical studies shattered this assumption by establishing that <strong>crimes are also committed by the upper class</strong>, and these crimes are far more dangerous to society than street crimes because of the massive financial damage and the erosion of public morals.</p>
+    </div>
+
+    <p>The <strong>Law Commission of India (LCI)</strong>, in its <strong>29th Report</strong> (1966) titled "Proposal to include Certain Social and Economic Offences in the Indian Penal Code," at <strong>Para 13</strong> traced the history: <em>"The problem similar to white-collar crimes had arisen as far back as the 18th Century. The 'South Sea Bubble' led to the Bubble Act of 1720, which may be cited as example of an effort by the Legislature to deal with fraud on a big scale perpetrated by unscrupulous persons. But the varieties of such crimes and their diverse manifestations were seen more acutely after the First World War."</em></p>
+  </div>
+
+  <!-- Definition -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">2. Sutherland's Definition of White Collar Crime</h3>
+
+    <div class="definition-box">
+      <div class="def-title">Sutherland's Original Definition (1949)</div>
+      <div class="def-text">"White Collar Crime means a crime committed by a person of respectability and high social status in the course of his occupation."</div>
+      <div class="def-source">— Edwin H. Sutherland, <em>White Collar Crime</em> (1949), pp. 9-10</div>
+    </div>
+
+    <div class="definition-box" style="border-color: #a8d8ea;">
+      <div class="def-title" style="color: #a8d8ea;">Refined Definition (Later formulation)</div>
+      <div class="def-text">"A person of the upper socio-economic class who violates the criminal law in the course of his occupational or professional activities."</div>
+      <div class="def-source">— Sutherland (later formulation), cited in DU Case Material</div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="label">🔑 Two Essential Ingredients of WCC (per Sutherland's Definition)</div>
+      <p style="margin:0;">The Law Commission of India observed that the <strong>emphasis is on the connection with occupation</strong>. The commission of crime in this category is facilitated by the office, calling, profession or vocation of the individual concerned.</p>
+      <ol>
+        <li><strong>The offender must be a person of respectability and high social status</strong> (upper socio-economic class)</li>
+        <li><strong>The crime must be committed in the course of his occupation/profession</strong></li>
+      </ol>
+      <p style="margin-top:10px;">WCCs <strong>excludes</strong> crimes like murder, adultery and intoxication, even if committed by people of the upper class, since these have <em>nothing to do with their occupation</em>.</p>
+    </div>
+  </div>
+
+  <!-- Arnold's Definition -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">3. Arnold's Definition</h3>
+    <p><strong>Arnold</strong> defined white-collar criminals as <em>"persons of the socio-economic class who violates the criminal law in the course of his occupational or professional activities."</em> He pointed out that white-collar crime was <strong>more dangerous to society</strong> than crimes committed by the members of the lower class, because of the damage inflicted on <strong>public morals</strong>.</p>
+  </div>
+
+  <!-- Kinds of Crimes -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">4. Classification of Crimes: White-Collar vs. Blue-Collar</h3>
+
+    <table class="comparison-table">
+      <tr>
+        <th>Feature</th>
+        <th>White-Collar Crime</th>
+        <th>Blue-Collar Crime</th>
+      </tr>
+      <tr>
+        <td><strong>Class</strong></td>
+        <td>Upper or Middle Class</td>
+        <td>Underprivileged / Lower Class</td>
+      </tr>
+      <tr>
+        <td><strong>Nature</strong></td>
+        <td>Non-violent, economic, fraud-based</td>
+        <td>Often violent, physical force</td>
+      </tr>
+      <tr>
+        <td><strong>Method</strong></td>
+        <td>Fraud, deception, breach of trust</td>
+        <td>Force, theft, physical harm</td>
+      </tr>
+      <tr>
+        <td><strong>Detection</strong></td>
+        <td>Difficult, concealed in organizational routine</td>
+        <td>Relatively easier to detect</td>
+      </tr>
+      <tr>
+        <td><strong>Victim</strong></td>
+        <td>Society, State, consumers at large</td>
+        <td>Individual victims</td>
+      </tr>
+      <tr>
+        <td><strong>Social Stigma</strong></td>
+        <td>Often no social sanction</td>
+        <td>High social stigma</td>
+      </tr>
+      <tr>
+        <td><strong>Punishment</strong></td>
+        <td>Usually fines, rarely imprisonment</td>
+        <td>Imprisonment common</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Examples -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">5. Examples of White Collar Crimes (Santhanam Committee)</h3>
+    <p>The <strong>Santhanam Committee (1964)</strong> observed the following examples of white-collar crimes:</p>
+    <ul>
+      <li>Tax-evasion and avoidance</li>
+      <li>Share-pushing, mal-practices in the share market and administration of companies</li>
+      <li>Monopolistic controls</li>
+      <li>Usury</li>
+      <li>Under-invoicing or over-invoicing</li>
+      <li>Hoarding</li>
+      <li>Profiteering</li>
+      <li>Sub-standard performance of contracts of construction and supply</li>
+      <li>Evasion of economic laws</li>
+      <li>Bribery and corruption</li>
+      <li>Election offences and malpractices</li>
+    </ul>
+  </div>
+
+  <!-- 47th Report Examples -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">6. Four Illustrative Examples (LCI 47th Report, 1972)</h3>
+
+    <div class="case-card">
+      <div class="case-header">
+        <span class="gavel">📋</span>
+        <div>
+          <div class="case-name">Four Illustrative Examples from 47th Report</div>
+          <div class="case-citation">Law Commission of India, 47th Report, Para 1.8 &amp; 1.9 (1972)</div>
+        </div>
+      </div>
+
+      <div class="case-detail facts">
+        <div class="detail-label">✅ Example 1 — IS a White Collar Criminal</div>
+        <p style="margin:0;">A <strong>manufacturer of drugs</strong> who deliberately supplies sub-standard drug is a white collar criminal. <em>(This is also a socio-economic offence)</em></p>
+      </div>
+
+      <div class="case-detail facts">
+        <div class="detail-label">✅ Example 2 — IS a White Collar Criminal</div>
+        <p style="margin:0;">A <strong>big corporation</strong> which has committed evasion of tax fraudulently is a 'White-collar criminal'. <em>(This is also a socio-economic offence)</em></p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label">❌ Example 3 — NOT a White Collar Criminal</div>
+        <p style="margin:0;">A person who illegally smuggles (for his personal use) costly television sets is <strong>NOT</strong> a white collar criminal — there being <strong>no connection between his occupation and the crime</strong> committed by him. <em>(It is only a socio-economic offence)</em></p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label"> Example 4 — NOT a White Collar Criminal</div>
+        <p style="margin:0;">A <strong>pensioner</strong> who submits a false returns of income is <strong>NOT</strong> a white collar criminal. <em>(But it is a socio-economic offence)</em></p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="label">💡 Key Insight</div>
+      <p style="margin:0;"><strong>Every White Collar Crime IS a Socio-Economic Offence, but every Socio-Economic Offence is NOT a White Collar Crime.</strong> Socio-economic offences constitute the wider genus; white collar crimes form a narrower species within it. The two could be represented as <strong>intersecting circles</strong>.</p>
+    </div>
+  </div>
+
+  <!-- Salient Features of Socio-Economic Offences -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">7. Salient Features of Socio-Economic Offences (47th Report, Para 1.4)</h3>
+
+    <ol>
+      <li><strong>Motive</strong> – The motive of the criminal is <em>avarice</em> (extreme greed for wealth) or <em>rapaciousness</em> (excessive desire to acquire money) — <strong>not lust or hate</strong>.</li>
+      <li><strong>Background is non-emotional</strong> – Unlike murder, rape, defamation etc., there is no emotional reaction as between the victim and the offender.</li>
+      <li><strong>Victims at large</strong> – The victim is usually the State or a section of the public. Even where there is an individual victim, the more important element of the offence is <strong>harm to society</strong>.</li>
+      <li><strong>Fraud</strong> – The mode of operation of the offender is <strong>fraud, not force</strong>.</li>
+      <li><strong>Wilful</strong> – Usually, the act is deliberate and wilful.</li>
+      <li><strong>Interest protected is two-fold</strong>:
+        <ul>
+          <li>Social interest in preservation of property/wealth/health of individual members and national resources, and the general economic system from exploitation or waste</li>
+          <li>Social interest in augmentation of wealth of the country by enforcing laws relating to taxes, duties, foreign exchange, foreign commerce, industries</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Differences Table -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">8. Differences: Socio-Economic Offences vs. Traditional Offences</h3>
+
+    <table class="comparison-table">
+      <tr>
+        <th>Grounds</th>
+        <th>Socio-Economic Offences</th>
+        <th>Traditional Offences</th>
+      </tr>
+      <tr>
+        <td><strong>History</strong></td>
+        <td>New concept. Origin in 18th Century (29th Report, LCI)</td>
+        <td>Old concept</td>
+      </tr>
+      <tr>
+        <td><strong>Mens Rea</strong></td>
+        <td>Persons convicted <strong>even without mens rea</strong> (Strict Liability)</td>
+        <td>Actus non facit reum, nisi mens sit rea strictly followed</td>
+      </tr>
+      <tr>
+        <td><strong>Presumption</strong></td>
+        <td><strong>Presumption of guilt</strong> (Sec 35 &amp; 54, NDPS; Sec 24, PMLA)</td>
+        <td>Presumption of innocence (Malimath Committee)</td>
+      </tr>
+      <tr>
+        <td><strong>Burden of Proof</strong></td>
+        <td><strong>Burden on accused</strong> (Sec 68J NDPS; Sec 24 PMLA)</td>
+        <td>Burden on prosecutor</td>
+      </tr>
+      <tr>
+        <td><strong>Victim</strong></td>
+        <td>Whole nation / mass level; damages national economy</td>
+        <td>Individual or group</td>
+      </tr>
+      <tr>
+        <td><strong>Heat of Passion</strong></td>
+        <td>Committed with <strong>cool mind</strong> and calculation (Gujarat v. Mohanlal Porwal)</td>
+        <td>May be with cool mind OR heat of passion</td>
+      </tr>
+      <tr>
+        <td><strong>Mode of Operation</strong></td>
+        <td><strong>Fraud, not force</strong> (47th Report)</td>
+        <td>Generally force</td>
+      </tr>
+      <tr>
+        <td><strong>Motive</strong></td>
+        <td>Avarice or rapaciousness (not lust or hate)</td>
+        <td>Lust or hate</td>
+      </tr>
+      <tr>
+        <td><strong>Liability</strong></td>
+        <td>Strict / Absolute liability</td>
+        <td>As provided under statute</td>
+      </tr>
+      <tr>
+        <td><strong>Stigma</strong></td>
+        <td>No social stigma as such</td>
+        <td>Disgrace, depravity, immorality</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Mens Rea in Socio-Economic Offences -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">9. Socio-Economic Offences and Mens Rea</h3>
+    <p>The cardinal principle of criminal law is <strong>"Actus non facit reum, nisi mens sit rea"</strong> — the act does not make a person guilty unless the mind is also guilty. However, in socio-economic offences, this principle is <strong>modified or excluded</strong>.</p>
+
+    <div class="highlight-box important">
+      <div class="label">⚠️ 47th Report, LCI – Two Key Recommendations on Mens Rea (Para 3.17, 3.20)</div>
+      <ol style="margin:5px 0 0 15px;">
+        <li>Socio-economic offences must be <strong>treated differently from traditional crime</strong>. In such offences, mens rea should <strong>not be required</strong>.</li>
+        <li>The <strong>burden of disproving mens rea should lie over the accused</strong>.</li>
+      </ol>
+    </div>
+
+    <p><strong>Key Statutes where Mens Rea requirement was rejected:</strong></p>
+    <ul>
+      <li><strong>The Sea Customs Act, 1878</strong> — <em>Indo-China Steam Navigation Co. Ltd. v. Jasjit Singh</em> (1964)</li>
+      <li><strong>The Foreign Exchange and Regulation Act, 1947</strong> — <em>State of Maharashtra v. M.H. George</em> (1965)</li>
+      <li><strong>The Immoral Traffic Prevention Act, 1956</strong> — <em>Chitan J. Vaswani v. State of West Bengal</em> (1975)</li>
+      <li><strong>The Essential Commodities Act, 1955</strong> — <em>State of M.P. v. Narayan Singh</em> (1989)</li>
+      <li><strong>The Prevention of Money-Laundering Act, 2002</strong> — <em>Ramaraju v. Union of India</em> (2011)</li>
+    </ul>
+  </div>
+
+  <!-- Why WCC is more dangerous -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">10. Why White Collar Crimes Are More Dangerous</h3>
+    <p>Sutherland pointed out that a white collar crime is <strong>more harmful than ordinary crimes</strong> because:</p>
+    <ul>
+      <li>The <strong>financial loss to society</strong> from white collar crime is far greater than the financial loss from traditional crimes</li>
+      <li>They cause <strong>irreparable damage to public morals</strong></li>
+      <li>Those who administer justice spare the well-off and influential by postulating that many such offences are "victimless"</li>
+      <li>Offenders are not treated as "real criminals"</li>
+      <li>Offences are of a non-violent nature</li>
+      <li>Mere implication of a person of high status is considered sufficient punishment (loss of status, professional license)</li>
+      <li>Imposition of jail sentence is rare</li>
+      <li>Typical <strong>concealment of offences within organizational routine</strong> makes detection difficult</li>
+      <li>Until the 20th century, corporations were immune from criminal liability</li>
+    </ul>
+  </div>
+
+  <!-- Criticism -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">11. Criticism of Sutherland's Concept</h3>
+    <ul>
+      <li>Sutherland's definition is considered <strong>too narrow</strong> — it requires BOTH conditions to be satisfied: (1) person must have respectability and high social status, AND (2) crime must be in course of occupation. Difficulty arises when only one condition is satisfied.</li>
+      <li><strong>Tappan</strong> criticized that only legally convicted acts should count as crime, excluding regulatory violations</li>
+      <li>The definition doesn't adequately address corporate/organizational crime vs. individual crime</li>
+      <li>Difficulty in prosecution because of the social status and influence of the offenders</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART B: DIFFERENTIAL ASSOCIATION THEORY -->
+<!-- ============================================================ -->
+<div id="part-b" class="section">
+  <h2 class="section-title"><span class="icon">🔗</span> Part B: The Theory of Differential Association by Edwin H. Sutherland</h2>
+
+  <!-- Introduction -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">1. Introduction</h3>
+    <p><strong>Differential Association Theory</strong> was propounded by <strong>Edwin Sutherland</strong>. He was searching for <em>how</em> a person becomes a criminal. According to him, when a person associates with other criminals, he learns values, attitudes, techniques and motives for criminal behaviour and becomes a criminal.</p>
+
+    <div class="highlight-box">
+      <div class="label"> Core Focus</div>
+      <p style="margin:0;">His main focus was on <strong>HOW</strong> a person becomes a criminal. He did <strong>NOT</strong> discuss <strong>WHY</strong> a person becomes a criminal. This theory is also known as the <strong>"Learning Theory of Deviance"</strong>.</p>
+    </div>
+
+    <p>The theory was first made implicit in the third edition (1939) of Sutherland's textbook <em>"Principles of Criminology"</em> and was revised into its final form in the fourth edition (1947).</p>
+  </div>
+
+  <!-- Prediction -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">2. Central Prediction</h3>
+    <div class="definition-box">
+      <div class="def-title">Core Prediction of Differential Association</div>
+      <div class="def-text">"An individual will choose the criminal path when the balance of definitions for law-breaking exceeds those for law-abiding."</div>
+      <div class="def-source">In other words: A person becomes delinquent because of an <strong>excess of definitions favorable to violation of law</strong> over definitions unfavorable to violation of law.</div>
+    </div>
+  </div>
+
+  <!-- Nine Principles -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">3. Nine Principles of Differential Association Theory</h3>
+
+    <div class="case-card">
+      <div class="case-header">
+        <span class="gavel">📑</span>
+        <div>
+          <div class="case-name">The Nine Propositions</div>
+          <div class="case-citation">Sutherland's Principles of Criminology (4th Ed., 1947)</div>
+        </div>
+      </div>
+
+      <div class="case-detail facts">
+        <div class="detail-label">Principle 1 — Learned Behaviour</div>
+        <p style="margin:0;">Criminal behaviour is <strong>learned</strong> from other individuals. It is not inherited or biologically determined.</p>
+      </div>
+
+      <div class="case-detail facts">
+        <div class="detail-label">Principle 2 — Communication Process</div>
+        <p style="margin:0;">Criminal behaviour is learned in <strong>interaction with other persons in a process of communication</strong>. This communication may be verbal or non-verbal.</p>
+      </div>
+
+      <div class="case-detail facts">
+        <div class="detail-label">Principle 3 — Intimate Personal Groups</div>
+        <p style="margin:0;">The <strong>principal part</strong> of the learning of criminal behaviour occurs within <strong>intimate personal groups</strong> (family, close friends, peer groups). The impersonal agencies of communication (media) play a relatively unimportant role.</p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label">Principle 4 — Content of Learning</div>
+        <p style="margin:0;">When criminal behaviour is learned, the learning includes:<br>
+        (a) <strong>Techniques</strong> of committing the crime — sometimes very complicated, sometimes simple;<br>
+        (b) The specific direction of <strong>motives, drives, rationalizations, and attitudes</strong>.</p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label">Principle 5 — Legal Codes as Definitions</div>
+        <p style="margin:0;">The specific direction of motives and drives is learned from <strong>definitions of the legal codes as favorable or unfavorable</strong>. A person learns whether the law is something to respect or to violate.</p>
+      </div>
+
+      <div class="case-detail arguments">
+        <div class="detail-label">Principle 6 — Excess of Definitions (The Central Principle)</div>
+        <p style="margin:0; font-weight:600;">A person becomes delinquent because of an <strong>EXCESS of definitions favorable to violation of law over definitions unfavorable to violation of the law</strong>.</p>
+      </div>
+
+      <div class="case-detail arguments">
+        <div class="detail-label">Principle 7 — Variation in Associations</div>
+        <p style="margin:0;">Differential associations may vary in:<br>
+        • <strong>Frequency</strong> — how often one associates with criminal patterns<br>
+        • <strong>Duration</strong> — how long the associations last<br>
+        • <strong>Priority</strong> — whether associations occur early in life (childhood)<br>
+        • <strong>Intensity</strong> — the prestige of the source and emotional reactions</p>
+      </div>
+
+      <div class="case-detail decision">
+        <div class="detail-label">Principle 8 — Same Learning Mechanisms</div>
+        <p style="margin:0;">The process of learning criminal behaviour by association with criminal and anti-criminal patterns involves <strong>all of the mechanisms that are involved in any other learning</strong>.</p>
+      </div>
+
+      <div class="case-detail principle">
+        <div class="detail-label">Principle 9 — General Needs &amp; Values</div>
+        <p style="margin:0;">While criminal behaviour is an expression of general needs and values, it is <strong>not explained by those needs and values</strong>, since non-criminal behaviour is an expression of the same needs and values. (A thief steals for money; a businessman works for money — same need, different expression.)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contribution -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">4. Contribution of this Theory</h3>
+    <div class="highlight-box important">
+      <div class="label"> Cultural Connection</div>
+      <p style="margin:0;">This theory is based on the Hindi proverb: <strong>"संगत से गुण होत हैं, संगत से गुण जात"</strong> (Company makes or breaks character). The role of the <strong>Peer Group</strong> in commission of crime has been emphasized. Parents should always take care of their children — with whom babies are living and playing.</p>
+    </div>
+    <p>The theory was supported by <strong>James Short Jr.</strong> on the basis of his study of 176 school children (126 boys and girls) in 1955.</p>
+  </div>
+
+  <!-- Criticism -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">5. Criticism of the Theory</h3>
+    <ol>
+      <li><strong>Ignorance of personality factors</strong> — <em>Tappan</em> criticized the theory for ignoring the role of personality, biological and psychological factors.</li>
+      <li><strong>Origin of criminality unexplained</strong> — He failed to explain the <em>origin</em> of criminality, since criminality has to exist before it can be learned from someone else. (Who was the first criminal?)</li>
+      <li><strong>Systematic vs. Situational crime</strong> — <em>Elliot</em> explained that Sutherland explained systematic crimes but failed to discuss situational crime.</li>
+      <li><strong>Doesn't explain "why"</strong> — He did not discuss WHY a person becomes a criminal; only HOW.</li>
+      <li><strong>Individual strength ignored</strong> — Some persons may be so strong-willed that outer criminal associations cannot affect their life. The theory assumes everyone is equally influenced by associations.</li>
+    </ol>
+  </div>
+
+  <!-- Application to WCC -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">6. Application to White Collar Crimes</h3>
+    <p>Sutherland, through his Differential Association Theory, explained how <strong>white collar crimes</strong> are learned:</p>
+    <ul>
+      <li>White collar criminals are <strong>seldom recruited from juvenile delinquents</strong></li>
+      <li>A young man with idealism is <strong>inducted into white collar crime</strong> as part of learning practical business</li>
+      <li>He is <strong>ordered by managers</strong> to do things which he regards as unethical or illegal</li>
+      <li>He learns from colleagues <strong>specific techniques</strong> of violating the law</li>
+      <li>He develops a <strong>general ideology</strong> — transmitted through phrases like "We are not in business for our health", "Business is business", "No business was ever built on the beatitudes"</li>
+      <li>These generalizations assist the neophyte in business to <strong>accept illegal practices</strong> and provide <strong>rationalizations</strong> for them</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PART C: FRAUD TRIANGLE BY DONALD CRESSEY -->
+<!-- ============================================================ -->
+<div id="part-c" class="section">
+  <h2 class="section-title"><span class="icon">🔺</span> Part C: Rationalization of White Collar Crimes — Fraud Triangle by Donald Cressey</h2>
+
+  <!-- Background -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">1. Background &amp; Research Methodology</h3>
+    <p><strong>Donald R. Cressey</strong>, a student of Sutherland, conducted his doctoral research on <strong>embezzlers</strong> whom he called <em>"trust violators."</em> Embezzlement is an <strong>occupational crime</strong> (also known as 'workplace crime').</p>
+    <p>Cressey arranged for permission to <strong>visit prisons in the Midwest</strong> and eventually interviewed about <strong>200 incarcerated inmates</strong>. He was especially interested in the circumstances that led them to be overcome by temptation. He <strong>excluded</strong> from his research those employees who took their jobs <em>for the purpose of stealing</em> — a relatively minor number of offenders.</p>
+    <p>His work was published under the title: <strong><em>"Other People's Money: A Study in the Social Psychology of Embezzlement"</em></strong>.</p>
+  </div>
+
+  <!-- Shareable vs Non-shareable -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">2. Shareable vs. Non-Shareable Financial Problems</h3>
+    <p>Cressey divided financial problems into two categories:</p>
+
+    <div class="case-card">
+      <div class="case-detail facts">
+        <div class="detail-label">📗 Shareable Financial Need</div>
+        <p style="margin:0;">Problems that a person <strong>can share</strong> with others — business associates, family, friends. For example, a failing bank might be considered a problem to be shared with the community.</p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label"> Non-Shareable Financial Need</div>
+        <p style="margin:0;">Problems that a person feels <strong>must be kept secret</strong>. The same failing bank could be defined by one person as non-sharable. A man could lose money at the race track daily but define it as a problem that must be kept private. <strong>It depends upon the capacity and circumstances of the individual</strong>.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <div class="label">💡 Cressey's Key Insight</div>
+      <p style="margin:0;">"Thus a man could lose considerable money at the race track daily but the loss, even if it constituted a problem for the individual, might not constitute a <em>non-sharable</em> problem for him. Another man might define the problem as one which must be kept secret and private."</p>
+    </div>
+  </div>
+
+  <!-- The Hypothesis -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">3. Cressey's Hypothesis (Three Parts)</h3>
+
+    <div class="definition-box" style="border-color: #ffd700;">
+      <div class="def-title" style="color: #ffd700;">The Proven Hypothesis</div>
+      <div class="def-text">"Trusted persons become trust violators when they:<br><br>
+      (1) Conceive of themselves as having a <strong>financial problem</strong>,<br>
+      (2) The financial problem is <strong>non-shareable</strong>, and<br>
+      (3) The offender believes that he can solve the problem <strong>secretly by using his position</strong>."<br><br>
+      This hypothesis was found <strong>TRUE</strong> — i.e., a proved hypothesis.</div>
+    </div>
+  </div>
+
+  <!-- The Fraud Triangle -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">4. The Fraud Triangle — Three Components</h3>
+
+    <div class="triangle-container">
+      <svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- Triangle background -->
+        <polygon points="250,30 50,370 450,370" fill="rgba(233,69,96,0.08)" stroke="#e94560" stroke-width="3" stroke-dasharray="8,4"/>
+
+        <!-- Vertex 1: Pressure -->
+        <circle cx="250" cy="30" r="55" fill="rgba(233,69,96,0.2)" stroke="#e94560" stroke-width="2"/>
+        <text x="250" y="22" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">(1) PRESSURE</text>
+        <text x="250" y="36" text-anchor="middle" fill="#e94560" font-size="9">Non-sharable</text>
+        <text x="250" y="48" text-anchor="middle" fill="#e94560" font-size="9">financial need</text>
+
+        <!-- Vertex 2: Opportunity -->
+        <circle cx="50" cy="370" r="55" fill="rgba(76,175,80,0.15)" stroke="#4CAF50" stroke-width="2"/>
+        <text x="50" y="362" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">(2) OPPORTUNITY</text>
+        <text x="50" y="376" text-anchor="middle" fill="#4CAF50" font-size="9">Position of trust</text>
+        <text x="50" y="388" text-anchor="middle" fill="#4CAF50" font-size="9">+ Access</text>
+
+        <!-- Vertex 3: Rationalization -->
+        <circle cx="450" cy="370" r="55" fill="rgba(33,150,243,0.15)" stroke="#2196F3" stroke-width="2"/>
+        <text x="450" y="362" text-anchor="middle" fill="#2196F3" font-size="11" font-weight="bold">(3) RATIONAL-</text>
+        <text x="450" y="376" text-anchor="middle" fill="#2196F3" font-size="11" font-weight="bold">IZATION</text>
+        <text x="450" y="390" text-anchor="middle" fill="#2196F3" font-size="9">Justification</text>
+
+        <!-- Center text -->
+        <text x="250" y="270" text-anchor="middle" fill="#ffd700" font-size="14" font-weight="bold">FRAUD</text>
+        <text x="250" y="290" text-anchor="middle" fill="#ffd700" font-size="12">TRIANGLE</text>
+
+        <!-- Arrows connecting vertices -->
+        <line x1="230" y1="80" x2="90" y2="320" stroke="#a8d8ea" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <line x1="270" y1="80" x2="410" y2="320" stroke="#a8d8ea" stroke-width="1.5" stroke-dasharray="5,3"/>
+        <line x1="100" y1="370" x2="400" y2="370" stroke="#a8d8ea" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+        <!-- Bottom label -->
+        <text x="250" y="150" text-anchor="middle" fill="#c5c6d0" font-size="10">All three elements</text>
+        <text x="250" y="165" text-anchor="middle" fill="#c5c6d0" font-size="10">must be present</text>
+        <text x="250" y="180" text-anchor="middle" fill="#c5c6d0" font-size="10">for fraud to occur</text>
+      </svg>
+    </div>
+
+    <div class="case-card">
+      <div class="case-detail facts">
+        <div class="detail-label"> Leg 1: Pressure (Non-Shareable Financial Need)</div>
+        <p style="margin:0;">The accused commits the crime because of a <strong>financial need that cannot be shared</strong> with others. This is the driving force. Without this pressure, even with opportunity and rationalization, the crime may not occur.</p>
+      </div>
+
+      <div class="case-detail issues">
+        <div class="detail-label">🟢 Leg 2: Opportunity</div>
+        <p style="margin:0;">There must be a <strong>perceived opportunity</strong> to commit the crime — a position of trust, access to funds, ability to conceal the act. The offender believes he can solve the problem <em>secretly</em> using his position.</p>
+      </div>
+
+      <div class="case-detail arguments">
+        <div class="detail-label">🔵 Leg 3: Rationalization</div>
+        <p style="margin:0;"><strong>Rationalization (justification)</strong> for the commission of crime is <em>sine qua non</em> (absolutely essential). Many times the <strong>hedonism principle</strong> is followed — if there is more pleasure, he will commit the crime. The offender convinces himself that what he is doing is not really wrong.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Six Categories -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">5. Six Categories of Non-Shareable Problems</h3>
+    <p>Cressey divided non-sharable problems into six categories:</p>
+
+    <ol>
+      <li><strong>Violation of ascribed obligations (Unable to pay debts)</strong> — When persons incur debts or become financially obligated as a result of violation of the obligations ascribed to the role of trusted person, they consider these debts must be kept secret. Meeting them becomes a non-sharable financial problem.</li>
+
+      <li><strong>Problems resulting from personal failure</strong> — Financial problems arising due to misguidance or poorly planned activities. The person fears loss of status due to "own bad judgment" or "own fault" or "own stupidity."</li>
+
+      <li><strong>Business reversals</strong> — Financial reverses coming from conditions beyond one's control: inflation, high interest rates, raising capital. The CORONA period is a glaring example of business reversals.</li>
+
+      <li><strong>Physical Isolation</strong> — The person in financial straits is isolated from people who can help. It's not that he is afraid to share — he has <em>no one</em> with whom to share. He wants to share the problem, but no one is there to listen.</li>
+
+      <li><strong>Status Gaining</strong> — Living beyond one's means or spending lavishly to maintain a false image (making "Bhaukal"). If your condition has changed, you should have also changed your lavish lifestyle. There is no need to commit fraud for showing off.</li>
+
+      <li><strong>Employer–Employee Relations</strong> — An employed person who resents his status within the organization. The resentment can come from perceived economic inequities (pay), or feeling overworked or underappreciated. The problem becomes non-sharable when the individual believes that making suggestions will threaten his status. There is also a strong motivator to seek revenge when feeling ill-treated.</li>
+    </ol>
+  </div>
+
+  <!-- Why Not Earlier -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">6. Why Did They Not Commit the Offence Previously?</h3>
+    <p>When Cressey asked his subjects why they had not embezzled before, their responses fell into <strong>three categories</strong>:</p>
+
+    <div class="case-card">
+      <div class="case-detail facts">
+        <div class="detail-label">Response 1</div>
+        <p style="margin:0; font-style:italic;">"There was no need for it like there was this time."</p>
+      </div>
+      <div class="case-detail issues">
+        <div class="detail-label">Response 2</div>
+        <p style="margin:0; font-style:italic;">"The idea never entered my head."</p>
+      </div>
+      <div class="case-detail arguments">
+        <div class="detail-label">Response 3</div>
+        <p style="margin:0; font-style:italic;">"I thought it was dishonest then, but this time it did not seem dishonest at first."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application -->
+  <div class="sub-section">
+    <h3 class="sub-section-title">7. Practical Application: Vijay Mallya Example</h3>
+    <div class="hypo-visual">
+      <div class="hypo-title">Applying the Fraud Triangle</div>
+      <div class="scenario">
+        <strong>Vijay Mallya</strong> is the best example cited in the DU material:<br><br>
+        🔴 <strong>Pressure:</strong> Massive financial debts from Kingfisher Airlines that became non-sharable<br>
+         <strong>Opportunity:</strong> Position as chairman of a publicly listed company with access to bank loans<br>
+        🔵 <strong>Rationalization:</strong> He rationalized himself and <em>ran away</em> after committing the crime, believing the business failure was not entirely his fault
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- CASE LAWS IN DETAIL -->
+<!-- ============================================================ -->
+<div id="case-laws" class="section">
+  <h2 class="section-title"><span class="icon">⚖️</span> Case Laws — Detailed Analysis (Strictly Based on DU Case Material)</h2>
+
+  <!-- CASE 1: Indo-China Steam Navigation -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">️</span>
+      <div>
+        <div class="case-name">Case 1: The Indo-China Steam Navigation Co. Ltd. v. Jasjit Singh, Addl.</div>
+        <div class="case-citation">AIR 1964 SC 1140 | Supreme Court | Date: February 3, 1964 | C.J. Gajendragadkar</div>
+      </div>
+    </div>
+
+    <div class="case-detail facts">
+      <div class="detail-label"> Facts</div>
+      <p>This case involved interpretation of several provisions of the <strong>Sea Customs Act, 1878</strong>, particularly Section 52-A. The case was related to <strong>smuggling of gold</strong>. Chief Justice Gajendragadkar noted that smuggling of gold had become a serious problem in India and operations were conducted by operators working on an international basis. The persons who carry out the physical part of smuggling are generally no more than agents; behind them stands a well-knit organisation for profit-making.</p>
+    </div>
+
+    <div class="case-detail issues">
+      <div class="detail-label">❓ Issue</div>
+      <p>Whether <strong>mens rea</strong> (guilty mind) is a necessary ingredient for an offence under Section 52-A of the Sea Customs Act, 1878?</p>
+    </div>
+
+    <div class="case-detail arguments">
+      <div class="detail-label">🗣️ Arguments</div>
+      <p><strong>Appellant/Defence:</strong> The provision should be interpreted to require mens rea as per the general principle of criminal law. Without a guilty mind, there can be no criminal liability.</p>
+      <p><strong>Respondent/Prosecution:</strong> The intention of the legislature in providing the prohibition was to put an end to illegal smuggling which rudely disturbs the national economy. The statute is silent on mens rea, indicating the legislature's intent to exclude it.</p>
+    </div>
+
+    <div class="case-detail decision">
+      <div class="detail-label">🏛️ Decision</div>
+      <p>The Supreme Court <strong>rejected the requirement of mens rea</strong>. The Court held that if the statutory provision is silent, there is no need to require mens rea. Such cases must be interpreted strictly. The smuggling rudely affects the economy of the country.</p>
+    </div>
+
+    <div class="case-detail principle">
+      <div class="detail-label"> Principle Evolved</div>
+      <p>In socio-economic offences, where the statute is silent about mens rea, the requirement of mens rea may be <strong>excluded</strong>. The intention of the legislature in enacting such provisions is to deal effectively with activities that disturb the national economy. <strong>Strict liability</strong> applies.</p>
+    </div>
+
+    <!-- Hypothetical Visual -->
+    <div class="hypo-visual">
+      <div class="hypo-title">Hypothetical Visual — The Smuggling Scene</div>
+      <div class="scenario">
+        Imagine a dark port at midnight. Crates labeled "Machinery Parts" are being unloaded. Inside are bars of gold. The customs officer (Jasjit Singh) suspects the cargo. Behind the scenes, an international syndicate operates through local agents. The company claims innocence — "We didn't know!" But the Court says: <em>"The law doesn't require you to know — it requires you to ensure."</em> The national economy is rudely disturbed.
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 2: State of Maharashtra v. M.H. George -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">⚖️</span>
+      <div>
+        <div class="case-name">Case 2: State of Maharashtra v. M.H. George</div>
+        <div class="case-citation">AIR 1965 SC 722 | Supreme Court | Date: August 24, 1964</div>
+      </div>
+    </div>
+
+    <div class="case-detail facts">
+      <div class="detail-label">📋 Facts</div>
+      <p>The accused, M.H. George, was a pilot who flew into India carrying gold. He was charged under the <strong>Foreign Exchange Regulation Act, 1947 (FERA)</strong>. He claimed he was not aware that carrying gold was prohibited, arguing absence of mens rea. The case tested whether ignorance of the law or absence of guilty mind could be a defence under FERA.</p>
+    </div>
+
+    <div class="case-detail issues">
+      <div class="detail-label">❓ Issue</div>
+      <p>Whether conviction under FERA, 1947 can be sustained <strong>without proving mens rea</strong>? Whether the accused's claim of ignorance is a valid defence?</p>
+    </div>
+
+    <div class="case-detail arguments">
+      <div class="detail-label">🗣️ Arguments</div>
+      <p><strong>Accused (George):</strong> I was not aware of the prohibition. I had no guilty mind. Mens rea is an essential ingredient of every crime.</p>
+      <p><strong>State/Prosecution:</strong> FERA is a special socio-economic legislation. The statute creates absolute liability. The protection of national economy requires that mens rea need not be proved.</p>
+    </div>
+
+    <div class="case-detail decision">
+      <div class="detail-label">🏛️ Decision</div>
+      <p>The <strong>majority opinion</strong> of the Supreme Court <strong>convicted the accused even without mens rea</strong>. The Court held that socio-economic offences are dealt with under special enactments and social welfare legislation. Due to their peculiar nature — planned and executed in secrecy by sophisticated means — most offences are made "strictly liable" or the requirement of mens rea is modified.</p>
+    </div>
+
+    <div class="case-detail principle">
+      <div class="detail-label">📌 Principle Evolved</div>
+      <p>Socio-economic offences represent a departure from traditional criminal law. The <strong>initial burden of proof lies upon the offender</strong> to disprove a legal presumption of his liability. The cardinal principle "actus non facit reum nisi mens sit rea" is <strong>not strictly applicable</strong> to socio-economic offences. Protection of national economy takes precedence.</p>
+    </div>
+
+    <div class="hypo-visual">
+      <div class="hypo-title">Hypothetical Visual — The Pilot's Dilemma</div>
+      <div class="scenario">
+        M.H. George, a commercial pilot, lands at Mumbai airport. In his luggage, gold bars are discovered. "I didn't know it was illegal!" he protests. But the Court holds: <em>"When you carry gold across international borders, the law presumes you know — or should know — the rules. The nation's economy cannot be left to the mercy of claimed ignorance."</em> This case became the landmark precedent for strict liability in socio-economic offences.
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 3: State of Gujarat v. Mohanlal Jitamalji Porwal -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">⚖️</span>
+      <div>
+        <div class="case-name">Case 3: State of Gujarat v. Mohanlal Jitamalji Porwal &amp; Anr.</div>
+        <div class="case-citation">AIR 1987 SC 1321 | Supreme Court | Date: March 26, 1987</div>
+      </div>
+    </div>
+
+    <div class="case-detail facts">
+      <div class="detail-label">📋 Facts</div>
+      <p>This case dealt with white collar crime in the context of economic offences. The accused were involved in economic offences that affected the national economy. The Supreme Court used this occasion to discuss the nature and characteristics of white collar crimes as distinct from traditional crimes.</p>
+    </div>
+
+    <div class="case-detail issues">
+      <div class="detail-label">❓ Issue</div>
+      <p>How should white collar crimes be distinguished from traditional crimes? What are the distinguishing characteristics?</p>
+    </div>
+
+    <div class="case-detail decision">
+      <div class="detail-label">️ Decision &amp; Key Observations</div>
+      <p>The Supreme Court made several crucial observations:</p>
+      <ul>
+        <li>White collar crime is committed with a <strong>cool mind and calculation</strong> — not in the heat of passion</li>
+        <li>It is committed for <strong>personal profit regardless of the consequences to the community</strong></li>
+        <li>Traditional crimes may be committed either with a cool mind or heat of passion (e.g., murder in the heat of passion)</li>
+        <li>White collar crimes affect the whole society and are not committed by disadvantaged people but by <strong>very affluent and immensely powerful people</strong></li>
+        <li>They <strong>cannot be equated with other crimes</strong> committed by individual offenders against individual victims</li>
+        <li>Such offences must be <strong>firmly tackled</strong></li>
+      </ul>
+    </div>
+
+    <div class="case-detail principle">
+      <div class="detail-label">📌 Principle Evolved</div>
+      <p>White collar crimes are fundamentally different from traditional crimes in their <strong>motive (avarice vs. lust/hate)</strong>, <strong>mode (fraud vs. force)</strong>, <strong>mental state (cool calculation vs. possible passion)</strong>, and <strong>impact (societal vs. individual)</strong>. They require a different approach to investigation, prosecution, and sentencing.</p>
+    </div>
+  </div>
+
+  <!-- CASE 4: Noormohmed Jamalbhai Latiwala -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">⚖️</span>
+      <div>
+        <div class="case-name">Case 4: Noormohmed Jamalbhai Latiwala v. State of Gujarat</div>
+        <div class="case-citation">Gujarat High Court | Date: March 25, 2004</div>
+      </div>
+    </div>
+
+    <div class="case-detail facts">
+      <div class="detail-label"> Facts</div>
+      <p>This case involved <strong>white collar crimes in the field of cooperative banking</strong> in Gujarat. The accused were involved in fraudulent activities in the cooperative banking sector that adversely affected the economic conditions of the public at large and particularly the class of depositors whose life savings were deposited in these institutions.</p>
+    </div>
+
+    <div class="case-detail decision">
+      <div class="detail-label">️ Decision &amp; Key Observations</div>
+      <p>The Gujarat High Court observed: <em>"Unfortunately in the last few years, the country has seen an alarming rise in white-collar crimes which has affected the fibre of the country's economic structure. These cases are nothing but private gain at the cost of public, and lead to economic disaster. In the present case also, if not national interest, but in view of the rampant white collar crimes in the field of cooperative banking business of the State, it can hardly be denied that it has adversely affected the economic conditions of the public at large in general and the class of depositors in particular whose life saving money is either deposited or whose livelihood is dependent on the income of interest."</em></p>
+    </div>
+
+    <div class="case-detail principle">
+      <div class="detail-label">📌 Principle Evolved</div>
+      <p>White collar crimes in the banking sector constitute a direct attack on the <strong>economic fibre of the nation</strong>. They represent <em>"private gain at the cost of public"</em> and lead to economic disaster. The investigation of such crimes must be conducted by highly trained investigating officers well conversant with the system. Such offences involve crores of rupees.</p>
+    </div>
+
+    <div class="hypo-visual">
+      <div class="hypo-title">Hypothetical Visual — The Banking Fraud</div>
+      <div class="scenario">
+        A respected bank manager, Noormohmed, sits in his air-conditioned office. Behind him, certificates of appreciation line the walls. Depositors — small shopkeepers, retired teachers, daily wage earners — trust him with their life savings. He approves fake loans, creates shell accounts, and siphons crores. The depositors never know until one day, the bank doors are locked. Their life savings — gone. This is white collar crime: committed with a pen, not a gun; with a signature, not a knife.
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 5: Tofan Singh -->
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">⚖️</span>
+      <div>
+        <div class="case-name">Case 5: Tofan Singh v. State of Tamil Nadu</div>
+        <div class="case-citation">2020 SCC OnLine SC 882 | Supreme Court | Date: October 29, 2020</div>
+      </div>
+    </div>
+
+    <div class="case-detail facts">
+      <div class="detail-label">📋 Facts</div>
+      <p>This case involved offences under the <strong>NDPS Act, 1985</strong> (Narcotic Drugs and Psychotropic Substances Act). The question was whether NDPS offences could be considered socio-economic offences / white collar crimes, and whether the presumption of guilt under Sections 35 and 54 of NDPS Act is constitutional.</p>
+    </div>
+
+    <div class="case-detail decision">
+      <div class="detail-label">🏛️ Decision (Para 50)</div>
+      <p>The Supreme Court observed that socio-economic offences and white collar crimes affect the whole society. They are <strong>not committed by disadvantaged people</strong> but by <strong>very affluent and immensely powerful people</strong>. Such offences must be firmly tackled and cannot be equated with other crimes committed by individual offenders against individual victims.</p>
+    </div>
+
+    <div class="case-detail principle">
+      <div class="detail-label">📌 Principle Evolved</div>
+      <p>Socio-economic offences like those under the NDPS Act involve strict liability, reversed burden of proof, and presumption of guilt. The constitutional validity of these provisions is upheld given the grave threat such offences pose to society.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PYQs WITH MODEL ANSWERS -->
+<!-- ============================================================ -->
+<div id="pyq" class="section">
+  <h2 class="section-title"><span class="icon"></span> Previous Year Questions (DU Semester Exams) with Model Answers</h2>
+
+  <!-- PYQ 1: 2019 -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2019 — Question 3(a) — 10 Marks</span>
+    <div class="question">"Explain the concept of white collar crimes in the light of 'Differential Association Theory'."</div>
+
+    <div class="answer-title">📌 Model Answer</div>
+
+    <p><strong>Introduction:</strong> Differential Association theory was propounded by Edwin Sutherland in the late 1930s and early 1940. Through this theory he proposed that through interaction with others, individuals learn the values, attitudes, techniques, and motives for criminal behaviour. This theory focuses on <em>how</em> individuals learn to become criminals, but does not concern itself with <em>why</em> they become criminals.</p>
+
+    <p><strong>Core Principle:</strong> The theory predicts that an individual will choose the criminal path when the balance of definitions for law-breaking exceeds those for law-abiding. This is also known as the <strong>"Learning Theory of Deviance."</strong></p>
+
+    <p><strong>Connection to White Collar Crime:</strong> Sutherland himself used this theory to explain white collar crimes:</p>
+    <ul>
+      <li>White collar criminals are seldom recruited from juvenile delinquents</li>
+      <li>A young man with idealism is inducted into white collar crime as part of learning practical business</li>
+      <li>He is ordered by managers to do things regarded as unethical or illegal</li>
+      <li>He learns specific techniques of violating the law from colleagues</li>
+      <li>He develops a general ideology through phrases like "Business is business", "We are not in business for our health"</li>
+      <li>These generalizations assist him to accept illegal practices and provide rationalizations</li>
+    </ul>
+
+    <p><strong>Nine Principles Application:</strong> The nine principles explain how in corporate environments, the excess of definitions favorable to law violation over those favorable to law abiding creates a criminogenic culture. The frequency, duration, priority and intensity of associations with those who violate the law in the corporate world tips the balance.</p>
+
+    <p><strong>Conclusion:</strong> Differential Association Theory thus provides a comprehensive framework for understanding how white collar criminals are made — not born — through their social environment and corporate culture.</p>
+  </div>
+
+  <!-- PYQ 2: 2020 -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2020 — Question 2 — 25 Marks</span>
+    <div class="question">"Sutherland asserts that in an area where the delinquency rate is high, a boy who is sociable, gregarious, active, and athletic is very likely to come in contact with other boys in the neighbourhood, learn delinquent behaviour from them and become a gangster; the psychopathic boy who is isolated, introverted and inert may remain at home, not become acquainted with other boys in the neighbourhood, and not become delinquent." Do you agree with the instance stated by Sutherland? Support your answer based on the differential association theory.</div>
+
+    <div class="answer-title"> Model Answer</div>
+
+    <p><strong>Agreement with Sutherland's Assertion:</strong> Yes, I agree with Sutherland's assertion. This statement perfectly illustrates the core principle of Differential Association Theory — that criminal behaviour is <em>learned through association</em> and not determined by individual personality traits alone.</p>
+
+    <p><strong>Analysis through the Nine Principles:</strong></p>
+    <ul>
+      <li><strong>Principle 3 (Intimate Groups):</strong> The sociable boy comes into contact with delinquent peer groups in his neighbourhood. These intimate personal groups become the primary source of learning criminal behaviour.</li>
+      <li><strong>Principle 1 &amp; 2 (Learned through Communication):</strong> Through interaction and communication with delinquent boys, he learns the techniques, motives, and rationalizations for criminal behaviour.</li>
+      <li><strong>Principle 6 (Excess of Definitions):</strong> The sociable boy accumulates more definitions favorable to law violation through his associations, tipping the balance toward delinquency.</li>
+      <li><strong>Principle 7 (Frequency, Duration, Priority, Intensity):</strong> The athletic, active boy spends more time (frequency and duration) with delinquent peers, giving greater intensity to criminal associations.</li>
+    </ul>
+
+    <p><strong>The Isolated Boy:</strong> The psychopathic, introverted boy remains at home, isolated from delinquent associations. Without exposure to criminal definitions, the balance of definitions remains favorable to law-abiding behaviour. His personality traits (introversion, isolation) actually <em>protect</em> him from delinquency — not because he is inherently better, but because he lacks the associations that teach criminal behaviour.</p>
+
+    <p><strong>Key Insight:</strong> Sutherland's point is that it is not individual pathology (being "psychopathic" or "sociable") that causes crime — it is the <strong>social environment and associations</strong>. The same personality could become criminal or non-criminal depending on the associations. This challenges biological and psychological theories of crime.</p>
+
+    <p><strong>Hindi Cultural Parallel:</strong> This is captured in the Hindi saying: <em>"संगत से गुण होत हैं, संगत से गुण जात"</em> — Good or bad qualities come from one's company.</p>
+  </div>
+
+  <!-- PYQ 3: Evolution PYQ -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2017 — Question 1(a) — 10 Marks</span>
+    <div class="question">"Discuss the development in the concept of 'Socio-Economic Offences' in India in view of Santhanam Committee Report of 1964 and 47th Report of the Law Commission of India, 1972."</div>
+
+    <div class="answer-title"> Model Answer</div>
+
+    <p><strong>Introduction:</strong> Socio-economic offences represent a new category of criminality that emerged prominently in the post-independence period. Unlike traditional crimes, these offences target the economic health of the nation and are committed through fraud rather than force.</p>
+
+    <p><strong>Santhanam Committee Report (1964):</strong> The Committee observed that the advance of technological and scientific development contributed to the emergence of "mass society" with a large rank and file and a small controlling elite, encouraging monopolies and the rise of a managerial class. The inability of all sections of society to appreciate the need for high ethical standards resulted in the emergence of white-collar and economic crimes. The Committee categorized socio-economic offences into 8 categories including tax evasion, profiteering, adulteration, and corruption.</p>
+
+    <p><strong>47th Report of LCI (1972):</strong> The Commission defined white-collar crime as "a crime committed in the course of one's occupation by a member of the upper class." It identified 6 salient features: motive of avarice (not lust), non-emotional background, victims at large (State/public), fraud (not force), wilful act, and two-fold social interest protection.</p>
+
+    <p><strong>Development in India:</strong> Post-independence, several laws were enacted — Prevention of Corruption Act 1947, Essential Commodities Act 1955, ITPA 1956, NDPS Act 1985, PMLA 2002. Courts excluded mens rea as essential ingredient (Indo-China Steam Navigation case, M.H. George case). The concept evolved from being unrecognized to forming a distinct branch of criminal jurisprudence.</p>
+  </div>
+
+  <!-- PYQ 4: 2018 -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2018 — Question 4(a) — 10 Marks</span>
+    <div class="question">"Distinguish between Socio-Economic Offences, White Collar Crimes and Traditional Crimes."</div>
+
+    <div class="answer-title">📌 Model Answer</div>
+
+    <p>The three categories of offences can be distinguished on several grounds:</p>
+
+    <table class="comparison-table" style="margin-top:15px;">
+      <tr>
+        <th>Ground</th>
+        <th>Traditional Crimes</th>
+        <th>Socio-Economic Offences</th>
+        <th>White Collar Crimes</th>
+      </tr>
+      <tr>
+        <td><strong>Definition</strong></td>
+        <td>Crimes against person, property, or State (IPC offences)</td>
+        <td>Offences affecting health/welfare of community and country's economy</td>
+        <td>Crime by person of respectability and high social status in course of occupation (Sutherland)</td>
+      </tr>
+      <tr>
+        <td><strong>Perpetrator</strong></td>
+        <td>Any class of persons</td>
+        <td>Any person — rich or poor</td>
+        <td>Only upper class / high social status</td>
+      </tr>
+      <tr>
+        <td><strong>Mens Rea</strong></td>
+        <td>Essential</td>
+        <td>Generally not required (Strict Liability)</td>
+        <td>Generally not required</td>
+      </tr>
+      <tr>
+        <td><strong>Motive</strong></td>
+        <td>Lust, hate, passion</td>
+        <td>Avarice, rapaciousness</td>
+        <td>Avarice, rapaciousness</td>
+      </tr>
+      <tr>
+        <td><strong>Mode</strong></td>
+        <td>Force, violence</td>
+        <td>Fraud, not force</td>
+        <td>Fraud, breach of trust</td>
+      </tr>
+      <tr>
+        <td><strong>Victim</strong></td>
+        <td>Individual</td>
+        <td>State / Public at large</td>
+        <td>State / Public at large</td>
+      </tr>
+      <tr>
+        <td><strong>Scope</strong></td>
+        <td>Old concept</td>
+        <td>Wider — Genus</td>
+        <td>Narrower — Species (subset of socio-economic offences)</td>
+      </tr>
+      <tr>
+        <td><strong>Examples</strong></td>
+        <td>Murder, rape, theft</td>
+        <td>Smuggling, hoarding, adulteration</td>
+        <td>Tax evasion by corporation, bank fraud by manager</td>
+      </tr>
+    </table>
+
+    <p><strong>Relationship:</strong> Every White Collar Crime is a Socio-Economic Offence, but not vice versa. Both can be represented as intersecting circles with Traditional Crimes forming a separate, largely non-overlapping category.</p>
+  </div>
+
+  <!-- PYQ 5: 2017 -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2017 — Question 1(b) — 10 Marks</span>
+    <div class="question">"How are the concept, viz., Mens Rea, Nature of Liability, Burden of Proof and Sentencing applicable in Socio-Economic Offences statutes?"</div>
+
+    <div class="answer-title">📌 Model Answer</div>
+
+    <p><strong>Mens Rea:</strong> Unlike traditional crimes where mens rea is essential (actus non facit reum nisi mens sit rea), in socio-economic offences, the tendency of the legislature is to <strong>curtail the requirement of mens rea</strong>. The 47th Report of LCI recommended that mens rea should not be required. Cases like <em>Indo-China Steam Navigation</em> and <em>M.H. George</em> established this principle.</p>
+
+    <p><strong>Nature of Liability:</strong> Socio-economic offences impose <strong>strict or absolute liability</strong>. The accused can be convicted even without proof of guilty intention. This is because such offences are planned and executed in secrecy by sophisticated means, making detection of mens rea difficult.</p>
+
+    <p><strong>Burden of Proof:</strong> The burden shifts to the <strong>accused</strong> to disprove the presumption of liability. Section 24 of PMLA, Sections 35 &amp; 54 of NDPS Act place the burden on the accused. This reverses the traditional rule that the prosecution must prove guilt beyond reasonable doubt.</p>
+
+    <p><strong>Sentencing Policy:</strong> No structured sentencing guidelines have been issued by the legislature or judiciary. Each judge exercises judicial discretion. Sentences range from fines to rigorous imprisonment depending on the statute and severity.</p>
+  </div>
+
+  <!-- PYQ 6: 2016 -->
+  <div class="pyq-box">
+    <span class="year-tag">DU LL.B 2016 — Question 3(a) — 10 Marks</span>
+    <div class="question">"Differentiate between the traditional crimes and socio-economic offences."</div>
+
+    <div class="answer-title">📌 Model Answer</div>
+
+    <p>See the comprehensive comparison table provided in Part A, Section 8 above. Key differentiating factors include: (1) History — traditional crimes are old, socio-economic offences emerged in the 18th-20th centuries; (2) Mens Rea — required in traditional, generally excluded in socio-economic; (3) Presumption — of innocence in traditional, of guilt in socio-economic; (4) Burden of Proof — on prosecutor in traditional, on accused in socio-economic; (5) Victim — individual in traditional, society at large in socio-economic; (6) Mode — force in traditional, fraud in socio-economic; (7) Motive — lust/hate in traditional, avarice in socio-economic; (8) Mental State — may involve heat of passion in traditional, always cool calculation in socio-economic (per <em>State of Gujarat v. Mohanlal Porwal</em>).</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- DIAGRAMS AND FLOWCHARTS -->
+<!-- ============================================================ -->
+<div id="diagrams" class="section">
+  <h2 class="section-title"><span class="icon">📊</span> Diagrams &amp; Flowcharts for Better Understanding</h2>
+
+  <!-- Diagram 1: Evolution Flowchart -->
+  <div class="diagram-box">
+    <div class="diagram-title">📈 Flowchart 1: Evolution of White Collar Crime Concept</div>
+    <svg width="900" height="380" viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" class="svg-flow">
+      <!-- Boxes -->
+      <rect x="10" y="10" width="170" height="60" rx="10" fill="rgba(233,69,96,0.2)" stroke="#e94560" stroke-width="2"/>
+      <text x="95" y="35" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">18th Century</text>
+      <text x="95" y="52" text-anchor="middle" fill="#c5c6d0" font-size="10">South Sea Bubble</text>
+      <text x="95" y="64" text-anchor="middle" fill="#c5c6d0" font-size="10">Bubble Act 1720</text>
+
+      <rect x="200" y="10" width="170" height="60" rx="10" fill="rgba(168,216,234,0.15)" stroke="#a8d8ea" stroke-width="2"/>
+      <text x="285" y="35" text-anchor="middle" fill="#a8d8ea" font-size="11" font-weight="bold">Post WWI</text>
+      <text x="285" y="52" text-anchor="middle" fill="#c5c6d0" font-size="10">Sutherland begins</text>
+      <text x="285" y="64" text-anchor="middle" fill="#c5c6d0" font-size="10">his research</text>
+
+      <rect x="390" y="10" width="170" height="60" rx="10" fill="rgba(76,175,80,0.15)" stroke="#4CAF50" stroke-width="2"/>
+      <text x="475" y="35" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">Feb 1940</text>
+      <text x="475" y="52" text-anchor="middle" fill="#c5c6d0" font-size="10">"White Collar</text>
+      <text x="475" y="64" text-anchor="middle" fill="#c5c6d0" font-size="10">Criminality" published</text>
+
+      <rect x="580" y="10" width="170" height="60" rx="10" fill="rgba(255,152,0,0.15)" stroke="#FF9800" stroke-width="2"/>
+      <text x="665" y="35" text-anchor="middle" fill="#FF9800" font-size="11" font-weight="bold">1949</text>
+      <text x="665" y="52" text-anchor="middle" fill="#c5c6d0" font-size="10">Book: "White Collar</text>
+      <text x="665" y="64" text-anchor="middle" fill="#c5c6d0" font-size="10">Crime" published</text>
+
+      <rect x="770" y="10" width="120" height="60" rx="10" fill="rgba(156,39,176,0.15)" stroke="#9C27B0" stroke-width="2"/>
+      <text x="830" y="35" text-anchor="middle" fill="#9C27B0" font-size="11" font-weight="bold">1947</text>
+      <text x="830" y="52" text-anchor="middle" fill="#c5c6d0" font-size="10">Final 9 Principles</text>
+      <text x="830" y="64" text-anchor="middle" fill="#c5c6d0" font-size="10">(4th Edition)</text>
+
+      <!-- Arrows -->
+      <line x1="180" y1="40" x2="200" y2="40" stroke="#e94560" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="370" y1="40" x2="390" y2="40" stroke="#a8d8ea" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="560" y1="40" x2="580" y2="40" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow)"/>
+      <line x1="750" y1="40" x2="770" y2="40" stroke="#FF9800" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- India row -->
+      <rect x="10" y="100" width="170" height="55" rx="10" fill="rgba(233,69,96,0.1)" stroke="#e94560" stroke-width="1.5"/>
+      <text x="95" y="122" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">1964</text>
+      <text x="95" y="138" text-anchor="middle" fill="#c5c6d0" font-size="10">Santhanam Committee</text>
+      <text x="95" y="150" text-anchor="middle" fill="#c5c6d0" font-size="9">Report (India)</text>
+
+      <rect x="200" y="100" width="170" height="55" rx="10" fill="rgba(168,216,234,0.1)" stroke="#a8d8ea" stroke-width="1.5"/>
+      <text x="285" y="122" text-anchor="middle" fill="#a8d8ea" font-size="11" font-weight="bold">1966</text>
+      <text x="285" y="138" text-anchor="middle" fill="#c5c6d0" font-size="10">29th Report LCI</text>
+      <text x="285" y="150" text-anchor="middle" fill="#c5c6d0" font-size="9">(Quoted Sutherland)</text>
+
+      <rect x="390" y="100" width="170" height="55" rx="10" fill="rgba(76,175,80,0.1)" stroke="#4CAF50" stroke-width="1.5"/>
+      <text x="475" y="122" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">1972</text>
+      <text x="475" y="138" text-anchor="middle" fill="#c5c6d0" font-size="10">47th Report LCI</text>
+      <text x="475" y="150" text-anchor="middle" fill="#c5c6d0" font-size="9">(Trial &amp; Punishment)</text>
+
+      <rect x="580" y="100" width="170" height="55" rx="10" fill="rgba(255,152,0,0.1)" stroke="#FF9800" stroke-width="1.5"/>
+      <text x="665" y="122" text-anchor="middle" fill="#FF9800" font-size="11" font-weight="bold">1987</text>
+      <text x="665" y="138" text-anchor="middle" fill="#c5c6d0" font-size="10">Mohanlal Porwal Case</text>
+      <text x="665" y="150" text-anchor="middle" fill="#c5c6d0" font-size="9">(SC: Cool mind)</text>
+
+      <rect x="770" y="100" width="120" height="55" rx="10" fill="rgba(156,39,176,0.1)" stroke="#9C27B0" stroke-width="1.5"/>
+      <text x="830" y="122" text-anchor="middle" fill="#9C27B0" font-size="11" font-weight="bold">2004</text>
+      <text x="830" y="138" text-anchor="middle" fill="#c5c6d0" font-size="10">Latiwala Case</text>
+      <text x="830" y="150" text-anchor="middle" fill="#c5c6d0" font-size="9">(Co-op banking)</text>
+
+      <!-- Arrows row 2 -->
+      <line x1="180" y1="128" x2="200" y2="128" stroke="#e94560" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <line x1="370" y1="128" x2="390" y2="128" stroke="#a8d8ea" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <line x1="560" y1="128" x2="580" y2="128" stroke="#4CAF50" stroke-width="1.5" marker-end="url(#arrow)"/>
+      <line x1="750" y1="128" x2="770" y2="128" stroke="#FF9800" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+      <!-- Key Concepts row -->
+      <rect x="10" y="190" width="440" height="170" rx="12" fill="rgba(26,26,62,0.8)" stroke="#e94560" stroke-width="2"/>
+      <text x="230" y="215" text-anchor="middle" fill="#e94560" font-size="13" font-weight="bold">Key Concepts Developed</text>
+
+      <text x="30" y="240" fill="#a8d8ea" font-size="11">• Sutherland's Definition (1949)</text>
+      <text x="30" y="260" fill="#a8d8ea" font-size="11">• Differential Association Theory (9 Principles)</text>
+      <text x="30" y="280" fill="#a8d8ea" font-size="11">• Cressey's Fraud Triangle</text>
+      <text x="30" y="300" fill="#a8d8ea" font-size="11">• 8 Categories (Santhanam Committee)</text>
+      <text x="30" y="320" fill="#a8d8ea" font-size="11">• 6 Salient Features (47th Report)</text>
+      <text x="30" y="340" fill="#a8d8ea" font-size="11">• Strict Liability &amp; Reversed Burden</text>
+
+      <rect x="470" y="190" width="420" height="170" rx="12" fill="rgba(26,26,62,0.8)" stroke="#4CAF50" stroke-width="2"/>
+      <text x="680" y="215" text-anchor="middle" fill="#4CAF50" font-size="13" font-weight="bold">Indian Statutory Framework</text>
+
+      <text x="490" y="240" fill="#c5c6d0" font-size="11">• Prevention of Corruption Act, 1947/1988</text>
+      <text x="490" y="260" fill="#c5c6d0" font-size="11">• Essential Commodities Act, 1955</text>
+      <text x="490" y="280" fill="#c5c6d0" font-size="11">• ITPA, 1956</text>
+      <text x="490" y="300" fill="#c5c6d0" font-size="11">• NDPS Act, 1985</text>
+      <text x="490" y="320" fill="#c5c6d0" font-size="11">• PMLA, 2002</text>
+      <text x="490" y="340" fill="#c5c6d0" font-size="11">• FSS Act, 2006</text>
+
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#e94560"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Diagram 2: Differential Association Process -->
+  <div class="diagram-box">
+    <div class="diagram-title">🔄 Flowchart 2: How Differential Association Creates a Criminal</div>
+    <svg width="900" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" class="svg-flow">
+      <!-- Step 1 -->
+      <rect x="20" y="100" width="160" height="100" rx="12" fill="rgba(233,69,96,0.15)" stroke="#e94560" stroke-width="2"/>
+      <text x="100" y="130" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">STEP 1</text>
+      <text x="100" y="150" text-anchor="middle" fill="#c5c6d0" font-size="10">Person associates</text>
+      <text x="100" y="165" text-anchor="middle" fill="#c5c6d0" font-size="10">with criminal</text>
+      <text x="100" y="180" text-anchor="middle" fill="#c5c6d0" font-size="10">peer groups</text>
+
+      <!-- Arrow -->
+      <line x1="180" y1="150" x2="220" y2="150" stroke="#a8d8ea" stroke-width="2" marker-end="url(#arrow2)"/>
+
+      <!-- Step 2 -->
+      <rect x="220" y="100" width="160" height="100" rx="12" fill="rgba(168,216,234,0.1)" stroke="#a8d8ea" stroke-width="2"/>
+      <text x="300" y="130" text-anchor="middle" fill="#a8d8ea" font-size="11" font-weight="bold">STEP 2</text>
+      <text x="300" y="150" text-anchor="middle" fill="#c5c6d0" font-size="10">Learns through</text>
+      <text x="300" y="165" text-anchor="middle" fill="#c5c6d0" font-size="10">communication</text>
+      <text x="300" y="180" text-anchor="middle" fill="#c5c6d0" font-size="10">(verbal + non-verbal)</text>
+
+      <!-- Arrow -->
+      <line x1="380" y1="150" x2="420" y2="150" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow2)"/>
+
+      <!-- Step 3 -->
+      <rect x="420" y="100" width="160" height="100" rx="12" fill="rgba(76,175,80,0.1)" stroke="#4CAF50" stroke-width="2"/>
+      <text x="500" y="130" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">STEP 3</text>
+      <text x="500" y="150" text-anchor="middle" fill="#c5c6d0" font-size="10">Learns techniques,</text>
+      <text x="500" y="165" text-anchor="middle" fill="#c5c6d0" font-size="10">motives, drives,</text>
+      <text x="500" y="180" text-anchor="middle" fill="#c5c6d0" font-size="10">rationalizations</text>
+
+      <!-- Arrow -->
+      <line x1="580" y1="150" x2="620" y2="150" stroke="#FF9800" stroke-width="2" marker-end="url(#arrow2)"/>
+
+      <!-- Step 4 -->
+      <rect x="620" y="100" width="160" height="100" rx="12" fill="rgba(255,152,0,0.1)" stroke="#FF9800" stroke-width="2"/>
+      <text x="700" y="130" text-anchor="middle" fill="#FF9800" font-size="11" font-weight="bold">STEP 4</text>
+      <text x="700" y="150" text-anchor="middle" fill="#c5c6d0" font-size="10">Excess of definitions</text>
+      <text x="700" y="165" text-anchor="middle" fill="#c5c6d0" font-size="10">favorable to law</text>
+      <text x="700" y="180" text-anchor="middle" fill="#c5c6d0" font-size="10">violation</text>
+
+      <!-- Arrow -->
+      <line x1="780" y1="150" x2="820" y2="150" stroke="#9C27B0" stroke-width="2" marker-end="url(#arrow2)"/>
+
+      <!-- Result -->
+      <rect x="820" y="80" width="70" height="140" rx="12" fill="rgba(156,39,176,0.2)" stroke="#9C27B0" stroke-width="3"/>
+      <text x="855" y="130" text-anchor="middle" fill="#9C27B0" font-size="12" font-weight="bold">CRIM-</text>
+      <text x="855" y="145" text-anchor="middle" fill="#9C27B0" font-size="12" font-weight="bold">INAL</text>
+      <text x="855" y="160" text-anchor="middle" fill="#9C27B0" font-size="12" font-weight="bold">BEHAV-</text>
+      <text x="855" y="175" text-anchor="middle" fill="#9C27B0" font-size="12" font-weight="bold">IOUR</text>
+
+      <!-- Top labels -->
+      <text x="100" y="80" text-anchor="middle" fill="#8892b0" font-size="9">Frequency</text>
+      <text x="300" y="80" text-anchor="middle" fill="#8892b0" font-size="9">Duration</text>
+      <text x="500" y="80" text-anchor="middle" fill="#8892b0" font-size="9">Priority</text>
+      <text x="700" y="80" text-anchor="middle" fill="#8892b0" font-size="9">Intensity</text>
+
+      <!-- Bottom explanation -->
+      <rect x="20" y="230" width="860" height="75" rx="10" fill="rgba(15,52,96,0.3)" stroke="rgba(168,216,234,0.3)" stroke-width="1"/>
+      <text x="450" y="255" text-anchor="middle" fill="#a8d8ea" font-size="11" font-weight="bold">Modifying Factors (Principle 7)</text>
+      <text x="450" y="275" text-anchor="middle" fill="#c5c6d0" font-size="10">The process is modified by: Frequency (how often) | Duration (how long) | Priority (early life associations more impactful) | Intensity (prestige of source)</text>
+      <text x="450" y="295" text-anchor="middle" fill="#e94560" font-size="10" font-style="italic">"संगत से गुण होत हैं, संगत से गुण जात" — Company makes or breaks character</text>
+
+      <defs>
+        <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#a8d8ea"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Diagram 3: Fraud Triangle Detailed -->
+  <div class="diagram-box">
+    <div class="diagram-title">🔺 Diagram 3: Detailed Fraud Triangle with 6 Non-Shareable Problem Categories</div>
+    <svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" class="svg-flow">
+      <!-- Main Triangle -->
+      <polygon points="450,50 100,420 800,420" fill="rgba(233,69,96,0.05)" stroke="#e94560" stroke-width="3"/>
+
+      <!-- Vertex 1: Pressure -->
+      <circle cx="450" cy="50" r="60" fill="rgba(233,69,96,0.25)" stroke="#e94560" stroke-width="3"/>
+      <text x="450" y="40" text-anchor="middle" fill="#e94560" font-size="13" font-weight="bold">PRESSURE</text>
+      <text x="450" y="56" text-anchor="middle" fill="#e94560" font-size="10">(Non-Shareable</text>
+      <text x="450" y="70" text-anchor="middle" fill="#e94560" font-size="10">Financial Need)</text>
+
+      <!-- Vertex 2: Opportunity -->
+      <circle cx="100" cy="420" r="60" fill="rgba(76,175,80,0.2)" stroke="#4CAF50" stroke-width="3"/>
+      <text x="100" y="410" text-anchor="middle" fill="#4CAF50" font-size="13" font-weight="bold">OPPORTUNITY</text>
+      <text x="100" y="428" text-anchor="middle" fill="#4CAF50" font-size="10">Position of</text>
+      <text x="100" y="442" text-anchor="middle" fill="#4CAF50" font-size="10">Trust + Access</text>
+
+      <!-- Vertex 3: Rationalization -->
+      <circle cx="800" cy="420" r="60" fill="rgba(33,150,243,0.2)" stroke="#2196F3" stroke-width="3"/>
+      <text x="800" y="410" text-anchor="middle" fill="#2196F3" font-size="13" font-weight="bold">RATIONAL-</text>
+      <text x="800" y="426" text-anchor="middle" fill="#2196F3" font-size="13" font-weight="bold">IZATION</text>
+      <text x="800" y="444" text-anchor="middle" fill="#2196F3" font-size="10">Justification</text>
+
+      <!-- 6 Categories box -->
+      <rect x="50" y="180" width="320" height="200" rx="10" fill="rgba(26,26,62,0.9)" stroke="#e94560" stroke-width="1.5"/>
+      <text x="210" y="205" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">6 Categories of Non-Shareable</text>
+      <text x="210" y="220" text-anchor="middle" fill="#e94560" font-size="11" font-weight="bold">Financial Problems (Cressey)</text>
+
+      <text x="70" y="245" fill="#ffd700" font-size="10">1. Violation of ascribed obligations</text>
+      <text x="70" y="262" fill="#ffd700" font-size="10">   (Unable to pay debts — secret)</text>
+      <text x="70" y="282" fill="#ffd700" font-size="10">2. Personal failure (bad judgment)</text>
+      <text x="70" y="302" fill="#ffd700" font-size="10">3. Business reversals (inflation, etc.)</text>
+      <text x="70" y="322" fill="#ffd700" font-size="10">4. Physical isolation (no one to share)</text>
+      <text x="70" y="342" fill="#ffd700" font-size="10">5. Status gaining (living beyond means)</text>
+      <text x="70" y="362" fill="#ffd700" font-size="10">6. Employer-employee resentment</text>
+
+      <!-- 3 Responses box -->
+      <rect x="530" y="180" width="320" height="200" rx="10" fill="rgba(26,26,62,0.9)" stroke="#4CAF50" stroke-width="1.5"/>
+      <text x="690" y="205" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">Why NOT Earlier?</text>
+      <text x="690" y="220" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">3 Responses from Embezzlers</text>
+
+      <text x="550" y="250" fill="#a8d8ea" font-size="11">Response 1:</text>
+      <text x="550" y="268" fill="#c5c6d0" font-size="10" font-style="italic">"There was no need for it</text>
+      <text x="550" y="283" fill="#c5c6d0" font-size="10" font-style="italic">like there was this time."</text>
+
+      <text x="550" y="310" fill="#a8d8ea" font-size="11">Response 2:</text>
+      <text x="550" y="328" fill="#c5c6d0" font-size="10" font-style="italic">"The idea never entered</text>
+      <text x="550" y="343" fill="#c5c6d0" font-size="10" font-style="italic">my head."</text>
+
+      <text x="550" y="368" fill="#a8d8ea" font-size="11">Response 3:</text>
+      <text x="550" y="386" fill="#c5c6d0" font-size="10" font-style="italic">"I thought it was dishonest</text>
+      <text x="550" y="401" fill="#c5c6d0" font-size="10" font-style="italic">then, but not this time."</text>
+
+      <!-- Cressey quote -->
+      <rect x="200" y="440" width="500" height="50" rx="10" fill="rgba(255,215,0,0.08)" stroke="#ffd700" stroke-width="1"/>
+      <text x="450" y="462" text-anchor="middle" fill="#ffd700" font-size="10" font-style="italic">"Trusted persons become trust violators when they conceive of themselves</text>
+      <text x="450" y="478" text-anchor="middle" fill="#ffd700" font-size="10" font-style="italic">as having a non-sharable financial problem they can secretly solve."</text>
+    </svg>
+  </div>
+
+  <!-- Diagram 4: Intersecting Circles -->
+  <div class="diagram-box">
+    <div class="diagram-title">🔵 Diagram 4: Intersecting Circles — WCC, Socio-Economic Offences &amp; Traditional Crimes</div>
+    <svg width="700" height="350" viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg" class="svg-flow">
+      <!-- Socio-Economic Offences (big circle) -->
+      <ellipse cx="300" cy="180" rx="250" ry="150" fill="rgba(233,69,96,0.08)" stroke="#e94560" stroke-width="2"/>
+      <text x="130" y="100" fill="#e94560" font-size="14" font-weight="bold">SOCIO-ECONOMIC</text>
+      <text x="170" y="118" fill="#e94560" font-size="14" font-weight="bold">OFFENCES</text>
+      <text x="170" y="135" fill="#e94560" font-size="11">(Wider — Genus)</text>
+
+      <!-- White Collar Crime (smaller circle inside) -->
+      <ellipse cx="350" cy="180" rx="130" ry="100" fill="rgba(168,216,234,0.1)" stroke="#a8d8ea" stroke-width="2"/>
+      <text x="310" y="170" fill="#a8d8ea" font-size="13" font-weight="bold">WHITE COLLAR</text>
+      <text x="340" y="188" fill="#a8d8ea" font-size="13" font-weight="bold">CRIME</text>
+      <text x="330" y="205" fill="#a8d8ea" font-size="10">(Narrower — Species)</text>
+
+      <!-- Strict Liability (overlapping) -->
+      <ellipse cx="420" cy="240" rx="100" ry="70" fill="rgba(255,152,0,0.08)" stroke="#FF9800" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="395" y="240" fill="#FF9800" font-size="11" font-weight="bold">Strict</text>
+      <text x="395" y="256" fill="#FF9800" font-size="11" font-weight="bold">Liability</text>
+
+      <!-- Traditional Crimes (separate circle) -->
+      <circle cx="600" cy="180" r="80" fill="rgba(76,175,80,0.08)" stroke="#4CAF50" stroke-width="2"/>
+      <text x="575" y="175" fill="#4CAF50" font-size="12" font-weight="bold">TRADI-</text>
+      <text x="575" y="192" fill="#4CAF50" font-size="12" font-weight="bold">TIONAL</text>
+      <text x="582" y="209" fill="#4CAF50" font-size="12" font-weight="bold">CRIMES</text>
+
+      <!-- Examples -->
+      <text x="50" y="310" fill="#c5c6d0" font-size="10">Examples in WCC: Tax evasion</text>
+      <text x="50" y="325" fill="#c5c6d0" font-size="10">by corporation, bank fraud</text>
+      <text x="50" y="340" fill="#c5c6d0" font-size="10">Examples only in SEO: Smuggling</text>
+      <text x="50" y="355" fill="#c5c6d0" font-size="10">for personal use, hoarding</text>
+      <text x="50" y="370" fill="#c5c6d0" font-size="10">Traditional: Murder, rape, theft</text>
+    </svg>
+  </div>
+
+  <!-- Diagram 5: Mens Rea Spectrum -->
+  <div class="diagram-box">
+    <div class="diagram-title">⚖️ Diagram 5: Mens Rea Spectrum — Traditional vs. Socio-Economic Offences</div>
+    <svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" class="svg-flow">
+      <!-- Spectrum bar -->
+      <rect x="50" y="80" width="700" height="30" rx="5" fill="url(#spectrumGrad)"/>
+
+      <!-- Labels -->
+      <text x="50" y="70" text-anchor="start" fill="#4CAF50" font-size="11" font-weight="bold">TRADITIONAL CRIMES</text>
+      <text x="400" y="70" text-anchor="middle" fill="#FF9800" font-size="11" font-weight="bold">MODIFIED / PARTIAL</text>
+      <text x="750" y="70" text-anchor="end" fill="#e94560" font-size="11" font-weight="bold">SOCIO-ECONOMIC OFFENCES</text>
+
+      <text x="50" y="130" text-anchor="start" fill="#4CAF50" font-size="10">Mens Rea ESSENTIAL</text>
+      <text x="50" y="145" text-anchor="start" fill="#4CAF50" font-size="10">Burden on Prosecution</text>
+      <text x="50" y="160" text-anchor="start" fill="#4CAF50" font-size="10">Presumption of Innocence</text>
+
+      <text x="750" y="130" text-anchor="end" fill="#e94560" font-size="10">Mens Rea NOT Required</text>
+      <text x="750" y="145" text-anchor="end" fill="#e94560" font-size="10">Burden on Accused</text>
+      <text x="750" y="160" text-anchor="end" fill="#e94560" font-size="10">Presumption of Guilt</text>
+
+      <text x="400" y="155" text-anchor="middle" fill="#FF9800" font-size="9">Cases: Indo-China Steam,</text>
+      <text x="400" y="168" text-anchor="middle" fill="#FF9800" font-size="9">M.H. George, Vaswani</text>
+
+      <defs>
+        <linearGradient id="spectrumGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:0.6"/>
+          <stop offset="50%" style="stop-color:#FF9800;stop-opacity:0.4"/>
+          <stop offset="100%" style="stop-color:#e94560;stop-opacity:0.6"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PRESCRIBED & SUGGESTED READINGS -->
+<!-- ============================================================ -->
+<div class="section">
+  <h2 class="section-title"><span class="icon">📚</span> Prescribed &amp; Suggested Readings</h2>
+
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">📖</span>
+      <div>
+        <div class="case-name">Prescribed Readings</div>
+      </div>
+    </div>
+    <ol>
+      <li>Edwin H. Sutherland, <em>"White Collar Criminality"</em> Vol.5(1) <strong>American Sociological Review</strong> (1940).</li>
+      <li>Edwin H. Sutherland, <em>"The Theory of Differential Association,"</em> in David Dressler, <em>Readings in Criminology and Penology</em>, 365-370 (Columbia University Press, 2<sup>nd</sup> Ed., 1972).</li>
+    </ol>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header">
+      <span class="gavel">📖</span>
+      <div>
+        <div class="case-name">Suggested Readings</div>
+      </div>
+    </div>
+    <ol>
+      <li>Katherine S. Williams, <em>"Differential Association"</em>, Textbook on Criminology, 501-519 (6<sup>th</sup> ed., 2012).</li>
+      <li>Dr. Joseph T. Wells, <em>Corporate Fraud Handbook — Prevention and Detection</em>, 1-42 (John Wiley &amp; Sons, 5<sup>th</sup> Edition, 2017).</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<div style="text-align:center; padding:40px; color:#8892b0; font-size:0.9em;">
+  <p style="margin-bottom:10px;"><strong>Topic 2: White Collar Criminality &amp; Social Learning Theories</strong></p>
+  <p style="margin-bottom:5px;">Based strictly on DU Case Material by Prof. Krishna Murari Yadav, Law Centre-1, Faculty of Law, University of Delhi</p>
+  <p style="margin-bottom:5px;">Includes: Sutherland's Concept (pp.1-13) | Differential Association (pp.14-20) | Cressey's Fraud Triangle</p>
+  <p>Case Laws | PYQs with Model Answers | Diagrams &amp; Flowcharts | Hypothetical Visuals</p>
+  <p style="margin-top:15px; font-size:0.8em; color:#555;">Compiled for LL.B. Semester Examination Preparation, University of Delhi</p>
+</div>
+
+</div><!-- end container -->
+</body>
+</html>

@@ -222,6 +222,33 @@ export const SEMESTER_SUBJECT_BOOKS: Record<number, BookCfg[]> = {
   ],
   3: [
     {
+      id: "cpc",
+      title: "Civil Procedure & Limitation",
+      author: "LB-301 • Faculty of Law, DU",
+      year: "2025–26",
+      stars: 5,
+      desc: "Code of Civil Procedure 1908 & Limitation Act 1963: Jurisdiction, Res Judicata, Pleadings, Rejection of Plaint, Appeals, Inherent Powers & Limitation.",
+      spineBg: "#2e1065",
+      spineInk: "#dfcaf5",
+      spineFont: "700 38px Georgia",
+      backBg: "#1a0d2b",
+      backInk: "223,202,245",
+      edge: "#ede0f5",
+      chapters: [
+        "Civil Courts Jurisdiction & Res Judicata (Ss. 9–11)",
+        "Appeals: First, Second & Appellate Powers (Ss. 96, 100, 107)",
+        "Reference, Review, Revision & S. 151 Inherent Powers",
+        "Parties to Suits (O. I) & Amendment of Pleadings (O. VI R. 17)",
+        "Rejection of Plaint (O. VII R. 11) & Ex-Parte Decrees (O. IX)",
+        "Summary Procedure on Commercial Debts (Order XXXVII)",
+        "Temporary Injunctions & Interlocutory Orders (Order XXXIX)",
+        "Bar of Limitation & Condonation of Delay (Ss. 3–5)",
+        "Computation of Limitation Period (Ss. 12, 17–19, 21)",
+        "Acquisition of Ownership by Possession (Ss. 25–27)",
+        "Limitation Schedule & Residuary Articles (Arts. 113, 137)"
+      ]
+    },
+    {
       id: "company",
       title: "Company Law",
       author: "LB-303 • Faculty of Law, DU",
@@ -248,6 +275,28 @@ export const SEMESTER_SUBJECT_BOOKS: Record<number, BookCfg[]> = {
       ]
     },
     {
+      id: "wcc",
+      title: "White Collar Crimes",
+      author: "LB-3037 • Faculty of Law, DU",
+      year: "2025–26",
+      stars: 5,
+      desc: "White Collar Crimes & Socio-Economic Offences: Sutherland & Cressey Theories, 47th LCI Report, PC Act 1988, PMLA 2002, FSSA 2006 & NDPS Act 1985.",
+      spineBg: "#450a0a",
+      spineInk: "#fed7d7",
+      spineFont: "700 38px Georgia",
+      backBg: "#260505",
+      backInk: "254,215,215",
+      edge: "#fde8e8",
+      chapters: [
+        "Concept of White Collar Crime & Socio-Economic Offences",
+        "Criminological Theories: Sutherland & Cressey Fraud Triangle",
+        "The Prevention of Corruption Act, 1988 (as amended 2018)",
+        "Prevention of Money-Laundering Act, 2002 (PMLA)",
+        "The Food Safety and Standards Act, 2006 (FSSA)",
+        "The Narcotic Drugs and Psychotropic Substances Act, 1985 (NDPS)"
+      ]
+    },
+    {
       id: "consti2",
       title: "Constitutional Law–II",
       author: "LB-302 • Faculty of Law, DU",
@@ -266,48 +315,6 @@ export const SEMESTER_SUBJECT_BOOKS: Record<number, BookCfg[]> = {
         "Parliamentary Privileges & Legislative Process",
         "Union & State Judiciary Independence",
         "Emergency Powers & Amendment Procedure"
-      ]
-    },
-    {
-      id: "cpc",
-      title: "Civil Procedure Code (CPC)",
-      author: "LB-301 • Faculty of Law, DU",
-      year: "2025–26",
-      stars: 5,
-      desc: "Code of Civil Procedure 1908 & Limitation Act 1963: Res Judicata, Pleadings, Injunctions & Execution.",
-      spineBg: "#301d4a",
-      spineInk: "#dfcaf5",
-      spineFont: "700 38px Georgia",
-      backBg: "#1a0d2b",
-      backInk: "223,202,245",
-      edge: "#ede0f5",
-      chapters: [
-        "Civil Courts Jurisdiction & Res Judicata",
-        "Place of Suing & Institution of Suits",
-        "Pleadings (Plaint, Written Statement & Set-off)",
-        "Interim Orders, Injunctions & Receivers",
-        "Execution of Decrees & Appeals Procedure"
-      ]
-    },
-    {
-      id: "specialcontract",
-      title: "Special Contracts",
-      author: "LB-304 • Faculty of Law, DU",
-      year: "2025–26",
-      stars: 5,
-      desc: "Partnership Act 1932, Sale of Goods Act 1930, Indemnity, Guarantee, Bailment & Pledge.",
-      spineBg: "#47291a",
-      spineInk: "#f5cda4",
-      spineFont: "700 38px Georgia",
-      backBg: "#24130a",
-      backInk: "245,205,164",
-      edge: "#ebd8c5",
-      chapters: [
-        "Contract of Indemnity & Guarantee Provisions",
-        "Bailment & Pledge Rights & Liabilities",
-        "Law of Agency: Creation & Termination",
-        "Sale of Goods Act: Conditions & Warranties",
-        "Partnership Act: Relations & Dissolution"
       ]
     },
     {

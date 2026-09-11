@@ -1,7 +1,8 @@
 /**
  * Delhi University Law Notes Portal — Statutory Database & Bare Act Registry
  * Quick Reference for Indian Contract Act, Bharatiya Nyaya Sanhita (BNS),
- * Hindu Marriage Act, HAMA, HMGA, Consumer Protection Act, and Companies Act.
+ * Hindu Marriage Act, HAMA, HMGA, Consumer Protection Act, Companies Act,
+ * Code of Civil Procedure (CPC), Limitation Act, PC Act, PMLA, FSSA & NDPS.
  */
 window.BARE_ACTS_DB = {
   "acts": [
@@ -60,6 +61,54 @@ window.BARE_ACTS_DB = {
       "badge": "Company Law",
       "icon": "fa-building-columns",
       "count": 23
+    },
+    {
+      "id": "cpc",
+      "name": "Code of Civil Procedure, 1908",
+      "short": "CPC 1908",
+      "badge": "Civil Procedure",
+      "icon": "fa-gavel",
+      "count": 10
+    },
+    {
+      "id": "lim",
+      "name": "Limitation Act, 1963",
+      "short": "Limitation 1963",
+      "badge": "Civil Procedure",
+      "icon": "fa-hourglass-half",
+      "count": 6
+    },
+    {
+      "id": "pca",
+      "name": "Prevention of Corruption Act, 1988",
+      "short": "PC Act 1988",
+      "badge": "White Collar Crimes",
+      "icon": "fa-handshake-slash",
+      "count": 5
+    },
+    {
+      "id": "pmla",
+      "name": "Prevention of Money-Laundering Act, 2002",
+      "short": "PMLA 2002",
+      "badge": "White Collar Crimes",
+      "icon": "fa-money-bill-transfer",
+      "count": 4
+    },
+    {
+      "id": "fssa",
+      "name": "Food Safety and Standards Act, 2006",
+      "short": "FSSA 2006",
+      "badge": "Socio-Economic Offences",
+      "icon": "fa-shield-halved",
+      "count": 2
+    },
+    {
+      "id": "ndps",
+      "name": "Narcotic Drugs and Psychotropic Substances Act, 1985",
+      "short": "NDPS Act 1985",
+      "badge": "Socio-Economic Offences",
+      "icon": "fa-capsules",
+      "count": 2
     }
   ],
   "sections": [
@@ -1169,48 +1218,467 @@ window.BARE_ACTS_DB = {
         "article 226",
         "embassy property developments"
       ]
+    },
+    {
+      "id": "cpc-s9",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "9",
+      "title": "Courts to try all civil suits unless barred",
+      "text": "The Courts shall (subject to the provisions herein contained) have jurisdiction to try all suits of a civil nature excepting suits of which their cognizance is either expressly or impliedly barred.",
+      "analysis": "Pillar of civil jurisdiction. Civil courts have plenary jurisdiction over any right to property or office (Explanation I). Exclusion of civil court jurisdiction is not readily inferred and must be strictly constructed (Dhulabhai v. State of M.P.).",
+      "keywords": [
+        "jurisdiction",
+        "civil nature",
+        "expressly barred",
+        "impliedly barred",
+        "dhulabhai",
+        "section 9"
+      ]
+    },
+    {
+      "id": "cpc-s10",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "10",
+      "title": "Stay of suit (Res Sub-Judice)",
+      "text": "No Court shall proceed with the trial of any suit in which the matter in issue is also directly and substantially in issue in a previously instituted suit between the same parties, or between parties under whom they or any of them claim litigating under the same title where such suit is pending in the same or in any other Court in India having jurisdiction to grant the relief claimed.",
+      "analysis": "Bars the trial of a subsequently instituted suit to prevent concurrent conflicting decrees between the same parties on the same issue.",
+      "keywords": [
+        "stay of suit",
+        "res sub-judice",
+        "previously instituted suit",
+        "concurrent trial",
+        "section 10"
+      ]
+    },
+    {
+      "id": "cpc-s11",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "11",
+      "title": "Res Judicata",
+      "text": "No Court shall try any suit or issue in which the matter directly and substantially in issue has been directly and substantially in issue in a former suit between the same parties, or between parties under whom they or any of them claim, litigating under the same title, in a Court competent to try such subsequent suit or the suit in which such issue has been subsequently raised, and has been heard and finally decided by such Court.",
+      "analysis": "Finality of judicial decisions founded on public policy (interest reipublicae ut sit finis litium) and protection from double vexation (nemo debet bis vexari). Explanation IV embodies Constructive Res Judicata (Forward Construction Co. v. Prabhat Mandal).",
+      "keywords": [
+        "res judicata",
+        "constructive res judicata",
+        "explanation iv",
+        "finality",
+        "section 11",
+        "former suit"
+      ]
+    },
+    {
+      "id": "cpc-s96",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "96",
+      "title": "Appeal from original decree",
+      "text": "Save where otherwise expressly provided in the body of this Code or by any other law for the time being in force, an appeal shall lie from every decree passed by any Court exercising original jurisdiction to the Court authorized to hear appeals from the decisions of such Court.",
+      "analysis": "Substantive statutory right of First Appeal. Allows full rehearing on questions of both fact and law. An appeal lies against an ex-parte decree (S. 96(2)). No appeal lies from a consent compromise decree (S. 96(3)).",
+      "keywords": [
+        "appeal",
+        "first appeal",
+        "original decree",
+        "consent decree",
+        "section 96"
+      ]
+    },
+    {
+      "id": "cpc-s100",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "100",
+      "title": "Second appeal",
+      "text": "Save as otherwise expressly provided in the body of this Code or by any other law for the time being in force, an appeal shall lie to the High Court from every decree passed in appeal by any Court subordinate to the High Court, if the High Court is satisfied that the case involves a substantial question of law.",
+      "analysis": "Second Appeal is strictly confined to substantial questions of law (Chunilal V. Mehta v. Century Spg. & Mfg. Co.). The High Court must formulate the substantial question of law before hearing the appeal on merits.",
+      "keywords": [
+        "second appeal",
+        "substantial question of law",
+        "high court",
+        "chunilal mehta",
+        "section 100"
+      ]
+    },
+    {
+      "id": "cpc-s115",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "115",
+      "title": "Revision",
+      "text": "The High Court may call for the record of any case which has been decided by any Court subordinate to such High Court and in which no appeal lies thereto, and if such subordinate Court appears (a) to have exercised a jurisdiction not vested in it by law, or (b) to have failed to exercise a jurisdiction so vested, or (c) to have acted in the exercise of its jurisdiction illegally or with material irregularity.",
+      "analysis": "Supervisory revisional jurisdiction for correction of jurisdictional errors where no appeal lies. Proviso added in 1999 bars revision unless the order would have finally disposed of the suit.",
+      "keywords": [
+        "revision",
+        "revisional jurisdiction",
+        "high court",
+        "jurisdictional error",
+        "section 115"
+      ]
+    },
+    {
+      "id": "cpc-s151",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "151",
+      "title": "Saving of inherent powers of Court",
+      "text": "Nothing in this Code shall be deemed to limit or otherwise affect the inherent power of the Court to make such orders as may be necessary for the ends of justice or to prevent abuse of the process of the Court.",
+      "analysis": "Inherent powers are not created by the Code but recognized and preserved. Cannot override express statutory provisions, but fills procedural lacunae (Manohar Lal Chopra v. Rai Bahadur Rao Raja Seth Hiralal).",
+      "keywords": [
+        "inherent powers",
+        "ends of justice",
+        "abuse of process",
+        "manohar lal chopra",
+        "section 151"
+      ]
+    },
+    {
+      "id": "cpc-o7r11",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "O. VII R. 11",
+      "title": "Rejection of Plaint",
+      "text": "The plaint shall be rejected in the following cases: (a) where it does not disclose a cause of action; (b) where the relief claimed is undervalued; (c) where the plaint is insufficiently stamped; (d) where the suit appears from the statement in the plaint to be barred by any law.",
+      "analysis": "Threshold gatekeeping mechanism. Only the averments in the plaint can be scrutinized; written statement cannot be looked into (Saleem Bhai v. State of Maharashtra). Rejection amounts to a deemed decree under S. 2(2).",
+      "keywords": [
+        "rejection of plaint",
+        "order 7 rule 11",
+        "cause of action",
+        "barred by law",
+        "saleem bhai",
+        "deemed decree"
+      ]
+    },
+    {
+      "id": "cpc-o9r13",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "O. IX R. 13",
+      "title": "Setting aside decree ex parte against defendant",
+      "text": "In any case in which a decree is passed ex parte against a defendant, he may apply to the Court by which the decree was passed for an order to set it aside; and if he satisfies the Court that the summons was not duly served, or that he was prevented by any sufficient cause from appearing when the suit was called on for hearing, the Court shall make an order setting aside the decree.",
+      "analysis": "Dual grounds: non-service of summons OR sufficient cause for non-appearance. Distinction between 'good cause' under Rule 7 and 'sufficient cause' under Rule 13 (Arjun Singh v. Mohindra Kumar).",
+      "keywords": [
+        "ex parte decree",
+        "setting aside",
+        "order 9 rule 13",
+        "sufficient cause",
+        "arjun singh"
+      ]
+    },
+    {
+      "id": "cpc-o39r1",
+      "actId": "cpc",
+      "act": "Code of Civil Procedure, 1908",
+      "sec": "O. XXXIX R. 1",
+      "title": "Cases in which temporary injunction may be granted",
+      "text": "Where in any suit it is proved by affidavit or otherwise: (a) that any property in dispute in a suit is in danger of being wasted, damaged or alienated by any party, or wrongfully sold in execution; or (b) that the defendant threatens or intends to remove or dispose of his property with a view to defrauding creditors.",
+      "analysis": "Three essential criteria: (1) Prima facie case, (2) Balance of convenience, (3) Irreparable injury not compensable in damages. Disobedience entails civil imprisonment up to 3 months under Rule 2A.",
+      "keywords": [
+        "temporary injunction",
+        "interim relief",
+        "order 39 rule 1",
+        "prima facie case",
+        "balance of convenience",
+        "irreparable injury"
+      ]
+    },
+    {
+      "id": "lim-s3",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "3",
+      "title": "Bar of limitation",
+      "text": "Subject to the provisions contained in sections 4 to 24 (inclusive), every suit instituted, appeal preferred, and application made after the prescribed period shall be dismissed, although limitation has not been set up as a defence.",
+      "analysis": "Mandatory statutory duty upon courts to dismiss time-barred proceedings sua sponte. Law of limitation bars the remedy, not the underlying right (except S. 27).",
+      "keywords": [
+        "bar of limitation",
+        "mandatory dismissal",
+        "prescribed period",
+        "section 3"
+      ]
+    },
+    {
+      "id": "lim-s5",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "5",
+      "title": "Extension of prescribed period in certain cases (Sufficient Cause)",
+      "text": "Any appeal or any application, other than an application under any of the provisions of Order XXI of the Code of Civil Procedure, 1908, may be admitted after the prescribed period, if the appellant or the applicant satisfies the court that he had sufficient cause for not preferring the appeal or making the application within such period.",
+      "analysis": "Applies ONLY to appeals and applications, NEVER to original suits. 'Sufficient cause' receives liberal, justice-oriented construction (Collector, Land Acquisition, Anantnag v. Katiji; Ramlal v. Rewa Coalfields).",
+      "keywords": [
+        "condonation of delay",
+        "sufficient cause",
+        "section 5",
+        "katiji",
+        "appeals and applications"
+      ]
+    },
+    {
+      "id": "lim-s12",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "12",
+      "title": "Exclusion of time in legal proceedings",
+      "text": "In computing the period of limitation for any suit, appeal or application, the day from which such period is to be reckoned shall be excluded. In computing limitation for appeal, application for leave to appeal, or review, the time requisite for obtaining a copy of the decree, sentence or order appealed from shall be excluded.",
+      "analysis": "'Time requisite' means time legitimately and properly occupied by the applicant in obtaining certified copies (State of U.P. v. Maharaja Narain).",
+      "keywords": [
+        "exclusion of time",
+        "certified copy",
+        "time requisite",
+        "section 12"
+      ]
+    },
+    {
+      "id": "lim-s18",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "18",
+      "title": "Effect of acknowledgment in writing",
+      "text": "Where, before the expiration of the prescribed period for a suit or application in respect of any property or right, an acknowledgment of liability in respect of such property or right has been made in writing signed by the party against whom such property or right is claimed, a fresh period of limitation shall be computed from the time when the acknowledgment was so signed.",
+      "analysis": "Must be in writing, signed, and made BEFORE limitation expires. Renews and extends limitation for a full fresh statutory period.",
+      "keywords": [
+        "acknowledgment",
+        "fresh period",
+        "signed in writing",
+        "section 18"
+      ]
+    },
+    {
+      "id": "lim-s27",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "27",
+      "title": "Extinguishment of right to property",
+      "text": "At the determination of the period hereby limited to any person for instituting a suit for possession of any property, his right to such property shall be extinguished.",
+      "analysis": "Substantive exception to the procedural rule: here, not only the remedy is barred, but the title and substantive right to possession itself is extinguished, perfecting adverse possession.",
+      "keywords": [
+        "extinguishment of right",
+        "adverse possession",
+        "property right",
+        "section 27"
+      ]
+    },
+    {
+      "id": "lim-art113",
+      "actId": "lim",
+      "act": "Limitation Act, 1963",
+      "sec": "Art. 113",
+      "title": "Residuary suit article",
+      "text": "Any suit for which no period of limitation is provided elsewhere in this Schedule: Three years from when the right to sue accrues.",
+      "analysis": "The omnibus residuary clause for suits. The trigger 'when the right to sue accrues' means when the cause of action first ripens for enforcement.",
+      "keywords": [
+        "article 113",
+        "residuary article",
+        "three years",
+        "right to sue"
+      ]
+    },
+    {
+      "id": "pca-s2c",
+      "actId": "pca",
+      "act": "Prevention of Corruption Act, 1988",
+      "sec": "2(c)",
+      "title": "Definition of 'Public Servant'",
+      "text": "Any person in the service or pay of the Government, remunerated by fees or commission for the performance of any public duty by the Government, or in the service of local authority or corporation established by or under a Central/State Act.",
+      "analysis": "Broad functional definition emphasizing the 'public duty' test rather than the designation of the post. Encompasses university vice-chancellors, bank chairpersons, and deemed public officials.",
+      "keywords": [
+        "public servant",
+        "public duty",
+        "corruption",
+        "section 2c",
+        "pc act"
+      ]
+    },
+    {
+      "id": "pca-s7",
+      "actId": "pca",
+      "act": "Prevention of Corruption Act, 1988",
+      "sec": "7",
+      "title": "Offence relating to public servant being bribed",
+      "text": "Any public servant who obtains or accepts or attempts to obtain from any person, an undue advantage, with the intention to perform or cause performance of public duty improperly or dishonestly.",
+      "analysis": "Revamped by the 2018 Amendment. Demand of undue advantage is the gravamen of the offence; mere recovery without proof of demand is insufficient (K. Shanthamma v. State of Telangana; Neeraj Dutta v. State).",
+      "keywords": [
+        "bribe",
+        "undue advantage",
+        "demand and acceptance",
+        "section 7",
+        "2018 amendment"
+      ]
+    },
+    {
+      "id": "pca-s13",
+      "actId": "pca",
+      "act": "Prevention of Corruption Act, 1988",
+      "sec": "13",
+      "title": "Criminal misconduct by a public servant",
+      "text": "A public servant commits criminal misconduct if: (a) he dishonestly or fraudulently misappropriates property entrusted to him; or (b) he intentionally enriches himself illicitly during the period of his office.",
+      "analysis": "Post-2018, criminal misconduct is narrowed to misappropriation and disproportionate assets. The prosecution must establish assets grossly out of proportion to known sources of income.",
+      "keywords": [
+        "criminal misconduct",
+        "disproportionate assets",
+        "misappropriation",
+        "section 13"
+      ]
+    },
+    {
+      "id": "pca-s17a",
+      "actId": "pca",
+      "act": "Prevention of Corruption Act, 1988",
+      "sec": "17A",
+      "title": "Enquiry or Investigation of offences relatable to recommendations",
+      "text": "No police officer shall conduct any enquiry or inquiry or investigation into any offence alleged to have been committed by a public servant under this Act, where the alleged offence is relatable to any recommendation made or decision taken by such public servant in discharge of his official functions or duties, without the previous approval of the competent authority.",
+      "analysis": "Inserted in 2018 as a mandatory statutory shield against vexatious investigations for bona fide administrative decisions.",
+      "keywords": [
+        "section 17a",
+        "prior approval",
+        "investigation shield",
+        "official duty"
+      ]
+    },
+    {
+      "id": "pca-s19",
+      "actId": "pca",
+      "act": "Prevention of Corruption Act, 1988",
+      "sec": "19",
+      "title": "Previous sanction necessary for prosecution",
+      "text": "No court shall take cognizance of an offence punishable under sections 7, 11, 13 and 15 alleged to have been committed by a public servant, except with the previous sanction of the appropriate Government or competent authority.",
+      "analysis": "Condition precedent to judicial cognizance. Designed to protect honest officers from malicious prosecutions (Kalicharan Mahapatra v. State of Orissa).",
+      "keywords": [
+        "prosecution sanction",
+        "previous sanction",
+        "cognizance",
+        "section 19"
+      ]
+    },
+    {
+      "id": "pmla-s3",
+      "actId": "pmla",
+      "act": "Prevention of Money-Laundering Act, 2002",
+      "sec": "3",
+      "title": "Offence of money-laundering",
+      "text": "Whosoever directly or indirectly attempts to indulge or knowingly assists or knowingly is a party or is actually involved in any process or activity connected with the proceeds of crime including its concealment, possession, acquisition or use and projecting or claiming it as untainted property shall be guilty of offence of money-laundering.",
+      "analysis": "The word 'and' was clarified by the Supreme Court in Vijay Madanlal Choudhary (2022) to mean 'or' — every individual process (concealment, possession, acquisition, use, or projecting as untainted) constitutes an independent offence.",
+      "keywords": [
+        "money-laundering",
+        "proceeds of crime",
+        "vijay madanlal",
+        "section 3",
+        "untainted property"
+      ]
+    },
+    {
+      "id": "pmla-s5",
+      "actId": "pmla",
+      "act": "Prevention of Money-Laundering Act, 2002",
+      "sec": "5",
+      "title": "Attachment of property involved in money-laundering",
+      "text": "Where the Director or any officer has reason to believe (reason for such belief to be recorded in writing), on the basis of material in his possession, that any person is in possession of any proceeds of crime and such proceeds of crime are likely to be concealed, transferred or dealt with, he may make an order provisionally attaching such property for a period not exceeding 180 days.",
+      "analysis": "Civil preventive remedy in rem. Upheld in B. Ramaraju v. Union of India as an essential mechanism to prevent dissipation of illicit assets pending adjudication.",
+      "keywords": [
+        "attachment",
+        "provisional attachment",
+        "180 days",
+        "section 5",
+        "b ramaraju"
+      ]
+    },
+    {
+      "id": "pmla-s24",
+      "actId": "pmla",
+      "act": "Prevention of Money-Laundering Act, 2002",
+      "sec": "24",
+      "title": "Burden of proof",
+      "text": "In any proceeding relating to proceeds of crime under this Act, in the case of a person charged with the offence of money-laundering, the Authority or Court shall presume that such proceeds of crime are involved in money-laundering.",
+      "analysis": "Statutory reversal of burden of proof once the foundational fact of proceeds of crime is established by the Enforcement Directorate.",
+      "keywords": [
+        "burden of proof",
+        "presumption",
+        "reverse onus",
+        "section 24"
+      ]
+    },
+    {
+      "id": "pmla-s45",
+      "actId": "pmla",
+      "act": "Prevention of Money-Laundering Act, 2002",
+      "sec": "45",
+      "title": "Offences to be cognizable and non-bailable (Twin Conditions)",
+      "text": "No person accused of an offence under this Act shall be released on bail unless: (i) the Public Prosecutor has been given an opportunity to oppose the application; and (ii) where the Public Prosecutor opposes, the court is satisfied that there are reasonable grounds for believing that he is not guilty of such offence and that he is not likely to commit any offence while on bail.",
+      "analysis": "The infamous 'twin conditions' of bail under PMLA. Struck down in Nikesh Tarachand Shah (2018), amended by Parliament, and upheld in Vijay Madanlal Choudhary (2022).",
+      "keywords": [
+        "twin conditions",
+        "bail",
+        "non-bailable",
+        "section 45",
+        "nikesh tarachand",
+        "vijay madanlal"
+      ]
+    },
+    {
+      "id": "fssa-s3",
+      "actId": "fssa",
+      "act": "Food Safety and Standards Act, 2006",
+      "sec": "3(1)(j)",
+      "title": "Definition of 'Food'",
+      "text": "Any substance, whether processed, partially processed or unprocessed, which is intended for human consumption and includes primary food, genetically modified food, packaged drinking water, chewing gum and any ingredient, but does not include animal feed, live animals, plants prior to harvesting, drugs or cosmetics.",
+      "analysis": "Expansive definition bringing all consumable articles under unified FSSAI regulatory authority, superseding the 1954 PFA Act.",
+      "keywords": [
+        "food definition",
+        "fssai",
+        "human consumption",
+        "section 3",
+        "fssa"
+      ]
+    },
+    {
+      "id": "fssa-s38",
+      "actId": "fssa",
+      "act": "Food Safety and Standards Act, 2006",
+      "sec": "38",
+      "title": "Powers of Food Safety Officer (FSO)",
+      "text": "The Food Safety Officer may take samples of any food, or any substance which appears to him to be intended for sale; seize any article of food which appears to be in contravention of the Act; inspect any place where food is manufactured or stored.",
+      "analysis": "Codifies inspection, sample extraction, sealing, and seizure powers of FSOs. Strict adherence to sampling protocols is mandatory to prevent vitiating prosecution.",
+      "keywords": [
+        "food safety officer",
+        "fso",
+        "sampling powers",
+        "seizure",
+        "section 38"
+      ]
+    },
+    {
+      "id": "ndps-s37",
+      "actId": "ndps",
+      "act": "Narcotic Drugs and Psychotropic Substances Act, 1985",
+      "sec": "37",
+      "title": "Offences to be cognizable and non-bailable",
+      "text": "Every offence punishable under this Act shall be cognizable and non-bailable. In commercial quantity offences, no person accused shall be released on bail unless the court is satisfied that there are reasonable grounds for believing he is not guilty and not likely to commit offences while on bail.",
+      "analysis": "Stringent bail conditions applicable to commercial quantities. The court must look at total mixture weight per Hira Singh v. Union of India (2020).",
+      "keywords": [
+        "ndps bail",
+        "twin conditions",
+        "commercial quantity",
+        "section 37",
+        "hira singh"
+      ]
+    },
+    {
+      "id": "ndps-s50",
+      "actId": "ndps",
+      "act": "Narcotic Drugs and Psychotropic Substances Act, 1985",
+      "sec": "50",
+      "title": "Conditions under which search of persons shall be conducted",
+      "text": "When any officer duly authorized is about to search any person under the provisions of section 41, 42 or 43, he shall, if such person so requires, take such person without unnecessary delay to the nearest Gazetted Officer of any of the departments mentioned in section 42 or to the nearest Magistrate.",
+      "analysis": "Sacrosanct personal liberty safeguard. Mandatory informing the suspect of his legal right to be searched before a Gazetted Officer or Magistrate (Constitution Bench in State of Punjab v. Baldev Singh; Vijaysinh Chandubha Jadeja). Applies strictly to personal searches, not bag/vehicle searches.",
+      "keywords": [
+        "section 50",
+        "search of person",
+        "gazetted officer",
+        "magistrate",
+        "baldev singh",
+        "mandatory compliance"
+      ]
     }
   ]
-};
-
-// Helper utilities for Bare Act lookup and search
-window.BARE_ACTS_DB.findSection = function(actIdOrCode, sec) {
-  if (!sec) return null;
-  const cleanSec = String(sec).trim().toLowerCase();
-  const cleanAct = actIdOrCode ? String(actIdOrCode).trim().toLowerCase() : '';
-  
-  return this.sections.find(s => {
-    const actMatch = !cleanAct || 
-      s.actId.toLowerCase() === cleanAct || 
-      s.act.toLowerCase().includes(cleanAct) || 
-      (s.keywords && s.keywords.some(k => k.toLowerCase() === cleanAct));
-    const secMatch = s.sec.toLowerCase() === cleanSec || 
-      s.sec.toLowerCase().replace(/[^a-z0-9]/g, '') === cleanSec.replace(/[^a-z0-9]/g, '') ||
-      s.id.toLowerCase().endsWith(cleanSec);
-    return actMatch && secMatch;
-  });
-};
-
-window.BARE_ACTS_DB.search = function(query, filterActId) {
-  if (!query && (!filterActId || filterActId === 'all')) return this.sections;
-  const q = (query || '').toLowerCase().trim();
-  const act = filterActId && filterActId !== 'all' ? filterActId.toLowerCase() : null;
-
-  return this.sections.filter(s => {
-    if (act && s.actId.toLowerCase() !== act) return false;
-    if (!q) return true;
-    
-    // Check section number
-    if (s.sec.toLowerCase().includes(q)) return true;
-    // Check title
-    if (s.title.toLowerCase().includes(q)) return true;
-    // Check text
-    if (s.text.toLowerCase().includes(q)) return true;
-    // Check analysis
-    if (s.analysis.toLowerCase().includes(q)) return true;
-    // Check keywords
-    if (s.keywords && s.keywords.some(k => k.toLowerCase().includes(q))) return true;
-    
-    return false;
-  });
 };
