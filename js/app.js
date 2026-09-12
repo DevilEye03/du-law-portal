@@ -289,6 +289,19 @@
   }
 
   // =========================================================================
+  // ANALYTICS TRACKER (Google Analytics 4 / gtag)
+  // =========================================================================
+  function trackEvent(eventName, params = {}) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, params);
+      }
+    } catch (err) {
+      // Non-blocking analytics
+    }
+  }
+
+  // =========================================================================
   // STUDY PROGRESS TRACKER
   // =========================================================================
   function getSubjectProgress(subId, totalUnits) {
@@ -537,6 +550,7 @@
     }
     renderHeaderSemDropdown();
     showView('subjects');
+    trackEvent('select_semester', { semester_id: semId, semester_name: `Semester ${semId}` });
   }
 
   // =========================================================================
@@ -698,6 +712,13 @@
     // Switch to Hub View
     showView('hub');
 
+    trackEvent('view_subject_hub', {
+      subject_id: subId,
+      subject_name: sub.name,
+      subject_code: sub.code,
+      semester_id: state.currentSemester
+    });
+
     // Switch to Default Tab
     switchHubTab('topics');
   }
@@ -705,6 +726,11 @@
   function switchHubTab(tabName) {
     state.currentTab = tabName;
     state.activeQuickFilter = 'all';
+
+    trackEvent('switch_tab', {
+      tab_name: tabName,
+      subject_id: state.currentSubject ? state.currentSubject.id : ''
+    });
 
     // Update Desktop Tabs
     elements.hubTabs.forEach(btn => {
@@ -1594,6 +1620,12 @@
     elements.readerIframe.src = fileUrl;
     elements.readerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    trackEvent('read_notes', {
+      file: fileUrl,
+      title: title || '',
+      subject: state.currentSubject ? state.currentSubject.id : ''
+    });
 
     // New Tab button
     elements.readerNewTabBtn.onclick = () => window.open(fileUrl, '_blank');
