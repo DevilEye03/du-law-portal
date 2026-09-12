@@ -342,11 +342,18 @@
     if (viewName === 'semester') {
       document.body.removeAttribute('data-active-subject');
       elements.semesterView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Choose Semester';
+      }
       renderSemesterSelection();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
     } else if (viewName === 'subjects') {
       document.body.removeAttribute('data-active-subject');
       elements.subjectsView.classList.add('active');
+      if (elements.headerSemText && state.currentSemester) {
+        elements.headerSemText.textContent = `Semester ${state.currentSemester}`;
+      }
       renderSubjectsGrid();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (viewName === 'hub') {
@@ -2385,13 +2392,9 @@
       applyTheme(state.darkMode);
     });
 
-    // Brand click returns to Subjects view
+    // Brand click returns to Homepage (Semester selection view)
     elements.brandLogo.addEventListener('click', () => {
-      if (state.currentSemester) {
-        showView('subjects');
-      } else {
-        showView('semester');
-      }
+      showView('semester');
     });
 
     // Semester Switcher in Header
@@ -2558,15 +2561,10 @@
       const savedSem = localStorage.getItem('du_law_selected_semester');
       selectSemester(savedSem ? parseInt(savedSem, 10) : 1);
     } else {
-      const savedSem = localStorage.getItem('du_law_selected_semester');
-      if (savedSem) {
-        selectSemester(parseInt(savedSem, 10));
-      } else {
-        showView('semester');
-      }
+      showView('semester');
     }
 
-    if (window.location.hash === '#contact' || params.get('contact') === 'true') {
+    if (window.location.hash === '#contact' || urlParams.get('contact') === 'true') {
       setTimeout(openContactModal, 250);
     }
   }
