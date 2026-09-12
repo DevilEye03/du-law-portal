@@ -461,6 +461,17 @@
       const isActive = sem.active;
       const romanNumerals = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
       const roman = romanNumerals[sem.id] || sem.id;
+
+      let subjectCountText = '5 Subjects Included';
+      if (sem.id === 1) subjectCountText = '5 Core Subjects Included';
+      else if (sem.id === 2) subjectCountText = '5 Subjects Included';
+      else if (sem.id === 3) subjectCountText = '3 Core Subjects Included';
+      else if (sem.id === 4) subjectCountText = '5 Subjects Included';
+      else if (sem.id === 5) subjectCountText = '5 Subjects Included';
+      else if (sem.id === 6) subjectCountText = '4 Subjects Included';
+
+      const topBadgeText = isActive ? (sem.id === 1 ? '5 Subjects Loaded' : '3 Subjects Loaded') : 'Coming Soon';
+
       return `
         <div class="sem-card ${isActive ? 'active-sem' : 'coming-soon'}" data-sem-id="${sem.id}">
           <div class="sem-card-strip"></div>
@@ -468,14 +479,24 @@
             <div class="sem-card-top">
               <span class="sem-roman">${roman}</span>
               <span class="sem-status-badge ${isActive ? 'badge-active' : 'badge-upcoming'}">
-                ${sem.badge}
+                ${topBadgeText}
               </span>
             </div>
-            <h3>${sem.name}</h3>
-            <div class="sem-term">${sem.term}</div>
-            <p>${sem.description}</p>
-            <button class="sem-btn ${isActive ? 'sem-btn-primary' : 'sem-btn-disabled'}" ${!isActive ? 'disabled' : ''}>
-              ${isActive ? `Enter ${sem.name} Subjects <i class="fa-solid fa-arrow-right"></i>` : '<i class="fa-solid fa-clock"></i> Uploading in Few Days'}
+            <div class="sem-card-body">
+              <h3>${sem.name}</h3>
+              <div class="sem-term">${sem.term}</div>
+              <div class="sem-subject-count-pill">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>${subjectCountText}</span>
+              </div>
+            </div>
+            <button class="sem-liquid-metal-btn ${isActive ? 'active-sem-btn' : 'disabled-sem-btn'}" ${!isActive ? 'disabled' : ''} type="button">
+              <div class="metal-inner-body">
+                <div class="metal-icon-circle">
+                  <i class="fa-solid ${isActive ? 'fa-arrow-right' : 'fa-clock'}"></i>
+                </div>
+                <span class="metal-btn-lbl">${isActive ? `Enter ${sem.name} Subjects` : 'Uploading in Few Days'}</span>
+              </div>
             </button>
           </div>
         </div>
@@ -486,6 +507,22 @@
       card.addEventListener('click', () => {
         const semId = parseInt(card.dataset.semId, 10);
         selectSemester(semId);
+      });
+    });
+
+    elements.semesterGrid.querySelectorAll('.sem-card.coming-soon').forEach(card => {
+      card.addEventListener('click', () => {
+        const semId = parseInt(card.dataset.semId, 10);
+        const semObj = data.semesters.find(s => s.id === semId);
+        showToast(`${semObj ? semObj.name : 'This semester'} is coming soon! Uploading in few days. ⏳`, 'fa-clock');
+      });
+    });
+
+    elements.semesterGrid.querySelectorAll('.sem-liquid-metal-btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
       });
     });
   }

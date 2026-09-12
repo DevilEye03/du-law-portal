@@ -202,29 +202,123 @@ button{font-family:inherit;cursor:pointer}
 .sem-card.coming-soon{opacity:.72;background:var(--bg-surface);border-style:dashed}
 .sem-card-strip{height:6px;background:linear-gradient(90deg,var(--du-crimson),var(--du-gold))}
 .sem-card.coming-soon .sem-card-strip{background:var(--border-line)}
-.sem-card-inner{padding:22px 22px 20px;display:flex;flex-direction:column;flex:1}
-.sem-card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+.sem-card-inner{padding:22px 22px 20px;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:18px;min-height:220px}
+.sem-card-top{display:flex;align-items:flex-start;justify-content:space-between}
 .sem-roman{font-family:var(--font-display);font-size:2.8rem;font-weight:900;
   color:var(--du-crimson);line-height:1}
 .sem-card.coming-soon .sem-roman{color:var(--text-faint)}
 .sem-status-badge{padding:4px 12px;border-radius:var(--radius-pill);
-  font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+  font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .badge-active{background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0}
 .badge-upcoming{background:var(--bg-surface);color:var(--text-muted);border:1px solid var(--border-line)}
-.sem-card h3{font-family:var(--font-display);font-size:1.22rem;font-weight:700;
-  color:var(--text-primary);margin-bottom:3px}
-.sem-card .sem-term{font-size:.78rem;color:var(--du-gold-muted);font-weight:600;
-  letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
-.sem-card p{font-size:.87rem;color:var(--text-muted);line-height:1.55;
-  flex:1;margin-bottom:18px;font-family:var(--font-serif)}
-.sem-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 18px;border-radius:var(--radius-sm);font-weight:700;font-size:.9rem;
-  transition:var(--transition);border:none;width:100%;min-height:46px}
-.sem-btn-primary{background:linear-gradient(135deg,var(--du-crimson-deep) 0%,var(--du-crimson) 100%);
-  color:#fff;box-shadow:0 4px 14px rgba(139,26,26,.25)}
-.sem-btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(139,26,26,.35)}
-.sem-btn-disabled{background:var(--bg-surface);color:var(--text-faint);
-  border:1.5px dashed var(--border-line);cursor:not-allowed}
+.sem-card-body{display:flex;flex-direction:column;gap:5px;flex:1}
+.sem-card h3{font-family:var(--font-display);font-size:1.32rem;font-weight:700;
+  color:var(--text-primary);margin:0;line-height:1.2}
+.sem-card .sem-term{font-size:.76rem;color:var(--du-gold-muted);font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;margin:0}
+.sem-subject-count-pill{display:inline-flex;align-items:center;gap:7px;margin-top:6px;
+  font-size:.82rem;font-weight:600;padding:4px 12px;border-radius:9999px;width:fit-content}
+.sem-card.active-sem .sem-subject-count-pill{background:rgba(16,185,129,.1);color:#10b981;border:1px solid rgba(16,185,129,.25)}
+.sem-card.active-sem .sem-subject-count-pill i{color:#10b981}
+.sem-card.coming-soon .sem-subject-count-pill{background:var(--bg-surface);color:var(--text-muted);border:1px solid var(--border-line)}
+.sem-card.coming-soon .sem-subject-count-pill i{color:var(--text-muted)}
+
+/* VengeanceUI Liquid Metal Button for Semester Cards */
+.sem-liquid-metal-btn{
+  position:relative;width:100%;border-radius:9999px;border:none;background:transparent;
+  padding:3px;cursor:pointer;outline:none;user-select:none;box-sizing:border-box;
+  text-decoration:none;transition:transform .18s cubic-bezier(.16,1,.3,1),box-shadow .25s ease;
+  box-shadow:0 8px 24px -4px rgba(0,0,0,.14),0 2px 6px rgba(0,0,0,.04);
+}
+.sem-liquid-metal-btn:active{transform:scale(.98)}
+
+/* Flowing Liquid Metal Outer Border (colorBack: #3b82f6, colorTint: #93c5fd) */
+.sem-liquid-metal-btn::before{
+  content:"";position:absolute;inset:0;border-radius:9999px;padding:3px;
+  background:linear-gradient(
+    115deg,
+    #1d4ed8 0%,
+    #2563eb 15%,
+    #3b82f6 30%,
+    #93c5fd 46%,
+    #ffffff 54%,
+    #93c5fd 64%,
+    #3b82f6 80%,
+    #1d4ed8 100%
+  );
+  background-size:260% 260%;
+  animation:liquid-metal-flow 4.2s cubic-bezier(.4,0,.2,1) infinite;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  pointer-events:none;z-index:2;transition:filter .3s ease;
+}
+.sem-liquid-metal-btn:hover::before,
+.sem-card.active-sem:hover .sem-liquid-metal-btn::before{
+  animation-duration:2s;
+  filter:drop-shadow(0 0 8px rgba(147,197,253,.95)) brightness(1.2);
+}
+.sem-liquid-metal-btn:hover,
+.sem-card.active-sem:hover .sem-liquid-metal-btn{
+  box-shadow:0 12px 30px -4px rgba(37,99,235,.35),0 0 16px rgba(59,130,246,.3);
+  transform:translateY(-1px);
+}
+
+/* Dynamic Glossy Specular Sheen Tracking Cursor */
+.sem-liquid-metal-btn::after{
+  content:"";position:absolute;inset:0;border-radius:9999px;
+  background:radial-gradient(circle 60px at var(--mouse-x,50%) var(--mouse-y,50%),rgba(255,255,255,.45),transparent 70%);
+  opacity:0;pointer-events:none;z-index:3;transition:opacity .25s ease;
+}
+.sem-liquid-metal-btn:hover::after,
+.sem-card.active-sem:hover .sem-liquid-metal-btn::after{opacity:1}
+
+/* Inner Button Body */
+.sem-liquid-metal-btn .metal-inner-body{
+  position:relative;z-index:1;display:flex;align-items:center;justify-content:flex-start;
+  gap:12px;padding:6px 18px 6px 6px;border-radius:9999px;
+  background:var(--metal-btn-bg,#ffffff);transition:background .2s ease;
+  width:100%;box-sizing:border-box;
+}
+[data-theme="dark"] .sem-liquid-metal-btn .metal-inner-body{background:#0b0c10}
+.sem-liquid-metal-btn:hover .metal-inner-body,
+.sem-card.active-sem:hover .sem-liquid-metal-btn .metal-inner-body{background:var(--metal-btn-bg-hover,#f8fafc)}
+[data-theme="dark"] .sem-liquid-metal-btn:hover .metal-inner-body,
+[data-theme="dark"] .sem-card.active-sem:hover .sem-liquid-metal-btn .metal-inner-body{background:#18181b}
+
+/* Inset Circular Icon */
+.sem-liquid-metal-btn .metal-icon-circle{
+  width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;background:var(--metal-icon-bg,#eff6ff);
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.08);flex-shrink:0;
+  transition:transform .22s cubic-bezier(.16,1,.3,1),background .2s ease;
+}
+[data-theme="dark"] .sem-liquid-metal-btn .metal-icon-circle{
+  background:rgba(59,130,246,.16);box-shadow:inset 0 2px 4px rgba(0,0,0,.25);
+}
+.sem-liquid-metal-btn:hover .metal-icon-circle,
+.sem-card.active-sem:hover .sem-liquid-metal-btn .metal-icon-circle{transform:scale(1.1)}
+.sem-liquid-metal-btn .metal-icon-circle i{
+  font-size:.88rem;color:var(--metal-icon-color,#2563eb);display:flex;align-items:center;justify-content:center;
+}
+
+/* Button Label */
+.sem-liquid-metal-btn .metal-btn-lbl{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:.88rem;font-weight:600;letter-spacing:-.01em;
+  color:var(--metal-text,#0f172a);white-space:nowrap;
+}
+[data-theme="dark"] .sem-liquid-metal-btn .metal-btn-lbl{color:#f8fafc}
+
+/* Disabled State for Upcoming Semesters */
+.sem-liquid-metal-btn.disabled-sem-btn{
+  opacity:.58;cursor:not-allowed;box-shadow:none;
+}
+.sem-liquid-metal-btn.disabled-sem-btn::before{
+  animation:none;background:var(--border-line);filter:none;
+}
+.sem-liquid-metal-btn.disabled-sem-btn .metal-icon-circle{background:var(--bg-surface)}
+.sem-liquid-metal-btn.disabled-sem-btn .metal-icon-circle i{color:var(--text-faint)}
+.sem-liquid-metal-btn.disabled-sem-btn .metal-btn-lbl{color:var(--text-muted)}
 
 .subjects-view{padding-top:32px}
 .view-header{margin-bottom:28px}
