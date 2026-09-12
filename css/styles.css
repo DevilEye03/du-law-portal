@@ -1718,6 +1718,75 @@ body[data-active-subject="company"] {
   transform: rotate(20deg) scale(1.12);
 }
 
+/* Header Telegram & Email Quick Action Buttons */
+.header-actions .telegram-header-btn .telegram-wrap {
+  background: rgba(34, 158, 217, 0.12);
+}
+
+.header-actions .telegram-header-btn .telegram-wrap i {
+  color: #229ed9;
+}
+
+[data-theme="dark"] .header-actions .telegram-header-btn .telegram-wrap {
+  background: rgba(34, 158, 217, 0.22);
+}
+
+[data-theme="dark"] .header-actions .telegram-header-btn .telegram-wrap i {
+  color: #38bdf8;
+}
+
+.header-actions .telegram-header-btn::before {
+  background: linear-gradient(
+    115deg,
+    #0284c7 0%,
+    #0ea5e9 22%,
+    #38bdf8 44%,
+    #ffffff 54%,
+    #38bdf8 64%,
+    #0ea5e9 82%,
+    #0284c7 100%
+  );
+  background-size: 260% 260%;
+}
+
+.header-actions .telegram-header-btn:hover {
+  box-shadow: 0 10px 28px -4px rgba(34, 158, 217, 0.45), 0 0 16px rgba(34, 158, 217, 0.28);
+}
+
+.header-actions .email-header-btn .email-wrap {
+  background: rgba(201, 168, 76, 0.15);
+}
+
+.header-actions .email-header-btn .email-wrap i {
+  color: var(--du-crimson);
+}
+
+[data-theme="dark"] .header-actions .email-header-btn .email-wrap {
+  background: rgba(201, 168, 76, 0.22);
+}
+
+[data-theme="dark"] .header-actions .email-header-btn .email-wrap i {
+  color: #e5b869;
+}
+
+.header-actions .email-header-btn::before {
+  background: linear-gradient(
+    115deg,
+    #8b1a1a 0%,
+    #b45309 22%,
+    #c9a84c 44%,
+    #fef08a 54%,
+    #c9a84c 64%,
+    #8b1a1a 82%,
+    #5c0f0f 100%
+  );
+  background-size: 260% 260%;
+}
+
+.header-actions .email-header-btn:hover {
+  box-shadow: 0 10px 28px -4px rgba(201, 168, 76, 0.42), 0 0 16px rgba(201, 168, 76, 0.26);
+}
+
 /* Mobile Quick Tools Trigger */
 .mobile-tools-trigger {
   display: none;
@@ -1829,6 +1898,9 @@ body[data-active-subject="company"] {
     font-size: 0.58rem;
     padding: 1px 4px;
   }
+  .header-actions .header-contact-pill,
+  .header-actions .telegram-header-btn,
+  .header-actions .email-header-btn,
   .header-actions .contact-header-btn {
     width: 32px !important;
     min-width: 32px !important;
@@ -1838,15 +1910,24 @@ body[data-active-subject="company"] {
     justify-content: center !important;
     flex-shrink: 0 !important;
   }
+  .header-actions .header-contact-pill .btn-icon-wrap,
+  .header-actions .telegram-header-btn .btn-icon-wrap,
+  .header-actions .email-header-btn .btn-icon-wrap,
   .header-actions .contact-header-btn .btn-icon-wrap {
     width: 24px !important;
     height: 24px !important;
     background: transparent !important;
     box-shadow: none !important;
   }
+  .header-actions .header-contact-pill .btn-icon-wrap i,
+  .header-actions .telegram-header-btn .btn-icon-wrap i,
+  .header-actions .email-header-btn .btn-icon-wrap i,
   .header-actions .contact-header-btn .btn-icon-wrap i {
-    font-size: 0.82rem !important;
+    font-size: 0.85rem !important;
   }
+  .header-actions .header-contact-pill .btn-lbl,
+  .header-actions .telegram-header-btn .btn-lbl,
+  .header-actions .email-header-btn .btn-lbl,
   .header-actions .contact-header-btn .btn-lbl {
     display: none !important;
   }
@@ -1920,15 +2001,19 @@ body[data-active-subject="company"] {
   box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.4);
   z-index: 1310;
   transform: translateY(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .mobile-tools-drawer.active {
   transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mtd-header {

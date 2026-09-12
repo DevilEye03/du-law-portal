@@ -95,6 +95,8 @@
     mtdSemesterBtn: document.getElementById('mtdSemesterBtn'),
     mtdContactBtn: document.getElementById('mtdContactBtn'),
     headerContactBtn: document.getElementById('headerContactBtn'),
+    headerTelegramBtn: document.getElementById('headerTelegramBtn'),
+    headerEmailBtn: document.getElementById('headerEmailBtn'),
     contactModalOverlay: document.getElementById('contactModalOverlay'),
     contactModal: document.getElementById('contactModal'),
     contactModalCloseBtn: document.getElementById('contactModalCloseBtn'),
@@ -2290,6 +2292,15 @@
     }
     if (elements.headerContactBtn) {
       elements.headerContactBtn.addEventListener('click', openContactModal);
+    }
+    if (elements.headerEmailBtn) {
+      elements.headerEmailBtn.addEventListener('click', () => {
+        const email = 'ankur@makelaweasy.in';
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).catch(() => {});
+        }
+        showToast('Email copied: ankur@makelaweasy.in 📋', 'fa-envelope');
+      });
     }
     if (elements.contactModalCloseBtn) {
       elements.contactModalCloseBtn.addEventListener('click', closeContactModal);
