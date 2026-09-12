@@ -121,7 +121,7 @@ button{font-family:inherit;cursor:pointer}
   position:absolute;inset:0;pointer-events:none;z-index:1;
   background:radial-gradient(circle at 50% 45%,rgba(6,11,25,.35) 0%,rgba(3,7,18,.75) 70%,rgba(2,4,10,.92) 100%)}
 
-/* Interactive GPU Particles Stage for "Made Law Easy." */
+/* Interactive GPU Particles Stage for "Make Law Easy." */
 .hero-particle-text-stage{
   position: relative;
   width: 100%;

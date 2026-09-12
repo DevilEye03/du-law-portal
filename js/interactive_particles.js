@@ -256,7 +256,7 @@
       const fontGold = 'italic 700 138px "Playfair Display", Georgia, serif';
 
       ctx.font = fontWhite;
-      const w1 = ctx.measureText('Made Law ').width;
+      const w1 = ctx.measureText('Make Law ').width;
       ctx.font = fontGold;
       const w2 = ctx.measureText('Easy.').width;
       const totalW = w1 + w2;
@@ -264,11 +264,11 @@
       const startX = Math.max(12, (c.width - totalW) / 2);
       const cy = c.height / 2;
 
-      // "Made Law " in pure white
+      // "Make Law " in pure white
       ctx.textAlign = 'left';
       ctx.fillStyle = '#ffffff';
       ctx.font = fontWhite;
-      ctx.fillText('Made Law ', startX, cy);
+      ctx.fillText('Make Law ', startX, cy);
 
       // "Easy." in radiant gold italic with period dot matching reference
       const goldGrad = ctx.createLinearGradient(startX + w1, cy - 50, startX + w1 + w2, cy + 50);
