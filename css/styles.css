@@ -1195,7 +1195,7 @@ button{font-family:inherit;cursor:pointer}
   align-items:center;gap:12px;position:relative}
 .footer-logo{font-family:var(--font-display);font-weight:700;font-size:.92rem;
   color:var(--du-gold);letter-spacing:.1em;text-transform:uppercase}
-.footer-text{font-size:.82rem;color:rgba(255,255,255,.5);max-width:680px;
+.footer-text{font-size:.82rem;color:rgba(255,255,255,.5);max-width:680px;}
 .footer-credits{font-size:.74rem;color:rgba(255,255,255,.28)}
 .footer-legal-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:4px 0 2px;font-size:.82rem}
 .footer-legal-links a{color:#93c5fd;text-decoration:none;font-weight:500;transition:color .2s}
