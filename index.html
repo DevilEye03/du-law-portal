@@ -131,8 +131,13 @@
 
           <!-- Quick Access Navigation Buttons -->
           <div class="sem-hero-actions">
-            <button class="hero-btn-primary" id="heroExploreBtn">
-              <i class="fa-solid fa-compass"></i> Explore Semester Notes
+            <button class="hero-btn-primary" id="heroExploreBtn" type="button">
+              <div class="metal-inner-body">
+                <div class="metal-icon-circle">
+                  <i class="fa-solid fa-compass"></i>
+                </div>
+                <span class="metal-btn-lbl">Explore Semester Notes</span>
+              </div>
             </button>
           </div>
         </div>
@@ -280,13 +285,21 @@
 
         <!-- Quick Study Actions: Flashcards & Bare Acts -->
         <div class="hub-action-btns-row">
-          <button class="hub-action-btn flashcard-btn" id="hubStartFlashcardsBtn" title="Launch Precedent Recall Flashcards">
-            <i class="fa-solid fa-brain"></i>
-            <span><b>Precedent Recall</b> Flashcards (3D Drill)</span>
+          <button class="hub-action-btn flashcard-btn" id="hubStartFlashcardsBtn" title="Launch Precedent Recall Flashcards" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <span class="metal-btn-lbl"><b>Precedent Recall</b> Flashcards (3D Drill)</span>
+            </div>
           </button>
-          <button class="hub-action-btn bareact-btn" id="hubOpenBareActBtn" title="Open Quick Bare Act Drawer">
-            <i class="fa-solid fa-book-bookmark"></i>
-            <span><b>Statutory Reference</b> (Quick Bare Act)</span>
+          <button class="hub-action-btn bareact-btn" id="hubOpenBareActBtn" title="Open Quick Bare Act Drawer" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-book-bookmark"></i>
+              </div>
+              <span class="metal-btn-lbl"><b>Statutory Reference</b> (Quick Bare Act)</span>
+            </div>
           </button>
         </div>
 
@@ -305,21 +318,37 @@
       <!-- 4 Tabs Navigation -->
       <div class="hub-tabs-container">
         <div class="hub-tabs">
-          <button class="hub-tab-btn active" data-tab="topics">
-            <i class="fa-solid fa-book-open-reader"></i>
-            <span>All Topics &amp; Notes</span>
+          <button class="hub-tab-btn active" data-tab="topics" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <span class="metal-btn-lbl">All Topics &amp; Notes</span>
+            </div>
           </button>
-          <button class="hub-tab-btn" data-tab="cases">
-            <i class="fa-solid fa-scale-balanced"></i>
-            <span>Landmark Cases</span>
+          <button class="hub-tab-btn" data-tab="cases" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <span class="metal-btn-lbl">Landmark Cases</span>
+            </div>
           </button>
-          <button class="hub-tab-btn" data-tab="pyqs">
-            <i class="fa-solid fa-file-lines"></i>
-            <span>PYQs &amp; Model Answers</span>
+          <button class="hub-tab-btn" data-tab="pyqs" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-file-lines"></i>
+              </div>
+              <span class="metal-btn-lbl">PYQs &amp; Model Answers</span>
+            </div>
           </button>
-          <button class="hub-tab-btn" data-tab="revision">
-            <i class="fa-solid fa-bolt-lightning"></i>
-            <span>Last-Minute Revision</span>
+          <button class="hub-tab-btn" data-tab="revision" type="button">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <span class="metal-btn-lbl">Last-Minute Revision</span>
+            </div>
           </button>
         </div>
       </div>
@@ -556,8 +585,10 @@
   </div>
 
   <!-- Floating Scroll-to-Top Button -->
-  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fa-solid fa-arrow-up"></i>
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top" type="button">
+    <div class="scroll-inner">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
   </button>
 
   <!-- Mobile Bottom Navigation -->

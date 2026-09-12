@@ -479,12 +479,13 @@
             <div class="sem-card-top">
               <span class="sem-roman">${roman}</span>
               <span class="sem-status-badge ${isActive ? 'badge-active' : 'badge-upcoming'}">
-                ${topBadgeText}
+                <i class="fa-solid ${isActive ? 'fa-circle-check' : 'fa-clock'}"></i>
+                <span>${topBadgeText}</span>
               </span>
             </div>
             <div class="sem-card-body">
               <h3>${sem.name}</h3>
-              <div class="sem-term">${sem.term}</div>
+              <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>${sem.term}</span></div>
               <div class="sem-subject-count-pill">
                 <i class="fa-solid fa-layer-group"></i>
                 <span>${subjectCountText}</span>
@@ -620,10 +621,13 @@
               </div>
             </div>
 
-            <div class="sub-open-btn">
-              <div class="sub-open-btn-bg"></div>
-              <span>Open Subject Hub</span>
-              <i class="fa-solid fa-arrow-right"></i>
+            <div class="sub-open-btn topic-liquid-metal-btn">
+              <div class="metal-inner-body">
+                <div class="metal-icon-circle">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <span class="metal-btn-lbl">Open Subject Hub</span>
+              </div>
             </div>
           </div>
         </div>
@@ -771,8 +775,10 @@
     }
 
     elements.quickFilterChips.innerHTML = chips.map(c => `
-      <button class="filter-chip ${state.activeQuickFilter === c.id ? 'active' : ''}" data-chip-id="${c.id}">
-        ${c.label}
+      <button class="filter-chip ${state.activeQuickFilter === c.id ? 'active' : ''}" data-chip-id="${c.id}" type="button">
+        <div class="chip-inner-body">
+          <span>${c.label}</span>
+        </div>
       </button>
     `).join('');
 
@@ -990,11 +996,18 @@
               </div>
 
               <div class="unit-actions-row">
-                <button class="btn-read-notes" data-file="${u.file}" data-title="${u.title}" data-unit="${u.number}">
-                  <i class="fa-solid fa-book-open"></i> Read Full Notes
+                <button class="btn-read-notes topic-liquid-metal-btn" data-file="${u.file}" data-title="${u.title}" data-unit="${u.number}" type="button">
+                  <div class="metal-inner-body">
+                    <div class="metal-icon-circle">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="metal-btn-lbl">Read Full Notes</span>
+                  </div>
                 </button>
-                <button class="btn-open-newtab" data-file="${u.file}" title="Open standalone note in new window">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <button class="btn-open-newtab" data-file="${u.file}" title="Open standalone note in new window" type="button">
+                  <div class="newtab-inner">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
                 </button>
               </div>
             </div>
@@ -1033,6 +1046,11 @@
         const title = btn.dataset.title;
         const unit = btn.dataset.unit;
         openReader(file, `Unit ${unit}: ${title}`, `${sub.name} • DU Notes`);
+      });
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
       });
     });
 
@@ -1140,8 +1158,10 @@
                         <div class="case-citation">${c.citation || 'Prescribed DU Case Material Precedent'}</div>
                       </div>
                       <div class="case-badge-actions">
-                        <button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button><button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation">
-                          <i class="fa-solid fa-copy"></i> Copy Citation
+                        <button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button>                        <button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation" type="button">
+                          <div class="copy-cite-inner">
+                            <i class="fa-solid fa-copy"></i> <span>Copy Citation</span>
+                          </div>
                         </button>
                         <span class="case-unit-tag">${c.unit}</span>
                       </div>
@@ -1491,8 +1511,13 @@
                 <span class="rev-badge-pill">${r.badge}</span>
               </div>
               <div class="rev-card-header-right">
-                <button class="btn-rev-reader" data-file="${r.file}" data-anchor="${r.anchorId || ''}" data-title="${r.unitTitle}">
-                  <i class="fa-solid fa-book-open"></i> Read Full Notes <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <button class="btn-rev-reader topic-liquid-metal-btn" data-file="${r.file}" data-anchor="${r.anchorId || ''}" data-title="${r.unitTitle}" type="button">
+                  <div class="metal-inner-body">
+                    <div class="metal-icon-circle">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="metal-btn-lbl">Read Full Notes</span>
+                  </div>
                 </button>
               </div>
             </div>
@@ -2650,14 +2675,15 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Liquid Metal Header Tabs: Dynamic Specular Reflection
-    document.querySelectorAll('.header-actions .liquid-metal-btn, .header-actions .header-action-btn, .header-actions .semester-badge-btn, .header-actions .theme-toggle-btn').forEach(btn => {
-      btn.addEventListener('mousemove', e => {
+    // Global Liquid Metal Dynamic Specular Sheen Tracking
+    document.addEventListener('mousemove', e => {
+      const btn = e.target.closest('.liquid-metal-btn, .sem-liquid-metal-btn, .topic-liquid-metal-btn, .hub-tab-btn, .filter-chip, .sub-open-btn, .hub-action-btn, .hero-btn-primary, .btn-rev-reader, .btn-copy-cite, .scroll-top-btn, .btn-open-newtab, .unit-check-btn, .view-mode-btn');
+      if (btn) {
         const rect = btn.getBoundingClientRect();
         btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
         btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-      });
-    });
+      }
+    }, { passive: true });
 
     // Initialize 3D Books Showcase Engine
     if (window.DUBooksShowcase && elements.booksShowcaseContainer && elements.booksCanvas) {
