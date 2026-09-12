@@ -65,11 +65,29 @@
           <span class="btn-icon-wrap email-wrap"><i class="fa-solid fa-envelope"></i></span>
           <span class="btn-lbl">Email</span>
         </a>
-        <button class="semester-badge-btn liquid-metal-btn" id="headerSemesterBtn" title="Switch Semester">
-          <span class="sem-indicator"></span>
-          <span class="btn-lbl" id="headerSemText">Choose Semester</span>
-          <i class="fa-solid fa-chevron-down arrow-down"></i>
-        </button>
+        <div class="header-sem-dropdown-wrap" id="headerSemDropdownWrap">
+          <button class="semester-badge-btn liquid-metal-btn" id="headerSemesterBtn" title="Choose Semester" aria-expanded="false" aria-haspopup="true">
+            <span class="sem-indicator"></span>
+            <span class="btn-lbl" id="headerSemText">Choose Semester</span>
+            <i class="fa-solid fa-chevron-down arrow-down"></i>
+          </button>
+          
+          <div class="sem-dropdown-menu" id="headerSemDropdownMenu" role="menu" aria-label="Select Semester">
+            <div class="sem-dd-header">
+              <span class="sem-dd-label"><i class="fa-solid fa-graduation-cap"></i> Select Semester</span>
+              <span class="sem-dd-sub">DU Faculty of Law</span>
+            </div>
+            <div class="sem-dd-list" id="headerSemDropdownList">
+              <!-- Dynamically populated by app.js -->
+            </div>
+            <div class="sem-dd-footer">
+              <button class="sem-dd-all-btn" id="headerSemDdAllBtn" type="button">
+                <i class="fa-solid fa-house"></i>
+                <span>View All Semesters Overview</span>
+              </button>
+            </div>
+          </div>
+        </div>
         <button class="theme-toggle-btn liquid-metal-btn" id="themeToggleBtn" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
           <i class="fa-solid fa-moon"></i>
         </button>

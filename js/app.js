@@ -83,6 +83,10 @@
     audioSpeedBtn: document.getElementById('audioSpeedBtn'),
     headerSemesterBtn: document.getElementById('headerSemesterBtn'),
     headerSemText: document.getElementById('headerSemText'),
+    headerSemDropdownWrap: document.getElementById('headerSemDropdownWrap'),
+    headerSemDropdownMenu: document.getElementById('headerSemDropdownMenu'),
+    headerSemDropdownList: document.getElementById('headerSemDropdownList'),
+    headerSemDdAllBtn: document.getElementById('headerSemDdAllBtn'),
     headerMobileMenuBtn: document.getElementById('headerMobileMenuBtn'),
     mobileToolsOverlay: document.getElementById('mobileToolsOverlay'),
     mobileToolsDrawer: document.getElementById('mobileToolsDrawer'),
@@ -345,6 +349,7 @@
       if (elements.headerSemText) {
         elements.headerSemText.textContent = 'Choose Semester';
       }
+      renderHeaderSemDropdown();
       renderSemesterSelection();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
@@ -354,6 +359,7 @@
       if (elements.headerSemText && state.currentSemester) {
         elements.headerSemText.textContent = `Semester ${state.currentSemester}`;
       }
+      renderHeaderSemDropdown();
       renderSubjectsGrid();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else if (viewName === 'hub') {
@@ -361,6 +367,87 @@
       if (elements.mobileBottomNav) elements.mobileBottomNav.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  }
+
+  // =========================================================================
+  // HEADER SEMESTER DROPDOWN (Click & Hover Interactive Menu)
+  // =========================================================================
+  let semDropdownHoverTimer = null;
+
+  function openHeaderSemDropdown() {
+    if (!elements.headerSemDropdownWrap) return;
+    clearTimeout(semDropdownHoverTimer);
+    elements.headerSemDropdownWrap.classList.add('is-open');
+    if (elements.headerSemesterBtn) {
+      elements.headerSemesterBtn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  function closeHeaderSemDropdown() {
+    if (!elements.headerSemDropdownWrap) return;
+    clearTimeout(semDropdownHoverTimer);
+    elements.headerSemDropdownWrap.classList.remove('is-open');
+    if (elements.headerSemesterBtn) {
+      elements.headerSemesterBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function toggleHeaderSemDropdown() {
+    if (!elements.headerSemDropdownWrap) return;
+    if (elements.headerSemDropdownWrap.classList.contains('is-open')) {
+      closeHeaderSemDropdown();
+    } else {
+      openHeaderSemDropdown();
+    }
+  }
+
+  function renderHeaderSemDropdown() {
+    const data = window.DU_LAW_PORTAL_DATA;
+    if (!data || !elements.headerSemDropdownList) return;
+
+    const romanNumerals = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
+    elements.headerSemDropdownList.innerHTML = data.semesters.map(sem => {
+      const isSelected = state.currentSemester === sem.id;
+      const roman = romanNumerals[sem.id] || sem.id;
+      const count = sem.subjectIds ? sem.subjectIds.length : 0;
+      const statusText = sem.active ? `${count} Subjects` : 'Coming Soon';
+      const badgeClass = sem.active ? 'badge-active' : 'badge-upcoming';
+
+      return `
+        <div class="sem-dd-item ${sem.active ? 'active-sem' : 'upcoming-sem'} ${isSelected ? 'is-selected' : ''}" 
+             data-sem-id="${sem.id}" 
+             role="menuitem"
+             tabindex="0"
+             title="${sem.name} (${sem.term})">
+          <div class="sem-dd-roman">${roman}</div>
+          <div class="sem-dd-info">
+            <div class="sem-dd-name-row">
+              <span class="sem-dd-name">${sem.name}</span>
+              ${isSelected ? '<span class="sem-dd-curr-tag"><i class="fa-solid fa-circle-check"></i> Active</span>' : ''}
+            </div>
+            <div class="sem-dd-term">${sem.term} &bull; <span class="sem-dd-badge ${badgeClass}">${statusText}</span></div>
+          </div>
+          <div class="sem-dd-arrow">
+            <i class="fa-solid ${sem.active ? 'fa-chevron-right' : 'fa-lock'}"></i>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    elements.headerSemDropdownList.querySelectorAll('.sem-dd-item').forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const semId = parseInt(item.dataset.semId, 10);
+        const semObj = data.semesters.find(s => s.id === semId);
+        if (semObj && semObj.active) {
+          selectSemester(semId);
+          closeHeaderSemDropdown();
+        } else {
+          showToast(`${semObj ? semObj.name : 'This semester'} is coming soon! Uploading in few days. ⏳`, 'fa-clock');
+          closeHeaderSemDropdown();
+        }
+      });
+    });
   }
 
   // =========================================================================
@@ -406,7 +493,10 @@
   function selectSemester(semId) {
     state.currentSemester = semId;
     localStorage.setItem('du_law_selected_semester', semId);
-    elements.headerSemText.textContent = `Semester ${semId}`;
+    if (elements.headerSemText) {
+      elements.headerSemText.textContent = `Semester ${semId}`;
+    }
+    renderHeaderSemDropdown();
     showView('subjects');
   }
 
@@ -2397,10 +2487,43 @@
       showView('semester');
     });
 
-    // Semester Switcher in Header
-    elements.headerSemesterBtn.addEventListener('click', () => {
-      showView('semester');
-    });
+    // Header Semester Dropdown Menu (Click & Hover Interactive)
+    renderHeaderSemDropdown();
+
+    if (elements.headerSemDropdownWrap && elements.headerSemesterBtn) {
+      // Hover interaction (cursor enters badge or menu)
+      elements.headerSemDropdownWrap.addEventListener('mouseenter', () => {
+        clearTimeout(semDropdownHoverTimer);
+        openHeaderSemDropdown();
+      });
+
+      // Hover interaction (cursor leaves badge and menu)
+      elements.headerSemDropdownWrap.addEventListener('mouseleave', () => {
+        clearTimeout(semDropdownHoverTimer);
+        semDropdownHoverTimer = setTimeout(closeHeaderSemDropdown, 220);
+      });
+
+      // Click interaction (toggle dropdown on click)
+      elements.headerSemesterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleHeaderSemDropdown();
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!elements.headerSemDropdownWrap.contains(e.target)) {
+          closeHeaderSemDropdown();
+        }
+      });
+    }
+
+    if (elements.headerSemDdAllBtn) {
+      elements.headerSemDdAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('semester');
+        closeHeaderSemDropdown();
+      });
+    }
 
     // Change Semester Button in Subjects View
     if (elements.changeSemBtn) {
@@ -2473,6 +2596,7 @@
         if (elements.readerModal && elements.readerModal.classList.contains('active')) closeReader();
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
         if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
+        closeHeaderSemDropdown();
       }
     });
 

@@ -1692,11 +1692,274 @@ body[data-active-subject="company"] {
   font-size: 0.68rem;
   color: var(--text-muted);
   margin-left: 2px;
-  transition: transform 0.2s ease;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
 }
 
 .header-actions .semester-badge-btn:hover i.arrow-down {
   transform: translateY(1px);
+}
+
+/* ==========================================================================
+   HEADER SEMESTER DROPDOWN MENU (Click & Hover Interactive)
+   ========================================================================== */
+.header-sem-dropdown-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-sem-dropdown-wrap:hover .header-actions .semester-badge-btn i.arrow-down,
+.header-sem-dropdown-wrap.is-open .header-actions .semester-badge-btn i.arrow-down,
+.header-sem-dropdown-wrap:hover i.arrow-down,
+.header-sem-dropdown-wrap.is-open i.arrow-down {
+  transform: rotate(180deg) !important;
+  color: var(--du-gold) !important;
+}
+
+.sem-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 346px;
+  max-width: min(360px, calc(100vw - 24px));
+  background: rgba(255, 255, 255, 0.98);
+  border: 1.5px solid rgba(201, 168, 76, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 18px 45px -8px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(201, 168, 76, 0.18);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  overflow: hidden;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.22s;
+}
+
+/* Hover bridge: smooth cursor path between badge and dropdown */
+.sem-dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+[data-theme="dark"] .sem-dropdown-menu {
+  background: rgba(18, 15, 12, 0.97);
+  border-color: rgba(201, 168, 76, 0.38);
+  box-shadow: 0 24px 55px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(201, 168, 76, 0.22);
+}
+
+.header-sem-dropdown-wrap:hover .sem-dropdown-menu,
+.header-sem-dropdown-wrap.is-open .sem-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.sem-dd-header {
+  padding: 12px 16px 10px;
+  background: linear-gradient(180deg, rgba(201, 168, 76, 0.12) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sem-dd-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--du-gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sem-dd-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.sem-dd-list {
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 168, 76, 0.4) transparent;
+}
+
+.sem-dd-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sem-dd-list::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.4);
+  border-radius: 9999px;
+}
+
+.sem-dd-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.sem-dd-item:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: rgba(201, 168, 76, 0.28);
+  transform: translateX(3px);
+}
+
+[data-theme="dark"] .sem-dd-item:hover {
+  background: rgba(201, 168, 76, 0.15);
+  border-color: rgba(201, 168, 76, 0.35);
+}
+
+.sem-dd-item.is-selected {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(201, 168, 76, 0.14) 100%);
+  border-color: rgba(201, 168, 76, 0.45);
+}
+
+.sem-dd-roman {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  font-family: var(--font-display, 'Playfair Display', Georgia, serif);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-line);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.sem-dd-item.active-sem .sem-dd-roman {
+  background: linear-gradient(135deg, var(--du-crimson-deep) 0%, var(--du-crimson) 100%);
+  color: #ffffff;
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 2px 6px rgba(139, 26, 26, 0.25);
+}
+
+.sem-dd-item.is-selected .sem-dd-roman {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border-color: #93c5fd;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
+
+.sem-dd-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sem-dd-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sem-dd-name {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.sem-dd-curr-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 1px 7px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sem-dd-term {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sem-dd-badge {
+  font-weight: 600;
+}
+
+.sem-dd-badge.badge-active {
+  color: #10b981;
+}
+
+.sem-dd-badge.badge-upcoming {
+  color: #f59e0b;
+}
+
+.sem-dd-arrow {
+  margin-left: auto;
+  color: var(--text-muted);
+  font-size: 0.70rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sem-dd-item:hover .sem-dd-arrow {
+  transform: translateX(2px);
+  color: var(--du-gold);
+}
+
+.sem-dd-footer {
+  padding: 8px;
+  border-top: 1px solid var(--border-line);
+  background: var(--bg-subtle, rgba(0, 0, 0, 0.02));
+}
+
+.sem-dd-all-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px dashed var(--border-line);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sem-dd-all-btn:hover {
+  background: rgba(201, 168, 76, 0.12);
+  border-color: var(--du-gold);
+  color: var(--text-primary);
 }
 
 /* Theme Toggle Button in Header (Circular) */
@@ -1954,7 +2217,12 @@ body[data-active-subject="company"] {
     flex-shrink: 0 !important;
   }
   .header-actions .semester-badge-btn i.arrow-down {
-    display: none !important;
+    display: inline-block !important;
+    font-size: 0.54rem !important;
+  }
+  .sem-dropdown-menu {
+    right: -42px !important;
+    max-width: calc(100vw - 20px) !important;
   }
   .header-actions .theme-toggle-btn {
     width: 32px !important;
