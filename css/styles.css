@@ -1967,6 +1967,27 @@ body[data-active-subject="company"] {
 }
 
 /* ==========================================================================
+   MEDIA & LAW (LB-3031) — SEMESTER III THEME OVERRIDES
+   ========================================================================== */
+[data-subject="media"] .sub-card-banner::before,
+body[data-active-subject="media"] .hub-banner::before {
+  background-image:
+    radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.22) 0%, transparent 45%),
+    linear-gradient(60deg, rgba(255, 255, 255, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.03) 75.5%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.03) 25%, transparent 25.5%, transparent 75%, rgba(255, 255, 255, 0.03) 75.5%);
+  background-size: auto, 40px 68px, 40px 68px;
+  opacity: 0.9;
+}
+
+[data-subject="media"]:hover {
+  box-shadow: 0 20px 48px rgba(3, 105, 161, 0.28), 0 0 0 1px rgba(186, 230, 253, 0.35);
+}
+
+body[data-active-subject="media"] {
+  background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(3, 105, 161, 0.04) 0%, transparent 70%);
+}
+
+/* ==========================================================================
    LIQUID METAL HEADER NAVIGATION BUTTONS (VengeanceUI Liquid Metal)
    ========================================================================== */
 .header-actions {

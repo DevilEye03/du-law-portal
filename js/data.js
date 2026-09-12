@@ -37,12 +37,12 @@ window.DU_LAW_PORTAL_DATA = {
       "name": "Semester III",
       "term": "III Term (Autumn)",
       "active": true,
-      "badge": "3 Subjects Loaded (CPC, Company Law, White Collar Crimes)",
+      "badge": "4 Core Subjects Loaded (CPC, Company Law, White Collar Crimes, Media Law)",
       "description": "Active syllabus modules, case briefs, past year examination questions, and rapid revision capsules for Semester 3.",
-      "subjectIds": [
-        "cpc",
+      "subjectIds": ["cpc",
         "company",
-        "wcc"
+        "wcc",
+        "media"
       ]
     },
     {
@@ -17134,6 +17134,1026 @@ window.DU_LAW_PORTAL_DATA = {
           },
           "examStrategy": "Emphasize statutory elements, presumptions, reverse burden clauses, and landmark Supreme Court rulings for The Narcotic Drugs and Psychotropic Substances Act, 1985. Contrast traditional IPC mens rea with socio-economic strict liability doctrine.",
           "caseMap": "Harjit Singh v. State of Punjab ((2011) 4 SCC 441 · Supreme Court of Indi) • Hira Singh and Another v. Union of India ((2020) 20 SCC 272 · Three-Judge Bench, S) • Karnail Singh v. State of Haryana ((2009) 8 SCC 539 · Constitution Bench (5) • Vijaysinh Chandubha Jadeja (and Another) v. State of Gujarat (and Others) ((2011) 1 SCC 609 · Constitution Bench, S) • Union of India v. Mohanlal & Another ((2016) 3 SCC 379 · Division Bench, Supre) • Indian Harm Reduction Network & Another v. Union of India & Others (with Gulam Mohammed Malik matters) (Bombay High Court, Writ/PIL jurisdiction)"
+        }
+      ]
+    },
+        "media": {
+      "id": "media",
+      "code": "LB-3031",
+      "name": "Media & Law",
+      "shortName": "Media Law",
+      "semester": 3,
+      "folder": "sem 3/Media",
+      "theme": {
+        "primary": "#0369a1",
+        "primaryDark": "#082f49",
+        "primaryLight": "#0ea5e9",
+        "accent": "#f59e0b",
+        "accentLight": "#fef3c7",
+        "bgTint": "#f0f9ff",
+        "border": "#bae6fd",
+        "badgeBg": "#e0f2fe",
+        "badgeColor": "#0369a1",
+        "gradient": "linear-gradient(135deg, #082f49 0%, #0369a1 55%, #0284c7 100%)",
+        "tagline": "Fourth Estate Jurisprudence, Freedom of Speech, Censorship, Contempt of Court & Digital Regulation",
+        "motto": "Article 19(1)(a) • Fourth Estate • Public Trust in Airwaves • Right to Know",
+        "quote": "The liberty of the press is no greater and no less than the liberty of every subject of the Queen. — Lord Russell of Killowen",
+        "icon": "fa-bullhorn"
+      },
+      "units": [
+        {
+          "id": "u1",
+          "number": 1,
+          "title": "Unit 1: Different Forms of Media & History of Legislative Efforts",
+          "subtitle": "Taxonomy of Media (Print, Broadcasting, Social Media), Fourth Estate Jurisprudence & Legislative Evolution (1766–2026)",
+          "file": "sem 3/Media/unit1_forms_of_media.html",
+          "statutes": [
+            "Press and Registration of Books Act, 1867",
+            "Press Council Act, 1978",
+            "Indian Telegraph Act, 1885",
+            "Cable Television Networks (Regulation) Act, 1995",
+            "Information Technology Act, 2000",
+            "Prasar Bharati Act, 1990",
+            "Working Journalists Act, 1955"
+          ],
+          "topics": [
+            "Media Concept, Etymology, Fourth Estate Doctrine & Derived Rights under Article 19(1)(a)",
+            "Print Media: Anatomy, Registration Regime (PRB Act 1867), Working Journalists Acts & Press Council of India",
+            "Electronic & Broadcast Media: Airwaves as Public Property, Telegraph Act, Cable TV Networks Act & TRAI",
+            "Social & Digital Media: Intermediary Architecture under IT Act 2000 & Shreya Singhal Revolution",
+            "Legislative Trajectory of Media Laws in India from Colonial Press Regulations (1766) to 2026 Telecommunications Regime"
+          ]
+        },
+        {
+          "id": "u2",
+          "number": 2,
+          "title": "Unit 2.1 & 2.2: Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "subtitle": "Article 19(1)(a) & 19(2) Adjudication, Derivative Rights, Hate Speech, Informational Privacy (Puttaswamy) & Investigative Stings",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "statutes": [
+            "Constitution of India, Arts. 19(1)(a), 19(2), 21",
+            "IPC §§ 153A, 295A, 499, 500 (BNS §§ 196, 299, 356)",
+            "Digital Personal Data Protection Act, 2023"
+          ],
+          "topics": [
+            "Philosophical Rationale of Free Speech: Marketplace of Ideas, Democratic Participation & Self-Fulfillment",
+            "Derivative Rights: Freedom of Circulation (Bennett Coleman, Sakal Papers), Right to Know & Right to Broadcast",
+            "Hate Speech Jurisprudence: Amish Devgan Framework, Good Faith Political Critique vs Harmful Hatred",
+            "Right to Privacy vs Freedom of the Press: R. Rajagopal (Auto Shankar), Public Figures vs Private Figures & Right to be Forgotten",
+            "Defamation (Civil & Criminal) and Sting Operations: Public Interest Justification vs Criminal Entrapment (Rajat Prasad, R.K. Anand)"
+          ]
+        },
+        {
+          "id": "u3",
+          "number": 3,
+          "title": "Unit 2.3 & 2.4: Right to Information, Media Access & Trial by Media",
+          "subtitle": "RTI Act 2005 S. 8 Exemptions, Supreme Court Collegium / CJI Office as Public Authority & 200th Law Commission Report on Pre-Trial Publicity",
+          "file": "sem 3/Media/unit2_rti_trial_by_media.html",
+          "statutes": [
+            "Right to Information Act, 2005 (Ss. 2(h), 8(1)(j), 11)",
+            "200th Law Commission Report (2006)",
+            "CrPC § 327 (BNSS § 366 — In-Camera Proceedings)"
+          ],
+          "topics": [
+            "Constitutional Foundation of RTI: Democratic Accountability & Judicial Office under RTI (CPIO, SC v. Subhash Chandra Aggarwal)",
+            "Section 8(1)(j) Privacy Exemption & Public Interest Balancing Test",
+            "Fairness Doctrine, Media Access, and Compelling Journalists to Disclose Crime Sources",
+            "Trial by Media vs Fair Trial: Prejudicial Pre-Trial Publicity (M.P. Lohia v. State of West Bengal)",
+            "Extortion through Investigative Reporting & Postponement Relief (Naveen Jindal v. Zee Media)"
+          ]
+        },
+        {
+          "id": "u4",
+          "number": 4,
+          "title": "Unit 3: Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "subtitle": "Contempt of Courts Act 1971, Articles 129/215, Krishna Iyer's 6 Functional Canons (Mulgaokar), Arundhati Roy & Prashant Bhushan",
+          "file": "sem 3/Media/unit3_contempt_of_court.html",
+          "statutes": [
+            "Contempt of Courts Act, 1971 (Ss. 2(b), 2(c), 13(b))",
+            "Constitution of India, Arts. 129, 142(2), 215"
+          ],
+          "topics": [
+            "Constitutional Contempt Power: Rationale, Articles 129 & 215 vs Statutory Limitations",
+            "Civil Contempt vs Criminal Contempt: S. 2(c) Scandalising the Court, Prejudicing Judicial Proceedings & Obstructing Justice",
+            "Krishna Iyer's Six Functional Canons in In re S. Mulgaokar (1978): The Philosophy of Judicial Restraint",
+            "Scandalising the Bench in Modern Protest: In re Arundhati Roy (2002) & In re Prashant Bhushan (2020/2021)",
+            "Unverified Media Reporting, Fair & Accurate Reporting of Judicial Proceedings (S. 4) & Truth as a Defence (S. 13(b))"
+          ]
+        },
+        {
+          "id": "u5",
+          "number": 5,
+          "title": "Unit 4: Media & Its Regulation: Print, Broadcasting & Social Media",
+          "subtitle": "Self-Regulation vs State Control, PCI Act 1978, Airwaves Public Trust Doctrine (CAB 1995), Prasar Bharati & IT Rules 2021",
+          "file": "sem 3/Media/unit4_media_regulation.html",
+          "statutes": [
+            "Press Council Act, 1978",
+            "Prasar Bharati Act, 1990",
+            "Cable Television Networks (Regulation) Act, 1995",
+            "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021"
+          ],
+          "topics": [
+            "Print Media Regulation: Press Council of India's Advisory/Admonitory Powers (S. 14) & Proposed Media Council with Penal Teeth",
+            "Airwaves Public Property Doctrine: Secretary MoIB v. Cricket Association of Bengal (1995)",
+            "Public Broadcasting Autonomy (Prasar Bharati Act 1990 & Pitroda Committee Recommendations)",
+            "Private Broadcasting Governance: Cable TV Act 1995 Programme & Advertising Codes & Bandh Violence Coverage (In re Destruction of Public Properties)",
+            "Social Media Regulation: Section 79 Safe Harbour, Due Diligence Duties & Three-Tier Grievance Redressal under IT Rules 2021"
+          ]
+        },
+        {
+          "id": "u6",
+          "number": 6,
+          "title": "Unit 5: Media, Advertisement and the Law: Commercial Speech & Government Ads",
+          "subtitle": "Commercial Speech under Art. 19(1)(a) (Hamdard Dawakhana to Tata Press), Objectionable Ads Acts & Common Cause Guidelines (2014)",
+          "file": "sem 3/Media/unit5_advertisement_law.html",
+          "statutes": [
+            "Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954",
+            "Indecent Representation of Women (Prohibition) Act, 1986",
+            "Government Advertisement (Content Regulation) Guidelines, 2014",
+            "Consumer Protection Act, 2019"
+          ],
+          "topics": [
+            "Commercial Speech Evolution: Exclusion in Hamdard Dawakhana (1960) to Constitutional Protection in Tata Press (1995)",
+            "Statutory Prohibitions: Magic Remedies Act 1954 & Indecent Representation of Women Act 1986",
+            "Obscenity Standards in Advertisements: Ajay Goswami v. Union of India (2007)",
+            "Regulation of Publicly-Funded Government Advertisements: Common Cause v. Union of India (2015)",
+            "Paid News as Counterfeit Advertising & Misleading Claims under Consumer Protection Act"
+          ]
+        },
+        {
+          "id": "u7",
+          "number": 7,
+          "title": "Unit 6: Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "subtitle": "Cinematograph Act 1952, K.A. Abbas, S. Rangarajan, Bobby Art (Bandit Queen), Variable Obscenity & Sahara v. SEBI Postponement Doctrine",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "statutes": [
+            "Cinematograph Act, 1952 (Ss. 5A, 5B)",
+            "Cinematograph (Certification) Rules, 1983",
+            "POCSO Act § 23 & JJ Act § 74 (Identity Protection)"
+          ],
+          "topics": [
+            "Prior Restraint vs Post-Publication Restraint: Constitutional Standards & Censorship of Cinema (K.A. Abbas v. UOI)",
+            "Freedom of Cinematic Expression & The Hostile Audience Veto: S. Rangarajan v. P. Jagjivan Ram (Spark in Powder Keg)",
+            "Contextual Realism & Artistic Obscenity: Bobby Art International v. Om Pal Singh Hoon (Bandit Queen)",
+            "Variable Obscenity & Contemporary Community Standards: Devidas Ramachandra Tuljapurkar v. State of Maharashtra",
+            "Judicial Postponement Orders vs Prior Restraint: Sahara India Real Estate Corp. v. SEBI (2012) & Protection of Vulnerable Identities"
+          ]
+        },
+        {
+          "id": "u8",
+          "number": 8,
+          "title": "Unit 7 & 8: Legislative Reporting Privileges & Contemporary Media Issues",
+          "subtitle": "Articles 105/194, Article 361A, Searchlight Cases, Paid News Disqualification (Ashok Chavan), Poll Surveys & Cross-Media Ownership",
+          "file": "sem 3/Media/unit7_reporting_legislative_proceedings.html",
+          "statutes": [
+            "Constitution of India, Arts. 105, 194, 361A",
+            "Parliamentary Proceedings (Protection of Publication) Act, 1977",
+            "Representation of the People Act, 1951 (Ss. 10A, 126, 126A)",
+            "Copyright Act, 1957 (S. 52(1)(a))"
+          ],
+          "topics": [
+            "Parliamentary Privileges vs Press Reporting: Pandit M.S.M. Sharma v. Sri Krishna Sinha (Searchlight I & II)",
+            "Constitutional Shield: Article 361A, Feroze Gandhi Legacy & Parliamentary Proceedings Act 1977",
+            "Reporting Judicial vs Legislative Statements: Dr. Jatish Chandra Ghosh, C.K. Daphtary & Jawaharlal Darda",
+            "Paid News & Electoral Corruption: Election Commission Disqualification Power under S. 10A RPA (Ashok Chavan & Umlesh Yadav)",
+            "Regulation of Exit/Opinion Polls (S. 126A RPA), Cross-Media Ownership Concentration & Copyright Fair Dealing in News"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "media-case-1",
+          "name": "Bennett Coleman & Co. v. Union of India",
+          "citation": "AIR 1973 SC 106; (1972) 2 SCC 788",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: A.N. Ray, Beg, Sikri, Grover, Dwivedi, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseBC",
+          "facts": "The Union Government framed the Newsprint Control Order, 1962 and the Import Policy for Newsprint for 1972–1973, which imposed restrictions on newspapers: fixing a ceiling of 10 pages, barring common ownership units from interchangeability of newsprint quota between dailies, and adjusting page quotas based on circulation. Bennett Coleman & Co., publishers of The Times of India, challenged the validity of these restrictions under Articles 14 and 19(1)(a) of the Constitution.",
+          "issues": "(i) Does freedom of speech and expression under Article 19(1)(a) include the freedom of the press and the right of circulation? (ii) Can the State regulate newsprint allocation under the guise of commercial/import regulation if its direct effect curtails newspaper pages and circulation?",
+          "arguments": "[PETITIONERS]: (1) Freedom of the press encompasses circulation and volume; fixing page limits directly restricts the quantitative content of news and editorial expression. (2) The direct effect and consequence test must be applied, not the subject-matter test. (3) Newsprint control was used as an unconstitutional speech control instrument.\n\n[UNION OF INDIA]: (1) Newsprint is an essential commodity in short supply involving foreign exchange; regulation is purely economic under Entry 33, List III. (2) Big newspapers monopolise the market, suffocating small and medium regional dailies; the policy promotes pluralism.",
+          "ratio": "Held (Majority 4:1, per A.N. Ray, J.): (1) Freedom of the press is an essential part of Article 19(1)(a). Freedom of speech encompasses not merely the content of speech, but also its circulation and volume: 'Circulation means the capacity to reach readers. To curtail circulation is to curtail the voice of the press.' (2) Direct Effect Test: The Court rejected the subject-matter test and established that the true test of constitutional validity is the direct effect and consequence of the measure on fundamental rights. (3) Fixing a 10-page limit and banning quota interchangeability directly struck at the circulation and quality of newspapers, violating Article 19(1)(a) as newsprint scarcity cannot justify arbitrary speech rationing.",
+          "examTips": "✍️ Golden Citation for Unit 2: The foundational authority on freedom of circulation and the 'Direct Effect and Consequence' test. Pair with Sakal Papers (1962) in every press freedom / Article 19(1)(a) question."
+        },
+        {
+          "id": "media-case-2",
+          "name": "R. Rajagopal alias R.R. Gopal v. State of Tamil Nadu",
+          "citation": "(1994) 6 SCC 632; AIR 1995 SC 264 (The 'Auto Shankar' Case)",
+          "bench": "Supreme Court of India (B.P. Jeevan Reddy & S.C. Sen, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "casePutta",
+          "facts": "Auto Shankar, a condemned convict sentenced to death for multiple murders in Madras Central Prison, wrote his autobiography revealing illicit nexus and complicity of senior police and IAS/IPS officers in his crimes. He delivered the manuscript to his wife, who handed it to R.R. Gopal, editor of the Tamil weekly 'Nakkheeran'. Prison authorities and police officials attempted to restrain publication through prior injunction, arguing that it defamed public officials and violated prison rules.",
+          "issues": "(i) Does a citizen have a fundamental right to privacy under Article 21 against media publication? (ii) Can the State or its public officials obtain a prior restraint injunction against the publication of an unauthorized autobiography? (iii) What is the remedy of public officials who claim to be defamed by press publications?",
+          "arguments": "[PETITIONER - NAKKHEERAN]: The press has a constitutional right under Article 19(1)(a) to publish information of public interest without prior censorship; public officials cannot invoke state power to suppress unflattering exposures.\n\n[RESPONDENTS - STATE & PRISON AUTHORITIES]: Shankar was a prisoner incapable of delivering manuscripts without superintendent approval; publication would smear the reputation of public servants and breach privacy.",
+          "ratio": "Held (per B.P. Jeevan Reddy, J.): (1) Right to Privacy: The right to privacy is implicit in Article 21 (right to life and personal liberty) and guarantees the right to be let alone. (2) Exception for Public Records & Public Officials: A citizen's privacy does not extend to matters that have become part of public records (court proceedings, police records). Public officials discharge public duties; they cannot claim privacy or prior injunction regarding acts done in the discharge of official duties. (3) Prior Restraint Barred: The State cannot impose prior restraint on the press. Public officials cannot prevent publication; their remedy, if any, is an action for damages after publication, provided they prove the statement was made with reckless disregard for the truth (importing New York Times v. Sullivan standard into Indian civil defamation).",
+          "examTips": "✍️ Lead authority for privacy vs press freedom and prior restraint against public officials. Always quote the 6 principles formulated in ¶26 of the judgment."
+        },
+        {
+          "id": "media-case-3",
+          "name": "Secretary, Ministry of Information & Broadcasting v. Cricket Association of Bengal",
+          "citation": "(1995) 2 SCC 161; AIR 1995 SC 1236 (The 'CAB' Case)",
+          "bench": "Supreme Court of India (3-Judge Bench: P.B. Sawant, S. Mohan, B.P. Jeevan Reddy, JJ.)",
+          "unitNumber": 4,
+          "unit": "Media & Its Regulation: Print, Broadcasting & Social Media",
+          "file": "sem 3/Media/unit4_media_regulation.html",
+          "anchorId": "caseCAB",
+          "facts": "The Cricket Association of Bengal (CAB) organised the Hero Cup international cricket tournament and entered into an agreement with a foreign telecasting company (TWI) for host broadcasting and worldwide telecast. Doordarshan (under the Ministry of I&B) claimed an exclusive monopoly over telecasting within India under the Indian Telegraph Act, 1885, refused uplink facilities and customs clearances for TWI equipment, and demanded exorbitant telecast rights fees from CAB.",
+          "issues": "(i) Does the right to telecast sporting events fall within the fundamental right of freedom of speech and expression under Article 19(1)(a)? (ii) Can the Government claim an absolute state monopoly over broadcasting airwaves? (iii) What is the legal status and ownership of electromagnetic airwaves?",
+          "arguments": "[CAB]: Freedom of expression includes the right to communicate sports events to citizens using the best available media technology; Doordarshan's monopoly is an unconstitutional restriction.\n\n[MINISTRY OF I&B]: Airwaves are scarce public assets controlled by the Sovereign under Section 4 of the Indian Telegraph Act, 1885; the State alone has the right to broadcast and regulate foreign broadcasting entities.",
+          "ratio": "Held (Unanimous, lead judgment by P.B. Sawant, J.): (1) Airwaves are Public Property: Electromagnetic airwaves are not the private property of the State, but are public property held in trust by the State for the public. (2) Freedom of Speech Includes the Right to Broadcast: The right to impart and receive information via electronic and broadcast media is an integral component of Article 19(1)(a). (3) End of State Monopoly: The Government has no monopoly over electronic media. A private entity has the right to use public airwaves subject to reasonable frequency management. (4) Independent Regulatory Body: The Court directed the Central Government to establish an independent, autonomous statutory public authority to regulate airwaves and broadcasting frequencies (laying the foundation for Prasar Bharati and modern broadcast regulation).",
+          "examTips": "✍️ The magna carta of broadcast media in India. Essential for Unit 1, Unit 4, and any question on airwaves, broadcasting rights, and freedom of electronic media."
+        },
+        {
+          "id": "media-case-4",
+          "name": "Swatanter Kumar v. The Indian Express Ltd.",
+          "citation": "207 (2014) DLT 221; 2014 SCC OnLine Del 207",
+          "bench": "Delhi High Court (Manmohan Singh, J.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseSwatanter",
+          "facts": "A former Judge of the Supreme Court of India and then-sitting Chairperson of the National Green Tribunal (NGT) was accused of sexual harassment by a former law intern. Mainstream print and electronic media widely telecast and published sensational allegations, depicting his photograph and running continuous headlines without verifying the complaint or awaiting formal inquiry. Justice Kumar filed a civil defamation suit seeking an ad-interim injunction against publication of defamatory matter.",
+          "issues": "(i) When can a court grant an interim injunction (gag order) against media reporting of unverified allegations against constitutional functionaries? (ii) How should the Court balance Article 19(1)(a) freedom of the press with an individual's Article 21 right to reputation and fair name?",
+          "arguments": "[PLAINTIFF]: Sensational unverified reporting damages irreversible judicial reputation; right to reputation is an inseparable facet of Article 21 and dignity; media cannot run a parallel trial based on unvetted affidavits.\n\n[MEDIA DEFENDANTS]: The press has a duty to report on matters of immense public interest involving high public officials; prior restraint is strictly barred under the Bonnard v. Perryman doctrine unless the defense of justification is bound to fail.",
+          "ratio": "Held (per Manmohan Singh, J.): (1) Right to reputation is an intrinsic part of the right to life with dignity under Article 21. While free press is essential, it does not license character assassination or unverified trial by media. (2) Where reporting is ex-facie reckless, unverified, and creates irreparable harm to judicial integrity, the Court possesses equitable jurisdiction to grant interim injunctive relief restraining media from publishing unverified insinuations and mandating that any reporting must strictly report objective legal proceedings.",
+          "examTips": "✍️ Lead Delhi High Court precedent on gag orders, judicial reputation vs media reporting, and unverified investigative journalism."
+        },
+        {
+          "id": "media-case-5",
+          "name": "Sakal Papers (P) Ltd. v. Union of India",
+          "citation": "AIR 1962 SC 305; (1962) 3 SCR 842",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: Mudholkar, Gajendragadkar, Wanchoo, Das Gupta, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseSakal",
+          "facts": "Parliament enacted the Newspaper (Price and Page) Act, 1956 and the Central Government issued the Daily Newspaper (Price and Page) Order, 1960, regulating the price charged for daily newspapers based on the number of pages published, and allocating the percentage of space that could be allocated to advertisements. Sakal Papers challenged the Act and Order, contending that fixing a higher price for higher pages directly reduced circulation and advertisement revenues.",
+          "issues": "(i) Can the State regulate the price and page count of newspapers under the guise of fair trade or preventing unfair competition? (ii) Can a law directly curtailing press circulation be saved under Article 19(6) if it violates Article 19(1)(a)?",
+          "arguments": "[PETITIONERS]: The Act forces newspapers either to raise prices (reducing circulation) or to reduce pages (curtailing information). It directly strikes at the freedom of circulation, which is protected under Article 19(1)(a).\n\n[UNION OF INDIA]: The regulation prevents monopolies and unfair trade practices by large capitalist newspapers, protecting small and regional newspapers under Article 19(6).",
+          "ratio": "Held (per Mudholkar, J.): (1) A law which directly restricts the circulation of a newspaper by regulating page count and pricing directly infringes Article 19(1)(a). (2) Freedom of speech can only be restricted on the grounds specifically enumerated in Article 19(2). It cannot be curtailed on grounds of trade regulation under Article 19(6). (3) The State cannot curb the circulation of newspapers in order to benefit smaller newspapers or promote fair competition: 'The freedom of a newspaper to publish any number of pages or to circulate it to any number of persons is each an integral part of the freedom of speech and expression.'",
+          "examTips": "✍️ Must-cite companion case to Bennett Coleman. Proves that Article 19(2) grounds are exhaustive and economic/competition justifications cannot justify press curbs."
+        },
+        {
+          "id": "media-case-6",
+          "name": "Amish Devgan v. Union of India",
+          "citation": "(2021) 1 SCC 1; AIR 2021 SC 293",
+          "bench": "Supreme Court of India (A.M. Khanwilkar & Sanjiv Khanna, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseDevgan",
+          "facts": "During a televised news debate on a commercial channel, news anchor Amish Devgan made derogatory and offensive remarks regarding Sufi saint Khwaja Moinuddin Chishti (referring to him as 'lootera Chishti'). Multiple FIRs were registered across several States under IPC §§ 153A, 295A, 505(2). Devgan filed a writ petition under Article 32 seeking quashing or consolidation of FIRs, pleading a bona fide slip of tongue and claiming free speech protection.",
+          "issues": "(i) What constitutes 'hate speech' under Indian criminal jurisprudence and constitutional law? (ii) What is the legal threshold distinguishing free speech and legitimate religious/political critique from criminal hate speech under Sections 153A and 295A?",
+          "arguments": "[PETITIONER]: The remark was an unintentional slip of tongue; petitioner immediately tweeted an apology; freedom of press protects heated journalistic debates; criminal intent (mens rea) was completely absent.\n\n[RESPONDENTS & STATE]: The derogatory epithet was broadcast to millions, insulting religious feelings and inciting communal discord; media figures wield immense influence and cannot escape criminal responsibility by claiming inadvertence.",
+          "ratio": "Held (per Sanjiv Khanna, J.): (1) Detailed Definition of Hate Speech: Hate speech is an effort to marginalise individuals based on their membership in a group. It impacts social cohesion and human dignity, creating a discriminatory environment. (2) Tripartite Test: Hate speech must be evaluated based on: (a) Content of speech, (b) Context of speech, and (c) Intent and Impact. (3) Free Speech vs Hate Speech: Free speech allows robust, pungent, and even aggressive critique of ideas and beliefs ('free speech protects critique and dissent'). But it does not protect vilification, ridicule, and dehumanisation targeting communities or generating hostility. (4) The Court refused to quash the FIRs, holding that whether the remarks constituted a bona fide slip of tongue or intentional insult must be evaluated at trial.",
+          "examTips": "✍️ Primary authority for Unit 2 on Hate Speech vs Free Speech and IPC 153A/295A (now BNS 196/299). Essential for Dec 2024 Q2."
+        },
+        {
+          "id": "media-case-7",
+          "name": "Court on Its Own Motion v. State",
+          "citation": "146 (2008) DLT 429 (The 'Uma Khurana Fake Sting' Case)",
+          "bench": "Delhi High Court (Division Bench: Manmohan Sarin & Rekha Sharma, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseUmaKhurana",
+          "facts": "A private television news channel broadcast a sensational 'sting operation' alleging that Uma Khurana, a government school teacher in Delhi, was running a prostitution racket forcing schoolgirls into sex work. Following the broadcast, an angry mob attacked the teacher, stripped and assaulted her on the road, and she was arrested and dismissed. Subsequent police and judicial investigations revealed that the sting was completely fabricated and staged by a reporter using a private actress to settle personal vendetta.",
+          "issues": "(i) Are sting operations legal in Indian journalistic practice? (ii) What are the legal, constitutional, and ethical limits of hidden camera and sting journalism? (iii) Can the media orchestrate or incite the commission of an offence in the name of investigative reporting?",
+          "arguments": "[SUO MOTU COGNIZANCE / COURT]: The media exceeded all boundaries of ethics and law, manufacturing a crime and destroying an innocent citizen's life and dignity under Article 21.\n\n[NEWS CHANNEL]: Sting journalism is an essential investigative weapon to uncover systemic corruption and vice in society, protected under Article 19(1)(a).",
+          "ratio": "Held (per Division Bench): (1) Staged or Fabricated Stings are Criminal Offences: A sting operation that entices, induces, or manufactures a crime is illegal and constitutes criminal abetment and conspiracy. (2) Guidelines for Sting Operations: (a) Stings must only be used as a last resort in extraordinary public interest to expose corruption; (b) Hidden cameras must never be used to fabricate or induce offences; (c) Broadcasters must verify authenticity, maintain unedited raw footage, and undergo pre-telecast editorial vetting; (d) Fabricators of fake stings face criminal prosecution and civil liability for damages.",
+          "examTips": "✍️ The landmark Indian precedent on the legality, misuse, and regulation of journalistic sting operations. Pair with Rajat Prasad (2014) in Unit 2.2."
+        },
+        {
+          "id": "media-case-8",
+          "name": "X v. Union of India",
+          "citation": "2021 SCC OnLine Del 1788 (Delhi High Court, Pratibha M. Singh, J.)",
+          "bench": "Delhi High Court",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseRTBF",
+          "facts": "An American citizen of Indian origin was prosecuted under the NDPS Act in India, but was subsequently honorably acquitted by the trial court. Despite full acquittal, whenever prospective employers or institutions Googled his name, the search results prominently displayed the initial news reports of his arrest, severely prejudicing his career and personal reputation. He invoked Article 226 seeking enforcement of the 'Right to be Forgotten' by directing search engines (Google, Indian Kanoon) to de-index or mask his identity.",
+          "issues": "(i) Does the Right to be Forgotten form part of the fundamental Right to Privacy under Article 21 post-Puttaswamy? (ii) How should the Court balance an acquitted person's privacy with the public's right to know and open court records?",
+          "arguments": "[PETITIONER]: An acquitted person has the right not to have his digital past perpetually held against him; continued search prominence violates Article 21 dignity and rehabilitation.\n\n[RESPONDENTS]: Court judgments and news reports are public records; search engines merely index available public data without malice.",
+          "ratio": "Held (per Pratibha M. Singh, J.): (1) Recognition of Right to be Forgotten: In the digital era, the Right to Privacy under Article 21 encompasses the 'Right to be Forgotten' and the right to informational self-determination. (2) Interlocutory Relief: An individual who has been acquitted is entitled to protection against perpetual digital stigma where no public interest demands ongoing disclosure. (3) The Court directed search engines to de-index the judgment and masked the petitioner's identity to prevent search retrieval, balancing open justice with individual dignity.",
+          "examTips": "✍️ The leading Indian judicial formulation of the Right to be Forgotten in media and search engine law post-K.S. Puttaswamy (2017)."
+        },
+        {
+          "id": "media-case-9",
+          "name": "R.K. Anand v. Registrar, Delhi High Court",
+          "citation": "(2009) 8 SCC 106 (The 'BMW Hit-and-Run Sting' Case)",
+          "bench": "Supreme Court of India (B.N. Agrawal, G.S. Singhvi, Aftab Alam, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseRKAnand",
+          "facts": "NDTV broadcast a sting operation revealing collusion between Senior Advocates (R.K. Anand representing accused Sanjeev Nanda and Special Public Prosecutor I.U. Khan) in suborning and bribing a key eye-witness (Sunil Kulkarni) in the high-profile BMW hit-and-run trial. Delhi High Court initiated criminal contempt against Anand and Khan and stripped them of Senior Advocate designation. On appeal to the Supreme Court, Anand challenged the admissibility and integrity of sting recordings and alleged trial by media.",
+          "issues": "(i) Is sting journalism exposing subversion of justice criminal contempt or legitimate public interest reporting? (ii) What standards govern the authenticity and evidentiary value of electronic sting recordings?",
+          "arguments": "[APPELLANT]: The telecast interfered with pending criminal trial and was contemptuous trial by media; hidden camera recordings were edited and tampered.\n\n[AMICUS CURIAE / COURT]: The sting rendered a monumental service to the administration of justice by exposing corruption at the highest echelon of the legal profession.",
+          "ratio": "Held (per Aftab Alam, J.): (1) Public Interest Defense: A sting operation that exposes the subversion of the criminal justice system by court officers and advocates is not criminal contempt, but a valuable public service under Article 19(1)(a). (2) Procedural Rigour: Electronic evidence must be authenticated, original microchips preserved, and forensic scrutiny conducted. (3) The conviction of R.K. Anand for criminal contempt was upheld, and the Supreme Court affirmed that genuine investigative journalism exposing judicial corruption is sheltered.",
+          "examTips": "✍️ Crucial precedent bridging sting journalism (Unit 2) and criminal contempt / fair trial (Unit 3). Cite on the public interest justification of stings."
+        },
+        {
+          "id": "media-case-10",
+          "name": "Rajat Prasad v. Central Bureau of Investigation",
+          "citation": "(2014) 6 SCC 495; AIR 2014 SC 3007 (The 'Cash-for-Query' Sting Case)",
+          "bench": "Supreme Court of India (R.M. Lodha, Madan B. Lokur, Kurian Joseph, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "caseRajatPrasad",
+          "facts": "Journalists executed a sting operation wherein they offered cash bribes to a Member of Parliament (Dilip Singh Judeo) in a hotel room in exchange for legislative favours, capturing the transaction on hidden camera. While the MP was prosecuted for taking bribes, the CBI also chargesheeted the journalist/producer (Rajat Prasad) under Section 12 of the Prevention of Corruption Act, 1988 for abetment of bribery. Prasad moved to quash proceedings, pleading that his sole motive was journalistic exposure and he lacked mens rea.",
+          "issues": "(i) Can a journalist claim an absolute immunity from criminal liability for abetment of bribery on the ground that the bribe was paid as part of a sting operation?",
+          "arguments": "[JOURNALIST / PETITIONER]: There was no criminal intent to corrupt a public servant; the bribe was decoy money paid solely to trap the corrupt official in public interest.\n\n[CBI]: The offence of abetment under Section 12 is complete once the bribe is offered; criminal law recognises no journalistic exception to active bribe giving.",
+          "ratio": "Held (per Kurian Joseph, J.): (1) No Absolute Journalistic Immunity: A journalist who initiates, pays, or facilitates a bribe during a sting operation is not automatically immune from the Penal Code or Prevention of Corruption Act. (2) Absence of mens rea is a matter of factual defense to be tested at trial, not a threshold bar to chargesheeting. (3) Media cannot act as an agent provocateur or entice crimes that would not have occurred but for the media's inducement.",
+          "examTips": "✍️ Primary authority on the criminal limits of sting operations. Use to demonstrate that freedom of press does not create a licence to violate criminal law."
+        },
+        {
+          "id": "media-case-11",
+          "name": "Central Public Information Officer, Supreme Court of India v. Subhash Chandra Aggarwal",
+          "citation": "(2020) 5 SCC 481; AIR 2020 SC 121 (5-Judge Constitution Bench)",
+          "bench": "Supreme Court of India (Ranjan Gogoi, CJI, N.V. Ramana, D.Y. Chandrachud, Deepak Gupta, Sanjiv Khanna, JJ.)",
+          "unitNumber": 3,
+          "unit": "Right to Information, Media Access & Trial by Media",
+          "file": "sem 3/Media/unit2_rti_trial_by_media.html",
+          "anchorId": "caseCPIO",
+          "facts": "RTI activist Subhash Chandra Aggarwal filed applications before the CPIO of the Supreme Court seeking: (i) information regarding declaration of assets by Supreme Court and High Court judges, (ii) correspondence relating to appointment and elevation of certain judges, and (iii) communications regarding judicial influence. The CPIO and SC registry resisted disclosure, contending that the Chief Justice of India was not a 'public authority' under Section 2(h) of the RTI Act and that disclosure would imperil judicial independence.",
+          "issues": "(i) Is the Office of the Chief Justice of India a 'public authority' under Section 2(h) of the RTI Act, 2005? (ii) How should the Court balance Judicial Independence, Public Accountability, and Personal Privacy under Section 8(1)(j)?",
+          "arguments": "[APPLICANT / AGGARWAL]: The judiciary is a public organ of governance; transparency bolsters, rather than harms, public faith; the CJI office squarely satisfies Section 2(h).\n\n[SC REGISTRY / CPIO]: Judicial independence is a basic feature of the Constitution; confidential collegium deliberations and personal judge assets are sheltered fiduciary records under Section 8(1)(e) and 8(1)(j).",
+          "ratio": "Held (Unanimous, lead judgment by Sanjiv Khanna, J.; concurring by D.Y. Chandrachud & N.V. Ramana, JJ.): (1) CJI Office is a Public Authority: The Office of the Chief Justice of India is a constitutional authority and squarely falls within the definition of 'public authority' under Section 2(h) of the RTI Act. (2) Judicial Independence & Transparency Co-exist: Judicial independence is not a shield against accountability. Transparency strengthens public trust in judicial integrity. (3) Proportionality & Section 8(1)(j) Balancing: Disclosure of personal assets or collegium materials must be weighed on the scales of public interest vs personal privacy. Routine personal data is exempt under Section 8(1)(j) unless overwhelming public interest mandates disclosure.",
+          "examTips": "✍️ Master authority for Unit 2.3 on the scope of RTI, public authorities, and Section 8(1)(j) balancing test."
+        },
+        {
+          "id": "media-case-12",
+          "name": "M.P. Lohia v. State of West Bengal",
+          "citation": "(2005) 2 SCC 686; 2005 SCC (Cri) 556 (The 'Doomed by Dowry' Case)",
+          "bench": "Supreme Court of India (N. Santosh Hegde & B.P. Singh, JJ.)",
+          "unitNumber": 3,
+          "unit": "Right to Information, Media Access & Trial by Media",
+          "file": "sem 3/Media/unit2_rti_trial_by_media.html",
+          "anchorId": "caseLohia",
+          "facts": "A young married woman committed suicide, and a criminal case was registered against her husband and in-laws under IPC §§ 304B/498A (dowry death). While the husband's anticipatory bail application was sub-judice before the courts, a prominent national magazine ('Savvy') published a one-sided, sensational feature article titled 'Doomed by Dowry', interviewing the deceased's family, detailing inflammatory unverified allegations, and proclaiming the accused guilty before trial.",
+          "issues": "(i) Does media publication of one-sided, prejudicial articles during pending judicial proceedings constitute trial by media and interfere with the administration of justice? (ii) What is the duty of the media when reporting on pending criminal trials?",
+          "arguments": "[ACCUSED / APPELLANT]: The article created immense public hysteria and prejudiced the judges dealing with his bail plea, depriving him of a fair hearing.\n\n[STATE / COMPLAINANT]: The press was exercising its duty to expose the social evil of dowry harassment in public interest.",
+          "ratio": "Held (per N. Santosh Hegde, J.): (1) Strict Condemnation of Trial by Media: Publishing articles which portray an accused as guilty while the matter is sub-judice directly prejudices the administration of justice and amounts to trial by media. (2) Trial in Court, Not Press: 'These types of articles coming on the eve of the court dealing with anticipatory bail applications or regular trial tend to prejudice the minds of judges and the public. Courts of law, and not newspaper or magazine readers, must try cases.' (3) The Court issued stern strictures against media trials compromising fair trial rights under Article 21.",
+          "examTips": "✍️ Primary citation for Unit 2.4 on Trial by Media and Pre-Trial Publicity. Always pair with 200th Law Commission Report."
+        },
+        {
+          "id": "media-case-13",
+          "name": "Naveen Jindal v. Zee Media Corporation Ltd.",
+          "citation": "(2014) 3 SCC 357; 2014 SCC OnLine Del 3411",
+          "bench": "Supreme Court of India & Delhi High Court",
+          "unitNumber": 3,
+          "unit": "Right to Information, Media Access & Trial by Media",
+          "file": "sem 3/Media/unit2_rti_trial_by_media.html",
+          "anchorId": "caseJindal",
+          "facts": "Zee News journalists and senior executives conducted a sting on industrialist and MP Naveen Jindal's corporate group regarding coal block allocations, and allegedly demanded ₹100 crore in advertising contracts in exchange for suppressing negative broadcasts. Jindal counter-stung the editors, capturing the extortion demand on camera, and filed FIRs under IPC §§ 384/511 (attempted extortion). Zee News launched aggressive retaliatory broadcasts attacking Jindal, prompting Jindal to seek injunctive relief against trial by media.",
+          "issues": "(i) Can the media use investigative journalism or sting operations as an extortionate bargaining chip? (ii) Is injunctive relief against biased, retaliatory broadcasts permissible without violating Article 19(1)(a)?",
+          "arguments": "[JINDAL]: Retaliatory broadcast was extortion-driven character assassination aimed at coercing withdrawal of criminal complaints.\n\n[ZEE MEDIA]: The reporting pertained to the nationwide Coalgate scam of immense public concern; press freedom cannot be restrained by injunction.",
+          "ratio": "Held: (1) Extortion is Not Journalism: Press freedom does not shield criminal acts of extortion or blackmail under the cloak of investigative reporting. (2) Balance of Convenience: Where media operates with an oblique motive to retaliate against an ongoing criminal investigation, injunctive orders restraining defamatory broadcasts are fully warranted to safeguard fair administration of justice.",
+          "examTips": "✍️ Ideal authority for questions on media ethics, extortion through sting operations, and corporate defamation injunctions."
+        },
+        {
+          "id": "media-case-14",
+          "name": "E.M. Sankaran Namboodiripad v. T. Narayanan Nambiar",
+          "citation": "(1970) 2 SCC 325; AIR 1970 SC 2015",
+          "bench": "Supreme Court of India (M. Hidayatullah, CJI, G.K. Mitter, K.S. Hegde, JJ.)",
+          "unitNumber": 4,
+          "unit": "Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "file": "sem 3/Media/unit3_contempt_of_court.html",
+          "anchorId": "caseEMS",
+          "facts": "EMS Namboodiripad, then Chief Minister of Kerala and a Marxist leader, addressed a press conference stating that the judiciary in India was 'an instrument of oppression', that judges were guided by 'class hatred and class interests', and that judges instinctively favored the rich and ruling classes over the working classes. The Kerala High Court convicted him of criminal contempt. On appeal, he argued that his remarks were legitimate philosophical critique based on Marxist-Leninist teachings on the nature of the State.",
+          "issues": "(i) Does public ideological criticism of the judiciary as an institution of class bias constitute criminal contempt by scandalising the court under Article 19(2)?",
+          "arguments": "[APPELLANT / EMS]: Remarks were political philosophy and socio-economic critique of state machinery, not an attack on individual judges; covered by Article 19(1)(a).\n\n[RESPONDENTS]: The speech attacked the integrity and impartiality of the entire judicial system, shaking public confidence in law courts.",
+          "ratio": "Held (per Hidayatullah, CJI): (1) Scandalising the Judiciary: While honest and fair criticism of judicial decisions is permissible, casting sweeping aspersions upon the entire judicial institution as biased, corrupt, or class-ridden scandalises the court and shakes public confidence. (2) Freedom of Speech Limits: Article 19(1)(a) does not permit an assault on the majesty and impartiality of the judiciary. Namboodiripad's conviction for criminal contempt was upheld (reducing sentence to a fine), emphasizing that philosophical critique cannot masquerade as institutional vilification.",
+          "examTips": "✍️ Foundational case for 'Scandalising the Court' under Section 2(c)(i) of the Contempt of Courts Act, 1971."
+        },
+        {
+          "id": "media-case-15",
+          "name": "In re S. Mulgaokar",
+          "citation": "(1978) 3 SCC 339; AIR 1978 SC 727",
+          "bench": "Supreme Court of India (M.H. Beg, CJI, P.N. Bhagwati, V.R. Krishna Iyer, JJ.)",
+          "unitNumber": 4,
+          "unit": "Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "file": "sem 3/Media/unit3_contempt_of_court.html",
+          "anchorId": "caseMulgaokar",
+          "facts": "The Indian Express published an article written by its Editor-in-Chief S. Mulgaokar criticising the Supreme Court during the post-Emergency era, alleging judicial subservience and compromise of judicial independence during the Emergency. Contempt proceedings were initiated suo motu against the Editor and publisher. The Bench had to consider whether the scathing critique constituted contempt or legitimate public debate.",
+          "issues": "(i) What are the principles and standards governing judicial exercise of criminal contempt power against the press for institutional criticism?",
+          "ratio": "Held (Contempt dropped; celebrated jurisprudence by V.R. Krishna Iyer, J.): Krishna Iyer, J. laid down the famous Six Functional Canons of Judicial Restraint in Contempt:\n1. The Court's jurisdiction is not to protect individual judges' vanity, but to protect the public's right to an untainted administration of justice.\n2. The Court must act with broad shoulders, judicial magnanimity, and forbearance ('dogs may bark, but the caravan passes on').\n3. The Court must distinguish between scurrilous personal attacks and robust institutional criticism aimed at systemic reform.\n4. Freedom of the press must be given the widest latitude in a democratic polity.\n5. Contempt power must be used sparingly, as an extraordinary weapon of last resort.\n6. The judge must not become prosecutor, witness, and executioner in his own cause without compelling necessity.",
+          "examTips": "✍️ The single most important theoretical authority on Contempt of Court in India. Memorize Krishna Iyer's 6 Functional Canons verbatim."
+        },
+        {
+          "id": "media-case-16",
+          "name": "In re Arundhati Roy",
+          "citation": "(2002) 3 SCC 343; AIR 2002 SC 1375",
+          "bench": "Supreme Court of India (G.B. Pattanaik & R.P. Sethi, JJ.)",
+          "unitNumber": 4,
+          "unit": "Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "file": "sem 3/Media/unit3_contempt_of_court.html",
+          "anchorId": "caseArundhatiRoy",
+          "facts": "Author Arundhati Roy participated in a dharna outside the Supreme Court protesting its Narmada Bachao Andolan judgment. When a contempt notice was issued based on allegations of sloganeering, Roy filed a replying affidavit asserting that the Court was showing 'bizarre petulance' in silencing dissent while ignoring corruption, and that judges were stifling free expression. The Supreme Court took suo motu cognizance of the contents of her affidavit as criminal contempt.",
+          "issues": "(i) Can imputations of institutional corruption and political bias in a court pleading constitute criminal contempt by scandalising the court? (ii) What is the threshold between fair comment and contemptuous vilification?",
+          "arguments": "[ROY]: The affidavit was an exercise of free speech under Article 19(1)(a), articulating honest criticism of judicial intolerance.\n\n[COURT]: The statements directly imputed corrupt motives and malafides to the highest court, eroding public trust in the rule of law.",
+          "ratio": "Held (per G.B. Pattanaik & R.P. Sethi, JJ.): (1) Scandalising by Imputing Motives: Freedom of speech under Article 19(1)(a) is subject to Article 19(2) and cannot be used as an open licence to denigrate the judiciary or impute judicial dishonesty without basis. (2) Rule of Law: 'Judicial criticism is lawful when it is fair, balanced, and expressed with dignified temperance. But scurrilous personal abuse or attribution of partisan motives to judges strikes at the foundation of the administration of justice.' Roy was convicted and sentenced to one day's symbolic imprisonment and a fine.",
+          "examTips": "✍️ Key authority on scandalising the court through protest affidavits. Contrast with Krishna Iyer's approach in Mulgaokar."
+        },
+        {
+          "id": "media-case-17",
+          "name": "In re Prashant Bhushan & Anr.",
+          "citation": "(2021) 1 SCC 745 & (2021) 3 SCC 160",
+          "bench": "Supreme Court of India (Arun Mishra, B.R. Gavai, Krishna Murari, JJ.)",
+          "unitNumber": 4,
+          "unit": "Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "file": "sem 3/Media/unit3_contempt_of_court.html",
+          "anchorId": "caseBhushan",
+          "facts": "Advocate Prashant Bhushan posted two tweets on Twitter/X in June 2020: (i) Criticising the then-CJI (S.A. Bobde) for riding a ₹50-lakh luxury motorcycle belonging to a BJP leader without helmet/mask while keeping the Supreme Court in lockdown denying justice to citizens; and (ii) Alleging that four past CJIs played a role in destroying democracy in India over the past 6 years. The Supreme Court initiated suo motu criminal contempt proceedings.",
+          "issues": "(i) Do tweets on social media criticizing sitting and past CJIs constitute criminal contempt by scandalising the authority of the Supreme Court? (ii) When is truth a valid statutory defense under Section 13(b) of the Contempt of Courts Act?",
+          "arguments": "[BHUSHAN]: The tweets represented bona fide opinion and anguish at the functioning of the Court; truth is a defense under S. 13(b); democratic institutions thrive on public scrutiny.\n\n[COURT / BENCH]: The tweets were not fair criticism but wild, scurrilous imputations undermining the authority of the Chief Justice and the institution of the Supreme Court in the public eye.",
+          "ratio": "Held (Convicted; nominal fine of ₹1 imposed): (1) S. 2(c)(i) Scandalising Authority: Scurrilous attacks on the Chief Justice in his judicial capacity that undermine public confidence in the judicial institution amount to criminal contempt. (2) Section 13(b) Truth Defense: Truth is an available defense under Section 13(b) (introduced by 2006 amendment) only if the Court is satisfied that it is raised in bona fide public interest. Vague or generalized allegations of corruption or subversion of democracy without substantiation cannot claim the defense of truth. (3) Media Reach: In the digital age, social media amplification of unverified attacks creates viral damage to institutional integrity.",
+          "examTips": "✍️ The most modern landmark authority on Contempt of Court, social media tweets, Section 13(b) truth defense, and scandalising the judiciary. Essential for Dec 2024 Q5."
+        },
+        {
+          "id": "media-case-18",
+          "name": "In re: Destruction of Public & Private Properties",
+          "citation": "(2009) 5 SCC 119; AIR 2009 SC 2266",
+          "bench": "Supreme Court of India (Arijit Pasayat & L.S. Panta, JJ.)",
+          "unitNumber": 5,
+          "unit": "Media & Its Regulation: Print, Broadcasting & Social Media",
+          "file": "sem 3/Media/unit4_media_regulation.html",
+          "anchorId": "caseDestruction",
+          "facts": "Following violent agitations, hartals, and bandhs causing widespread destruction of public and private properties, the Supreme Court appointed two expert committees: the Justice K.T. Thomas Committee and the Senior Advocate Fali S. Nariman Committee. The Nariman Committee specifically investigated the role of media and television broadcasts in exacerbating mass violence, riot coverage, and inciting panic through sensational real-time reporting.",
+          "issues": "(i) What are the regulatory responsibilities of news broadcasters during violent agitations and riots? (ii) Should media self-regulation or statutory regulation govern broadcast news ethics?",
+          "ratio": "Held (per Arijit Pasayat, J.): (1) Endorsement of Media Self-Regulation: The Court accepted the recommendations of the Nariman Committee that television news channels must not sensationalise riots or incite violence. (2) Guidelines for Broadcasters: (a) Visuals of gruesome violence, dead bodies, and inflammatory mobs must be modulated; (b) Unverified reports inciting sectarian passions are prohibited; (c) The Court endorsed the self-regulatory code of the News Broadcasters Association (NBA / NBSA) as a model for preventing media-induced panic while avoiding pre-censorship.",
+          "examTips": "✍️ Core authority for Unit 4 on broadcast media regulation, news coverage of violence, and the NBA self-regulation framework."
+        },
+        {
+          "id": "media-case-19",
+          "name": "Ajay Goswami v. Union of India",
+          "citation": "AIR 2007 SC 493; (2007) 1 SCC 143",
+          "bench": "Supreme Court of India (S.B. Sinha & Markandey Katju, JJ.)",
+          "unitNumber": 6,
+          "unit": "Media, Advertisement and the Law: Commercial Speech & Government Ads",
+          "file": "sem 3/Media/unit5_advertisement_law.html",
+          "anchorId": "caseGoswami",
+          "facts": "Advocate Ajay Goswami filed a public interest litigation under Article 32 alleging that mainstream national daily newspapers (The Times of India, Hindustan Times) were publishing semi-nude, sexually suggestive, and vulgar photographs in lifestyle supplements ('Delhi Times') alongside suggestive advertisements. He contended that such contents corrupted juvenile minds and violated the Indecent Representation of Women Act 1986 and Section 292 IPC, seeking guidelines restraining such publications.",
+          "issues": "(i) What is the standard for determining obscenity in newspaper advertisements and photographs? (ii) Can the standard of morals of minors/children be applied to restrict what adult citizens may read in newspapers?",
+          "arguments": "[PETITIONER]: Minors and children read family newspapers; vulgar photographs and suggestive commercial advertisements corrupt young minds and degrade female dignity.\n\n[NEWSPAPER PUBLISHERS]: The Hicklin test is outdated; publications must be judged as a whole; adults cannot be reduced to reading only what is fit for a child (Butler v. Michigan).",
+          "ratio": "Held (per S.B. Sinha, J.): (1) Rejection of Child-Standard for Adults: The standard of a child or hyper-sensitive person cannot be used to restrict general adult access to newspapers: 'A culture of responsible reading cannot reduce adult literature to reading only what is fit for a schoolchild.' (2) The Community Standards Test: Obscenity must be judged by the contemporary standards of the ordinary reasonable man in the community as a whole, looking at the entire context of the publication. (3) Press Council Machinery: The Press Council of India possesses adequate statutory machinery to redress complaints against improper advertisements without imposing judicial pre-censorship.",
+          "examTips": "✍️ Lead authority for Unit 5 on advertising obscenity and the transition from the Hicklin test to the modern contemporary community standards test."
+        },
+        {
+          "id": "media-case-20",
+          "name": "Common Cause v. Union of India",
+          "citation": "(2015) 42 SCD 686; (2015) 7 SCC 1",
+          "bench": "Supreme Court of India (P. Sathasivam, CJI, Ranjan Gogoi, N.V. Ramana, JJ.)",
+          "unitNumber": 6,
+          "unit": "Media, Advertisement and the Law: Commercial Speech & Government Ads",
+          "file": "sem 3/Media/unit5_advertisement_law.html",
+          "anchorId": "caseCommonCause",
+          "facts": "NGO Common Cause filed a PIL challenging the pervasive practice of ruling political parties and governments using public taxpayer funds to issue massive, glossy advertisements in print and electronic media on the eve of elections, glorifying political leaders, displaying prominent portraits of chief ministers and ministers, and projecting partisan achievements at public expense.",
+          "issues": "(i) Does the expenditure of public taxpayer funds on politically partisan government advertisements violate Articles 14 and 21? (ii) What guidelines should regulate government advertisement campaigns?",
+          "ratio": "Held (per Ranjan Gogoi, J.): (1) Public Funds Fiduciary Trust: Taxpayer funds are held in trust for the public and cannot be expended for personal political glorification or partisan propaganda. (2) Adoption of Prof. N.R. Madhava Menon Committee Guidelines (2014): (a) Advertisements must be related to government responsibilities and citizen rights; (b) Content must be objective, fair, and non-partisan; (c) Advertisement campaigns must be cost-effective; (d) Photographs of political leaders are strictly barred, except for the President, Prime Minister, Chief Justice of India, and historic national icons (subsequently relaxed to include Chief Ministers and Governors).",
+          "examTips": "✍️ The definitive authority on regulation of government advertisements (Unit 5.2). Always cite the Madhava Menon Committee guidelines."
+        },
+        {
+          "id": "media-case-21",
+          "name": "K.A. Abbas v. Union of India",
+          "citation": "AIR 1971 SC 481; (1970) 2 SCC 780",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: M. Hidayatullah, CJI, J.M. Shelat, G.K. Mitter, C.A. Vaidialingam, A.N. Ray, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseAbbas",
+          "facts": "Renowned filmmaker and journalist K.A. Abbas produced a documentary film titled 'A Tale of Four Cities', contrasting the luxurious lives of the rich in Bombay, Calcutta, Delhi, and Madras with the squalor and misery of the poor. The Censor Board granted an 'A' (Adult) certificate and demanded cuts to scenes depicting red-light districts and sex workers in Kamathipura. Abbas challenged the constitutional validity of pre-censorship of films under the Cinematograph Act, 1952, arguing that pre-censorship violated Article 19(1)(a).",
+          "issues": "(i) Is pre-censorship (prior restraint) of cinematographic films constitutional under Article 19(2)? (ii) Can films be treated differently from print media in the application of prior censorship?",
+          "arguments": "[PETITIONER / ABBAS]: The press cannot be subjected to pre-censorship; cinema is an art form entitled to identical freedom of expression under Article 19(1)(a); pre-censorship creates chilling effect.\n\n[UNION OF INDIA]: Motion pictures possess a unique visual and auditory potency that produces an immediate emotional impact on mixed audiences, justifying prior certification.",
+          "ratio": "Held (Unanimous, per Hidayatullah, CJI): (1) Pre-Censorship of Cinema is Constitutional: Motion pictures stir up emotions more deeply than any other art form. Because of its instant appeal to sight and hearing simultaneously, cinema is a distinct class by itself and justifies pre-censorship under Article 19(2). (2) Standards for Censors: Censorship must not be narrow or prudish. The film must be judged as an integrated whole, not by isolated scenes out of context. (3) Appellate Safeguard: The Court mandated that an independent appellate tribunal (leading to the creation of the FCAT) must be provided to avoid executive arbitrariness.",
+          "examTips": "✍️ The foundational Indian precedent upholding pre-censorship of cinema under the Cinematograph Act, 1952. Essential for Unit 6 and Dec 2024 Q7."
+        },
+        {
+          "id": "media-case-22",
+          "name": "S. Rangarajan v. P. Jagjivan Ram",
+          "citation": "(1989) 2 SCC 574; 1989 SCR (2) 204",
+          "bench": "Supreme Court of India (K. Jagannatha Shetty & Kuldip Singh, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseRangarajan",
+          "facts": "The Censor Board granted a 'U' certificate to a Tamil film titled 'Ore Oru Gramathile' ('In One Village'), which critically examined the government's affirmative action / reservation policy based solely on caste, advocating for economic criteria. Protesters threatened violent agitations, arson, and burning of cinema halls if the film was screened. The Madras High Court revoked the certificate on grounds of potential breach of public order.",
+          "issues": "(i) Can the State suppress or revoke a film's exhibition certificate merely because a hostile audience threatens violent protests? (ii) What is the legal standard of proximate nexus required to restrict free speech on the ground of 'public order'?",
+          "arguments": "[APPELLANT / PRODUCER]: Film received U-certificate after expert review; threats of violence by intolerant groups cannot extinguish fundamental rights of expression.\n\n[RESPONDENTS]: Caste reservations are highly sensitive; screening would trigger violent communal riots and breach public peace.",
+          "ratio": "Held (per K. Jagannatha Shetty, J.): (1) Spark in a Powder Keg Test: The anticipated danger to public order must not be remote, speculative, or far-fetched. It must have a proximate and direct nexus with the speech: 'The expression of thought should be intrinsically dangerous to public interest. In other words, the expression should be inseparably connected to the action contemplated, like the equivalent of a spark in a powder keg.' (2) The Hostile Audience Veto Rejected: The State cannot surrender freedom of expression to the blackmail of intolerant mobs. If threatened with violence, the duty of the State is to protect freedom of speech and enforce the rule of law, not to muzzle the speaker: 'Freedom of expression cannot be held to ransom by an intolerant mob.'",
+          "examTips": "✍️ The single most celebrated Indian authority on the 'Hostile Audience' doctrine and the 'Spark in a Powder Keg' proximity test. Quote the powder keg passage in every public order answer."
+        },
+        {
+          "id": "media-case-23",
+          "name": "Bobby Art International v. Om Pal Singh Hoon",
+          "citation": "(1996) 4 SCC 1; AIR 1996 SC 1846 (The 'Bandit Queen' Case)",
+          "bench": "Supreme Court of India (A.M. Ahmadi, CJI, N.P. Singh, B.N. Kirpal, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseBanditQueen",
+          "facts": "Shekhar Kapur directed the biographical feature film 'Bandit Queen' depicting the traumatic life of Phoolan Devi, an oppressed lower-caste rural woman who was gang-raped and paraded naked, and subsequently became a dacoit in the Chambal ravines. The film contained brutal scenes of nudity and explicit swear words. A PIL was filed claiming that the frontal nudity scene was obscene, vulgar, and degraded female dignity, and the Delhi High Court quashed its Censor certificate.",
+          "issues": "(i) Does graphic depiction of nudity, rape, and foul language in a biographical film amount to obscenity under Section 292 IPC and Section 5B of the Cinematograph Act? (ii) How should scenes of violence and degradation be assessed in cinematic art?",
+          "arguments": "[RESPONDENTS / PETITIONERS BELOW]: Nudity and explicit rape scenes are per se obscene and violate Section 5B; public exhibition depraves audiences.\n\n[FILMMAKER / APPELLANT]: The scene does not arouse lust or prurience; it evokes horror, repulsion, and profound disgust at the barbarity inflicted upon an oppressed woman.",
+          "ratio": "Held (per A.M. Ahmadi, CJI): (1) Contextual Realism: A scene of nudity or violence cannot be examined in clinical isolation. It must be judged in the context of the film's entire narrative message. (2) Disgust vs Prurience: Nudity is not obscenity. Where nudity and degradation are portrayed to generate revulsion, anger, and sympathy for the victim of caste oppression, rather than to arouse lustful thoughts, it is not obscene: 'The film does not glorify rape or nudity; it depicts its sheer brutality to shake the viewer's conscience.' The Censor Board's 'A' certificate was restored.",
+          "examTips": "✍️ Master authority on artistic realism vs obscenity in cinema. Always pair with K.A. Abbas and S. Rangarajan."
+        },
+        {
+          "id": "media-case-24",
+          "name": "Sahara India Real Estate Corp. Ltd. v. SEBI",
+          "citation": "(2012) 10 SCC 603; AIR 2013 SC 202 (5-Judge Constitution Bench)",
+          "bench": "Supreme Court of India (S.H. Kapadia, CJI, D.K. Jain, S.S. Nijjar, Ranjana Desai, J.S. Khehar, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseSahara",
+          "facts": "During high-stakes regulatory and contempt proceedings involving Sahara's ₹24,000-crore OFCD debenture scheme, confidential letters and settlement proposals exchanged between counsel were leaked to television news channels and broadcast live. Sahara moved the Supreme Court seeking framing of comprehensive guidelines to regulate reporting of sub-judice proceedings and protect parties from trial by media.",
+          "issues": "(i) Can constitutional courts pass 'postponement orders' deferring media reporting of ongoing sub-judice proceedings? (ii) What is the constitutional doctrine underpinning postponement orders under Articles 19(1)(a), 19(2), 21, and 129/215?",
+          "arguments": "[SAHARA / COUNSEL]: Prejudicial reporting damages ongoing litigation and undermines the presumption of innocence; the Court has inherent powers to restrain publication.\n\n[MEDIA EDITORS & PRESS GUILD]: Prior restraint gag orders violate Article 19(1)(a); the press has a constitutional duty to inform citizens on major economic scandals.",
+          "ratio": "Held (Unanimous, per S.H. Kapadia, CJI): (1) The Postponement Doctrine: The Supreme Court and High Courts (as courts of record under Arts. 129 and 215) possess inherent constitutional power to order temporary postponement of media reporting in pending trials. (2) Postponement is Not a Ban: A postponement order is a neutral, temporary measure, not a permanent gag order. It postpones reporting only for a limited duration to prevent real and substantial risk of prejudice to a fair trial. (3) Two-Part Test: A party seeking postponement must prove: (a) There is a real and substantial risk of prejudice to the administration of justice; and (b) No reasonable alternative measures (change of venue, sequestering) are available.",
+          "examTips": "✍️ Crucial 5-Judge Constitution Bench ruling on the 'Postponement of Publication' doctrine. Essential for Unit 6 and Dec 2024 Q6."
+        },
+        {
+          "id": "media-case-25",
+          "name": "Pandit M.S.M. Sharma v. Shri Sri Krishna Sinha",
+          "citation": "AIR 1959 SC 395; 1959 SCR Supp. (1) 806 (The 'Searchlight I' Case)",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: S.R. Das, CJI, Bhagwati, B.P. Sinha, Subba Rao, Wanchoo, JJ.)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "file": "sem 3/Media/unit7_reporting_legislative_proceedings.html",
+          "anchorId": "caseSearchlight",
+          "facts": "MSM Sharma, editor of the daily newspaper 'Searchlight' in Patna, published a full account of a speech delivered in the Bihar Legislative Assembly by an MLA. However, the Speaker had ordered certain portions of the speech alleging minister-officer corruption to be expunged. The Committee of Privileges of the Assembly issued a show-cause notice to the Editor for breach of parliamentary privilege. Sharma filed an Article 32 petition arguing that publishing truthful legislative proceedings was protected under Article 19(1)(a).",
+          "issues": "(i) Does parliamentary privilege under Article 194(3) / 105(3) override the fundamental right of freedom of the press under Article 19(1)(a)? (ii) Does the legislature possess the privilege to prohibit the publication of its proceedings or expunged portions?",
+          "arguments": "[EDITOR / SHARMA]: Freedom of speech under Article 19(1)(a) is a paramount fundamental right; legislative privileges cannot override Part III guarantees.\n\n[BIHAR ASSEMBLY]: Under Article 194(3), the powers, privileges, and immunities of the House correspond to the British House of Commons at the commencement of the Constitution, which had absolute power to prohibit publication of proceedings.",
+          "ratio": "Held (Majority 4:1, per S.R. Das, CJI): (1) Parliamentary Privileges Prevail over Article 19(1)(a): The provisions of Article 19(1)(a) are general, whereas Article 194(3) is special. The House of Commons had the undisputed power to prohibit publication of debates and expunged portions. Therefore, Article 194(3) overrides Article 19(1)(a). (2) No Right to Publish Expunged Speeches: Publishing speech ordered expunged by the Speaker constitutes breach of legislative privilege. Dissent (Subba Rao, J.): Fundamental rights in Part III are paramount and control legislative privileges; the House of Commons had abandoned the privilege to ban publication long before 1950.",
+          "examTips": "✍️ The classic ruling on Parliamentary Privileges vs Press Freedom. Explain how Subba Rao J.'s dissent later triumphed with the enactment of Article 361A."
+        },
+        {
+          "id": "media-case-26",
+          "name": "Ashok Shankarrao Chavan v. Madhavrao Kinhalkar",
+          "citation": "(2014) 7 SCC 99; AIR 2014 SC 3108 (The 'Paid News' Case)",
+          "bench": "Supreme Court of India (S.S. Nijjar & F.M.I. Kalifulla, JJ.)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "file": "sem 3/Media/unit8_paid_news_contemporary_issues.html",
+          "anchorId": "caseChavan",
+          "facts": "During the 2009 Maharashtra Assembly Elections, candidate Ashok Chavan (then Chief Minister) allegedly sponsored extensive full-page articles and supplements disguised as news in leading Marathi newspapers (Lokmat, Maharashtra Times) praising his achievements and urging votes. Despite huge promotional coverage, his statutory election return showed only a nominal expenditure of ₹5,379 on advertising. Defeated opponents complained of 'Paid News' to the Election Commission of India (ECI), which initiated inquiry under Section 10A of the Representation of the People Act, 1951 (RPA) for disqualification. Chavan challenged the ECI's jurisdiction.",
+          "issues": "(i) Does the Election Commission have jurisdiction under Section 10A of the RPA to inquire into the truth, correctness, and falsity of election expense returns involving paid news? (ii) What is the legal character of 'Paid News' in Indian electoral democracy?",
+          "arguments": "[CHAVAN]: ECI's power under S. 10A is purely clerical—to check whether accounts were submitted in time and form. The substantive correctness can only be challenged in an Election Petition before the High Court under S. 86.\n\n[ECI & COMPLAINANT]: Section 10A mandates lodging accounts 'in the manner required'. A false or fabricated return concealing huge paid news expenditure is no return in the eye of law.",
+          "ratio": "Held (Unanimous, per F.M.I. Kalifulla, J.): (1) ECI's Inherent Power under Section 10A: The Election Commission has full quasi-judicial power under Section 10A of the RPA to look behind the ledger and inquire into the falsity of expenditure accounts. (2) Paid News is an Electoral Menace: Paid news is a grave threat to democracy because it deceives voters into believing sponsored propaganda is objective journalism: 'Paid news plays fraud on the electorate. It destroys free and fair elections, which are the bedrock of democracy.' (3) If a candidate fails to disclose expenditure incurred on paid news, the ECI is empowered to disqualify the candidate for three years under Section 10A.",
+          "examTips": "✍️ The leading Supreme Court authority on Paid News and electoral disqualification under Section 10A RPA (Unit 8.1). Essential for Dec 2024 Q8(A)."
+        },
+        {
+          "id": "media-case-27",
+          "name": "Odyssey Communications Pvt. Ltd. v. Lokvidayan Sanghatana",
+          "citation": "(1988) 3 SCC 410; AIR 1988 SC 1642",
+          "bench": "Supreme Court of India (E.S. Venkataramiah & N.D. Ojha, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseOdyssey",
+          "facts": "Doordarshan scheduled the telecast of a 13-episode television docu-drama serial titled 'Honi Anhoni', depicting occult practices, superstitions, and miraculous occurrences. A social welfare organisation (Lokvidayan Sanghatana) filed a writ petition seeking an injunction against the telecast, alleging that it spread blind faith and superstition among the public, violating fundamental duties under Article 51A(h) (to develop scientific temper). The Bombay High Court granted an interim stay restraining the telecast.",
+          "issues": "(i) Can a citizen or social organisation obtain an injunction restraining the telecast of a television serial certified for public viewing without proving clear danger? (ii) What is the scope of the right of a television producer to broadcast under Article 19(1)(a)?",
+          "arguments": "[PRODUCER / APPELLANT]: The serial received expert clearance and warned viewers against superstition; television producers have a fundamental right under Article 19(1)(a) to broadcast creative works.\n\n[RESPONDENTS]: Telecast of occult miracles promotes obscurantism, exploits illiterate masses, and violates Article 51A(h).",
+          "ratio": "Held (per E.S. Venkataramiah, J.): (1) Right to Telecast under Article 19(1)(a): A citizen or producer has a fundamental right under Article 19(1)(a) to telecast films and serials over television on terms available to others. (2) Injunctions Against Broadcast: An injunction restraining the telecast of a serial cannot be granted on vague or subjective apprehensions. Unless the challenger establishes that the broadcast prejudices public order, morality, or any ground in Article 19(2), courts must not grant prior restraint: 'The right to exhibit a film is akin to the right of an author to publish a book or a journalist to write an article.' The High Court's stay was vacated.",
+          "examTips": "✍️ Prime authority for Unit 6 on television telecast rights, prior restraint against Doordarshan broadcasts, and balancing artistic freedom with scientific temper (Art 51A(h))."
+        },
+        {
+          "id": "media-case-28",
+          "name": "Union of India v. Motion Picture Association",
+          "citation": "AIR 1999 SC 2334; (1999) 6 SCC 150",
+          "bench": "Supreme Court of India (Sujata V. Manohar & R.C. Lahoti, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseMPA",
+          "facts": "Under Section 12(4) of the Cinematograph Act, 1952 and state licensing conditions, cinema theatre exhibitors were mandatorily required to carry and screen approved educational, scientific, and documentary films produced by the Films Division of India (lasting up to 20 minutes) alongside commercial feature films. The Motion Picture Association challenged these 'must-carry' provisions, arguing that compelling private cinema halls to screen state-sponsored documentaries constituted 'compelled speech' and infringed Article 19(1)(a).",
+          "issues": "(i) Does a statutory requirement compelling cinema exhibitors to screen approved educational and documentary films violate freedom of speech under Article 19(1)(a)? (ii) Does Article 19(1)(a) protect the right to be free from compelled speech in public interest?",
+          "arguments": "[CINEMA EXHIBITORS]: Compelling theatre owners to screen government films against their will is unconstitutional compelled speech; private commercial cinema space cannot be requisitioned.\n\n[UNION OF INDIA]: Cinema reaches vast illiterate audiences; screening newsreels and social-welfare documentaries promotes civic awareness and education in public interest under Article 19(2).",
+          "ratio": "Held (per Sujata V. Manohar, J.): (1) Upheld Must-Carry Provisions: Compelling cinema exhibitors to screen short educational or developmental films is a reasonable regulatory measure in the public interest and does not violate Article 19(1)(a). (2) Right to Know of the Public: Freedom of speech includes the public's right to be informed on scientific, social, and cultural matters. Cinema is a vital educational medium, and reasonable requirements to screen public-interest documentaries further, rather than diminish, constitutional objectives.",
+          "examTips": "✍️ Important authority for Unit 5 and Unit 6 on the 'Must-Carry' doctrine and the constitutionality of compelled speech in public educational interest."
+        },
+        {
+          "id": "media-case-29",
+          "name": "Devidas Ramachandra Tuljapurkar v. State of Maharashtra",
+          "citation": "(2015) 6 SCC 1; AIR 2015 SC 2612",
+          "bench": "Supreme Court of India (Dipak Misra & P.C. Pant, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseTuljapurkar",
+          "facts": "In 1994, an in-house magazine of a statutory bank union published a satirical poem titled 'Gandhi Mala Bhetla' ('I Met Gandhi') by poet Vasant Dattatray Gurjar. The poem used vulgar, sexually explicit, and surreal imagery attributing obscene words to the persona of Mahatma Gandhi to satirize modern societal hypocrisy. A criminal complaint under Section 292 IPC was filed against the publisher. The publisher sought quashing, pleading poetic satire and artistic freedom.",
+          "issues": "(i) What is the constitutional standard of obscenity when applied to historically revered national figures such as Mahatma Gandhi? (ii) Does the concept of 'variable obscenity' apply to literary and satirical publications?",
+          "arguments": "[PUBLISHER / PETITIONER]: Satire and surrealist poetry cannot be judged by literal vulgarity; the poem was a searing moral critique of contemporary social decadence.\n\n[STATE & COMPLAINANT]: Placing sexually explicit and grotesque words in the mouth of the Father of the Nation is per se obscene and degrades national dignity under Section 292 IPC.",
+          "ratio": "Held (per Dipak Misra, J.): (1) Variable Obscenity Doctrine: While artistic freedom and contemporary community standards govern general literature, when an author invokes the persona of a nationally revered historically respected figure like Mahatma Gandhi, a higher standard of decency applies. (2) Limits of Satiric Freedom: One cannot use sexually explicit obscenity under the protective umbrella of surrealistic satire against a person held in supreme collective esteem by the nation. The petition to quash Section 292 charges was rejected.",
+          "examTips": "✍️ Key authority on the 'Variable Obscenity' doctrine and the boundaries of literary satire involving historical figures under Section 292 IPC."
+        },
+        {
+          "id": "media-case-30",
+          "name": "Reliance Petrochemicals Ltd. v. Proprietors of Indian Express Newspapers, Bombay Pvt. Ltd.",
+          "citation": "(1988) 4 SCC 592; AIR 1989 SC 190",
+          "bench": "Supreme Court of India (Sabyasachi Mukharji & S. Ranganathan, JJ.)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "file": "sem 3/Media/unit6_censorship_gag_orders.html",
+          "anchorId": "caseReliancePetro",
+          "facts": "Reliance Petrochemicals floated a massive public issue of convertible debentures worth ₹516 crore. While the public issue was open for subscription, the Indian Express published investigative articles questioning the legality, financial stability, and public borrowing approvals of the debentures. Reliance obtained an interim injunction from the Supreme Court restraining the newspaper from publishing further articles on the issue pending litigation.",
+          "issues": "(i) When can a court grant a prior restraint injunction restraining the press from publishing investigative articles concerning ongoing commercial public issues? (ii) What is the threshold of 'Clear and Present Danger' to the administration of justice required for prior restraint?",
+          "arguments": "[RELIANCE]: Prejudicial reporting while debentures are open directly undermines subscriber confidence and interferes with pending litigation.\n\n[INDIAN EXPRESS]: The press has a duty to alert the investing public on corporate financial risks; prior restraint gag orders violate Article 19(1)(a).",
+          "ratio": "Held (Injunction vacated, per Sabyasachi Mukharji, J.): (1) Clear and Present Danger Test: Prior restraint against the press can only be justified if there is a 'clear and present danger' of grave, imminent, and irreparable prejudice to the administration of justice. (2) Public's Right to Know: The investing public has a vital constitutional right to know all financial facts and critical perspectives concerning major public corporate borrowing: 'The prevention of publication must be based on compelling and imminent danger, not speculative apprehension.' Once the public issue closed, any continuing injunction was wholly unjustified.",
+          "examTips": "✍️ Leading Indian authority adopting the American 'Clear and Present Danger' test for prior restraint gag orders in commercial media reporting."
+        },
+        {
+          "id": "media-case-31",
+          "name": "Dr. Jatish Chandra Ghosh v. Harisadhan Mukherjee",
+          "citation": "AIR 1961 SC 613; (1961) 2 SCR 607",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: P.B. Gajendragadkar, A.K. Sarkar, K. Subba Rao, K.N. Wanchoo, J.R. Mudholkar, JJ.)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "file": "sem 3/Media/unit7_reporting_legislative_proceedings.html",
+          "anchorId": "caseJatishChandra",
+          "facts": "Dr. Jatish Chandra Ghosh, an elected Member of the West Bengal Legislative Assembly, gave notice of certain questions intended to be asked in the House. The Speaker disallowed the questions as scandalous and reflecting on an individual. Dr. Ghosh nonetheless published the disallowed questions in a local journal ('Janasatta') along with imputations against a public servant. The public servant filed a criminal defamation complaint under Section 500 IPC. Dr. Ghosh claimed absolute legislative immunity under Article 194(2).",
+          "issues": "(i) Does the immunity conferred on legislators under Article 194(2) protect the external publication of disallowed legislative questions in a public journal outside the House?",
+          "arguments": "[APPELLANT / GHOSH]: Questions framed by an MLA form part of legislative duty; immunity under Article 194(2) extends to communicating legislative notices to the electorate.\n\n[RESPONDENT]: Disallowed questions never became part of assembly proceedings; external publication in a private journal is ordinary print media subject to criminal defamation.",
+          "ratio": "Held (Unanimous, per Gajendragadkar, J.): (1) Limits of Article 194(2) Immunity: The immunity in Article 194(2) is strictly confined to speech made 'in the Legislature' or publications authorised 'by or under the authority of the House'. (2) Disallowed Questions Not Protected: A notice of a question disallowed by the Speaker never becomes part of the proceedings of the House. A legislator who publishes such disallowed questions in external newspapers possesses no greater immunity than any ordinary citizen and is fully amenable to criminal defamation under Section 500 IPC.",
+          "examTips": "✍️ Classic authority for Unit 7 proving that parliamentary immunity is intra-mural and does not protect extra-mural publications outside official authorization."
+        },
+        {
+          "id": "media-case-32",
+          "name": "C.K. Daphtary & Ors. v. O.P. Gupta & Ors.",
+          "citation": "(1971) 1 SCC 626; AIR 1971 SC 1132",
+          "bench": "Supreme Court of India (S.M. Sikri, CJI, G.K. Mitter, K.S. Hegde, A.N. Grover, P. Jaganmohan Reddy, JJ.)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "file": "sem 3/Media/unit7_reporting_legislative_proceedings.html",
+          "anchorId": "caseDaphtary",
+          "facts": "A litigant (O.P. Gupta) published and circulated a booklet/pamphlet among Members of Parliament containing scurrilous allegations of dishonesty, bias, and fabricated records against a sitting Judge of the Supreme Court (J.C. Shah, J.) in connection with a decided appeal. Senior Advocate C.K. Daphtary and others filed a petition for criminal contempt. The respondent pleaded parliamentary privilege under Article 105, arguing that the pamphlet was submitted to MPs for introducing an impeachment motion under Article 124(4).",
+          "issues": "(i) Can a private litigant claim parliamentary immunity under Article 105 for circulating defamatory pamphlets against a judge to MPs? (ii) Does the parliamentary privilege shield an extra-parliamentary attack on the judiciary?",
+          "arguments": "[RESPONDENT]: Communication with MPs to seek judicial impeachment is a democratic right sheltered under parliamentary privilege.\n\n[PETITIONERS]: Article 105 protects proceedings within Parliament; circulating scandalous pamphlets attacking judges to the public and MPs is gross criminal contempt.",
+          "ratio": "Held (per S.M. Sikri, CJI): (1) Parliamentary Privilege is Strictly Intra-Mural: Article 105 applies to Members of Parliament and authorised publications of the House. A private citizen circulating scurrilous pamphlets cannot claim parliamentary privilege. (2) Scandalising Judicial Integrity: The pamphlet was a direct attack on judicial honesty and was held to be gross criminal contempt: 'Freedom of speech does not allow scandalous attacks on judges under the pretext of lobbying for impeachment.'",
+          "examTips": "✍️ Key authority for Unit 7 & Unit 3 on the boundaries between Parliamentary Privilege (Art 105) and Criminal Contempt of Court."
+        },
+        {
+          "id": "media-case-33",
+          "name": "Jawaharlal Darda & Ors. v. Manoharrao Ganpatrao Kapsikar",
+          "citation": "(1998) 4 SCC 112; AIR 1998 SC 2117",
+          "bench": "Supreme Court of India (G.T. Nanavati & S.P. Kurdukar, JJ.)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "file": "sem 3/Media/unit7_reporting_legislative_proceedings.html",
+          "anchorId": "caseDarda",
+          "facts": "The daily Marathi newspaper 'Lokmat' published an accurate news report of proceedings in the Maharashtra State Legislative Assembly wherein a Minister of State for Food and Civil Supplies stated on the floor of the House that a misappropriation of government funds had taken place and named the complainant as one of the involved parties. The complainant filed a criminal defamation complaint against the Chief Editor (Jawaharlal Darda) and the reporter under Section 500 IPC.",
+          "issues": "(i) Does an accurate, truthful, and bona fide newspaper report of an official statement made by a minister on the floor of a legislative assembly constitute criminal defamation under Section 499 IPC?",
+          "arguments": "[COMPLAINANT]: The newspaper published defamatory imputations damaging his reputation; the minister's statement was subsequently contested.\n\n[JOURNALISTS / DARDA]: The report was a substantially true and faithful account of what transpired in the public legislature, published in good faith in public interest (Exceptions 1, 3, and 4 to Section 499 IPC).",
+          "ratio": "Held (Conviction quashed, per G.T. Nanavati, J.): (1) Accurate Reporting of Legislative Proceedings is Protected: The news report was an accurate, faithful, and objective reproduction of the proceedings of the Assembly. The journalists had neither added spice nor shown malice. (2) Public Interest Shield: Where a newspaper publishes a fair and substantially true report of public legislative proceedings in good faith for public information, it is sheltered from criminal defamation under Section 499 (Exceptions 3 & 4) IPC.",
+          "examTips": "✍️ Direct authority for Unit 7 on accurate newspaper reporting of legislative debates and criminal defamation immunity."
+        },
+        {
+          "id": "media-case-34",
+          "name": "Tata Press Ltd. v. Mahanagar Telephone Nigam Ltd.",
+          "citation": "(1995) 5 SCC 139; AIR 1995 SC 2438 (The 'Yellow Pages' Case)",
+          "bench": "Supreme Court of India (3-Judge Bench: Kuldip Singh, B.L. Hansaria, S.B. Majmudar, JJ.)",
+          "unitNumber": 6,
+          "unit": "Media, Advertisement and the Law: Commercial Speech & Government Ads",
+          "file": "sem 3/Media/unit5_advertisement_law.html",
+          "anchorId": "caseTataPress",
+          "facts": "Tata Press published commercial buyer's guides titled 'Tata Press Yellow Pages' containing paid business advertisements, classifications, and telephone listings. MTNL and the Union Government challenged the publication, claiming an absolute statutory monopoly under the Indian Telegraph Act, 1885 to print telephone directories, and argued that commercial advertising did not enjoy constitutional free speech protection under Article 19(1)(a).",
+          "issues": "(i) Does 'commercial speech' (advertising) fall within the fundamental right of freedom of speech and expression under Article 19(1)(a)? (ii) Can the State create a statutory monopoly to extinguish private commercial speech?",
+          "arguments": "[MTNL / STATE]: Following Hamdard Dawakhana (1960), commercial advertising is solely for trade profit and is excluded from Article 19(1)(a).\n\n[TATA PRESS]: Advertising disseminates vital consumer information on goods and services; the public has a fundamental right to receive commercial information.",
+          "ratio": "Held (per Kuldip Singh, J.): (1) Commercial Speech is Protected under Article 19(1)(a): Overruling the restrictive legacy of Hamdard Dawakhana, the Supreme Court held that 'commercial speech' is an essential part of the freedom of speech and expression under Article 19(1)(a). (2) Consumer Welfare: In a modern market democracy, advertising disseminates crucial information on product availability, price, and quality, empowering consumer choice. (3) Deceptive Ads Not Protected: Misleading, deceptive, or untruthful advertising is not protected and may be strictly regulated under Article 19(2).",
+          "examTips": "✍️ The landmark Indian judgment establishing constitutional protection for Commercial Speech under Article 19(1)(a). Must-cite for Unit 5 and Dec 2024 Q8(D)."
+        },
+        {
+          "id": "media-case-35",
+          "name": "Hamdard Dawakhana (Wakf) Lal Kuan, Delhi v. Union of India",
+          "citation": "AIR 1960 SC 554; (1960) 2 SCR 671",
+          "bench": "Supreme Court of India (5-Judge Constitution Bench: B.P. Sinha, CJI, Kapur, Gajendragadkar, Subba Rao, Wanchoo, JJ.)",
+          "unitNumber": 6,
+          "unit": "Media, Advertisement and the Law: Commercial Speech & Government Ads",
+          "file": "sem 3/Media/unit5_advertisement_law.html",
+          "anchorId": "caseHamdard",
+          "facts": "Parliament enacted the Drugs and Magic Remedies (Objectionable Advertisements) Act, 1954 to prohibit advertisements of drugs claiming magic cures for venereal diseases, sexual disorders, and female ailments. Hamdard Dawakhana challenged the Act under Article 19(1)(a), arguing that prohibiting advertisements of its Ayurvedic and Unani medicines restricted its freedom of speech.",
+          "issues": "(i) Does commercial advertisement of medicines fall within the fundamental guarantee of freedom of speech and expression under Article 19(1)(a)?",
+          "ratio": "Held (per Kapur, J.): (1) Commercial Advertising Excluded: An advertisement promoting trade and commerce has no relationship with essential democratic discourse or ideas. Its true character is commercial merchandising; hence, pure commercial speech was not protected under Article 19(1)(a). (2) Public Health Protection: The Act legitimately banned misleading magic remedies to protect gullible citizens from quackery.",
+          "examTips": "✍️ The historical starting point of commercial speech jurisprudence in India. Always pair with its reversal in Tata Press (1995)."
+        },
+        {
+          "id": "media-case-36",
+          "name": "Shreya Singhal v. Union of India",
+          "citation": "(2015) 5 SCC 1; AIR 2015 SC 1523",
+          "bench": "Supreme Court of India (J. Chelameswar & Rohinton F. Nariman, JJ.)",
+          "unitNumber": 1,
+          "unit": "Different Forms of Media & History of Legislative Efforts",
+          "file": "sem 3/Media/unit1_forms_of_media.html",
+          "anchorId": "caseShreya",
+          "facts": "Section 66A of the Information Technology Act, 2000 penalised the sending of 'offensive' or 'menacing' messages through computer resources or communication devices. Police across India invoked Section 66A to arrest citizens and journalists for posting political satire, cartoons, and social media critique. A law student (Shreya Singhal) and civil liberties groups challenged Section 66A under Article 19(1)(a).",
+          "issues": "(i) Does Section 66A of the IT Act violate freedom of speech under Article 19(1)(a) due to vagueness, overbreadth, and chilling effect?",
+          "ratio": "Held (Unanimous, per R.F. Nariman, J.): (1) Section 66A Struck Down in its Entirety: Section 66A was declared unconstitutional as an impermissible restriction violating Article 19(1)(a). (2) The Three Concepts: The Court distinguished between Discussion, Advocacy, and Incitement. Advocacy of an unpopular cause remains protected; only speech that reaches the level of clear incitement can be restricted under Article 19(2). (3) Overbreadth & Chilling Effect: Words like 'offensive', 'annoyance', and 'inconvenience' are hopelessly vague, casting a wide net that chills legitimate digital journalism. (4) Intermediary Safe Harbour: Section 79(3)(b) was read down so that intermediaries are required to take down content only upon receiving a court order or government directive.",
+          "examTips": "✍️ The digital free speech magnum opus. Essential for Unit 1, Unit 4, and digital intermediary liability (Dec 2024 Q8(B))."
+        },
+        {
+          "id": "media-case-37",
+          "name": "Prabha Dutt v. Union of India",
+          "citation": "(1982) 1 SCC 1; AIR 1982 SC 6",
+          "bench": "Supreme Court of India (Y.V. Chandrachud, CJI, A.P. Sen, Baharul Islam, JJ.)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "file": "sem 3/Media/unit2_free_speech_privacy.html",
+          "anchorId": "casePrabhaDutt",
+          "facts": "Prabha Dutt, Chief Reporter of The Hindustan Times, applied to the Superintendent of Tihar Jail seeking permission to interview Billa and Ranga, two convicts sentenced to death for the sensational Geeta and Sanjay Chopra kidnapping and murder, before their execution. The jail authorities summarily refused permission without stating grounds. Dutt filed a writ petition under Article 32.",
+          "issues": "(i) Does freedom of the press under Article 19(1)(a) include the right of journalists to interview prisoners? (ii) Can jail authorities arbitrarily refuse interview permissions to accredited journalists?",
+          "ratio": "Held (per Y.V. Chandrachud, CJI): (1) Right to Gather News: Freedom of the press under Article 19(1)(a) is not an empty privilege; it includes the right of journalists to gather news and access public institutions like prisons, subject to reasonable prison regulations. (2) Condemned Prisoners' Consent: If condemned prisoners are willing to be interviewed and prison discipline/security is not jeopardised, jail authorities have no arbitrary power to deny interviews to accredited journalists. The Court directed the jail superintendent to permit the interviews.",
+          "examTips": "✍️ Classic authority establishing the 'Right to Gather News' and interview prisoners as an integral facet of press freedom under Article 19(1)(a)."
+        }
+      ],
+      "pyqs": [
+        {
+          "id": "media-pyq-1",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 1,
+          "unit": "Different Forms of Media & History of Legislative Efforts",
+          "question": "Discuss the different forms of media and examine the history of legislative efforts to regulate print, broadcast and social media in India. What are the key contemporary challenges?",
+          "marks": 20,
+          "frequency": "Repeated every alternative year in Unit 1",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>Media is often described as the <b>Fourth Estate</b> of democracy—the watchdog of governance and public accountability. While the Indian Constitution does not explicitly mention 'freedom of the press', it is well-settled since <i>Romesh Thappar</i> and <i>Bennett Coleman</i> that press freedom is an inalienable derivative right embedded within <b>Article 19(1)(a)</b>. The regulation of media reflects a historical journey from colonial suppression to post-colonial trusteeship and digital deregulation.</p>\n\n<h5>I. Taxonomy of Media Forms</h5>\n<table class=\"data-table\">\n  <tr><th>Media Form</th><th>Technological Medium</th><th>Constitutional / Regulatory Paradigm</th></tr>\n  <tr><td><b>Print Media</b></td><td>Physical paper & printing press</td><td>Free from pre-censorship; subject to post-publication registration under the PRB Act, 1867 and voluntary moral codes under the Press Council Act, 1978.</td></tr>\n  <tr><td><b>Broadcast Media</b></td><td>Electromagnetic spectrum & cable wires</td><td>Governed by the <i>Airwaves Public Property</i> doctrine (<i>CAB Case</i>, 1995); licensed under Telegraph Act 1885 and Cable TV Act 1995.</td></tr>\n  <tr><td><b>Social / Digital Media</b></td><td>Internet packets & cloud platforms</td><td>Intermediary architecture under IT Act, 2000; Section 79 safe-harbour immunities and due-diligence rules (IT Rules, 2021).</td></tr>\n</table>\n\n<h5>II. History of Legislative Efforts</h5>\n<ol class=\"pts\">\n  <li><b>Colonial Period (1766–1947):</b> Early censorship began with Hickey's Bengal Gazette (1780), Wellesley's Censorship of the Press Act (1799), the Licensing Regulations of 1823, and the <b>Press and Registration of Books Act, 1867</b> (which continues as a registration statute). Lord Lytton's notorious <b>Vernacular Press Act, 1878</b> discriminated against Indian-language presses until repealed by Lord Ripon. The Indian Press Act, 1910 and Indian Press (Emergency Powers) Act, 1931 were enacted to stifle the nationalist independence movement.</li>\n  <li><b>Post-Independence Era:</b> Enactment of the Press Commission Recommendations leading to the <b>Working Journalists Act, 1955</b>, the failed economic rationing of the Newspaper (Price and Page) Act 1956 (struck down in <i>Sakal Papers</i>, 1962), and the establishment of the <b>Press Council of India (1966/1978)</b> as an autonomous body without penal teeth.</li>\n  <li><b>Broadcast Evolution:</b> Transition from Doordarshan's state monopoly under the Indian Telegraph Act, 1885 to the recognition of airwaves as public property in <i>MoIB v. CAB (1995)</i>, the creation of Prasar Bharati (1990), and the <b>Cable Television Networks (Regulation) Act, 1995</b> mandating adherence to Programme and Advertising Codes.</li>\n  <li><b>Digital Frontier:</b> Enactment of the Information Technology Act, 2000, the striking down of Section 66A in <i>Shreya Singhal</i> (2015), and the formulation of the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 establishing a three-tier regulatory mechanism for digital news and OTT content.</li>\n</ol>\n\n<h5>Conclusion</h5>\n<p>Media regulation in India has evolved from punitive pre-censorship by the colonial state to constitutional balance under Article 19(2). The contemporary challenge is reconciling digital speed, algorithms, and deepfakes with democratic transparency while preventing executive encroachment on free speech.</p>"
+        },
+        {
+          "id": "media-pyq-2",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "question": "“Hate speech is not protected by the guarantee of freedom of speech and expression under Article 19(1)(a) of the Constitution.” Critically examine this statement in light of recent judicial pronouncements, with special reference to Amish Devgan v. Union of India.",
+          "marks": 20,
+          "frequency": "Appeared in Dec 2024, May 2023, 2021",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>The boundary between passionate political or religious debate and punishable hate speech is one of the most litigated frontiers in constitutional law. While Article 19(1)(a) confers the right to dissent, offend, and criticise, this right is circumscribed by the eight exhaustive heads of <b>Article 19(2)</b>—specifically 'public order', 'decency or morality', and 'incitement to an offence'. In <i>Amish Devgan v. Union of India (2021)</i>, the Supreme Court crystallised the modern jurisprudence of hate speech in India.</p>\n\n<h5>I. What is Hate Speech?</h5>\n<p>As observed in the 267th Law Commission Report and endorsed in <i>Amish Devgan</i>, hate speech generally refers to speech that targets, denigrates, or dehumanises individuals or groups based on characteristics such as religion, race, caste, ethnicity, or sexual orientation. It denies the targeted group equal moral worth and human dignity, creating systemic marginalisation.</p>\n\n<h5>II. The Amish Devgan Framework (2021)</h5>\n<p>In <i>Amish Devgan</i>, Sanjiv Khanna, J. articulated a comprehensive distinction between legitimate free speech and illicit hate speech:</p>\n<ul class=\"pts\">\n  <li><b>Free Speech protects Critique and Dissent:</b> Free expression permits robust, pungent, controversial, and unpopular viewpoints. Dissent against government policy, cultural customs, or historical accounts does not constitute hate speech.</li>\n  <li><b>Hate Speech targets Human Dignity:</b> Hate speech is an assault on human dignity and equality under Article 14. It aims to exclude and silence vulnerable groups.</li>\n  <li><b>The Tripartite Test:</b> To evaluate whether an utterance is hate speech, courts must examine:\n    <ol>\n      <li><i>Content:</i> The language used—whether it spreads hatred, ridicule, contempt, or violent threats.</li>\n      <li><i>Context:</i> The historical and socio-political setting, the authority and reach of the speaker, and audience vulnerability.</li>\n      <li><i>Intent & Impact:</i> Whether the speech had the calculated intention or likely consequence of disrupting public harmony.</li>\n    </ol>\n  </li>\n</ul>\n\n<h5>III. Statutory Landscape: IPC to BNS</h5>\n<p>Hate speech is penalized under several statutory provisions:</p>\n<ul>\n  <li><b>Section 153A IPC (Now Section 196 BNS):</b> Promoting enmity between different groups on grounds of religion, race, caste, etc.</li>\n  <li><b>Section 295A IPC (Now Section 299 BNS):</b> Deliberate and malicious acts intended to outrage religious feelings. In <i>Ramji Lal Modi (1957)</i>, the Supreme Court upheld Section 295A by holding that it only punishes aggravated and intentional insults, not casual criticism.</li>\n  <li><b>Section 505(2) IPC (Now Section 353(2) BNS):</b> Statements creating or promoting enmity, hatred or ill-will between classes.</li>\n</ul>\n\n<h5>Conclusion</h5>\n<p>In a pluralist constitutional democracy, hate speech cannot masquerade as freedom of speech. The <i>Amish Devgan</i> ruling strikes a vital equilibrium: shielding genuine ideological and artistic dissent while denying constitutional shelter to speech that strikes at fraternity, equality, and civic dignity.</p>"
+        },
+        {
+          "id": "media-pyq-3",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 2,
+          "unit": "Freedom of Speech and Expression, Privacy, Defamation & Sting Operations",
+          "question": "Bring out a comparison between the American First Amendment doctrine and the Indian constitutional framework under Article 19(1)(a) and 19(2) regarding freedom of speech and the press.",
+          "marks": 20,
+          "frequency": "Dec 2024 Q3 verbatim; classic 20-marker",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>Both the United States and India are constitutional democracies that hold freedom of expression in the highest reverence. However, their structural, textual, and philosophical foundations differ fundamentally. The American First Amendment is an absolute negative command against legislative interference, while Article 19(1)(a) of the Indian Constitution grants an affirmative right subject to strictly enumerated reasonable restrictions under Article 19(2).</p>\n\n<h5>I. Master Comparative Matrix</h5>\n<table class=\"data-table\">\n  <tr><th>Feature</th><th>United States (First Amendment)</th><th>India (Article 19(1)(a) & 19(2))</th></tr>\n  <tr><td><b>Textual Phrasing</b></td><td>Negative absolute: <i>“Congress shall make no law… abridging the freedom of speech, or of the press…”</i></td><td>Affirmative rights: <i>“All citizens shall have the right to freedom of speech and expression…”</i></td></tr>\n  <tr><td><b>Explicit Press Guarantee</b></td><td>Expressly mentions 'freedom of the press'.</td><td>Press freedom is not explicit; it is a derivative right established by judicial interpretation (<i>Bennett Coleman</i>).</td></tr>\n  <tr><td><b>Exceptions / Grounds</b></td><td>No textual exceptions; judge-made doctrines (clear and present danger, incitement to imminent lawless action, obscenity, fighting words).</td><td>Eight exhaustive, codified grounds in Article 19(2): Sovereignty, Security, Foreign States, Public Order, Decency/Morality, Contempt, Defamation, Incitement.</td></tr>\n  <tr><td><b>Standard of Scrutiny</b></td><td>Strict Scrutiny: Compelling state interest and narrowly tailored means.</td><td>Reasonableness and Proportionality test under Article 19(2) (<i>Modern Dental College</i>).</td></tr>\n  <tr><td><b>Prior Restraint</b></td><td>Heavy presumption against prior restraint (<i>Near v. Minnesota</i>, <i>Pentagon Papers</i>).</td><td>Prior restraint heavily disfavored for print (<i>Auto Shankar</i>), but permissible for cinema (<i>K.A. Abbas</i>) and court postponement (<i>Sahara</i>).</td></tr>\n  <tr><td><b>Defamation Standard</b></td><td>Public officials must prove 'actual malice' (<i>New York Times v. Sullivan</i>); civil tort only.</td><td>Dual remedies: Civil tort (strict liability) and Criminal Defamation (IPC 499/500 -> BNS 356, upheld in <i>Subramanian Swamy</i>).</td></tr>\n</table>\n\n<h5>II. Key Philosophical Differences</h5>\n<ol class=\"pts\">\n  <li><b>Hate Speech:</b> In the US, hate speech is protected under the First Amendment unless it produces 'imminent lawless action' (<i>Brandenburg v. Ohio</i>). Neo-Nazis and white supremacists cannot be banned purely for hateful ideologies (<i>Skokie Case</i>). In India, hate speech is strictly unconstitutional and criminal under Article 19(2) and Section 153A IPC / Section 196 BNS (<i>Amish Devgan</i>).</li>\n  <li><b>Commercial Speech:</b> In the US, commercial speech receives intermediate scrutiny (<i>Central Hudson Gas</i>). In India, it was initially excluded from free speech (<i>Hamdard Dawakhana</i>), but recognized in <i>Tata Press (1995)</i> subject to truthfulness and consumer welfare.</li>\n</ol>\n\n<h5>Conclusion</h5>\n<p>While the American First Amendment operates on near-libertarian speech absolutism, Indian constitutionalism reflects a communitarian welfare framework: balancing individual expression with social harmony, secularism, and institutional dignity.</p>"
+        },
+        {
+          "id": "media-pyq-4",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 4,
+          "unit": "Contempt of Court, Scandalising the Judiciary & Unverified Reporting",
+          "question": "Critically analyse the offence of 'Scandalising the Court' under Section 2(c)(i) of the Contempt of Courts Act, 1971. Does it act as a chilling effect on legitimate criticism of the judiciary? Refer to landmark cases.",
+          "marks": 20,
+          "frequency": "Dec 2024 Q5; recurring core contempt question",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>Under Section 2(c)(i) of the Contempt of Courts Act, 1971, criminal contempt includes any publication or act that <b>“scandalises or tends to scandalise, or lowers or tends to lower the authority of, any court.”</b> Borrowed from English common law (<i>R. v. Gray</i>, 1900), this jurisdiction has faced sharp critique for vagueness, subjective application, and its potential chilling effect on the press and public critique.</p>\n\n<h5>I. Rationale vs Critique</h5>\n<ul class=\"pts\">\n  <li><b>Justification:</b> The judiciary has neither the sword of the executive nor the purse of the legislature. Its authority rests entirely on moral stature and public confidence. If scurrilous, unfounded allegations of corruption or bias destroy public faith, the rule of law collapses.</li>\n  <li><b>The Chilling Effect Critique:</b> The offense of scandalising is inherently subjective. The UK abolished the offense in 2013 pursuant to the Law Commission's recommendation, branding it an archaic relic. In India, critics argue that the broad phrasing allows sensitive judges to silence legitimate investigative reporting on judicial misconduct.</li>\n</ul>\n\n<h5>II. The Evolution: From Punishment to Restraint and Back</h5>\n<ol class=\"pts\">\n  <li><b>E.M.S. Namboodiripad (1970):</b> The Court upheld the conviction of Kerala's Chief Minister for claiming judges were guided by class bias, ruling that imputing institutional class prejudice scandalises the court.</li>\n  <li><b>In re S. Mulgaokar (1978):</b> The zenith of judicial magnanimity. Justice V.R. Krishna Iyer laid down six functional canons: the court must not be hyper-sensitive, must welcome robust criticism, and must act with broad shoulders: <i>“Justice is not a cloistered virtue, she must be allowed to suffer the scrutiny and respectful, even if outspoken, comments of ordinary men.”</i></li>\n  <li><b>In re Arundhati Roy (2002):</b> The Court swung back to strictness, holding that attributing political motives and 'bizarre petulance' in a protest affidavit scandalised the bench.</li>\n  <li><b>In re Prashant Bhushan (2020/2021):</b> Two tweets criticising the CJI on a luxury motorcycle and alleging four past CJIs ruined democracy were held to be criminal contempt. The Court held that viral social media posts attributing bad faith to the Chief Justice impair public trust in the institution.</li>\n</ol>\n\n<h5>III. Statutory Reforms: Truth as a Defense (Section 13(b))</h5>\n<p>The Contempt of Courts (Amendment) Act, 2006 inserted <b>Section 13(b)</b>, enabling the court to permit a defense of truth if it is satisfied that it is in the public interest and the request is bona fide. However, as demonstrated in <i>Prashant Bhushan</i>, the threshold for proving that an allegation is made in bona fide public interest remains exceptionally high.</p>\n\n<h5>Conclusion</h5>\n<p>The offense of scandalising the court must be exercised with extreme self-restraint as an extraordinary shield of last resort, rather than an aggressive weapon to silence dissent. As Lord Denning famously said in <i>R. v. Metropolitan Police Commissioner</i>: <i>“We will never use our contempt jurisdiction to uphold our own dignity… we must rely on our own conduct and character.”</i></p>"
+        },
+        {
+          "id": "media-pyq-5",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 3,
+          "unit": "Right to Information, Media Access & Trial by Media",
+          "question": "Examine the conflict between 'Freedom of the Press' under Article 19(1)(a) and the 'Right to a Fair Trial' under Article 21. Discuss the recommendations of the 200th Law Commission Report on Trial by Media.",
+          "marks": 20,
+          "frequency": "Dec 2024 Q6; regular core question on Trial by Media",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>The intersection of media reporting and criminal justice administration produces one of the sharpest constitutional conflicts: the clash between the media's <b>Right to Inform under Article 19(1)(a)</b> and an accused's <b>Fundamental Right to a Fair Trial under Article 21</b>. When media agencies conduct parallel investigations, prejudge guilt, and broadcast sensational narratives, it degenerates into a <b>Trial by Media</b>.</p>\n\n<h5>I. Constitutional & Doctrinal Conflict</h5>\n<p>An accused is presumed innocent until proven guilty by a court of competent jurisdiction following due process of law. Prejudicial pre-trial publicity violates fair trial in three distinct ways:</p>\n<ul class=\"pts\">\n  <li><b>Prejudice to Judicial Impartiality:</b> Sub-conscious pressure on magistrates and judges created by media hysteria (acknowledged in <i>M.P. Lohia v. State of W.B.</i>).</li>\n  <li><b>Witness Intimidation / Contamination:</b> Witnesses exposed to constant media coverage alter testimony or turn hostile out of fear or publicity.</li>\n  <li><b>Destruction of Reputation:</b> An accused is stigmatised and condemned in the public eye even if ultimately acquitted by the court.</li>\n</ul>\n\n<h5>II. The 200th Law Commission Report (2006)</h5>\n<p>Titled <i>“Trial by Media: Free Speech vs. Fair Trial under the Criminal Procedure Code, 1973”</i>, the Law Commission of India comprehensively addressed pre-trial publicity:</p>\n<ol class=\"pts\">\n  <li><b>Starting Point of Contempt:</b> Under the Contempt of Courts Act, 1971, criminal contempt regarding pending proceedings begins only when a charge-sheet or challan is filed. The Commission recommended amending Section 3 to provide that proceedings are deemed pending <b>from the date of arrest</b> of the suspect.</li>\n  <li><b>Catalogue of Prejudicial Publications:</b> The report identified 10 categories of media publications that are inherently prejudicial:\n    <ul>\n      <li>Character, antecedents, or prior convictions of the accused.</li>\n      <li>Confessions or admissions made to police officers.</li>\n      <li>Results of DNA, polygraph, or forensic tests before presentation in court.</li>\n      <li>Expressions of definite opinions as to guilt or innocence.</li>\n      <li>Creation of public sympathy for the victim or demonisation of the accused.</li>\n    </ul>\n  </li>\n  <li><b>Judicial Postponement Relief:</b> Recommending statutory powers for High Courts to issue temporary postponement orders against reporting.</li>\n</ol>\n\n<h5>III. Judicial Solutions: The Postponement Doctrine</h5>\n<p>In <i>Sahara India Real Estate Corp. v. SEBI (2012)</i>, a 5-Judge Constitution Bench established the <b>Postponement of Publication</b> doctrine: where there is a real and substantial risk of prejudice to a fair trial, constitutional courts may order temporary deferral of media reporting under their inherent powers (Articles 129/215).</p>\n\n<h5>Conclusion</h5>\n<p>Free speech is the lifeblood of democracy, but fair trial is the bedrock of individual liberty. Between the two, the right to life and liberty under Article 21 must reign supreme. A trial by media is the antithesis of the rule of law.</p>"
+        },
+        {
+          "id": "media-pyq-6",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 8,
+          "unit": "Legislative Reporting Privileges & Contemporary Media Issues",
+          "question": "Write short notes on any TWO of the following:\n(A) Paid News—A threat to independent and fair media (Ashok Chavan Case)\n(B) Social Media Regulation and Intermediary Liability under Section 79 of IT Act\n(C) Article 361A and Reporting of Parliamentary Proceedings\n(D) Commercial Speech under Article 19(1)(a) (Hamdard Dawakhana to Tata Press)",
+          "marks": 20,
+          "frequency": "Dec 2024 Q8 verbatim; recurring short-notes block",
+          "modelAnswer": "<h5>(A) Paid News—A Threat to Independent Media (Ashok Chavan Case)</h5>\n<p><b>Concept:</b> Paid News refers to any news or analysis appearing in print or broadcast media for a price in cash or kind. It masquerades advertisement as objective editorial content.</p>\n<p><b>The Ashok Shankarrao Chavan Ruling (2014):</b> The Supreme Court held that the Election Commission of India (ECI) possesses full quasi-judicial powers under <b>Section 10A of the Representation of the People Act, 1951</b> to look behind election returns and inquire into the falsity of expenditure accounts. Candidates failing to lodge true accounts of paid news expenditure face disqualification for three years. The Court condemned paid news as a fraud on the electorate that vitiates democratic elections.</p>\n\n<hr/>\n\n<h5>(B) Social Media Regulation & Intermediary Liability (Section 79 IT Act)</h5>\n<p><b>Section 79 Safe Harbour:</b> Under Section 79 of the IT Act, 2000, internet intermediaries (Google, Meta, X) enjoy legal immunity from liability for third-party user content, provided they observe due diligence.</p>\n<p><b>Shreya Singhal v. UOI (2015):</b> The Supreme Court read down Section 79(3)(b) to establish that an intermediary is obligated to take down unlawful content only upon receiving a court order or authorized government notification, not on private complaints.</p>\n<p><b>IT Rules, 2021:</b> Introduced higher obligations on Significant Social Media Intermediaries (SSMIs), including appointing a Resident Grievance Officer, Chief Compliance Officer, 24-hour take-down for non-consensual sexual imagery, and compliance with the Digital Media Ethics Code.</p>\n\n<hr/>\n\n<h5>(C) Article 361A & Reporting of Parliamentary Proceedings</h5>\n<p><b>Background:</b> In <i>Pandit M.S.M. Sharma (Searchlight I, 1959)</i>, the Supreme Court held that parliamentary privileges under Article 194(3) overrode Article 19(1)(a). To remedy this, Feroze Gandhi introduced the 1956 statutory immunity, which was constitutionalised by the 44th Constitutional Amendment Act, 1978 through <b>Article 361A</b>.</p>\n<p><b>Constitutional Shield:</b> Article 361A grants complete immunity from civil or criminal proceedings in any court to any person publishing a substantially true report of the proceedings of Parliament or a State Legislature, provided: (i) the report is published without malice, (ii) the publication is not an in-camera proceeding, and (iii) it does not publish expunged remarks.</p>\n\n<hr/>\n\n<h5>(D) Commercial Speech under Article 19(1)(a)</h5>\n<p><b>Hamdard Dawakhana v. UOI (1960):</b> The Supreme Court held that commercial advertisements promoting trade and business do not form part of the freedom of speech under Article 19(1)(a), because their primary object is private commercial gain rather than democratic discourse.</p>\n<p><b>Tata Press Ltd. v. MTNL (1995):</b> The Supreme Court reversed the Hamdard doctrine. The 3-Judge Bench held that commercial speech is an essential part of Article 19(1)(a). Advertising disseminates crucial consumer information on goods and services, enabling informed choices in a market economy. Untruthful, misleading, or deceptive advertising, however, remains subject to state regulation under Article 19(2) and consumer protection statutes.</p>"
+        },
+        {
+          "id": "media-pyq-7",
+          "year": "December 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 7,
+          "unit": "Media, Censorship and the Gag Orders: Cinema & Postponement",
+          "question": "“Cinema cannot be equated with other media forms and justifies pre-censorship.” In light of this statement, critically evaluate the constitutional validity of film censorship under the Cinematograph Act, 1952, referring to K.A. Abbas, S. Rangarajan and Bobby Art International.",
+          "marks": 20,
+          "frequency": "Dec 2024 Q7; recurring 20-marker on Cinema Censorship",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>While the Indian press is free from pre-censorship as a general rule, cinematographic films occupy a unique legal category under Indian jurisprudence. Under the <b>Cinematograph Act, 1952</b>, no film can be exhibited publicly without prior certification by the Central Board of Film Certification (CBFC). In <i>K.A. Abbas v. Union of India (1971)</i>, the Supreme Court established that cinema is a distinct class justifying prior restraint under Article 19(2).</p>\n\n<h5>I. The Constitutional Foundation: K.A. Abbas (1971)</h5>\n<p>In <i>K.A. Abbas</i>, the 5-Judge Constitution Bench upheld the constitutionality of film pre-censorship:</p>\n<ul class=\"pts\">\n  <li><b>Potency of the Medium:</b> Motion pictures combine sight, sound, motion, and visual reality simultaneously. They produce an immediate, visceral emotional reaction that exceeds the printed word.</li>\n  <li><b>Mixed Audiences:</b> Unlike books which require literacy and deliberate reading, films are witnessed collectively by heterogeneous audiences of varying ages, maturity, and emotional stability.</li>\n  <li><b>Article 19(2) Applicability:</b> The Court held that pre-censorship is a valid reasonable restriction within the enumerated heads of Article 19(2), provided the film is judged as a whole and an independent appellate tribunal is available.</li>\n</ul>\n\n<h5>II. The Hostile Audience Veto: S. Rangarajan (1989)</h5>\n<p>In <i>S. Rangarajan v. P. Jagjivan Ram</i>, when fundamentalist groups threatened violence against the screening of <i>Ore Oru Gramathile</i> (critiquing caste reservations), the Supreme Court laid down two monumental principles:</p>\n<ol class=\"pts\">\n  <li><b>Spark in a Powder Keg Test:</b> The anticipated danger to public order must not be conjectural or far-fetched. It must be proximate and direct: <i>“The expression of thought should be inseparably connected to the action contemplated, like the equivalent of a spark in a powder keg.”</i></li>\n  <li><b>Rejection of Intolerant Mob Veto:</b> The State cannot revoke a certificate or ban a film merely because intolerant groups threaten arson or violent disorder. The constitutional duty of the State is to uphold the law and protect the filmmaker's free expression, not surrender to mob rule: <i>“Freedom of expression cannot be held to ransom by an intolerant mob.”</i></li>\n</ol>\n\n<h5>III. Contextual Realism & Obscenity: Bobby Art International (1996)</h5>\n<p>In the <i>Bandit Queen</i> case, challenging scenes of frontal nudity and graphic gang-rape of Phoolan Devi, the Supreme Court established:</p>\n<ul class=\"pts\">\n  <li><b>Contextual Narrative:</b> Scenes of nudity and violence must not be torn out of context. The test is the total message of the film.</li>\n  <li><b>Revulsion vs Prurience:</b> Nudity is not obscenity per se. Where explicit scenes evoke horror, shock, and empathy for the victim of caste and gender barbarity, rather than titillation or lustful thoughts, they are protected under Article 19(1)(a).</li>\n</ul>\n\n<h5>Conclusion</h5>\n<p>Film censorship in India is constitutional, but it is not an arbitrary moral policing license. From <i>K.A. Abbas</i> to <i>S. Rangarajan</i> and <i>Bobby Art</i>, the Supreme Court has anchored censorship strictly within constitutional proportionality: defending artistic realism, demanding proximate proof of disorder, and refusing to allow intolerant mobs to veto creative freedom.</p>"
+        },
+        {
+          "id": "media-pyq-8",
+          "year": "May 2023 / Dec 2024",
+          "exam": "DU LL.B. Term Examination (Course Code: LB-3031)",
+          "unitNumber": 5,
+          "unit": "Media & Its Regulation: Print, Broadcasting & Social Media",
+          "question": "Explain the doctrine of 'Airwaves as Public Property' laid down in Secretary, Ministry of Information & Broadcasting v. Cricket Association of Bengal. How has it influenced broadcasting regulation and the autonomy of Prasar Bharati?",
+          "marks": 20,
+          "frequency": "Repeated in 2023, 2021, 2019",
+          "modelAnswer": "<h5>Introduction</h5>\n<p>Prior to 1995, broadcasting in India was held under an absolute government monopoly by Doordarshan and All India Radio under Section 4 of the <b>Indian Telegraph Act, 1885</b>. In <i>Secretary, Ministry of Information & Broadcasting v. Cricket Association of Bengal (CAB, 1995)</i>, the Supreme Court dismantled state monopoly over the airwaves, establishing a transformative doctrine of public trusteeship that reshaped Indian media.</p>\n\n<h5>I. The Factual Context of the CAB Case</h5>\n<p>The Cricket Association of Bengal (CAB) sought to telecast the Hero Cup international cricket tournament using a foreign broadcasting entity (TWI). The Ministry of I&B refused uplink and customs clearances, claiming that the sovereign State had an absolute monopoly over airwaves and telecasting within India.</p>\n\n<h5>II. The Airwaves Public Property Doctrine</h5>\n<p>A 3-Judge Bench led by P.B. Sawant and B.P. Jeevan Reddy, JJ. established four foundational propositions:</p>\n<ol class=\"pts\">\n  <li><b>Airwaves are Public Property:</b> Electromagnetic airwaves are natural resources belonging to the people of India. The State is not the owner of airwaves, but merely a trustee on behalf of the public.</li>\n  <li><b>Right to Broadcast under Article 19(1)(a):</b> Freedom of speech and expression includes the right to impart and receive information through electronic media. A citizen or association has the right to use airwaves for telecasting, subject to reasonable spectrum management.</li>\n  <li><b>No State Monopoly:</b> The Government cannot claim an exclusive monopoly over the electronic media. A state-controlled broadcasting monopoly violates the democratic diversity of opinions and the public's right to know.</li>\n  <li><b>Mandate for an Autonomous Regulatory Authority:</b> Because frequencies are limited, airwaves must be regulated by an independent, autonomous public statutory authority representative of all sections of society, free from executive interference.</li>\n</ol>\n\n<h5>III. Impact on Broadcasting Regulation & Prasar Bharati</h5>\n<ul class=\"pts\">\n  <li><b>Operationalisation of Prasar Bharati:</b> Following the CAB ruling, Parliament notified the <b>Prasar Bharati (Broadcasting Corporation of India) Act, 1990</b> in 1997, creating a public service broadcaster with statutory autonomy.</li>\n  <li><b>Private Broadcasting Boom & Cable TV Act 1995:</b> The decision opened the gates for private television channels, regulated under the Cable Television Networks (Regulation) Act, 1995.</li>\n  <li><b>Spectrum Management by TRAI & WPC:</b> Allocation of spectrum and DTH/broadcasting licenses were brought under independent regulatory oversight.</li>\n</ul>\n\n<h5>Conclusion</h5>\n<p>The <i>CAB</i> judgment is the Magna Carta of electronic broadcasting in India. By treating airwaves as public property held in trust, it emancipated broadcast media from state monopoly and laid the legal foundation for the pluralistic, multi-channel television ecosystem in India today.</p>"
+        }
+      ],
+      "revision": [
+        {
+          "id": "media-rev-u1",
+          "unitNumber": 1,
+          "unitTitle": "Different Forms of Media & Legislative History",
+          "badge": "Unit 1 Revision Capsule",
+          "coreDoctrines": [
+            "Fourth Estate Doctrine: Press as the non-statutory watchdog of constitutional democracy.",
+            "Derived Freedom: Press freedom flows from citizens' individual speech under Article 19(1)(a) (Romesh Thappar 1950, Bennett Coleman 1973).",
+            "Airwaves Public Property Doctrine: Electronic frequencies are held in public trust by the State, precluding absolute state monopoly (CAB Case 1995)."
+          ],
+          "keyStatutes": [
+            "PRB Act 1867: Procedural registration of printing presses and books; not pre-censorship.",
+            "Press Council Act 1978: Section 14 advisory/reprimand powers; moral self-regulation without penal teeth.",
+            "Cable TV Networks Act 1995: Section 5 Programme Code & Section 6 Advertising Code compliance.",
+            "IT Act 2000: Section 66A struck down (Shreya Singhal); Section 79 safe harbour for intermediaries."
+          ],
+          "landmarkCases": [
+            "Romesh Thappar v. State of Madras (1950): Circulation is an integral part of free speech.",
+            "Bennett Coleman v. UOI (1973): Direct effect test; newsprint quotas cannot restrict newspaper pages.",
+            "Secy., MoIB v. CAB (1995): Airwaves belong to the public; state monopoly over broadcasting is unconstitutional."
+          ],
+          "mnemonic": "💡 M-E-D-I-A: Medium (Print/Broadcast/Digital) • Effect Test (Bennett Coleman) • Derivative Right (19(1)(a)) • Immunity (Sec 79 IT Act) • Airwaves Public Trust (CAB)."
+        },
+        {
+          "id": "media-rev-u2",
+          "unitNumber": 2,
+          "unitTitle": "Freedom of Speech, Privacy, Defamation & Stings",
+          "badge": "Unit 2 Revision Capsule",
+          "coreDoctrines": [
+            "Marketplace of Ideas (Oliver Wendell Holmes): Truth prevails in an uninhibited exchange of ideas.",
+            "Informational Privacy (Puttaswamy 2017): Fundamental right under Article 21; graduated protection for public vs private figures.",
+            "Hate Speech Tripartite Standard (Amish Devgan 2021): Content, Context, and Intent/Impact.",
+            "Decoy vs Agent Provocateur (Rajat Prasad 2014): No journalistic immunity if media induces or abets a criminal bribe."
+          ],
+          "keyStatutes": [
+            "Constitution Arts. 19(1)(a) & 19(2): 8 exhaustive reasonable restriction grounds.",
+            "IPC §§ 153A, 295A, 499/500 -> BNS §§ 196, 299, 356: Hate speech and criminal defamation.",
+            "Digital Personal Data Protection Act 2023: Recognition of right to be forgotten and data dignity."
+          ],
+          "landmarkCases": [
+            "R. Rajagopal (Auto Shankar 1994): No prior restraint on publishing public record stories; public figures cannot claim civil privacy for official acts.",
+            "Amish Devgan v. UOI (2021): Hate speech targets human dignity and is excluded from Article 19(1)(a).",
+            "Uma Khurana Case (2008): Staged/fake stings are criminal conspiracy; mandatory unedited footage retention.",
+            "X v. UOI (Delhi HC 2021): Right to be forgotten recognized for acquitted individuals against search engines."
+          ],
+          "mnemonic": "💡 P-R-I-V-A-C-Y: Public Record Exception • Right to be Forgotten • Injunctions Barred (Rajagopal) • Verifiable Public Interest • Accountability • Criminal Limits (Rajat Prasad)."
+        },
+        {
+          "id": "media-rev-u3",
+          "unitNumber": 3,
+          "unitTitle": "Contempt of Court, Scandalising & Fair Trial",
+          "badge": "Unit 3 & 4 Revision Capsule",
+          "coreDoctrines": [
+            "Constitutional Contempt (Arts. 129, 215): Inherent court of record powers to protect administration of justice.",
+            "Krishna Iyer's 6 Canons (Mulgaokar 1978): Judicial restraint, broad shoulders, non-retaliation, systemic critique welcomed.",
+            "Postponement Doctrine (Sahara v. SEBI 2012): Temporary, neutral deferral of trial reporting to prevent real risk of prejudice.",
+            "Pre-trial Publicity Menace (200th LCI Report): Media trial violates presumption of innocence under Article 21."
+          ],
+          "keyStatutes": [
+            "Contempt of Courts Act 1971: S. 2(b) Civil Contempt; S. 2(c) Criminal Contempt; S. 13(b) Truth defense.",
+            "CrPC § 327 -> BNSS § 366: Open court rule with mandatory in-camera trials for sexual offences.",
+            "RTI Act 2005: S. 2(h) Public authority includes CJI office; S. 8(1)(j) privacy balancing test."
+          ],
+          "landmarkCases": [
+            "In re S. Mulgaokar (1978): Six functional canons of judicial forbearance.",
+            "M.P. Lohia v. State of W.B. (2005): 'Doomed by Dowry' article condemned as unconstitutional trial by media.",
+            "Sahara v. SEBI (2012): Inherent power to grant temporary postponement orders against trial reporting.",
+            "In re Prashant Bhushan (2020): Tweets scandalising CJI and judiciary held to be criminal contempt."
+          ],
+          "mnemonic": "💡 C-O-N-T-E-M-P-T: Civil vs Criminal • Obstructing Justice • Neutrality • Truth Defense (13(b)) • Evidence Integrity • Magnanimity (Mulgaokar) • Postponement (Sahara)."
+        },
+        {
+          "id": "media-rev-u4",
+          "unitNumber": 4,
+          "unitTitle": "Censorship, Advertising, Privileges & Paid News",
+          "badge": "Unit 5 to 8 Revision Capsule",
+          "coreDoctrines": [
+            "Commercial Speech Doctrine: Transition from Hamdard (1960 exclusion) to Tata Press (1995 constitutional protection).",
+            "Cinema Pre-Censorship: Unique visual impact justifies pre-censorship of motion pictures (K.A. Abbas 1971).",
+            "Spark in a Powder Keg (S. Rangarajan 1989): Public order restriction requires direct, imminent proximate danger.",
+            "Contextual Obscenity (Bandit Queen 1996): Nudity evoking horror and empathy is not obscene.",
+            "Paid News Disqualification: ECI power under S. 10A RPA to disqualify for false accounts (Ashok Chavan 2014)."
+          ],
+          "keyStatutes": [
+            "Cinematograph Act 1952: Sections 5A & 5B certification principles.",
+            "Constitution Art. 361A: Immunity for substantially true, non-malicious reporting of legislative proceedings.",
+            "RPA 1951: Section 10A (Disqualification for failure to lodge expenditure accounts); Section 126A (Ban on Exit Polls)."
+          ],
+          "landmarkCases": [
+            "K.A. Abbas v. UOI (1971): Pre-censorship of cinema upheld under Article 19(2).",
+            "S. Rangarajan v. P. Jagjivan Ram (1989): Hostile audience cannot veto artistic expression.",
+            "Common Cause v. UOI (2015): Ban on political glorification in government-funded advertisements.",
+            "Ashok Shankarrao Chavan v. Madhavrao Kinhalkar (2014): ECI empowered to probe paid news accounts."
+          ],
+          "mnemonic": "💡 F-I-L-M-S: Fiction/Context (Bobby Art) • Imminent Danger (Rangarajan) • Legislative Immunity (Art 361A) • Money in Elections (Ashok Chavan) • State Ads (Common Cause)."
+        },
+        {
+          "id": "media-rev-u5",
+          "unitNumber": 5,
+          "unitTitle": "Media & Its Regulation: Print, Broadcasting & Social Media",
+          "badge": "Unit 4 Revision Capsule",
+          "coreDoctrines": [
+            "Airwaves Public Property Doctrine (CAB 1995): Electronic frequencies belong to the people; State is mere trustee.",
+            "Three-Tier Regulatory Mechanism (IT Rules 2021): Publisher self-regulation -> Self-regulatory body -> Inter-Departmental Committee.",
+            "Due Diligence Safe Harbour (IT Act S. 79): Intermediary immunity conditional on court/government take-down orders (Shreya Singhal)."
+          ],
+          "keyStatutes": [
+            "Press Council Act 1978: Section 14 advisory censure powers; no penal teeth.",
+            "Cable TV Networks Act 1995: Rules 6 & 7 Programme and Advertising Codes.",
+            "Prasar Bharati Act 1990: Autonomy of All India Radio and Doordarshan.",
+            "IT (Intermediary Guidelines) Rules 2021: Rules 3, 4, and Part III digital media ethics."
+          ],
+          "landmarkCases": [
+            "MoIB v. CAB (1995): Airwaves are public property; state broadcasting monopoly ended.",
+            "In re Destruction of Public Properties (2009): NBA self-regulation endorsed for riot/violence coverage.",
+            "Shreya Singhal v. UOI (2015): Section 79(3)(b) read down to court/government orders."
+          ],
+          "mnemonic": "💡 B-R-O-A-D-C-A-S-T: Broadcast Freedom • Regulatory Framework • Open Airwaves (CAB) • Autonomy (Prasar Bharati) • Digital Rules • Censorship Barred • Accountability • Social Safe Harbour (S. 79) • Telecom Oversight."
+        },
+        {
+          "id": "media-rev-u6",
+          "unitNumber": 6,
+          "unitTitle": "Media, Advertisement and the Law",
+          "badge": "Unit 5 Revision Capsule",
+          "coreDoctrines": [
+            "Commercial Speech Constitutional Status: Protected under Art 19(1)(a) since Tata Press (1995); consumer right to know.",
+            "Untruthful Ads Excluded: Deceptive and misleading advertisements enjoy zero protection under Art 19(2) or CPA 2019.",
+            "Fiduciary Taxpayer Principle: Government-funded advertisements cannot glorify individual political leaders (Common Cause 2015)."
+          ],
+          "keyStatutes": [
+            "Drugs and Magic Remedies Act 1954: Schedule of 54 prohibited magic cures.",
+            "Indecent Representation of Women Act 1986: Section 3 prohibition on derogatory female depictions.",
+            "Consumer Protection Act 2019: Sections 10 & 21 penalties for misleading advertisements by CCPA."
+          ],
+          "landmarkCases": [
+            "Hamdard Dawakhana v. UOI (1960): Initial exclusion of commercial ads from free speech.",
+            "Tata Press v. MTNL (1995): Reversal of Hamdard; commercial speech protected under 19(1)(a).",
+            "Ajay Goswami v. UOI (2007): Obscenity in newspaper ads judged by ordinary adult community standards.",
+            "Common Cause v. UOI (2015): Madhava Menon Committee guidelines restricting leader photos in govt ads."
+          ],
+          "mnemonic": "💡 A-D-V-E-R-T: Advertising Protected (Tata Press) • Deceptive Ads Banned • Vulnerable Health Protected (Magic Remedies) • Equal Dignity (Women Act) • Reasonable Limits • Taxpayer Restraint (Common Cause)."
+        },
+        {
+          "id": "media-rev-u7",
+          "unitNumber": 7,
+          "unitTitle": "Media, Censorship and the Gag Orders",
+          "badge": "Unit 6 Revision Capsule",
+          "coreDoctrines": [
+            "Cinema Pre-Censorship Justified (K.A. Abbas 1971): Visual/auditory potency justifies prior certification.",
+            "Spark in a Powder Keg (S. Rangarajan 1989): Proximate connection required for public order restrictions.",
+            "Intolerant Mob Veto Rejected: State cannot ban speech due to threats of violence by hostile audiences.",
+            "Contextual Obscenity (Bandit Queen 1996): Explicit realism conveying horror and social empathy is not obscene.",
+            "Postponement Doctrine (Sahara 2012): Inherent power to temporarily defer trial reporting to preserve fair trial."
+          ],
+          "keyStatutes": [
+            "Cinematograph Act 1952: Section 5A (Certification) & Section 5B (Article 19(2) principles).",
+            "POCSO Act § 23 & JJ Act § 74: Strict bar on reporting child victim/juvenile identity.",
+            "CrPC § 327 (BNSS § 366): In-camera trials and media exclusion in sexual offences."
+          ],
+          "landmarkCases": [
+            "K.A. Abbas v. UOI (1971): Pre-censorship of motion pictures held constitutional.",
+            "S. Rangarajan v. P. Jagjivan Ram (1989): Spark in powder keg test; hostile audience veto barred.",
+            "Bobby Art v. Om Pal Singh Hoon (1996): Bandit Queen nudity held not obscene in narrative context.",
+            "Sahara v. SEBI (2012): Inherent postponement orders doctrine under Arts 129/215."
+          ],
+          "mnemonic": "💡 C-E-N-S-O-R: Cinema Potency (Abbas) • Evidence of Direct Harm (Rangarajan) • Narrative Context (Bobby Art) • Special Inherent Power (Sahara) • Obscenity Standards • Restraint Rules."
+        },
+        {
+          "id": "media-rev-u8",
+          "unitNumber": 8,
+          "unitTitle": "Legislative Reporting Privileges & Contemporary Issues",
+          "badge": "Unit 7 & 8 Revision Capsule",
+          "coreDoctrines": [
+            "Parliamentary Privileges vs Free Press: Searchlight I (1959) held privileges prevailed; cured by Article 361A.",
+            "Article 361A Constitutional Shield: Immunity for publishing substantially true, non-malicious legislative reports.",
+            "Intra-Mural Privilege (Jatish Chandra Ghosh 1961): Privilege does not protect publishing disallowed questions outside.",
+            "Paid News Disqualification (Ashok Chavan 2014): ECI power under S. 10A RPA to probe expenditure falsity.",
+            "Exit Polls Ban (S. 126A RPA): Prohibition on publishing exit polls during polling phases."
+          ],
+          "keyStatutes": [
+            "Constitution Arts. 105, 194: Legislative powers and privileges.",
+            "Constitution Art. 361A: Protection of publication of parliamentary proceedings.",
+            "Parliamentary Proceedings (Protection of Publication) Act 1977: Statutory reporting immunity.",
+            "RPA 1951: Section 10A (Disqualification for false accounts) & Section 126A (Exit poll ban)."
+          ],
+          "landmarkCases": [
+            "MSM Sharma (Searchlight I 1959): Expunged legislative proceedings cannot be published.",
+            "Jatish Chandra Ghosh (1961): Disallowed questions published in newspapers not immune.",
+            "Jawaharlal Darda (1998): Truthful report of assembly minister's statement is not defamation.",
+            "Ashok Shankarrao Chavan (2014): ECI can probe and disqualify for paid news under S. 10A RPA."
+          ],
+          "mnemonic": "💡 P-R-I-V-I-L-E-G-E: Parliamentary Reports • RPA 10A Inquiries (Chavan) • Immunity under 361A • Veracity Requirement • Intra-Mural Limits • Legislative Power • Expunged Bar • Good Faith Reporting (Darda)."
         }
       ]
     }

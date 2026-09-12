@@ -342,6 +342,33 @@
         ]
       },
       {
+        id: "media",
+        code: "LB-3031",
+        title: "Media & Law",
+        author: "LB-3031 • Faculty of Law, DU",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "8 Comprehensive Units",
+        casesCount: "37 Landmark Cases",
+        desc: "Fourth Estate Jurisprudence, Freedom of Speech (Art. 19(1)(a)), Cinema Censorship, Contempt of Court, RTI, Trial by Media & Digital Regulation.",
+        spineBg: "#082f49",
+        spineInk: "#bae6fd",
+        spineFont: "700 38px Georgia",
+        backBg: "#031c2e",
+        backInk: "186,230,253",
+        edge: "#e0f2fe",
+        chapters: [
+          "Different Forms of Media & Legislative History",
+          "Freedom of Speech, Privacy, Defamation & Stings",
+          "Right to Information & Trial by Media",
+          "Contempt of Court & Unverified Reporting",
+          "Media Regulation: Print, Broadcast & Social Media",
+          "Media, Advertisement & Commercial Speech",
+          "Cinema Censorship & Judicial Postponement",
+          "Legislative Privileges, Paid News & Contemporary Issues"
+        ]
+      },
+      {
         id: "consti2",
         code: "LB-302",
         title: "Constitutional Law–II",
