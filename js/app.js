@@ -462,15 +462,16 @@
       const romanNumerals = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
       const roman = romanNumerals[sem.id] || sem.id;
 
-      let subjectCountText = '5 Subjects Included';
-      if (sem.id === 1) subjectCountText = '5 Core Subjects Included';
+      const loadedCount = (sem.subjectIds && sem.subjectIds.length) || 0;
+      let subjectCountText = `${loadedCount} Subjects Included`;
+      if (sem.id === 1) subjectCountText = `${loadedCount} Core Subjects Included`;
       else if (sem.id === 2) subjectCountText = '5 Subjects Included';
-      else if (sem.id === 3) subjectCountText = '3 Core Subjects Included';
+      else if (sem.id === 3) subjectCountText = `${loadedCount} Core Subjects Included`;
       else if (sem.id === 4) subjectCountText = '5 Subjects Included';
       else if (sem.id === 5) subjectCountText = '5 Subjects Included';
       else if (sem.id === 6) subjectCountText = '4 Subjects Included';
 
-      const topBadgeText = isActive ? (sem.id === 1 ? '5 Subjects Loaded' : '3 Subjects Loaded') : 'Coming Soon';
+      const topBadgeText = isActive ? `${loadedCount} Subjects Loaded` : 'Coming Soon';
 
       return `
         <div class="sem-card ${isActive ? 'active-sem' : 'coming-soon'}" data-sem-id="${sem.id}">
@@ -678,10 +679,10 @@
     elements.hubTagline.textContent = sub.theme.tagline;
 
     // Update Metric Counter Pills
-    elements.hubUnitsPill.innerHTML = `📚 <b>${sub.units.length}</b> Units / Topics`;
-    elements.hubCasesPill.innerHTML = `⚖️ <b>${sub.cases.length}</b> Landmark Cases`;
-    elements.hubPyqsPill.innerHTML = `📝 <b>${sub.pyqs.length}</b> DU PYQs with Answers`;
-    elements.hubRevPill.innerHTML = `⚡ <b>${sub.revisions.length}</b> Topic Revision Capsules`;
+    elements.hubUnitsPill.innerHTML = `📚 <b>${(sub.units || []).length}</b> Units / Topics`;
+    elements.hubCasesPill.innerHTML = `⚖️ <b>${(sub.cases || []).length}</b> Landmark Cases`;
+    elements.hubPyqsPill.innerHTML = `📝 <b>${(sub.pyqs || []).length}</b> DU PYQs with Answers`;
+    elements.hubRevPill.innerHTML = `⚡ <b>${(sub.revisions || sub.revision || []).length}</b> Topic Revision Capsules`;
 
     // Update Progress
     updateProgressUI();
@@ -893,7 +894,17 @@
     'wcc-3': 'Pecunia Non Olet • Statutory presumption of corruption under Section 20 PC Act',
     'wcc-4': 'Commodum Ex Injuria Sua Nemo Habere Debet • No one shall profit from money-laundering crime (PMLA)',
     'wcc-5': 'Salus Populi Suprema Lex Esto • Public health and food adulteration strict liability (FSSA)',
-    'wcc-6': 'Reversa Onus Probandi • Reverse burden of proof for psychotropic substances (NDPS S. 35 & 54)'
+    'wcc-6': 'Reversa Onus Probandi • Reverse burden of proof for psychotropic substances (NDPS S. 35 & 54)',
+
+    // Media & Law
+    'media-1': 'Fourth Estate Watchdog • Airwaves Public Trust & Democratic Speech (CAB 1995)',
+    'media-2': 'Dignitas Personae • Free Speech, Informational Privacy & Hate Speech Limits (Puttaswamy)',
+    'media-3': 'Audi Alteram Partem • Right to Information & Prevention of Trial by Media Prejudices',
+    'media-4': 'Actus Curiae Neminem Gravabit • Contempt of Court, Open Justice & Section 13(b) Truth',
+    'media-5': 'Salus Populi Suprema Lex • Airwaves Regulation & IT Intermediary Safe Harbour (S. 79)',
+    'media-6': 'Caveat Venditor • Protected Commercial Speech (Tata Press) & Misleading Ad Prohibitions',
+    'media-7': 'Fiat Justitia Ruat Caelum • Inherent Postponement of Trial Reporting & Censorship Standards',
+    'media-8': 'Lex Parliamenti • Article 361A Legislative Reporting Shield & Paid News Inquiries'
   };
 
   function getTopicMaxim(subId, unitNumber, unitTitle, subTheme) {
@@ -1460,7 +1471,7 @@
   // TAB 4: QUICK LAST-MINUTE REVISION (LMR)
   // -------------------------------------------------------------------------
   function renderRevisionTab(sub) {
-    let revisions = sub.revisions || [];
+    let revisions = sub.revisions || sub.revision || [];
 
     // Filter by unit dropdown
     if (state.selectedUnitFilter !== 'all') {

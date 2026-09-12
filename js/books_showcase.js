@@ -367,54 +367,6 @@
           "Cinema Censorship & Judicial Postponement",
           "Legislative Privileges, Paid News & Contemporary Issues"
         ]
-      },
-      {
-        id: "consti2",
-        code: "LB-302",
-        title: "Constitutional Law–II",
-        author: "LB-302 • Faculty of Law, DU",
-        year: "2025–26",
-        stars: 5,
-        unitsCount: "5 Comprehensive Units",
-        casesCount: "55 Landmark Cases",
-        desc: "Federalism, Union & State Executive, Parliament, Judiciary (Art. 124–147) & Amendment Powers (Art. 368).",
-        spineBg: "#192e47",
-        spineInk: "#e8c974",
-        spineFont: "700 38px Georgia",
-        backBg: "#0c1724",
-        backInk: "232,201,116",
-        edge: "#ece4d0",
-        chapters: [
-          "Indian Federal Structure & Centre-State Relations",
-          "The Union & State Executive Powers",
-          "Parliamentary Privileges & Legislative Process",
-          "Union & State Judiciary Independence",
-          "Emergency Powers & Amendment Procedure"
-        ]
-      },
-      {
-        id: "specialcontracts",
-        code: "LB-304",
-        title: "Special Contracts",
-        author: "LB-304 • Faculty of Law, DU",
-        year: "2025–26",
-        stars: 5,
-        unitsCount: "5 Comprehensive Units",
-        casesCount: "48 Landmark Cases",
-        desc: "Sale of Goods Act 1930, Indian Partnership Act 1932, Contracts of Indemnity, Guarantee, Bailment, Pledge & Agency.",
-        spineBg: "#1a2c38",
-        spineInk: "#d2e9f7",
-        spineFont: "700 38px Georgia",
-        backBg: "#0c1820",
-        backInk: "210,233,247",
-        edge: "#dbe8f0",
-        chapters: [
-          "Contract of Indemnity & Guarantee (Ss. 124–147)",
-          "Bailment & Pledge Rights and Duties (Ss. 148–181)",
-          "Law of Agency & Principal-Agent Relations (Ss. 182–238)",
-          "Sale of Goods Act: Conditions, Warranties & Unpaid Seller",
-          "Indian Partnership Act: Relations of Partners & Dissolution"
-        ]
       }
     ],
     4: [
