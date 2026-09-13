@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=4.4">
+  <link rel="stylesheet" href="css/styles.css?v=4.5">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -79,6 +79,10 @@
           <span class="btn-icon-wrap email-wrap"><i class="fa-solid fa-envelope"></i></span>
           <span class="btn-lbl">Email</span>
         </a>
+        <button class="header-contact-pill liquid-metal-btn bareact-header-btn" id="headerBareActBtn" title="Statutory Reference (Quick Bare Act)" aria-label="Open Statutory Reference Bare Act Drawer" type="button">
+          <span class="btn-icon-wrap bareact-wrap"><i class="fa-solid fa-book-bookmark"></i></span>
+          <span class="btn-lbl">Statutory Reference</span>
+        </button>
         <div class="header-sem-dropdown-wrap" id="headerSemDropdownWrap">
           <button class="semester-badge-btn liquid-metal-btn" id="headerSemesterBtn" title="Choose Semester" aria-expanded="false" aria-haspopup="true">
             <span class="sem-indicator"></span>
@@ -297,7 +301,7 @@
           <div class="hub-pill" id="hubRevPill">&#9889; <b>0</b> Revision Capsules</div>
         </div>
 
-        <!-- Quick Study Actions: Flashcards & Bare Acts -->
+        <!-- Quick Study Actions: Flashcards -->
         <div class="hub-action-btns-row">
           <button class="hub-action-btn flashcard-btn" id="hubStartFlashcardsBtn" title="Launch Precedent Recall Flashcards" type="button">
             <div class="metal-inner-body">
@@ -305,14 +309,6 @@
                 <i class="fa-solid fa-brain"></i>
               </div>
               <span class="metal-btn-lbl"><b>Precedent Recall</b> Flashcards (3D Drill)</span>
-            </div>
-          </button>
-          <button class="hub-action-btn bareact-btn" id="hubOpenBareActBtn" title="Open Quick Bare Act Drawer" type="button">
-            <div class="metal-inner-body">
-              <div class="metal-icon-circle">
-                <i class="fa-solid fa-book-bookmark"></i>
-              </div>
-              <span class="metal-btn-lbl"><b>Statutory Reference</b> (Quick Bare Act)</span>
             </div>
           </button>
         </div>
@@ -981,7 +977,7 @@
   <script src="js/data.js?v=4.0"></script>
   <script src="js/bare_acts.js?v=4.2"></script>
   <script src="js/bns_converter.js?v=4.0"></script>
-  <script src="js/app.js?v=4.2"></script>
+  <script src="js/app.js?v=4.3"></script>
 
   <script>
     if ("serviceWorker" in navigator) {

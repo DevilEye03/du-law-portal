@@ -2687,6 +2687,7 @@ body[data-active-subject="media"] {
   .header-actions .header-contact-pill .btn-icon-wrap,
   .header-actions .telegram-header-btn .btn-icon-wrap,
   .header-actions .email-header-btn .btn-icon-wrap,
+  .header-actions .bareact-header-btn .btn-icon-wrap,
   .header-actions .contact-header-btn .btn-icon-wrap {
     width: 24px !important;
     height: 24px !important;
@@ -2696,12 +2697,14 @@ body[data-active-subject="media"] {
   .header-actions .header-contact-pill .btn-icon-wrap i,
   .header-actions .telegram-header-btn .btn-icon-wrap i,
   .header-actions .email-header-btn .btn-icon-wrap i,
+  .header-actions .bareact-header-btn .btn-icon-wrap i,
   .header-actions .contact-header-btn .btn-icon-wrap i {
     font-size: 0.85rem !important;
   }
   .header-actions .header-contact-pill .btn-lbl,
   .header-actions .telegram-header-btn .btn-lbl,
   .header-actions .email-header-btn .btn-lbl,
+  .header-actions .bareact-header-btn .btn-lbl,
   .header-actions .contact-header-btn .btn-lbl {
     display: none !important;
   }

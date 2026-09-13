@@ -46,6 +46,7 @@
     headerMockExamBtn: document.getElementById('headerMockExamBtn'),
     headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
     headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
+    headerBareActBtn: document.getElementById('headerBareActBtn'),
     headerStarBadge: document.getElementById('headerStarBadge'),
     heroExploreBtn: document.getElementById('heroExploreBtn'),
     heroMockBtn: document.getElementById('heroMockBtn'),
