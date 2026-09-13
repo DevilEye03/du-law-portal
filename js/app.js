@@ -186,7 +186,44 @@
     toastMsg: document.getElementById('toastMsg'),
     scrollTopBtn: document.getElementById('scrollTopBtn'),
     mobileBottomNav: document.getElementById('mobileBottomNav'),
-    mobileNavItems: document.querySelectorAll('.mobile-nav-item')
+    mobileNavItems: document.querySelectorAll('.mobile-nav-item'),
+
+    // Hub Hero Action Buttons
+    hubStartFlashcardsBtn: document.getElementById('hubStartFlashcardsBtn'),
+    hubOpenBareActBtn: document.getElementById('hubOpenBareActBtn'),
+
+    // Quick Bare Act Drawer Elements
+    bareActOverlay: document.getElementById('bareActOverlay'),
+    bareActDrawer: document.getElementById('bareActDrawer'),
+    bareActCloseBtn: document.getElementById('bareActCloseBtn'),
+    badActTabs: document.getElementById('badActTabs'),
+    bareActSearchInput: document.getElementById('bareActSearchInput'),
+    bareActClearSearch: document.getElementById('bareActClearSearch'),
+    badQuickRibbonWrap: document.getElementById('badQuickRibbonWrap'),
+    badQuickSecRibbon: document.getElementById('badQuickSecRibbon'),
+    bareActListContainer: document.getElementById('bareActListContainer'),
+    bareActList: document.getElementById('bareActList'),
+
+    // Flashcards Modal Elements
+    flashcardsModalOverlay: document.getElementById('flashcardsModalOverlay'),
+    flashcardsModal: document.getElementById('flashcardsModal'),
+    fcCloseBtn: document.getElementById('fcCloseBtn'),
+    activeFlashcard: document.getElementById('activeFlashcard'),
+    fcCardInner: document.getElementById('fcCardInner'),
+    fcFrontUnit: document.getElementById('fcFrontUnit'),
+    fcFrontName: document.getElementById('fcFrontName'),
+    fcFrontCitation: document.getElementById('fcFrontCitation'),
+    fcFrontFacts: document.getElementById('fcFrontFacts'),
+    fcFrontIssue: document.getElementById('fcFrontIssue'),
+    fcBackHolding: document.getElementById('fcBackHolding'),
+    fcBackDoctrine: document.getElementById('fcBackDoctrine'),
+    fcCurrentIdx: document.getElementById('fcCurrentIdx'),
+    fcTotalCount: document.getElementById('fcTotalCount'),
+    fcPrevBtn: document.getElementById('fcPrevBtn'),
+    fcNextBtn: document.getElementById('fcNextBtn'),
+    fcShuffleBtn: document.getElementById('fcShuffleBtn'),
+    fcBtnReview: document.getElementById('fcBtnReview'),
+    fcBtnMastered: document.getElementById('fcBtnMastered')
   };
 
   // =========================================================================
@@ -1820,7 +1857,7 @@
   }
 
   // =========================================================================
-  // 6. QUICK BARE ACT DRAWER CONTROLLER
+  // 6. QUICK BARE ACT DRAWER CONTROLLER & LIQUID METAL SECTION SHOWCASE
   // =========================================================================
   function openBareActDrawer(searchSec, filterAct) {
     if (!elements.bareActDrawer) return;
@@ -1834,6 +1871,8 @@
         family: 'hma',
         torts: 'cpa',
         company: 'ca',
+        cpc: 'cpc',
+        media: 'all',
         juris: 'all'
       };
       if (subActMap[state.currentSubject]) {
@@ -1850,6 +1889,9 @@
         elements.bareActSearchInput.value = state.bareActs.searchQuery;
       }
       if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'block';
+    } else if (!state.bareActs.searchQuery) {
+      if (elements.bareActSearchInput) elements.bareActSearchInput.value = '';
+      if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'none';
     }
 
     // Update tab styles
@@ -1862,6 +1904,7 @@
     if (elements.bareActOverlay) elements.bareActOverlay.classList.add('open');
     document.body.classList.add('drawer-open');
 
+    renderQuickSecRibbon();
     renderBareActList();
 
     // If searchSec specified, scroll to matching card
@@ -1880,6 +1923,71 @@
     if (elements.bareActDrawer) elements.bareActDrawer.classList.remove('open');
     if (elements.bareActOverlay) elements.bareActOverlay.classList.remove('open');
     document.body.classList.remove('drawer-open');
+  }
+
+  // Render the horizontal quick-navigation ribbon of liquid metal section buttons
+  function renderQuickSecRibbon() {
+    if (!elements.badQuickSecRibbon) return;
+    if (!window.BARE_ACTS_DB || !window.BARE_ACTS_DB.getByAct) return;
+
+    const currentAct = state.bareActs.activeAct;
+    let actSections = [];
+
+    if (currentAct === 'all') {
+      actSections = window.BARE_ACTS_DB.sections.slice(0, 30);
+    } else {
+      actSections = window.BARE_ACTS_DB.getByAct(currentAct);
+    }
+
+    if (!actSections || actSections.length === 0) {
+      if (elements.badQuickRibbonWrap) elements.badQuickRibbonWrap.style.display = 'none';
+      return;
+    }
+
+    if (elements.badQuickRibbonWrap) elements.badQuickRibbonWrap.style.display = 'block';
+
+    elements.badQuickSecRibbon.innerHTML = actSections.map(s => {
+      const isSelected = state.bareActs.expandedId === s.id;
+      return `
+        <button class="bad-quick-sec-btn ${isSelected ? 'active' : ''}" data-sec-id="${s.id}" type="button" title="Section ${s.sec}: ${escapeHtml(s.title)}">
+          <div class="metal-inner-body">
+            <div class="metal-icon-circle">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <span class="metal-btn-lbl">S. ${s.sec}</span>
+          </div>
+        </button>
+      `;
+    }).join('');
+
+    // Attach click listeners to quick section buttons
+    elements.badQuickSecRibbon.querySelectorAll('.bad-quick-sec-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const secId = btn.dataset.secId;
+        state.bareActs.expandedId = secId;
+
+        // Highlight active ribbon button
+        elements.badQuickSecRibbon.querySelectorAll('.bad-quick-sec-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // If a search query was filtering out other sections, clear it
+        if (state.bareActs.searchQuery) {
+          state.bareActs.searchQuery = '';
+          if (elements.bareActSearchInput) elements.bareActSearchInput.value = '';
+          if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'none';
+          renderBareActList();
+        }
+
+        // Find matching section card, open it, highlight it, and scroll to it
+        const targetCard = elements.bareActList ? elements.bareActList.querySelector(`.bad-section-card[data-id="${secId}"]`) : null;
+        if (targetCard) {
+          elements.bareActList.querySelectorAll('.bad-section-card').forEach(c => c.classList.remove('highlighted'));
+          targetCard.classList.add('open', 'highlighted');
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
   }
 
   function renderBareActList() {
@@ -1907,30 +2015,131 @@
       const actObj = window.BARE_ACTS_DB.acts.find(a => a.id === s.actId) || { short: s.act, badge: 'Statute' };
       const isOpen = s.id === state.bareActs.expandedId || sections.length === 1;
 
+      // Format ingredients checklist
+      let ingredientsHtml = '';
+      if (s.ingredients && Array.isArray(s.ingredients) && s.ingredients.length > 0) {
+        ingredientsHtml = `
+          <div class="bad-ingredients-card">
+            <div class="bad-ingredients-header">
+              <i class="fa-solid fa-list-check"></i>
+              <span>Essential Statutory Ingredients</span>
+            </div>
+            <ul class="bad-ingredients-list">
+              ${s.ingredients.map(ing => `
+                <li class="bad-ingredient-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>${escapeHtml(ing)}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+      // Format Plain English Explanation
+      let explanationHtml = '';
+      if (s.explanation) {
+        explanationHtml = `
+          <div class="bad-plain-expl-card">
+            <div class="bad-plain-expl-header">
+              <i class="fa-solid fa-book-sparkles"></i>
+              <span>What This Means in Plain English</span>
+            </div>
+            <p class="bad-plain-expl-text">${escapeHtml(s.explanation)}</p>
+          </div>
+        `;
+      }
+
+      // Format Landmark Precedents & Holdings
+      let casesHtml = '';
+      if (s.cases && Array.isArray(s.cases) && s.cases.length > 0) {
+        casesHtml = `
+          <div class="bad-cases-card">
+            <div class="bad-cases-header">
+              <i class="fa-solid fa-gavel"></i>
+              <span>Landmark DU Precedents &amp; Holdings</span>
+            </div>
+            <div class="bad-cases-list">
+              ${s.cases.map(c => `
+                <div class="bad-case-item">
+                  <i class="fa-solid fa-landmark"></i>
+                  <span>${escapeHtml(c)}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Format DU Exam Tips
+      let examTipHtml = '';
+      if (s.examTips) {
+        examTipHtml = `
+          <div class="bad-exam-tip-card">
+            <div class="bad-exam-tip-header">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>DU Exam &amp; PYQ Application Strategy</span>
+            </div>
+            <p class="bad-exam-tip-text">${escapeHtml(s.examTips)}</p>
+          </div>
+        `;
+      } else if (s.analysis) {
+        examTipHtml = `
+          <div class="bad-analysis-box">
+            <div class="bad-box-label"><i class="fa-solid fa-lightbulb"></i> DU Exam Analysis &amp; Precedent Links</div>
+            <p class="bad-analysis-text">${escapeHtml(s.analysis)}</p>
+          </div>
+        `;
+      }
+
       return `
         <article class="bad-section-card ${isOpen ? 'open' : ''}" data-id="${s.id}">
           <header class="bad-card-header">
             <div class="bad-card-header-left">
-              <div class="bad-act-tag">${actObj.short}</div>
-              <h4 class="bad-sec-title">Section ${s.sec}: <span>${s.title}</span></h4>
+              <!-- Liquid Metal Section Button for Each Section -->
+              <button class="sec-liquid-metal-btn" type="button" title="Section ${s.sec}">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Section ${s.sec}</span>
+                </div>
+              </button>
+
+              <div class="bad-sec-title-group">
+                <h4 class="bad-sec-main-title">${escapeHtml(s.title)}</h4>
+                <div class="bad-sec-meta-row">
+                  ${s.unit ? `<span class="bad-unit-pill"><i class="fa-solid fa-layer-group"></i> ${escapeHtml(s.unit)}</span>` : ''}
+                  ${s.badge ? `<span class="bad-theme-pill">${escapeHtml(s.badge)}</span>` : `<span class="bad-act-tag">${actObj.short}</span>`}
+                </div>
+              </div>
             </div>
             <div class="bad-card-header-right">
               <i class="fa-solid fa-chevron-down bad-chevron"></i>
             </div>
           </header>
           <div class="bad-card-body">
+            <!-- Verbatim Statutory Text -->
             <div class="bad-statutory-box">
               <div class="bad-box-label"><i class="fa-solid fa-scale-balanced"></i> Verbatim Statutory Text</div>
               <pre class="bad-statutory-text">${escapeHtml(s.text)}</pre>
             </div>
-            ${s.analysis ? `
-              <div class="bad-analysis-box">
-                <div class="bad-box-label"><i class="fa-solid fa-lightbulb"></i> DU Exam Analysis &amp; Precedent Links</div>
-                <p class="bad-analysis-text">${escapeHtml(s.analysis)}</p>
-              </div>
-            ` : ''}
+
+            <!-- Essential Ingredients Checklist -->
+            ${ingredientsHtml}
+
+            <!-- Plain English Explanation -->
+            ${explanationHtml}
+
+            <!-- Landmark Precedents & Ratios -->
+            ${casesHtml}
+
+            <!-- DU Exam & PYQ Strategy -->
+            ${examTipHtml}
+
+            <!-- Action Buttons -->
             <div class="bad-card-actions">
-              <button class="bad-btn-action copy-sec-btn" data-text="${encodeURIComponent('Section ' + s.sec + ' — ' + s.title + '\n' + s.text)}">
+              <button class="bad-btn-action copy-sec-btn" data-text="${encodeURIComponent('Section ' + s.sec + ' — ' + s.title + ' (' + s.act + ')\n\n' + s.text + (s.ingredients ? '\n\nEssential Ingredients:\n- ' + s.ingredients.join('\n- ') : ''))}">
                 <i class="fa-solid fa-copy"></i> <span>Copy Statutory Text</span>
               </button>
               <button class="bad-btn-action cite-sec-btn" data-cite="${encodeURIComponent('Section ' + s.sec + ', ' + s.act)}">
@@ -2548,6 +2757,7 @@
           elements.badActTabs.querySelectorAll('.bad-tab').forEach(t => t.classList.remove('active'));
           tab.classList.add('active');
           state.bareActs.activeAct = tab.dataset.act;
+          renderQuickSecRibbon();
           renderBareActList();
         });
       });

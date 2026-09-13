@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=4.3">
+  <link rel="stylesheet" href="css/styles.css?v=4.4">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -569,12 +569,15 @@
     <div class="bad-act-tabs" id="badActTabs">
       <button class="bad-tab active" data-act="all">All Acts</button>
       <button class="bad-tab" data-act="ica">ICA 1872</button>
+      <button class="bad-tab" data-act="sra">SRA 1963</button>
       <button class="bad-tab" data-act="bns">BNS 2023</button>
       <button class="bad-tab" data-act="hma">HMA 1955</button>
       <button class="bad-tab" data-act="hama">HAMA 1956</button>
       <button class="bad-tab" data-act="hmga">HMGA 1956</button>
       <button class="bad-tab" data-act="cpa">CPA 2019</button>
       <button class="bad-tab" data-act="ca">CA 2013</button>
+      <button class="bad-tab" data-act="cpc">CPC 1908</button>
+      <button class="bad-tab" data-act="lim">Limitation</button>
     </div>
 
     <!-- Search Input -->
@@ -584,6 +587,14 @@
       <button class="bad-search-clear" id="bareActClearSearch" style="display:none;" title="Clear search">
         <i class="fa-solid fa-xmark"></i>
       </button>
+    </div>
+
+    <!-- Quick Liquid Metal Section Navigation Ribbon -->
+    <div class="bad-quick-ribbon-wrap" id="badQuickRibbonWrap">
+      <div class="bad-ribbon-label"><i class="fa-solid fa-bolt-lightning"></i> <span>Quick Section Jump</span></div>
+      <div class="bad-quick-ribbon" id="badQuickSecRibbon">
+        <!-- Dynamically rendered liquid metal buttons by app.js -->
+      </div>
     </div>
 
     <!-- Sections List Container -->
@@ -968,9 +979,9 @@
   <script src="js/interactive_particles.js?v=4.0"></script>
   <script src="js/books_showcase.js?v=4.0"></script>
   <script src="js/data.js?v=4.0"></script>
-  <script src="js/bare_acts.js?v=4.0"></script>
+  <script src="js/bare_acts.js?v=4.2"></script>
   <script src="js/bns_converter.js?v=4.0"></script>
-  <script src="js/app.js?v=4.1"></script>
+  <script src="js/app.js?v=4.2"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
