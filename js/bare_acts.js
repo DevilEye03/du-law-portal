@@ -177,7 +177,7 @@ window.BARE_ACTS_DB = {
       "Assent must be communicated to the proposer in prescribed or reasonable manner.",
       "Acceptance converts the revocable proposal into an irrevocable binding promise."
     ],
-    "explanation": "Acceptance is to an offer what a lighted match is to a train of gunpowder (Anson). Once accepted, the proposal crystallizes into a promise and creates contractual obligations that neither party can unilaterally withdraw.",
+    "explanation": "Acceptance is to an offer what a lighted match is to a train of gunpowder (classic common law formulation). Once accepted, the proposal crystallizes into a promise and creates contractual obligations that neither party can unilaterally withdraw.",
     "cases": [
       "Carlill v. Carbolic Smoke Ball Co. (1893) — In general offers, performance of condition constitutes valid acceptance without prior notification.",
       "Lalman Shukla v. Gauri Datt (1913) — Acceptance without knowledge of the offer cannot create a valid contract."
@@ -187,7 +187,7 @@ window.BARE_ACTS_DB = {
       "acceptance",
       "promise",
       "section 2b",
-      "anson metaphor",
+      "gunpowder metaphor",
       "carlill",
       "lalman shukla"
     ]

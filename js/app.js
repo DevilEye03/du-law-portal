@@ -622,7 +622,7 @@
     if (!currentSemObj) return;
 
     elements.currentSemHeading.textContent = `${currentSemObj.name} — Core Subjects`;
-    elements.currentSemDesc.textContent = `${currentSemObj.term} • Select any subject treatise below to open syllabus, landmark cases, and PYQ dossier.`;
+    elements.currentSemDesc.textContent = `${currentSemObj.term} • Select any subject dossier below to open syllabus, landmark cases, and PYQ dossier.`;
 
     // Apply active view mode (3D Books or Standard Grid)
     applySubjectsViewMode(state.subjectsViewMode || 'books');
