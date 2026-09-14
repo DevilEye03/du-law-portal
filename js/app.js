@@ -1137,6 +1137,28 @@
     });
   }
 
+  // Helper to format case text blocks into semantic paragraphs or bullet lists
+  function formatCaseContent(val) {
+    if (!val) return '';
+    const str = String(val).trim();
+    if (!str) return '';
+    // If it already contains HTML block tags, preserve them
+    if (/<(p|ul|ol|li|div|blockquote|br\s*\/?)[\s>]/i.test(str)) {
+      return str;
+    }
+    const paragraphs = str.split(/\n{2,}/);
+    return paragraphs.map(p => {
+      let trimmed = p.trim();
+      if (!trimmed) return '';
+      trimmed = trimmed.replace(/^(\[[^\]]+\]:?|Held\s*(?:\([^)]+\))?:?)/i, '<strong>$1</strong>');
+      const lines = trimmed.split(/\n+/);
+      if (lines.length > 1 && lines.every(l => /^\s*(?:[•\-\*]|\(\w+\)|\d+[\.\)])\s+/.test(l))) {
+        return `<ul class="case-bullet-list">${lines.map(l => `<li>${l.replace(/^\s*(?:[•\-\*]|\(\w+\)|\d+[\.\)])\s+/, '')}</li>`).join('')}</ul>`;
+      }
+      return `<p>${lines.join('<br>')}</p>`;
+    }).join('');
+  }
+
   // -------------------------------------------------------------------------
   // TAB 2: LANDMARK CASES (FIRAC CARDS) — TOPIC-WISE SEGREGATED
   // -------------------------------------------------------------------------
@@ -1243,35 +1265,54 @@
                     </div>
 
                     <div class="case-card-body">
-                      <div class="firac-grid">
-                        <div class="firac-box facts">
-                          <span class="firac-label"><i class="fa-solid fa-book-open"></i> Essential Facts & Procedural History</span>
-                          <div class="case-text-block">${c.facts}</div>
+                      <!-- 1. Facts -->
+                      <div class="case-struct-box struct-facts">
+                        <div class="struct-box-header">
+                          <span class="struct-step-badge step-1">1</span>
+                          <span class="struct-box-title"><i class="fa-solid fa-book-open"></i> Essential Facts & Procedural History</span>
                         </div>
-                        <div class="firac-box ratio">
-                          <span class="firac-label"><i class="fa-solid fa-scale-balanced"></i> Ratio Decidendi & Legal Principles</span>
-                          <div class="case-text-block">${c.ratio}</div>
-                        </div>
+                        <div class="case-text-block">${formatCaseContent(c.facts)}</div>
                       </div>
 
+                      <!-- 2. Issues -->
                       ${c.issues ? `
-                        <div class="case-extra-box issues-box">
-                          <span class="extra-box-label"><i class="fa-solid fa-circle-question"></i> Key Legal Issues Framed</span>
-                          <div class="case-text-block">${c.issues}</div>
+                        <div class="case-struct-box struct-issues">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-2">2</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-circle-question"></i> Key Legal Issues Framed</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.issues)}</div>
                         </div>
                       ` : ''}
 
+                      <!-- 3. Arguments -->
                       ${c.arguments ? `
-                        <div class="case-extra-box args-box">
-                          <span class="extra-box-label"><i class="fa-solid fa-comments"></i> Arguments of the Parties</span>
-                          <div class="case-text-block">${c.arguments}</div>
+                        <div class="case-struct-box struct-arguments">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-3">3</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-comments"></i> Arguments of the Parties</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.arguments)}</div>
                         </div>
                       ` : ''}
 
-                      ${c.examTips ? `
-                        <div class="case-extra-box tips-box">
-                          <span class="extra-box-label"><i class="fa-solid fa-lightbulb"></i> DU Exam Application & Strategy</span>
-                          <div class="case-text-block">${c.examTips}</div>
+                      <!-- 4. Ratio -->
+                      <div class="case-struct-box struct-ratio">
+                        <div class="struct-box-header">
+                          <span class="struct-step-badge step-4">4</span>
+                          <span class="struct-box-title"><i class="fa-solid fa-scale-balanced"></i> Ratio Decidendi (Court's Decision & Reasoning)</span>
+                        </div>
+                        <div class="case-text-block">${formatCaseContent(c.ratio)}</div>
+                      </div>
+
+                      <!-- 5. Principle Evolved -->
+                      ${(c.principleEvolved || c.principles || c.examTips) ? `
+                        <div class="case-struct-box struct-principle">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-5">5</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-lightbulb"></i> Principle Evolved & Legal Doctrine</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.principleEvolved || c.principles || c.examTips)}</div>
                         </div>
                       ` : ''}
 

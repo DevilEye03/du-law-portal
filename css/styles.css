@@ -919,7 +919,185 @@ button{font-family:inherit;cursor:pointer}
 [data-theme="dark"] .btn-copy-cite .copy-cite-inner{background:#181512;color:#cbd5e1}
 .btn-copy-cite:hover .copy-cite-inner{background:var(--bg-elevated);color:#2563eb}
 [data-theme="dark"] .btn-copy-cite:hover .copy-cite-inner{color:#60a5fa}
-.case-card-body{padding:20px 24px 22px}
+.case-card-body{padding:22px 24px}
+
+/* ==========================================================================
+   LANDMARK CASES: SEQUENTIAL STRUCTURED CASE FLOW (1 -> 5)
+   Facts -> Issues -> Arguments -> Ratio -> Principle Evolved
+   ========================================================================== */
+.case-struct-box {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border-line);
+  background: var(--bg-surface);
+  transition: all 0.2s ease;
+}
+.case-struct-box:last-of-type {
+  margin-bottom: 18px;
+}
+.struct-box-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.struct-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  flex-shrink: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+.struct-box-title {
+  font-family: var(--font-ui, 'Inter', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* 1. Facts Styling */
+.case-struct-box.struct-facts {
+  border-left: 4px solid #64748b;
+  background: var(--bg-surface);
+}
+.case-struct-box.struct-facts .struct-step-badge {
+  background: linear-gradient(135deg, #64748b, #475569);
+}
+.case-struct-box.struct-facts .struct-box-title {
+  color: #475569;
+}
+[data-theme="dark"] .case-struct-box.struct-facts {
+  border-left-color: #94a3b8;
+  background: rgba(255, 255, 255, 0.02);
+}
+[data-theme="dark"] .case-struct-box.struct-facts .struct-box-title {
+  color: #cbd5e1;
+}
+
+/* 2. Issues Styling */
+.case-struct-box.struct-issues {
+  border-left: 4px solid #0284c7;
+  background: rgba(2, 132, 199, 0.04);
+  border-color: rgba(2, 132, 199, 0.18);
+}
+.case-struct-box.struct-issues .struct-step-badge {
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+.case-struct-box.struct-issues .struct-box-title {
+  color: #0284c7;
+}
+[data-theme="dark"] .case-struct-box.struct-issues {
+  background: rgba(2, 132, 199, 0.09);
+  border-color: rgba(2, 132, 199, 0.3);
+  border-left-color: #38bdf8;
+}
+[data-theme="dark"] .case-struct-box.struct-issues .struct-box-title {
+  color: #38bdf8;
+}
+
+/* 3. Arguments Styling */
+.case-struct-box.struct-arguments {
+  border-left: 4px solid #8b5cf6;
+  background: rgba(139, 92, 246, 0.04);
+  border-color: rgba(139, 92, 246, 0.18);
+}
+.case-struct-box.struct-arguments .struct-step-badge {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+.case-struct-box.struct-arguments .struct-box-title {
+  color: #7c3aed;
+}
+[data-theme="dark"] .case-struct-box.struct-arguments {
+  background: rgba(139, 92, 246, 0.09);
+  border-color: rgba(139, 92, 246, 0.3);
+  border-left-color: #a78bfa;
+}
+[data-theme="dark"] .case-struct-box.struct-arguments .struct-box-title {
+  color: #c4b5fd;
+}
+
+/* 4. Ratio Styling */
+.case-struct-box.struct-ratio {
+  border-left: 4px solid #059669;
+  background: rgba(5, 150, 105, 0.04);
+  border-color: rgba(5, 150, 105, 0.18);
+}
+.case-struct-box.struct-ratio .struct-step-badge {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+.case-struct-box.struct-ratio .struct-box-title {
+  color: #059669;
+}
+[data-theme="dark"] .case-struct-box.struct-ratio {
+  background: rgba(5, 150, 105, 0.09);
+  border-color: rgba(5, 150, 105, 0.3);
+  border-left-color: #34d399;
+}
+[data-theme="dark"] .case-struct-box.struct-ratio .struct-box-title {
+  color: #6ee7b7;
+}
+
+/* 5. Principle Evolved Styling */
+.case-struct-box.struct-principle {
+  border-left: 4px solid #d97706;
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #78350f;
+}
+.case-struct-box.struct-principle .struct-step-badge {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+.case-struct-box.struct-principle .struct-box-title {
+  color: #b45309;
+}
+.case-struct-box.struct-principle .case-text-block {
+  color: #78350f;
+}
+[data-theme="dark"] .case-struct-box.struct-principle {
+  background: #201708;
+  border-color: #3b280c;
+  border-left-color: #f59e0b;
+  color: #fde68a;
+}
+[data-theme="dark"] .case-struct-box.struct-principle .struct-box-title {
+  color: #fbbf24;
+}
+[data-theme="dark"] .case-struct-box.struct-principle .case-text-block {
+  color: #fef3c7;
+}
+
+/* Bullet list inside structured boxes */
+.case-bullet-list {
+  margin: 8px 0 6px 0;
+  padding-left: 20px;
+  line-height: 1.68;
+}
+.case-bullet-list li {
+  margin-bottom: 7px;
+}
+.case-bullet-list li:last-child {
+  margin-bottom: 0;
+}
+.case-bullet-list li strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* Backward compatibility fallbacks */
 .firac-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 @media(max-width:860px){.firac-grid{grid-template-columns:1fr}}
 .firac-box{padding:16px 20px;border-radius:var(--radius-md);border:1px solid var(--border-line);
@@ -930,15 +1108,6 @@ button{font-family:inherit;cursor:pointer}
   display:inline-flex;align-items:center;gap:6px;margin-bottom:10px}
 .firac-box.facts .firac-label{color:var(--text-muted)}
 .firac-box.ratio .firac-label{color:var(--sub-primary)}
-
-.case-text-block{font-family:var(--font-body);color:var(--text-primary);line-height:1.68}
-.case-text-block p{margin-bottom:10px;line-height:1.68}
-.case-text-block p:last-child{margin-bottom:0}
-.case-text-block ul,
-.case-text-block ol{margin:8px 0 10px 22px;padding:0;line-height:1.65}
-.case-text-block li{margin-bottom:6px}
-.case-text-block b,
-.case-text-block strong{font-weight:700;color:var(--text-primary)}
 
 .case-extra-box{padding:14px 20px;border-radius:var(--radius-md);border:1px solid var(--border-line);
   margin-bottom:14px;font-size:.9rem;line-height:1.65}
@@ -1525,6 +1694,24 @@ button{font-family:inherit;cursor:pointer}
   }
   .case-card-body {
     padding: 14px 14px;
+  }
+  .case-struct-box {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .struct-box-header {
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .struct-step-badge {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+  .struct-box-title {
+    font-size: 0.72rem;
   }
   .firac-grid {
     grid-template-columns: 1fr;
