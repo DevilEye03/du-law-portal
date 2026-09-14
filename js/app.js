@@ -516,7 +516,7 @@
       const loadedCount = (sem.subjectIds && sem.subjectIds.length) || 0;
       let subjectCountText = `${loadedCount} Subjects Included`;
       if (sem.id === 1) subjectCountText = `${loadedCount} Core Subjects Included`;
-      else if (sem.id === 2) subjectCountText = '5 Subjects Included';
+      else if (sem.id === 2) subjectCountText = `${loadedCount} Core Subject Loaded (Law of Evidence)`;
       else if (sem.id === 3) subjectCountText = `${loadedCount} Core Subjects Included`;
       else if (sem.id === 4) subjectCountText = '5 Subjects Included';
       else if (sem.id === 5) subjectCountText = '5 Subjects Included';

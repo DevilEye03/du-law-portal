@@ -27,6 +27,14 @@ window.BARE_ACTS_DB = {
     "icon": "fa-scale-unbalanced",
     "count": 11
   },
+    {
+    "id": "bsa",
+    "name": "Bharatiya Sakshya Adhiniyam, 2023",
+    "short": "BSA 2023",
+    "badge": "Law of Evidence",
+    "icon": "fa-fingerprint",
+    "count": 12
+  },
   {
     "id": "bns",
     "name": "Bharatiya Nyaya Sanhita, 2023",
@@ -3192,6 +3200,320 @@ window.BARE_ACTS_DB = {
       "magistrate",
       "baldev singh",
       "mandatory compliance"
+    ]
+  },
+
+  {
+    "id": "bsa-s2",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "2",
+    "title": "Definitions — Document, Evidence, Fact & Proof",
+    "badge": "Foundational Definitions",
+    "unit": "Unit 1",
+    "text": "(1) In this Adhiniyam, unless the context otherwise requires,—\n(d) 'document' means any matter expressed, described or inscribed upon any substance by means of letters, figures or marks, or by more than one of those means, or by any other electronic and digital means, intended to be used, or which may be used, for the purpose of recording that matter;\n(e) 'evidence' means and includes—\n(i) all statements which the Court permits or requires to be made before it by witnesses, in relation to matters of fact under inquiry, such statements are called oral evidence;\n(ii) all documents including electronic records produced for the inspection of the Court, such documents are called documentary evidence;\n(h) 'proved'—a fact is said to be proved when, after considering the matters before it, the Court either believes it to exist, or considers its existence so probable that a prudent man ought, under the circumstances of the particular case, to act upon the supposition that it exists.",
+    "ingredients": [
+      "Document includes traditional physical inscriptions as well as modern electronic and digital means.",
+      "Evidence comprises both oral statements and documentary records (explicitly including electronic records).",
+      "Standard of proof in civil cases: Preponderance of probabilities (prudent man test).",
+      "Standard of proof in criminal cases: Beyond reasonable doubt."
+    ],
+    "analysis": "Section 2 provides the core conceptual definitions. The BSA 2023 modernizes Section 3 of the 1872 Act by bringing electronic records directly into the definition of 'document' and 'evidence', eliminating the colonial divide between physical papers and electronic outputs.",
+    "cases": "State of Maharashtra v. Prafulla B. Desai (2003) 4 SCC 601 • R.M. Malkani v. State of Maharashtra (1973) 1 SCC 471",
+    "examTips": "Always cite Section 2(1)(d) & 2(1)(e) when answering questions on electronic evidence, tape recordings, or video conferencing.",
+    "keywords": [
+      "section 2",
+      "bsa",
+      "evidence",
+      "definitions — document, evidence, fact & proof"
+    ]
+  },
+
+  {
+    "id": "bsa-s4",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "4",
+    "title": "Relevancy of facts forming part of same transaction (Res Gestae)",
+    "badge": "Core Relevancy",
+    "unit": "Unit 2",
+    "text": "Facts which, though not in issue, are so connected with a fact in issue as to form part of the same transaction, are relevant, whether they occurred at the same time and place or at different times and places.",
+    "ingredients": [
+      "The fact must be connected with the fact in issue.",
+      "The connection must be so proximate as to form part of the same transaction.",
+      "Can occur contemporaneously at the same time and place or at different times and places.",
+      "Spontaneity and contemporaneity are essential to eliminate fabrication or concoction."
+    ],
+    "analysis": "Corresponds to Section 6 of IEA 1872. Known in common law as the doctrine of Res Gestae (things done). Statements made or acts done spontaneously during or immediately after the commission of an act are admissible as an exception to the hearsay rule.",
+    "cases": "R. v. Bedingfield (1879) • Gentela Vijayavardhan Rao v. State of A.P. (1996) 6 SCC 241 • Sukhar v. State of U.P. (1999) 9 SCC 507",
+    "examTips": "Exam Trap: A statement made after an interval of time when the speaker had time to reflect, concoct, or fabricate is NOT part of res gestae. Emphasize the spontaneity test.",
+    "keywords": [
+      "section 4",
+      "bsa",
+      "evidence",
+      "relevancy of facts forming part of same transaction (res gestae)"
+    ]
+  },
+
+  {
+    "id": "bsa-s8",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "8",
+    "title": "Things said or done by conspirator in reference to common design",
+    "badge": "Conspiracy",
+    "unit": "Unit 2",
+    "text": "Where there is reasonable ground to believe that two or more persons have conspired together to commit an offence or an actionable wrong, anything said, done or written by any one of such persons in reference to their common intention, after the time when such intention was first entertained by any one of them, is a relevant fact as against each of the persons believed to be so conspiring, as well for the purpose of proving the existence of the conspiracy as for the purpose of showing that any such person was a party to it.",
+    "ingredients": [
+      "Prima facie evidence of conspiracy (reasonable ground to believe).",
+      "Applies to anything said, done, or written by any co-conspirator.",
+      "Must be in reference to their common intention (interpreted as in furtherance of common design).",
+      "Temporal window: After the common intention was first entertained until its termination."
+    ],
+    "analysis": "Corresponds to Section 10 of IEA 1872. Based on the principle of mutual agency among conspirators. However, under the landmark rule in Mirza Akbar, statements made after the conspiracy has ended (e.g., confessions after arrest) are inadmissible against co-conspirators.",
+    "cases": "Mirza Akbar v. Emperor, AIR 1940 PC 176 • Badri Rai v. State of Bihar, AIR 1958 SC 953 • Mohd. Khalid v. State of W.B. (2002) 7 SCC 334",
+    "examTips": "Remember the temporal barrier: Post-arrest confessions cannot be admitted under Section 8 against fellow conspirators because the common intention ended upon arrest.",
+    "keywords": [
+      "section 8",
+      "bsa",
+      "evidence",
+      "things said or done by conspirator in reference to common design"
+    ]
+  },
+
+  {
+    "id": "bsa-s9",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "9",
+    "title": "When facts not otherwise relevant become relevant (Plea of Alibi)",
+    "badge": "Alibi & Inconsistency",
+    "unit": "Unit 2",
+    "text": "Facts not otherwise relevant are relevant—\n(1) if they are inconsistent with any fact in issue or relevant fact;\n(2) if by themselves or in connection with other facts they make the existence or non-existence of any fact in issue or relevant fact highly probable or improbable.",
+    "ingredients": [
+      "The fact is not otherwise relevant under preceding sections.",
+      "Clause (1): Fact is physically or logically inconsistent with the crime (Plea of Alibi).",
+      "Clause (2): Fact renders the crime highly probable or highly improbable."
+    ],
+    "analysis": "Corresponds to Section 11 of IEA 1872. The statutory home for the 'Plea of Alibi' (elsewhere). If an accused proves he was in London when a murder occurred in Delhi, his presence in London is relevant because it makes presence in Delhi impossible.",
+    "cases": "Jayantibhai Bhenkarbhai v. State of Gujarat (2002) 8 SCC 165 • Dudh Nath Pandey v. State of U.P. (1981) 2 SCC 166",
+    "examTips": "Plea of alibi is not a general exception under Chapter III BNS; it is a rule of evidence under Section 9 BSA. Burden of proving alibi rests strictly on accused under Section 107 BSA.",
+    "keywords": [
+      "section 9",
+      "bsa",
+      "evidence",
+      "when facts not otherwise relevant become relevant (plea of alibi)"
+    ]
+  },
+
+  {
+    "id": "bsa-s23",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "23",
+    "title": "Confession to police officer not to be proved & Discovery of Fact",
+    "badge": "Custodial Confessions & S. 27 Proviso",
+    "unit": "Unit 2",
+    "text": "(1) No confession made to a police officer shall be proved as against a person accused of any offence.\n(2) Provided that when any fact is deposed to as discovered in consequence of information received from a person accused of any offence, in the custody of a police officer, so much of such information, whether it amounts to a confession or not, as relates distinctly to the fact thereby discovered, may be proved.",
+    "ingredients": [
+      "Subsection (1): Total and absolute bar on confessions made to any police officer.",
+      "Subsection (2): Exception when information leads to discovery of a physical fact.",
+      "Accused must be in police custody at the time of giving information.",
+      "Only the distinct portion leading to discovery is admissible; confession of guilt remains strictly barred."
+    ],
+    "analysis": "Consolidates Section 25, Section 26, and Section 27 of IEA 1872 into a single unified provision. Codifies the Pulukuri Kottaya doctrine: 'fact discovered' means physical object + place of concealment + knowledge of accused.",
+    "cases": "Pulukuri Kottaya v. King Emperor, AIR 1947 PC 67 • Aghnoo Nagesia v. State of Bihar, AIR 1966 SC 119 • State of U.P. v. Deoman Upadhyaya, AIR 1960 SC 1125",
+    "examTips": "Severability Rule: 'I killed X with this knife and hid it under the bridge' → 'I killed X' is BARRED; 'I hid the knife under the bridge' is ADMISSIBLE.",
+    "keywords": [
+      "section 23",
+      "bsa",
+      "evidence",
+      "confession to police officer not to be proved & discovery of fact"
+    ]
+  },
+
+  {
+    "id": "bsa-s26",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "26(1)",
+    "title": "Dying Declarations — Statements as to cause of death",
+    "badge": "Dying Declarations",
+    "unit": "Unit 2",
+    "text": "Statements, written or verbal, of relevant facts made by a person who is dead, or who cannot be found, or who has become incapable of giving evidence, or whose attendance cannot be procured without an amount of delay or expense which, under the circumstances of the case, appears to the Court unreasonable, are themselves relevant facts in the following cases:—\n(1) When the statement is made by a person as to the cause of his death, or as to any of the circumstances of the transaction which resulted in his death, in cases in which the cause of that person's death comes into question.",
+    "ingredients": [
+      "Statement made by a person who is now dead.",
+      "Relates to the cause of his death OR circumstances of transaction resulting in death.",
+      "Cause of that person's death must be in question.",
+      "Admissible in both homicide and civil suicide/insurance cases.",
+      "Declarant need not be under expectation of death at the time of making the statement (unlike English law)."
+    ],
+    "analysis": "Corresponds to Section 32(1) of IEA 1872. Founded on the maxim 'Nemo moriturus praesumitur mentire'. A truthful and voluntary dying declaration can sustain conviction without corroboration.",
+    "cases": "Khushal Rao v. State of Bombay, AIR 1958 SC 22 • Laxman v. State of Maharashtra (2002) 6 SCC 710 • Pakala Narayana Swami v. Emperor, AIR 1939 PC 47",
+    "examTips": "Crucial difference from English law: Indian law does not require the declarant to be in settled, hopeless expectation of imminent death.",
+    "keywords": [
+      "section 26(1)",
+      "bsa",
+      "evidence",
+      "dying declarations — statements as to cause of death"
+    ]
+  },
+
+  {
+    "id": "bsa-s63",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "63",
+    "title": "Admissibility of electronic records & Section 63(4) Certificate",
+    "badge": "Electronic Evidence",
+    "unit": "Unit 3",
+    "text": "(1) Notwithstanding anything contained in this Adhiniyam, any information contained in an electronic record which is printed on a paper, stored, recorded or copied in optical or magnetic media or each such digital record produced by a computer shall be deemed to be also a document... and shall be admissible in any proceedings, without further proof or production of the original...\n(4) In any proceedings where it is desired to give a statement in evidence by virtue of this section, a certificate doing any of the following things, that is to say,—\n(a) identifying the electronic record containing the statement;\n(b) describing the manner in which it was produced;\n(c) giving such particulars of any device involved...\nand purporting to be signed by a person in charge of the computer or device shall be evidence of any matter stated in the certificate.",
+    "ingredients": [
+      "Special non-obstante code for electronic evidence.",
+      "Deems secondary computer outputs (printouts, CDs, hard disks) to be documents.",
+      "Four operating conditions under subsection (2) must be fulfilled.",
+      "Subsection (4) certificate is a mandatory condition precedent for secondary electronic records."
+    ],
+    "analysis": "Corresponds to Section 65B of IEA 1872. Following the landmark ruling in Arjun Panditrao Khotkar (2020), a Section 63(4) certificate is compulsory whenever secondary electronic evidence is produced. If original device is produced in court, no certificate needed.",
+    "cases": "Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal (2020) 7 SCC 1 • Anvar P.V. v. P.K. Basheer (2014) 10 SCC 473",
+    "examTips": "Golden rule from Arjun Panditrao: Primary electronic evidence (original device) = No certificate. Secondary electronic evidence (copies/CDs/printouts) = Section 63(4) Certificate MANDATORY.",
+    "keywords": [
+      "section 63",
+      "bsa",
+      "evidence",
+      "admissibility of electronic records & section 63(4) certificate"
+    ]
+  },
+
+  {
+    "id": "bsa-s116",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "116",
+    "title": "Birth during marriage, conclusive proof of legitimacy",
+    "badge": "Conclusive Presumption",
+    "unit": "Unit 6",
+    "text": "The fact that any person was born during the continuance of a valid marriage between his mother and any man, or within two hundred and eighty days after its dissolution, the mother remaining unmarried, shall be conclusive proof that he is the legitimate child of that man, unless it can be shown that the parties to the marriage had no access to each other at any time when he could have been begotten.",
+    "ingredients": [
+      "Birth during the continuance of a valid marriage, OR",
+      "Birth within 280 days after dissolution, mother remaining unmarried.",
+      "Status: Conclusive proof of legitimacy under Section 2(1)(h).",
+      "Sole statutory defence: Proof of non-access during the conception period."
+    ],
+    "analysis": "Corresponds to Section 112 of IEA 1872. Designed to prevent social stigma on innocent children. However, under modern Supreme Court rulings (Nandlal Badwaik), conclusive scientific DNA tests showing non-paternity constitute proof of non-access in fact, overcoming the presumption.",
+    "cases": "Goutam Kundu v. State of W.B. (1993) 3 SCC 418 • Nandlal Wasudeo Badwaik (2014) 2 SCC 576 • Dipanwita Roy v. Ronobroto Roy (2015) 1 SCC 365",
+    "examTips": "Standard of proof to rebut Section 116 is extraordinarily high: Husband must prove non-access beyond reasonable doubt, or produce conclusive forensic DNA exclusion.",
+    "keywords": [
+      "section 116",
+      "bsa",
+      "evidence",
+      "birth during marriage, conclusive proof of legitimacy"
+    ]
+  },
+
+  {
+    "id": "bsa-s118",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "118",
+    "title": "Presumption as to Dowry Death",
+    "badge": "Mandatory Presumption",
+    "unit": "Unit 6",
+    "text": "When the question is whether a person has committed the dowry death of a woman and it is shown that soon before her death such woman had been subjected by such person to cruelty or harassment for, or in connection with, any demand for dowry, the Court shall presume that such person had caused the dowry death.",
+    "ingredients": [
+      "Charge of dowry death under Section 80 BNS (Section 304B IPC).",
+      "Death of woman occurred within 7 years of marriage under abnormal circumstances.",
+      "Proof of cruelty or harassment in connection with dowry demands.",
+      "Cruelty inflicted 'soon before her death' (proximate nexus).",
+      "Once proved, 'Court shall presume'—statutory presumption is mandatory."
+    ],
+    "analysis": "Corresponds to Section 113B of IEA 1872. Reverses the burden of proof onto the husband and his relatives once the prosecution establishes that the deceased was harassed for dowry soon before her death.",
+    "cases": "Major Singh v. State of Punjab (2015) 5 SCC 201 • Satbir Singh v. State of Haryana (2021) 6 SCC 1",
+    "examTips": "Note the word 'shall presume': The judge has no discretion. The burden shifts to the defence to establish absence of cruelty on preponderance of probabilities.",
+    "keywords": [
+      "section 118",
+      "bsa",
+      "evidence",
+      "presumption as to dowry death"
+    ]
+  },
+
+  {
+    "id": "bsa-s121",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "121",
+    "title": "Estoppel — Representation, Belief & Detriment",
+    "badge": "Estoppel",
+    "unit": "Unit 3",
+    "text": "When one person has, by his declaration, act or omission, intentionally caused or permitted another person to believe a thing to be true and to act upon such belief, neither he nor his representative shall be allowed, in any suit or proceeding between himself and such person or his representative, to deny the truth of that thing.",
+    "ingredients": [
+      "Representation made by declaration, act, or omission.",
+      "Intentional inducement causing another to believe the representation.",
+      "Action taken by the representee based on that belief.",
+      "Detriment or alteration of position suffered by the representee.",
+      "Consequence: Maker is disabled from pleading the contrary."
+    ],
+    "analysis": "Corresponds to Section 115 of IEA 1872. Codifies the rule of equity that a person cannot blow hot and cold (allegans contraria non est audiendus).",
+    "cases": "Chhaganlal Keshavlal Mehta (1982) 1 SCC 223 • Sanatan Gauda v. Berhampur University (1990) 3 SCC 23 • Motilal Padampat Sugar Mills (1979) 2 SCC 409",
+    "examTips": "Inviolable exception: There is NO estoppel against a statute or constitutional provision (Kumari Madhuri Patil, 1994).",
+    "keywords": [
+      "section 121",
+      "bsa",
+      "evidence",
+      "estoppel — representation, belief & detriment"
+    ]
+  },
+
+  {
+    "id": "bsa-s138",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "138",
+    "title": "Accomplice — Competency & Uncorroborated Conviction",
+    "badge": "Accomplice Law",
+    "unit": "Unit 4",
+    "text": "An accomplice shall be a competent witness against an accused person; and a conviction is not illegal merely because it proceeds upon the uncorroborated testimony of an accomplice.",
+    "ingredients": [
+      "Accomplice is a competent witness as a matter of law.",
+      "Conviction on uncorroborated accomplice testimony is strictly legal.",
+      "Must be read harmoniously with Section 119 Illustration (b) (rule of prudence).",
+      "The Double Test of corroboration in material particulars must be satisfied."
+    ],
+    "analysis": "Corresponds to Section 133 of IEA 1872. Represents the 'Rule of Law', while Section 119 Illustration (b) represents the 'Rule of Prudence'. Judicial practice has unified both: conviction should not be based on uncorroborated accomplice evidence save in exceptional cases.",
+    "cases": "Bhuboni Sahu v. The King, AIR 1949 PC 257 • Haroon Haji Abdulla v. State of Maharashtra, AIR 1968 SC 832 • Ravinder Singh v. State of Haryana (1975) 3 SCC 742",
+    "examTips": "Quote Sir John Beaumont's maxim: 'Tainted evidence cannot corroborate other tainted evidence.' An accomplice cannot be corroborated by another accomplice or co-accused confession.",
+    "keywords": [
+      "section 138",
+      "bsa",
+      "evidence",
+      "accomplice — competency & uncorroborated conviction"
+    ]
+  },
+
+  {
+    "id": "bsa-s157",
+    "actId": "bsa",
+    "act": "Bharatiya Sakshya Adhiniyam, 2023",
+    "sec": "157",
+    "title": "Question by party to his own witness (Hostile Witness)",
+    "badge": "Hostile Witness",
+    "unit": "Unit 5",
+    "text": "(1) The Court may, in its discretion, permit the person who calls a witness to put any question to him which might be put in cross-examination by the adverse party.\n(2) Nothing in this section shall disentitle the person so permitted under sub-section (1), to rely on any part of the evidence of such witness.",
+    "ingredients": [
+      "Court has judicial discretion to permit cross-examination of one's own witness.",
+      "Used when witness displays hostility, bias, or resiles from prior statement.",
+      "Subsection (2): Explicit statutory confirmation that evidence is NOT effaced.",
+      "Court may accept truthful, corroborated portions of hostile witness testimony."
+    ],
+    "analysis": "Corresponds to Section 154 of IEA 1872. Modernized by adding explicit subsection (2) confirming the Supreme Court's rulings in Sat Pal and Laloo Prasad that hostile witness evidence is severable and can be used by either side.",
+    "cases": "State of Bihar v. Laloo Prasad (2002) 9 SCC 626 • Sat Pal v. Delhi Administration (1976) 1 SCC 727 • Neeraj Dutta v. State (Govt. of NCT of Delhi) (2023) 4 SCC 731",
+    "examTips": "Section 157(2) BSA statutorily codifies the Laloo Prasad rule: Calling a witness hostile does NOT efface his evidence from the record.",
+    "keywords": [
+      "section 157",
+      "bsa",
+      "evidence",
+      "question by party to his own witness (hostile witness)"
     ]
   }
 ]

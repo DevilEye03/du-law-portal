@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law of Evidence — Unit VI: PRESUMPTIONS | Complete DU Notes (BSA 2023 &amp; IEA 1872)</title>
+<style>
+:root{
+  --ink:#1c1a17; --paper:#fdfbf5; --cream:#f7f2e7; --maroon:#7a1f2b; --indigo:#1f3a5f;
+  --gold:#b98a2f; --green:#2e5e3a; --blue:#20567c; --plum:#5b2a52; --line:#d8cfbc;
+  --case:#8c2f39; --prov:#1f4e5f; --ex:#7a5a12; --pyq:#3c4f8a; --rel:#4a5d2f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.72 "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px;}
+.cover{background:linear-gradient(160deg,#101b20 0%, #14343d 45%, #1f4e5f 100%);color:#eaf3f0;padding:64px 26px 58px;text-align:center;border-bottom:6px double var(--gold);}
+.cover .kicker{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:#9fd0c4;}
+.cover h1{font-size:clamp(30px,5vw,52px);margin:.35em 0 .15em;line-height:1.12;color:#fff;}
+.cover h2{font-weight:400;font-size:clamp(17px,2.4vw,24px);color:#cfe8d4;margin:0 0 18px;}
+.cover .meta{display:inline-block;border:1px solid #7fae9f;border-radius:10px;padding:10px 22px;font-size:14px;color:#e6f2ec;background:rgba(0,0,0,.25);}
+.cover .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.cover .tag{font-size:12.5px;border:1px solid #7fae9f88;border-radius:999px;padding:4px 13px;color:#dcefe7;background:#00000030;}
+.toc{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:34px 0;}
+.toc h3{margin:0 0 10px;color:var(--maroon);font-size:22px;}
+.toc ol{margin:0;padding-left:22px;}
+.toc li{margin:5px 0;}
+.toc a{color:var(--indigo);text-decoration:none;border-bottom:1px dotted #9aa;}
+.toc a:hover{color:var(--maroon);}
+h2.unit{font-size:clamp(24px,3.4vw,34px);color:var(--maroon);border-bottom:3px solid var(--gold);padding-bottom:8px;margin:64px 0 6px;}
+h2.unit .no{display:inline-block;background:var(--maroon);color:#fff;border-radius:8px;font-size:.62em;padding:3px 12px;vertical-align:middle;margin-right:12px;letter-spacing:.08em;}
+h3.sec{font-size:clamp(20px,2.6vw,26px);color:var(--indigo);margin:44px 0 8px;border-left:6px solid var(--gold);padding-left:14px;}
+h4.sub{font-size:19px;color:var(--plum);margin:30px 0 6px;}
+h5.mini{font-size:16px;color:var(--green);margin:22px 0 4px;text-transform:uppercase;letter-spacing:.06em;}
+p{margin:10px 0;}
+ul,ol{margin:8px 0 14px;padding-left:26px;}
+li{margin:5px 0;}
+.box{border-radius:12px;padding:16px 20px;margin:18px 0;border:1px solid;position:relative;}
+.box .lbl{position:absolute;top:-13px;left:16px;background:var(--paper);padding:0 10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.prov{border-color:#9fc4cf;background:#eef6f8;} .prov .lbl{color:var(--prov);}
+.case{border-color:#d9a6ad;background:#fbf0f1;} .case .lbl{color:var(--case);}
+.exbox{border-color:#e0c584;background:#fdf6e3;} .exbox .lbl{color:var(--ex);}
+.pyq{border-color:#9fb0e0;background:#eef1fb;} .pyq .lbl{color:var(--pyq);}
+.rel{border-color:#b5c79a;background:#f2f7ea;} .rel .lbl{color:var(--rel);}
+.warn{border-color:#e0b484;background:#fdf1e6;} .warn .lbl{color:#9c5a12;}
+.stat{font-family:Georgia,serif;font-size:16px;background:#ffffffb0;border-left:4px solid var(--prov);padding:12px 16px;margin:10px 0;border-radius:0 8px 8px 0;}
+.stat b.h{color:var(--prov);}
+.casecard{background:#fff;border:1px solid #e3c9cd;border-left:7px solid var(--case);border-radius:12px;padding:20px 24px;margin:26px 0;box-shadow:0 2px 10px #00000012;}
+.casecard h4{margin:0 0 2px;color:var(--case);font-size:21px;}
+.casecard .cite{font-size:13.5px;color:#7c6a6d;font-style:italic;margin-bottom:10px;}
+.casecard h5{margin:16px 0 4px;color:#8c2f39;font-size:15px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px dashed #d9a6ad;padding-bottom:3px;}
+table{border-collapse:collapse;width:100%;margin:16px 0;background:#fff;font-size:14.8px;}
+th{background:var(--indigo);color:#fff;padding:9px 10px;text-align:left;font-weight:600;}
+td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+tr:nth-child(even) td{background:#faf7ef;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.pill{display:inline-block;border-radius:999px;padding:2px 12px;font-size:12.5px;font-weight:700;margin-right:6px;}
+.p-bsa{background:#1f4e5f;color:#fff;} .p-iea{background:#7a5a12;color:#fff;}
+.quote{font-family:Georgia,serif;font-style:italic;background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:12px 18px;margin:12px 0;color:#4c3b1e;}
+.fig{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 12px;margin:24px 0;text-align:center;overflow-x:auto;}
+.fig figcaption{font-size:13.5px;color:#6b5f4c;margin-top:8px;font-style:italic;}
+svg text{font-family:"Segoe UI",Arial,sans-serif;}
+.small{font-size:13.5px;color:#6d6152;}
+.hl{background:#ffe9a8;padding:0 4px;border-radius:3px;}
+.hl2{background:#cfe8d4;padding:0 4px;border-radius:3px;}
+.hl3{background:#f3cfd6;padding:0 4px;border-radius:3px;}
+.navtop{position:sticky;top:0;background:#101b20cc;backdrop-filter:blur(6px);z-index:50;padding:8px 16px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.navtop a{color:#cfe8d4;text-decoration:none;font-size:13px;letter-spacing:.04em;}
+.navtop a:hover{color:#fff;}
+.ans{background:#f4f8ef;border:1px solid #b5c79a;border-radius:10px;padding:14px 18px;margin:12px 0;}
+.ans h6{margin:0 0 6px;color:var(--green);font-size:15px;text-transform:uppercase;letter-spacing:.08em;}
+footer{background:#101b20;color:#c9d8cf;padding:30px 20px;text-align:center;font-size:13.5px;margin-top:60px;}
+@media print{.navtop{display:none}.cover{padding:30px}.box,.casecard{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">University of Delhi &bull; Faculty of Law &bull; LL.B. / B.A. LL.B. (Hons.)</div>
+  <h1>THE LAW OF EVIDENCE<br>UNIT VI &mdash; PRESUMPTIONS</h1>
+  <h2>May Presume &bull; Shall Presume &bull; Conclusive Proof &bull; Legitimacy &bull; Dowry Death &bull; Abetment of Suicide &bull; Rape &bull; Disturbed-Area Offences</h2>
+  <div class="meta">Syllabus Topic VI &bull; BSA ss. 2(1), 35, 108, 115, 116, 117, 118, 119, 120 &bull; IEA ss. 4, 41, 105, 111A, 112, 113A, 113B, 114, 114A &bull; Cases 29&ndash;30: Goutam Kundu; Dipanwita Roy</div>
+  <div class="tags">
+    <span class="tag">s. 2(1) BSA / s. 4 IEA &mdash; the three degrees of presumption</span>
+    <span class="tag">s. 35 BSA / s. 41 IEA &mdash; conclusive proof of probate &amp; matrimonial judgments</span>
+    <span class="tag">s. 108 BSA / s. 105 IEA &mdash; burden as to exceptions</span>
+    <span class="tag">s. 115/111A &bull; s. 116/112 &bull; s. 117/113A &bull; s. 118/113B &bull; s. 119/114 &bull; s. 120/114A</span>
+    <span class="tag">Goutam Kundu v. State of W.B. &bull; Dipanwita Roy v. Ronobroto Roy &mdash; full briefs</span>
+    <span class="tag">DNA vs conclusive proof: Nandlal Badwaik, Kamti Devi, Sharda, Sham Lal, Bhabani Prasad Jena</span>
+    <span class="tag">DU PYQ (June 2024 Q.8) + model answers</span>
+  </div>
+</div>
+
+<div class="navtop">
+  <a href="#framework">Framework</a><a href="#judgments">s. 35 / s. 41</a><a href="#burden">s. 108 / s. 105</a><a href="#offences">s. 115 / s. 111A</a><a href="#legitimacy">Legitimacy s. 116 / s. 112</a><a href="#cases">Cases 29&ndash;30</a><a href="#social">117&ndash;120 / 113A&ndash;114A</a><a href="#pyq">PYQs &amp; Models</a><a href="#revision">Rapid Revision</a>
+</div>
+
+<div class="wrap">
+
+<div class="toc">
+<h3>Contents</h3>
+<ol>
+  <li><a href="#framework">Part 0 &mdash; Anatomy of presumption: s. 2(1)(h)/(l)/(b) BSA &amp; s. 4 IEA; classifications; the presumption ladder diagram; BSA&harr;IEA map of Topic VI</a></li>
+  <li><a href="#judgments">Part 1 &mdash; s. 35 BSA / s. 41 IEA: conclusive proof of judgments in probate, matrimonial, admiralty &amp; insolvency jurisdiction</a></li>
+  <li><a href="#burden">Part 2 &mdash; s. 108 BSA / s. 105 IEA: burden of proving exceptions; the court &ldquo;shall presume the absence&rdquo;</a></li>
+  <li><a href="#offences">Part 3 &mdash; s. 115 BSA / s. 111A IEA: presumption as to certain offences in disturbed areas (IPC 121&ndash;123 &rarr; BNS 147&ndash;150)</a></li>
+  <li><a href="#legitimacy">Part 4 &mdash; s. 116 BSA / s. 112 IEA: birth during marriage &mdash; conclusive proof of legitimacy; access/non-access; DNA &amp; the right to privacy</a></li>
+  <li><a href="#cases">Part 5 &mdash; Cases 29&ndash;30 in full brief: Goutam Kundu v. State of West Bengal; Dipanwita Roy v. Ronobroto Roy; companion cards (Nandlal Badwaik, Kamti Devi, Sharda, Sham Lal, Bhabani Prasad Jena)</a></li>
+  <li><a href="#social">Part 6 &mdash; Social-crime presumptions: s. 117/113A (abetment of suicide), s. 118/113B (dowry death), s. 120/114A (absence of consent in rape); and s. 119/114 with Illustrations (a)&ndash;(i)</a></li>
+  <li><a href="#pyq">Part 7 &mdash; DU PYQs: June 2024 Q.8 with best model answer + pattern-based models</a></li>
+  <li><a href="#revision">Part 8 &mdash; Rapid revision: master tables, mnemonics, traps, answer blueprint</a></li>
+</ol>
+<p class="small">Primary sources: (1) DU Case Material LB-201 (2025 ed.) &mdash; full text of <i>Goutam Kundu v. State of West Bengal</i>, AIR 1993 SC 2295 (pp. 178&ndash;184); (2) DU LB-201 lecture notes Ch. XI &ldquo;Evidence to decide paternity&rdquo; (ss. 4, 11, 112, 114(h); Goutam Kundu, Nandlal Badwaik, Dipanwita Roy; Kamti Devi, Sharda, Sham Lal, Bhabani Prasad Jena; Law Commission 185th Report; ART/Surrogacy/DNA-Technology instruments) and Ch. XII companion materials; (3) bare texts of the BSA 2023 &amp; IEA 1872 (ss. 2(1), 35, 108, 115&ndash;120 verbatim); (4) DU LL.B. II Term May&ndash;June 2024 paper, Q.8; (5) connected instruments: AFSPA 1958 s. 3, Arms Act 1959 ss. 24A&ndash;24B, Commission of Sati (Prevention) Act 1987 s. 4, Dowry Prohibition Act 1961 s. 2, HMA 1955 ss. 13 &amp; 16, CrPC s. 125, BNS offence mapping.</p>
+</div>
+
+<!-- ================= PART 0 ================= -->
+<h2 class="unit" id="framework"><span class="no">PART 0</span>Anatomy of a Presumption</h2>
+
+<h3 class="sec">0.1 The statutory definitions &mdash; three degrees of force</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 2(1)(h), BSA 2023 &mdash; &ldquo;may presume&rdquo;</b> [= s. 4, IEA]: &ldquo;Whenever it is provided by this Adhiniyam that the Court may presume a fact, it may either <b>regard such fact as proved, unless and until it is disproved</b>, or <b>may call for proof of it</b>.&rdquo;</div>
+<div class="stat"><b class="h">s. 2(1)(l), BSA 2023 &mdash; &ldquo;shall presume&rdquo;</b> [= s. 4, IEA]: &ldquo;Whenever it is directed by this Adhiniyam that the Court shall presume a fact, it <b>shall regard such fact as proved, unless and until it is disproved</b>.&rdquo;</div>
+<div class="stat"><b class="h">s. 2(1)(b), BSA 2023 &mdash; &ldquo;conclusive proof&rdquo;</b> [= s. 4, IEA]: &ldquo;When one fact is declared by this Adhiniyam to be conclusive proof of another, the Court shall, <b>on proof of the one fact, regard the other as proved, and shall not allow evidence to be given for the purpose of disproving it</b>.&rdquo;</div>
+<table>
+<tr><th>Degree</th><th>Court&rsquo;s duty</th><th>Rebuttal?</th><th>Examples in the syllabus list</th></tr>
+<tr><td><b>May presume</b> (presumption of fact / discretionary)</td><td>Option: treat as proved <i>or</i> call for proof</td><td>Yes &mdash; by disproving or by leading contrary evidence</td><td>s. 119 BSA / s. 114 IEA (&ldquo;Court may presume&rdquo; + Illustrations); s. 117 BSA / s. 113A IEA</td></tr>
+<tr><td><b>Shall presume</b> (presumption of law, rebuttable)</td><td>Must regard as proved</td><td>Yes &mdash; &ldquo;unless and until it is disproved&rdquo;</td><td>s. 118 BSA / s. 113B IEA (dowry death); s. 115 BSA / s. 111A IEA (&ldquo;shall be presumed, unless the contrary is shown&rdquo;)</td></tr>
+<tr><td><b>Conclusive proof</b> (irrebuttable presumption of law)</td><td>Must regard as proved</td><td><b>No</b> &mdash; counter-evidence barred altogether</td><td>s. 116 BSA / s. 112 IEA (legitimacy, save non-access); s. 35(2) BSA / s. 41 IEA (judgments in probate etc. jurisdiction)</td></tr>
+</table>
+<p class="small">DU notes classification cross-check: presumptions are of <b>fact</b> (logical inferences &mdash; the s. 119/114 illustrations), of <b>law</b> (rebuttable: shall presume) and <b>conclusive/irrebuttable</b> (law forbidding rebuttal). &ldquo;May presume&rdquo; leaves both the raising and the acting upon the presumption to judicial discretion; &ldquo;shall presume&rdquo; removes the discretion to raise but keeps the door of disproof open; &ldquo;conclusive proof&rdquo; closes even that door &mdash; the only escape being the exception <b>built into</b> the provision itself (e.g. &ldquo;unless&hellip; no access&rdquo; in s. 116/112).</p>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 330" width="940" role="img" aria-label="Presumption ladder diagram">
+ <defs><marker id="p1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker>
+ <marker id="p1r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c2f39"/></marker></defs>
+ <rect x="60" y="30" width="250" height="86" rx="12" fill="#f2f7ea" stroke="#2e5e3a" stroke-width="2"/>
+ <text x="185" y="55" fill="#2e5e3a" font-size="14" text-anchor="middle" font-weight="bold">MAY PRESUME</text>
+ <text x="185" y="74" fill="#333" font-size="11.5" text-anchor="middle">discretionary; treat as proved</text>
+ <text x="185" y="90" fill="#333" font-size="11.5" text-anchor="middle">or call for proof</text>
+ <text x="185" y="106" fill="#333" font-size="11" text-anchor="middle">s. 119/114; s. 117/113A</text>
+ <rect x="355" y="30" width="250" height="86" rx="12" fill="#fdf6e3" stroke="#b98a2f" stroke-width="2"/>
+ <text x="480" y="55" fill="#7a5a12" font-size="14" text-anchor="middle" font-weight="bold">SHALL PRESUME</text>
+ <text x="480" y="74" fill="#333" font-size="11.5" text-anchor="middle">mandatory; rebuttable</text>
+ <text x="480" y="90" fill="#333" font-size="11.5" text-anchor="middle">&ldquo;unless and until disproved&rdquo;</text>
+ <text x="480" y="106" fill="#333" font-size="11" text-anchor="middle">s. 118/113B; s. 115/111A</text>
+ <rect x="650" y="30" width="250" height="86" rx="12" fill="#fbf0f1" stroke="#8c2f39" stroke-width="2"/>
+ <text x="775" y="55" fill="#8c2f39" font-size="14" text-anchor="middle" font-weight="bold">CONCLUSIVE PROOF</text>
+ <text x="775" y="74" fill="#333" font-size="11.5" text-anchor="middle">mandatory; counter-evidence</text>
+ <text x="775" y="90" fill="#333" font-size="11.5" text-anchor="middle">BARRED (s. 4 / s. 2(1)(b))</text>
+ <text x="775" y="106" fill="#333" font-size="11" text-anchor="middle">s. 116/112; s. 35(2)/41</text>
+ <line x1="310" y1="73" x2="353" y2="73" stroke="#4a3f2a" stroke-width="2.2" marker-end="url(#p1)"/>
+ <line x1="605" y1="73" x2="648" y2="73" stroke="#4a3f2a" stroke-width="2.2" marker-end="url(#p1)"/>
+ <text x="480" y="22" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">increasing force of law &rarr;</text>
+ <line x1="185" y1="116" x2="185" y2="160" stroke="#8c2f39" stroke-width="2" marker-end="url(#p1r)"/>
+ <line x1="480" y1="116" x2="480" y2="160" stroke="#8c2f39" stroke-width="2" marker-end="url(#p1r)"/>
+ <line x1="775" y1="116" x2="775" y2="160" stroke="#4a3f2a" stroke-width="2"/>
+ <rect x="85" y="162" width="200" height="46" rx="9" fill="#fff" stroke="#8c2f39"/><text x="185" y="182" fill="#8c2f39" font-size="11.5" text-anchor="middle" font-weight="bold">rebuttal: contrary evidence</text><text x="185" y="198" fill="#333" font-size="11" text-anchor="middle">(disproof on balance)</text>
+ <rect x="380" y="162" width="200" height="46" rx="9" fill="#fff" stroke="#8c2f39"/><text x="480" y="182" fill="#8c2f39" font-size="11.5" text-anchor="middle" font-weight="bold">rebuttal: disproof</text><text x="480" y="198" fill="#333" font-size="11" text-anchor="middle">(&ldquo;unless the contrary is shown&rdquo;)</text>
+ <rect x="655" y="162" width="240" height="46" rx="9" fill="#fff" stroke="#1f4e5f"/><text x="775" y="182" fill="#1f4e5f" font-size="11.5" text-anchor="middle" font-weight="bold">no rebuttal &mdash; only the built-in</text><text x="775" y="198" fill="#1f4e5f" font-size="11.5" text-anchor="middle">exception (e.g. non-access, s. 116)</text>
+ <rect x="230" y="240" width="500" height="62" rx="10" fill="#eef6f8" stroke="#1f4e5f"/>
+ <text x="480" y="262" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">Function: shifts the burden of producing evidence (sometimes the burden of proof)</text>
+ <text x="480" y="280" fill="#333" font-size="11.5" text-anchor="middle">from the party whom it favours &mdash; a bridge between &ldquo;proved&rdquo; and &ldquo;not proved&rdquo;</text>
+ <text x="480" y="296" fill="#333" font-size="11.5" text-anchor="middle">built on the common course of natural events, human conduct, and public/private business</text>
+ <line x1="480" y1="208" x2="480" y2="238" stroke="#4a3f2a" stroke-width="1.6" marker-end="url(#p1)"/>
+</svg>
+<figcaption>Fig. 0.1 &mdash; The presumption ladder: discretion &rarr; compulsion &rarr; conclusiveness, with the rebuttal doors that remain open at each rung.</figcaption>
+</figure>
+
+<h3 class="sec">0.2 The Topic VI map (BSA &harr; IEA) and where each provision sits</h3>
+<table>
+<tr><th>BSA 2023</th><th>IEA 1872</th><th>Subject</th><th>Degree</th></tr>
+<tr><td>s. 2(1)(h), (l), (b)</td><td>s. 4</td><td>&ldquo;May presume&rdquo;, &ldquo;shall presume&rdquo;, &ldquo;conclusive proof&rdquo; defined</td><td>Definitions</td></tr>
+<tr><td>s. 35</td><td>s. 41</td><td>Final judgments in probate, matrimonial, admiralty, insolvency jurisdiction &mdash; relevant &amp; <b>conclusive proof</b> of the legal character conferred/taken away</td><td>Conclusive</td></tr>
+<tr><td>s. 108</td><td>s. 105</td><td>Accused&rsquo;s burden for exceptions; Court <b>shall presume the absence</b> of excepting circumstances</td><td>Shall presume</td></tr>
+<tr><td>s. 115</td><td>s. 111A</td><td>Disturbed-area offences (firearms/explosives vs armed forces): BNS ss. 147&ndash;150 (IPC ss. 121&ndash;123)</td><td>Shall presume</td></tr>
+<tr><td>s. 116</td><td>s. 112</td><td>Birth during marriage / within 280 days of dissolution &mdash; <b>conclusive proof of legitimacy</b>, save non-access</td><td>Conclusive</td></tr>
+<tr><td>s. 117</td><td>s. 113A</td><td>Abetment of suicide of a married woman (suicide within 7 years + cruelty, BNS s. 86 / IPC s. 498A)</td><td>May presume</td></tr>
+<tr><td>s. 118</td><td>s. 113B</td><td>Dowry death (cruelty/harassment for dowry soon before death; BNS s. 80 / IPC s. 304B)</td><td>Shall presume</td></tr>
+<tr><td>s. 119</td><td>s. 114</td><td>Court may presume existence of certain facts &mdash; Illustrations (a)&ndash;(i)</td><td>May presume</td></tr>
+<tr><td>s. 120</td><td>s. 114A</td><td>Absence of consent in certain prosecutions for rape (BNS s. 64(2); &ldquo;sexual intercourse&rdquo; = BNS s. 63 acts)</td><td>Shall presume</td></tr>
+</table>
+
+</div><!-- /wrap -->
+<div class="wrap">
+
+<!-- ================= PART 1 ================= -->
+<h2 class="unit" id="judgments"><span class="no">PART 1</span>s. 35 BSA / s. 41 IEA &mdash; Conclusive Proof of Certain Judgments</h2>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 35, BSA 2023</b> [= s. 41, IEA 1872]: &ldquo;(1) A <b>final judgment, order or decree</b> of a competent Court or Tribunal, in the exercise of <b>probate, matrimonial, admiralty or insolvency jurisdiction</b>, which <b>confers upon or takes away from any person any legal character</b>, or which declares any person to be entitled to any such character, or to be entitled to any specific thing, not as against any specified person but <b>absolutely</b>, is <b>relevant</b> when the existence of any such legal character, or the title of any such person to any such thing, is relevant. (2) Such judgment, order or decree is <b>conclusive proof</b> that &mdash; (i) any legal character which it confers <b>accrued at the time</b> when such judgment, order or decree came into operation; (ii) any legal character, to which it declares any such person to be entitled, <b>accrued to that person at the time</b> when such judgment&hellip; declares it to have accrued&hellip;; (iii) any legal character which it takes away&hellip; <b>ceased at the time</b> from which such judgment&hellip; declared that it had ceased or should cease; and (iv) anything to which it declares any person to be so entitled <b>was the property of that person</b> at the time from which the judgment&hellip; declares it to have been or should be his property.&rdquo;</div>
+<h4 class="sub">Elements &amp; components</h4>
+<ul>
+<li><b>Four jurisdictions only:</b> probate, matrimonial, admiralty, insolvency &mdash; judgments <i>in rem</i> in character; ordinary civil/criminal judgments are outside s. 35/41 (they operate as <i>res judicata</i>/<i>autrefois</i> between parties, not as conclusive proof against the world).</li>
+<li><b>Finality:</b> the judgment/order/decree must be <b>final</b> and of a <b>competent</b> court/tribunal.</li>
+<li><b>Legal character or absolute title:</b> it must confer/take away a <b>legal character</b> (e.g. spouse, widow, legitimate child, solvent/insolvent, owner of a ship) or declare entitlement to a specific thing <b>absolutely</b>, not merely as against a specified person.</li>
+<li><b>Effect:</b> (a) <b>relevancy</b> even against strangers to the earlier proceeding; (b) <b>conclusive proof</b> of the four timed propositions in sub-s. (2) &mdash; no evidence in disproof admissible (s. 4 / s. 2(1)(b)).</li>
+<li><b>Safety valves elsewhere:</b> such a judgment can still be <b>avoided</b> by proving fraud, collusion or want of competence (s. 44 IEA / corresponding BSA provision) &mdash; the conclusiveness attaches to a <i>valid</i> judgment.</li>
+</ul>
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p>In a succession dispute over a ship, X produces a <b>decree of the Admiralty Court</b> condemning the vessel as prize and vesting it in Y. Under s. 35 BSA / s. 41 IEA the decree is not merely relevant against strangers to that suit; it is <b>conclusive proof</b> that Y&rsquo;s title accrued at the time the decree declared &mdash; the rival claimant cannot lead evidence that the ship was never lawfully condemned. Contrast: a mere money decree between A and B deciding ownership incidentally is <b>not</b> within the section.</p>
+</div>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2 class="unit" id="burden"><span class="no">PART 2</span>s. 108 BSA / s. 105 IEA &mdash; Burden as to Exceptions</h2>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 108, BSA 2023</b> [= s. 105, IEA 1872]: &ldquo;When a person is accused of any offence, the <b>burden of proving the existence of circumstances bringing the case within any of the General Exceptions</b> in the Bharatiya Nyaya Sanhita, 2023, or within any special exception or proviso contained in any other part of the said Sanhita, or in any law defining the offence, <b>is upon him</b>, and the Court <b>shall presume the absence of such circumstances</b>.&rdquo;
+<br><b>Illustration (a):</b> A, accused of murder, alleges that, by reason of <b>unsoundness of mind</b>, he did not know the nature of the act. The burden of proof is on A.
+<br><b>Illustration (b):</b> A, accused of murder, alleges that, by <b>grave and sudden provocation</b>, he was deprived of the power of self-control. The burden of proof is on A.</div>
+<h4 class="sub">Components</h4>
+<ul>
+<li><b>Two burdens distinguished:</b> the prosecution&rsquo;s burden to prove the <b>ingredients of the offence</b> beyond reasonable doubt never shifts (s. 104? / general rule); the <b>exception burden</b> on the accused is lighter &mdash; proof by <b>preponderance of probabilities</b>, not beyond reasonable doubt (settled case-law gloss taught with the section).</li>
+<li><b>Statutory presumption against the accused:</b> &ldquo;the Court <b>shall presume the absence</b> of such circumstances&rdquo; &mdash; a <b>shall-presume</b> rule: the excepting fact is treated as absent until the accused displaces it.</li>
+<li><b>Scope:</b> General Exceptions of the BNS (the chapter corresponding to IPC ss. 76&ndash;106), special exceptions/provisos in other parts of the Sanhita, and exceptions in <b>any law defining the offence</b>.</li>
+<li><b>Discharge without evidence:</b> the accused may rely on <b>prosecution evidence itself</b> or on the totality of material; if a reasonable doubt emerges on the excepting circumstance, the benefit goes to the accused (standard gloss).</li>
+</ul>
+<div class="box rel"><span class="lbl">Connected Law</span>
+<p>General Exceptions cross-map (crime subject): insanity IPC s. 84 &rarr; BNS s. 21? &mdash; <i>use the chapter correspondence</i>: IPC ss. 76&ndash;106 (General Exceptions) correspond to the BNS General Exceptions chapter; grave and sudden provocation IPC s. 300 Exception 1 &rarr; BNS s. 103 Exception 1; private defence IPC ss. 96&ndash;106 &rarr; BNS ss. 34&ndash;44 range. Where an exception is pleaded, s. 108/105 places its proof on the accused &mdash; e.g. an accused claiming <b>private defence</b> against a charge under BNS s. 103 (IPC s. 302) must prove the exception; failing that, the court presumes its absence.</p>
+</div>
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p>D is charged with murder (BNS s. 103 / IPC s. 302) and pleads that he killed under a <b>delusion of unsound mind</b>. Under s. 108 BSA the court <b>shall presume sanity</b>; D must show, on preponderance, that he fell within the BNS insanity exception. If psychiatric material raises only a reasonable doubt (without fully proving insanity), D is entitled to acquittal of murder because the prosecution case ceases to be beyond reasonable doubt &mdash; but the <i>initial</i> presumption always stands against him.</p>
+</div>
+</div>
+
+<!-- ================= PART 3 ================= -->
+<h2 class="unit" id="offences"><span class="no">PART 3</span>s. 115 BSA / s. 111A IEA &mdash; Presumption as to Certain Offences</h2>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 115, BSA 2023</b> [= s. 111A, IEA 1872]: &ldquo;(1) Where a person is accused of having committed any offence specified in sub-section (2), in &mdash; (a) any area <b>declared to be a disturbed area</b> under any enactment for the time being in force, making provision for the suppression of disorder and restoration and maintenance of public order; or (b) any area in which there has been, <b>over a period of more than one month, extensive disturbance of the public peace</b>, and it is shown that such person <b>had been at a place in such area at a time when firearms or explosives were used</b> at or from that place <b>to attack or resist the members of any armed forces</b> or the forces charged with the maintenance of public order acting in the discharge of their duties, <b>it shall be presumed, unless the contrary is shown</b>, that such person had committed such offence. (2) The offences referred to in sub-section (1) are &mdash; (a) an offence under <b>section 147, 148, 149 or 150 of the Bharatiya Nyaya Sanhita, 2023</b>; (b) <b>criminal conspiracy or attempt to commit, or abetment of</b>, an offence under <b>section 149 or section 150</b> of the BNS.&rdquo;</div>
+<h4 class="sub">Ingredients (all must be shown before the presumption rises)</h4>
+<table>
+<tr><th>#</th><th>Ingredient</th><th>Nature</th></tr>
+<tr><td>1</td><td>Area: declared <b>disturbed</b> under a public-order enactment, <b>or</b> extensive disturbance of public peace for &gt; 1 month</td><td>Jurisdictional/foundational</td></tr>
+<tr><td>2</td><td>Accused <b>present at a place</b> in that area</td><td>Foundational</td></tr>
+<tr><td>3</td><td><b>Firearms or explosives used</b> at or from that place, at that time</td><td>Foundational</td></tr>
+<tr><td>4</td><td>Use directed <b>to attack or resist armed forces / public-order forces</b> on duty</td><td>Foundational</td></tr>
+<tr><td>5</td><td>Offence charged is one listed in sub-s. (2)</td><td>Legal</td></tr>
+</table>
+<p>Once 1&ndash;5 are shown: <b>shall be presumed</b> (&ldquo;unless the contrary is shown&rdquo;) &mdash; a rebuttable presumption of law throwing the burden of disproof on the accused.</p>
+<div class="box rel"><span class="lbl">Connected Law &amp; Crime Mapping</span>
+<ul>
+<li><b>Offence mapping:</b> the predecessor s. 111A(2) IEA listed <b>IPC ss. 121, 121A, 122, 123</b> (waging war; conspiracy to wage war; collecting arms with intent to wage war; concealing such design) plus conspiracy/attempt/abetment of ss. 122&ndash;123; the BSA re-enacts the list with the BNS numbers &mdash; <b>BNS ss. 147 (IPC 121), 148 (IPC 121A), 149 (IPC 122), 150 (IPC 123)</b>.</li>
+<li><b>Disturbed-area enactments (BSA linked provisions):</b> <b>Armed Forces (Special Powers) Act, 1958, s. 3</b> and <b>Armed Forces (Jammu &amp; Kashmir) Special Powers Act, 1990, s. 3</b> (power to declare areas disturbed); <b>Arms Act, 1959, ss. 24A &amp; 24B</b> (prohibition on possession/carrying of notified arms in disturbed areas).</li>
+</ul>
+</div>
+</div>
+<figure class="fig">
+<svg viewBox="0 0 960 240" width="940" role="img" aria-label="Section 115 presumption flow">
+ <defs><marker id="p2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e5e3a"/></marker></defs>
+ <rect x="30" y="40" width="170" height="70" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="115" y="68" fill="#1f4e5f" font-size="12" text-anchor="middle" font-weight="bold">Disturbed area</text><text x="115" y="86" fill="#333" font-size="10.5" text-anchor="middle">declared, or &gt;1 month</text><text x="115" y="100" fill="#333" font-size="10.5" text-anchor="middle">extensive disturbance</text>
+ <rect x="215" y="40" width="170" height="70" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="300" y="68" fill="#1f4e5f" font-size="12" text-anchor="middle" font-weight="bold">Accused at a place</text><text x="300" y="86" fill="#333" font-size="10.5" text-anchor="middle">in that area, at the time</text><text x="300" y="100" fill="#333" font-size="10.5" text-anchor="middle">firearms/explosives used</text>
+ <rect x="400" y="40" width="170" height="70" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="485" y="68" fill="#1f4e5f" font-size="12" text-anchor="middle" font-weight="bold">Use to attack/resist</text><text x="485" y="86" fill="#333" font-size="10.5" text-anchor="middle">armed forces / public-order</text><text x="485" y="100" fill="#333" font-size="10.5" text-anchor="middle">forces on duty</text>
+ <rect x="585" y="40" width="160" height="70" rx="10" fill="#fdf6e3" stroke="#b98a2f"/><text x="665" y="68" fill="#7a5a12" font-size="12" text-anchor="middle" font-weight="bold">Listed offence</text><text x="665" y="86" fill="#333" font-size="10.5" text-anchor="middle">BNS 147&ndash;150 or</text><text x="665" y="100" fill="#333" font-size="10.5" text-anchor="middle">conspiracy/attempt/abetment</text>
+ <line x1="200" y1="75" x2="213" y2="75" stroke="#2e5e3a" stroke-width="2" marker-end="url(#p2)"/>
+ <line x1="385" y1="75" x2="398" y2="75" stroke="#2e5e3a" stroke-width="2" marker-end="url(#p2)"/>
+ <line x1="570" y1="75" x2="583" y2="75" stroke="#2e5e3a" stroke-width="2" marker-end="url(#p2)"/>
+ <line x1="745" y1="75" x2="778" y2="75" stroke="#2e5e3a" stroke-width="2.4" marker-end="url(#p2)"/>
+ <rect x="780" y="40" width="150" height="70" rx="10" fill="#f2f7ea" stroke="#2e5e3a" stroke-width="2"/><text x="855" y="68" fill="#2e5e3a" font-size="12" text-anchor="middle" font-weight="bold">SHALL BE</text><text x="855" y="86" fill="#2e5e3a" font-size="12" text-anchor="middle" font-weight="bold">PRESUMED</text><text x="855" y="102" fill="#333" font-size="10.5" text-anchor="middle">unless contrary shown</text>
+ <text x="480" y="150" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">All foundational facts are for the prosecution; only then does the burden of disproof shift to the accused.</text>
+ <text x="480" y="180" fill="#6d6152" font-size="11.5" text-anchor="middle" font-style="italic">Inserted (as IEA s. 111A) for disturbed-area terrorism; pairs with AFSPA declarations and Arms Act disturbed-area bans.</text>
+</svg>
+<figcaption>Fig. 3.1 &mdash; Raising the s. 115 BSA / s. 111A IEA presumption.</figcaption>
+</figure>
+
+</div><!-- /wrap -->
+<div class="wrap">
+
+<!-- ================= PART 4 ================= -->
+<h2 class="unit" id="legitimacy"><span class="no">PART 4</span>s. 116 BSA / s. 112 IEA &mdash; Birth During Marriage: Conclusive Proof of Legitimacy</h2>
+
+<h3 class="sec">4.1 The provision and its architecture</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 116, BSA 2023</b> [= s. 112, IEA 1872]: &ldquo;The fact that any person was born &mdash; (i) <b>during the continuance of a valid marriage</b> between his mother and any man, or (ii) <b>within two hundred and eighty days after its dissolution</b>, the mother <b>remaining unmarried</b>, shall be <b>conclusive proof</b> that he is the legitimate child of that man, <b>unless it can be shown that the parties to the marriage had no access to each other at any time when he could have been begotten</b>.&rdquo;</div>
+<ul>
+<li><b>Maxim:</b> <i>pater est quem nuptiae demonstrant</i> &mdash; &ldquo;he is the father whom the marriage indicates&rdquo; (Goutam Kundu).</li>
+<li><b>Maternity is a fact; paternity is an inference</b> (DU notes, citing <i>Nand v. Gopal</i>, AIR 1940 PC 93): s. 116/112 has no application when <b>maternity</b> is disputed, only paternity.</li>
+<li><b>Foundational conditions (DU notes):</b> (1) <b>Birth</b> &mdash; during the continuance of a valid marriage, <b>or</b> within 280 days of its dissolution with the mother unmarried; (2) <b>Access</b> &mdash; opportunity for access existed. After <b>Nandlal Wasudeo Badwaik v. Lata Nandlal Badwaik</b> (2014) 2 SCC 576, DU notes add a third working ingredient: (3) <b>DNA matching</b> where a scientific test has been rightly directed &mdash; &ldquo;when there is a conflict between a conclusive proof envisaged under law and a proof based on scientific advancement accepted by the world community to be correct, <b>the latter must prevail over the former</b>&rdquo;.</li>
+<li><b>&ldquo;Access&rdquo; = opportunity, not act:</b> &ldquo;Access and non-access connote the <b>existence or non-existence of opportunities for marital intercourse</b>&rdquo; (<i>Chilukuri Venkateswarlu v. Chilukuri Venkatanarayana</i>, 1953); &ldquo;it does not mean <b>actual cohabitation</b>&rdquo; (Goutam Kundu).</li>
+<li><b>Evidentiary route of non-access:</b> non-access is a fact <b>inconsistent</b> with the fact in issue &mdash; relevant under <b>s. 11 IEA</b> (DU notes: &ldquo;&lsquo;No-access&rsquo; used under Section 112 is relevant under Section 11, Part 1, i.e. principle of inconsistency&rdquo;).</li>
+<li><b>Standard of disproof:</b> not mere balance of probabilities &mdash; the evidence of non-access must be &ldquo;<b>strong, distinct, satisfactory and conclusive</b>&rdquo; (<i>Morris v. Davies</i>, quoted in <i>Vasu v. Santha</i>, Ker HC, adopted in Goutam Kundu); &ldquo;the standard of proof in this regard is <b>similar to the standard of proof of guilt in a criminal case</b>&rdquo;; the presumption &ldquo;can only be displaced by a <b>strong preponderance of evidence</b>&rdquo;.</li>
+<li><b>Policy (Vasu v. Santha, adopted):</b> &ldquo;A special protection is given by the law to the status of legitimacy&hellip; even proof that the mother committed adultery with any number of men will not of itself suffice&hellip; The stigma of illegitimacy is very severe&hellip; the legislature alone can change the rigour of the law.&rdquo;</li>
+</ul>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 400" width="940" role="img" aria-label="Legitimacy presumption and DNA gate flowchart">
+ <defs><marker id="p3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e5e3a"/></marker>
+ <marker id="p3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c2f39"/></marker></defs>
+ <rect x="60" y="20" width="380" height="64" rx="10" fill="#eef6f8" stroke="#1f4e5f" stroke-width="2"/>
+ <text x="250" y="45" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">FOUNDATION A: birth during valid marriage</text>
+ <text x="250" y="63" fill="#333" font-size="11.5" text-anchor="middle">OR within 280 days of dissolution, mother unmarried</text>
+ <rect x="520" y="20" width="380" height="64" rx="10" fill="#eef6f8" stroke="#1f4e5f" stroke-width="2"/>
+ <text x="710" y="45" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">FOUNDATION B: access (opportunity) existed</text>
+ <text x="710" y="63" fill="#333" font-size="11.5" text-anchor="middle">presumed; challenger must show NON-access</text>
+ <line x1="250" y1="84" x2="420" y2="120" stroke="#2e5e3a" stroke-width="2" marker-end="url(#p3)"/>
+ <line x1="710" y1="84" x2="540" y2="120" stroke="#2e5e3a" stroke-width="2" marker-end="url(#p3)"/>
+ <rect x="330" y="122" width="300" height="48" rx="10" fill="#fbf0f1" stroke="#8c2f39" stroke-width="2"/>
+ <text x="480" y="142" fill="#8c2f39" font-size="13" text-anchor="middle" font-weight="bold">CONCLUSIVE PROOF of legitimacy</text>
+ <text x="480" y="159" fill="#333" font-size="11" text-anchor="middle">counter-evidence barred (s. 4 / s. 2(1)(b))</text>
+ <line x1="480" y1="170" x2="480" y2="196" stroke="#8c2f39" stroke-width="2" marker-end="url(#p3r)"/>
+ <rect x="250" y="198" width="460" height="48" rx="10" fill="#fff" stroke="#8c2f39"/>
+ <text x="480" y="218" fill="#8c2f39" font-size="12" text-anchor="middle" font-weight="bold">ONLY DOOR: proof of NON-ACCESS &mdash; strong, distinct, satisfactory, conclusive</text>
+ <text x="480" y="235" fill="#333" font-size="11" text-anchor="middle">(opportunity absent; not adultery, not balance of probabilities)</text>
+ <line x1="480" y1="246" x2="480" y2="272" stroke="#4a3f2a" stroke-width="2" marker-end="url(#p3)"/>
+ <rect x="170" y="274" width="620" height="56" rx="10" fill="#fdf6e3" stroke="#b98a2f"/>
+ <text x="480" y="295" fill="#7a5a12" font-size="12" text-anchor="middle" font-weight="bold">SCIENTIFIC GATE (post-1993 evolution): blood/DNA test not as of course (Goutam Kundu);</text>
+ <text x="480" y="313" fill="#7a5a12" font-size="11.5" text-anchor="middle">strong prima facie non-access first; court balances privacy vs truth (Bhabani Prasad Jena);</text>
+ <text x="480" y="328" fill="#7a5a12" font-size="11.5" text-anchor="middle">if directed and taken &mdash; science prevails (Nandlal); refusal &rArr; s. 119/114 Ill. (h) inference (Dipanwita)</text>
+ <rect x="250" y="352" width="460" height="34" rx="9" fill="#f2f7ea" stroke="#2e5e3a"/>
+ <text x="480" y="374" fill="#2e5e3a" font-size="12" text-anchor="middle">Outcome: legitimacy stands unless the single exception is clinchingly proved</text>
+ <line x1="480" y1="330" x2="480" y2="350" stroke="#4a3f2a" stroke-width="1.6" marker-end="url(#p3)"/>
+</svg>
+<figcaption>Fig. 4.1 &mdash; The s. 116/112 machine: foundations &rarr; conclusive proof &rarr; the single non-access door &rarr; the scientific gate.</figcaption>
+</figure>
+
+<h3 class="sec">4.2 Connected law &amp; reform (DU notes Ch. XI)</h3>
+<div class="box rel"><span class="lbl">Connected Law</span>
+<ul>
+<li><b>CrPC s. 125</b> (maintenance of wife/children) &mdash; the arena of <i>Goutam Kundu</i>; legitimacy under s. 116/112 directly fixes the father&rsquo;s liability.</li>
+<li><b>Hindu Marriage Act 1955:</b> s. 13 (divorce &mdash; the arena of <i>Dipanwita Roy</i>; adultery as ground) and <b>s. 16</b> (children of <b>void or voidable marriages</b> deemed legitimate) &mdash; a statutory extension harmonious with s. 116/112.</li>
+<li><b>Law Commission of India, 185th Report (Part I):</b> proposed, besides the sole exception of non-access, <b>additional exceptions by way of blood-group/DNA tests subject to very stringent conditions</b>; and extension of the presumption to children of <b>void marriages</b> declared null, where personal law treats them legitimate.</li>
+<li><b>Modern statutes to read with s. 116/112 (DU notes):</b> <b>Assisted Reproductive Technology (Regulation) Act, 2021</b> (s. 31 &mdash; equal rights of the child born through ART); <b>Surrogacy (Regulation) Act, 2021</b>; <b>DNA Technology (Use and Application) Regulation Bill</b> &mdash; parentage in ART/surrogacy scenarios tests the classical presumption.</li>
+<li><b>Constitution:</b> Art. 21 (right to privacy &mdash; the counterweight to compulsory testing; <i>Bhabani Prasad Jena</i>; balanced in <i>Dipanwita Roy</i>).</li>
+</ul>
+</div>
+
+<h3 class="sec">4.3 The DU-notes problem (class illustration)</h3>
+<div class="box exbox"><span class="lbl">Real Example (DU notes problem, adapted)</span>
+<p><b>Shivam &amp; G:</b> students at the Faculty of Law, DU; known to be in a relationship, meeting in Shivam&rsquo;s hostel. They marry; <b>three days after marriage</b> G delivers a (premature, 7-month) baby girl. Shivam denies paternity, saying there was no intercourse before marriage, and suggests Kapil may be the father. <b>(1) Is Shivam the father in law?</b> Yes &mdash; birth during the continuance of a valid marriage + opportunity of access (hostel meetings; marriage) &rArr; s. 116/112 conclusive proof; what he did or did not do is immaterial unless <b>non-access</b> (absence of opportunity) is clinchingly shown. <b>(2) May he disprove by DNA test?</b> Pre-2014 position: only in rare cases, on a strong prima facie case of non-access (Goutam Kundu). Post-<b>Nandlal Badwaik</b> &amp; <b>Dipanwita Roy</b> (both 2014): the court may direct a DNA test where eminently needed; if directed, science prevails over the legal presumption; G then holds the <b>Dipanwita options</b> &mdash; submit to the test (conclusive determination) or refuse, inviting an adverse <b>s. 119/114 Illustration (h)</b> inference. (<b>Kapil&rsquo;s position:</b> no liability &mdash; IPC s. 497 (adultery) has been struck down as unconstitutional in <i>Joseph Shine</i>, as the DU notes observe.)</p>
+</div>
+
+</div><!-- /wrap -->
+<div class="wrap">
+
+<!-- ================= PART 5 ================= -->
+<h2 class="unit" id="cases"><span class="no">PART 5</span>Cases 29&ndash;30 in Full Brief &amp; Companions</h2>
+
+<div class="casecard">
+<h4>Case 29 &mdash; Goutam Kundu v. State of West Bengal</h4>
+<div class="cite">AIR 1993 SC 2295 &bull; Supreme Court (S. Mohan, J.), decided 14 May 1993 &bull; IEA ss. 112 &amp; 4; CrPC s. 125; English Family Law Reform Acts 1969/1987 &bull; DU Case Material LB-201 (2025), pp. 178&ndash;184</div>
+
+<h5>Facts</h5>
+<ul>
+<li>The appellant <b>Goutam Kundu</b> married the second respondent on <b>16 January 1990</b> according to Hindu rites. They lived together until she left for her parents&rsquo; home to prepare for the <b>Higher Secondary Examination (5.4.1990&ndash;10.5.1990)</b>.</li>
+<li>In <b>April 1990</b> she conceived; the appellant and his family, not wanting the child, <b>forced her to undergo abortion, which she refused</b>; during her stay she was meted out <b>cruel treatment physically and mentally</b>. She returned to the matrimonial home during <b>Durga Puja, October 1990</b>.</li>
+<li>A <b>female child was born on 3 January 1991</b>.</li>
+<li>The wife filed a petition under <b>s. 125 CrPC</b> before the CJM, Alipore (Misc. Case No. 143 of 1991) for herself and the child; by an <b>ex parte order dated 14.8.1991</b> she was awarded <b>Rs. 300 per month</b> for herself and <b>Rs. 200</b> for the child; the husband&rsquo;s revision (1837 of 1991) was pending in the High Court.</li>
+<li>Thereafter the husband filed an application for a <b>blood-group test</b> of the wife and the child, <b>disputing paternity</b>: if established, he would not be liable to pay maintenance.</li>
+</ul>
+<table>
+<tr><th>Event</th><th>Date</th><th>Remark</th></tr>
+<tr><td>Marriage</td><td>16.1.1990</td><td>Hindu rites</td></tr>
+<tr><td>Wife at parents&rsquo; home (HSE exam)</td><td>5.4.1990&ndash;10.5.1990</td><td>conception April 1990</td></tr>
+<tr><td>Return; cruelty</td><td>October 1990</td><td>Durga Puja</td></tr>
+<tr><td>Birth of daughter</td><td>3.1.1991</td><td>during marriage</td></tr>
+<tr><td>Maintenance order (CJM Alipore)</td><td>14.8.1991</td><td>ex parte; Rs. 300 + Rs. 200</td></tr>
+<tr><td>Blood-test application dismissed; HC revision dismissed</td><td>1992</td><td>two grounds (below)</td></tr>
+<tr><td>Supreme Court decision</td><td>14.5.1993</td><td>appeal dismissed</td></tr>
+</table>
+
+<h5>Issues</h5>
+<ol>
+<li>Whether a court in India can <b>direct a blood-group test</b> to prove or disprove paternity, and if so, in what circumstances.</li>
+<li>Whether s. 112 IEA (conclusive proof of legitimacy) <b>debars</b> such evidence except upon non-access.</li>
+</ol>
+
+<h5>Arguments for the Appellant (Mr. Ashok Sen)</h5>
+<ul>
+<li>The <b>only way</b> for the father to disprove paternity is the blood-group test; having regard to the development of <b>medical jurisprudence</b>, denying it is unreasonable.</li>
+<li>In England blood tests are commonly resorted to: <b>Re L</b> [(1968) 1 All ER 20] &mdash; even without the consent of the guardian ad litem the court had power to order an infant to be subjected to a blood-group test; the <b>Family Law Reform Act 1969</b> empowers courts to direct blood tests in paternity proceedings.</li>
+<li>There is no justification for refusing the test on the ground that s. 112 is an obstacle.</li>
+</ul>
+
+<h5>Reasoning of the Supreme Court</h5>
+<ul>
+<li><b>English law surveyed:</b> ABO genetics can <b>exclude</b> but not affirmatively prove paternity; the 1938 compulsory-test attempt failed; the <b>Affiliation Proceedings Act 1957</b>; the <b>Family Law Reform Act 1969</b> (directions for tests; no compulsion, but <b>adverse inferences from refusal</b>); the <b>1987 Act</b> (&ldquo;parentage&rdquo;, both parents may claim maintenance); <b>Re L</b> and <b>B.R.B. v. J.B.</b> [(1968) 2 All ER 1023] (Lord Denning: refusal may be taken as evidence against the refuser; High Court judge may order a test in the child&rsquo;s best interests; &ldquo;when scientific advances give us fresh means of ascertaining [the truth], we should not hesitate to use those means whenever the occasion requires&rdquo;).</li>
+<li><b>United States surveyed</b> (Wecht, <i>Forensic Sciences</i>): blood typing since the 1920s; exclusion tables; statutory authorisation in many states; but &ldquo;absolute proof of paternity cannot be established by any known blood test&rdquo;.</li>
+<li><b>Indian law:</b> &ldquo;In India there is <b>no special statute</b> governing this. Neither the CrPC nor the Evidence Act empowers the court to direct such a test.&rdquo; <b>Polavarapu Venkateswarlu v. Polavarapu Subbayya</b> (AIR 1951 Mad 910): s. 151 CPC inherent powers cannot force unwilling parties to give blood; <b>Vasu v. Santha</b> (1975 Ker LT 533): special protection to legitimacy; non-access must be &ldquo;strong, distinct, satisfactory and conclusive&rdquo; (<i>Morris v. Davies</i>); standard akin to criminal proof; stigma of illegitimacy; legislature alone can change the rigour; consent required before a blood test &mdash; &ldquo;this test is a <b>constraint on personal liberty</b>&rdquo;; maximum consequence of refusal is an <b>adverse inference</b>; <b>Hargavind Soni v. Ramdulari</b> (AIR 1986 MP 57): no compulsion, no adverse inference; <b>Raghunath v. Shardabai</b> (AIR 1986 Bom 388): blood tests &ldquo;cannot possibly establish paternity, they can only indicate its possibilities&rdquo;; <b>Bhartiraj v. Sumesh Sachdeo</b> (AIR 1986 All 2591) &mdash; Rayden: exclusion aspect is the valuable one; court exercises <b>protective jurisdiction on behalf of the infant</b>; a &ldquo;fishing&rdquo; or ulterior application may be refused.</li>
+<li><b>The s. 112 analysis:</b> the section rests on <i>pater est quem nuptiae demonstrant</i>; the presumption of legitimacy &ldquo;throws on the person interested in making out the illegitimacy <b>the whole burden of proving it</b>&rdquo;; it is a <b>rebuttable presumption of law</b> displacable only by <b>strong preponderance of evidence</b>; &ldquo;conclusive proof&rdquo; means what <b>s. 4</b> says; <b>Smt. Dukhtar Jahan v. Mohammed Faroog</b> (AIR 1987 SC 1049): courts incline towards upholding legitimacy unless facts are &ldquo;compulsive and clinching&rdquo;; &ldquo;<b>Access</b>&rdquo; and &ldquo;<b>non-access</b>&rdquo; mean the <b>existence or non-existence of opportunities for sexual intercourse</b>, not actual cohabitation; the English blood-test law &ldquo;could not be applied in view of s. 112&rdquo; &mdash; &ldquo;s. 112 read with s. 4&hellip; <b>debars evidence except in cases of non-access</b>&rdquo;.</li>
+</ul>
+
+<h5>Decision &mdash; the five-point emergence (verbatim structure of the judgment)</h5>
+<ol>
+<li>Courts in India <b>cannot order a blood test as a matter of course</b>;</li>
+<li>Wherever applications are made for such prayers in order to have a <b>roving inquiry</b>, the prayer <b>cannot be entertained</b>;</li>
+<li>There must be a <b>strong prima facie case</b> &mdash; the husband must establish <b>non-access</b> in order to dispel the s. 112 presumption;</li>
+<li>The court must carefully examine the <b>consequence</b> of ordering the test &mdash; whether it will have the effect of <b>branding the child a bastard and the mother an unchaste woman</b>;</li>
+<li><b>No one can be compelled</b> to give a sample of blood for analysis.</li>
+</ol>
+<p>Applying these: the purpose of the application was &ldquo;nothing more than <b>to avoid payment of maintenance</b>, without making any ground whatever&rdquo;; the impugned orders were upheld; <b>criminal appeal dismissed</b>; the wife&rsquo;s companion petition allowed (permitted to withdraw the amount without security).</p>
+
+<h5>Principle evolved</h5>
+<p>Section 112/116 raises a <b>conclusive-proof presumption</b> of legitimacy rebuttable <b>only</b> by clinching proof of non-access; scientific tests are <b>not a right</b>, cannot be ordered as of course or for roving inquiry, require a strong prima facie case of non-access, cannot be compelled, and must be weighed against the consequences for the child&rsquo;s status.</p>
+</div>
+
+<div class="casecard">
+<h4>Case 30 &mdash; Dipanwita Roy v. Ronobroto Roy</h4>
+<div class="cite">AIR 2015 SC 418 &bull; Supreme Court (Jagdish Singh Khehar &amp; R.K. Agrawal, JJ.), decided 15 October 2014 &bull; IEA ss. 112, 114 (Ill. h); HMA 1955 s. 13 &bull; DU lecture notes Ch. XI (11.3.2) &amp; syllabus item 30</div>
+
+<h5>Facts</h5>
+<ul>
+<li>Petitioner-wife <b>Dipanwita Roy</b> and respondent-husband <b>Ronobroto Roy</b> married at Calcutta on <b>25.1.2003</b>; marriage registered on <b>9.2.2003</b>.</li>
+<li>The husband filed a petition under <b>s. 13, Hindu Marriage Act 1955</b> on <b>24.7.2011</b> seeking dissolution on grounds of the wife&rsquo;s <b>adulterous life style</b>: that he never shared her bed after <b>22.9.2007</b>; that on the few occasions he visited her residence to collect his things she did not turn him out only to avoid public scandal; that her extravagant, fast life with <b>Mr. Deven Shah</b> (extra-marital relationship) resulted in the birth of a son; and that she had incurred heavy debts.</li>
+<li>The wife <b>denied</b>: continuous matrimonial relationship, cohabitation and performance of matrimonial obligations by the husband.</li>
+<li>On <b>24.7.2011</b> the husband moved for a <b>DNA test</b> of himself and the male child born to the wife.</li>
+<li><b>Family Court (27.8.2012):</b> dismissed the DNA prayer. <b>High Court at Calcutta (6.12.2012):</b> allowed it. The wife filed the SLP.</li>
+</ul>
+
+<h5>Issue</h5>
+<p>Whether the court can pass an order for a <b>DNA test</b> to determine paternity in the face of the s. 112 presumption and the right to privacy.</p>
+
+<h5>Arguments for the Wife (appellant)</h5>
+<ul>
+<li><b>Goutam Kundu</b> (1993) and <b>Kamti Devi v. Poshi Ram</b> (AIR 2001 SC 2226): no blood/DNA test as of course; legitimacy protected.</li>
+<li><b>Sham Lal @ Kuldeep v. Sanjeev Kumar</b> (2009) 12 SCC 454: once a valid marriage is proved there is a <b>strong presumption of legitimacy</b> of children of the wedlock, rebuttable only by &ldquo;strong, clear, satisfying and conclusive evidence&rdquo;; not displaced by mere balance of probabilities or doubt; <b>even evidence of adultery, though very strong, is by itself insufficient</b> if the husband had access.</li>
+<li><b>Bhabani Prasad Jena v. Convener-Secretary, Orissa State Commission for Women</b> (2010) 8 SCC 633: DNA testing is &ldquo;extremely delicate and sensitive&rdquo;; conflict between the <b>right to privacy</b> (no forced medical examination) and the court&rsquo;s duty to reach truth must be <b>balanced</b>; a test may be permitted only if <b>eminently needed</b> for a just decision; the State Commission had <b>no power</b> to order it.</li>
+</ul>
+
+<h5>Arguments for the Husband (respondent)</h5>
+<ul>
+<li>Per <b>Bhabani Prasad Jena</b> and <b>Nandlal Wasudeo Badwaik</b> (2014) 2 SCC 576, depending on facts and circumstances it <b>is permissible for a court to direct a DNA examination</b> to determine the veracity of allegations on which a party would succeed or lose; &ldquo;if the direction to hold such a test can be avoided, it should be so avoided&rdquo; &mdash; but here paternity/adultery is the very ground of the divorce petition.</li>
+<li><b>Opportunity for both:</b> DNA testing is &ldquo;the most legitimate and scientifically perfect means&rdquo; for the husband to establish infidelity &mdash; and <b>simultaneously the most authentic, rightful and correct means for the wife</b> to rebut his assertions and establish that she had not been unfaithful, adulterous or disloyal.</li>
+</ul>
+
+<h5>Decision (Supreme Court)</h5>
+<ul>
+<li>The High Court&rsquo;s direction for a DNA test was <b>correct</b>, but the order was <b>modified</b> by giving the wife <b>two options</b>:
+  <ol>
+  <li><b>First option (DNA test):</b> if she accepts the High Court&rsquo;s direction, the DNA test will <b>conclusively determine</b> the dispute regarding paternity;</li>
+  <li><b>Second option (presumption u/s 114):</b> if she declines to comply, the allegation would be determined by the concerned court by drawing a presumption of the nature contemplated in <b>s. 114 IEA, especially Illustration (h)</b> &mdash; &ldquo;if a man refuses to answer a question which he is not compelled to answer by law, the answer, if given, would be unfavourable to him&rdquo; (applied by analogy to her refusal).</li>
+  </ol></li>
+<li>Rationale: this scheme &ldquo;will protect <b>right to privacy</b> without sacrifice [of the] cause of justice&rdquo;.</li>
+</ul>
+
+<h5>Principle evolved</h5>
+<p>(1) A DNA direction is permissible where <b>eminently needed</b> and factually justified; (2) but no one may be <b>forced</b> to undergo it &mdash; the affected party holds an <b>option</b>; (3) refusal is not costless: it invites an <b>adverse s. 114/119 Illustration (h)</b> inference; (4) thus scientific truth and privacy are reconciled &mdash; the DU notes&rsquo; appraisal: the judgment &ldquo;by giving option to the other party has established cordially [the] relation between scientific evidence (DNA test) and right to privacy&rdquo;.</p>
+</div>
+
+<h3 class="sec">5.3 Companion cards (the DNA&ndash;legitimacy line)</h3>
+<div class="casecard">
+<h4>Nandlal Wasudeo Badwaik v. Lata Nandlal Badwaik &amp; Anr.</h4>
+<div class="cite">(2014) 2 SCC 576 &bull; Chandramauli Kr. Prasad, J. &bull; 6 January 2014 &bull; DU notes Ch. XI (11.2), (11.3)</div>
+<h5>Point</h5>
+<p>Where a <b>conclusive proof</b> envisaged by law conflicts with proof based on <b>scientific advancement accepted by the world community</b> as correct, <b>the latter must prevail</b>; a DNA test <b>can be done to determine paternity</b>. With <i>Dipanwita Roy</i>, this marks the post-2014 position in which the s. 112/116 presumption yields to a rightly-directed scientific test (DU notes: third ingredient &mdash; &ldquo;DNA matching&rdquo;).</p>
+</div>
+<div class="casecard">
+<h4>Kamti Devi v. Poshi Ram</h4>
+<div class="cite">AIR 2001 SC 2226 &bull; relied on by the wife in Dipanwita &bull; DU notes Ch. XI</div>
+<h5>Point</h5>
+<p>Reinforces the <i>Goutam Kundu</i> regime: the s. 112 presumption is of the highest order; legitimacy not lightly displaced (pre-2014 strictness).</p>
+</div>
+<div class="casecard">
+<h4>Sharda v. Dharmpal &amp; Sham Lal @ Kuldeep v. Sanjeev Kumar</h4>
+<div class="cite">(2003) 4 SCC 493; (2009) 12 SCC 454 &bull; DU notes Ch. XI</div>
+<h5>Points</h5>
+<p><i>Sharda</i>: a civil court may direct a <b>medical (handwriting/blood) examination</b> of a party; such direction is not per se violative of privacy; refusal may ground an adverse inference. <i>Sham Lal</i>: strong presumption of legitimacy; rebuttal only by strong, clear, satisfying and conclusive evidence; adultery evidence alone insufficient where access existed.</p>
+</div>
+<div class="casecard">
+<h4>Bhabani Prasad Jena v. Convener-Secretary, Orissa State Commission for Women</h4>
+<div class="cite">(2010) 8 SCC 633 &bull; DU notes Ch. XI &bull; quoted in Dipanwita</div>
+<h5>Points</h5>
+<p>DNA testing &ldquo;extremely delicate and sensitive&rdquo;; two views (use science freely vs protect privacy/child); on conflict, the court must <b>balance interests</b> and order only if <b>eminently needed</b>; a State Commission has <b>no competence</b> to order a DNA test; result may &ldquo;bastardise an innocent child&rdquo;.</p>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 210" width="940" role="img" aria-label="Evolution of DNA versus presumption of legitimacy">
+ <line x1="40" y1="60" x2="920" y2="60" stroke="#b98a2f" stroke-width="3"/>
+ <circle cx="150" cy="60" r="9" fill="#8c2f39"/><text x="150" y="90" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">1993 &mdash; Goutam Kundu</text>
+ <text x="150" y="108" fill="#333" font-size="11" text-anchor="middle">no blood test as of course;</text><text x="150" y="123" fill="#333" font-size="11" text-anchor="middle">strong prima facie non-access;</text><text x="150" y="138" fill="#333" font-size="11" text-anchor="middle">no compulsion; protect child</text>
+ <circle cx="430" cy="60" r="9" fill="#1f4e5f"/><text x="430" y="90" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">2010&ndash;14 &mdash; Bhabani Jena / Nandlal</text>
+ <text x="430" y="108" fill="#333" font-size="11" text-anchor="middle">balancing test; DNA permitted</text><text x="430" y="123" fill="#333" font-size="11" text-anchor="middle">if eminently needed; science</text><text x="430" y="138" fill="#333" font-size="11" text-anchor="middle">prevails over legal presumption</text>
+ <circle cx="760" cy="60" r="9" fill="#2e5e3a"/><text x="760" y="90" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">2014 &mdash; Dipanwita Roy</text>
+ <text x="760" y="108" fill="#333" font-size="11" text-anchor="middle">option architecture: test or</text><text x="760" y="123" fill="#333" font-size="11" text-anchor="middle">s. 114 Ill. (h) inference &mdash; privacy</text><text x="760" y="138" fill="#333" font-size="11" text-anchor="middle">protected, justice not sacrificed</text>
+ <text x="480" y="185" fill="#6d6152" font-size="11.5" text-anchor="middle" font-style="italic">Read with: Law Commission 185th Report; HMA s. 16; ART Act 2021 s. 31; Surrogacy Act 2021; DNA Technology Regulation Bill.</text>
+</svg>
+<figcaption>Fig. 5.1 &mdash; From prohibition to option: three decades of the legitimacy&ndash;science dialogue.</figcaption>
+</figure>
+
+</div><!-- /wrap -->
+<div class="wrap">
+
+<!-- ================= PART 6 ================= -->
+<h2 class="unit" id="social"><span class="no">PART 6</span>Social-Crime Presumptions &amp; the s. 119 / s. 114 Illustrations</h2>
+
+<h3 class="sec">6.1 s. 117 BSA / s. 113A IEA &mdash; abetment of suicide of a married woman</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 117, BSA 2023</b> [= s. 113A, IEA]: &ldquo;When the question is whether the commission of <b>suicide by a woman had been abetted by her husband or any relative of her husband</b> and it is shown that (i) she had committed suicide <b>within a period of seven years from the date of her marriage</b> and (ii) her husband or such relative had <b>subjected her to cruelty</b>, the Court <b>may presume</b>, having regard to all the other circumstances of the case, that such suicide had been abetted by her husband or by such relative. &mdash; <b>Explanation:</b> &lsquo;cruelty&rsquo; shall have the same meaning as in <b>section 86 of the Bharatiya Nyaya Sanhita, 2023</b> [IEA: s. 498A IPC].&rdquo;</div>
+<ul>
+<li><b>Ingredients:</b> (1) suicide by a married woman; (2) within <b>7 years</b> of marriage; (3) <b>cruelty</b> by husband/his relative (BNS s. 86 / IPC s. 498A meaning: wilful conduct likely to drive her to suicide or cause grave injury/danger, or harassment for unlawful dowry demands).</li>
+<li><b>Degree:</b> <b>may presume</b> &mdash; discretionary; the court must also regard &ldquo;all the other circumstances&rdquo;; the presumption is <b>rebuttable</b> and not automatic.</li>
+<li><b>Crime mapping:</b> abetment of suicide &mdash; <b>IPC s. 306 &rarr; BNS s. 108</b>; cruelty &mdash; <b>IPC s. 498A &rarr; BNS s. 86</b>.</li>
+<li><b>Connected law:</b> <b>Commission of Sati (Prevention) Act, 1987, s. 4</b> (abetment of sati &mdash; the linked provision noted in the BSA itself); Dowry Prohibition Act 1961; Protection of Women from Domestic Violence Act 2005 (context of cruelty).</li>
+</ul>
+</div>
+
+<h3 class="sec">6.2 s. 118 BSA / s. 113B IEA &mdash; dowry death</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 118, BSA 2023</b> [= s. 113B, IEA]: &ldquo;When the question is whether a person has committed the <b>dowry death</b> of a woman and it is shown that <b>soon before her death</b> such woman had been subjected by such person to <b>cruelty or harassment for, or in connection with, any demand for dowry</b>, the Court <b>shall presume</b> that such person had caused the dowry death. &mdash; <b>Explanation:</b> &lsquo;dowry death&rsquo; shall have the same meaning as in <b>section 80 of the Bharatiya Nyaya Sanhita, 2023</b> [IEA: s. 304B IPC].&rdquo;</div>
+<ul>
+<li><b>Ingredients:</b> (1) death of a woman otherwise than in normal circumstances (burns/bodily injury/unnatural) within <b>7 years of marriage</b> (via BNS s. 80 / IPC s. 304B); (2) <b>soon before her death</b> cruelty or harassment; (3) <b>for or in connection with a dowry demand</b> (dowry as defined in <b>Dowry Prohibition Act 1961, s. 2</b>).</li>
+<li><b>Degree:</b> <b>shall presume</b> &mdash; mandatory raising; rebuttable by disproof (&ldquo;unless and until disproved&rdquo;).</li>
+<li><b>&ldquo;Soon before&rdquo;:</b> a live-link requirement &mdash; stale harassment will not raise the presumption (standard judicial gloss taught with the section).</li>
+<li><b>Crime mapping:</b> <b>IPC s. 304B &rarr; BNS s. 80</b>; <b>IPC s. 498A &rarr; BNS s. 86</b>.</li>
+<li><b>Contrast with s. 117/113A:</b> same cruelty concept, but <b>shall</b> (dowry death) vs <b>may</b> (abetment of suicide) &mdash; the legislature calibrated the force to the gravity and evidentiary asymmetry of each situation.</li>
+</ul>
+</div>
+
+<h3 class="sec">6.3 s. 120 BSA / s. 114A IEA &mdash; absence of consent in certain rape prosecutions</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 120, BSA 2023</b> [= s. 114A, IEA]: &ldquo;In a prosecution for rape under <b>sub-section (2) of section 64 of the Bharatiya Nyaya Sanhita, 2023</b>, where <b>sexual intercourse by the accused is proved</b> and the question is whether it was without the consent of the woman alleged to have been raped, and <b>such woman states in her evidence before the Court that she did not consent</b>, the Court <b>shall presume that she did not consent</b>. &mdash; <b>Explanation:</b> &lsquo;sexual intercourse&rsquo; shall mean any of the acts mentioned in <b>section 63 of the BNS, 2023</b>.&rdquo;</div>
+<ul>
+<li><b>Ingredients:</b> (1) prosecution under <b>BNS s. 64(2)</b> (the aggravated categories &mdash; the successor of the post-2013 IPC s. 376(2) categories); (2) <b>sexual intercourse proved</b> (acts per BNS s. 63); (3) the prosecutrix <b>states in court</b> that she did not consent &rArr; mandatory presumption of <b>no consent</b>.</li>
+<li><b>Crime mapping:</b> rape &mdash; <b>IPC s. 376 &rarr; BNS s. 64</b> (definition of acts: IPC s. 375 &rarr; BNS s. 63); the presumption corresponds to the post&ndash;Criminal Law (Amendment) Act 2013 regime (IEA s. 114A inserted 1983, widened 2013).</li>
+<li><b>Companion protection:</b> BSA s. 53A-equivalent (IEA s. 53A): the victim&rsquo;s <b>previous sexual experience</b> is irrelevant to consent or quality of consent; and her statement under s. 164-equivalent recording. The prosecutrix is a <b>competent witness</b> and not an accomplice (Unit V, <i>Chandraprakash</i>).</li>
+</ul>
+</div>
+
+<h3 class="sec">6.4 s. 119 BSA / s. 114 IEA &mdash; &ldquo;Court may presume&rdquo; and the Illustrations</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 119(1), BSA 2023</b> [= s. 114, IEA]: &ldquo;The Court may presume the existence of any fact which it thinks likely to have happened, regard being had to the <b>common course of natural events, human conduct and public and private business</b>, in their relation to the facts of the particular case.&rdquo;</div>
+<p><b>Illustrations &mdash; the Court may presume that&mdash;</b></p>
+<ul>
+<li><b>(a)</b> a man who is in possession of <b>stolen goods soon after the theft</b> is either the thief or has received them knowing them to be stolen, unless he can account for his possession;</li>
+<li><b>(b)</b> an <b>accomplice is unworthy of credit, unless he is corroborated in material particulars</b> (the Unit IV rule, resting here);</li>
+<li><b>(c)</b> a <b>bill of exchange</b>, accepted or endorsed, was accepted or endorsed for good consideration;</li>
+<li><b>(d)</b> a thing or state of things shown to be in existence within a period shorter than that within which such things usually cease to exist, <b>is still in existence</b>;</li>
+<li><b>(e)</b> <b>judicial and official acts have been regularly performed</b>;</li>
+<li><b>(f)</b> the <b>common course of business</b> has been followed in particular cases;</li>
+<li><b>(g)</b> <b>evidence which could be and is not produced would, if produced, be unfavourable</b> to the person who withholds it;</li>
+<li><b>(h)</b> if a man <b>refuses to answer a question which he is not compelled to answer by law</b>, the answer, if given, would be <b>unfavourable to him</b> (the <b>Dipanwita Roy</b> option-two presumption);</li>
+<li><b>(i)</b> when a <b>document creating an obligation is in the hands of the obligor</b>, the obligation has been discharged.</li>
+</ul>
+<p class="small">Sub-s. (2) then directs the Court, in considering whether such maxims apply, to regard the statutory counter-illustrations (e.g. as to (a): the shop-keeper with the marked rupee received in course of business; as to (b): the two equally careful engineers; the captured accomplices kept apart whose accounts corroborate without concert &mdash; the very pattern discussed in Unit IV).</p>
+<p><b>Use in this unit:</b> Illustration (h) is the hinge of <i>Dipanwita Roy</i>&rsquo;s second option &mdash; refusal to submit to a DNA test, though not compellable, may be read against the refuser; Illustration (g) supports adverse inference for withheld material generally (cf. Goutam Kundu&rsquo;s English-law discussion of refusal-inferences).</p>
+</div>
+
+<h3 class="sec">6.5 The &ldquo;may vs shall&rdquo; calibration table</h3>
+<table>
+<tr><th>Provision</th><th>Trigger facts (prosecution/beneficiary proves)</th><th>Presumption</th><th>Degree</th><th>Offence map</th></tr>
+<tr><td>s. 117 BSA / 113A IEA</td><td>Suicide within 7 years of marriage + cruelty (BNS 86/IPC 498A)</td><td>Suicide abetted by husband/relative</td><td>May presume</td><td>IPC 306 &rarr; BNS 108</td></tr>
+<tr><td>s. 118 BSA / 113B IEA</td><td>Cruelty/harassment for dowry <b>soon before</b> death</td><td>Accused caused the dowry death</td><td>Shall presume</td><td>IPC 304B &rarr; BNS 80</td></tr>
+<tr><td>s. 120 BSA / 114A IEA</td><td>Intercourse proved (BNS 63 acts) + prosecutrix&rsquo;s court statement of no consent; prosecution under BNS 64(2)</td><td>She did not consent</td><td>Shall presume</td><td>IPC 376 &rarr; BNS 64</td></tr>
+<tr><td>s. 115 BSA / 111A IEA</td><td>Disturbed area + presence + firearms/explosives vs forces</td><td>Accused committed the listed offence (BNS 147&ndash;150)</td><td>Shall presume (&ldquo;unless contrary shown&rdquo;)</td><td>IPC 121&ndash;123 &rarr; BNS 147&ndash;150</td></tr>
+<tr><td>s. 108 BSA / 105 IEA</td><td>Accusation of an offence</td><td><b>Absence</b> of excepting circumstances</td><td>Shall presume</td><td>BNS General Exceptions (IPC 76&ndash;106)</td></tr>
+<tr><td>s. 116 BSA / 112 IEA</td><td>Birth during marriage / within 280 days, mother unmarried</td><td>Legitimacy &mdash; <b>conclusive</b></td><td>Conclusive proof</td><td>&mdash; (status, not crime)</td></tr>
+</table>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Dowry-death trial.</b> W dies of burn injuries within three years of marriage; her mother testifies to repeated demands for a car and to beatings &ldquo;soon before&rdquo; the death; the defence claims suicide. On proof of (i) unnatural death within seven years and (ii) dowry-linked cruelty/harassment soon before death (BNS s. 80 ingredients), the court <b>shall presume</b> under s. 118 BSA that the husband caused the dowry death &mdash; he must then <b>disprove</b> it (e.g. conclusive evidence of accidental ignition and immediate rescue attempts). If instead W had <b>consumed poison</b> and the charge were abetment of suicide (BNS s. 108), the same cruelty proof within seven years would only enable the court to <b>may presume</b> abetment under s. 117 &mdash; it must still weigh &ldquo;all the other circumstances&rdquo; (her diary, the timing of the last demand, the husband&rsquo;s absence that night).</p>
+</div>
+
+</div><!-- /wrap -->
+<div class="wrap">
+
+<!-- ================= PART 7 ================= -->
+<h2 class="unit" id="pyq"><span class="no">PART 7</span>DU PYQs &amp; Best Model Answers</h2>
+
+<div class="box pyq"><span class="lbl">PYQ &mdash; LL.B. II Term, Law of Evidence, May&ndash;June 2024, Q.8 (20 marks)</span>
+<p><b>Question:</b> &ldquo;A child was born within 280 days of husband&rsquo;s death. Evidence was offered that about the time while the child was conceived the husband was suffering from Carbuncle (swelling under the skin) and died of illness within 14 days. Can the plea of paternity be negatived? Discuss.&rdquo;</p>
+<div class="ans"><h6>Best Model Answer</h6>
+<p><b>1. The governing provision.</b> Section 116 of the Bharatiya Sakshya Adhiniyam, 2023 (s. 112 of the Indian Evidence Act, 1872) enacts that the birth of a person <b>during the continuance of a valid marriage</b> between his mother and any man, or <b>within two hundred and eighty days after its dissolution, the mother remaining unmarried</b>, shall be <b>conclusive proof</b> of legitimacy, <b>unless</b> it is shown that the parties had <b>no access</b> to each other at any time when he could have been begotten. The section rests on the maxim <i>pater est quem nuptiae demonstrant</i> and, by virtue of s. 4 (s. 2(1)(b) BSA), &ldquo;conclusive proof&rdquo; means the Court shall regard legitimacy as proved and <b>shall not allow evidence to disprove it</b> &mdash; the only admissible counter is the <b>built-in exception of non-access</b>.</p>
+<p><b>2. Application to the facts &mdash; the foundation is satisfied.</b> The child was born <b>within 280 days of the husband&rsquo;s death</b> (dissolution by death) and the mother remained unmarried: the foundational fact of s. 116/112 is complete, and the presumption of legitimacy rises as <b>conclusive proof</b>.</p>
+<p><b>3. The only door &mdash; non-access, meaning opportunity.</b> &ldquo;Access&rdquo; and &ldquo;non-access&rdquo; connote the <b>existence or non-existence of opportunities for marital intercourse</b>, not actual cohabitation (<i>Chilukuri Venkateswarlu</i>; <i>Goutam Kundu v. State of West Bengal</i>, AIR 1993 SC 2295). The burden lies <b>wholly on the party disputing paternity</b>, and the standard is not balance of probabilities: the proof of non-access must be &ldquo;<b>strong, distinct, satisfactory and conclusive</b>&rdquo;, akin to the criminal standard (<i>Morris v. Davies</i>, adopted in <i>Vasu v. Santha</i> and <i>Goutam Kundu</i>). Even proof of the mother&rsquo;s adultery with others would not suffice where access existed &mdash; <i>a fortiori</i>, the husband&rsquo;s <b>illness</b>.</p>
+<p><b>4. The carbuncle evidence, tested.</b> Evidence that the husband suffered from a carbuncle at the likely time of conception and died of illness within 14 days is, at its highest, evidence of <b>ill health</b>. Illness, without more, does not establish the <b>absence of opportunity</b> for intercourse: it neither shows separation, hospitalisation, nor physical impossibility during the entire conceptive window. On the <i>Goutam Kundu</i> discipline &mdash; courts &ldquo;desist from lightly or hastily rendering a verdict&hellip; on slender materials, which will have the effect of branding a child as a bastard and its mother an unchaste woman&rdquo; &mdash; such material cannot displace a conclusive-proof presumption. <b>Unless</b> the evidence is strengthened into proof that during the whole period of possible conception the spouses had <b>no opportunity</b> of meeting (e.g. the husband was hospitalised in isolation or away), the exception is not made out.</p>
+<p><b>5. The scientific gate.</b> Could a blood/DNA test negative the plea? Under <i>Goutam Kundu</i>, courts cannot order such a test <b>as of course</b>; there must be a <b>strong prima facie case of non-access</b> first, no compulsion is permissible, and the consequences for the child&rsquo;s status must be weighed. Post-2014 (<i>Nandlal Wasudeo Badwaik</i>, (2014) 2 SCC 576; <i>Dipanwita Roy v. Ronobroto Roy</i>, AIR 2015 SC 418), where a test is eminently needed and rightly directed, science prevails over the legal presumption; but here the husband is <b>dead</b>, so the ordinary parentage test against him is impracticable, and a &ldquo;roving&rdquo; direction against the child alone, without a prima facie case of non-access, is exactly what <i>Goutam Kundu</i> forbids. Refusal-based inferences under s. 119/114 Illustration (h) (the <i>Dipanwita</i> device) also have no foothold on these facts.</p>
+<p><b>6. Conclusion.</b> The plea of paternity <b>cannot be negatived</b> on the offered evidence: the s. 116/112 presumption, being conclusive proof, stands; the carbuncle-and-illness material falls short of the clinching proof of <b>non-access</b> that alone can displace it; and no scientific test may be directed as of course in the absence of a strong prima facie case. The child is, in law, the legitimate child of the deceased husband.</p>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 2 (Essay, 20 marks)</span>
+<p><b>Q.</b> Distinguish &ldquo;may presume&rdquo;, &ldquo;shall presume&rdquo; and &ldquo;conclusive proof&rdquo;, and locate each of the following in that scheme: s. 116 (legitimacy), s. 117 (abetment of suicide), s. 118 (dowry death), s. 120 (rape &mdash; consent), s. 115 (disturbed-area offences), s. 108 (exceptions), s. 35(2) (probate judgments).</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li><b>Definitions (s. 2(1)(h)/(l)/(b) BSA = s. 4 IEA):</b> may presume &mdash; court may treat as proved unless disproved <i>or</i> call for proof (discretion); shall presume &mdash; court shall treat as proved unless and until disproved (compulsion, rebuttable); conclusive proof &mdash; on proof of one fact the other stands proved and <b>no evidence in disproof admissible</b> (irrebuttable).</li>
+<li><b>May presume:</b> s. 117/113A (suicide abetment &mdash; &ldquo;having regard to all the other circumstances&rdquo;); s. 119/114 generally.</li>
+<li><b>Shall presume:</b> s. 118/113B (dowry death); s. 120/114A (absence of consent); s. 115/111A (&ldquo;shall be presumed unless the contrary is shown&rdquo;); s. 108/105 (court shall presume the <b>absence</b> of excepting circumstances).</li>
+<li><b>Conclusive proof:</b> s. 116/112 (legitimacy, subject to the internal non-access exception); s. 35(2)/41 (legal character conferred/taken by probate, matrimonial, admiralty, insolvency judgments).</li>
+<li><b>Function:</b> presumptions shift the burden of producing evidence; only conclusive proofs also close the door of disproof; rebuttable ones keep it open (&ldquo;unless and until disproved&rdquo;).</li>
+</ul>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 3 (Essay, 20 marks)</span>
+<p><b>Q.</b> &ldquo;Section 112 of the Evidence Act is a fortress of legitimacy; science has been admitted only through a guarded gate.&rdquo; Discuss with reference to Goutam Kundu, Nandlal Badwaik and Dipanwita Roy.</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li><b>The fortress:</b> conclusive proof; single exception (non-access = absence of opportunity); heaviest burden (&ldquo;strong, distinct, satisfactory, conclusive&rdquo;); policy &mdash; stigma of illegitimacy, protection of the child (<i>Vasu v. Santha</i> adopted in <i>Goutam Kundu</i>).</li>
+<li><b>Goutam Kundu (1993):</b> five rules &mdash; no blood test as of course; no roving inquiry; strong prima facie non-access first; consequences weighed (bastardising the child, branding the mother); no compulsion to give samples. English law (Family Law Reform Acts 1969/1987; Re L; BRB v JB) not transplantable against s. 112 read with s. 4.</li>
+<li><b>Nandlal Badwaik (2014):</b> the gate opens &mdash; conflict between legal conclusive proof and world-accepted scientific proof: <b>science prevails</b>; DNA test may be directed to determine paternity.</li>
+<li><b>Dipanwita Roy (2014):</b> the guard-rails &mdash; direction permissible where eminently needed (Bhabani Prasad Jena balancing); but the affected party holds an <b>option</b>: submit (conclusive determination) or refuse (adverse inference under s. 114 Ill. (h)/s. 119); privacy protected without sacrificing justice; DNA serves both spouses symmetrically.</li>
+<li><b>Reform context:</b> Law Commission 185th Report (stringent DNA/blood-test exceptions proposed; extension to void marriages &mdash; cf. HMA s. 16); ART Act 2021 s. 31; Surrogacy Act 2021; DNA Technology Regulation Bill.</li>
+<li><b>Conclusion:</b> the presumption remains conclusive in form; in substance the 2014 duo converted the absolute bar into a <b>regulated scientific doorway</b> guarded by prima facie requirement, balancing, optionality and adverse inference.</li>
+</ul>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 4 (Problem, 10 marks)</span>
+<p><b>Q.</b> H is prosecuted for the dowry death of his wife W (BNS s. 80). The prosecution proves that W was harassed for a car demand up to a fortnight before her burn death. H offers no evidence. Advise on the presumption. Would the position differ if the charge were abetment of suicide (BNS s. 108) on the same cruelty proof?</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li><b>Dowry death:</b> foundations proved (cruelty/harassment for dowry <b>soon before</b> death &mdash; a fortnight is a live link) &rArr; under s. 118 BSA / s. 113B IEA the court <b>shall presume</b> H caused the dowry death; with H offering nothing, the presumption stands <b>undisproved</b> &mdash; conviction can rest on it together with the foundational evidence.</li>
+<li><b>Abetment of suicide:</b> same cruelty + suicide within 7 years &rArr; s. 117 BSA / s. 113A IEA: the court <b>may presume</b> abetment &mdash; discretion, having regard to <b>all other circumstances</b> (manner of death, last demand, conduct after). Even with no defence evidence, the court must consciously decide whether to raise it; the presumption, once raised, is equally rebuttable.</li>
+<li><b>Contrast:</b> &ldquo;shall&rdquo; removes judicial discretion to raise; &ldquo;may&rdquo; preserves it &mdash; the calibration of s. 4/s. 2(1) at work; both remain rebuttable, unlike s. 116/112.</li>
+</ul>
+</div>
+</div>
+
+<!-- ================= PART 8 ================= -->
+<h2 class="unit" id="revision"><span class="no">PART 8</span>Rapid Revision</h2>
+
+<h3 class="sec">8.1 One-page master table</h3>
+<table>
+<tr><th>Point</th><th>Rule in one line</th><th>Source</th></tr>
+<tr><td>Three degrees</td><td>May presume (discretion) / shall presume (compulsion, rebuttable) / conclusive proof (counter-evidence barred)</td><td>s. 2(1)(h),(l),(b) BSA; s. 4 IEA</td></tr>
+<tr><td>Probate etc. judgments</td><td>Final judgments in probate/matrimonial/admiralty/insolvency jurisdiction: relevant &amp; conclusive proof of character/title timings</td><td>s. 35 BSA / s. 41 IEA</td></tr>
+<tr><td>Exceptions burden</td><td>On the accused; court shall presume their absence; discharge on preponderance</td><td>s. 108 BSA / s. 105 IEA</td></tr>
+<tr><td>Disturbed areas</td><td>Presence + firearms/explosives vs forces &rArr; shall presume listed offence (BNS 147&ndash;150; IPC 121&ndash;123)</td><td>s. 115 BSA / s. 111A IEA</td></tr>
+<tr><td>Legitimacy</td><td>Birth in wedlock / within 280 days &rArr; conclusive proof; only non-access (opportunity) rebuts; heaviest standard</td><td>s. 116 BSA / s. 112 IEA; Goutam Kundu</td></tr>
+<tr><td>Access meaning</td><td>Opportunity for intercourse, not cohabitation</td><td>Chilukuri Venkateswarlu; Goutam Kundu</td></tr>
+<tr><td>Blood/DNA tests</td><td>Not as of course; strong prima facie first; no compulsion; consequences weighed; post-2014 science prevails if rightly directed; refusal &rArr; Ill. (h) inference</td><td>Goutam Kundu; Nandlal; Dipanwita; Bhabani Jena</td></tr>
+<tr><td>Suicide abetment</td><td>Suicide &lt;7 yrs + cruelty (BNS 86) &rArr; may presume abetment</td><td>s. 117 BSA / s. 113A IEA; IPC 306&rarr;BNS 108</td></tr>
+<tr><td>Dowry death</td><td>Cruelty/harassment for dowry soon before death &rArr; shall presume causation</td><td>s. 118 BSA / s. 113B IEA; IPC 304B&rarr;BNS 80</td></tr>
+<tr><td>Rape consent</td><td>BNS 64(2) case + intercourse proved + her court statement of no consent &rArr; shall presume no consent</td><td>s. 120 BSA / s. 114A IEA; IPC 376&rarr;BNS 64</td></tr>
+<tr><td>Court&rsquo;s general power</td><td>May presume on common course of events/conduct/business; Illustrations (a)&ndash;(i); (h) = refusal inference</td><td>s. 119 BSA / s. 114 IEA; Dipanwita</td></tr>
+</table>
+
+<h3 class="sec">8.2 Mnemonics</h3>
+<ul>
+<li><b>&ldquo;M-S-C&rdquo;:</b> <b>M</b>ay (choice) &rarr; <b>S</b>hall (command, rebuttable) &rarr; <b>C</b>onclusive (closed).</li>
+<li><b>&ldquo;7&ndash;280&ndash;7&rdquo;:</b> <b>7 years</b> (s. 117/113A suicide window) &mdash; <b>280 days</b> (s. 116/112 post-dissolution window) &mdash; <b>7 years</b> (dowry death via BNS 80/IPC 304B).</li>
+<li><b>&ldquo;O-P-R&rdquo;</b> for legitimacy rebuttal: <b>O</b>pportunity absent (non-access), <b>P</b>roof conclusive-standard, <b>R</b>ight to test only through the guarded gate.</li>
+<li><b>&ldquo;A-B-C-D&rdquo;</b> for the four conclusive/strong presumptions pairings: <b>A</b>ccess (116/112), <b>B</b>lood-offences (115/111A), <b>C</b>ruelty-dowry (118/113B), <b>D</b>enial of consent (120/114A).</li>
+</ul>
+
+<h3 class="sec">8.3 Examiner&rsquo;s traps</h3>
+<div class="box warn"><span class="lbl">Traps</span>
+<ol>
+<li><b>&ldquo;A DNA/blood test can be ordered as of right to disprove paternity&rdquo;</b> &mdash; FALSE (Goutam Kundu&rsquo;s five rules; post-2014 only via the guarded gate).</li>
+<li><b>&ldquo;Adultery of the wife rebuts s. 112/116&rdquo;</b> &mdash; FALSE: only <b>non-access</b>; adultery is insufficient where opportunity existed (Vasu v. Santha; Sham Lal).</li>
+<li><b>&ldquo;The s. 113B/118 presumption is discretionary&rdquo;</b> &mdash; FALSE: <b>shall</b> presume; it is s. 113A/117 that says <b>may</b>.</li>
+<li><b>&ldquo;The s. 114A/120 consent presumption applies to every rape prosecution&rdquo;</b> &mdash; FALSE: only <b>BNS s. 64(2)</b> (IPC s. 376(2)) categories, with intercourse proved and her court statement of non-consent.</li>
+<li><b>&ldquo;Any judgment is conclusive proof under s. 35/41&rdquo;</b> &mdash; FALSE: only final judgments in the <b>four in-rem jurisdictions</b> affecting legal character/absolute title.</li>
+<li><b>&ldquo;The accused must prove an exception beyond reasonable doubt&rdquo;</b> &mdash; FALSE: preponderance of probabilities; the prosecution&rsquo;s own evidence may discharge it.</li>
+<li><b>&ldquo;Refusal of a DNA test is costless&rdquo;</b> &mdash; FALSE post-Dipanwita: adverse inference under s. 119/114 Ill. (h).</li>
+<li><b>&ldquo;Non-access means no cohabitation&rdquo;</b> &mdash; FALSE: absence of <b>opportunity</b> for intercourse.</li>
+<li><b>&ldquo;Conclusive proof can be rebutted by strong evidence&rdquo;</b> &mdash; FALSE: counter-evidence is barred; only the <b>internal exception</b> (non-access) operates.</li>
+<li><b>&ldquo;Illness of the husband at conception negatives paternity&rdquo;</b> &mdash; FALSE on the June-2024 Q.8 facts: illness &ne; absence of opportunity.</li>
+</ol>
+</div>
+
+<h3 class="sec">8.4 Answer-writing blueprint (20-mark presumption question)</h3>
+<ol>
+<li><b>Definitions first</b> &mdash; s. 2(1)(h)/(l)/(b) BSA (s. 4 IEA) verbatim; classify the provision in issue.</li>
+<li><b>Ingredients table</b> &mdash; foundational facts, degree, rebuttal route.</li>
+<li><b>Case law</b> &mdash; DU-prescribed cases in full brief; companions in one line.</li>
+<li><b>Connected law</b> &mdash; crime mapping (IPC&harr;BNS), special statutes (AFSPA, Arms Act, Sati Act, Dowry Prohibition Act, HMA, CrPC 125), reform instruments (185th Report, ART/Surrogacy/DNA Bill).</li>
+<li><b>Policy sentence</b> &mdash; why the legislature chose this degree of force (child&rsquo;s status / gender justice / public order).</li>
+<li><b>Application</b> &mdash; facts &rarr; foundation &rarr; presumption &rarr; rebuttal outcome.</li>
+<li><b>Conclusion</b> &mdash; restate the degree and the single door of disproof.</li>
+</ol>
+
+<p class="small" style="margin-top:26px;border-top:1px solid var(--line);padding-top:14px;">Compilation note: prepared strictly on the uploaded DU materials &mdash; Case Material LB-201 (2025 ed., pp. 178&ndash;184: <i>Goutam Kundu v. State of West Bengal</i>), DU LB-201 lecture notes Ch. XI &ldquo;Evidence to decide paternity&rdquo; (ss. 4, 11, 112, 114(h); Goutam Kundu, Nandlal Badwaik, Dipanwita Roy; Kamti Devi, Sharda, Sham Lal, Bhabani Prasad Jena; the Shivam&ndash;G class problem; Law Commission 185th Report; ART Act 2021, Surrogacy Act 2021, DNA Technology Bill), bare BSA 2023 &amp; IEA 1872 texts (ss. 2(1), 35, 108, 115&ndash;120 verbatim, including BSA 115(2)&rsquo;s BNS offence list and 119&rsquo;s Illustrations (a)&ndash;(i)), DU LL.B. II Term May&ndash;June 2024 paper Q.8, and connected instruments (AFSPA 1958 s. 3; Arms Act 1959 ss. 24A&ndash;24B; Commission of Sati (Prevention) Act 1987 s. 4; Dowry Prohibition Act 1961 s. 2; HMA 1955 ss. 13 &amp; 16; CrPC s. 125; IPC&harr;BNS mappings 121&ndash;123&rarr;147&ndash;150, 306&rarr;108, 304B&rarr;80, 498A&rarr;86, 376&rarr;64). Estoppel (BSA ss. 121&ndash;123 / IEA ss. 115&ndash;117) forms a separate syllabus topic and is not covered here.</p>
+
+</div><!-- /wrap -->
+
+<footer>
+  <b>LAW OF EVIDENCE &mdash; UNIT VI: PRESUMPTIONS</b> &bull; DU LL.B./B.A. LL.B. (Hons.) Examination Notes<br>
+  BSA ss. 2(1), 35, 108, 115&ndash;120 &bull; IEA ss. 4, 41, 105, 111A, 112, 113A, 113B, 114, 114A &bull; Goutam Kundu (AIR 1993 SC 2295) &bull; Dipanwita Roy (AIR 2015 SC 418)<br>
+  <span class="small">Compiled from DU Case Material LB-201 (2025), DU lecture notes and prescribed bare Acts. For academic study use.</span>
+</footer>
+</body>
+</html>

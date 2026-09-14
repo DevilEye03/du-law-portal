@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law of Evidence — Unit IV: ACCOMPLICE EVIDENCE | Complete DU Notes (BSA 2023 &amp; IEA 1872)</title>
+<style>
+:root{
+  --ink:#1c1a17; --paper:#fdfbf5; --cream:#f7f2e7; --maroon:#7a1f2b; --indigo:#1f3a5f;
+  --gold:#b98a2f; --green:#2e5e3a; --blue:#20567c; --plum:#5b2a52; --line:#d8cfbc;
+  --case:#8c2f39; --prov:#1f4e5f; --ex:#7a5a12; --pyq:#3c4f8a; --rel:#4a5d2f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.72 "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px;}
+.cover{background:linear-gradient(160deg,#101b20 0%, #14343d 45%, #1f4e5f 100%);color:#eaf3f0;padding:64px 26px 58px;text-align:center;border-bottom:6px double var(--gold);}
+.cover .kicker{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:#9fd0c4;}
+.cover h1{font-size:clamp(30px,5vw,52px);margin:.35em 0 .15em;line-height:1.12;color:#fff;}
+.cover h2{font-weight:400;font-size:clamp(17px,2.4vw,24px);color:#cfe8d4;margin:0 0 18px;}
+.cover .meta{display:inline-block;border:1px solid #7fae9f;border-radius:10px;padding:10px 22px;font-size:14px;color:#e6f2ec;background:rgba(0,0,0,.25);}
+.cover .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.cover .tag{font-size:12.5px;border:1px solid #7fae9f88;border-radius:999px;padding:4px 13px;color:#dcefe7;background:#00000030;}
+.toc{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:34px 0;}
+.toc h3{margin:0 0 10px;color:var(--maroon);font-size:22px;}
+.toc ol{margin:0;padding-left:22px;}
+.toc li{margin:5px 0;}
+.toc a{color:var(--indigo);text-decoration:none;border-bottom:1px dotted #9aa;}
+.toc a:hover{color:var(--maroon);}
+h2.unit{font-size:clamp(24px,3.4vw,34px);color:var(--maroon);border-bottom:3px solid var(--gold);padding-bottom:8px;margin:64px 0 6px;}
+h2.unit .no{display:inline-block;background:var(--maroon);color:#fff;border-radius:8px;font-size:.62em;padding:3px 12px;vertical-align:middle;margin-right:12px;letter-spacing:.08em;}
+h3.sec{font-size:clamp(20px,2.6vw,26px);color:var(--indigo);margin:44px 0 8px;border-left:6px solid var(--gold);padding-left:14px;}
+h4.sub{font-size:19px;color:var(--plum);margin:30px 0 6px;}
+h5.mini{font-size:16px;color:var(--green);margin:22px 0 4px;text-transform:uppercase;letter-spacing:.06em;}
+p{margin:10px 0;}
+ul,ol{margin:8px 0 14px;padding-left:26px;}
+li{margin:5px 0;}
+.box{border-radius:12px;padding:16px 20px;margin:18px 0;border:1px solid;position:relative;}
+.box .lbl{position:absolute;top:-13px;left:16px;background:var(--paper);padding:0 10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.prov{border-color:#9fc4cf;background:#eef6f8;} .prov .lbl{color:var(--prov);}
+.case{border-color:#d9a6ad;background:#fbf0f1;} .case .lbl{color:var(--case);}
+.exbox{border-color:#e0c584;background:#fdf6e3;} .exbox .lbl{color:var(--ex);}
+.pyq{border-color:#9fb0e0;background:#eef1fb;} .pyq .lbl{color:var(--pyq);}
+.rel{border-color:#b5c79a;background:#f2f7ea;} .rel .lbl{color:var(--rel);}
+.warn{border-color:#e0b484;background:#fdf1e6;} .warn .lbl{color:#9c5a12;}
+.stat{font-family:Georgia,serif;font-size:16px;background:#ffffffb0;border-left:4px solid var(--prov);padding:12px 16px;margin:10px 0;border-radius:0 8px 8px 0;}
+.stat b.h{color:var(--prov);}
+.casecard{background:#fff;border:1px solid #e3c9cd;border-left:7px solid var(--case);border-radius:12px;padding:20px 24px;margin:26px 0;box-shadow:0 2px 10px #00000012;}
+.casecard h4{margin:0 0 2px;color:var(--case);font-size:21px;}
+.casecard .cite{font-size:13.5px;color:#7c6a6d;font-style:italic;margin-bottom:10px;}
+.casecard h5{margin:16px 0 4px;color:#8c2f39;font-size:15px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px dashed #d9a6ad;padding-bottom:3px;}
+table{border-collapse:collapse;width:100%;margin:16px 0;background:#fff;font-size:14.8px;}
+th{background:var(--indigo);color:#fff;padding:9px 10px;text-align:left;font-weight:600;}
+td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+tr:nth-child(even) td{background:#faf7ef;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.pill{display:inline-block;border-radius:999px;padding:2px 12px;font-size:12.5px;font-weight:700;margin-right:6px;}
+.p-bsa{background:#1f4e5f;color:#fff;} .p-iea{background:#7a5a12;color:#fff;} .p-new{background:#2e7d32;color:#fff;}
+.quote{font-family:Georgia,serif;font-style:italic;background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:12px 18px;margin:12px 0;color:#4c3b1e;}
+.fig{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 12px;margin:24px 0;text-align:center;overflow-x:auto;}
+.fig figcaption{font-size:13.5px;color:#6b5f4c;margin-top:8px;font-style:italic;}
+svg text{font-family:"Segoe UI",Arial,sans-serif;}
+.small{font-size:13.5px;color:#6d6152;}
+.hl{background:#ffe9a8;padding:0 4px;border-radius:3px;}
+.hl2{background:#cfe8d4;padding:0 4px;border-radius:3px;}
+.hl3{background:#f3cfd6;padding:0 4px;border-radius:3px;}
+.navtop{position:sticky;top:0;background:#101b20cc;backdrop-filter:blur(6px);z-index:50;padding:8px 16px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.navtop a{color:#cfe8d4;text-decoration:none;font-size:13px;letter-spacing:.04em;}
+.navtop a:hover{color:#fff;}
+.ans{background:#f4f8ef;border:1px solid #b5c79a;border-radius:10px;padding:14px 18px;margin:12px 0;}
+.ans h6{margin:0 0 6px;color:var(--green);font-size:15px;text-transform:uppercase;letter-spacing:.08em;}
+footer{background:#101b20;color:#c9d8cf;padding:30px 20px;text-align:center;font-size:13.5px;margin-top:60px;}
+@media print{.navtop{display:none}.cover{padding:30px}.box,.casecard{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">University of Delhi &bull; Faculty of Law &bull; LL.B. / B.A. LL.B. (Hons.)</div>
+  <h1>THE LAW OF EVIDENCE<br>UNIT IV &mdash; ACCOMPLICE EVIDENCE</h1>
+  <h2>Exhaustive Examination Notes &mdash; s. 138 BSA r/w s. 119 Illustration (b) &bull; s. 133 IEA r/w s. 114 Illustration (b)</h2>
+  <div class="meta">Course Code LB-201 (Law of Evidence) &bull; Semester II &bull; Case Material ed. Prof. Gunjan Gupta et al. (DU, 2025)</div>
+  <div class="tags">
+    <span class="tag">Accomplice &amp; Approver &mdash; meaning, classes, exclusions</span>
+    <span class="tag">s. 138 BSA / s. 133 IEA &mdash; competency &amp; rule of law</span>
+    <span class="tag">s. 119 Ill. (b) BSA / s. 114 Ill. (b) IEA &mdash; rule of prudence</span>
+    <span class="tag">Tender of pardon &mdash; BNSS ss. 343&ndash;345 (CrPC 306&ndash;308)</span>
+    <span class="tag">Corroboration in material particulars</span>
+    <span class="tag">Bhuboni Sahu &bull; Haroon Haji Abdulla &bull; Ravinder Singh &mdash; full briefs</span>
+    <span class="tag">DU PYQs (June 2024 Q.7) + Model Answers</span>
+  </div>
+</div>
+
+<div class="navtop">
+  <a href="#framework">Framework</a><a href="#concept">Accomplice &amp; Approver</a><a href="#value">Evidentiary Value &amp; Corroboration</a><a href="#cases">The Three Cases in Full</a><a href="#connected">Connected Law</a><a href="#pyq">PYQs &amp; Model Answers</a><a href="#revision">Rapid Revision</a>
+</div>
+
+<div class="wrap">
+
+<div class="toc">
+<h3>Contents</h3>
+<ol>
+  <li><a href="#framework">Part 0 &mdash; Statutory Framework: s. 138 BSA &amp; s. 119 Ill. (b); the rule of law vs the rule of prudence; master diagrams</a></li>
+  <li><a href="#concept">Part 1 &mdash; Who is an Accomplice? Approver, co-accused, classes, exclusions, burden, tender of pardon (BNSS 343&ndash;345)</a></li>
+  <li><a href="#value">Part 2 &mdash; Evidentiary Value: the double test, corroboration in material particulars, retracted confessions, self-corroboration bar</a></li>
+  <li><a href="#cases">Part 3 &mdash; DU Case Material in Full: Bhuboni Sahu v. The King; Haroon Haji Abdulla v. State of Maharashtra; Ravinder Singh v. State of Haryana</a></li>
+  <li><a href="#connected">Part 4 &mdash; Connected Law: BNSS, BSA companions, Customs Act, IPC&harr;BNS offence mapping, Art. 20(3)</a></li>
+  <li><a href="#pyq">Part 5 &mdash; DU PYQs with Best Model Answers (incl. LL.B. II Term May&ndash;June 2024, Q.7)</a></li>
+  <li><a href="#revision">Part 6 &mdash; Rapid Revision: tables, mnemonics, examiner&rsquo;s traps</a></li>
+</ol>
+<p class="small">Primary sources: (1) DU Case Material LB-201 (2025 ed.) &mdash; full judgments of the three prescribed cases; (2) DU LB-201 lecture notes, Ch. XIV &ldquo;Accomplice &mdash; Sections 114(b) &amp; 133&rdquo; and companion notes (meaning, classes, pardon, corroboration, case digests); (3) bare texts of the Bharatiya Sakshya Adhiniyam 2023 and the Indian Evidence Act 1872; (4) DU LL.B. II Term Examination May&ndash;June 2024 (Code 7953), Q.7; (5) statutory companions &mdash; BNSS 2023 (ss. 343&ndash;345, 183), CrPC 1973 (ss. 306&ndash;308, 164, 288), Sea Customs Act 1878 s. 171-A / Customs Act 1962 s. 108, IPC 1860 &amp; BNS 2023 offence mapping, Constitution Art. 20(3).</p>
+</div>
+
+<!-- ================= PART 0 ================= -->
+<h2 class="unit" id="framework"><span class="no">PART 0</span>The Statutory Framework</h2>
+
+<h3 class="sec">0.1 The two provisions, side by side</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 138, BSA 2023 (&ldquo;Accomplice&rdquo;)</b> [= s. 133, IEA 1872] &mdash; &ldquo;An accomplice shall be a <b>competent witness</b> against an accused person; and a conviction is <b>not illegal</b> merely because it proceeds upon the <b>uncorroborated testimony</b> of an accomplice.&rdquo;</div>
+<div class="stat"><b class="h">s. 119, BSA 2023 (&ldquo;Court may presume existence of certain facts&rdquo;)</b> [= s. 114, IEA 1872] &mdash; &ldquo;The Court may presume the existence of any fact which it thinks likely to have happened, regard being had to the common course of natural events, human conduct and public and private business, in their relation to the facts of the particular case.&rdquo; <b>Illustration (b):</b> &ldquo;That an accomplice is <b>unworthy of credit, unless he is corroborated in material particulars</b>.&rdquo;</div>
+<p><b>The apparent antinomy and its resolution.</b> Section 138 declares <i>competency</i> and legality (&ldquo;shall&rdquo;; rule of law); Illustration (b) to s. 119 declares <i>credibility</i> (&ldquo;may presume&rdquo;; rule of prudence/precaution). Reading them together, the courts in India have held &mdash; in the words of the Privy Council in <b>Bhuboni Sahu v. The King</b> &mdash; that &ldquo;whilst it is not illegal to act upon the uncorroborated evidence of an accomplice, it is a <b>rule of prudence so universally followed as to amount almost to a rule of law</b> that it is unsafe to act upon the evidence of an accomplice unless it is corroborated in material respects so as to implicate the accused&rdquo;. There is <b>no antithesis</b> between the two, because the illustration raises only a rebuttable &ldquo;may&rdquo; presumption, not a <i>presumptio juris et de jure</i> (<b>Dagdu v. State of Maharashtra</b>, (1977) 1 SCC 543, as briefed in DU notes).</p>
+</div>
+
+<table>
+<tr><th>Point</th><th>s. 138 BSA / s. 133 IEA</th><th>s. 119 Ill. (b) BSA / s. 114 Ill. (b) IEA</th></tr>
+<tr><td>Function</td><td>Declares the accomplice a <b>competent witness</b>; legalises conviction on uncorroborated testimony</td><td>Authorises a presumption of <b>unworthiness of credit</b> absent corroboration in material particulars</td></tr>
+<tr><td>Language</td><td>&ldquo;<b>Shall</b> be a competent witness&rdquo;; &ldquo;not illegal&rdquo;</td><td>&ldquo;<b>May</b> presume&rdquo;</td></tr>
+<tr><td>Character</td><td><b>Rule of law</b> (the only absolute rule on accomplice evidence)</td><td><b>Rule of prudence / precaution</b> (rebuttable)</td></tr>
+<tr><td>Effect in practice</td><td>Conviction on sole accomplice evidence is <b>lawful</b></td><td>But <b>unsafe</b> &mdash; courts in the generality of cases insist on corroboration connecting the accused with the crime</td></tr>
+<tr><td>Companion provision</td><td>s. 139 BSA / s. 134 IEA (&ldquo;no particular number of witnesses shall in any case be required for the proof of any fact&rdquo;) &mdash; reinforces that quality, not quantity, matters</td><td>Rebuttal = independent evidence implicating the accused in material particulars</td></tr>
+</table>
+
+<figure class="fig">
+<svg viewBox="0 0 960 430" width="940" role="img" aria-label="Rule of law versus rule of prudence diagram">
+ <defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker></defs>
+ <rect x="330" y="6" width="300" height="42" rx="10" fill="#1f4e5f"/><text x="480" y="32" fill="#fff" font-size="15" text-anchor="middle" font-weight="bold">ACCOMPLICE TENDERED AS PROSECUTION WITNESS</text>
+ <line x1="480" y1="48" x2="480" y2="74" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <rect x="300" y="76" width="360" height="40" rx="9" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="101" fill="#1f4e5f" font-size="13.5" text-anchor="middle" font-weight="bold">GATE 1 &mdash; COMPETENCY: s. 138 BSA (&ldquo;shall be a competent witness&rdquo;)</text>
+ <line x1="480" y1="116" x2="480" y2="142" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <rect x="300" y="144" width="360" height="40" rx="9" fill="#f2f7ea" stroke="#2e5e3a"/><text x="480" y="169" fill="#2e5e3a" font-size="13.5" text-anchor="middle" font-weight="bold">GATE 2 &mdash; RELIABILITY: is his story intrinsically credible?</text>
+ <line x1="480" y1="184" x2="480" y2="210" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <rect x="270" y="212" width="420" height="44" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="231" fill="#7a5a12" font-size="13.5" text-anchor="middle" font-weight="bold">GATE 3 &mdash; PRUDENCE: s. 119 Ill. (b) &mdash; corroborated in material particulars?</text><text x="480" y="248" fill="#7a5a12" font-size="11.5" text-anchor="middle">(independent evidence connecting the accused with the crime)</text>
+ <line x1="360" y1="256" x2="200" y2="300" stroke="#8c2f39" stroke-width="2" marker-end="url(#a1)"/><text x="250" y="272" fill="#8c2f39" font-size="12">NO (ordinary case)</text>
+ <rect x="40" y="302" width="300" height="60" rx="10" fill="#fbf0f1" stroke="#8c2f39"/>
+ <text x="190" y="325" fill="#8c2f39" font-size="13" text-anchor="middle" font-weight="bold">UNSAFE TO CONVICT</text>
+ <text x="190" y="343" fill="#333" font-size="11.5" text-anchor="middle">acquittal / reversal on appeal (Bhuboni Sahu)</text>
+ <line x1="600" y1="256" x2="760" y2="300" stroke="#2e5e3a" stroke-width="2" marker-end="url(#a1)"/><text x="700" y="272" fill="#2e5e3a" font-size="12">YES</text>
+ <rect x="620" y="302" width="300" height="60" rx="10" fill="#f2f7ea" stroke="#2e5e3a"/>
+ <text x="770" y="325" fill="#2e5e3a" font-size="13" text-anchor="middle" font-weight="bold">CONVICTION SAFE &amp; LAWFUL</text>
+ <text x="770" y="343" fill="#333" font-size="11.5" text-anchor="middle">(Ravinder Singh; Haroon Haji)</text>
+ <rect x="330" y="380" width="300" height="42" rx="9" fill="#fff" stroke="#b98a2f"/>
+ <text x="480" y="398" fill="#7a5a12" font-size="12" text-anchor="middle" font-weight="bold">RARE CASE: Gates 1+2 fully satisfied,</text>
+ <text x="480" y="414" fill="#7a5a12" font-size="11.5" text-anchor="middle">Gate 3 absent &rArr; conviction still lawful (s. 138) but exceptional</text>
+ <line x1="480" y1="256" x2="480" y2="378" stroke="#b98a2f" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a1)"/>
+</svg>
+<figcaption>Fig. 0.1 &mdash; The three gates of accomplice evidence: competency (law) &rarr; reliability (fact) &rarr; corroboration (prudence). The dashed route is the &ldquo;rare case&rdquo; of Ravinder Singh.</figcaption>
+</figure>
+
+<figure class="fig">
+<svg viewBox="0 0 900 300" width="880" role="img" aria-label="Genus species diagram of co-accused accomplice approver">
+ <rect x="250" y="10" width="400" height="52" rx="12" fill="#1f3a5f"/><text x="450" y="33" fill="#fff" font-size="15" text-anchor="middle" font-weight="bold">CO-ACCUSED (genus)</text><text x="450" y="50" fill="#cdd9ea" font-size="11.5" text-anchor="middle">persons jointly charged &mdash; confession usable only under s. 28 BSA / s. 30 IEA</text>
+ <line x1="450" y1="62" x2="450" y2="92" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <rect x="230" y="94" width="440" height="52" rx="12" fill="#1f4e5f"/><text x="450" y="117" fill="#fff" font-size="15" text-anchor="middle" font-weight="bold">ACCOMPLICE (species) &mdash; s. 138 BSA / s. 119 Ill. (b)</text><text x="450" y="134" fill="#d7e8ec" font-size="11.5" text-anchor="middle">guilty associate / particeps criminis; competent witness whether or not pardoned</text>
+ <line x1="450" y1="146" x2="450" y2="176" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <rect x="210" y="178" width="480" height="52" rx="12" fill="#2e5e3a"/><text x="450" y="201" fill="#fff" font-size="15" text-anchor="middle" font-weight="bold">APPROVER (sub-species) &mdash; pardon under BNSS s. 343 (CrPC s. 306)</text><text x="450" y="218" fill="#dcead9" font-size="11.5" text-anchor="middle">accomplice who accepted pardon on condition of full and true disclosure; a prosecution witness</text>
+ <text x="450" y="262" fill="#6d6152" font-size="12.5" text-anchor="middle" font-style="italic">All approvers are accomplices; not all accomplices are approvers. For the BSA/IEA both remain &ldquo;accomplice&rdquo;.</text>
+ <text x="450" y="284" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">DU notes: co-accused (genus) &rarr; accomplice (species) &rarr; approver (sub-species).</text>
+</svg>
+<figcaption>Fig. 0.2 &mdash; The taxonomic ladder (DU notes Ch. XIV): co-accused &rarr; accomplice &rarr; approver.</figcaption>
+</figure>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 1 ================= -->
+<h2 class="unit" id="concept"><span class="no">PART 1</span>Who is an Accomplice? Approver, Co-accused, Pardon</h2>
+
+<h3 class="sec">1.1 Meaning &mdash; the Act is silent; the word takes its ordinary sense</h3>
+<div class="box prov"><span class="lbl">Concept</span>
+<p>Neither the BSA nor the IEA <b>defines</b> &ldquo;accomplice&rdquo;. The word is used in only three places in the IEA &mdash; <b>ss. 114 Illustration (b), 133 and 156</b> (BSA: <b>119 Ill. (b), 138 and 159</b>) &mdash; and nowhere explained. The courts therefore give it its <b>ordinary meaning</b>:</p>
+<div class="quote">&ldquo;An accomplice is a person who is supposed to have taken part in the commission of a crime and is one who is supposed to have been associated with the accused in the commission of the same crime &hellip; a <b>guilty associate</b> in the commission of the offence.&rdquo;</div>
+<p><b>Jagannath v. Emperor</b>, AIR 1942 Oudh 221 (as briefed in DU notes): whether a person is an accomplice <b>depends on the facts of each particular case</b> and must be determined by asking whether he could have been <b>charged with the accused</b> in respect of the same offence. <b>R.K. Dalmia v. Delhi Administration</b>, AIR 1962 SC 1821: the Supreme Court followed the definition given by Lord Simonds in <b>Davies v. DPP</b>, [1954] AC 378.</p>
+<p><b>Davies v. DPP &mdash; the four classes of accomplices (Lord Simonds):</b></p>
+<ol>
+  <li><b>Principals in the first degree</b> &mdash; the actual perpetrators who physically commit the act;</li>
+  <li><b>Principals in the second degree</b> &mdash; aiders and abettors who are <b>present</b> at the commission of the crime, supporting the actual perpetrator;</li>
+  <li><b>Accessories before the fact</b> &mdash; aiders and abettors who help to <b>plan</b> or <b>provide for</b> the execution of the crime but are <b>not present</b> when it is committed;</li>
+  <li><b>Receivers</b> (of stolen goods) &mdash; persons who have received stolen property <b>knowing it to have been stolen</b>, on an indictment alleging a joint felony with the thief.</li>
+</ol>
+<p class="small">Cautions extracted from the same discussion in DU notes: (i) an <b>accessory after the fact</b> (one who merely shelters the criminal knowing him to be a felon &mdash; e.g. the common harbouring offences, now BNS ss. 274&ndash;276 / IPC ss. 216, 212) is <b>not</b> automatically an accomplice to the principal crime &mdash; he must have <b>some participation</b> in the crime itself or in the conspiracy to commit it; (ii) accessories before the fact are accomplices <b>only if</b> they participated in the <b>preparation</b> of the crime; (iii) accomplice status requires connection with the <b>same crime</b> &mdash; participation in some other, different crime makes the witness at most an interested/participating witness of that other offence, not an accomplice of the offence on trial.</p>
+</div>
+
+<h3 class="sec">1.2 Accomplice &mdash; the five tests (Jagannath v. Emperor, as applied in DU notes)</h3>
+<table>
+<tr><th>#</th><th>Test</th><th>Practical question</th></tr>
+<tr><td>1</td><td>Ordinary sense</td><td>Was he, in plain language, a partner in the crime?</td></tr>
+<tr><td>2</td><td>Guilty associate</td><td>Is he associated in guilt &mdash; <i>particeps criminis</i> &mdash; in the offence charged?</td></tr>
+<tr><td>3</td><td>Chargeability</td><td>Could he himself have been <b>charged with the accused</b> for the same offence (as principal, abettor, or accessory before the fact)?</td></tr>
+<tr><td>4</td><td>Same crime</td><td>Does his participation relate to the <b>identical transaction</b> on trial, and not to a different offence?</td></tr>
+<tr><td>5</td><td>Fact-specific</td><td>Whether he is an accomplice is decided on the facts of <b>each particular case</b>; if the evidence falls short of these tests, he is not an accomplice and his testimony needs no accomplice-style corroboration</td></tr>
+</table>
+
+<h3 class="sec">1.3 Persons who are <b>NOT</b> accomplices</h3>
+<div class="box rel"><span class="lbl">Exclusions</span>
+<ol>
+<li>A witness <b>not involved</b> in the crime being charged;</li>
+<li>A person who commits an offence <b>under threat or compulsion</b> and participates unwillingly &mdash; not a <i>willing</i> accomplice (compulsion under duress, e.g. a person forced at gunpoint to drive a getaway car; cf. also the general exception of compulsion, BNS s. 22 / IPC s. 94);</li>
+<li>A witness who merely <b>knows of</b> the crime, <b>witnesses</b> it, or fails to disclose it <b>out of fear</b>;</li>
+<li><b>Detectives, paid informers and trap witnesses</b> &mdash; not accomplices; they are <b>interested witnesses</b> whose testimony is scrutinised on its own merits (their presence in a trap, e.g. a corruption sting, does not by itself make them <i>participes criminis</i>);</li>
+<li>The <b>victim</b> of the offence (e.g. the prosecutrix or the cheated customer) &mdash; never an accomplice;</li>
+<li>An <b>accessory after the fact</b> who merely harboured the criminal without participation in the crime or conspiracy (subject to the cautions above &mdash; receivers of stolen property, per Davies class 4, can be accomplices in the joint trial for the felony).</li>
+</ol>
+<p class="small">Why it matters: if the witness is <b>not</b> an accomplice, s. 119 Ill. (b) / s. 114 Ill. (b) is not attracted and corroboration is not insisted upon as a matter of prudence (only ordinary credibility scrutiny).</p>
+</div>
+
+<h3 class="sec">1.4 Accomplice vs Co-accused (confessing) &mdash; the vital distinction</h3>
+<p>An <b>accomplice</b> who is <b>not</b> jointly tried testifies on oath as a witness, is subject to cross-examination, and his testimony is &ldquo;evidence&rdquo; within the BSA/IEA definition &mdash; but it is <b>tainted</b> and calls for corroboration in material particulars. A <b>co-accused</b> (including an accomplice who is jointly tried and does not turn witness) is examined <b>only</b> through his <b>confession</b> under <b>s. 28 BSA / s. 30 IEA</b>: no oath, no cross-examination, technically <b>not &ldquo;evidence&rdquo;</b>, and usable only to <b>lend assurance</b> to other substantive evidence &mdash; it cannot itself found a conviction.</p>
+<table>
+<tr><th>Aspect</th><th>Accomplice examined as witness</th><th>Co-accused (confession)</th></tr>
+<tr><td>Governing provision</td><td>s. 138 r/w s. 119 Ill. (b) BSA (ss. 133, 114(b) IEA)</td><td>s. 28 BSA (s. 30 IEA)</td></tr>
+<tr><td>Oath administered</td><td>Yes</td><td>No</td></tr>
+<tr><td>Cross-examination</td><td>Available to the accused (a major safeguard)</td><td>None &mdash; not a witness</td></tr>
+<tr><td>Technical character</td><td>&ldquo;Evidence&rdquo; (s. 3 BSA / s. 3 IEA)</td><td>Outside the definition of &ldquo;evidence&rdquo;; only &ldquo;may be taken into consideration&rdquo;</td></tr>
+<tr><td>Use</td><td>Substantive proof, subject to corroboration-prudence</td><td>Lends assurance to other evidence; cannot alone sustain conviction</td></tr>
+<tr><td>Presence in court</td><td>Present as witness</td><td>Present as accused (if jointly tried)</td></tr>
+</table>
+
+<h3 class="sec">1.5 Accomplice vs Approver</h3>
+<div class="box prov"><span class="lbl">Statute &mdash; Tender of Pardon</span>
+<p>The BSA/IEA speak only of an &ldquo;accomplice&rdquo;. The word &ldquo;approver&rdquo; belongs to the procedural codes: an accomplice granted <b>pardon</b> on condition of making a <b>full and true disclosure</b> of every circumstance of the offence and of every other person concerned. Once pardoned he is <b>tendered as a prosecution witness</b> &mdash; but for evidentiary purposes he <b>remains an accomplice</b> under s. 138 BSA and the Ill. (b) prudence continues to apply in full.</p>
+<div class="stat"><b class="h">BNSS s. 343 (1)</b> [= CrPC s. 306(1)]: where, in any case triable <b>exclusively by the Court of Session</b> or in a case punishable with imprisonment extending to <b>seven years or more</b> under ss. 34, 109, 114, 115, 116 or 120-B IPC (now BNS ss. 3(5) and the abetment/conspiracy chapter) the Chief Judicial Magistrate or a Metropolitan Magistrate <b>or</b> a First Class Magistrate inquiring into or trying the offence considers it <b>necessary to obtain the evidence</b> of any person supposed to have been directly or indirectly concerned in or privy to the offence, he may tender pardon to such person on condition of his <b>making a full and true disclosure</b> of the whole of the circumstances within his knowledge relative to the offence and to every other person concerned.</div>
+<div class="stat"><b class="h">BNSS s. 343 (2)&ndash;(4)</b> [= CrPC s. 306(2)&ndash;(4)]: pardon may be tendered <b>at any stage of the investigation or inquiry or trial</b>; the person to whom pardon is tendered shall be examined <b>as a witness</b> in the case; before the Magistrate committing the case for trial, and at the trial itself, and shall be kept in <b>custody until the termination of the trial</b> unless he is already on bail. The Magistrate shall record his <b>reasons</b> for tendering pardon (BNSS s. 343(2) / CrPC s. 306(2)(a)).</div>
+<div class="stat"><b class="h">BNSS s. 344</b> [= CrPC s. 307]: after commitment but before judgment, the <b>Court of Session</b> may tender (or direct the committing Magistrate to tender) pardon on the same terms &mdash; so that the trial court itself can convert an accomplice into an approver where the necessity emerges during trial.</div>
+<div class="stat"><b class="h">BNSS s. 345</b> [= CrPC s. 308]: <b>trial of a person not complying</b> &mdash; if the approver <b>wilfully conceals</b> anything essential, gives <b>false evidence</b>, or otherwise fails to fulfil the condition, the pardon is <b>forfeited</b>: he may be <b>tried for the original offence</b> and also for giving false evidence; his statement accepting pardon and the proceedings are admissible against him; he must plead the pardon as a defence, failing which the court may take it into consideration.</div>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 250" width="940" role="img" aria-label="Pardon flowchart">
+ <defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e5e3a"/></marker>
+ <marker id="a2r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c2f39"/></marker></defs>
+ <rect x="20" y="30" width="180" height="70" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="110" y="58" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">Magistrate finds</text><text x="110" y="76" fill="#1f4e5f" font-size="12.5" text-anchor="middle">pardon necessary</text><text x="110" y="93" fill="#333" font-size="10.5" text-anchor="middle">BNSS 343(1)</text>
+ <line x1="200" y1="65" x2="238" y2="65" stroke="#2e5e3a" stroke-width="2" marker-end="url(#a2)"/>
+ <rect x="240" y="30" width="180" height="70" rx="10" fill="#f2f7ea" stroke="#2e5e3a"/><text x="330" y="52" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">Pardon tendered on</text><text x="330" y="69" fill="#2e5e3a" font-size="12.5" text-anchor="middle">condition of full &amp; true</text><text x="330" y="86" fill="#2e5e3a" font-size="12.5" text-anchor="middle">disclosure; reasons recorded</text>
+ <line x1="420" y1="65" x2="458" y2="65" stroke="#2e5e3a" stroke-width="2" marker-end="url(#a2)"/>
+ <rect x="460" y="30" width="180" height="70" rx="10" fill="#fdf6e3" stroke="#b98a2f"/><text x="550" y="58" fill="#7a5a12" font-size="12.5" text-anchor="middle" font-weight="bold">Acceptance &rArr; he becomes</text><text x="550" y="76" fill="#7a5a12" font-size="12.5" text-anchor="middle">the APPROVER</text><text x="550" y="93" fill="#333" font-size="10.5" text-anchor="middle">kept in custody till trial ends</text>
+ <line x1="640" y1="65" x2="678" y2="65" stroke="#2e5e3a" stroke-width="2" marker-end="url(#a2)"/>
+ <rect x="680" y="30" width="260" height="70" rx="10" fill="#fff" stroke="#1f4e5f"/><text x="810" y="52" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">Examined as prosecution witness:</text><text x="810" y="70" fill="#1f4e5f" font-size="12.5" text-anchor="middle">before committing Magistrate and</text><text x="810" y="88" fill="#1f4e5f" font-size="12.5" text-anchor="middle">at the Session trial (s. 138 BSA)</text>
+ <line x1="810" y1="100" x2="810" y2="130" stroke="#8c2f39" stroke-width="2" marker-end="url(#a2r)"/><text x="830" y="122" fill="#8c2f39" font-size="11">breach of condition?</text>
+ <rect x="600" y="132" width="340" height="86" rx="10" fill="#fbf0f1" stroke="#8c2f39"/><text x="770" y="155" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">PARDON FORFEITED &mdash; BNSS s. 345 (CrPC 308)</text><text x="770" y="174" fill="#333" font-size="11.5" text-anchor="middle">tried for the original offence; may also be tried</text><text x="770" y="191" fill="#333" font-size="11.5" text-anchor="middle">for giving false evidence; his acceptance-statement</text><text x="770" y="208" fill="#333" font-size="11.5" text-anchor="middle">admissible against him</text>
+ <rect x="20" y="132" width="540" height="86" rx="10" fill="#fff" stroke="#9fc4cf"/><text x="290" y="156" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">But evidentiary status is unchanged: an approver is still an &ldquo;accomplice&rdquo; under s. 138 BSA</text><text x="290" y="176" fill="#333" font-size="11.8" text-anchor="middle">s. 119 Ill. (b) presumption continues &mdash; double test (reliability + corroboration) applies;</text><text x="290" y="194" fill="#333" font-size="11.8" text-anchor="middle">&ldquo;every approver comes to give evidence seeking to purchase his immunity &mdash; to start with</text><text x="290" y="211" fill="#333" font-size="11.8" text-anchor="middle">he is an unreliable person&rdquo; (Ravinder Singh).</text>
+</svg>
+<figcaption>Fig. 1.1 &mdash; Tender of pardon &rarr; approver &rarr; forfeiture, under BNSS ss. 343&ndash;345 (CrPC ss. 306&ndash;308).</figcaption>
+</figure>
+
+<h3 class="sec">1.6 Who must prove accomplice character? (burden)</h3>
+<div class="box prov"><span class="lbl">Doctrine</span>
+<p>If the <b>accused</b> alleges that a prosecution witness is an accomplice (to attract the Ill. (b) presumption and demand corroboration), the <b>burden lies on the accused</b> to prove it; but the <b>prosecution has a duty</b> to inform the court if a witness is in fact an accomplice, and the court must itself consider the point. Once a person is <b>tendered pardon</b> and examined for the prosecution, the accomplice character is admitted by the very act of pardon.</p>
+</div>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Bank robbery with a lookout.</b> A, B and C rob a bank: A fires at the guard, B cracks the safe, C stands watch outside in the car and drives the three away. C is arrested first and, the evidence being otherwise thin, the Magistrate <b>tenders him pardon</b> under BNSS s. 343. At trial C deposes on oath against A and B. <b>C is an approver and therefore an accomplice</b>: A is a principal in the first degree; B likewise; C is a principal in the second degree / accessory before the fact (he aided and planned though he stayed outside &mdash; under Davies class 3 he counts if he participated in preparation; a lookout in the getaway car is conventionally treated as an accomplice). The court may <b>lawfully</b> convict A and B on C&rsquo;s uncorroborated testimony (s. 138), but <b>prudentially</b> will look for independent evidence connecting each of A and B to the robbery in material particulars &mdash; e.g. CCTV of the car, recovery of C&rsquo;s share of the loot, fingerprint of B on the safe. If, however, C falsely ropes in D (A&rsquo;s enemy) who slept at home that night, this is exactly the &ldquo;ten people, eight true, two false&rdquo; danger described in Bhuboni Sahu &mdash; and D&rsquo;s villager-alibi problem (only family evidence, interested) makes corroboration of C&rsquo;s case against D indispensable.</p>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 2 ================= -->
+<h2 class="unit" id="value"><span class="no">PART 2</span>Evidentiary Value: The Double Test and Corroboration</h2>
+
+<h3 class="sec">2.1 Why caution? The five dangers (DU notes + Bhuboni Sahu)</h3>
+<div class="box prov"><span class="lbl">Doctrine</span>
+<p>The evidence of an accomplice must be accepted with <b>great caution and scrutiny</b> because:</p>
+<ol>
+<li><b>Participation taints the source</b> &mdash; he is a participant in the actual commission of the crime; on his own admission a man of bad character who, to save himself, <b>betrayed his former associates</b>;</li>
+<li>He is <b>not viewed with the respect</b> due to a law-abiding citizen; being immoral he may commit <b>perjury</b> on occasion;</li>
+<li>He is in a position in which he <b>can hardly fail to have a strong bias in favour of the prosecution</b> &mdash; having <b>hoped for or secured pardon</b>, he favours the State&rsquo;s case (&ldquo;seeking to purchase his immunity&rdquo;);</li>
+<li>The <b>real danger</b> (per Rankin C.J. in <i>Emperor v. Lalit Mohan</i>, adopted in Bhuboni Sahu): he may tell a story <b>true in its general outline</b> into which it is easy to work <b>untrue matter</b> &mdash; &ldquo;He may implicate ten people &hellip; and the story may be true in all its details as to eight of them, but untrue as to the other two, whose names have been introduced because they are enemies of the approver.&rdquo; This tendency to <b>include the innocent with the guilty</b> is, Judges have noted, <b>peculiarly prevalent in India</b>;</li>
+<li><b>Alibi difficulty</b> &mdash; an Indian villager charged with taking part in a night crime while in fact asleep in his hut or guarding his crops can only rely on the <b>interested</b> evidence of wife, family or friends, which carries little weight; the court cannot easily detect the false implication.</li>
+</ol>
+<p><b>Conclusion of Bhuboni Sahu:</b> &ldquo;The only real safeguard against the risk of condemning the innocent with the guilty lies in <b>insisting upon independent evidence which in some measure implicates each accused</b>.&rdquo;</p>
+</div>
+
+<h3 class="sec">2.2 The double test for an approver&rsquo;s / accomplice&rsquo;s evidence</h3>
+<div class="box prov"><span class="lbl">Rule</span>
+<p>An accomplice, by becoming an approver, becomes a <b>prosecution witness</b>; his evidence must satisfy a <b>double test</b> (DU companion notes; formulated in <b>Ravinder Singh v. State of Haryana</b>):</p>
+<div class="stat"><b class="h">Test 1 &mdash; Reliability.</b> The story he relates must <b>involve him in the crime</b> and appear <b>intrinsically to be a natural and probable catalogue of events</b>; given in <b>minute details according with reality</b>, it is likely to save it from being rejected <i>brevi manu</i>.</div>
+<div class="stat"><b class="h">Test 2 &mdash; Corroboration.</b> Once that hurdle is crossed, the story, so far as the <b>accused on trial</b> is concerned, must implicate him in such a manner as to give rise to a conclusion of <b>guilt beyond reasonable doubt</b> &mdash; ordinarily through corroboration in <b>material particulars</b> from independent credible evidence.</div>
+<div class="quote">&ldquo;Every approver comes to give evidence in some such manner seeking to purchase his immunity and that is why to start with he is an unreliable person and the rule of caution calling for material corroboration is constantly kept in mind by the court by time-worn judicial practice.&rdquo; &mdash; <b>Ravinder Singh v. State of Haryana</b></div>
+<p><b>Rare-case exception:</b> &ldquo;In a rare case taking into consideration all the factors, circumstances and situations governing a particular case, conviction based on the <b>uncorroborated</b> evidence of an approver <b>confidently held to be true and reliable</b> by the Court may be permissible&rdquo; &mdash; lawful under s. 138 BSA, but the exception, not the rule.</p>
+</div>
+
+<h3 class="sec">2.3 What counts as corroboration? (rules of the doctrine)</h3>
+<table>
+<tr><th>Rule</th><th>Content</th><th>Authority</th></tr>
+<tr><td>Material particulars only</td><td>Corroboration is needed <b>in material particulars</b> connecting the <b>accused</b> with the <b>crime</b> &mdash; not in every minute detail or circumstance. It must implicate the accused: &ldquo;bridging closely the distance between the <b>crime</b> and the <b>criminal</b>&rdquo;.</td><td>Ill. (b) itself; Ravinder Singh; Haroon Haji</td></tr>
+<tr><td>Independence</td><td>Corroboration must come from <b>independent evidence</b> which <b>in some measure implicates each accused</b> separately.</td><td>Bhuboni Sahu</td></tr>
+<tr><td>One accomplice cannot corroborate another</td><td>&ldquo;The evidence of <b>one accomplice cannot be used to corroborate</b> the evidence of <b>another accomplice</b>&rdquo; (unless both are independently corroborated).</td><td>Bhuboni Sahu</td></tr>
+<tr><td>No self-corroboration</td><td>&ldquo;An accomplice <b>cannot corroborate himself</b>; <b>tainted evidence does not lose its taint by repetition</b>.&rdquo; His earlier statement (e.g. recorded under CrPC s. 164 / BNSS s. 183, or before a customs officer) is <b>not</b> substantive corroboration of his own testimony; it may at most be used under <b>s. 160 BSA / s. 157 IEA</b> (corroboration of later testimony by former statement) or for contradiction &mdash; but that remains <b>the same tainted source</b>.</td><td>Bhuboni Sahu; Haroon Haji (Kashinath&rsquo;s own s. 171-A statement); <i>In re B.K. Rajagopal</i> dissented in spirit</td></tr>
+<tr><td>Co-accused confession</td><td>The confession of a <b>jointly tried co-accused</b> (s. 28 BSA / s. 30 IEA) is a &ldquo;<b>very weak type</b> of evidence&rdquo;: no oath, no cross-examination, not &ldquo;evidence&rdquo; technically; the court may &ldquo;take it into consideration&rdquo; but <b>cannot found a conviction</b> on it. It may lend assurance to other evidence but cannot substitute for independent corroboration of accomplice testimony.</td><td>Bhuboni Sahu (re Trinath); Haroon Haji (re Bengali &mdash; usable, if voluntary, but only to lend assurance)</td></tr>
+<tr><td>Retraction</td><td>A <b>retracted confession</b> must first be tested for <b>voluntariness and truthfulness</b> (satisfaction of the court, not mechanical); a retraction months later, without credible explanation, may be held <b>incredible</b>. Even so, a retracted confession of the maker is weak against co-accused.</td><td>Haroon Haji (Ram Prakash v. State of Punjab; Subramania Goundan; Nathu); Ravinder Singh</td></tr>
+<tr><td>Number of witnesses</td><td>No particular number of witnesses is required (s. 139 BSA / s. 134 IEA); corroboration is about <b>quality and independence</b>, not arithmetic.</td><td>Dagdu v. State of Maharashtra</td></tr>
+<tr><td>Relation of the two sections</td><td>No antithesis: Ill. (b) &ldquo;only says that the court <b>may</b> presume a certain state of affairs &hellip; not a conclusive and irrebuttable presumption&rdquo;.</td><td>Dagdu v. State of Maharashtra</td></tr>
+</table>
+
+<figure class="fig">
+<svg viewBox="0 0 960 430" width="940" role="img" aria-label="Corroboration analysis flowchart">
+ <defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker></defs>
+ <rect x="310" y="8" width="340" height="40" rx="9" fill="#1f4e5f"/><text x="480" y="33" fill="#fff" font-size="13.5" text-anchor="middle" font-weight="bold">PROPOSED CORROBORATING ITEM &mdash; classify its SOURCE</text>
+ <line x1="480" y1="48" x2="480" y2="74" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a3)"/>
+ <text x="480" y="70" fill="#4a3f2a" font-size="11.5" text-anchor="middle"></text>
+ <rect x="40" y="76" width="270" height="66" rx="9" fill="#fbf0f1" stroke="#8c2f39"/><text x="175" y="100" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">A. Same accomplice&rsquo;s earlier statement</text><text x="175" y="118" fill="#333" font-size="11" text-anchor="middle">(CrPC 164/BNSS 183; customs s. 171-A;</text><text x="175" y="133" fill="#333" font-size="11" text-anchor="middle">FIR by him; s. 160 BSA/s. 157 IEA use)</text>
+ <rect x="345" y="76" width="270" height="66" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="100" fill="#7a5a12" font-size="12.5" text-anchor="middle" font-weight="bold">B. Another accomplice / approver</text><text x="480" y="118" fill="#333" font-size="11" text-anchor="middle">jointly tried co-accused confession</text><text x="480" y="133" fill="#333" font-size="11" text-anchor="middle">(s. 28 BSA / s. 30 IEA) &mdash; incl. retracted</text>
+ <rect x="650" y="76" width="270" height="66" rx="9" fill="#f2f7ea" stroke="#2e5e3a"/><text x="785" y="100" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">C. Independent untainted evidence</text><text x="785" y="118" fill="#333" font-size="11" text-anchor="middle">eye-witnesses, recovery, documents,</text><text x="785" y="133" fill="#333" font-size="11" text-anchor="middle">medical/forensic, circumstantial chain</text>
+ <line x1="175" y1="142" x2="175" y2="180" stroke="#8c2f39" stroke-width="2" marker-end="url(#a3)"/>
+ <rect x="40" y="182" width="270" height="72" rx="9" fill="#fff" stroke="#8c2f39"/><text x="175" y="205" fill="#8c2f39" font-size="12" text-anchor="middle" font-weight="bold">NOT corroboration</text><text x="175" y="223" fill="#333" font-size="11" text-anchor="middle">&ldquo;tainted evidence does not lose its taint</text><text x="175" y="239" fill="#333" font-size="11" text-anchor="middle">by repetition&rdquo;; usable only to prefer</text>
+ <line x1="480" y1="142" x2="480" y2="180" stroke="#b98a2f" stroke-width="2" marker-end="url(#a3)"/>
+ <rect x="345" y="182" width="270" height="72" rx="9" fill="#fff" stroke="#b98a2f"/><text x="480" y="205" fill="#7a5a12" font-size="12" text-anchor="middle" font-weight="bold">Weak &mdash; no assurance by itself</text><text x="480" y="223" fill="#333" font-size="11" text-anchor="middle">one accomplice cannot corroborate another;</text><text x="480" y="239" fill="#333" font-size="11" text-anchor="middle">co-accused confession cannot found conviction</text>
+ <line x1="785" y1="142" x2="785" y2="180" stroke="#2e5e3a" stroke-width="2" marker-end="url(#a3)"/>
+ <rect x="650" y="182" width="270" height="72" rx="9" fill="#fff" stroke="#2e5e3a"/><text x="785" y="205" fill="#2e5e3a" font-size="12" text-anchor="middle" font-weight="bold">VALID corroboration</text><text x="785" y="223" fill="#333" font-size="11" text-anchor="middle">if it connects THIS accused with THIS</text><text x="785" y="239" fill="#333" font-size="11" text-anchor="middle">crime in material particulars</text>
+ <line x1="175" y1="254" x2="400" y2="300" stroke="#4a3f2a" stroke-width="1.6" stroke-dasharray="5 4"/>
+ <line x1="480" y1="254" x2="460" y2="300" stroke="#4a3f2a" stroke-width="1.6" stroke-dasharray="5 4"/>
+ <line x1="785" y1="254" x2="580" y2="300" stroke="#4a3f2a" stroke-width="1.6"/>
+ <rect x="270" y="300" width="420" height="60" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="324" fill="#1f4e5f" font-size="13" text-anchor="middle" font-weight="bold">TOTAL ASSESSMENT per accused separately</text><text x="480" y="344" fill="#333" font-size="11.5" text-anchor="middle">C alone &rArr; safe conviction; A/B alone &rArr; unsafe (Bhuboni); A+B+C &rArr; strongest</text>
+ <rect x="270" y="380" width="420" height="42" rx="9" fill="#fff" stroke="#b98a2f"/><text x="480" y="406" fill="#7a5a12" font-size="12" text-anchor="middle">Only C absent &rArr; rare-case exception (Ravinder Singh) &mdash; record reasons</text>
+ <line x1="480" y1="360" x2="480" y2="378" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a3)"/>
+</svg>
+<figcaption>Fig. 2.1 &mdash; Sorting proposed corroborative material by source: A (self), B (other accomplice/co-accused), C (independent).</figcaption>
+</figure>
+
+<h3 class="sec">2.4 Corroboration by confessions of other co-accused &mdash; the Bhuboni&ndash;Haroon line</h3>
+<div class="box prov"><span class="lbl">Doctrine</span>
+<ul>
+<li><b>Bhuboni Sahu (PC 1949):</b> the Privy Council declined to act on an approver&rsquo;s evidence <b>supported only by the retracted confession of a co-accused</b> (Trinath). The two had been &ldquo;nothing but hired assassins&rdquo; with &ldquo;ample opportunity of preparing their statements in concert&rdquo;; the approver had sworn to <b>two contradictory stories</b>; and the co-accused had <b>denied</b> his confession. Conviction set aside.</li>
+<li><b>Haroon Haji (SC 1968):</b> a co-accused&rsquo;s <b>confession</b> recorded by customs officers under <b>s. 171-A of the Sea Customs Act</b> (now s. 108 of the Customs Act, 1962) <b>is</b> a confession for <b>s. 30 IEA / s. 28 BSA</b> if proved <b>voluntary</b> &mdash; such statements enjoy <b>none of the safeguards</b> of a judicially recorded confession (CrPC s. 164 / BNSS s. 183), so voluntariness must be scrutinised with <b>special care</b>. If voluntary, the confession may be used <b>against its maker and against co-accused jointly tried for the same offence</b> &mdash; to <b>lend assurance</b> to the accomplice&rsquo;s testimony. Bengali&rsquo;s confession, retracted but held voluntary and true, furnished <b>sufficient corroboration</b> of the approver Kashinath. A confession by a co-accused who had <b>absconded before judgment</b> (Noor Mohammad) was not usable &mdash; &ldquo;jointly tried&rdquo; requirement not satisfied in substance.</li>
+<li>Net rule: an <b>independent, voluntary confession of a jointly tried co-accused</b> may corroborate an accomplice <b>as against each of them</b>; but a <b>retracted</b> confession, or one made by a person with opportunity to concert stories, will not satisfy the prudent judge without more.</li>
+</ul>
+</div>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Smuggling ring.</b> Customs officers raid a beach landing at 2 a.m.; gold biscuits pass from a launch to waiting trucks. Suspects are served notices and their statements recorded under s. 108 of the Customs Act, 1962 (successor of s. 171-A Sea Customs Act). Suspect K&rsquo;s statement implicates himself and the financer H. K is then <b>tendered pardon</b> and testifies. Against H the court now has: (i) K&rsquo;s testimony (accomplice evidence); (ii) K&rsquo;s <b>own</b> earlier s. 108 statement &mdash; <b>no corroboration</b> (same source, Haroon Haji); (iii) the <b>confession of co-accused B</b>, jointly tried, voluntarily given though later retracted, describing H&rsquo;s role &mdash; <b>may lend assurance</b> if the court is satisfied of its voluntariness and truth (Haroon Haji); (iv) recovery of a portion of the consignment from H&rsquo;s godown and call-detail records placing H at the landing &mdash; <b>independent corroboration in material particulars</b>. Item (iv), plus (iii), makes conviction safe.</p>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 3 ================= -->
+<h2 class="unit" id="cases"><span class="no">PART 3</span>The Three Prescribed Cases in Full Brief</h2>
+<p class="small">Syllabus items 25&ndash;27 (DU Case Material, p. 4). <b>Note on citation:</b> the syllabus prints item 26 &ldquo;Haroon Haji Abdulla v. State of Maharashtra, AIR 1975 SC 856&rdquo;, which duplicates the citation of item 27. The judgment in the DU case material bears the citation <b>(1968) 2 SCR 641 : AIR 1968 SC 832</b> (decided 14.12.1967) &mdash; that is the correct citation; the syllabus entry is a typographical error.</p>
+
+<!-- ============ CASE 25 ============ -->
+<div class="casecard">
+<h4>Case 25 &mdash; Bhuboni Sahu v. The King</h4>
+<div class="cite">AIR 1949 PC 257 : (1949) 51 Cr LJ 872 &bull; Privy Council &bull; Sir John Beaumont &bull; Appeal by special leave from the High Court of Patna &bull; IEA ss. 114 Ill. (b), 133, 157; CrPC ss. 164, 288, 30 (IEA)</div>
+
+<h5>Facts</h5>
+<ul>
+<li>On <b>11 October 1946</b>, one <b>Kalia Behara</b>, who lived at Berhampur and carried on business as a <b>jutka (pony-cart) driver</b>, was <b>brutally murdered</b> at a place between Berhampur and Golantra, to which he was driving with passengers in his jutka.</li>
+<li><b>Eight persons</b> were charged with the murder (<b>s. 302 r/w s. 34 IPC</b> &mdash; now BNS s. 103 r/w s. 3(5)) and tried by the Sessions Judge, who convicted <b>six</b>, including the appellant <b>Bhuboni Sahu</b> (accused No. 7) and <b>Trinath</b>. The High Court of Patna allowed some appeals but dismissed those of the appellant and Trinath. (The deceased&rsquo;s son and one other, also charged, were acquitted.)</li>
+<li><b>Kholi Behara</b> (aged 20), who had taken part in the murder, was <b>tendered pardon</b> and became an <b>approver</b>. He was arrested on 12 October 1946 (the day after the offence), sent to the Magistrate on 14 October, who on <b>15 October</b> recorded his statement under <b>s. 164 CrPC</b>. In it he described the murder and alleged that he and Trinath had been <b>engaged as hired assassins</b>; that the appellant gave him a <b>khantibadi</b> (grass-cutting instrument) which he passed to Trinath, who handed it over at the appellant&rsquo;s house; and that the appellant paid each of them a sum of money.</li>
+<li>At the Sessions trial the approver told a <b>different story</b>. The Sessions Judge brought his evidence before the <b>Committing Magistrate</b> on record under <b>s. 288 CrPC</b>, and both the Sessions Judge and the High Court <b>preferred the earlier version</b>.</li>
+<li><b>Trinath</b>, the co-accused, made a confession which was recorded but was <b>retracted</b> in the Sessions Court.</li>
+<li>Recoveries: a <b>loin cloth</b> identified as the one worn by the deceased when assaulted, and a <b>khantibadi</b>, in circumstances alleged to implicate the appellant.</li>
+</ul>
+
+<h5>Evidence against Bhuboni Sahu (the three items)</h5>
+<ol>
+<li>The evidence of the approver Kholi Behara (ss. 114 Ill. (b) &amp; 133 IEA);</li>
+<li>The (retracted) confession of co-accused Trinath (s. 30 IEA);</li>
+<li>Recovery of the deceased&rsquo;s loin cloth and the khantibadi.</li>
+</ol>
+
+<h5>Issues</h5>
+<ol>
+<li>Was there <b>any evidence</b> upon which the appellant could lawfully be convicted?</li>
+<li>Can a conviction rest on <b>accomplice evidence &ldquo;supported&rdquo; only by the retracted confession of a co-accused</b>?</li>
+<li>Can the approver&rsquo;s <b>own earlier statements</b> (s. 164 CrPC; evidence brought on record under s. 288 CrPC) serve as the required <b>corroboration</b>?</li>
+<li>Do the recoveries of the loin cloth and khantibadi corroborate the approver&rsquo;s story against the appellant?</li>
+</ol>
+
+<h5>Arguments for the Appellant (Sir Valentine Holmes)</h5>
+<ul>
+<li>The approver&rsquo;s evidence was accepted by two courts; his earlier s. 164 statement and his evidence before the Committing Magistrate (made admissible by s. 288 CrPC) showed <b>consistency soon after the occurrence</b>.</li>
+<li>He relied on <b>examples recognised by the Judicial Committee itself</b> where confessions of co-accused given <b>independently and without opportunity of previous concert</b> were entitled to great weight &mdash; and contended that <b>Trinath&rsquo;s confession was independent</b> of the approver&rsquo;s statement and its truth <b>was not weakened by its retraction</b>.</li>
+<li>The <b>recoveries</b> (loin cloth; khantibadi handed over at the appellant&rsquo;s house and later found there) supplied the necessary corroboration in material particulars.</li>
+</ul>
+
+<h5>Arguments for the Crown / reasoning adopted</h5>
+<ul>
+<li>The <b>rule of prudence</b> requires <b>independent</b> evidence implicating <b>each</b> accused; the confession of a co-accused (himself an accomplice) is <b>not</b> such independent evidence.</li>
+<li>Trinath&rsquo;s confession was <b>very short</b>, gave only a bare outline, and was <b>partly self-exculpatory</b>; on the state of the evidence it was <b>impossible to say</b> the approver and Trinath were kept apart, so <b>previous concert was highly improbable</b> to exclude.</li>
+<li>The khantibadi is an instrument <b>commonly possessed by agriculturists</b> &mdash; no blood stains, nothing to connect the particular khantibadi with the murder; the recovery of the cloth also failed to implicate the appellant as claimed.</li>
+</ul>
+
+<h5>Decision (Privy Council &mdash; appeal allowed; conviction set aside)</h5>
+<ul>
+<li><b>Combined reading of ss. 133 and 114 Ill. (b):</b> it is not illegal to act on uncorroborated accomplice evidence, but the rule of prudence requiring corroboration in material respects <b>implicating the accused</b> is &ldquo;so universally followed as to amount almost to a rule of law&rdquo; that it is <b>unsafe</b> to act without it.</li>
+<li><b>Corroboration must be independent</b> and must implicate <b>each accused</b> &mdash; not merely confirm the occurrence. &ldquo;The corroboration must be not only with regard to the occurrence but also as against each of the accused sought to be implicated in the crime.&rdquo;</li>
+<li><b>One accomplice cannot corroborate another:</b> the High Court itself was right not to treat Trinath&rsquo;s confession as sufficient corroboration of the approver&rsquo;s evidence (and on that principle had acquitted Mata Simma, accused No. 6).</li>
+<li><b>No self-corroboration:</b> a s. 164 CrPC statement &ldquo;can never be used as substantive evidence of the facts stated, but it can be used to <b>support or challenge</b> evidence given in court by the person who made the statement&rdquo;. &ldquo;The statement made by the approver under s. 164 plainly does not amount to the corroboration in material particulars&hellip; <b>An accomplice cannot corroborate himself; tainted evidence does not lose its taint by repetition.</b>&rdquo; But the court <b>was entitled to have regard</b> to the early consistent statement <b>when choosing between</b> the approver&rsquo;s two versions (Committing Magistrate vs Sessions Court).</li>
+<li><b>Recoveries rejected</b> as corroboration: the khantibadi was a common agricultural tool; nothing showed it was the murder weapon; the cloth&rsquo;s recovery did not implicate the appellant in the manner deposed.</li>
+<li><b>Confession of a co-accused under s. 30 IEA is &ldquo;a very weak type of evidence&rdquo;:</b> it is not evidence within the s. 3 definition; not made on oath; not in the presence of the accused; not tested by cross-examination. Section 30 permits the court to <b>&ldquo;take into consideration&rdquo;</b> such a confession &mdash; but the section &ldquo;does not say that the confession is to amount to proof. <b>Clearly there must be other evidence</b>&rdquo;.</li>
+<li><b>Danger rationale</b> (adopting Sir George Rankin in <i>Ambikacharan Roy v. Emperor</i> and the passage from <i>Emperor v. Lalit Mohan Chuckerbutty</i>): the accomplice&rsquo;s bad character and prosecution bias are not the real danger; the real danger is a <b>story true in outline padded with falsehoods</b> &mdash; &ldquo;He may implicate ten people&hellip; true as to eight&hellip; untrue as to the other two, whose names have been introduced because they are enemies of the approver.&rdquo; This tendency is <b>peculiarly prevalent in India</b>; an Indian villager is <b>seldom able to prove an alibi</b> cogently (only interested family evidence). &ldquo;The only real safeguard&hellip; lies in <b>insisting upon independent evidence which in some measure implicates each accused</b>.&rdquo;</li>
+<li><b>Result:</b> the approver&rsquo;s evidence, supported only by Trinath&rsquo;s retracted confession, could not be acted upon &mdash; the two were &ldquo;nothing but hired assassins&rdquo; with &ldquo;ample opportunity of preparing their statements in concert&rdquo;; the approver had <b>sworn to two contradictory stories</b>; Trinath <b>denied</b> his confession. They may have falsely claimed instigation by another to conceal the real instigator. <b>Conviction of Bhuboni Sahu set aside.</b></li>
+</ul>
+
+<h5>Principle evolved</h5>
+<p>(1) ss. 133 and 114(b) IEA (138 and 119(b) BSA) must be read together &mdash; conviction on uncorroborated accomplice evidence is legal but unsafe; the prudence rule is &ldquo;almost a rule of law&rdquo;. (2) Corroboration must be by <b>independent</b> evidence and must implicate <b>each accused</b> separately in material particulars. (3) <b>An accomplice cannot corroborate himself</b> &mdash; prior statements (s. 164 CrPC / s. 288 CrPC material) are not corroboration, though they may help the court prefer one version to another. (4) <b>One accomplice&rsquo;s evidence cannot corroborate another&rsquo;s.</b> (5) A co-accused&rsquo;s confession under s. 30 IEA / s. 28 BSA is very weak, is not &ldquo;evidence&rdquo; technically, and cannot found a conviction &mdash; other evidence must exist. (6) The classic statement of the <b>danger of false implication</b> and the villager-alibi rationale.</p>
+</div>
+
+<!-- ============ CASE 26 ============ -->
+<div class="casecard">
+<h4>Case 26 &mdash; Haroon Haji Abdulla v. State of Maharashtra</h4>
+<div class="cite">(1968) 2 SCR 641 : AIR 1968 SC 832 &bull; Supreme Court &bull; M. Hidayatullah, J. &bull; Decided 14 December 1967 &bull; IEA ss. 30, 114 Ill. (b), 133; s. 171-A Sea Customs Act 1878; s. 120-B IPC; s. 167(81) Sea Customs Act; FERA 1947 &bull; <i>(syllabus citation &ldquo;AIR 1975 SC 856&rdquo; is an error &mdash; it belongs to Case 27)</i></div>
+
+<h5>Facts</h5>
+<ul>
+<li><b>Gold smuggling from the Persian Gulf</b>: gold was brought in <b>steam launches</b> from Gulf ports, <b>transshipped at sea</b> into Indian boats standing out, brought to the Indian shore and taken away by <b>persons waiting</b> for it.</li>
+<li>A <b>raid on the night of 13 August 1961</b> caught a consignment coming in; many smugglers were arrested. On <b>14 August</b> the Customs Authorities served notices under <b>s. 171-A, Sea Customs Act</b> (successor provision today: s. 108, Customs Act 1962). On <b>15 August</b>, two customs officers &mdash; Karnik and Rane &mdash; recorded <b>independently and almost simultaneously</b> the statements of two suspects, <b>Kashinath</b> and <b>Bengali</b>. (Noor Mohammad&rsquo;s statement was recorded by Randive on 19 August.)</li>
+<li><b>Kashinath&rsquo;s</b> statement implicated himself and <b>Haroon</b>. <b>Bengali&rsquo;s</b> statement was a <b>confession</b> of his own guilt and implicated Haroon. Bengali was <b>jointly tried</b> with Haroon. <b>Haroon</b>, though served with a notice, was <b>unwilling to make any statement until he had seen what the others had said</b>.</li>
+<li><b>Eighteen accused</b> (the appellant and 17 others) were tried before the Chief Presidency Magistrate, Esplanade Court, for <b>conspiracy to smuggle gold</b> &mdash; <b>s. 120-B IPC</b> (now BNS s. 61(2)) read with <b>s. 167(81) Sea Customs Act</b> and certain offences under the <b>FERA, 1947</b>.</li>
+<li>At trial, <b>Kashinath became a prosecution witness (PW 1)</b> &mdash; an accomplice. <b>Bengali</b> (accused No. 1) <b>retracted</b> his confession alleging <b>duress and torture</b>; he was convicted by the judgment but had <b>died</b> after the conclusion of the case and before judgment, so the case against him <b>abated</b>. <b>Noor Mohammad</b> (accused No. 4) <b>jumped bail</b> just before judgment; the case against him was kept pending (trial separated). Accused Nos. 11, 12, 13 and 16 were acquitted.</li>
+<li><b>Trial Court:</b> some accused acquitted; the appellant convicted. <b>High Court:</b> confirmed the conviction relying on (i) Kashinath&rsquo;s evidence corroborated by his own statement before the Customs authorities, and (ii) the retracted confession of Bengali.</li>
+</ul>
+
+<h5>Issues</h5>
+<ol>
+<li>Whether Kashinath, an <b>accomplice</b>, could support a conviction without corroboration in material particulars, and what may <b>corroborate</b> him.</li>
+<li>Whether Kashinath&rsquo;s <b>own statement</b> to the Customs authorities can corroborate him.</li>
+<li>Whether a statement recorded under <b>s. 171-A Sea Customs Act</b> is a &ldquo;confession&rdquo; usable under <b>s. 30 IEA</b> (s. 28 BSA) against a co-accused, and whether s. 30 is confined to Magistrate-recorded confessions.</li>
+<li>Whether <b>Bengali</b> (died before judgment) and <b>Noor Mohammad</b> (absconded before judgment) were still persons &ldquo;<b>jointly tried</b>&rdquo; with Haroon.</li>
+<li>Effect of <b>retraction</b> alleging duress and torture on the value of the confessions.</li>
+</ol>
+
+<h5>Arguments for the Appellant</h5>
+<ul>
+<li>Kashinath being an accomplice, <b>no conviction could be based on his evidence</b> unless corroborated in <b>material particulars</b> (Bhuboni Sahu).</li>
+<li>His <b>own statement</b> before the Customs authorities cannot be corroboration &mdash; an accomplice cannot corroborate himself.</li>
+<li>Bengali&rsquo;s statement was <b>not a confession</b> within s. 30 IEA and, in any case, was obtained by <b>inducement/duress/torture</b>; being <b>retracted</b>, it was worthless even against its maker, and far more so against a co-accused.</li>
+<li>Since <b>Bengali died</b> and <b>Noor Mohammad absconded</b> before the trial was finally concluded against them, their statements are not statements of persons &ldquo;<b>jointly tried</b>&rdquo; with Haroon and are inadmissible under s. 30.</li>
+<li>A confession of a co-accused is <b>no better than</b> accomplice evidence; corroboration by another tainted source proves nothing.</li>
+</ul>
+
+<h5>Arguments for the State</h5>
+<ul>
+<li>Reliance on <b>Ram Prakash v. State of Punjab</b> (1959 SCR 1219, Imam J.): the Evidence Act nowhere provides that a <b>retracted confession</b> ceases to be usable against the maker or co-accused; its value is weak and corroboration is ordinarily needed, but admissibility is unaffected &mdash; credibility depends on the circumstances of each case.</li>
+<li>Reliance on <b>Subramania Goundan v. State of Madras</b> (1958 SCR 428, Govinda Menon J.): a confession stands on a <b>slightly higher level</b> than accomplice evidence.</li>
+<li>Bengali&rsquo;s confession was <b>voluntary and true</b>; the retractions came <b>months later</b>; and the two statements (Kashinath and Bengali), recorded almost simultaneously by different officers within hours of the incident, <b>agree remarkably</b> in detail and are independently corroborated at numerous points.</li>
+</ul>
+
+<h5>Decision (Supreme Court &mdash; appeal dismissed)</h5>
+<ul>
+<li><b>Relation of ss. 133 and 114(b):</b> settled law &mdash; a court may legally convict on the single evidence of an accomplice; Ill. (b) adds a <b>rider of prudence</b>, because an accomplice &ldquo;who betrays his associates is not a fair witness&rdquo; and may weave false details into a true story so that &ldquo;there may be no means at hand to sever the false from that which is true&rdquo;. Courts therefore insist on corroboration <b>as to the offence itself</b> and <b>implicating, however slightly, each accused named</b> &mdash; a rule &ldquo;so ingrained&hellip; as to have almost the standing of a rule of law&rdquo;.</li>
+<li><b>Bhuboni Sahu distinguished/clarified:</b> that case dealt with accomplice evidence sought to be corroborated <b>only</b> by a retracted confession; the Judicial Committee itself accepted that confessions given <b>independently and without opportunity of previous concert</b> might be entitled to great weight, while courts should be <b>slow to depart</b> from the prudence rule.</li>
+<li><b>Confession of co-accused used against the co-accused stands LOWER than accomplice evidence</b>, because accomplice evidence is at least <b>tested by cross-examination</b> while the confession is not (reading Subramania Goundan down; <b>Nathu v. State of U.P.</b>: confessions of co-accused are not evidence, but if there is other evidence on which conviction can be based, they can be referred to as <b>lending some assurance</b> to the verdict).</li>
+<li><b>Retraction:</b> &ldquo;A retracted confession must be looked upon with greater concern unless the reasons given for having <b>made it in the first instance</b> (not for retraction, as erroneously stated in some cases) are on the face of them false&rdquo;. Once the confession is <b>satisfactorily proved</b> (voluntary), the admission must be <b>satisfactorily withdrawn</b> or its making explained by fear, duress or promise from a person in authority. A retracted confession is a <b>weak link</b> against the maker and more so against a co-accused.</li>
+<li><b>Voluntariness of s. 171-A statements:</b> such statements enjoy <b>none of the safeguards</b> of s. 164 CrPC recordings; they must be scrutinised with <b>special care</b> &mdash; but if voluntary and true they are confessions usable under s. 30 IEA, which is <b>not confined to Magistrate-recorded confessions</b>.</li>
+<li><b>&ldquo;Jointly tried&rdquo;:</b> Bengali <b>was fully tried jointly</b> with Haroon; his statement is relevant under <b>s. 30 read with s. 32(3) IEA</b> despite his death before judgment. There is &ldquo;difficulty&rdquo; about <b>Noor Mohammad</b>&rsquo;s statement, because his trial was <b>separated</b> (he absconded); the High Court did not rely on it, and the Supreme Court also &ldquo;<b>reluctantly left it out of consideration</b>&rdquo; &mdash; yet nothing else destroyed the conclusion about the truth of the accomplice evidence.</li>
+<li><b>No self-corroboration:</b> &ldquo;We are not seeking corroboration of the accomplice from his own statements&hellip; We are only looking into the previous statement to see if it discloses any <b>variation</b> which would put us on further inquiry.&rdquo; The <b>real check</b> was comparison with Bengali&rsquo;s statement &mdash; a <b>remarkable degree of agreement</b>, recorded almost simultaneously by different officers only hours after the incident, so that tutoring/collusion was impossible; the defence&rsquo;s own suggestion of collusion failed for want of time.</li>
+<li><b>Independent corroboration:</b> Kashinath&rsquo;s account of the boats, owners, pilots, trips, participants and their roles, the residences of the Muslim co-accused, the furniture of the room where gold was secreted, the cars employed &mdash; all <b>amply borne out by non-accomplice evidence</b>; Bengali&rsquo;s independent confession corroborated Kashinath <b>as against Haroon</b>.</li>
+<li><b>Conduct of Haroon:</b> his refusal to answer the s. 171-A notice until he saw what others had said was &ldquo;<b>peculiar conduct in a man who now claims that he was not concerned with the smuggling</b>&rdquo;.</li>
+<li><b>Result:</b> the High Court had applied the correct checks; regard being had to s. 133, no interference was warranted. <b>Appeal dismissed; appellant to surrender to bail.</b></li>
+</ul>
+
+<h5>Principle evolved</h5>
+<p>(1) Confessions recorded under <b>s. 171-A Sea Customs Act</b> (cf. s. 108 Customs Act 1962) <b>are confessions for s. 30 IEA / s. 28 BSA</b> if voluntary &mdash; s. 30 is not limited to s. 164 CrPC confessions; but voluntariness demands special scrutiny absent magisterial safeguards. (2) A confession is usable under s. 30 only against a person <b>jointly tried</b> for the same offence &mdash; satisfied where the confessing co-accused was fully tried even if he dies before judgment (s. 30 r/w s. 32(3)); <b>not</b> satisfied where his trial stands separated. (3) A <b>retracted but voluntary and true</b> confession of a jointly tried co-accused may <b>corroborate an accomplice</b> as against the accused, though it can never alone found a conviction. (4) The accomplice&rsquo;s <b>own prior statement</b> is not corroboration; it is relevant only to detect <b>variations</b>. (5) Used against a co-accused, a confession ranks <b>below</b> accomplice evidence (no cross-examination).</p>
+</div>
+
+<!-- ============ CASE 27 ============ -->
+<div class="casecard">
+<h4>Case 27 &mdash; Ravinder Singh v. State of Haryana</h4>
+<div class="cite">(1975) 3 SCC 742 : AIR 1975 SC 856 &bull; Supreme Court &bull; A.N. Goswami, J. &bull; Cr appeal by right under s. 2, Supreme Court (Enlargement of Criminal Appellate Jurisdiction) Act 1970 &bull; IPC ss. 302/34 (now BNS ss. 103 r/w 3(5)); CrPC ss. 306&ndash;308 (now BNSS ss. 343&ndash;345); IEA ss. 114(b), 133</div>
+
+<h5>Facts</h5>
+<ul>
+<li>On <b>30 July 1968</b>, <b>Bimla</b>, &ldquo;a hale and hearty young girl (19)&rdquo;, the <b>right, legitimate wife</b> of the accused <b>Ravinder Singh</b> (23, an Air Force employee at Sirsa), accompanied her husband on a rail journey after his two months&rsquo; furlough. He returned to his Air Force Station <b>without her</b> and without the least concern. Next morning she was found near a wayside station between Rewari and Kosli, with <b>acid burns</b> on her face and body and multiple injuries, incapacitated by shock; she was taken to the Railway Hospital, Rewari, then the Civil Hospital, Rewari, and was <b>pronounced dead at 8.45 p.m. on 31 July 1968</b>. She spoke something about her journey but it was <b>not sufficient to be treated as a dying declaration</b>.</li>
+<li>The whole story came from the accused&rsquo;s friend, <b>approver Jasbir Inder Singh (21) (PW 5)</b>, arrested along with the accused on <b>13 August 1968</b>. Ravinder Singh and the approver worked together at the Air Force Station, Sirsa, and were good friends; <b>Bhanu Parkash Singh</b> (since acquitted in a separate trial) was the cousin of the accused.</li>
+<li><b>Preparation:</b> in early July the accused told friends he &ldquo;would finish his wife one day&rdquo;. On <b>29 July 1968</b> Bhanu Parkash Singh came to the accused&rsquo;s house. On <b>30 July</b> the accused told the approver, in Bhanu Parkash&rsquo;s presence, that he would <b>kill his wife that day</b>. Five persons &mdash; Ravinder, Bimla, Satinder Kumar, Jasbir Inder Singh (approver) and Bhanu Parkash Singh &mdash; left for Sirsa <b>by train from Sasni station</b> (4&ndash;5 miles from Komri); the accused <b>booked his cycle</b> at Sasni and bought <b>only two tickets</b> (his wife&rsquo;s and Bhanu Parkash&rsquo;s).</li>
+<li><b>Journey:</b> left Sasni at 12 noon; reached Delhi at 6.30 p.m.; changed for Bhatinda; reached Rewari about 10.30 p.m.; their bogie was attached to the Sirsa&ndash;Bhatinda train. When the train left Rewari at <b>2.15 a.m. on 31 July 1968</b>, there was <b>no other passenger in the compartment</b> except the five.</li>
+<li><b>The murder:</b> Ravinder <b>threw his wife on the floor by catching her neck</b>; the approver <b>caught hold of her feet</b>; <b>Bhanu Parkash Singh &ldquo;threw acid in her mouth&rdquo;</b>; Satinder Kumar took no part. They removed her <b>pazebs</b> and gold <b>jumkas</b>. They <b>threw Bimla from the running train</b> between the first and second stations beyond Rewari. Some acid drops fell on the hands of the accused and Bhanu Parkash Singh, and on their pants and the accused&rsquo;s shirt.</li>
+<li><b>Aftermath:</b> the accused got down to buy tickets for Bhanu Parkash and Satinder Kumar, but <b>Ticket Collector Raghbir Singh (PW 29) at Bhiwani</b> detained him for ticketless travel of the three and <b>he missed the train</b>; the approver, Bhanu Parkash and Satinder went on to Sirsa (arriving ~10.30 a.m.; accused arrived 1.30 p.m.). On <b>4 August 1968</b> the accused reported <b>acid burns on both hands</b> to the First Aid Post at the Air Force Unit; <b>Sergeant R.N. Singh (PW 50)</b>, the Medical Assistant, made the <b>entry in the register (Ext. PT)</b>. The accused and the approver resumed duties on 2 August 1968; both were arrested on 13 August 1968.</li>
+<li><b>Pardon:</b> the approver was in police custody till 27 August; on <b>29 August 1968</b> he wrote through the Jail Superintendent to the Magistrate expressing willingness to give evidence as <b>&ldquo;sultani gawa&rdquo;</b> (originally &ldquo;King&rsquo;s witness&rdquo;); <b>conditional pardon was granted on 6 September 1968</b> and he was examined thereafter as a prosecution witness (CrPC s. 306; now BNSS s. 343).</li>
+<li><b>Trial Court (Additional Sessions Judge):</b> disbelieved the approver; held his statement uncorroborated in material particulars; motive not established; dying declaration not proved &mdash; <b>husband acquitted</b>. <b>High Court</b> (on the State&rsquo;s appeal): found the approver&rsquo;s statement free from defect and <b>corroborated in material particulars</b> by other evidence connecting the accused with the crime &mdash; <b>convicted under s. 302 IPC; life sentence</b> (&ldquo;shrinking&hellip; from administering the extreme penalty&rdquo;).</li>
+</ul>
+
+<h5>Issues</h5>
+<ol>
+<li>Was the <b>approver&rsquo;s evidence reliable</b>, and was it <b>corroborated in material particulars</b> connecting the accused with the crime?</li>
+<li>Can a conviction be based on the <b>uncorroborated</b> evidence of an approver?</li>
+<li>Did the <b>acquittal of co-accused Bhanu Parkash Singh</b> in a separate trial (pronounced the same day, because there the approver&rsquo;s evidence was found uncorroborated against him) bar the appellant&rsquo;s conviction on the principle of <b>issue-estoppel</b>?</li>
+</ol>
+
+<h5>Arguments for the Appellant</h5>
+<ul>
+<li>The approver is a <b>purchased witness</b>; the trial court rightly disbelieved him; the &ldquo;corroboration&rdquo; items (ticket collector, cycle booking, acid burns) are trivial or explicable.</li>
+<li>The <b>acid-burn explanation</b> of the accused (burns from <b>batteries</b> he handled) was a plausible innocent explanation.</li>
+<li><b>Issue-estoppel:</b> relying on <b>Lalta v. State of U.P.</b>, AIR 1970 SC 1381 &mdash; Bhanu Parkash Singh was acquitted on the same approver&rsquo;s evidence being held uncorroborated; that finding should estop the State from convicting Ravinder on the same evidence; conviction would be inconsistent.</li>
+</ul>
+
+<h5>Arguments for the State</h5>
+<ul>
+<li>The approver&rsquo;s account is <b>self-implicating, natural, detailed</b>, with no earlier contradiction on any material point; the High Court examined it with the care required of accomplice evidence and found <b>ample corroboration</b> aliunde.</li>
+<li>Motive proved: the accused&rsquo;s <b>illegitimate intimacy</b> and repeated threats (&ldquo;would finish his wife one day&rdquo;).</li>
+<li>Issue-estoppel has <b>no application</b>: the parties in the two trials are different; and counsel <b>frankly admitted</b> that in Bhanu Parkash&rsquo;s case the approver was <b>not held unreliable</b> &mdash; only uncorroborated <b>against that accused</b>.</li>
+</ul>
+
+<h5>Decision (Supreme Court &mdash; appeal dismissed; conviction upheld)</h5>
+<ul>
+<li><b>Approver&rsquo;s starting point of unreliability:</b> &ldquo;Every approver comes to give evidence in some such manner seeking to purchase his immunity and that is why to start with he is an unreliable person and the rule of caution calling for material corroboration is constantly kept in mind by the court by time-worn judicial practice.&rdquo; &ldquo;An approver is a most unworthy friend if at all and he having bargained for his immunity, must prove his worthiness for credibility in court.&rdquo;</li>
+<li><b>The double test:</b> (1) the story must <b>involve him in the crime</b> and appear <b>intrinsically a natural and probable catalogue of events</b>, in <b>minute details according with reality</b>, so as not to be rejected <i>brevi manu</i>; (2) it must <b>implicate the accused on trial</b> so as to raise a conclusion of <b>guilt beyond reasonable doubt</b> &mdash; ordinarily through corroboration in <b>material particulars &ldquo;bridging closely the distance between the crime and the criminal&rdquo;</b>.</li>
+<li><b>Rare-case rule:</b> in a rare case, considering all factors, circumstances and situations, a conviction on the <b>uncorroborated</b> evidence of an approver <b>confidently held to be true and reliable</b> may be permissible.</li>
+<li><b>Corroboration found on facts</b> (each item from an independent source):
+  <ol>
+  <li><b>PW 2 (Miss V.K. Sharma, Nurse):</b> the semi-conscious Bimla&rsquo;s statement about her journey &mdash; confirming the accused&rsquo;s presence with her;</li>
+  <li><b>PW 29 (Ticket Collector Raghbir Singh, Bhiwani):</b> the accused was <b>detained at Bhiwani and missed the train</b> &mdash; corroboration of the journey and the throwing of Bimla from the train beyond Rewari; his story fitted the actual number of tickets &mdash; &ldquo;absence of any attempt at padding&rdquo;;</li>
+  <li><b>PW 26 (Yudhishter Kumar, Sirsa):</b> the approver, Satinder Kumar and Bhanu Parkash came to him at Sirsa on 31 July ~10.30 a.m. <b>without the accused</b>;</li>
+  <li><b>PWs 16 &amp; 17 (A.S.Ms., Sasni):</b> the accused <b>booked cycle No. RK-162872 (Road King)</b> from Sasni to Sirsa on 30 July 1968 (forwarding note Ext. PW 16/A) and personally filled the note &mdash; proving he came by train <b>on 30 July</b>, not 29 July as the defence claimed;</li>
+  <li><b>PW 20 (Sirsa station):</b> the accused took <b>delivery of the cycle at Sirsa on 1 August</b>;</li>
+  <li><b>PW 50 (Sgt. R.N. Singh, Medical Assistant):</b> the accused reported <b>acid burns on both hands at 7 a.m. on 4 August 1968</b>; the entry in the First Aid Post register (Ext. PT) proved; <b>not denied</b> by the accused.</li>
+  </ol></li>
+<li><b>Battery explanation rejected as an afterthought:</b> burns from a few accidental battery-acid drops &ldquo;may even be superficial&rdquo;; PW 50 was not shaken; the explanation was invented to cover the acid injuries.</li>
+<li><b>Motive accepted:</b> the illegitimate intimacy of the accused.</li>
+<li><b>Trial court&rsquo;s error exposed:</b> it used the <b>disbelieved</b> dying-declaration evidence of Sampat (PW 8) as a yardstick to judge the approver&rsquo;s veracity &mdash; once Sampat&rsquo;s evidence is rejected it cannot be used to test other evidence; its reasons for rejecting the Ticket Collector were tenuous.</li>
+<li><b>Issue-estoppel rejected:</b> quoting Dixon J. in <b>King v. Wilkes</b> (77 CLR 511, 518): issue-estoppel arises where the <b>same point</b> was determined <b>in favour of a prisoner</b> in a previous criminal trial and arises again <b>in a subsequent proceeding by the Crown against the same prisoner</b>. Here the parties were different (State v. Ravinder Singh; State v. Bhanu Parkash Singh); the approver was <b>not held unreliable</b> in the earlier case &mdash; only uncorroborated <b>against Bhanu Parkash</b>; there is <b>no inconsistency</b> between the two findings. Per <b>Manipur Administration v. Thokchom Bira Singh</b>, AIR 1965 SC 87: issue-estoppel does not prevent trial of an offence (as <i>autrefois acquit</i> does) but only precludes <b>evidence being led</b> to prove a fact-in-issue already specifically found in an earlier trial between the same parties. <b>Corroboration is accused-specific</b> &mdash; uncorroborated as against one co-accused, amply corroborated as against another.</li>
+<li><b>Result:</b> appeal dismissed; conviction under s. 302 IPC and life sentence upheld.</li>
+</ul>
+
+<h5>Principle evolved</h5>
+<p>(1) The classic formulation of the <b>double test</b> for approver evidence (reliability + corroboration bridging the distance between crime and criminal). (2) Corroboration need not be elaborate &mdash; small, independent, credible items (railway records, medical register, ticket collector) suffice if they connect the accused with the crime. (3) In a <b>rare case</b> conviction on uncorroborated approver evidence is permissible if the court confidently believes it. (4) <b>Corroboration is accused-specific</b>: failure against one co-accused does not defeat conviction of another who is independently corroborated. (5) <b>Issue-estoppel</b> in criminal law requires identity of parties and of the fact-in-issue previously determined in the prisoner&rsquo;s favour; it bars re-proof of a specific finding, not the trial itself.</p>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 210" width="940" role="img" aria-label="Case timeline comparison">
+ <text x="480" y="22" fill="#1f3a5f" font-size="15" text-anchor="middle" font-weight="bold">THE THREE CASES ON ONE LINE &mdash; evolution of the accomplice doctrine</text>
+ <line x1="40" y1="60" x2="920" y2="60" stroke="#b98a2f" stroke-width="3"/>
+ <circle cx="140" cy="60" r="9" fill="#8c2f39"/><text x="140" y="90" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">1949 &mdash; Bhuboni Sahu (PC)</text>
+ <text x="140" y="108" fill="#333" font-size="11" text-anchor="middle">prudence &asymp; rule of law;</text><text x="140" y="123" fill="#333" font-size="11" text-anchor="middle">no self-corroboration;</text><text x="140" y="138" fill="#333" font-size="11" text-anchor="middle">co-accused confession too weak;</text><text x="140" y="153" fill="#333" font-size="11" text-anchor="middle">conviction SET ASIDE</text>
+ <circle cx="480" cy="60" r="9" fill="#1f4e5f"/><text x="480" y="90" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">1967/68 &mdash; Haroon Haji (SC)</text>
+ <text x="480" y="108" fill="#333" font-size="11" text-anchor="middle">s. 171-A statement = confession under s. 30;</text><text x="480" y="123" fill="#333" font-size="11" text-anchor="middle">&ldquo;jointly tried&rdquo; requirement;</text><text x="480" y="138" fill="#333" font-size="11" text-anchor="middle">retraction not fatal if voluntary &amp; true;</text><text x="480" y="153" fill="#333" font-size="11" text-anchor="middle">conviction UPHELD</text>
+ <circle cx="820" cy="60" r="9" fill="#2e5e3a"/><text x="820" y="90" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">1975 &mdash; Ravinder Singh (SC)</text>
+ <text x="820" y="108" fill="#333" font-size="11" text-anchor="middle">double test crystallised;</text><text x="820" y="123" fill="#333" font-size="11" text-anchor="middle">rare-case uncorroborated conviction;</text><text x="820" y="138" fill="#333" font-size="11" text-anchor="middle">corroboration is accused-specific;</text><text x="820" y="153" fill="#333" font-size="11" text-anchor="middle">conviction UPHELD</text>
+ <text x="480" y="188" fill="#6d6152" font-size="11.5" text-anchor="middle" font-style="italic">Dagdu v. State of Maharashtra (1977) later confirmed: no antithesis between s. 133 and s. 114(b) &mdash; &ldquo;may presume&rdquo; is rebuttable.</text>
+</svg>
+<figcaption>Fig. 3.1 &mdash; Doctrinal timeline of the three prescribed cases.</figcaption>
+</figure>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 4 ================= -->
+<h2 class="unit" id="connected"><span class="no">PART 4</span>Connected Law at Every Relevant Point</h2>
+
+<h3 class="sec">4.1 Procedural companions (BNSS 2023 &harr; CrPC 1973)</h3>
+<table>
+<tr><th>Old (CrPC 1973)</th><th>New (BNSS 2023)</th><th>Relevance to accomplice evidence</th></tr>
+<tr><td>s. 306 &mdash; Tender of pardon to accomplice</td><td><b>s. 343</b></td><td>Creates the <b>approver</b>: pardon by CJM/MM/First Class Magistrate in cases triable exclusively by Sessions or punishable with 7+ years imprisonment (or under ss. 34/109/114/115/116/120-B IPC &mdash; now BNS s. 3(5) &amp; abetment-conspiracy chapter), on condition of <b>full and true disclosure</b>; reasons recorded; approver examined as witness; kept in custody till trial ends unless on bail</td></tr>
+<tr><td>s. 307 &mdash; Power to direct tender of pardon</td><td><b>s. 344</b></td><td>After commitment, before judgment, the <b>Court of Session</b> may tender pardon (as in <b>Ravinder Singh</b>: &ldquo;sultani gawa&rdquo; letter 29.8.1968; conditional pardon 6.9.1968)</td></tr>
+<tr><td>s. 308 &mdash; Trial of person not complying with conditions</td><td><b>s. 345</b></td><td>Wilful concealment / false evidence &rArr; <b>forfeiture</b>; tried for the original offence and for giving false evidence; his acceptance-statement admissible against him; pardon pleaded as defence</td></tr>
+<tr><td>s. 164 &mdash; Recording of confessions and statements</td><td><b>s. 183</b></td><td>Approver&rsquo;s/accused&rsquo;s judicial statement. Per <b>Bhuboni Sahu</b>: never substantive evidence; may support/challenge its maker&rsquo;s court testimony; <b>never self-corroboration</b>. Contrast in <b>Haroon Haji</b>: customs statements under s. 171-A Sea Customs Act lack these safeguards &rArr; special voluntariness scrutiny</td></tr>
+<tr><td>s. 288 &mdash; Evidence before Committing Magistrate</td><td>(old committal regime streamlined; no identical carry-forward)</td><td>Bhuboni Sahu: evidence brought on record under s. 288 could be preferred, but still needed independent corroboration; today former statements operate through <b>ss. 159&ndash;160 BSA</b> (ss. 156&ndash;157 IEA) and BNSS s. 183</td></tr>
+</table>
+
+<h3 class="sec">4.2 Evidentiary companions (BSA 2023 &harr; IEA 1872)</h3>
+<table>
+<tr><th>IEA 1872</th><th>BSA 2023</th><th>Role in the accomplice doctrine</th></tr>
+<tr><td>s. 133 (Accomplice)</td><td><b>s. 138</b></td><td>Competency + legality of uncorroborated conviction (rule of law)</td></tr>
+<tr><td>s. 114 Ill. (b)</td><td><b>s. 119 Ill. (b)</b></td><td>&ldquo;May presume&rdquo; unworthiness of credit absent corroboration in material particulars (rule of prudence)</td></tr>
+<tr><td>s. 134 (Number of witnesses)</td><td><b>s. 139</b></td><td>No fixed number required &mdash; quality/independence governs</td></tr>
+<tr><td>s. 30 (Confession of co-accused)</td><td><b>s. 28</b></td><td>&ldquo;Take into consideration&rdquo; only; very weak; not &ldquo;evidence&rdquo; (s. 3 IEA / s. 3 BSA); lends assurance where other evidence exists (Nathu; Haroon Haji)</td></tr>
+<tr><td>s. 157 (Former statements to corroborate)</td><td><b>s. 160</b></td><td>Discussed in Bhuboni Sahu &mdash; cannot turn an accomplice&rsquo;s own prior statement into corroboration</td></tr>
+<tr><td>s. 156 (Questions tending to corroborate)</td><td><b>s. 159</b></td><td>Third place the word &ldquo;accomplice&rdquo; touches in the Act (DU notes); corroborative questioning</td></tr>
+<tr><td>s. 154 (Hostile witness)</td><td><b>s. 157</b></td><td>Practical companion: an approver who <b>turns hostile</b> &mdash; court may permit cross-examination by the prosecution; his testimony then needs even greater scrutiny</td></tr>
+<tr><td>s. 32(3) (Statement against interest by deceased)</td><td><b>s. 26(3)</b></td><td>Used with s. 30 in Haroon Haji to admit the deceased co-accused&rsquo;s confession</td></tr>
+</table>
+
+<h3 class="sec">4.3 Special statutes &amp; Constitution</h3>
+<div class="box rel"><span class="lbl">Connected Law</span>
+<ul>
+<li><b>Sea Customs Act 1878, s. 171-A</b> (power to summon and record statements; succeeded by <b>Customs Act 1962, s. 108</b>): the vehicle of the confessions in <b>Haroon Haji</b>. A statement under it <b>can be a confession</b> for s. 30 IEA / s. 28 BSA if voluntary &mdash; but with no s. 164 CrPC safeguards, the court must scrutinise voluntariness with special care.</li>
+<li><b>Constitution, Art. 20(3)</b>: an accomplice who <b>voluntarily accepts pardon</b> and testifies is not &ldquo;compelled to be a witness against himself&rdquo; &mdash; he accepts the pardon of his free will, on condition of true disclosure, in his own interest (see also Mohideen v. State of Madras, 1965 Cr LJ 51, cited in DU discussion of CrPC ss. 306/308). Forfeiture proceedings under BNSS s. 345 likewise do not violate Art. 20(3).</li>
+<li><b>Offence mapping (crime-subject) &mdash; IPC 1860 &harr; BNS 2023</b> for the offences appearing in these cases:
+<table>
+<tr><th>IPC 1860</th><th>BNS 2023</th><th>Where it appears</th></tr>
+<tr><td>s. 302 (murder)</td><td><b>s. 103</b></td><td>Bhuboni Sahu (charge); Ravinder Singh (conviction)</td></tr>
+<tr><td>s. 34 (common intention)</td><td><b>s. 3(5)</b></td><td>Both murder cases</td></tr>
+<tr><td>s. 120-A / 120-B (criminal conspiracy)</td><td><b>s. 61(1) / 61(2)</b></td><td>Haroon Haji (gold-smuggling conspiracy)</td></tr>
+<tr><td>ss. 107&ndash;120 (abetment: 107 abetment of a thing; 108 abettor; 108-A abetment in India of offences outside India; 109 punishment of abetment if act committed; 114 abettor present when offence committed; 116&ndash;118 abetment of offences not committed, etc.)</td><td><b>ss. 45&ndash;56</b> (45 = 107; 46 = 108; 47 = 108-A; 48 = 108-B; 49 = 109; the rest distributed within the chapter)</td><td>These are the sections under which pardon may be tendered (CrPC 306/BNSS 343) and which define <b>abettors/accessories</b> &mdash; i.e. who can be an accomplice (<i>particeps criminis</i>)</td></tr>
+<tr><td>ss. 411/414 (dishonestly receiving/assisting in concealment of stolen property)</td><td><b>ss. 317/320</b> (receiving stolen property)</td><td>Davies class 4 &mdash; receivers as accomplices in a joint trial</td></tr>
+<tr><td>s. 167(81), Sea Customs Act; FERA 1947</td><td>Customs Act 1962; FEMA 1999 (successors)</td><td>Haroon Haji &mdash; smuggling offences</td></tr>
+</table></li>
+<li><b>Cutting across:</b> abetment/conspiracy liability is what makes the planner, instigator, lookout or receiver an <b>accomplice</b>; the pardon provisions then convert one of them into the <b>approver</b> &mdash; substantive law (BNS) creates the accomplice, procedural law (BNSS) creates the approver, evidentiary law (BSA) evaluates both.</li>
+</ul>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 240" width="940" role="img" aria-label="Statute interaction diagram">
+ <rect x="30" y="40" width="270" height="150" rx="12" fill="#fbf0f1" stroke="#8c2f39" stroke-width="2"/>
+ <text x="165" y="68" fill="#8c2f39" font-size="14" text-anchor="middle" font-weight="bold">SUBSTANTIVE LAW</text>
+ <text x="165" y="92" fill="#333" font-size="12" text-anchor="middle">BNS ss. 3(5), 45&ndash;56, 61</text>
+ <text x="165" y="110" fill="#333" font-size="12" text-anchor="middle">(IPC ss. 34, 107&ndash;120, 120-B)</text>
+ <text x="165" y="134" fill="#333" font-size="11.5" text-anchor="middle">defines WHO participates:</text>
+ <text x="165" y="152" fill="#333" font-size="11.5" text-anchor="middle">principal, abettor, conspirator,</text>
+ <text x="165" y="170" fill="#333" font-size="11.5" text-anchor="middle">receiver &rArr; ACCOMPLICE</text>
+ <rect x="345" y="40" width="270" height="150" rx="12" fill="#eef6f8" stroke="#1f4e5f" stroke-width="2"/>
+ <text x="480" y="68" fill="#1f4e5f" font-size="14" text-anchor="middle" font-weight="bold">PROCEDURAL LAW</text>
+ <text x="480" y="92" fill="#333" font-size="12" text-anchor="middle">BNSS ss. 343&ndash;345, 183</text>
+ <text x="480" y="110" fill="#333" font-size="12" text-anchor="middle">(CrPC ss. 306&ndash;308, 164)</text>
+ <text x="480" y="134" fill="#333" font-size="11.5" text-anchor="middle">pardon on condition of full &amp; true</text>
+ <text x="480" y="152" fill="#333" font-size="11.5" text-anchor="middle">disclosure &rArr; APPROVER;</text>
+ <text x="480" y="170" fill="#333" font-size="11.5" text-anchor="middle">forfeiture on breach</text>
+ <rect x="660" y="40" width="270" height="150" rx="12" fill="#f2f7ea" stroke="#2e5e3a" stroke-width="2"/>
+ <text x="795" y="68" fill="#2e5e3a" font-size="14" text-anchor="middle" font-weight="bold">EVIDENTIARY LAW</text>
+ <text x="795" y="92" fill="#333" font-size="12" text-anchor="middle">BSA ss. 138, 119 Ill. (b), 28,</text>
+ <text x="795" y="110" fill="#333" font-size="12" text-anchor="middle">139, 157, 159&ndash;160 (IEA 133, 114(b), 30&hellip;)</text>
+ <text x="795" y="134" fill="#333" font-size="11.5" text-anchor="middle">competency (law) + prudence</text>
+ <text x="795" y="152" fill="#333" font-size="11.5" text-anchor="middle">(corroboration in material</text>
+ <text x="795" y="170" fill="#333" font-size="11.5" text-anchor="middle">particulars) &rArr; EVALUATION</text>
+ <line x1="300" y1="115" x2="343" y2="115" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <line x1="615" y1="115" x2="658" y2="115" stroke="#4a3f2a" stroke-width="2" marker-end="url(#a1)"/>
+ <text x="480" y="222" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">The crime law creates the accomplice &rarr; the procedure converts him into an approver &rarr; the evidence law decides what his word is worth.</text>
+</svg>
+<figcaption>Fig. 4.1 &mdash; How the three codes interlock on accomplice evidence.</figcaption>
+</figure>
+
+<!-- ================= PART 5 ================= -->
+<h2 class="unit" id="pyq"><span class="no">PART 5</span>DU PYQs with Best Model Answers</h2>
+
+<div class="box pyq"><span class="lbl">PYQ &mdash; LL.B. II Term, Law of Evidence, May&ndash;June 2024, Q.7 (20 marks)</span>
+<p><b>Question:</b> &ldquo;The law is not that the evidence of accomplice deserves outright rejection if there is no corroboration; rather caution and care are required in dealing with accomplice evidence. Though there is no legal necessity to seek corroboration of accomplice evidence, yet it is desirable that the court should look for reassuring circumstances to satisfy the judicial conscience that the evidence is true.&rdquo; <b>Elucidate.</b></p>
+<div class="ans"><h6>Best Model Answer</h6>
+<p><b>1. Introduction &mdash; the statutory setting.</b> Section 138 of the Bharatiya Sakshya Adhiniyam, 2023 (s. 133 IEA) provides that an accomplice &ldquo;shall be a competent witness against an accused person; and a conviction is not illegal merely because it proceeds upon the uncorborated testimony of an accomplice&rdquo;. Alongside stands Illustration (b) to s. 119 BSA (s. 114 IEA): the court &ldquo;may presume&rdquo; that an accomplice is unworthy of credit unless corroborated in material particulars. The quoted proposition captures exactly the combined effect of these two provisions: <b>no outright rejection (s. 138 &mdash; rule of law), but caution and care (Ill. (b) &mdash; rule of prudence)</b>.</p>
+<p><b>2. Rule of law vs rule of prudence.</b> Section 138 is the only absolute rule of law on the subject: it makes the accomplice competent (unlike, say, the disqualifications once attached by the Oaths Act era) and legalises conviction on his uncorroborated testimony. Illustration (b) does not contradict it &mdash; it raises a rebuttable presumption (&ldquo;may presume&rdquo;), not a <i>presumptio juris et de jure</i>. In <b>Dagdu v. State of Maharashtra</b> (1977) the Supreme Court held there is <b>no antithesis</b> between s. 133 and s. 114(b): reading them together, a conviction may lawfully rest on uncorroborated accomplice testimony, yet the court is entitled &mdash; and in the generality of cases justified &mdash; to presume that no reliance can be placed on such evidence unless corroborated in material particulars.</p>
+<p><b>3. The Privy Council&rsquo;s classic formula.</b> In <b>Bhuboni Sahu v. The King</b> (AIR 1949 PC 257), Sir John Beaumont held that the rule of prudence is &ldquo;so universally followed as to amount almost to a rule of law&rdquo; that it is <b>unsafe</b> to act on accomplice evidence unless corroborated in material respects implicating the accused. The reason is not merely the accomplice&rsquo;s bad character, his betrayal of associates, or his prosecution bias; the <b>real danger</b> is that his story, true in outline, may be <b>padded with falsehoods</b> &mdash; he may implicate ten persons, the story being true as to eight and false as to two named out of enmity. This tendency is peculiarly prevalent in India, where a villager can seldom prove an alibi except through interested family evidence. Hence the only real safeguard is <b>insisting on independent evidence which in some measure implicates each accused</b>. Further: (i) an accomplice <b>cannot corroborate himself</b> &mdash; his s. 164 CrPC (BNSS s. 183) statement is not corroboration, for &ldquo;tainted evidence does not lose its taint by repetition&rdquo;; (ii) <b>one accomplice cannot corroborate another</b>; (iii) a co-accused&rsquo;s confession under s. 30 IEA (s. 28 BSA) is a very weak type of evidence which cannot itself found a conviction.</p>
+<p><b>4. &ldquo;Reassuring circumstances&rdquo; in modern application.</b> In <b>Haroon Haji Abdulla v. State of Maharashtra</b> (AIR 1968 SC 832), a gold-smuggling conspiracy case, the Court accepted the accomplice Kashinath because: his prior statement was used only to detect variations, never as self-corroboration; his account was corroborated at numerous points by <b>non-accomplice evidence</b>; and the <b>independent, voluntary</b> (though retracted) confession of co-accused Bengali, recorded almost simultaneously, lent assurance against the appellant. Retraction was not fatal: once voluntariness is satisfactorily proved, the admission must be satisfactorily withdrawn or explained. In <b>Ravinder Singh v. State of Haryana</b> (AIR 1975 SC 856), the Court crystallised the <b>double test</b>: (1) reliability &mdash; the approver&rsquo;s story must involve him in the crime and appear a natural, probable catalogue of events in minute detail; (2) corroboration in material particulars &ldquo;bridging closely the distance between the crime and the criminal&rdquo;. Railway records (cycle booking), the ticket collector, and the medical register entry of acid burns were held sufficient reassuring circumstances. The Court also recognised that in a <b>rare case</b>, conviction on uncorroborated approver evidence confidently held true and reliable is permissible &mdash; which is precisely why the requirement is prudence, not legal necessity.</p>
+<p><b>5. Conclusion.</b> The law thus steers between two extremes: it refuses to reject accomplice evidence outright (s. 138/s. 133), and it refuses to act on it mechanically (Ill. (b)/s. 114(b)). The court must look for reassuring circumstances &mdash; independent corroboration in material particulars connecting each accused with the crime &mdash; to satisfy the judicial conscience that the evidence is true; where such circumstances are absent, conviction, though not illegal, will ordinarily be unsafe.</p>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 2 (10&ndash;15 marks)</span>
+<p><b>Q.</b> Who is an accomplice? Distinguish between accomplice, approver and a co-accused making a confession.</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li><b>Meaning:</b> the Act does not define the word; ordinary sense &mdash; a <b>guilty associate</b>, a person supposed to have taken part in the commission of the same crime and who could have been <b>charged with the accused</b> (<b>Jagannath v. Emperor</b>, AIR 1942 Oudh 221). Fact-specific inquiry; burden on the party alleging accomplice character, though the prosecution must disclose it; the word appears only in ss. 114 Ill. (b), 133, 156 IEA (ss. 119 Ill. (b), 138, 159 BSA).</li>
+<li><b>Classes (Davies v. DPP, [1954] AC 378; followed in R.K. Dalmia v. Delhi Administration, AIR 1962 SC 1821):</b> (i) principals in the first degree; (ii) principals in the second degree (aiders/abettors present); (iii) accessories before the fact (planners/providers, absent at commission); (iv) receivers of stolen property in a joint trial for the felony. Accessories <b>after</b> the fact are accomplices only if they participated in the crime or conspiracy.</li>
+<li><b>Not accomplices:</b> uninvolved witnesses; unwilling participants under compulsion; persons who merely know of/witness the crime or conceal it out of fear; detectives, paid informers, <b>trap witnesses</b> (interested witnesses); victims.</li>
+<li><b>Accomplice:</b> competent witness (s. 138 BSA), testifies on oath, cross-examinable, evidence is &ldquo;evidence&rdquo; but tainted &mdash; corroboration in material particulars as prudence.</li>
+<li><b>Approver:</b> accomplice <b>pardoned</b> under BNSS s. 343/344 (CrPC 306/307) on condition of full and true disclosure; becomes a prosecution witness but remains an accomplice evidentially; breach &rArr; forfeiture and trial under BNSS s. 345 (CrPC 308). All approvers are accomplices; not vice-versa.</li>
+<li><b>Co-accused (confession):</b> no oath, no cross-examination, not &ldquo;evidence&rdquo; technically; only &ldquo;taken into consideration&rdquo; under s. 28 BSA / s. 30 IEA; cannot found a conviction; used against a co-accused it stands <b>lower</b> than accomplice evidence (Haroon Haji, citing Nathu).</li>
+</ul>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 3 (10 marks)</span>
+<p><b>Q.</b> Discuss the law relating to tender of pardon to an accomplice and the consequences of its breach.</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li><b>Power &amp; stage:</b> BNSS s. 343 (CrPC 306) &mdash; CJM/MM/First Class Magistrate, in cases triable exclusively by the Court of Session or punishable with 7+ years (or specified abetment/conspiracy offences), at <b>any stage</b> of investigation, inquiry or trial; BNSS s. 344 (CrPC 307) &mdash; Court of Session after commitment, before judgment; reasons to be recorded.</li>
+<li><b>Condition:</b> making a <b>full and true disclosure</b> of the whole of the circumstances within his knowledge relative to the offence and every other person concerned in it (as principal or abettor).</li>
+<li><b>Position after pardon:</b> examined <b>as a witness</b> (before the committing Magistrate and at the trial); kept in custody until the trial terminates unless already on bail; evidentially he <b>remains an accomplice</b> &mdash; the double test of Ravinder Singh applies; Art. 20(3) is not attracted because the disclosure is voluntary, accepted in his own interest.</li>
+<li><b>Breach:</b> BNSS s. 345 (CrPC 308) &mdash; wilful concealment of anything essential, false evidence, or non-compliance &rArr; pardon forfeited; he may be tried for the <b>original offence</b> and for <b>giving false evidence</b>; the statement accepting the pardon and the proceedings are admissible against him; the pardon must be pleaded as a defence.</li>
+<li><b>Illustration:</b> Ravinder Singh &mdash; approver wrote from jail as &ldquo;sultani gawa&rdquo; on 29.8.1968; conditional pardon granted 6.9.1968; evidence evaluated on the double test; conviction of the accused upheld.</li>
+</ul>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Expected / Practice PYQ 4 (7&ndash;10 marks)</span>
+<p><b>Q.</b> &ldquo;An accomplice cannot corroborate himself; tainted evidence does not lose its taint by repetition.&rdquo; Explain with reference to decided cases. Can the retracted confession of a co-accused corroborate an accomplice?</p>
+<div class="ans"><h6>Model Answer (points)</h6>
+<ul>
+<li>The maxim is from <b>Bhuboni Sahu v. The King</b>: corroboration must come from an <b>independent source</b> implicating each accused; the accomplice&rsquo;s own earlier statement (s. 164 CrPC / BNSS s. 183) is never substantive evidence and cannot corroborate his own testimony, though it may support/challenge his credit and help the court prefer one of two versions.</li>
+<li><b>Haroon Haji</b>: the Supreme Court looked at the accomplice&rsquo;s prior customs statement only to check for <b>variations</b> (&ldquo;that does not advance accomplice evidence any further&rdquo;); the <b>real check</b> was Bengali&rsquo;s independent confession plus non-accomplice corroboration at numerous points.</li>
+<li><b>Retracted confession of a co-accused</b>: usable under s. 30 IEA / s. 28 BSA only against a person <b>jointly tried</b> for the same offence; must be proved <b>voluntary</b> (special scrutiny for s. 171-A/customs statements); retraction is not fatal unless the making of the confession is explained by fear, duress or promise (<b>Ram Prakash; Subramania Goundan; Nathu</b>); it is <b>weak</b> &mdash; it can <b>lend assurance</b> where other evidence exists (Bengali&rsquo;s confession corroborated Kashinath in Haroon Haji), but <b>cannot alone</b> corroborate an accomplice or found a conviction (Bhuboni Sahu &mdash; Trinath&rsquo;s confession insufficient; concert possible; two contradictory stories).</li>
+<li><b>One accomplice cannot corroborate another</b> &mdash; each needs independent corroboration.</li>
+</ul>
+</div>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 6 ================= -->
+<h2 class="unit" id="revision"><span class="no">PART 6</span>Rapid Revision</h2>
+
+<h3 class="sec">6.1 One-page master table</h3>
+<table>
+<tr><th>Proposition</th><th>Rule in one line</th><th>Authority</th></tr>
+<tr><td>Competency</td><td>Accomplice is a competent witness; conviction on uncorroborated testimony is <b>not illegal</b></td><td>s. 138 BSA / s. 133 IEA</td></tr>
+<tr><td>Credibility</td><td>Court <b>may presume</b> him unworthy of credit unless corroborated in material particulars</td><td>s. 119 Ill. (b) BSA / s. 114 Ill. (b) IEA</td></tr>
+<tr><td>No antithesis</td><td>&ldquo;May presume&rdquo; is rebuttable, not <i>presumptio juris et de jure</i></td><td>Dagdu v. State of Maharashtra (1977)</td></tr>
+<tr><td>Almost a rule of law</td><td>Prudence &ldquo;so universally followed as to amount almost to a rule of law&rdquo;</td><td>Bhuboni Sahu (1949 PC)</td></tr>
+<tr><td>Corroboration target</td><td>Must implicate <b>each accused</b> in material particulars; bridges &ldquo;crime and criminal&rdquo;</td><td>Bhuboni; Ravinder Singh</td></tr>
+<tr><td>No self-corroboration</td><td>&ldquo;Tainted evidence does not lose its taint by repetition&rdquo;</td><td>Bhuboni; Haroon Haji</td></tr>
+<tr><td>Accomplice &times; accomplice</td><td>One accomplice cannot corroborate another</td><td>Bhuboni</td></tr>
+<tr><td>Co-accused confession</td><td>Very weak; not &ldquo;evidence&rdquo;; may lend assurance only; needs joint trial + voluntariness</td><td>s. 28 BSA / s. 30 IEA; Nathu; Haroon Haji</td></tr>
+<tr><td>Retraction</td><td>Not fatal: test the reasons for <b>making</b> it; weak link, esp. against co-accused</td><td>Haroon Haji (Ram Prakash)</td></tr>
+<tr><td>Double test (approver)</td><td>(1) intrinsically reliable story implicating himself; (2) corroboration in material particulars &rArr; guilt beyond reasonable doubt</td><td>Ravinder Singh (1975)</td></tr>
+<tr><td>Rare case</td><td>Conviction on uncorroborated approver evidence permissible if confidently true and reliable</td><td>Ravinder Singh</td></tr>
+<tr><td>Accused-specificity</td><td>Failure of corroboration against one co-accused does not defeat another</td><td>Ravinder Singh (Bhanu Parkash acquittal)</td></tr>
+<tr><td>Issue-estoppel</td><td>Requires same parties + same fact-in-issue decided in prisoner&rsquo;s favour earlier; bars re-proof, not trial</td><td>Ravinder Singh (Lalta; King v. Wilkes; Thokchom Bira)</td></tr>
+<tr><td>Pardon</td><td>BNSS ss. 343&ndash;345 (CrPC 306&ndash;308): tender at any stage; conditions; forfeiture on breach</td><td>Ravinder Singh (&ldquo;sultani gawa&rdquo;)</td></tr>
+</table>
+
+<h3 class="sec">6.2 Case &rarr; Principle (exam recall grid)</h3>
+<table>
+<tr><th>Case</th><th>Subject</th><th>Fate of conviction</th><th>One-line holding</th></tr>
+<tr><td><b>Bhuboni Sahu v. The King</b>, AIR 1949 PC 257</td><td>Approver + retracted co-accused confession; s. 164 statement; khantibadi recovery</td><td><span class="pill" style="background:#8c2f39;color:#fff">SET ASIDE</span></td><td>Corroboration must be independent and per-accused; no self-corroboration; one accomplice cannot corroborate another; co-accused&rsquo;s confession cannot found conviction</td></tr>
+<tr><td><b>Haroon Haji Abdulla v. State of Maharashtra</b>, (1968) 2 SCR 641 : AIR 1968 SC 832</td><td>Gold-smuggling conspiracy; accomplice Kashinath; customs statements (s. 171-A); Bengali&rsquo;s retracted confession</td><td><span class="pill" style="background:#2e5e3a;color:#fff">UPHELD</span></td><td>Voluntary customs confession usable under s. 30 IEA against jointly tried co-accused; retraction not fatal; independent confession + non-accomplice detail = corroboration; Noor Mohammad&rsquo;s statement excluded (separated trial)</td></tr>
+<tr><td><b>Ravinder Singh v. State of Haryana</b>, (1975) 3 SCC 742 : AIR 1975 SC 856</td><td>Acid murder of wife in running train; approver Jasbir (PW 5); issue-estoppel plea</td><td><span class="pill" style="background:#2e5e3a;color:#fff">UPHELD</span></td><td>Double test; corroboration via railway/medical records; rare-case uncorroborated conviction possible; corroboration is accused-specific; issue-estoppel inapplicable</td></tr>
+<tr><td><i>Supporting:</i> Dagdu v. State of Maharashtra (1977); R.K. Dalmia (1962); Davies v. DPP [1954] AC 378; Jagannath v. Emperor (1942 Oudh); Nathu (1956); Ram Prakash (1959); Subramania Goundan (1958); Mohd. Khalid (2002); Mrinal Das (accomplice/approver interchangeable in usage)</td><td>Doctrine</td><td>&mdash;</td><td>Relation of ss. 114(b)/133; meaning &amp; classes of accomplice; value of confessions; retraction law</td></tr>
+</table>
+
+<h3 class="sec">6.3 Mnemonics</h3>
+<ul>
+<li><b>&ldquo;C-A-R&rdquo;</b> for the framework: <b>C</b>ompetent (s. 138) &rarr; <b>A</b>lmost a rule of law (Ill. (b) prudence) &rarr; <b>R</b>are-case exception (Ravinder).</li>
+<li><b>&ldquo;I-M-P-L-I-C-A-T-E&quot;</b> checklist for corroboration &mdash; <b>I</b>ndependent source; <b>M</b>aterial particulars; <b>P</b>er-accused; <b>L</b>inks crime &amp; criminal; <b>I</b>ntegrity (no concert/tutoring); <b>C</b>ross-examinable preferred over confession; <b>A</b>ccomplice cannot self-corroborate; <b>T</b>ainted repetition is not corroboration; <b>E</b>xceptions are rare and reasoned.</li>
+<li><b>Davies&rsquo;s four classes:</b> &ldquo;<b>P-P-A-R</b>&rdquo; &mdash; Principal 1st degree, Principal 2nd degree, Accessory before the fact, Receiver.</li>
+<li><b>Pardon trio:</b> BNSS <b>343&ndash;344&ndash;345</b> = <b>tender &rarr; direct &rarr; try on breach</b> (CrPC 306&ndash;307&ndash;308).</li>
+</ul>
+
+<h3 class="sec">6.4 Examiner&rsquo;s traps (do not fall for)</h3>
+<div class="box warn"><span class="lbl">Traps</span>
+<ol>
+<li><b>&ldquo;Conviction on accomplice evidence is illegal without corroboration&rdquo;</b> &mdash; FALSE. It is <b>not illegal</b> (s. 138); it is only <b>unsafe</b> as a rule of prudence.</li>
+<li><b>Approver&rsquo;s s. 164/BNSS-183 statement as corroboration</b> &mdash; FALSE. No self-corroboration; use only for consistency/variation or s. 160 BSA credit purposes.</li>
+<li><b>Confession of any co-accused usable</b> &mdash; INCOMPLETE. Only of a person <b>jointly tried for the same offence</b> (Bengali yes; Noor Mohammad no &mdash; separated trial), and only to lend assurance.</li>
+<li><b>Retraction destroys a confession</b> &mdash; FALSE. Test voluntariness and truth; retraction weakens value, not admissibility (Ram Prakash, applied in Haroon Haji).</li>
+<li><b>Accomplice = approver</b> &mdash; FALSE. Approver &sub; accomplice &sub; co-accused; pardon is procedural (BNSS), status is evidentiary (BSA).</li>
+<li><b>Trap witness/detective is an accomplice</b> &mdash; FALSE. Interested witness, not <i>particeps criminis</i>.</li>
+<li><b>Corroboration needed for every detail</b> &mdash; FALSE. Material particulars only, connecting each accused with the crime.</li>
+<li><b>Acquittal of co-accused on same approver evidence = estoppel</b> &mdash; FALSE. Corroboration is accused-specific; issue-estoppel needs same parties &amp; same fact-in-issue (Ravinder Singh).</li>
+<li><b>Citation trap:</b> the DU syllabus prints &ldquo;AIR 1975 SC 856&rdquo; against Haroon Haji; the correct citation is <b>(1968) 2 SCR 641 : AIR 1968 SC 832</b> (AIR 1975 SC 856 belongs to Ravinder Singh). Mentioning this correction earns credit.</li>
+</ol>
+</div>
+
+<h3 class="sec">6.5 Answer-writing blueprint (20-mark accomplice question)</h3>
+<ol>
+<li><b>Provisions</b> (BSA 138 + 119 Ill. (b); IEA 133 + 114(b); s. 139/134).</li>
+<li><b>Concepts</b> &mdash; accomplice (undefined; Jagannath; Davies classes; exclusions), approver (BNSS 343&ndash;345), co-accused (s. 28 BSA).</li>
+<li><b>Rule of law vs rule of prudence</b> &mdash; Dagdu (no antithesis).</li>
+<li><b>Why caution</b> &mdash; the five dangers (bad character; bias; padding-the-story; innocent-implicated; alibi problem).</li>
+<li><b>Corroboration rules</b> &mdash; material particulars; independence; per-accused; no self-corroboration; accomplice &ne; corroborator of accomplice; co-accused confession (weak; assurance only).</li>
+<li><b>Double test + rare-case exception</b> &mdash; Ravinder Singh.</li>
+<li><b>Case law</b> &mdash; Bhuboni Sahu; Haroon Haji; Ravinder Singh (+ Dagdu, Dalmia, Nathu, Ram Prakash).</li>
+<li><b>Conclusion</b> &mdash; lawful but unsafe; reassuring circumstances satisfy the judicial conscience.</li>
+</ol>
+
+<p class="small" style="margin-top:26px;border-top:1px solid var(--line);padding-top:14px;">Compilation note: prepared strictly on the uploaded DU materials &mdash; Case Material LB-201 (2025 ed., pp. 158&ndash;175: Bhuboni Sahu, Haroon Haji Abdulla, Ravinder Singh judgments), DU LB-201 lecture notes Ch. XIV &ldquo;Accomplice (ss. 114(b) &amp; 133)&rdquo; with companion notes on meaning/exceptions/corroboration, bare BSA 2023 &amp; IEA 1872 texts, DU LL.B. II Term May&ndash;June 2024 paper (Q.7), and the syllabus chart. Section correspondences (BNSS/BSA/BNS) verified against official indices. Forward reference: the next case in the DU case material, <i>State of Bihar v. Lalu Prasad</i>, belongs to the following unit (&ldquo;tainted witness&rdquo;) and is not covered here.</p>
+
+</div><!-- /wrap -->
+
+<footer>
+  <b>LAW OF EVIDENCE &mdash; UNIT IV: ACCOMPLICE EVIDENCE</b> &bull; DU LL.B./B.A. LL.B. (Hons.) Examination Notes<br>
+  BSA ss. 138 &amp; 119 Ill. (b) &bull; IEA ss. 133 &amp; 114 Ill. (b) &bull; BNSS ss. 343&ndash;345, 183 &bull; Bhuboni Sahu &bull; Haroon Haji Abdulla &bull; Ravinder Singh<br>
+  <span class="small">Compiled from DU Case Material LB-201 (2025), DU lecture notes and prescribed bare Acts. For academic study use.</span>
+</footer>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3a565602e09c116',t:'MTc4OTI4NDA5Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

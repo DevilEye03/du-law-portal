@@ -136,6 +136,31 @@
     ],
     2: [
       {
+        id: "bsa",
+        code: "LB-201",
+        title: "Law of Evidence (BSA)",
+        author: "LB-201 • Faculty of Law, DU",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "6 Comprehensive Units",
+        casesCount: "33 Landmark Cases",
+        desc: "Bharatiya Sakshya Adhiniyam 2023 & IEA 1872: Relevancy, Res Gestae, Admissions, Confessions, Dying Declarations, Electronic Records & Presumptions.",
+        spineBg: "#1e3a8a",
+        spineInk: "#d1fae5",
+        spineFont: "700 36px Georgia",
+        backBg: "#0f172a",
+        backInk: "209,250,229",
+        edge: "#d8f3dc",
+        chapters: [
+          "General Issues Relating to Law of Evidence",
+          "Relevancy & Admissibility of Facts",
+          "On Proof & Modes of Proof",
+          "Accomplice Evidence",
+          "Witnesses: Competence and Examination",
+          "Presumptions & Burden of Proof"
+        ]
+      },
+      {
         id: "crimes2",
         code: "LB-201",
         title: "Law of Crimes–II (CrPC & BNSS)",

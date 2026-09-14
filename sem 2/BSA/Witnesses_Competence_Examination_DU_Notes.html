@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law of Evidence — Unit V: WITNESSES — COMPETENCE AND EXAMINATION | Complete DU Notes (BSA 2023 &amp; IEA 1872)</title>
+<style>
+:root{
+  --ink:#1c1a17; --paper:#fdfbf5; --cream:#f7f2e7; --maroon:#7a1f2b; --indigo:#1f3a5f;
+  --gold:#b98a2f; --green:#2e5e3a; --blue:#20567c; --plum:#5b2a52; --line:#d8cfbc;
+  --case:#8c2f39; --prov:#1f4e5f; --ex:#7a5a12; --pyq:#3c4f8a; --rel:#4a5d2f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.72 "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 90px;}
+.cover{background:linear-gradient(160deg,#101b20 0%, #14343d 45%, #1f4e5f 100%);color:#eaf3f0;padding:64px 26px 58px;text-align:center;border-bottom:6px double var(--gold);}
+.cover .kicker{letter-spacing:.35em;text-transform:uppercase;font-size:12px;color:#9fd0c4;}
+.cover h1{font-size:clamp(30px,5vw,52px);margin:.35em 0 .15em;line-height:1.12;color:#fff;}
+.cover h2{font-weight:400;font-size:clamp(17px,2.4vw,24px);color:#cfe8d4;margin:0 0 18px;}
+.cover .meta{display:inline-block;border:1px solid #7fae9f;border-radius:10px;padding:10px 22px;font-size:14px;color:#e6f2ec;background:rgba(0,0,0,.25);}
+.cover .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+.cover .tag{font-size:12.5px;border:1px solid #7fae9f88;border-radius:999px;padding:4px 13px;color:#dcefe7;background:#00000030;}
+.toc{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:34px 0;}
+.toc h3{margin:0 0 10px;color:var(--maroon);font-size:22px;}
+.toc ol{margin:0;padding-left:22px;}
+.toc li{margin:5px 0;}
+.toc a{color:var(--indigo);text-decoration:none;border-bottom:1px dotted #9aa;}
+.toc a:hover{color:var(--maroon);}
+h2.unit{font-size:clamp(24px,3.4vw,34px);color:var(--maroon);border-bottom:3px solid var(--gold);padding-bottom:8px;margin:64px 0 6px;}
+h2.unit .no{display:inline-block;background:var(--maroon);color:#fff;border-radius:8px;font-size:.62em;padding:3px 12px;vertical-align:middle;margin-right:12px;letter-spacing:.08em;}
+h3.sec{font-size:clamp(20px,2.6vw,26px);color:var(--indigo);margin:44px 0 8px;border-left:6px solid var(--gold);padding-left:14px;}
+h4.sub{font-size:19px;color:var(--plum);margin:30px 0 6px;}
+h5.mini{font-size:16px;color:var(--green);margin:22px 0 4px;text-transform:uppercase;letter-spacing:.06em;}
+p{margin:10px 0;}
+ul,ol{margin:8px 0 14px;padding-left:26px;}
+li{margin:5px 0;}
+.box{border-radius:12px;padding:16px 20px;margin:18px 0;border:1px solid;position:relative;}
+.box .lbl{position:absolute;top:-13px;left:16px;background:var(--paper);padding:0 10px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.prov{border-color:#9fc4cf;background:#eef6f8;} .prov .lbl{color:var(--prov);}
+.case{border-color:#d9a6ad;background:#fbf0f1;} .case .lbl{color:var(--case);}
+.exbox{border-color:#e0c584;background:#fdf6e3;} .exbox .lbl{color:var(--ex);}
+.pyq{border-color:#9fb0e0;background:#eef1fb;} .pyq .lbl{color:var(--pyq);}
+.rel{border-color:#b5c79a;background:#f2f7ea;} .rel .lbl{color:var(--rel);}
+.warn{border-color:#e0b484;background:#fdf1e6;} .warn .lbl{color:#9c5a12;}
+.stat{font-family:Georgia,serif;font-size:16px;background:#ffffffb0;border-left:4px solid var(--prov);padding:12px 16px;margin:10px 0;border-radius:0 8px 8px 0;}
+.stat b.h{color:var(--prov);}
+.casecard{background:#fff;border:1px solid #e3c9cd;border-left:7px solid var(--case);border-radius:12px;padding:20px 24px;margin:26px 0;box-shadow:0 2px 10px #00000012;}
+.casecard h4{margin:0 0 2px;color:var(--case);font-size:21px;}
+.casecard .cite{font-size:13.5px;color:#7c6a6d;font-style:italic;margin-bottom:10px;}
+.casecard h5{margin:16px 0 4px;color:#8c2f39;font-size:15px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px dashed #d9a6ad;padding-bottom:3px;}
+table{border-collapse:collapse;width:100%;margin:16px 0;background:#fff;font-size:14.8px;}
+th{background:var(--indigo);color:#fff;padding:9px 10px;text-align:left;font-weight:600;}
+td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;}
+tr:nth-child(even) td{background:#faf7ef;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.pill{display:inline-block;border-radius:999px;padding:2px 12px;font-size:12.5px;font-weight:700;margin-right:6px;}
+.p-bsa{background:#1f4e5f;color:#fff;} .p-iea{background:#7a5a12;color:#fff;}
+.quote{font-family:Georgia,serif;font-style:italic;background:#fff;border:1px dashed var(--gold);border-radius:10px;padding:12px 18px;margin:12px 0;color:#4c3b1e;}
+.fig{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 12px;margin:24px 0;text-align:center;overflow-x:auto;}
+.fig figcaption{font-size:13.5px;color:#6b5f4c;margin-top:8px;font-style:italic;}
+svg text{font-family:"Segoe UI",Arial,sans-serif;}
+.small{font-size:13.5px;color:#6d6152;}
+.hl{background:#ffe9a8;padding:0 4px;border-radius:3px;}
+.hl2{background:#cfe8d4;padding:0 4px;border-radius:3px;}
+.hl3{background:#f3cfd6;padding:0 4px;border-radius:3px;}
+.navtop{position:sticky;top:0;background:#101b20cc;backdrop-filter:blur(6px);z-index:50;padding:8px 16px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
+.navtop a{color:#cfe8d4;text-decoration:none;font-size:13px;letter-spacing:.04em;}
+.navtop a:hover{color:#fff;}
+.ans{background:#f4f8ef;border:1px solid #b5c79a;border-radius:10px;padding:14px 18px;margin:12px 0;}
+.ans h6{margin:0 0 6px;color:var(--green);font-size:15px;text-transform:uppercase;letter-spacing:.08em;}
+footer{background:#101b20;color:#c9d8cf;padding:30px 20px;text-align:center;font-size:13.5px;margin-top:60px;}
+@media print{.navtop{display:none}.cover{padding:30px}.box,.casecard{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="kicker">University of Delhi &bull; Faculty of Law &bull; LL.B. / B.A. LL.B. (Hons.)</div>
+  <h1>THE LAW OF EVIDENCE<br>UNIT V &mdash; WITNESSES: COMPETENCE AND EXAMINATION</h1>
+  <h2>Child Witness &bull; Dumb Witness &bull; Hostile Witness &bull; Examination, Cross-Examination &amp; Re-Examination</h2>
+  <div class="meta">Syllabus Topic V &bull; BSA ss. 124, 125, 157, 142&ndash;144 &amp; 158 &bull; IEA ss. 118, 119, 154, 137&ndash;139 &amp; 155 &bull; Case 28: State of Bihar v. Laloo Prasad (2002) 9 SCC 626</div>
+  <div class="tags">
+    <span class="tag">s. 124 BSA / s. 118 IEA &mdash; who may testify; child witness</span>
+    <span class="tag">s. 125 BSA / s. 119 IEA &mdash; witness unable to communicate verbally</span>
+    <span class="tag">s. 157 BSA / s. 154 IEA &mdash; hostile witness; court&rsquo;s discretion</span>
+    <span class="tag">ss. 142&ndash;144 &amp; 158 BSA / ss. 137&ndash;139 &amp; 155 IEA &mdash; the examination cycle</span>
+    <span class="tag">Oaths Act 1969 ss. 4&ndash;5, 7 &bull; BNSS s. 348 (CrPC 311) &bull; Witness Protection Scheme 2018</span>
+    <span class="tag">State of Bihar v. Laloo Prasad &mdash; full brief + 10 supporting case cards</span>
+    <span class="tag">DU PYQ bank + model answers</span>
+  </div>
+</div>
+
+<div class="navtop">
+  <a href="#framework">Framework</a><a href="#child">Child Witness</a><a href="#dumb">Dumb Witness</a><a href="#hostile">Hostile Witness</a><a href="#exam">Examination Cycle</a><a href="#cases">Case 28 &amp; Companions</a><a href="#pyq">PYQs &amp; Models</a><a href="#revision">Rapid Revision</a>
+</div>
+
+<div class="wrap">
+
+<div class="toc">
+<h3>Contents</h3>
+<ol>
+  <li><a href="#framework">Part 0 &mdash; Statutory framework: the competence code (BSA ss. 124&ndash;126), BSA&harr;IEA map, Bentham&rsquo;s &ldquo;eyes and ears of justice&rdquo;, Oaths Act 1969, master diagram</a></li>
+  <li><a href="#child">Part 1 &mdash; Child Witness: s. 124 BSA / s. 118 IEA, Oaths Act proviso, voir dire test, Krishna Master, Dattu Ramrao Sakhare, P Ramesh; corroboration as prudence</a></li>
+  <li><a href="#dumb">Part 2 &mdash; Dumb Witness / Witness Unable to Communicate Verbally: s. 125 BSA / s. 119 IEA, 2013 amendment, modes of evidence, vow of silence, Meesala Ramakrishnan, Darshan Singh guidelines</a></li>
+  <li><a href="#hostile">Part 3 &mdash; Hostile Witness: s. 157 BSA / s. 154 IEA, Sat Pal taxonomy, why witnesses turn hostile, evidentiary value &amp; s. 157(2), Baldev Singh, stage-of-application rule (Laloo Prasad), BNSS s. 348 recall, perjury (IPC 191&ndash;193 / BNS 227&ndash;229)</a></li>
+  <li><a href="#exam">Part 4 &mdash; Examination, Cross-Examination, Re-Examination: ss. 142&ndash;144 &amp; 158 BSA / ss. 137&ndash;139 &amp; 155 IEA, leading questions (s. 146 BSA), forbidden questions, impeachment of credit, cycle diagram</a></li>
+  <li><a href="#cases">Part 5 &mdash; Case 28 in full brief: State of Bihar v. Laloo Prasad (2002) 9 SCC 626, plus companion case cards</a></li>
+  <li><a href="#pyq">Part 6 &mdash; DU PYQs (June 2024 audit) + pattern-based model answers</a></li>
+  <li><a href="#revision">Part 7 &mdash; Rapid revision: master tables, mnemonics, examiner&rsquo;s traps, answer blueprint</a></li>
+</ol>
+<p class="small">Primary sources: (1) DU Case Material LB-201 (2025 ed.) &mdash; full text of <i>State of Bihar v. Laloo Prasad</i>, (2002) 9 SCC 626 (pp. 176&ndash;177); (2) DU LB-201 lecture notes &mdash; Ch. XIII (ss. 118&ndash;123: competence, child &amp; dumb witnesses, Oaths Act) and Ch. XV (Hostile Witness, s. 154 IEA, examination cycle); (3) companion DU notes (Topic 5: hostile witness &amp; examination ss. 137&ndash;139, 154&ndash;155); (4) bare texts of the Bharatiya Sakshya Adhiniyam 2023 and Indian Evidence Act 1872; (5) DU LL.B. II Term Examination May&ndash;June 2024 (Code 7953) &mdash; full 8-question audit; (6) connected instruments: Oaths Act 1969, BNSS 2023 s. 348 (CrPC s. 311), CrPC s. 327, Witness Protection Scheme 2018, IPC/BNS false-evidence mapping.</p>
+</div>
+
+<!-- ================= PART 0 ================= -->
+<h2 class="unit" id="framework"><span class="no">PART 0</span>The Statutory Framework of Competence</h2>
+
+<h3 class="sec">0.1 &ldquo;Witnesses are the eyes and ears of justice&rdquo;</h3>
+<div class="box prov"><span class="lbl">Foundation</span>
+<p>Bentham&rsquo;s aphorism, quoted at the opening of the DU chapter on competence: &ldquo;<b>Witnesses are eyes and ears of justice</b>&rdquo; &mdash; &ldquo;but these eyes and ears must be <b>fit and in working condition</b>&rdquo;. Section 124 BSA (s. 118 IEA) is the <b>general provision</b> deciding competency: it presumes <b>every person</b> competent, and incompetency is the <b>exception</b>, to be established only where the Court considers the person <b>prevented</b> &mdash; by tender years, extreme old age, disease (of body or mind), or any other cause of the same kind &mdash; from <b>understanding the questions</b> put to him or from <b>giving rational answers</b> to them. The Explanation protects the person of unsound mind (IEA: &ldquo;lunatic&rdquo;): he is <b>not</b> incompetent unless his unsoundness actually prevents understanding and rational answering &mdash; i.e. <b>lucidity restores competence</b>.</p>
+<div class="stat"><b class="h">s. 124, BSA 2023 &mdash; &ldquo;Who may testify&rdquo;</b> [= s. 118, IEA 1872]: &ldquo;All persons shall be competent to testify unless the Court considers that they are prevented from understanding the questions put to them, or from giving rational answers to those questions, by tender years, extreme old age, disease, whether of body or mind, or any other cause of the same kind. &mdash; <b>Explanation.</b> A person of unsound mind is not incompetent to testify, unless he is prevented by his unsoundness of mind from understanding the questions put to him and giving rational answers to them.&rdquo;</div>
+<p class="small">DU notes MCQ (reproduced): &ldquo;Who among the following is treated <b>absolutely</b> incompetent under s. 118 IEA? (a) lunatic (b) child of tender years (c) person of extreme old age (d) none of the above&rdquo; &mdash; <b>Answer: (d)</b>. Incompetence under s. 124/118 is never absolute or status-based; it is always <b>functional</b> (understanding + rational answers).</p>
+</div>
+
+<h3 class="sec">0.2 The BSA &harr; IEA map for Topic V</h3>
+<table>
+<tr><th>Subject</th><th>BSA 2023</th><th>IEA 1872</th><th>Substance</th></tr>
+<tr><td>Who may testify (competence; child)</td><td><b>s. 124</b></td><td>s. 118</td><td>All persons competent unless prevented from understanding questions / giving rational answers</td></tr>
+<tr><td>Witness unable to communicate verbally (dumb)</td><td><b>s. 125</b></td><td>s. 119</td><td>Evidence by writing or signs in open Court; deemed oral evidence; proviso: interpreter/special educator + videography</td></tr>
+<tr><td>Competency of husband &amp; wife / parties</td><td>s. 126</td><td>s. 120</td><td>Parties and spouses competent in civil and criminal proceedings</td></tr>
+<tr><td>Definitions of the three examinations</td><td><b>s. 142</b></td><td>s. 137</td><td>Examination-in-chief / cross-examination / re-examination defined</td></tr>
+<tr><td>Order of examinations</td><td><b>s. 143</b></td><td>s. 138</td><td>Chief &rarr; cross &rarr; re; scope of each stage; new matter in re-exam &rArr; further cross</td></tr>
+<tr><td>Cross-examination of person called to produce a document</td><td><b>s. 144</b></td><td>s. 139</td><td>Mere production does not make him a witness</td></tr>
+<tr><td>Leading questions</td><td>s. 146</td><td>ss. 142&ndash;143</td><td>Definition; barred in chief/re-exam on objection; permitted in cross</td></tr>
+<tr><td>Questions lawful in cross-examination</td><td>s. 149</td><td>s. 146</td><td>Test veracity; identity/position in life; shake credit</td></tr>
+<tr><td>Indecent / scandalous / insulting questions</td><td>ss. 154&ndash;155</td><td>ss. 151&ndash;152</td><td>Court shall forbid</td></tr>
+<tr><td>Question by party to his own witness (hostile)</td><td><b>s. 157</b></td><td>s. 154</td><td>Court&rsquo;s discretion to permit cross-questions; sub-s. (2): right to rely on any part preserved</td></tr>
+<tr><td>Impeaching credit of witness</td><td><b>s. 158</b></td><td>s. 155</td><td>Three modes: unworthy-of-credit witnesses; bribery/corrupt inducement; former inconsistent statements</td></tr>
+</table>
+
+<figure class="fig">
+<svg viewBox="0 0 960 400" width="940" role="img" aria-label="Competence tree diagram">
+ <defs><marker id="w1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker></defs>
+ <rect x="330" y="8" width="300" height="44" rx="10" fill="#1f4e5f"/><text x="480" y="35" fill="#fff" font-size="15" text-anchor="middle" font-weight="bold">s. 124 BSA / s. 118 IEA &mdash; ALL PERSONS COMPETENT</text>
+ <line x1="480" y1="52" x2="480" y2="80" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w1)"/>
+ <rect x="255" y="82" width="450" height="46" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="101" fill="#7a5a12" font-size="13" text-anchor="middle" font-weight="bold">EXCEPTION (functional, never absolute): prevented from understanding questions</text><text x="480" y="118" fill="#7a5a12" font-size="12.5" text-anchor="middle">OR from giving rational answers &mdash; by tender years / extreme old age / disease / like cause</text>
+ <line x1="180" y1="128" x2="180" y2="160" stroke="#4a3f2a" stroke-width="1.8" marker-end="url(#w1)"/>
+ <line x1="400" y1="128" x2="400" y2="160" stroke="#4a3f2a" stroke-width="1.8" marker-end="url(#w1)"/>
+ <line x1="600" y1="128" x2="600" y2="160" stroke="#4a3f2a" stroke-width="1.8" marker-end="url(#w1)"/>
+ <line x1="800" y1="128" x2="800" y2="160" stroke="#4a3f2a" stroke-width="1.8" marker-end="url(#w1)"/>
+ <rect x="60" y="162" width="240" height="76" rx="10" fill="#eef6f8" stroke="#1f4e5f"/><text x="180" y="186" fill="#1f4e5f" font-size="13" text-anchor="middle" font-weight="bold">CHILD WITNESS</text><text x="180" y="204" fill="#333" font-size="11.5" text-anchor="middle">s. 124 BSA / 118 IEA + Oaths Act 1969</text><text x="180" y="220" fill="#333" font-size="11.5" text-anchor="middle">s. 4(1) proviso (no oath if &lt;12 and</text><text x="180" y="234" fill="#333" font-size="11.5" text-anchor="middle">nature of oath not understood)</text>
+ <rect x="285" y="162" width="230" height="76" rx="10" fill="#f2f7ea" stroke="#2e5e3a"/><text x="400" y="186" fill="#2e5e3a" font-size="13" text-anchor="middle" font-weight="bold">DUMB WITNESS</text><text x="400" y="204" fill="#333" font-size="11.5" text-anchor="middle">s. 125 BSA / 119 IEA:</text><text x="400" y="220" fill="#333" font-size="11.5" text-anchor="middle">writing or signs in open Court;</text><text x="400" y="234" fill="#333" font-size="11.5" text-anchor="middle">deemed oral evidence</text>
+ <rect x="490" y="162" width="220" height="76" rx="10" fill="#fbf0f1" stroke="#8c2f39"/><text x="600" y="186" fill="#8c2f39" font-size="13" text-anchor="middle" font-weight="bold">ACCOMPLICE</text><text x="600" y="204" fill="#333" font-size="11.5" text-anchor="middle">s. 138 BSA / 133 IEA</text><text x="600" y="220" fill="#333" font-size="11.5" text-anchor="middle">competent but tainted;</text><text x="600" y="234" fill="#333" font-size="11.5" text-anchor="middle">corroboration as prudence</text>
+ <rect x="690" y="162" width="230" height="76" rx="10" fill="#eef1fb" stroke="#3c4f8a"/><text x="805" y="186" fill="#3c4f8a" font-size="13" text-anchor="middle" font-weight="bold">PARTIES &amp; SPOUSES</text><text x="805" y="204" fill="#333" font-size="11.5" text-anchor="middle">s. 126 BSA / 120 IEA;</text><text x="805" y="220" fill="#333" font-size="11.5" text-anchor="middle">judges/magistrates s. 127/121;</text><text x="805" y="234" fill="#333" font-size="11.5" text-anchor="middle">privileged holders ss. 128&ndash;132</text>
+ <rect x="255" y="270" width="450" height="52" rx="10" fill="#fff" stroke="#1f4e5f"/><text x="480" y="291" fill="#1f4e5f" font-size="13" text-anchor="middle" font-weight="bold">UNIFYING TEST: can the witness understand the questions and</text><text x="480" y="309" fill="#1f4e5f" font-size="13" text-anchor="middle">give rational / intelligible answers? (P Ramesh, 2019)</text>
+ <line x1="480" y1="238" x2="480" y2="268" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w1)"/>
+ <text x="480" y="352" fill="#6d6152" font-size="12.5" text-anchor="middle" font-style="italic">Explanation: unsound mind / lunacy &ne; incompetence &mdash; competence returns in lucid intervals.</text>
+ <text x="480" y="376" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">DU notes: &ldquo;All persons are competent including child witness, dumb witness and accomplice.&rdquo;</text>
+</svg>
+<figcaption>Fig. 0.1 &mdash; The competence tree: one general rule (s. 124), four special branches, one functional test.</figcaption>
+</figure>
+
+<h3 class="sec">0.3 Connected law at the threshold: the Oaths Act, 1969</h3>
+<div class="box rel"><span class="lbl">Connected Law</span>
+<div class="stat"><b class="h">s. 4(1), Oaths Act 1969</b> (repealing the Oaths Act 1873): &ldquo;Oaths or affirmations shall be made by all witnesses, that is to say, all persons who may lawfully be examined, or give, or be required to give, evidence by or before any court&hellip; <b>Provided that</b> where the witness is a <b>child under twelve years of age</b>, and the court&hellip; is of opinion that, though the witness <b>understands the duty of speaking the truth</b>, he <b>does not understand the nature of an oath or affirmation</b>, the foregoing provisions of this Section and the provisions of Section 5 shall not apply to such witness; <b>but in any such case the absence of an oath or affirmation shall not render inadmissible any evidence given by such witness nor affect the obligation of the witness to state the truth</b>.&rdquo;</div>
+<ul>
+<li><b>Effect:</b> oath is the rule; for a child under 12 who understands the <b>duty of truth</b> but not the <b>nature of the oath</b>, oath is dispensed with &mdash; yet the evidence remains <b>admissible</b> and the <b>duty to speak the truth</b> continues (reinforced by s. 7: omission or irregularity in administering the oath does not affect the obligation to state the truth or the admissibility of evidence).</li>
+<li><b>Interplay with s. 124 BSA / 118 IEA:</b> competence (understanding + rational answers) is a <b>Evidence-Act</b> question; oath (its form or dispensation) is an <b>Oaths-Act</b> question. Absence of oath goes to <b>weight</b>, not admissibility.</li>
+<li><b>For dumb witnesses:</b> oath may be administered &ldquo;by appropriate means&hellip; with the assistance of an interpreter&rdquo; (<i>Darshan Singh</i>); a person under a <b>religious vow of silence</b> is deemed unable to speak within s. 125/119 (<i>Lakhan Singh v. Emperor</i>, 1942 P 183) and may depose in writing without breaking the vow.</li>
+</ul>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 1 ================= -->
+<h2 class="unit" id="child"><span class="no">PART 1</span>Child Witness &mdash; s. 124 BSA / s. 118 IEA</h2>
+
+<h3 class="sec">1.1 The rule: no age bar, only a capacity test</h3>
+<div class="box prov"><span class="lbl">Doctrine</span>
+<ul>
+<li>The Evidence Act fixes <b>no minimum age</b> for a witness. A child is competent if he can <b>understand the questions</b> put to him and <b>give rational answers</b> &mdash; the determining factor is <b>capacity, not age</b> (DU companion notes; <i>P Ramesh</i>).</li>
+<li><b>The two-limb test (P Ramesh v. State, 2019):</b> in criminal proceedings a person of any age is competent if she/he is able to (i) <b>understand questions put as a witness</b>; and (ii) <b>give such answers to the questions that can be understood</b>. &ldquo;A child of tender age can be allowed to testify if she/he has the <b>intellectual capacity</b> to understand questions and give rational answers thereto. A child becomes incompetent only in case the court considers that the child was unable to understand the questions and answer them in a <b>coherent and comprehensible manner</b>.&rdquo;</li>
+<li><b>Voir dire (preliminary examination):</b> &ldquo;In order to determine the competency of a child witness, <b>the judge has to form her or his opinion</b>. The judge is at liberty to <b>test the capacity</b> of a child witness and <b>no precise rule can be laid down</b> regarding the degree of intelligence and knowledge which will render the child a competent witness. The competency&hellip; can be ascertained by <b>questioning her/him</b> to find out the capability to understand the occurrence witnessed and to speak the truth before the court.&rdquo; &mdash; i.e. the court may put preliminary (voir dire) questions before administering oath/recording evidence.</li>
+<li><b>Sequence:</b> &ldquo;A child has to be a <b>competent witness first</b>, only then is her/his statement admissible.&rdquo;</li>
+<li><b>Oath:</b> child under 12 who understands the duty of truth but not the nature of oath &mdash; <b>no oath required</b> (Oaths Act s. 4(1) proviso); absence of oath does not make the evidence inadmissible.</li>
+</ul>
+</div>
+
+<h3 class="sec">1.2 Value of a child&rsquo;s testimony &mdash; the three DU-note cases</h3>
+<div class="casecard">
+<h4>State of Uttar Pradesh v. Krishna Master &amp; Ors.</h4>
+<div class="cite">(2010) &mdash; Supreme Court, decided 3 August 2010 &bull; child witness aged <b>six years</b> &bull; DU notes Ch. XIII (13.1.1.2)</div>
+<h5>Facts</h5>
+<p>A <b>gruesome murder</b> of the child&rsquo;s father, mother, brothers etc. was committed; the child, then <b>six years old</b>, witnessed it. His evidence was recorded with a gap of about <b>ten years</b> between the incident and the recording of evidence.</p>
+<h5>Observation of the Supreme Court</h5>
+<div class="quote">&ldquo;A child of tender age is always <b>receptive to abnormal events</b> which take place in its life and would <b>never forget those events</b> for the rest of his life. The child would be able to <b>recapitulate correctly and exactly</b> when asked about the same in future. When a child of tender age witnesses gruesome murder of his father, mother, brothers etc. he is not likely to forget the incident for his whole life and would certainly recapitulate facts in his memory when asked about the same at any point of time, <b>notwithstanding the gap of about ten years</b> between the incident and recording of his evidence&hellip; it would be doing <b>injustice to a child witness possessing sharp memory</b> to say that it is inconceivable for him to recapitulate facts&hellip; Normally, a child aged six years is <b>not expected to be out of house at the dead of night</b> and he is expected to be in the company of his parents.&rdquo;</div>
+<h5>Decision</h5>
+<p>Accused <b>convicted</b> for committing murder; the child&rsquo;s testimony accepted.</p>
+<h5>Principle</h5>
+<p>Delay between incident and testimony does not by itself discredit a child of tender years; traumatic/abnormal events are indelibly imprinted on a child&rsquo;s memory; presence of a six-year-old in the house at dead of night is natural.</p>
+</div>
+
+<div class="casecard">
+<h4>Dattu Ramrao Sakhare &amp; Ors. v. State of Maharashtra</h4>
+<div class="cite">decided 8 May 1997 &bull; child witness <b>Sarubai, aged about 10 years</b> &bull; DU notes Ch. XIII (13.1.1.3)</div>
+<h5>Facts</h5>
+<p>The <b>entire prosecution case rested</b> upon the evidence of Sarubai, a child witness aged about 10 years.</p>
+<h5>Observation of the Supreme Court</h5>
+<ul>
+<li>&ldquo;A child witness <b>can be the basis of conviction</b>. In other words <b>even in the absence of oath</b> the evidence of a child witness can be considered under Section 118 of the Evidence Act provided that such witness is able to <b>understand the question and able to give rational answers</b> thereof.&rdquo;</li>
+<li>&ldquo;The evidence of a child witness and credibility thereof would <b>depend upon the circumstances of each case</b>. The only precaution which the court should bear in mind&hellip; is that the witness must be a <b>reliable</b> one and his/her <b>demeanour must be like any other competent witness</b> and there is <b>no likelihood of being tutored</b>.&rdquo;</li>
+<li>&ldquo;There is <b>no practice that in every case the evidence of such a witness be corroborated</b> before a conviction can be allowed to stand but, however, <b>as a rule of prudence</b> the court always finds it desirable to have the <b>corroboration</b> to such evidence from other <b>dependable evidence on record</b>.&rdquo;</li>
+</ul>
+<h5>Principle (rule of law vs rule of prudence)</h5>
+<p><b>Rule of law:</b> no corroboration is legally necessary for convicting on a child&rsquo;s testimony. <b>Rule of prudence:</b> corroboration from dependable evidence is desirable before conviction. The touchstones are <b>reliability, natural demeanour, absence of tutoring</b>.</p>
+</div>
+
+<div class="casecard">
+<h4>P Ramesh v. State, Rep. by Inspector of Police</h4>
+<div class="cite">decided 9 July 2019 &bull; children aged <b>eight and six years</b> &bull; murder of mother by father &bull; DU notes Ch. XIII (13.1.1.3)</div>
+<h5>Facts</h5>
+<p>The appellant was tried for the <b>murder of his wife</b>. During trial the prosecution sought to adduce the evidence of the children of the appellant and the deceased; on 19 May 2015, when their evidence was to be recorded, one was <b>eight years old</b> and the other <b>six years old</b>.</p>
+<h5>Law applied</h5>
+<p>s. 118 IEA (competence) read with <b>s. 4, Oaths Act 1969</b> (oath mandatory for all witnesses, <b>except child witnesses under twelve</b> within the proviso).</p>
+<h5>Observation &amp; decision</h5>
+<p>The two-limb competency test and the voir dire liberty of the judge (quoted in 1.1 above); &ldquo;no precise rule can be laid down&rdquo;; competency ascertained by questioning the child about the occurrence and the duty to speak the truth.</p>
+<h5>Principle</h5>
+<p>Competency of a child witness is a <b>judicial determination on facts</b>, made by preliminary questioning; the standard is <b>understanding + intelligible, rational answers</b>, never a fixed age or IQ threshold.</p>
+</div>
+
+<h3 class="sec">1.3 Scrutiny checklist for a child&rsquo;s evidence (DU notes synthesis)</h3>
+<table>
+<tr><th>#</th><th>Checkpoint</th><th>Source</th></tr>
+<tr><td>1</td><td>Competence first: understands questions; rational, coherent answers (two-limb test)</td><td>s. 124 BSA / 118 IEA; P Ramesh</td></tr>
+<tr><td>2</td><td>Oath: under 12 &amp; unaware of its nature &rarr; dispense; admissibility unaffected</td><td>Oaths Act s. 4(1) proviso; Dattu Ramrao</td></tr>
+<tr><td>3</td><td>No tutoring / coaching: consistency, spontaneity, demeanour like any competent witness</td><td>Dattu Ramrao</td></tr>
+<tr><td>4</td><td>Memory of abnormal events survives long delay</td><td>Krishna Master</td></tr>
+<tr><td>5</td><td>Corroboration: not a rule of law; desirable as rule of prudence from dependable evidence</td><td>Dattu Ramrao</td></tr>
+<tr><td>6</td><td>Child is <b>not</b> an accomplice and (if victim) not to be equated with one; her evidence carries the weight of an <b>injured witness</b></td><td>Chandraprakash Kewalchand Jain (1990) &mdash; DU notes Ch. XIII (13.2)</td></tr>
+</table>
+
+<figure class="fig">
+<svg viewBox="0 0 960 330" width="940" role="img" aria-label="Child witness evaluation flowchart">
+ <defs><marker id="w2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e5e3a"/></marker>
+ <marker id="w2r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c2f39"/></marker></defs>
+ <rect x="330" y="6" width="300" height="40" rx="9" fill="#1f4e5f"/><text x="480" y="31" fill="#fff" font-size="13.5" text-anchor="middle" font-weight="bold">CHILD TENDERED AS WITNESS (any age)</text>
+ <line x1="480" y1="46" x2="480" y2="70" stroke="#2e5e3a" stroke-width="2" marker-end="url(#w2)"/>
+ <rect x="300" y="72" width="360" height="44" rx="9" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="90" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">GATE 1 &mdash; VOIR DIRE: understand questions?</text><text x="480" y="107" fill="#1f4e5f" font-size="12.5" text-anchor="middle">give rational / intelligible answers? (P Ramesh)</text>
+ <line x1="360" y1="116" x2="200" y2="150" stroke="#8c2f39" stroke-width="2" marker-end="url(#w2r)"/><text x="255" y="130" fill="#8c2f39" font-size="11.5">NO &rArr; incompetent</text>
+ <rect x="60" y="152" width="280" height="40" rx="9" fill="#fbf0f1" stroke="#8c2f39"/><text x="200" y="177" fill="#8c2f39" font-size="12" text-anchor="middle">evidence inadmissible (s. 124 exception)</text>
+ <line x1="480" y1="116" x2="480" y2="150" stroke="#2e5e3a" stroke-width="2" marker-end="url(#w2)"/><text x="495" y="136" fill="#2e5e3a" font-size="11.5">YES</text>
+ <rect x="300" y="152" width="360" height="44" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="170" fill="#7a5a12" font-size="12.5" text-anchor="middle" font-weight="bold">GATE 2 &mdash; OATH: under 12 &amp; unaware of its nature?</text><text x="480" y="187" fill="#7a5a12" font-size="12" text-anchor="middle">dispense (Oaths Act s. 4(1) proviso); admissibility intact</text>
+ <line x1="480" y1="196" x2="480" y2="224" stroke="#2e5e3a" stroke-width="2" marker-end="url(#w2)"/>
+ <rect x="300" y="226" width="360" height="44" rx="9" fill="#f2f7ea" stroke="#2e5e3a"/><text x="480" y="244" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">GATE 3 &mdash; CREDIBILITY: reliable? natural demeanour?</text><text x="480" y="261" fill="#2e5e3a" font-size="12" text-anchor="middle">no tutoring? (Dattu Ramrao; Krishna Master)</text>
+ <line x1="480" y1="270" x2="480" y2="296" stroke="#2e5e3a" stroke-width="2" marker-end="url(#w2)"/>
+ <rect x="230" y="298" width="500" height="28" rx="8" fill="#fff" stroke="#1f4e5f"/><text x="480" y="317" fill="#1f4e5f" font-size="12" text-anchor="middle">Conviction lawful on sole testimony; corroboration desirable as prudence</text>
+</svg>
+<figcaption>Fig. 1.1 &mdash; Evaluating a child witness: competence &rarr; oath &rarr; credibility &rarr; (prudent) corroboration.</figcaption>
+</figure>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Domestic-violence murder, sole child eyewitness.</b> A (the husband) kills his wife W at night in their home; their daughter D (7) sees A strike W with a rod. At trial D is first asked preliminary questions (her name, school, what &ldquo;truth&rdquo; means, whether she was present) &mdash; she answers coherently: <b>competent</b> under s. 124 BSA. She does not understand what an oath means: the court records her evidence <b>without oath</b> under the Oaths Act proviso; the evidence is still admissible and she remains bound to speak the truth. Her account is spontaneous, matches the injury pattern and the position of the rod, and shows no coaching: <b>credible</b>. The court may convict on her testimony alone (rule of law) but will look, as prudence, for supporting material &mdash; the neighbour who heard the quarrel, the FSL report on the rod &mdash; before convicting (Dattu Ramrao). Delay of four years in recording her evidence is immaterial: abnormal events are indelible in a child&rsquo;s memory (Krishna Master).</p>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<h2 class="unit" id="dumb"><span class="no">PART 2</span>Dumb Witness / Witness Unable to Communicate Verbally &mdash; s. 125 BSA / s. 119 IEA</h2>
+
+<h3 class="sec">2.1 The provision and the 2013 amendment</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 125, BSA 2023</b> [= s. 119, IEA 1872 as amended in 2013]: &ldquo;A witness who is <b>unable to speak</b> may give his evidence <b>in any other manner in which he can make it intelligible</b>, as by <b>writing</b> or by <b>signs</b>; but such writing must be written and the signs made <b>in open Court</b>, and evidence so given shall be <b>deemed to be oral evidence</b>: Provided that if the witness is unable to communicate verbally, (1) the Court shall take the assistance of an <b>interpreter or a special educator</b> in recording the statement, and (2) such statement shall be <b>videographed</b>.&rdquo;</div>
+<table>
+<tr><th>#</th><th>Before the 2013 amendment</th><th>After the 2013 amendment</th></tr>
+<tr><td>1</td><td>Marginal note: &ldquo;<b>Dumb witnesses</b>&rdquo;</td><td>Marginal note: &ldquo;<b>Witness unable to communicate verbally</b>&rdquo;</td></tr>
+<tr><td>2</td><td>No proviso</td><td>Proviso added: <b>interpreter / special educator</b> + mandatory <b>videography</b></td></tr>
+</table>
+<p class="small">DU notes glosses: &ldquo;deemed&rdquo; = <b>legal fiction</b> &mdash; writing/signs are treated as &ldquo;oral&rdquo; for the purposes of the oral-evidence provisions (ss. 59&ndash;60, 91&ndash;92 IEA; ss. 56&ndash;57, 88&ndash;89 BSA); &ldquo;open Court&rdquo; connects to <b>CrPC s. 327</b> (court to be open), securing transparency.</p>
+</div>
+
+<h3 class="sec">2.2 Scope and special situations (DU notes)</h3>
+<ul>
+<li><b>Object (Darshan Singh):</b> deaf-and-dumb persons were once &ldquo;contemplated in law as idiots&rdquo;; modern science shows such persons are &ldquo;generally found <b>more intelligent</b>, and susceptible to far higher culture than one was once supposed&rdquo; &mdash; hence physical disability must not exclude them from witness status.</li>
+<li><b>Vow of silence:</b> a witness under a <b>religious vow of silence</b> is deemed unable to speak within s. 119/125 and may give evidence <b>in writing in open court</b> without being forced to break the vow (<i>Lakhan Singh v. Emperor</i>, 1942 P 183; Monir&rsquo;s Textbook, cited in DU notes).</li>
+<li><b>Signs, nods and gestures have evidentiary value:</b> <i>Meesala Ramakrishnan v. State of A.P.</i> (1994) 4 SCC 182 &mdash; a dying declaration recorded by means of <b>signs and nods</b> of a person unable to speak is a <b>verbal statement</b>, relevant and admissible; the Court clarified that &ldquo;<b>verbal</b>&rdquo; does not mean &ldquo;<b>oral</b>&rdquo;; &ldquo;signs and gestures made by nods or head are admissible and such nods and gestures are not only admissible but <b>possess evidentiary value</b>&rdquo;.</li>
+<li><b>Dumb child:</b> both ss. 124 and 125 BSA (118 &amp; 119 IEA) apply &mdash; s. 124 is the general competence gate (understanding + rational answers), s. 125 the manner-of-evidence gate (DU notes Q&amp;A).</li>
+</ul>
+
+<h3 class="sec">2.3 The Darshan Singh guidelines (State of Rajasthan v. Darshan Singh @ Darshan Lal, 21 May 2012)</h3>
+<div class="casecard">
+<h4>State of Rajasthan v. Darshan Singh @ Darshan Lal</h4>
+<div class="cite">Supreme Court, decided 21 May 2012 &bull; sole eye-witness <b>Geeta (PW 16)</b>, deaf and dumb &bull; DU notes Ch. XIII (13.2)</div>
+<h5>Facts</h5>
+<p>Geeta, wife of the deceased Kaku Singh, communicated <b>by gestures</b> that the accused Darshan Singh had stayed with them at night, gave Kaku Singh <b>a pill with water</b> making him unconscious, and that <b>two more accomplices</b> of Darshan came from outside and all three inflicted injuries on Kaku Singh with sharp-edged weapons. The deceased had an <b>illicit relationship with the accused&rsquo;s sister</b> (motive). Geeta, being <b>deaf and dumb</b>, was the <b>sole eye-witness</b>; her statement was recorded in <b>sign language with the help of her father Jaswant Singh as interpreter</b>.</p>
+<h5>The six observations of the Supreme Court</h5>
+<ol>
+<li><b>Object of s. 119:</b> the historical equation of deaf-and-dumb persons with &ldquo;idiots&rdquo; has been abandoned in light of modern science (above).</li>
+<li><b>Duty of the Court:</b> before examining a deaf-and-dumb person, the Court must <b>exercise due caution</b> and ascertain that he possesses the <b>requisite intelligence</b> and <b>understands the nature of an oath</b>.</li>
+<li><b>Oath:</b> on being so satisfied, oath may be administered <b>by appropriate means</b>, with the <b>assistance of an interpreter</b>.</li>
+<li><b>Read-and-write preferred:</b> if the person can read and write, it is <b>most desirable</b> to adopt that method, being more satisfactory than sign language; &ldquo;the law requires that there must be a <b>record of signs and not the interpretation of signs</b>&rdquo;.</li>
+<li><b>Credibility:</b> a dumb person need not be prevented from being a <b>credible and reliable witness</b> merely due to physical disability; if literate he may convey himself through writing, otherwise through signs and gestures.</li>
+<li><b>Summing up:</b> a deaf-and-dumb person <b>is a competent witness</b>; if oath can be administered, it should be; if literate, record statement <b>in writing</b> (questions in writing, answers in writing); if not literate, record in <b>sign language with an interpreter</b> if found necessary; the interpreter should be <b>a person of the same surroundings</b>, <b>without interest in the case</b>, and <b>himself administered oath</b>.</li>
+</ol>
+<h5>Principle</h5>
+<p>Physical disability of speech/hearing affects only the <b>manner</b> of giving evidence, never <b>competence</b>; the recording must preserve the witness&rsquo;s own signs (record of signs, not interpretation), with interpreter-safeguards and (post-2013) videography.</p>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 300" width="940" role="img" aria-label="Dumb witness recording modes flowchart">
+ <defs><marker id="w3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker></defs>
+ <rect x="320" y="6" width="320" height="40" rx="9" fill="#1f4e5f"/><text x="480" y="31" fill="#fff" font-size="13.5" text-anchor="middle" font-weight="bold">WITNESS UNABLE TO SPEAK / COMMUNICATE VERBALLY</text>
+ <line x1="480" y1="46" x2="480" y2="72" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w3)"/>
+ <rect x="330" y="74" width="300" height="38" rx="9" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="98" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">Pre-checks: intelligence + understanding of oath (Darshan Singh)</text>
+ <line x1="480" y1="112" x2="480" y2="136" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w3)"/>
+ <rect x="350" y="138" width="260" height="36" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="161" fill="#7a5a12" font-size="12.5" text-anchor="middle" font-weight="bold">Can the witness read and write?</text>
+ <line x1="350" y1="156" x2="200" y2="196" stroke="#2e5e3a" stroke-width="2" marker-end="url(#w3)"/><text x="255" y="176" fill="#2e5e3a" font-size="11.5">YES (preferred)</text>
+ <line x1="610" y1="156" x2="760" y2="196" stroke="#8c2f39" stroke-width="2" marker-end="url(#w3)"/><text x="700" y="176" fill="#8c2f39" font-size="11.5">NO</text>
+ <rect x="50" y="198" width="300" height="62" rx="10" fill="#f2f7ea" stroke="#2e5e3a"/><text x="200" y="220" fill="#2e5e3a" font-size="12.5" text-anchor="middle" font-weight="bold">WRITING in open Court</text><text x="200" y="238" fill="#333" font-size="11.5" text-anchor="middle">questions in writing, answers in writing;</text><text x="200" y="253" fill="#333" font-size="11.5" text-anchor="middle">also the route for a vow-of-silence witness</text>
+ <rect x="610" y="198" width="300" height="62" rx="10" fill="#fbf0f1" stroke="#8c2f39"/><text x="760" y="220" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">SIGNS / GESTURES in open Court</text><text x="760" y="238" fill="#333" font-size="11.5" text-anchor="middle">with disinterested interpreter of same</text><text x="760" y="253" fill="#333" font-size="11.5" text-anchor="middle">surroundings, on oath; record the SIGNS</text>
+ <rect x="230" y="272" width="500" height="26" rx="8" fill="#fff" stroke="#1f4e5f"/><text x="480" y="290" fill="#1f4e5f" font-size="12" text-anchor="middle">Both routes: statement VIDEOGRAPHED (proviso); evidence DEEMED ORAL EVIDENCE</text>
+ <line x1="200" y1="260" x2="380" y2="272" stroke="#4a3f2a" stroke-width="1.4"/>
+ <line x1="760" y1="260" x2="580" y2="272" stroke="#4a3f2a" stroke-width="1.4"/>
+</svg>
+<figcaption>Fig. 2.1 &mdash; Choosing the mode of evidence under s. 125 BSA / s. 119 IEA.</figcaption>
+</figure>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Shop assault, deaf-mute eyewitness.</b> M, a deaf-and-mute shop assistant, witnesses a snatch-and-assault. She reads and writes Hindi fluently. Following <i>Darshan Singh</i>, the court first satisfies itself of her intelligence and that she understands the duty of truth; administers oath through a sign-language interpreter (a government-certified interpreter with no link to the parties, himself sworn); then puts questions <b>in writing</b> and records her answers <b>in writing in open court</b>, the whole proceeding being <b>videographed</b> per the s. 125 proviso. Her written deposition is <b>deemed oral evidence</b> and can found a conviction if credible &mdash; the disability goes to manner, not merit.</p>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 3 ================= -->
+<h2 class="unit" id="hostile"><span class="no">PART 3</span>Hostile Witness &mdash; s. 157 BSA / s. 154 IEA</h2>
+
+<h3 class="sec">3.1 The provision</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 157, BSA 2023</b> [= s. 154, IEA 1872] &mdash; &ldquo;Question by party to his own witness&rdquo;: &ldquo;(1) The Court may, <b>in its discretion</b>, permit the person who calls a witness to put any questions to him which might be put in <b>cross-examination by the adverse party</b>. (2) Nothing in this section shall <b>disentitle</b> the person so permitted under sub-section (1), to <b>rely on any part of the evidence</b> of such witness.&rdquo;</div>
+<p><b>Analysis (DU companion notes):</b> (i) the provision permits <b>only those questions</b> that could be asked in cross-examination; (ii) the law <b>nowhere requires a formal declaration</b> that the witness is &ldquo;hostile&rdquo; before the section is invoked; (iii) the request arises when the party examining feels the witness&rsquo;s present testimony is <b>against his duty to speak the truth</b> / contrary to what was collected in investigation. Only the <b>judge</b> may grant the permission, on the request of the examining party.</p>
+<p><b>Working definition (DU notes):</b> during a trial, when the prosecution calls a person to witness in its favour and such person, when called upon, <b>does not conform to his previous statement</b> collected during investigation, he is called a <b>hostile witness</b>; at common law, one who is <b>not desirous of telling the truth</b> at the instance of the party calling him, or who testifies for the opposing party / offers adverse testimony to the calling party during direct examination.</p>
+</div>
+
+<h3 class="sec">3.2 Why the Indian Act avoids the word &ldquo;hostile&rdquo; &mdash; Sat Pal v. Delhi Administration (30 Sept 1975, SC)</h3>
+<div class="box prov"><span class="lbl">Doctrine</span>
+<ol>
+<li><b>Origin:</b> the terms &ldquo;hostile witness&rdquo;, &ldquo;adverse witness&rdquo;, &ldquo;unfavourable witness&rdquo;, &ldquo;unwilling witness&rdquo; are all terms of <b>English law</b>.</li>
+<li><b>Relaxation:</b> the rigidity of the English rule prohibiting a party from discrediting or contradicting its own witness was relaxed by evolving &ldquo;hostile&rdquo; and &ldquo;unfavourable&rdquo; and drawing distinctions between them.</li>
+<li><b>Hostile witness:</b> one who is <b>not desirous of telling the truth</b> at the instance of the party calling him.</li>
+<li><b>Unfavourable witness:</b> one called by a party to prove a particular fact in issue or relevant to the issue who <b>fails to prove such fact, or proves an opposite fact</b>.</li>
+<li><b>Deliberate Indian silence:</b> to steer clear of the English controversy, the authors of the IEA <b>advisedly avoided</b> all these terms; in India the grant of permission to cross-examine one&rsquo;s own witness is <b>not conditional</b> on the witness being declared &ldquo;adverse&rdquo; or &ldquo;hostile&rdquo;. Whether under s. 142 (leading questions) or s. 154 (cross-questions), the Act <b>leaves the matter entirely to the discretion of the court</b>.</li>
+<li><b>Use of the discretion:</b> the discretion under s. 154 is <b>unqualified and untrammelled</b> and apart from any question of &ldquo;hostility&rdquo;; it is to be <b>liberally exercised</b> whenever the court &mdash; from the witness&rsquo;s <b>demeanour, temper, attitude, bearing</b>, or the <b>tenor and tendency of his answers</b>, or from a perusal of his <b>previous inconsistent statement</b>, or otherwise &mdash; thinks the grant <b>expedient to extract the truth and to do justice</b>. The grant is <b>not an adjudication on veracity</b>; therefore courts should <b>avoid expressions like &ldquo;declared hostile&rdquo;</b> in the order, with their &ldquo;historical cobwebs&hellip; misleading legacy of confusion&rdquo;.</li>
+</ol>
+</div>
+
+<h3 class="sec">3.3 Why witnesses turn hostile (DU companion notes)</h3>
+<div class="box rel"><span class="lbl">Context</span>
+<ul>
+<li>Absence of <b>witness protection</b>;</li>
+<li><b>Prolonged trials</b>;</li>
+<li>Easy <b>bail</b> of rich accused;</li>
+<li>Absence of adequate <b>facilities to witnesses</b> in courts;</li>
+<li>Use of <b>money and power</b> by the accused;</li>
+<li><b>Threats</b> by the accused;</li>
+<li>Other factors: <b>fear of police or of the legal system</b>, political fear, etc.</li>
+</ul>
+<p class="small"><b>Connected instrument:</b> the <b>Witness Protection Scheme, 2018</b> (formulated pursuant to the Supreme Court&rsquo;s directions in <i>Mahendra Chawla v. Union of India</i> and given statutory force through amendments/state adoption) &mdash; threat assessment, protection of identity, change of identity/relocation, in-camera proceedings &mdash; is the systemic answer to the first cause above; cite it wherever an exam question asks &ldquo;why do witnesses turn hostile and what is the remedy?&rdquo;</p>
+</div>
+
+<h3 class="sec">3.4 Evidentiary value of a hostile witness&rsquo;s testimony &mdash; s. 157(2) and Baldev Singh</h3>
+<div class="box prov"><span class="lbl">Rule</span>
+<p>Sub-section (2) of s. 157 BSA (s. 154(2) IEA) preserves the calling party&rsquo;s right to <b>rely on any part</b> of the witness&rsquo;s evidence. Consequences, per <b>Baldev Singh &amp; Ors. v. State of H.P.</b> (H.P. High Court, 29 April 2017), quoted in DU notes:</p>
+<div class="quote">&ldquo;It is settled that statement of hostile witnesses is <b>not to be brushed aside in toto</b> and Court can consider evidence of hostile witness to <b>corroborate other evidence on record</b>. It is also clearly well settled that <b>mere fact that a witness is declared hostile does not make him unreliable</b> witness so as to exclude his evidence from consideration altogether but the said evidence <b>remains admissible</b> in the trial and there is <b>no legal bar to base conviction or acquittal</b> upon testimony of hostile witness <b>if corroborated by other reliable evidence</b>.&rdquo;</div>
+<ul>
+<li>The testimony is therefore <b>sifted</b>: the part that supports the case may be used; the part that does not is discarded &mdash; &ldquo;the grain from the chaff&rdquo;.</li>
+<li>The court may also permit the party to <b>impeach the credit</b> of its own witness with the court&rsquo;s consent under <b>s. 158 BSA / s. 155 IEA</b> (unworthiness of credit, bribery, former inconsistent statements).</li>
+<li>Former inconsistent statements (e.g. the s. 183 BNSS / s. 161 CrPC police statement, or s. 180 BNSS statement) may be used to <b>contradict</b> him (BNSS s. 322 / CrPC s. 145 procedure).</li>
+</ul>
+</div>
+
+<h3 class="sec">3.5 The stage at which permission may be sought &mdash; the Laloo Prasad rule</h3>
+<div class="box prov"><span class="lbl">Rule</span>
+<p>Permission under s. 157(1)/154(1) may in law be sought <b>at any stage</b> of the examination (<i>Dahyabhai Chhaganbhai Thakkar v. State of Gujarat</i>, AIR 1964 SC 1563, as relied upon in <i>Laloo Prasad</i>), <b>but</b> the grant remains a <b>discretion</b>, and the discretion is ordinarily exercised against a request made <b>after cross-examination has closed</b> where the witness had already <b>resiled in the examination-in-chief itself</b>. The matrix distilled from <b>State of Bihar v. Laloo Prasad</b> (full brief in Part 5):</p>
+<table>
+<tr><th>Situation</th><th>Correct stage for the s. 157 application</th><th>Outcome if delayed</th></tr>
+<tr><td>Witness resiles from expected stand <b>in examination-in-chief</b></td><td><b>At the end of examination-in-chief</b>, before cross begins</td><td>Application after cross-examination over &rArr; refusal a valid exercise of discretion (Laloo Prasad)</td></tr>
+<tr><td>Witness keeps to expected stand in chief but <b>shows propensity to favour the adverse party in cross-examination</b></td><td>At the close of cross-examination</td><td>&ldquo;The party who called him has a <b>legitimate right</b> to put cross-questions&rdquo; &mdash; permission normally granted</td></tr>
+<tr><td>Permission refused; prosecutor does not own the testimony</td><td>&mdash;</td><td>Alternatives: (a) disown the witness <b>in final arguments</b>; (b) no need to recall merely for cross-questions (SC declined to treat recall as useful exercise)</td></tr>
+</table>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 340" width="940" role="img" aria-label="Hostile witness timing flowchart">
+ <defs><marker id="w4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker>
+ <marker id="w4r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8c2f39"/></marker></defs>
+ <rect x="340" y="6" width="280" height="38" rx="9" fill="#1f4e5f"/><text x="480" y="30" fill="#fff" font-size="13" text-anchor="middle" font-weight="bold">WITNESS CALLED BY A PARTY</text>
+ <line x1="480" y1="44" x2="480" y2="66" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w4)"/>
+ <rect x="300" y="68" width="360" height="40" rx="9" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="93" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">EXAMINATION-IN-CHIEF (s. 142(1) BSA)</text>
+ <line x1="300" y1="88" x2="150" y2="128" stroke="#8c2f39" stroke-width="2" marker-end="url(#w4r)"/><text x="200" y="108" fill="#8c2f39" font-size="11">resiles HERE</text>
+ <rect x="30" y="130" width="260" height="52" rx="9" fill="#fbf0f1" stroke="#8c2f39"/><text x="160" y="151" fill="#8c2f39" font-size="12" text-anchor="middle" font-weight="bold">Apply u/s 157(1) NOW</text><text x="160" y="169" fill="#333" font-size="11" text-anchor="middle">&ldquo;no good reason for declining&rdquo; (Laloo Prasad)</text>
+ <line x1="480" y1="108" x2="480" y2="130" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w4)"/>
+ <rect x="300" y="132" width="360" height="40" rx="9" fill="#fdf6e3" stroke="#b98a2f"/><text x="480" y="157" fill="#7a5a12" font-size="12.5" text-anchor="middle" font-weight="bold">CROSS-EXAMINATION by adverse party (s. 142(2))</text>
+ <line x1="660" y1="152" x2="790" y2="186" stroke="#8c2f39" stroke-width="2" marker-end="url(#w4r)"/><text x="735" y="168" fill="#8c2f39" font-size="11">turns favourable to defence HERE</text>
+ <rect x="670" y="188" width="270" height="52" rx="9" fill="#f2f7ea" stroke="#2e5e3a"/><text x="805" y="209" fill="#2e5e3a" font-size="12" text-anchor="middle" font-weight="bold">Apply u/s 157(1) at close of cross</text><text x="805" y="227" fill="#333" font-size="11" text-anchor="middle">legitimate right; normally granted</text>
+ <line x1="480" y1="172" x2="480" y2="196" stroke="#4a3f2a" stroke-width="2" marker-end="url(#w4)"/>
+ <rect x="300" y="198" width="360" height="40" rx="9" fill="#eef6f8" stroke="#1f4e5f"/><text x="480" y="223" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">RE-EXAMINATION (s. 142(3)) / close of evidence</text>
+ <line x1="480" y1="238" x2="480" y2="262" stroke="#8c2f39" stroke-width="2" marker-end="url(#w4r)"/><text x="560" y="254" fill="#8c2f39" font-size="11">belated application (resiled in chief)</text>
+ <rect x="230" y="264" width="500" height="60" rx="10" fill="#fff" stroke="#8c2f39"/><text x="480" y="286" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">DISCRETION MAY BE REFUSED &mdash; Laloo Prasad (2002) 9 SCC 626</text><text x="480" y="304" fill="#333" font-size="11.5" text-anchor="middle">Remedies left: disown in final arguments; rely on supporting parts (s. 157(2));</text><text x="480" y="318" fill="#333" font-size="11.5" text-anchor="middle">court&rsquo;s own power to recall (BNSS s. 348 / CrPC s. 311) is NOT the party&rsquo;s tool</text>
+</svg>
+<figcaption>Fig. 3.1 &mdash; When to move for cross-questions against one&rsquo;s own witness: the Laloo Prasad timing matrix.</figcaption>
+</figure>
+
+<h3 class="sec">3.6 Connected law around the hostile witness</h3>
+<div class="box rel"><span class="lbl">Connected Law</span>
+<ul>
+<li><b>BNSS s. 348 (= CrPC s. 311):</b> &ldquo;Any Court may, <b>at any stage</b> of any inquiry, trial or other proceeding&hellip; summon any person as a witness, or examine any person in attendance though not summoned&hellip; or <b>recall and re-examine any person already examined</b>; and the Court <b>shall</b> summon and examine or recall and re-examine any such person if his evidence appears to it to be <b>essential to the just decision of the case</b>.&rdquo; This is the <b>court&rsquo;s</b> truth-finding power &mdash; distinct from the party&rsquo;s s. 157 route; in <i>Laloo Prasad</i> the SC treated recall for cross-questions as an unnecessary exercise given the prosecutor&rsquo;s other options.</li>
+<li><b>Contradiction by former statements:</b> BNSS s. 322 (CrPC s. 145) &mdash; witness may be contradicted by his police/statement-in-writing; s. 160 BSA / s. 157 IEA &mdash; former statements to corroborate; s. 158 BSA / s. 155 IEA &mdash; impeachment of credit.</li>
+<li><b>False evidence (perjury) deterrence:</b> a witness who answers falsely after being denied contradiction may be charged with giving false evidence (s. 156 BSA / s. 153 IEA exception). Offences: <b>IPC ss. 191 (giving false evidence) &rarr; BNS s. 227; IPC s. 192 (fabricating) &rarr; BNS s. 228; IPC s. 193 (punishment) &rarr; BNS s. 229; IPC s. 194 (false evidence causing conviction of innocent) &rarr; BNS s. 230</b>; procedural gateway: CrPC s. 340 (complaint by court) with the corresponding BNSS provision.</li>
+<li><b>Oaths Act 1969 ss. 4&ndash;5, 7:</b> the sworn duty to speak truth underpins every stage; breach is perjury, not mere irregularity.</li>
+<li><b>Witness Protection Scheme 2018:</b> systemic cure for hostility caused by threats (see 3.3).</li>
+</ul>
+</div>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Theft trial, eyewitness won.</b> PW 1 gave a s. 180 BNSS (s. 161 CrPC) statement identifying T as the snatch-thief (IPC s. 379 &rarr; BNS s. 303). In court he says he &ldquo;cannot identify&rdquo;. If he says this <b>in examination-in-chief</b>, the prosecutor must move under s. 157(1) <b>then</b>; the court, seeing the prior inconsistent statement, will liberally permit cross-questions (Sat Pal). If instead he identifies T in chief but, in cross, admits &ldquo;I was not really there&rdquo;, the prosecutor&rsquo;s application <b>at the close of cross</b> is timely and legitimate (Laloo Prasad&rsquo;s second limb). If the prosecutor sleeps through both stages and applies only after re-examination, refusal is unimpeachable &mdash; his remedies are to <b>disown PW 1 in arguments</b> and to rely on any part still helpful (s. 157(2)), e.g. the admission that he saw T flee with the bag.</p>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 4 ================= -->
+<h2 class="unit" id="exam"><span class="no">PART 4</span>Examination, Cross-Examination &amp; Re-Examination &mdash; ss. 142&ndash;144 &amp; 158 BSA / ss. 137&ndash;139 &amp; 155 IEA</h2>
+
+<h3 class="sec">4.1 The three stages defined (s. 142 BSA / s. 137 IEA)</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 142, BSA 2023</b> [= s. 137 IEA]: &ldquo;(1) The examination of a witness <b>by the party who calls him</b> shall be called his <b>examination-in-chief</b>. (2) The examination of a witness <b>by the adverse party</b> shall be called his <b>cross-examination</b>. (3) The examination of a witness, <b>subsequent to the cross-examination, by the party who called him</b>, shall be called his <b>re-examination</b>.&rdquo;</div>
+<p><b>Objects (DU companion notes):</b></p>
+<ul>
+<li><b>Examination-in-chief:</b> to make the witness <b>depose to what he has been called to prove</b>; must be confined to <b>relevant facts</b>; <b>no leading questions</b> (a leading question is one which <b>suggests the answer</b>).</li>
+<li><b>Cross-examination:</b> to <b>impeach the accuracy, credibility and general value</b> of the evidence given in chief; to <b>sift the facts</b> already stated; to <b>detect and expose discrepancies</b>; and to <b>elicit suppressed facts</b> supporting the cross-examining party&rsquo;s case.</li>
+<li><b>Re-examination:</b> to give the calling party an opportunity of <b>filling in lacunae</b> or <b>explaining inconsistencies</b> which cross-examination has discovered in the examination-in-chief; hence limited to <b>explanation of matters referred to in cross-examination</b>.</li>
+</ul>
+</div>
+
+<h3 class="sec">4.2 Order and scope (s. 143 BSA / s. 138 IEA)</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 143, BSA 2023</b> [= s. 138 IEA]: &ldquo;(1) Witnesses shall be <b>first examined-in-chief</b>, then (if the adverse party so desires) <b>cross-examined</b>, then (if the party calling him so desires) <b>re-examined</b>. (2) The examination-in-chief and cross-examination must <b>relate to relevant facts</b>, but the <b>cross-examination need not be confined</b> to the facts to which the witness testified in his examination-in-chief. (3) The <b>re-examination shall be directed to the explanation of matters referred to in cross-examination</b>; and, if <b>new matter</b> is, by permission of the Court, introduced in re-examination, the adverse party may <b>further cross-examine</b> upon that matter.&rdquo;</div>
+<ul>
+<li><b>No cross without chief:</b> a witness cannot be cross-examined unless first examined-in-chief (DU notes: &ldquo;it cannot be so without examination-in-chief&rdquo;).</li>
+<li><b>Cross is the right of the adverse party</b>; a party cannot cross-examine his own witness <b>except</b> with the court&rsquo;s permission under s. 157 BSA / s. 154 IEA.</li>
+<li><b>Incomplete examination:</b> if the opposite party is unlawfully <b>denied the opportunity to cross-examine</b>, or the calling party is not allowed re-examination, the examination is treated as <b>incomplete</b> &mdash; and evidence not tested by cross-examination loses its probative force (DU companion notes).</li>
+<li><b>s. 144 BSA / s. 139 IEA:</b> a person summoned <b>merely to produce a document</b> does not become a witness by producing it and <b>cannot be cross-examined</b> unless and until he is called as a witness.</li>
+</ul>
+</div>
+
+<figure class="fig">
+<svg viewBox="0 0 960 380" width="940" role="img" aria-label="Examination cycle diagram">
+ <defs><marker id="w5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a3f2a"/></marker></defs>
+ <rect x="40" y="30" width="260" height="90" rx="12" fill="#eef6f8" stroke="#1f4e5f" stroke-width="2"/>
+ <text x="170" y="55" fill="#1f4e5f" font-size="14" text-anchor="middle" font-weight="bold">1. EXAMINATION-IN-CHIEF</text>
+ <text x="170" y="74" fill="#333" font-size="11.5" text-anchor="middle">by the party calling (s. 142(1))</text>
+ <text x="170" y="90" fill="#333" font-size="11.5" text-anchor="middle">scope: relevant facts only</text>
+ <text x="170" y="106" fill="#8c2f39" font-size="11.5" text-anchor="middle">leading questions barred (s. 146(2))</text>
+ <rect x="350" y="30" width="260" height="90" rx="12" fill="#fdf6e3" stroke="#b98a2f" stroke-width="2"/>
+ <text x="480" y="55" fill="#7a5a12" font-size="14" text-anchor="middle" font-weight="bold">2. CROSS-EXAMINATION</text>
+ <text x="480" y="74" fill="#333" font-size="11.5" text-anchor="middle">by the adverse party (s. 142(2))</text>
+ <text x="480" y="90" fill="#333" font-size="11.5" text-anchor="middle">scope: relevant facts + NOT confined</text>
+ <text x="480" y="106" fill="#333" font-size="11.5" text-anchor="middle">to chief; credit-testing (s. 149); leading allowed</text>
+ <rect x="660" y="30" width="260" height="90" rx="12" fill="#f2f7ea" stroke="#2e5e3a" stroke-width="2"/>
+ <text x="790" y="55" fill="#2e5e3a" font-size="14" text-anchor="middle" font-weight="bold">3. RE-EXAMINATION</text>
+ <text x="790" y="74" fill="#333" font-size="11.5" text-anchor="middle">by the calling party (s. 142(3))</text>
+ <text x="790" y="90" fill="#333" font-size="11.5" text-anchor="middle">scope: explanation of matters</text>
+ <text x="790" y="106" fill="#333" font-size="11.5" text-anchor="middle">referred to in cross only</text>
+ <line x1="300" y1="75" x2="348" y2="75" stroke="#4a3f2a" stroke-width="2.4" marker-end="url(#w5)"/>
+ <line x1="610" y1="75" x2="658" y2="75" stroke="#4a3f2a" stroke-width="2.4" marker-end="url(#w5)"/>
+ <path d="M 790 120 C 790 170, 480 170, 480 122" fill="none" stroke="#8c2f39" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#w5)"/>
+ <text x="640" y="160" fill="#8c2f39" font-size="11.5" text-anchor="middle">new matter introduced with court&rsquo;s permission &rArr; FURTHER CROSS-EXAMINATION (s. 143(3))</text>
+ <rect x="230" y="200" width="500" height="60" rx="10" fill="#fff" stroke="#1f4e5f"/>
+ <text x="480" y="222" fill="#1f4e5f" font-size="12.5" text-anchor="middle" font-weight="bold">Guards on cross-examination: s. 149 (lawful questions: veracity, identity/position,</text>
+ <text x="480" y="240" fill="#1f4e5f" font-size="12.5" text-anchor="middle">credit) &bull; ss. 154&ndash;155 (indecent/scandalous, insulting questions forbidden) &bull; s. 156</text>
+ <text x="480" y="256" fill="#1f4e5f" font-size="12.5" text-anchor="middle">(no contradiction on answers merely shaking credit, with two exceptions)</text>
+ <rect x="230" y="280" width="500" height="52" rx="10" fill="#fbf0f1" stroke="#8c2f39"/>
+ <text x="480" y="301" fill="#8c2f39" font-size="12.5" text-anchor="middle" font-weight="bold">If denial of cross-examination or of re-examination is unlawful &rArr; examination INCOMPLETE;</text>
+ <text x="480" y="319" fill="#333" font-size="11.5" text-anchor="middle">untested chief-evidence carries no probative weight (DU notes)</text>
+ <line x1="480" y1="260" x2="480" y2="278" stroke="#4a3f2a" stroke-width="1.6" marker-end="url(#w5)"/>
+ <text x="480" y="360" fill="#6d6152" font-size="12" text-anchor="middle" font-style="italic">Party&rsquo;s own cross-questions only via s. 157 BSA / s. 154 IEA (Part 3); court&rsquo;s recall power via BNSS s. 348 / CrPC s. 311.</text>
+</svg>
+<figcaption>Fig. 4.1 &mdash; The examination cycle with its scopes, guards and the further-cross feedback loop.</figcaption>
+</figure>
+
+<h3 class="sec">4.3 Leading questions (s. 146 BSA / ss. 142&ndash;143 IEA)</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 146, BSA 2023</b>: &ldquo;(1) Any question <b>suggesting the answer</b> which the person putting it wishes or expects to receive, is called a <b>leading question</b>. (2) Leading questions <b>must not</b>, if objected to by the adverse party, be asked in an <b>examination-in-chief, or in a re-examination</b>, except with the <b>permission of the Court</b>. (3) The Court <b>shall permit</b> leading questions as to matters which are <b>introductory or undisputed</b>, or which have, in its opinion, been <b>already sufficiently proved</b>. (4) Leading questions <b>may be asked in cross-examination</b>.&rdquo;</div>
+<p class="small">IEA counterparts: s. 142 (when leading questions must not be asked) and s. 143 (when they may be asked). Example of a leading question: &ldquo;Were you at the tea-shop at 6 p.m. on 2 March?&rdquo; (suggests the answer) vs the non-leading &ldquo;Where were you on the evening of 2 March?&rdquo;</p>
+</div>
+
+<h3 class="sec">4.4 Impeaching the credit of a witness (s. 158 BSA / s. 155 IEA)</h3>
+<div class="box prov"><span class="lbl">Statute</span>
+<div class="stat"><b class="h">s. 158, BSA 2023</b> [= s. 155 IEA]: &ldquo;The credit of a witness may be impeached in the following ways <b>by the adverse party, or, with the consent of the Court, by the party who calls him</b>: (a) by the evidence of persons who testify that they, from their knowledge of the witness, believe him to be <b>unworthy of credit</b>; (b) by proof that the witness has been <b>bribed</b>, or has accepted the offer of a bribe, or has received any other <b>corrupt inducement</b> to give his evidence; (c) by proof of <b>former statements inconsistent</b> with any part of his evidence which is liable to be contradicted. &mdash; <b>Explanation:</b> A witness declaring another witness to be unworthy of credit may not, upon his examination-in-chief, give reasons for his belief, but he may be asked his reasons in cross-examination, and the answers which he gives cannot be contradicted, though, if they are false, he may afterwards be charged with giving false evidence.&rdquo;</div>
+<ul>
+<li>Note the <b>consent route</b>: the calling party may impeach his own witness <b>with the court&rsquo;s consent</b> &mdash; a companion gateway to s. 157.</li>
+<li>Companion provisions: <b>s. 160 BSA / s. 157 IEA</b> (former statements to <b>corroborate</b> later testimony); <b>s. 159 BSA / s. 156 IEA</b> (questions tending to corroborate); <b>s. 156 BSA / s. 153 IEA</b> (exclusion of evidence to contradict answers testing veracity, with exceptions for previous conviction and impeachment of impartiality).</li>
+</ul>
+</div>
+
+<h3 class="sec">4.5 Forbidden questions &mdash; the courtroom guardrails</h3>
+<table>
+<tr><th>BSA 2023</th><th>IEA 1872</th><th>Guardrail</th></tr>
+<tr><td>s. 154</td><td>s. 151</td><td><b>Indecent and scandalous questions</b> forbidden (unless they relate to facts in issue or relevant to them)</td></tr>
+<tr><td>s. 155</td><td>s. 152</td><td>Questions <b>intended to insult or annoy</b>, or needlessly offensive in form, forbidden</td></tr>
+<tr><td>s. 156</td><td>s. 153</td><td>No evidence to <b>contradict answers</b> given to credit-shaking questions (exceptions: previous conviction; impeachment of impartiality)</td></tr>
+<tr><td>s. 150</td><td>s. 148</td><td>Court to decide when a credit-shaking question is <b>reasonable</b> (propriety rules: remoteness, triviality, prior admission etc.)</td></tr>
+</table>
+
+<div class="box exbox"><span class="lbl">Real Example</span>
+<p><b>Walk-through of one witness, three stages.</b> Prosecution calls E, an eye-witness to an assault (IPC s. 323/324 &rarr; BNS ss. 115/116). <b>Chief:</b> prosecutor asks open questions &mdash; &ldquo;What did you see at 9 p.m. near the gate?&rdquo; &mdash; no leading (s. 146(2)); defence objects if the prosecutor slips in &ldquo;You saw X strike the blow, didn&rsquo;t you?&rdquo;. <b>Cross:</b> defence may range beyond the chief &mdash; E&rsquo;s enmity with X, his presence at a liquor shop, his earlier s. 180 BNSS statement &mdash; because cross &ldquo;need not be confined&rdquo; (s. 143(2)); leading questions freely allowed (s. 146(4)); but &ldquo;Is it true you were sleeping with the complainant&rsquo;s wife?&rdquo; may be forbidden as insulting/needlessly offensive (s. 155). <b>Re-examination:</b> prosecutor may only <b>explain</b> cross-matters &mdash; e.g. why E was at the liquor shop (his shift ended there) &mdash; and if, with permission, E volunteers new matter (a fresh identification), the defence gets a <b>further cross</b> on it (s. 143(3)).</p>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 5 ================= -->
+<h2 class="unit" id="cases"><span class="no">PART 5</span>Case 28 in Full Brief &amp; Companion Cards</h2>
+
+<div class="casecard">
+<h4>Case 28 &mdash; State of Bihar v. Laloo Prasad</h4>
+<div class="cite">(2002) 9 SCC 626 &bull; Supreme Court of India &bull; K.T. Thomas &amp; S.N. Variava, JJ. &bull; appeal by special leave against the High Court&rsquo;s refusal to interfere &bull; IEA s. 154 (now BSA s. 157); CrPC trial procedure; CBI prosecution &bull; DU Case Material LB-201 (2025), pp. 176&ndash;177</div>
+
+<h5>Facts</h5>
+<ul>
+<li>In a criminal case prosecuted by the <b>CBI</b>, the <b>Public Prosecutor</b> examined <b>Baleshwar Choudhary (PW 39)</b> as a prosecution witness.</li>
+<li><b>Examination-in-chief:</b> PW 39 referred to a <b>document executed in 1993</b>, styling it a <b>sale deed</b>; and then stated that he had <b>received the consideration thereof in 1983</b> &mdash; i.e. ten years <b>before</b> the deed. &ldquo;The said last part of the chief examination is <b>obviously not in consonance with the prosecution case</b>.&rdquo;</li>
+<li>The Public Prosecutor <b>did not</b>, at that stage, seek the trial court&rsquo;s permission under <b>s. 154 IEA</b> to put to the witness questions which might be put in cross-examination by the adverse party. The examination therefore proceeded to <b>cross-examination by the adverse party</b>.</li>
+<li><b>Cross-examination:</b> in cross, the witness gave <b>further details of how he received the consideration</b> &mdash; elaboration in favour of the accused and against the State.</li>
+<li><b>After cross-examination was over</b>, the Public Prosecutor requested permission to <b>treat the witness as hostile</b> and to cross-examine him.</li>
+<li><b>Trial Judge:</b> declined, by order, to permit the Public Prosecutor to cross-examine the witness. <b>High Court:</b> on the CBI&rsquo;s challenge, <b>declined to interfere</b>. Hence the appeal by special leave.</li>
+</ul>
+
+<h5>Issues</h5>
+<ol>
+<li>Whether the party calling a witness may seek the court&rsquo;s permission under s. 154 IEA (s. 157 BSA) <b>at any stage</b> of the examination &mdash; including <b>after cross-examination has concluded</b>.</li>
+<li>Whether the trial Judge&rsquo;s refusal to exercise the s. 154 discretion in favour of the prosecution, on a request made after cross-examination, was an error warranting interference.</li>
+<li>Whether the witness should be <b>recalled</b> so that the prosecution may put cross-questions to him.</li>
+</ol>
+
+<h5>Argument for the Appellant (State / CBI)</h5>
+<ul>
+<li>Reliance on <b>Dahyabhai Chhaganbhai Thakkar v. State of Gujarat</b>, AIR 1964 SC 1563: it is open to the party who calls the witness to seek the permission of the court (as envisaged in s. 154 of the Evidence Act) <b>at any stage of the examination</b>.</li>
+<li>The witness&rsquo;s answers favoured the defence; the prosecution must therefore be armed with cross-questions to test him; refusal paralyses the prosecution and occasions miscarriage of justice.</li>
+</ul>
+
+<h5>Reasoning of the Supreme Court (respondent-side position upheld)</h5>
+<ul>
+<li><b>Discretion is the heart of s. 154:</b> &ldquo;Nonetheless, a <b>discretion has been vested with the court</b> whether to grant the permission or not. Normally when the Public Prosecutor requested for permission to put cross-questions to a witness called by him the court used to grant it.&rdquo;</li>
+<li><b>The missed window:</b> &ldquo;Here if the Public Prosecutor had sought permission <b>at the end of the chief examination itself</b> the trial court would have <b>no good reason for declining</b> the permission sought for. But the Public Prosecutor did not do so at that stage. That is precisely the reason why the trial Judge declined to exercise his discretion when the permission was sought for <b>after the cross-examination was over</b>.&rdquo;</li>
+<li><b>Nature of the cross-testimony:</b> &ldquo;The witness has said only the <b>details in cross-examination</b> regarding the matter which he said in the chief examination itself.&rdquo; There was thus no new resiling in cross.</li>
+<li><b>The contrasting situation (the rule stated):</b> &ldquo;It would have been a <b>different position</b> if the witness <b>stuck to his version</b> he was expected to say by the party who called the witness, in the examination-in-chief, but he <b>showed propensity to favour the adverse party only in cross-examination</b>. In such case the party who called him has a <b>legitimate right</b> to put cross-questions to the witness. But if he <b>resiled from his expected stand even in the chief examination</b> the permission to put cross-questions <b>should have been sought then</b>.&rdquo;</li>
+<li><b>No wholly wrong exercise of discretion:</b> &ldquo;In the above situation we are unable to hold that the trial Judge has gone <b>wholly wrong</b> in declining to exercise the discretion envisaged under Section 154&hellip; in favour of the appellant.&rdquo;</li>
+<li><b>Options still open to the prosecutor (and why recall is unnecessary):</b> &ldquo;If the Public Prosecutor is not prepared to <b>own the testimony</b> of the witness examined by him he can give expression of it in different forms. One of such forms is the one envisaged in Section 154&hellip; The very fact that he sought permission of the court soon after the end of the cross-examination was enough to indicate his <b>resolve not to own</b> all what the witness said in his evidence. It is again open to the Public Prosecutor to <b>tell the court during final consideration</b> that he is not inclined to own the evidence of any particular witness in spite of the fact the said witness was examined on his side. When such options are available to a Public Prosecutor, it is <b>not a useful exercise</b> for this Court to consider whether the witness shall again be <b>called back</b> for the purpose of putting cross-questions to him.&rdquo;</li>
+</ul>
+
+<h5>Decision</h5>
+<p><b>Appeal dismissed; no remedy granted to the State.</b> The trial Judge&rsquo;s refusal (and the High Court&rsquo;s non-interference) stood; the Supreme Court declined to direct recall of PW 39 for cross-questions.</p>
+
+<h5>Principle evolved</h5>
+<ol>
+<li>Permission under s. 154 IEA / s. 157 BSA may <b>in law</b> be sought at any stage (Dahyabhai), but its grant is <b>judicial discretion</b>, and the discretion is properly refused where the request is <b>belated</b> &mdash; made after cross-examination &mdash; in respect of a witness who had <b>already resiled in the examination-in-chief</b>.</li>
+<li><b>Timing rule of practice:</b> resiling in chief &rArr; apply at the end of chief; resiling first in cross &rArr; apply at the close of cross (legitimate right).</li>
+<li>A prosecutor who does not own a witness&rsquo;s testimony has <b>alternative expressions</b>: the s. 154 route at the proper time, or <b>disowning the witness in final arguments</b>; hence recall merely for cross-questions is not a necessary exercise.</li>
+<li>Appellate restraint: unless the trial court&rsquo;s discretionary order is <b>wholly wrong</b>, superior courts will not substitute their own discretion.</li>
+</ol>
+</div>
+
+<h3 class="sec">5.2 Companion case cards (DU notes, Ch. XV &amp; Ch. XIII)</h3>
+
+<div class="casecard">
+<h4>Sat Pal v. Delhi Administration</h4>
+<div class="cite">decided 30 September 1975, Supreme Court &bull; DU notes Ch. XV &mdash; the leading exposition of s. 154 IEA</div>
+<h5>Points (as briefed in DU notes)</h5>
+<ul>
+<li>The labels &ldquo;hostile&rdquo;, &ldquo;adverse&rdquo;, &ldquo;unfavourable&rdquo;, &ldquo;unwilling&rdquo; are <b>English-law imports</b>; the IEA deliberately avoids them.</li>
+<li><b>Hostile</b> = not desirous of telling the truth at the instance of the calling party; <b>unfavourable</b> = fails to prove the fact he was called to prove, or proves the opposite.</li>
+<li>Permission under s. 154 is <b>not conditional on a declaration of hostility</b>; the discretion is <b>unqualified and untrammelled</b>, to be <b>liberally exercised</b> from demeanour, temper, attitude, bearing, tenor/tendency of answers, or previous inconsistent statements, whenever expedient <b>to extract the truth and do justice</b>.</li>
+<li>The order granting permission is <b>not an adjudication of veracity</b>; avoid the phrase &ldquo;declared hostile&rdquo;.</li>
+</ul>
+</div>
+
+<div class="casecard">
+<h4>Baldev Singh &amp; Ors. v. State of Himachal Pradesh</h4>
+<div class="cite">Himachal Pradesh High Court, 29 April 2017 &bull; s. 154(2) IEA &mdash; evidentiary value of hostile witness &bull; DU notes Ch. XV</div>
+<h5>Points</h5>
+<ul>
+<li>Hostile witness&rsquo;s statement <b>not brushed aside in toto</b>; usable to <b>corroborate other evidence</b>.</li>
+<li>Declaration of hostility does <b>not</b> make the witness unreliable per se; evidence <b>remains admissible</b>; <b>no legal bar</b> to conviction or acquittal on it <b>if corroborated by other reliable evidence</b>.</li>
+</ul>
+</div>
+
+<div class="casecard">
+<h4>Dahyabhai Chhaganbhai Thakkar v. State of Gujarat</h4>
+<div class="cite">AIR 1964 SC 1563 &bull; cited in Laloo Prasad &bull; DU notes Ch. XV</div>
+<h5>Point relied upon</h5>
+<p>It is open to the party who calls a witness to seek s. 154 permission <b>at any stage of the examination</b> &mdash; the proposition the appellant pressed in Laloo Prasad; the 2002 judgment reads it as subject to the court&rsquo;s <b>discretion</b> and to the timing discipline explained above.</p>
+</div>
+
+<h3 class="sec">5.3 Quick-reference: which case for which proposition</h3>
+<table>
+<tr><th>Proposition</th><th>Case</th></tr>
+<tr><td>Competence = understanding + rational answers; voir dire liberty; no age rule</td><td>P Ramesh (2019); s. 124 BSA / 118 IEA</td></tr>
+<tr><td>Child&rsquo;s memory of abnormal events; delay immaterial</td><td>Krishna Master (2010)</td></tr>
+<tr><td>No corroboration as rule of law; prudence requires it; tutoring check</td><td>Dattu Ramrao Sakhare (1997)</td></tr>
+<tr><td>Prosecutrix not an accomplice; weight of an injured witness</td><td>Chandraprakash Kewalchand Jain (1990)</td></tr>
+<tr><td>Dumb witness: record of signs, not interpretation; interpreter safeguards; literacy preferred</td><td>Darshan Singh (2012)</td></tr>
+<tr><td>Signs/nods = verbal statement with evidentiary value; verbal &ne; oral</td><td>Meesala Ramakrishnan (1994)</td></tr>
+<tr><td>Vow of silence &rArr; s. 119 route, writing in open court</td><td>Lakhan Singh v. Emperor (1942)</td></tr>
+<tr><td>Discretion unqualified; avoid &ldquo;hostile&rdquo; labels; liberal exercise</td><td>Sat Pal (1975)</td></tr>
+<tr><td>Permission at any stage (subject to discretion)</td><td>Dahyabhai (1964)</td></tr>
+<tr><td>Timing discipline; belated request after cross properly refused; disown in arguments; no recall needed</td><td><b>Laloo Prasad (2002)</b></td></tr>
+<tr><td>Hostile testimony not discarded in toto; s. 154(2)/157(2) reliance</td><td>Baldev Singh (2017)</td></tr>
+</table>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 6 ================= -->
+<h2 class="unit" id="pyq"><span class="no">PART 6</span>DU PYQs &amp; Best Model Answers</h2>
+
+<div class="box pyq"><span class="lbl">PYQ Audit &mdash; LL.B. II Term, Law of Evidence, May&ndash;June 2024 (Code 7953)</span>
+<p>The full paper (8 questions &times; 20 marks, attempt any 5) was audited from the scanned copy in the project files:</p>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Bears on Topic V?</th></tr>
+<tr><td>1</td><td>Relevancy of facts (inducement to break contract; alibi railway ticket)</td><td>No</td></tr>
+<tr><td>2</td><td>Conspiracy &mdash; letters before/after common intention (s. 8/10 IEA)</td><td>No</td></tr>
+<tr><td>3</td><td>Custodial statement &amp; recovery (s. 27 IEA / s. 24 BSA)</td><td>No</td></tr>
+<tr><td>4</td><td>Dying declaration (sole basis; incomplete sentence)</td><td>No</td></tr>
+<tr><td>5</td><td>Estoppel (university admission)</td><td>No</td></tr>
+<tr><td>6</td><td>Privileged communications (marital; client&ndash;attorney)</td><td>No</td></tr>
+<tr><td>7</td><td>Accomplice corroboration (Unit IV)</td><td>No</td></tr>
+<tr><td>8</td><td>Presumption of legitimacy (s. 112 IEA)</td><td>No</td></tr>
+</table>
+<p><b>Honest finding:</b> the May&ndash;June 2024 paper contains <b>no question directly on Topic V</b>. DU&rsquo;s pattern, however, tests this unit through <b>short notes</b> (&ldquo;child witness&rdquo;, &ldquo;hostile witness&rdquo;, &ldquo;leading questions&rdquo;), <b>problem questions</b> on competence and on s. 154 timing, and <b>essays</b> on the examination cycle. The model answers below are framed exactly on that pattern and on the DU case material.</p>
+</div>
+
+<div class="box pyq"><span class="lbl">Model Q 1 (Essay, 20 marks &mdash; pattern-based)</span>
+<p><b>Q.</b> &ldquo;All persons shall be competent to testify&rdquo; &mdash; discuss the competence of a <b>child witness</b> under s. 124 BSA (s. 118 IEA) and the Oaths Act 1969, and evaluate the evidentiary value of a child&rsquo;s testimony with reference to decided cases.</p>
+<div class="ans"><h6>Best Model Answer</h6>
+<p><b>1. Statutory foundation.</b> Section 124 BSA (s. 118 IEA) enacts the presumption of universal competence: all persons are competent unless the Court considers them prevented &mdash; by <b>tender years</b>, extreme old age, disease of body or mind, or any other like cause &mdash; from <b>understanding the questions</b> put to them or from <b>giving rational answers</b>. Incompetence is thus <b>functional, never status-based</b>: no person, not even a lunatic (Explanation: unsound mind), is absolutely incompetent; a lunatic testifies in lucid intervals. &ldquo;Witnesses are the eyes and ears of justice&rdquo; (Bentham), but the eyes and ears must be fit and working.</p>
+<p><b>2. The child-witness test.</b> The Act fixes <b>no age limit</b>. In <b>P Ramesh v. State</b> (2019) the Supreme Court held that competency is decided by the judge forming her/his own opinion through preliminary questioning &mdash; no precise rule of intelligence can be laid down &mdash; and stated the two limbs: the child must (i) <b>understand the questions put as a witness</b>, and (ii) <b>give answers that can be understood</b>; a child is incompetent only if unable to answer in a <b>coherent and comprehensible</b> manner. &ldquo;A child has to be a competent witness first, only then is her/his statement admissible.&rdquo;</p>
+<p><b>3. The Oaths Act interface.</b> Section 4(1), Oaths Act 1969 requires oaths of all witnesses, but the proviso dispenses with oath for a <b>child under twelve</b> who understands the <b>duty of speaking the truth</b> though not the <b>nature of an oath</b>; and &ldquo;the absence of an oath&hellip; shall not render inadmissible any evidence given by such witness nor affect the obligation of the witness to state the truth&rdquo; (see also s. 7: irregularity in oath &ne; inadmissibility). Oath goes to <b>weight</b>, competence to <b>admissibility</b>.</p>
+<p><b>4. Evidentiary value.</b> In <b>Dattu Ramrao Sakhare v. State of Maharashtra</b> (1997) the Court held a child&rsquo;s evidence <b>can be the basis of conviction</b> even without oath, provided the understanding/rational-answer test is met; credibility depends on the circumstances; the precautions are <b>reliability, natural demeanour, absence of tutoring</b>; corroboration is <b>not a rule of law but a rule of prudence</b>. In <b>State of U.P. v. Krishna Master</b> (2010) a six-year-old&rsquo;s account of the gruesome murder of his parents was accepted despite a <b>ten-year gap</b>: a child of tender years is &ldquo;always receptive to abnormal events&rdquo; and never forgets them; to doubt his recapitulation would be &ldquo;injustice to a child witness possessing sharp memory&rdquo;; and a six-year-old is naturally at home at dead of night.</p>
+<p><b>5. Special positions.</b> A child who is a <b>victim</b> (prosecutrix) stands higher: she is not equated with an accomplice and her evidence carries the weight of an <b>injured witness</b> (<b>State of Maharashtra v. Chandraprakash Kewalchand Jain</b>, 1990). A <b>dumb child</b> is governed by ss. 124 and 125 together.</p>
+<p><b>6. Conclusion.</b> Competence is a capacity question answered by voir dire; admissibility survives absence of oath; conviction on sole child testimony is lawful but prudence seeks dependable corroboration; tutoring is the fatal vice to exclude.</p>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Model Q 2 (Short note / problem, 10 marks)</span>
+<p><b>Q.</b> A deaf-and-dumb eye-witness cannot read or write. How may her evidence be recorded? State the safeguards. What is the effect of s. 125 BSA deeming such evidence &ldquo;oral&rdquo;?</p>
+<div class="ans"><h6>Best Model Answer (points)</h6>
+<ul>
+<li><b>Competence first:</b> s. 124 BSA/118 IEA &mdash; the disability of speech does not affect understanding or rational answering; the court must first satisfy itself of her <b>intelligence</b> and that she <b>understands the nature of an oath</b> (<b>Darshan Singh</b>, 2012).</li>
+<li><b>Manner:</b> s. 125 BSA/119 IEA &mdash; evidence &ldquo;in any other manner in which he can make it intelligible, as by writing or by signs&rdquo;; writing/signs must be made <b>in open Court</b> (CrPC s. 327). Since she cannot read or write, the <b>sign-language route</b> applies, with an <b>interpreter</b> &mdash; a person of the same surroundings, <b>disinterested</b>, himself <b>on oath</b>; oath may be administered to her by appropriate means through the interpreter.</li>
+<li><b>Post-2013 proviso:</b> assistance of an <b>interpreter or special educator</b> is mandatory and the statement <b>shall be videographed</b>.</li>
+<li><b>Record of signs, not interpretation:</b> the record must preserve <b>her signs</b>; the interpreter&rsquo;s gloss is not the evidence (Darshan Singh). Signs/nods possess <b>evidentiary value</b> and a statement by signs can be a <b>verbal statement</b> (e.g. dying declaration by nods: <b>Meesala Ramakrishnan</b>, 1994 &mdash; &ldquo;verbal&rdquo; &ne; &ldquo;oral&rdquo;).</li>
+<li><b>Deeming fiction:</b> evidence so given is <b>deemed oral evidence</b> &mdash; it satisfies the oral-evidence provisions (ss. 56&ndash;57, 88&ndash;89 BSA; ss. 59&ndash;60, 91&ndash;92 IEA) and can found a conviction like any spoken testimony (Geeta PW 16 in Darshan Singh was the sole eye-witness).</li>
+<li><b>Vow of silence analogy:</b> a witness under a religious vow of silence is within the same section and may depose in writing without breaking the vow (<b>Lakhan Singh v. Emperor</b>, 1942).</li>
+</ul>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Model Q 3 (Essay, 20 marks &mdash; pattern-based)</span>
+<p><b>Q.</b> What is a hostile witness? Discuss s. 157 BSA (s. 154 IEA), the scope of the court&rsquo;s discretion, the evidentiary value of a hostile witness&rsquo;s testimony, and the stage at which permission should be sought, with reference to Sat Pal, Baldev Singh and State of Bihar v. Laloo Prasad.</p>
+<div class="ans"><h6>Best Model Answer</h6>
+<p><b>1. Concept and statute.</b> A hostile witness, at common law, is one <b>not desirous of telling the truth</b> at the instance of the party calling him; an &ldquo;unfavourable&rdquo; witness fails to prove the fact he was called to prove or proves the opposite (<b>Sat Pal v. Delhi Administration</b>, 1975). Indian law avoids both labels: <b>s. 157(1) BSA (s. 154(1) IEA)</b> simply empowers the Court, <b>in its discretion</b>, to permit the party calling a witness to put to him <b>any questions which might be put in cross-examination by the adverse party</b>; and <b>s. 157(2)</b> preserves that party&rsquo;s right to <b>rely on any part</b> of the witness&rsquo;s evidence. No formal &ldquo;declaration of hostility&rdquo; is a precondition.</p>
+<p><b>2. The discretion.</b> Per Sat Pal it is <b>unqualified and untrammelled</b>, independent of any finding of hostility, and to be <b>liberally exercised</b> where the witness&rsquo;s demeanour, temper, attitude, bearing, the tenor and tendency of his answers, or a previous inconsistent statement, show that cross-questions are <b>expedient to extract the truth and do justice</b>; the order should avoid the phrase &ldquo;declared hostile&rdquo; because granting permission is <b>not an adjudication on veracity</b>.</p>
+<p><b>3. Value of the testimony.</b> The testimony is not wiped out: s. 157(2) allows reliance on any part; <b>Baldev Singh v. State of H.P.</b> (2017) confirms it is <b>not to be brushed aside in toto</b>, may corroborate other evidence, and &mdash; if corroborated by reliable evidence &mdash; may even found a conviction or acquittal. The court <b>sifts</b> the supporting grain from the hostile chaff; impeachment of credit is available with consent under s. 158 BSA (s. 155 IEA).</p>
+<p><b>4. Stage of the application &mdash; Laloo Prasad.</b> In <b>State of Bihar v. Laloo Prasad</b>, (2002) 9 SCC 626, PW 39 had resiled <b>in examination-in-chief</b> (sale deed of 1993 with consideration received in 1983); the prosecutor let cross-examination proceed and applied under s. 154 only <b>after it closed</b>. The Supreme Court (K.T. Thomas &amp; S.N. Variava JJ.) upheld the trial Judge&rsquo;s refusal: permission sought <b>at the end of chief</b> would have met &ldquo;no good reason for declining&rdquo;; but where the witness resiled in chief the application <b>should have been made then</b>. Conversely, where the witness keeps his chief version and <b>first favours the adverse party in cross</b>, the calling party has a <b>legitimate right</b> to cross-questions at the close of cross. The prosecutor&rsquo;s residual tools &mdash; <b>disowning the witness in final arguments</b> and relying on helpful parts &mdash; made recall for cross-questions an unnecessary exercise; appeal dismissed.</p>
+<p><b>5. Why witnesses turn hostile &amp; systemic cure.</b> Absence of witness protection, protracted trials, threats, money and power of the accused, fear of police/courts (DU notes) &mdash; addressed today by the <b>Witness Protection Scheme 2018</b>; deterrence by perjury law (IPC ss. 191&ndash;193 &rarr; BNS ss. 227&ndash;229).</p>
+<p><b>6. Conclusion.</b> Section 157 is a truth-extraction device governed by disciplined timing and untrammelled but reviewable discretion; hostility qualifies weight and mode of testing, never admissibility.</p>
+</div>
+</div>
+
+<div class="box pyq"><span class="lbl">Model Q 4 (Problem, 10 marks)</span>
+<p><b>Q.</b> In a murder trial, PW 2 in his examination-in-chief states that he saw nothing. The prosecutor, taken by surprise, says nothing. The defence cross-examines PW 2, who then admits he was present but &ldquo;cannot say who struck&rdquo;. After re-examination the prosecutor applies under s. 157(1) BSA to cross-examine PW 2. The trial judge refuses. Advise the prosecutor, citing Laloo Prasad. Would your answer change if PW 2 had identified the accused in chief but retracted only in cross?</p>
+<div class="ans"><h6>Best Model Answer (points)</h6>
+<ul>
+<li><b>First limb (as facts stand):</b> PW 2 <b>resiled in chief</b> (&ldquo;saw nothing&rdquo; against his s. 180 BNSS statement). Per <b>Laloo Prasad</b>, the application &ldquo;should have been sought then&rdquo; &mdash; at the end of chief. The post-re-examination application is <b>belated</b>; refusal is a valid exercise of discretion, not &ldquo;wholly wrong&rdquo;; no appellate interference.</li>
+<li><b>Residual remedies:</b> (i) <b>disown PW 2 in final arguments</b>; (ii) rely on any part still helpful, e.g. the admission of <b>presence</b> (s. 157(2)); (iii) contradict him by his former statement (BNSS s. 322 / CrPC s. 145 procedure) and impeach credit with consent (s. 158 BSA); (iv) the <b>court&rsquo;s own</b> power under BNSS s. 348 (CrPC s. 311) to recall if essential to a just decision &mdash; but that is the court&rsquo;s tool, not the party&rsquo;s.</li>
+<li><b>Variant:</b> if PW 2 had <b>identified the accused in chief</b> and retracted <b>only in cross</b>, the prosecutor&rsquo;s application at the <b>close of cross-examination</b> is timely and his right is <b>legitimate</b> (Laloo Prasad, second limb); refusal in that situation would be an improper fetter on the discretion and open to challenge.</li>
+<li><b>Practice note:</b> move under s. 157(1) the moment the witness resiles; the order need not label him &ldquo;hostile&rdquo; (Sat Pal).</li>
+</ul>
+</div>
+</div>
+
+</div><!-- /wrap -->
+<!--CONT-->
+<div class="wrap">
+
+<!-- ================= PART 7 ================= -->
+<h2 class="unit" id="revision"><span class="no">PART 7</span>Rapid Revision</h2>
+
+<h3 class="sec">7.1 One-page master table</h3>
+<table>
+<tr><th>Point</th><th>Rule in one line</th><th>Source</th></tr>
+<tr><td>Competence</td><td>All persons competent; exception only where prevented from understanding questions / rational answers (tender years, old age, disease, like cause); unsound mind competent in lucidity</td><td>s. 124 BSA / 118 IEA</td></tr>
+<tr><td>Child test</td><td>Understands questions + intelligible, rational answers; judge&rsquo;s voir dire; no age rule</td><td>P Ramesh (2019)</td></tr>
+<tr><td>Child &amp; oath</td><td>Under 12 not understanding nature of oath &rarr; no oath; evidence admissible; duty of truth remains</td><td>Oaths Act s. 4(1) proviso; s. 7</td></tr>
+<tr><td>Child &amp; corroboration</td><td>Not legally required; desirable as prudence; check tutoring, demeanour, reliability</td><td>Dattu Ramrao (1997)</td></tr>
+<tr><td>Child &amp; memory</td><td>Abnormal events indelible; long delay immaterial</td><td>Krishna Master (2010)</td></tr>
+<tr><td>Dumb witness modes</td><td>Writing or signs in open Court; deemed oral evidence; writing preferred if literate; record of signs not interpretation</td><td>s. 125 BSA / 119 IEA; Darshan Singh (2012)</td></tr>
+<tr><td>Dumb witness safeguards</td><td>Pre-check intelligence + oath-understanding; disinterested interpreter on oath; videography (post-2013 proviso)</td><td>Darshan Singh; 2013 amendment</td></tr>
+<tr><td>Signs have value</td><td>Nods/gestures = verbal statement, admissible &amp; probative; verbal &ne; oral</td><td>Meesala Ramakrishnan (1994)</td></tr>
+<tr><td>Vow of silence</td><td>Within s. 125/119; depose in writing in open court</td><td>Lakhan Singh (1942)</td></tr>
+<tr><td>Hostile &mdash; provision</td><td>Court&rsquo;s discretion to permit own cross-questions; right to rely on any part preserved</td><td>s. 157 BSA / 154 IEA</td></tr>
+<tr><td>Hostile &mdash; discretion</td><td>Unqualified, untrammelled, liberal; no &ldquo;hostile&rdquo; label needed; not an adjudication of veracity</td><td>Sat Pal (1975)</td></tr>
+<tr><td>Hostile &mdash; value</td><td>Not discarded in toto; usable to corroborate; conviction possible if corroborated</td><td>s. 157(2); Baldev Singh (2017)</td></tr>
+<tr><td>Hostile &mdash; timing</td><td>Resile in chief &rArr; apply at end of chief; resile in cross &rArr; apply at close of cross; belated &rArr; refusal valid; disown in arguments; no recall needed</td><td><b>Laloo Prasad (2002) 9 SCC 626</b></td></tr>
+<tr><td>Three examinations</td><td>Chief (calling party) &rarr; cross (adverse party) &rarr; re (calling party)</td><td>s. 142 BSA / 137 IEA</td></tr>
+<tr><td>Order &amp; scope</td><td>Chief &amp; cross on relevant facts; cross not confined to chief; re only to explain cross-matters; new matter in re &rArr; further cross</td><td>s. 143 BSA / 138 IEA</td></tr>
+<tr><td>Document producer</td><td>Mere production &ne; witness; no cross unless called</td><td>s. 144 BSA / 139 IEA</td></tr>
+<tr><td>Leading questions</td><td>Suggest the answer; barred in chief/re on objection; permitted on introductory/undisputed/proved matters; free in cross</td><td>s. 146 BSA / 142&ndash;143 IEA</td></tr>
+<tr><td>Impeach credit</td><td>Three modes; calling party needs court&rsquo;s consent</td><td>s. 158 BSA / 155 IEA</td></tr>
+<tr><td>Forbidden questions</td><td>Indecent/scandalous (154/151); insulting/annoying (155/152); no contradiction of credit answers save exceptions (156/153)</td><td>BSA / IEA pairs</td></tr>
+<tr><td>Recall power</td><td>Court may summon/recall/re-examine at any stage if essential to just decision</td><td>BNSS s. 348 / CrPC s. 311</td></tr>
+</table>
+
+<h3 class="sec">7.2 Mnemonics</h3>
+<ul>
+<li><b>&ldquo;U-R-A&rdquo;</b> for competence: <b>U</b>nderstands questions &rarr; <b>R</b>ational answers &rarr; <b>A</b>ll persons presumed competent.</li>
+<li><b>&ldquo;C-O-D-E&rdquo;</b> for child witness: <b>C</b>apacity not age; <b>O</b>ath dispensable (&lt;12); <b>D</b>emeanour &amp; no tutoring; <b>E</b>vidence may convict (prudence: corroborate).</li>
+<li><b>&ldquo;W-S-V&rdquo;</b> for dumb witness: <b>W</b>riting preferred; <b>S</b>igns in open court (record of signs); <b>V</b>ideograph + interpreter (proviso).</li>
+<li><b>&ldquo;H-T-V&rdquo;</b> for hostile witness: <b>H</b>ostility not required as label; <b>T</b>iming of application decisive (Laloo Prasad); <b>V</b>alue survives in parts (s. 157(2), Baldev Singh).</li>
+<li><b>&ldquo;C-X-R&rdquo;</b> cycle: <b>C</b>hief (own party, no leading) &rarr; <b>X</b> (cross: wide, leading ok, credit-testing) &rarr; <b>R</b>e (explanation only; new matter &rArr; further X).</li>
+</ul>
+
+<h3 class="sec">7.3 Examiner&rsquo;s traps</h3>
+<div class="box warn"><span class="lbl">Traps</span>
+<ol>
+<li><b>&ldquo;A child&rsquo;s evidence is inadmissible without oath&rdquo;</b> &mdash; FALSE: Oaths Act proviso preserves admissibility; absence of oath affects weight only.</li>
+<li><b>&ldquo;Corroboration of a child witness is mandatory&rdquo;</b> &mdash; FALSE: rule of prudence, not law (Dattu Ramrao).</li>
+<li><b>&ldquo;A dumb witness&rsquo;s signs are not oral evidence&rdquo;</b> &mdash; FALSE: s. 125/119 <b>deems</b> them oral evidence; and per Meesala, verbal &ne; oral.</li>
+<li><b>&ldquo;Interpreter&rsquo;s translation is the evidence&rdquo;</b> &mdash; FALSE: there must be a <b>record of signs</b>, not the interpretation (Darshan Singh).</li>
+<li><b>&ldquo;A hostile witness&rsquo;s evidence is wiped out&rdquo;</b> &mdash; FALSE: s. 157(2)/154(2); Baldev Singh &mdash; sift, don&rsquo;t discard.</li>
+<li><b>&ldquo;Permission under s. 157 can never be refused&rdquo; / &ldquo;can be sought whenever convenient&rdquo;</b> &mdash; BOTH WRONG: discretion is real; Laloo Prasad disciplines the timing.</li>
+<li><b>&ldquo;Declaring a witness hostile is a precondition of s. 157&rdquo;</b> &mdash; FALSE: no declaration required; Sat Pal discourages the label.</li>
+<li><b>&ldquo;Re-examination can add new proof of the case&rdquo;</b> &mdash; FALSE: explanation of cross-matters only; new matter needs permission and triggers further cross (s. 143(3)).</li>
+<li><b>&ldquo;A document-producer can be cross-examined&rdquo;</b> &mdash; FALSE unless called as a witness (s. 144 BSA / 139 IEA).</li>
+<li><b>&ldquo;Leading questions are illegal in cross-examination&rdquo;</b> &mdash; FALSE: they are the native currency of cross (s. 146(4)).</li>
+</ol>
+</div>
+
+<h3 class="sec">7.4 Answer-writing blueprint (20-mark witness question)</h3>
+<ol>
+<li><b>Provision</b> verbatim (BSA number first, IEA in brackets) + its place in the Act.</li>
+<li><b>Concept &amp; elements</b> in bullets (tests, modes, discretion).</li>
+<li><b>Connected law</b> at the point: Oaths Act 1969; BNSS s. 348/CrPC 311; CrPC 327; Witness Protection Scheme 2018; IPC/BNS perjury mapping; leading/forbidden-question sections.</li>
+<li><b>Case law</b> &mdash; DU-prescribed case in full brief form; companions in one line each.</li>
+<li><b>Rule of law vs rule of prudence / discretion vs right</b> &mdash; the analytical hinge examiners reward.</li>
+<li><b>Example or diagram</b> &mdash; one compact illustration or a flow sentence-chain.</li>
+<li><b>Conclusion</b> &mdash; restate the balance (admissibility vs weight; competence vs credibility; discretion vs discipline).</li>
+</ol>
+
+<p class="small" style="margin-top:26px;border-top:1px solid var(--line);padding-top:14px;">Compilation note: prepared strictly on the uploaded DU materials &mdash; Case Material LB-201 (2025 ed., pp. 176&ndash;177: <i>State of Bihar v. Laloo Prasad</i>), DU LB-201 lecture notes Ch. XIII (ss. 118&ndash;123 &mdash; competence, child &amp; dumb witnesses, Oaths Act 1969, Krishna Master, Dattu Ramrao, P Ramesh, Chandraprakash, Darshan Singh, Meesala Ramakrishnan) and Ch. XV (hostile witness, Sat Pal, Baldev Singh, Laloo Prasad, ss. 137&ndash;139/154), companion DU notes Topic 5 (hostile witness &amp; examination ss. 137&ndash;139, 154&ndash;155), bare BSA 2023 &amp; IEA 1872 texts, DU LL.B. II Term May&ndash;June 2024 paper (full 8-question audit), and connected instruments (Oaths Act 1969; BNSS s. 348 = CrPC s. 311; CrPC s. 327; Witness Protection Scheme 2018; IPC ss. 191&ndash;194 &rarr; BNS ss. 227&ndash;230). Forward reference: <i>Goutam Kundu v. State of West Bengal</i> (next in the case material) belongs to the presumptions unit and is not covered here.</p>
+
+</div><!-- /wrap -->
+
+<footer>
+  <b>LAW OF EVIDENCE &mdash; UNIT V: WITNESSES, COMPETENCE AND EXAMINATION</b> &bull; DU LL.B./B.A. LL.B. (Hons.) Examination Notes<br>
+  BSA ss. 124, 125, 157, 142&ndash;144, 158 &bull; IEA ss. 118, 119, 154, 137&ndash;139, 155 &bull; Oaths Act 1969 &bull; BNSS s. 348 &bull; State of Bihar v. Laloo Prasad (2002) 9 SCC 626<br>
+  <span class="small">Compiled from DU Case Material LB-201 (2025), DU lecture notes and prescribed bare Acts. For academic study use.</span>
+</footer>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3a59f8dce9a17d7',t:'MTc4OTI4NjQ3OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
