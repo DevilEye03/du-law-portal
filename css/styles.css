@@ -1366,6 +1366,7 @@ button{font-family:inherit;cursor:pointer}
   color:var(--du-gold);letter-spacing:.1em;text-transform:uppercase}
 .footer-text{font-size:.82rem;color:rgba(255,255,255,.5);max-width:680px;}
 .footer-credits{font-size:.74rem;color:rgba(255,255,255,.28)}
+.footer-team{font-family:var(--font-display);font-size:.85rem;font-weight:600;color:var(--du-gold);letter-spacing:.08em;text-transform:uppercase;margin-top:2px}
 .footer-legal-links{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:4px 0 2px;font-size:.82rem}
 .footer-legal-links a{color:#93c5fd;text-decoration:none;font-weight:500;transition:color .2s}
 .footer-legal-links a:hover{color:#fff;text-decoration:underline}
