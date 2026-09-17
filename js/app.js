@@ -1694,8 +1694,8 @@
   // 4. EMBEDDED FULL NOTES READER MODAL (Print PDF removed)
   // =========================================================================
   function openReader(fileUrl, title, subInfo) {
-    elements.readerTitle.textContent = title || 'Comprehensive DU Study Notes';
-    elements.readerSubInfo.textContent = subInfo || 'Faculty of Law, University of Delhi';
+    elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
+    elements.readerSubInfo.textContent = subInfo || 'Make Law Easy';
     elements.readerIframe.src = fileUrl;
     elements.readerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -2590,7 +2590,7 @@
             '<div class="rubric-cell"><div class="rubric-label">Logical Reasoning &amp; Conclusion</div><div class="rubric-pts">4 Marks</div></div>' +
           '</div>' +
           '<div style="background:var(--bg-tint);padding:16px;border-radius:8px;font-size:0.9rem;line-height:1.6;">' +
-            '<h4 style="margin:0 0 10px;color:var(--primary);"><i class="fa-solid fa-award"></i> DU Faculty Model Answer:</h4>' +
+            '<h4 style="margin:0 0 10px;color:var(--primary);"><i class="fa-solid fa-award"></i> Comprehensive Model Answer:</h4>' +
             (q.modelAnswer ? renderMarkdown(q.modelAnswer) : (q.answer ? q.answer : '<p>Consult the primary unit notes for detailed case ratios.</p>')) +
           '</div>' +
         '</div>' +

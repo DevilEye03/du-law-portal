@@ -3,8 +3,8 @@
 // Comprehensive coverage across LL.B. syllabus
 
 window.DU_LAW_PORTAL_DATA = {
-  "portalName": "Delhi University Law Notes Portal",
-  "faculty": "Faculty of Law, University of Delhi",
+  "portalName": "Make Law Easy",
+  "faculty": "Make Law Easy",
   "programme": "LL.B. Three-Year Degree Course",
   "currentYear": "Academic Session 2025–2026",
   "semesters": [
@@ -5253,7 +5253,7 @@ window.DU_LAW_PORTAL_DATA = {
         {
           "id": "pyq-bns-2-1",
           "number": "Q1",
-          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.2(a) · DU Faculty of Law",
+          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.2(a)",
           "question": "What are the circumstances wherein the right of private defence of body extends to voluntarily causing death?",
           "unit": "Unit 2: General Exceptions (BNS §§ 14–44 ↔ IPC §§ 76–106)",
           "unitNumber": 2,
@@ -5264,7 +5264,7 @@ window.DU_LAW_PORTAL_DATA = {
         {
           "id": "pyq-bns-2-2",
           "number": "Q2",
-          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.3(b) · DU Faculty of Law",
+          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.3(b)",
           "question": "A is attacked by Z, a person of unsound mind, who has a spear in his hand. In order to protect himself, A strikes Z with a stick on his head, resulting in his death. During trial A pleads the right of private defence. Decide with the help of the relevant legislative provision.",
           "unit": "Unit 2: General Exceptions (BNS §§ 14–44 ↔ IPC §§ 76–106)",
           "unitNumber": 2,
@@ -5275,7 +5275,7 @@ window.DU_LAW_PORTAL_DATA = {
         {
           "id": "pyq-bns-2-3",
           "number": "Q3",
-          "marks": "LL.B. I Term Examination, December 2014 — Law of Crimes–I, Q.4(a) · DU Faculty of Law",
+          "marks": "LL.B. I Term Examination, December 2014 — Law of Crimes–I, Q.4(a)",
           "question": "Due to communal riots, a mob of community A reached the house of X (a member of community B), which he had locked to save himself and his family. The mob started knocking at his door. Before the mob could enter, X fired from his licensed revolver and killed a member of the mob. X is charged with murder, but pleads the right of private defence. Can he do so? Give reasons.",
           "unit": "Unit 2: General Exceptions (BNS §§ 14–44 ↔ IPC §§ 76–106)",
           "unitNumber": 2,
@@ -5286,7 +5286,7 @@ window.DU_LAW_PORTAL_DATA = {
         {
           "id": "pyq-bns-2-4",
           "number": "Q4",
-          "marks": "LL.B. I Term Examination, December 2014 — Law of Crimes–I, Q.4(b) · DU Faculty of Law",
+          "marks": "LL.B. I Term Examination, December 2014 — Law of Crimes–I, Q.4(b)",
           "question": "Discuss statutory limitations on the exercise of the right of private defence as laid down in the Indian Penal Code.",
           "unit": "Unit 2: General Exceptions (BNS §§ 14–44 ↔ IPC §§ 76–106)",
           "unitNumber": 2,
@@ -5297,7 +5297,7 @@ window.DU_LAW_PORTAL_DATA = {
         {
           "id": "pyq-bns-2-5",
           "number": "Q5",
-          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.2(b) · DU Faculty of Law",
+          "marks": "LL.B. I Term Examination, December 2015 — Law of Crimes–I, Q.2(b)",
           "question": "Can a student leader on indefinite fast during a protest be force-fed in order to save his life? Discuss in the light of relevant case law.",
           "unit": "Unit 2: General Exceptions (BNS §§ 14–44 ↔ IPC §§ 76–106)",
           "unitNumber": 2,

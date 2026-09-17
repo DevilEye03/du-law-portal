@@ -3,7 +3,7 @@
  */
 window.BNS_CONVERTER_DB = {
   "title": "BNS 2023 ↔ IPC 1860 Comprehensive Converter & Comparison Engine",
-  "subtitle": "Faculty of Law, University of Delhi — Criminal Law Transition Guide",
+  "subtitle": "Criminal Law Transition Guide — Comparative Analysis",
   "sections": [
     {
       "id": "c1",
