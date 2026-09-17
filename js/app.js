@@ -595,21 +595,22 @@
   // 2. SUBJECTS SELECTION VIEW
   // =========================================================================
   function applySubjectsViewMode(mode) {
-    state.subjectsViewMode = mode;
-    localStorage.setItem('du_subjects_view_mode', mode);
+    mode = 'books';
+    state.subjectsViewMode = 'books';
+    localStorage.setItem('du_subjects_view_mode', 'books');
 
     if (elements.subjectsView) {
-      elements.subjectsView.classList.remove('mode-books', 'mode-grid');
-      elements.subjectsView.classList.add(mode === 'grid' ? 'mode-grid' : 'mode-books');
+      elements.subjectsView.classList.remove('mode-grid');
+      elements.subjectsView.classList.add('mode-books');
     }
 
     if (elements.viewModeBooksBtn && elements.viewModeGridBtn) {
-      elements.viewModeBooksBtn.classList.toggle('active', mode !== 'grid');
-      elements.viewModeGridBtn.classList.toggle('active', mode === 'grid');
+      elements.viewModeBooksBtn.classList.add('active');
+      elements.viewModeGridBtn.classList.remove('active');
     }
 
-    // If switching to books mode, ensure Three.js canvas resizes appropriately
-    if (mode !== 'grid' && window.DUBooksShowcase) {
+    // Ensure Three.js canvas resizes appropriately
+    if (window.DUBooksShowcase) {
       window.dispatchEvent(new Event('resize'));
     }
   }

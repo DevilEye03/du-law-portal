@@ -1492,12 +1492,7 @@ button{font-family:inherit;cursor:pointer}
     font-size: 0.82rem;
   }
   .view-controls-bar {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px;
-    flex-wrap: wrap;
+    display: none !important;
   }
   .view-mode-toggle {
     display: inline-flex;
@@ -5639,7 +5634,7 @@ body.drawer-open {
    3D BOOKS SHOWCASE COMPONENT (VengeanceUI Inspired Three.js Engine)
    =================================================================== */
 .view-controls-bar {
-  display: flex;
+  display: none !important;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
