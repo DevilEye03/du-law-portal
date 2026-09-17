@@ -2,7 +2,8 @@
 
 > **AUTHORITATIVE REPOSITORY INTELLIGENCE DOSSIER & CONTEXT BIBLE**  
 > **Target Audience**: AI Agents (Antigravity, Gemini, Claude, Cursor, Copilot) & Developers.  
-> **Mandate**: **CONSULT THIS FILE BEFORE INITIATING ANY TASK ON THIS CODEBASE.**
+> **Scope**: **CONSULT THIS FILE BEFORE INITIATING ANY TASK ON THIS CODEBASE.**  
+> **Location**: Saved locally in workspace root (`PROJECT_BRAIN.md`). Zero external dependencies required.
 
 ---
 
@@ -44,9 +45,10 @@ Make Law Easy is deliberately built as an **ultra-fast, zero-build, pure vanilla
               │
               ▼
 ┌────────────────────────────────────────────────────────────────────────┐
-│                     INFRASTRUCTURE & DEPLOYMENT                        │
-│  • Firebase Hosting (Global CDN, HTTP/2, SSL, Cache-Control Headers)   │
-│  • Git / GitHub (Version Control: DevilEye03/du-law-portal)            │
+│                     INFRASTRUCTURE & ENVIRONMENT                       │
+│  • Local Environment: node scripts/server.js (Zero build step, pure)   │
+│  • Version Control: Git repository DevilEye03/du-law-portal (main)     │
+│  • Optional Hosting: Firebase Hosting (make-law-easy)                  │
 │  • Google Tag Manager (GTM-NNW78WFV) & GA4 (G-8ZG7VS1G45)              │
 └────────────────────────────────────────────────────────────────────────┘
 ```
@@ -66,10 +68,7 @@ Make Law Easy is deliberately built as an **ultra-fast, zero-build, pure vanilla
    - `manifest.json`: Standalone PWA installation support, theme color `#183059`.
    - `sw.js`: Service worker with aggressive cache-first strategy for app shell assets and stale-while-revalidate for dynamic content.
    - **CRITICAL VERSIONING RULE**: Whenever editing CSS, JS, or core pages, you MUST increment `CACHE_NAME = "du-law-portal-vXX"` in `sw.js`!
-4. **Hosting & DNS**:
-   - **Firebase Hosting**: Main deployment target. Managed via `firebase.json` and `.firebaserc`. Supports clean URLs and edge caching.
-   - Apex domain `makelaweasy.in` mapped with SSL.
-5. **Analytics & Tag Management**:
+4. **Analytics & Tag Management**:
    - Google Tag Manager container: `GTM-NNW78WFV`.
    - Google Analytics 4 stream: `G-8ZG7VS1G45` (configured with IP anonymization for DPDP Act compliance).
 
@@ -94,6 +93,9 @@ d:\law notes/
 ├── privacy.html                    # Executive Legal Documentation: Privacy & DPDP (20 clauses)
 ├── about.html                      # Editorial mission, faculty alignment, and author credits
 ├── sw.js                           # PWA Service Worker (Cache versioning du-law-portal-vXX)
+├── PROJECT_BRAIN.md                # THIS FILE: Master 360° Repository Knowledge Bible
+├── GEMINI.md                       # Antigravity/Gemini permanent system rulefile
+├── AGENTS.md                       # Universal agent instruction directives
 │
 ├── js/                             # CORE JAVASCRIPT ENGINES
 │   ├── app.js                      # Main SPA application logic, routing, view rendering, modals
@@ -141,14 +143,14 @@ d:\law notes/
 
 ### 4.1. Three-Tier SPA Router (in `index.html` & `js/app.js`)
 The application operates as a hashless/query-driven SPA with 3 primary views:
-1. **View 1: Semester View (`#semesterView`)**:
+1. **View 1: Semester View (`#semesterView` / `showView('semester')`)**:
    - Cinematic 3D Wave Grid Hero canvas + Interactive Particle stage.
-   - Semester selector cards (Semester I & Semester III currently live, with Semester II/IV/V/VI roadmap).
-2. **View 2: Subjects Selection Dashboard (`#subjectsView`)**:
+   - Semester selector cards (Semester I & Semester III currently active).
+2. **View 2: Subjects Selection Dashboard (`#subjectsView` / `showView('subjects')`)**:
    - Dual-mode subject explorer:
      - **3D Books Showcase**: Realistic 3D hardbound book models with book spines, covers, open animation, and drag-to-rotate carousel.
      - **Standard Grid View**: Responsive card grid fallback.
-3. **View 3: Subject Study Hub (`#subjectHubView`)**:
+3. **View 3: Subject Study Hub (`#subjectHubView` / `showView('hub')`)**:
    - 4 Specialized Study Tabs:
      - **Tab 1: All Topics & Notes**: Syllabus unit cards with topic links that open the embedded iframe reader.
      - **Tab 2: Landmark Cases**: Exhaustive FIRAC briefs with search, tags, and bookmarking.
@@ -348,7 +350,7 @@ The portal adheres to a **Dark Luxury Legal / Judicial Editorial Design System**
    # Open http://localhost:3000
    ```
 
-### SOP 4: Git Commit & Production Deployment
+### SOP 4: Git Commit & Version Control
 1. Verify clean git state:
    ```powershell
    git status
@@ -357,17 +359,97 @@ The portal adheres to a **Dark Luxury Legal / Judicial Editorial Design System**
    ```powershell
    git add -A
    git commit -m "Your descriptive commit message"
-   git push origin main
    ```
-3. Deploy live to Firebase Hosting:
-   ```powershell
-   firebase deploy --only hosting
-   ```
-4. Verify live site: [https://makelaweasy.in](https://makelaweasy.in)
+*(Optional: Push to origin/main or deploy to hosting only when requested by user).*
 
 ---
 
-## 8. ABSOLUTE GUARDRAILS & COMMON PITFALLS
+## 8. COMPONENT & DOM HIERARCHY REFERENCE
+
+### 8.1. Main Views
+- `#semesterView`: Landing hero stage with wave grid canvas, particle stage, and semester cards.
+- `#subjectsView`: Subject selection screen with 3D Three.js book carousel (`#booksShowcaseWrap`) and fallback grid (`#subjectsGrid`).
+- `#subjectHubView`: Active subject study hub containing breadcrumbs, banner, and 4 tab content panes:
+  - `#topicsTabPane` & `#topicsContainer`
+  - `#casesTabPane` & `#casesContainer`
+  - `#pyqsTabPane` & `#pyqsContainer`
+  - `#revisionTabPane` & `#revisionContainer`
+
+### 8.2. Modals & Off-Canvas Drawers
+- `#readerModal`: Full-screen iframe study dossier viewer (`#readerIframe`, `#readerTitle`, `#readerCloseBtn`).
+- `#flashcardsModal`: 3D flip card deck modal (`#activeFlashcard`, `#fcPrevBtn`, `#fcNextBtn`, `#fcShuffleBtn`).
+- `#bareActDrawer`: Statutory reference drawer (`#badActTabs`, `#bareActSearchInput`, `#bareActList`).
+- `#bnsModal`: BNS 2023 ↔ IPC 1860 live section converter (`#bnsSearchInput`, `#bnsCardsContainer`).
+- `#mockModal`: DU examination hall paper generator & timer (`#mockSubjectSelect`, `#mockTimerClock`, `#mockQuestionsList`).
+- `#bookmarksDrawer`: Starred precedents & revision vault drawer (`#bookmarksList`).
+- `#mobileToolsDrawer`: Bottom action sheet with quick study tool shortcuts for mobile devices.
+- `#contactModal`: Contact & community popup dialog (Telegram, Email).
+
+---
+
+## 9. APPLICATION STATE & ROUTER CONTROLLER (`js/app.js`)
+
+`js/app.js` manages the entire lifecycle of the portal via a centralized `state` object:
+
+```javascript
+const state = {
+  currentSemester: null,           // e.g. 1 or 3
+  currentSubject: null,            // e.g. DU_LAW_PORTAL_DATA.subjects['company']
+  currentTab: 'topics',            // 'topics' | 'cases' | 'pyqs' | 'revision'
+  searchQuery: '',                 // Active keyword filter in Subject Hub
+  selectedUnitFilter: 'all',       // Dropdown unit filter ('all' | 1 | 2 ...)
+  activeQuickFilter: 'all',        // Quick filter pill
+  darkMode: true,                  // Theme state
+  starred: [],                     // Array of saved item IDs (localStorage: 'du_portal_starred')
+  personalNotes: {},               // User note annotations (localStorage: 'du_portal_notes')
+  mockTimerSecs: 10800,            // 3-hour exam timer (seconds)
+  flashcards: {
+    deck: [],                      // Active case cards
+    currentIndex: 0,
+    isFlipped: false,
+    masteredIds: []                // localStorage: 'du_law_flashcard_mastery'
+  },
+  bareActs: {
+    activeAct: 'all',
+    searchQuery: '',
+    expandedId: null
+  },
+  subjectsViewMode: 'books'        // 'books' (3D) or 'grid'
+};
+```
+
+### Key Controller Functions in `app.js`:
+- `showView(viewName)`: Switches between `'semester'`, `'subjects'`, and `'hub'`.
+- `navigateToSemester(semId)`: Loads semester subjects and opens 3D books showcase.
+- `navigateToSubject(subId)`: Sets up subject theme, header breadcrumbs, and renders active tab.
+- `switchTab(tabName)`: Renders topics, landmark cases, PYQs, or revision capsules with search filters.
+- `openReaderModal(fileUrl, title)`: Loads raw HTML notes dossiers into the iframe overlay.
+- `openFlashcards(subId)`: Initializes 3D flip card deck and attaches keyboard listeners.
+- `openBareActDrawer(actId, secNum)`: Opens statutory reference drawer filtered to a specific section.
+- `openBnsModal(searchQuery)`: Launches the BNS ↔ IPC converter with optional search pre-fill.
+- `generateMockPaper(subId)`: Constructs an 8-question exam paper strictly following DU examination patterns.
+
+---
+
+## 10. FUTURE DEVELOPMENT ROADMAP
+
+When adding features to Make Law Easy, follow these exact patterns:
+1. **Adding New Semesters (e.g. Semester 2, 4, 5, 6)**:
+   - Add entry to `DU_LAW_PORTAL_DATA.semesters` in `js/data.js`.
+   - Add semester subjects into `DU_LAW_PORTAL_DATA.subjects`.
+   - Place HTML dossiers into `sem [N]/[subject]/`.
+   - Run `node scripts/ingest_subject.js "sem [N]/[subject]"`.
+   - Run `node scripts/comprehensive_test.js`.
+2. **Adding New Bare Acts**:
+   - Register act metadata into `window.BARE_ACTS_DB.acts` in `js/bare_acts.js`.
+   - Add sections to `window.BARE_ACTS_DB.sections` with `{ id, actId, sec, title, text, tags }`.
+   - Add corresponding tab in `index.html` inside `#badActTabs`.
+3. **Adding Audio / Podcast Summaries**:
+   - `js/app.js` already has state variables (`audioSpeechRate`, `audioUtterance`, `audioIsPlaying`) and UI elements (`#floatingAudioBar`). Connect with Web Speech API `window.speechSynthesis`.
+
+---
+
+## 11. ABSOLUTE GUARDRAILS & COMMON PITFALLS
 
 1. ❌ **NEVER blindly overwrite `js/data.js`**:
    `js/data.js` is nearly 4MB and contains hundreds of curated case briefs and model answers. Always make targeted changes or use `scripts/ingest_subject.js`.

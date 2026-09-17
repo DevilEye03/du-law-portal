@@ -33,12 +33,13 @@ Never alter or omit substantive legal protections in `terms.html` (21 sections) 
 - Digital Personal Data Protection Act, 2023 (DPDP Act)
 - Grievance Redressal Officer contact (`ankur@makelaweasy.in`)
 
-### Rule 5: Verification & Deployment Workflow
+### Rule 5: Local Verification & Development Workflow
 Before finalizing any coding task:
-1. Run local tests: `node scripts/comprehensive_test.js`
-2. Check git status: `git status`
-3. Commit and push: `git add -A && git commit -m "..." && git push origin main`
-4. Deploy to Firebase: `firebase deploy --only hosting`
+1. Run local automated integrity tests: `node scripts/comprehensive_test.js`
+2. Test locally in browser if needed: `node scripts/server.js` (http://localhost:3000)
+3. Check git status: `git status`
+4. Commit changes: `git add -A && git commit -m "..."`
+*Note: Deployment to Firebase Hosting (`firebase deploy --only hosting`) is strictly OPTIONAL and should NOT be run unless explicitly requested by the user.*
 
 ---
 
