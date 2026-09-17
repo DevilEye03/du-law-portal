@@ -12,267 +12,1128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms and Conditions of Use &amp; Academic Disclaimer — Make Law Easy</title>
-  <meta name="description" content="Terms and Conditions of Use, Academic Fair Dealing Disclaimer, and Non-Solicitation Statement for Make Law Easy (makelaweasy.in) — Operated by Team Aditya Shukla.">
+  <meta name="description" content="Terms and Conditions of Use, Academic Fair Dealing Disclaimer (Section 52 Copyright Act 1957), and Bar Council of India Non-Solicitation Statement for Make Law Easy (makelaweasy.in).">
   <link rel="canonical" href="https://makelaweasy.in/terms.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
     :root {
-      --bg: #0b1120;
-      --surface: #131d35;
-      --card: #182647;
-      --border: rgba(148, 163, 184, 0.16);
-      --border-accent: rgba(201, 168, 76, 0.35);
-      --accent: #38bdf8;
-      --gold: #f59e0b;
+      --bg-canvas: #080d1a;
+      --bg-surface: #0f172a;
+      --bg-card: #131f38;
+      --bg-card-hover: #182747;
+      --bg-glass: rgba(15, 23, 42, 0.88);
+      --border-subtle: rgba(148, 163, 184, 0.12);
+      --border-medium: rgba(148, 163, 184, 0.22);
+      --border-accent: rgba(201, 168, 76, 0.38);
+      --gold-primary: #c9a84c;
       --gold-light: #fde68a;
-      --text: #f1f5f9;
+      --gold-dark: #8c6b23;
+      --gold-glow: rgba(201, 168, 76, 0.18);
+      --cyan-accent: #38bdf8;
+      --cyan-glow: rgba(56, 189, 248, 0.15);
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
       --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.25);
+      --shadow-prominent: 0 16px 40px -8px rgba(0, 0, 0, 0.45);
+      --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.75;
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
       font-size: 16px;
-      padding-bottom: 60px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
     }
-    .header {
-      background: linear-gradient(180deg, #0f172a 0%, var(--bg) 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 20px;
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-secondary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    p, a, li, h1, h2, h3, h4, span {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Scroll progress bar */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #c9a84c 0%, #38bdf8 50%, #f59e0b 100%);
+      z-index: 10000;
+      transition: width 0.08s ease-out;
+    }
+
+    /* Top Sticky Header */
+    .top-header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
+      z-index: 1000;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: var(--transition);
     }
-    .header-inner {
-      max-width: 960px;
+
+    .top-header-inner {
+      max-width: 1320px;
       margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-crest-box {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 1.1rem;
+      box-shadow: 0 0 16px var(--gold-glow);
+    }
+
+    .brand-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.28rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #fff;
+    }
+
+    .brand-title span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Document Switcher & Nav */
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-pill {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .nav-pill:hover {
+      color: var(--text-primary);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-pill.active {
+      color: var(--gold-light);
+      background: rgba(201, 168, 76, 0.12);
+      border-color: var(--border-accent);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .action-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .action-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-color: var(--border-medium);
+    }
+
+    .portal-back-btn {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.28);
+      color: var(--cyan-accent);
+    }
+
+    .portal-back-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      color: #fff;
+    }
+
+    /* Main Container & Hero */
+    .main-wrapper {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 24px 60px;
+      flex: 1;
+    }
+
+    /* Document Hero Card */
+    .document-hero {
+      background: linear-gradient(145deg, #101a33 0%, #0d1527 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-prominent);
+    }
+
+    .document-hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .hero-breadcrumbs a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .hero-breadcrumbs a:hover {
+      color: var(--cyan-accent);
+    }
+
+    .hero-breadcrumbs i {
+      font-size: 0.7rem;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.22;
+      margin-bottom: 14px;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 860px;
+      margin-bottom: 24px;
+      line-height: 1.68;
+    }
+
+    .metadata-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+    }
+
+    .meta-badge i { font-size: 0.8rem; }
+    .badge-gold {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: var(--border-accent);
+      color: var(--gold-light);
+    }
+    .badge-blue {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: var(--cyan-accent);
+    }
+    .badge-green {
+      background: rgba(34, 197, 94, 0.1);
+      border-color: rgba(34, 197, 94, 0.3);
+      color: #86efac;
+    }
+
+    /* Executive Summary / Key Takeaways */
+    .at-a-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .glance-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      transition: var(--transition);
+    }
+
+    .glance-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .glance-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+
+    .icon-gold { background: rgba(201, 168, 76, 0.15); color: var(--gold-light); }
+    .icon-blue { background: rgba(56, 189, 248, 0.15); color: var(--cyan-accent); }
+    .icon-green { background: rgba(34, 197, 94, 0.15); color: #86efac; }
+    .icon-purple { background: rgba(168, 85, 247, 0.15); color: #d8b4fe; }
+
+    .glance-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .glance-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* Mobile TOC Accordion / Selector (Hidden on Desktop) */
+    .mobile-toc-bar {
+      display: none;
+      position: sticky;
+      top: 68px;
+      z-index: 990;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .mobile-toc-toggle {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .mobile-toc-toggle span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold-light);
+    }
+
+    .mobile-toc-drawer {
+      display: none;
+      margin-top: 14px;
+      max-height: 280px;
+      overflow-y: auto;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 10px;
+    }
+
+    .mobile-toc-drawer.open {
+      display: block;
+    }
+
+    .mobile-toc-drawer a {
+      display: block;
+      padding: 8px 10px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.88rem;
+      border-radius: var(--radius-sm);
+    }
+
+    .mobile-toc-drawer a:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--gold-light);
+    }
+
+    /* 2-Column Documentation Grid */
+    .docs-layout {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      gap: 40px;
+      align-items: start;
+      min-width: 0;
+      max-width: 100%;
+    }
+
+    /* Left Sticky Sidebar */
+    .docs-sidebar {
+      position: sticky;
+      top: 88px;
+      max-height: calc(100vh - 108px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sidebar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - 200px);
+    }
+
+    .sidebar-search-box {
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-search-box i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+
+    .sidebar-search-input {
+      width: 100%;
+      background: #090e1a;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 9px 12px 9px 34px;
+      color: #fff;
+      font-size: 0.84rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .sidebar-search-input:focus {
+      border-color: var(--border-accent);
+      box-shadow: 0 0 10px var(--gold-glow);
+    }
+
+    .sidebar-heading {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      font-weight: 700;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .brand {
+
+    .sidebar-toc-list {
+      list-style: none;
+      overflow-y: auto;
+      padding-right: 4px;
+      flex: 1;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(148, 163, 184, 0.2) transparent;
+    }
+
+    .sidebar-toc-list::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .sidebar-toc-list::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.2);
+      border-radius: 4px;
+    }
+
+    .toc-link {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      align-items: baseline;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
       text-decoration: none;
-      color: #fff;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
-    .brand i { color: var(--gold); }
-    .back-link {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.92rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.25);
-      border-radius: 9999px;
-      transition: all 0.2s ease;
-    }
-    .back-link:hover {
-      background: rgba(56, 189, 248, 0.16);
-      text-decoration: none;
-    }
-    .container {
-      max-width: 960px;
-      margin: 36px auto;
-      padding: 0 20px;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 44px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-    }
-    @media (max-width: 640px) {
-      .card { padding: 24px 18px; }
-      h1 { font-size: 1.85rem !important; }
-    }
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.35rem;
-      color: #fff;
-      margin-bottom: 8px;
-      line-height: 1.25;
-    }
-    .meta-badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      margin: 14px 0 28px;
-      font-size: 0.88rem;
       color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.45;
+      transition: var(--transition);
+      border-left: 2px solid transparent;
+      margin-bottom: 2px;
     }
-    .meta-pill {
-      display: inline-flex;
+
+    .toc-link:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .toc-link.active {
+      color: var(--gold-light);
+      background: rgba(201, 168, 76, 0.1);
+      border-left-color: var(--gold-primary);
+      font-weight: 600;
+    }
+
+    .toc-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+      min-width: 18px;
+    }
+
+    .toc-link.active .toc-num {
+      color: var(--gold-primary);
+    }
+
+    /* Sidebar Mini Help Card */
+    .sidebar-help-card {
+      background: linear-gradient(145deg, #111d38 0%, #0c1527 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      font-size: 0.82rem;
+    }
+
+    .sidebar-help-card h4 {
+      color: var(--gold-light);
+      font-size: 0.88rem;
+      margin-bottom: 6px;
+      display: flex;
       align-items: center;
       gap: 6px;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      color: var(--gold-light);
+    }
+
+    .sidebar-help-card p {
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .sidebar-help-card a {
+      color: var(--cyan-accent);
+      text-decoration: none;
       font-weight: 500;
     }
-    .notice-box {
-      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(56, 189, 248, 0.08) 100%);
-      border: 1px solid var(--border-accent);
-      border-left: 5px solid var(--gold);
-      padding: 22px 24px;
-      border-radius: 12px;
-      margin: 28px 0;
-    }
-    .notice-box h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--gold-light);
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .notice-box p {
-      color: #e2e8f0;
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-    .notice-box p:last-child { margin-bottom: 0; }
-    .toc-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 22px 24px;
-      margin: 32px 0 40px;
-    }
-    .toc-card h3 {
-      color: #fff;
-      font-size: 1.08rem;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-    }
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 8px 16px;
-      list-style: none;
-    }
-    .toc-grid a {
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 0.92rem;
-      transition: color 0.15s ease;
-      display: block;
-      padding: 2px 0;
-    }
-    .toc-grid a:hover {
-      color: var(--gold);
+
+    .sidebar-help-card a:hover {
       text-decoration: underline;
     }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--accent);
-      margin: 40px 0 16px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-      scroll-margin-top: 90px;
+
+    /* Right Main Content Canvas */
+    .docs-content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      min-width: 0;
+      max-width: 100%;
     }
-    h3.sub-sec {
-      font-size: 1.08rem;
-      color: #fff;
-      margin: 20px 0 8px;
+
+    /* Legal Section Container */
+    .legal-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 36px 40px;
+      position: relative;
+      scroll-margin-top: 92px;
+      box-shadow: var(--shadow-subtle);
+      transition: border-color 0.2s ease;
+      min-width: 0;
+      max-width: 100%;
     }
-    p, li {
-      color: #cbd5e1;
-      font-size: 1rem;
-      margin-bottom: 14px;
+
+    .legal-section:hover {
+      border-color: var(--border-medium);
     }
-    ul, ol {
-      padding-left: 24px;
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
       margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 14px;
+      min-width: 0;
     }
-    li { margin-bottom: 8px; }
-    b, strong { color: #fff; }
-    a { color: var(--accent); }
-    a:hover { text-decoration: underline; }
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 22px 0;
-      border-radius: 8px;
-      overflow: hidden;
-      font-size: 0.95rem;
+
+    .section-badge {
+      font-family: 'Inter', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      background: rgba(201, 168, 76, 0.12);
+      border: 1px solid var(--border-accent);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
     }
-    .info-table th, .info-table td {
-      border: 1px solid var(--border);
-      padding: 12px 16px;
-      text-align: left;
+
+    .legal-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+      flex: 1;
+      min-width: 0;
     }
-    .info-table th {
-      background: #0f172a;
+
+    .anchor-btn {
+      color: var(--text-dim);
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      opacity: 0.4;
+      transition: var(--transition);
+    }
+
+    .legal-section:hover .anchor-btn {
+      opacity: 1;
+    }
+
+    .anchor-btn:hover {
+      color: var(--cyan-accent);
+      background: rgba(56, 189, 248, 0.1);
+    }
+
+    .legal-section h3.sub-sec {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 24px 0 10px;
+    }
+
+    .legal-section p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .legal-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section strong, .legal-section b {
       color: #fff;
       font-weight: 600;
     }
-    .info-table tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.02);
+
+    .legal-section a {
+      color: var(--cyan-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: var(--transition);
     }
-    .contact-card {
-      background: var(--card);
-      border: 1px solid var(--border-accent);
-      border-radius: 12px;
-      padding: 24px;
-      margin-top: 24px;
+
+    .legal-section a:hover {
+      color: #fff;
     }
-    .contact-card ul {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 0;
+
+    .legal-section code {
+      background: #1e293b;
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: var(--gold-light);
+      font-family: monospace;
+      font-size: 0.9em;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .contact-card li {
+
+    .legal-section ul, .legal-section ol {
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+
+    .legal-section li {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
       margin-bottom: 10px;
+      line-height: 1.75;
+    }
+
+    .legal-section li::marker {
+      color: var(--gold-primary);
+    }
+
+    /* Callout & Notice Boxes */
+    .callout-box {
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .callout-gold {
+      background: linear-gradient(135deg, rgba(201, 168, 76, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+      border: 1px solid var(--border-accent);
+      border-left: 4px solid var(--gold-primary);
+    }
+
+    .callout-blue {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-left: 4px solid var(--cyan-accent);
+    }
+
+    .callout-box h4 {
+      font-size: 1.02rem;
+      font-weight: 600;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      color: #e2e8f0;
+      gap: 8px;
     }
-    .contact-card li i {
-      color: var(--gold);
-      width: 20px;
-      text-align: center;
+
+    .callout-gold h4 { color: var(--gold-light); }
+    .callout-blue h4 { color: var(--cyan-accent); }
+
+    .callout-box p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 6px;
     }
-    footer {
-      text-align: center;
-      margin-top: 48px;
-      color: var(--text-muted);
+
+    /* Contact Details Card */
+    .contact-card {
+      background: #090e1a;
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      list-style: none !important;
+      padding-left: 0 !important;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 0 !important;
+    }
+
+    .contact-item-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-sm);
+      background: rgba(201, 168, 76, 0.12);
+      border: 1px solid var(--border-accent);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-content strong {
+      display: block;
+      color: #fff;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 2px;
+    }
+
+    /* Site Footer */
+    .site-footer {
+      background: #050811;
+      border-top: 1px solid var(--border-subtle);
+      padding: 48px 24px 32px;
+      margin-top: 60px;
+      color: var(--text-dim);
       font-size: 0.88rem;
+      text-align: center;
     }
-    .footer-team {
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-team-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      margin-top: 8px;
-      color: var(--gold);
+      padding: 4px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(201, 168, 76, 0.1);
+      border: 1px solid var(--border-accent);
+      color: var(--gold-light);
       font-weight: 600;
+      font-size: 0.84rem;
+    }
+
+    /* Back to Top Floating Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-medium);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .back-to-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      background: var(--gold-primary);
+      color: #000;
+      border-color: var(--gold-light);
+      transform: translateY(-3px);
+    }
+
+    /* Interactive Toast */
+    .toast-notice {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #1e293b;
+      border: 1px solid var(--border-accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 10001;
+    }
+
+    .toast-notice.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .toast-notice i {
+      color: var(--gold-light);
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1023px) {
+      .docs-layout {
+        grid-template-columns: 1fr;
+      }
+      .docs-sidebar {
+        display: none;
+      }
+      .mobile-toc-bar {
+        display: block;
+      }
+      .at-a-glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .document-hero {
+        padding: 28px 20px;
+      }
+      .hero-title {
+        font-size: 1.95rem;
+      }
+      .legal-section {
+        padding: 26px 20px;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .main-wrapper {
+        padding: 16px 12px 40px;
+      }
+      .document-hero {
+        padding: 20px 14px;
+        border-radius: var(--radius-md);
+      }
+      .legal-section {
+        padding: 20px 14px;
+      }
+      .at-a-glance-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 20px;
+        padding-top: 18px;
+      }
+      .glance-card {
+        padding: 14px;
+      }
+      .header-nav {
+        display: none;
+      }
+      #printBtn {
+        display: none;
+      }
+      .top-header-inner {
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        width: 100%;
+      }
+      .header-brand {
+        flex-shrink: 1;
+        min-width: 0;
+        gap: 8px;
+      }
+      .brand-crest-box {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+      }
+      .brand-title {
+        font-size: 0.98rem;
+        white-space: nowrap;
+      }
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-shrink: 0;
+      }
+      .action-btn {
+        padding: 5px 9px;
+        font-size: 0.82rem;
+      }
+      .action-btn span {
+        display: none;
+      }
+      .portal-back-btn {
+        order: -1;
+        padding: 5px 10px;
+      }
+      .portal-back-btn span {
+        display: inline !important;
+        font-size: 0.78rem;
+      }
+      .hero-title {
+        font-size: 1.45rem;
+      }
+      .hero-subtitle {
+        font-size: 0.92rem;
+      }
+      .section-header {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .legal-section h2 {
+        font-size: 1.25rem;
+        min-width: 0;
+        width: 100%;
+      }
+      .metadata-badges {
+        gap: 6px;
+      }
+      .meta-badge {
+        padding: 4px 10px;
+        font-size: 0.76rem;
+      }
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #111 !important;
+        font-size: 11pt;
+        line-height: 1.6;
+      }
+      .top-header, .scroll-progress-bar, .docs-sidebar, .mobile-toc-bar, .back-to-top, .toast-notice, .action-btn, .portal-back-btn, .site-footer {
+        display: none !important;
+      }
+      .document-hero {
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 20pt !important;
+      }
+      .hero-title {
+        color: #000 !important;
+        font-size: 20pt !important;
+      }
+      .hero-subtitle, .hero-breadcrumbs, .meta-badge {
+        color: #333 !important;
+      }
+      .at-a-glance-grid {
+        display: none !important;
+      }
+      .legal-section {
+        background: #fff !important;
+        border: none !important;
+        border-bottom: 1pt solid #ccc !important;
+        box-shadow: none !important;
+        padding: 16pt 0 !important;
+        page-break-inside: avoid;
+      }
+      .legal-section h2 {
+        color: #000 !important;
+        font-size: 14pt !important;
+      }
+      .legal-section p, .legal-section li {
+        color: #222 !important;
+      }
+      .legal-section strong, .legal-section b {
+        color: #000 !important;
+      }
+      .anchor-btn {
+        display: none !important;
+      }
+      .callout-box {
+        background: #f8f9fa !important;
+        border: 1pt solid #ccc !important;
+        border-left: 3pt solid #333 !important;
+        color: #111 !important;
+      }
+      .callout-box h4 {
+        color: #000 !important;
+      }
     }
   </style>
 </head>
@@ -282,117 +1143,282 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header class="header">
-    <div class="header-inner">
-      <a href="/" class="brand">
-        <i class="fa-solid fa-scale-balanced"></i>
-        <span>Make Law Easy</span>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Top Sticky Navigation Header -->
+  <header class="top-header">
+    <div class="top-header-inner">
+      <a href="/" class="header-brand" title="Make Law Easy — Home">
+        <div class="brand-crest-box">
+          <i class="fa-solid fa-scale-balanced"></i>
+        </div>
+        <div class="brand-title">
+          Make Law <span>Easy</span>
+        </div>
       </a>
-      <a href="/" class="back-link">
-        <i class="fa-solid fa-arrow-left"></i> Back to Portal
-      </a>
+
+      <nav class="header-nav" aria-label="Legal document switcher">
+        <a href="terms.html" class="nav-pill active" aria-current="page">Terms of Service</a>
+        <a href="privacy.html" class="nav-pill">Privacy Policy</a>
+        <a href="about.html" class="nav-pill">About Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" id="printBtn" title="Print or save as PDF">
+          <i class="fa-solid fa-print"></i>
+          <span>Print</span>
+        </button>
+        <button class="action-btn" id="copyShareBtn" title="Copy document URL">
+          <i class="fa-solid fa-share-nodes"></i>
+          <span>Share</span>
+        </button>
+        <a href="/" class="action-btn portal-back-btn" title="Return to interactive law portal">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Portal</span>
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <article class="card">
-      <h1>Terms and Conditions of Use &amp; Legal Disclaimer</h1>
+  <!-- Main Content Layout -->
+  <main class="main-wrapper">
+    
+    <!-- Hero Document Banner -->
+    <header class="document-hero">
+      <div class="hero-breadcrumbs">
+        <a href="/">Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>Legal &amp; Governance</span>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span style="color: var(--gold-light);">Terms of Service</span>
+      </div>
+
+      <h1 class="hero-title">Terms and Conditions of Use &amp; Academic Disclaimer</h1>
+      <p class="hero-subtitle">
+        Comprehensive terms governing public academic access, statutory fair dealing under Section 52 of the Copyright Act, 1957, and Bar Council of India non-solicitation ethics.
+      </p>
+
+      <div class="metadata-badges">
+        <span class="meta-badge badge-gold"><i class="fa-solid fa-code-branch"></i> Version 2.4</span>
+        <span class="meta-badge badge-green"><i class="fa-solid fa-circle-check"></i> Binding &amp; Active</span>
+        <span class="meta-badge badge-blue"><i class="fa-solid fa-location-dot"></i> New Delhi, India</span>
+        <span class="meta-badge"><i class="fa-solid fa-calendar"></i> September 17, 2026</span>
+        <span class="meta-badge"><i class="fa-solid fa-book-open"></i> ~14 min read</span>
+      </div>
+
+      <!-- At a Glance Executive Summary -->
+      <div class="at-a-glance-grid">
+        <div class="glance-card">
+          <div class="glance-icon icon-gold"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="glance-title">Academic Fair Dealing</div>
+          <div class="glance-desc">Strictly educational study dossiers compiled under Section 52(1)(a)(i) of the Indian Copyright Act, 1957.</div>
+        </div>
+
+        <div class="glance-card">
+          <div class="glance-icon icon-blue"><i class="fa-solid fa-scale-balanced"></i></div>
+          <div class="glance-title">No Legal Advice</div>
+          <div class="glance-desc">Informational revision notes only. Complies strictly with BCI Rule 36 non-solicitation ethics.</div>
+        </div>
+
+        <div class="glance-card">
+          <div class="glance-icon icon-green"><i class="fa-solid fa-unlock-keyhole"></i></div>
+          <div class="glance-title">Zero Friction Access</div>
+          <div class="glance-desc">100% free open portal. No account creation, login credentials, or subscription paywalls required.</div>
+        </div>
+
+        <div class="glance-card">
+          <div class="glance-icon icon-purple"><i class="fa-solid fa-landmark"></i></div>
+          <div class="glance-title">Indian Jurisdiction</div>
+          <div class="glance-desc">Governed by the substantive laws of India, subject to the exclusive jurisdiction of New Delhi courts.</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Quick-Jump Accordion -->
+    <div class="mobile-toc-bar">
+      <button class="mobile-toc-toggle" id="mobileTocToggle" type="button" aria-expanded="false">
+        <span><i class="fa-solid fa-list-ol"></i> Jump to Clause (21 Sections)</span>
+        <i class="fa-solid fa-chevron-down" id="mobileTocChevron"></i>
+      </button>
+      <div class="mobile-toc-drawer" id="mobileTocDrawer">
+        <a href="#sec1">1. Acceptance and Scope of Terms</a>
+        <a href="#sec2">2. No Legal Advice (Academic Purpose)</a>
+        <a href="#sec3">3. No Advocate-Client Relationship</a>
+        <a href="#sec4">4. Non-Solicitation &amp; Professional Ethics</a>
+        <a href="#sec5">5. Free Public Access (No Subscription)</a>
+        <a href="#sec6">6. Eligibility</a>
+        <a href="#sec7">7. Intellectual Property &amp; Fair Dealing</a>
+        <a href="#sec8">8. Acceptable Use &amp; Prohibitions</a>
+        <a href="#sec9">9. Community Channels &amp; Feedback</a>
+        <a href="#sec10">10. Third-Party Links &amp; Citations</a>
+        <a href="#sec11">11. Currency &amp; Editorial Updates</a>
+        <a href="#sec12">12. Disclaimer of Warranties</a>
+        <a href="#sec13">13. Limitation of Liability</a>
+        <a href="#sec14">14. Indemnification</a>
+        <a href="#sec15">15. Copyright &amp; Takedown Procedure</a>
+        <a href="#sec16">16. Privacy Reference (DPDP Act)</a>
+        <a href="#sec17">17. Severability</a>
+        <a href="#sec18">18. Governing Law &amp; Jurisdiction</a>
+        <a href="#sec19">19. Entire Agreement</a>
+        <a href="#sec20">20. Updates to These Terms</a>
+        <a href="#sec21">21. Contact &amp; Grievance Redressal</a>
+      </div>
+    </div>
+
+    <!-- 2-Column Documentation Grid -->
+    <div class="docs-layout">
       
-      <div class="meta-badge-row">
-        <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i> Last Updated: September 17, 2026</span>
-        <span class="meta-pill"><i class="fa-solid fa-globe"></i> makelaweasy.in</span>
-        <span class="meta-pill"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
-      </div>
+      <!-- Left Sticky Sidebar TOC -->
+      <aside class="docs-sidebar" aria-label="Table of contents sidebar">
+        <div class="sidebar-card">
+          <div class="sidebar-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="clauseFilterInput" class="sidebar-search-input" placeholder="Filter clauses... (e.g. fair use)" aria-label="Filter terms clauses">
+          </div>
 
-      <div class="notice-box">
-        <h3><i class="fa-solid fa-circle-info"></i> Important Notice: Open Academic Resource (No Registration Required)</h3>
-        <p><strong>This Website is an open, publicly accessible academic legal study platform.</strong> You are not required to create an account, log in, or pay subscription fees to read our syllabus notes, landmark case briefs, statutory references, and PYQ dossiers.</p>
-        <p>Please read these Terms carefully before using the portal. By accessing or browsing any part of <strong>Make Law Easy</strong>, you confirm your acceptance of these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please discontinue use immediately.</p>
-      </div>
+          <div class="sidebar-heading">
+            <span>Clauses</span>
+            <span>21 Sections</span>
+          </div>
 
-      <!-- Quick Navigation -->
-      <nav class="toc-card" aria-label="Table of Contents">
-        <h3><i class="fa-solid fa-list-ol"></i> Table of Contents</h3>
-        <ol class="toc-grid">
-          <li><a href="#sec1">1. Acceptance and Scope of Terms</a></li>
-          <li><a href="#sec2">2. No Legal Advice (Academic Purpose)</a></li>
-          <li><a href="#sec3">3. No Advocate-Client Relationship</a></li>
-          <li><a href="#sec4">4. Non-Solicitation &amp; Professional Ethics</a></li>
-          <li><a href="#sec5">5. Free Public Access (No Subscription)</a></li>
-          <li><a href="#sec6">6. Eligibility</a></li>
-          <li><a href="#sec7">7. Intellectual Property &amp; Fair Dealing</a></li>
-          <li><a href="#sec8">8. Acceptable Use &amp; Prohibitions</a></li>
-          <li><a href="#sec9">9. Community Channels &amp; Feedback</a></li>
-          <li><a href="#sec10">10. Third-Party Links &amp; Citations</a></li>
-          <li><a href="#sec11">11. Currency &amp; Editorial Updates</a></li>
-          <li><a href="#sec12">12. Disclaimer of Warranties</a></li>
-          <li><a href="#sec13">13. Limitation of Liability</a></li>
-          <li><a href="#sec14">14. Indemnification</a></li>
-          <li><a href="#sec15">15. Copyright &amp; Takedown Procedure</a></li>
-          <li><a href="#sec16">16. Privacy Reference (DPDP Act)</a></li>
-          <li><a href="#sec17">17. Severability</a></li>
-          <li><a href="#sec18">18. Governing Law &amp; Jurisdiction</a></li>
-          <li><a href="#sec19">19. Entire Agreement</a></li>
-          <li><a href="#sec20">20. Updates to These Terms</a></li>
-          <li><a href="#sec21">21. Contact &amp; Grievance Redressal</a></li>
-        </ol>
-      </nav>
+          <ol class="sidebar-toc-list" id="sidebarTocList">
+            <li><a href="#sec1" class="toc-link active"><span class="toc-num">01</span><span>Acceptance and Scope</span></a></li>
+            <li><a href="#sec2" class="toc-link"><span class="toc-num">02</span><span>No Legal Advice</span></a></li>
+            <li><a href="#sec3" class="toc-link"><span class="toc-num">03</span><span>No Advocate Relationship</span></a></li>
+            <li><a href="#sec4" class="toc-link"><span class="toc-num">04</span><span>BCI Non-Solicitation</span></a></li>
+            <li><a href="#sec5" class="toc-link"><span class="toc-num">05</span><span>Free Public Access</span></a></li>
+            <li><a href="#sec6" class="toc-link"><span class="toc-num">06</span><span>Eligibility</span></a></li>
+            <li><a href="#sec7" class="toc-link"><span class="toc-num">07</span><span>Fair Dealing &amp; IP</span></a></li>
+            <li><a href="#sec8" class="toc-link"><span class="toc-num">08</span><span>Acceptable Use</span></a></li>
+            <li><a href="#sec9" class="toc-link"><span class="toc-num">09</span><span>Community &amp; Feedback</span></a></li>
+            <li><a href="#sec10" class="toc-link"><span class="toc-num">10</span><span>Third-Party References</span></a></li>
+            <li><a href="#sec11" class="toc-link"><span class="toc-num">11</span><span>Editorial Updates</span></a></li>
+            <li><a href="#sec12" class="toc-link"><span class="toc-num">12</span><span>Disclaimer of Warranties</span></a></li>
+            <li><a href="#sec13" class="toc-link"><span class="toc-num">13</span><span>Limitation of Liability</span></a></li>
+            <li><a href="#sec14" class="toc-link"><span class="toc-num">14</span><span>Indemnification</span></a></li>
+            <li><a href="#sec15" class="toc-link"><span class="toc-num">15</span><span>Copyright Takedown</span></a></li>
+            <li><a href="#sec16" class="toc-link"><span class="toc-num">16</span><span>Privacy Reference</span></a></li>
+            <li><a href="#sec17" class="toc-link"><span class="toc-num">17</span><span>Severability</span></a></li>
+            <li><a href="#sec18" class="toc-link"><span class="toc-num">18</span><span>Governing Law</span></a></li>
+            <li><a href="#sec19" class="toc-link"><span class="toc-num">19</span><span>Entire Agreement</span></a></li>
+            <li><a href="#sec20" class="toc-link"><span class="toc-num">20</span><span>Updates to Terms</span></a></li>
+            <li><a href="#sec21" class="toc-link"><span class="toc-num">21</span><span>Grievance Contact</span></a></li>
+          </ol>
+        </div>
 
-      <section id="sec1">
-        <h2>1. Acceptance and Scope of Terms</h2>
-        <p><strong>1.1.</strong> These Terms and Conditions of Use (&ldquo;<strong>Terms</strong>&rdquo;) govern your access to and use of the website located at <a href="https://makelaweasy.in">https://makelaweasy.in</a> (including <a href="https://make-law-easy.web.app">https://make-law-easy.web.app</a>, all study hubs, subject notes, case briefs, statutory bare acts, and PYQ dossiers, collectively referred to as the &ldquo;<strong>Website</strong>&rdquo; or &ldquo;<strong>Portal</strong>&rdquo;).</p>
-        <p><strong>1.2.</strong> The Website is an independent, non-commercial academic legal education initiative operated under the banner of <strong>Make Law Easy</strong>, spearheaded by <strong>Team Aditya Shukla</strong>, headquartered in New Delhi, Delhi, India (referred to as &ldquo;<strong>Make Law Easy</strong>&rdquo;, &ldquo;<strong>we</strong>&rdquo;, &ldquo;<strong>us</strong>&rdquo;, or &ldquo;<strong>our</strong>&rdquo;).</p>
-        <p><strong>1.3.</strong> For the purposes of these Terms, &ldquo;<strong>User</strong>&rdquo;, &ldquo;<strong>student</strong>&rdquo;, &ldquo;<strong>visitor</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo;, and &ldquo;<strong>your</strong>&rdquo; refer to any individual, law student, academician, legal researcher, or entity who accesses, browses, or reads the Website on any device.</p>
-        <p><strong>1.4.</strong> By using this Website, you represent and warrant that you have read, understood, and agreed to be bound by these Terms.</p>
-      </section>
+        <!-- Sticky Mini Help Box -->
+        <div class="sidebar-help-card">
+          <h4><i class="fa-solid fa-headset"></i> Need Clarification?</h4>
+          <p>For questions regarding our terms, copyright citations, or student permissions:</p>
+          <a href="mailto:ankur@makelaweasy.in"><i class="fa-solid fa-envelope"></i> ankur@makelaweasy.in</a>
+        </div>
+      </aside>
 
-      <section id="sec2">
-        <h2>2. No Legal Advice — Informational and Academic Purpose Only</h2>
-        <p><strong>2.1. Strictly Educational and Academic Content:</strong> All materials published on this Website—including curriculum outlines, landmark case briefs, statutory provisions, previous year questions, revision tables, and mnemonics—are compiled and published strictly for <strong>general informational, academic study, and examination revision purposes</strong>.</p>
-        <p><strong>2.2. No Legal or Professional Advice:</strong> <strong>NONE OF THE CONTENT ON THIS WEBSITE CONSTITUTES, NOR IS IT INTENDED TO CONSTITUTE, FORMAL LEGAL ADVICE, LEGAL OPINIONS, SOLICITATION, ADVOCACY, OR TAX/FINANCIAL COUNSEL.</strong> Legal doctrine and judicial precedents vary widely across jurisdictions and depend entirely on specific factual contexts.</p>
-        <p><strong>2.3. No Duty to Act:</strong> You should not act, nor refrain from acting, in any real-world dispute or contentious legal proceeding on the basis of any study material contained on this Website without first obtaining direct, formal legal counsel from an advocate duly enrolled with a State Bar Council under the Advocates Act, 1961.</p>
-        <p><strong>2.4. No Guarantees of Examination Results:</strong> While we endeavor to ensure high editorial and pedagogical accuracy, Make Law Easy makes no guarantees regarding specific examination grades, marks, or university evaluation outcomes.</p>
-      </section>
+      <!-- Right Main Content Canvas -->
+      <article class="docs-content">
+        
+        <!-- Section 1 -->
+        <section class="legal-section" id="sec1">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 01</span>
+            <h2>1. Acceptance and Scope of Terms</h2>
+            <a href="#sec1" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>1.1.</strong> These Terms and Conditions of Use (&ldquo;<strong>Terms</strong>&rdquo;) govern your access to and use of the website located at <a href="https://makelaweasy.in">https://makelaweasy.in</a> (including <a href="https://make-law-easy.web.app">https://make-law-easy.web.app</a>, all study hubs, subject notes, case briefs, statutory bare acts, and PYQ dossiers, collectively referred to as the &ldquo;<strong>Website</strong>&rdquo; or &ldquo;<strong>Portal</strong>&rdquo;).</p>
+          <p><strong>1.2.</strong> The Website is an independent, non-commercial academic legal education initiative operated under the banner of <strong>Make Law Easy</strong>, spearheaded by <strong>Team Aditya Shukla</strong>, headquartered in New Delhi, Delhi, India (referred to as &ldquo;<strong>Make Law Easy</strong>&rdquo;, &ldquo;<strong>we</strong>&rdquo;, &ldquo;<strong>us</strong>&rdquo;, or &ldquo;<strong>our</strong>&rdquo;).</p>
+          <p><strong>1.3.</strong> For the purposes of these Terms, &ldquo;<strong>User</strong>&rdquo;, &ldquo;<strong>student</strong>&rdquo;, &ldquo;<strong>visitor</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo;, and &ldquo;<strong>your</strong>&rdquo; refer to any individual, law student, academician, legal researcher, or entity who accesses, browses, or reads the Website on any device.</p>
+          <p><strong>1.4.</strong> By using this Website, you represent and warrant that you have read, understood, and agreed to be bound by these Terms.</p>
+        </section>
 
-      <section id="sec3">
-        <h2>3. No Attorney-Client / Advocate-Client Relationship</h2>
-        <p><strong>3.1.</strong> Accessing, browsing, or reading study dossiers on this Website does not establish or constitute an advocate-client, attorney-client, or fiduciary relationship between you and Make Law Easy, Team Aditya Shukla, or any of our contributors.</p>
-        <p><strong>3.2.</strong> Transmitting messages via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>) or participating in our community channels (such as our official Telegram channel) does not create an advocate-client relationship.</p>
-        <p><strong>3.3. Do Not Transmit Confidential Legal Case Files:</strong> Our communication channels are dedicated strictly to academic inquiries, notes errata, and portal feedback. Please do not send confidential, proprietary, or incriminating real-world litigation files to us.</p>
-      </section>
+        <!-- Section 2 -->
+        <section class="legal-section" id="sec2">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 02</span>
+            <h2>2. No Legal Advice — Informational and Academic Purpose Only</h2>
+            <a href="#sec2" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>2.1. Strictly Educational and Academic Content:</strong> All materials published on this Website—including curriculum outlines, landmark case briefs, statutory provisions, previous year questions, revision tables, and mnemonics—are compiled and published strictly for <strong>general informational, academic study, and examination revision purposes</strong>.</p>
+          <div class="callout-box callout-gold">
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> Mandatory Non-Advice Disclaimer</h4>
+            <p><strong>NONE OF THE CONTENT ON THIS WEBSITE CONSTITUTES, NOR IS IT INTENDED TO CONSTITUTE, FORMAL LEGAL ADVICE, LEGAL OPINIONS, SOLICITATION, ADVOCACY, OR TAX/FINANCIAL COUNSEL.</strong> Legal doctrine and judicial precedents vary widely across jurisdictions and depend entirely on specific factual contexts.</p>
+          </div>
+          <p><strong>2.3. No Duty to Act:</strong> You should not act, nor refrain from acting, in any real-world dispute or contentious legal proceeding on the basis of any study material contained on this Website without first obtaining direct, formal legal counsel from an advocate duly enrolled with a State Bar Council under the Advocates Act, 1961.</p>
+          <p><strong>2.4. No Guarantees of Examination Results:</strong> While we endeavor to ensure high editorial and pedagogical accuracy, Make Law Easy makes no guarantees regarding specific examination grades, marks, or university evaluation outcomes.</p>
+        </section>
 
-      <section id="sec4">
-        <h2>4. Regulatory Compliance, Professional Ethics &amp; Non-Solicitation</h2>
-        <p><strong>4.1.</strong> This Website has been designed in strict compliance with the professional ethics rules governing legal practitioners under the <strong>Bar Council of India Rules</strong> framed under the <strong>Advocates Act, 1961</strong> (specifically Rule 36 of Section IV, Chapter II, Part VI).</p>
-        <p><strong>4.2. No Advertisement or Inducement:</strong> Make Law Easy does not advertise, solicit professional work, or invite clients through this platform. The portal functions strictly as an open educational knowledge repository for law students.</p>
-        <p><strong>4.3. Voluntary Access:</strong> You acknowledge that you access this portal voluntarily and autonomously for your own personal educational and knowledge enrichment.</p>
-      </section>
+        <!-- Section 3 -->
+        <section class="legal-section" id="sec3">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 03</span>
+            <h2>3. No Attorney-Client / Advocate-Client Relationship</h2>
+            <a href="#sec3" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>3.1.</strong> Accessing, browsing, or reading study dossiers on this Website does not establish or constitute an advocate-client, attorney-client, or fiduciary relationship between you and Make Law Easy, Team Aditya Shukla, or any of our contributors.</p>
+          <p><strong>3.2.</strong> Transmitting messages via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>) or participating in our community channels (such as our official Telegram channel) does not create an advocate-client relationship.</p>
+          <p><strong>3.3. Do Not Transmit Confidential Legal Case Files:</strong> Our communication channels are dedicated strictly to academic inquiries, notes errata, and portal feedback. Please do not send confidential, proprietary, or incriminating real-world litigation files to us.</p>
+        </section>
 
-      <section id="sec5">
-        <h2>5. Free Public Access (No Login or Subscription)</h2>
-        <p><strong>5.1. Open and Free Platform:</strong> Make Law Easy is dedicated to keeping core legal knowledge freely accessible. All core subject notes, case briefs, and PYQ solutions are provided 100% free of charge.</p>
-        <p><strong>5.2. No Account or Credentials Required:</strong> You do not need to register, create a username, or input passwords to access our notes.</p>
-        <p><strong>5.3. No Subscription Fees or Paywalls:</strong> The Website does not operate a paywall, locked membership tier, or recurring subscription model.</p>
-        <p><strong>5.4. No Commercial Transactions on Website:</strong> We do not collect credit/debit card numbers, UPI handles, or online payments on this Website.</p>
-      </section>
+        <!-- Section 4 -->
+        <section class="legal-section" id="sec4">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 04</span>
+            <h2>4. Regulatory Compliance, Professional Ethics &amp; Non-Solicitation</h2>
+            <a href="#sec4" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>4.1.</strong> This Website has been designed in strict compliance with the professional ethics rules governing legal practitioners under the <strong>Bar Council of India Rules</strong> framed under the <strong>Advocates Act, 1961</strong> (specifically Rule 36 of Section IV, Chapter II, Part VI).</p>
+          <div class="callout-box callout-blue">
+            <h4><i class="fa-solid fa-shield-halved"></i> Bar Council of India Rule 36 Statement</h4>
+            <p><strong>Make Law Easy does not advertise, solicit professional work, or invite clients through this platform.</strong> The portal functions strictly as an open educational knowledge repository for law students.</p>
+          </div>
+          <p><strong>4.3. Voluntary Access:</strong> You acknowledge that you access this portal voluntarily and autonomously for your own personal educational and knowledge enrichment.</p>
+        </section>
 
-      <section id="sec6">
-        <h2>6. Eligibility</h2>
-        <p><strong>6.1.</strong> By using this Website, you confirm that you are at least 18 years of age (or have attained the age of majority in your jurisdiction), or are an enrolled student accessing this portal for educational purposes with institutional or parental consent.</p>
-      </section>
+        <!-- Section 5 -->
+        <section class="legal-section" id="sec5">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 05</span>
+            <h2>5. Free Public Access (No Login or Subscription)</h2>
+            <a href="#sec5" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>5.1. Open and Free Platform:</strong> Make Law Easy is dedicated to keeping core legal knowledge freely accessible. All core subject notes, case briefs, and PYQ solutions are provided 100% free of charge.</p>
+          <p><strong>5.2. No Account or Credentials Required:</strong> You do not need to register, create a username, or input passwords to access our notes.</p>
+          <p><strong>5.3. No Subscription Fees or Paywalls:</strong> The Website does not operate a paywall, locked membership tier, or recurring subscription model.</p>
+          <p><strong>5.4. No Commercial Transactions on Website:</strong> We do not collect credit/debit card numbers, UPI handles, or online payments on this Website.</p>
+        </section>
 
-      <section id="sec7">
-        <h2>7. Intellectual Property Rights and Limited Academic License</h2>
-        <p><strong>7.1. Public Legal Records &amp; Fair Dealing (Section 52, Copyright Act, 1957):</strong> Judicial judgments delivered by the Supreme Court of India and High Courts, statutory Bare Acts enacted by Parliament and State Legislatures, and university examination question papers cited on this Website are public legal records. These materials are referenced under the <strong>Fair Dealing</strong> doctrine for private study, research, and educational review pursuant to <strong>Section 52 of the Copyright Act, 1957 (India)</strong>.</p>
-        <p><strong>7.2. Proprietary Original Content:</strong> The editorial synthesis, structured topic notes, original case brief analyses, custom mnemonics, revision flowcharts, user interface design, 3D visual book representations, CSS styling, and underlying code are the exclusive intellectual property of Make Law Easy and Team Aditya Shukla.</p>
-        <p><strong>7.3. Limited License Granted to Students:</strong> Make Law Easy grants you a limited, non-exclusive, revocable license to view, read, and download single copies of reasonable excerpts strictly for your **personal, non-commercial academic study and exam revision**.</p>
-        <p><strong>7.4. Prohibitions:</strong> You may not sell, redistribute, license, bulk-scrape, or commercially exploit any synthesized notes or compilations from this Website without explicit prior written authorization.</p>
-      </section>
+        <!-- Section 6 -->
+        <section class="legal-section" id="sec6">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 06</span>
+            <h2>6. Eligibility</h2>
+            <a href="#sec6" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>6.1.</strong> By using this Website, you confirm that you are at least 18 years of age (or have attained the age of majority in your jurisdiction), or are an enrolled student accessing this portal for educational purposes with institutional or parental consent.</p>
+        </section>
 
-      <section id="sec8">
-        <h2>8. Acceptable Use and Prohibited Conduct</h2>
-        <p><strong>8.1.</strong> You agree to use the Website strictly for lawful educational purposes and in compliance with all applicable laws.</p>
-        <p><strong>8.2.</strong> You agree not to:
+        <!-- Section 7 -->
+        <section class="legal-section" id="sec7">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 07</span>
+            <h2>7. Intellectual Property Rights and Limited Academic License</h2>
+            <a href="#sec7" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>7.1. Public Legal Records &amp; Fair Dealing (Section 52, Copyright Act, 1957):</strong> Judicial judgments delivered by the Supreme Court of India and High Courts, statutory Bare Acts enacted by Parliament and State Legislatures, and university examination question papers cited on this Website are public legal records. These materials are referenced under the <strong>Fair Dealing</strong> doctrine for private study, research, and educational review pursuant to <strong>Section 52 of the Copyright Act, 1957 (India)</strong>.</p>
+          <p><strong>7.2. Proprietary Original Content:</strong> The editorial synthesis, structured topic notes, original case brief analyses, custom mnemonics, revision flowcharts, user interface design, 3D visual book representations, CSS styling, and underlying code are the exclusive intellectual property of Make Law Easy and Team Aditya Shukla.</p>
+          <p><strong>7.3. Limited License Granted to Students:</strong> Make Law Easy grants you a limited, non-exclusive, revocable license to view, read, and download single copies of reasonable excerpts strictly for your <strong>personal, non-commercial academic study and exam revision</strong>.</p>
+          <p><strong>7.4. Prohibitions:</strong> You may not sell, redistribute, license, bulk-scrape, or commercially exploit any synthesized notes or compilations from this Website without explicit prior written authorization.</p>
+        </section>
+
+        <!-- Section 8 -->
+        <section class="legal-section" id="sec8">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 08</span>
+            <h2>8. Acceptable Use and Prohibited Conduct</h2>
+            <a href="#sec8" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>8.1.</strong> You agree to use the Website strictly for lawful educational purposes and in compliance with all applicable laws.</p>
+          <p><strong>8.2.</strong> You agree not to:</p>
           <ul>
             <li>Interfere with or disrupt the stability, uptime, or security of the Website, its hosting servers, or connected networks;</li>
             <li>Launch Denial of Service (DoS/DDoS) attacks or automated flood requests;</li>
@@ -400,48 +1426,82 @@
             <li>Deploy automated scrapers, crawlers, or extraction tools in a manner that degrades service performance for fellow students;</li>
             <li>Impersonate Make Law Easy, Team Aditya Shukla, or university officials.</li>
           </ul>
-        </p>
-      </section>
+        </section>
 
-      <section id="sec9">
-        <h2>9. User Communications, Telegram Community, and Feedback</h2>
-        <p><strong>9.1. Community Etiquette:</strong> Make Law Easy maintains an official Telegram community (<a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a>) for academic updates and student discussions. Users agree to engage respectfully (no harassment, spam, hate speech, or commercial advertising).</p>
-        <p><strong>9.2. Errata &amp; Feedback:</strong> We welcome academic feedback, typo corrections, and notes suggestions from students and professors. By submitting feedback via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>), you grant us the right to incorporate improvements to benefit the broader student community.</p>
-      </section>
+        <!-- Section 9 -->
+        <section class="legal-section" id="sec9">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 09</span>
+            <h2>9. User Communications, Telegram Community, and Feedback</h2>
+            <a href="#sec9" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>9.1. Community Etiquette:</strong> Make Law Easy maintains an official Telegram community (<a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a>) for academic updates and student discussions. Users agree to engage respectfully (no harassment, spam, hate speech, or commercial advertising).</p>
+          <p><strong>9.2. Errata &amp; Feedback:</strong> We welcome academic feedback, typo corrections, and notes suggestions from students and professors. By submitting feedback via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>), you grant us the right to incorporate improvements to benefit the broader student community.</p>
+        </section>
 
-      <section id="sec10">
-        <h2>10. Third-Party Links, Citations, and External References</h2>
-        <p><strong>10.1.</strong> The Website contains academic citations, statutory references, and external hyperlinks (such as official court portals, government gazettes, or Telegram channels). These links are provided solely for academic reference and student convenience.</p>
-        <p><strong>10.2.</strong> Make Law Easy exercises no editorial control over external third-party platforms and assumes no responsibility for their content, availability, or data practices.</p>
-      </section>
+        <!-- Section 10 -->
+        <section class="legal-section" id="sec10">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 10</span>
+            <h2>10. Third-Party Links, Citations, and External References</h2>
+            <a href="#sec10" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>10.1.</strong> The Website contains academic citations, statutory references, and external hyperlinks (such as official court portals, government gazettes, or Telegram channels). These links are provided solely for academic reference and student convenience.</p>
+          <p><strong>10.2.</strong> Make Law Easy exercises no editorial control over external third-party platforms and assumes no responsibility for their content, availability, or data practices.</p>
+        </section>
 
-      <section id="sec11">
-        <h2>11. Accuracy, Currency, and Modifications of Academic Materials</h2>
-        <p><strong>11.1. Dynamic Legal Landscape:</strong> Law is subject to continuous legislative amendments and judicial reinterpretation. While we endeavor to maintain updated notes aligned with current syllabi, Make Law Easy cannot guarantee that every note immediately reflects newly promulgated statutory amendments or recent judgments.</p>
-        <p><strong>11.2. Editorial Updates:</strong> We reserve the right to review, update, edit, or archive study materials at any time to enhance pedagogical clarity.</p>
-      </section>
+        <!-- Section 11 -->
+        <section class="legal-section" id="sec11">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 11</span>
+            <h2>11. Accuracy, Currency, and Modifications of Academic Materials</h2>
+            <a href="#sec11" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>11.1. Dynamic Legal Landscape:</strong> Law is subject to continuous legislative amendments and judicial reinterpretation. While we endeavor to maintain updated notes aligned with current syllabi, Make Law Easy cannot guarantee that every note immediately reflects newly promulgated statutory amendments or recent judgments.</p>
+          <p><strong>11.2. Editorial Updates:</strong> We reserve the right to review, update, edit, or archive study materials at any time to enhance pedagogical clarity.</p>
+        </section>
 
-      <section id="sec12">
-        <h2>12. Disclaimer of Warranties</h2>
-        <p><strong>12.1. &ldquo;AS-IS&rdquo; Academic Resource:</strong> <strong>THE WEBSITE, ALL SYLLABUS NOTES, CASE BRIEFS, BARE ACTS, AND STUDY MATERIALS ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS FOR ACADEMIC REVISION ONLY, WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong></p>
-        <p><strong>12.2.</strong> To the maximum extent permitted by law, Make Law Easy disclaims all warranties, including implied warranties of merchantability, fitness for a particular educational purpose, title, accuracy, and uninterrupted availability.</p>
-      </section>
+        <!-- Section 12 -->
+        <section class="legal-section" id="sec12">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 12</span>
+            <h2>12. Disclaimer of Warranties</h2>
+            <a href="#sec12" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>12.1. &ldquo;AS-IS&rdquo; Academic Resource:</strong> <strong>THE WEBSITE, ALL SYLLABUS NOTES, CASE BRIEFS, BARE ACTS, AND STUDY MATERIALS ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS FOR ACADEMIC REVISION ONLY, WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong></p>
+          <p><strong>12.2.</strong> To the maximum extent permitted by law, Make Law Easy disclaims all warranties, including implied warranties of merchantability, fitness for a particular educational purpose, title, accuracy, and uninterrupted availability.</p>
+        </section>
 
-      <section id="sec13">
-        <h2>13. Limitation of Liability</h2>
-        <p><strong>13.1.</strong> In no event shall Make Law Easy, Team Aditya Shukla, or any contributors be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to, use of, or inability to access this Website or its study notes.</p>
-        <p><strong>13.2. Liability Cap:</strong> Because this platform is provided completely free of charge to the student community, <strong>the total aggregate liability of Make Law Easy for any claims under these Terms shall not exceed five hundred Indian Rupees (INR ₹500.00).</strong></p>
-      </section>
+        <!-- Section 13 -->
+        <section class="legal-section" id="sec13">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 13</span>
+            <h2>13. Limitation of Liability</h2>
+            <a href="#sec13" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>13.1.</strong> In no event shall Make Law Easy, Team Aditya Shukla, or any contributors be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to, use of, or inability to access this Website or its study notes.</p>
+          <p><strong>13.2. Liability Cap:</strong> Because this platform is provided completely free of charge to the student community, <strong>the total aggregate liability of Make Law Easy for any claims under these Terms shall not exceed five hundred Indian Rupees (INR ₹500.00).</strong></p>
+        </section>
 
-      <section id="sec14">
-        <h2>14. Indemnification</h2>
-        <p><strong>14.1.</strong> You agree to indemnify, defend, and hold harmless Make Law Easy and Team Aditya Shukla from and against any claims, liabilities, damages, or costs (including legal fees) arising from your misuse of the Website, violation of these Terms, or infringement of any third-party rights.</p>
-      </section>
+        <!-- Section 14 -->
+        <section class="legal-section" id="sec14">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 14</span>
+            <h2>14. Indemnification</h2>
+            <a href="#sec14" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>14.1.</strong> You agree to indemnify, defend, and hold harmless Make Law Easy and Team Aditya Shukla from and against any claims, liabilities, damages, or costs (including legal fees) arising from your misuse of the Website, violation of these Terms, or infringement of any third-party rights.</p>
+        </section>
 
-      <section id="sec15">
-        <h2>15. Copyright Infringement, Fair Use &amp; Takedown Procedure</h2>
-        <p><strong>15.1.</strong> Make Law Easy respects intellectual property rights and adheres to the **Information Technology Act, 2000** and the **Copyright Act, 1957 (India)**.</p>
-        <p><strong>15.2.</strong> If you believe in good faith that any material hosted on this portal exceeds fair educational dealing or infringes your copyright, please forward a detailed notice to <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> specifying:
+        <!-- Section 15 -->
+        <section class="legal-section" id="sec15">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 15</span>
+            <h2>15. Copyright Infringement, Fair Use &amp; Takedown Procedure</h2>
+            <a href="#sec15" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>15.1.</strong> Make Law Easy respects intellectual property rights and adheres to the <strong>Information Technology Act, 2000</strong> and the <strong>Copyright Act, 1957 (India)</strong>.</p>
+          <p><strong>15.2.</strong> If you believe in good faith that any material hosted on this portal exceeds fair educational dealing or infringes your copyright, please forward a detailed notice to <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> specifying:</p>
           <ol>
             <li>Identification of the copyrighted work claimed to have been infringed;</li>
             <li>Specific URL or location on <code>makelaweasy.in</code>;</li>
@@ -449,61 +1509,302 @@
             <li>A statement of good-faith belief that the use is unauthorized;</li>
             <li>A declaration of accuracy under penalty of perjury.</li>
           </ol>
-        </p>
-        <p><strong>15.3.</strong> Upon receipt of a valid notice, we will promptly investigate and take appropriate remedial action (including editing or removing the referenced material).</p>
-      </section>
+          <p><strong>15.3.</strong> Upon receipt of a valid notice, we will promptly investigate and take appropriate remedial action (including editing or removing the referenced material).</p>
+        </section>
 
-      <section id="sec16">
-        <h2>16. Privacy and Data Protection Reference</h2>
-        <p><strong>16.1.</strong> Your privacy is paramount. We practice strict data minimization. Please review our <a href="privacy.html">Privacy Policy</a> to understand how technical telemetry, local storage preferences, and optional feedback are handled in compliance with the **Digital Personal Data Protection Act, 2023 (DPDP Act, India)**.</p>
-      </section>
+        <!-- Section 16 -->
+        <section class="legal-section" id="sec16">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 16</span>
+            <h2>16. Privacy and Data Protection Reference</h2>
+            <a href="#sec16" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>16.1.</strong> Your privacy is paramount. We practice strict data minimization. Please review our <a href="privacy.html">Privacy Policy</a> to understand how technical telemetry, local storage preferences, and optional feedback are handled in compliance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong>.</p>
+        </section>
 
-      <section id="sec17">
-        <h2>17. Severability and Enforceability</h2>
-        <p><strong>17.1.</strong> If any provision of these Terms is determined by a court of competent jurisdiction to be invalid or unenforceable, such provision shall be severed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
-      </section>
+        <!-- Section 17 -->
+        <section class="legal-section" id="sec17">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 17</span>
+            <h2>17. Severability and Enforceability</h2>
+            <a href="#sec17" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>17.1.</strong> If any provision of these Terms is determined by a court of competent jurisdiction to be invalid or unenforceable, such provision shall be severed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+        </section>
 
-      <section id="sec18">
-        <h2>18. Governing Law and Dispute Resolution</h2>
-        <p><strong>18.1. Governing Law:</strong> These Terms and your use of the Website shall be governed by, interpreted, and construed in accordance with the <strong>substantive laws of India</strong>.</p>
-        <p><strong>18.2. Exclusive Jurisdiction:</strong> Any dispute, controversy, or claim arising out of or related to this Website shall be subject to the exclusive jurisdiction of the competent civil courts situated at <strong>New Delhi, India</strong>.</p>
-        <p><strong>18.3. Amicable Resolution:</strong> You agree to first contact Make Law Easy at <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> to resolve any concern or grievance informally before seeking formal judicial remedy.</p>
-      </section>
+        <!-- Section 18 -->
+        <section class="legal-section" id="sec18">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 18</span>
+            <h2>18. Governing Law and Dispute Resolution</h2>
+            <a href="#sec18" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>18.1. Governing Law:</strong> These Terms and your use of the Website shall be governed by, interpreted, and construed in accordance with the <strong>substantive laws of India</strong>.</p>
+          <p><strong>18.2. Exclusive Jurisdiction:</strong> Any dispute, controversy, or claim arising out of or related to this Website shall be subject to the exclusive jurisdiction of the competent civil courts situated at <strong>New Delhi, India</strong>.</p>
+          <p><strong>18.3. Amicable Resolution:</strong> You agree to first contact Make Law Easy at <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> to resolve any concern or grievance informally before seeking formal judicial remedy.</p>
+        </section>
 
-      <section id="sec19">
-        <h2>19. Waiver and Entire Agreement</h2>
-        <p><strong>19.1.</strong> These Terms, together with our Privacy Policy and official notices published on the Website, constitute the entire agreement between you and Make Law Easy regarding your access to and use of the portal.</p>
-      </section>
+        <!-- Section 19 -->
+        <section class="legal-section" id="sec19">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 19</span>
+            <h2>19. Waiver and Entire Agreement</h2>
+            <a href="#sec19" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>19.1.</strong> These Terms, together with our Privacy Policy and official notices published on the Website, constitute the entire agreement between you and Make Law Easy regarding your access to and use of the portal.</p>
+        </section>
 
-      <section id="sec20">
-        <h2>20. Updates and Modifications to These Terms</h2>
-        <p><strong>20.1.</strong> We may update or amend these Terms periodically. Any changes will become effective immediately upon posting to this page with an updated &ldquo;Last Updated&rdquo; date displayed above. Your continued use of the portal following any update signifies your acceptance of the revised Terms.</p>
-      </section>
+        <!-- Section 20 -->
+        <section class="legal-section" id="sec20">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 20</span>
+            <h2>20. Updates and Modifications to These Terms</h2>
+            <a href="#sec20" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p><strong>20.1.</strong> We may update or amend these Terms periodically. Any changes will become effective immediately upon posting to this page with an updated &ldquo;Last Updated&rdquo; date displayed above. Your continued use of the portal following any update signifies your acceptance of the revised Terms.</p>
+        </section>
 
-      <section id="sec21">
-        <h2>21. Contact and Grievance Officer Information</h2>
-        <p>For any inquiries, academic questions, copyright concerns, or legal notices, please reach out to our team:</p>
-        
-        <div class="contact-card">
-          <ul>
-            <li><i class="fa-solid fa-graduation-cap"></i> <b>Platform:</b> Make Law Easy</li>
-            <li><i class="fa-solid fa-award"></i> <b>Academic Initiative:</b> Team Aditya Shukla</li>
-            <li><i class="fa-solid fa-user-shield"></i> <b>Grievance Redressal Contact:</b> Ankur</li>
-            <li><i class="fa-solid fa-envelope"></i> <b>Official Email:</b> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></li>
-            <li><i class="fa-brands fa-telegram"></i> <b>Official Telegram:</b> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a></li>
-            <li><i class="fa-solid fa-location-dot"></i> <b>Location:</b> New Delhi, Delhi, India</li>
-            <li><i class="fa-solid fa-globe"></i> <b>Website:</b> <a href="https://makelaweasy.in">https://makelaweasy.in</a></li>
-          </ul>
-        </div>
-      </section>
-    </article>
+        <!-- Section 21 -->
+        <section class="legal-section" id="sec21">
+          <div class="section-header">
+            <span class="section-badge">CLAUSE 21</span>
+            <h2>21. Contact and Grievance Officer Information</h2>
+            <a href="#sec21" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
+          </div>
+          <p>For any inquiries, academic questions, copyright concerns, or legal notices, please reach out to our team:</p>
+          
+          <div class="contact-card">
+            <div class="contact-grid">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="contact-item-content">
+                  <strong>Platform</strong>
+                  <span>Make Law Easy</span>
+                </div>
+              </div>
 
-    <footer>
-      &copy; 2026 Make Law Easy &bull; All Rights Reserved.
-      <br>
-      <span class="footer-team"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
-    </footer>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="contact-item-content">
+                  <strong>Academic Initiative</strong>
+                  <span>Team Aditya Shukla</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <div class="contact-item-content">
+                  <strong>Grievance Redressal</strong>
+                  <span>Ankur (Redressal Lead)</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-item-content">
+                  <strong>Official Email</strong>
+                  <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-brands fa-telegram"></i></div>
+                <div class="contact-item-content">
+                  <strong>Official Telegram</strong>
+                  <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-item-content">
+                  <strong>Jurisdiction</strong>
+                  <span>New Delhi, Delhi, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
   </main>
 
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Interactive Toast Notice -->
+  <div class="toast-notice" id="toastNotice" role="status" aria-live="polite">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastNoticeMsg">Link copied to clipboard</span>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <span>&bull;</span>
+        <a href="about.html">About Us</a>
+        <span>&bull;</span>
+        <a href="terms.html">Terms of Service</a>
+        <span>&bull;</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <span>&bull;</span>
+        <a href="mailto:ankur@makelaweasy.in">Contact Us</a>
+      </div>
+
+      <p>&copy; 2026 Make Law Easy &bull; An academic legal study resource crafted for serious law students.</p>
+
+      <div>
+        <span class="footer-team-pill">
+          <i class="fa-solid fa-award"></i> Team Aditya Shukla
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Client Scripts -->
+  <script>
+    (function() {
+      // 1. Scroll Progress Bar
+      const progressBar = document.getElementById('scrollProgressBar');
+      const backToTopBtn = document.getElementById('backToTopBtn');
+
+      function updateScrollState() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        if (progressBar) {
+          progressBar.style.width = progress + '%';
+        }
+        if (backToTopBtn) {
+          if (scrollTop > 320) {
+            backToTopBtn.classList.add('show');
+          } else {
+            backToTopBtn.classList.remove('show');
+          }
+        }
+      }
+
+      window.addEventListener('scroll', updateScrollState, { passive: true });
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 2. Print & Share actions
+      const printBtn = document.getElementById('printBtn');
+      if (printBtn) {
+        printBtn.addEventListener('click', function() {
+          window.print();
+        });
+      }
+
+      const toastNotice = document.getElementById('toastNotice');
+      const toastNoticeMsg = document.getElementById('toastNoticeMsg');
+      function showToast(msg) {
+        if (!toastNotice) return;
+        if (toastNoticeMsg) toastNoticeMsg.textContent = msg;
+        toastNotice.classList.add('show');
+        setTimeout(() => toastNotice.classList.remove('show'), 2800);
+      }
+
+      const copyShareBtn = document.getElementById('copyShareBtn');
+      if (copyShareBtn) {
+        copyShareBtn.addEventListener('click', function() {
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            showToast('Document link copied to clipboard');
+          }).catch(() => {
+            showToast('Link ready: ' + window.location.href);
+          });
+        });
+      }
+
+      // 3. Section Anchor deep-links
+      document.querySelectorAll('.anchor-btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+            history.pushState(null, null, targetId);
+            const fullUrl = window.location.origin + window.location.pathname + targetId;
+            navigator.clipboard.writeText(fullUrl).then(() => {
+              showToast('Direct section link copied to clipboard');
+            }).catch(() => {});
+          }
+        });
+      });
+
+      // 4. ScrollSpy for Left Sidebar TOC
+      const sections = document.querySelectorAll('.legal-section');
+      const tocLinks = document.querySelectorAll('.sidebar-toc-list .toc-link');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const activeId = entry.target.getAttribute('id');
+            tocLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + activeId) {
+                link.classList.add('active');
+                link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      }, {
+        rootMargin: '-10% 0px -70% 0px',
+        threshold: 0.05
+      });
+
+      sections.forEach(sec => observer.observe(sec));
+
+      // 5. Client-Side Clause Filter
+      const clauseFilterInput = document.getElementById('clauseFilterInput');
+      if (clauseFilterInput) {
+        clauseFilterInput.addEventListener('input', function() {
+          const filter = this.value.toLowerCase().trim();
+          tocLinks.forEach(link => {
+            const text = link.textContent.toLowerCase();
+            const parentLi = link.closest('li');
+            if (parentLi) {
+              parentLi.style.display = text.includes(filter) ? '' : 'none';
+            }
+          });
+        });
+      }
+
+      // 6. Mobile TOC Accordion Toggle
+      const mobileTocToggle = document.getElementById('mobileTocToggle');
+      const mobileTocDrawer = document.getElementById('mobileTocDrawer');
+      const mobileTocChevron = document.getElementById('mobileTocChevron');
+
+      if (mobileTocToggle && mobileTocDrawer) {
+        mobileTocToggle.addEventListener('click', function() {
+          const isOpen = mobileTocDrawer.classList.toggle('open');
+          mobileTocToggle.setAttribute('aria-expanded', isOpen);
+          if (mobileTocChevron) {
+            mobileTocChevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+          }
+        });
+
+        mobileTocDrawer.querySelectorAll('a').forEach(a => {
+          a.addEventListener('click', () => {
+            mobileTocDrawer.classList.remove('open');
+            mobileTocToggle.setAttribute('aria-expanded', 'false');
+            if (mobileTocChevron) mobileTocChevron.style.transform = '';
+          });
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
