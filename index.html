@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=5.0">
+  <link rel="stylesheet" href="css/styles.css?v=5.1">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -282,25 +282,25 @@
 
         <div class="hub-title-row">
           <div class="hub-title-content">
-            <div class="hub-tags-wrap">
-              <span class="hub-code-tag" id="hubCodeTag">LB-102 &bull; DU Case Material</span>
+            <div class="hub-tags-wrap" style="display: none !important;">
+              <span class="hub-code-tag" id="hubCodeTag"></span>
               <span class="hub-motto-tag" id="hubMottoTag"></span>
             </div>
             <h2 id="hubTitle">Subject Name</h2>
-            <p class="hub-sub" id="hubTagline">Syllabus tagline and course description.</p>
+            <p class="hub-sub" id="hubTagline" style="display: none !important;">Syllabus tagline and course description.</p>
           </div>
         </div>
 
-        <!-- Metric Counter Pills -->
-        <div class="hub-pills-row">
+        <!-- Metric Counter Pills (Hidden for Clean Subject Presentation) -->
+        <div class="hub-pills-row" style="display: none !important;">
           <div class="hub-pill" id="hubUnitsPill">&#128218; <b>0</b> Units / Topics</div>
           <div class="hub-pill" id="hubCasesPill">&#9878; <b>0</b> Landmark Cases</div>
           <div class="hub-pill" id="hubPyqsPill">&#128221; <b>0</b> DU PYQs with Answers</div>
           <div class="hub-pill" id="hubRevPill">&#9889; <b>0</b> Revision Capsules</div>
         </div>
 
-        <!-- Quick Study Actions: Flashcards -->
-        <div class="hub-action-btns-row">
+        <!-- Quick Study Actions: Flashcards (Hidden in Banner) -->
+        <div class="hub-action-btns-row" style="display: none !important;">
           <button class="hub-action-btn flashcard-btn" id="hubStartFlashcardsBtn" title="Launch Precedent Recall Flashcards" type="button">
             <div class="metal-inner-body">
               <div class="metal-icon-circle">
@@ -311,8 +311,8 @@
           </button>
         </div>
 
-        <!-- Study Progress Tracker -->
-        <div class="hub-progress-card">
+        <!-- Study Progress Tracker (Hidden in Banner) -->
+        <div class="hub-progress-card" style="display: none !important;">
           <div class="progress-info-row">
             <span><i class="fa-solid fa-list-check"></i> <b>Study &amp; Revision Progress</b> (<span id="subjectProgressCount">0 of 0 topics</span>)</span>
             <span class="progress-percent" id="subjectProgressText">0% Done</span>
@@ -986,7 +986,7 @@
   <script src="js/data.js?v=4.9"></script>
   <script src="js/bare_acts.js?v=4.7"></script>
   <script src="js/bns_converter.js?v=4.1"></script>
-  <script src="js/app.js?v=5.0"></script>
+  <script src="js/app.js?v=5.1"></script>
 
   <script>
     if ("serviceWorker" in navigator) {

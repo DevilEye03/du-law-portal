@@ -719,7 +719,7 @@
     // Update Hub Banner Header
     elements.hubBreadcrumbSem.textContent = `Semester ${state.currentSemester}`;
     elements.hubBreadcrumbSub.textContent = sub.shortName;
-    elements.hubCodeTag.textContent = `${sub.code} • DU Case Material`;
+    elements.hubCodeTag.textContent = sub.code || '';
     if (elements.hubMottoTag) {
       if (sub.theme.motto) {
         elements.hubMottoTag.textContent = sub.theme.motto;
