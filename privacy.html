@@ -11,41 +11,48 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Make Law Easy (Delhi University Law Notes Portal)</title>
-  <meta name="description" content="Privacy Policy for Make Law Easy. Explains our data practices, cookie usage, Google AdSense, and Google Analytics compliance.">
+  <title>Privacy Policy — Make Law Easy</title>
+  <meta name="description" content="Privacy Policy for Make Law Easy (makelaweasy.in) — Operated by Team Aditya Shukla. Data minimization, Google Analytics (GA4: G-8ZG7VS1G45), Google AdSense compliance, and Digital Personal Data Protection Act (DPDP Act 2023).">
   <link rel="canonical" href="https://makelaweasy.in/privacy.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     :root {
       --bg: #0b1120;
       --surface: #131d35;
       --card: #182647;
-      --border: rgba(148, 163, 184, 0.15);
+      --border: rgba(148, 163, 184, 0.16);
+      --border-accent: rgba(201, 168, 76, 0.35);
       --accent: #38bdf8;
       --gold: #f59e0b;
+      --gold-light: #fde68a;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.7;
+      line-height: 1.75;
       font-size: 16px;
       padding-bottom: 60px;
     }
     .header {
       background: linear-gradient(180deg, #0f172a 0%, var(--bg) 100%);
       border-bottom: 1px solid var(--border);
-      padding: 24px 20px;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
     }
     .header-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -58,76 +65,222 @@
       text-decoration: none;
       color: #fff;
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 700;
     }
     .brand i { color: var(--gold); }
     .back-link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 500;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      padding: 8px 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 9999px;
+      transition: all 0.2s ease;
     }
-    .back-link:hover { text-decoration: underline; }
+    .back-link:hover {
+      background: rgba(56, 189, 248, 0.16);
+      text-decoration: none;
+    }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 960px;
+      margin: 36px auto;
       padding: 0 20px;
     }
     .policy-card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 18px;
+      padding: 44px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+    @media (max-width: 640px) {
+      .policy-card { padding: 24px 18px; }
+      h1 { font-size: 1.85rem !important; }
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      font-size: 2.35rem;
       color: #fff;
       margin-bottom: 8px;
+      line-height: 1.25;
     }
-    .updated-date {
-      color: var(--text-muted);
+    .meta-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 14px 0 28px;
       font-size: 0.88rem;
-      margin-bottom: 30px;
-      display: block;
+      color: var(--text-muted);
     }
-    h2 {
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    .notice-box {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(245, 158, 11, 0.08) 100%);
+      border: 1px solid var(--border-accent);
+      border-left: 5px solid var(--accent);
+      padding: 22px 24px;
+      border-radius: 12px;
+      margin: 28px 0;
+    }
+    .notice-box h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.45rem;
       color: var(--accent);
-      margin: 32px 0 12px;
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notice-box p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+    .notice-box p:last-child { margin-bottom: 0; }
+    .toc-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 32px 0 40px;
+    }
+    .toc-card h3 {
+      color: #fff;
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       border-bottom: 1px solid var(--border);
       padding-bottom: 8px;
     }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 8px 16px;
+      list-style: none;
+    }
+    .toc-grid a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.15s ease;
+      display: block;
+      padding: 2px 0;
+    }
+    .toc-grid a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin: 40px 0 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      scroll-margin-top: 90px;
+    }
+    h3.sub-sec {
+      font-size: 1.08rem;
+      color: #fff;
+      margin: 20px 0 8px;
+    }
     p, li {
       color: #cbd5e1;
-      font-size: 1.02rem;
-      margin-bottom: 16px;
+      font-size: 1rem;
+      margin-bottom: 14px;
     }
-    ul {
+    ul, ol {
       padding-left: 24px;
       margin-bottom: 20px;
     }
     li { margin-bottom: 8px; }
-    .highlight-box {
-      background: rgba(56, 189, 248, 0.08);
-      border-left: 4px solid var(--accent);
-      padding: 16px 20px;
-      border-radius: 0 10px 10px 0;
-      margin: 24px 0;
+    b, strong { color: #fff; }
+    code {
+      background: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--gold-light);
+      font-family: monospace;
+      font-size: 0.92em;
     }
-    .highlight-box p { margin: 0; color: #e2e8f0; }
     a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+    .info-table th, .info-table td {
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .info-table th {
+      background: #0f172a;
+      color: #fff;
+      font-weight: 600;
+    }
+    .info-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .contact-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    .contact-card li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e2e8f0;
+    }
+    .contact-card li i {
+      color: var(--gold);
+      width: 20px;
+      text-align: center;
+    }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 48px;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+    }
+    .footer-team {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      color: var(--gold);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -150,57 +303,308 @@
   </header>
 
   <main class="container">
-    <div class="policy-card">
+    <article class="policy-card">
       <h1>Privacy Policy</h1>
-      <span class="updated-date">Last Updated: September 12, 2026 • Strictly Compliant with Digital Personal Data Protection (DPDP) Act &amp; Google Publisher Policies</span>
-
-      <p>Welcome to <b>Make Law Easy</b> (<a href="https://makelaweasy.in">makelaweasy.in</a>), an academic legal portal curated for LL.B. students of Delhi University (Campus Law Centre, Law Centre–I, and Law Centre–II). We are committed to protecting your privacy and ensuring transparency regarding our data collection and advertising practices.</p>
-
-      <h2>1. Information We Collect</h2>
-      <p>Make Law Easy is an open academic repository. You do not need to register, create an account, or share personal credentials (such as your name, phone number, or address) to read our notes, landmark cases, or past year questions.</p>
-      <ul>
-        <li><b>Automated Log Files:</b> Like almost all web servers, our host (Google Firebase Hosting) automatically records non-personally identifiable log information including your IP address, browser type, Internet Service Provider (ISP), referring/exit pages, platform type, and date/time stamps.</li>
-        <li><b>Local Storage:</b> We use your browser's local storage solely to remember your user interface preferences (such as Dark Mode / Light Mode, selected semester, and personal study progress checkboxes). This data remains strictly on your own device and is never transmitted to any central database.</li>
-      </ul>
-
-      <h2>2. Google AdSense &amp; Advertising Cookies</h2>
-      <div class="highlight-box">
-        <p><b>Important Notice Regarding Third-Party Advertisements:</b> We use third-party advertising companies, including Google LLC, to serve advertisements when you visit our website.</p>
+      
+      <div class="meta-badge-row">
+        <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i> Last Updated: September 17, 2026</span>
+        <span class="meta-pill"><i class="fa-solid fa-shield-halved"></i> DPDP Act 2023 &amp; GDPR Compliant</span>
+        <span class="meta-pill"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
       </div>
-      <p>Google’s use of advertising cookies enables it and its partners to serve ads to users based on their visit to Make Law Easy and/or other sites on the Internet.</p>
-      <ul>
-        <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.</li>
-        <li>Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our portal and/or other websites on the Internet.</li>
-        <li>You may opt out of personalized advertising by visiting <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a>.</li>
-        <li>Alternatively, you can opt out of third-party vendor cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.</li>
-      </ul>
 
-      <h2>3. Google Analytics (GA4)</h2>
-      <p>We use Google Analytics 4 (Measurement ID: <code>G-8ZG7VS1G45</code>) to understand how students engage with our educational materials. Google Analytics gathers aggregated statistical data, such as:</p>
-      <ul>
-        <li>Total daily visitors and real-time active users.</li>
-        <li>Aggregated geographical location (e.g. City and Country level).</li>
-        <li>Most viewed subjects, syllabus units, landmark case briefs, and PYQ solutions.</li>
-      </ul>
-      <p>Google Analytics operates anonymously and does not collect personally identifiable information (PII). You can prevent your data from being used by Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
+      <div class="notice-box">
+        <h3><i class="fa-solid fa-lock"></i> Important Notice: Open Academic Resource &amp; Data Minimization</h3>
+        <p><strong>This Privacy Policy applies to an open, freely accessible academic legal portal.</strong> You are not required to create an account, log in with credentials, or purchase a paid subscription to browse, read, or access the legal notes, case briefs, statutory bare acts, and PYQ solutions provided on this website.</p>
+        <p><strong>We practice rigorous data minimization:</strong> We do not collect passwords, payment cards, phone contacts, or financial details. Please read this Privacy Policy carefully to understand our data protection practices.</p>
+      </div>
 
-      <h2>4. External Links &amp; Academic Materials</h2>
-      <p>Our notes contain academic citations, statutory references, and external hyperlinks (such as Telegram discussion channels or government gazettes). Make Law Easy is not responsible for the privacy policies, terms, or content of third-party external websites.</p>
+      <!-- Quick Navigation -->
+      <nav class="toc-card" aria-label="Table of Contents">
+        <h3><i class="fa-solid fa-list-ol"></i> Table of Contents</h3>
+        <ol class="toc-grid">
+          <li><a href="#sec1">1. Introduction and Scope</a></li>
+          <li><a href="#sec2">2. Data Controller &amp; Contact Details</a></li>
+          <li><a href="#sec3">3. Data Minimization Architecture</a></li>
+          <li><a href="#sec4">4. Categories of Data We Collect</a></li>
+          <li><a href="#sec5">5. Data We DO NOT Collect</a></li>
+          <li><a href="#sec6">6. Legal Bases for Processing</a></li>
+          <li><a href="#sec7">7. How We Use Your Information</a></li>
+          <li><a href="#sec8">8. Confidentiality &amp; Academic Notice</a></li>
+          <li><a href="#sec9">9. Cookies, GA4 &amp; Google AdSense</a></li>
+          <li><a href="#sec10">10. Sharing &amp; Disclosure of Information</a></li>
+          <li><a href="#sec11">11. Cloud Infrastructure &amp; CDN</a></li>
+          <li><a href="#sec12">12. Data Retention &amp; Erasure</a></li>
+          <li><a href="#sec13">13. Security Practices &amp; Safeguards</a></li>
+          <li><a href="#sec14">14. Your Legal Rights (DPDP Act)</a></li>
+          <li><a href="#sec15">15. How to Exercise Your Rights</a></li>
+          <li><a href="#sec16">16. Children's Privacy Protection</a></li>
+          <li><a href="#sec17">17. Third-Party Websites &amp; Links</a></li>
+          <li><a href="#sec18">18. Governing Law &amp; Jurisdiction</a></li>
+          <li><a href="#sec19">19. Modifications to This Policy</a></li>
+          <li><a href="#sec20">20. Grievance Redressal &amp; DPO</a></li>
+        </ol>
+      </nav>
 
-      <h2>5. Academic Disclaimer</h2>
-      <p>Make Law Easy is an independent student academic resource. The summaries, case analyses, and model answers provided on this portal are for educational, revision, and study purposes only and do not constitute formal legal advice.</p>
+      <section id="sec1">
+        <h2>1. Introduction and Scope</h2>
+        <p><strong>1.1.</strong> This Privacy Policy (&ldquo;<strong>Policy</strong>&rdquo;) describes the principles and practices of <strong>Make Law Easy</strong>, an academic legal education initiative led by <strong>Team Aditya Shukla</strong> (&ldquo;<strong>Make Law Easy</strong>&rdquo;, &ldquo;<strong>we</strong>&rdquo;, &ldquo;<strong>us</strong>&rdquo;, or &ldquo;<strong>our</strong>&rdquo;), regarding the collection, use, processing, and protection of information obtained from visitors and users (&ldquo;<strong>User</strong>&rdquo;, &ldquo;<strong>student</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo;, or &ldquo;<strong>your</strong>&rdquo;) who access our public website at <a href="https://makelaweasy.in">https://makelaweasy.in</a> (and <a href="https://make-law-easy.web.app">https://make-law-easy.web.app</a>, collectively referred to as the &ldquo;<strong>Website</strong>&rdquo;).</p>
+        <p><strong>1.2. Compliance Framework:</strong> This Policy is formulated in compliance with applicable privacy statutes:
+          <ul>
+            <li>The <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong> and the <strong>Information Technology Act, 2000</strong> (including the IT Rules, 2011);</li>
+            <li>International data protection standards, including the <strong>General Data Protection Regulation (EU GDPR / UK GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA/CPRA)</strong>;</li>
+            <li>Google Publisher &amp; AdSense Privacy Policies and Google Analytics 4 transparency standards.</li>
+          </ul>
+        </p>
+        <p><strong>1.3.</strong> This Policy must be read in conjunction with our <a href="terms.html">Terms and Conditions of Use &amp; Legal Disclaimer</a>.</p>
+      </section>
 
-      <h2>6. Contact Us</h2>
-      <p>If you have any questions or suggestions regarding this Privacy Policy or our editorial practices, please contact us:</p>
-      <ul>
-        <li><b>Email:</b> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></li>
-        <li><b>Academic Platform:</b> Make Law Easy (Academic Study Portal)</li>
-        <li><b>Official Telegram:</b> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">Join Community Channel</a></li>
-      </ul>
-    </div>
+      <section id="sec2">
+        <h2>2. Data Controller and Contact Details</h2>
+        <p><strong>2.1.</strong> The Data Controller responsible for information processed through this Website is:</p>
+        <div class="contact-card">
+          <ul>
+            <li><i class="fa-solid fa-graduation-cap"></i> <b>Platform:</b> Make Law Easy</li>
+            <li><i class="fa-solid fa-award"></i> <b>Academic Initiative:</b> Team Aditya Shukla</li>
+            <li><i class="fa-solid fa-location-dot"></i> <b>Headquarters / Location:</b> New Delhi, Delhi, India</li>
+            <li><i class="fa-solid fa-envelope"></i> <b>Official Privacy Email:</b> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></li>
+            <li><i class="fa-brands fa-telegram"></i> <b>Official Community:</b> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a></li>
+            <li><i class="fa-solid fa-globe"></i> <b>Website:</b> <a href="https://makelaweasy.in">https://makelaweasy.in</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="sec3">
+        <h2>3. The Principle of Data Minimization (No Login or Subscription)</h2>
+        <p><strong>3.1. Open Public Platform:</strong> Unlike commercial platforms or subscription portals, Make Law Easy operates on an uncompromising <strong>data minimization</strong> architecture.</p>
+        <p><strong>3.2. No User Accounts or Credentials:</strong> We do not operate a user registration portal. You do not need to create an account, enter passwords, or submit credentials to read our syllabus notes, landmark case briefs, or PYQ dossiers.</p>
+        <p><strong>3.3. No Financial Data Collection:</strong> We do not charge subscription fees, sell digital products through the Website, or maintain payment gateways. Consequently, <strong>we do not request, process, or store credit card numbers, debit card details, bank account credentials, UPI handles, or billing addresses</strong>.</p>
+      </section>
+
+      <section id="sec4">
+        <h2>4. Categories of Information We Collect</h2>
+        <p>We limit data collection to what is strictly necessary to maintain security, ensure responsive performance, and communicate with students who reach out directly.</p>
+
+        <h3 class="sub-sec">4.1. Information You Provide Voluntarily:</h3>
+        <p>When you voluntarily email us (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>) or engage in our Telegram community, you may provide:
+          <ul>
+            <li><strong>Contact Details:</strong> Your name, email address, or Telegram handle;</li>
+            <li><strong>Inquiry Content:</strong> Academic questions, syllabus feedback, notes suggestions, or errata reports.</li>
+          </ul>
+        </p>
+
+        <h3 class="sub-sec">4.2. Local Storage (Stored Exclusively on Your Device):</h3>
+        <p>To provide a personalized study experience without requiring a login, Make Law Easy utilizes standard browser <strong>HTML5 Local Storage</strong>:
+          <ul>
+            <li><strong>Display Settings:</strong> Dark / Light mode theme setting (<code>du_law_dark_mode</code>);</li>
+            <li><strong>Curriculum Navigation:</strong> Currently selected semester (<code>du_law_selected_semester</code>);</li>
+            <li><strong>Study Progress:</strong> Checked topic completion items and bookmarks (<code>du_law_portal_bookmarks</code>).</li>
+          </ul>
+          <em>Privacy Guarantee: All Local Storage data is stored strictly on your own device and browser. It is NEVER uploaded, transmitted, or synchronized to any remote database.</em>
+        </p>
+
+        <h3 class="sub-sec">4.3. Information Collected Automatically (Technical Telemetry):</h3>
+        <p>When your browser accesses the Website, our hosting infrastructure (Google Firebase Hosting) automatically logs standard, non-sensitive technical details:
+          <ul>
+            <li><strong>Network Telemetry:</strong> Anonymized IP address, operating system, browser type, device category (desktop/mobile), and screen resolution;</li>
+            <li><strong>Request Logs:</strong> Timestamp of request, pages visited, referring URLs, HTTP status codes, and bytes transferred.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="sec5">
+        <h2>5. Information We Explicitly DO NOT Collect</h2>
+        <p>Make Law Easy explicitly refrains from harvesting or collecting:
+          <ul>
+            <li><strong>Device Contacts:</strong> We never inspect or access your device address book;</li>
+            <li><strong>Social Media Profiles:</strong> We do not deploy intrusive social login plugins that scrape your social networks;</li>
+            <li><strong>Financial Credentials:</strong> We do not collect bank credentials, credit/debit card numbers, or UPI PINs;</li>
+            <li><strong>Biometric Data:</strong> We do not collect fingerprints, facial recognition scans, or voiceprints;</li>
+            <li><strong>Precise GPS Location:</strong> We do not track real-time GPS coordinates;</li>
+            <li><strong>Data Brokering:</strong> We do not sell, rent, or trade your browsing records to commercial data brokers.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="sec6">
+        <h2>6. Legal Bases for Processing Personal Data</h2>
+        <p>Under the <strong>Digital Personal Data Protection Act, 2023</strong> and the <strong>EU/UK GDPR</strong>, we process data on the following lawful bases:</p>
+        
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th>Processing Activity</th>
+              <th>Data Involved</th>
+              <th>Lawful Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Responding to Inquiries</strong></td>
+              <td>Name, email address, inquiry text</td>
+              <td><strong>Consent &amp; Legitimate Interest:</strong> Addressing student queries and academic feedback at your request.</td>
+            </tr>
+            <tr>
+              <td><strong>Website Security &amp; Uptime</strong></td>
+              <td>Anonymized IP, server logs, browser type</td>
+              <td><strong>Legitimate Interest &amp; Legal Duty:</strong> Preventing DDoS attacks, scraping abuses, and ensuring platform stability.</td>
+            </tr>
+            <tr>
+              <td><strong>Study Preference Persistence</strong></td>
+              <td>Theme mode, semester choice, bookmarks</td>
+              <td><strong>User Consent &amp; Local Storage:</strong> Kept strictly on client device; never transmitted to server.</td>
+            </tr>
+            <tr>
+              <td><strong>Aggregated Educational Analytics</strong></td>
+              <td>Anonymized GA4 page views, session time</td>
+              <td><strong>Legitimate Interest:</strong> Evaluating which subject dossiers require further pedagogical enhancement.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sec7">
+        <h2>7. How We Use Your Information</h2>
+        <p>We process information solely for transparent, academic purposes:
+          <ul>
+            <li><strong>Responding to Student Inquiries:</strong> Answering errata reports, feedback, and academic questions;</li>
+            <li><strong>Platform Optimization:</strong> Analyzing technical logs to ensure rapid load times, smooth mobile navigation, and cross-browser reliability;</li>
+            <li><strong>Cybersecurity Safeguards:</strong> Monitoring traffic patterns to mitigate malicious bot attacks or automated web scraping;</li>
+            <li><strong>Legal &amp; Regulatory Compliance:</strong> Fulfilling our obligations under the Information Technology Act, 2000 and laws of India.</li>
+          </ul>
+        </p>
+        <p><strong>WE DO NOT USE YOUR INFORMATION FOR AUTOMATED PROFILING, ROBOCALLS, TELEMARKETING, OR SALE TO THIRD PARTIES.</strong></p>
+      </section>
+
+      <section id="sec8">
+        <h2>8. Confidentiality &amp; Academic Inquiry Notice</h2>
+        <p><strong>8.1.</strong> Make Law Easy is an independent academic study resource, not a law firm. Submitting an email or inquiry to <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> does not create an advocate-client relationship or legal privilege.</p>
+        <p><strong>8.2.</strong> Please restrict all correspondence to academic discussions, study notes errata, and portal feedback. Do not submit sensitive litigation case files or confidential real-world legal documents.</p>
+      </section>
+
+      <section id="sec9">
+        <h2>9. Cookies, Tracking Technologies, and Server Analytics (GA4 &amp; Google AdSense)</h2>
+
+        <h3 class="sub-sec">9.1. Essential &amp; Preference Cookies:</h3>
+        <p>Because the Website has no user accounts, we do not use persistent authentication cookies. We use minimal functional local storage to remember your Dark/Light mode preference and semester navigation.</p>
+
+        <h3 class="sub-sec">9.2. Google Analytics 4 (GA4):</h3>
+        <p>We use Google Analytics 4 (Measurement ID: <code>G-8ZG7VS1G45</code>) to understand aggregate student readership. GA4 collects non-personally identifiable telemetry such as total daily visitors, broad city/country distribution, and most read case briefs. GA4 is configured with <strong>IP Anonymization</strong>. You can opt out globally via the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+        <h3 class="sub-sec">9.3. Google AdSense &amp; Third-Party Advertising Cookies:</h3>
+        <p>To help keep Make Law Easy freely available to all law students, we may display non-intrusive advertisements served by third-party advertising partners, including <strong>Google LLC (Google AdSense)</strong>.</p>
+        <ul>
+          <li>Third-party vendors, including Google, use cookies (such as the DoubleClick cookie) to serve advertisements based on a user's prior visits to this website and other websites across the internet.</li>
+          <li>Advertisements are formatted responsibly to ensure they never obstruct notes, case briefs, or study charts.</li>
+          <li><strong>How to Opt Out of Personalized Ads:</strong>
+            <ul>
+              <li>You can manage or opt out of personalized Google advertising at any time by visiting <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a>.</li>
+              <li>You can also opt out of third-party vendor advertising cookies by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">AboutAds Choices</a> or the <a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative</a>.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="sec10">
+        <h2>10. Sharing and Disclosure of Information</h2>
+        <p><strong>10.1. No Sale of Personal Data:</strong> <strong>WE DO NOT SELL, RENT, LEASE, OR TRADE YOUR PERSONAL INFORMATION OR CONTACT DETAILS TO ANY THIRD PARTY, ADVERTISER, OR LEAD BROKER.</strong></p>
+        <p><strong>10.2. Trusted Infrastructure Partners:</strong> We utilize Google Cloud / Firebase Hosting for global edge content delivery, SSL certificate provisioning, and secure server hosting.</p>
+        <p><strong>10.3. Legal Compulsion:</strong> We may disclose information if strictly required by applicable Indian law, court order, subpoena, or lawful direction from a competent statutory or judicial authority under the Information Technology Act, 2000.</p>
+      </section>
+
+      <section id="sec11">
+        <h2>11. Cross-Border and International Cloud Infrastructure</h2>
+        <p><strong>11.1.</strong> The Website is hosted via Google Firebase Hosting, utilizing distributed global content delivery networks (CDNs) and secure cloud infrastructure to ensure fast page load speeds for students across India and abroad.</p>
+        <p><strong>11.2.</strong> All data in transit is protected using modern TLS 1.3 / 1.2 256-bit encryption in accordance with global privacy principles.</p>
+      </section>
+
+      <section id="sec12">
+        <h2>12. Data Retention and Erasure Policy</h2>
+        <p><strong>12.1. Retention Periods:</strong>
+          <ul>
+            <li><strong>Server Logs:</strong> Automatically purged or rotated within 30 to 90 days by cloud hosting infrastructure;</li>
+            <li><strong>Email Communications:</strong> Retained only as long as necessary to address your feedback or update study dossiers (typically up to 12 months);</li>
+            <li><strong>Client-Side Local Storage:</strong> Stored on your browser until you clear your browser cookies and site data.</li>
+          </ul>
+        </p>
+        <p><strong>12.2. Erasure:</strong> Upon request to <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>, any stored correspondence containing personal identifiers will be permanently deleted.</p>
+      </section>
+
+      <section id="sec13">
+        <h2>13. Data Security Practices and Technical Safeguards</h2>
+        <p><strong>13.1. Safeguards Implemented:</strong>
+          <ul>
+            <li><strong>HTTPS / TLS 256-Bit Encryption:</strong> All traffic between your browser and Make Law Easy is encrypted in transit;</li>
+            <li><strong>Zero Server-Side Passwords:</strong> Because there are no user accounts, passwords cannot be leaked or breached from our portal;</li>
+            <li><strong>Continuous Monitoring:</strong> Regular monitoring of security headers and cloud hosting deployments.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="sec14">
+        <h2>14. Your Legal Rights as a Data Subject</h2>
+        <p>Under the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong> and global regulations (GDPR, CCPA), you possess the following rights:
+          <ul>
+            <li><strong>Right to Access / Summary:</strong> The right to request a summary of any personal data we hold about you;</li>
+            <li><strong>Right to Correction:</strong> The right to request the correction of inaccurate or outdated details;</li>
+            <li><strong>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</strong> The right to request the deletion of your personal communications;</li>
+            <li><strong>Right to Grievance Redressal:</strong> The right to have grievances addressed by our Grievance Redressal Officer;</li>
+            <li><strong>Right to Non-Discrimination:</strong> We never restrict or deny access to our free study notes for exercising your statutory rights.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="sec15">
+        <h2>15. How to Exercise Your Rights (Without an Account)</h2>
+        <p><strong>15.1.</strong> Because Make Law Easy does not require user accounts, you do not need to log into an account settings page.</p>
+        <p><strong>15.2.</strong> To exercise any data protection rights, simply send an email to our Grievance &amp; Privacy Lead at: <a href="mailto:ankur@makelaweasy.in"><strong>ankur@makelaweasy.in</strong></a>. Please provide your name and previous communication context so we can locate relevant records.</p>
+        <p><strong>15.3. Response Timeline:</strong> We will acknowledge and address valid requests within statutory timelines (typically within 30 days).</p>
+      </section>
+
+      <section id="sec16">
+        <h2>16. Children's Privacy Protection</h2>
+        <p><strong>16.1.</strong> Make Law Easy is an academic resource designed for adult law students, university scholars, and legal educators. We do not knowingly solicit or collect personal data from minors under 18 years of age without parental guidance.</p>
+        <p><strong>16.2.</strong> If a parent or guardian becomes aware that a minor has provided personal details to us, please contact <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>, and we will promptly delete such information.</p>
+      </section>
+
+      <section id="sec17">
+        <h2>17. Third-Party Websites and External Hyperlinks</h2>
+        <p><strong>17.1.</strong> Our study notes contain academic citations and hyperlinks to external legal resources (e.g., Supreme Court of India judgments, Indian Kanoon, government gazettes, and Telegram). This Privacy Policy applies strictly to <code>makelaweasy.in</code>. We encourage you to review the privacy policies of any third-party websites you visit.</p>
+      </section>
+
+      <section id="sec18">
+        <h2>18. Governing Law and Dispute Resolution</h2>
+        <p><strong>18.1. Governing Law:</strong> This Privacy Policy shall be governed by, interpreted, and construed in accordance with the <strong>substantive laws of India</strong> (including the DPDP Act, 2023 and the Information Technology Act, 2000).</p>
+        <p><strong>18.2. Jurisdiction:</strong> Any dispute arising hereunder shall be subject to the exclusive jurisdiction of the competent civil courts situated at <strong>New Delhi, India</strong>.</p>
+      </section>
+
+      <section id="sec19">
+        <h2>19. Modifications and Updates to This Privacy Policy</h2>
+        <p><strong>19.1.</strong> We may update or amend this Privacy Policy periodically. Any changes will be posted on this page with an updated &ldquo;Last Updated&rdquo; date displayed above. Your continued use of the Website after any revision signifies your acceptance of the updated Policy.</p>
+      </section>
+
+      <section id="sec20">
+        <h2>20. Grievance Redressal and Data Protection Officer</h2>
+        <p>In accordance with the <strong>Information Technology Act, 2000</strong> and the <strong>Digital Personal Data Protection Act, 2023</strong>, the designated Grievance Officer and Data Protection Lead for Make Law Easy is:</p>
+        
+        <div class="contact-card">
+          <ul>
+            <li><i class="fa-solid fa-user-shield"></i> <b>Designated Officer:</b> Ankur</li>
+            <li><i class="fa-solid fa-id-badge"></i> <b>Role:</b> Grievance Redressal Officer &amp; Data Protection Lead</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> <b>Platform:</b> Make Law Easy</li>
+            <li><i class="fa-solid fa-award"></i> <b>Academic Initiative:</b> Team Aditya Shukla</li>
+            <li><i class="fa-solid fa-envelope"></i> <b>Privacy &amp; Grievance Email:</b> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></li>
+            <li><i class="fa-brands fa-telegram"></i> <b>Official Telegram:</b> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <b>Location:</b> New Delhi, Delhi, India</li>
+            <li><i class="fa-solid fa-clock"></i> <b>Hours:</b> Monday &ndash; Friday, 10:00 AM &ndash; 6:00 PM IST</li>
+          </ul>
+        </div>
+      </section>
+    </article>
 
     <footer>
-      &copy; 2026 Make Law Easy &bull; Team Aditya Shukla &bull; All Rights Reserved.
+      &copy; 2026 Make Law Easy &bull; All Rights Reserved.
+      <br>
+      <span class="footer-team"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
     </footer>
   </main>
 

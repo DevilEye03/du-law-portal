@@ -8,42 +8,51 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NNW78WFV');</script>
   <!-- End Google Tag Manager -->
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — Make Law Easy (Delhi University Law Notes Portal)</title>
-  <meta name="description" content="Terms of Service and Academic Disclaimer for Make Law Easy, Delhi University LL.B. notes portal.">
+  <title>Terms and Conditions of Use &amp; Academic Disclaimer — Make Law Easy</title>
+  <meta name="description" content="Terms and Conditions of Use, Academic Fair Dealing Disclaimer, and Non-Solicitation Statement for Make Law Easy (makelaweasy.in) — Operated by Team Aditya Shukla.">
   <link rel="canonical" href="https://makelaweasy.in/terms.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
     :root {
       --bg: #0b1120;
       --surface: #131d35;
-      --border: rgba(148, 163, 184, 0.15);
+      --card: #182647;
+      --border: rgba(148, 163, 184, 0.16);
+      --border-accent: rgba(201, 168, 76, 0.35);
       --accent: #38bdf8;
       --gold: #f59e0b;
+      --gold-light: #fde68a;
       --text: #f1f5f9;
       --text-muted: #94a3b8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.7;
+      line-height: 1.75;
       font-size: 16px;
       padding-bottom: 60px;
     }
     .header {
       background: linear-gradient(180deg, #0f172a 0%, var(--bg) 100%);
       border-bottom: 1px solid var(--border);
-      padding: 24px 20px;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(12px);
     }
     .header-inner {
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -56,68 +65,214 @@
       text-decoration: none;
       color: #fff;
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
       font-weight: 700;
     }
     .brand i { color: var(--gold); }
     .back-link {
       color: var(--accent);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 500;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      padding: 8px 14px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 9999px;
+      transition: all 0.2s ease;
     }
-    .back-link:hover { text-decoration: underline; }
+    .back-link:hover {
+      background: rgba(56, 189, 248, 0.16);
+      text-decoration: none;
+    }
     .container {
-      max-width: 900px;
-      margin: 40px auto;
+      max-width: 960px;
+      margin: 36px auto;
       padding: 0 20px;
     }
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border-radius: 18px;
+      padding: 44px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+    @media (max-width: 640px) {
+      .card { padding: 24px 18px; }
+      h1 { font-size: 1.85rem !important; }
     }
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
+      font-size: 2.35rem;
       color: #fff;
       margin-bottom: 8px;
+      line-height: 1.25;
     }
-    .updated-date {
-      color: var(--text-muted);
+    .meta-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin: 14px 0 28px;
       font-size: 0.88rem;
-      margin-bottom: 30px;
+      color: var(--text-muted);
+    }
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    .notice-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(56, 189, 248, 0.08) 100%);
+      border: 1px solid var(--border-accent);
+      border-left: 5px solid var(--gold);
+      padding: 22px 24px;
+      border-radius: 12px;
+      margin: 28px 0;
+    }
+    .notice-box h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--gold-light);
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notice-box p {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      margin-bottom: 8px;
+    }
+    .notice-box p:last-child { margin-bottom: 0; }
+    .toc-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin: 32px 0 40px;
+    }
+    .toc-card h3 {
+      color: #fff;
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 8px 16px;
+      list-style: none;
+    }
+    .toc-grid a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.15s ease;
       display: block;
+      padding: 2px 0;
+    }
+    .toc-grid a:hover {
+      color: var(--gold);
+      text-decoration: underline;
     }
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
       color: var(--accent);
-      margin: 32px 0 12px;
+      margin: 40px 0 16px;
       border-bottom: 1px solid var(--border);
       padding-bottom: 8px;
+      scroll-margin-top: 90px;
+    }
+    h3.sub-sec {
+      font-size: 1.08rem;
+      color: #fff;
+      margin: 20px 0 8px;
     }
     p, li {
       color: #cbd5e1;
-      font-size: 1.02rem;
-      margin-bottom: 16px;
+      font-size: 1rem;
+      margin-bottom: 14px;
     }
-    ul {
+    ul, ol {
       padding-left: 24px;
       margin-bottom: 20px;
     }
     li { margin-bottom: 8px; }
+    b, strong { color: #fff; }
     a { color: var(--accent); }
+    a:hover { text-decoration: underline; }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 22px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.95rem;
+    }
+    .info-table th, .info-table td {
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .info-table th {
+      background: #0f172a;
+      color: #fff;
+      font-weight: 600;
+    }
+    .info-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+    .contact-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    .contact-card li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e2e8f0;
+    }
+    .contact-card li i {
+      color: var(--gold);
+      width: 20px;
+      text-align: center;
+    }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 48px;
       color: var(--text-muted);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
+    }
+    .footer-team {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      color: var(--gold);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -140,33 +295,213 @@
   </header>
 
   <main class="container">
-    <div class="card">
-      <h1>Terms of Service</h1>
-      <span class="updated-date">Effective Date: September 12, 2026</span>
+    <article class="card">
+      <h1>Terms and Conditions of Use &amp; Legal Disclaimer</h1>
+      
+      <div class="meta-badge-row">
+        <span class="meta-pill"><i class="fa-solid fa-calendar-check"></i> Last Updated: September 17, 2026</span>
+        <span class="meta-pill"><i class="fa-solid fa-globe"></i> makelaweasy.in</span>
+        <span class="meta-pill"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
+      </div>
 
-      <p>By accessing and using <b>Make Law Easy</b> (<a href="https://makelaweasy.in">makelaweasy.in</a>), you accept and agree to be bound by the terms and provisions of this agreement.</p>
+      <div class="notice-box">
+        <h3><i class="fa-solid fa-circle-info"></i> Important Notice: Open Academic Resource (No Registration Required)</h3>
+        <p><strong>This Website is an open, publicly accessible academic legal study platform.</strong> You are not required to create an account, log in, or pay subscription fees to read our syllabus notes, landmark case briefs, statutory references, and PYQ dossiers.</p>
+        <p>Please read these Terms carefully before using the portal. By accessing or browsing any part of <strong>Make Law Easy</strong>, you confirm your acceptance of these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please discontinue use immediately.</p>
+      </div>
 
-      <h2>1. Nature of the Service</h2>
-      <p>Make Law Easy is an independent non-commercial academic study repository tailored for students pursuing the 3-Year LL.B. curriculum. The portal synthesizes syllabus outlines, landmark judicial decisions, statutory structures, and past examination papers for academic study and exam revision.</p>
+      <!-- Quick Navigation -->
+      <nav class="toc-card" aria-label="Table of Contents">
+        <h3><i class="fa-solid fa-list-ol"></i> Table of Contents</h3>
+        <ol class="toc-grid">
+          <li><a href="#sec1">1. Acceptance and Scope of Terms</a></li>
+          <li><a href="#sec2">2. No Legal Advice (Academic Purpose)</a></li>
+          <li><a href="#sec3">3. No Advocate-Client Relationship</a></li>
+          <li><a href="#sec4">4. Non-Solicitation &amp; Professional Ethics</a></li>
+          <li><a href="#sec5">5. Free Public Access (No Subscription)</a></li>
+          <li><a href="#sec6">6. Eligibility</a></li>
+          <li><a href="#sec7">7. Intellectual Property &amp; Fair Dealing</a></li>
+          <li><a href="#sec8">8. Acceptable Use &amp; Prohibitions</a></li>
+          <li><a href="#sec9">9. Community Channels &amp; Feedback</a></li>
+          <li><a href="#sec10">10. Third-Party Links &amp; Citations</a></li>
+          <li><a href="#sec11">11. Currency &amp; Editorial Updates</a></li>
+          <li><a href="#sec12">12. Disclaimer of Warranties</a></li>
+          <li><a href="#sec13">13. Limitation of Liability</a></li>
+          <li><a href="#sec14">14. Indemnification</a></li>
+          <li><a href="#sec15">15. Copyright &amp; Takedown Procedure</a></li>
+          <li><a href="#sec16">16. Privacy Reference (DPDP Act)</a></li>
+          <li><a href="#sec17">17. Severability</a></li>
+          <li><a href="#sec18">18. Governing Law &amp; Jurisdiction</a></li>
+          <li><a href="#sec19">19. Entire Agreement</a></li>
+          <li><a href="#sec20">20. Updates to These Terms</a></li>
+          <li><a href="#sec21">21. Contact &amp; Grievance Redressal</a></li>
+        </ol>
+      </nav>
 
-      <h2>2. No Legal Advice (Academic Disclaimer)</h2>
-      <p>The information provided on this portal is strictly for educational, instructional, and research purposes. It does not constitute formal legal counsel, professional representation, or legal advice. Users seeking legal advice should consult an enrolled advocate or qualified legal practitioner.</p>
+      <section id="sec1">
+        <h2>1. Acceptance and Scope of Terms</h2>
+        <p><strong>1.1.</strong> These Terms and Conditions of Use (&ldquo;<strong>Terms</strong>&rdquo;) govern your access to and use of the website located at <a href="https://makelaweasy.in">https://makelaweasy.in</a> (including <a href="https://make-law-easy.web.app">https://make-law-easy.web.app</a>, all study hubs, subject notes, case briefs, statutory bare acts, and PYQ dossiers, collectively referred to as the &ldquo;<strong>Website</strong>&rdquo; or &ldquo;<strong>Portal</strong>&rdquo;).</p>
+        <p><strong>1.2.</strong> The Website is an independent, non-commercial academic legal education initiative operated under the banner of <strong>Make Law Easy</strong>, spearheaded by <strong>Team Aditya Shukla</strong>, headquartered in New Delhi, Delhi, India (referred to as &ldquo;<strong>Make Law Easy</strong>&rdquo;, &ldquo;<strong>we</strong>&rdquo;, &ldquo;<strong>us</strong>&rdquo;, or &ldquo;<strong>our</strong>&rdquo;).</p>
+        <p><strong>1.3.</strong> For the purposes of these Terms, &ldquo;<strong>User</strong>&rdquo;, &ldquo;<strong>student</strong>&rdquo;, &ldquo;<strong>visitor</strong>&rdquo;, &ldquo;<strong>you</strong>&rdquo;, and &ldquo;<strong>your</strong>&rdquo; refer to any individual, law student, academician, legal researcher, or entity who accesses, browses, or reads the Website on any device.</p>
+        <p><strong>1.4.</strong> By using this Website, you represent and warrant that you have read, understood, and agreed to be bound by these Terms.</p>
+      </section>
 
-      <h2>3. Intellectual Property &amp; Fair Use</h2>
-      <p>Judicial decisions of the Supreme Court of India and High Courts, statutory bare acts, and university examination questions cited on this website are public legal records and are quoted under fair academic use doctrine (Section 52 of the Copyright Act, 1957). The structured summaries, editorial model answers, and UI components are proprietary creations of Make Law Easy.</p>
+      <section id="sec2">
+        <h2>2. No Legal Advice — Informational and Academic Purpose Only</h2>
+        <p><strong>2.1. Strictly Educational and Academic Content:</strong> All materials published on this Website—including curriculum outlines, landmark case briefs, statutory provisions, previous year questions, revision tables, and mnemonics—are compiled and published strictly for <strong>general informational, academic study, and examination revision purposes</strong>.</p>
+        <p><strong>2.2. No Legal or Professional Advice:</strong> <strong>NONE OF THE CONTENT ON THIS WEBSITE CONSTITUTES, NOR IS IT INTENDED TO CONSTITUTE, FORMAL LEGAL ADVICE, LEGAL OPINIONS, SOLICITATION, ADVOCACY, OR TAX/FINANCIAL COUNSEL.</strong> Legal doctrine and judicial precedents vary widely across jurisdictions and depend entirely on specific factual contexts.</p>
+        <p><strong>2.3. No Duty to Act:</strong> You should not act, nor refrain from acting, in any real-world dispute or contentious legal proceeding on the basis of any study material contained on this Website without first obtaining direct, formal legal counsel from an advocate duly enrolled with a State Bar Council under the Advocates Act, 1961.</p>
+        <p><strong>2.4. No Guarantees of Examination Results:</strong> While we endeavor to ensure high editorial and pedagogical accuracy, Make Law Easy makes no guarantees regarding specific examination grades, marks, or university evaluation outcomes.</p>
+      </section>
 
-      <h2>4. User Conduct</h2>
-      <p>Users agree not to exploit the website for unlawful activities, scrape data via abusive automated bots, or disrupt the performance of our cloud hosting infrastructure.</p>
+      <section id="sec3">
+        <h2>3. No Attorney-Client / Advocate-Client Relationship</h2>
+        <p><strong>3.1.</strong> Accessing, browsing, or reading study dossiers on this Website does not establish or constitute an advocate-client, attorney-client, or fiduciary relationship between you and Make Law Easy, Team Aditya Shukla, or any of our contributors.</p>
+        <p><strong>3.2.</strong> Transmitting messages via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>) or participating in our community channels (such as our official Telegram channel) does not create an advocate-client relationship.</p>
+        <p><strong>3.3. Do Not Transmit Confidential Legal Case Files:</strong> Our communication channels are dedicated strictly to academic inquiries, notes errata, and portal feedback. Please do not send confidential, proprietary, or incriminating real-world litigation files to us.</p>
+      </section>
 
-      <h2>5. Modifications</h2>
-      <p>We reserve the right to revise or update these Terms of Service at any time. Continued use of the website following any changes signifies your acceptance of the updated terms.</p>
+      <section id="sec4">
+        <h2>4. Regulatory Compliance, Professional Ethics &amp; Non-Solicitation</h2>
+        <p><strong>4.1.</strong> This Website has been designed in strict compliance with the professional ethics rules governing legal practitioners under the <strong>Bar Council of India Rules</strong> framed under the <strong>Advocates Act, 1961</strong> (specifically Rule 36 of Section IV, Chapter II, Part VI).</p>
+        <p><strong>4.2. No Advertisement or Inducement:</strong> Make Law Easy does not advertise, solicit professional work, or invite clients through this platform. The portal functions strictly as an open educational knowledge repository for law students.</p>
+        <p><strong>4.3. Voluntary Access:</strong> You acknowledge that you access this portal voluntarily and autonomously for your own personal educational and knowledge enrichment.</p>
+      </section>
 
-      <h2>6. Contact</h2>
-      <p>For any inquiries regarding these terms, please write to us at <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>.</p>
-    </div>
+      <section id="sec5">
+        <h2>5. Free Public Access (No Login or Subscription)</h2>
+        <p><strong>5.1. Open and Free Platform:</strong> Make Law Easy is dedicated to keeping core legal knowledge freely accessible. All core subject notes, case briefs, and PYQ solutions are provided 100% free of charge.</p>
+        <p><strong>5.2. No Account or Credentials Required:</strong> You do not need to register, create a username, or input passwords to access our notes.</p>
+        <p><strong>5.3. No Subscription Fees or Paywalls:</strong> The Website does not operate a paywall, locked membership tier, or recurring subscription model.</p>
+        <p><strong>5.4. No Commercial Transactions on Website:</strong> We do not collect credit/debit card numbers, UPI handles, or online payments on this Website.</p>
+      </section>
+
+      <section id="sec6">
+        <h2>6. Eligibility</h2>
+        <p><strong>6.1.</strong> By using this Website, you confirm that you are at least 18 years of age (or have attained the age of majority in your jurisdiction), or are an enrolled student accessing this portal for educational purposes with institutional or parental consent.</p>
+      </section>
+
+      <section id="sec7">
+        <h2>7. Intellectual Property Rights and Limited Academic License</h2>
+        <p><strong>7.1. Public Legal Records &amp; Fair Dealing (Section 52, Copyright Act, 1957):</strong> Judicial judgments delivered by the Supreme Court of India and High Courts, statutory Bare Acts enacted by Parliament and State Legislatures, and university examination question papers cited on this Website are public legal records. These materials are referenced under the <strong>Fair Dealing</strong> doctrine for private study, research, and educational review pursuant to <strong>Section 52 of the Copyright Act, 1957 (India)</strong>.</p>
+        <p><strong>7.2. Proprietary Original Content:</strong> The editorial synthesis, structured topic notes, original case brief analyses, custom mnemonics, revision flowcharts, user interface design, 3D visual book representations, CSS styling, and underlying code are the exclusive intellectual property of Make Law Easy and Team Aditya Shukla.</p>
+        <p><strong>7.3. Limited License Granted to Students:</strong> Make Law Easy grants you a limited, non-exclusive, revocable license to view, read, and download single copies of reasonable excerpts strictly for your **personal, non-commercial academic study and exam revision**.</p>
+        <p><strong>7.4. Prohibitions:</strong> You may not sell, redistribute, license, bulk-scrape, or commercially exploit any synthesized notes or compilations from this Website without explicit prior written authorization.</p>
+      </section>
+
+      <section id="sec8">
+        <h2>8. Acceptable Use and Prohibited Conduct</h2>
+        <p><strong>8.1.</strong> You agree to use the Website strictly for lawful educational purposes and in compliance with all applicable laws.</p>
+        <p><strong>8.2.</strong> You agree not to:
+          <ul>
+            <li>Interfere with or disrupt the stability, uptime, or security of the Website, its hosting servers, or connected networks;</li>
+            <li>Launch Denial of Service (DoS/DDoS) attacks or automated flood requests;</li>
+            <li>Transmit viruses, worms, malware, or malicious scripts;</li>
+            <li>Deploy automated scrapers, crawlers, or extraction tools in a manner that degrades service performance for fellow students;</li>
+            <li>Impersonate Make Law Easy, Team Aditya Shukla, or university officials.</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="sec9">
+        <h2>9. User Communications, Telegram Community, and Feedback</h2>
+        <p><strong>9.1. Community Etiquette:</strong> Make Law Easy maintains an official Telegram community (<a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a>) for academic updates and student discussions. Users agree to engage respectfully (no harassment, spam, hate speech, or commercial advertising).</p>
+        <p><strong>9.2. Errata &amp; Feedback:</strong> We welcome academic feedback, typo corrections, and notes suggestions from students and professors. By submitting feedback via email (<a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a>), you grant us the right to incorporate improvements to benefit the broader student community.</p>
+      </section>
+
+      <section id="sec10">
+        <h2>10. Third-Party Links, Citations, and External References</h2>
+        <p><strong>10.1.</strong> The Website contains academic citations, statutory references, and external hyperlinks (such as official court portals, government gazettes, or Telegram channels). These links are provided solely for academic reference and student convenience.</p>
+        <p><strong>10.2.</strong> Make Law Easy exercises no editorial control over external third-party platforms and assumes no responsibility for their content, availability, or data practices.</p>
+      </section>
+
+      <section id="sec11">
+        <h2>11. Accuracy, Currency, and Modifications of Academic Materials</h2>
+        <p><strong>11.1. Dynamic Legal Landscape:</strong> Law is subject to continuous legislative amendments and judicial reinterpretation. While we endeavor to maintain updated notes aligned with current syllabi, Make Law Easy cannot guarantee that every note immediately reflects newly promulgated statutory amendments or recent judgments.</p>
+        <p><strong>11.2. Editorial Updates:</strong> We reserve the right to review, update, edit, or archive study materials at any time to enhance pedagogical clarity.</p>
+      </section>
+
+      <section id="sec12">
+        <h2>12. Disclaimer of Warranties</h2>
+        <p><strong>12.1. &ldquo;AS-IS&rdquo; Academic Resource:</strong> <strong>THE WEBSITE, ALL SYLLABUS NOTES, CASE BRIEFS, BARE ACTS, AND STUDY MATERIALS ARE PROVIDED ON AN &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; BASIS FOR ACADEMIC REVISION ONLY, WITHOUT REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.</strong></p>
+        <p><strong>12.2.</strong> To the maximum extent permitted by law, Make Law Easy disclaims all warranties, including implied warranties of merchantability, fitness for a particular educational purpose, title, accuracy, and uninterrupted availability.</p>
+      </section>
+
+      <section id="sec13">
+        <h2>13. Limitation of Liability</h2>
+        <p><strong>13.1.</strong> In no event shall Make Law Easy, Team Aditya Shukla, or any contributors be liable for any indirect, incidental, special, consequential, or punitive damages arising from your access to, use of, or inability to access this Website or its study notes.</p>
+        <p><strong>13.2. Liability Cap:</strong> Because this platform is provided completely free of charge to the student community, <strong>the total aggregate liability of Make Law Easy for any claims under these Terms shall not exceed five hundred Indian Rupees (INR ₹500.00).</strong></p>
+      </section>
+
+      <section id="sec14">
+        <h2>14. Indemnification</h2>
+        <p><strong>14.1.</strong> You agree to indemnify, defend, and hold harmless Make Law Easy and Team Aditya Shukla from and against any claims, liabilities, damages, or costs (including legal fees) arising from your misuse of the Website, violation of these Terms, or infringement of any third-party rights.</p>
+      </section>
+
+      <section id="sec15">
+        <h2>15. Copyright Infringement, Fair Use &amp; Takedown Procedure</h2>
+        <p><strong>15.1.</strong> Make Law Easy respects intellectual property rights and adheres to the **Information Technology Act, 2000** and the **Copyright Act, 1957 (India)**.</p>
+        <p><strong>15.2.</strong> If you believe in good faith that any material hosted on this portal exceeds fair educational dealing or infringes your copyright, please forward a detailed notice to <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> specifying:
+          <ol>
+            <li>Identification of the copyrighted work claimed to have been infringed;</li>
+            <li>Specific URL or location on <code>makelaweasy.in</code>;</li>
+            <li>Your full legal name, designation, and official contact information;</li>
+            <li>A statement of good-faith belief that the use is unauthorized;</li>
+            <li>A declaration of accuracy under penalty of perjury.</li>
+          </ol>
+        </p>
+        <p><strong>15.3.</strong> Upon receipt of a valid notice, we will promptly investigate and take appropriate remedial action (including editing or removing the referenced material).</p>
+      </section>
+
+      <section id="sec16">
+        <h2>16. Privacy and Data Protection Reference</h2>
+        <p><strong>16.1.</strong> Your privacy is paramount. We practice strict data minimization. Please review our <a href="privacy.html">Privacy Policy</a> to understand how technical telemetry, local storage preferences, and optional feedback are handled in compliance with the **Digital Personal Data Protection Act, 2023 (DPDP Act, India)**.</p>
+      </section>
+
+      <section id="sec17">
+        <h2>17. Severability and Enforceability</h2>
+        <p><strong>17.1.</strong> If any provision of these Terms is determined by a court of competent jurisdiction to be invalid or unenforceable, such provision shall be severed to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+      </section>
+
+      <section id="sec18">
+        <h2>18. Governing Law and Dispute Resolution</h2>
+        <p><strong>18.1. Governing Law:</strong> These Terms and your use of the Website shall be governed by, interpreted, and construed in accordance with the <strong>substantive laws of India</strong>.</p>
+        <p><strong>18.2. Exclusive Jurisdiction:</strong> Any dispute, controversy, or claim arising out of or related to this Website shall be subject to the exclusive jurisdiction of the competent civil courts situated at <strong>New Delhi, India</strong>.</p>
+        <p><strong>18.3. Amicable Resolution:</strong> You agree to first contact Make Law Easy at <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a> to resolve any concern or grievance informally before seeking formal judicial remedy.</p>
+      </section>
+
+      <section id="sec19">
+        <h2>19. Waiver and Entire Agreement</h2>
+        <p><strong>19.1.</strong> These Terms, together with our Privacy Policy and official notices published on the Website, constitute the entire agreement between you and Make Law Easy regarding your access to and use of the portal.</p>
+      </section>
+
+      <section id="sec20">
+        <h2>20. Updates and Modifications to These Terms</h2>
+        <p><strong>20.1.</strong> We may update or amend these Terms periodically. Any changes will become effective immediately upon posting to this page with an updated &ldquo;Last Updated&rdquo; date displayed above. Your continued use of the portal following any update signifies your acceptance of the revised Terms.</p>
+      </section>
+
+      <section id="sec21">
+        <h2>21. Contact and Grievance Officer Information</h2>
+        <p>For any inquiries, academic questions, copyright concerns, or legal notices, please reach out to our team:</p>
+        
+        <div class="contact-card">
+          <ul>
+            <li><i class="fa-solid fa-graduation-cap"></i> <b>Platform:</b> Make Law Easy</li>
+            <li><i class="fa-solid fa-award"></i> <b>Academic Initiative:</b> Team Aditya Shukla</li>
+            <li><i class="fa-solid fa-user-shield"></i> <b>Grievance Redressal Contact:</b> Ankur</li>
+            <li><i class="fa-solid fa-envelope"></i> <b>Official Email:</b> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></li>
+            <li><i class="fa-brands fa-telegram"></i> <b>Official Telegram:</b> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">t.me/+5suDyPQc065jYWY1</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <b>Location:</b> New Delhi, Delhi, India</li>
+            <li><i class="fa-solid fa-globe"></i> <b>Website:</b> <a href="https://makelaweasy.in">https://makelaweasy.in</a></li>
+          </ul>
+        </div>
+      </section>
+    </article>
 
     <footer>
-      &copy; 2026 Make Law Easy &bull; Team Aditya Shukla
+      &copy; 2026 Make Law Easy &bull; All Rights Reserved.
+      <br>
+      <span class="footer-team"><i class="fa-solid fa-award"></i> Team Aditya Shukla</span>
     </footer>
   </main>
 
