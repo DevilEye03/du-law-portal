@@ -82,9 +82,11 @@
     audioPlayPauseIcon: document.getElementById('audioPlayPauseIcon'),
     audioStopBtn: document.getElementById('audioStopBtn'),
     audioSpeedBtn: document.getElementById('audioSpeedBtn'),
+    siteHeader: document.querySelector('.site-header'),
     headerSemesterBtn: document.getElementById('headerSemesterBtn'),
     headerSemText: document.getElementById('headerSemText'),
     headerSemDropdownWrap: document.getElementById('headerSemDropdownWrap'),
+    semDropdownBackdrop: document.getElementById('semDropdownBackdrop'),
     headerSemDropdownMenu: document.getElementById('headerSemDropdownMenu'),
     headerSemDropdownList: document.getElementById('headerSemDropdownList'),
     headerSemDdAllBtn: document.getElementById('headerSemDdAllBtn'),
@@ -424,11 +426,22 @@
   // HEADER SEMESTER DROPDOWN (Click & Hover Interactive Menu)
   // =========================================================================
   let semDropdownHoverTimer = null;
+  let lastHoverOpenTime = 0;
 
-  function openHeaderSemDropdown() {
+  function isFinePointer() {
+    return !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  }
+
+  function openHeaderSemDropdown(fromHover = false) {
     if (!elements.headerSemDropdownWrap) return;
     clearTimeout(semDropdownHoverTimer);
+    if (fromHover) {
+      lastHoverOpenTime = Date.now();
+    }
     elements.headerSemDropdownWrap.classList.add('is-open');
+    if (elements.siteHeader) {
+      elements.siteHeader.classList.add('has-open-dropdown');
+    }
     if (elements.headerSemesterBtn) {
       elements.headerSemesterBtn.setAttribute('aria-expanded', 'true');
     }
@@ -438,6 +451,9 @@
     if (!elements.headerSemDropdownWrap) return;
     clearTimeout(semDropdownHoverTimer);
     elements.headerSemDropdownWrap.classList.remove('is-open');
+    if (elements.siteHeader) {
+      elements.siteHeader.classList.remove('has-open-dropdown');
+    }
     if (elements.headerSemesterBtn) {
       elements.headerSemesterBtn.setAttribute('aria-expanded', 'false');
     }
@@ -445,10 +461,14 @@
 
   function toggleHeaderSemDropdown() {
     if (!elements.headerSemDropdownWrap) return;
+    // Debounce against simulated clicks right after hover on hybrid/touch screens
+    if (Date.now() - lastHoverOpenTime < 400 && elements.headerSemDropdownWrap.classList.contains('is-open')) {
+      return;
+    }
     if (elements.headerSemDropdownWrap.classList.contains('is-open')) {
       closeHeaderSemDropdown();
     } else {
-      openHeaderSemDropdown();
+      openHeaderSemDropdown(false);
     }
   }
 
@@ -486,7 +506,8 @@
     }).join('');
 
     elements.headerSemDropdownList.querySelectorAll('.sem-dd-item').forEach(item => {
-      item.addEventListener('click', (e) => {
+      const handleSelect = (e) => {
+        e.preventDefault();
         e.stopPropagation();
         const semId = parseInt(item.dataset.semId, 10);
         const semObj = data.semesters.find(s => s.id === semId);
@@ -496,6 +517,14 @@
         } else {
           showToast(`${semObj ? semObj.name : 'This semester'} is coming soon! Uploading in few days. ⏳`, 'fa-clock');
           closeHeaderSemDropdown();
+        }
+      };
+
+      item.addEventListener('click', handleSelect);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleSelect(e);
         }
       });
     });
@@ -2849,30 +2878,47 @@
     renderHeaderSemDropdown();
 
     if (elements.headerSemDropdownWrap && elements.headerSemesterBtn) {
-      // Hover interaction (cursor enters badge or menu)
+      // Hover interaction (cursor enters badge or menu) - ONLY on desktop/fine-pointer devices
       elements.headerSemDropdownWrap.addEventListener('mouseenter', () => {
+        if (!isFinePointer()) return;
         clearTimeout(semDropdownHoverTimer);
-        openHeaderSemDropdown();
+        openHeaderSemDropdown(true);
       });
 
-      // Hover interaction (cursor leaves badge and menu)
+      // Hover interaction (cursor leaves badge and menu) - ONLY on desktop/fine-pointer devices
       elements.headerSemDropdownWrap.addEventListener('mouseleave', () => {
+        if (!isFinePointer()) return;
         clearTimeout(semDropdownHoverTimer);
         semDropdownHoverTimer = setTimeout(closeHeaderSemDropdown, 220);
       });
 
-      // Click interaction (toggle dropdown on click)
+      // Click / Tap interaction (toggle dropdown on click or mobile tap)
       elements.headerSemesterBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleHeaderSemDropdown();
       });
 
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!elements.headerSemDropdownWrap.contains(e.target)) {
+      // Mobile Backdrop Tap-to-Dismiss
+      if (elements.semDropdownBackdrop) {
+        elements.semDropdownBackdrop.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeHeaderSemDropdown();
+        });
+        elements.semDropdownBackdrop.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          closeHeaderSemDropdown();
+        }, { passive: false });
+      }
+
+      // Close dropdown when clicking or tapping outside
+      const handleOutsideDropdown = (e) => {
+        if (elements.headerSemDropdownWrap && !elements.headerSemDropdownWrap.contains(e.target)) {
           closeHeaderSemDropdown();
         }
-      });
+      };
+      document.addEventListener('click', handleOutsideDropdown);
+      document.addEventListener('touchend', handleOutsideDropdown, { passive: true });
     }
 
     if (elements.headerSemDdAllBtn) {
