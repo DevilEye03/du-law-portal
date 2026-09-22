@@ -128,7 +128,9 @@ d:\law notes/
 │   └── BNS/                        # LB-103: Law of Crimes-I (Bharatiya Nyaya Sanhita 2023)
 │
 ├── sem 2/                          # SEMESTER 2 CONTENT
-│   └── BSA/                        # Bharatiya Sakshya Adhiniyam, 2023 (Law of Evidence)
+│   ├── BSA/                        # LB-201: Bharatiya Sakshya Adhiniyam, 2023 (6 Unit Dossiers)
+│   ├── PIL/                        # LB-205: Public International Law (7 Unit Dossiers)
+│   └── PROPERTY LAW/               # LB-204: Property Law & TPA 1882 (12 Unit Dossiers)
 │
 └── sem 3/                          # SEMESTER 3 CONTENT
     ├── company/                    # LB-303: Company Law (10 Unit Dossiers)
@@ -145,7 +147,7 @@ d:\law notes/
 The application operates as a hashless/query-driven SPA with 3 primary views:
 1. **View 1: Semester View (`#semesterView` / `showView('semester')`)**:
    - Cinematic 3D Wave Grid Hero canvas + Interactive Particle stage.
-   - Semester selector cards (Semester I & Semester III currently active).
+   - Semester selector cards (Semester I, Semester II, and Semester III currently active).
 2. **View 2: Subjects Selection Dashboard (`#subjectsView` / `showView('subjects')`)**:
    - Dual-mode subject explorer:
      - **3D Books Showcase**: Realistic 3D hardbound book models with book spines, covers, open animation, and drag-to-rotate carousel.
@@ -168,7 +170,7 @@ The application operates as a hashless/query-driven SPA with 3 primary views:
 
 ### 4.4. Quick Bare Act Drawer (`#bareActDrawer`)
 - Slide-over off-canvas drawer accessible from the top navigation bar.
-- Tabbed statutory coverage: ICA 1872, SRA 1963, BSA 2023, BNS 2023, HMA 1955, HAMA 1956, HMGA 1956, CPA 2019, CA 2013, CPC 1908, Limitation Act 1963.
+- Tabbed statutory coverage: ICA 1872, SRA 1963, BSA 2023, TPA 1882, BNS 2023, HMA 1955, HAMA 1956, HMGA 1956, CPA 2019, CA 2013, CPC 1908, Limitation Act 1963, PC Act 1988, PMLA 2002.
 - Features real-time keyword search, section jump ribbon, and verbatim statutory texts.
 
 ### 4.5. BNS 2023 ↔ IPC 1860 Live Section Converter (`#bnsModal`)

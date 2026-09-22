@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 5 – What Kind of Property can be Transferred (Sec. 6(a) & 43) | LB-204 | DU Notes</title>
+<style>
+  :root{--ink:#1b2a41;--accent:#4a2c82;--accent2:#b23a48;--gold:#c9a227;--soft:#f5f3fa;--line:#ddd8ea;--note:#fff8e1;--blue:#e8f1fb;--red:#fdecec;--green:#e9f7ef;--purple:#f1ebfb}
+  *{box-sizing:border-box}
+  body{font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);margin:0;background:#fbfbfd}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 34px 80px}
+  header.hero{background:linear-gradient(135deg,#4a2c82 0%,#1b2a41 100%);color:#fff;padding:40px 34px;border-radius:14px;margin-bottom:28px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  header.hero h1{margin:0 0 6px;font-size:2.1rem}
+  header.hero .sub{opacity:.92;font-size:1.05rem}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);padding:3px 10px;border-radius:20px;font-size:.85rem;margin:8px 6px 0 0}
+  h2{font-size:1.65rem;color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:6px;margin-top:54px}
+  h3{font-size:1.28rem;color:var(--ink);margin-top:34px;border-left:5px solid var(--gold);padding-left:10px}
+  h4{font-size:1.08rem;color:var(--accent2);margin:22px 0 8px}
+  p{margin:9px 0;text-align:justify}
+  ul,ol{margin:8px 0 8px 22px} li{margin:5px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95rem;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
+  th{background:var(--accent);color:#fff} tr:nth-child(even) td{background:var(--soft)}
+  .box{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0;background:#fff}
+  .note{background:var(--note);border-left:6px solid var(--gold)}
+  .stat{background:var(--blue);border-left:6px solid #2b6cb0;font-family:"Courier New",monospace;font-size:.93rem;white-space:pre-wrap}
+  .warn{background:var(--red);border-left:6px solid var(--accent2)}
+  .ok{background:var(--green);border-left:6px solid #0b6e4f}
+  .ex{background:var(--purple);border-left:6px solid #6b46c1}
+  .case{border:2px solid var(--accent);border-radius:12px;padding:18px 22px;margin:26px 0;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+  .case h3{border:none;padding:0;margin-top:0;color:var(--accent);font-size:1.4rem}
+  .case .cite{font-style:italic;color:#555;margin-bottom:10px}
+  .lbl{display:inline-block;background:var(--ink);color:#fff;padding:2px 9px;border-radius:4px;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;margin-right:6px}
+  .lbl.g{background:#0b6e4f}.lbl.r{background:var(--accent2)}.lbl.y{background:var(--gold);color:#222}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;columns:2;column-gap:30px}
+  .toc a{text-decoration:none;color:var(--ink)} .toc a:hover{color:var(--accent);text-decoration:underline} .toc li{break-inside:avoid}
+  .flow{display:flex;flex-direction:column;align-items:center;margin:20px 0}
+  .fbox{border:2px solid var(--accent);border-radius:10px;padding:10px 16px;background:#fff;max-width:600px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.92rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .fbox.q{background:#fff8e1;border-color:var(--gold)} .fbox.yes{background:var(--green);border-color:#0b6e4f} .fbox.no{background:var(--red);border-color:var(--accent2)}
+  .arrow{font-size:1.5rem;color:var(--accent);line-height:1;margin:4px 0}
+  .split{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .branch{display:flex;flex-direction:column;align-items:center;min-width:240px}
+  .branchlbl{font-size:.8rem;font-weight:bold;color:#555;font-family:Arial;margin-bottom:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.grid2{grid-template-columns:1fr}.toc{columns:1}.vs{grid-template-columns:1fr}}
+  .vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}
+  .vs>div{padding:14px 16px} .vs>div:first-child{background:var(--green);border-right:1px solid var(--line)} .vs>div:last-child{background:var(--red)} .vs h4{margin-top:0}
+  .mnem{font-family:"Courier New",monospace;background:#1b2a41;color:#f7e9a0;padding:14px 18px;border-radius:10px;white-space:pre-wrap}
+  .pyq{border:2px dashed var(--accent2);border-radius:12px;padding:18px 22px;margin:28px 0;background:#fffdfd}
+  .pyq h3{border:none;padding:0;color:var(--accent2);margin-top:0}
+  .ans{background:#fff;border-left:5px solid var(--accent);padding:12px 16px;margin-top:12px}
+  .small{font-size:.86rem;color:#555} .kw{color:var(--accent2);font-weight:bold}
+  blockquote{margin:10px 20px;padding:8px 16px;border-left:4px solid #999;background:#f7f7f7;font-style:italic}
+  svg text{font-family:Arial,Helvetica,sans-serif}
+  .foot{margin-top:50px;font-size:.85rem;color:#666;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body><div class="wrap">
+
+<header class="hero">
+  <h1>Topic 5 — What Kind of Property Can Be Transferred (Sections 6(a) and 43, TPA 1882)</h1>
+  <div class="sub">LL.B. II Term · Paper LB-204 Property Law · Faculty of Law, University of Delhi</div>
+  <div class="sub" style="margin-top:6px">Transfer of <i>spes successionis</i> · Transfer by heir apparent · Chance of a relation obtaining a legacy · Comparison with fraudulent and erroneous unauthorised transfers · Doctrine of "feeding the grant by estoppel" · Status of bona fide transferee for consideration without notice</div>
+  <span class="tag">Jumma Masjid, Mercara v. Kodimaniandra Deviah (1962 SC)</span>
+  <span class="tag">Kartar Singh v. Harbans Kaur (1994 SC)</span>
+  <span class="tag">DU PYQs incl. May/June 2025 Q.4</span>
+</header>
+
+<div class="box note"><b>Sources.</b> Primary: DU Case Material LB-204 (May 2022), Topic 5, pp. 76–84 — both judgments reproduced in depth (facts, genealogy, procedural history, issues, arguments, paragraph-wise reasoning, every precedent discussed, principles). Statutory text from the bare Transfer of Property Act, 1882 (ss.6, 7, 8, 41, 43, 44, 53-A), Indian Contract Act, 1872 (ss.10, 23, 65), Indian Evidence Act, 1872 (s.115) / Bharatiya Sakshya Adhiniyam, 2023 (s.121), Hindu Succession Act, 1956 (ss.6, 8, 14, 15), Hindu Minority and Guardianship Act, 1956 (ss.8, 11, 12), Guardians and Wards Act, 1890 (ss.29, 30), Specific Relief Act, 1963 (s.13), Indian Succession Act, 1925. Concept material supplemented from the LED Exam Capsule (pp. 26–29). PYQs: DU May/June 2025 paper Q.4 and recurring DU questions.</div>
+
+<nav class="toc"><b>CONTENTS</b>
+<ol>
+<li><a href="#p1">Section 6 — the general rule of transferability and its exceptions (overview)</a></li>
+<li><a href="#p2">Section 6(a) — text and the three limbs of <i>spes successionis</i></a></li>
+<li><a href="#p3">Limb 1 — chance of an heir apparent succeeding to an estate (incl. Hindu reversioners)</a></li>
+<li><a href="#p4">Limb 2 — chance of a relation obtaining a legacy on the death of a kinsman</a></li>
+<li><a href="#p5">Limb 3 — "any other mere possibility of a like nature"; contrast with contingent/vested interests</a></li>
+<li><a href="#p6">Rationale; effect of a transfer of spes; contracts to transfer spes (s.23 Contract Act)</a></li>
+<li><a href="#p7">Section 43 — text, history (1929), illustration; the doctrine of feeding the grant by estoppel</a></li>
+<li><a href="#p8">Essentials of s.43 — element-by-element</a></li>
+<li><a href="#p9">Fraudulent v. erroneous representation; knowledge/notice of the transferee</a></li>
+<li><a href="#p10">s.6(a) v. s.43 — the reconciliation in <i>Jumma Masjid</i> (substantive law v. rule of estoppel)</a></li>
+<li><a href="#p11">Status of the bona fide transferee for consideration without notice (s.43 para 2)</a></li>
+<li><a href="#p12">Decision flowchart — spes, s.43 or neither?</a></li>
+<li><a href="#p13">Comparison tables — s.43 v. s.41 v. s.53-A v. Evidence Act s.115 v. English "feeding the estoppel"</a></li>
+<li><a href="#p14">Related provisions in other Acts</a></li>
+<li><a href="#c1">CASE 1 — Jumma Masjid, Mercara v. Kodimaniandra Deviah</a></li>
+<li><a href="#c2">CASE 2 — Kartar Singh v. Harbans Kaur</a></li>
+<li><a href="#p15">Precedent map &amp; reconciliation of the two cases</a></li>
+<li><a href="#p16">Master tables and real-life examples</a></li>
+<li><a href="#p17">DU Previous Year Questions with model answers</a></li>
+<li><a href="#p18">Rapid revision &amp; mnemonics</a></li>
+</ol></nav>
+
+<!-- ============================================================ -->
+<h2 id="p1">1. Section 6 — the general rule of transferability</h2>
+<div class="box stat"><b>Section 6. What may be transferred.</b> — Property of any kind may be transferred, except as otherwise provided by this Act or by any other law for the time being in force.
+<b>(a)</b> The chance of an heir-apparent succeeding to an estate, the chance of a relation obtaining a legacy on the death of a kinsman, or any other mere possibility of a like nature, cannot be transferred.
+<b>(b)</b> A mere right of re-entry for breach of a condition subsequent cannot be transferred to any one except the owner of the property affected thereby.
+<b>(c)</b> An easement cannot be transferred apart from the dominant heritage.
+<b>(d)</b> An interest in property restricted in its enjoyment to the owner personally cannot be transferred by him.
+<b>(dd)</b> A right to future maintenance, in whatsoever manner arising, secured or determined, cannot be transferred. <span class="small">[ins. 1929]</span>
+<b>(e)</b> A mere right to sue cannot be transferred.
+<b>(f)</b> A public office cannot be transferred, nor can the salary of a public officer, whether before or after it has become payable.
+<b>(g)</b> Stipends allowed to military, naval, air-force and civil pensioners of Government and political pensions cannot be transferred.
+<b>(h)</b> No transfer can be made (1) in so far as it is opposed to the nature of the interest affected thereby, or (2) for an unlawful object or consideration within the meaning of s.23 of the Indian Contract Act, 1872, or (3) to a person legally disqualified to be transferee.
+<b>(i)</b> Nothing in this section shall be deemed to authorise a tenant having an untransferable right of occupancy, the farmer of an estate in respect of which default has been made in paying revenue, or the lessee of an estate under the management of a Court of Wards, to assign his interest as such tenant, farmer or lessee.</div>
+<p><b>Structure.</b> The opening words lay down the <b>general rule — free alienability</b> ("property of any kind may be transferred"), reflecting the policy that wealth should circulate. Transferability is the rule; non-transferability the exception, and the <b>burden</b> is on the person asserting that a property is non-transferable. The exceptions are of two kinds: (i) those listed in clauses (a)–(i); (ii) those created "by any other law for the time being in force" (e.g., tenancy laws barring assignment; Bhoodan/ceiling laws; s.60 CPC exemptions from attachment such as tools of artisans; Provident Funds Act s.3; Air Force/Army Acts; Trusts Act s.58 — beneficiary's interest transferable; Insurance Act s.38). Clause (a) — <i>spes successionis</i> — is the syllabus focus and the one that interacts with s.43.</p>
+<table>
+<tr><th style="width:12%">Clause</th><th style="width:30%">Non-transferable interest</th><th>Reason / illustration</th></tr>
+<tr><td>(a)</td><td><i>Spes successionis</i> — heir apparent's chance; relation's chance of legacy; other mere possibilities</td><td>Not property at all — a bare hope. <i>Jumma Masjid</i>; <i>Kartar Singh</i>.</td></tr>
+<tr><td>(b)</td><td>Mere right of re-entry (for breach of condition subsequent)</td><td>Personal to the owner of the reversion; can pass only with the property.</td></tr>
+<tr><td>(c)</td><td>Easement apart from dominant heritage</td><td>Appurtenant right; cannot exist in gross.</td></tr>
+<tr><td>(d)</td><td>Interest restricted to personal enjoyment — <i>e.g.</i>, service tenure, religious office (shebaitship as such), a widow's right of residence, a pre-1956 Hindu widow's estate as regards the corpus</td><td>Personal character.</td></tr>
+<tr><td>(dd)</td><td>Right to future maintenance</td><td>Personal; arrears already accrued are transferable/attachable.</td></tr>
+<tr><td>(e)</td><td>Mere right to sue (damages for breach/tort)</td><td>Champerty concerns; but a decree or a debt (actionable claim) is transferable.</td></tr>
+<tr><td>(f),(g)</td><td>Public office and salary; pensions</td><td>Public policy — efficiency and support of the officer.</td></tr>
+<tr><td>(h)</td><td>Transfers opposed to nature of interest (<i>res communes</i>, <i>res nullius</i>, debutter), for unlawful object (s.23 Contract Act), or to a disqualified transferee (e.g., judge/legal practitioner buying actionable claim — s.136 TPA)</td><td>General public policy.</td></tr>
+<tr><td>(i)</td><td>Untransferable occupancy tenancies, defaulting revenue farmers, Court of Wards lessees</td><td>Statutory tenures.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p2">2. Section 6(a) — the three limbs of <i>spes successionis</i></h2>
+<p><i>Spes successionis</i> (Latin: "hope of succession") is the <b>bare expectation</b> that a living person's property may come to one on that person's death — by inheritance (heir apparent) or by will (a hoped-for legacy). It is not an interest in property, vested or contingent; it is a <b>mere possibility</b>. Clause (a) has three limbs:</p>
+<svg viewBox="0 0 1000 230" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="350" y="10" width="300" height="46" rx="10" fill="#4a2c82"/><text x="500" y="39" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">s.6(a) — SPES SUCCESSIONIS (not transferable)</text>
+<line x1="500" y1="56" x2="170" y2="95" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="500" y2="95" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="830" y2="95" stroke="#4a2c82" stroke-width="2"/>
+<g font-size="11.5" text-anchor="middle">
+<rect x="30" y="95" width="280" height="110" rx="10" fill="#fdecec" stroke="#b23a48" stroke-width="2"/><text x="170" y="118" font-weight="bold">1. Chance of an HEIR APPARENT</text><text x="170" y="136">succeeding to an estate</text><text x="170" y="156">e.g. son during father's life;</text><text x="170" y="172">Hindu reversioner during widow's life</text><text x="170" y="190">(Jumma Masjid; Ananda Mohan Roy)</text>
+<rect x="360" y="95" width="280" height="110" rx="10" fill="#fff8e1" stroke="#c9a227" stroke-width="2"/><text x="500" y="118" font-weight="bold">2. Chance of a RELATION obtaining</text><text x="500" y="136">a LEGACY on the death of a kinsman</text><text x="500" y="156">e.g. nephew named in uncle's will</text><text x="500" y="172">— will is revocable; nothing vests</text><text x="500" y="190">until testator's death (Succession Act s.62)</text>
+<rect x="690" y="95" width="280" height="110" rx="10" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="2"/><text x="830" y="118" font-weight="bold">3. Any other MERE POSSIBILITY</text><text x="830" y="136">of a like nature</text><text x="830" y="156">e.g. next cast of a fisherman's net;</text><text x="830" y="172">future wages not yet earned; prize in a</text><text x="830" y="190">lottery not yet drawn; hope of a gift</text>
+</g></svg>
+
+<!-- ============================================================ -->
+<h2 id="p3">3. Limb 1 — chance of an heir apparent succeeding to an estate</h2>
+<p><b>Heir apparent</b> — strictly, one who will inherit <i>if he survives</i> the propositus (a son under the Hindu Succession Act); loosely, in Indian usage, any <b>presumptive heir</b> (one who would inherit if the propositus died <i>now</i>, but may be displaced by the birth of a nearer heir). Neither has any interest during the propositus's life: <i>nemo est heres viventis</i> — no one is the heir of a living person. The owner may sell, gift or will away everything; the "heir" may predecease him; a nearer heir may be born; the personal law may change (as it did in 1956 and 2005). What the expectant heir has is therefore a <b>hope</b>, and clause (a) says it "cannot be transferred".</p>
+<div class="box note"><b>The Hindu reversioner — the classic Indian example (the <i>Jumma Masjid</i> fact-pattern).</b> Before the Hindu Succession Act, 1956, a Hindu widow inheriting her husband's property took a <b>limited "widow's estate"</b>: full enjoyment for life, but no power to alienate the corpus beyond legal necessity; on her death the property passed not to <i>her</i> heirs but to the <b>reversioners</b> — the heirs of the <i>last male holder</i> ascertained at the moment of her death. During the widow's life the "next reversioner" had only a spes successionis: he might die first; a nearer reversioner might be born or adopted; the widow might validly alienate for necessity or surrender. Hence transfers by presumptive reversioners were void under s.6(a) — as the mosque argued in <i>Jumma Masjid</i>. (After s.14(1) HSA 1956 the widow's limited estate became absolute ownership, so reversioners largely disappeared; but the principle governs all expectant heirs today — e.g., a son selling "the house I will inherit from my father".)</div>
+<div class="box ex"><b>Example.</b> Arjun, the only son of Vikram (aged 70, owner of a Vasant Kunj bungalow), executes a registered "sale deed" in 2025 selling the bungalow to Priya for Rs 3 crore, stating candidly that he is Vikram's heir and will get the property on Vikram's death. The deed is <b>void</b> — a transfer of spes successionis (s.6(a)); it conveys nothing even after Vikram dies in 2030 and Arjun inherits, because Priya knew the true position and s.43 (which requires an erroneous/fraudulent representation of a <i>present</i> title acted upon) is not attracted. Priya can only sue to recover her money (s.65 Contract Act) — if not time-barred.</div>
+
+<!-- ============================================================ -->
+<h2 id="p4">4. Limb 2 — chance of a relation obtaining a legacy on the death of a kinsman</h2>
+<p>A person named as legatee in the will of a living kinsman has <b>no interest</b>: a will is ambulatory and revocable until death (Succession Act ss.2(h), 62 — see Topic 4, <i>Ramaiah</i>); the testator may revoke, sell the property (ademption), or the legatee may predecease (lapse — s.105 Succession Act). The expectation is therefore a mere possibility and cannot be transferred, mortgaged or charged. "Relation" and "kinsman" are used because in practice such expectations arise within families, but the principle extends to any expectant legatee. After the testator's death the legacy vests (subject to assent of the executor — s.332) and becomes ordinary transferable property.</p>
+
+<!-- ============================================================ -->
+<h2 id="p5">5. Limb 3 — "any other mere possibility of a like nature"</h2>
+<p>The residuary words cover <b>bare possibilities</b> analogous to the first two — chances that depend wholly on uncertain future events and in which the person has <i>no present right</i>: the next cast of a fisherman's net, the future crop of land the transferor does not own, the winnings of a lottery ticket not yet drawn, the hope of a gift, the chance of a person being appointed to an office. <b><i>Ejusdem generis</i></b> — "of a like nature" — confines the clause to possibilities of the spes-successionis type; it does <b>not</b> catch:</p>
+<table>
+<tr><th style="width:30%">Interest</th><th>Transferable?</th><th>Why</th></tr>
+<tr><td><b>Vested interest</b> (s.19) — e.g., remainder to B after A's life estate</td><td style="color:#0b6e4f"><b>Yes</b></td><td>A present right, though enjoyment is postponed; passes to B's heirs if B dies before A.</td></tr>
+<tr><td><b>Contingent interest</b> (s.21) — e.g., to B if he attains 25</td><td style="color:#0b6e4f"><b>Yes</b> (generally)</td><td>An interest in property created by a transfer, though defeasible; not a bare hope (s.6(a) excludes it expressly — "mere possibility <i>of a like nature</i>"). It is a "possibility coupled with an interest".</td></tr>
+<tr><td><b>Future property in the transferor's own hands</b> (next year's crop of his own field)</td><td style="color:#0b6e4f">Yes, as a contract; transfers when it comes into existence</td><td><i>Holroyd v. Marshall</i>; an existing right in the land.</td></tr>
+<tr><td><b>Right of a reversioner after the succession opens</b></td><td style="color:#0b6e4f"><b>Yes</b></td><td>Becomes a vested estate on the widow's death.</td></tr>
+<tr><td><b>Interest of a coparcener in Mitakshara property</b></td><td>Yes (in Bombay, Madras, M.P.; elsewhere via partition/execution); now generally yes</td><td>Undivided but existing interest — <i>not</i> a spes.</td></tr>
+<tr><td><b>A Muslim heir's expectancy</b></td><td style="color:#b23a48"><b>No</b> (in principle)</td><td>s.2 saves Muslim law from Chapter II, but Muslim law itself treats a renunciation of a chance of inheritance as void unless part of a family settlement for consideration (<i>Gulam Abbas v. Haji Kayyum Ali</i>, AIR 1973 SC 554 — estoppel/family arrangement may bind).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p6">6. Rationale, effect and contracts to transfer spes</h2>
+<ul>
+<li><b>Rationale.</b> (i) Conceptual — one cannot convey what one does not have (<i>nemo dat quod non habet</i>); a spes is not "property". (ii) Policy — to protect expectant heirs (often young, needy or improvident) from selling their expectations at ruinous discounts to money-lenders ("catching bargains" — the English equity of <i>Earl of Aylesford v. Morris</i>), and to protect the propositus's freedom of disposition. (iii) Certainty of title — otherwise every ancestor's property would be clouded by speculative dealings of his relatives.</li>
+<li><b>Effect of a transfer of spes.</b> <b>Void</b> <i>ab initio</i> — not merely voidable. It conveys nothing at the time and nothing later, even if the transferor afterwards inherits (unless s.43 applies — Part 7 onwards). No estoppel arises against the statute (<i>Jumma Masjid</i>, para 10 — "Rules of estoppel are not to be resorted to for defeating or circumventing prohibitions enacted by statutes on grounds of public policy"). Consideration paid may be recovered under s.65 Contract Act (restitution on discovering agreement void) subject to limitation.</li>
+<li><b>Contracts (agreements) to transfer spes.</b> Equally void: an agreement to do what the statute forbids is unlawful under <b>s.23 Contract Act</b> (defeating the provision of a law) — <i>Sri Jagannada Raju v. Sri Rajah Prasada Rao</i> (AIR 1916 Mad 579), approved by the Privy Council in <b><i>Ananda Mohan Roy v. Gour Mohan Mullick</i></b> (AIR 1923 PC 189): the prohibition in s.6(a) "would become futile if agreements to transfer could be enforced" after the succession opens. So specific performance is not available (SRA s.9/14). <i>Jumma Masjid</i> distinguished these cases — they deal with professed transfers/contracts of spes, not with representations of present title.</li>
+<li><b>Release/relinquishment of spes.</b> A reversioner's release of his expectancy in favour of the widow was, under old Hindu law, ineffective as a transfer but could operate as a <i>family settlement</i> or raise an estoppel against him in some situations; similarly among Muslims (<i>Gulam Abbas</i>). These are exceptions grounded in family-arrangement doctrine, not in s.43.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="p7">7. Section 43 — feeding the grant by estoppel</h2>
+<div class="box stat"><b>Section 43. Transfer by unauthorised person who subsequently acquires interest in property transferred.</b> — Where a person <b>fraudulently or erroneously represents</b> that he is <b>authorised to transfer certain immovable property</b> and <b>professes to transfer such property for consideration</b>, such transfer shall, <b>at the option of the transferee</b>, operate on <b>any interest which the transferor may acquire in such property at any time during which the contract of transfer subsists</b>.
+Nothing in this section shall impair the right of <b>transferees in good faith for consideration without notice of the existence of the said option</b>.
+<b>Illustration.</b> A, a Hindu who has separated from his father B, sells to C three fields, X, Y and Z, representing that A is authorised to transfer the same. Of these fields Z does not belong to A, it having been retained by B on the partition; but on B's dying A as heir obtains Z. C, not having rescinded the contract of sale, may require A to deliver Z to him.
+<span class="small">[Words "fraudulently or" inserted by Act 20 of 1929.]</span></div>
+<h3>7.1 The doctrine</h3>
+<p>The English equitable rule of <b>"feeding the estoppel"</b> (<i>Rajapakse v. Fernando</i> [1920] AC 892 PC; <i>Holroyd v. Marshall</i>): a grantor who purports to convey an estate he does not have is estopped, as against his grantee, from denying that he had it; when he later acquires the estate, the estoppel is "fed" — the after-acquired title passes automatically to the grantee. Section 43 codifies this for Indian immovable property, with modifications: (i) the transfer operates on the after-acquired interest <b>at the option of the transferee</b> (not automatically); (ii) it applies only to transfers <b>for consideration</b>; (iii) it protects intervening <b>bona fide purchasers without notice</b>. It is also an application of the maxim that <b>equity treats as done that which ought to be done</b> — the transferor promised a title; when he gets it, he must make good. In <i>Jumma Masjid</i> the Supreme Court characterised s.43 as "<b>a rule of estoppel which is one of evidence</b>" (cf. Evidence Act s.115), enacted as "a special provision for the protection of transferees for consideration from persons who represent that they have a present title, which, in fact, they have not."</p>
+<h3>7.2 Legislative history</h3>
+<p>The original 1882 text read "where a person <i>erroneously</i> represents". Some courts read this as confined to innocent misrepresentations, so that a <i>fraudulent</i> transferor could escape by pleading his own fraud. The <b>Amending Act 20 of 1929</b> inserted "fraudulently or", making it clear — as Venkatarama Aiyar J. stressed — "that for the purpose of the section it matters not whether the transferor acted fraudulently or innocently in making the representation, and that what is material is that he did make a representation and the transferee has acted on it."</p>
+
+<!-- ============================================================ -->
+<h2 id="p8">8. Essentials of s.43 — element by element</h2>
+<p>The Supreme Court in <i>Kartar Singh</i> (para 4) compressed the section into <b>two conditions</b>: (1) a fraudulent or erroneous representation by the transferor that he is authorised to transfer certain immovable property, and a professed transfer of it for consideration; (2) the transferor subsequently acquiring an interest in that property <b>while the contract of transfer subsists</b>, whereupon the transferee may at his option claim it. Expanded:</p>
+<table>
+<tr><th style="width:5%">#</th><th style="width:26%">Ingredient</th><th>Explanation &amp; authority</th></tr>
+<tr><td>1</td><td><b>Representation of authority to transfer</b> — "fraudulently or erroneously represents that he is authorised to transfer"</td><td>Express or implied from the deed's recitals or conduct (in <i>Jumma Masjid</i>, the recital that the vendors had become owners as reversioners on Ammakka's death). Must be a representation of a <b>present</b> right/authority — not a candid statement that the transferor merely <i>hopes</i> to inherit (<i>Alamanaya Kunigari Nabi Sab</i>; <i>Shyam Narain</i>). Whether innocent or fraudulent is immaterial (1929 amendment).</td></tr>
+<tr><td>2</td><td><b>Immovable property</b></td><td>Section applies to immovable property only; for movables the analogous rule is s.27 Sale of Goods Act (<i>nemo dat</i>) with its estoppel exception, and English estoppel principles.</td></tr>
+<tr><td>3</td><td><b>Professes to transfer</b></td><td>There must be a purported <b>transfer</b> (sale, mortgage, lease, exchange) — not a mere agreement to transfer (for which SRA s.13 gives analogous relief: a purchaser may compel the vendor to make good a title subsequently acquired). The deed must be otherwise valid in form (registered etc.).</td></tr>
+<tr><td>4</td><td><b>For consideration</b></td><td>Gratuitous transfers (gifts) are outside s.43 — equity does not assist a volunteer; but the donee may plead ordinary estoppel (s.115 Evidence Act) in some circumstances.</td></tr>
+<tr><td>5</td><td><b>Transferee misled — acted on the representation</b>, without knowledge/notice of the want of title</td><td>"It is only material to find out whether in fact the transferee has been misled … Where the transferee knew as a fact that the transferor did not possess the title which he represents he has, then he cannot be said to have acted on it … Section 43 would then have no application, and the transfer will fail under Section 6(a)" (<i>Jumma Masjid</i>, para 15). <i>Kartar Singh</i> extends this to <b>constructive notice</b>: a note in the deed disclosing the transferor's limited capacity (guardian of a minor) put the transferee on inquiry; failing to inquire, "the first limb of Section 43 is not satisfied."</td></tr>
+<tr><td>6</td><td><b>Transferor subsequently acquires an interest</b> in the same property</td><td>By any means — inheritance, purchase, gift, legacy, partition, adverse possession (<i>Shyam Narain</i>: "no matter whether by private purchase, gift, legacy or by inheritance or otherwise"). The interest acquired need not be the whole; the transfer operates on "any interest".</td></tr>
+<tr><td>7</td><td><b>The contract of transfer must be subsisting</b> at the time of acquisition / claim</td><td>Not rescinded by the transferee (illustration: "C, not having rescinded the contract"), not cancelled by a decree, not abandoned. A transfer <b>void ab initio</b> (e.g., of a minor's property by a guardian without court sanction — <i>Kartar Singh</i>) "is no contract in the eye of law and was never in existence, so the second limb of Section 43 is not satisfied."</td></tr>
+<tr><td>8</td><td><b>Option of the transferee</b></td><td>The after-acquired interest passes only if the transferee <b>elects</b> to claim it (by suit, notice or conduct); he may instead rescind and sue for damages/refund. The option must be exercised within limitation (Art. 54/58/113 Limitation Act as applicable) and before rights of bona fide purchasers intervene.</td></tr>
+<tr><td>9</td><td><b>No intervening bona fide transferee for value without notice of the option</b> (second paragraph)</td><td>If, after acquiring title, the transferor sells to X who pays in good faith without notice of the first transferee's option, X's title prevails; the first transferee is left with a personal remedy. See Part 11.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p9">9. Fraudulent v. erroneous representation; knowledge of the transferee</h2>
+<div class="grid2">
+<div class="box ok"><b>Transferor's state of mind — irrelevant</b>
+<p>"It is immaterial whether the transferor acts bona fide or fraudulently in making the representation" (<i>Jumma Masjid</i>). Reasons: (i) the section, since 1929, says "fraudulently or erroneously"; (ii) estoppel looks at the effect on the representee, not the motive of the representor; (iii) a fraudulent transferor should not profit from his own fraud by escaping the estoppel. In <i>Kartar Singh</i> the mother's representation that she could sell the minor's share "may be an erroneous representation and may not be fraudulent one … For the purpose of Section 43 it is not strong material for consideration."</p></div>
+<div class="box warn"><b>Transferee's state of mind — decisive</b>
+<p>The transferee must have been <b>misled</b>. He fails if he: (a) <b>knew</b> the transferor lacked title (parties "knowing the full facts fraudulently clothe the transaction in the garb of an out and out sale" — <i>Shyam Narain</i>); (b) had <b>constructive notice</b> — facts on the face of the deed (the marginal note in <i>Kartar Singh</i>) or otherwise, which a prudent man would have followed up ("the transferee must make all reasonable and diligent enquiries regarding the capacity of the transferor"); (c) took a transfer expressed to be of a <b>spes</b> — then s.6(a) applies squarely. The Exam Capsule: "even constructive notice on his part would bring the case under Section 6(a)."</p></div></div>
+<div class="box note"><b>The Bardswell J. objection and its answer.</b> In <i>Official Assignee, Madras v. Sampath Naidu</i> (AIR 1933 Mad 795) it was said that distinguishing a transfer "on the face of it spes successionis" from one "purporting to be an interest in praesenti" would let parties "by a clever description of the property … conceal the real nature of the transaction and evade a clear statutory prohibition." The Supreme Court's answer: the distinction is not about clever drafting but about whether the transferee was <b>actually misled</b>; where both parties know the truth and merely dress up the deed, there is no representation acted upon and s.6(a) governs; where the transferee genuinely relied on a representation of present title, equity binds the transferor. <i>Sampath Naidu</i> was held "erroneous" and overruled.</div>
+
+<!-- ============================================================ -->
+<h2 id="p10">10. s.6(a) v. s.43 — the reconciliation in <i>Jumma Masjid</i></h2>
+<table>
+<tr><th>Point</th><th>Section 6(a)</th><th>Section 43</th></tr>
+<tr><td>Nature of rule</td><td><b>Substantive law</b> — declares certain interests non-transferable</td><td><b>Rule of estoppel</b> — a rule of evidence/equity binding a representor</td></tr>
+<tr><td>Subject-matter</td><td>Transfer <i>simpliciter</i> of a spes — professedly of a chance of succession</td><td>Representation of <b>present</b> title/authority over specific immovable property, acted on by a transferee for consideration</td></tr>
+<tr><td>Knowledge of transferee</td><td>Both parties know that only an expectancy is being dealt with (or transferee has notice)</td><td>Transferee is misled — no actual or constructive notice of the defect</td></tr>
+<tr><td>Effect</td><td>Transfer void; never revives</td><td>Transfer fastens on after-acquired title at transferee's option</td></tr>
+<tr><td>Field of operation</td><td colspan="2">"The two provisions operate on different fields, and under different conditions, and we see no ground for reading a conflict between them or for cutting down the ambit of the one by reference to the other" (para 9). To exclude expectant heirs from s.43 "would destroy its utility to a large extent." To read in an exception would be "not construing Section 43, but rewriting it" (<i>Vickers v. Evans</i>).</td></tr>
+<tr><td>Estoppel against statute?</td><td colspan="2">No estoppel can defeat s.6(a) <i>alone</i>; but s.43 is itself a statutory provision — a plea under it "is one pleaded under, and not against the statute" (para 10).</td></tr>
+<tr><td>The illustration</td><td colspan="2">The illustration to s.43 (A sells field Z retained by his father B; on B's death A inherits Z; C may claim it) is precisely a spes case; it is "of relevance and value in the construction of the text" and must not be rejected as repugnant (<i>Mahomed Syedol Ariffin v. Yeoh Ooi Gark</i>, AIR 1916 PC 242).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p11">11. Status of the bona fide transferee for consideration without notice</h2>
+<p>The second paragraph of s.43 protects a <b>second transferee</b> from the transferor: after acquiring the interest, the transferor may (dishonestly) sell it again to X. If X (i) took a <b>transfer</b> (not a mere contract), (ii) <b>for consideration</b>, (iii) <b>in good faith</b>, and (iv) <b>without notice</b> (actual or constructive — s.3 TPA, Topic 3) <b>of the existence of the first transferee's option</b>, X's title is <b>not impaired</b> by the first transferee's option. The first transferee is then relegated to damages against the transferor (s.55(2) covenant for title; s.73 Contract Act). Notice here will very often be <b>constructive</b>: the first transfer, if registered, is notice under Explanation I to s.3 (compulsorily registrable sale/mortgage); the first transferee's <b>possession</b> is notice under Explanation II. Hence the protection in practice covers cases where the first deed was unregistered/not registrable and the first transferee was out of possession.</p>
+<div class="box ex"><b>Example.</b> A, representing himself owner, sells plot Z (really his father's) to C in 2020 by registered deed; C does not take possession. Father dies 2023; A inherits Z. In 2024 A sells Z to X, who pays full value. X will be deemed to have notice of C's 2020 registered sale (Explanation I) — so X cannot claim the second paragraph; C's option prevails and C can recover Z from X (subject to electing promptly). Had C's 2020 deed been unregistered (say, an unregistered mortgage below Rs 100) and C out of possession, X would take free and C would sue A for damages.</div>
+<h3>11.1 Position of the transferee <i>inter partes</i> — "equity's estoppel" as a sword and shield</h3>
+<ul>
+<li><b>Against the transferor and his heirs/legal representatives</b>: the estoppel binds them; they cannot set up the after-acquired title.</li>
+<li><b>Against volunteers from the transferor</b> (donees, legatees): bound — they take subject to equities.</li>
+<li><b>Against purchasers with notice</b>: bound.</li>
+<li><b>Against bona fide purchasers for value without notice</b>: not bound (second paragraph).</li>
+<li><b>Against strangers / the true owner during the interval</b>: s.43 gives the transferee nothing until the transferor actually acquires the interest; a sale by the true owner (the father while alive) to someone else defeats the expectancy altogether.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="p12">12. Decision flowchart — spes, s.43 or neither?</h2>
+<div class="flow">
+<div class="fbox q">At the date of the transfer, did the transferor have any <b>present interest</b> (vested/contingent/undivided) in the property?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox yes">Ordinary transfer — s.6(a) irrelevant (s.8 passes whatever interest he has; s.44 for co-owners)</div></div>
+<div class="branch"><div class="branchlbl">NO — only a hope/expectancy or no title at all</div>
+<div class="fbox q">Was the transfer <b>professedly</b> of the chance of succession / legacy / mere possibility — or did the transferee otherwise <b>know or have notice</b> of the want of title?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">VOID under s.6(a) (and a contract to that effect void under s.23 Contract Act — Ananda Mohan Roy). No estoppel against the statute. Refund under s.65 Contract Act only. (Kartar Singh — constructive notice from the deed itself)</div></div>
+<div class="branch"><div class="branchlbl">NO — transferor represented a PRESENT title/authority and transferee was misled</div>
+<div class="fbox q">Was it a transfer of <b>immovable property for consideration</b>, otherwise valid in form (not void ab initio for another reason, e.g. minor's property without court sanction)?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">s.43 unavailable (gift → volunteer; void contract → "never in existence" — Kartar Singh second limb)</div></div>
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Did the transferor <b>later acquire an interest</b> in the property while the contract of transfer was still <b>subsisting</b> (not rescinded/cancelled)?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">Transferee has only personal remedies (damages/refund; s.55(2) covenant)</div></div>
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Has the transferee <b>elected</b> to claim, and has no <b>bona fide purchaser for value without notice of the option</b> intervened?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">Intervening BFP without notice</div><div class="fbox no">BFP's title prevails (s.43 para 2); transferee sues transferor</div></div>
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox yes">s.43 APPLIES — the transfer "feeds" on the after-acquired interest; transferee entitled to it (Jumma Masjid; illustration to s.43)</div></div>
+</div></div></div></div></div></div></div></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p13">13. Comparison tables</h2>
+<h3>13.1 s.43 v. s.41 v. s.53-A v. Evidence Act s.115</h3>
+<table>
+<tr><th>Point</th><th>s.43 (feeding the grant)</th><th>s.41 (ostensible owner)</th><th>s.53-A (part performance)</th><th>Evidence Act s.115 / BSA s.121 (general estoppel)</th></tr>
+<tr><td>Who is estopped</td><td>Transferor who misrepresented his own title/authority</td><td>Real owner who allowed another to appear as owner</td><td>Transferor who put transferee in possession under a written contract</td><td>Any person who by declaration/act/omission caused another to believe and act</td></tr>
+<tr><td>Transferee's duty</td><td>Must have been misled; no notice (actual/constructive) of defect</td><td>Must take <b>reasonable care</b> to ascertain transferor's power and act in good faith</td><td>Must have performed/be willing to perform; possession taken</td><td>Belief and detrimental action</td></tr>
+<tr><td>Consideration</td><td>Essential</td><td>Essential</td><td>Contract "for consideration"</td><td>Not essential</td></tr>
+<tr><td>Effect</td><td>After-acquired title passes at transferee's option</td><td>Transfer not voidable for want of authority — title good against real owner</td><td>Shield only — transferor debarred from enforcing rights; no title</td><td>Representor cannot deny the truth of representation</td></tr>
+<tr><td>Third parties</td><td>BFP for value without notice of option protected</td><td>—</td><td>Transferee for consideration without notice of contract/part performance protected</td><td>Personal to parties/privies</td></tr>
+<tr><td>Timing of title</td><td>Transferor <i>had none</i>, later gets it</td><td>Transferor <i>never</i> gets title; real owner bound by his consent</td><td>Title never passes</td><td>—</td></tr>
+</table>
+<h3>13.2 India (s.43) v. England (feeding the estoppel)</h3>
+<table>
+<tr><th>Point</th><th>India — s.43</th><th>England — estoppel by deed / feeding the estoppel</th></tr>
+<tr><td>Source</td><td>Statute (with 1929 amendment)</td><td>Common law/equity (<i>Rajapakse v. Fernando</i>; <i>Holroyd v. Marshall</i>)</td></tr>
+<tr><td>Passing of after-acquired estate</td><td>At the <b>option</b> of the transferee</td><td><b>Automatic</b> — estoppel is fed and the estate passes at once</td></tr>
+<tr><td>Consideration</td><td>Required</td><td>Estoppel by deed operates even on voluntary conveyances (deed under seal)</td></tr>
+<tr><td>Representation</td><td>Fraudulent or erroneous — irrelevant which</td><td>Recital/representation in deed; fraud no bar</td></tr>
+<tr><td>Bona fide purchaser</td><td>Expressly protected (para 2)</td><td>Protected by general equitable priorities</td></tr>
+<tr><td>Movables</td><td>Not covered (Sale of Goods Act s.27 estoppel; general estoppel)</td><td>Similar estoppel principles</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p14">14. Related provisions in other Acts</h2>
+<table>
+<tr><th style="width:30%">Provision</th><th>Relevance</th></tr>
+<tr><td><b>Indian Contract Act, 1872 — s.23</b></td><td>An agreement whose object is to defeat a statutory prohibition (s.6(a)) is unlawful and void — <i>Sri Jagannada Raju</i>; <i>Ananda Mohan Roy</i> (PC). <b>s.65</b> — restitution when agreement discovered void (refund of price paid for a spes). <b>s.10/11</b> — competency (minor's contract void — <i>Mohori Bibee</i>).</td></tr>
+<tr><td><b>Indian Evidence Act, 1872 — s.115</b> (BSA 2023 s.121)</td><td>General estoppel by representation — s.43 is described in <i>Jumma Masjid</i> as "a rule of estoppel which is one of evidence"; s.115 supplements s.43 for cases outside it (e.g., gifts), subject to the rule that there is no estoppel against a statute.</td></tr>
+<tr><td><b>TPA s.7</b></td><td>Competency to transfer — "entitled to transferable property or authorised to dispose of transferable property not his own"; the mother in <i>Kartar Singh</i> was not so authorised.</td></tr>
+<tr><td><b>TPA s.8</b></td><td>A transfer passes all the interest the transferor <i>can</i> pass — nothing if he has none; s.43 is the exception operating on later interest.</td></tr>
+<tr><td><b>TPA s.41, s.44, s.53-A</b></td><td>Cognate protections for transferees (see 13.1).</td></tr>
+<tr><td><b>TPA s.55(2)</b></td><td>Seller's implied covenant for title — the transferee's damages remedy when s.43 is unavailable or a BFP intervenes.</td></tr>
+<tr><td><b>TPA s.3 ("notice"), Explanations I–II</b></td><td>Determines whether a subsequent transferee has notice of the option (para 2 of s.43) and whether the first transferee had constructive notice of the defect (<i>Kartar Singh</i>).</td></tr>
+<tr><td><b>Specific Relief Act, 1963 — s.13</b></td><td>Where a person contracts to sell immovable property having no or imperfect title, the purchaser may compel him to make good the contract out of any interest he <b>subsequently acquires</b> (s.13(1)(a)) — the contractual analogue of s.43. <b>s.14/9</b> — no specific performance of void (spes) contracts.</td></tr>
+<tr><td><b>Hindu Succession Act, 1956 — ss.8, 14, 15</b></td><td>s.8 Class I heirs (mother succeeded to the son in <i>Kartar Singh</i>); s.14 converted the Hindu widow's limited estate into absolute ownership, abolishing the reversioner (the <i>Jumma Masjid</i> scenario) prospectively; s.15 female intestate succession.</td></tr>
+<tr><td><b>Hindu Minority and Guardianship Act, 1956 — s.8(2), 8(3)</b>; <b>Guardians and Wards Act, 1890 — ss.29, 30</b></td><td>A natural guardian cannot mortgage, charge, sell, gift or exchange the minor's immovable property without <b>previous permission of the court</b>; a disposal in contravention is <b>voidable at the instance of the minor</b> (HMGA s.8(3)); under GWA s.30 a certificated guardian's unauthorised alienation is voidable. <i>Kartar Singh</i> treated the sale, once set aside by decree, as void from inception qua the minor's share. (Note: the mother could act as natural guardian only in the father's absence — s.6(a) HMGA.)</td></tr>
+<tr><td><b>Indian Succession Act, 1925 — ss.2(h), 62, 105, 332</b></td><td>Revocability of wills; lapse of legacy; vesting on assent — why an expected legacy is a mere spes.</td></tr>
+<tr><td><b>Limitation Act, 1963 — Arts. 54, 58, 60, 65, 113</b></td><td>Time for exercising the option/suing for possession; Art. 60 — suit by ward to set aside guardian's transfer: 3 years from attaining majority (<i>Kartar Singh</i> — son sued on 14-3-1975, shortly after majority).</td></tr>
+<tr><td><b>Sale of Goods Act, 1930 — s.27</b></td><td><i>Nemo dat</i> and estoppel exception for movables — parallel to s.43 for goods.</td></tr>
+<tr><td><b>Registration Act, 1908 — s.17</b></td><td>First transfer, if registered, gives constructive notice to later transferees (defeats para 2 protection).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>Leading Cases (DU Case Material, Topic 5, pp. 76–84)</h2>
+
+<div class="case" id="c1">
+<h3>CASE 1 — Jumma Masjid, Mercara v. Kodimaniandra Deviah &amp; Ors.</h3>
+<div class="cite">AIR 1962 SC 847 : 1962 Supp (1) SCR 554 · Supreme Court of India · Venkatarama Aiyar J. (for the Bench) · Appeal on certificate under Art. 133(1)(c) from the Madras High Court (Full Bench), transferred to Mysore High Court under s.4 of Act 72 of 1952</div>
+<p><span class="lbl">Theme</span> Does <b>s.43</b> protect a purchaser for consideration from a person who <b>represented a present title</b> but in fact held only a <b>spes successionis</b> (as presumptive reversioner)? Reconciliation of s.6(a) and s.43.</p>
+<h4>Facts (with genealogy)</h4>
+<ul>
+<li>A Mitakshara joint family of three brothers: <b>Santhappa</b> (died unmarried), <b>Basappa</b> (died 1901, leaving widow <b>Gangamma</b>) and <b>Nanjundappa</b> (died 1907, leaving widow <b>Ammakka</b>, who succeeded to all the family properties as his heir). Ammakka died in <b>1910</b>; the estate then devolved on the <b>next reversioners</b> of Nanjundappa — the sister's grandsons <b>Basappa, Mallappa and Santhappa</b> (the "reversioners").</li>
+<li>On <b>5 Aug 1900</b> Nanjundappa and Basappa had executed a <b>usufructuary mortgage</b> of the suit properties; the assignee <b>Appanna Shetty</b> sued (O.S. 9/1903, Sub-Judge, Coorg) and obtained a <b>compromise decree</b>: he would enjoy the usufruct till <b>August 1920</b> in full satisfaction, whereafter the properties would revert to the mortgagors' family.</li>
+<li>By sale deed <b>Ex. III dated 18 Nov 1920</b> the three reversioners sold the suit properties to <b>Ganapathi</b> (predecessor of the respondents) for <b>Rs 2,000</b>, <b>reciting</b> that the properties belonged to the joint family of Nanjundappa and Basappa, that on Nanjundappa's death Ammakka inherited them as widow, and that on her death <b>they had devolved on the vendors as next reversioners</b> of the last male owner. <b>Ex. IV (12 Mar 1921)</b> rectified Ex. III by adding items omitted by oversight.</li>
+<li>Ganapathi sued for possession. <b>Gangamma</b> (Basappa's widow) resisted, claiming the properties were the <b>self-acquisitions of her husband Basappa</b> and that she, as his heir, was entitled (i.e., the vendors were <i>not</i> yet entitled — they were only presumptive reversioners to Basappa's estate during her life). The Sub-Judge, District Judge and Judicial Commissioner all <b>accepted Gangamma's contention</b> — the reversioners had no present title in 1920.</li>
+<li>Before the second appeal was finally disposed of, <b>Gangamma died on 17 Feb 1933</b>. The succession to Basappa's estate now opened, and the same three reversioners became entitled. Ganapathi applied to the Revenue Authorities to transfer the <b>patta</b> from Gangamma's name to his, on the strength of Ex. III.</li>
+<li>The <b>Jumma Masjid, Mercara</b> (appellant, through its muthavalli) intervened, claiming the properties (i) under a <b>sadakah/gift by Gangamma on 5 Sep 1932</b>, and (ii) under a <b>release deed Ex. A dated 3 Mar 1933</b> by which <b>Santhappa</b>, one of the reversioners, relinquished his half-share to the mosque for <b>Rs 300</b>. By order Ex. II (9 Sep 1933) the Revenue Authorities rejected the mosque's claim and entered Ganapathi as owner; he took possession.</li>
+<li>On <b>2 Jan 1945</b> the mosque sued for recovery of a <b>half-share</b> (Santhappa's) and mesne profits, contending that in 1920 the vendors had only a <b>spes successionis</b> during Gangamma's lifetime, so Ex. III/IV were <b>void</b> under s.6(a) and conferred no title; whereas Santhappa's 1933 release (after the succession opened) was valid.</li>
+</ul>
+<h4>Procedural history</h4>
+<p><b>District Judge, Coorg</b>: gift of 1932 not proved (abandoned later); Ganapathi had purchased under Ex. III on the faith of the representation that the vendors had become entitled on Ammakka's death in 1910 — he acquired a good title under <b>s.43</b> when the vendors' title matured in 1933; Ex. A could not prevail; suit dismissed. <b>Madras High Court — Full Bench</b> (reference because of conflicting Madras decisions): agreed that the purchaser acted on the representation; held that as the sale was of properties in which the vendors <i>claimed a present interest</i>, and not of a mere right to succeed, s.43 applied and the sale became operative on 17 Feb 1933; overruled <i>Official Assignee, Madras v. Sampath Naidu</i>; appeal dismissed. Certificate granted; appeal to the Supreme Court (only respondent 3 appeared).</p>
+<h4>Issue (para 6)</h4>
+<p>"Whether a transfer of property for consideration made by a person who represents that he has a present and transferable interest therein, while he possesses, in fact, only a spes successionis, is within the protection of Section 43 of the Transfer of Property Act." If yes, the respondents' title under Ex. III/IV prevails over the mosque's under Ex. A; if not, the mosque succeeds.</p>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (Jumma Masjid)</h4>
+<ul><li><b>s.43 must be read subject to s.6(a).</b> If s.43 applied to what are in fact transfers of spes successionis, it would <b>nullify s.6(a)</b>; s.43 should therefore be confined to transfers other than those within s.6(a) — i.e., an implied exception: "nothing in this section shall confer title if the transferor had at the date of transfer an interest of the kind mentioned in s.6(a)".</li><li><b>No estoppel against a statute.</b> A transfer prohibited by s.6(a) is void on grounds of public policy; estoppel cannot validate it.</li><li><b>The illustration to s.43 is repugnant</b> to the section (it depicts a spes case) and must be rejected, as held in <i>Sampath Naidu</i>, in light of <i>Ananda Mohan Roy v. Gour Mohan Mullick</i> (PC) and <i>Sri Jagannada Raju</i> (Mad), which hold contracts by reversioners to sell during the widow's lifetime void.</li><li>Allowing the distinction between a deed "on the face of it" spes and one "purporting" to convey a present interest would let parties evade s.6(a) "by a clever description of the property" (Bardswell J.).</li><li>Hence Ex. III was void; Santhappa's half-share passed to the mosque by the 1933 release.</li></ul></div>
+<div><h4>Respondents (Ganapathi's successors)</h4>
+<ul><li><b>Plain words of s.43</b>: whenever a person transfers property to which he has no title on a representation that he has a present and transferable interest, and the transferee takes for consideration acting on it, the transfer fastens on any interest later acquired — "absolute and unqualified"; it makes no difference whether the defect arises from having no interest at all or from being an expectant heir.</li><li><b>Different fields</b>: s.6(a) prohibits a transfer <i>simpliciter</i> of an expectancy (substantive law); s.43 deals with representations of title (estoppel/evidence). No conflict.</li><li>The <b>illustration</b> (A sells field Z retained by father B; on B's death A inherits; C may claim Z) is exactly this case and must be given effect (<i>Mahomed Syedol Ariffin</i>).</li><li>Authorities: <i>Alamanaya Kunigari Nabi Sab v. Murukuti Papiah</i> (AIR 1915 Mad 972) — distinction between "purporting to transfer the chance of an heir apparent" and "erroneously representing that he is authorised to transfer"; <i>Shyam Narain v. Mangal Prasad</i> (ILR 57 All 474) — same; the Full Bench below.</li><li>The vendors <b>recited a present title</b> (as reversioners of Nanjundappa after 1910); Ganapathi acted on it; when the true position emerged and Gangamma died in 1933, the vendors became <i>in titulo</i> and the 1920 sale operated on their title. The 1933 release to the mosque, being later, conveyed nothing.</li></ul></div></div>
+<h4>Decision and reasoning (Venkatarama Aiyar J.)</h4>
+<ol>
+<li><b>Scope of s.43 on its terms (para 6).</b> "It clearly applies whenever a person transfers property to which he has no title on a representation that he has a present and transferable interest therein, and acting on that representation, the transferee takes a transfer for consideration. When these conditions are satisfied, the section enacts that if the transferor subsequently acquires the property, the transferee becomes entitled to it, if the transfer has not in the meantime been thrown up or cancelled and is subsisting. There is an exception in favour of transferees for consideration in good faith and without notice of the rights under the prior transfer. But apart from that, <b>the section is absolute and unqualified in its operation</b> … it makes no difference … whether the defect of title in the transferor arises by reason of his having no interest whatsoever in the property, or of his interest therein being that of an expectant heir."</li>
+<li><b>No implied exception (para 8).</b> To read s.43 as excluding s.6(a) cases would import a new exception — "we will not be construing Section 43, but rewriting it." Lord Loreburn L.C. in <i>Vickers v. Evans</i>: courts are "not entitled to read words into an Act of Parliament unless clear reason for it is to be found within the four corners of the Act itself."</li>
+<li><b>Different fields (para 9).</b> "Section 6(a) and Section 43 relate to two different subjects, and there is no necessary conflict between them. Section 6(a) deals with certain kinds of interests in property mentioned therein, and prohibits a transfer simpliciter of those interests. Section 43 deals with representations as to title made by a transferor who had no title at the time of transfer, and provides that the transfer shall fasten itself on the title which the transferor subsequently acquires. <b>Section 6(a) enacts a rule of substantive law, while Section 43 enacts a rule of estoppel which is one of evidence.</b> The two provisions operate on different fields, and under different conditions … both of them can be given full effect on their own terms, in their respective spheres. To hold that transfers by persons who have only a spes successionis at the date of transfer are not within the protection afforded by Section 43 would destroy its utility to a large extent."</li>
+<li><b>Estoppel against statute (para 10).</b> The argument would have force "if the question fell to be decided solely on the terms of Section 6(a). Rules of estoppel are not to be resorted to for defeating or circumventing prohibitions enacted by statutes on grounds of public policy. But here the matter does not rest only on Section 6(a). We have, in addition, Section 43, which enacts a special provision for the protection of transferees for consideration from persons who represent that they have a present title, which, in fact, they have not … the plea of estoppel raised by them on the terms of the section is one pleaded <b>under, and not against the statute</b>."</li>
+<li><b>The illustration (para 12).</b> In the illustration A had only a spes in field Z; yet C gets it. "This would appear to conclude the question against the appellant." An illustration is not to be readily rejected as repugnant; the section "is general in its terms and of sufficient amplitude to take in the class of transfers now in question." Privy Council in <i>Mahomed Syedol Ariffin</i>: it is "the duty of a court of law to accept, if that can be done, the illustrations given as being both of relevance and value in the construction of the text … It would be the very last resort of construction" to reject them.</li>
+<li><b>Review of authorities (paras 13–18).</b> <i>Alamanaya Kunigari Nabi Sab</i> (Mad 1915) — son's mortgage of father's property during father's life; father died pending suit; s.43 applied: the argument "neglects the distinction between purporting to transfer 'the chance of an heir-apparent', and 'erroneously representing that he is authorised to transfer certain immovable property'" — <b>approved</b>. <i>Official Assignee, Madras v. Sampath Naidu</i> (Mad 1933) — contrary view (mortgages by expectant heir void and not validated) — its reasoning "ignores the principle underlying Section 43", which "embodies a rule of estoppel and enacts that a person who makes a representation shall not be heard to allege the contrary as against a person who acts on that representation. <b>It is immaterial whether the transferor acts bona fide or fraudulently</b> … It is only material to find out whether in fact the transferee has been misled." The 1929 amendment ("fraudulently or erroneously") emphasises this. "<b>Where the transferee knew as a fact that the transferor did not possess the title which he represents he has, then he cannot be said to have acted on it when taking a transfer. Section 43 would then have no application, and the transfer will fail under Section 6(a).</b> But where the transferee does act on the representation, there is no reason why he should not have the benefit of the equitable doctrine embodied in Section 43, however fraudulent the act of the transferor might have been." <i>Ananda Mohan Roy</i> (PC) and <i>Sri Jagannada Raju</i> — concerned <i>contracts</i> by reversioners to sell during the widow's life, void under s.23 Contract Act; "have no bearing" on a transferee for consideration of what is represented as a present interest. <i>Sampath Naidu</i> "erroneous, and was rightly overruled." <i>Shyam Narain v. Mangal Prasad</i> (All 1935, Sulaiman C.J. and Rachhpal Singh J.) — daughter's son sold in 1910 while the daughter held; inherited 1926; s.43 applied — <b>approved</b>, including the passage distinguishing professed spes transfers (and collusive dressing-up) from erroneous representations of full ownership acted upon, where the later interest "no matter whether by private purchase, gift, legacy or by inheritance or otherwise" feeds the transfer. <i>Bindeshwari Singh v. Har Narain Singh</i> (Oudh 1929) — contrary, disapproved.</li>
+<li><b>Holding (para 18).</b> "When a person transfers property representing that he has a present interest therein, whereas he has, in fact, only a spes successionis, the transferee is entitled to the benefit of Section 43, if he has taken the transfer on the faith of that representation and for consideration." Santhappa, in Ex. III, represented a present title; the purchaser acted on it; he "acquired title to the properties under Section 43 … when Santhappa became <i>in titulo</i> on the death of Gangamma on February 17, 1933, and the subsequent dealing with them by Santhappa by way of release under Ex. A did not operate to vest any title in the appellant." <b>Appeal dismissed with costs</b> of respondent 3.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>s.43 applies whenever a transferor, having no title (including an expectant heir with only a spes), <b>represents a present transferable interest</b> and the transferee takes <b>for consideration acting on that representation</b>; the transfer fastens on any interest later acquired, at the transferee's option, while the contract subsists.</li>
+<li>s.6(a) (substantive prohibition on transfer of a spes <i>simpliciter</i>) and s.43 (rule of estoppel) operate in <b>different fields</b>; no implied exception is to be read into s.43.</li>
+<li>The transferor's fraud or innocence is <b>immaterial</b>; the transferee's <b>knowledge</b> is decisive — if he knew the truth, s.6(a) governs and the transfer is void.</li>
+<li>Pleading s.43 is pleading estoppel <b>under</b> the statute, not against it.</li>
+<li>Illustrations appended to a section are valuable aids to construction and are not to be rejected as repugnant except as a last resort.</li>
+<li>Contracts to transfer a spes are void (s.23 Contract Act; <i>Ananda Mohan Roy</i>) — distinct from transfers on representation of present title.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> Ramesh sells his aunt's Jaipur house to Neha in 2022, the sale deed reciting that he inherited it from his late uncle. In truth the aunt held it (as owner under s.14 HSA) and Ramesh was merely her presumptive heir; Neha, relying on the recital and the revenue records showing the uncle's name, pays Rs 60 lakh. The aunt dies intestate in 2025 and Ramesh inherits. Neha may claim the house under s.43 (<i>Jumma Masjid</i>); a later release by Ramesh to a temple trust conveys nothing. Had the deed said "I sell my expectancy in my aunt's house", or had Neha known the aunt was the owner, the sale would be void under s.6(a).</div>
+</div>
+
+<div class="case" id="c2">
+<h3>CASE 2 — Kartar Singh v. Harbans Kaur</h3>
+<div class="cite">(1994) 4 SCC 730 · Supreme Court of India · K. Ramaswamy and B.L. Hansaria JJ. · Appeals by special leave from the Punjab &amp; Haryana High Court (R.S.A. No. 1557 of 1979)</div>
+<p><span class="lbl">Theme</span> The <b>limits</b> of s.43 — transferee with <b>constructive notice</b> of the transferor's want of authority; a transfer <b>void ab initio</b> (guardian's sale of minor's land without court sanction) cannot be fed by after-acquired title.</p>
+<h4>Facts</h4>
+<ul>
+<li>Land in Gurdaspur district had been acquired <b>by pre-emption</b> jointly by <b>Harbans Kaur</b> (respondent) and her <b>minor son Kulwant Singh</b>, in equal shares.</li>
+<li>On <b>19 April 1961</b> Harbans Kaur executed a <b>registered sale deed</b> in favour of <b>Kartar Singh</b> (appellant) of the entire land — <b>on her own behalf</b> as to her half, and <b>as guardian of the minor</b> as to his half. A <b>note in the margin</b> of the deed recorded that the land had been acquired by pre-emption by her and her minor son, and that she was executing the sale for her own share and, as guardian, for the minor's share.</li>
+<li>No <b>permission of the District Court</b> under the <b>Guardians and Wards Act, 1890</b> (and s.8 HMGA, 1956) had been obtained for alienating the minor's share.</li>
+<li>On attaining majority, Kulwant Singh filed <b>Suit No. 21 of 1975 on 14 March 1975</b> (Sub-Judge II Class, Gurdaspur) for a declaration that the sale was <b>void</b> qua his half-share and did not bind him; the suit was <b>decreed</b>.</li>
+<li>Kulwant Singh <b>died before taking possession</b>; his <b>mother Harbans Kaur succeeded</b> to his half-share as his <b>Class I heir under s.8 of the Hindu Succession Act, 1956</b>. Thus the very transferor (the mother) later acquired the interest she had purported to convey in 1961.</li>
+<li>Kartar Singh therefore invoked <b>s.43</b>: having sold the minor's half representing that she was authorised to do so, and having now acquired that half by succession, she is estopped and the after-acquired interest feeds his 1961 purchase.</li>
+</ul>
+<h4>Procedural history</h4>
+<p>The trial court decreed the son's suit. In <b>Second Appeal No. 1557/1979</b> the High Court held the sale of the minor's share <b>void</b> and refused to apply s.43 in the appellant's favour. Kartar Singh came to the Supreme Court by special leave.</p>
+<h4>Issue</h4>
+<p>Whether the appellant-purchaser is entitled to the benefit of <b>s.43</b> in respect of the minor's half-share which the transferor-mother subsequently inherited, where (a) the deed itself disclosed that she sold that share only as guardian, and (b) the sale of that share, made without court permission, had been declared void.</p>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (Kartar Singh)</h4>
+<ul><li>The mother <b>represented</b> that she was authorised to transfer the minor's share; the appellant paid <b>consideration</b>; she has since <b>acquired</b> that share by inheritance; every ingredient of s.43 is satisfied — the transfer "feeds" on the acquired title.</li><li>Relied on <b>Jumma Masjid</b> (s.43 is "absolute and unqualified"; immaterial whether representation fraudulent or erroneous; applies even to a transferor who had no title/only a spes) and on <b>Jhulan Prasad v. Ram Raj Prasad</b>, AIR 1979 Pat 54 (Patna High Court applying s.43 in a comparable setting).</li><li>The 1975 decree merely declared the sale not binding on the minor; as between transferor and transferee the sale subsisted, so the "subsisting contract" requirement is met.</li></ul></div>
+<div><h4>Respondent (Harbans Kaur)</h4>
+<ul><li>s.43 is "a rule of estoppel" and "feeds its estoppel" only where the transferee has been <b>misled</b> (Jumma Masjid, para 15). The <b>marginal note</b> put the purchaser on notice that half the land belonged to a <b>minor</b> and was being sold by a guardian; a prudent purchaser was bound to inquire whether <b>court permission</b> existed. He made no inquiry — he cannot say he was misled; he had at least <b>constructive notice</b>.</li><li>A guardian's alienation of a minor's immovable property without the court's sanction is <b>void/voidable at the minor's instance</b>; once avoided by decree it is <b>non est ab initio</b> — there is no "subsisting contract" on which the after-acquired interest could operate. The second limb of s.43 fails.</li><li>Applying s.43 here would allow the statutory protection of minors (GWA; HMGA s.8) to be circumvented by estoppel — an estoppel <b>against</b> the statute.</li></ul></div></div>
+<h4>Decision and reasoning (K. Ramaswamy J.)</h4>
+<ol>
+<li><b>Two conditions of s.43 (para 4).</b> "(1) a fraudulent or erroneous representation made by the transferor to the transferee that he is authorised to transfer certain immovable property and professes to transfer such property for consideration, and (2) the transferor subsequently acquires an interest in such property [while the contract subsists], whereupon the transferee is entitled at his option to claim it."</li>
+<li><b>Purchaser's duty of inquiry — first limb fails.</b> "It is settled law that the transferee must make all reasonable and diligent enquiries regarding the capacity of the transferor and the necessity to alienate the estate of the minor." Under the Guardians and Wards Act the minor's estate "cannot be alienated without the permission of the District Court"; admittedly none was obtained; "therefore the sale of the minor's half share is void." "Section 43 feeds its estoppel" only when the transferee has been misled; here "the note in the sale deed itself put the appellant on notice" that the share was the minor's; "the appellant had not made any enquiry" whether the mother had authority — "therefore the first limb of Section 43 is not satisfied." The Court quoted <i>Jumma Masjid</i> para 15 verbatim: where the transferee "knew as a fact" the truth, s.43 has no application.</li>
+<li><b>Nature of the representation.</b> The mother's statement that she was competent to sell "may be an erroneous representation and may not be a fraudulent one"; but for s.43 this is "not strong material for consideration" — what matters is whether the transferee was misled, and he was not, because the deed itself disclosed the limitation.</li>
+<li><b>Void sale — second limb fails.</b> Since the sale of the minor's share was void, "it is no contract in the eye of law and was never in existence"; the acquisition of the share by the mother through succession "does not feed the estoppel"; "the second limb of Section 43 is also not satisfied."</li>
+<li><b><i>Jhulan Prasad</i> distinguished</b> — the Patna decision turned on its own facts and did not involve a purchaser with notice of the minor's title and a void sale; it "does not assist the appellant."</li>
+<li><b>Scope of the decree.</b> The declaration is confined to the <b>minor's half-share</b>; the mother's own half validly passed in 1961 and remains with the appellant. The appellant "is at liberty to pursue such independent remedy as is available in law on the basis of the contract" (i.e., damages/refund of proportionate consideration against the vendor).</li>
+<li><b>Result.</b> Appeals dismissed; no order as to costs.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>s.43 is available only to a transferee who was <b>actually misled</b>; <b>constructive notice</b> — facts on the face of the deed or discoverable by reasonable inquiry — defeats the plea. A purchaser from a guardian of a minor must inquire into <b>authority (court permission)</b> and <b>necessity</b>.</li>
+<li>A transfer that is <b>void ab initio</b> (not merely defective in title) is not a "subsisting contract"; after-acquired interest cannot feed it.</li>
+<li>Whether the representation was fraudulent or erroneous is immaterial — <i>Jumma Masjid</i> reaffirmed; but the doctrine cannot be used to circumvent statutory protections for minors (GWA ss.29–30; HMGA s.8).</li>
+<li>Partial failure: s.43 (or its refusal) operates share-wise; the transferor's own valid share is unaffected; the transferee retains contractual remedies.</li>
+</ol></div>
+<div class="box note"><b>Jumma Masjid v. Kartar Singh — the contrast in one line.</b> In <i>Jumma Masjid</i> the deed asserted a present title and the purchaser had no means of knowing it was an expectancy → s.43 applied. In <i>Kartar Singh</i> the deed itself disclosed that the vendor was selling a minor's share as guardian → purchaser on notice, sale void → s.43 refused.</div>
+<div class="box ex"><b>Example.</b> Sunita sells a Lucknow shop to Deepak in 2018 "for self and as natural guardian of minor daughter Priya (co-owner ½)" without district court permission under s.8 HMGA. Priya, on majority in 2023, gets the sale set aside qua her half (Art. 60 Limitation Act — 3 years from majority) and then dies; Sunita inherits Priya's half under s.15 HSA. Deepak cannot invoke s.43 for Priya's half (<i>Kartar Singh</i>): the deed itself told him a minor's share was involved, he made no inquiry, and the sale was void. He keeps Sunita's half and may sue Sunita for the proportionate price.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p15">15. Precedent map</h2>
+<svg viewBox="0 0 900 470" width="100%" style="max-width:900px;display:block;margin:auto;font-family:sans-serif">
+<defs><marker id="ar5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#555"/></marker></defs>
+<rect x="300" y="15" width="300" height="60" rx="8" fill="#1a3c6e"/><text x="450" y="40" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Jumma Masjid v. Kodimaniandra Deviah</text><text x="450" y="60" text-anchor="middle" fill="#cfe" font-size="12">AIR 1962 SC 847 — s.43 applies to expectant heir who represents present title</text>
+<rect x="20" y="130" width="200" height="70" rx="8" fill="#d9f2e3" stroke="#2e7d32"/><text x="120" y="155" text-anchor="middle" font-size="12" font-weight="bold">Alamanaya Kunigari Nabi Sab</text><text x="120" y="172" text-anchor="middle" font-size="11">AIR 1915 Mad 972 — APPROVED</text><text x="120" y="188" text-anchor="middle" font-size="10">son's mortgage of father's land fed by s.43</text>
+<rect x="240" y="130" width="200" height="70" rx="8" fill="#d9f2e3" stroke="#2e7d32"/><text x="340" y="155" text-anchor="middle" font-size="12" font-weight="bold">Shyam Narain v. Mangal Prasad</text><text x="340" y="172" text-anchor="middle" font-size="11">ILR 57 All 474 — APPROVED</text><text x="340" y="188" text-anchor="middle" font-size="10">daughter's son's sale, later inheritance</text>
+<rect x="460" y="130" width="200" height="70" rx="8" fill="#fde2e2" stroke="#c62828"/><text x="560" y="155" text-anchor="middle" font-size="12" font-weight="bold">Official Assignee v. Sampath Naidu</text><text x="560" y="172" text-anchor="middle" font-size="11">AIR 1933 Mad 795 — OVERRULED</text><text x="560" y="188" text-anchor="middle" font-size="10">"clever description" argument rejected</text>
+<rect x="680" y="130" width="200" height="70" rx="8" fill="#fde2e2" stroke="#c62828"/><text x="780" y="155" text-anchor="middle" font-size="12" font-weight="bold">Bindeshwari Singh v. Har Narain</text><text x="780" y="172" text-anchor="middle" font-size="11">AIR 1929 Oudh 185 — DISAPPROVED</text>
+<rect x="130" y="240" width="300" height="70" rx="8" fill="#fff3cd" stroke="#b8860b"/><text x="280" y="262" text-anchor="middle" font-size="12" font-weight="bold">Ananda Mohan Roy v. Gour Mohan Mullick (PC 1923)</text><text x="280" y="279" text-anchor="middle" font-size="12" font-weight="bold">Sri Jagannada Raju (Mad 1916)</text><text x="280" y="297" text-anchor="middle" font-size="10">DISTINGUISHED — contracts to sell spes void (s.23 Contract Act)</text>
+<rect x="470" y="240" width="300" height="70" rx="8" fill="#e3ecfa" stroke="#1a3c6e"/><text x="620" y="262" text-anchor="middle" font-size="12" font-weight="bold">Mahomed Syedol Ariffin v. Yeoh Ooi Gark (PC 1916)</text><text x="620" y="279" text-anchor="middle" font-size="12" font-weight="bold">Vickers v. Evans (HL 1910)</text><text x="620" y="297" text-anchor="middle" font-size="10">RELIED ON — value of illustrations; no rewriting statutes</text>
+<rect x="300" y="360" width="300" height="80" rx="8" fill="#1a3c6e"/><text x="450" y="385" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Kartar Singh v. Harbans Kaur</text><text x="450" y="404" text-anchor="middle" fill="#cfe" font-size="12">(1994) 4 SCC 730 — FOLLOWS Jumma Masjid para 15;</text><text x="450" y="422" text-anchor="middle" fill="#cfe" font-size="12">notice + void sale → s.43 refused; Jhulan Prasad (Pat 1979) distinguished</text>
+<line x1="380" y1="75" x2="130" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#ar5)"/>
+<line x1="420" y1="75" x2="340" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#ar5)"/>
+<line x1="480" y1="75" x2="560" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#ar5)"/>
+<line x1="520" y1="75" x2="770" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#ar5)"/>
+<line x1="430" y1="75" x2="290" y2="240" stroke="#555" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar5)"/>
+<line x1="470" y1="75" x2="610" y2="240" stroke="#555" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar5)"/>
+<line x1="450" y1="310" x2="450" y2="360" stroke="#1a3c6e" stroke-width="2.5" marker-end="url(#ar5)"/>
+</svg>
+
+<!-- ============================================================ -->
+<h2 id="p16">16. Master table — is it transferable? How do s.6(a)/s.43 apply?</h2>
+<table>
+<tr><th style="width:5%">#</th><th style="width:45%">Situation</th><th>Answer</th></tr>
+<tr><td>1</td><td>Son sells father's self-acquired house during father's life, deed says "I am owner"; buyer unaware; father dies intestate, son inherits</td><td>s.43 — buyer may claim (illustration; Jumma Masjid)</td></tr>
+<tr><td>2</td><td>Same, but deed says "I sell my right to inherit father's house"</td><td>Void — s.6(a); no feeding</td></tr>
+<tr><td>3</td><td>Same as 1, but father disinherits son by will</td><td>Nothing acquired → s.43 never triggered; buyer sues son for price/damages</td></tr>
+<tr><td>4</td><td>Same as 1, but buyer knew the house was the father's</td><td>Void — s.6(a) (Jumma Masjid para 15; Kartar Singh)</td></tr>
+<tr><td>5</td><td>Coparcener sells his undivided share in Mitakshara property</td><td>Valid (present interest) — s.44; not spes</td></tr>
+<tr><td>6</td><td>Muslim heir sells share in father's estate during father's life, father consents</td><td>Void — spes; consent immaterial (nemo est haeres viventis); but if made in return for consideration paid to heir and heir later inherits — s.43 may apply only if the deed represented present title and buyer misled</td></tr>
+<tr><td>7</td><td>Legatee under a will sells the bequeathed flat while testator alive</td><td>Void — chance of legacy (limb 2)</td></tr>
+<tr><td>8</td><td>Reversioner under old Hindu law sells during widow's life representing present title; widow dies; reversioner succeeds</td><td>s.43 — Jumma Masjid</td></tr>
+<tr><td>9</td><td>Guardian sells minor's land without court leave; deed discloses minor; sale set aside; guardian later inherits</td><td>s.43 refused — Kartar Singh (notice; void sale)</td></tr>
+<tr><td>10</td><td>A, having no title, gifts B's land to C; A later inherits</td><td>No s.43 (no consideration); C may try s.115 Evidence Act estoppel but generally fails</td></tr>
+<tr><td>11</td><td>Buyer under s.43 situation; before father's death buyer rescinds and recovers price</td><td>Contract not subsisting → no s.43</td></tr>
+<tr><td>12</td><td>After acquiring title transferor re-sells to X, who has no notice of first (unregistered) transfer; first buyer out of possession</td><td>X protected (para 2); first buyer → damages</td></tr>
+<tr><td>13</td><td>Contract (agreement to sell) of father's land by son; father dies</td><td>Not a transfer — s.43 inapplicable; but purchaser may enforce under SRA s.13(1)(a) against after-acquired title</td></tr>
+<tr><td>14</td><td>Transfer of a "mere possibility" — e.g., next cast of a fisherman's net, future winnings of a lottery</td><td>Void — s.6(a) limb 3</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p17">17. DU semester PYQs with model answers</h2>
+
+<div class="pyq"><b>Q1 (DU LL.B., May/June 2025, Q.4 — reproduced in substance).</b> Akshay, representing that he is authorised to transfer, sells fields X and Y to Bhavesh for consideration. Field X belongs to Akshay but field Y belongs to his father, who is alive. Later the father dies and Akshay inherits field Y. Bhavesh claims field Y. Decide. Would your answer differ if Bhavesh knew at the time of sale that Y belonged to Akshay's father?
+<div class="ans"><b>Model answer.</b>
+<p><b>Issue.</b> Whether Bhavesh can claim field Y under s.43 TPA (feeding the grant by estoppel), or whether the sale of Y is void as a transfer of spes successionis under s.6(a).</p>
+<p><b>Law.</b> s.6(a) prohibits transfer of "the chance of an heir-apparent succeeding to an estate". During his father's lifetime Akshay had no interest in Y — only a spes (<i>nemo est haeres viventis</i>). But s.43 provides that where a person "fraudulently or erroneously represents that he is authorised to transfer certain immovable property and professes to transfer such property for consideration", the transfer operates, at the transferee's option, on any interest the transferor acquires while the contract subsists. The illustration to s.43 is on all fours: A sells fields X, Y and Z, of which Z belongs to his father B; B dies, A inherits Z; C may require A to deliver Z. In <i>Jumma Masjid v. Kodimaniandra Deviah</i> (AIR 1962 SC 847) the Supreme Court held that s.6(a) (substantive prohibition on transfer of spes <i>simpliciter</i>) and s.43 (rule of estoppel) operate in different fields; where the transferor <i>represents a present title</i> and the transferee acts on it for consideration, s.43 applies even though the transferor in fact had only a spes; the transferor's good or bad faith is immaterial; and the plea is under, not against, the statute. <i>Kartar Singh v. Harbans Kaur</i> ((1994) 4 SCC 730) lays down the two conditions: representation + transfer for consideration; subsequent acquisition while the contract subsists — and adds that the transferee must have been actually misled (no actual/constructive notice).</p>
+<p><b>Application.</b> Akshay represented authority to transfer Y; Bhavesh paid consideration; Akshay has now acquired Y by inheritance; nothing shows the contract was rescinded. All conditions are met. Field X passed at once (s.8). As to Y, Bhavesh may, at his option, claim it; Akshay is estopped from asserting his after-acquired title. If Akshay has meanwhile sold Y to a bona fide purchaser for value without notice of Bhavesh's right, that purchaser is protected (s.43 para 2) and Bhavesh is left to damages (s.55(2)).</p>
+<p><b>Alternative.</b> If Bhavesh <i>knew</i> Y belonged to the father, he was not misled; "Section 43 would then have no application, and the transfer will fail under Section 6(a)" (<i>Jumma Masjid</i>, para 15; applied in <i>Kartar Singh</i> where the deed itself gave notice). The sale of Y would be void; Bhavesh could only recover the proportionate price under s.65 Contract Act. <b>Conclusion:</b> Bhavesh succeeds as to Y unless he had knowledge/notice of the father's title.</p></div></div>
+
+<div class="pyq"><b>Q2.</b> "Section 6(a) and Section 43 of the Transfer of Property Act, 1882 are in apparent conflict." Explain the conflict and how the Supreme Court has reconciled the two provisions.
+<div class="ans"><b>Model answer (outline).</b> (1) State s.6(a) and its three limbs; rationale (public policy, protection of expectant heirs, speculation, <i>nemo dat</i>); contracts to transfer spes also void — s.23 Contract Act, <i>Ananda Mohan Roy</i>. (2) State s.43 with illustration; doctrine of feeding the grant by estoppel; 1929 amendment inserting "fraudulently or erroneously"; two paragraphs. (3) The apparent conflict: an heir apparent's transfer is void under s.6(a), yet the illustration to s.43 validates the sale of field Z retained by the father — <i>Sampath Naidu</i> (Mad 1933) and <i>Bindeshwari Singh</i> (Oudh) held s.43 must yield to s.6(a); <i>Alamanaya Kunigari</i> and <i>Shyam Narain</i> held otherwise. (4) Reconciliation in <i>Jumma Masjid</i> — facts (reversioners' sale 1920; Gangamma d. 1933; release to mosque) and the six propositions: different subjects; substantive law v. estoppel; no implied exception ("rewriting"); estoppel under, not against, statute; illustration binding aid; test is whether transferee was misled, not the transferor's good faith. (5) Refinement in <i>Kartar Singh</i>: constructive notice and void transactions fall outside s.43. (6) Conclusion: the distinguishing factor is the <b>knowledge/notice of the transferee</b> — a professed transfer of expectancy (or one taken with notice) is void under s.6(a); a transfer on a representation of present title acted on in good faith for consideration is fed by s.43.</div></div>
+
+<div class="pyq"><b>Q3.</b> Explain "spes successionis". What interests are covered by s.6(a)? Is a contract to transfer such an interest valid? Distinguish spes successionis from a contingent interest.
+<div class="ans"><b>Model answer (outline).</b> Definition — bare hope of succeeding; three limbs (heir apparent's chance; relation's chance of legacy; any other mere possibility of like nature) with examples (son during father's life; Hindu reversioner before 1956; legatee before testator's death; next cast of net). Reasons for non-transferability. Contracts — void under s.23 Contract Act (<i>Ananda Mohan Roy v. Gour Mohan Mullick</i>, PC; <i>Sri Jagannada Raju</i>); no specific performance; s.65 restitution. Distinction from contingent interest (s.21): a contingent interest is a <b>present</b> interest created by a transfer, dependent on an uncertain event, and is transferable (s.6 read with s.21, s.120 Succession Act), whereas a spes is not an interest in property at all; also distinguish from an undivided coparcenary share (transferable, s.44) and a Muslim heir's expectancy (void even with consent). Close with exception via s.43 (<i>Jumma Masjid</i>).</div></div>
+
+<div class="pyq"><b>Q4.</b> State the essentials of the doctrine of "feeding the grant by estoppel" under s.43. Does it matter whether the transferor's representation was fraudulent or merely erroneous? Who is protected by the second paragraph of s.43?
+<div class="ans"><b>Model answer (outline).</b> Essentials (Part 8 table): representation of authority (fraudulent/erroneous); immovable property; professed transfer for consideration; transferee misled — no notice; subsequent acquisition of interest; subsisting contract; transferee's option; no intervening BFP. State of mind: transferor's irrelevant — 1929 amendment, <i>Jumma Masjid</i>; transferee's decisive — <i>Kartar Singh</i> (reasonable and diligent inquiry; note in deed = notice). Second paragraph: transferee for consideration, in good faith, without notice of the existence of the option — explain with s.3 notice Explanations (registration, possession) and an example. Mention English rule (automatic feeding; volunteers) for comparison and SRA s.13 for contracts.</div></div>
+
+<div class="pyq"><b>Q5.</b> H, a Hindu widow, sells land belonging jointly to her and her minor son S, executing the deed for herself and "as guardian of S", without permission of the court. S on majority obtains a decree that the sale is void as to his share, then dies; H inherits S's share. The purchaser P claims S's share under s.43. Decide.
+<div class="ans"><b>Model answer.</b> This is <i>Kartar Singh v. Harbans Kaur</i>. Two conditions of s.43 (representation + consideration; subsequent acquisition while contract subsists) — both fail. (i) P was not misled: the deed itself disclosed that half the land was a minor's being sold by a guardian; a purchaser from a guardian must make reasonable and diligent inquiry as to authority (court permission under GWA ss.29–30 / HMGA s.8(2)) and necessity; P made none — constructive notice (s.3 TPA); "Section 43 feeds its estoppel" only when the transferee was misled (<i>Jumma Masjid</i> para 15). (ii) The sale of S's share, made without sanction and avoided by decree, is non est ab initio — no subsisting contract to be fed. Result: P retains H's own half; S's half is not affected by s.43; P may sue H for proportionate refund/damages. Distinguish <i>Jumma Masjid</i> (deed asserted present title; purchaser had no notice).</div></div>
+
+<div class="pyq"><b>Q6.</b> Write short notes: (a) transfer by a Hindu reversioner before 1956; (b) chance of a relation obtaining a legacy; (c) "no estoppel against a statute" in the context of s.43.
+<div class="ans"><b>Points.</b> (a) Widow's limited estate; reversioner's interest = spes; transfer/contract void (<i>Ananda Mohan Roy</i>); but representation of present title + consideration → s.43 (<i>Jumma Masjid</i>); s.14 HSA abolished the limited estate prospectively. (b) Will ambulatory/revocable (Succession Act s.62); legatee may predecease (lapse, s.105); estate may be insufficient; hence a mere spes; transfer void; after testator's death the legacy becomes a vested/contingent interest and is transferable. (c) Estoppel cannot validate what statute forbids on public policy; but s.43 is itself a statutory estoppel; a plea under s.43 is "pleaded under, and not against the statute" (<i>Jumma Masjid</i> para 10); limit — where another statute makes the transaction void (minor's property, <i>Kartar Singh</i>), s.43 cannot circumvent it.</div></div>
+
+<!-- ============================================================ -->
+<h2 id="p18">18. Mnemonics &amp; rapid revision</h2>
+<div class="mnem"><b>"HELP-M"</b> — the three limbs of s.6(a): <b>H</b>eir apparent's chance · <b>E</b>xpected <b>L</b>egacy of a relation · <b>P</b>ossibility (<b>M</b>ere) of a like nature.</div>
+<div class="mnem"><b>"R-I-P-C-M-A-S-O-B"</b> — essentials of s.43: <b>R</b>epresentation of authority · <b>I</b>mmovable property · <b>P</b>rofessed transfer · <b>C</b>onsideration · <b>M</b>isled transferee (no notice) · <b>A</b>cquisition later · <b>S</b>ubsisting contract · <b>O</b>ption of transferee · <b>B</b>FP exception.</div>
+<div class="mnem"><b>"Transferor's motive—No; Transferee's notice—Yes."</b> Fraud or error of the transferor is irrelevant; knowledge/notice of the transferee is decisive (<i>Jumma Masjid</i> ¶15; <i>Kartar Singh</i>).</div>
+<div class="mnem"><b>"Substantive v. Evidence."</b> s.6(a) = substantive law; s.43 = rule of estoppel/evidence — "different fields, different conditions".</div>
+<div class="box stat"><b>Ten lines to remember</b>
+<ol>
+<li>Spes successionis = bare hope; not property; s.6(a) makes it non-transferable; contracts to transfer it are void (s.23 Contract Act).</li>
+<li>Three limbs: heir apparent; relation's legacy; other mere possibility.</li>
+<li>Contingent interests, undivided coparcenary shares, vested remainders are transferable — not spes.</li>
+<li>s.43: fraudulent/erroneous representation + transfer for consideration + later acquisition + subsisting contract → transferee's option.</li>
+<li>Illustration: fields X, Y, Z — Z retained by father — C may claim Z after father's death.</li>
+<li><i>Jumma Masjid</i> (1962): s.43 applies to expectant heir representing present title; s.6(a) and s.43 operate in different fields; no implied exception; estoppel under statute.</li>
+<li><i>Jumma Masjid</i> ¶15: if transferee knew the truth, s.43 out; transfer fails under s.6(a).</li>
+<li><i>Kartar Singh</i> (1994): constructive notice (note in deed) + void sale of minor's share → s.43 refused; two-condition formulation.</li>
+<li>Para 2 of s.43: bona fide transferee for consideration without notice of the option is protected.</li>
+<li>Cognates: s.41 (ostensible owner), s.53-A (part performance), s.115 Evidence Act, SRA s.13, HMGA s.8/GWA ss.29–30, HSA ss.8, 14.</li>
+</ol></div>
+
+<div class="foot">Prepared from the DU Faculty of Law case material (IInd Term, Property Law LB-204, 2022 — Topic 5, pp. 76–84), the Transfer of Property Act, 1882 (bare Act, ss. 6, 7, 8, 43), the Exam Capsule (Topic 5) and the DU LL.B. May/June 2025 question paper. Related statutes cited for holistic understanding. For examination use.</div>
+</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e93e2acb12c795',t:'MTc4OTk5NTUyMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -36,6 +36,14 @@ window.BARE_ACTS_DB = {
     "count": 12
   },
   {
+    "id": "tpa",
+    "name": "Transfer of Property Act, 1882",
+    "short": "TPA 1882",
+    "badge": "Property Law",
+    "icon": "fa-house-chimney",
+    "count": 17
+  },
+  {
     "id": "bns",
     "name": "Bharatiya Nyaya Sanhita, 2023",
     "short": "BNS 2023",
@@ -3514,6 +3522,561 @@ window.BARE_ACTS_DB = {
       "bsa",
       "evidence",
       "question by party to his own witness (hostile witness)"
+    ]
+  },
+  {
+    "id": "tpa-s3",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "3",
+    "title": "Interpretation Clause (Immovable Property, Attestation & Notice)",
+    "unit": "Unit 1 & 3: Immovable Property & Notice",
+    "badge": "Interpretation",
+    "text": "In this Act, unless there is something repugnant in the subject or context: 'immovable property' does not include standing timber, growing crops or grass; 'instrument' means a non-testamentary instrument; 'attested' means attested by two or more witnesses each of whom has seen the executant sign or affix his mark; 'attached to the earth' means rooted in the earth, embedded in the earth, or attached to what is so embedded for the permanent beneficial enjoyment; A person is said to have 'notice' of a fact when he actually knows that fact, or when, but for wilful abstention from an inquiry or search which he ought to have made, or gross negligence, he would have known it.",
+    "ingredients": [
+      "Negative definition of Immovable Property: Excludes standing timber, growing crops, and grass.",
+      "General Clauses Act 1897 S. 3(26) supplement: Includes land, benefits arising out of land, and things attached to earth.",
+      "Tests of annexation: Degree/mode of annexation and purpose/object of annexation (Holland v. Hodgson).",
+      "Attestation requires two or more attesting witnesses who must possess animus attestandi (Kumar Harish Chandra).",
+      "Notice comprises: (a) Actual Notice, (b) Constructive Notice (wilful abstention or gross negligence), and (c) Notice to Agent."
+    ],
+    "explanation": "Section 3 lays down the core definitions governing property jurisprudence under Indian law. Standing timber denotes trees fit for commercial building or carpentry whose immediate felling is contemplated (e.g. shisham, teak, babool), whereas fruit-bearing trees intended for ongoing nourishment (e.g. mango, mahua grove) constitute immovable property (Shanta Bai). Constructive notice creates an irrebuttable legal presumption of knowledge where a prudent person ought to have verified title documents or registered instruments.",
+    "cases": [
+      "Shanta Bai v. State of Bombay (1958) — Distinguishing standing timber from trees conferring an interest in land / profit à prendre.",
+      "Kumar Harish Chandra v. Bansidhar Mohanty (1965) — Attestation requires witnessing execution with animus attestandi; a party to the deed cannot attest.",
+      "Md. Mustafa v. Sri Ram Chandra (1993) — Possession constitutes constructive notice of the title of the person in actual occupation under Explanation II."
+    ],
+    "examTips": "Always address the dual test of annexation (degree vs purpose). Remember that standing timber is movable because the intention is immediate severed exploitation, whereas trees nurtured for fruit/sap yield benefits from the soil and constitute immovable property.",
+    "keywords": [
+      "section 3",
+      "immovable property",
+      "standing timber",
+      "growing crops",
+      "attestation",
+      "notice",
+      "constructive notice",
+      "attached to earth",
+      "shanta bai",
+      "kumar harish chandra"
+    ]
+  },
+  {
+    "id": "tpa-s5",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "5",
+    "title": "'Transfer of Property' Defined (Inter Vivos)",
+    "unit": "Unit 4: Meaning of Transfer of Property",
+    "badge": "Inter Vivos",
+    "text": "In the following sections 'transfer of property' means an act by which a living person conveys property, in present or in future, to one or more other living persons, or to himself, or to himself and one or more other living persons; and 'to transfer property' is to perform such act. In this section 'living person' includes a company or association or body of individuals, whether incorporated or not.",
+    "ingredients": [
+      "Must be an act of a living person (inter vivos transfer).",
+      "Conveyance of property: Creation of a new interest or transfer of existing title.",
+      "Can operate in present or in future.",
+      "Transferee must be one or more living persons (or transferor to himself/others).",
+      "Living person explicitly includes companies, firms, and associations (corporate juristic persons)."
+    ],
+    "explanation": "Section 5 restricts the scope of the Act strictly to inter vivos transactions (transfers between living persons). It does not apply to testamentary dispositions (Wills governed by the Indian Succession Act 1925), partitions of joint family property, surrender, family arrangements, or easements, because these do not involve conveyance of title from one independent entity to another.",
+    "cases": [
+      "Mohar Singh v. Devi Charan (1988) — A partition is not a transfer of property because each co-sharer already holds an antecedently existing antecedent title.",
+      "Sadhu Ram v. Pritam Singh (1961) — Relinquishment or surrender of a right by a reversioner or coparcener is not a conveyance under Section 5."
+    ],
+    "examTips": "Classic problem questions ask whether a family settlement, partition, or compromise decree constitutes a 'transfer of property'. State firmly: Partition or family settlement is a mutual adjustment of pre-existing rights, not a transfer under S. 5.",
+    "keywords": [
+      "section 5",
+      "transfer of property",
+      "inter vivos",
+      "living person",
+      "conveyance",
+      "partition",
+      "family settlement",
+      "mohar singh"
+    ]
+  },
+  {
+    "id": "tpa-s6a",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "6(a)",
+    "title": "Prohibition on Transfer of Spes Successionis",
+    "unit": "Unit 5: Spes Successionis & S. 43",
+    "badge": "Inalienability",
+    "text": "Property of any kind may be transferred, except as otherwise provided by this Act or by any other law for the time being in force: (a) The chance of an heir-apparent succeeding to an estate, the chance of a relation obtaining a legacy on the death of a kinsman, or any other mere possibility of a like nature, cannot be transferred.",
+    "ingredients": [
+      "General rule: All property is transferable unless explicitly barred.",
+      "Clause (a) exception: Spes successionis (bare expectation of inheritance) is non-transferable.",
+      "Covers: (1) Chance of heir-apparent, (2) Chance of relation obtaining a legacy under a Will, (3) Any other bare possibility.",
+      "Such transfer is void ab initio under Section 23 of the Indian Contract Act (unlawful object)."
+    ],
+    "explanation": "Spes successionis represents a mere hope or chance of succession. An heir-apparent has no present interest, right, or title in the estate of a living person (nemo est heres viventis — no one is the heir of a living person). Attempting to transfer, mortgage, or sell such expectancies is completely void in law and equity in India.",
+    "cases": [
+      "Jumma Masjid, Mercara v. Kodimaniandra Deviah (1962) — Landmark reconciliation between Section 6(a) and Section 43 (feeding grant by estoppel).",
+      "Amrit Narayan v. Gaya Singh (1917) — A Hindu reversioner has no right or interest in praesenti; an agreement dealing with such expectancy is wholly void."
+    ],
+    "examTips": "Differentiate S. 6(a) from S. 43! S. 6(a) applies when the transferee KNOWS the transferor has only a spes successionis (both sides aware: void). S. 43 applies when the transferor fraudulently or erroneously misrepresents that he has present title (estoppel protects innocent transferee).",
+    "keywords": [
+      "section 6a",
+      "spes successionis",
+      "heir apparent",
+      "bare possibility",
+      "jumma masjid",
+      "amrit narayan",
+      "feeding the grant by estoppel"
+    ]
+  },
+  {
+    "id": "tpa-s10",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "10",
+    "title": "Condition Restraining Alienation (Absolute Restraint Void)",
+    "unit": "Unit 6: Conditional Transfers & Restraints",
+    "badge": "Restraints",
+    "text": "Where property is transferred subject to a condition or limitation absolutely restraining the transferee or any person claiming under him from parting with or disposing of his interest in the property, the condition or limitation is void, except in the case of a lease where the condition is for the benefit of the lessor or those claiming under him: Provided that property may be transferred to or for the benefit of a woman (not being a Hindu, Muhammadan or Buddhist), so that she shall not have power during her marriage to transfer or charge the same or her beneficial interest therein.",
+    "ingredients": [
+      "Transfer of an interest in property subject to a condition.",
+      "Condition absolutely restrains transferee or heirs from parting with or disposing of the property.",
+      "Result: The restraining condition is VOID; the transfer itself remains VALID and absolute.",
+      "Exceptions: (1) Leases where covenant is for lessor's benefit, (2) Married non-Hindu/Muslim/Buddhist women (restraint on anticipation)."
+    ],
+    "explanation": "Ownership carries three core incidents: right of possession, enjoyment, and alienation (ius disponendi). Section 10 invalidates conditions that strip away the right of alienation completely. While absolute restraints are void, partial restraints (e.g., restriction not to sell outside the family for a fair market price) are valid if reasonable.",
+    "cases": [
+      "Mohd. Raza v. Abbas Bandi Bibi (1932) — Restriction prohibiting alienation outside the family or lineage is a partial restraint and is valid.",
+      "Rosher v. Rosher (1884) — A condition compelling the transferee to offer property to a specific person at 1/5th of market value operates as an absolute restraint and is void."
+    ],
+    "examTips": "Determine if the restriction is 'absolute' or 'partial'. Restraint as to time, person, or price: if it practically destroys the power of alienation (like selling only at a fixed nominal price), it is treated as absolute and struck down under S. 10.",
+    "keywords": [
+      "section 10",
+      "restraint on alienation",
+      "absolute restraint",
+      "partial restraint",
+      "mohd raza",
+      "rosher",
+      "ius disponendi"
+    ]
+  },
+  {
+    "id": "tpa-s11",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "11",
+    "title": "Restriction Repugnant to Interest Created",
+    "unit": "Unit 6: Conditional Transfers & Restraints",
+    "badge": "Restraints",
+    "text": "Where, on a transfer of property, an interest therein is created absolutely in favour of any person, but the terms of the transfer direct that such interest shall be applied or enjoyed by him in a particular manner, he shall be entitled to receive and dispose of such interest as if there were no such direction. Exception (Tulk v. Moxhay rule): Where transferor owns adjoining piece of land, he may impose affirmative covenants for beneficial enjoyment of retained land.",
+    "ingredients": [
+      "Property transferred creating an absolute interest in the transferee.",
+      "Terms of deed direct or dictate a specific mode of enjoyment or use.",
+      "Repugnancy: Restriction conflicts with the absolute ownership created.",
+      "Result: Direction as to enjoyment is ignored/void; transferee takes absolute right.",
+      "Exception: Negative covenants preserving the beneficial enjoyment of adjacent retained land."
+    ],
+    "explanation": "While Section 10 deals with restrictions on alienation (parting with title), Section 11 deals with restrictions on enjoyment (how the owner uses the property). When an absolute estate is gifted or sold, the transferor cannot dictate where the buyer sleeps, what religion he practices on the land, or how he cultivates it.",
+    "cases": [
+      "Tulk v. Moxhay (1848) — Negative restrictive covenants run with the equity in land against subsequent purchasers with notice.",
+      "Bhavani Ammal v. Gurunatha Gounder (1970) — Transferee of absolute title is entitled to enjoy and build without being fettered by personal restrictions of vendor."
+    ],
+    "examTips": "Distinguish S. 10 (bar on selling/alienating) from S. 11 (bar on using/enjoying). In both, the restriction is severed and declared void, leaving the underlying conveyance intact and absolute.",
+    "keywords": [
+      "section 11",
+      "repugnant restriction",
+      "mode of enjoyment",
+      "absolute interest",
+      "tulk v moxhay",
+      "covenant"
+    ]
+  },
+  {
+    "id": "tpa-s13",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "13",
+    "title": "Transfer for Benefit of Unborn Person",
+    "unit": "Unit 7: Transfer to Unborn Persons & Perpetuities",
+    "badge": "Unborn Persons",
+    "text": "Where, on a transfer of property, an interest therein is created for the benefit of a person not in existence at the date of the transfer, subject to a prior interest created by the same transfer, the interest created for the benefit of such person shall not take effect, unless it extends to the whole of the remaining interest of the transferor in the property.",
+    "ingredients": [
+      "Beneficiary is unborn / not in existence at the time of transfer.",
+      "Direct transfer to unborn is void (must be created via a prior life interest in a living person).",
+      "Prior life estate must bridge the gap until the unborn person is conceived/born.",
+      "Unborn person MUST be given the entire remaining absolute interest (no life estate upon life estate).",
+      "Unborn person must come into existence before the prior life estate terminates."
+    ],
+    "explanation": "Under Indian property law, property can never remain in abeyance without an owner. Because an unborn child cannot hold immediate title, Section 13 mandates two strict statutory safeguards: (1) A prior life estate in a living person must hold the legal title, and (2) The interest transferred to the unborn child must be the entirety of the grantor's remaining absolute interest.",
+    "cases": [
+      "Girjesh Dutt v. Data Din (1934) — Transfer of life interest to nephew's unborn female issue with gift over to cousin if no male issue: held entirely void under Section 13.",
+      "Sridhar v. N. Revanna (2020) — Gift to unborn grandson held valid where prior life estate in son was followed by complete absolute vestment in grandson upon birth."
+    ],
+    "examTips": "Two golden rules for Section 13: (1) No direct transfer to unborn (prior life interest required), and (2) No life interest can be given to an unborn person. Any attempt to give limited estate to an unborn person invalidates the transfer.",
+    "keywords": [
+      "section 13",
+      "unborn person",
+      "prior interest",
+      "remaining interest",
+      "absolute interest",
+      "girjesh dutt",
+      "abeyance"
+    ]
+  },
+  {
+    "id": "tpa-s14",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "14",
+    "title": "Rule Against Perpetuity",
+    "unit": "Unit 7: Transfer to Unborn Persons & Perpetuities",
+    "badge": "Perpetuities",
+    "text": "No transfer of property can operate to create an interest which is to take effect after the life-time of one or more persons living at the date of such transfer, and the minority of some person who shall be in existence at the expiration of that period, and to whom, if he attains full age, the interest created is to belong.",
+    "ingredients": [
+      "Statutory formula: Maximum permissible perpetuity period = Lifetime of living person(s) + Period of gestation + Minority of unborn beneficiary (18 years).",
+      "Indian law minority is strictly 18 years (cannot extend to 21 years under Indian Majority Act for S. 14).",
+      "Interest must vest, if at all, within this perpetuity period.",
+      "Test is applied at the time of creation of deed, based on possibilities, not actual eventualities.",
+      "Exceptions: Transfers for public benefit/charity (S. 18), personal covenants, contracts for sale, vested mortgages."
+    ],
+    "explanation": "Perpetuity means tying up property inalienably forever. Section 14 prevents tying up property beyond living lives plus the minority of the ultimate unborn beneficiary. Unlike English law which allows a gross term of 21 years in the air, Indian law restricts the period strictly to the actual minority (18 years) of an unborn person in existence at the end of the prior life estate.",
+    "cases": [
+      "Ram Newaz v. Nankoo (1926) — Condition that village land could only be repurchased by descendants across future generations violated S. 14 and was void.",
+      "R. Kempraj v. Burton Son & Co. (1970) — A covenant for renewal of lease does not create an interest in land and therefore does not attract the rule against perpetuity."
+    ],
+    "examTips": "Key difference from English Law: Under English Common Law, the perpetuity period can include a 21-year gross period in gross. Under Indian TPA S. 14, minority is strictly tied to a minority of a person in existence (18 years maximum), plus actual gestation period.",
+    "keywords": [
+      "section 14",
+      "rule against perpetuity",
+      "perpetuity period",
+      "minority",
+      "gestation",
+      "ram newaz",
+      "kempraj",
+      "remoteness of vesting"
+    ]
+  },
+  {
+    "id": "tpa-s19",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "19",
+    "title": "Vested Interest Defined",
+    "unit": "Unit 8: Vested & Contingent Interests",
+    "badge": "Vested Interest",
+    "text": "Where, on a transfer of property, an interest therein is created in favour of a person without specifying the time when it is to take effect, or in terms specifying that it is to take effect forthwith, or on the happening of an event which must happen, such interest is vested, unless a contrary intention appears from the terms of the transfer. An intention that an interest shall not be vested is not to be inferred merely because of a prior life interest or postponement of enjoyment.",
+    "ingredients": [
+      "Created either forthwith, or without specifying time, or on an event certain to happen (e.g. death of living person).",
+      "Present immediate proprietary right in praesenti, even if enjoyment/possession is postponed in futuro.",
+      "Heritable and transferable: If transferee dies before getting possession, it passes to his legal heirs.",
+      "Not defeated by the death of the transferee before obtaining possession.",
+      "Attachable in execution of a civil court decree."
+    ],
+    "explanation": "A vested interest confers immediate ownership (debitum in praesenti, solvendum in futuro). Even if possession is postponed until the death of a life-tenant, the remainderman possesses a vested interest from the moment the deed takes effect. If the remainderman dies before the life-tenant, the property devolves on the remainderman's legal heirs.",
+    "cases": [
+      "Lachman v. Baldeo (1920) — Gift to A for life and after A's death to B: B gets an immediate vested interest upon execution of the deed.",
+      "Rajes Kanta Roy v. Shanti Debi (1957) — Postponement of payment or enjoyment to pay off trust debts does not render an interest contingent; it remains vested."
+    ],
+    "examTips": "Tabular comparison between Vested (S. 19) and Contingent (S. 21) is a 20-mark favorite in DU LL.B. Remember: Vested = certain event, heritable, transferable, attachable. Contingent = uncertain event, mere hope, non-heritable if condition fails.",
+    "keywords": [
+      "section 19",
+      "vested interest",
+      "debitum in praesenti",
+      "postponement of enjoyment",
+      "heritable",
+      "rajes kanta roy"
+    ]
+  },
+  {
+    "id": "tpa-s21",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "21",
+    "title": "Contingent Interest Defined",
+    "unit": "Unit 8: Vested & Contingent Interests",
+    "badge": "Contingent Interest",
+    "text": "Where, on a transfer of property, an interest therein is created in favour of a person to take effect only on the happening of a specified uncertain event, or if a specified uncertain event shall not happen, such person thereby acquires a contingent interest in the property. Such interest becomes a vested interest, in the former case, on the happening of the event, in the latter, when the happening of the event becomes impossible.",
+    "ingredients": [
+      "Dependent entirely on the happening or non-happening of a specified uncertain future event.",
+      "No present proprietary title (creates a mere expectancy / potentiality until condition precedent is fulfilled).",
+      "Crystallization: Converts into a vested interest the instant the contingency occurs.",
+      "Lapse: If the transferee dies before the condition precedent is satisfied, the interest fails entirely and does not pass to heirs.",
+      "Cannot be attached in execution of a decree."
+    ],
+    "explanation": "A contingent interest is an inchoate interest that depends on an uncertain event (e.g. 'to B if B marries C', or 'to B upon attaining age 25'). Until the condition happens, B has no vested estate. If B dies before reaching 25 or before marrying C, the gift lapses completely and reverts to the grantor.",
+    "cases": [
+      "Leake v. Robinson (1817) — Gift contingent on attaining age 25 fails if beneficiary dies before reaching specified age.",
+      "Rajes Kanta Roy v. Shanti Debi (1957) — SC analyzed whether interest dependent on discharge of debts created a condition precedent or merely postponed distribution."
+    ],
+    "examTips": "Notice the statutory exception under S. 21: A bequest to a person upon reaching a certain age, coupled with directions that income in the interim be paid to him, creates a VESTED interest, not contingent!",
+    "keywords": [
+      "section 21",
+      "contingent interest",
+      "uncertain event",
+      "condition precedent",
+      "lapse",
+      "rajes kanta roy"
+    ]
+  },
+  {
+    "id": "tpa-s43",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "43",
+    "title": "Transfer by Unauthorized Person (Feeding Grant by Estoppel)",
+    "unit": "Unit 5: Spes Successionis & S. 43",
+    "badge": "Estoppel",
+    "text": "Where a person fraudulently or erroneously represents that he is authorized to transfer certain immovable property and professes to transfer such property for consideration, such transfer shall, at the option of the transferee, operate on any interest which the transferor may acquire in such property at any time during which the contract of transfer subsists. Exception: Nothing in this section shall impair the right of transferees in good faith for consideration without notice of the existence of the said option.",
+    "ingredients": [
+      "Fraudulent or erroneous representation by transferor of authority to transfer.",
+      "Professed transfer of immovable property for valuable consideration (does not apply to gifts).",
+      "Transferor subsequently acquires title/interest in the property.",
+      "Contract of transfer must still be subsisting (not rescinded or repudiated).",
+      "Operates at the OPTION of the transferee to claim the newly acquired estate.",
+      "Bona fide purchaser defense: Defeated if property sold to a bona fide purchaser for value without notice (BFP)."
+    ],
+    "explanation": "Section 43 embodies the common law doctrine of feeding the grant by estoppel. Where a grantor sells property claiming he is owner when he has no title, the moment he later inherits or purchases that title, the law estops him from asserting his prior lack of title. His subsequent title automatically feeds and validates the earlier defective conveyance.",
+    "cases": [
+      "Jumma Masjid, Mercara v. Kodimaniandra Deviah (1962) — S. 6(a) and S. 43 operate in distinct spheres: S. 43 protects transferee who was misled by representation, even if property was an expectancy.",
+      "Rajeshwar v. Board of Revenue (1983) — Estoppel binds the transferor the moment property enters his hands, provided the transferee exercises option while contract subsists."
+    ],
+    "examTips": "High probability DU problem: A sells B ancestral land claiming full ownership, while father is alive. Father dies and A inherits. B can invoke S. 43 to claim the land. But if B already knew A had only spes successionis, S. 43 cannot be invoked!",
+    "keywords": [
+      "section 43",
+      "feeding the grant by estoppel",
+      "fraudulent representation",
+      "erroneous representation",
+      "option of transferee",
+      "bona fide purchaser",
+      "jumma masjid"
+    ]
+  },
+  {
+    "id": "tpa-s52",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "52",
+    "title": "Doctrine of Lis Pendens (Transfer Pending Suit)",
+    "unit": "Unit 9: Lis Pendens",
+    "badge": "Lis Pendens",
+    "text": "During the pendency in any Court having authority within the limits of India of any suit or proceeding which is not collusive and in which any right to immovable property is directly and specifically in question, the property cannot be transferred or otherwise dealt with by any party to the suit or proceeding so as to affect the rights of any other party thereto under any decree or order which may be made therein, except under the authority of the Court and on such terms as it may impose.",
+    "ingredients": [
+      "Pendency of a suit or proceeding in a court of competent jurisdiction.",
+      "Suit must NOT be collusive (genuine dispute between adverse parties).",
+      "Right to immovable property must be directly and specifically in issue.",
+      "Transfer or alienation of property by any party to the litigation.",
+      "Consequence: Alienation is NOT void, but is subordinate to the final decree/judgment of the court."
+    ],
+    "explanation": "Section 52 is based on the maxim 'pendente lite nihil innovetur' (during litigation, nothing new should be introduced). Its objective is to prevent litigants from defeating the court's decree by alienating the disputed property to third parties. The transferee pendente lite steps into the shoes of the alienating party and is bound by the ultimate judgment.",
+    "cases": [
+      "Bellamy v. Sabine (1857) — Origin of doctrine: based not on notice, but on judicial necessity to bring litigation to a conclusive end.",
+      "Faryad Ali v. State of Rajasthan (2013) — Transferee pendente lite cannot claim protection as a bona fide purchaser without notice.",
+      "Rajender Singh v. Santa Singh (1973) — Lis pendens applies from the date of filing the plaint until full execution/satisfaction of the decree."
+    ],
+    "examTips": "Critical distinction: A transfer pending litigation is NOT void ab initio; it is merely ineffective against the decree-holder. If the alienor wins the lawsuit, the transfer is completely valid and effective!",
+    "keywords": [
+      "section 52",
+      "lis pendens",
+      "pendente lite nihil innovetur",
+      "collusive suit",
+      "directly and specifically in question",
+      "bellamy v sabine",
+      "rajender singh"
+    ]
+  },
+  {
+    "id": "tpa-s54",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "54",
+    "title": "'Sale' Defined & Mode of Transfer",
+    "unit": "Unit 10: Sale & Mortgages",
+    "badge": "Sale of Property",
+    "text": "'Sale' is a transfer of ownership in exchange for a price paid or promised or part-paid and part-promised. Transfer how made: Such transfer, in the case of tangible immovable property of the value of one hundred rupees and upwards, or in the case of a reversion or other intangible thing, can be made only by a registered instrument. A contract for the sale of immovable property is a contract that a sale of such property shall take place on terms settled between the parties. It does not, of itself, create any interest in or charge on such property.",
+    "ingredients": [
+      "Transfer of absolute ownership.",
+      "Parties: Competent seller and competent buyer.",
+      "Subject matter: Existing, transferable immovable property.",
+      "Price / Consideration: Money paid, promised, or partly paid and partly promised.",
+      "Registration requirement: Value >= Rs. 100 requires mandatory registered deed.",
+      "Contract for sale does NOT create any legal interest or charge in the property under Indian law."
+    ],
+    "explanation": "Sale under Section 54 transfers complete bundle of ownership rights. Indian law firmly rejects the English equitable doctrine that a contract for sale converts the seller into a trustee for the buyer. In India, an agreement to sell generates only personal contractual obligations; legal title passes only upon execution and registration of the formal sale deed.",
+    "cases": [
+      "Suraj Lamp & Industries v. State of Haryana (2012) — SA/GPA/WILL transactions cannot convey ownership; transfer of title requires registered conveyance under S. 54.",
+      "Vidyadhar v. Manikrao (1999) — Non-payment or partial payment of price does not invalidate the sale once title has passed by registered deed; unpaid vendor's remedy is a charge under S. 55(4)(b)."
+    ],
+    "examTips": "Always cite Suraj Lamp (2012) when discussing GPA sales or agreements to sell. An unregistered Agreement to Sell (Bayana) does NOT convey title, even if possession is handed over.",
+    "keywords": [
+      "section 54",
+      "sale",
+      "price",
+      "registered instrument",
+      "contract for sale",
+      "suraj lamp",
+      "vidyadhar",
+      "ownership transfer"
+    ]
+  },
+  {
+    "id": "tpa-s58",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "58",
+    "title": "'Mortgage' Defined & 6 Kinds of Mortgages",
+    "unit": "Unit 10: Mortgages & Charges",
+    "badge": "Mortgage",
+    "text": "(a) A mortgage is the transfer of an interest in specific immovable property for the purpose of securing the payment of money advanced or to be advanced by way of loan, an existing or future debt, or the performance of an engagement which may give rise to a pecuniary liability. Six recognized forms: (b) Simple mortgage, (c) Mortgage by conditional sale, (d) Usufructuary mortgage, (e) English mortgage, (f) Mortgage by deposit of title-deeds (Equitable mortgage), (g) Anomalous mortgage.",
+    "ingredients": [
+      "Transfer of an interest (not complete ownership) in specific immovable property.",
+      "Purpose: Securing repayment of loan, debt, or pecuniary engagement.",
+      "Parties: Mortgagor (borrower/transferor) and Mortgagee (lender/transferee).",
+      "Principal money and interest secured called the 'mortgage-money'.",
+      "Instrument called a 'mortgage-deed'."
+    ],
+    "explanation": "Section 58 classifies the six standard mortgage structures. In a Simple Mortgage, possession is not delivered and remedy is sale through court. In Usufructuary, possession is delivered and rents/profits extinguish debt. In Conditional Sale, ostensible sale becomes absolute on default. Deposit of Title Deeds (equitable mortgage) requires intent to create security in notified towns without registered conveyance.",
+    "cases": [
+      "Pandit Chunchun Jha v. Sheikh Ebadat Ali (1954) — Intention of parties gathered from deed determines whether transaction is a mortgage by conditional sale or sale with repurchase condition.",
+      "Ramkinkar Banerjee v. Satya Charan Srimani (1939) — In Indian law, a mortgage transfers an interest, not the whole legal estate."
+    ],
+    "examTips": "Proviso to Section 58(c) is a recurring exam trap: No transaction shall be deemed a mortgage by conditional sale unless the condition is embodied in the VERY SAME document that effects or purports to effect the sale (Chunchun Jha).",
+    "keywords": [
+      "section 58",
+      "mortgage",
+      "simple mortgage",
+      "usufructuary mortgage",
+      "conditional sale",
+      "deposit of title deeds",
+      "chunchun jha",
+      "mortgage money"
+    ]
+  },
+  {
+    "id": "tpa-s60",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "60",
+    "title": "Right of Mortgagor to Redeem (Once a Mortgage, Always a Mortgage)",
+    "unit": "Unit 10: Mortgages & Charges",
+    "badge": "Redemption",
+    "text": "At any time after the principal money has become due, the mortgagor has a right, on payment or tender of the mortgage-money, to require the mortgagee to deliver to the mortgagor the mortgage-deed and all documents of title, and to deliver possession of the mortgaged property. Proviso: Provided that the right conferred by this section has not been extinguished by the act of the parties or by decree of a court. Doctrine: Any clog or fetter on the equity of redemption is void.",
+    "ingredients": [
+      "Mortgagor's statutory right to redeem arises once the principal mortgage money falls due.",
+      "Entitled to return of documents, reconveyance of title, and restoration of possession.",
+      "Right cannot be extinguished by any private covenant entered into as part of mortgage bargain.",
+      "Right can only be extinguished by act of parties subsequent to mortgage or by court decree.",
+      "Any stipulation restricting redemption or penalizing redemption is a 'clog' and void."
+    ],
+    "explanation": "The equity of redemption is the cornerstone of mortgage law ('Once a mortgage, always a mortgage'). Because borrowers are often in financial distress, courts strike down oppressive terms entered into at the time of mortgage that make redemption impossible, postpone it unreasonably (e.g. 100 years without justification), or convert the mortgage into an absolute sale.",
+    "cases": [
+      "Stanley v. Wilde (1899) — 'A mortgage cannot be made irredeemable and such a condition is void. The right to redeem cannot be taken away or fettered by any collateral covenant.'",
+      "Murarilal v. Devkaran (1965) — A stipulation that if mortgage money is not paid within 15 years the property shall become the mortgagee's outright is an invalid clog on redemption.",
+      "Shivdev Singh v. Sucha Singh (2000) — Mortgage for 99 years where mortgagor was in financial distress was held an unreasonable clog on redemption."
+    ],
+    "examTips": "Always examine if the restriction was part of the original mortgage contract (clog: void) or a subsequent independent agreement negotiated freely between mortgagor and mortgagee (valid).",
+    "keywords": [
+      "section 60",
+      "redemption",
+      "clog on redemption",
+      "once a mortgage always a mortgage",
+      "stanley v wilde",
+      "murarilal",
+      "equity of redemption"
+    ]
+  },
+  {
+    "id": "tpa-s100",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "100",
+    "title": "Charges on Immovable Property",
+    "unit": "Unit 10: Mortgages & Charges",
+    "badge": "Charges",
+    "text": "Where immovable property of one person is by act of parties or operation of law made security for the payment of money to another, and the transaction does not amount to a mortgage, the latter person is said to have a charge on the property; and all the provisions hereinbefore contained which apply to a simple mortgage shall, so far as may be, apply to such charge. Exception: No charge shall be enforced against any property in the hands of a person to whom such property has been transferred for consideration and without notice of the charge.",
+    "ingredients": [
+      "Created either by act of parties (agreement) or by operation of law (statute, maintenance decree).",
+      "Immovable property made security for payment of money.",
+      "Transaction does NOT amount to a mortgage (no transfer of interest in property).",
+      "Enforced in the same manner as a simple mortgage (sale through court).",
+      "Crucial distinction from mortgage: Cannot be enforced against a bona fide purchaser for value without notice (BFP)."
+    ],
+    "explanation": "A charge creates a security interest in immovable property without transferring any proprietary estate to the charge-holder (ius ad rem, not ius in rem). For example, a court decree ordering alimony to be paid out of a husband's property creates a charge by operation of law.",
+    "cases": [
+      "Dattatreya Shanker Mote v. Anand Shanker Mote (1974) — SC laid down difference between mortgage (transfer of interest) and charge (mere right of realization).",
+      "JK (Bombay) Pvt. Ltd. v. New Kaiser-I-Hind Spg. & Wvg. Co. (1969) — Charge creates a personal obligation with a right to have payment realized out of specified property."
+    ],
+    "examTips": "Distinguish Mortgage vs Charge: (1) Mortgage transfers an interest; Charge does not. (2) Mortgage is good against the whole world, even a purchaser without notice; Charge is defeated by a bona fide purchaser for value without notice.",
+    "keywords": [
+      "section 100",
+      "charge",
+      "security",
+      "operation of law",
+      "act of parties",
+      "dattatreya",
+      "bona fide purchaser without notice"
+    ]
+  },
+  {
+    "id": "tpa-s105",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "105",
+    "title": "'Lease' Defined (Lessor, Lessee, Premium & Rent)",
+    "unit": "Unit 11: Lease & Licence",
+    "badge": "Leases",
+    "text": "A lease of immovable property is a transfer of a right to enjoy such property, made for a certain time, express or implied, or in perpetuity, in consideration of a price paid or promised, or of money, a share of crops, service or any other thing of value, to be rendered periodically or on specified occasions to the transferor by the transferee, who accepts the transfer on such terms. Transferor is 'lessor', transferee is 'lessee', price is 'premium', and money/share rendered periodically is 'rent'.",
+    "ingredients": [
+      "Transfer of a right of enjoyment (demise of interest in land).",
+      "Immovable property must be identifiable and specific.",
+      "Duration: For a certain time (definite period) or in perpetuity.",
+      "Consideration: Premium (lump sum price) or Rent (recurring payment, crops, or service).",
+      "Requires acceptance by lessee."
+    ],
+    "explanation": "A lease creates an interest in land (ius in rem) giving the tenant exclusive possession against the whole world, including the landlord. It is distinguished from a Licence (Section 52 of Indian Easements Act 1882), which confers a mere personal privilege to enter without conveying any estate or exclusive possession.",
+    "cases": [
+      "Associated Hotels of India v. R.N. Kapoor (1959) — Landmark test distinguishing Lease vs Licence: Substantial test is exclusive possession and intention of parties.",
+      "Delta International Ltd. v. Shyam Sundar Ganeriwalla (1999) — True relationship depends on construction of agreement and whether exclusive possession was granted."
+    ],
+    "examTips": "Focus on the classic test in Associated Hotels v. RN Kapoor: Exclusive possession is prima facie evidence of a lease, though intention gathered from surrounding circumstances remains the ultimate touchstone.",
+    "keywords": [
+      "section 105",
+      "lease",
+      "licence",
+      "exclusive possession",
+      "premium",
+      "rent",
+      "associated hotels",
+      "rn kapoor"
+    ]
+  },
+  {
+    "id": "tpa-s122",
+    "actId": "tpa",
+    "act": "Transfer of Property Act, 1882",
+    "sec": "122",
+    "title": "'Gift' Defined (Acceptance During Lifetime of Donor)",
+    "unit": "Unit 12: Law of Gifts",
+    "badge": "Gifts",
+    "text": "'Gift' is the transfer of certain existing movable or immovable property made voluntarily and without consideration, by one person, called the donor, to another, called the donee, and accepted by or on behalf of the donee. Acceptance when to be made: Such acceptance must be made during the lifetime of the donor and while he is still capable of giving. If the donee dies before acceptance, the gift is void.",
+    "ingredients": [
+      "Transfer of existing movable or immovable property (future property cannot be gifted — S. 124).",
+      "Made voluntarily with free consent (without coercion or undue influence).",
+      "Without consideration (purely gratuitous; absence of money or monetary value).",
+      "Parties: Competent Donor and Donee (donee can be a minor).",
+      "Mandatory acceptance: Donee must accept during donor's lifetime and while donor is compos mentis.",
+      "Consequence: If donee dies prior to acceptance, the gift is completely void."
+    ],
+    "explanation": "Gift is an act of sheer beneficence requiring divestment by donor and acceptance by donee. Under Section 123, a gift of immovable property is invalid unless executed through a registered instrument signed by the donor and attested by at least two witnesses, regardless of property valuation.",
+    "cases": [
+      "K. Balakrishnan v. K. Kamalam (2004) — Gift to a minor is valid if accepted on his behalf by natural guardian, or if minor acts upon it upon attaining majority.",
+      "Renikuntla Rajamma v. K. Sarwanamma (2014) — Retention of right to enjoy usufruct/residence during donor's lifetime does not invalidate immediate vesting of gift under S. 122."
+    ],
+    "examTips": "Frequent problem: Donor executes gift deed, registers it, but dies before donee learns of it or accepts it. Is the gift valid? No! Section 122 explicitly states: If donee does not accept during donor's lifetime, gift is void.",
+    "keywords": [
+      "section 122",
+      "gift",
+      "donor",
+      "donee",
+      "voluntarily",
+      "without consideration",
+      "acceptance during lifetime",
+      "balakrishnan",
+      "renikuntla"
     ]
   }
 ]

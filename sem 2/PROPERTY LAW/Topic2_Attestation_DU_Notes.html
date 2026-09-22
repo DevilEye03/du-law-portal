@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2 – Attestation (Sec. 3 TPA) | LB-204 Property Law | DU Notes</title>
+<style>
+  :root{--ink:#1b2a41;--accent:#4a2c82;--accent2:#b23a48;--gold:#c9a227;--soft:#f5f3fa;--line:#ddd8ea;--note:#fff8e1;--blue:#e8f1fb;--red:#fdecec;--green:#e9f7ef;--purple:#f1ebfb}
+  *{box-sizing:border-box}
+  body{font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);margin:0;background:#fbfbfd}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 34px 80px}
+  header.hero{background:linear-gradient(135deg,#4a2c82 0%,#1b2a41 100%);color:#fff;padding:40px 34px;border-radius:14px;margin-bottom:28px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  header.hero h1{margin:0 0 6px;font-size:2.1rem}
+  header.hero .sub{opacity:.92;font-size:1.05rem}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);padding:3px 10px;border-radius:20px;font-size:.85rem;margin:8px 6px 0 0}
+  h2{font-size:1.65rem;color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:6px;margin-top:54px}
+  h3{font-size:1.28rem;color:var(--ink);margin-top:34px;border-left:5px solid var(--gold);padding-left:10px}
+  h4{font-size:1.08rem;color:var(--accent2);margin:22px 0 8px}
+  p{margin:9px 0;text-align:justify}
+  ul,ol{margin:8px 0 8px 22px} li{margin:5px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95rem;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
+  th{background:var(--accent);color:#fff} tr:nth-child(even) td{background:var(--soft)}
+  .box{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0;background:#fff}
+  .note{background:var(--note);border-left:6px solid var(--gold)}
+  .stat{background:var(--blue);border-left:6px solid #2b6cb0;font-family:"Courier New",monospace;font-size:.93rem;white-space:pre-wrap}
+  .warn{background:var(--red);border-left:6px solid var(--accent2)}
+  .ok{background:var(--green);border-left:6px solid #0b6e4f}
+  .ex{background:var(--purple);border-left:6px solid #6b46c1}
+  .case{border:2px solid var(--accent);border-radius:12px;padding:18px 22px;margin:26px 0;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+  .case h3{border:none;padding:0;margin-top:0;color:var(--accent);font-size:1.4rem}
+  .case .cite{font-style:italic;color:#555;margin-bottom:10px}
+  .lbl{display:inline-block;background:var(--ink);color:#fff;padding:2px 9px;border-radius:4px;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;margin-right:6px}
+  .lbl.g{background:#0b6e4f}.lbl.r{background:var(--accent2)}.lbl.y{background:var(--gold);color:#222}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;columns:2;column-gap:30px}
+  .toc a{text-decoration:none;color:var(--ink)} .toc a:hover{color:var(--accent);text-decoration:underline} .toc li{break-inside:avoid}
+  .flow{display:flex;flex-direction:column;align-items:center;margin:20px 0}
+  .fbox{border:2px solid var(--accent);border-radius:10px;padding:10px 16px;background:#fff;max-width:600px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.92rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .fbox.q{background:#fff8e1;border-color:var(--gold)} .fbox.yes{background:var(--green);border-color:#0b6e4f} .fbox.no{background:var(--red);border-color:var(--accent2)}
+  .arrow{font-size:1.5rem;color:var(--accent);line-height:1;margin:4px 0}
+  .split{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .branch{display:flex;flex-direction:column;align-items:center;min-width:240px}
+  .branchlbl{font-size:.8rem;font-weight:bold;color:#555;font-family:Arial;margin-bottom:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.grid2{grid-template-columns:1fr}.toc{columns:1}.vs{grid-template-columns:1fr}}
+  .vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}
+  .vs>div{padding:14px 16px} .vs>div:first-child{background:var(--green);border-right:1px solid var(--line)} .vs>div:last-child{background:var(--red)} .vs h4{margin-top:0}
+  .mnem{font-family:"Courier New",monospace;background:#1b2a41;color:#f7e9a0;padding:14px 18px;border-radius:10px;white-space:pre-wrap}
+  .pyq{border:2px dashed var(--accent2);border-radius:12px;padding:18px 22px;margin:28px 0;background:#fffdfd}
+  .pyq h3{border:none;padding:0;color:var(--accent2);margin-top:0}
+  .ans{background:#fff;border-left:5px solid var(--accent);padding:12px 16px;margin-top:12px}
+  .small{font-size:.86rem;color:#555} .kw{color:var(--accent2);font-weight:bold}
+  blockquote{margin:10px 20px;padding:8px 16px;border-left:4px solid #999;background:#f7f7f7;font-style:italic}
+  svg text{font-family:Arial,Helvetica,sans-serif}
+  .foot{margin-top:50px;font-size:.85rem;color:#666;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body><div class="wrap">
+
+<header class="hero">
+  <h1>Topic 2 — Attestation (Section 3, TPA 1882)</h1>
+  <div class="sub">LL.B. II Term · Paper LB-204 Property Law · Faculty of Law, University of Delhi</div>
+  <div class="sub" style="margin-top:6px">Importance of attestation · Who may be a competent witness · Mode of attestation · Attestation by a pardanashin woman</div>
+  <span class="tag">Kumar Harish Chandra Singh Deo v. Bansidhar Mohanty (1965 SC)</span>
+  <span class="tag">M.L. Abdul Jabbar Sahib v. H. Venkata Sastri (1969 SC)</span>
+  <span class="tag">Padarath Halwai v. Ram Narain (1915 PC)</span>
+  <span class="tag">DU PYQs with model answers</span>
+</header>
+
+<div class="box note"><b>Sources.</b> Primary: DU Case Material LB-204 (May 2022), Topic 2, pp. 37–44 — the three edited judgments are reproduced in depth (facts, procedural history, issues, arguments, reasoning with paragraph references, principles, and every precedent the judges discussed). Statutory text from the bare Transfer of Property Act, 1882 and connected statutes (Registration Act 1908, Indian Evidence Act 1872 / Bharatiya Sakshya Adhiniyam 2023, Indian Succession Act 1925, Contract Act 1872). Concept-level material is supplemented from the LED Exam Capsule uploaded with the project; the PYQ section uses the DU May/June 2025 paper (Q.2(a)) plus earlier DU questions on attestation.</div>
+
+<nav class="toc"><b>CONTENTS</b>
+<ol>
+<li><a href="#p1">Meaning and object of attestation</a></li>
+<li><a href="#p2">Statutory text — s.3 TPA and its legislative history (1926/1927 amendments)</a></li>
+<li><a href="#p3">When is attestation required? (TPA and other Acts)</a></li>
+<li><a href="#p4">Essentials / ingredients of valid attestation — element-by-element</a></li>
+<li><a href="#p5">Mode of attestation — flowchart; the modes; “presence”; marks; signature by others</a></li>
+<li><a href="#p6">Animus attestandi — scribe, identifier, registering officer, consenting legatee</a></li>
+<li><a href="#p7">Who may be a competent attesting witness? — party to deed vs party to transaction</a></li>
+<li><a href="#p8">Attestation by / for a pardanashin woman</a></li>
+<li><a href="#p9">Attestation vs. execution vs. registration vs. identification</a></li>
+<li><a href="#p10">Proof of attestation — Evidence Act ss.68–71 (BSA ss.67–70)</a></li>
+<li><a href="#p11">Effect of defective attestation; charge vs. mortgage</a></li>
+<li><a href="#p12">Related provisions in other Acts</a></li>
+<li><a href="#c1">CASE 1 — Kumar Harish Chandra Singh Deo v. Bansidhar Mohanty</a></li>
+<li><a href="#c2">CASE 2 — M.L. Abdul Jabbar Sahib v. H. Venkata Sastri</a></li>
+<li><a href="#c3">CASE 3 — Padarath Halwai v. Ram Narain</a></li>
+<li><a href="#p13">Precedent map &amp; timeline</a></li>
+<li><a href="#p14">Master tables and real-life examples</a></li>
+<li><a href="#p15">DU Previous Year Questions with model answers</a></li>
+<li><a href="#p16">Rapid revision &amp; mnemonics</a></li>
+</ol></nav>
+
+<!-- ============================================================ -->
+<h2 id="p1">1. Meaning and object of attestation</h2>
+<p><b>To attest is to bear witness to a fact</b> (Bachawat J., <i>Abdul Jabbar</i>, para 7). In the law of property, attestation is the act by which a person, <i>not being a party to the instrument</i>, signs it in the presence of the executant <b>in order to testify that the executant signed it (or acknowledged his signature) voluntarily</b>. The attesting witness vouches for the <b>genuineness of execution</b>; he does not vouch for the contents of the deed, need not know what it contains, and need not read it. Lord Selborne L.C. in <i>Seal v. Claridge</i> (1881) 7 QBD 516 said attestation “implies the presence of some person who stands by but is not a party to the transaction”.</p>
+
+<h3>1.1 Why the law insists on attestation — the object</h3>
+<div class="box ok">
+<ol>
+<li><b>Protection of the executant against force, fraud and undue influence.</b> Mudholkar J. in <i>Kumar Harish Chandra</i> (para 4): “The object of attestation is to protect the executant from being required to execute a document by the other party thereto by force, fraud or undue influence.” The presence of independent bystanders makes coercion or deceit at the moment of signing far less likely — especially important for the illiterate, the aged, and pardanashin women who form a large part of the executants of Indian mortgages and gifts.</li>
+<li><b>Authentication of execution / evidentiary value.</b> The witness is a ready source of proof that the document was in fact executed by the person by whom it purports to be executed. Section 68 Evidence Act (now s.67 BSA 2023) makes calling at least one attesting witness the <i>primary mode of proving</i> a document required by law to be attested.</li>
+<li><b>Solemnity and deliberation.</b> Attestation marks the transaction as a serious, formal disposition of immovable property (mortgage, gift) or of one’s estate (will), distinguishing it from casual writings.</li>
+<li><b>Prevention of fabrication and ante-dating.</b> Two independent signatures fixed at the moment of execution make later forgery or substitution of pages harder.</li>
+</ol></div>
+
+<div class="box note"><b>What attestation is <u>not</u>.</b> It is not a certificate of the truth or fairness of the contents; not proof that the executant understood the deed (that is a separate question — relevant for pardanashin executants, see Part 8); not the same as registration (a statutory act of a public officer); not identification (vouching that the executant is who he says he is). Confusion between these is what <i>Abdul Jabbar</i> resolves.</div>
+
+<!-- ============================================================ -->
+<h2 id="p2">2. Statutory text — s.3 TPA and its history</h2>
+<div class="box stat"><b>Transfer of Property Act, 1882 — s. 3 (Interpretation clause)</b>
+“attested”, in relation to an instrument, means and shall be deemed always to have meant attested by <b>two or more witnesses</b> each of whom
+   (i) has <b>seen the executant sign or affix his mark</b> to the instrument, or
+   (ii) has seen <b>some other person sign</b> the instrument <b>in the presence and by the direction of the executant</b>, or
+   (iii) has <b>received from the executant a personal acknowledgement</b> of his signature or mark, or of the signature of such other person,
+and each of whom has <b>signed the instrument in the presence of the executant</b>;
+but it shall not be necessary that more than one of such witnesses shall have been present at the same time, and no particular form of attestation shall be necessary.
+<span class="small">[Inserted by the Transfer of Property (Amendment) Act 27 of 1926, s.2, as amended by Act 10 of 1927, s.2 &amp; Sch. I — “shall be deemed always to have meant” makes it retrospective.]</span></div>
+
+<h3>2.1 Legislative history — why the definition was inserted in 1926</h3>
+<p>Before 1926 the TPA used the word “attested” (ss.59, 123) but did not define it. Two conflicting lines of authority arose:</p>
+<ul>
+<li><b>Strict English view</b> — the witness must have actually <i>seen</i> the executant sign (the Wills Act, 1837 rule): followed by Calcutta and some other High Courts.</li>
+<li><b>Liberal view</b> — a witness who received the executant’s <i>acknowledgment</i> of a signature already made could attest (as under the Succession Act for wills).</li>
+</ul>
+<p>The Privy Council in <b><i>Shamu Patter v. Abdul Kadir Ravuthan</i></b> (1912) 39 IA 218 : ILR 35 Mad 607 adopted the strict view: witnesses who had not seen the executant sign but merely received his acknowledgment were not attesting witnesses; the mortgage failed. This caused widespread hardship (countless Indian deeds were attested on acknowledgment). The <b>Amending Act 27 of 1926</b> therefore inserted the present definition, expressly allowing attestation on <b>personal acknowledgment</b>, and <b>Act 10 of 1927</b> added the words “<b>and shall be deemed always to have meant</b>” to make it <b>retrospective</b> and cure past deeds. The definition mirrors s.63(c) of the Indian Succession Act, 1925 (attestation of wills) — Mudholkar J. notes this similarity in <i>Kumar Harish Chandra</i>.</p>
+
+<svg viewBox="0 0 1000 150" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="75" x2="960" y2="75" stroke="#4a2c82" stroke-width="4"/>
+<g font-size="12" text-anchor="middle">
+<circle cx="110" cy="75" r="9" fill="#c9a227"/><text x="110" y="45" font-weight="bold">1882</text><text x="110" y="110">TPA enacted —</text><text x="110" y="125">"attested" undefined</text>
+<circle cx="330" cy="75" r="9" fill="#b23a48"/><text x="330" y="45" font-weight="bold">1912</text><text x="330" y="110">Shamu Patter (PC):</text><text x="330" y="125">must SEE signing; acknowledgment insufficient</text>
+<circle cx="560" cy="75" r="9" fill="#0b6e4f"/><text x="560" y="45" font-weight="bold">1926 (Act 27)</text><text x="560" y="110">Definition inserted:</text><text x="560" y="125">acknowledgment mode allowed</text>
+<circle cx="770" cy="75" r="9" fill="#0b6e4f"/><text x="770" y="45" font-weight="bold">1927 (Act 10)</text><text x="770" y="110">"deemed always to have meant"</text><text x="770" y="125">— retrospective</text>
+<circle cx="930" cy="75" r="9" fill="#4a2c82"/><text x="930" y="45" font-weight="bold">1929 (Act 20)</text><text x="930" y="110">s.100 amended</text><text x="930" y="125">(charges)</text>
+</g></svg>
+
+<!-- ============================================================ -->
+<h2 id="p3">3. When is attestation required?</h2>
+<p>Attestation is required <b>only where a statute demands it</b>. Where it is not required, a deed attested by no one (or by one person) is perfectly valid; where it is required, its absence is fatal to the transfer (subject to Part 11).</p>
+<table>
+<tr><th style="width:26%">Instrument</th><th>Provision</th><th>Requirement</th></tr>
+<tr><td><b>Mortgage</b> (principal ≥ Rs 100), other than mortgage by deposit of title-deeds</td><td>TPA s.59</td><td>“can be effected only by a <b>registered</b> instrument <b>signed by the mortgagor and attested by at least two witnesses</b>.” If principal &lt; Rs 100: registered instrument signed and attested as aforesaid, or (except simple mortgage) delivery of the property. <i>Mortgage by deposit of title deeds (s.58(f)) needs no writing, attestation or registration.</i></td></tr>
+<tr><td><b>Gift of immovable property</b> (any value)</td><td>TPA s.123</td><td>“must be effected by a <b>registered instrument signed by or on behalf of the donor, and attested by at least two witnesses</b>.” Gift of movables: registered instrument so signed <i>or</i> delivery. (Muslim <i>hiba</i> — declaration, acceptance, delivery of possession — is exempt from s.123 by s.129.)</td></tr>
+<tr><td><b>Will / codicil</b> (non-Muslim)</td><td>Indian Succession Act, 1925, s.63(c)</td><td>Attested by two or more witnesses, each of whom has seen the testator sign/affix mark or seen some other person sign in the testator’s presence and by his direction, <i>or</i> received a personal acknowledgment; each signs in presence of testator; no particular form; witnesses need not be present at same time. (Identical language to s.3 TPA.) Also s.67: bequest to an attesting witness or his/her spouse is void, though the will remains valid.</td></tr>
+<tr><td><b>Sale</b> (s.54), <b>Lease</b> (s.107), <b>Exchange</b> (s.118), <b>Charge</b> (s.100), <b>Actionable claim</b> (s.130), <b>Relinquishment / release</b>, <b>Partition deed</b>, <b>Agreement to sell</b></td><td>—</td><td><b>Attestation NOT required by law.</b> Voluntary attestation is common but legally irrelevant; such a document is proved like any other (s.72 Evidence Act / s.71 BSA). <i>Abdul Jabbar</i>: s.100 does not import s.59’s attestation requirement into charges.</td></tr>
+<tr><td><b>Bond, Power of Attorney, Adoption deed, Promissory note</b></td><td>—</td><td>No statutory attestation requirement (a registered POA is usually authenticated before the Registrar under s.33 Registration Act, which is different). Adoption deed under s.16 Hindu Adoptions &amp; Maintenance Act must be registered, not attested.</td></tr>
+<tr><td><b>Instrument of transfer of shares</b></td><td>Companies Act 2013, s.56 &amp; Form SH-4</td><td>Signature of transferor and transferee is witnessed — a corporate-law form of attestation.</td></tr>
+</table>
+
+<div class="box ex"><b>Real-life example.</b> Meena gifts her flat in Dwarka to her daughter by a registered gift deed which only Meena and the daughter have signed, with the Sub-Registrar’s endorsement. The gift is <b>void</b> for want of attestation by two witnesses (s.123), even though registered — registration cannot cure non-attestation, and the Sub-Registrar’s signature is not attestation unless he signed <i>animo attestandi</i> in Meena’s presence (<i>Abdul Jabbar</i>). Had Meena instead <b>sold</b> the flat by a registered sale deed with no witnesses, the sale would be valid (s.54 requires no attestation).</div>
+
+<!-- ============================================================ -->
+<h2 id="p4">4. Essentials of a valid attestation — element by element</h2>
+<p>Bachawat J. compressed the definition into two essential conditions (<i>Abdul Jabbar</i>, para 7): “(1) two or more witnesses have seen the executant sign the instrument or have received from him a personal acknowledgment of his signature; (2) with a view to attest or to bear witness to this fact each of them has signed the instrument in the presence of the executant.” Expanded, the ingredients are:</p>
+<table>
+<tr><th style="width:5%">#</th><th style="width:28%">Ingredient</th><th>Explanation &amp; authority</th></tr>
+<tr><td>1</td><td><b>Two or more witnesses</b></td><td>Minimum two. One is fatal (<i>Abdul Jabbar</i> — bond attested by Somnath Rao alone → “attested by one witness only”). More than two is permissible; only two need be proved.</td></tr>
+<tr><td>2</td><td><b>Each witness must have perceived execution</b> in one of three ways: (a) seen the executant <b>sign or affix his mark</b>; (b) seen <b>another person sign in the presence and by the direction</b> of the executant; or (c) <b>received a personal acknowledgment</b> of the signature/mark from the executant himself</td><td>“Seen” — visual perception of the act; in <i>Padarath Halwai</i> the witnesses saw the hands of the ladies executing through an unlined <i>chick</i> and recognised their voices — enough. Acknowledgment must be <b>personal</b> (by the executant to the witness — not through an agent or letter) and must be of the <b>signature</b>, not merely of the transaction. Since the 1926 amendment overruled <i>Shamu Patter</i>, prior signing followed by acknowledgment is valid.</td></tr>
+<tr><td>3</td><td><b>Each witness must sign the instrument</b></td><td>Signature or mark (thumb impression) of the witness suffices; an illiterate witness can attest by mark. The witness need not write “witness” or “attested by” — “no particular form of attestation shall be necessary” — but there must be a <i>signature on the instrument</i>. Initials suffice if intended as signature.</td></tr>
+<tr><td>4</td><td><b>In the presence of the executant</b></td><td>The executant must be present when <i>each</i> witness signs — physically present and in a position to see (conscious presence). A witness who signs later at home, or after the executant has left, is not an attesting witness (<i>Abdul Jabbar</i>, para 10 — not proved that the Sub-Registrar signed in the presence of the executant). Note the asymmetry: the witness need not have seen the executant sign (acknowledgment suffices) but the executant must be present at the witness’s signing.</td></tr>
+<tr><td>5</td><td><b><i>Animus attestandi</i></b> — intention to attest</td><td>The signature must be put <i>for the purpose of bearing witness to execution</i>; a signature for another purpose (scribe, identifier, registering officer, consenting party, solicitor) is not attestation (<i>Abdul Jabbar</i>; <i>Girja Datt v. Gangotri</i>; <i>Shiam Sunder Singh v. Jagannath Singh</i>). Evidence is admissible on intention.</td></tr>
+<tr><td>6</td><td><b>Witnesses need not be present together</b></td><td>Express words of s.3. Witness A may see execution at 10 a.m. and sign; witness B may receive acknowledgment at 4 p.m. and sign — valid, provided the executant is present each time. (Contrast English Wills Act, 1837 s.9 — both witnesses must be present together when the testator signs/acknowledges.)</td></tr>
+<tr><td>7</td><td><b>No particular form</b></td><td>No attestation clause, no words like “signed in my presence”, no particular place on the document is required; signatures on the margin, at the end, or on the reverse suffice if <i>animo attestandi</i>. Conversely, an elaborate attestation clause does not help if the facts are absent.</td></tr>
+<tr><td>8</td><td><b>Attestation must follow execution</b> (in time)</td><td>One can only witness what has already happened; a signature put <i>before</i> the executant signs (and never re-affirmed by acknowledgment) is not attestation. Exam Capsule: “attestation can never be prior to the execution of the document, and must always be subsequent to it.”</td></tr>
+<tr><td>9</td><td><b>Competency</b> of the witness</td><td>See Part 7: must be <i>sui juris</i> (major, sound mind); must not be a party to the deed; may be a party to the transaction, a relative, an interested person, a payee of consideration.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p5">5. Mode of attestation — flowchart</h2>
+<div class="flow">
+<div class="fbox q">Has the executant <b>signed or affixed his mark</b> (or has another person signed <b>in his presence and by his direction</b>)?</div>
+<div class="arrow">↓ yes (execution complete — attestation can only follow execution)</div>
+<div class="fbox q">For <b>each</b> of at least two witnesses: did he <b>(a) see</b> the signing/mark, or <b>(b) see</b> the directed signing by another, or <b>(c) receive a personal acknowledgment</b> from the executant of the signature/mark?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">Not an attesting witness (the Shamu Patter situation; after 1926 cured only if acknowledgment was in fact received)</div></div>
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Did he <b>sign the instrument in the presence of the executant</b>?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">Not attestation (Abdul Jabbar — Sub-Registrar not shown to have signed in executant's presence)</div></div>
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Did he sign <b>animo attestandi</b> — to bear witness to execution — and not merely as scribe / identifier / registering officer / consenting party?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">Not attestation (Abdul Jabbar; Girja Datt; Abinash Chandra; Shiam Sunder)</div></div>
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Is he <b>competent</b> — sui juris and <b>not a party to the deed</b>?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">Party to deed</div><div class="fbox no">Incompetent (Seal v. Claridge; Peary Mohan Maiti; Gomathi Ammal)</div></div>
+<div class="branch"><div class="branchlbl">Not a party to deed (even if party to transaction)</div><div class="fbox yes">VALID ATTESTING WITNESS (Kumar Harish Chandra). Two such witnesses = valid attestation; need not be present together; no form required.</div></div>
+</div></div></div></div></div></div></div>
+</div>
+
+<h3>5.1 Modes of execution that can be attested</h3>
+<ul>
+<li><b>Signature</b> by the executant in any script; <b>initials</b>; a <b>mark</b> (thumb impression, cross) — expressly covered (“sign or affix his mark”). Illiterate executants commonly affix a thumb impression; the scribe usually writes the name beside it (the scribe is not thereby an attesting witness).</li>
+<li><b>Signature by another person</b> (amanuensis) “in the presence and by the direction of the executant” — e.g. an infirm or blind executant directs his son to sign for him. The witness may attest either by seeing this directed signing or by receiving the executant’s acknowledgment of “the signature of such other person”. Compare s.123 — gift deed may be “signed by or on behalf of the donor”.</li>
+<li><b>Signature through a power-of-attorney holder</b> — the agent executes as the principal’s representative; the agent is then effectively a party and <b>cannot also attest</b> (Exam Capsule; principle of <i>Seal v. Claridge</i>).</li>
+</ul>
+
+<h3>5.2 “Presence” — meaning</h3>
+<p>Presence means <b>conscious, physical presence in the same place, with the opportunity to see</b> the act of signing if he chose to look. Presence in the same house but a different room without line of sight is not presence; presence behind an unlined <i>chick</i> through which the act of signing was visible <b>is</b> presence (<i>Padarath Halwai</i>). Presence by video-conference is <b>not</b> presence for s.3 TPA under current Indian law.</p>
+
+<!-- ============================================================ -->
+<h2 id="p6">6. <i>Animus attestandi</i> — the mental element</h2>
+<p>The physical act (signing in the presence of the executant, after perceiving execution) must coincide with the <b>mental act</b> — the intention to authenticate execution. Jarman on Wills (8th ed., p.137): “In every case the Court must be satisfied that the names were written <i>animo attestandi</i>.” Theobald on Wills (12th ed., p.129): the witnesses must subscribe “with the intention that the subscription made should be complete attestation … and evidence is admissible to show whether such was the intention or not.” Both passages were adopted by the Supreme Court in <i>Abdul Jabbar</i> (para 8).</p>
+<table>
+<tr><th>Person who signs</th><th>Ordinary purpose of signature</th><th>Attesting witness?</th><th>Authority</th></tr>
+<tr><td><b>Scribe</b> (deed-writer)</td><td>To authenticate that he wrote the deed</td><td>No — unless he also witnessed execution and signed <i>as a witness</i></td><td><i>Abinash Chandra Bidyanidhi Bhattacharya v. Dasarath Malo</i>, AIR 1929 Cal 123</td></tr>
+<tr><td><b>Identifying witness</b> before Sub-Registrar</td><td>To certify identity of executant (Reg. Act ss.34, 35, 58)</td><td>No, prima facie; yes if proved he also intended to attest and signed in executant’s presence after seeing/receiving acknowledgment</td><td><i>Girja Datt Singh v. Gangotri Datt Singh</i>, AIR 1955 SC 346; <i>Abdul Jabbar</i></td></tr>
+<tr><td><b>Registering officer</b> (Sub-Registrar)</td><td>Statutory duty under Reg. Act s.59 to sign endorsements</td><td>No, prima facie; may be if animus to attest + saw signing/received acknowledgment + signed in executant’s presence</td><td><i>Sunder Bahadur Singh v. Thakur Behari Singh</i>, AIR 1939 PC 117; Madras FB in <i>Abdul Jabbar</i> (limiting <i>Veerappa Chettiar v. Subramania</i>, AIR 1929 Mad 1); SC in <i>Abdul Jabbar</i></td></tr>
+<tr><td><b>Legatee / beneficiary signing in token of consent</b></td><td>To record consent to the disposition</td><td>No — hence not disqualified as legatee under s.67 Succession Act</td><td><i>Shiam Sunder Singh v. Jagannath Singh</i>, AIR 1927 PC 248</td></tr>
+<tr><td><b>Advocate / solicitor who explains the deed</b></td><td>To certify explanation / identification</td><td>No — in <i>Abdul Jabbar</i> it was not even contended that advocate K.S. Narayana Iyer (who explained and identified) was an attesting witness</td><td><i>Abdul Jabbar</i>, para 6</td></tr>
+<tr><td><b>Person signing as witness to receipt of consideration only</b></td><td>To witness payment</td><td>No — unless also attesting execution</td><td>General principle</td></tr>
+</table>
+<div class="box note"><b>Evidence of intention.</b> Because intention is a question of fact, oral evidence is admissible to show that a person who signed as identifier/registrar also intended to attest (Madras Full Bench formulation adopted in <i>Abdul Jabbar</i>: the signatures “can be treated as those of attesting witnesses if (1) the signatories are those who have seen the execution or received a personal acknowledgment …, (2) they sign their names in the presence of the executant and (3) while so doing they had the <i>animus</i> to attest.” Mere presence of their signatures on the registration endorsement “would not by themselves be sufficient”.) The <b>burden</b> lies on the party relying on the deed.</div>
+
+<!-- ============================================================ -->
+<h2 id="p7">7. Who may be a competent attesting witness?</h2>
+<p>The TPA prescribes <b>no qualifications</b>. The following rules have been worked out by the courts:</p>
+<div class="grid2">
+<div class="box ok"><b>Competent</b>
+<ul>
+<li>Any person <b>sui juris</b> — a major of sound mind (competent to understand and later depose to what he witnessed). Age, sex, caste, religion, literacy, social or financial status are irrelevant; an <b>illiterate</b> person may attest by mark.</li>
+<li><b>Relatives</b> of the parties (wife, son, brother), <b>friends</b>, neighbours, employees, business partners.</li>
+<li><b>A person interested in the transaction</b> / a “party to the transaction” who is <b>not a party to the deed</b> — e.g. the real lender whose money is advanced in a benami mortgage taken in another’s name (<i>Kumar Harish Chandra</i>).</li>
+<li>The <b>scribe</b>, <b>identifier</b>, <b>Sub-Registrar</b>, <b>advocate</b> — <i>if</i> they also witnessed execution and signed with animus attestandi in the executant’s presence (<i>Abdul Jabbar</i>).</li>
+<li>For wills, a <b>legatee</b> may attest, but his bequest becomes void (s.67 Succession Act). A donee who is a <i>party to the gift deed</i> cannot attest.</li>
+<li>Witnesses may attest a pardanashin executant through a see-through curtain (<i>Padarath Halwai</i>).</li>
+</ul></div>
+<div class="box warn"><b>Not competent</b>
+<ul>
+<li><b>A party to the deed</b> — the executant, the mortgagee/donee named in the deed, or any person who signs the deed <i>as a party</i>. Reasons: (i) Lord Selborne — attestation implies a person who “stands by but is not a party to the transaction” (<i>Seal v. Claridge</i>; <i>Freshfield v. Reed</i> (1842) 9 M &amp; W 404 — “the party to an instrument cannot attest it”); (ii) Mudholkar J.’s <b>inferential</b> reason — s.68 Evidence Act requires at least one <i>attesting witness</i> to be called to prove execution and the testimony of the parties cannot dispense with this; a party therefore cannot be his own attesting witness. Indian authorities: <i>Peary Mohan Maiti v. Sreenath Chandra</i> 14 CWN 1046; <i>Sarur Jigar Begum v. Barada Kanta</i> ILR 37 Cal 525; <i>Gomathi Ammal v. V.S.M. Krishna Iyer</i> AIR 1954 Mad 126.</li>
+<li>A person who <b>executes as power-of-attorney holder / agent</b> of a party — he stands in the party’s shoes.</li>
+<li>A <b>minor</b> or a person of <b>unsound mind</b>.</li>
+<li>A person who <b>did not perceive execution</b> or <b>did not sign in the executant’s presence</b>, or who signed <b>without animus attestandi</b> — however respectable.</li>
+</ul></div></div>
+
+<h3>7.1 The key distinction: “party to the deed” vs “party to the transaction”</h3>
+<svg viewBox="0 0 1000 300" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="20" y="20" width="460" height="260" rx="14" fill="#fdecec" stroke="#b23a48" stroke-width="2"/>
+<text x="250" y="52" text-anchor="middle" font-size="16" font-weight="bold" fill="#b23a48">PARTY TO THE DEED</text>
+<text x="250" y="80" text-anchor="middle" font-size="12">Named in / signs the instrument as executant or grantee</text>
+<rect x="60" y="100" width="380" height="40" rx="8" fill="#fff" stroke="#b23a48"/><text x="250" y="125" text-anchor="middle" font-size="12">Mortgagor A · Mortgagee named in deed (C) · POA holder</text>
+<text x="250" y="170" text-anchor="middle" font-size="13" font-weight="bold">→ CANNOT ATTEST</text>
+<text x="250" y="195" text-anchor="middle" font-size="11">Seal v. Claridge (1881) · Freshfield v. Reed (1842)</text>
+<text x="250" y="212" text-anchor="middle" font-size="11">Peary Mohan Maiti · Sarur Jigar Begum · Gomathi Ammal</text>
+<text x="250" y="240" text-anchor="middle" font-size="11" font-style="italic">Reason: s.68 Evidence Act needs an attesting witness</text>
+<text x="250" y="257" text-anchor="middle" font-size="11" font-style="italic">independent of the parties</text>
+<rect x="520" y="20" width="460" height="260" rx="14" fill="#e9f7ef" stroke="#0b6e4f" stroke-width="2"/>
+<text x="750" y="52" text-anchor="middle" font-size="16" font-weight="bold" fill="#0b6e4f">PARTY TO THE TRANSACTION ONLY</text>
+<text x="750" y="80" text-anchor="middle" font-size="12">Interested in / financed the deal but not named as a party in the deed</text>
+<rect x="560" y="100" width="380" height="40" rx="8" fill="#fff" stroke="#0b6e4f"/><text x="750" y="125" text-anchor="middle" font-size="12">Real lender B (deed taken benami in C's name) · guarantor · broker</text>
+<text x="750" y="170" text-anchor="middle" font-size="13" font-weight="bold">→ CAN ATTEST</text>
+<text x="750" y="195" text-anchor="middle" font-size="11">Kumar Harish Chandra Singh Deo v. Bansidhar Mohanty (SC 1965)</text>
+<text x="750" y="212" text-anchor="middle" font-size="11">Balu Ravji Gharat (Bom) · Durga Din v. Suraj Bakhsh (Oudh 1931)</text>
+<text x="750" y="240" text-anchor="middle" font-size="11" font-style="italic">Reason: no statutory bar; he is not a party whose</text>
+<text x="750" y="257" text-anchor="middle" font-size="11" font-style="italic">testimony is excluded from proving execution</text>
+</svg>
+
+<!-- ============================================================ -->
+<h2 id="p8">8. Attestation by / of a pardanashin woman</h2>
+<p>A <b>pardanashin</b> (purdah-observing) woman is one who, by custom of her community, lives in seclusion and does not appear before or converse with male strangers. Two distinct legal questions arise:</p>
+<h3>8.1 Mode of attestation when the executant is pardanashin — <i>Padarath Halwai</i></h3>
+<p>The requirement that the witness must “see” the executant sign cannot mean that he must see her <b>face</b>. It is enough that the witness, being in her presence, <b>saw the act of execution</b> (her hand signing) — e.g. through a <i>chick</i> (bamboo blind) not lined with cloth — and <b>identified her</b> by some reliable means, such as recognising her <b>voice</b> with which he was well acquainted (<i>Padarath Halwai v. Ram Narain</i>, PC 1915). If a <i>tat</i> (opaque screen) through which nothing could be seen was used, the witness could not have “seen” execution; but he might still attest by receiving her <b>personal acknowledgment</b> (post-1926 definition), provided he can identify her voice and she is in his presence when he signs. The Privy Council’s pragmatic approach prevents the rules of attestation from making it “extremely difficult” for pardanashin women to deal with property (Exam Capsule).</p>
+<h3>8.2 The separate equitable doctrine protecting pardanashin executants</h3>
+<p>Independently of attestation, a deed executed by a pardanashin woman (and, by extension, by illiterate or otherwise disadvantaged executants) will be upheld only if the party relying on it proves that (i) it was <b>explained to her</b> and she <b>understood</b> its nature and effect, (ii) she executed it with <b>free and independent will</b>, preferably with <b>independent advice</b>, and (iii) there was no fraud or undue influence — <i>Farid-un-nisa v. Mukhtar Ahmad</i> (1925) 52 IA 342; <i>Kharbuja Kuer v. Jangbahadur Rai</i>, AIR 1963 SC 1203 (the doctrine applies to pardanashin women proper, not to every woman who merely observes some seclusion). The Exam Capsule notes a case where a deed written in English, unfamiliar to executant and witnesses and not explained, was held not properly executed/attested. Attestation by respectable independent persons who saw the deed explained is strong evidence on these points, though attestation itself does not certify understanding. Relatedly, <b>s.16(3) Contract Act</b> shifts the burden to the person in a position to dominate the will where the transaction appears unconscionable; and <b>s.111 Evidence Act</b> (s.114 BSA) places the burden of proving good faith on the party in active confidence.</p>
+
+<!-- ============================================================ -->
+<h2 id="p9">9. Attestation distinguished from execution, registration and identification</h2>
+<table>
+<tr><th>Concept</th><th>Who</th><th>What it establishes</th><th>Statute</th><th>Can one act count as another?</th></tr>
+<tr><td><b>Execution</b></td><td>The party (executant) or his authorised representative</td><td>Assent to and adoption of the instrument as his act</td><td>General law; s.3 TPA (“sign or affix his mark”)</td><td>Executant cannot attest his own deed</td></tr>
+<tr><td><b>Attestation</b></td><td>Two or more independent witnesses</td><td>That the executant signed/acknowledged voluntarily in their presence</td><td>s.3, s.59, s.123 TPA; s.63 Succession Act</td><td>—</td></tr>
+<tr><td><b>Registration</b></td><td>Registering officer (Sub-Registrar)</td><td>Public record of the instrument; admission of execution before a public officer; notice to the world (s.3 TPA Expl. I)</td><td>Registration Act ss.17, 32–35, 58–60</td><td>Registrar’s signature ≠ attestation unless animus attestandi + presence proved (<i>Abdul Jabbar</i>); registration cannot cure absence of attestation</td></tr>
+<tr><td><b>Identification</b></td><td>Identifying witnesses before Sub-Registrar</td><td>That the person admitting execution is the person he claims to be</td><td>Registration Act ss.34(3), 35, 58</td><td>Identifier ≠ attesting witness unless animus attestandi proved (<i>Girja Datt</i>; <i>Abdul Jabbar</i>)</td></tr>
+<tr><td><b>Authentication of POA</b></td><td>Registrar/Sub-Registrar, Magistrate, Notary</td><td>That the POA was executed by the principal</td><td>Registration Act s.33; Notaries Act 1952 s.8</td><td>Different function; not attestation under TPA</td></tr>
+<tr><td><b>Admission of execution</b></td><td>Executant before Sub-Registrar</td><td>Basis for registration (s.35)</td><td>Registration Act s.35; s.60 certificate is evidence of admission</td><td>Not attestation; but a registration endorsement is admissible to prove admission of execution</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p10">10. Proof of attestation — Evidence Act ss.68–71 (BSA 2023 ss.67–70)</h2>
+<div class="box stat"><b>s.68 Evidence Act (BSA s.67) — Proof of execution of document required by law to be attested.</b> If a document is required by law to be attested, it shall not be used as evidence until <b>one attesting witness at least</b> has been called for the purpose of proving its execution, if there be an attesting witness alive, subject to the process of the Court and capable of giving evidence:
+<b>Proviso</b> — it shall not be necessary to call an attesting witness in proof of the execution of any document, <b>not being a will</b>, which has been <b>registered</b> under the Registration Act, 1908, <b>unless its execution by the person by whom it purports to have been executed is specifically denied</b>.
+<b>s.69 (BSA s.68)</b> — If no such attesting witness can be found, it must be proved that the attestation of one attesting witness at least is in his handwriting, and that the signature of the executant is in his handwriting.
+<b>s.70 (BSA s.69)</b> — Admission of execution by the party to an attested document is sufficient proof of execution <i>as against him</i>, though it be a document required by law to be attested.
+<b>s.71 (BSA s.70)</b> — If the attesting witness denies or does not recollect the execution, execution may be proved by other evidence.
+<b>s.72 (BSA s.71)</b> — An attested document not required by law to be attested may be proved as if it was unattested.</div>
+<p><b>How this links to the DU cases.</b> Mudholkar J.’s inferential reason why a party cannot attest rests on s.68: “the law requires that the testimony of parties to a document cannot dispense with the necessity of examining at least one attesting witness to prove the execution of the deed. Inferentially, therefore, it debars a party from attesting.” But “where a person is not a party to the deed there is no prohibition in law to the proof of the execution of the document by that person” — hence the lender who is not a party may attest and prove. In <i>Padarath Halwai</i> the Privy Council remanded the case precisely so that attesting witnesses could be examined, and accepted their evidence.</p>
+<div class="box note"><b>Practical sequence in a mortgage/gift suit:</b> (1) Is attestation required by law? (2) If yes and the deed is registered and execution is not <i>specifically denied</i> — no need to call an attesting witness (proviso to s.68). (3) If execution is specifically denied — call at least one attesting witness (s.68); if none available, prove handwriting (s.69); if witness turns hostile — other evidence (s.71). (4) Against the executant himself, his admission suffices (s.70). (5) The witness must prove <i>both</i> limbs: that he saw execution/received acknowledgment <i>and</i> that he signed in the executant’s presence — the second limb is often the one omitted in evidence and can be fatal (<i>Abdul Jabbar</i>, para 10).</div>
+
+<!-- ============================================================ -->
+<h2 id="p11">11. Effect of defective or absent attestation</h2>
+<ul>
+<li><b>Mortgage (≥ Rs 100) not attested by two witnesses</b> → no mortgage is created; the instrument does not transfer any interest in the property (s.59 — “can be effected <i>only</i> by”). The mortgagee is relegated to a <b>personal claim for the money</b> (a simple money decree; the deed may be usable as evidence of the debt). He gets <b>no charge</b> either — courts do not ordinarily convert a void mortgage into a charge.</li>
+<li><b>Gift of immovable property not attested</b> → gift is void; title remains with the donor (s.123); mere delivery of possession does not help (unlike movables).</li>
+<li><b>Registration does not cure</b> the defect; nor does the Sub-Registrar’s endorsement supply attestation absent animus (<i>Abdul Jabbar</i>).</li>
+<li><b>Charge (s.100)</b> — does <b>not</b> require attestation at all (<i>Abdul Jabbar</i>): a charge worth ≥ Rs 100 by act of parties needs a <b>registered</b> instrument (Reg. Act s.17(1)(b)) but no witnesses; the 1929 amendment of s.100 applied the <i>rights and liabilities</i> of a simple mortgage to a charge, not the <i>mode of creation</i> under s.59.</li>
+<li><b>Part performance (s.53-A TPA)</b> — protects a transferee in possession under a written contract; no application to a defective mortgage, and after 2001 requires a registered writing.</li>
+<li><b>Priority consequences</b> — a creditor whose security fails for want of attestation ranks as an <b>unsecured creditor</b> and shares rateably under <b>s.73 CPC</b> with other decree-holders (the respondents’ argument in <i>Abdul Jabbar</i>; it failed only because the bond was a charge, not a mortgage, and s.73(1) proviso (c) then gave the charge-holder priority).</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="p12">12. Related provisions across other Acts</h2>
+<table>
+<tr><th style="width:30%">Provision</th><th>Relevance</th></tr>
+<tr><td><b>TPA s.59</b></td><td>Mortgage ≥ Rs 100 (other than by deposit of title deeds): registered instrument signed by mortgagor + attested by ≥ 2 witnesses. In issue in all three DU cases.</td></tr>
+<tr><td><b>TPA s.58(f), s.96</b></td><td>Mortgage by deposit of title deeds (equitable mortgage) — no writing/attestation/registration needed.</td></tr>
+<tr><td><b>TPA s.100</b> (as amended by Act 20 of 1929)</td><td>Charge — provisions applicable to a simple mortgage apply “so far as may be”; does not import s.59 formalities (<i>Abdul Jabbar</i>; <i>Bapurao v. Narayan</i>, AIR 1950 Nag 117). Charge not enforceable against a bona fide transferee for value without notice.</td></tr>
+<tr><td><b>TPA s.123, s.129</b></td><td>Gift of immovables: registered + attested by ≥ 2 witnesses; Muslim gifts exempt.</td></tr>
+<tr><td><b>TPA s.3 (“notice”), Expl. I</b></td><td>An attesting witness has actual notice of execution — “a person attesting the execution of a deed cannot say that he did not know that the deed was being executed” (Exam Capsule, Topic 3); registration is constructive notice.</td></tr>
+<tr><td><b>Indian Succession Act, 1925 — ss.63, 67, 68</b></td><td>Attestation of wills (same definition); bequest to attesting witness/spouse void; attestation by a legatee does not invalidate the will (<i>Shiam Sunder Singh</i>).</td></tr>
+<tr><td><b>Indian Evidence Act, 1872 — ss.68–72, 111</b> (BSA 2023 ss.67–71, 114)</td><td>Proof of attested documents; burden in fiduciary/confidence relationships.</td></tr>
+<tr><td><b>Registration Act, 1908 — ss.17(1)(b), 32–35, 49, 58–60, 33</b></td><td>Compulsory registration; enquiry into execution and identity (s.34(3)); registration on admission (s.35(1)); endorsements (s.58); Registrar to date and sign endorsements (s.59); certificate (s.60). All discussed in <i>Abdul Jabbar</i>, para 9.</td></tr>
+<tr><td><b>Code of Civil Procedure, 1908 — s.73 &amp; proviso (c); O.XXXVII</b></td><td>Rateable distribution among decree-holders; where property is sold in execution of a decree ordering sale for discharge of an encumbrance, proceeds first go to the encumbrancer (<i>Abdul Jabbar</i>, para 16). Leave to defend on furnishing security produced the security bond in that case.</td></tr>
+<tr><td><b>Indian Contract Act, 1872 — ss.16, 19-A</b></td><td>Undue influence; presumption where party dominates will and transaction unconscionable — the mischief attestation guards against.</td></tr>
+<tr><td><b>Notaries Act, 1952; Powers of Attorney Act, 1882</b></td><td>Notarial attestation/authentication — a different, statutory certification; an attorney executing under POA is a party.</td></tr>
+<tr><td><b>Benami Transactions (Prohibition) Act, 1988 (as amended 2016)</b></td><td><i>Kumar Harish Chandra</i> involved a benami mortgage (real lender B, ostensible mortgagee C). Today such an arrangement may be a prohibited benami transaction (s.2(9)) unless within the exceptions — the real lender may be unable to sue on it (s.4). The attestation principle of the case is unaffected.</td></tr>
+<tr><td><b>Information Technology Act, 2000 — s.1(4) &amp; First Schedule</b></td><td>Electronic signatures are not permitted for wills, trusts, POAs, or any conveyance of immovable property or interest therein — so mortgage and gift deeds (and their attestation) remain paper-based.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>Leading Cases (DU Case Material, Topic 2, pp. 37–44)</h2>
+
+<div class="case" id="c1">
+<h3>CASE 1 — Kumar Harish Chandra Singh Deo v. Bansidhar Mohanty &amp; Ors.</h3>
+<div class="cite">AIR 1965 SC 1738 · Supreme Court of India · Mudholkar J. (for the Bench) · Appeal from the High Court of Orissa</div>
+<p><span class="lbl">Theme</span> Can the person who actually advances the mortgage money — but is not named as mortgagee in the deed — be one of the two attesting witnesses? <b>Party to the deed vs. party to the transaction.</b></p>
+
+<h4>Facts</h4>
+<ul>
+<li>On <b>30 April 1945</b> the appellant (Kumar Harish Chandra Singh Deo) executed a <b>mortgage deed for Rs 15,000</b> in favour of <b>Jagannath Debata (respondent 2)</b>.</li>
+<li>The <b>money was in fact advanced by Bansidhar Mohanty (respondent 1)</b>; the deed was taken <b>benami</b> in the name of respondent 2 — a nominal mortgagee — because respondent 1, for reasons of his own, did not wish to appear as the lender.</li>
+<li>The deed bore only <b>two attesting witnesses</b>, and <b>one of them was respondent 1</b>, the real lender.</li>
+<li>Respondent 1 sued on the mortgage; the appellant’s wife, <b>Dr. Jyotsna Dei</b>, was impleaded (defendant 2) and remained <i>ex parte</i>.</li>
+<li>The appellant resisted the suit contending that the mortgage was <b>not validly attested</b> because respondent 1 — the real party interested — could not be an attesting witness; deducting him, only one witness remained, so the mortgage failed under s.59.</li>
+<li>The trial court decreed the suit; the <b>Orissa High Court affirmed</b>, holding that respondent 1, not being a party to the deed, could attest. The appellant came to the Supreme Court by certificate.</li>
+</ul>
+
+<h4>Issue</h4>
+<p>Whether a person who has advanced the money under a mortgage deed executed in favour of another person (benami) — i.e., a party to the <i>transaction</i> but not to the <i>deed</i> — is competent to be an attesting witness within s.59 read with s.3 TPA.</p>
+
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (mortgagor)</h4>
+<ul>
+<li>The object of attestation is to secure independent witnesses to execution; the real lender is the person most interested and least independent — precisely the person against whom the executant needs protection.</li>
+<li>Lord Selborne in <i>Seal v. Claridge</i>: attestation implies a person “who stands by but is <b>not a party to the transaction</b>.” Respondent 1 was the real party to the transaction; the benami mortgagee was a mere name-lender.</li>
+<li>Calcutta authorities (<i>Peary Mohan Maiti</i>; <i>Sarur Jigar Begum</i>) and Madras (<i>Gomathi Ammal</i>) hold that a party cannot attest; English authority (<i>Freshfield v. Reed</i>) is to the same effect. The substance, not the form, should govern — look at who the real mortgagee is.</li>
+<li>Consequently only one valid attesting witness existed; the deed was not “attested by at least two witnesses” and no mortgage came into existence.</li>
+</ul></div>
+<div><h4>Respondent 1 (real lender)</h4>
+<ul>
+<li>Neither s.59 nor the definition in s.3 lays down any qualification for, or disqualification of, an attesting witness. Courts cannot add words to the statute.</li>
+<li>The bar on a “party” attesting is only <i>inferential</i> (from s.68 Evidence Act) and applies to a <b>party to the deed</b>. Respondent 1 was not a party to the deed; his signature appears only as a witness.</li>
+<li>Bombay High Court in <i>Balu Ravji Gharat v. Gopal Ravji</i>, 12 Ind Cas 531, after examining English cases (<i>Swire v. Bell</i>; <i>Wickham v. Marquis of Bath</i>) held that a person interested in the transaction but not a party to the deed can attest; Oudh followed in <i>Durga Din v. Suraj Bakhsh</i>, AIR 1931 Oudh 285.</li>
+<li>Interest in the transaction affects the <i>weight</i> of the witness’s testimony, not his <i>competence</i> to attest; the executant is protected by the requirement that he be able to prove execution through a witness who is not a party.</li>
+</ul></div></div>
+
+<h4>Decision and reasoning (Mudholkar J.)</h4>
+<ol>
+<li><b>No express bar.</b> “Section 59 does not, in terms, say who can be an attesting witness … nor does the definition of ‘attested’ in s.3.” The Court noted that the definition, inserted in 1926 and made retrospective in 1927, is in language similar to s.63 Succession Act and simply lays down what the witness must have seen/received and that he must sign in the executant’s presence.</li>
+<li><b>Object of attestation.</b> “The object of attestation is to protect the executant from being required to execute a document by the other party thereto by force, fraud or undue influence.” The presence of a disinterested bystander serves this object.</li>
+<li><b>Why a party to the deed cannot attest — the inferential reason.</b> Section 68 Evidence Act requires that a document required by law to be attested shall not be used in evidence until one attesting witness at least has been called. Since “the testimony of parties to a document cannot dispense with the necessity of examining at least one attesting witness … Inferentially, therefore, it debars a party from attesting.” The English cases <i>Seal v. Claridge</i> and <i>Freshfield v. Reed</i> and the Indian cases <i>Peary Mohan Maiti</i>, <i>Sarur Jigar Begum</i>, <i>Gomathi Ammal</i> all concern <b>parties to the deed</b> and are correct to that extent.</li>
+<li><b>Party to the transaction distinguished.</b> “Where a person is not a party to the deed there is no prohibition in law to the proof of the execution of the document by that person.” Lord Selborne’s phrase “not a party to the transaction” must be read in the context of that case, where the person was a party to the deed. The Court <b>approved the Bombay view</b> in <i>Balu Ravji Gharat</i> and the Oudh decision in <i>Durga Din</i>: a person who is a party to the transaction but not to the deed is a competent attesting witness.</li>
+<li><b>Application.</b> Respondent 1 was not a party to the mortgage deed; the deed was in favour of respondent 2. Respondent 1’s attestation was therefore valid; there were two attesting witnesses; the mortgage was validly executed under s.59. <b>Appeal dismissed with costs.</b></li>
+</ol>
+
+<h4>Principles</h4>
+<div class="box ok">
+<ol>
+<li>The TPA prescribes no qualification for an attesting witness; disqualifications are only those inferable from the statutory scheme.</li>
+<li>A <b>party to the deed</b> cannot be an attesting witness (inferred from s.68 Evidence Act and from the very concept of “bearing witness”).</li>
+<li>A <b>party to the transaction who is not a party to the deed</b> — e.g., the real lender in a benami mortgage, a guarantor, a person paying the consideration — <b>can</b> validly attest. His interest goes to credibility, not competence.</li>
+<li>The object of attestation is protection of the executant against force, fraud and undue influence by the other party — the test of competence is read in light of this object.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> Ravi lends Rs 20 lakh to Sohan on a mortgage of Sohan’s Rohini plot, but the deed names Ravi’s brother Mohan as mortgagee. Ravi and a neighbour sign as witnesses in Sohan’s presence after watching him sign. <b>Valid attestation</b> — Ravi is not a party to the deed. Had Ravi himself been named as mortgagee and signed the deed as such, his signature as witness would not count and the mortgage would fail for want of a second witness. (Today, the benami arrangement itself may run into the Benami Transactions (Prohibition) Act, 1988 — a separate issue.)</div>
+</div>
+
+<!-- ============================================================ -->
+<div class="case" id="c2">
+<h3>CASE 2 — M.L. Abdul Jabbar Sahib v. H. Venkata Sastri &amp; Sons &amp; Ors.</h3>
+<div class="cite">AIR 1969 SC 1147 : (1969) 1 SCC 573 · Supreme Court of India · Bachawat J. (for Bachawat, Mitter &amp; Hegde JJ.) · Appeals from the Madras High Court</div>
+<p><span class="lbl">Theme</span> What is attestation? Do the signatures of the <b>Sub-Registrar</b> and <b>identifying witnesses</b> on the registration endorsement amount to attestation? Does a <b>charge</b> under s.100 require attestation?</p>
+
+<h4>Facts</h4>
+<ul>
+<li>The appellant (Abdul Jabbar Sahib) filed <b>C.S. No. 56 of 1953</b> on the Original Side of the <b>Madras High Court</b> on <b>23 February 1953</b> against <b>Hajee Ahmed Batcha</b> (the debtor) on <b>promissory notes</b> under summary procedure (O.XXXVII CPC).</li>
+<li>On <b>9 March 1953</b> the debtor was granted <b>leave to defend on condition of furnishing security for Rs 50,000</b>.</li>
+<li>On <b>26 March 1953</b> the debtor executed a <b>security bond in favour of the Registrar of the High Court</b>, <b>charging certain immovable properties</b> for Rs 50,000 towards satisfaction of any decree. The bond was <b>registered on 29 March 1953</b>.</li>
+<li>Signatures on the bond: <b>B. Somnath Rao</b> signed as the <b>only attesting witness</b>; <b>K.S. Narayana Iyer</b>, advocate, <b>explained</b> the bond to the executant and signed as having done so; before the <b>Sub-Registrar D.W. Kittoo</b>, <b>Sankaranarayana and Kaki Abdul Aziz</b> signed as <b>identifying witnesses</b>; the Sub-Registrar signed the registration endorsements.</li>
+<li>On <b>19 March 1954</b> <b>Ramaswami J.</b> passed a <b>decree for Rs 49,891-2-0</b> with interest and, on the appellant’s oral prayer, <b>declared a charge</b> on the properties under the bond. The properties were <b>sold in execution on 29–30 May 1954</b>.</li>
+<li>The respondents (<b>H. Venkata Sastri &amp; Sons; Gowramma; Rama Sastri</b>) were other decree-holders against the same debtor; they applied for <b>rateable distribution</b> of the sale proceeds under <b>s.73 CPC</b>, contending the appellant had no valid charge.</li>
+</ul>
+<h4>Procedural history in the Madras High Court</h4>
+<ul>
+<li><b>Single Judge (Balakrishna Ayyar J.)</b> dismissed the respondents’ applications, following <i>Veerappa Chettiar v. Subramania Ayyar</i>, AIR 1929 Mad 1 (registering officer and identifying witnesses may be treated as attesting witnesses).</li>
+<li><b>Division Bench</b> referred the correctness of <i>Veerappa Chettiar</i> to a <b>Full Bench</b>, which held that the signatures of the registering officer and identifying witnesses can be treated as attestation <b>only if</b> (1) they saw execution or received a personal acknowledgment, (2) they signed in the executant’s presence, and (3) they had the <i>animus attestandi</i>; their mere signatures on the endorsements are not enough.</li>
+<li>The <b>Division Bench</b> then held that the bond required attestation, that it was not duly attested (no proof of the three conditions), that the charge was therefore invalid, and directed <b>rateable distribution</b>. The appellant appealed to the Supreme Court by certificate.</li>
+</ul>
+
+<h4>Issues</h4>
+<ol>
+<li>What constitutes attestation under s.3 TPA — and were the signatures of the Sub-Registrar and identifying witnesses attestation?</li>
+<li>Was the security bond “duly attested”?</li>
+<li>Does an instrument creating a <b>charge</b> under s.100 TPA require attestation?</li>
+<li>Was the appellant entitled to priority over other decree-holders?</li>
+</ol>
+
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (charge-holder)</h4>
+<ul>
+<li>The bond bore signatures of the Sub-Registrar and two identifying witnesses in addition to Somnath Rao; following <i>Veerappa Chettiar</i>, these should be treated as attesting witnesses, making the attestation sufficient.</li>
+<li>In any event, the bond created a <b>charge</b>, not a mortgage; <b>s.100 does not require attestation</b> — the 1929 amendment to s.100 applies to charges only the provisions relating to a simple mortgage “so far as may be”, i.e., the <i>rights and liabilities</i>, not the <i>formalities of creation</i> in s.59 (<i>Bapurao v. Narayan</i>, AIR 1950 Nag 117). The bond was registered, satisfying s.17(1)(b) Registration Act.</li>
+<li>The decree of Ramaswami J. itself declared and created a charge; the sale was in execution of a decree ordering sale for discharge of the encumbrance; under <b>s.73(1) proviso (c) CPC</b> the proceeds go first to the encumbrancer.</li>
+</ul></div>
+<div><h4>Respondents (rival decree-holders)</h4>
+<ul>
+<li>“To attest” has a settled meaning: a witness must see execution/receive acknowledgment and sign in the executant’s presence <i>animo attestandi</i>. The Sub-Registrar signs under statutory duty (Reg. Act s.59) and identifiers sign to certify identity — neither intends to attest; there was <b>no evidence</b> that they saw execution or signed in the executant’s presence (registration occurred three days after execution).</li>
+<li>Hence the bond had <b>one attesting witness only</b>, and was invalid as a security under s.59.</li>
+<li>Since 1929, s.100 makes the provisions applicable to simple mortgages applicable to charges; a simple mortgage requires attestation; therefore a charge does too (<i>Viswanadhan v. Menon</i>, AIR 1939 Mad 202; <i>Shiva Rao v. Shanmugasundaraswami</i>, AIR 1940 Mad 140).</li>
+<li>With no valid charge, the appellant was an unsecured decree-holder entitled only to rateable distribution under s.73 CPC.</li>
+</ul></div></div>
+
+<h4>Decision and reasoning (Bachawat J.)</h4>
+<ol>
+<li><b>Meaning of attestation (paras 7–8).</b> “To attest is to bear witness to a fact.” The essential conditions are: (1) two or more witnesses have seen the executant sign or have received from him a personal acknowledgment of his signature; (2) with a view to attest or bear witness to this fact each has signed the instrument in the presence of the executant. “It is essential that the witness should have put his signature <i>animo attestandi</i>, that is, for the purpose of attesting that he has seen the executant sign or has received from him a personal acknowledgment of his signature. If a person puts his signature on the document for some other purpose, e.g., to certify that he is a scribe or an identifier or a registering officer, he is not an attesting witness.” The Court cited Jarman and Theobald on Wills, <i>Girja Datt Singh</i> (AIR 1955 SC 346), <i>Abinash Chandra</i> (scribe), <i>Shiam Sunder Singh</i> (PC — legatee signing in token of consent), and <i>Sunder Bahadur Singh</i> (PC — registrar/identifiers).</li>
+<li><b>Registration signatures (para 9).</b> Under Reg. Act s.34(3) the registering officer enquires whether the document was executed by the persons by whom it purports to be executed and satisfies himself of identity; under s.35(1) he registers if execution is admitted; under s.58 he endorses the admission and the signatures of identifiers; under s.59 he affixes his own date and signature. “Prima facie, the registering officer puts his signature on the document in discharge of his statutory duty under s.59 … and not for the purpose of attesting it or certifying that he has received from the executant a personal acknowledgment of his signature.” Likewise identifying witnesses sign to authenticate their identification. The Full Bench formulation (three conditions) was <b>correct</b>; <i>Veerappa Chettiar</i> was wrong insofar as it treated such signatures as attestation without proof.</li>
+<li><b>Application (para 10).</b> It was <b>not proved</b> that the Sub-Registrar or the identifying witnesses signed in the presence of the executant or with the intention to attest; the executant admitted execution before the Sub-Registrar but there was no evidence the officer signed in his presence. “The bond was, therefore, attested by <b>one witness only</b>.”</li>
+<li><b>Does a charge need attestation? (paras 11–14) — NO.</b> Section 100 says that where immovable property is made security for payment of money without a mortgage, “all the provisions hereinbefore contained which apply to a simple mortgage shall, so far as may be, apply to such charge.” Before 1929 the words were “as to a mortgagor” etc.; the 1929 amendment was intended to make the <b>rights and liabilities</b> of the parties to a simple mortgage applicable to a charge — it did <b>not</b> attract the <b>formalities of s.59</b>. A charge can be created even <b>orally</b> (subject to the Registration Act where in writing, s.17(1)(b)); it may arise by operation of law; requiring attestation would be incongruous. <i>Bapurao v. Narayan</i> (Nagpur) approved; <i>Viswanadhan</i> and <i>Shiva Rao</i> (Madras) <b>overruled</b>. The registered bond, though attested by one witness, therefore <b>validly created a charge</b>.</li>
+<li><b>Decree and priority (paras 15–16).</b> The decree of Ramaswami J. itself created/declared a charge over the properties; the properties were sold in execution of that decree; under s.73(1) proviso (c) CPC, where property liable to be sold in execution of a decree is subject to a mortgage or charge, the proceeds are first applied to the encumbrance. The appellant was entitled to priority; rival decree-holders could not claim rateable distribution.</li>
+<li><b>Result.</b> Appeals <b>allowed</b>; the Division Bench orders set aside; the Single Judge’s orders dismissing the rateable-distribution applications <b>restored</b>.</li>
+</ol>
+
+<h4>Principles</h4>
+<div class="box ok">
+<ol>
+<li><b>Definition:</b> to attest is to bear witness to a fact; two conditions (perceiving execution/acknowledgment + signing in executant’s presence) plus <b>animus attestandi</b>.</li>
+<li>Signatures put for another purpose — <b>scribe, identifier, registering officer, consenting legatee, explaining advocate</b> — are not attestation <i>unless</i> it is proved that the signatory saw execution/received acknowledgment, signed in the executant’s presence, and intended to attest. Their mere presence on the registration endorsement is insufficient.</li>
+<li>The registration process (Reg. Act ss.34, 35, 58, 59) is distinct from attestation; registration does not supply missing attestation.</li>
+<li><b>A charge under s.100 needs no attestation</b>; s.100 imports the incidents of a simple mortgage, not the mode of creation under s.59.</li>
+<li>A decree may itself create a charge; an encumbrancer has priority under s.73(1) proviso (c) CPC.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> A registered gift deed of a Delhi house is signed by the donor, one witness, the scribe, two identifiers before the Sub-Registrar and the Sub-Registrar himself. Execution is specifically denied by the donor’s heirs. Unless the donee proves that at least one of the scribe/identifiers/Sub-Registrar saw the donor sign or received her acknowledgment, signed in her presence <i>and</i> intended thereby to attest, the deed has only one attesting witness and the gift is void under s.123 — exactly the <i>Abdul Jabbar</i> analysis. Had the same document merely created a <b>charge</b> (e.g., for maintenance), it would be valid on registration alone.</div>
+</div>
+
+<!-- ============================================================ -->
+<div class="case" id="c3">
+<h3>CASE 3 — Padarath Halwai v. Ram Narain Upadhia &amp; Ors.</h3>
+<div class="cite">AIR 1915 PC 21 : (1915) 42 IA 163 · Privy Council · Sir John Edge (for Lord Shaw, Sir John Edge and Mr. Ameer Ali) · Appeal from the High Court at Allahabad</div>
+<p><span class="lbl">Theme</span> Mode of attestation where the executants are <b>pardanashin ladies</b> behind a curtain — what does “seeing the executant sign” mean?</p>
+
+<h4>Facts</h4>
+<ul>
+<li>On <b>25 June 1892</b> two pardanashin Muslim ladies, <b>Musammat Niamat Bibi</b> and <b>Musammat Kamar-un-nisa Bibi</b>, executed a <b>mortgage of village Baragaon</b> (district Jaunpur) to secure <b>Rs 66,809</b> in favour of the plaintiffs’ predecessor. The deed was registered.</li>
+<li>On <b>29 November 1904</b> the mortgagees (Ram Narain Upadhia and others) sued in the Court of the Subordinate Judge of Jaunpur for sale on the mortgage. The defendants included <b>Padarath Halwai</b>, a subsequent transferee/purchaser of the mortgaged property.</li>
+<li>The Subordinate Judge decreed the suit; the <b>Allahabad High Court affirmed on 29 March 1909</b>.</li>
+<li>Before the Privy Council, the appellant for the <b>first time</b> took the plea that the mortgage had <b>not been attested as required by s.59</b>, because the ladies executed the deed behind a <i>parda</i> and the attesting witnesses could not have <b>seen</b> them sign. The Board <b>remanded</b> the case for a finding on this issue after evidence.</li>
+<li>On remand the evidence showed: the ladies sat in an <b>ante-room behind a <i>chick</i></b> (a bamboo screen) which was <b>not lined with cloth</b>; the attesting witnesses, who were <b>well acquainted with the ladies and knew their voices</b>, stood on the other side; they <b>saw the hands of the ladies</b> as they signed the deed and <b>heard them</b> acknowledge it; the scribe and witnesses then signed in their presence. The appellant alleged that an opaque <b><i>tat</i></b> (sackcloth) screen had been used through which nothing could be seen; this was disbelieved.</li>
+</ul>
+
+<h4>Issue</h4>
+<p>Whether the mortgage executed by pardanashin ladies behind a curtain was “attested by at least two witnesses” within s.59 TPA — i.e., whether the witnesses had, in law, <i>seen</i> the executants sign.</p>
+
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (Padarath Halwai)</h4>
+<ul>
+<li>Under <i>Shamu Patter</i> (PC 1912, then the governing law) the attesting witness must have actually <b>seen the executant sign</b>; acknowledgment was insufficient.</li>
+<li>The ladies were behind a screen; the witnesses could not identify by sight who was signing — they may have seen a hand, but not whose hand. Seeing a hand through a screen is not seeing the executant sign.</li>
+<li>The screen was an opaque <i>tat</i>, so even the hands were not visible; the whole attestation rested on hearsay/voice.</li>
+<li>Therefore the deed was not attested; no mortgage arose; the subsequent purchaser took free of it.</li>
+</ul></div>
+<div><h4>Respondents (mortgagees)</h4>
+<ul>
+<li>The statute requires that the witness see the <b>act of signing</b>; it does not require that he see the executant’s face. The witnesses saw the hands sign through the unlined <i>chick</i>.</li>
+<li>Identification of pardanashin executants is necessarily by <b>voice</b> and circumstances; the witnesses knew the ladies well and recognised their voices; the ladies also acknowledged execution.</li>
+<li>Requiring pardanashin women to unveil before male witnesses would make it practically impossible for them to deal with their property — the law should not be construed to produce that result.</li>
+<li>The plea was raised for the first time after two concurrent decrees; the evidence on remand established due attestation.</li>
+</ul></div></div>
+
+<h4>Decision and reasoning (Sir John Edge)</h4>
+<ol>
+<li>The Board accepted the findings on remand: the screen was an <b>unlined chick</b> through which the witnesses <b>saw the ladies’ hands</b> in the act of signing; they <b>knew the ladies’ voices</b> and were in a position to identify them; they signed in the ladies’ presence.</li>
+<li>Since the witnesses “<b>saw the ladies sign</b>” — the act of execution — and identified them by voice, the requirement of attestation was satisfied. It is <b>not necessary that the witness should see the face</b> of a pardanashin executant; it suffices that he, being present, saw the execution and could identify the executant by adequate means.</li>
+<li>The mortgage was held <b>duly attested and valid under s.59</b>; the decree for sale was <b>affirmed</b> and the <b>appeal dismissed</b>.</li>
+</ol>
+
+<h4>Principles</h4>
+<div class="box ok">
+<ol>
+<li>“Seeing the executant sign” means seeing the <b>act of execution</b>; for a pardanashin lady it is enough that the witness saw her hand sign through a screen and identified her by voice or other reliable means.</li>
+<li>Rules of attestation are applied <b>pragmatically</b>, so that customs of seclusion do not deprive women of the capacity to deal with property.</li>
+<li>After the 1926 amendment, attestation of a pardanashin executant may also be by <b>personal acknowledgment</b> (voice through the curtain), provided the witness then signs in her presence — thus the <i>Padarath</i> route (seeing the hand) and the acknowledgment route both exist today.</li>
+<li>A plea of non-attestation may be entertained even at a late stage but must be proved; the burden is on the party impeaching a registered deed to establish the facts (here, the alleged opaque <i>tat</i>).</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> Begum Sultana, who observes strict <i>parda</i>, mortgages her Old Delhi haveli. She signs in the zenana behind a translucent blind; two family friends who have known her for years watch her hand sign, hear her say “I have signed the deed,” and then sign as witnesses while she remains behind the blind. Attestation is valid (<i>Padarath Halwai</i>; also acknowledgment mode under s.3). If instead a thick curtain was used and the witnesses merely heard a voice they could not identify, attestation fails. Separately, the mortgagee must be ready to prove that the deed was explained to and understood by her (<i>Farid-un-nisa</i>; <i>Kharbuja Kuer</i>).</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p13">13. Precedent map</h2>
+<svg viewBox="0 0 1000 420" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4a2c82"/></marker></defs>
+<rect x="380" y="15" width="240" height="50" rx="10" fill="#4a2c82"/><text x="500" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">s.3 TPA "attested" (1926/27)</text>
+<line x1="500" y1="65" x2="500" y2="100" stroke="#4a2c82" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="20" y="105" width="300" height="70" rx="10" fill="#e9f7ef" stroke="#0b6e4f" stroke-width="2"/><text x="170" y="130" text-anchor="middle" font-size="12" font-weight="bold">WHO may attest</text><text x="170" y="150" text-anchor="middle" font-size="11">Kumar Harish Chandra (SC 1965)</text><text x="170" y="166" text-anchor="middle" font-size="11">party to deed ✗ · party to transaction ✓</text>
+<rect x="350" y="105" width="300" height="70" rx="10" fill="#fff8e1" stroke="#c9a227" stroke-width="2"/><text x="500" y="130" text-anchor="middle" font-size="12" font-weight="bold">WHAT is attestation / animus</text><text x="500" y="150" text-anchor="middle" font-size="11">Abdul Jabbar (SC 1969)</text><text x="500" y="166" text-anchor="middle" font-size="11">registrar/identifier ≠ witness; charge needs none</text>
+<rect x="680" y="105" width="300" height="70" rx="10" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="2"/><text x="830" y="130" text-anchor="middle" font-size="12" font-weight="bold">HOW – mode (pardanashin)</text><text x="830" y="150" text-anchor="middle" font-size="11">Padarath Halwai (PC 1915)</text><text x="830" y="166" text-anchor="middle" font-size="11">seeing the hand + voice = "seen sign"</text>
+<line x1="500" y1="100" x2="170" y2="105" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="100" x2="830" y2="105" stroke="#4a2c82" stroke-width="2"/>
+<g font-size="10.5">
+<rect x="20" y="200" width="300" height="200" rx="8" fill="#fff" stroke="#0b6e4f"/>
+<text x="30" y="220" font-weight="bold">Relied on / distinguished:</text>
+<text x="30" y="238">✓ Balu Ravji Gharat (Bom, 12 Ind Cas 531)</text>
+<text x="30" y="254">✓ Durga Din v. Suraj Bakhsh (AIR 1931 Oudh 285)</text>
+<text x="30" y="270">✓ Swire v. Bell; Wickham v. Marquis of Bath (Eng.)</text>
+<text x="30" y="290">Party-to-deed bar (explained):</text>
+<text x="30" y="306">• Seal v. Claridge (1881) 7 QBD 516</text>
+<text x="30" y="322">• Freshfield v. Reed (1842) 9 M &amp; W 404</text>
+<text x="30" y="338">• Peary Mohan Maiti (14 CWN 1046)</text>
+<text x="30" y="354">• Sarur Jigar Begum (ILR 37 Cal 525)</text>
+<text x="30" y="370">• Gomathi Ammal (AIR 1954 Mad 126)</text>
+<text x="30" y="388">Basis: s.68 Evidence Act</text>
+<rect x="350" y="200" width="300" height="200" rx="8" fill="#fff" stroke="#c9a227"/>
+<text x="360" y="220" font-weight="bold">Relied on:</text>
+<text x="360" y="238">✓ Girja Datt Singh (AIR 1955 SC 346)</text>
+<text x="360" y="254">✓ Abinash Chandra (AIR 1929 Cal 123) – scribe</text>
+<text x="360" y="270">✓ Shiam Sunder Singh (AIR 1927 PC 248) – legatee</text>
+<text x="360" y="286">✓ Sunder Bahadur Singh (AIR 1939 PC 117)</text>
+<text x="360" y="302">✓ Bapurao v. Narayan (AIR 1950 Nag 117) – charge</text>
+<text x="360" y="322" font-weight="bold">Limited / overruled:</text>
+<text x="360" y="338">✗ Veerappa Chettiar (AIR 1929 Mad 1)</text>
+<text x="360" y="354">✗ Viswanadhan (AIR 1939 Mad 202)</text>
+<text x="360" y="370">✗ Shiva Rao (AIR 1940 Mad 140)</text>
+<text x="360" y="388">Statutes: Reg. Act ss.34,35,58,59; s.73 CPC</text>
+<rect x="680" y="200" width="300" height="200" rx="8" fill="#fff" stroke="#2b6cb0"/>
+<text x="690" y="220" font-weight="bold">Context:</text>
+<text x="690" y="238">• Shamu Patter (1912) 39 IA 218 – strict "seen" rule</text>
+<text x="690" y="254">  → legislatively overruled by Act 27/1926</text>
+<text x="690" y="274" font-weight="bold">Pardanashin doctrine (separate):</text>
+<text x="690" y="290">• Farid-un-nisa v. Mukhtar Ahmad (1925) 52 IA 342</text>
+<text x="690" y="306">• Kharbuja Kuer v. Jangbahadur (AIR 1963 SC 1203)</text>
+<text x="690" y="322">• s.16 Contract Act; s.111 Evidence Act</text>
+<text x="690" y="342" font-weight="bold">Take-away:</text>
+<text x="690" y="358">Screen must be see-through (chick) not opaque (tat);</text>
+<text x="690" y="374">identification by voice acceptable; post-1926 the</text>
+<text x="690" y="390">acknowledgment mode gives a second route.</text>
+</g></svg>
+
+<!-- ============================================================ -->
+<h2 id="p14">14. Master tables</h2>
+<h3>14.1 Situations — valid or invalid attestation?</h3>
+<table>
+<tr><th style="width:55%">Situation</th><th>Result</th><th>Why</th></tr>
+<tr><td>Mortgagor signs; two neighbours watch and sign in his presence</td><td class="kw" style="color:#0b6e4f">Valid</td><td>Classic s.3(i)</td></tr>
+<tr><td>Mortgagor signs at home alone; next day shows the deed to W1 and says “this is my signature”; W1 signs then and there; later W2 does likewise separately</td><td style="color:#0b6e4f"><b>Valid</b></td><td>Personal acknowledgment; witnesses need not be together; each signed in executant’s presence</td></tr>
+<tr><td>Same, but W2 signs after the mortgagor has left the room</td><td style="color:#b23a48"><b>Invalid</b> (only one witness)</td><td>Not signed “in the presence of the executant”</td></tr>
+<tr><td>Mortgagee named in the deed signs also as a witness</td><td style="color:#b23a48"><b>Invalid</b> as to him</td><td>Party to the deed (<i>Seal v. Claridge</i>; <i>Kumar Harish</i>)</td></tr>
+<tr><td>Real lender in a benami mortgage (not named in deed) signs as witness</td><td style="color:#0b6e4f"><b>Valid</b></td><td><i>Kumar Harish Chandra</i></td></tr>
+<tr><td>Deed signed by executant + one witness + Sub-Registrar + two identifiers; no evidence of animus/presence</td><td style="color:#b23a48"><b>Invalid</b> (one witness)</td><td><i>Abdul Jabbar</i></td></tr>
+<tr><td>Same, but identifier deposes he watched execution, signed in executant’s presence intending to witness it</td><td style="color:#0b6e4f"><b>Valid</b></td><td>Full Bench test approved in <i>Abdul Jabbar</i>; <i>Girja Datt</i></td></tr>
+<tr><td>Scribe writes the deed, watches execution and signs at foot “scribe”</td><td style="color:#b23a48"><b>Not attestation</b> prima facie</td><td><i>Abinash Chandra</i>; rebuttable by proof of animus</td></tr>
+<tr><td>Pardanashin lady signs behind unlined <i>chick</i>; witnesses see hand, know voice, sign in her presence</td><td style="color:#0b6e4f"><b>Valid</b></td><td><i>Padarath Halwai</i></td></tr>
+<tr><td>Witnesses sign the blank deed first; executant signs later and never acknowledges to them</td><td style="color:#b23a48"><b>Invalid</b></td><td>Attestation must follow execution</td></tr>
+<tr><td>Blind executant directs son to sign for him; two witnesses watch the son sign and sign in father’s presence</td><td style="color:#0b6e4f"><b>Valid</b></td><td>s.3(ii): another person signing in presence and by direction</td></tr>
+<tr><td>Instrument of charge / sale deed / lease signed with no witnesses</td><td style="color:#0b6e4f"><b>Valid</b></td><td>Attestation not required (<i>Abdul Jabbar</i>; ss.54, 100, 107)</td></tr>
+<tr><td>Will attested by the sole legatee and one stranger</td><td style="color:#0b6e4f"><b>Will valid</b>, legacy void</td><td>Succession Act s.67</td></tr>
+</table>
+
+<h3>14.2 Comparative chart — TPA s.3 vs Succession Act s.63 vs English Wills Act s.9</h3>
+<table>
+<tr><th>Point</th><th>TPA s.3 (mortgage/gift)</th><th>Succession Act s.63(c) (wills)</th><th>Wills Act 1837 (England) s.9</th></tr>
+<tr><td>Number of witnesses</td><td>Two or more</td><td>Two or more</td><td>Two or more</td></tr>
+<tr><td>Acknowledgment mode</td><td>Yes (since 1926)</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Witnesses present together?</td><td>Not necessary</td><td>Not necessary</td><td>Must be present at the same time when testator signs/acknowledges</td></tr>
+<tr><td>Witness signs in executant’s presence?</td><td>Yes, essential</td><td>Yes, essential</td><td>Yes</td></tr>
+<tr><td>Form</td><td>None prescribed</td><td>None prescribed</td><td>None prescribed</td></tr>
+<tr><td>Interested witness</td><td>Competent if not party to deed</td><td>Competent; but gift to him/spouse void (s.67)</td><td>Competent; gift void (s.15)</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p15">15. DU Previous Year Questions — model answers</h2>
+
+<div class="pyq">
+<h3>PYQ 1 — DU LL.B. II Term, LB-204, May/June 2025, Q.2(a) [10 marks]</h3>
+<p><b>“Attestation by a ‘party to a deed’ is invalid; however attestation by a person who is not a party to the deed but a ‘party to the transaction’ is permissible.” Discuss in the light of decided case law.</b></p>
+<div class="ans">
+<p><b>Introduction.</b> Section 3 TPA defines “attested”: two or more witnesses, each of whom has seen the executant sign/affix his mark (or seen another sign by his direction) or received his personal acknowledgment, and each of whom has signed in the executant’s presence; no form is needed and the witnesses need not be present together. Attestation is mandatory for mortgages of Rs 100 and above (s.59) and gifts of immovable property (s.123). The definition, however, is silent as to <i>who</i> may attest — the question is answered by case law, principally <i>Kumar Harish Chandra Singh Deo v. Bansidhar Mohanty</i>, AIR 1965 SC 1738.</p>
+<p><b>Object of attestation.</b> As Mudholkar J. stated, the object is “to protect the executant from being required to execute a document by the other party thereto by force, fraud or undue influence.” An attesting witness “bears witness to a fact” (<i>Abdul Jabbar</i>) — he is, in Lord Selborne’s words in <i>Seal v. Claridge</i>, one who “stands by but is not a party”.</p>
+<p><b>Party to the deed cannot attest.</b> (i) Conceptually, one cannot be a witness to one’s own act; (ii) <i>Freshfield v. Reed</i>: “the party to an instrument cannot attest it”; (iii) statutorily, s.68 Evidence Act requires that a document required by law to be attested be proved by calling at least one attesting witness — the testimony of the parties cannot dispense with this; “inferentially, therefore, it debars a party from attesting” (Mudholkar J.). Indian cases: <i>Peary Mohan Maiti</i>, <i>Sarur Jigar Begum</i> (Cal), <i>Gomathi Ammal</i> (Mad). A person executing as agent/POA-holder of a party is in the same position.</p>
+<p><b>Party to the transaction but not to the deed can attest.</b> In <i>Kumar Harish Chandra</i> a mortgage for Rs 15,000 (30.4.1945) was executed in favour of Jagannath Debata, but the money was advanced by Bansidhar Mohanty, in whose favour the deed was taken benami; Bansidhar was one of only two attesting witnesses. The mortgagor argued the attestation was invalid. The Supreme Court held: neither s.59 nor s.3 prescribes any qualification; the inferential bar from s.68 applies only to parties to the deed; “where a person is not a party to the deed there is no prohibition in law to the proof of the execution of the document by that person.” Lord Selborne’s reference to a “party to the transaction” was made in a case where the person was a party to the deed and cannot be read literally. The Court approved the Bombay decision in <i>Balu Ravji Gharat v. Gopal Ravji</i> (which analysed <i>Swire v. Bell</i> and <i>Wickham v. Marquis of Bath</i>) and <i>Durga Din v. Suraj Bakhsh</i> (Oudh), and dismissed the appeal: the mortgage was validly attested.</p>
+<p><b>Rationale.</b> Interest in the transaction affects the <i>weight</i> of the witness’s evidence, not his <i>competence</i>. The executant is sufficiently protected because the person can still be examined under s.68 as an attesting witness; the mischief (a party proving his own deed) does not arise.</p>
+<p><b>Related limits.</b> Even a non-party is not an attesting witness unless he signed <i>animo attestandi</i> in the executant’s presence after seeing execution or receiving acknowledgment — the scribe, identifier and Sub-Registrar are prima facie not witnesses (<i>M.L. Abdul Jabbar Sahib v. Venkata Sastri</i>, AIR 1969 SC 1147). And a pardanashin executant may be attested through a screen if the witnesses saw the act and identified her (<i>Padarath Halwai v. Ram Narain</i>, AIR 1915 PC 21).</p>
+<p><b>Conclusion.</b> The statement correctly states the law: the disqualification is of a <i>party to the deed</i>, deduced from the concept of witnessing and s.68 Evidence Act; a person merely interested in or party to the underlying transaction, who is not a party to the instrument, is a competent attesting witness (<i>Kumar Harish Chandra</i>).</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 2 — “What is attestation? Discuss the essentials of a valid attestation. Is the signature of the Sub-Registrar or of an identifying witness on a mortgage deed sufficient attestation?” [DU, recurring]</h3>
+<div class="ans">
+<p><b>Meaning.</b> “To attest is to bear witness to a fact” (Bachawat J., <i>Abdul Jabbar</i>). Section 3 TPA (inserted 1926, retrospective by Act 10 of 1927, to overrule <i>Shamu Patter</i>) defines “attested”.</p>
+<p><b>Essentials.</b> (1) Two or more witnesses; (2) each must have <i>seen</i> the executant sign or affix his mark, or seen another sign in his presence and by his direction, or received his <i>personal acknowledgment</i>; (3) each must <i>sign</i> the instrument; (4) <i>in the presence of the executant</i>; (5) with <i>animus attestandi</i>; (6) attestation must follow execution; (7) witnesses need not be present together; (8) no particular form; (9) witness must be sui juris and not a party to the deed (<i>Kumar Harish Chandra</i>).</p>
+<p><b>Sub-Registrar / identifiers.</b> In <i>Abdul Jabbar</i> a security bond charging immovable property (26.3.1953) was attested by one witness (Somnath Rao); the appellant relied on the signatures of the Sub-Registrar and two identifying witnesses on the registration endorsement, following <i>Veerappa Chettiar</i>. The Supreme Court held that under Registration Act ss.34(3), 35(1), 58 and 59 the registering officer signs in discharge of a statutory duty and identifiers sign to certify identity; “prima facie” such signatures are not attestation. They can count only if it is proved that the signatory (a) saw execution or received a personal acknowledgment, (b) signed in the executant’s presence, and (c) did so with the intention to attest. As none of this was proved, the bond was attested by one witness only. (Similarly the scribe — <i>Abinash Chandra</i>; a legatee signing in token of consent — <i>Shiam Sunder Singh</i>; identifier — <i>Girja Datt Singh</i>.)</p>
+<p><b>Consequence and exception.</b> A mortgage or gift so attested is void for non-compliance with s.59/s.123; registration cannot cure the defect. But the instrument in <i>Abdul Jabbar</i> survived because a <b>charge</b> under s.100 does not require attestation; the 1929 amendment imports only the rights and liabilities of a simple mortgage (<i>Bapurao v. Narayan</i> approved; <i>Viswanadhan</i>, <i>Shiva Rao</i> overruled).</p>
+<p><b>Conclusion.</b> Signatures of the Sub-Registrar and identifiers are not, by themselves, attestation; they may be treated as such only on proof of perception, presence and animus attestandi.</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 3 — Problem: “A, a pardanashin lady, executed a mortgage deed of her house for Rs 5 lakh sitting behind a curtain. The two attesting witnesses, old family acquaintances, saw her hand signing through the curtain and recognised her voice, and then signed the deed while she remained behind the curtain. A’s heirs contend the mortgage is void for want of attestation as the witnesses never saw A. Decide.” [DU pattern]</h3>
+<div class="ans">
+<p><b>Issue.</b> Whether the witnesses “saw the executant sign” within s.3 TPA, so that the mortgage complies with s.59 (principal ≥ Rs 100 — registration + signature + attestation by two witnesses required).</p>
+<p><b>Law.</b> <i>Padarath Halwai v. Ram Narain</i> (PC 1915): two pardanashin ladies executed a mortgage (25.6.1892) behind an unlined <i>chick</i>; the witnesses, who knew their voices, saw their hands sign and signed in their presence. The Privy Council held the deed duly attested — the requirement is that the witness see the <b>act of execution</b> and be able to identify the executant; seeing the face is not required. After 1926, s.3 additionally permits attestation on <b>personal acknowledgment</b>, so even if the witnesses had only heard A acknowledge her signature in a voice they recognised, and signed in her presence, attestation would be good. Contrast: an opaque <i>tat</i> with an unidentifiable voice — attestation fails.</p>
+<p><b>Application.</b> The witnesses saw A’s hand sign, identified her by voice, and signed in her presence with intent to attest. All s.3 requirements are met. The heirs’ objection fails.</p>
+<p><b>Caveat.</b> The mortgagee must separately be prepared to prove — the burden being on him — that the deed was explained to and understood by A and executed of her free will (<i>Farid-un-nisa v. Mukhtar Ahmad</i>; <i>Kharbuja Kuer v. Jangbahadur Rai</i>); s.16 Contract Act and s.111 Evidence Act reinforce this. Assuming these are satisfied, the mortgage is <b>valid</b>.</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 4 — Short notes: (a) Animus attestandi; (b) Attestation vs Registration; (c) Documents requiring attestation under the TPA</h3>
+<div class="ans">
+<p><b>(a) Animus attestandi</b> — the intention to bear witness to execution. A signature on the deed put for any other purpose (scribe, identifier, registrar, consenting legatee, explaining advocate) is not attestation (<i>Abdul Jabbar</i>; <i>Girja Datt</i>; <i>Shiam Sunder Singh</i>). Intention is a fact provable by evidence; the burden is on the propounder. Jarman: the Court must be satisfied that names were written <i>animo attestandi</i>.</p>
+<p><b>(b) Attestation vs Registration</b> — attestation is by private witnesses at execution, testifying to the genuineness of execution; registration is by a public officer under the Registration Act, recording the document and the executant’s admission of execution and giving constructive notice. Both are required for mortgages ≥ Rs 100 and gifts of immovables; each is independent; registration does not supply attestation (<i>Abdul Jabbar</i>), and attestation does not dispense with registration. The proviso to s.68 Evidence Act relaxes proof for registered attested documents (other than wills) unless execution is specifically denied.</p>
+<p><b>(c) Documents requiring attestation under TPA</b> — (i) mortgage deed where principal is Rs 100 or more, other than mortgage by deposit of title deeds (s.59); (ii) mortgage below Rs 100 if effected by instrument (s.59 second para); (iii) gift of immovable property (s.123). <i>Not</i> required: sale, lease, exchange, charge (<i>Abdul Jabbar</i>), transfer of actionable claim, relinquishment, partition, agreement to sell. Outside TPA: wills (Succession Act s.63).</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 5 — Problem: “D obtained leave to defend a summary suit on furnishing security. He executed a registered bond charging his house for Rs 10 lakh, attested by only one witness, though also signed by the Sub-Registrar and two identifiers. After a decree, the house was sold. Other decree-holders claim rateable distribution, arguing the charge is void for want of attestation. Decide.” [DU pattern]</h3>
+<div class="ans">
+<p><b>Issues.</b> (1) Was the bond duly attested? (2) Does a charge require attestation? (3) Priority under s.73 CPC.</p>
+<p><b>(1)</b> Applying <i>Abdul Jabbar</i>, the Sub-Registrar and identifiers signed in discharge of statutory functions (Reg. Act ss.34, 35, 58, 59); absent proof that they saw execution/received acknowledgment, signed in D’s presence and intended to attest, they are not attesting witnesses. The bond was attested by one witness only — insufficient for s.59 if the instrument were a mortgage.</p>
+<p><b>(2)</b> But the instrument creates a <b>charge</b> (s.100 — immovable property made security without a mortgage). The Supreme Court held that s.100, even after the 1929 amendment, attracts only the provisions relating to the <i>rights and liabilities</i> of parties to a simple mortgage “so far as may be”, not the formalities of s.59; a charge may even be oral. The registered bond therefore validly created a charge notwithstanding defective attestation. Registration satisfies s.17(1)(b) Registration Act.</p>
+<p><b>(3)</b> The decree, passed on the bond, itself declared the charge; the sale was in execution of that decree; under s.73(1) proviso (c) CPC the proceeds must first satisfy the encumbrance. The rival decree-holders are not entitled to rateable distribution; the charge-holder has priority. <b>Decision:</b> charge valid; objection dismissed (<i>M.L. Abdul Jabbar Sahib v. H. Venkata Sastri &amp; Sons</i>, AIR 1969 SC 1147).</p>
+</div></div>
+
+<!-- ============================================================ -->
+<h2 id="p16">16. Rapid revision &amp; mnemonics</h2>
+<div class="mnem">ATTESTATION = 2 · S/A · S · P · A
+  2   = Two or more witnesses
+  S/A = each SAW execution (or directed signing) / or received personal ACKNOWLEDGMENT
+  S   = each SIGNED the instrument
+  P   = in the PRESENCE of the executant
+  A   = ANIMUS attestandi (intention to attest)
+  + Need not be together · No form · Must follow execution · Not a party to the deed
+
+WHAT NEEDS ATTESTATION (TPA & beyond) = "M-G-W"
+  M = Mortgage ≥ Rs 100 (s.59)   G = Gift of immovables (s.123)   W = Will (Succession Act s.63)
+  NOT: Sale · Lease · Exchange · Charge (Abdul Jabbar) · Actionable claim · Release
+
+THE THREE CASES = "K-A-P"
+  K = Kumar Harish  → WHO: party to transaction ✓, party to deed ✗ (s.68 Evidence Act)
+  A = Abdul Jabbar  → WHAT: bear witness to a fact; registrar/identifier ≠ witness; charge needs no attestation
+  P = Padarath      → HOW: pardanashin – see the hand + know the voice = "seen sign"</div>
+
+<div class="box note"><b>Ten lines to remember</b>
+<ol>
+<li>“Attested” — s.3 TPA, inserted 1926, retrospective 1927, to overrule <i>Shamu Patter</i> (PC 1912).</li>
+<li>Two witnesses; each sees signing/mark or directed signing, or receives personal acknowledgment; each signs in executant’s presence.</li>
+<li>Witnesses need not be present together; no particular form; attestation follows execution.</li>
+<li>Animus attestandi is essential — scribe, identifier, registrar, consenting legatee are not witnesses per se (<i>Abdul Jabbar</i>).</li>
+<li>Party to the deed cannot attest (s.68 Evidence Act inference); party to the transaction can (<i>Kumar Harish Chandra</i>).</li>
+<li>Pardanashin executant: witnesses may see the hand through a see-through screen and identify by voice (<i>Padarath Halwai</i>).</li>
+<li>Required for mortgage ≥ Rs 100 (s.59) and gift of immovables (s.123); not for sale, lease, exchange, charge (s.100).</li>
+<li>Registration ≠ attestation; registration cannot cure absence of attestation.</li>
+<li>Defective attestation → no mortgage/gift; lender left with a money claim; charge, however, unaffected.</li>
+<li>Proof: s.68 Evidence Act (call one attesting witness; proviso for registered non-testamentary deeds unless execution specifically denied), ss.69–71.</li>
+</ol></div>
+
+<div class="foot">Prepared from the DU LB-204 Case Material (May 2022), Topic 2 (pp. 37–44); Transfer of Property Act, 1882; Registration Act, 1908; Indian Evidence Act, 1872 / Bharatiya Sakshya Adhiniyam, 2023; Indian Succession Act, 1925; Code of Civil Procedure, 1908; supplemented by the LED Exam Capsule and DU May/June 2025 question paper. For study purposes only — verify citations against the original reports before citing in an examination or court.</div>
+
+</div><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e696131a9d0ee1',t:'MTc4OTk2NzY2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

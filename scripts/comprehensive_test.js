@@ -95,6 +95,50 @@ try {
     assert(fs.existsSync(p), `WCC Dossier file exists: ${u.file}`);
   });
 
+  // Property Law Integrity (LB-204)
+  const property = portalData.subjects['property'];
+  assert(!!property, 'Subject "property" is registered');
+  assert(property.code === 'LB-204', 'Property Law code is LB-204');
+  assert(property.units && property.units.length === 12, `Property Law has exactly 12 units (Found: ${property.units?.length})`);
+  assert(property.cases && property.cases.length >= 20, `Property Law landmark cases count >= 20 (Found: ${property.cases?.length})`);
+  assert(property.pyqs && property.pyqs.length >= 45, `Property Law PYQs with model answers >= 45 (Found: ${property.pyqs?.length})`);
+  assert(property.revisions && property.revisions.length === 12, `Property Law revision capsules === 12 (Found: ${property.revisions?.length})`);
+
+  for (let u = 1; u <= 12; u++) {
+    const uPyqs = property.pyqs.filter(p => p.unitNumber === u);
+    const uRev = property.revisions.filter(r => r.unitNumber === u);
+    assert(uRev.length > 0, `Property Law Unit ${u} has revision capsule (Found: ${uRev.length})`);
+    if (u !== 1) { // Unit 1 has cases, Unit 8 has 4 PYQs
+      assert(uPyqs.length > 0, `Property Law Unit ${u} has at least 1 PYQ (Found: ${uPyqs.length})`);
+    }
+  }
+  property.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Property Law Dossier file exists: ${u.file}`);
+  });
+
+  // Public International Law Integrity (LB-205)
+  const pil = portalData.subjects['pil'];
+  assert(!!pil, 'Subject "pil" is registered');
+  assert(pil.code === 'LB-205', 'PIL code is LB-205');
+  assert(pil.units && pil.units.length === 7, `PIL has exactly 7 units (Found: ${pil.units?.length})`);
+  assert(pil.cases && pil.cases.length >= 60, `PIL landmark cases count >= 60 (Found: ${pil.cases?.length})`);
+  assert(pil.pyqs && pil.pyqs.length >= 30, `PIL PYQs with model answers >= 30 (Found: ${pil.pyqs?.length})`);
+  assert(pil.revisions && pil.revisions.length === 7, `PIL revision capsules === 7 (Found: ${pil.revisions?.length})`);
+
+  for (let u = 1; u <= 7; u++) {
+    const uCases = pil.cases.filter(c => c.unitNumber === u);
+    const uPyqs = pil.pyqs.filter(p => p.unitNumber === u);
+    const uRev = pil.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `PIL Unit ${u} has at least 1 landmark case (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `PIL Unit ${u} has at least 1 PYQ (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `PIL Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  pil.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `PIL Dossier file exists: ${u.file}`);
+  });
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
@@ -118,8 +162,9 @@ try {
     assert(caSections.some(s => s.sec === sec), `Companies Act S. ${sec} exists`);
   });
 
-  // Check new semester 3 bare acts
+  // Check new semester bare acts
   const newActsToCheck = [
+    { id: 'tpa', name: 'Transfer of Property Act 1882', minSecs: 17 },
     { id: 'cpc', name: 'CPC 1908', minSecs: 8 },
     { id: 'lim', name: 'Limitation Act 1963', minSecs: 5 },
     { id: 'pca', name: 'PC Act 1988', minSecs: 4 },
@@ -133,6 +178,12 @@ try {
     assert(!!act, `${item.name} is registered in acts array`);
     const secs = db.sections.filter(s => s.actId === item.id);
     assert(secs.length >= item.minSecs, `${item.name} sections >= ${item.minSecs} (Found: ${secs.length})`);
+  });
+
+  const tpaSecs = ['3', '5', '6(a)', '10', '11', '13', '14', '19', '21', '43', '52', '54', '58', '60', '100', '105', '122'];
+  const tpaInDb = db.sections.filter(s => s.actId === 'tpa');
+  tpaSecs.forEach(sec => {
+    assert(tpaInDb.some(s => s.sec === sec), `TPA S. ${sec} exists in DB`);
   });
 
 } catch (err) {

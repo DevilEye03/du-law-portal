@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 3 – Notice (Sec. 3 TPA) | LB-204 Property Law | DU Notes</title>
+<style>
+  :root{--ink:#1b2a41;--accent:#4a2c82;--accent2:#b23a48;--gold:#c9a227;--soft:#f5f3fa;--line:#ddd8ea;--note:#fff8e1;--blue:#e8f1fb;--red:#fdecec;--green:#e9f7ef;--purple:#f1ebfb}
+  *{box-sizing:border-box}
+  body{font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);margin:0;background:#fbfbfd}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 34px 80px}
+  header.hero{background:linear-gradient(135deg,#4a2c82 0%,#1b2a41 100%);color:#fff;padding:40px 34px;border-radius:14px;margin-bottom:28px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  header.hero h1{margin:0 0 6px;font-size:2.1rem}
+  header.hero .sub{opacity:.92;font-size:1.05rem}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);padding:3px 10px;border-radius:20px;font-size:.85rem;margin:8px 6px 0 0}
+  h2{font-size:1.65rem;color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:6px;margin-top:54px}
+  h3{font-size:1.28rem;color:var(--ink);margin-top:34px;border-left:5px solid var(--gold);padding-left:10px}
+  h4{font-size:1.08rem;color:var(--accent2);margin:22px 0 8px}
+  p{margin:9px 0;text-align:justify}
+  ul,ol{margin:8px 0 8px 22px} li{margin:5px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95rem;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
+  th{background:var(--accent);color:#fff} tr:nth-child(even) td{background:var(--soft)}
+  .box{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0;background:#fff}
+  .note{background:var(--note);border-left:6px solid var(--gold)}
+  .stat{background:var(--blue);border-left:6px solid #2b6cb0;font-family:"Courier New",monospace;font-size:.93rem;white-space:pre-wrap}
+  .warn{background:var(--red);border-left:6px solid var(--accent2)}
+  .ok{background:var(--green);border-left:6px solid #0b6e4f}
+  .ex{background:var(--purple);border-left:6px solid #6b46c1}
+  .case{border:2px solid var(--accent);border-radius:12px;padding:18px 22px;margin:26px 0;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+  .case h3{border:none;padding:0;margin-top:0;color:var(--accent);font-size:1.4rem}
+  .case .cite{font-style:italic;color:#555;margin-bottom:10px}
+  .lbl{display:inline-block;background:var(--ink);color:#fff;padding:2px 9px;border-radius:4px;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;margin-right:6px}
+  .lbl.g{background:#0b6e4f}.lbl.r{background:var(--accent2)}.lbl.y{background:var(--gold);color:#222}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;columns:2;column-gap:30px}
+  .toc a{text-decoration:none;color:var(--ink)} .toc a:hover{color:var(--accent);text-decoration:underline} .toc li{break-inside:avoid}
+  .flow{display:flex;flex-direction:column;align-items:center;margin:20px 0}
+  .fbox{border:2px solid var(--accent);border-radius:10px;padding:10px 16px;background:#fff;max-width:600px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.92rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .fbox.q{background:#fff8e1;border-color:var(--gold)} .fbox.yes{background:var(--green);border-color:#0b6e4f} .fbox.no{background:var(--red);border-color:var(--accent2)}
+  .arrow{font-size:1.5rem;color:var(--accent);line-height:1;margin:4px 0}
+  .split{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .branch{display:flex;flex-direction:column;align-items:center;min-width:240px}
+  .branchlbl{font-size:.8rem;font-weight:bold;color:#555;font-family:Arial;margin-bottom:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.grid2{grid-template-columns:1fr}.toc{columns:1}.vs{grid-template-columns:1fr}}
+  .vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}
+  .vs>div{padding:14px 16px} .vs>div:first-child{background:var(--green);border-right:1px solid var(--line)} .vs>div:last-child{background:var(--red)} .vs h4{margin-top:0}
+  .mnem{font-family:"Courier New",monospace;background:#1b2a41;color:#f7e9a0;padding:14px 18px;border-radius:10px;white-space:pre-wrap}
+  .pyq{border:2px dashed var(--accent2);border-radius:12px;padding:18px 22px;margin:28px 0;background:#fffdfd}
+  .pyq h3{border:none;padding:0;color:var(--accent2);margin-top:0}
+  .ans{background:#fff;border-left:5px solid var(--accent);padding:12px 16px;margin-top:12px}
+  .small{font-size:.86rem;color:#555} .kw{color:var(--accent2);font-weight:bold}
+  blockquote{margin:10px 20px;padding:8px 16px;border-left:4px solid #999;background:#f7f7f7;font-style:italic}
+  svg text{font-family:Arial,Helvetica,sans-serif}
+  .foot{margin-top:50px;font-size:.85rem;color:#666;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body><div class="wrap">
+
+<header class="hero">
+  <h1>Topic 3 — Notice (Section 3, TPA 1882)</h1>
+  <div class="sub">LL.B. II Term · Paper LB-204 Property Law · Faculty of Law, University of Delhi</div>
+  <div class="sub" style="margin-top:6px">Relevance of the doctrine of Notice · Actual and Constructive Notice · Wilful abstention from inquiry and gross negligence · Actual possession · Registration · Notice to agent as constructive notice</div>
+  <span class="tag">Ahmedabad Municipal Corpn. v. Haji Abdul Gafur (1971 SC)</span>
+  <span class="tag">Md. Mustafa v. Haji Md. Isa (1987 Pat)</span>
+  <span class="tag">H.N. Narayanaswamy Naidu v. Deveeramma (1981 Kant)</span>
+  <span class="tag">Ram Niwas v. Bano (2000 SC)</span>
+  <span class="tag">DU PYQs incl. May/June 2025 Q.3</span>
+</header>
+
+<div class="box note"><b>Sources.</b> Primary: DU Case Material LB-204 (May 2022), Topic 3, pp. 45–62 — the four edited judgments are reproduced in depth with paragraph references, all precedents discussed by the judges, and both sides' arguments. Statutory text from the bare Transfer of Property Act, 1882 (s.3 definition with Explanations I–III; ss.39, 40, 41, 53-A, 78, 100), Specific Relief Act, 1963 (ss.19(b), 20), Registration Act, 1908 (ss.17, 30, 51, 55), Indian Contract Act, 1872 (ss.229, 238), Provincial Insolvency Act, 1920 (s.61), CPC O.XXI r.91. Concept-level material supplemented from the LED Exam Capsule (pp. 14–21). PYQ section uses the DU May/June 2025 paper (Q.3) and earlier DU questions on notice.</div>
+
+<nav class="toc"><b>CONTENTS</b>
+<ol>
+<li><a href="#p1">Meaning and relevance of the doctrine of notice</a></li>
+<li><a href="#p2">Statutory text — s.3 definition and Explanations I–III</a></li>
+<li><a href="#p3">Kinds of notice — classification chart</a></li>
+<li><a href="#p4">Actual notice — essentials</a></li>
+<li><a href="#p5">Constructive notice — meaning, basis and the five heads</a></li>
+<li><a href="#p6">Head 1 — Wilful abstention from inquiry or search</a></li>
+<li><a href="#p7">Head 2 — Gross negligence</a></li>
+<li><a href="#p8">Head 3 — Registration as notice (Explanation I)</a></li>
+<li><a href="#p9">Head 4 — Actual possession (Explanation II) and <i>Daniels v. Davison</i></a></li>
+<li><a href="#p10">Head 5 — Notice to agent (Explanation III)</a></li>
+<li><a href="#p11">Decision flowchart — does the transferee have notice?</a></li>
+<li><a href="#p12">Where notice operates in the TPA and other Acts (ss.39, 40, 41, 53-A, 78, 100; SRA s.19(b))</a></li>
+<li><a href="#p13">Burden of proof and "bona fide purchaser for value without notice"</a></li>
+<li><a href="#c1">CASE 1 — Ahmedabad Municipal Corporation v. Haji Abdul Gafur Haji Hussenbhai</a></li>
+<li><a href="#c2">CASE 2 — Md. Mustafa v. Haji Md. Isa</a></li>
+<li><a href="#c3">CASE 3 — H.N. Narayanaswamy Naidu v. Deveeramma</a></li>
+<li><a href="#c4">CASE 4 — Ram Niwas v. Bano</a></li>
+<li><a href="#p14">Precedent map &amp; reconciliation of the possession cases</a></li>
+<li><a href="#p15">Master tables and real-life examples</a></li>
+<li><a href="#p16">DU Previous Year Questions with model answers</a></li>
+<li><a href="#p17">Rapid revision &amp; mnemonics</a></li>
+</ol></nav>
+
+<!-- ============================================================ -->
+<h2 id="p1">1. Meaning and relevance of the doctrine of notice</h2>
+<p><b>Notice</b>, in its literal sense, means <b>knowledge</b> or <b>information</b> of a fact. In property law the doctrine of notice is the tool by which courts decide <b>priorities between competing claimants</b> to the same property where the author of the conflict (the transferor) has dropped out and two innocent-looking persons are left to fight. As the Exam Capsule puts it, the doctrine "is used to determine the rights and claims of two or more persons vis-à-vis each other, who are involved in an unconscionable transaction … the court determines their rights with the help of doctrine of notice."</p>
+<p>The doctrine has its origin in <b>English equity</b>: an equitable interest (e.g. the right of a person who has a contract to purchase) binds everyone <i>except</i> the <b>bona fide purchaser of the legal estate for value without notice</b> — "equity's darling". The TPA codified the concept in s.3 (definition of "a person is said to have notice") and then uses it in numerous sections (ss.39, 40, 41, 53, 53-A, 78, 100 etc.), while the Specific Relief Act, 1963, s.19(b) employs it to protect a subsequent transferee against a suit for specific performance. Quadri J. in <i>Ram Niwas v. Bano</i> (para 4) quoted Snell's Equity: "a bona fide purchaser for valuable consideration who obtains a legal estate at the time of his purchase without notice of a prior equitable right is entitled to priority in equity as well as at law."</p>
+
+<div class="box ok"><b>Why notice matters — the relevance in one paragraph.</b> A transferee for consideration who takes <b>without notice</b> of a prior right takes free of it: the prior contract (s.40; SRA s.19(b)), the maintenance right (s.39), the charge (s.100), the part-performance right (s.53-A proviso), the prior mortgage in some priority situations (s.78), the defect in an ostensible owner's title (s.41), the fraudulent-transfer taint (s.53). A transferee <b>with notice</b> (actual or constructive) takes subject to the prior right. Notice thus draws the line between <b>innocent acquisition</b> and <b>taking with one's eyes shut</b>. Dua J. in <i>Ahmedabad Municipal Corpn.</i> emphasised that the question is to be approached "from equitable considerations" and "in the background of Indian conditions".</div>
+
+<div class="box ex"><b>Real-life illustration.</b> Ravi agrees (1 Jan) to sell his Lajpat Nagar shop to his tenant Suresh; on 10 Jan Ravi sells the same shop by registered deed to Amar. Whether Suresh can get specific performance against Amar depends entirely on whether Amar had <b>notice</b> — actual or constructive (Suresh is in <i>actual possession</i>: Explanation II) — of Suresh's agreement. This is exactly DU's May/June 2025 Q.3 (see Part 16).</div>
+
+<!-- ============================================================ -->
+<h2 id="p2">2. Statutory text — s.3 TPA</h2>
+<div class="box stat"><b>Section 3 — "a person is said to have notice"</b> of a fact when he <b>actually knows</b> that fact, or when, but for <b>wilful abstention from an enquiry or search which he ought to have made</b>, or <b>gross negligence</b>, he would have known it.
+
+<b>Explanation I.</b> — Where any transaction relating to immovable property is <b>required by law to be and has been effected by a registered instrument</b>, any person acquiring such property or any part of, or share or interest in, such property shall be <b>deemed to have notice of such instrument as from the date of registration</b> or, where the property is not all situated in one sub-district, or where the registered instrument has been registered under s.30(2) of the Registration Act, 1908, from the earliest date on which any memorandum of such registered instrument has been filed by any Sub-Registrar within whose sub-district any part of the property … is situated:
+   Provided that — (1) the instrument has been registered and its registration completed in the manner prescribed by the Registration Act, 1908 and the rules made thereunder; (2) the instrument or memorandum has been duly entered or filed in books kept under s.51 of that Act; and (3) the particulars regarding the transaction have been correctly entered in the indexes kept under s.55 of that Act.
+
+<b>Explanation II.</b> — Any person acquiring any immovable property or any share or interest in any such property shall be <b>deemed to have notice of the title, if any, of any person who is for the time being in actual possession thereof</b>.
+
+<b>Explanation III.</b> — A person shall be deemed to have had notice of any fact if <b>his agent acquires notice thereof whilst acting on his behalf in the course of business to which that fact is material</b>:
+   Provided that, if the agent <b>fraudulently conceals</b> the fact, the principal shall not be charged with notice thereof as against any person who was a party to or otherwise cognizant of the fraud.
+<span class="small">[Definition substituted and Explanations I–III inserted by the Transfer of Property (Amendment) Act 20 of 1929; Explanation I amended by Act 5 of 1930 (memorandum clause).]</span></div>
+
+<h3>2.1 Anatomy of the definition</h3>
+<table>
+<tr><th style="width:24%">Component</th><th>Content</th><th>Label</th></tr>
+<tr><td>Limb 1 — "actually knows that fact"</td><td>Real, personal, definite knowledge</td><td><b>Actual (express) notice</b></td></tr>
+<tr><td>Limb 2 — "but for wilful abstention from an enquiry or search which he ought to have made … he would have known it"</td><td>Deliberate shutting of eyes</td><td><b>Constructive notice</b> (head 1)</td></tr>
+<tr><td>Limb 3 — "but for … gross negligence he would have known it"</td><td>Culpable carelessness of a high degree</td><td><b>Constructive notice</b> (head 2)</td></tr>
+<tr><td>Explanation I</td><td>Registered instrument (where registration compulsory)</td><td><b>Constructive notice</b> (head 3) — irrebuttable deeming</td></tr>
+<tr><td>Explanation II</td><td>Title of person in actual possession</td><td><b>Constructive notice</b> (head 4) — deeming</td></tr>
+<tr><td>Explanation III</td><td>Knowledge of agent in course of business</td><td><b>Imputed notice</b> (head 5) — deeming, with fraud proviso</td></tr>
+</table>
+<p>Quadri J. (<i>Ram Niwas</i>, para 5) notes that notice may be "(i) actual, (ii) constructive, or (iii) imputed", and (para 18) that "<b>the word 'notice' is of wider import than the word 'knowledge'</b>. A person may not have actual knowledge of a fact but he may have notice of it having regard to the aforementioned definition and Explanation II thereto." The 1929 amendment converted what were equitable presumptions into <b>statutory deeming provisions</b>; Dua J.: "Though originating in equity this presumption of notice is now a part of our statute and we have to interpret it as such."</p>
+
+<!-- ============================================================ -->
+<h2 id="p3">3. Kinds of notice — classification chart</h2>
+<svg viewBox="0 0 1000 330" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="400" y="10" width="200" height="46" rx="10" fill="#4a2c82"/><text x="500" y="39" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">NOTICE (s.3 TPA)</text>
+<line x1="500" y1="56" x2="170" y2="100" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="500" y2="100" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="830" y2="100" stroke="#4a2c82" stroke-width="2"/>
+<rect x="40" y="100" width="260" height="60" rx="10" fill="#e9f7ef" stroke="#0b6e4f" stroke-width="2"/><text x="170" y="125" text-anchor="middle" font-size="13" font-weight="bold">ACTUAL / EXPRESS</text><text x="170" y="145" text-anchor="middle" font-size="11">"actually knows that fact"</text>
+<rect x="370" y="100" width="260" height="60" rx="10" fill="#fff8e1" stroke="#c9a227" stroke-width="2"/><text x="500" y="125" text-anchor="middle" font-size="13" font-weight="bold">CONSTRUCTIVE</text><text x="500" y="145" text-anchor="middle" font-size="11">law presumes knowledge he ought to have had</text>
+<rect x="700" y="100" width="260" height="60" rx="10" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="2"/><text x="830" y="125" text-anchor="middle" font-size="13" font-weight="bold">IMPUTED (Expl. III)</text><text x="830" y="145" text-anchor="middle" font-size="11">agent's knowledge → principal</text>
+<line x1="500" y1="160" x2="500" y2="185" stroke="#c9a227" stroke-width="2"/>
+<g font-size="11" text-anchor="middle">
+<rect x="40" y="190" width="200" height="60" rx="8" fill="#fff" stroke="#c9a227"/><text x="140" y="212" font-weight="bold">Wilful abstention</text><text x="140" y="230">from enquiry/search</text><text x="140" y="244">(body of definition)</text>
+<rect x="270" y="190" width="200" height="60" rx="8" fill="#fff" stroke="#c9a227"/><text x="370" y="212" font-weight="bold">Gross negligence</text><text x="370" y="230">(body of definition)</text><text x="370" y="244">Ahmedabad MC</text>
+<rect x="500" y="190" width="200" height="60" rx="8" fill="#fff" stroke="#c9a227"/><text x="600" y="212" font-weight="bold">Registration</text><text x="600" y="230">Explanation I</text><text x="600" y="244">(compulsorily registrable deeds)</text>
+<rect x="730" y="190" width="230" height="60" rx="8" fill="#fff" stroke="#c9a227"/><text x="845" y="212" font-weight="bold">Actual possession</text><text x="845" y="230">Explanation II</text><text x="845" y="244">Md. Mustafa · Naidu · Ram Niwas</text>
+<line x1="140" y1="190" x2="500" y2="160" stroke="#c9a227" stroke-width="1.5"/><line x1="370" y1="190" x2="500" y2="160" stroke="#c9a227" stroke-width="1.5"/><line x1="600" y1="190" x2="500" y2="160" stroke="#c9a227" stroke-width="1.5"/><line x1="845" y1="190" x2="500" y2="160" stroke="#c9a227" stroke-width="1.5"/>
+<text x="500" y="285" font-size="12" font-style="italic">Body of the definition = question of fact/mixed question (Ahmedabad MC); Explanations = statutory deeming fictions ("shall be deemed")</text>
+<text x="500" y="308" font-size="12" font-style="italic">Constructive notice is knowledge imputed "upon a presumption so strong that it cannot be allowed to be rebutted" (Exam Capsule)</text>
+</g></svg>
+
+<!-- ============================================================ -->
+<h2 id="p4">4. Actual notice — essentials</h2>
+<p>Actual (or express) notice is <b>real, personal knowledge</b> of the fact by the party himself. To count as notice under s.3 the knowledge must satisfy the following requirements (Exam Capsule, p.14; standard commentaries):</p>
+<table>
+<tr><th style="width:28%">Requirement</th><th>Explanation</th><th>Example</th></tr>
+<tr><td><b>Definite information</b>, not vague rumour</td><td>Casual remarks, hearsay, or statements by strangers do not amount to notice; the information must be such that a reasonable man would act on it.</td><td>A hears at a tea-stall that "somebody says X has agreed to sell his house to Y" — not notice. A is told by Y himself, showing the agreement — notice.</td></tr>
+<tr><td><b>Knowledge of a person interested in the transaction</b></td><td>Knowledge acquired as a stranger to any transaction is not notice for that transaction; the person must have come by it in relation to the dealing in question.</td><td>An attesting witness "cannot say that he did not know that the deed was being executed" — attestation is actual notice of the execution of the deed.</td></tr>
+<tr><td><b>Knowledge relating to the very transaction / property</b></td><td>Notice must be of the fact material to the transfer in question, not general or irrelevant information.</td><td>Knowing that the vendor "has many creditors" is not notice of a specific charge on the property.</td></tr>
+<tr><td><b>Knowledge existing at the material time</b></td><td>Notice must exist when the transferee <i>pays his money / takes the transfer</i>; knowledge acquired afterwards is irrelevant to his bona fides.</td><td>Purchaser learns of a prior agreement a week after registration and payment — still a purchaser without notice.</td></tr>
+<tr><td><b>Notice ≠ knowledge</b></td><td>"Notice" is wider: it includes constructive and imputed notice (<i>Ram Niwas</i>, para 18 — issue framed on "knowledge" was defective).</td><td>Purchaser truly ignorant of a tenant's agreement is nevertheless "deemed to have notice" under Explanation II.</td></tr>
+</table>
+<div class="box note"><b>Proof of actual notice</b> is by ordinary evidence — admissions, correspondence, the transferee's conduct (in <i>Naidu</i> the trial court inferred actual notice from the fact that defendant 3 lived "within a furlong" of the property and, in his own purchase deed, took an indemnity clause from the vendors "in case the sale falls through for any reason" — the conduct of a man who knew something was wrong). Contrast <i>Md. Mustafa</i>, where residence in the same big locality was held <i>not</i> enough to infer knowledge.</div>
+
+<!-- ============================================================ -->
+<h2 id="p5">5. Constructive notice — meaning, basis and the five heads</h2>
+<p><b>Constructive notice</b> is the knowledge which the court <b>imputes</b> to a person — treating him as if he actually knew a fact — because he <i>ought</i> to have known it. It is "a notice which treats a person who ought to have known a fact as if he actually does know it" (Exam Capsule); "he is said to have constructive notice when ordinary prudence and care would have impelled him to undertake an inquiry which would have disclosed the charge" (Allahabad HC in <i>Roop Chand Jain</i>, quoted with approval by the SC in <i>Ahmedabad MC</i>, para 8).</p>
+<h3>5.1 Basis — duty to inquire</h3>
+<p>The presumption rests on a <b>duty</b>: where the circumstances would put a reasonably prudent purchaser on inquiry, he must inquire; if he does not, he is fixed with what the inquiry would have revealed. Dua J. framed the test precisely (para 11): "<b>The question one has to answer … is not whether the purchaser had the means of obtaining and might with prudent caution have obtained knowledge of the charge but whether in not doing so he acted with wilful abstention or gross negligence.</b>" The doctrine is therefore <i>not</i> a licence to impute notice of everything discoverable — only of what a prudent person <i>in Indian conditions</i> would have discovered.</p>
+<h3>5.2 The five heads</h3>
+<ol>
+<li><b>Wilful abstention</b> from an enquiry or search which he ought to have made (body of s.3).</li>
+<li><b>Gross negligence</b> (body of s.3).</li>
+<li><b>Registration</b> of a compulsorily registrable instrument (Explanation I).</li>
+<li><b>Actual possession</b> of a person other than the transferor (Explanation II).</li>
+<li><b>Notice to agent</b> (Explanation III) — strictly "imputed" notice.</li>
+</ol>
+<div class="box warn"><b>Nature of the inquiry: fact or law?</b> Dua J. (para 11): "The question of wilful abstention or gross negligence and, therefore, of constructive notice … is generally a <b>question of fact or at best mixed question of fact and law</b> depending primarily on the facts and circumstances of each case and <b>except for cases directly falling within the three explanations, no inflexible rule can be laid down</b> to serve as a straight-jacket covering all possible contingencies." Hence heads 1–2 are fact-sensitive; heads 3–5 are statutory presumptions triggered once their conditions are met.</div>
+
+<!-- ============================================================ -->
+<h2 id="p6">6. Head 1 — Wilful abstention from an enquiry or search</h2>
+<p>"<b>Wilful abstention suggests conscious or deliberate abstention</b>" (Dua J., para 11). It is a <b>deliberate avoidance</b> of an inquiry which a reasonable man would have made — "shutting one's eyes" to avoid learning an inconvenient truth. The elements are:</p>
+<ol>
+<li>There was an <b>enquiry or search which the person ought to have made</b> — i.e., a duty to inquire arising from the circumstances (a tenant in possession; a reference to another deed in the title documents; a registered envelope from the other party; a statement in a document that a right is "attached" or that repairs costs must be paid to the occupant — as in <i>Naidu</i>).</li>
+<li>He <b>abstained</b> from making it.</li>
+<li>The abstention was <b>wilful</b> — conscious, deliberate, or with a design not to know (not mere inadvertence, which falls under negligence).</li>
+<li>Had he inquired, he <b>would have known</b> the fact (causal link).</li>
+</ol>
+<div class="grid2">
+<div class="box ex"><b>Illustrations (Exam Capsule).</b> (a) Landlord A sends a registered letter to tenant B; B refuses to take delivery. B has constructive notice of the contents — he wilfully abstained from knowing them. (b) A contracts to sell his house to B; B knows the tenants have been paying rent to C. B has constructive notice of C's right to receive rents — he should have asked why. (c) A purchaser's title papers refer to an earlier lease deed; he does not call for it — he has notice of its contents.</div>
+<div class="box ex"><b>From the DU cases.</b> <i>Naidu</i>: the purchase deed itself recited that the reconveyance right had been attached in litigation, and the original agreement said repairs costs were payable to the occupant-plaintiff; "any average prudent man ought to have enquired"; "<b>but for the wilful abstention from enquiry, defendant 3 would have come to know the entire facts</b>" — notice imputed. <i>Ram Niwas</i>: purchasers who "relied upon the assertion of the vendor … and abstained from making inquiry into the real nature of the possession of the tenant" cannot escape deemed notice.</div></div>
+<div class="box note"><b>Related rules.</b> <i>Jones v. Smith</i> (1841) 1 Hare 43 (classic English statement: constructive notice where the purchaser had actual notice of some fact which put him on inquiry, or designedly abstained from inquiry to avoid notice); Registration Act s.57 — anyone may inspect Books 1 &amp; 2 and indexes and obtain certified copies, so a title search is always possible; Indian Evidence Act s.114 — court may presume that a person who refused a registered letter knew its contents.</div>
+
+<!-- ============================================================ -->
+<h2 id="p7">7. Head 2 — Gross negligence</h2>
+<p><b>Negligence</b> "is ordinarily understood as an omission to take such reasonable care as under the circumstances is the duty of a person of ordinary prudence to take … an omission to do something which a reasonable man guided by considerations which normally regulate the conduct of human affairs would do or doing something which normally a prudent and reasonable man would not do" (Dua J., para 11, adopting <i>Blyth v. Birmingham Waterworks</i>). <b>Gross negligence "is indicative of a higher degree of neglect"</b> — "carelessness of so aggravated a nature as to indicate an attitude of mental indifference to obvious risks" (Exam Capsule). Ordinary carelessness is <i>not</i> enough to impute notice; the neglect must be so grave that it cannot be attributed to an ordinary prudent man.</p>
+<table>
+<tr><th>Element</th><th>Content</th></tr>
+<tr><td>Duty of care in the transaction</td><td>A prudent purchaser investigates title, examines the documents supplied, searches the register, and inspects the property.</td></tr>
+<tr><td>Breach of an aggravated kind</td><td>Not merely a slip but conduct showing indifference to obvious risk — e.g., failing to read a note in the title papers in his own possession that the property is subject to a charge (Exam Capsule illustration); paying the price without asking for the title deeds at all (<i>Hudston v. Viney</i>; <i>Lloyds Bank v. P.E. Guzdar &amp; Co.</i> AIR 1930 Cal 22 — bank negligent in not taking title deeds, postponed).</td></tr>
+<tr><td>Causation</td><td>But for the negligence he would have known the fact.</td></tr>
+<tr><td>Standard: reasonable man <b>in Indian conditions</b></td><td>"Courts in India should … be careful and cautious in seeking assistance from English precedents which should not be blindly or too readily followed" (Dua J., para 11).</td></tr>
+</table>
+<div class="box ok"><b><i>Ahmedabad MC</i> applied.</b> Was the court-auction purchaser grossly negligent in not asking the Municipal Corporation about tax arrears? <b>No</b>: (i) the property had been in the hands of court-appointed receivers since 1949 and a prudent man would assume receivers pay statutory dues (which enjoy priority under s.61 Provincial Insolvency Act); (ii) the property was tenanted and rents were being collected by the receivers — reasonable to assume taxes were paid out of rent; (iii) the purchaser did in fact make general inquiries from the receivers about dues and got no information; (iv) there is <b>no public register of tax arrears</b> and the Corporation had not published any list (following <i>Roop Chand Jain</i>); (v) the Corporation, which had let arrears accumulate for five years without pursuing the receivers or the insolvency court, "was far more negligent and blameworthy than the plaintiff". The SC rejected any <b>general rule</b> (as propounded in <i>Nawal Kishore</i>, Allahabad FB, and <i>Ramji Lal</i>, Oudh) that every purchaser in a municipal area has constructive notice of possible tax arrears.</div>
+
+<!-- ============================================================ -->
+<h2 id="p8">8. Head 3 — Registration as constructive notice (Explanation I)</h2>
+<p>Before 1929 the courts were divided on whether registration of a document was by itself notice to subsequent transferees (<i>Tilakdhari Lal v. Khedan Lal</i>, PC 1921 — registration is not <i>per se</i> notice, but the register may be a fact putting a person on inquiry). The <b>1929 amendment</b> settled the law by Explanation I: registration <b>is</b> deemed notice — but subject to <b>strict conditions</b>:</p>
+<table>
+<tr><th style="width:5%">#</th><th style="width:35%">Condition</th><th>Comment</th></tr>
+<tr><td>1</td><td>The transaction must be one <b>required by law to be effected by a registered instrument</b> (compulsorily registrable — Registration Act s.17; TPA ss.54, 59, 107, 118, 123)</td><td>Registration of an <i>optionally</i> registrable document (s.18 — e.g., a lease for less than one year, a will, an agreement to sell in most States) is <b>not</b> constructive notice under Explanation I — though it may still be evidence of actual notice or a fact putting on inquiry. <i>Query</i>: after the 2001 amendment to s.17(1A), an agreement to sell relied on for s.53-A must be registered.</td></tr>
+<tr><td>2</td><td>The instrument <b>has been</b> registered and registration <b>completed</b> in the manner prescribed by the Registration Act and rules (proviso (1); s.61 — endorsement and certificate = completion)</td><td>Presentation alone is insufficient.</td></tr>
+<tr><td>3</td><td>The instrument/memorandum has been <b>duly entered or filed in the books kept under s.51</b> (Book 1 — non-testamentary documents relating to immovable property)</td><td>A clerical failure to copy the deed into Book 1 defeats deemed notice.</td></tr>
+<tr><td>4</td><td>The <b>particulars are correctly entered in the indexes under s.55</b> (Index I — names of executants/claimants; Index II — property)</td><td>A wrong name or wrong survey number in the index means no constructive notice — the searcher could not have found it.</td></tr>
+<tr><td>5</td><td>Notice operates <b>from the date of registration</b> (or, for property in several sub-districts / s.30(2) registration, from the earliest filing of a memorandum by a Sub-Registrar of the relevant sub-district — ss.64–66 Registration Act)</td><td>A transferee who completed his purchase <i>before</i> the earlier deed was registered is not affected by it (subject to s.47 relation-back for priority and s.48 Registration Act).</td></tr>
+<tr><td>6</td><td>Notice is of the <b>instrument</b> — i.e., of its contents and of facts reasonably inferable from them</td><td>Not notice of unregistered collateral documents merely referred to, unless the reference itself puts one on inquiry (then head 1 applies).</td></tr>
+<tr><td>7</td><td>Only a person <b>acquiring</b> the property or an interest in it <b>after</b> registration is affected</td><td>Explanation I does not fix notice on the world at large for all purposes (e.g., not on a mortgagee for s.78 in respect of a later deed).</td></tr>
+</table>
+<div class="box ex"><b>Example.</b> A mortgages his Karol Bagh house to B by registered deed (Jan 2024). In June 2024 A sells the house to C, who never searches the Sub-Registrar's records. C is <b>deemed to have notice</b> of B's mortgage (Explanation I) and takes subject to it — a mortgage of Rs 100+ is compulsorily registrable (s.59). Had B's deed been misindexed under "Anil" instead of "Amit", condition (3) fails and C would not have constructive notice under Explanation I. Conversely, an <b>unregistered</b> agreement to sell in B's favour gives C no Explanation I notice — B must rely on actual notice or on Explanation II if in possession.</div>
+
+<!-- ============================================================ -->
+<h2 id="p9">9. Head 4 — Actual possession (Explanation II)</h2>
+<p><b>Possession is notice of title.</b> A purchaser who finds someone <i>other than his vendor</i> in actual possession is bound to ask that person on what terms he holds; if he does not, he is deemed to know whatever title the possessor has (a lease, an agreement to purchase, an equitable right of reconveyance, a claim under s.53-A, etc.). Explanation II codifies the rule laid down by <b>Lord Eldon in <i>Daniels v. Davison</i> (1809) 16 Ves 249</b>: "where there is a tenant in possession under a lease, or an agreement, a person, purchasing part of the estate, must be bound to inquire, on what terms that person is in possession" (quoted by the SC in <i>Ram Niwas</i>, para 8). Three DU cases turn on this Explanation.</p>
+<h3>9.1 Elements</h3>
+<table>
+<tr><th style="width:30%">Element</th><th>Explanation</th></tr>
+<tr><td>Person <b>acquiring</b> immovable property or any share/interest therein</td><td>Purchaser, mortgagee, lessee, assignee of a reconveyance right (<i>Naidu</i>) — any transferee.</td></tr>
+<tr><td>Some person is <b>for the time being in actual possession</b></td><td><b>Actual</b> (physical, de facto) possession — not constructive or symbolic possession, not possession through the vendor. Possession of a tenant, licensee, purchaser under an agreement, co-sharer. In <i>Md. Mustafa</i> the plaintiff failed to prove he had come into possession of the <i>entire</i> building; only his tenanted katra was in his actual possession.</td></tr>
+<tr><td>Possession must be of the <b>property being acquired</b> (or a substantial part)</td><td>Patna line: possession of an "insignificant fraction" (1/7th in <i>Md. Mustafa</i>; even slightly over 1/3rd in <i>Hari Charan Kuar</i> FB) does not attract the deeming rule for the whole property. The SC in <i>Ram Niwas</i> (possession of the <i>entire</i> shop) applied the Explanation strictly and did not discuss the fraction cases.</td></tr>
+<tr><td>Deemed notice of the <b>title, if any</b>, of the possessor</td><td>Whatever right the possessor actually has — including rights beyond the ostensible character of his possession (a tenant who is also an agreement-holder: <i>Ram Niwas</i>; a purchaser-in-possession whose vendors' reconveyance right had been released: <i>Naidu</i>). "If any" — if the possessor turns out to have no title, nothing is imputed.</td></tr>
+<tr><td>Inquiry must be made <b>from the possessor</b></td><td>Asking the vendor and accepting his explanation ("the tenant is my brother; the papers are with him") is <b>not</b> enough (<i>Ram Niwas</i>, para 18). Contrast <i>Kesharmull Agarwala</i> (Pat) — where the owner himself occupies part and has been asked, purchaser need not ask every petty tenant.</td></tr>
+<tr><td>Effect</td><td>Deeming fiction — notice imputed regardless of actual ignorance; the purchaser takes subject to the possessor's rights; loses the s.19(b) SRA protection; bound by s.40 obligations and s.53-A part performance.</td></tr>
+</table>
+<h3>9.2 The two-line tension — and how to reconcile</h3>
+<div class="vs">
+<div><h4>Strict deeming (SC: <i>Ram Niwas</i>; Kant: <i>Naidu</i>; Pat DBs: <i>Balchand Mahton</i>, <i>Ramkrishna Singh</i>, <i>Basruddin Khan</i>)</h4><ul><li>Possessor in <b>exclusive</b> or <b>substantial</b> possession of the property sold.</li><li>Purchaser must inquire <i>from the possessor</i>; vendor's assurances are no substitute.</li><li>Notice of the possessor's <i>whole</i> title, including a prior agreement to sell.</li></ul></div>
+<div><h4>Limited application (Pat: <i>Hari Charan Kuar</i> FB 1917; <i>Kesharmull Agarwala</i> 1968; <i>Md. Mustafa</i> 1987; <i>Shankar Prasad</i> 1969)</h4><ul><li>Possessor holds only a <b>small fraction</b> (1/7th) among many identical tenants; owner in possession of part and inquired from.</li><li>No duty to ask every tenant; Explanation II "cannot be attracted at all".</li><li>Burden on purchaser is "light"; bare denial shifts onus to plaintiff.</li></ul></div></div>
+<p><b>Reconciliation:</b> Explanation II applies with full force where the claimant is in actual possession of the property (or a substantial part) that the purchaser is buying — as in <i>Ram Niwas</i> (whole shop) and <i>Naidu</i> (whole property). Where the purchaser buys a large multi-tenanted building and the claimant is one of many petty tenants of an insignificant portion, the Patna view is that the deeming provision is not attracted to the whole; the purchaser is not put on inquiry of a prior contract by such possession. Since <i>Ram Niwas</i> is a Supreme Court decision and speaks of "the real nature of the possession of the tenant" without qualification, exam answers should state the SC rule as the general rule and the Patna "fraction" rule as a fact-specific limitation.</p>
+
+<!-- ============================================================ -->
+<h2 id="p10">10. Head 5 — Notice to agent (Explanation III)</h2>
+<p><i>Qui facit per alium facit per se</i> — he who acts through another acts himself. Knowledge acquired by an agent while acting for the principal is imputed to the principal, because the agency extends to receiving notice of matters material to the business. This is a rule of the law of agency (Contract Act, 1872, <b>s.229</b>: "Any notice given to or information obtained by the agent, provided it be given or obtained in the course of the business transacted by him for the principal, shall, as between the principal and third parties, have the same legal consequence as if it had been given to or obtained by the principal") adopted into the TPA as Explanation III.</p>
+<h3>10.1 Conditions for imputation</h3>
+<ol>
+<li>The person must be an <b>agent</b> (lawyer, broker, munim, general attorney) — not a mere messenger or a stranger.</li>
+<li>Notice must be acquired <b>whilst acting on behalf of the principal</b> — knowledge acquired <i>before</i> the agency began, or in a private capacity, is not imputed (unless the agent is shown to have it in mind and it is material — older English cases; Indian law applies the statutory words strictly).</li>
+<li>It must be acquired <b>in the course of the business</b> for which he is agent.</li>
+<li>The fact must be <b>material</b> to that business.</li>
+<li><b>Proviso — fraudulent concealment</b>: if the agent fraudulently conceals the fact, the principal is not charged with notice <i>as against a person who was party to or cognizant of the fraud</i>. Against an innocent third party, the principal is still charged (the loss falls on him who chose the fraudulent agent).</li>
+</ol>
+<div class="box ex"><b>Examples.</b> (1) A instructs advocate X to investigate title and buy a plot; during the search X learns of an unregistered agreement to sell in favour of B and a tenant in possession. A is deemed to have notice even if X never told him. (2) X learned of B's agreement two years earlier while acting for another client — not imputed (not acquired in this agency). (3) X, in collusion with the vendor V, conceals the prior agreement from A. As against V (party to the fraud), A is <i>not</i> charged with notice; as against innocent B, A is. (4) A property dealer who is a common agent for both vendor and purchaser — notice to him is notice to both.</div>
+<div class="box note"><b>Related agency rules.</b> Contract Act s.238 — misrepresentation/fraud by agent in the course of business has the same effect as if committed by the principal; s.182 — definition of agent; a <b>solicitor acting for both sides</b> (common in registered conveyancing) — his knowledge is imputed to both principals (<i>Kettlewell v. Watson</i>). In a <b>joint family or partnership</b>, knowledge of the karta/partner acting for the firm is imputed to the family/firm (Partnership Act s.24 — notice to a partner who habitually acts in the business operates as notice to the firm).</div>
+
+<!-- ============================================================ -->
+<h2 id="p11">11. Decision flowchart — does the transferee have notice?</h2>
+<div class="flow">
+<div class="fbox q">Did the transferee <b>actually know</b> the fact (definite information, in relation to this transaction, at the time of transfer)?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">ACTUAL NOTICE → takes subject to the prior right</div></div>
+<div class="branch"><div class="branchlbl">NO</div>
+<div class="fbox q">Was the prior transaction <b>compulsorily registrable AND duly registered</b>, entered in Book 1 and correctly indexed, before he acquired? (Expl. I)</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">DEEMED NOTICE of the instrument</div></div>
+<div class="branch"><div class="branchlbl">NO</div>
+<div class="fbox q">Was <b>someone other than the transferor in actual possession</b> of the property (or a substantial part) being acquired? (Expl. II)</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">DEEMED NOTICE of the possessor's title — unless he inquired FROM the possessor and was told nothing (Ram Niwas; Naidu). Insignificant-fraction possession may not attract it (Md. Mustafa)</div></div>
+<div class="branch"><div class="branchlbl">NO</div>
+<div class="fbox q">Did his <b>agent</b> acquire notice while acting for him in the course of the business, the fact being material? (Expl. III; no fraudulent concealment vis-à-vis this opponent)</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">IMPUTED NOTICE</div></div>
+<div class="branch"><div class="branchlbl">NO</div>
+<div class="fbox q">Were there circumstances which would put a <b>reasonably prudent man (in Indian conditions)</b> on inquiry, and did he <b>wilfully abstain</b> or act with <b>gross negligence</b>, such that he would otherwise have known? (question of fact — Ahmedabad MC)</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox no">CONSTRUCTIVE NOTICE</div></div>
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox yes">NO NOTICE → bona fide transferee for value without notice: protected under ss.39, 40, 41, 53-A proviso, 100 TPA; s.19(b) SRA</div></div>
+</div></div></div></div></div></div></div></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p12">12. Where notice operates — TPA and other Acts</h2>
+<table>
+<tr><th style="width:24%">Provision</th><th>Rule</th><th>Role of notice</th></tr>
+<tr><td><b>TPA s.39</b> — right to maintenance / advancement / marriage from profits of immovable property</td><td>Right enforceable against a transferee <b>with notice</b> or a <b>gratuitous</b> transferee; not against a transferee for consideration without notice.</td><td>Notice (actual/constructive) of the maintenance right — e.g., a Hindu widow's charge decreed or well known in the family.</td></tr>
+<tr><td><b>TPA s.40</b> — restrictive covenants and obligations annexed to ownership (incl. contract to sell)</td><td>Enforceable against transferee <b>with notice</b> or gratuitous transferee; not against transferee for consideration without notice. <i>Illustration:</i> A contracts to sell Sultanpur to B; A then sells to C who has notice — B may enforce against C.</td><td>The TPA counterpart of SRA s.19(b); a contract to sell creates no interest (s.54) but an obligation annexed to ownership that runs with notice.</td></tr>
+<tr><td><b>TPA s.41</b> — transfer by ostensible owner</td><td>Transfer by ostensible owner with consent of real owner not voidable, provided transferee took <b>reasonable care</b> to ascertain the transferor's power and acted in <b>good faith</b>.</td><td>"Reasonable care" mirrors the constructive-notice inquiry — notice of the real owner's title defeats the transferee.</td></tr>
+<tr><td><b>TPA s.53(1)</b> — fraudulent transfer</td><td>Transfer to defeat creditors voidable, but not against a transferee <b>in good faith and for consideration</b>.</td><td>Notice of the fraudulent intent negatives good faith.</td></tr>
+<tr><td><b>TPA s.53-A</b> — part performance, proviso</td><td>Nothing in the section affects a transferee for consideration who has <b>no notice of the contract or of the part performance</b>.</td><td>Possession of the part-performing transferee is itself Explanation II notice to later purchasers — so the proviso seldom saves them.</td></tr>
+<tr><td><b>TPA s.78</b> — postponement of prior mortgagee</td><td>Where through fraud, misrepresentation or <b>gross neglect</b> of a prior mortgagee another is induced to advance money on the same property, the prior mortgagee is postponed.</td><td>"Gross neglect" — e.g., leaving title deeds with the mortgagor (<i>Lloyds Bank v. Guzdar</i>).</td></tr>
+<tr><td><b>TPA s.100</b> — charge</td><td>"No charge shall be enforced against any property in the hands of a person to whom such property has been <b>transferred for consideration and without notice</b> of the charge", save where otherwise <b>expressly</b> provided by law.</td><td>Core of <i>Ahmedabad MC</i>: the saving law must expressly make the charge enforceable against a transferee without notice — merely creating a "first charge" (s.141 BPMC Act) is not enough. The SC also held (following <i>Laxmi Devi v. Mukand Kanwar</i>, AIR 1965 SC 834) that s.2(d) makes Chapter IV (incl. s.100) applicable to <b>court sales</b> (transfers by operation of law), disapproving <i>Arumilli Surayya</i>.</td></tr>
+<tr><td><b>TPA s.3 — "attested"</b></td><td>An attesting witness has actual notice of execution.</td><td>Link with Topic 2.</td></tr>
+<tr><td><b>Specific Relief Act, 1963, s.19(b)</b></td><td>Specific performance may be enforced against any person claiming under the vendor by a title arising subsequently to the contract, "<b>except a transferee for value who has paid his money in good faith and without notice of the original contract</b>."</td><td>Three cumulative requirements (Quadri J., <i>Ram Niwas</i>, para 3): (a) purchase for value; (b) money <i>paid</i> in good faith; (c) <b>no notice</b> of the earlier contract. Notice is read with s.3 TPA and Explanation II.</td></tr>
+<tr><td><b>SRA s.20 (pre-2018) / s.10 &amp; 20 (post-2018 Amendment Act)</b></td><td>Specific performance was discretionary (s.20(2) — e.g., unfair advantage, hardship); since the 2018 amendment it is the rule, subject to s.14 and s.16.</td><td><i>Ram Niwas</i> remanded the s.20(2) discretion question; today the court would examine s.16(c) readiness and willingness instead.</td></tr>
+<tr><td><b>Registration Act, 1908 — ss.17, 18, 47, 48, 50, 51, 55, 57, 64–66</b></td><td>Compulsory/optional registration; date of operation; priority of registered over unregistered documents (s.50); books and indexes; public inspection; memoranda across sub-districts.</td><td>Machinery behind Explanation I; s.57 makes search possible, grounding the duty to search.</td></tr>
+<tr><td><b>Indian Contract Act, 1872 — ss.182, 229, 238</b></td><td>Agency; notice to agent = notice to principal; agent's fraud.</td><td>Foundation of Explanation III.</td></tr>
+<tr><td><b>Provincial Insolvency Act, 1920, s.61</b></td><td>Priority of debts due to local authorities (bracketed with Crown debts).</td><td>Used in <i>Ahmedabad MC</i> to show the purchaser could reasonably assume receivers had paid municipal taxes.</td></tr>
+<tr><td><b>CPC O.XXI r.91; doctrine of <i>caveat emptor</i></b></td><td>No warranty of title in a court auction; purchaser takes subject to defects except where judgment-debtor had no saleable interest.</td><td>Conceded in <i>Ahmedabad MC</i> (para 3) — but "no warranty" does not mean "notice of every charge".</td></tr>
+<tr><td><b>Municipal statutes</b> — Bombay Provincial Municipal Corporation Act 1949 s.141; Delhi Municipal Corporation Act 1957 s.156 (property tax a first charge); RERA 2016 s.11(4)/s.19</td><td>Tax arrears as statutory first charge on premises; RERA obliges promoters to disclose encumbrances.</td><td>After <i>Ahmedabad MC</i>, a "first charge" clause alone does not bind a transferee without notice; some modern statutes (e.g., Delhi MC Act s.156(2)/s.169 — liability of transferee) go further; purchasers routinely obtain a <b>no-dues certificate</b>, which is the practical response.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p13">13. Burden of proof; "bona fide purchaser for value without notice"</h2>
+<div class="grid2">
+<div class="box ok"><b>Elements of the defence</b> (SRA s.19(b); equity)
+<ol><li><b>Purchaser</b> (transferee of the property/interest) — includes mortgagee, lessee, assignee of a right (<i>Naidu</i>).</li><li><b>For value</b> — consideration actually <b>paid</b> (unpaid balance is not protected; "who has <i>paid</i> his money").</li><li><b>In good faith</b> — honesty; Gen. Clauses Act s.3(22) "honestly, whether negligently or not", but for s.19(b) gross negligence negatives protection through s.3 TPA.</li><li><b>Without notice</b> — actual, constructive or imputed — at the time of paying the money/taking the transfer.</li></ol></div>
+<div class="box warn"><b>Burden of proof</b>
+<ul><li>The <b>subsequent purchaser</b> who pleads s.19(b) must plead and prove all three ingredients — the plea is a special defence (<i>Akhoy Kumar Banerji v. Corpn. of Calcutta</i>: not pleaded → not available; <i>Ram Niwas</i>, para 3 — "a transferee must show that…").</li><li>The burden is "<b>somewhat light</b>": a sworn denial of knowledge may shift the evidential onus to the plaintiff to prove notice (<i>Kesharmull Agarwala</i>; <i>Rameshwar Singh v. Hari Narayan Singh</i>, AIR 1984 Pat 277; applied in <i>Md. Mustafa</i>, para 27–28).</li><li>Once both sides have led evidence, burden "loses its importance and the question is ultimately one of appreciating evidence."</li><li>Constructive notice under the Explanations, being a legal deeming, cannot be displaced by a mere denial of knowledge (<i>Ram Niwas</i>).</li></ul></div></div>
+
+<!-- ============================================================ -->
+<h2>Leading Cases (DU Case Material, Topic 3, pp. 45–62)</h2>
+
+<div class="case" id="c1">
+<h3>CASE 1 — Ahmedabad Municipal Corporation v. Haji Abdul Gafur Haji Hussenbhai</h3>
+<div class="cite">AIR 1971 SC 1201 : (1971) 1 SCC 757 · Supreme Court of India · Dua J. (for the Bench) · Appeal on certificate under Art. 133(1)(c) from the Gujarat High Court · heard ex parte</div>
+<p><span class="lbl">Theme</span> Is a court-auction purchaser fixed with <b>constructive notice</b> of arrears of municipal taxes which are a statutory charge on the property? Interaction of <b>s.100 TPA</b> with a municipal "first charge" provision; meaning of <b>wilful abstention</b> and <b>gross negligence</b>.</p>
+<h4>Facts</h4>
+<ul>
+<li>The property belonged to <b>Haji Nur Muhammad Haji Abdulmian</b>, who ran into financial difficulties in <b>Feb 1949</b>; insolvency proceedings began in <b>March 1949</b>; interim receivers took charge; he was <b>adjudicated insolvent on 14 Oct 1950</b> and the property vested in the receivers.</li>
+<li>The property was mortgaged to <b>M/s Hargovind Laxmichand</b>. In execution of the <b>mortgage decree</b> the property was sold by court auction and purchased by the plaintiff-respondent <b>Haji Abdul Gafur Haji Hussenbhai for Rs 22,300</b>; he was declared purchaser on <b>28 Nov 1954</b>.</li>
+<li>Municipal taxes for <b>1949-50 to 1953-54</b> were in arrears — the receivers had not paid them. On <b>15 Jan 1951</b> the receivers had reported to the insolvency court that they had received municipal bills for <b>Rs 628-3-0</b>; the court on <b>8 &amp; 24 Feb 1951</b> ordered that the taxes be paid and sanctioned sale of some property for the purpose — yet nothing was done, and the Corporation did not pursue the matter.</li>
+<li>On <b>20 July 1955</b> the Corporation <b>attached</b> the property for arrears of <b>Rs 543.79</b> under s.141 of the <b>Bombay Provincial Municipal Corporation Act, 1949</b> (property taxes a "first charge" on the premises) and threatened sale.</li>
+<li>The purchaser sued for a declaration that he was owner, that the arrears due from the insolvent were not recoverable by attachment of the property in his hands, that the warrant was illegal, and for a permanent injunction. He deposed (unrebutted) that at purchase the building was <b>occupied by tenants</b> whose rent the receivers were collecting, and that he had <b>made inquiries from the receivers</b> about dues but was told nothing.</li>
+</ul>
+<h4>Procedural history</h4>
+<p>Trial court: declined the declaration of non-liability but held the particular warrant illegal and issued an injunction against enforcing it. Both parties appealed; the Assistant Judge dismissed both appeals. Second appeal summarily dismissed by a single Judge of the Gujarat HC; on Letters Patent appeal (Cl.15) the <b>Division Bench allowed the plaintiff's appeal</b> in full — plaintiff owner; municipal charge <b>not enforceable</b> against the property in his hands; permanent injunction. Corporation appealed to the Supreme Court on certificate; no appearance for the respondent.</p>
+<h4>Issues</h4>
+<ol>
+<li>Is there a warranty of title in a court auction — does <i>caveat emptor</i> apply?</li>
+<li>Is s.141 BPMC Act a law that "otherwise expressly provides" within s.100 TPA, so that the charge binds a transferee for consideration without notice?</li>
+<li>Does s.100 apply at all to a court-auction purchaser (transfer by operation of law)?</li>
+<li>Must the purchaser be <b>deemed to have constructive notice</b> of the tax arrears by reason of wilful abstention or gross negligence?</li>
+</ol>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant Corporation (Shri S.T. Desai)</h4>
+<ul>
+<li><b>No warranty of title</b> in auction sales — the purchaser takes the property with all its defects and burdens.</li>
+<li><b>s.141 BPMC Act</b> makes property taxes a <i>first charge</i> on the premises; this is an express saving provision contemplated by s.100 TPA, so the charge is enforceable even against a transferee without notice.</li>
+<li><b>s.100 does not apply to auction sales</b> — a court sale is not a "transfer" under the TPA; the auction purchaser steps into the shoes of the judgment-debtor and takes subject to all charges (<i>Arumilli Surayya v. Pinisethi Venkataramanamma</i>, AIR 1940 Mad 701, relying on <i>Creet v. Ganga Ram</i>, AIR 1937 Cal 129).</li>
+<li><b>Constructive notice</b>: every intending purchaser of property in a municipal area knows the law makes taxes a charge, and must inquire whether arrears exist; failure is wilful abstention or gross negligence — <i>Nawal Kishore v. Municipal Board, Agra</i>, AIR 1943 All 115 (FB); <i>Municipal Board, Lucknow v. Ramji Lal</i>, AIR 1941 Oudh 305; <i>Akhoy Kumar Banerji v. Corpn. of Calcutta</i>, AIR 1915 Cal 478; <i>Chandu Ram v. Kurseong Municipality</i>, AIR 1951 Cal 398.</li>
+</ul></div>
+<div><h4>Respondent purchaser (case as found by the courts below; no appearance in SC)</h4>
+<ul>
+<li>s.100 TPA, second part: no charge is enforceable against property in the hands of a transferee <b>for consideration without notice</b>, unless a law <b>expressly</b> so provides. s.141 merely <i>creates</i> a charge; it says nothing about enforceability against a bona fide transferee.</li>
+<li>Court sales are governed by Chapter IV via s.2(d) TPA (<i>Laxmi Devi v. Mukand Kanwar</i>, AIR 1965 SC 834, which overruled the <i>Arumilli Surayya</i> line).</li>
+<li>No constructive notice: there is <b>no public register of tax arrears</b>; the property was in the hands of court receivers who could be expected to pay statutory dues (s.61 Provincial Insolvency Act priority); tenants' rents were being collected; he <b>did inquire</b> from the receivers and was told nothing — <i>Municipal Board, Cawnpore v. Roop Chand Jain</i>, AIR 1940 All 456.</li>
+<li>The Corporation itself, having let arrears accumulate for five years, was the negligent party; equity should not assist it.</li>
+</ul></div></div>
+<h4>Decision and reasoning (Dua J.)</h4>
+<ol>
+<li><b>Caveat emptor (para 3).</b> The general contention is well founded: an auction purchaser takes subject to all defects of title (except the O.XXI r.91 case of no saleable interest). But that does not decide whether he takes subject to a <i>charge</i> of which he had no notice.</li>
+<li><b>s.100 and s.141 (paras 3–4).</b> "The saving provision of law must <b>expressly provide for enforcement of a charge against the property in the hands of a transferee for value without notice</b> of the charge and <b>not merely create a charge</b>." s.141(1) "merely creates a charge in express language" (subject to land revenue); it does not further provide enforceability against a transferee without notice. "The real core of the saving provision … must be not mere enforceability of the charge against the property charged but enforceability … in the hands of a transferee for consideration without notice." Contention repelled.</li>
+<li><b>Applicability to court sales (para 5).</b> The Court disagreed with <i>Arumilli Surayya</i>; in any event it stood overruled by <i>Laxmi Devi</i>, where the SC held that s.2(d) prevails over s.5 so that s.57 and Chapter IV (which includes s.100) apply to transfers by operation of law. An auction purchaser can therefore claim the s.100 protection.</li>
+<li><b>Law of constructive notice (paras 10–11).</b> Definition of notice in s.3 restated. "Wilful abstention suggests conscious or deliberate abstention and gross negligence is indicative of a higher degree of neglect." Negligence defined (reasonable-man test). Constructive notice is "generally a question of fact or at best mixed question of fact and law"; "except for cases directly falling within the three explanations, no inflexible rule can be laid down". The correct question: "<b>not whether the purchaser had the means of obtaining and might with prudent caution have obtained knowledge of the charge but whether in not doing so he acted with wilful abstention or gross negligence</b>." Indian conditions govern; English precedents to be used with caution.</li>
+<li><b>Review of the High Court decisions (paras 5–9).</b> <i>Nawal Kishore</i> (All FB) — laid down a general principle imputing to all purchasers in municipal areas constructive knowledge of the tax charge and possible arrears — <b>not approved</b>. <i>Akhoy Kumar</i> (Cal) — distinguishable (defence not pleaded; private purchasers personally liable under s.223 of the Calcutta Act; vendor was a foreclosing mortgagee). <i>Ramji Lal</i> (Oudh), <i>Chandu Ram</i> (Cal) — followed <i>Nawal Kishore</i>; not approved. <i>Laxman Venkatesh Naik</i> (Bom) — takkavi loans, irrelevant. <i>Roop Chand Jain</i> (All DB) — reasoning <b>preferred</b>: a bona fide purchaser takes free of charges of which he has no notice; constructive notice arises when ordinary prudence would impel an inquiry that would disclose the charge; there is no register of tax arrears and no publication; no purchaser is bound to presume taxes are unpaid absent special intimation.</li>
+<li><b>Application (para 12).</b> Property vested in receivers since 1949; purchaser could not reasonably expect receivers not to have paid statutory dues which have priority under s.61 Provincial Insolvency Act; receivers had even obtained court sanction to sell property to pay taxes (Feb 1951); the Corporation's inaction was "not a proper attitude"; property tenanted and rents collected by receivers — reasonable assumption taxes were paid from rent; purchaser in fact inquired from receivers about dues and was told nothing (receivers apparently reluctant to disclose their lapse). "On these facts and circumstances we do not think that the plaintiff could reasonably be fixed with any constructive notice." No principle or firm rule of law as in <i>Nawal Kishore</i>; question to be determined on the facts of each case.</li>
+<li><b>Equity (para 13).</b> "As the question of constructive notice has to be approached from equitable considerations … the municipal corporation in the present case was <b>far more negligent and blameworthy than the plaintiff</b>." High Court correct; <b>appeal dismissed</b>; no costs.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>Under s.100 TPA a charge (including a statutory charge) is not enforceable against a transferee for consideration without notice unless a law <b>expressly</b> provides for enforceability against such a transferee; a provision merely creating a "first charge" is insufficient.</li>
+<li>s.100 (Chapter IV) applies to court-auction purchasers via s.2(d) TPA (<i>Laxmi Devi</i>).</li>
+<li>Constructive notice under the body of s.3 requires <b>wilful abstention</b> (conscious/deliberate) or <b>gross negligence</b> (aggravated neglect) — a question of fact/mixed question; no inflexible rule outside the three Explanations.</li>
+<li>Test: not whether the purchaser <i>could</i> have found out, but whether his failure amounted to wilful abstention or gross negligence, judged by the reasonably prudent man <b>in Indian conditions</b>.</li>
+<li>No general presumption that purchasers in municipal areas have notice of tax arrears (<i>Nawal Kishore</i> disapproved; <i>Roop Chand Jain</i> approved).</li>
+<li>Equitable considerations — the comparative blameworthiness of the parties — are relevant.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> Priya buys a Rohini flat at a DDA/bank auction. The MCD later attaches it for five years of the previous owner's property-tax arrears. Unless the Delhi statute <i>expressly</i> makes the charge enforceable against a transferee without notice (DMC Act s.156 read with s.169 does impose transferee liability — check the statute), and unless Priya wilfully abstained or was grossly negligent (e.g., ignored a demand notice pasted on the door), <i>Ahmedabad MC</i> protects her. Practical lesson: always obtain a municipal no-dues certificate — it costs little and forecloses the dispute.</div>
+</div>
+
+<!-- ============================================================ -->
+<div class="case" id="c2">
+<h3>CASE 2 — Md. Mustafa v. Haji Md. Isa</h3>
+<div class="cite">AIR 1987 Pat 5 · Patna High Court · Ramanandan Prasad J. · First appeal from the Subordinate Judge</div>
+<p><span class="lbl">Theme</span> Does <b>Explanation II</b> fix a purchaser with notice of a prior agreement to sell held by a <b>tenant occupying a small fraction</b> of a multi-tenanted building? Burden of proof of "bona fide purchaser without notice".</p>
+<h4>Facts</h4>
+<ul>
+<li>Plaintiff <b>Md. Mustafa</b> was a tenant (running a hotel, since his father's time) in <b>one of seven <i>katras</i></b> of a pucca house on 4 decimals of land (plots 2230–2231, khata 721) at <b>Alamgirpur, Phulwarisharif, Patna</b>, owned by his uncle, defendant 1 <b>Haji Md. Isa</b>. Six other tenants occupied the other katras; plaintiff and D.W.3 each paid <b>Rs 10 p.m.</b></li>
+<li>Plaintiff's case: in <b>April 1972</b> Md. Isa, needing money, agreed to sell the house to him for <b>Rs 20,000</b>; on <b>15 June 1972</b> plaintiff advanced <b>Rs 7,000</b> and Md. Isa executed an <b>agreement to sell (<i>bainama</i>/"Beyananama", Ext. 1)</b> on stamp paper, promising a registered sale deed on payment of the balance by the last week of January 1973, and (per plaintiff) <b>put him in possession of the entire building in part performance</b>. Plaintiff's pleader's notice of <b>7 Oct 1972</b> was refused.</li>
+<li>Meanwhile Md. Isa executed a <b>registered sale deed dated 20 July 1972</b> of the whole house for <b>Rs 24,000</b> in favour of <b>defendants 2 and 3, minors</b>, through their father <b>Arif Hussain</b>; he directed tenants to pay rent to them; their names were <b>mutated</b> in the Circle Office; one vacant katra was let by them (D.W.9). Plaintiff alleged the sale was collusive, without consideration and with knowledge of his agreement.</li>
+<li>Defence: the agreement was <b>forged, fabricated and antedated</b>; plaintiff's offer had been too low and was rejected; defendants 2–3 were <b>bona fide purchasers for value without notice</b>.</li>
+<li>Md. Isa died on <b>20 June 1974</b>; heirs adopted his written statement.</li>
+</ul>
+<h4>Trial court findings</h4>
+<p>(1) Ext. 1 not executed by Md. Isa — not genuine; (2) sale deed to defendants 2–3 genuine and for full consideration; (3) defendants 2–3 bona fide purchasers for value without notice. Suit dismissed. Plaintiff appealed.</p>
+<h4>Issues</h4>
+<ol><li>Is the agreement (Ext. 1) a valid and genuine document?</li><li>Are defendants 2–3 bona fide purchasers for value without notice of the agreement — in particular, does Explanation II to s.3 TPA impute notice by reason of the plaintiff's possession of one katra?</li></ol>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (plaintiff Md. Mustafa)</h4>
+<ul><li>The building was <b>not in the vendor's actual possession</b>; a portion was admittedly in the plaintiff's possession; it was the purchasers' duty to inquire from the persons in possession including the plaintiff; failing that, they are bound by all equities of the possessor — including a collateral agreement to sell.</li><li>Admittedly the father of the minor purchasers <b>made no inquiry</b>; hence they are deemed to have purchased subject to the plaintiff's equities and cannot be bona fide purchasers without notice — <i>Balchand Mahton v. Bulaki Singh</i>, AIR 1929 Pat 284; <i>Ramkrishna Singh v. Mahadei Haluai</i>, AIR 1965 Pat 467; <i>Basruddin Khan v. Gurudarshan Das</i>, AIR 1970 Pat 304, applying Explanation II and <i>Daniels v. Davison</i>.</li><li>Burden lies on the subsequent purchaser to prove want of notice; the purchaser's father lived in the same locality and must have known.</li></ul></div>
+<div><h4>Respondents (defendants 2–3)</h4>
+<ul><li>Ext. 1 is forged; the plaintiff never came into possession of the whole building — six other tenants continued, rent was never collected by him, he could not name the tenants, and tenants (Dr Suleman Gosh Khan, Md. Nazir Alam) deposed they paid rent to Md. Isa and, after the sale, to Arif Hussain; mutation in defendants' names; plaintiff never sought mutation.</li><li>The plaintiff occupied only <b>1/7th</b> of the building as an ordinary tenant like six others; such possession is an <b>insignificant portion</b> and does not put a purchaser of the whole on inquiry of a prior contract — <i>Hari Charan Kuar v. Kaula Rai</i>, AIR 1917 Pat 478 (FB); <i>Kesharmull Agarwala v. Rajendra Prasad</i>, 1968 BLJR 28.</li><li>D.W.9 (father-guardian) swore he had no knowledge of the agreement; the burden being light, the onus shifted to the plaintiff, who offered only a vague assertion (<i>Rameshwar Singh v. Hari Narayan Singh</i>, AIR 1984 Pat 277).</li></ul></div></div>
+<h4>Decision and reasoning (Ramanandan Prasad J.)</h4>
+<ol>
+<li><b>Possession (para 12).</b> "There is no evidence worth the name" that plaintiff came into actual or constructive possession of the entire building; he occupied one katra as tenant; his claim to have collected rent once was false; tenants and the vendor's son supported the defendants; mutation and rent receipts stood in defendants' names. Plaintiff's possession case rejected (and the agreement was held not genuine — point I).</li>
+<li><b>Explanation II and the fraction rule (paras 22–26).</b> The three Division Bench cases relied on by plaintiff involved claimants in <b>exclusive occupation</b> of the property; they rest on <i>Daniels v. Davison</i>. The <b>Full Bench in <i>Hari Charan Kuar</i></b> refused to extend that doctrine where the contract-holder possessed "not … the entire property sold to another but only a small portion" (3 bighas 15 kathas out of 9 bighas 10 kathas — a little over one-third). <i>A fortiori</i>, it cannot apply where the plaintiff held only <b>1/7th</b>. <i>Kesharmull Agarwala</i>: where the owner occupies part and has been asked, the purchaser "was not bound to make enquiry from every tenant in occupation of a portion of the house". <b>Principle (para 26):</b> "the principle of constructive notice, as incorporated in [Explanation] II of s.3 … and the doctrine … in <i>Daniels v. Davison</i> cannot be extended to a case in which the person basing his claim on the basis of a prior agreement is in possession of only a small fraction of the property … in such a case the purchasers cannot be said to be bound to make enquiry about the previous contract from the plaintiff or any other tenant in occupation of a portion of the house. In such an event the deeming clause of [Explanation] II … cannot be attracted at all."</li>
+<li><b>Burden of proof (para 27).</b> "To defeat a suit for specific performance of contract, the burden initially lies on the subsequent purchasers to prove want of notice, but this burden is <b>somewhat light and even a mere denial may suffice</b> for shifting the burden upon the plaintiff"; when both sides have led evidence the question is one of appreciation.</li>
+<li><b>Application (para 28).</b> D.W.9's sworn denial discharged the initial burden; plaintiff's "vague and general statement" that defendants knew, without explaining how, was insufficient; residence in the same big locality "is not such a circumstance which alone can lead to the irresistible conclusion" of knowledge. Defendants had no notice; "a bona fide purchaser for value without notice cannot be bound by any prior agreement between his vendor and the plaintiff" — even if Ext. 1 were genuine.</li>
+<li><b>Result (paras 29–30).</b> No specific performance; no refund of Rs 7,000 (agreement not genuine). <b>Appeal dismissed with costs.</b></li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>Explanation II is attracted only by <b>actual possession</b> of the property (or a substantial part) being sold; possession of an <b>insignificant fraction</b> by one of many tenants does not put the purchaser of the whole on inquiry as to a prior contract.</li>
+<li>Where the owner is in possession of part and has been inquired from, the purchaser need not interrogate every petty tenant.</li>
+<li>Burden of proving "bona fide purchaser for value without notice" is on the subsequent purchaser but is light; a sworn denial shifts the evidential burden.</li>
+<li>Mere residence in the same locality does not prove actual notice.</li>
+<li>Claimant must prove his possession — not merely assert it in the agreement.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> A 12-shop market complex in Chandni Chowk is sold to P, who inquires from the owner (who runs one shop himself). Shopkeeper S, tenant of one 8×10 shop, later produces an unregistered agreement to sell the whole complex to him. On the Patna view S's possession of 1/12th does not fix P with Explanation II notice of S's agreement. Had S been in possession of the <i>whole</i> complex (or the very shop that was sold to P — see <i>Ram Niwas</i>), the result would be different.</div>
+</div>
+
+<!-- ============================================================ -->
+<div class="case" id="c3">
+<h3>CASE 3 — H.N. Narayanaswamy Naidu v. Smt. Deveeramma</h3>
+<div class="cite">AIR 1981 Kant 93 · Karnataka High Court · G.N. Sabhahit J. · Second appeal by defendant 3 against concurrent decrees of the Additional Munsiff, Hassan (O.S. 271/1969, 10-10-1972) and the Civil Judge, Hassan (R.A. 176/1972, 24-10-1973)</div>
+<p><span class="lbl">Theme</span> Assignee of a <b>right of reconveyance</b> claiming to be a bona fide purchaser without notice; <b>wilful abstention</b> + <b>Explanation II</b> (purchaser-in-possession); SRA s.19(b).</p>
+<h4>Facts</h4>
+<ul>
+<li>On <b>21 March 1966</b> defendant 1 and his mother (defendant 2) <b>sold the suit properties to the plaintiff Deveeramma</b> (Ext. P-2). On the <b>same day</b> they obtained from her an <b>agreement to reconvey</b> (Ext. P-3): plaintiff would reconvey if the vendors repaid the entire consideration <b>after six years and within six months thereafter</b>; Ext. P-3 also stipulated that before reconveyance the <b>costs of major repairs</b> would be paid to the plaintiff. Plaintiff took possession and carried out major repairs at her cost.</li>
+<li>Subsequently, being again in need of money, the vendors, for consideration, executed <b>Ext. P-1 (10-10-1967)</b> — an (unregistered) agreement to <b>release the right of reconveyance</b> in the plaintiff's favour and to execute a registered release deed.</li>
+<li>Instead, on <b>29 May 1969</b> defendants 1–2 <b>sold the right to obtain reconveyance to defendant 3 (H.N. Narayanaswamy Naidu)</b> by Ext. D-1, without disclosing the release. Ext. D-1 recited that there had been <b>litigation against defendants 1–2 in which the right in question had been attached</b>, and contained a clause making the vendors liable for damages and return of the price, charged on their other properties, "in case the sale falls through for any reason".</li>
+<li>Plaintiff sued (O.S. 271/1969) for <b>specific performance of Ext. P-1</b> — execution of a registered release deed. Defendants 1–2 denied Ext. P-1. Defendant 3 pleaded that he acquired the reconveyance right <b>bona fide, for consideration and without knowledge of Ext. P-1</b>, so it did not bind him.</li>
+<li>Both courts below decreed the suit: trial court found defendant 3 had <b>actual notice</b> (he lived within a furlong of the property and in all probability knew of all dealings); first appellate court added <b>deemed notice</b>. Defendant 3 appealed.</li>
+</ul>
+<h4>Issue</h4>
+<p>"Whether defendant 3 was a bona fide purchaser for value without notice of the right to get the reconveyance from defendants 1 and 2?" — i.e., can he claim the exception in <b>s.19(b) Specific Relief Act, 1963</b>?</p>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (defendant 3)</h4>
+<ul><li>He is a transferee for value who paid in good faith without notice of Ext. P-1; s.19(b) SRA protects him; Ext. P-1 is unregistered and could not be discovered by a search.</li><li>Relied on <i>Shankar Prasad v. Mt. Muneshwari</i>, AIR 1969 Pat 304 — on its facts the purchaser was not required to make further inquiry from the occupant of the premises.</li><li>The plaintiff's possession was referable to her registered sale deed (Ext. P-2), which he knew; there was nothing to suggest she had any <i>further</i> right (the release) and hence no duty to inquire.</li></ul></div>
+<div><h4>Respondent (plaintiff Deveeramma)</h4>
+<ul><li>s.19(b) casts the burden on defendant 3 to prove value, good faith <b>and</b> want of notice; "notice" is defined in s.3 TPA to include constructive notice.</li><li><b>Wilful abstention</b>: Ext. P-3 (the very document creating the right he bought) required repair costs to be paid to the plaintiff before reconveyance; Ext. D-1 itself recited an attachment of the right in litigation — any prudent man would have asked the plaintiff whether the reconveyance right still subsisted.</li><li><b>Explanation II</b>: plaintiff was in <b>actual possession, practically as owner</b>; defendant 3 was bound to inquire from her and is deemed to have notice of her title including the release.</li><li>Actual notice was also proved circumstantially — proximity of residence and the tell-tale indemnity clause in Ext. D-1.</li></ul></div></div>
+<h4>Decision and reasoning (Sabhahit J.)</h4>
+<ol>
+<li><b>Framework (paras 5–6).</b> s.19(b) SRA set out; defendant 3, who pleads the exception, "shall have to prove that he was a transferee for value, that he paid so without notice of the original contract."</li>
+<li><b>Definition of notice (para 7).</b> s.3 TPA body and Explanation II quoted.</li>
+<li><b><i>Shankar Prasad</i> distinguished (paras 9–10).</b> Its facts were "entirely different"; here "the facts … are such as would induce any average prudent man to go and enquire with the person viz., the plaintiff, who was in actual possession of the premises." Ext. P-3 (repair costs payable to plaintiff) and Ext. D-1 (attachment recital) put him on inquiry: "any average prudent man ought to have enquired about the rights of the plaintiff, whether reconveyance was still subsisting or whether he had spent any amount further for major repairs or what was the nature of his rights etc. Thus, it is obvious that <b>but for the wilful abstention from enquiry, defendant 3 would have come to know the entire facts</b> and, hence, he should be deemed to have the notice of the rights of the plaintiff."</li>
+<li><b>Explanation II (para 10).</b> "Further, even under Explanation II … since the plaintiff was in <b>actual possession, practically as owner but for the reconveyance deed</b>, it was the duty of defendant 3 to enquire with the plaintiff about her rights. Even under the said provision, he should be deemed to have the notice of the right of the plaintiff."</li>
+<li><b>Actual notice (para 11).</b> Concurrent findings of notice upheld; probability strengthened by the fact that in Ext. D-1 defendant 3 "has taken care to see that the vendors are made liable for damages and return of purchase money in case the sale falls through for any reason" — the caution of a man who suspected a defect. He "cannot resist the suit … on the ground that he is a bona fide purchaser for value without notice."</li>
+<li><b>Obiter (para 12).</b> Reconveyance is a concession by the vendee; <b>time is of the essence</b>; defendant 3 never acted within the stipulated period, so his right, if any, was in any case barred.</li>
+<li><b>Result (para 13).</b> Appeal dismissed; decree for specific performance of the release agreement affirmed.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>A transferee invoking SRA s.19(b) bears the burden of proving value, good faith and absence of notice; "notice" is read with s.3 TPA (actual + constructive).</li>
+<li><b>Wilful abstention</b>: where the documents in the transferee's own chain (the reconveyance agreement; recitals in his purchase deed) disclose facts calling for inquiry from the occupant, failure to inquire is wilful abstention and notice is imputed.</li>
+<li><b>Explanation II</b> applies to a purchaser-in-possession "practically as owner": an assignee of a right affecting that property must inquire of the possessor and is deemed to know her title (including an unregistered release in her favour).</li>
+<li>Circumstantial evidence — proximity, unusual protective clauses — can establish actual notice.</li>
+<li>Right of reconveyance: time is of the essence; a concession to be strictly exercised.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> S sells his Gurugram plot to B with a right to buy it back within 5 years; a year later S, for Rs 2 lakh, agrees in writing to give up the buy-back right. S then "sells" the buy-back right to T. T knows B is in possession as owner and T's own deed mentions that the right was once attached in a suit. T never asks B. T is fixed with notice of the release (wilful abstention + Explanation II) and cannot claim s.19(b) protection against B's suit — <i>Naidu</i>.</div>
+</div>
+
+<!-- ============================================================ -->
+<div class="case" id="c4">
+<h3>CASE 4 — Ram Niwas (dead) through LRs v. Bano (Smt.) &amp; Ors.</h3>
+<div class="cite">(2000) 6 SCC 685 : AIR 2000 SC 2921 · Supreme Court of India · S.S.M. Quadri J. (for the Bench) · Appeal by special leave from the Rajasthan High Court (Division Bench, 29-1-1990)</div>
+<p><span class="lbl">Theme</span> <b>Tenant in possession</b> holding a prior agreement to purchase v. subsequent registered purchaser: scope of <b>SRA s.19(b)</b> read with <b>Explanation II to s.3 TPA</b>; "notice" wider than "knowledge"; vendor's assurances no substitute for inquiry from the possessor.</p>
+<h4>Facts</h4>
+<ul>
+<li>The appellant-plaintiff ("the tenant", Ram Niwas) held on rent a <b>shop at Katlara Bazar, Loharawali Gali, Merta City</b> (Rajasthan) from its owner respondent 5 ("the vendor") at <b>Rs 35 p.m.</b> The tenant and the vendor were <b>brothers as well as brothers-in-law</b>.</li>
+<li>On <b>25 Jan 1978</b> the tenant claims to have entered into an <b>agreement (Ext. 1)</b> to purchase the shop for <b>Rs 9,200</b>, paying <b>Rs 3,200</b> in cash and undertaking to pay <b>Rs 6,000</b> at execution of the sale deed; the vendor allegedly put him in possession "as owner" and handed over the old tenancy letter.</li>
+<li>On <b>24 July 1978</b> the vendor <b>sold the shop by registered deed (Ext. 4) for Rs 20,000</b> to respondents 1–4 ("the purchasers" — Smt. Bano and others); their husbands were respondents 6–9.</li>
+<li>On <b>12 Oct 1978</b> the tenant sued for <b>specific performance</b> of Ext. 1 against the vendor and the purchasers. The purchasers denied the genuineness of Ext. 1 (alleged it was forged) and pleaded that they were <b>bona fide purchasers for value without notice</b>.</li>
+<li>Issue 1 (agreement and possession as owner) and Issue 10 ("Have defendants 2 to 5 purchased the disputed shop after paying full price and had they no <i>knowledge</i> of the alleged agreement to sell?") were framed.</li>
+</ul>
+<h4>Procedural history</h4>
+<p><b>Trial court (15-12-1984)</b>: all issues for the plaintiff; suit decreed. <b>Single Judge, Rajasthan HC (4-8-1987)</b>: on reappraisal, held the purchasers were bona fide purchasers who paid Rs 20,000 without knowledge of Ext. 1; assumed (without an independent finding) the trial court's finding that the agreement existed; registered sale deed could not be cancelled; appeal allowed. <b>Division Bench (29-1-1990)</b>: agreed; held that failure to inquire from the tenant did not raise a presumption of knowledge because the vendor had told the purchasers that the tenant was his brother/sister-in-law's husband and that the documents were with him and he would retrieve them — "so there was no need to make further inquiry"; also found the plaintiff's version untrustworthy and that equitable relief of cancellation should not be granted. Tenant appealed by special leave; he died pending appeal and his LRs were substituted.</p>
+<h4>Issues</h4>
+<ol><li>What must a subsequent transferee prove to fall within the exception in SRA s.19(b)?</li><li>Are the purchasers <b>deemed to have notice</b> of the tenant's agreement by virtue of Explanation II to s.3 TPA, notwithstanding a finding that they had no actual knowledge?</li><li>Was the High Court right to proceed without an independent finding on the genuineness of Ext. 1, and how should the s.20(2) SRA discretion be exercised?</li></ol>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant tenant (Mr Sanjeev K. Kapoor)</h4>
+<ul><li>Both the Single Judge and the Division Bench <b>ignored Explanation II to s.3 TPA</b>: the tenant was in <b>actual possession</b> of the shop; the purchasers were bound to inquire from him on what terms he held; not having done so they are deemed to have notice of his title under Ext. 1 and cannot claim s.19(b).</li><li>The Division Bench wrongly accepted the vendor's story that no inquiry was needed because the tenant was his brother — the vendor is the last person whose word can substitute for inquiry from the possessor (<i>Daniels v. Davison</i>).</li><li>Nothing in the tenant's conduct disentitled him to the equitable relief.</li></ul></div>
+<div><h4>Respondent purchasers</h4>
+<ul><li>They are bona fide purchasers for <b>Rs 20,000</b> (more than double the alleged agreement price) under a <b>registered</b> deed, without knowledge of Ext. 1 — a concurrent finding of the High Court.</li><li>The tenant's possession was <b>as tenant</b>, fully explained by the tenancy; the vendor explained the relationship and undertook to retrieve the documents; a reasonable purchaser needed to go no further.</li><li>Ext. 1 is forged; between close relatives (brothers/brothers-in-law) such a document is easily fabricated; the plaintiff's version was found untrustworthy.</li><li>Specific performance is discretionary (s.20 SRA); cancellation of a registered sale deed would be inequitable.</li></ul></div></div>
+<h4>Decision and reasoning (Quadri J.)</h4>
+<ol>
+<li><b>s.19(b) analysed (paras 2–4).</b> To fall within the excluded class a transferee must show: "(a) he has purchased for value the property …; (b) he has paid his money to the vendor in good faith; and (c) he had no notice of the earlier contract for sale." The provision embodies the English rule of priority between legal and equitable rights (Snell): a bona fide purchaser of the legal estate for value without notice of a prior equitable right has priority "in equity as well as at law".</li>
+<li><b>Kinds of notice (paras 5–8).</b> Notice may be actual, constructive or imputed. s.3 TPA definition and Explanation II quoted: "a statutory presumption of 'notice' arises against any person who acquires any immovable property … of the title, if any, of the person who is for the time being in actual possession thereof." The principle derives from <b>Lord Eldon in <i>Daniels v. Davison</i></b>: a person purchasing where there is a tenant in possession under a lease or an agreement "must be bound to inquire, on what terms that person is in possession."</li>
+<li><b>Legal v. equitable right (para 16).</b> The purchasers acquired a <b>legal right</b> under the registered sale deed; the tenant's right under Ext. 1, though earlier, is only an <b>equitable right</b> and does not affect the purchasers <i>if</i> they are bona fide purchasers for value without notice.</li>
+<li><b>Failure to decide Issue 1 (para 17).</b> The Single Judge merely "assumed" the agreement and proceeded on absence of knowledge; he "ought to have considered the evidence and recorded his own positive finding on the question whether Ext. 1 was a true and valid agreement." Issue 1 must be decided afresh.</li>
+<li><b>Notice v. knowledge; Explanation II applied (para 18).</b> Both courts examined only whether the purchasers had <i>actual knowledge</i> and "failed to notice the provisions of Explanation II". Issue 10 was wrongly framed — "the word 'notice' should have been used … instead of 'knowledge' because s.19(b) uses the word 'notice'." "<b>The word 'notice' is of wider import than the word 'knowledge'.</b> A person may not have actual knowledge of a fact but he may have notice of it having regard to the aforementioned definition and Explanation II thereto. <b>If the purchasers have relied upon the assertion of the vendor or on their own knowledge and abstained from making inquiry into the real nature of the possession of the tenant, they cannot escape from the consequences of the deemed notice under Explanation II</b> … we hold that the purchasers will be deemed to have notice of Ext. 1, should it be found to be true and valid."</li>
+<li><b>Order (para 21).</b> Judgments of the Division Bench and Single Judge set aside; case <b>remanded</b> to the Single Judge to decide (i) Issue 1 — genuineness of Ext. 1; and (ii) whether the plaintiff is entitled to the <b>discretionary relief</b> of specific performance under <b>s.20(2) SRA</b>. Appeal allowed; no costs.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>Under SRA s.19(b) the subsequent transferee must prove <b>value, payment in good faith, and absence of notice</b> — three cumulative conditions.</li>
+<li>"Notice" in s.19(b) bears the s.3 TPA meaning and is <b>wider than "knowledge"</b>; issues should be framed on "notice".</li>
+<li><b>Explanation II</b> raises a <b>statutory presumption</b>: a purchaser is deemed to have notice of the title of the person in <b>actual possession</b>, including a tenant's agreement to purchase — the purchaser must inquire <b>from the possessor</b> about "the real nature of the possession"; reliance on the vendor's assertions or on one's own assumptions is no answer.</li>
+<li>Possession as tenant does not exhaust the inquiry — the tenant may hold a further title (<i>Daniels v. Davison</i>).</li>
+<li>Deemed notice makes the later purchaser's legal title subordinate to the prior equitable right, subject to the prior agreement being proved genuine and the court's discretion (now s.16(c)/s.20 SRA as amended in 2018).</li>
+<li>An appellate court must record its own finding on the existence of the contract before applying s.19(b).</li>
+</ol></div>
+<div class="box ex"><b>Example (DU 2025 Q.3 fact pattern).</b> Tenant Suresh signs an agreement to buy the tenanted shop from landlord Ravi on 1 Jan 2025; Ravi sells to Amar by registered deed on 10 Jan 2025. Amar never asks Suresh why he is in possession, relying on Ravi's statement that "he is just my tenant". Under <i>Ram Niwas</i>, Amar is deemed to have notice of Suresh's agreement (Explanation II) and cannot claim s.19(b); Suresh, if his agreement is genuine and he is ready and willing (s.16(c) SRA), can obtain specific performance against Amar and retain possession.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p14">14. Precedent map &amp; reconciliation</h2>
+<svg viewBox="0 0 1000 400" width="100%" style="max-width:1000px;display:block;margin:auto" xmlns="http://www.w3.org/2000/svg">
+<rect x="350" y="10" width="300" height="46" rx="10" fill="#4a2c82"/><text x="500" y="39" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">s.3 TPA — "notice" (1929 amendment)</text>
+<line x1="500" y1="56" x2="180" y2="95" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="500" y2="95" stroke="#4a2c82" stroke-width="2"/><line x1="500" y1="56" x2="820" y2="95" stroke="#4a2c82" stroke-width="2"/>
+<rect x="30" y="95" width="300" height="70" rx="10" fill="#fff8e1" stroke="#c9a227" stroke-width="2"/><text x="180" y="118" text-anchor="middle" font-size="12" font-weight="bold">Wilful abstention / gross negligence</text><text x="180" y="136" text-anchor="middle" font-size="11">Ahmedabad MC v. Haji Abdul Gafur (SC 1971)</text><text x="180" y="152" text-anchor="middle" font-size="11">question of fact; no general rule; s.100 charge</text>
+<rect x="350" y="95" width="300" height="70" rx="10" fill="#e9f7ef" stroke="#0b6e4f" stroke-width="2"/><text x="500" y="118" text-anchor="middle" font-size="12" font-weight="bold">Explanation II — actual possession</text><text x="500" y="136" text-anchor="middle" font-size="11">Ram Niwas v. Bano (SC 2000) — strict deeming</text><text x="500" y="152" text-anchor="middle" font-size="11">Naidu v. Deveeramma (Kant 1981) — + wilful abstention</text>
+<rect x="670" y="95" width="300" height="70" rx="10" fill="#fdecec" stroke="#b23a48" stroke-width="2"/><text x="820" y="118" text-anchor="middle" font-size="12" font-weight="bold">Limit of Explanation II</text><text x="820" y="136" text-anchor="middle" font-size="11">Md. Mustafa v. Haji Md. Isa (Pat 1987)</text><text x="820" y="152" text-anchor="middle" font-size="11">insignificant fraction; light burden</text>
+<g font-size="10.5">
+<rect x="30" y="185" width="300" height="200" rx="8" fill="#fff" stroke="#c9a227"/>
+<text x="40" y="205" font-weight="bold">Approved / relied on:</text>
+<text x="40" y="222">✓ Roop Chand Jain (AIR 1940 All 456) – no register of arrears</text>
+<text x="40" y="238">✓ Laxmi Devi v. Mukand Kanwar (AIR 1965 SC 834) – s.2(d)</text>
+<text x="40" y="258" font-weight="bold">Disapproved / distinguished:</text>
+<text x="40" y="275">✗ Nawal Kishore (AIR 1943 All 115 FB) – general presumption</text>
+<text x="40" y="291">✗ Ramji Lal (AIR 1941 Oudh 305); Chandu Ram (AIR 1951 Cal 398)</text>
+<text x="40" y="307">✗ Arumilli Surayya (AIR 1940 Mad 701) – s.100 & auctions</text>
+<text x="40" y="323">~ Akhoy Kumar Banerji (AIR 1915 Cal 478) – distinguished</text>
+<text x="40" y="339">~ Laxman Venkatesh Naik (AIR 1939 Bom 183) – irrelevant</text>
+<text x="40" y="359">Statutes: s.100 TPA; s.141 BPMC Act 1949;</text>
+<text x="40" y="375">s.61 Prov. Insolvency Act; O.XXI r.91 CPC</text>
+<rect x="350" y="185" width="300" height="200" rx="8" fill="#fff" stroke="#0b6e4f"/>
+<text x="360" y="205" font-weight="bold">Foundation:</text>
+<text x="360" y="222">• Daniels v. Davison (1809) 16 Ves 249 – Lord Eldon</text>
+<text x="360" y="238">• Snell's Equity – bona fide purchaser of legal estate</text>
+<text x="360" y="258" font-weight="bold">Statutes:</text>
+<text x="360" y="275">• SRA 1963 s.19(b) – value + good faith + no notice</text>
+<text x="360" y="291">• SRA s.20(2) discretion (now s.16(c)/2018 Amendment)</text>
+<text x="360" y="311" font-weight="bold">Naidu distinguished:</text>
+<text x="360" y="328">~ Shankar Prasad v. Muneshwari (AIR 1969 Pat 304)</text>
+<text x="360" y="348" font-weight="bold">Key dictum:</text>
+<text x="360" y="365">"notice" wider than "knowledge"; inquire from the</text>
+<text x="360" y="380">possessor, not the vendor (Ram Niwas para 18)</text>
+<rect x="670" y="185" width="300" height="200" rx="8" fill="#fff" stroke="#b23a48"/>
+<text x="680" y="205" font-weight="bold">Followed:</text>
+<text x="680" y="222">✓ Hari Charan Kuar v. Kaula Rai (AIR 1917 Pat 478 FB)</text>
+<text x="680" y="238">✓ Kesharmull Agarwala (1968 BLJR 28)</text>
+<text x="680" y="254">✓ Rameshwar Singh (AIR 1984 Pat 277) – burden</text>
+<text x="680" y="270">✓ Ramchander Singh v. Asghari Begam – light burden</text>
+<text x="680" y="290" font-weight="bold">Distinguished (exclusive possession):</text>
+<text x="680" y="307">~ Balchand Mahton (AIR 1929 Pat 284)</text>
+<text x="680" y="323">~ Ramkrishna Singh (AIR 1965 Pat 467)</text>
+<text x="680" y="339">~ Basruddin Khan (AIR 1970 Pat 304)</text>
+<text x="680" y="359">Rule: 1/7th possession by one of seven tenants</text>
+<text x="680" y="375">does not put purchaser of whole on inquiry</text>
+</g></svg>
+
+<!-- ============================================================ -->
+<h2 id="p15">15. Master tables and examples</h2>
+<h3>15.1 Actual v. constructive v. imputed notice</h3>
+<table>
+<tr><th>Point</th><th>Actual notice</th><th>Constructive notice</th><th>Imputed notice</th></tr>
+<tr><td>Source</td><td>Personal knowledge</td><td>Presumption of law from duty to inquire / deeming Explanations I–II</td><td>Agent's knowledge (Explanation III)</td></tr>
+<tr><td>Nature</td><td>Fact</td><td>Legal fiction; heads 1–2 questions of fact, Expl. I–II statutory deeming</td><td>Legal fiction from agency law</td></tr>
+<tr><td>Rebuttable?</td><td>Disproved by evidence of ignorance</td><td>Not by mere denial of knowledge once conditions met</td><td>Not, except via fraud proviso vis-à-vis party to fraud</td></tr>
+<tr><td>Illustrative case</td><td><i>Naidu</i> (trial court finding)</td><td><i>Ahmedabad MC</i>; <i>Ram Niwas</i>; <i>Md. Mustafa</i></td><td>Contract Act s.229 examples</td></tr>
+</table>
+<h3>15.2 Situations — notice or no notice?</h3>
+<table>
+<tr><th style="width:55%">Situation</th><th>Result</th><th>Basis</th></tr>
+<tr><td>Purchaser does not search the Sub-Registrar's records; a registered mortgage exists</td><td style="color:#b23a48"><b>Notice</b></td><td>Expl. I (compulsorily registrable, duly registered &amp; indexed)</td></tr>
+<tr><td>Same, but the mortgage deed was indexed under a wrong name</td><td style="color:#0b6e4f"><b>No Expl. I notice</b></td><td>Proviso (3) not satisfied</td></tr>
+<tr><td>Prior unregistered agreement to sell; holder not in possession; purchaser ignorant</td><td style="color:#0b6e4f"><b>No notice</b></td><td>Not registrable → no Expl. I; no possession → no Expl. II</td></tr>
+<tr><td>Tenant in possession of the whole shop holds an agreement to buy; purchaser asks only the vendor</td><td style="color:#b23a48"><b>Deemed notice</b></td><td>Expl. II — <i>Ram Niwas</i></td></tr>
+<tr><td>One of seven tenants holds an alleged agreement; purchaser inquired from owner</td><td style="color:#0b6e4f"><b>No notice</b></td><td><i>Md. Mustafa</i> (fraction rule)</td></tr>
+<tr><td>Purchaser's own deed recites attachment of the right; occupant is purchaser-in-possession; no inquiry</td><td style="color:#b23a48"><b>Notice</b></td><td>Wilful abstention + Expl. II — <i>Naidu</i></td></tr>
+<tr><td>Court-auction purchaser; municipal tax arrears; property with receivers; general inquiry made</td><td style="color:#0b6e4f"><b>No notice</b></td><td><i>Ahmedabad MC</i></td></tr>
+<tr><td>Purchaser refuses registered letter from prior claimant before completing purchase</td><td style="color:#b23a48"><b>Notice</b></td><td>Wilful abstention</td></tr>
+<tr><td>Title papers in purchaser's hands mention a charge; he never reads them</td><td style="color:#b23a48"><b>Notice</b></td><td>Gross negligence</td></tr>
+<tr><td>Purchaser's advocate learns of a prior lease during title search; does not tell client</td><td style="color:#b23a48"><b>Notice</b></td><td>Expl. III</td></tr>
+<tr><td>Advocate colludes with vendor to hide prior lease; lessee sues purchaser</td><td style="color:#b23a48"><b>Notice as against lessee</b> (innocent)</td><td>Proviso protects principal only against party to fraud (vendor)</td></tr>
+<tr><td>Gratuitous donee of property subject to a contract to sell, without notice</td><td style="color:#b23a48"><b>Bound</b></td><td>s.40 — protection only for transferee <i>for consideration</i></td></tr>
+</table>
+<h3>15.3 Comparative snapshot of the four DU cases</h3>
+<table>
+<tr><th>Case</th><th>Claimant's right</th><th>Transferee</th><th>Head of notice</th><th>Outcome</th></tr>
+<tr><td><i>Ahmedabad MC</i> (SC 1971)</td><td>Statutory charge for tax arrears</td><td>Court-auction purchaser</td><td>Wilful abstention / gross negligence (body of s.3); s.100</td><td>No notice — purchaser wins</td></tr>
+<tr><td><i>Md. Mustafa</i> (Pat 1987)</td><td>Unregistered agreement to sell (found forged)</td><td>Registered purchasers (minors via father)</td><td>Expl. II — 1/7th possession</td><td>No notice — purchasers win</td></tr>
+<tr><td><i>Naidu</i> (Kant 1981)</td><td>Unregistered release of reconveyance right; possession as owner</td><td>Assignee of reconveyance right</td><td>Wilful abstention + Expl. II + actual</td><td>Notice — claimant wins</td></tr>
+<tr><td><i>Ram Niwas</i> (SC 2000)</td><td>Agreement to sell held by tenant in possession</td><td>Registered purchasers</td><td>Expl. II (strict)</td><td>Deemed notice — remand on genuineness &amp; discretion</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p16">16. DU Previous Year Questions — model answers</h2>
+
+<div class="pyq">
+<h3>PYQ 1 — DU LL.B. II Term, LB-204, May/June 2025, Q.3</h3>
+<p><b>The tenant Mr. Suresh entered into an agreement to sell on 1st Jan 2025 with the landlord Mr. Ravi to purchase the tenanted property. On 10th Jan 2025 the landlord entered into a sale deed of the property with the purchaser Mr. Amar. Amar claims to be a bona fide purchaser without notice and wants possession of the property. Decide whether Amar would succeed, in the light of decided cases.</b></p>
+<div class="ans">
+<p><b>Issues.</b> (i) Can Suresh enforce his prior agreement against Amar, a subsequent purchaser? (ii) Is Amar a "transferee for value who has paid his money in good faith and without notice of the original contract" under s.19(b) SRA, 1963? (iii) Does Suresh's actual possession fix Amar with notice under Explanation II to s.3 TPA?</p>
+<p><b>Law.</b> An agreement to sell creates no interest in land (s.54 TPA) but an obligation annexed to ownership enforceable against a transferee <b>with notice</b> or a gratuitous transferee (s.40, illustration — Sultanpur). s.19(b) SRA permits specific performance against a subsequent transferee "except a transferee for value who has paid his money in good faith and without notice of the original contract"; per <i>Ram Niwas v. Bano</i> (2000) 6 SCC 685 he must prove three things — value, payment in good faith, and absence of <b>notice</b>. "Notice" is defined in s.3 TPA (actual knowledge; wilful abstention; gross negligence) and Explanation II deems a person acquiring immovable property "to have notice of the title, if any, of any person who is for the time being in <b>actual possession</b> thereof" — codifying Lord Eldon's rule in <i>Daniels v. Davison</i> that a purchaser must inquire on what terms a tenant in possession holds. The Supreme Court held that "notice" is <b>wider than "knowledge"</b>, and that purchasers who "relied upon the assertion of the vendor or on their own knowledge and abstained from making inquiry into the real nature of the possession of the tenant … cannot escape from the consequences of the deemed notice under Explanation II." <i>H.N. Narayanaswamy Naidu v. Deveeramma</i> (AIR 1981 Kant 93) likewise imputed notice to an assignee who failed to inquire from the person in actual possession, treating the omission as wilful abstention. Contrast <i>Md. Mustafa v. Haji Md. Isa</i> (AIR 1987 Pat 5) — where the claimant occupied only 1/7th of a multi-tenanted building, Explanation II was not attracted and a purchaser who had inquired from the owner was protected. Burden: the purchaser must plead and prove the s.19(b) exception, though the burden is light (<i>Md. Mustafa</i>).</p>
+<p><b>Application.</b> Suresh is the tenant in <b>actual possession of the very property</b> sold — the <i>Ram Niwas</i> situation, not the <i>Md. Mustafa</i> fraction situation. Amar was bound to inquire <i>from Suresh</i> about the nature of his possession; had he done so he would have learnt of the 1 Jan agreement. Whether or not Amar actually knew of it, he is <b>deemed to have notice</b> of Suresh's title under Explanation II; reliance on Ravi's description of Suresh as "merely a tenant" is no answer. Amar therefore fails the third condition of s.19(b) and takes subject to Suresh's contract (s.40 TPA). Amar cannot recover possession from Suresh, whose possession is lawful both as tenant and (if he has performed or is willing to perform — s.53-A) as transferee in part performance; further, s.53-A's proviso protecting a transferee "who has no notice of the contract or of the part performance" does not aid Amar for the same reason. Suresh may sue for specific performance impleading both Ravi and Amar (s.19(a)–(b)); post-2018 specific performance is no longer discretionary (s.10 SRA as amended), subject to Suresh proving the agreement and his readiness and willingness (s.16(c)). The only caveats: (a) if the agreement is not genuine, Amar wins (<i>Ram Niwas</i> remanded on this point); (b) if the agreement is registrable and unregistered, it remains admissible for specific performance (Registration Act s.49 proviso).</p>
+<p><b>Conclusion.</b> Amar would <b>not</b> succeed. Being deemed to have notice of Suresh's agreement by virtue of Suresh's actual possession (Explanation II; <i>Ram Niwas</i>; <i>Naidu</i>), he is not a bona fide purchaser without notice under s.19(b) SRA; Suresh can enforce the agreement against him and retain possession.</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 2 — "Define notice. Distinguish between actual and constructive notice. Explain the circumstances in which a person is deemed to have constructive notice under the Transfer of Property Act." [DU, recurring]</h3>
+<div class="ans">
+<p><b>Definition.</b> s.3 TPA: a person is said to have notice of a fact when he actually knows it, or when, but for wilful abstention from an enquiry or search which he ought to have made, or gross negligence, he would have known it. Three Explanations add deemed notice by registration, actual possession and notice to agent (1929 amendment). Notice may be actual, constructive or imputed (<i>Ram Niwas</i>).</p>
+<p><b>Actual notice</b> — definite knowledge of the fact, in relation to the transaction, by a person interested in it, existing at the time of the transfer; vague rumours or strangers' remarks do not suffice; e.g., an attesting witness has actual notice of execution. <b>Constructive notice</b> — knowledge the law imputes because the person ought to have known: "a notice which treats a person who ought to have known a fact as if he actually does know it"; originally equitable, now statutory (Dua J.). Differences: source (fact v. presumption of law); proof (evidence of knowledge v. proof of circumstances raising duty); rebuttal (denial v. cannot be rebutted by mere denial); "notice" is wider than "knowledge".</p>
+<p><b>Circumstances of constructive notice.</b> (1) <b>Wilful abstention</b> — deliberate refusal to inquire (refusing a registered letter; not asking why tenants pay rent to a third party; <i>Naidu</i>). (2) <b>Gross negligence</b> — aggravated carelessness indicating indifference to obvious risk (ignoring a charge noted in one's own title papers); in <i>Ahmedabad MC v. Haji Abdul Gafur</i> the SC held these are questions of fact; the test is not whether the purchaser <i>could</i> have discovered the fact but whether his failure was wilful or grossly negligent, judged in Indian conditions; no general presumption of notice of municipal tax arrears. (3) <b>Registration — Explanation I</b>: deemed notice of a compulsorily registrable instrument duly registered, entered in Book 1 (s.51) and correctly indexed (s.55), from the date of registration. (4) <b>Actual possession — Explanation II</b>: deemed notice of the title of the person in actual possession; purchaser must inquire from the possessor (<i>Daniels v. Davison</i>; <i>Ram Niwas</i>; <i>Naidu</i>); not attracted where claimant holds an insignificant fraction (<i>Md. Mustafa</i>). (5) <b>Notice to agent — Explanation III</b>: agent's knowledge acquired while acting for the principal in the course of the business, on a material matter, is imputed (Contract Act s.229); not if fraudulently concealed, as against a party to the fraud.</p>
+<p><b>Conclusion.</b> The doctrine balances protection of prior equities against security of bona fide purchasers; ss.39, 40, 41, 53-A, 100 TPA and s.19(b) SRA all turn on it.</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 3 — "Is a purchaser of property at a court auction bound by arrears of municipal taxes which are a statutory charge on the property but of which he had no knowledge? Discuss with reference to <i>Ahmedabad Municipal Corporation v. Haji Abdul Gafur</i>." [DU pattern]</h3>
+<div class="ans">
+<p><b>Statutory position.</b> s.100 TPA: "no charge shall be enforced against any property in the hands of a person to whom such property has been transferred for consideration and without notice of the charge", save as otherwise <b>expressly</b> provided by any law. Municipal Acts (e.g., s.141 BPMC Act 1949) make property taxes a "first charge".</p>
+<p><b>The decision.</b> Facts: owner insolvent (1950); property with receivers; sold in execution of mortgage decree to the respondent (Nov 1954) for Rs 22,300; tax arrears 1949-54 of Rs 543.79; Corporation attached the property (1955). The SC (Dua J.) held: (1) <i>caveat emptor</i> applies to auction sales but does not settle the notice question; (2) a saving law under s.100 must expressly make the charge enforceable against a transferee for value <b>without notice</b> — s.141 merely creates a charge and is not such a law; (3) s.100 applies to court sales (s.2(d); <i>Laxmi Devi</i>); (4) constructive notice requires wilful abstention (conscious) or gross negligence (aggravated); it is a question of fact; the question is not whether the purchaser had the means of knowledge but whether his omission was wilful or grossly negligent; (5) no general rule (as in <i>Nawal Kishore</i>) that purchasers in municipal areas have notice of possible arrears — <i>Roop Chand Jain</i> preferred: there is no register of arrears; (6) on facts, purchaser could assume court receivers had paid priority dues (s.61 Provincial Insolvency Act), rents were being collected, he had inquired from the receivers; the Corporation was "far more negligent and blameworthy". No constructive notice; charge unenforceable against him.</p>
+<p><b>Answer.</b> The auction purchaser without actual or constructive notice is <b>not</b> bound unless the statute expressly provides for enforcement against a transferee without notice or the facts show wilful abstention/gross negligence (e.g., ignoring a served demand notice). Practical corollary: obtain a municipal no-dues certificate.</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 4 — Problem: "A owns a building with seven identical shops let to seven tenants. B, one tenant, claims that A agreed in writing to sell him the whole building and took Rs 7,000 in advance. A thereafter sells the building by registered deed to C, who inquired from A but not from any tenant. B sues C for specific performance, contending that his possession fixed C with notice. Decide." [DU pattern]</h3>
+<div class="ans">
+<p><b>Issue.</b> Whether B's possession of one shop attracts Explanation II so as to deprive C of the s.19(b) SRA protection.</p>
+<p><b>Law.</b> Explanation II deems a purchaser to have notice of the title of the person in actual possession of the property acquired (<i>Daniels v. Davison</i>). In <i>Md. Mustafa v. Haji Md. Isa</i> (AIR 1987 Pat 5), on facts identical to the problem (plaintiff tenant of one of seven <i>katras</i>; registered sale to minors; no inquiry from tenants), the Patna High Court held, following its Full Bench in <i>Hari Charan Kuar v. Kaula Rai</i> and <i>Kesharmull Agarwala</i>, that the principle "cannot be extended to a case in which the person basing his claim on the basis of a prior agreement is in possession of only a small fraction of the property"; the purchaser is not bound to inquire from every tenant, and "the deeming clause … cannot be attracted at all." The burden on the purchaser to prove want of notice is light; a sworn denial shifts the onus to the plaintiff. Contrast <i>Ram Niwas v. Bano</i> (SC 2000), where the tenant possessed the <i>entire</i> shop sold and Explanation II applied with full force.</p>
+<p><b>Application.</b> B holds only 1/7th of the building; six other tenants hold identical portions; C inquired from the owner. Applying <i>Md. Mustafa</i>, Explanation II is not attracted; unless B proves C's actual knowledge (mere residence in the locality is insufficient), C is a bona fide purchaser for value without notice. B's remedy lies against A in damages (and refund of the advance, if the agreement is genuine).</p>
+<p><b>Decision.</b> Suit against C fails. (Note the caveat: if B had been in possession of a substantial part or the whole, the <i>Ram Niwas</i> rule would bind C.)</p>
+</div></div>
+
+<div class="pyq">
+<h3>PYQ 5 — Short notes: (a) Registration as constructive notice; (b) Notice to agent; (c) Actual possession as notice</h3>
+<div class="ans">
+<p><b>(a) Registration (Explanation I).</b> Inserted 1929 to resolve conflict (<i>Tilakdhari Lal v. Khedan Lal</i>). A person acquiring immovable property is deemed to have notice of a registered instrument from the date of registration <b>if</b> (i) the transaction was required by law to be registered and was so effected; (ii) registration was completed as prescribed; (iii) the instrument/memorandum was entered in Book 1 (s.51 Registration Act); (iv) particulars correctly entered in the indexes (s.55); for property in several sub-districts, from the earliest filing of a memorandum (s.30(2)/ss.64–66). Optionally registrable documents do not attract the Explanation. Basis: the register is open to public search (s.57), so a prudent purchaser must search.</p>
+<p><b>(b) Notice to agent (Explanation III).</b> <i>Qui facit per alium facit per se</i>; Contract Act s.229. Principal is deemed to have notice of a fact of which his agent acquires notice (i) while acting on his behalf, (ii) in the course of the business, (iii) the fact being material to it. Proviso: if the agent fraudulently conceals the fact, the principal is not charged with notice as against a person party to or cognizant of the fraud (but is charged as against innocent third parties). Knowledge acquired before the agency or in another capacity is not imputed.</p>
+<p><b>(c) Actual possession (Explanation II).</b> Codifies <i>Daniels v. Davison</i>: a purchaser is deemed to have notice of the title of the person in actual possession; he must inquire from the possessor, not merely the vendor (<i>Ram Niwas</i>); applies to purchasers-in-possession (<i>Naidu</i>) and tenants with collateral agreements; not attracted by possession of an insignificant fraction (<i>Md. Mustafa</i>). It defeats the s.19(b) SRA and s.53-A proviso defences.</p>
+</div></div>
+
+<!-- ============================================================ -->
+<h2 id="p17">17. Rapid revision &amp; mnemonics</h2>
+<div class="mnem">NOTICE (s.3) = "A + W-G-R-P-A"
+  A  = ACTUAL knowledge (definite, relevant, timely, by an interested person)
+  W  = WILFUL abstention from enquiry/search   ─┐ body of s.3 – questions of fact
+  G  = GROSS negligence                          ─┘ (Ahmedabad MC)
+  R  = REGISTRATION – Expl. I (compulsory + completed + Book 1 + correct index)
+  P  = POSSESSION  – Expl. II (title of person in ACTUAL possession) – Ram Niwas / Naidu / Md. Mustafa
+  A  = AGENT       – Expl. III (in course of business, material; fraud proviso)
+
+THE FOUR CASES = "A-M-N-R"
+  A = Ahmedabad MC   → charge + court sale; no general presumption of tax arrears; test = wilful/gross, not "means of knowledge"
+  M = Md. Mustafa    → 1/7th possession ≠ Expl. II notice; burden on purchaser is light
+  N = Naidu          → deed recitals + occupant-as-owner → wilful abstention + Expl. II
+  R = Ram Niwas      → "notice" wider than "knowledge"; ask the POSSESSOR, not the vendor
+
+s.19(b) SRA – transferee must prove: VALUE paid · GOOD FAITH · NO NOTICE  ("V-G-N")</div>
+
+<div class="box note"><b>Ten lines to remember</b>
+<ol>
+<li>Notice = actual knowledge, or knowledge one would have had but for wilful abstention or gross negligence (s.3), plus three deeming Explanations (1929).</li>
+<li>Notice is wider than knowledge (<i>Ram Niwas</i>); actual, constructive, imputed.</li>
+<li>Wilful abstention = conscious/deliberate; gross negligence = aggravated neglect; both are questions of fact judged in Indian conditions (<i>Ahmedabad MC</i>).</li>
+<li>Test: not "could he have found out?" but "was his failure wilful or grossly negligent?"</li>
+<li>Registration is notice only if compulsory, completed, entered in Book 1 and correctly indexed (Expl. I).</li>
+<li>Possession of a person other than the vendor is notice of his whole title; inquire from him, not the vendor (Expl. II; <i>Daniels v. Davison</i>; <i>Ram Niwas</i>; <i>Naidu</i>).</li>
+<li>Possession of an insignificant fraction by one of many tenants does not attract Expl. II (<i>Md. Mustafa</i>).</li>
+<li>Agent's notice in the course of business is the principal's notice, save fraudulent concealment vis-à-vis a party to the fraud (Expl. III; Contract Act s.229).</li>
+<li>Notice determines results under ss.39, 40, 41, 53, 53-A, 78, 100 TPA and s.19(b) SRA; s.100 saving law must <i>expressly</i> bind transferees without notice.</li>
+<li>Burden of proving "bona fide purchaser for value without notice" is on the subsequent transferee, but is light; deemed notice cannot be rebutted by mere denial.</li>
+</ol></div>
+
+<div class="foot">Prepared from the DU LB-204 Case Material (May 2022), Topic 3 (pp. 45–62); Transfer of Property Act, 1882; Specific Relief Act, 1963; Registration Act, 1908; Indian Contract Act, 1872; Provincial Insolvency Act, 1920; Code of Civil Procedure, 1908; supplemented by the LED Exam Capsule (pp. 14–21) and the DU May/June 2025 question paper. For study purposes only — verify citations against the original reports before citing in an examination or court.</div>
+
+</div><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3e6b48e7f2ab21e',t:'MTc4OTk2ODkxMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

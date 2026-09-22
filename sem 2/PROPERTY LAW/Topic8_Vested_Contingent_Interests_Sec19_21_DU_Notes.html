@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 8 – Vested and Contingent Interests (Sec. 19 & 21) | LB-204 | DU Notes</title>
+<style>
+  :root{--ink:#1b2a41;--accent:#4a2c82;--accent2:#b23a48;--gold:#c9a227;--soft:#f5f3fa;--line:#ddd8ea;--note:#fff8e1;--blue:#e8f1fb;--red:#fdecec;--green:#e9f7ef;--purple:#f1ebfb}
+  *{box-sizing:border-box}
+  body{font-family:Georgia,"Times New Roman",serif;line-height:1.65;color:var(--ink);margin:0;background:#fbfbfd}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 34px 80px}
+  header.hero{background:linear-gradient(135deg,#4a2c82 0%,#1b2a41 100%);color:#fff;padding:40px 34px;border-radius:14px;margin-bottom:28px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  header.hero h1{margin:0 0 6px;font-size:2.1rem}
+  header.hero .sub{opacity:.92;font-size:1.05rem}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);padding:3px 10px;border-radius:20px;font-size:.85rem;margin:8px 6px 0 0}
+  h2{font-size:1.65rem;color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:6px;margin-top:54px}
+  h3{font-size:1.28rem;color:var(--ink);margin-top:34px;border-left:5px solid var(--gold);padding-left:10px}
+  h4{font-size:1.08rem;color:var(--accent2);margin:22px 0 8px}
+  p{margin:9px 0;text-align:justify}
+  ul,ol{margin:8px 0 8px 22px} li{margin:5px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95rem;background:#fff}
+  th,td{border:1px solid var(--line);padding:9px 11px;vertical-align:top;text-align:left}
+  th{background:var(--accent);color:#fff} tr:nth-child(even) td{background:var(--soft)}
+  .box{border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:16px 0;background:#fff}
+  .note{background:var(--note);border-left:6px solid var(--gold)}
+  .stat{background:var(--blue);border-left:6px solid #2b6cb0;font-family:"Courier New",monospace;font-size:.93rem;white-space:pre-wrap}
+  .warn{background:var(--red);border-left:6px solid var(--accent2)}
+  .ok{background:var(--green);border-left:6px solid #0b6e4f}
+  .ex{background:var(--purple);border-left:6px solid #6b46c1}
+  .case{border:2px solid var(--accent);border-radius:12px;padding:18px 22px;margin:26px 0;background:#fff;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+  .case h3{border:none;padding:0;margin-top:0;color:var(--accent);font-size:1.4rem}
+  .case .cite{font-style:italic;color:#555;margin-bottom:10px}
+  .lbl{display:inline-block;background:var(--ink);color:#fff;padding:2px 9px;border-radius:4px;font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;margin-right:6px}
+  .lbl.g{background:#0b6e4f}.lbl.r{background:var(--accent2)}.lbl.y{background:var(--gold);color:#222}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 22px;columns:2;column-gap:30px}
+  .toc a{text-decoration:none;color:var(--ink)} .toc a:hover{color:var(--accent);text-decoration:underline} .toc li{break-inside:avoid}
+  .flow{display:flex;flex-direction:column;align-items:center;margin:20px 0}
+  .fbox{border:2px solid var(--accent);border-radius:10px;padding:10px 16px;background:#fff;max-width:600px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:.92rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  .fbox.q{background:#fff8e1;border-color:var(--gold)} .fbox.yes{background:var(--green);border-color:#0b6e4f} .fbox.no{background:var(--red);border-color:var(--accent2)}
+  .arrow{font-size:1.5rem;color:var(--accent);line-height:1;margin:4px 0}
+  .split{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .branch{display:flex;flex-direction:column;align-items:center;min-width:240px}
+  .branchlbl{font-size:.8rem;font-weight:bold;color:#555;font-family:Arial;margin-bottom:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px} @media(max-width:760px){.grid2{grid-template-columns:1fr}.toc{columns:1}.vs{grid-template-columns:1fr}}
+  .vs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:14px 0}
+  .vs>div{padding:14px 16px} .vs>div:first-child{background:var(--green);border-right:1px solid var(--line)} .vs>div:last-child{background:var(--red)} .vs h4{margin-top:0}
+  .mnem{font-family:"Courier New",monospace;background:#1b2a41;color:#f7e9a0;padding:14px 18px;border-radius:10px;white-space:pre-wrap}
+  .pyq{border:2px dashed var(--accent2);border-radius:12px;padding:18px 22px;margin:28px 0;background:#fffdfd}
+  .pyq h3{border:none;padding:0;color:var(--accent2);margin-top:0}
+  .ans{background:#fff;border-left:5px solid var(--accent);padding:12px 16px;margin-top:12px}
+  .small{font-size:.86rem;color:#555} .kw{color:var(--accent2);font-weight:bold}
+  blockquote{margin:10px 20px;padding:8px 16px;border-left:4px solid #999;background:#f7f7f7;font-style:italic}
+  svg text{font-family:Arial,Helvetica,sans-serif}
+  .foot{margin-top:50px;font-size:.85rem;color:#666;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body><div class="wrap">
+
+<header class="hero">
+  <h1>Topic 8 — Vested and Contingent Interests (Sections 19 and 21, TPA 1882)</h1>
+  <div class="sub">LL.B. II Term · Paper LB-204 Property Law · Faculty of Law, University of Delhi</div>
+  <div class="sub" style="margin-top:6px">Definition of and distinction between vested and contingent interests · Explanation to s.19 · Exception to s.21 · Related ss. 20, 22–24 · Attachability, transferability, heritability · Construction of trust deeds and wills</div>
+  <span class="tag">Rajesh Kanta Roy v. Shanti Debi AIR 1957 SC 255 : 1957 SCR 77</span>
+  <span class="tag">DU PYQs incl. May/June 2025 Q.6(b)</span>
+</header>
+
+<div class="box note"><b>Sources.</b> Primary: DU Case Material LB-204 (May 2022), Topic 8, pp. 112–118 — <i>Rajesh Kanta Roy v. Shanti Debi</i> reproduced in depth (facts, procedural history, issues, arguments, paragraph-wise reasoning with the clauses of the trust deed, authorities cited, principles). Statutory text from the bare Transfer of Property Act, 1882 (ss. 5, 6, 19–24, 25–34) and the Indian Succession Act, 1925 (ss. 119–120). Doctrinal summary, illustrations and comparison table from the Exam Capsule (Topic 8, pp. 43–46). PYQs from the DU LL.B. May/June 2025 paper (Q.6(b)) and recurring DU semester questions. Related provisions (CPC s.60 &amp; O.21, Succession Act, Hindu law on adoption/Dayabhaga, Trusts Act, Insolvency, Limitation, Stamp Act) added at relevant places.</div>
+
+<nav class="toc"><b>CONTENTS</b>
+<ol>
+<li><a href="#p1">The idea of "vesting" — vesting in interest v. vesting in possession; why the distinction matters</a></li>
+<li><a href="#p2">Section 19 — vested interest: text, element-by-element analysis</a></li>
+<li><a href="#p3">The Explanation to s.19 — four things that do <u>not</u> prevent vesting</a></li>
+<li><a href="#p4">Section 21 — contingent interest: text, elements, conversion into vested interest</a></li>
+<li><a href="#p5">The Exception to s.21 — interest on attaining an age + income given/applied = vested</a></li>
+<li><a href="#p6">Condition precedent v. condition subsequent; "certain" v. "uncertain" events; the presumption in favour of vesting</a></li>
+<li><a href="#p7">Distinction table — vested v. contingent (Capsule + additions); contingent interest v. spes successionis</a></li>
+<li><a href="#p8">Incidents — transferability (s.6), heritability, attachability (CPC s.60; <i>Pestonjee Bhicajee</i>), insolvency, limitation</a></li>
+<li><a href="#p9">Related sections — s.20 (unborn), s.22 (class attaining age), s.23 (no time fixed), s.24 (survivors), ss.25–34 (conditions); ISA ss.119–120</a></li>
+<li><a href="#p10">Rules of construction — "payable at/upon", "if/when", gifts after payment of debts, English learning (Jarman, Williams)</a></li>
+<li><a href="#p11">Flowchart — is the interest vested or contingent?</a></li>
+<li><a href="#p12">Related provisions in other Acts</a></li>
+<li><a href="#c1">CASE — Rajesh Kanta Roy v. Shanti Debi</a></li>
+<li><a href="#p13">Diagram of the trust deed in <i>Rajesh Kanta Roy</i>; other illustrative cases</a></li>
+<li><a href="#p14">Master table of dispositions with answers; real examples</a></li>
+<li><a href="#p15">DU Previous Year Questions with model answers</a></li>
+<li><a href="#p16">Rapid revision &amp; mnemonics</a></li>
+</ol></nav>
+
+<!-- ============================================================ -->
+<h2 id="p1">1. The idea of "vesting"</h2>
+<p>Every interest created by a transfer must be classified by <b>when the transferee's title becomes complete</b>. An interest may be <b>vested in possession</b> (present right to present enjoyment — e.g., the life tenant in occupation), <b>vested in interest</b> (present right to <i>future</i> enjoyment — e.g., the remainderman after a life estate; the title is complete, only possession is deferred), or <b>contingent</b> (no present right at all; the title itself depends on an uncertain event which may never happen). Chapter II of the TPA (ss.19–24) codifies the English learning on this subject; the Indian Succession Act (ss.119–120) does the same for wills, and the Supreme Court in <i>Rajesh Kanta Roy</i> treats all four provisions as a single body of principle.</p>
+<table>
+<tr><th style="width:24%">Why it matters</th><th>Consequence</th></tr>
+<tr><td><b>Alienability</b></td><td>A vested interest is property (s.6) and transferable at once even before possession; a contingent interest is also transferable (it is not a mere <i>spes</i> — s.6(a)), but what passes is only the chance that the contingency will occur.</td></tr>
+<tr><td><b>Heritability</b></td><td>"A vested interest is not defeated by the death of the transferee before he obtains possession" (s.19) — it passes to his heirs. A contingent interest generally <b>fails</b> if the transferee dies before the event (unless the contingency is one unconnected with his survival).</td></tr>
+<tr><td><b>Attachability in execution</b></td><td>A vested interest is "property" liable to attachment and sale under <b>s.60 CPC</b>; "a mere contingent interest though transferable inter vivos is <b>not attachable</b>" — <i>Pestonjee Bhicajee v. P.H. Anderson</i> AIR 1939 PC 6, applied in <i>Rajesh Kanta Roy</i>. This was the whole battle in the DU case: Santi Debi could execute her decree against Rajes's interest under the trust only if it was vested.</td></tr>
+<tr><td><b>Perpetuity (s.14)</b></td><td>The rule against perpetuity is concerned with remoteness of <i>vesting</i>; an interest vested at once (with enjoyment postponed) can never offend it.</td></tr>
+<tr><td><b>Insolvency / taxation / stamp</b></td><td>A vested remainder passes to the Official Assignee/Resolution Professional; is includible in the estate for wealth/estate duty purposes; a transfer of it attracts stamp duty as a conveyance.</td></tr>
+<tr><td><b>Acceleration and lapse</b></td><td>A vested remainder is accelerated if the prior interest fails; a contingent interest cannot be accelerated before the event; in wills a contingent legacy lapses if the legatee dies before the event.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p2">2. Section 19 — vested interest</h2>
+<div class="box stat"><b>s.19. Vested interest.</b>—Where, on a transfer of property, an interest therein is created in favour of a person without specifying the time when it is to take effect, or in terms specifying that it is to take effect forthwith or on the happening of an event which must happen, such interest is vested, unless a contrary intention appears from the terms of the transfer.<br>A vested interest is not defeated by the death of the transferee before he obtains possession.<br><i>Explanation.</i>—An intention that an interest shall not be vested is not to be inferred merely from a provision whereby the enjoyment thereof is postponed, or whereby a prior interest in the same property is given or reserved to some other person, or whereby income arising from the property is directed to be accumulated until the time of enjoyment arrives, or from a provision that if a particular event shall happen the interest shall pass to another person.</div>
+<table>
+<tr><th style="width:5%">#</th><th style="width:30%">Element</th><th>Analysis</th></tr>
+<tr><td>1</td><td><b>"on a transfer of property, an interest therein is created in favour of a person"</b></td><td>Inter vivos transfer (s.5); the person must be living or, if unborn, the interest is created "for his benefit" and vests on birth (s.20). For wills — s.119 ISA.</td></tr>
+<tr><td>2</td><td><b>Three modes of vesting</b>: (a) "without specifying the time when it is to take effect"; (b) "in terms specifying that it is to take effect forthwith"; (c) "on the happening of an event which <u>must</u> happen"</td><td>(a) Silence → immediate vesting (e.g., "I transfer my house to B"). (b) Express immediacy ("to B from today"). (c) A <b>certain</b> event — death of a named person (Capsule ill. (a): Rs 100 to B "to be paid on the death of C" — vested, C's death is certain); expiry of a fixed term; determination of a prior life estate (Capsule ill. (b)). The event must be one that <i>must</i> happen, though its <i>time</i> may be uncertain.</td></tr>
+<tr><td>3</td><td><b>"such interest is vested"</b></td><td>The transferee acquires a <b>present proprietary right</b> — ownership — even if possession/enjoyment is postponed. The Capsule's adoption example: a Hindu widow adopts a son under an agreement postponing his estate during her lifetime — the adopted son's interest is <i>vested</i> (takes effect on the widow's death, a certain event); "he has a present proprietary right in the estate, the right of possession and enjoyment being deferred; and therefore, he can transfer the property even during the widow's lifetime."</td></tr>
+<tr><td>4</td><td><b>"unless a contrary intention appears from the terms of the transfer"</b></td><td>The section lays down a <b>presumption</b>, rebuttable by the instrument read as a whole. But courts approach construction "with a bias in favour of a vested interest unless the intention to the contrary is definite and clear" (<i>Rajesh Kanta Roy</i>, para 9, conceded by the Solicitor-General). The Explanation lists four provisions from which a contrary intention is <i>not</i> to be inferred.</td></tr>
+<tr><td>5</td><td><b>"not defeated by the death of the transferee before he obtains possession"</b></td><td>Heritability: the interest passes to the transferee's legal representatives (Capsule: "If the transferee dies, his interest vests in his legal representatives whether or not he has obtained possession"). Contrast the contingent interest (Part 4).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p3">3. The Explanation to s.19 — four things that do <u>not</u> prevent vesting</h2>
+<div class="grid2">
+<div class="box ok"><b>(i) Postponement of enjoyment</b><br>"To B, to be given possession when he attains 25" — B's interest is vested at once; only <i>enjoyment</i> is postponed. (Distinguish "to B <i>if</i> he attains 25" — a condition precedent → contingent, s.21.) English rule: where the gift is "in terms immediate, and the payment alone postponed, the legacy is vested" (Williams on Executors, quoted in <i>Rajesh Kanta Roy</i>).</div>
+<div class="box ok"><b>(ii) A prior interest given or reserved to another</b><br>"To A for life, then to B" — B's remainder is vested from the date of transfer (A's death is certain); B may sell it during A's life; if B predeceases A, B's heirs take on A's death (Capsule ill. (b)).</div>
+<div class="box ok"><b>(iii) Direction to accumulate income until the time of enjoyment</b><br>"To B, the rents to be accumulated and paid to him with the corpus at 21" — vested; the accumulation direction (subject to s.17) does not make the gift contingent.</div>
+<div class="box ok"><b>(iv) A provision that on a particular event the interest shall pass to another</b><br>"To B, but if B dies before A, then to C" — B's interest is <b>vested subject to divestment</b> (a condition <i>subsequent</i>, ss.28–31), not contingent. B has ownership now; C's interest is the contingent one.</div></div>
+<div class="box note"><b>The principle behind the Explanation.</b> Each of the four provisions concerns the <i>manner or time of enjoyment</i>, or a <i>later divesting event</i> — none of them makes the <i>acquisition of the title itself</i> depend on an uncertain event. Only a <b>condition precedent</b> that may never be fulfilled produces a contingent interest. <i>Rajesh Kanta Roy</i> (para 11): "where the enjoyment of the property is postponed but the present income thereof is to be applied for the benefit of the donee the gift is vested and not contingent."</div>
+
+<!-- ============================================================ -->
+<h2 id="p4">4. Section 21 — contingent interest</h2>
+<div class="box stat"><b>s.21. Contingent interest.</b>—Where, on a transfer of property, an interest therein is created in favour of a person to take effect only on the happening of a specified uncertain event, or if a specified uncertain event shall not happen, such person thereby acquires a contingent interest in the property. Such interest becomes a vested interest, in the former case, on the happening of the event, in the latter, when the happening of the event becomes impossible.<br><i>Exception.</i>—Where, under a transfer of property, a person becomes entitled to an interest therein upon attaining a particular age, and the transferor also gives to him absolutely the income to arise from such interest before he reaches that age, or directs the income or so much thereof as may be necessary to be applied for his benefit, such interest is not contingent.</div>
+<table>
+<tr><th style="width:5%">#</th><th style="width:30%">Element</th><th>Analysis</th></tr>
+<tr><td>1</td><td><b>"to take effect only on the happening of a specified uncertain event"</b> (positive contingency)</td><td>"To B <i>if</i> he marries C"; "to B <i>if</i> he attains 21"; "to B if A dies without leaving a son". The event may or may not happen. Capsule example: estate to A until he marries, then to B — B's interest is contingent on A's marriage.</td></tr>
+<tr><td>2</td><td><b>"or if a specified uncertain event shall not happen"</b> (negative contingency)</td><td>"To B if C does <i>not</i> return from abroad within 5 years"; "to B if A has no son".</td></tr>
+<tr><td>3</td><td><b>"such person thereby acquires a contingent interest"</b></td><td>"Neither any proprietary interest nor a right of enjoyment is given at present, but both depend upon future uncertain events" (Capsule). It is nevertheless an <i>interest</i> — "something more than a simple chance or possibility"; it rests on "the present existence of an incomplete title" — hence transferable (s.6) though not attachable.</td></tr>
+<tr><td>4</td><td><b>Conversion into vested interest</b></td><td>Positive contingency → vests <b>on the happening</b> of the event (A marries → B's interest vests). Negative contingency → vests <b>when the event becomes impossible</b> (C dies abroad → B's interest vests). Until then the transferor retains the reversion.</td></tr>
+<tr><td>5</td><td><b>Failure</b></td><td>If the event becomes impossible (positive) or happens (negative), or the transferee dies before the event where his survival is implicit in the condition, the interest fails and the property "reverts to the transferor" (Capsule) — or goes over under an ulterior disposition (ss.27–28).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p5">5. The Exception to s.21</h2>
+<p>Where an interest is given "upon attaining a particular age" (which, standing alone, is a condition precedent → contingent), but the transferor <b>also</b> (a) gives the transferee <b>absolutely the income</b> arising from the interest before he reaches that age, <b>or</b> (b) directs the income "or so much thereof as may be necessary" to be <b>applied for his benefit</b> (maintenance, education), the interest is <b>not contingent</b> but vested. Rationale: a settlor who gives the whole present benefit of the property to the donee is treated as intending immediate ownership, the age being a mere postponement of full enjoyment. This is the statutory form of the English rule in <i>Hanson v. Graham</i> (1801) 6 Ves 239 and <i>Fox v. Fox</i> (1875) LR 19 Eq 286 (where the intermediate income is given, the gift "at 21" is vested), and of the second limb of s.120 ISA. <i>Rajesh Kanta Roy</i> extends the same reasoning beyond the age case: application of the income for the donee's benefit — including, for sons legally bound to pay their father's debts, application of income towards those debts — indicates vesting.</p>
+<div class="box ex"><b>Examples.</b> (1) "To my nephew N on attaining 21" — contingent; if N dies at 19 it fails. (2) "To N on attaining 21, the rents meanwhile to be paid to him" — vested (Exception); if N dies at 19 his heirs take. (3) "To N on attaining 21, the trustees to apply so much of the income as necessary for his education" — vested. (4) "To N on attaining 21, the income meanwhile to be paid to his mother" — contingent (income not given to N or applied for his benefit).</div>
+
+<!-- ============================================================ -->
+<h2 id="p6">6. Condition precedent v. condition subsequent; certain v. uncertain events; presumption in favour of vesting</h2>
+<table>
+<tr><th>Point</th><th>Condition precedent</th><th>Condition subsequent</th></tr>
+<tr><td>Effect on interest</td><td>Interest does <b>not arise</b> until the condition is fulfilled → <b>contingent</b> (s.21)</td><td>Interest arises at once but may be <b>divested</b> on the event → <b>vested subject to divestment</b> (s.19 Expl. (iv); ss.28, 31)</td></tr>
+<tr><td>Compliance</td><td>Substantial compliance suffices (s.26)</td><td>Strict compliance required for divesting (s.29)</td></tr>
+<tr><td>Invalid condition</td><td>Interest fails (s.25)</td><td>Condition void, interest absolute (ss.10–12, 32)</td></tr>
+<tr><td>Typical words</td><td>"if", "provided he", "upon his attaining", "in case"</td><td>"but if", "provided that if … the interest shall pass to"</td></tr>
+<tr><td>Example</td><td>"To B if he becomes an advocate"</td><td>"To B, but if he ceases to practise as an advocate, to C"</td></tr>
+</table>
+<div class="box warn"><b>Certain v. uncertain event.</b> The line between ss.19 and 21 is whether the event "must happen" (death of a person; end of a term; coming of a date) or "may or may not happen" (marriage; attaining an age; a person dying <i>without issue</i>; payment of debts — arguably). Only the <i>occurrence</i> need be certain, not its time. In <i>Rajesh Kanta Roy</i> the settlor's death was conceded to be certain; the dispute was whether "liquidation of all the debts" was an uncertain event on which the sons' title depended — the Court held it was, in substance, a mere charge/postponement of enjoyment, not a condition precedent.</div>
+<div class="box ok"><b>Presumption in favour of vesting.</b> "There is a strong presumption that on a transfer of property the transferor intends to confer a vested interest" (Capsule); the court "has to approach the task of construction … with a bias in favour of a vested interest unless the intention to the contrary is definite and clear" (<i>Rajesh Kanta Roy</i>). Reasons: the law abhors intestacy/reversion and favours early vesting, certainty of title, alienability, and protection of the donee's family.</div>
+
+<!-- ============================================================ -->
+<h2 id="p7">7. Distinction — vested v. contingent interest</h2>
+<table>
+<tr><th style="width:18%">Basis</th><th>Vested interest (s.19)</th><th>Contingent interest (s.21)</th></tr>
+<tr><td>Definition</td><td>Created without specifying time, or to take effect forthwith, or on an event which <b>must</b> happen</td><td>Created to take effect <b>only</b> on the happening or non-happening of a <b>specified uncertain</b> event</td></tr>
+<tr><td>Nature of right</td><td><b>Ownership</b> — a present, immediate proprietary right; title "already perfect"</td><td>Only a <b>chance of becoming owner</b> (but more than a <i>spes</i>); title "as yet imperfect, but capable of becoming perfect"</td></tr>
+<tr><td>Dependence on condition</td><td>Not dependent on any condition precedent; enjoyment alone may be postponed</td><td>Wholly dependent on fulfilment of the condition; if it fails, the interest "falls through"</td></tr>
+<tr><td>Effect of transferee's death before possession</td><td><b>Not defeated</b> — passes to heirs/legal representatives (s.19 para 2)</td><td>Generally <b>defeated</b> — depends on the nature of the contingency (if survival is part of the condition, it fails; if the contingency is unconnected with survival, e.g., "if X returns from England", the interest may pass to heirs)</td></tr>
+<tr><td>Transferability</td><td>Transferable (s.6) even before possession</td><td>Transferable (s.6 — not within s.6(a)), but transferee takes subject to the contingency</td></tr>
+<tr><td>Heritability</td><td>Heritable</td><td>Depends on the nature of the contingency</td></tr>
+<tr><td>Attachability / execution</td><td>Attachable and saleable (CPC s.60) — <i>Rajesh Kanta Roy</i></td><td><b>Not attachable</b> — <i>Pestonjee Bhicajee v. Anderson</i> (PC 1939)</td></tr>
+<tr><td>Present right of enjoyment</td><td>Present immediate right, even if enjoyment postponed</td><td>No present right; "a mere promise for giving such right … may be nullified by the failure of the condition"</td></tr>
+<tr><td>Conversion</td><td>May be divested by a condition subsequent (ss.28, 31)</td><td>Becomes vested on the event happening / becoming impossible (s.21)</td></tr>
+<tr><td>Perpetuity</td><td>Never offends s.14</td><td>Must vest within the perpetuity period</td></tr>
+<tr><td>Examples</td><td>"To B on C's death"; "to A for life, then to B"; "to B at 21 with intermediate income"</td><td>"To B if he marries C"; "to B at 21" (no income); "to A until he marries, then to B"</td></tr>
+</table>
+<h3>7.1 Contingent interest v. <i>spes successionis</i> (link to Topic 5)</h3>
+<table>
+<tr><th>Point</th><th>Contingent interest</th><th>Spes successionis (s.6(a))</th></tr>
+<tr><td>Origin</td><td>Created by a <b>transfer</b>; rests on "the present existence of an incomplete title"</td><td>Not created by anyone — a bare hope of inheriting/receiving a legacy</td></tr>
+<tr><td>Transferability</td><td>Transferable (s.6)</td><td>Non-transferable; transfer void</td></tr>
+<tr><td>Nature</td><td>An interest in property, though imperfect</td><td>No interest at all</td></tr>
+<tr><td>Example</td><td>"To B if B survives A"</td><td>B's hope of inheriting from A on intestacy</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p8">8. Incidents — transferability, heritability, attachability, insolvency, limitation</h2>
+<ul>
+<li><b>Transferability (s.6).</b> Both vested and contingent interests are "property" transferable under s.6 (the Capsule: "when an interest is vested, it becomes the property of the transferee and is under Section 6 transferable by him even before he has obtained possession"; a contingent interest "is transferable"). A transfer of a contingent interest passes whatever the transferor gets when the contingency is resolved.</li>
+<li><b>Heritability.</b> Vested — always. Contingent — depends on whether the condition is personal to the transferee (survival to an age/event) or external (return of X from abroad; A dying without issue).</li>
+<li><b>Attachability.</b> <b>CPC s.60(1)</b> makes liable to attachment "all … saleable property … belonging to the judgment-debtor, or over which … he has a disposing power which he may exercise for his own benefit"; <b>O.21 r.46</b> (attachment of debts/shares/other movable property not in possession) and <b>r.54</b> (immovable property). The Privy Council in <i>Pestonjee Bhicajee v. P.H. Anderson</i> (AIR 1939 PC 6) held a mere contingent interest not attachable, though transferable inter vivos — the rule accepted as "well-settled" in <i>Rajesh Kanta Roy</i> (para 7). A vested remainder/reversion is attachable and saleable (subject to the prior interest).</li>
+<li><b>Insolvency.</b> A vested interest (including a vested remainder) vests in the Official Assignee/Receiver (Presidency-towns/Provincial Insolvency Acts; IBC 2016 for individuals when notified); a contingent interest is generally excluded until it vests, though after-acquired property provisions may catch it.</li>
+<li><b>Limitation.</b> For a remainderman/reversioner, time to sue for possession runs from when his interest falls into possession (Limitation Act, 1963, Art. 65 read with s.6–8; Art. 110 for a Hindu excluded from joint family property); a vested interest cannot be lost by the life-tenant's adverse possession.</li>
+<li><b>Trust deeds.</b> Under the <b>Indian Trusts Act, 1882</b> (ss.55–58) a beneficiary with a vested interest may transfer it (s.58) and may, if <i>sui juris</i> and solely entitled, require the trustees to transfer the property to him (s.56 — the rule in <i>Saunders v. Vautier</i>); a contingent beneficiary cannot.</li>
+</ul>
+
+<!-- ============================================================ -->
+<h2 id="p9">9. Related sections — ss.20, 22, 23, 24; ss.25–34; ISA ss.119–120</h2>
+<table>
+<tr><th style="width:28%">Section</th><th>Rule</th></tr>
+<tr><td><b>s.20 — When unborn person acquires vested interest</b></td><td>An interest created for the benefit of a person not then living vests in him <b>on his birth</b> (unless a contrary intention appears), although enjoyment may be deferred — links Topic 7 to Topic 8.</td></tr>
+<tr><td><b>s.22 — Transfer to members of a class who attain a particular age</b></td><td>"Where … an interest … is created in favour of such members only of a class as shall attain a particular age, such interest does not vest in any member … who has not attained that age" — contingent for each member until the age (subject to the Exception to s.21 if income is given).</td></tr>
+<tr><td><b>s.23 — Transfer contingent on happening of specified uncertain event</b></td><td>Where the interest is to accrue to a specified person if a specified uncertain event happens, and <b>no time is mentioned</b>, the interest fails unless the event happens <b>before, or at the same time as, the intermediate or precedent interest ceases</b> — e.g., "to A for life, then to B if B marries" — B must marry during A's life.</td></tr>
+<tr><td><b>s.24 — Transfer to such of certain persons as survive at some period not specified</b></td><td>Interest to accrue to "such of certain persons as shall be surviving at some period" (period unspecified) goes to those alive when the precedent interest ceases; illustration: to B for life, then to C and D or the survivor — C dies in B's life; D takes.</td></tr>
+<tr><td><b>ss.25–34 — Conditional transfers</b></td><td>s.25 (interest dependent on impossible/unlawful condition fails); s.26 (condition precedent — substantial compliance); s.27 (ulterior disposition on failure of prior); s.28 (ulterior transfer on a specified event — subject to ss.10, 12, 21–25, 27); s.29 (condition subsequent — strict compliance); s.30 (invalid ulterior does not affect prior); s.31–32 (interest ceasing on an event); s.33–34 (time for performance of a condition).</td></tr>
+<tr><td><b>ISA ss.119–120 (wills)</b></td><td>s.119: date of vesting of legacy when payment/possession postponed — vests on the testator's death unless a contrary intention; Explanation identical to s.19's; <b>illustration (v)</b> ("a fund is bequeathed to A … <i>after payment of debts</i>" or a legacy "when the testator's debts are paid" — vested; relied on by the Calcutta High Court in <i>Rajesh Kanta Roy</i>). s.120: date of vesting when legacy is contingent upon a specified uncertain event — vests only when the event happens; Exception for age + intermediate income (twin of the Exception to s.21).</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p10">10. Rules of construction</h2>
+<table>
+<tr><th style="width:36%">Form of words</th><th>Prima facie result</th></tr>
+<tr><td>"To B" / "to B forthwith" / "to B on C's death" (C named, certain to die)</td><td>Vested (s.19)</td></tr>
+<tr><td>"To B, <i>payable/to be delivered</i> at 21" (gift immediate, payment postponed)</td><td>Vested — enjoyment postponed (Expl. (i); Williams: "where the bequest is in terms immediate, and the payment alone postponed, the legacy is vested")</td></tr>
+<tr><td>"To B <i>if/when/upon</i> he attains 21" (age part of the description of the gift)</td><td>Contingent (s.21) — unless intermediate income is given/applied (Exception; s.120 ISA)</td></tr>
+<tr><td>"To B <i>after payment of my debts</i>" / "when my debts are paid"</td><td>Vested — the words of apparent postponement create only a <b>charge</b> (Jarman, 8th edn, vol. II p. 1373, quoted in <i>Rajesh Kanta Roy</i>; ISA s.119 ill. (v); <i>Ranganatha Mudaliar v. Mohana Krishna Mudaliar</i> AIR 1926 Mad 645) — <i>but</i> a clearly expressed intention that benefits "should not vest till his debts were paid" will be given effect (Jarman p. 1390; <i>Bernard v. Mountague</i> (1816) 1 Mer 422)</td></tr>
+<tr><td>"To A for life, then to B"</td><td>B vested remainder (Expl. (ii))</td></tr>
+<tr><td>"To A for life, then to B <i>if B survives A</i>"</td><td>B contingent (survival uncertain)</td></tr>
+<tr><td>"To B, but if B dies before A, to C"</td><td>B vested subject to divestment; C contingent (Expl. (iv))</td></tr>
+<tr><td>"To B, the income to be accumulated till he is 25"</td><td>Vested (Expl. (iii)), accumulation subject to s.17</td></tr>
+<tr><td>Provision that if the donee dies before the event <b>his heirs</b> take</td><td>Strong indication of vesting — because a hallmark of a contingent interest is that "the heirs of such a person do not get the benefit of the gift" (<i>Rajesh Kanta Roy</i>, para 12)</td></tr>
+<tr><td>Donee's own conduct — creating a charge on the interest, treating it as presently executable</td><td>Confirmatory of vesting (<i>Rajesh Kanta Roy</i>, para 13)</td></tr>
+</table>
+<div class="box note"><b>Overarching rule.</b> "Apart from any seemingly technical rules which may be gathered from English decisions and text-books … there can be no doubt that the question is really one of <b>intention to be gathered from a comprehensive view of all the terms of a document</b>" (<i>Rajesh Kanta Roy</i>, para 9). Read the whole scheme; identify the settlor's purposes; ask whether the uncertain event was intended as a <i>condition of title</i> or as a <i>limit on enjoyment / a charge</i>.</div>
+
+<!-- ============================================================ -->
+<h2 id="p11">11. Flowchart — vested or contingent?</h2>
+<div class="flow">
+<div class="fbox q">Is the interest to take effect (a) with no time specified, (b) forthwith, or (c) on an event that <b>must</b> happen (death of a named person; end of a term; a date)?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div>
+<div class="fbox q">Does a <b>contrary intention</b> appear from the terms — other than mere (i) postponement of enjoyment, (ii) prior interest to another, (iii) accumulation direction, (iv) gift over on a later event? (s.19 Explanation)</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox yes">VESTED (s.19). Transferable, heritable, attachable; not defeated by death before possession; never offends s.14. If a gift over exists → vested subject to divestment (ss.28, 31).</div></div>
+<div class="branch"><div class="branchlbl">YES — clear words make the title itself depend on an uncertain event</div><div class="fbox no">CONTINGENT despite the form (rare — Bernard v. Mountague type)</div></div>
+</div></div>
+<div class="branch"><div class="branchlbl">NO — to take effect ONLY if a specified uncertain event happens / does not happen</div>
+<div class="fbox q">Is the event "attaining a particular age" AND is the intermediate income given to the donee absolutely or directed to be applied for his benefit? (Exception to s.21) — or, more broadly, is the whole present benefit of the property applied for him while enjoyment is restricted (Rajesh Kanta Roy)?</div>
+<div class="split">
+<div class="branch"><div class="branchlbl">YES</div><div class="fbox yes">VESTED — the age/event is only a postponement of full enjoyment; a clause giving the interest to the donee's heirs if he dies earlier confirms vesting</div></div>
+<div class="branch"><div class="branchlbl">NO</div><div class="fbox no">CONTINGENT (s.21). Transferable but NOT attachable (Pestonjee Bhicajee); fails if the event becomes impossible / donee dies where survival is implicit; must vest within s.14 period; s.23 — event must occur before the precedent interest ends if no time is fixed. Becomes vested on the event (or on impossibility of the negative event).</div></div>
+</div></div></div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p12">12. Related provisions in other Acts</h2>
+<table>
+<tr><th style="width:32%">Provision</th><th>Relevance</th></tr>
+<tr><td><b>Code of Civil Procedure, 1908 — s.47, s.60, O.21 rr.46, 54, 58</b></td><td>s.47: questions between decree-holder and judgment-debtor relating to execution decided by the executing court (Rajes's objection in <i>Rajesh Kanta Roy</i>); s.60: what property is attachable — a vested interest is; O.21 r.54: attachment of immovable property (Premises 44/2 Lansdowne Road); r.58: claims/objections to attachment.</td></tr>
+<tr><td><b>Indian Succession Act, 1925 — ss.119, 120, 124, 125, 126–137</b></td><td>ss.119–120 (vesting of legacies — twins of ss.19, 21; ill. (v) to s.119 on gifts after payment of debts); s.124 (bequest contingent on event with no time fixed — twin of s.23); s.125 (survivors — twin of s.24).</td></tr>
+<tr><td><b>Indian Trusts Act, 1882 — ss.3, 9, 55–58, 69</b></td><td>Beneficiary's rights; transfer of beneficial interest (s.58); right to have the property transferred when solely entitled and sui juris (s.56); trustee's powers of sale for payment of debts (cf. clause 11 of the Roy trust deed).</td></tr>
+<tr><td><b>Hindu law — Dayabhaga school; doctrine of representation; pious obligation</b></td><td><i>Rajesh Kanta Roy</i> (paras 11–12): sons who would, on intestacy, be bound to discharge the father's debts out of his estate; representation up to the third degree in the male line meant that the "heirs then living" of Rajes would be the same persons who would inherit from him — so the alleged contingency made no practical difference. Hindu Succession Act 1956 (s.8, s.6(4) post-2005 abolishing pious obligation prospectively) alters the modern position.</td></tr>
+<tr><td><b>Hindu Adoptions and Maintenance Act, 1956 — s.12, s.13</b></td><td>Capsule's adoption example: an agreement postponing the adopted son's estate during the widow's life gives him a vested interest; s.13 preserves the adoptive parents' power to dispose of property by agreement; s.12(c) — adopted child not to divest vested estates.</td></tr>
+<tr><td><b>Insolvency law — Presidency-towns Insolvency Act 1909 s.17, 52; Provincial Insolvency Act 1920 s.28; IBC 2016 Part III</b></td><td>Vested interests pass to the Official Assignee; contingent interests generally not until vesting.</td></tr>
+<tr><td><b>Limitation Act, 1963 — Arts. 65, 110; ss.6–8</b></td><td>Time for a remainderman to sue runs from when his interest falls into possession.</td></tr>
+<tr><td><b>Indian Stamp Act, 1899 — Sch. I Art. 23, 64; Registration Act s.17</b></td><td>Trust deed of 26-7-1945 registered; valued at Rs 5 lakh for stamp (clause 17); transfer of a vested remainder is a conveyance.</td></tr>
+<tr><td><b>TPA s.100 (charge), s.55(4)(b), s.6</b></td><td>Compromise decree created a charge for Santi Debi's maintenance; "words of apparent postponement" for payment of debts create a charge, not a contingency.</td></tr>
+<tr><td><b>Hindu Women's Right to Maintenance / HAMA s.18–19, s.27</b></td><td>Santi Debi's monthly allowance of Rs 475 secured by charge — maintenance of a widowed daughter-in-law.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2>Leading Case (DU Case Material, Topic 8, pp. 112–118)</h2>
+
+<div class="case" id="c1">
+<h3>CASE — Rajesh (Rajes) Kanta Roy v. Shanti (Santi) Debi &amp; Anr.</h3>
+<div class="cite">AIR 1957 SC 255 : 1957 SCR 77 · Supreme Court of India · Jagannadhadas J. (for the Bench) · Appeal from the Calcutta High Court, which had affirmed the Subordinate Judge's order overruling objections under s.47 CPC to execution · DU material pp. 112–118</div>
+<p><span class="lbl">Theme</span> Whether the interest of a son under his father's <b>trust deed</b> — property to "devolve on" him "absolutely" only after (i) liquidation of all the settlor's debts and (ii) the settlor's death, with restricted monthly payments meanwhile — is <b>vested</b> (and therefore <b>attachable</b> in execution of a maintenance decree) or <b>contingent</b> (and therefore not attachable). Held: <b>vested in title, restricted in enjoyment</b>.</p>
+<h4>Facts</h4>
+<ul>
+<li><b>Ramani Kanta Roy</b>, a man of "considerable properties" (Calcutta; Dayabhaga Hindu), had three sons: <b>Rajes</b>, <b>Rabindra</b> and <b>Ramendra</b>. <b>Rabindra died childless in 1938</b> leaving a widow, <b>Santi Debi</b>.</li>
+<li>In <b>1934</b> Ramani had endowed some properties to the family deity, appointing the three sons <b>shebaits</b>. In <b>1941</b> Santi Debi sued for a declaration that, as her husband's heir, she could act as shebait in his place; the suit ended in a <b>compromise recognising her as co-shebait</b>.</li>
+<li>In <b>1944</b> Ramani, Rajes and Ramendra sued Santi Debi to declare that compromise decree void — one ground being that her marriage to Rabindra was a <b>nullity</b> as within prohibited degrees (a <i>sagotra</i> marriage, against which Ramani "had developed prejudice").</li>
+<li>During that suit, on <b>26 July 1945</b>, Ramani executed a <b>registered trust deed</b> of his <b>entire properties</b>, appointing <b>Rajes sole trustee</b>. Key clauses:
+ <ul>
+ <li><b>Cl. 3</b> — trustee "shall pay the present existing just debts of the settlor" (Schedule B debts: <b>Rs 2,62,169-8-0</b>; properties valued at Rs 5 lakh for stamp, cl. 17, "substantially higher" in reality).</li>
+ <li><b>Cl. 5</b> — during the settlor's life and until all debts are paid, trustee to pay monthly <b>Rs 1,000 to the settlor, Rs 300 to Rajes, Rs 200 to Ramendra</b>. <b>Cl. 6</b> — after the settlor's death and before liquidation, <b>Rs 800 to Rajes and Rs 700 to Ramendra</b> per month. (Only Rs 1,500 p.m. set aside for the family; by implication the rest of the income goes to debts.)</li>
+ <li><b>Cl. 8–9</b> — payments out of income if Rajes or Ramendra dies before liquidation: Rajes's monthly sum to go to his <b>widow</b>, then his <b>legal heirs</b>. <b>Cl. 10</b> — family residence while debts unpaid. <b>Cl. 11</b> — trustee's power to sell, mortgage or grant long leases to pay debts.</li>
+ <li><b>Cl. 12</b> — "On the liquidation of all the debts of the settlor (including the debt, if any, that may be incurred by the trustee for payment of the settlor's debts) <b>and after his death</b> this trust shall come to an end and the properties … shall devolve as follows: <b>(a)</b> Lots I–IV … <b>including the surplus income thereof shall devolve on the said Rajes Kanta Roy absolutely or if he be then dead then … on his heirs then living absolutely</b> but subject to cl. (c) regarding Premises No. 44/2, Lansdowne Road; <b>(b)</b> Lot V … shall be <b>enjoyed by Ramendra during his lifetime</b> or if he be then dead … on his son or sons absolutely, failing whom on his grandson(s) absolutely."</li>
+ <li><b>Cl. 14</b> — if Rajes dies before liquidation, Rajes's wife and Ramendra become joint trustees, the survivor sole trustee; no provision for further devolution of trusteeship.</li>
+ </ul></li>
+<li>Ramani died (date not on record). On <b>3 Dec 1946</b> the 1944 suit was <b>compromised</b>: Santi Debi gave up her rights under the 1941 decree and was to receive <b>Rs 475 per month for life</b> from November 1946, with a <b>charge</b> over certain properties, and a term that on default she could realise it <b>by execution of the decree</b>.</li>
+<li>Payments were made till <b>February 1948</b>, then defaulted. On <b>8 July 1949</b> Santi Debi applied for execution for arrears March 1948–July 1949 (<b>Rs 8,075</b>) against both brothers, by <b>attachment and sale of Premises No. 44/2, Lansdowne Road, Ballygunge</b>. <b>Rajes objected under s.47 CPC</b>; Ramendra did not contest.</li>
+</ul>
+<h4>Procedural history</h4>
+<p>Subordinate Judge overruled Rajes's objections (holding his interest under the trust "not a mere expectancy"). Calcutta High Court dismissed his appeal, treating the question as whether the interest was vested or contingent and holding it vested, relying on <b>illustration (v) to s.119 ISA</b> and <i>Ranganatha Mudaliar v. A. Mohana Krishna Mudaliar</i> (AIR 1926 Mad 645). Appeal to the Supreme Court (Rajes appellant; Santi Debi respondent 1; Ramendra respondent 2).</p>
+<h4>Issues</h4>
+<ol>
+<li>(Construction of the compromise decree) Whether, a charge having been created for the monthly allowance, the <b>personal remedy</b> could be pursued only after exhausting the remedy by way of charge. [Decided against Rajes — paras 4–6, not reproduced in the DU extract.]</li>
+<li>Whether, on a true construction of the trust deed, Rajes's interest in the trust properties (and in Premises 44/2 in particular) is <b>vested</b> or merely <b>contingent</b> — and hence whether it is <b>attachable</b>.</li>
+</ol>
+<h4>Arguments</h4>
+<div class="vs">
+<div><h4>Appellant (Rajes) — the Solicitor-General</h4>
+<ul><li>Under cl. 12 the sons take only when the trust "comes to an end", which requires <b>two events</b>: the settlor's death (certain) and <b>liquidation of all debts</b> — an <b>uncertain</b> event as to both <i>factum</i> and <i>time</i>. The interest, taking effect "only on the happening of a specified uncertain event", is <b>contingent</b> (s.21).</li><li>The settlor was "very particular" that the property should not go to the sons as owners until debts were paid — cls. 3, 5, 6, 8–11 all emphasise liquidation; the surplus income was to be accumulated; the sons received only fixed sums. Discharge of debts was a <b>condition precedent</b> to vesting.</li><li>Both s.19 TPA and s.119 ISA yield to "a contrary intention"; there is "no such inflexible rule of law" that a gift after payment of debts is always vested. <i>Bernard v. Mountague</i> (1816) 1 Mer 422 held payment of debts a condition precedent on the terms of that trust; Williams on Executors (13th edn, vol. 2, p. 658) and Jarman on Wills (8th edn, vol. II, p. 1390) recognise that where the testator clearly intends that benefits shall not vest till debts are paid, "the vesting as well as payment was held to be postponed."</li><li>A contingent interest, though transferable, is <b>not attachable</b> — <i>Pestonjee Bhicajee v. P.H. Anderson</i> (AIR 1939 PC 6). Alternatively, Rajes holds only as trustee (the s.47 petition's plea).</li></ul></div>
+<div><h4>Respondent (Santi Debi)</h4>
+<ul><li>The point of contingency was <b>never taken</b> in the s.47 petition (which pleaded only that Rajes had "no interest … except that of a trustee") nor in the grounds of appeal to the High Court; it should not be entertained; in any event its determination may depend on whether the debts have since been paid.</li><li>The strong <b>presumption in favour of vesting</b> (s.19; s.119 ISA) applies; a gift "after payment of debts" is vested, the words of postponement "being considered only as creating a charge" (Jarman p. 1373; ISA s.119 ill. (v); <i>Ranganatha Mudaliar</i>).</li><li>The scheme shows a <b>present allotment</b> of specific lots to each son: the sons receive <b>monthly sums</b> throughout; on a son's death before liquidation his payments go to his <b>widow and heirs</b>; the <b>surplus income of each lot</b> is to follow the corpus of that lot; cl. 14 assumes the debts will be cleared within three lives. What is postponed is <b>enjoyment</b>, not vesting (s.19 Explanation).</li><li>The sons themselves treated their interest as vested — in the 1946 compromise they <b>created a charge</b> on the properties for her allowance and agreed it was presently executable.</li></ul></div></div>
+<h4>Decision (Jagannadhadas J.)</h4>
+<ol>
+<li><b>Preliminary (para 7).</b> The contingency point "has not been raised in the petition … under Section 47"; the plea actually taken (interest only as trustee) "is obviously untenable"; it is not disputed that a <b>beneficial interest under the trust would be attachable provided it is vested</b>. Since the High Court decided the point as one of pure construction, the Court proceeded to consider it.</li>
+<li><b>The operative clause (para 8).</b> Under cl. 12(a)–(b) Lots I–IV go to Rajes and Lot V to Ramendra, "after the trust comes to an end", i.e., after (1) discharge of all scheduled debts and (2) the settlor's death. Death "is not by any means an uncertain event"; the argument centred on discharge of debts being uncertain "in the sense that neither the factum nor the time … can be predicated with any certainty." The Court acknowledged that the deed's clauses (3, 5, 6, 8–11, 12) show "the settlor attached great importance to the discharge of the debts becoming an accomplished fact before the two sons take the full benefit", restricting family enjoyment to Rs 1,500 p.m. "But can it be said that their interest in the property was made to depend on the event of the total discharge of the debts and that the discharge of the debts was contemplated as an uncertain event?"</li>
+<li><b>Governing principles (para 9).</b> The question "has to be guided generally by the principles recognised under <b>Sections 19 and 21 of the Transfer of Property Act, 1882, and Sections 119 and 120 of the Indian Succession Act, 1925</b>." The English learning was reviewed: Williams — "where the bequest is in terms immediate, and the payment alone postponed, the legacy is vested", subject to the testator's intention and to the exception where he clearly intends no vesting till debts are paid; Jarman p. 1390 (same exception) <i>but also</i> p. 1373 — "it is now well established that such a devise [after payment of debts] confers an immediately vested interest, the words of apparent postponement being considered only as creating a charge." Conclusion: "the question is really one of <b>intention to be gathered from a comprehensive view of all the terms of a document</b>"; the Solicitor-General "frankly admitted this, and also that a court has to approach the task of construction in such cases with <b>a bias in favour of a vested interest unless the intention to the contrary is definite and clear</b>."</li>
+<li><b>Scheme and purposes of the deed (para 10).</b> Two main purposes: (i) to give the property to the two surviving sons <b>excluding Santi Debi</b> (prejudice over the <i>sagotra</i> marriage); (ii) discharge of debts — by constituting the whole estate a trust, vesting management in Rajes with powers of alienation, and limiting family drawings to Rs 1,500 p.m. Debts were Rs 2,62,169; properties worth well over Rs 5 lakh; cl. 12(a) contemplated <b>surplus income</b> accumulating — so the settlor expected the debts to be cleared; cl. 14's silence on trusteeship beyond three lives indicates he expected liquidation "before the expiry of the three lives … Rajes, his wife and Ramendra." "There is nothing to show that he was apprehensive that the debts would remain undischarged … and that he contemplated the ultimate discharge of his debts to be such an uncertain event as to drive him to make the accrual of the interest to his sons … depend upon the event of the actual discharge." Three "provisions of great significance": (1) the sons are <b>not excluded from benefit</b> pending liquidation — fixed monthly sums; (2) on a son's death before liquidation those sums go to his <b>widow and legal heirs</b>; (3) "the most significant" — cl. 12(a) directs that the <b>surplus income of each lot devolves with that lot</b>; the lots being unequal, this shows "the corpus of these lots was earmarked for the two sons with the present income thereof but with a restriction on the enjoyment of the present income to specified sums, so as to facilitate orderly discharge of the debts."</li>
+<li><b>Application of income for the donee's benefit (para 11).</b> "There can be no doubt about the rule that <b>where the enjoyment of the property is postponed but the present income thereof is to be applied for the benefit of the donee the gift is vested and not contingent</b>" (Explanation to s.19 TPA; Explanation to s.119 ISA; Williams; Jarman). Normally the rule operates where the <i>entire</i> income is applied for the donee; here only a portion was available for actual use. But the sons are persons who, on intestacy, "would be under an obligation to discharge his debts out of the properties which devolve upon them. It is only the surplus which would be legally available for division between them. In such a case, <b>the balance of the income which is meant to be applied for the discharge of the debts is also an application of the income for the benefit of the donees</b>." The scheme therefore "operates as nothing more than the present allotment of these properties themselves to the donees subject to the discharge of debts notionally in the same proportion." Summarised: (1) specified lots earmarked for each son; (2) present income applied to debts after monthly payments, notionally pro rata; (3) surpluses go to the very person who gets the corpus; (4) a son's monthly payments devolve on his heirs if he dies earlier. "These arrangements taken together clearly indicate that <b>what is postponed is not the very vesting of the property in the lots themselves but that the enjoyment of the income thereof is burdened</b> with certain monthly payments and with the obligation to discharge debts therefrom notionally pro rata, all of which taken together constitute application of the income for his benefit."</li>
+<li><b>The heirs clause (para 12).</b> "One of the features of a contingent interest is that if a person dies before the contingency disappears and before the vesting occurs, <b>the heirs of such a person do not get the benefit of the gift</b>. But the trust deed … specifically provides in the case of Rajes … that even in the event of his death it is his heirs (then surviving) that would take the interest." Even treating this as a direct gift to the heirs then living, "this would make no practical difference": the parties are <b>Dayabhaga</b> Hindus, and "up to the third degree in the male line the principle of <b>representation</b> under the Hindu Law operates", so whenever the debts are discharged the taker "would, in the normal course, be the very heir (the lineal descendant then surviving or the widow) of Rajes. The actual devolution … would not be affected by the alleged contingency. That being so it is more reasonable to hold that <b>the interest of Rajes under the deed is vested and not contingent</b>."</li>
+<li><b>Confirmation from conduct (para 13).</b> In the 1946 compromise decree both brothers <b>created a charge</b> for Santi Debi's monthly payment "and agreed to such charge being presently executable. This shows clearly that they themselves understood the interest available to them under the trust as a vested interest."</li>
+<li><b>Conclusion (paras 14–15).</b> Other hypothetical possibilities canvassed did not displace this view. "It appears to us reasonably clear that the intention of the settlor is that as regards the interest of the sons with respect to all the properties comprised therein, it is <b>vested in title but restricted in enjoyment</b> so long as the settlor is alive and the debts are not discharged." Rajes's interest in Premises 44/2 Lansdowne Road (subject to cl. 12(c)) was likewise vested. <b>Appeal dismissed with costs</b>; execution by attachment could proceed.</li>
+</ol>
+<h4>Principles</h4>
+<div class="box ok"><ol>
+<li>Whether an interest is vested or contingent is a question of the <b>settlor's/testator's intention gathered from the whole instrument</b>, guided by ss.19 and 21 TPA and ss.119 and 120 ISA, with a <b>strong bias in favour of vesting</b> unless a contrary intention is "definite and clear".</li>
+<li>Postponement of enjoyment, a prior interest, a direction to accumulate, a gift over, or a direction that the property devolve "after payment of debts" does <b>not</b> make the interest contingent; words of apparent postponement for payment of debts create only a <b>charge</b> (Jarman; ISA s.119 ill. (v)).</li>
+<li>Where the <b>present income is applied for the benefit of the donee</b> — including application towards debts which the donee would himself be legally bound to discharge — the gift is <b>vested</b> though enjoyment is restricted (Explanation to s.19; Exception to s.21 by analogy).</li>
+<li>A provision that the donee's <b>heirs take if he dies before the event</b> is a strong indicator of vesting, since the hallmark of a contingent interest is that heirs get nothing.</li>
+<li>A <b>vested</b> beneficial interest under a trust is <b>attachable</b> in execution; a <b>contingent</b> interest, though transferable inter vivos, is <b>not</b> (<i>Pestonjee Bhicajee v. Anderson</i>).</li>
+<li>The parties' own subsequent conduct (creating a presently executable charge) may confirm the construction.</li>
+</ol></div>
+<div class="box ex"><b>Example.</b> In 2020 a Kanpur businessman settles all his properties on his elder son as trustee: pay my bank loans (Rs 3 crore) from the rents; pay me Rs 1 lakh and each son Rs 50,000 monthly; on clearance of the loans and my death, Building A (with its accumulated surplus rent) to the elder son absolutely or, if dead, to his heirs then living; Building B to the younger son. In 2024 a decree-holder against the elder son seeks to attach Building A. Following <i>Rajesh Kanta Roy</i>, the elder son's interest is <b>vested in title, restricted in enjoyment</b> — the loan clearance is a charge/postponement, the income is applied for his benefit (debts he would be liable for), his heirs are expressly provided for — so Building A is attachable (subject to the trust and the charge for the loans). Had the deed said "Building A to my elder son <i>if</i> he is alive when the loans are cleared, otherwise to a charity", his interest would be contingent and not attachable.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2 id="p13">13. Diagram of the trust deed; other illustrative cases</h2>
+<svg viewBox="0 0 900 420" width="100%" style="max-width:900px;display:block;margin:auto;font-family:sans-serif">
+<defs><marker id="ar8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#555"/></marker></defs>
+<rect x="300" y="10" width="300" height="56" rx="8" fill="#1a3c6e"/><text x="450" y="32" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">Ramani Kanta Roy — Trust Deed 26-7-1945</text><text x="450" y="52" text-anchor="middle" fill="#cfe" font-size="11">Rajes sole trustee · debts Rs 2,62,169 · properties &gt; Rs 5 lakh</text>
+<rect x="40" y="110" width="250" height="90" rx="8" fill="#fff3cd" stroke="#b8860b"/><text x="165" y="132" text-anchor="middle" font-size="12" font-weight="bold">DURING TRUST (cls. 3, 5, 6, 11)</text><text x="165" y="150" text-anchor="middle" font-size="10">Income → debts (trustee may sell/mortgage)</text><text x="165" y="165" text-anchor="middle" font-size="10">Settlor Rs 1,000 · Rajes Rs 300 · Ramendra Rs 200</text><text x="165" y="180" text-anchor="middle" font-size="10">after settlor's death: Rajes Rs 800 · Ramendra Rs 700</text><text x="165" y="194" text-anchor="middle" font-size="10">(cls. 8–9: on a son's death → widow → heirs)</text>
+<rect x="325" y="110" width="250" height="90" rx="8" fill="#e3ecfa" stroke="#1a3c6e"/><text x="450" y="132" text-anchor="middle" font-size="12" font-weight="bold">TRUST ENDS (cl. 12) when BOTH:</text><text x="450" y="152" text-anchor="middle" font-size="11">① all debts liquidated  (uncertain?)</text><text x="450" y="170" text-anchor="middle" font-size="11">② settlor dead  (certain)</text><text x="450" y="190" text-anchor="middle" font-size="10">cl. 14: trusteeship → Rajes's wife + Ramendra → survivor</text>
+<rect x="610" y="110" width="250" height="90" rx="8" fill="#fde2e2" stroke="#c62828"/><text x="735" y="132" text-anchor="middle" font-size="12" font-weight="bold">1946 COMPROMISE DECREE</text><text x="735" y="150" text-anchor="middle" font-size="10">Santi Debi: Rs 475 p.m. for life, charge on properties,</text><text x="735" y="165" text-anchor="middle" font-size="10">executable on default · default from March 1948</text><text x="735" y="180" text-anchor="middle" font-size="10">→ execution 8-7-1949 for Rs 8,075 by attachment of</text><text x="735" y="194" text-anchor="middle" font-size="10">44/2 Lansdowne Road → Rajes objects (s.47 CPC)</text>
+<rect x="120" y="260" width="300" height="80" rx="8" fill="#d9f2e3" stroke="#2e7d32"/><text x="270" y="282" text-anchor="middle" font-size="12" font-weight="bold">cl. 12(a) → RAJES</text><text x="270" y="300" text-anchor="middle" font-size="10">Lots I–IV + their surplus income, ABSOLUTELY</text><text x="270" y="315" text-anchor="middle" font-size="10">"or if he be then dead → his heirs then living absolutely"</text><text x="270" y="331" text-anchor="middle" font-size="10">(subject to cl. (c) re 44/2 Lansdowne Road)</text>
+<rect x="480" y="260" width="300" height="80" rx="8" fill="#d9f2e3" stroke="#2e7d32"/><text x="630" y="282" text-anchor="middle" font-size="12" font-weight="bold">cl. 12(b) → RAMENDRA</text><text x="630" y="300" text-anchor="middle" font-size="10">Lot V + surplus income, for LIFE</text><text x="630" y="315" text-anchor="middle" font-size="10">then to his sons absolutely, failing whom grandsons</text>
+<rect x="200" y="365" width="500" height="45" rx="8" fill="#1a3c6e"/><text x="450" y="384" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">HELD: "vested in title but restricted in enjoyment" → ATTACHABLE</text><text x="450" y="401" text-anchor="middle" fill="#cfe" font-size="10">income applied for sons' benefit (incl. debts they would owe) · heirs clause · surplus follows corpus · own charge in 1946</text>
+<line x1="380" y1="66" x2="200" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#ar8)"/>
+<line x1="450" y1="66" x2="450" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#ar8)"/>
+<line x1="400" y1="200" x2="300" y2="260" stroke="#555" stroke-width="1.5" marker-end="url(#ar8)"/>
+<line x1="500" y1="200" x2="600" y2="260" stroke="#555" stroke-width="1.5" marker-end="url(#ar8)"/>
+<line x1="735" y1="200" x2="640" y2="365" stroke="#c62828" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar8)"/>
+<line x1="270" y1="340" x2="380" y2="365" stroke="#2e7d32" stroke-width="2" marker-end="url(#ar8)"/>
+</svg>
+<h3>13.1 Other illustrative authorities (for enrichment)</h3>
+<table>
+<tr><th style="width:36%">Case</th><th>Point</th></tr>
+<tr><td><i>Pestonjee Bhicajee v. P.H. Anderson</i> AIR 1939 PC 6</td><td>Contingent interest transferable inter vivos but not attachable in execution — foundation of the attachability issue in <i>Rajesh Kanta Roy</i>.</td></tr>
+<tr><td><i>Ranganatha Mudaliar v. A. Mohana Krishna Mudaliar</i> AIR 1926 Mad 645</td><td>Gift to take effect after payment of debts is vested — relied on by the Calcutta High Court.</td></tr>
+<tr><td><i>Bernard v. Mountague</i> (1816) 1 Mer 422 : 35 ER 729</td><td>On the terms of that trust, payment of debts was a condition precedent to vesting — the exception, cited by the Solicitor-General.</td></tr>
+<tr><td><i>Lachman v. Baldeo</i> (1919) 21 OC 312 (Oudh)</td><td>Deed giving property to a person, possession postponed until the transferor's death — vested interest (classic Indian illustration of Expl. (i)).</td></tr>
+<tr><td><i>Sundar Bibi v. Rajendra Narain Singh</i> (1925) ILR 47 All 496</td><td>Interest to take effect on the death of the transferor's brother (a certain event) — vested; brother's life interest a prior interest (Expl. (ii)).</td></tr>
+<tr><td><i>Ma Yait v. Official Assignee</i> AIR 1930 PC 17</td><td>Contingent interests of children under a settlement are transferable and pass to the Official Assignee on insolvency to the extent they are property — but the distinction from vested interests governs what actually passes.</td></tr>
+<tr><td><i>Usha Subbarao v. B.E. Vishveswaraiah</i> (1996) 5 SCC 201</td><td>Supreme Court applying ss.19/21 and ISA ss.119/120: legacy to daughters "after the death of" the widow with intermediate income direction — construction of intention; presumption of vesting.</td></tr>
+<tr><td><i>Kokilambal v. N. Raman</i> (2005) 11 SCC 234</td><td>Settlement deed — settlor retaining life interest with vested remainder to settlee; settlee's interest vested, not contingent; cannot be revoked.</td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p14">14. Master table of dispositions</h2>
+<table>
+<tr><th style="width:5%">#</th><th style="width:50%">Disposition</th><th>Vested / contingent — reason</th></tr>
+<tr><td>1</td><td>A gifts Rs 100 to B "to be paid on C's death"</td><td>Vested — C's death certain (Capsule ill. (a))</td></tr>
+<tr><td>2</td><td>To A for life, then to B</td><td>B vested remainder (Capsule ill. (b); Expl. (ii))</td></tr>
+<tr><td>3</td><td>To B, possession to be delivered when he is 25</td><td>Vested — enjoyment postponed (Expl. (i))</td></tr>
+<tr><td>4</td><td>To B if he attains 25</td><td>Contingent (s.21) — and void under s.14 if B unborn and preceded by a life estate</td></tr>
+<tr><td>5</td><td>To B if he attains 21, income meanwhile paid to B / applied for his maintenance</td><td>Vested — Exception to s.21</td></tr>
+<tr><td>6</td><td>To B if he attains 21, income meanwhile to C</td><td>Contingent</td></tr>
+<tr><td>7</td><td>To B, income accumulated till B is 21 and then paid with corpus</td><td>Vested (Expl. (iii)); accumulation subject to s.17</td></tr>
+<tr><td>8</td><td>To B, but if B dies before A, to C</td><td>B vested subject to divestment; C contingent (Expl. (iv))</td></tr>
+<tr><td>9</td><td>To A until she marries, then to B</td><td>B contingent on A's marriage (Capsule); vests when A marries</td></tr>
+<tr><td>10</td><td>To B if C does not return from England within 5 years</td><td>Contingent (negative event); vests when return becomes impossible / 5 years pass</td></tr>
+<tr><td>11</td><td>To B "after payment of my debts"</td><td>Vested — words create a charge (Jarman; ISA s.119 ill. (v); <i>Rajesh Kanta Roy</i>)</td></tr>
+<tr><td>12</td><td>Trust: property to sons on liquidation of debts and settlor's death; fixed monthly sums meanwhile; heirs to take if son dies earlier; surplus follows corpus</td><td>Vested in title, restricted in enjoyment — <i>Rajesh Kanta Roy</i>; attachable</td></tr>
+<tr><td>13</td><td>Hindu widow adopts son under agreement postponing his estate for her life</td><td>Adopted son vested; may transfer during widow's life (Capsule)</td></tr>
+<tr><td>14</td><td>To A for life, then to B if B marries (no time fixed); B unmarried at A's death</td><td>B's interest fails — s.23</td></tr>
+<tr><td>15</td><td>To A for life, then to C and D or the survivor; C dies before A</td><td>D takes — s.24</td></tr>
+<tr><td>16</td><td>To such of B's children as attain 18</td><td>Contingent for each child until 18 — s.22</td></tr>
+<tr><td>17</td><td>B's hope of inheriting from his living father</td><td>Neither — spes successionis; non-transferable (s.6(a))</td></tr>
+<tr><td>18</td><td>Decree-holder seeks to attach B's remainder after A's life estate</td><td>Attachable (vested) — sale subject to A's life interest</td></tr>
+<tr><td>19</td><td>Decree-holder seeks to attach B's interest "if B survives A"</td><td>Not attachable (contingent) — <i>Pestonjee Bhicajee</i></td></tr>
+</table>
+
+<!-- ============================================================ -->
+<h2 id="p15">15. DU semester PYQs with model answers</h2>
+
+<div class="pyq"><b>Q1 (DU LL.B., May/June 2025, Q.6(b) — short note).</b> Difference between vested and contingent interest.
+<div class="ans"><b>Model answer.</b>
+<p><b>Vested interest — s.19.</b> Created (a) without specifying the time when it is to take effect, or (b) to take effect forthwith, or (c) on the happening of an event which <i>must</i> happen — unless a contrary intention appears. It is <b>ownership</b>: a present proprietary right, though enjoyment may be deferred (e.g., Rs 100 to B payable on C's death; to A for life, remainder to B). It is not defeated by the transferee's death before possession, and is transferable (s.6), heritable and attachable (CPC s.60). The <b>Explanation</b> says vesting is not negatived merely by postponement of enjoyment, a prior interest to another, a direction to accumulate income, or a gift over on a later event.</p>
+<p><b>Contingent interest — s.21.</b> Created to take effect <i>only</i> on the happening, or non-happening, of a <i>specified uncertain event</i> (to B if he marries C; to B if C does not return within five years). The transferee has no present proprietary right — "a chance of becoming an owner" resting on an incomplete title; the interest becomes vested when the event happens (or, for a negative event, becomes impossible) and fails if the condition fails. It is transferable (it is more than a <i>spes</i>) but <b>not attachable</b> (<i>Pestonjee Bhicajee v. Anderson</i>, PC 1939), and generally not heritable if survival is implicit. <b>Exception:</b> an interest on attaining an age is <i>not</i> contingent if the intermediate income is given to the donee or applied for his benefit.</p>
+<p><b>Distinction in brief.</b> (1) Certain v. uncertain event; (2) present ownership v. mere expectancy on an incomplete title; (3) condition precedent absent v. present; (4) death before possession — no effect v. usually fatal; (5) heritable v. depends on contingency; (6) attachable v. not attachable; (7) never offends s.14 v. must vest within the period; (8) construction — strong presumption in favour of vesting. <b>Case:</b> <i>Rajesh Kanta Roy v. Shanti Debi</i> (AIR 1957 SC 255) — sons' interest under a trust deed, to devolve on liquidation of debts and settlor's death, with monthly payments meanwhile and a clause in favour of heirs, held "vested in title but restricted in enjoyment" and therefore attachable in execution of the widow's maintenance decree; the question is one of intention gathered from the whole document, approached "with a bias in favour of a vested interest unless the intention to the contrary is definite and clear."</p></div></div>
+
+<div class="pyq"><b>Q2.</b> R executes a trust deed of all his properties appointing his son S trustee, directing payment of his debts from the income, monthly allowances to himself and his sons, and providing that on liquidation of all debts and after his death the trust shall end and Lot A shall devolve on S absolutely "or if he be then dead, on his heirs then living". A decree-holder of S seeks to attach Lot A. S objects that his interest is contingent. Decide.
+<div class="ans"><b>Model answer (outline).</b> Identify issue: vested (attachable, CPC s.60) or contingent (not attachable, <i>Pestonjee Bhicajee</i>). Law: ss.19, 21 TPA; ss.119–120 ISA; Explanation to s.19; presumption of vesting; "after payment of debts" = charge (Jarman; ISA s.119 ill. (v)). Apply <i>Rajesh Kanta Roy</i> point by point: settlor's death certain; liquidation of debts — not intended as a condition of title because (i) sons receive income (monthly sums) meanwhile — application of income for their benefit, including the balance applied to debts they would themselves be bound to pay; (ii) heirs clause — contrary to the hallmark of contingency; (iii) surplus income follows corpus — present earmarking; (iv) settlor expected debts to be cleared (surplus contemplated, trusteeship for three lives only). Conclusion: "vested in title but restricted in enjoyment"; objection fails; attachment (subject to the trust and the debts) proceeds. Note the contrary case (<i>Bernard v. Mountague</i>) where a "definite and clear" intention postpones vesting.</div></div>
+
+<div class="pyq"><b>Q3.</b> "An intention that an interest shall not be vested is not to be inferred merely from a provision whereby the enjoyment thereof is postponed." Explain the Explanation to s.19 and the Exception to s.21 with illustrations and case law.
+<div class="ans"><b>Model answer (outline).</b> Text of s.19 and its Explanation; the four situations with examples (payment at 25; life estate then remainder; accumulation; gift over); rationale — they concern enjoyment/divesting, not acquisition of title; condition precedent v. subsequent (ss.26, 29). Exception to s.21 — age + income given/applied = vested; English origin (<i>Hanson v. Graham</i>; <i>Fox v. Fox</i>); ISA s.120 Exception. <i>Rajesh Kanta Roy</i> as the leading application: "where the enjoyment of the property is postponed but the present income thereof is to be applied for the benefit of the donee the gift is vested and not contingent" — even where only part of the income reaches the donee, if the rest is applied to his legal obligations (father's debts). Capsule adoption example (widow postponing adopted son's estate). Limits: clear contrary intention prevails (<i>Bernard v. Mountague</i>); "if/when he attains" without income → contingent (s.22).</div></div>
+
+<div class="pyq"><b>Q4.</b> Classify the following and give reasons: (i) A transfers property to B for life and after B's death to C; C dies during B's lifetime. (ii) A transfers Rs 5,000 to B if B marries D; B dies unmarried. (iii) A transfers a house to B "when B attains 21", directing that the rent be applied for B's education; B is 16. (iv) A transfers property to B, but if B dies before A, to C.
+<div class="ans"><b>Points.</b> (i) C's remainder vested (B's death certain; Expl. (ii)) — not defeated by C's death; C's heirs take on B's death. (ii) Contingent on marriage to D; B's death unmarried makes the event impossible → interest fails; property remains with A (s.21; Capsule). (iii) Vested — Exception to s.21 (income applied for B's benefit); if B dies at 18 his heirs take. (iv) B vested subject to divestment (Expl. (iv); s.28); C contingent; if A dies first, B's interest becomes indefeasible; if B dies first, C's vests (s.29 strict compliance).</div></div>
+
+<div class="pyq"><b>Q5.</b> Distinguish a contingent interest from spes successionis. Can either be transferred or attached?
+<div class="ans"><b>Points.</b> Contingent interest — created by a transfer; "present existence of an incomplete title"; transferable under s.6 (Capsule); becomes vested on the event; not attachable (<i>Pestonjee Bhicajee</i>). Spes — no interest; bare hope; non-transferable (s.6(a)); contracts to transfer void (s.23 Contract Act; <i>Ananda Mohan Roy</i>); neither transferable nor attachable; only s.43 may operate where a present title was misrepresented (<i>Jumma Masjid</i>). Vested interest — transferable, heritable, attachable.</div></div>
+
+<!-- ============================================================ -->
+<h2 id="p16">16. Mnemonics &amp; rapid revision</h2>
+<div class="mnem"><b>"MUST = VESTED; MAY = CONTINGENT."</b> Event that must happen → s.19; event that may or may not → s.21.</div>
+<div class="mnem"><b>"P-P-A-G" — the four non-contingencies of the s.19 Explanation:</b> <b>P</b>ostponed enjoyment · <b>P</b>rior interest to another · <b>A</b>ccumulation of income · <b>G</b>ift over on a later event.</div>
+<div class="mnem"><b>"AGE + INCOME = VESTED"</b> — Exception to s.21 / ISA s.120.</div>
+<div class="mnem"><b>"T-H-A": vested is Transferable, Heritable, Attachable; contingent is Transferable only</b> (heritability depends; not attachable — <i>Pestonjee Bhicajee</i>).</div>
+<div class="mnem"><b>"Debts = charge, not condition"</b> — <i>Rajesh Kanta Roy</i>: "vested in title but restricted in enjoyment".</div>
+<div class="box stat"><b>Ten lines to remember</b>
+<ol>
+<li>s.19: no time / forthwith / certain event → vested, unless contrary intention; not defeated by death before possession.</li>
+<li>Explanation: postponement, prior interest, accumulation, gift over ≠ contrary intention.</li>
+<li>s.21: only on a specified uncertain event (or its non-happening) → contingent; vests when event happens / becomes impossible.</li>
+<li>Exception: age condition + income given or applied for donee → vested.</li>
+<li>Vested = ownership now, enjoyment later; contingent = incomplete title, more than a spes, less than ownership.</li>
+<li>Both transferable (s.6); only vested is attachable (<i>Pestonjee Bhicajee</i>, PC 1939) and reliably heritable.</li>
+<li>Presumption/bias in favour of vesting; construe the whole instrument for intention (<i>Rajesh Kanta Roy</i>).</li>
+<li>"After payment of debts" → charge, vested (Jarman p. 1373; ISA s.119 ill. (v)) — unless a definite, clear contrary intention (<i>Bernard v. Mountague</i>).</li>
+<li><i>Rajesh Kanta Roy</i> indicators: income applied for donee (incl. debts he would owe); heirs clause; surplus follows corpus; settlor expected debts cleared; donee's own conduct (charge).</li>
+<li>Related: s.20 (unborn vests at birth), s.22 (class at age), s.23 (no time fixed — event before precedent interest ends), s.24 (survivors), ss.25–34 (conditions), ISA ss.119–120, CPC s.60.</li>
+</ol></div>
+
+<div class="foot">Prepared from the DU Faculty of Law case material (IInd Term, Property Law LB-204, 2022 — Topic 8, pp. 112–118), the Transfer of Property Act, 1882 (bare Act, ss. 5, 6, 19–34), the Indian Succession Act, 1925 (ss. 119–120), the Exam Capsule (Topic 8) and the DU LL.B. May/June 2025 question paper. Related statutes cited for holistic understanding. For examination use.</div>
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3f00ad31dedbc88',t:'MTc5MDA2NjgxOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
