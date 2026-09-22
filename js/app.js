@@ -226,7 +226,19 @@
     fcNextBtn: document.getElementById('fcNextBtn'),
     fcShuffleBtn: document.getElementById('fcShuffleBtn'),
     fcBtnReview: document.getElementById('fcBtnReview'),
-    fcBtnMastered: document.getElementById('fcBtnMastered')
+    fcBtnMastered: document.getElementById('fcBtnMastered'),
+
+    // Student Feedback Elements (Google Form Style)
+    studentFeedbackSection: document.getElementById('studentFeedbackSection'),
+    studentFeedbackForm: document.getElementById('studentFeedbackForm'),
+    gfSubmitBtn: document.getElementById('gfSubmitBtn'),
+    gfClearBtn: document.getElementById('gfClearBtn'),
+    gfSuccessCard: document.getElementById('gfSuccessCard'),
+    gfResetBtn: document.getElementById('gfResetBtn'),
+    gfEmailBackupBtn: document.getElementById('gfEmailBackupBtn'),
+    headerFeedbackBtn: document.getElementById('headerFeedbackBtn'),
+    footerFeedbackLink: document.getElementById('footerFeedbackLink'),
+    mtdFeedbackBtn: document.getElementById('mtdFeedbackBtn')
   };
 
   // =========================================================================
@@ -2670,9 +2682,266 @@
     pauseMockTimer();
     document.querySelectorAll('.mock-evaluated-answer').forEach(el => el.classList.add('revealed'));
     showToast('Exam Completed! All Model Answers & Evaluation Rubrics Unfolded. 🎉');
-    if (elements.mockPaperContent) elements.mockPaperContent.scrollTo({ top: 0, behavior: 'smooth' });
+  // =========================================================================
+  // STUDENT EXPERIENCE & FEEDBACK SURVEY CONTROLLER (Google Form Style)
+  // =========================================================================
+  function navigateToFeedback() {
+    showView('semester');
+    setTimeout(() => {
+      const section = document.getElementById('studentFeedbackSection');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 120);
   }
 
+  function initStudentFeedbackForm() {
+    const form = elements.studentFeedbackForm;
+    if (!form) return;
+
+    // Connect Trigger Buttons
+    if (elements.headerFeedbackBtn) {
+      elements.headerFeedbackBtn.addEventListener('click', navigateToFeedback);
+    }
+    if (elements.footerFeedbackLink) {
+      elements.footerFeedbackLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToFeedback();
+      });
+    }
+    if (elements.mtdFeedbackBtn) {
+      elements.mtdFeedbackBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToFeedback();
+      });
+    }
+
+    // Google Form Card Focus & Live Error Clearing
+    const cards = form.querySelectorAll('.gf-card');
+    cards.forEach(card => {
+      card.addEventListener('focusin', () => card.classList.add('focused'));
+      card.addEventListener('focusout', () => card.classList.remove('focused'));
+      card.addEventListener('input', () => card.classList.remove('has-error'));
+      card.addEventListener('change', () => card.classList.remove('has-error'));
+    });
+
+    // Form Submission Handler
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let hasError = false;
+      let firstErrorCard = null;
+
+      function markError(card) {
+        if (!card) return;
+        card.classList.add('has-error');
+        hasError = true;
+        if (!firstErrorCard) firstErrorCard = card;
+      }
+
+      // 1. Email Validation (Required)
+      const emailInput = form.querySelector('#gfStudentEmail');
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailVal || !emailRegex.test(emailVal)) {
+        markError(form.querySelector('#qCardEmail'));
+      }
+
+      // 2. Centre Validation (Required Radio)
+      const centreChecked = form.querySelector('input[name="student_centre"]:checked');
+      if (!centreChecked) {
+        markError(form.querySelector('#qCardCentre'));
+      }
+
+      // 3. Semester Validation (Required Radio)
+      const semChecked = form.querySelector('input[name="student_semester"]:checked');
+      if (!semChecked) {
+        markError(form.querySelector('#qCardSemester'));
+      }
+
+      // 4. Overall Rating Validation (Required Scale)
+      const ratingChecked = form.querySelector('input[name="overall_rating"]:checked');
+      if (!ratingChecked) {
+        markError(form.querySelector('#qCardOverallRating'));
+      }
+
+      // 5. Frequent Features Validation (At least one checkbox)
+      const featuresChecked = form.querySelectorAll('input[name="frequent_features"]:checked');
+      if (!featuresChecked || featuresChecked.length === 0) {
+        markError(form.querySelector('#qCardFeatures'));
+      }
+
+      // 6. DPDP Consent Validation (Required Checkbox)
+      const consentChecked = form.querySelector('#gfDpdpConsent');
+      if (!consentChecked || !consentChecked.checked) {
+        markError(form.querySelector('#qCardConsent'));
+      }
+
+      if (hasError) {
+        if (firstErrorCard) {
+          firstErrorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const focusable = firstErrorCard.querySelector('input, textarea');
+          if (focusable) focusable.focus();
+        }
+        showToast('Please complete all required questions marked with *', 'fa-circle-exclamation');
+        return;
+      }
+
+      // Gather Payload
+      const nameVal = form.querySelector('#gfStudentName')?.value.trim() || 'Anonymous Student';
+      const discoveryChecked = form.querySelector('input[name="student_discovery"]:checked');
+      const careerChecked = form.querySelector('input[name="student_career"]:checked');
+      const casesRating = form.querySelector('input[name="cases_rating"]:checked');
+      const pyqsRating = form.querySelector('input[name="pyqs_rating"]:checked');
+      const favVal = form.querySelector('#gfStudentFavorite')?.value.trim() || '';
+      const sugVal = form.querySelector('#gfStudentSuggestions')?.value.trim() || '';
+
+      const selectedFeatures = Array.from(featuresChecked).map(cb => cb.value);
+      const selectedUpcoming = Array.from(form.querySelectorAll('input[name="upcoming_subjects"]:checked')).map(cb => cb.value);
+      const selectedTools = Array.from(form.querySelectorAll('input[name="new_tools"]:checked')).map(cb => cb.value);
+
+      const payload = {
+        id: 'resp_' + Date.now(),
+        timestamp: new Date().toISOString(),
+        name: nameVal,
+        email: emailVal,
+        centre: centreChecked.value,
+        semester: semChecked.value,
+        discovery: discoveryChecked ? discoveryChecked.value : 'Not specified',
+        career: careerChecked ? careerChecked.value : 'Not specified',
+        overall_rating: ratingChecked.value + '/5',
+        frequent_features: selectedFeatures,
+        cases_rating: casesRating ? casesRating.value + '/5' : 'Not rated',
+        pyqs_rating: pyqsRating ? pyqsRating.value + '/5' : 'Not rated',
+        upcoming_subjects: selectedUpcoming,
+        new_tools: selectedTools,
+        favorite_thing: favVal || 'N/A',
+        suggestions: sugVal || 'None',
+        consent: 'Agreed to DPDP Act 2023 guidelines'
+      };
+
+      // 1. Local Storage Persistence
+      try {
+        const stored = JSON.parse(localStorage.getItem('du_portal_feedback_responses') || '[]');
+        stored.push(payload);
+        localStorage.setItem('du_portal_feedback_responses', JSON.stringify(stored));
+      } catch (err) {
+        console.warn('[Feedback] Local storage write failed:', err);
+      }
+
+      // 2. Transmit to ankur@makelaweasy.in via FormSubmit AJAX endpoint
+      const submitBtn = elements.gfSubmitBtn;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to Editorial Inbox...</span>';
+      }
+
+      const postData = new FormData();
+      postData.append('_subject', `🎓 New Student Survey: ${payload.name} (${payload.centre})`);
+      postData.append('_template', 'table');
+      postData.append('_captcha', 'false');
+      postData.append('Student Name', payload.name);
+      postData.append('Email Address', payload.email);
+      postData.append('Law Centre / College', payload.centre);
+      postData.append('LL.B. Semester', payload.semester);
+      postData.append('Discovery Source', payload.discovery);
+      postData.append('Career Objective', payload.career);
+      postData.append('Overall Portal Rating', payload.overall_rating);
+      postData.append('Frequently Used Features', payload.frequent_features.join(', ') || 'None selected');
+      postData.append('FIRAC Cases Clarity', payload.cases_rating);
+      postData.append('DU Model Answers Quality', payload.pyqs_rating);
+      postData.append('Requested Subjects', payload.upcoming_subjects.join(', ') || 'None');
+      postData.append('Requested Tools', payload.new_tools.join(', ') || 'None');
+      postData.append('Favorite Aspect', payload.favorite_thing);
+      postData.append('Suggestions & Typos', payload.suggestions);
+      postData.append('Submission Date & Time', new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
+
+      fetch('https://formsubmit.co/ajax/ankur@makelaweasy.in', {
+        method: 'POST',
+        body: postData,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        console.log('[Feedback] Dispatch response status:', res.status);
+      }).catch(err => {
+        console.warn('[Feedback] Network transmission deferred:', err);
+      });
+
+      // 3. Prepare Fail-safe Email Client Link
+      if (elements.gfEmailBackupBtn) {
+        const mailSub = encodeURIComponent(`Make Law Easy — Feedback from ${payload.name} (${payload.centre})`);
+        const mailBody = encodeURIComponent(
+`Make Law Easy — Student Feedback & User Profile
+======================================================
+Name: ${payload.name}
+Email: ${payload.email}
+Institution: ${payload.centre}
+Semester: ${payload.semester}
+Discovery: ${payload.discovery}
+Career Goal: ${payload.career}
+
+PORTAL RATINGS & FEEDBACK
+------------------------------------------------------
+Overall Experience: ${payload.overall_rating}
+Frequent Features: ${payload.frequent_features.join(', ')}
+FIRAC Cases Rating: ${payload.cases_rating}
+Model Answers Rating: ${payload.pyqs_rating}
+
+UPCOMING SUBJECTS & REQUESTED TOOLS
+------------------------------------------------------
+Requested Subjects: ${payload.upcoming_subjects.join(', ')}
+Requested Tools: ${payload.new_tools.join(', ')}
+
+STUDENT REMARKS
+------------------------------------------------------
+Favorite Aspect: ${payload.favorite_thing}
+Suggestions & Bugs: ${payload.suggestions}
+
+DPDP Act 2023 Consent: Confirmed
+Submission Time: ${new Date().toLocaleString()}
+`
+        );
+        elements.gfEmailBackupBtn.href = `mailto:ankur@makelaweasy.in?subject=${mailSub}&body=${mailBody}`;
+      }
+
+      // 4. Transition to Success Card
+      setTimeout(() => {
+        form.style.display = 'none';
+        if (elements.gfSuccessCard) {
+          elements.gfSuccessCard.style.display = 'block';
+          elements.gfSuccessCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        showToast('Feedback submitted successfully! Thank you.', 'fa-circle-check');
+      }, 400);
+    });
+
+    // Reset / Submit Another Response Handler
+    if (elements.gfResetBtn) {
+      elements.gfResetBtn.addEventListener('click', () => {
+        form.reset();
+        cards.forEach(c => c.classList.remove('has-error'));
+        if (elements.gfSubmitBtn) {
+          elements.gfSubmitBtn.disabled = false;
+          elements.gfSubmitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Submit Feedback</span>';
+        }
+        if (elements.gfSuccessCard) elements.gfSuccessCard.style.display = 'none';
+        form.style.display = 'block';
+        if (elements.studentFeedbackSection) {
+          elements.studentFeedbackSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // Clear Form Button Handler
+    if (elements.gfClearBtn) {
+      elements.gfClearBtn.addEventListener('click', () => {
+        if (confirm('Clear form? All answers entered in this survey will be cleared.')) {
+          form.reset();
+          cards.forEach(c => c.classList.remove('has-error'));
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  }
 
   function init() {
     // Theme setup
@@ -3093,8 +3362,13 @@
       showView('semester');
     }
 
+    // Student Feedback System (Google Forms Style)
+    initStudentFeedbackForm();
+
     if (window.location.hash === '#contact' || urlParams.get('contact') === 'true') {
       setTimeout(openContactModal, 250);
+    } else if (window.location.hash === '#feedback' || urlParams.get('feedback') === 'true') {
+      setTimeout(navigateToFeedback, 350);
     }
   }
 

@@ -200,6 +200,31 @@ try {
   assert(false, `bns_converter.js execution error: ${err.message}`);
 }
 
+// 4. STUDENT FEEDBACK SYSTEM & SERVICE WORKER INTEGRITY
+try {
+  const htmlContent = fs.readFileSync('index.html', 'utf8');
+  assert(htmlContent.includes('id="studentFeedbackSection"'), 'studentFeedbackSection container exists in index.html');
+  assert(htmlContent.includes('id="studentFeedbackForm"'), 'studentFeedbackForm exists in index.html');
+  assert(htmlContent.includes('id="gfStudentEmail"'), 'Email question exists in feedback form');
+  assert(htmlContent.includes('id="qCardCentre"'), 'Law Centre question card exists');
+  assert(htmlContent.includes('id="qCardSemester"'), 'Semester question card exists');
+  assert(htmlContent.includes('id="gfSubmitBtn"'), 'Submit button exists in feedback form');
+  assert(htmlContent.includes('id="gfSuccessCard"'), 'Success response card exists in feedback form');
+  assert(htmlContent.includes('id="headerFeedbackBtn"'), 'Header feedback quick-link button exists');
+  assert(htmlContent.includes('id="mtdFeedbackBtn"'), 'Mobile tools drawer feedback button exists');
+  assert(htmlContent.includes('id="footerFeedbackLink"'), 'Footer feedback link exists');
+
+  const cssContent = fs.readFileSync('css/styles.css', 'utf8');
+  assert(cssContent.includes('.gf-container'), '.gf-container style rule exists in styles.css');
+  assert(cssContent.includes('.gf-card'), '.gf-card style rule exists in styles.css');
+  assert(cssContent.includes('.gf-header-strip'), '.gf-header-strip style rule exists in styles.css');
+
+  const swContent = fs.readFileSync('sw.js', 'utf8');
+  assert(swContent.includes('du-law-portal-v26'), 'sw.js CACHE_NAME is bumped to du-law-portal-v26');
+} catch (err) {
+  assert(false, `Feedback & SW integrity test error: ${err.message}`);
+}
+
 console.log('\n----------------------------------------------------');
 if (failed) {
   console.error('❌ ONE OR MORE TESTS FAILED! Fix issues before deploying.');

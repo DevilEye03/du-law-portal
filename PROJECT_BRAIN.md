@@ -186,6 +186,18 @@ The application operates as a hashless/query-driven SPA with 3 primary views:
 - Client-side persistent bookmarking system powered by `localStorage`.
 - Allows students to star landmark cases, tricky questions, and revision capsules for quick review before walking into the examination hall.
 
+### 4.8. Student Experience & Intelligence Survey (`#studentFeedbackSection`)
+- Positioned seamlessly at the bottom of the home / semester selection view (`#semesterView`) with deep-links from the header (`#headerFeedbackBtn`), mobile tools drawer (`#mtdFeedbackBtn`), footer (`#footerFeedbackLink`), and URL routing (`#feedback` / `?feedback=true`).
+- **Authentic Google Forms Design Language**: Iconic purple header stripe (`#673ab7`), card-based questions with focus border styling (`#7c3aed`), custom circular radio buttons, square multi-select checkboxes, 1–5 linear rating scale matrix, and responsive touch layouts.
+- **15 Exhaustive Questions Across 3 Sections**:
+  1. *Student Profile & Intelligence*: Law Centre (CLC, LC-I, LC-II, Other), Current Semester (I–VI), Target Career Path (Judiciary, Litigation, Corporate, UPSC, Academia), Primary Study Device, and Daily Study Routine.
+  2. *Platform Evaluation*: Overall 1–5 rating, Most Valued Feature, Notes Quality & Depth, Accuracy Feedback.
+  3. *Wishlist & Open Feedback*: Priority Subjects for Ingestion, Feature Requests, Offline Mode vs Live Quiz Preferences, General Feedback, and DPDP Act 2023 Consent Checkbox.
+- **Zero-Backend Email Dispatch Architecture**:
+  - Dispatches submissions asynchronously via FormSubmit AJAX endpoint (`https://formsubmit.co/ajax/ankur@makelaweasy.in`) directly to the portal administrator.
+  - Automatically backs up all responses locally to `localStorage` (`du_portal_feedback_responses`).
+  - Google Forms confirmation card with a fail-safe "Open Response Copy in Email Client" (`mailto:`) button guaranteeing 100% delivery even on restrictive student college networks.
+
 ---
 
 ## 5. DATA STRUCTURES & CONTRACTS
@@ -200,6 +212,13 @@ window.DU_LAW_PORTAL_DATA = {
       desc: "Foundational legal curriculum...",
       active: true,
       subjectsCount: 5
+    },
+    {
+      id: 2,
+      title: "Semester II",
+      desc: "Substantive & evidentiary legal disciplines...",
+      active: true,
+      subjectsCount: 2
     },
     {
       id: 3,
@@ -274,6 +293,9 @@ window.DU_LAW_PORTAL_DATA = {
   - `bns` (LB-103): Law of Crimes-I (Bharatiya Nyaya Sanhita, 2023)
   - `family` (LB-104): Family Law-I
   - `torts` (LB-105): Law of Torts & Consumer Protection Act, 2019
+- **Semester 2**:
+  - `property` (LB-204): Property Law & Transfer of Property Act, 1882
+  - `pil` (LB-205): Public International Law
 - **Semester 3**:
   - `cpc` (LB-301): Code of Civil Procedure, 1908 & Limitation Act, 1963
   - `company` (LB-303): Company Law (Companies Act, 2013)
