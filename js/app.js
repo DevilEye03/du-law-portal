@@ -2688,6 +2688,8 @@
     pauseMockTimer();
     document.querySelectorAll('.mock-evaluated-answer').forEach(el => el.classList.add('revealed'));
     showToast('Exam Completed! All Model Answers & Evaluation Rubrics Unfolded. 🎉');
+  }
+
   // =========================================================================
   // STUDENT EXPERIENCE & FEEDBACK SURVEY CONTROLLER (Google Form Style Modal)
   // =========================================================================

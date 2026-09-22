@@ -231,10 +231,33 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v28'), 'sw.js CACHE_NAME is bumped to du-law-portal-v28');
+  assert(swContent.includes('du-law-portal-v29'), 'sw.js CACHE_NAME is bumped to du-law-portal-v29');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }
+
+// 5. JAVASCRIPT SYNTAX & COMPILATION INTEGRITY
+const vm = require('vm');
+const jsFilesToCheck = [
+  'js/app.js',
+  'js/data.js',
+  'js/bare_acts.js',
+  'js/bns_converter.js',
+  'js/books_showcase.js',
+  'js/wave_grid_background.js',
+  'js/interactive_particles.js',
+  'sw.js'
+];
+
+jsFilesToCheck.forEach(file => {
+  try {
+    const code = fs.readFileSync(file, 'utf8');
+    new vm.Script(code, { filename: file });
+    assert(true, `${file} compiles cleanly with zero syntax errors`);
+  } catch (err) {
+    assert(false, `${file} syntax compilation failure: ${err.message}`);
+  }
+});
 
 console.log('\n----------------------------------------------------');
 if (failed) {
