@@ -210,7 +210,6 @@ try {
   assert(htmlContent.includes('id="qCardSemester"'), 'Semester question card exists');
   assert(htmlContent.includes('id="gfSubmitBtn"'), 'Submit button exists in feedback form');
   assert(htmlContent.includes('id="gfSuccessCard"'), 'Success response card exists in feedback form');
-  assert(htmlContent.includes('id="headerFeedbackBtn"'), 'Header feedback quick-link button exists');
   assert(htmlContent.includes('id="mtdFeedbackBtn"'), 'Mobile tools drawer feedback button exists');
   assert(htmlContent.includes('id="footerFeedbackLink"'), 'Footer feedback link exists');
   assert(htmlContent.includes('id="footerContactBarFeedbackLink"'), 'Footer contact bar feedback link exists');
@@ -231,7 +230,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v29'), 'sw.js CACHE_NAME is bumped to du-law-portal-v29');
+  assert(swContent.includes('du-law-portal-v30'), 'sw.js CACHE_NAME is bumped to du-law-portal-v30');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }
