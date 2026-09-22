@@ -230,7 +230,10 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v30'), 'sw.js CACHE_NAME is bumped to du-law-portal-v30');
+  assert(swContent.includes('du-law-portal-v31'), 'sw.js CACHE_NAME is bumped to du-law-portal-v31');
+  assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
+  assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');
+  assert(!privacyContent.includes('Team Aditya Shukla'), 'privacy.html contains zero occurrences of Team Aditya Shukla');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }

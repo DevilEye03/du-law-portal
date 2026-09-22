@@ -2,7 +2,7 @@
 
 **Last Updated / Effective Date:** September 17, 2026  
 **Website:** [https://makelaweasy.in](https://makelaweasy.in) *(the "Website")*  
-**Platform / Operator:** Make Law Easy *(Operated by Team Aditya Shukla — "we", "us", or "our")*  
+**Platform / Operator:** Make Law Easy *("we", "us", or "our")*  
 
 ---
 
@@ -43,7 +43,7 @@
 
 1.1. These Terms and Conditions of Use ("**Terms**") govern your voluntary access to and use of the website located at `https://makelaweasy.in` (including `https://make-law-easy.web.app`, all subpages, syllabus notes, case briefs, statutory compendiums, PYQ model answers, flashcards, and contact channels available thereon, collectively referred to as the "**Website**" or "**Portal**").
 
-1.2. The Website is an independent, non-commercial academic legal initiative maintained and operated under the banner of **Make Law Easy**, spearheaded by **Team Aditya Shukla**, headquartered and situated in New Delhi, Delhi, India (referred to as "**Make Law Easy**", "**we**", "**us**", or "**our**").
+1.2. The Website is an independent, non-commercial academic legal initiative maintained and operated under the banner of **Make Law Easy**, headquartered and situated in New Delhi, Delhi, India (referred to as "**Make Law Easy**", "**we**", "**us**", or "**our**").
 
 1.3. For the purposes of these Terms, "**User**", "**student**", "**visitor**", "**you**", and "**your**" refer to any individual, law student, academician, legal researcher, or entity who accesses, browses, navigates, reads, or interacts with the Website on any computer, smartphone, tablet, or digital apparatus.
 
@@ -70,7 +70,7 @@ While Make Law Easy strives to maintain rigorous editorial standards aligned wit
 ## 3. NO ATTORNEY-CLIENT / ADVOCATE-CLIENT RELATIONSHIP
 
 3.1. **No Relationship Created by Browsing:**  
-Your access to, browsing of, or receipt of information from this Website does not create, establish, or constitute an advocate-client, attorney-client, solicitor-client, fiduciary, or confidential relationship between you and Make Law Easy, Team Aditya Shukla, or any of our contributors.
+Your access to, browsing of, or receipt of information from this Website does not create, establish, or constitute an advocate-client, attorney-client, solicitor-client, fiduciary, or confidential relationship between you and Make Law Easy or any of our contributors.
 
 3.2. **No Relationship Created via Communications:**  
 Neither the transmission of messages via email (`ankur@makelaweasy.in`), nor participation in our community discussion channels (such as our official Telegram channel), shall create or constitute an advocate-client relationship.
@@ -125,7 +125,7 @@ We do not collect banking details, credit/debit card numbers, UPI PINs, or onlin
 Judicial judgments and orders delivered by the Supreme Court of India, High Courts, statutory Bare Acts enacted by Parliament and State Legislatures, and university examination question papers cited on this Website are public legal records. These materials are referenced under the **Fair Dealing** doctrine for private study, research, academic criticism, and review pursuant to **Section 52 of the Copyright Act, 1957 (India)**.
 
 7.2. **Proprietary Original Content:**  
-The editorial synthesis, structured topic notes, custom mnemonics, original case brief analyses, flowcharts, user interface designs, 3D visual book representations, CSS styling, and underlying code ("**Make Law Easy IP**") are the exclusive intellectual property of Make Law Easy and Team Aditya Shukla.
+The editorial synthesis, structured topic notes, custom mnemonics, original case brief analyses, flowcharts, user interface designs, 3D visual book representations, CSS styling, and underlying code ("**Make Law Easy IP**") are the exclusive intellectual property of Make Law Easy.
 
 7.3. **Limited Educational License Granted to Students:**  
 Subject to your compliance with these Terms, Make Law Easy grants you a limited, revocable, non-exclusive, non-transferable, personal license to:
@@ -149,7 +149,7 @@ You shall **not**:
 * **Denial of Service:** Impose an unreasonable load on the Website's hosting infrastructure or launch Denial of Service (DoS/DDoS) attacks;
 * **Malicious Code:** Distribute any software viruses, worms, malware, or destructive code;
 * **Automated Scraping:** Deploy automated scrapers, crawlers, or extraction tools designed to harvest bulk content in a manner that degrades service for other students;
-* **Impersonation:** Impersonate Make Law Easy, Team Aditya Shukla, university officials, or other users.
+* **Impersonation:** Impersonate Make Law Easy, university officials, or other users.
 
 ---
 
@@ -194,7 +194,7 @@ We reserve the right to review, update, edit, or archive study notes at any time
 ## 13. LIMITATION OF LIABILITY
 
 13.1. **Exclusion of Consequential Losses:**  
-**IN NO EVENT SHALL MAKE LAW EASY, TEAM ADITYA SHUKLA, OR ANY CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR ACCESS TO, USE OF, OR INABILITY TO ACCESS THIS WEBSITE OR ITS STUDY NOTES.**
+**IN NO EVENT SHALL MAKE LAW EASY OR ANY CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR ACCESS TO, USE OF, OR INABILITY TO ACCESS THIS WEBSITE OR ITS STUDY NOTES.**
 
 13.2. **Cap on Liability:**  
 Because this platform is provided completely free of charge to the student community, **the total aggregate liability of Make Law Easy for any claims under these Terms shall not exceed five hundred Indian Rupees (INR ₹500.00).**
@@ -203,7 +203,7 @@ Because this platform is provided completely free of charge to the student commu
 
 ## 14. INDEMNIFICATION
 
-14.1. You agree to indemnify, defend, and hold harmless Make Law Easy and Team Aditya Shukla from and against any claims, liabilities, damages, or costs (including legal fees) arising from your misuse of the Website, violation of these Terms, or infringement of any third-party rights.
+14.1. You agree to indemnify, defend, and hold harmless Make Law Easy from and against any claims, liabilities, damages, or costs (including legal fees) arising from your misuse of the Website, violation of these Terms, or infringement of any third-party rights.
 
 ---
 
@@ -264,7 +264,7 @@ Users agree to first contact Make Law Easy at `ankur@makelaweasy.in` to resolve 
 For any questions, feedback, academic suggestions, or legal notices, please reach out to our team:
 
 * **Platform:** Make Law Easy  
-* **Academic Initiative:** Team Aditya Shukla  
+* **Academic Initiative:** Editorial Board  
 * **Grievance Redressal & Compliance Contact:** Ankur  
 * **Official Contact Email:** [ankur@makelaweasy.in](mailto:ankur@makelaweasy.in)  
 * **Official Telegram Community:** [https://t.me/+5suDyPQc065jYWY1](https://t.me/+5suDyPQc065jYWY1)  

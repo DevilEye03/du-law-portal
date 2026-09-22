@@ -2,7 +2,7 @@
 
 **Last Updated / Effective Date:** September 17, 2026  
 **Website:** [https://makelaweasy.in](https://makelaweasy.in) *(the "Website")*  
-**Platform / Data Controller:** Make Law Easy *(Operated by Team Aditya Shukla — "we", "us", or "our")*  
+**Platform / Data Controller:** Make Law Easy *("we", "us", or "our")*  
 
 ---
 
@@ -42,7 +42,7 @@
 
 ## 1. INTRODUCTION AND SCOPE
 
-1.1. This Privacy Policy ("**Policy**") describes the practices and principles of **Make Law Easy**, an academic legal initiative spearheaded by **Team Aditya Shukla** ("**Make Law Easy**", "**we**", "**us**", or "**our**"), regarding the collection, storage, use, processing, and protection of personal data and non-personal technical telemetry obtained from visitors and users ("**User**", "**student**", "**you**", or "**your**") who access or interact with our public academic website located at `https://makelaweasy.in` (and `https://make-law-easy.web.app`, collectively referred to as the "**Website**").
+1.1. This Privacy Policy ("**Policy**") describes the practices and principles of **Make Law Easy**, an academic legal initiative ("**Make Law Easy**", "**we**", "**us**", or "**our**"), regarding the collection, storage, use, processing, and protection of personal data and non-personal technical telemetry obtained from visitors and users ("**User**", "**student**", "**you**", or "**your**") who access or interact with our public academic website located at `https://makelaweasy.in` (and `https://make-law-easy.web.app`, collectively referred to as the "**Website**").
 
 1.2. This Policy is formulated in strict compliance with applicable data protection and privacy statutes, including:
 * The **Digital Personal Data Protection Act, 2023 (DPDP Act, India)** and the **Information Technology Act, 2000** (including the Information Technology (Reasonable Security Practices and Procedures and Sensitive Personal Data or Information) Rules, 2011);
@@ -57,7 +57,7 @@
 
 2.1. The Data Controller responsible for information processed through this Website is:
 * **Platform Name:** Make Law Easy  
-* **Academic Initiative:** Team Aditya Shukla  
+* **Academic Initiative:** Editorial Board  
 * **Principal Location:** New Delhi, Delhi, India  
 * **Official Data Protection / Privacy Email:** [ankur@makelaweasy.in](mailto:ankur@makelaweasy.in)  
 * **Official Telegram Channel:** [https://t.me/+5suDyPQc065jYWY1](https://t.me/+5suDyPQc065jYWY1)  
@@ -282,7 +282,7 @@ In accordance with the **Information Technology Act, 2000** and the **Digital Pe
 * **Designated Officer:** Ankur  
 * **Role / Designation:** Grievance Redressal Officer & Data Protection Lead  
 * **Platform:** Make Law Easy  
-* **Academic Initiative:** Team Aditya Shukla  
+* **Academic Initiative:** Editorial Board  
 * **Principal Location:** New Delhi, Delhi, India  
 * **Official Privacy & Grievance Email:** [ankur@makelaweasy.in](mailto:ankur@makelaweasy.in)  
 * **Official Telegram:** [https://t.me/+5suDyPQc065jYWY1](https://t.me/+5suDyPQc065jYWY1)  
