@@ -238,6 +238,9 @@
     gfEmailBackupBtn: document.getElementById('gfEmailBackupBtn'),
     headerFeedbackBtn: document.getElementById('headerFeedbackBtn'),
     footerFeedbackLink: document.getElementById('footerFeedbackLink'),
+    footerContactBarFeedbackLink: document.getElementById('footerContactBarFeedbackLink'),
+    footerContactBtn: document.getElementById('footerContactBtn'),
+    contactModalFeedbackBtn: document.getElementById('contactModalFeedbackBtn'),
     mtdFeedbackBtn: document.getElementById('mtdFeedbackBtn')
   };
 
@@ -2709,6 +2712,18 @@
         navigateToFeedback();
       });
     }
+    if (elements.footerContactBarFeedbackLink) {
+      elements.footerContactBarFeedbackLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToFeedback();
+      });
+    }
+    if (elements.contactModalFeedbackBtn) {
+      elements.contactModalFeedbackBtn.addEventListener('click', () => {
+        closeContactModal();
+        navigateToFeedback();
+      });
+    }
     if (elements.mtdFeedbackBtn) {
       elements.mtdFeedbackBtn.addEventListener('click', () => {
         closeMobileTools();
@@ -3044,6 +3059,12 @@ Submission Time: ${new Date().toLocaleString()}
     }
     if (elements.headerContactBtn) {
       elements.headerContactBtn.addEventListener('click', openContactModal);
+    }
+    if (elements.footerContactBtn) {
+      elements.footerContactBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openContactModal();
+      });
     }
     if (elements.headerEmailBtn) {
       elements.headerEmailBtn.addEventListener('click', () => {

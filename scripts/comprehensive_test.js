@@ -213,6 +213,14 @@ try {
   assert(htmlContent.includes('id="headerFeedbackBtn"'), 'Header feedback quick-link button exists');
   assert(htmlContent.includes('id="mtdFeedbackBtn"'), 'Mobile tools drawer feedback button exists');
   assert(htmlContent.includes('id="footerFeedbackLink"'), 'Footer feedback link exists');
+  assert(htmlContent.includes('id="footerContactBarFeedbackLink"'), 'Footer contact bar feedback link exists');
+  assert(htmlContent.includes('id="footerContactBtn"'), 'Footer contact button exists');
+
+  const termsContent = fs.readFileSync('terms.html', 'utf8');
+  assert(termsContent.includes('/#feedback'), 'terms.html footer includes link to feedback');
+
+  const privacyContent = fs.readFileSync('privacy.html', 'utf8');
+  assert(privacyContent.includes('/#feedback'), 'privacy.html footer includes link to feedback');
 
   const cssContent = fs.readFileSync('css/styles.css', 'utf8');
   assert(cssContent.includes('.gf-container'), '.gf-container style rule exists in styles.css');
@@ -220,7 +228,7 @@ try {
   assert(cssContent.includes('.gf-header-strip'), '.gf-header-strip style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v26'), 'sw.js CACHE_NAME is bumped to du-law-portal-v26');
+  assert(swContent.includes('du-law-portal-v27'), 'sw.js CACHE_NAME is bumped to du-law-portal-v27');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }
