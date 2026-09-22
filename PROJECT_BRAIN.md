@@ -186,8 +186,17 @@ The application operates as a hashless/query-driven SPA with 3 primary views:
 - Client-side persistent bookmarking system powered by `localStorage`.
 - Allows students to star landmark cases, tricky questions, and revision capsules for quick review before walking into the examination hall.
 
-### 4.8. Student Experience & Intelligence Survey (`#studentFeedbackSection`)
-- Positioned seamlessly at the bottom of the home / semester selection view (`#semesterView`) with deep-links from the header (`#headerFeedbackBtn`), mobile tools drawer (`#mtdFeedbackBtn`), footer (`#footerFeedbackLink`), and URL routing (`#feedback` / `?feedback=true`).
+### 4.8. Student Experience & Intelligence Survey Modal (`#studentFeedbackSection`)
+- Implemented as a dedicated, focused **Modal Dialog** (`.feedback-modal-dialog` & `.feedback-modal-overlay`).
+- **Homepage Cleanliness**: The modal is hidden by default (`display: none;` / `opacity: 0;`), leaving the homepage completely clean, focused, and free of long survey forms.
+- **On-Demand Activation**: Opens ONLY when a student clicks any feedback trigger:
+  - Footer Navigation Link: `About Us • Privacy Policy • Terms of Service • Contact Us • Feedback` (`#footerFeedbackLink`)
+  - Footer Contact Details Bar: `ankur@makelaweasy.in • Telegram Channel • Student Feedback` (`#footerContactBarFeedbackLink`)
+  - Top Navigation Bar: `Feedback` button (`#headerFeedbackBtn`)
+  - Mobile Quick Tools Drawer: `Feedback` card (`#mtdFeedbackBtn`)
+  - Inside Contact Modal: `Share Student Feedback →` button (`#contactModalFeedbackBtn`)
+  - Direct URL Route: `https://makelaweasy.in/#feedback` or `?feedback=true`
+- **Dismissible UX**: Dismissible via the sticky `×` close button (`#feedbackModalCloseBtn`), clicking the backdrop overlay, pressing the `Escape` key, or clicking `Done & Close` on the completion screen.
 - **Authentic Google Forms Design Language**: Iconic purple header stripe (`#673ab7`), card-based questions with focus border styling (`#7c3aed`), custom circular radio buttons, square multi-select checkboxes, 1–5 linear rating scale matrix, and responsive touch layouts.
 - **15 Exhaustive Questions Across 3 Sections**:
   1. *Student Profile & Intelligence*: Law Centre (CLC, LC-I, LC-II, Other), Current Semester (I–VI), Target Career Path (Judiciary, Litigation, Corporate, UPSC, Academia), Primary Study Device, and Daily Study Routine.
