@@ -24,10 +24,11 @@ const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0].split('#')[0]);
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
-  const fullPath = path.join(__dirname, reqPath);
+  const ROOT_DIR = path.resolve(__dirname, '..');
+  const fullPath = path.join(ROOT_DIR, reqPath);
 
-  // Security check: ensure path is within __dirname
-  if (!fullPath.startsWith(__dirname)) {
+  // Security check: ensure path is within ROOT_DIR
+  if (!fullPath.startsWith(ROOT_DIR)) {
     res.writeHead(403);
     res.end('Access denied');
     return;
@@ -52,6 +53,6 @@ server.listen(PORT, () => {
   console.log(`\n======================================================`);
   console.log(`🏛️  DELHI UNIVERSITY LAW NOTES PORTAL IS RUNNING!`);
   console.log(`🔗 Local URL: http://localhost:${PORT}`);
-  console.log(`📁 Directory: ${__dirname}`);
+  console.log(`📁 Directory: ${path.resolve(__dirname, '..')}`);
   console.log(`======================================================\n`);
 });
