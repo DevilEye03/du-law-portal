@@ -6542,12 +6542,95 @@ body.drawer-open {
 }
 
 /* ==========================================================================
-   STUDENT EXPERIENCE & USER INTELLIGENCE SURVEY (Google Form Style)
+   STUDENT EXPERIENCE & USER INTELLIGENCE SURVEY MODAL (Google Form Style)
    ========================================================================== */
-.student-feedback-section {
-  padding: 48px 0 64px;
-  position: relative;
-  width: 100%;
+.feedback-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 13, 26, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2150;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s;
+}
+
+.feedback-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feedback-modal-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -46%) scale(0.96);
+  width: min(94vw, 820px);
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(124, 58, 237, 0.45) transparent;
+  background: var(--bg-canvas, #080d1a);
+  border-radius: 20px;
+  border: 1.5px solid rgba(124, 58, 237, 0.35);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85), 0 0 45px rgba(124, 58, 237, 0.22);
+  z-index: 2160;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.28s;
+  padding: 24px 20px 48px;
+}
+
+[data-theme="dark"] .feedback-modal-dialog {
+  background: #080d1a;
+  border-color: rgba(124, 58, 237, 0.45);
+}
+
+.feedback-modal-dialog.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.feedback-modal-close-btn {
+  position: sticky;
+  top: 0;
+  float: right;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-line);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 30;
+  margin-bottom: 6px;
+  transition: all 0.22s ease;
+}
+
+.feedback-modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.4);
+  transform: rotate(90deg);
+}
+
+.gf-close-btn-accent {
+  background: rgba(124, 58, 237, 0.15) !important;
+  color: #c4b5fd !important;
+  border: 1px solid rgba(124, 58, 237, 0.4) !important;
+}
+.gf-close-btn-accent:hover {
+  background: #7c3aed !important;
+  color: #ffffff !important;
 }
 
 .gf-container {
@@ -7203,8 +7286,15 @@ body.drawer-open {
 
 /* Mobile Responsiveness (Rule 3) */
 @media (max-width: 600px) {
+  .feedback-modal-dialog {
+    width: 96vw;
+    max-height: 94vh;
+    max-height: 94dvh;
+    padding: 16px 10px 36px;
+    border-radius: 16px;
+  }
   .student-feedback-section {
-    padding: 32px 0 48px;
+    padding: 16px 8px 36px;
   }
   .gf-container {
     padding: 0 12px;

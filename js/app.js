@@ -241,6 +241,9 @@
     footerContactBarFeedbackLink: document.getElementById('footerContactBarFeedbackLink'),
     footerContactBtn: document.getElementById('footerContactBtn'),
     contactModalFeedbackBtn: document.getElementById('contactModalFeedbackBtn'),
+    feedbackModalOverlay: document.getElementById('feedbackModalOverlay'),
+    feedbackModalCloseBtn: document.getElementById('feedbackModalCloseBtn'),
+    gfCloseModalSuccessBtn: document.getElementById('gfCloseModalSuccessBtn'),
     mtdFeedbackBtn: document.getElementById('mtdFeedbackBtn')
   };
 
@@ -2686,21 +2689,46 @@
     document.querySelectorAll('.mock-evaluated-answer').forEach(el => el.classList.add('revealed'));
     showToast('Exam Completed! All Model Answers & Evaluation Rubrics Unfolded. 🎉');
   // =========================================================================
-  // STUDENT EXPERIENCE & FEEDBACK SURVEY CONTROLLER (Google Form Style)
+  // STUDENT EXPERIENCE & FEEDBACK SURVEY CONTROLLER (Google Form Style Modal)
   // =========================================================================
+  function openFeedbackModal() {
+    if (elements.studentFeedbackSection && elements.feedbackModalOverlay) {
+      elements.feedbackModalOverlay.classList.add('active');
+      elements.studentFeedbackSection.classList.add('active');
+      elements.studentFeedbackSection.setAttribute('aria-hidden', 'false');
+      elements.feedbackModalOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeFeedbackModal() {
+    if (elements.studentFeedbackSection && elements.feedbackModalOverlay) {
+      elements.studentFeedbackSection.classList.remove('active');
+      elements.feedbackModalOverlay.classList.remove('active');
+      elements.studentFeedbackSection.setAttribute('aria-hidden', 'true');
+      elements.feedbackModalOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
   function navigateToFeedback() {
-    showView('semester');
-    setTimeout(() => {
-      const section = document.getElementById('studentFeedbackSection');
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 120);
+    openFeedbackModal();
   }
 
   function initStudentFeedbackForm() {
     const form = elements.studentFeedbackForm;
     if (!form) return;
+
+    // Connect Modal Close Triggers
+    if (elements.feedbackModalCloseBtn) {
+      elements.feedbackModalCloseBtn.addEventListener('click', closeFeedbackModal);
+    }
+    if (elements.feedbackModalOverlay) {
+      elements.feedbackModalOverlay.addEventListener('click', closeFeedbackModal);
+    }
+    if (elements.gfCloseModalSuccessBtn) {
+      elements.gfCloseModalSuccessBtn.addEventListener('click', closeFeedbackModal);
+    }
 
     // Connect Trigger Buttons
     if (elements.headerFeedbackBtn) {
@@ -3290,6 +3318,7 @@ Submission Time: ${new Date().toLocaleString()}
         if (elements.readerModal && elements.readerModal.classList.contains('active')) closeReader();
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
         if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
+        if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) closeFeedbackModal();
         closeHeaderSemDropdown();
       }
     });

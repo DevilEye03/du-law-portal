@@ -173,577 +173,6 @@
           <!-- Injected dynamically by app.js -->
         </div>
       </div>
-
-      <!-- =============================================================
-           STUDENT EXPERIENCE & USER INTELLIGENCE SURVEY (Google Form Style)
-           ============================================================= -->
-      <section class="student-feedback-section" id="studentFeedbackSection" aria-label="Student Experience and Feedback Survey">
-        <div class="gf-container">
-          
-          <!-- Google Form Header Card -->
-          <div class="gf-header-card">
-            <div class="gf-header-strip"></div>
-            <div class="gf-header-content">
-              <div class="gf-crest-pill">
-                <i class="fa-solid fa-graduation-cap"></i> Make Law Easy &bull; Academic Survey
-              </div>
-              <h2 class="gf-form-title">Student Experience &amp; Academic Feedback</h2>
-              <p class="gf-form-desc">
-                Help us elevate your LL.B. preparation. Your feedback directly shapes new subject notes, landmark case additions, and study tools for Delhi University law students.
-              </p>
-              <div class="gf-header-meta">
-                <span><i class="fa-solid fa-envelope"></i> Submissions routed directly to: <code>ankur@makelaweasy.in</code></span>
-              </div>
-              <div class="gf-required-note">
-                <span class="gf-req-star">*</span> Indicates required question
-              </div>
-            </div>
-          </div>
-
-          <!-- The Form -->
-          <form class="gf-form" id="studentFeedbackForm" novalidate>
-
-            <!-- SECTION 1: STUDENT PROFILE & USER INTELLIGENCE -->
-            <div class="gf-section-divider">
-              <div class="gf-section-tag"><i class="fa-solid fa-user-graduate"></i> Section 1 of 3: Academic Profile</div>
-              <p class="gf-section-desc">Tell us a little about your academic journey so we can tailor notes to your specific batch and institution.</p>
-            </div>
-
-            <!-- Q1: Name -->
-            <div class="gf-card" id="qCardName">
-              <div class="gf-question-title">
-                Full Name / Preferred Name
-              </div>
-              <div class="gf-question-sub">Optional &mdash; how would you like us to address you?</div>
-              <div class="gf-input-wrap">
-                <input type="text" name="student_name" id="gfStudentName" class="gf-input" placeholder="Your answer" autocomplete="name">
-                <span class="gf-input-line"></span>
-              </div>
-            </div>
-
-            <!-- Q2: Email -->
-            <div class="gf-card" id="qCardEmail" data-required="true">
-              <div class="gf-question-title">
-                Email Address <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">For follow-up, new subject release notifications, and editorial updates.</div>
-              <div class="gf-input-wrap">
-                <input type="email" name="student_email" id="gfStudentEmail" class="gf-input" placeholder="your.name@example.com" required autocomplete="email">
-                <span class="gf-input-line"></span>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address</div>
-            </div>
-
-            <!-- Q3: Law Centre / College -->
-            <div class="gf-card" id="qCardCentre" data-required="true">
-              <div class="gf-question-title">
-                Law Centre / Institution <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">Select your current faculty centre or university.</div>
-              <div class="gf-radio-group">
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="Campus Law Centre (CLC), Faculty of Law, DU" required>
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Campus Law Centre (CLC), Faculty of Law, DU</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="Law Centre–I (LC-1), Faculty of Law, DU">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Law Centre–I (LC-1), Faculty of Law, DU</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="Law Centre–II (LC-2), Faculty of Law, DU">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Law Centre–II (LC-2), Faculty of Law, DU</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="Other Delhi University College / Department">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Other Delhi University College / Department</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="National Law University (NLU) / Other Law College">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">National Law University (NLU) / Other Law College in India</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_centre" value="Judicial Aspirant / Advocate / Legal Practitioner">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Judicial Aspirant / Advocate / Legal Practitioner</span>
-                </label>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
-            </div>
-
-            <!-- Q4: Semester / Stage -->
-            <div class="gf-card" id="qCardSemester" data-required="true">
-              <div class="gf-question-title">
-                Current Academic Stage / Semester <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">Which LL.B. semester are you currently enrolled in?</div>
-              <div class="gf-radio-group">
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 1 (LL.B.)" required>
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 1 (Term 1 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 2 (LL.B.)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 2 (Term 2 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 3 (LL.B.)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 3 (Term 3 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 4 (LL.B.)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 4 (Term 4 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 5 (LL.B.)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 5 (Term 5 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="Semester 6 (LL.B.)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Semester 6 (Term 6 LL.B.)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_semester" value="LL.M. / Judicial Exam Preparation">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">LL.M. / Judicial Services Preparation</span>
-                </label>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
-            </div>
-
-            <!-- Q5: Discovery Source -->
-            <div class="gf-card" id="qCardDiscovery">
-              <div class="gf-question-title">
-                How did you discover Make Law Easy?
-              </div>
-              <div class="gf-question-sub">Helps us understand how our study community is growing.</div>
-              <div class="gf-radio-group">
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_discovery" value="Class WhatsApp / Telegram Batch Groups">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Class WhatsApp / Telegram Batch Groups</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_discovery" value="Recommendation by Senior / Faculty / Colleague">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Recommendation by Senior / Faculty / Colleague</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_discovery" value="Official Telegram Channel (t.me/+5suDyPQc065jYWY1)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Official Telegram Channel (t.me/+5suDyPQc065jYWY1)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_discovery" value="Google Search">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Google Search</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_discovery" value="LinkedIn / Social Media / Other">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">LinkedIn / Social Media / Other</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Q6: Career Objective -->
-            <div class="gf-card" id="qCardCareer">
-              <div class="gf-question-title">
-                Primary Career Objective
-              </div>
-              <div class="gf-question-sub">What is your principal professional aspiration post-law school?</div>
-              <div class="gf-radio-group">
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_career" value="Judicial Services Exam (DJS / State Judiciary)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Judicial Services Examination (DJS / State Judiciary)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_career" value="Litigation & Court Advocacy (High Court / Supreme Court)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Litigation &amp; Court Advocacy (High Court / Supreme Court)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_career" value="Corporate Law / Tier-1 Law Firms / In-House Counsel">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Corporate Law / Tier-1 Law Firms / In-House Counsel</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_career" value="Civil Services (UPSC CSE / State PSC)">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Civil Services (UPSC CSE / State PSC)</span>
-                </label>
-                <label class="gf-radio-label">
-                  <input type="radio" name="student_career" value="Legal Academia / LL.M. / Research / JAG">
-                  <span class="gf-radio-circle"></span>
-                  <span class="gf-radio-text">Legal Academia / LL.M. / Research / JAG Branch</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- SECTION 2: PORTAL EXPERIENCE & QUALITY EVALUATION -->
-            <div class="gf-section-divider">
-              <div class="gf-section-tag"><i class="fa-solid fa-star-half-stroke"></i> Section 2 of 3: Portal Experience &amp; Quality</div>
-              <p class="gf-section-desc">Rate your experience with our study tools, FIRAC briefs, and model answers.</p>
-            </div>
-
-            <!-- Q7: Overall Rating -->
-            <div class="gf-card" id="qCardOverallRating" data-required="true">
-              <div class="gf-question-title">
-                Overall Portal Experience <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">How would you rate your overall study experience on Make Law Easy?</div>
-              <div class="gf-scale-wrap">
-                <span class="gf-scale-edge-label">Needs Improvement</span>
-                <div class="gf-scale-row">
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">1</span>
-                    <input type="radio" name="overall_rating" value="1" required>
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">2</span>
-                    <input type="radio" name="overall_rating" value="2">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">3</span>
-                    <input type="radio" name="overall_rating" value="3">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">4</span>
-                    <input type="radio" name="overall_rating" value="4">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">5</span>
-                    <input type="radio" name="overall_rating" value="5">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                </div>
-                <span class="gf-scale-edge-label">Outstanding</span>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
-            </div>
-
-            <!-- Q8: Features used most frequently -->
-            <div class="gf-card" id="qCardFeatures" data-required="true">
-              <div class="gf-question-title">
-                Which features do you use most frequently? <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">Select all features that you actively use during your exam preparation.</div>
-              <div class="gf-check-group">
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="Detailed Subject Dossiers & Syllabus Notes">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Detailed Subject Dossiers &amp; Unit Syllabus Notes</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="Landmark FIRAC Precedent Analyses">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Landmark FIRAC Precedent Analyses &amp; Case Briefs</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="Past 10-Year DU Examination PYQs & Model Answers">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Past 10-Year DU Examination PYQs &amp; Model Answers</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="3D Precedent Recall Flashcards">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">3D Precedent Recall Flashcards (Flip-Card Drills)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="Quick Bare Act Statutory Drawer">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Quick Bare Act Statutory Drawer (Verbatim Sections &amp; Search)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="BNS 2023 ↔ IPC 1860 Live Section Converter">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">BNS 2023 &harr; IPC 1860 Live Section Converter</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="Last-Minute Unit Revision Capsules">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Last-Minute Unit Revision Capsules &amp; Tables</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="frequent_features" value="3D Hardbound Books Showcase">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">3D Hardbound Books Showcase (Interactive Carousel)</span>
-                </label>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select at least one feature</div>
-            </div>
-
-            <!-- Q9: FIRAC Precedents Clarity -->
-            <div class="gf-card" id="qCardCasesRating">
-              <div class="gf-question-title">
-                Clarity &amp; Analytical Depth of Landmark FIRAC Cases
-              </div>
-              <div class="gf-question-sub">Rate the clarity of facts, issues, ratios, and exam application tips.</div>
-              <div class="gf-scale-wrap">
-                <span class="gf-scale-edge-label">Poor</span>
-                <div class="gf-scale-row">
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">1</span>
-                    <input type="radio" name="cases_rating" value="1">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">2</span>
-                    <input type="radio" name="cases_rating" value="2">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">3</span>
-                    <input type="radio" name="cases_rating" value="3">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">4</span>
-                    <input type="radio" name="cases_rating" value="4">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">5</span>
-                    <input type="radio" name="cases_rating" value="5">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                </div>
-                <span class="gf-scale-edge-label">Exceptional</span>
-              </div>
-            </div>
-
-            <!-- Q10: PYQ Model Answers Quality -->
-            <div class="gf-card" id="qCardPyqsRating">
-              <div class="gf-question-title">
-                Exam Readiness of DU PYQ Model Answers
-              </div>
-              <div class="gf-question-sub">How well do our model answers match the expectations of DU examination evaluators?</div>
-              <div class="gf-scale-wrap">
-                <span class="gf-scale-edge-label">Inadequate</span>
-                <div class="gf-scale-row">
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">1</span>
-                    <input type="radio" name="pyqs_rating" value="1">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">2</span>
-                    <input type="radio" name="pyqs_rating" value="2">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">3</span>
-                    <input type="radio" name="pyqs_rating" value="3">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">4</span>
-                    <input type="radio" name="pyqs_rating" value="4">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                  <label class="gf-scale-item">
-                    <span class="gf-scale-num">5</span>
-                    <input type="radio" name="pyqs_rating" value="5">
-                    <span class="gf-radio-circle"></span>
-                  </label>
-                </div>
-                <span class="gf-scale-edge-label">Exam Perfect</span>
-              </div>
-            </div>
-
-            <!-- SECTION 3: FUTURE CONTENT & DPDP CONSENT -->
-            <div class="gf-section-divider">
-              <div class="gf-section-tag"><i class="fa-solid fa-lightbulb"></i> Section 3 of 3: Future Subjects &amp; Suggestions</div>
-              <p class="gf-section-desc">Guide our editorial roadmap for upcoming semesters and tools.</p>
-            </div>
-
-            <!-- Q11: Upcoming Subjects Priority -->
-            <div class="gf-card" id="qCardUpcoming">
-              <div class="gf-question-title">
-                Which upcoming subjects do you need most urgently?
-              </div>
-              <div class="gf-question-sub">Check all subjects you want us to publish next on the portal.</div>
-              <div class="gf-check-group">
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Law of Crimes–II (CrPC & BNSS 2023)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 2: Law of Crimes&ndash;II (CrPC &amp; BNSS 2023)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Constitutional Law–I (LB-202)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 2: Constitutional Law&ndash;I (LB-202)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Family Law–II (Muslim Law, LB-206)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 2: Family Law&ndash;II (Muslim Law, LB-206)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Labour Law–I (LB-401)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 4: Labour Law&ndash;I (LB-401)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Administrative Law (LB-404)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 4: Administrative Law (LB-404)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Alternative Dispute Resolution (ADR, LB-402)">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 4: Alternative Dispute Resolution (ADR, LB-402)</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="upcoming_subjects" value="Semester 5: Environmental Law / IPR">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Semester 5: Environmental Law / Intellectual Property Rights (IPR)</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Q12: New Features Wanted -->
-            <div class="gf-card" id="qCardNewFeatures">
-              <div class="gf-question-title">
-                What new tools or features would you like to see next?
-              </div>
-              <div class="gf-question-sub">We build tools based directly on student demand.</div>
-              <div class="gf-check-group">
-                <label class="gf-check-label">
-                  <input type="checkbox" name="new_tools" value="Downloadable / Printable PDF Revision Booklets">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Downloadable / Printable PDF Revision Booklets</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="new_tools" value="Audio Lecture Capsules / Spoken Law Summaries">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Audio Lecture Capsules / Spoken Law Summaries</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="new_tools" value="MCQ Drill & Quiz Bank for Semester & Judicial Exams">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">MCQ Drill &amp; Quiz Bank for Semester &amp; Judicial Exams</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="new_tools" value="AI-Powered Case Law Search & Citation Finder">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">AI-Powered Case Law Search &amp; Citation Finder</span>
-                </label>
-                <label class="gf-check-label">
-                  <input type="checkbox" name="new_tools" value="Doubt Clearing & Community Study Forum">
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">Doubt Clearing &amp; Community Study Forum</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Q13: Favorite aspect -->
-            <div class="gf-card" id="qCardFavorite">
-              <div class="gf-question-title">
-                What do you love most about Make Law Easy?
-              </div>
-              <div class="gf-question-sub">What has been the most helpful part of the portal in your studies?</div>
-              <div class="gf-input-wrap">
-                <textarea name="student_favorite" id="gfStudentFavorite" class="gf-textarea" rows="2" placeholder="Your answer"></textarea>
-                <span class="gf-input-line"></span>
-              </div>
-            </div>
-
-            <!-- Q14: Suggestions & Bugs -->
-            <div class="gf-card" id="qCardSuggestions">
-              <div class="gf-question-title">
-                Suggestions for Improvement or Report an Issue / Typo
-              </div>
-              <div class="gf-question-sub">Found an error or have an idea to make the portal even better?</div>
-              <div class="gf-input-wrap">
-                <textarea name="student_suggestions" id="gfStudentSuggestions" class="gf-textarea" rows="3" placeholder="Your answer"></textarea>
-                <span class="gf-input-line"></span>
-              </div>
-            </div>
-
-            <!-- Q15: DPDP Consent -->
-            <div class="gf-card" id="qCardConsent" data-required="true">
-              <div class="gf-question-title">
-                Privacy &amp; Data Protection Consent <span class="gf-req-star">*</span>
-              </div>
-              <div class="gf-question-sub">
-                In compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act).
-              </div>
-              <div class="gf-check-group">
-                <label class="gf-check-label">
-                  <input type="checkbox" name="dpdp_consent" id="gfDpdpConsent" value="consented" required>
-                  <span class="gf-check-box"></span>
-                  <span class="gf-check-text">
-                    I agree that my feedback may be processed by Make Law Easy to enhance academic materials in accordance with the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &amp; DPDP Act 2023.
-                  </span>
-                </label>
-              </div>
-              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Consent is required to submit feedback</div>
-            </div>
-
-            <!-- Form Actions Row -->
-            <div class="gf-actions-row">
-              <button type="submit" class="gf-submit-btn" id="gfSubmitBtn">
-                <i class="fa-solid fa-paper-plane"></i> <span>Submit Feedback</span>
-              </button>
-              <button type="button" class="gf-clear-btn" id="gfClearBtn">
-                Clear form
-              </button>
-            </div>
-
-          </form>
-
-          <!-- Post-Submission Success Card (Hidden Initially) -->
-          <div class="gf-success-card" id="gfSuccessCard" style="display: none;" role="alert">
-            <div class="gf-header-strip"></div>
-            <div class="gf-success-body">
-              <div class="gf-success-icon-wrap">
-                <i class="fa-solid fa-circle-check"></i>
-              </div>
-              <h2 class="gf-success-title">Student Experience &amp; Academic Feedback</h2>
-              <p class="gf-success-msg">Your response has been recorded.</p>
-              
-              <div class="gf-dispatch-status" id="gfDispatchStatus">
-                <div class="gf-status-pill success">
-                  <i class="fa-solid fa-paper-plane"></i> <span>Transmitted to Editorial Inbox (<code>ankur@makelaweasy.in</code>)</span>
-                </div>
-                <div class="gf-status-pill local-saved">
-                  <i class="fa-solid fa-shield-halved"></i> <span>Locally backed up in browser storage</span>
-                </div>
-              </div>
-
-              <div class="gf-success-actions">
-                <a href="#" class="gf-email-backup-btn" id="gfEmailBackupBtn" target="_blank" rel="noopener noreferrer">
-                  <i class="fa-solid fa-envelope-open-text"></i> Open Response Copy in Email Client
-                </a>
-                <button type="button" class="gf-reset-btn" id="gfResetBtn">
-                  Submit another response
-                </button>
-              </div>
-
-              <div class="gf-success-footer">
-                <p>Thank you for contributing to open and accessible legal education for Delhi University!</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
     </section>
 
     <!-- ---------------------------------------------------------------
@@ -1528,6 +957,584 @@
       </div>
     </div>
   </div>
+
+  <!-- ===================================================================
+       STUDENT EXPERIENCE & USER INTELLIGENCE SURVEY MODAL (Google Form Style)
+       =================================================================== -->
+  <div class="feedback-modal-overlay" id="feedbackModalOverlay" aria-hidden="true"></div>
+  <div class="feedback-modal-dialog student-feedback-section" id="studentFeedbackSection" role="dialog" aria-modal="true" aria-labelledby="feedbackModalTitle" aria-hidden="true">
+    <button class="feedback-modal-close-btn" id="feedbackModalCloseBtn" aria-label="Close Feedback Survey" title="Close (Esc)">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+        <div class="gf-container">
+          
+          <!-- Google Form Header Card -->
+          <div class="gf-header-card">
+            <div class="gf-header-strip"></div>
+            <div class="gf-header-content">
+              <div class="gf-crest-pill">
+                <i class="fa-solid fa-graduation-cap"></i> Make Law Easy &bull; Academic Survey
+              </div>
+              <h2 class="gf-form-title">Student Experience &amp; Academic Feedback</h2>
+              <p class="gf-form-desc">
+                Help us elevate your LL.B. preparation. Your feedback directly shapes new subject notes, landmark case additions, and study tools for Delhi University law students.
+              </p>
+              <div class="gf-header-meta">
+                <span><i class="fa-solid fa-envelope"></i> Submissions routed directly to: <code>ankur@makelaweasy.in</code></span>
+              </div>
+              <div class="gf-required-note">
+                <span class="gf-req-star">*</span> Indicates required question
+              </div>
+            </div>
+          </div>
+
+          <!-- The Form -->
+          <form class="gf-form" id="studentFeedbackForm" novalidate>
+
+            <!-- SECTION 1: STUDENT PROFILE & USER INTELLIGENCE -->
+            <div class="gf-section-divider">
+              <div class="gf-section-tag"><i class="fa-solid fa-user-graduate"></i> Section 1 of 3: Academic Profile</div>
+              <p class="gf-section-desc">Tell us a little about your academic journey so we can tailor notes to your specific batch and institution.</p>
+            </div>
+
+            <!-- Q1: Name -->
+            <div class="gf-card" id="qCardName">
+              <div class="gf-question-title">
+                Full Name / Preferred Name
+              </div>
+              <div class="gf-question-sub">Optional &mdash; how would you like us to address you?</div>
+              <div class="gf-input-wrap">
+                <input type="text" name="student_name" id="gfStudentName" class="gf-input" placeholder="Your answer" autocomplete="name">
+                <span class="gf-input-line"></span>
+              </div>
+            </div>
+
+            <!-- Q2: Email -->
+            <div class="gf-card" id="qCardEmail" data-required="true">
+              <div class="gf-question-title">
+                Email Address <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">For follow-up, new subject release notifications, and editorial updates.</div>
+              <div class="gf-input-wrap">
+                <input type="email" name="student_email" id="gfStudentEmail" class="gf-input" placeholder="your.name@example.com" required autocomplete="email">
+                <span class="gf-input-line"></span>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address</div>
+            </div>
+
+            <!-- Q3: Law Centre / College -->
+            <div class="gf-card" id="qCardCentre" data-required="true">
+              <div class="gf-question-title">
+                Law Centre / Institution <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">Select your current faculty centre or university.</div>
+              <div class="gf-radio-group">
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="Campus Law Centre (CLC), Faculty of Law, DU" required>
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Campus Law Centre (CLC), Faculty of Law, DU</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="Law Centre–I (LC-1), Faculty of Law, DU">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Law Centre–I (LC-1), Faculty of Law, DU</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="Law Centre–II (LC-2), Faculty of Law, DU">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Law Centre–II (LC-2), Faculty of Law, DU</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="Other Delhi University College / Department">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Other Delhi University College / Department</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="National Law University (NLU) / Other Law College">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">National Law University (NLU) / Other Law College in India</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_centre" value="Judicial Aspirant / Advocate / Legal Practitioner">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Judicial Aspirant / Advocate / Legal Practitioner</span>
+                </label>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
+            </div>
+
+            <!-- Q4: Semester / Stage -->
+            <div class="gf-card" id="qCardSemester" data-required="true">
+              <div class="gf-question-title">
+                Current Academic Stage / Semester <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">Which LL.B. semester are you currently enrolled in?</div>
+              <div class="gf-radio-group">
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 1 (LL.B.)" required>
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 1 (Term 1 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 2 (LL.B.)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 2 (Term 2 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 3 (LL.B.)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 3 (Term 3 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 4 (LL.B.)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 4 (Term 4 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 5 (LL.B.)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 5 (Term 5 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="Semester 6 (LL.B.)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Semester 6 (Term 6 LL.B.)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_semester" value="LL.M. / Judicial Exam Preparation">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">LL.M. / Judicial Services Preparation</span>
+                </label>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
+            </div>
+
+            <!-- Q5: Discovery Source -->
+            <div class="gf-card" id="qCardDiscovery">
+              <div class="gf-question-title">
+                How did you discover Make Law Easy?
+              </div>
+              <div class="gf-question-sub">Helps us understand how our study community is growing.</div>
+              <div class="gf-radio-group">
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_discovery" value="Class WhatsApp / Telegram Batch Groups">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Class WhatsApp / Telegram Batch Groups</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_discovery" value="Recommendation by Senior / Faculty / Colleague">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Recommendation by Senior / Faculty / Colleague</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_discovery" value="Official Telegram Channel (t.me/+5suDyPQc065jYWY1)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Official Telegram Channel (t.me/+5suDyPQc065jYWY1)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_discovery" value="Google Search">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Google Search</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_discovery" value="LinkedIn / Social Media / Other">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">LinkedIn / Social Media / Other</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q6: Career Objective -->
+            <div class="gf-card" id="qCardCareer">
+              <div class="gf-question-title">
+                Primary Career Objective
+              </div>
+              <div class="gf-question-sub">What is your principal professional aspiration post-law school?</div>
+              <div class="gf-radio-group">
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_career" value="Judicial Services Exam (DJS / State Judiciary)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Judicial Services Examination (DJS / State Judiciary)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_career" value="Litigation & Court Advocacy (High Court / Supreme Court)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Litigation &amp; Court Advocacy (High Court / Supreme Court)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_career" value="Corporate Law / Tier-1 Law Firms / In-House Counsel">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Corporate Law / Tier-1 Law Firms / In-House Counsel</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_career" value="Civil Services (UPSC CSE / State PSC)">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Civil Services (UPSC CSE / State PSC)</span>
+                </label>
+                <label class="gf-radio-label">
+                  <input type="radio" name="student_career" value="Legal Academia / LL.M. / Research / JAG">
+                  <span class="gf-radio-circle"></span>
+                  <span class="gf-radio-text">Legal Academia / LL.M. / Research / JAG Branch</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- SECTION 2: PORTAL EXPERIENCE & QUALITY EVALUATION -->
+            <div class="gf-section-divider">
+              <div class="gf-section-tag"><i class="fa-solid fa-star-half-stroke"></i> Section 2 of 3: Portal Experience &amp; Quality</div>
+              <p class="gf-section-desc">Rate your experience with our study tools, FIRAC briefs, and model answers.</p>
+            </div>
+
+            <!-- Q7: Overall Rating -->
+            <div class="gf-card" id="qCardOverallRating" data-required="true">
+              <div class="gf-question-title">
+                Overall Portal Experience <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">How would you rate your overall study experience on Make Law Easy?</div>
+              <div class="gf-scale-wrap">
+                <span class="gf-scale-edge-label">Needs Improvement</span>
+                <div class="gf-scale-row">
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">1</span>
+                    <input type="radio" name="overall_rating" value="1" required>
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">2</span>
+                    <input type="radio" name="overall_rating" value="2">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">3</span>
+                    <input type="radio" name="overall_rating" value="3">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">4</span>
+                    <input type="radio" name="overall_rating" value="4">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">5</span>
+                    <input type="radio" name="overall_rating" value="5">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                </div>
+                <span class="gf-scale-edge-label">Outstanding</span>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> This is a required question</div>
+            </div>
+
+            <!-- Q8: Features used most frequently -->
+            <div class="gf-card" id="qCardFeatures" data-required="true">
+              <div class="gf-question-title">
+                Which features do you use most frequently? <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">Select all features that you actively use during your exam preparation.</div>
+              <div class="gf-check-group">
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="Detailed Subject Dossiers & Syllabus Notes">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Detailed Subject Dossiers &amp; Unit Syllabus Notes</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="Landmark FIRAC Precedent Analyses">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Landmark FIRAC Precedent Analyses &amp; Case Briefs</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="Past 10-Year DU Examination PYQs & Model Answers">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Past 10-Year DU Examination PYQs &amp; Model Answers</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="3D Precedent Recall Flashcards">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">3D Precedent Recall Flashcards (Flip-Card Drills)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="Quick Bare Act Statutory Drawer">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Quick Bare Act Statutory Drawer (Verbatim Sections &amp; Search)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="BNS 2023 ↔ IPC 1860 Live Section Converter">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">BNS 2023 &harr; IPC 1860 Live Section Converter</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="Last-Minute Unit Revision Capsules">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Last-Minute Unit Revision Capsules &amp; Tables</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="frequent_features" value="3D Hardbound Books Showcase">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">3D Hardbound Books Showcase (Interactive Carousel)</span>
+                </label>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select at least one feature</div>
+            </div>
+
+            <!-- Q9: FIRAC Precedents Clarity -->
+            <div class="gf-card" id="qCardCasesRating">
+              <div class="gf-question-title">
+                Clarity &amp; Analytical Depth of Landmark FIRAC Cases
+              </div>
+              <div class="gf-question-sub">Rate the clarity of facts, issues, ratios, and exam application tips.</div>
+              <div class="gf-scale-wrap">
+                <span class="gf-scale-edge-label">Poor</span>
+                <div class="gf-scale-row">
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">1</span>
+                    <input type="radio" name="cases_rating" value="1">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">2</span>
+                    <input type="radio" name="cases_rating" value="2">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">3</span>
+                    <input type="radio" name="cases_rating" value="3">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">4</span>
+                    <input type="radio" name="cases_rating" value="4">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">5</span>
+                    <input type="radio" name="cases_rating" value="5">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                </div>
+                <span class="gf-scale-edge-label">Exceptional</span>
+              </div>
+            </div>
+
+            <!-- Q10: PYQ Model Answers Quality -->
+            <div class="gf-card" id="qCardPyqsRating">
+              <div class="gf-question-title">
+                Exam Readiness of DU PYQ Model Answers
+              </div>
+              <div class="gf-question-sub">How well do our model answers match the expectations of DU examination evaluators?</div>
+              <div class="gf-scale-wrap">
+                <span class="gf-scale-edge-label">Inadequate</span>
+                <div class="gf-scale-row">
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">1</span>
+                    <input type="radio" name="pyqs_rating" value="1">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">2</span>
+                    <input type="radio" name="pyqs_rating" value="2">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">3</span>
+                    <input type="radio" name="pyqs_rating" value="3">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">4</span>
+                    <input type="radio" name="pyqs_rating" value="4">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                  <label class="gf-scale-item">
+                    <span class="gf-scale-num">5</span>
+                    <input type="radio" name="pyqs_rating" value="5">
+                    <span class="gf-radio-circle"></span>
+                  </label>
+                </div>
+                <span class="gf-scale-edge-label">Exam Perfect</span>
+              </div>
+            </div>
+
+            <!-- SECTION 3: FUTURE CONTENT & DPDP CONSENT -->
+            <div class="gf-section-divider">
+              <div class="gf-section-tag"><i class="fa-solid fa-lightbulb"></i> Section 3 of 3: Future Subjects &amp; Suggestions</div>
+              <p class="gf-section-desc">Guide our editorial roadmap for upcoming semesters and tools.</p>
+            </div>
+
+            <!-- Q11: Upcoming Subjects Priority -->
+            <div class="gf-card" id="qCardUpcoming">
+              <div class="gf-question-title">
+                Which upcoming subjects do you need most urgently?
+              </div>
+              <div class="gf-question-sub">Check all subjects you want us to publish next on the portal.</div>
+              <div class="gf-check-group">
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Law of Crimes–II (CrPC & BNSS 2023)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 2: Law of Crimes&ndash;II (CrPC &amp; BNSS 2023)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Constitutional Law–I (LB-202)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 2: Constitutional Law&ndash;I (LB-202)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 2: Family Law–II (Muslim Law, LB-206)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 2: Family Law&ndash;II (Muslim Law, LB-206)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Labour Law–I (LB-401)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 4: Labour Law&ndash;I (LB-401)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Administrative Law (LB-404)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 4: Administrative Law (LB-404)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 4: Alternative Dispute Resolution (ADR, LB-402)">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 4: Alternative Dispute Resolution (ADR, LB-402)</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="upcoming_subjects" value="Semester 5: Environmental Law / IPR">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Semester 5: Environmental Law / Intellectual Property Rights (IPR)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q12: New Features Wanted -->
+            <div class="gf-card" id="qCardNewFeatures">
+              <div class="gf-question-title">
+                What new tools or features would you like to see next?
+              </div>
+              <div class="gf-question-sub">We build tools based directly on student demand.</div>
+              <div class="gf-check-group">
+                <label class="gf-check-label">
+                  <input type="checkbox" name="new_tools" value="Downloadable / Printable PDF Revision Booklets">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Downloadable / Printable PDF Revision Booklets</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="new_tools" value="Audio Lecture Capsules / Spoken Law Summaries">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Audio Lecture Capsules / Spoken Law Summaries</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="new_tools" value="MCQ Drill & Quiz Bank for Semester & Judicial Exams">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">MCQ Drill &amp; Quiz Bank for Semester &amp; Judicial Exams</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="new_tools" value="AI-Powered Case Law Search & Citation Finder">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">AI-Powered Case Law Search &amp; Citation Finder</span>
+                </label>
+                <label class="gf-check-label">
+                  <input type="checkbox" name="new_tools" value="Doubt Clearing & Community Study Forum">
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">Doubt Clearing &amp; Community Study Forum</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Q13: Favorite aspect -->
+            <div class="gf-card" id="qCardFavorite">
+              <div class="gf-question-title">
+                What do you love most about Make Law Easy?
+              </div>
+              <div class="gf-question-sub">What has been the most helpful part of the portal in your studies?</div>
+              <div class="gf-input-wrap">
+                <textarea name="student_favorite" id="gfStudentFavorite" class="gf-textarea" rows="2" placeholder="Your answer"></textarea>
+                <span class="gf-input-line"></span>
+              </div>
+            </div>
+
+            <!-- Q14: Suggestions & Bugs -->
+            <div class="gf-card" id="qCardSuggestions">
+              <div class="gf-question-title">
+                Suggestions for Improvement or Report an Issue / Typo
+              </div>
+              <div class="gf-question-sub">Found an error or have an idea to make the portal even better?</div>
+              <div class="gf-input-wrap">
+                <textarea name="student_suggestions" id="gfStudentSuggestions" class="gf-textarea" rows="3" placeholder="Your answer"></textarea>
+                <span class="gf-input-line"></span>
+              </div>
+            </div>
+
+            <!-- Q15: DPDP Consent -->
+            <div class="gf-card" id="qCardConsent" data-required="true">
+              <div class="gf-question-title">
+                Privacy &amp; Data Protection Consent <span class="gf-req-star">*</span>
+              </div>
+              <div class="gf-question-sub">
+                In compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act).
+              </div>
+              <div class="gf-check-group">
+                <label class="gf-check-label">
+                  <input type="checkbox" name="dpdp_consent" id="gfDpdpConsent" value="consented" required>
+                  <span class="gf-check-box"></span>
+                  <span class="gf-check-text">
+                    I agree that my feedback may be processed by Make Law Easy to enhance academic materials in accordance with the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &amp; DPDP Act 2023.
+                  </span>
+                </label>
+              </div>
+              <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Consent is required to submit feedback</div>
+            </div>
+
+            <!-- Form Actions Row -->
+            <div class="gf-actions-row">
+              <button type="submit" class="gf-submit-btn" id="gfSubmitBtn">
+                <i class="fa-solid fa-paper-plane"></i> <span>Submit Feedback</span>
+              </button>
+              <button type="button" class="gf-clear-btn" id="gfClearBtn">
+                Clear form
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Post-Submission Success Card (Hidden Initially) -->
+          <div class="gf-success-card" id="gfSuccessCard" style="display: none;" role="alert">
+            <div class="gf-header-strip"></div>
+            <div class="gf-success-body">
+              <div class="gf-success-icon-wrap">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <h2 class="gf-success-title">Student Experience &amp; Academic Feedback</h2>
+              <p class="gf-success-msg">Your response has been recorded.</p>
+              
+              <div class="gf-dispatch-status" id="gfDispatchStatus">
+                <div class="gf-status-pill success">
+                  <i class="fa-solid fa-paper-plane"></i> <span>Transmitted to Editorial Inbox (<code>ankur@makelaweasy.in</code>)</span>
+                </div>
+                <div class="gf-status-pill local-saved">
+                  <i class="fa-solid fa-shield-halved"></i> <span>Locally backed up in browser storage</span>
+                </div>
+              </div>
+
+              <div class="gf-success-actions">
+                <a href="#" class="gf-email-backup-btn" id="gfEmailBackupBtn" target="_blank" rel="noopener noreferrer">
+                  <i class="fa-solid fa-envelope-open-text"></i> Open Response Copy in Email Client
+                </a>
+                <button type="button" class="gf-reset-btn" id="gfResetBtn">
+                  Submit another response
+                </button>
+                <button type="button" class="gf-reset-btn gf-close-btn-accent" id="gfCloseModalSuccessBtn">
+                  <i class="fa-solid fa-check"></i> Done &amp; Close
+                </button>
+              </div>
+
+              <div class="gf-success-footer">
+                <p>Thank you for contributing to open and accessible legal education for Delhi University!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
   <!-- Toast Notification System -->
   <div class="toast-notification" id="toastNotification" role="status" aria-live="polite">

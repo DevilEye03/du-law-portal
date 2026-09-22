@@ -215,6 +215,8 @@ try {
   assert(htmlContent.includes('id="footerFeedbackLink"'), 'Footer feedback link exists');
   assert(htmlContent.includes('id="footerContactBarFeedbackLink"'), 'Footer contact bar feedback link exists');
   assert(htmlContent.includes('id="footerContactBtn"'), 'Footer contact button exists');
+  assert(htmlContent.includes('id="feedbackModalOverlay"'), 'Feedback modal overlay exists');
+  assert(htmlContent.includes('id="feedbackModalCloseBtn"'), 'Feedback modal close button exists');
 
   const termsContent = fs.readFileSync('terms.html', 'utf8');
   assert(termsContent.includes('/#feedback'), 'terms.html footer includes link to feedback');
@@ -226,9 +228,10 @@ try {
   assert(cssContent.includes('.gf-container'), '.gf-container style rule exists in styles.css');
   assert(cssContent.includes('.gf-card'), '.gf-card style rule exists in styles.css');
   assert(cssContent.includes('.gf-header-strip'), '.gf-header-strip style rule exists in styles.css');
+  assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v27'), 'sw.js CACHE_NAME is bumped to du-law-portal-v27');
+  assert(swContent.includes('du-law-portal-v28'), 'sw.js CACHE_NAME is bumped to du-law-portal-v28');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }
