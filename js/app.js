@@ -166,6 +166,7 @@
 
     // Hub Tabs & Filter
     hubTabs: document.querySelectorAll('.hub-tab-btn'),
+    hubTabsContainer: document.querySelector('.hub-tabs-container'),
     tabContentPanes: document.querySelectorAll('.tab-content-pane'),
     hubSearchInput: document.getElementById('hubSearchInput'),
     searchClearBtn: document.getElementById('searchClearBtn'),
@@ -412,6 +413,12 @@
   // VIEW SWITCHING
   // =========================================================================
   function showView(viewName, pushHistory = false) {
+    document.body.classList.remove('reader-open');
+    document.documentElement.classList.remove('reader-open');
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.removeProperty('display');
+      elements.hubTabsContainer.classList.remove('is-hidden');
+    }
     elements.semesterView.classList.remove('active');
     elements.subjectsView.classList.remove('active');
     elements.subjectHubView.classList.remove('active');
@@ -1793,7 +1800,18 @@
     }
 
     elements.readerModal.classList.add('active');
+    document.body.classList.add('reader-open');
+    document.documentElement.classList.add('reader-open');
     document.body.style.overflow = 'hidden';
+
+    // Hide the 4 hub tab buttons when any topic is open
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.setProperty('display', 'none', 'important');
+      elements.hubTabsContainer.classList.add('is-hidden');
+    }
+    if (elements.mobileBottomNav) {
+      elements.mobileBottomNav.style.setProperty('display', 'none', 'important');
+    }
 
     if (pushHistory) {
       const semId = state.currentSemester || 1;
@@ -1821,11 +1839,22 @@
 
   function closeReader(popHistory = false) {
     elements.readerModal.classList.remove('active');
+    document.body.classList.remove('reader-open');
+    document.documentElement.classList.remove('reader-open');
     const iframeWrap = document.querySelector('.reader-iframe-wrap');
     if (iframeWrap) {
       iframeWrap.innerHTML = '';
     }
     document.body.style.overflow = '';
+
+    // Restore the 4 hub tab buttons when reader is closed
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.removeProperty('display');
+      elements.hubTabsContainer.classList.remove('is-hidden');
+    }
+    if (elements.mobileBottomNav && elements.subjectHubView.classList.contains('active')) {
+      elements.mobileBottomNav.style.removeProperty('display');
+    }
 
     if (popHistory && window.history.state && window.history.state.view === 'reader') {
       window.history.back();
