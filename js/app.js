@@ -289,7 +289,7 @@
         const cols = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
         return cols ? `<tr>${cols}</tr>` : '';
       }).join('');
-      return `<div style="overflow-x:auto; margin:14px 0; -webkit-overflow-scrolling:touch;"><table class="rev-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
+      return `<div class="table-responsive rev-table-wrap md-table-wrap" style="overflow-x:auto; width:100%; max-width:100%; box-sizing:border-box; margin:14px 0; -webkit-overflow-scrolling:touch;"><table class="rev-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
     });
 
     // Headings
