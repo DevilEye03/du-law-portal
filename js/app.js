@@ -143,6 +143,8 @@
     bsActionExplore: document.getElementById('bsActionExplore'),
     subjectsGrid: document.getElementById('subjectsGrid'),
     changeSemBtn: document.getElementById('changeSemBtn'),
+    subjectsBackBtn: document.getElementById('subjectsBackBtn'),
+    subjectsBreadcrumbSem: document.getElementById('subjectsBreadcrumbSem'),
 
     // Subject Hub Elements
     hubBreadcrumbSem: document.getElementById('hubBreadcrumbSem'),
@@ -181,6 +183,7 @@
     readerTitle: document.getElementById('readerTitle'),
     readerSubInfo: document.getElementById('readerSubInfo'),
     readerIframe: document.getElementById('readerIframe'),
+    readerBackBtn: document.getElementById('readerBackBtn'),
     readerCloseBtn: document.getElementById('readerCloseBtn'),
     readerNewTabBtn: document.getElementById('readerNewTabBtn'),
 
@@ -408,7 +411,7 @@
   // =========================================================================
   // VIEW SWITCHING
   // =========================================================================
-  function showView(viewName) {
+  function showView(viewName, pushHistory = false) {
     elements.semesterView.classList.remove('active');
     elements.subjectsView.classList.remove('active');
     elements.subjectHubView.classList.remove('active');
@@ -424,11 +427,20 @@
       renderSemesterSelection();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        if (!window.history.state || window.history.state.view !== 'semester') {
+          window.history.pushState({ view: 'semester' }, '', window.location.pathname);
+        }
+      }
     } else if (viewName === 'subjects') {
       document.body.removeAttribute('data-active-subject');
       elements.subjectsView.classList.add('active');
       if (elements.headerSemText && state.currentSemester) {
         elements.headerSemText.textContent = `Semester ${state.currentSemester}`;
+      }
+      if (elements.subjectsBreadcrumbSem && state.currentSemester) {
+        const romMap = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI' };
+        elements.subjectsBreadcrumbSem.textContent = `Semester ${romMap[state.currentSemester] || state.currentSemester}`;
       }
       renderHeaderSemDropdown();
       renderSubjectsGrid();
@@ -627,14 +639,25 @@
     });
   }
 
-  function selectSemester(semId) {
+  function selectSemester(semId, pushHistory = true) {
     state.currentSemester = semId;
     localStorage.setItem('du_law_selected_semester', semId);
     if (elements.headerSemText) {
       elements.headerSemText.textContent = `Semester ${semId}`;
     }
+    if (elements.subjectsBreadcrumbSem) {
+      const romMap = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI' };
+      elements.subjectsBreadcrumbSem.textContent = `Semester ${romMap[semId] || semId}`;
+    }
     renderHeaderSemDropdown();
-    showView('subjects');
+    showView('subjects', false);
+
+    if (pushHistory) {
+      const semUrl = `?sem=${semId}`;
+      if (!window.history.state || window.history.state.view !== 'subjects' || window.history.state.semId !== semId) {
+        window.history.pushState({ view: 'subjects', semId: semId }, '', semUrl);
+      }
+    }
     trackEvent('select_semester', { semester_id: semId, semester_name: `Semester ${semId}` });
   }
 
@@ -746,7 +769,7 @@
   // =========================================================================
   // 3. SUBJECT HUB VIEW & SPECIALIZED TABS
   // =========================================================================
-  function openSubjectHub(subId) {
+  function openSubjectHub(subId, pushHistory = true) {
     const data = window.DU_LAW_PORTAL_DATA;
     const sub = data.subjects[subId];
     if (!sub) {
@@ -796,7 +819,15 @@
     if (elements.searchClearBtn) elements.searchClearBtn.style.display = 'none';
 
     // Switch to Hub View
-    showView('hub');
+    showView('hub', false);
+
+    if (pushHistory) {
+      const semId = state.currentSemester || 1;
+      const hubUrl = `?sem=${semId}&sub=${subId}`;
+      if (!window.history.state || window.history.state.view !== 'hub' || window.history.state.subId !== subId) {
+        window.history.pushState({ view: 'hub', semId: semId, subId: subId }, '', hubUrl);
+      }
+    }
 
     trackEvent('view_subject_hub', {
       subject_id: subId,
@@ -1741,12 +1772,26 @@
   // =========================================================================
   // 4. EMBEDDED FULL NOTES READER MODAL (Print PDF removed)
   // =========================================================================
-  function openReader(fileUrl, title, subInfo) {
+  function openReader(fileUrl, title, subInfo, pushHistory = true) {
     elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
     elements.readerSubInfo.textContent = subInfo || 'Make Law Easy';
     elements.readerIframe.src = fileUrl;
     elements.readerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    if (pushHistory) {
+      const semId = state.currentSemester || 1;
+      const subId = state.currentSubject ? state.currentSubject.id : null;
+      const baseSearch = `?sem=${semId}${subId ? '&sub=' + subId : ''}`;
+      window.history.pushState({
+        view: 'reader',
+        semId: semId,
+        subId: subId,
+        fileUrl: fileUrl,
+        title: title || '',
+        subInfo: subInfo || ''
+      }, '', baseSearch + '#reader');
+    }
 
     trackEvent('read_notes', {
       file: fileUrl,
@@ -1758,10 +1803,42 @@
     elements.readerNewTabBtn.onclick = () => window.open(fileUrl, '_blank');
   }
 
-  function closeReader() {
+  function closeReader(popHistory = false) {
     elements.readerModal.classList.remove('active');
     elements.readerIframe.src = 'about:blank';
     document.body.style.overflow = '';
+
+    if (popHistory && window.history.state && window.history.state.view === 'reader') {
+      window.history.back();
+    }
+  }
+
+  function handleReaderBack() {
+    if (window.history.state && window.history.state.view === 'reader') {
+      window.history.back();
+    } else {
+      closeReader(false);
+    }
+  }
+
+  function handleHubBack() {
+    if (window.history.state && window.history.state.view === 'hub') {
+      window.history.back();
+    } else {
+      if (state.currentSemester) {
+        selectSemester(state.currentSemester, true);
+      } else {
+        showView('semester', true);
+      }
+    }
+  }
+
+  function handleSubjectsBack() {
+    if (window.history.state && window.history.state.view === 'subjects') {
+      window.history.back();
+    } else {
+      showView('semester', true);
+    }
   }
 
   // =========================================================================
@@ -3191,7 +3268,7 @@ Submission Time: ${new Date().toLocaleString()}
 
     // Brand click returns to Homepage (Semester selection view)
     elements.brandLogo.addEventListener('click', () => {
-      showView('semester');
+      showView('semester', true);
     });
 
     // Header Semester Dropdown Menu (Click & Hover Interactive)
@@ -3244,7 +3321,7 @@ Submission Time: ${new Date().toLocaleString()}
     if (elements.headerSemDdAllBtn) {
       elements.headerSemDdAllBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        showView('semester');
+        showView('semester', true);
         closeHeaderSemDropdown();
       });
     }
@@ -3252,13 +3329,20 @@ Submission Time: ${new Date().toLocaleString()}
     // Change Semester Button in Subjects View
     if (elements.changeSemBtn) {
       elements.changeSemBtn.addEventListener('click', () => {
-        showView('semester');
+        handleSubjectsBack();
+      });
+    }
+
+    // Back to All Semesters breadcrumb link in Subjects View
+    if (elements.subjectsBackBtn) {
+      elements.subjectsBackBtn.addEventListener('click', () => {
+        handleSubjectsBack();
       });
     }
 
     // Back to Subjects button in Hub Banner
     elements.hubBackBtn.addEventListener('click', () => {
-      showView('subjects');
+      handleHubBack();
     });
 
     // Desktop Hub Tab switching
@@ -3274,7 +3358,7 @@ Submission Time: ${new Date().toLocaleString()}
       item.addEventListener('click', () => {
         const action = item.dataset.action;
         if (action === 'back-subjects') {
-          showView('subjects');
+          handleHubBack();
         } else {
           const tab = item.dataset.tab;
           if (tab) switchHubTab(tab);
@@ -3308,16 +3392,85 @@ Submission Time: ${new Date().toLocaleString()}
       renderActiveTabContent();
     });
 
-    // Reader Modal close
-    elements.readerCloseBtn.addEventListener('click', closeReader);
+    // Reader Modal Back & Close listeners
+    if (elements.readerBackBtn) {
+      elements.readerBackBtn.addEventListener('click', handleReaderBack);
+    }
+    elements.readerCloseBtn.addEventListener('click', handleReaderBack);
     elements.readerModal.addEventListener('click', (e) => {
-      if (e.target === elements.readerModal) closeReader();
+      if (e.target === elements.readerModal) handleReaderBack();
+    });
+
+    // Browser Popstate (Native Back/Forward Button & Mobile Gesture Navigation)
+    window.addEventListener('popstate', (event) => {
+      const st = event.state;
+
+      // 1. If Reader Modal is open but target history state is not reader -> Close Reader!
+      if (elements.readerModal && elements.readerModal.classList.contains('active')) {
+        if (!st || st.view !== 'reader') {
+          closeReader(false);
+        }
+      }
+
+      // 2. Close any open drawers or modals if navigating back
+      if (elements.flashcardsModal && elements.flashcardsModal.classList.contains('active')) {
+        closeFlashcardsModal();
+      }
+      if (elements.bnsModal && elements.bnsModal.classList.contains('active')) {
+        closeBnsConverter();
+      }
+      if (elements.mockModal && elements.mockModal.classList.contains('active')) {
+        closeMockExam();
+      }
+      if (elements.bookmarksDrawer && elements.bookmarksDrawer.classList.contains('active')) {
+        closeBookmarksDrawer();
+      }
+      if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) {
+        closeMobileTools();
+      }
+      if (elements.contactModal && elements.contactModal.classList.contains('active')) {
+        closeContactModal();
+      }
+      if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) {
+        closeFeedbackModal();
+      }
+      if (elements.bareActDrawer && elements.bareActDrawer.classList.contains('active')) {
+        closeBareActDrawer();
+      }
+      closeHeaderSemDropdown();
+
+      // 3. Restore matching view based on history state
+      if (!st || st.view === 'semester') {
+        showView('semester', false);
+      } else if (st.view === 'subjects') {
+        if (st.semId && st.semId !== state.currentSemester) {
+          state.currentSemester = st.semId;
+          localStorage.setItem('du_law_selected_semester', st.semId);
+        }
+        showView('subjects', false);
+      } else if (st.view === 'hub') {
+        if (st.semId) state.currentSemester = st.semId;
+        if (st.subId) {
+          if (!state.currentSubject || state.currentSubject.id !== st.subId) {
+            openSubjectHub(st.subId, false);
+          } else {
+            showView('hub', false);
+          }
+        }
+      } else if (st.view === 'reader') {
+        if (st.fileUrl) {
+          openReader(st.fileUrl, st.title, st.subInfo, false);
+        }
+      }
     });
 
     // Keyboard ESC to close reader or mobile tools
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        if (elements.readerModal && elements.readerModal.classList.contains('active')) closeReader();
+        if (elements.readerModal && elements.readerModal.classList.contains('active')) {
+          handleReaderBack();
+          return;
+        }
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
         if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
         if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) closeFeedbackModal();
@@ -3394,11 +3547,16 @@ Submission Time: ${new Date().toLocaleString()}
 
     if (querySub) {
       const data = window.DU_LAW_PORTAL_DATA;
+      let foundSemId = 1;
       if (data) {
         const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(querySub));
-        if (foundSem) state.currentSemester = foundSem.id;
+        if (foundSem) {
+          state.currentSemester = foundSem.id;
+          foundSemId = foundSem.id;
+        }
       }
-      openSubjectHub(querySub);
+      openSubjectHub(querySub, false);
+      window.history.replaceState({ view: 'hub', semId: state.currentSemester || foundSemId, subId: querySub }, '', window.location.href);
       if (queryTab && ['topics', 'cases', 'pyqs', 'revision'].includes(queryTab)) {
         setTimeout(() => {
           const targetBtn = Array.from(elements.hubTabs).find(b => b.dataset.tab === queryTab);
@@ -3406,12 +3564,17 @@ Submission Time: ${new Date().toLocaleString()}
         }, 50);
       }
     } else if (querySem) {
-      selectSemester(parseInt(querySem, 10) || 1);
+      const semNum = parseInt(querySem, 10) || 1;
+      selectSemester(semNum, false);
+      window.history.replaceState({ view: 'subjects', semId: semNum }, '', window.location.href);
     } else if (queryView === 'subjects') {
       const savedSem = localStorage.getItem('du_law_selected_semester');
-      selectSemester(savedSem ? parseInt(savedSem, 10) : 1);
+      const semNum = savedSem ? parseInt(savedSem, 10) : 1;
+      selectSemester(semNum, false);
+      window.history.replaceState({ view: 'subjects', semId: semNum }, '', `?sem=${semNum}`);
     } else {
-      showView('semester');
+      showView('semester', false);
+      window.history.replaceState({ view: 'semester' }, '', window.location.pathname);
     }
 
     // Student Feedback System (Google Forms Style)

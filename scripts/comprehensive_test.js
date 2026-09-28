@@ -230,7 +230,11 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v32'), 'sw.js CACHE_NAME is bumped to du-law-portal-v32');
+  assert(swContent.includes('du-law-portal-v33'), 'sw.js CACHE_NAME is bumped to du-law-portal-v33');
+  assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
+  assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
+  assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
+  assert(cssContent.includes('.subjects-breadcrumbs'), '.subjects-breadcrumbs style rule exists in styles.css');
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');
   assert(!privacyContent.includes('Team Aditya Shukla'), 'privacy.html contains zero occurrences of Team Aditya Shukla');

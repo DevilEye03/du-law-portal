@@ -403,6 +403,17 @@ button{font-family:inherit;cursor:pointer}
 
 .subjects-view{padding-top:32px}
 .view-header{margin-bottom:28px}
+.subjects-breadcrumbs{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;
+  color:var(--text-faint);margin-bottom:14px;flex-wrap:wrap;min-width:0;overflow-wrap:break-word}
+.subjects-back-link{display:inline-flex;align-items:center;gap:6px;
+  color:var(--text-primary);font-weight:700;text-decoration:none;
+  padding:5px 12px;border-radius:9999px;background:var(--bg-tint, rgba(24,48,89,.08));
+  border:1px solid var(--border-color, rgba(203,213,225,.6));transition:var(--transition-fast)}
+.subjects-back-link:hover{background:var(--sub-primary, #183059);color:#fff;
+  border-color:var(--sub-primary, #183059);transform:translateX(-2px);box-shadow:var(--shadow-sm)}
+.subjects-back-link i{font-size:.85rem;transition:transform .2s ease}
+.subjects-back-link:hover i{transform:translateX(-2px)}
+.breadcrumb-separator{color:var(--text-faint);opacity:.6}
 .view-header-top{display:flex;align-items:flex-start;justify-content:space-between;
   flex-wrap:wrap;gap:16px;padding-bottom:20px;border-bottom:1px solid var(--border-line)}
 .view-title-group h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.6rem);
@@ -1263,11 +1274,22 @@ button{font-family:inherit;cursor:pointer}
   border-radius:var(--radius-xl);box-shadow:var(--shadow-xl);display:flex;
   flex-direction:column;overflow:hidden;border:1px solid var(--border-strong)}
 .reader-header{padding:12px 18px;background:var(--sub-gradient);color:#fff;
-  display:flex;align-items:center;justify-content:space-between;gap:14px}
+  display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0}
+.reader-header-left{display:flex;align-items:center;gap:12px;min-width:0;flex:1}
+.reader-title-box{min-width:0;overflow:hidden}
 .reader-title-box h3{font-family:var(--font-display);font-size:clamp(.9rem,2.5vw,1.05rem);
-  font-weight:700;color:#fff}
-.reader-title-box p{font-size:.73rem;color:var(--sub-accent);font-weight:600}
-.reader-controls{display:flex;align-items:center;gap:8px}
+  font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reader-title-box p{font-size:.73rem;color:var(--sub-accent);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn-reader-back{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);
+  color:#fff;padding:7px 15px;border-radius:var(--radius-xs);font-size:.84rem;font-weight:700;
+  cursor:pointer;transition:var(--transition-fast);display:inline-flex;align-items:center;
+  gap:7px;min-height:36px;flex-shrink:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.btn-reader-back:hover{background:#fff;color:var(--sub-primary);transform:translateX(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.btn-reader-back:active{transform:scale(.97)}
+.btn-reader-back i{font-size:.92rem;transition:transform .2s ease}
+.btn-reader-back:hover i{transform:translateX(-3px)}
+.reader-controls{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .btn-reader-action{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
   color:#fff;padding:7px 14px;border-radius:var(--radius-xs);font-size:.82rem;font-weight:700;
   cursor:pointer;transition:var(--transition-fast);display:inline-flex;align-items:center;
@@ -1275,13 +1297,16 @@ button{font-family:inherit;cursor:pointer}
 .btn-reader-action:hover{background:#fff;color:var(--sub-primary)}
 .btn-reader-close{background:rgba(239,68,68,.9);border:none;color:#fff;width:36px;height:36px;
   border-radius:var(--radius-xs);display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:1.1rem;transition:var(--transition-fast)}
+  cursor:pointer;font-size:1.1rem;transition:var(--transition-fast);flex-shrink:0}
 .btn-reader-close:hover{background:#dc2626;transform:scale(1.06)}
 .reader-iframe-wrap{flex:1;width:100%;background:#fff}
 .reader-iframe{width:100%;height:100%;border:none}
 @media(max-width:768px){
   .reader-modal{padding:0}
   .reader-window{height:100vh;height:100dvh;border-radius:0;max-width:100%;border:none}
+  .reader-header{padding:10px 12px;gap:8px}
+  .reader-header-left{gap:8px}
+  .btn-reader-back{padding:6px 11px;font-size:.8rem;gap:5px;min-height:34px}
   .btn-reader-action span{display:none}
 }
 

@@ -172,6 +172,13 @@
          --------------------------------------------------------------- -->
     <section class="subjects-view" id="subjectsView">
       <div class="view-header">
+        <div class="subjects-breadcrumbs">
+          <a href="javascript:void(0)" id="subjectsBackBtn" class="subjects-back-link" title="Return to All Semesters">
+            <i class="fa-solid fa-arrow-left"></i> <span>All Semesters</span>
+          </a>
+          <span class="breadcrumb-separator">/</span>
+          <span id="subjectsBreadcrumbSem">Semester I</span>
+        </div>
         <div class="view-header-top">
           <div class="view-title-group">
             <h2 id="currentSemHeading">Semester I &mdash; Core Subjects</h2>
@@ -400,9 +407,15 @@
   <div class="reader-modal" id="readerModal" role="dialog" aria-modal="true">
     <div class="reader-window">
       <div class="reader-header">
-        <div class="reader-title-box">
-          <h3 id="readerTitle">Comprehensive Study Notes</h3>
-          <p id="readerSubInfo">Make Law Easy</p>
+        <div class="reader-header-left">
+          <button class="btn-reader-back" id="readerBackBtn" title="Back to Topics" aria-label="Back to Topics">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+          </button>
+          <div class="reader-title-box">
+            <h3 id="readerTitle">Comprehensive Study Notes</h3>
+            <p id="readerSubInfo">Make Law Easy</p>
+          </div>
         </div>
         <div class="reader-controls">
           <button class="btn-reader-action" id="readerNewTabBtn" title="Open in new tab">
