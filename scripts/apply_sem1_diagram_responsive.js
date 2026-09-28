@@ -1,4 +1,10 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const sem1Dirs = ['Juris', 'Contract', 'BNS', 'Family', 'Torts'];
+
+// 1. Build the updated Universal Mobile Responsive Engine CSS
+const universalResponsiveCss = `/* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
    Enhanced: Full Responsive Diagrams, Flowcharts & Charts Engine
    ========================================================================== */
@@ -448,4 +454,84 @@
     box-sizing: border-box !important;
   }
 }
-/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
+/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */`;
+
+// Write to css/notes-responsive.css
+fs.writeFileSync('css/notes-responsive.css', universalResponsiveCss, 'utf8');
+console.log('✅ Updated css/notes-responsive.css');
+
+// 2. Process all Semester 1 HTML files
+let modifiedCount = 0;
+let svgWrappedCount = 0;
+let flowSvgCount = 0;
+
+sem1Dirs.forEach(dir => {
+  const dirPath = path.join(process.cwd(), dir);
+  if (!fs.existsSync(dirPath)) return;
+  const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.html'));
+
+  files.forEach(f => {
+    const filePath = path.join(dirPath, f);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let changed = false;
+
+    // A. In BNS (Unit 8, 9, 10): Replace bare <div><svg with <div class="fig"><svg
+    if (dir === 'BNS') {
+      const bnsSvgRegex = /<div>\s*(<svg\b[^>]*role="img"[^>]*>)/gi;
+      if (bnsSvgRegex.test(content)) {
+        content = content.replace(bnsSvgRegex, (match, p1) => {
+          svgWrappedCount++;
+          changed = true;
+          return `<div class="fig">${p1}`;
+        });
+      }
+    }
+
+    // B. In Family Law: Add class flow-svg to <div class="flow"> containing SVGs
+    if (dir === 'Family') {
+      // Check for <div class="flow"> that has SVG
+      const flowRegex = /<div class="flow">(\s*<div class="fcap">[\s\S]*?<svg|<svg)/gi;
+      if (flowRegex.test(content)) {
+        content = content.replace(flowRegex, (match, p1) => {
+          flowSvgCount++;
+          changed = true;
+          return `<div class="flow flow-svg">${p1}`;
+        });
+      }
+    }
+
+    // C. Remove rigid inline style="min-width:760px" or similar on SVGs
+    const minWidthSvgRegex = /(<svg\b[^>]*)\s+style="min-width:\s*\d+px"/gi;
+    if (minWidthSvgRegex.test(content)) {
+      content = content.replace(minWidthSvgRegex, (match, p1) => {
+        changed = true;
+        return p1;
+      });
+    }
+
+    // D. Update or insert the Universal Mobile Responsive Engine in the HTML's <style> block
+    const engineStartRegex = /\/\* ==========================================================================\s+MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE[\s\S]*?\/\* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE \*\//gi;
+
+    if (engineStartRegex.test(content)) {
+      content = content.replace(engineStartRegex, universalResponsiveCss);
+      changed = true;
+    } else {
+      // If not present, append before </style>
+      if (content.includes('</style>')) {
+        const lastStyleClose = content.lastIndexOf('</style>');
+        content = content.substring(0, lastStyleClose) + '\n\n' + universalResponsiveCss + '\n' + content.substring(lastStyleClose);
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modifiedCount++;
+      console.log(`✅ Updated ${dir}/${f}`);
+    }
+  });
+});
+
+console.log(`\n🎉 Processed ${modifiedCount} Semester 1 HTML files!`);
+console.log(`- SVG figures wrapped: ${svgWrappedCount}`);
+console.log(`- Flow SVG containers labeled: ${flowSvgCount}`);

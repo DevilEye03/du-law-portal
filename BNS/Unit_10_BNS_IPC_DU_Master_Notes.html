@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DU Master Notes | Unit 10 — Offences against Property Part II</title>
 <style>
 :root{--ink:#182233;--muted:#526174;--navy:#10243f;--blue:#1d5d8f;--teal:#0c7c86;--gold:#c58b2b;--paper:#fff;--line:#dfe5ec;--sky:#edf6ff;--mint:#eaf8f4;--cream:#fff9ec;--rose:#fff0ef;--shadow:0 12px 32px rgba(16,36,63,.10)}
@@ -24,6 +24,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
 
 /* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   Enhanced: Full Responsive Diagrams, Flowcharts & Charts Engine
    ========================================================================== */
 @media screen and (max-width: 768px) {
   /* 1. Root & Viewport Overflow Containment (Rule 3) */
@@ -48,39 +49,382 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
     min-width: 0 !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
-  /* 3. Hero Header & Covers */
-  header.cover, header.hero, .hero, .topbar {
-    padding: 24px 14px 20px !important;
-    border-radius: 8px !important;
-    margin-bottom: 16px !important;
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc {
+    display: none !important;
+  }
+
+  /* 3. Hero & Header Responsive Scaling */
+  header.hero, .hero, .header, .top-bar {
+    padding: 28px 16px 24px !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
-  header.cover h1, header.hero h1, .hero h1 {
-    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+
+  header.hero h1, .hero h1, h1 {
+    font-size: clamp(22px, 6.2vw, 32px) !important;
     line-height: 1.22 !important;
-    margin: 10px 0 6px !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
   }
-  header.cover h2, header.hero .sub, .hero .dek {
-    font-size: 0.95rem !important;
-    line-height: 1.45 !important;
+
+  header.hero .lede, .hero p, .hero-sub, .lead {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
   }
-  .badges, .meta {
-    font-size: 0.82rem !important;
-    line-height: 1.4 !important;
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    opacity: 0.2 !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    pointer-events: none !important;
   }
-  .badge, .tag, .lbl {
-    font-size: 0.75rem !important;
-    padding: 3px 8px !important;
-    margin: 2px !important;
+
+  svg.hero-visual {
+    max-width: 130px !important;
+    height: auto !important;
+    margin: 8px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
     display: inline-block !important;
   }
 
-  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  /* 4. DIAGRAMS & FLOWCHARTS: CONTAINER & HORIZONTAL TOUCH-PAN */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap,
+  .flow-svg, .flow:has(svg), .flow:has(.diagram) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+    padding: 14px 10px !important;
+    margin: 18px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+  }
+
+  /* Visual touch-pan scroll hint badge on mobile diagrams */
+  .fig::after, .figure::after, .scene::after, .svgwrap::after, .flow-svg::after, .flow:has(svg)::after {
+    content: "⇄ Swipe horizontally to pan diagram" !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--mut, #64748b) !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+    letter-spacing: 0.4px !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+  }
+
+  /* Captions & badges on figures & scenes */
+  .fig .cap, .fcap, .scene .badge {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 4px 0 10px !important;
+    color: var(--ink, #14213d) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. SVG DIAGRAM RESIZING & LEGIBILITY */
+  /* Wide SVGs inside scrollable figure cards: maintain legible typography & geometry */
+  .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg, svg.diagram,
+  svg[width]:not([width="18"]):not([width="20"]):not([width="24"]):not(.icon),
+  svg[viewBox*="9"], svg[viewBox*="8"], svg[viewBox*="7"], svg[viewBox*="6"] {
+    display: block !important;
+    min-width: 600px !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Moderate/Small standalone SVGs (viewBox width <= 450) */
+  svg[viewBox*=" 0 0 2"]:not(.crest):not(.hero-visual),
+  svg[viewBox*=" 0 0 3"]:not(.crest),
+  svg[viewBox*=" 0 0 4"]:not(.crest) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. CSS FLOWCHARTS (.flow, .node, .ar, .dn, .step) */
+  .flow:not(.flow-svg):not(:has(svg)) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 14px 12px !important;
+    margin: 18px 0 !important;
+    background: var(--paper, #f8fafc) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar {
+    display: block !important;
+    transform: rotate(90deg) !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    padding: 2px 0 !important;
+    width: auto !important;
+  }
+
+  .flow .dn {
+    display: block !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    margin: 4px auto !important;
+    font-size: 20px !important;
+  }
+
+  .flow .step, .flow > .step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 4px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .flow.vertical {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 8px !important;
+  }
+
+  .flow.vertical .node {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. FAMILY LAW DECISION TREES (.decision-tree, .branches, .branch) */
+  .decision-tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 16px 12px !important;
+    margin: 18px 0 !important;
+    background: #f1f5f9 !important;
+    border-radius: 10px !important;
+  }
+
+  .decision-tree .root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+  }
+
+  .branches {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin: 14px 0 !important;
+  }
+
+  .branch {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 8. TREE DIAGRAMS (.tree, .tree .node, .tree ul) */
+  .tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tree ul {
+    padding-left: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .tree .node {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 9. FCHARTS (.fchart, .fbox, .frow, .farrow) */
+  .fchart {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    gap: 6px !important;
+  }
+
+  .fbox {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .farrow {
+    margin: 4px 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* 10. TIMELINES & SCENES (.timeline, .scene) */
+  .timeline {
+    padding-left: 18px !important;
+    margin-left: 4px !important;
+    border-left-width: 2px !important;
+  }
+
+  .timeline .ev {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin: 12px 0 !important;
+  }
+
+  .timeline .ev:before {
+    left: -24px !important;
+    width: 10px !important;
+    height: 10px !important;
+    top: 5px !important;
+  }
+
+  /* 11. COMPARISON CHARTS, GRIDS & MATRICES (.vs, .grid, .grid2, .grid3, .cgrid, etc.) */
+  .vs, .grid, .grid2, .grid3, .cgrid, .case-grid, .remedy-grid, .revision-grid, .test-grid, .quiz-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .vs > div, .grid > div, .grid2 > div, .grid3 > div, .cgrid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 12. DIAGRAM IMAGES */
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 12px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+  }
+
+  .case-img, .diag-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin: 14px 0 !important;
+    text-align: center !important;
+  }
+
+  /* 13. TABLES: HORIZONTAL SCROLL CONTAINMENT (Rule 3) */
   table {
     display: block !important;
     width: 100% !important;
@@ -91,166 +435,41 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
     margin: 14px 0 !important;
     font-size: 13.5px !important;
   }
-  .table-wrap, .table-container, .table-responsive {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    margin: 14px 0 !important;
-  }
+
   th, td {
     padding: 8px 10px !important;
-    min-width: 85px !important;
-    word-break: break-word !important;
+    white-space: normal !important;
+    min-width: 90px !important;
   }
 
-  /* 5. Typography & Headings */
-  h2, h2.part, .chapter h2 {
-    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
-    margin-top: 28px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.3 !important;
-    word-break: break-word !important;
-  }
-  h3 {
-    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
-    margin-top: 22px !important;
-    line-height: 1.35 !important;
-    padding-left: 8px !important;
-    word-break: break-word !important;
-  }
-  h4, h5 {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-  }
-  p {
-    font-size: 15.5px !important;
-    line-height: 1.65 !important;
-    text-align: left !important;
-    margin: 8px 0 !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  li {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin: 6px 0 !important;
-    overflow-wrap: break-word !important;
-  }
-  ul, ol {
-    padding-left: 20px !important;
-    margin: 8px 0 !important;
-  }
-
-  /* 6. Grids & Multi-column Stacking */
-  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 12px !important;
-    grid-template-columns: 1fr !important;
-  }
-  .vs > div {
-    border-right: none !important;
-    border-bottom: 1px solid var(--line, #dedfd7) !important;
-  }
-  .branch, .fbox, .flow > div {
-    min-width: 0 !important;
-    width: 100% !important;
+  /* 14. PRE & CODE BLOCKS */
+  pre, code, pre code {
     max-width: 100% !important;
-  }
-
-  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
-    padding: 14px 14px !important;
-    margin: 14px 0 !important;
-    border-radius: 8px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  .casefile .cf-head, .casefile .cf-body {
-    padding: 12px 14px !important;
-  }
-
-  /* 8. Code, Monospace & Pre Blocks */
-  pre, code, .stat {
-    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12.5px !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
-    overflow-x: auto !important;
-    font-size: 13px !important;
-    padding: 10px 12px !important;
-  }
-  blockquote {
-    margin: 12px 0 !important;
-    padding: 10px 14px !important;
-    font-size: 15px !important;
   }
 
-  /* 9. Images & SVG Diagrams */
-  img, svg {
-    max-width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+  /* 15. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
   }
-  .fig, .case-visual, figure {
+
+  .sec-num, .chapter-num, .badge-num {
+    margin-bottom: 4px !important;
+  }
+
+  .card, .box, .case, .pyq, .callout, .warn, .tip, .note {
+    width: 100% !important;
     max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    min-width: 0 !important;
+    padding: 14px 12px !important;
     margin: 14px 0 !important;
-  }
-
-  /* 10. Horizontal Navigation & ToC */
-  nav.tocbar, .topbar {
-    padding: 4px 6px !important;
-    width: 100% !important;
-  }
-  nav.tocbar .inner, .topbar .toolbar {
-    display: flex !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 6px 4px !important;
-    gap: 4px !important;
-  }
-  nav.tocbar a, .topbar button {
-    padding: 5px 9px !important;
-    font-size: 11.5px !important;
-    white-space: nowrap !important;
-  }
-  .sidebar {
-    position: static !important;
-    width: 100% !important;
-    max-height: none !important;
-    padding: 0 !important;
-  }
-  .toc {
-    columns: 1 !important;
-    padding: 12px 16px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html, body {
-    font-size: 14.5px !important;
-  }
-  .wrap, .layout, .container, .page-wrap {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  header.cover, header.hero, .hero {
-    padding: 18px 10px 16px !important;
-  }
-  th, td {
-    padding: 6px 8px !important;
-    font-size: 12px !important;
-    min-width: 75px !important;
-  }
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
-    padding: 12px 10px !important;
+    box-sizing: border-box !important;
   }
 }
 /* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
@@ -350,7 +569,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
 <div class="case-label">Arguments</div><ul><li><strong>Appellants:</strong> failure to return could create civil liability but not criminal breach of trust; the first appellant had moved to Ahmedabad, was occupied with insolvency proceedings and was not physically present in Bombay when the goods allegedly disappeared. The disappearance could be due to white ants/moths, disposal as rubbish or mortgagees’ possession. The prosecution had no direct proof of the precise conversion.</li><li><strong>Prosecution/State:</strong> the cloth was Government property entrusted for a defined dyeing purpose; the appellants had dominion and admitted the balance. Repeated demands were ignored, the cloth was not found, the white-ant story was unsupported and false, records were not produced, and the course of conduct supported dishonest conversion. Directors participated in the common criminal act; physical presence was not necessary for this non-violent property offence.</li></ul>
 <div class="case-label">Decision</div><p>The Supreme Court dismissed the appeals. It held that direct proof of the precise mode of conversion is not indispensable. Entrustment and failure to account, viewed with other circumstances, may justify an inference of dishonest misappropriation/conversion. Mere failure to account is not automatically enough, but an untrue explanation and surrounding circumstances can make the inference compelling. The Court also held that §34 IPC did not require physical presence in every offence: participation in the criminal act may be through acts done at different times and places; the necessary elements were common intention and participation in the action, not mere planning.</p>
 <div class="principle"><strong>Principles evolved:</strong> (1) Entrustment/dominion is the foundation of CBT. (2) The prosecution need not prove the exact mechanics of misappropriation where circumstantial evidence establishes dishonest conversion. (3) Failure to account plus a false explanation and corroborating circumstances may support conviction, but failure alone is not conclusive. (4) Joint liability does not invariably require physical presence; it requires participation in a criminal act in furtherance of common intention.</div>
-</div><div><svg viewBox="0 0 650 330" role="img" aria-label="Hypothetical visual of Jaikrishnadas case"><rect width="650" height="330" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Jaikrishnadas · entrustment → failure to account → inference</text><rect x="30" y="75" width="150" height="72" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Government</text><text x="55" y="128" font-family="Arial" font-size="13" fill="#182233">entrusts cloth</text><path d="M195 111 H250" stroke="#0c7c86" stroke-width="4"/><rect x="265" y="75" width="145" height="72" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="283" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Company</text><text x="282" y="128" font-family="Arial" font-size="13" fill="#182233">dominion / duty</text><path d="M425 111 H480" stroke="#0c7c86" stroke-width="4"/><rect x="495" y="75" width="120" height="72" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="521" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Missing</text><text x="516" y="128" font-family="Arial" font-size="13" fill="#182233">cloth</text><line x1="45" y1="197" x2="605" y2="197" stroke="#d2dde7"/><text x="53" y="226" font-family="Arial" font-size="15" fill="#182233">repeated demands + no stock records + false white-ant explanation</text><rect x="60" y="248" width="530" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="101" y="275" font-family="Arial" font-size="16" font-weight="700" fill="#835707">circumstances → dishonest conversion may be inferred</text></svg><p class="small">Hypothetical memory diagram. It does not replace proof of entrustment and dishonest circumstances.</p><div class="callout"><strong>BNS application:</strong> Begin with §316(1). Apply §316(5) only if the person’s specified status—public servant, banker, merchant, factor, broker, attorney or agent—fits the statutory language. BNS §3(5) is the common-intention bridge.</div></div></div></div></article>
+</div><div class="fig"><svg viewBox="0 0 650 330" role="img" aria-label="Hypothetical visual of Jaikrishnadas case"><rect width="650" height="330" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Jaikrishnadas · entrustment → failure to account → inference</text><rect x="30" y="75" width="150" height="72" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Government</text><text x="55" y="128" font-family="Arial" font-size="13" fill="#182233">entrusts cloth</text><path d="M195 111 H250" stroke="#0c7c86" stroke-width="4"/><rect x="265" y="75" width="145" height="72" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="283" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Company</text><text x="282" y="128" font-family="Arial" font-size="13" fill="#182233">dominion / duty</text><path d="M425 111 H480" stroke="#0c7c86" stroke-width="4"/><rect x="495" y="75" width="120" height="72" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="521" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Missing</text><text x="516" y="128" font-family="Arial" font-size="13" fill="#182233">cloth</text><line x1="45" y1="197" x2="605" y2="197" stroke="#d2dde7"/><text x="53" y="226" font-family="Arial" font-size="15" fill="#182233">repeated demands + no stock records + false white-ant explanation</text><rect x="60" y="248" width="530" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="101" y="275" font-family="Arial" font-size="16" font-weight="700" fill="#835707">circumstances → dishonest conversion may be inferred</text></svg><p class="small">Hypothetical memory diagram. It does not replace proof of entrustment and dishonest circumstances.</p><div class="callout"><strong>BNS application:</strong> Begin with §316(1). Apply §316(5) only if the person’s specified status—public servant, banker, merchant, factor, broker, attorney or agent—fits the statutory language. BNS §3(5) is the common-intention bridge.</div></div></div></div></article>
 
 <article class="case" id="mahadeo"><div class="case-head"><h3>Mahadeo Prasad v. State of West Bengal</h3><p>AIR 1954 SC 724 · Supreme Court of India · IPC §420 · BNS §318(4)</p></div><div class="case-body"><div class="case-grid"><div>
 <div class="case-label">Facts</div><p>Mahadeo Prasad agreed to buy 25 ingots of tin from Dulichand Kheria at a price payable cash against delivery. The complainant had 14 ingots and purchased 11 more so that the entire quantity could be supplied. The goods were delivered at the appellant’s guddi. Mahadeo took delivery, kept the Jamadar waiting and left without paying. The complainant had parted with the ingots because of the promise of cash payment.</p><p>Evidence showed that Mahadeo’s bank overdraft was already close to its limit; on the date of delivery he had only a small margin and no evidence of expected funds sufficient to pay. He had also hypothecated 70 ingots to the bank. The defence claimed that the transaction was on credit, that the promise of cash was invented and that Mahadeo later went to negotiate a settlement.</p>
@@ -359,7 +578,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
 <div class="case-label">Arguments</div><ul><li><strong>Appellant:</strong> non-payment ordinarily creates civil liability; he may have miscalculated his capacity or intended to pay later; the declining tin market made the seller anxious to sell; the bill mentioned interest for non-payment, showing a credit arrangement; his later attempt to settle showed absence of fraudulent intention.</li><li><strong>Prosecution/State:</strong> the seller was a stranger and agreed only to cash against delivery; Mahadeo knew his financial position and had no realistic funds; his conduct in taking goods and leaving without payment, bank hypothecation and surrounding circumstances showed that he never intended to pay and made the promise solely to obtain delivery.</li></ul>
 <div class="case-label">Decision</div><p>The Supreme Court dismissed the appeal and upheld the conviction. If Mahadeo intended to pay when he promised cash and later failed, the case would be civil. But the evidence established that he had no intention to pay at the time of the promise; the promise was the deception/inducement that caused delivery. His later settlement effort did not erase the initial fraudulent intention.</p>
 <div class="principle"><strong>Principle evolved:</strong> The decisive test for cheating is intention at the time of inducement. Subsequent failure to perform a genuine promise is not, by itself, cheating; a promise made without intention to perform to obtain property is cheating under IPC §420/BNS §318(4). Civil liability and criminal cheating can coexist where the inception facts establish deception.</div>
-</div><div><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Mahadeo Prasad case"><rect width="650" height="300" rx="12" fill="#fffaf0"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Mahadeo Prasad · the inception-intention test</text><rect x="30" y="76" width="145" height="70" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Promise</text><text x="53" y="128" font-family="Arial" font-size="13" fill="#182233">cash on delivery</text><path d="M190 111 H245" stroke="#0c7c86" stroke-width="4"/><rect x="260" y="76" width="145" height="70" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="286" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">No intention</text><text x="281" y="128" font-family="Arial" font-size="13" fill="#182233">funds unavailable</text><path d="M420 111 H475" stroke="#0c7c86" stroke-width="4"/><rect x="490" y="76" width="125" height="70" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="515" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Delivery</text><text x="513" y="128" font-family="Arial" font-size="13" fill="#182233">25 ingots</text><line x1="45" y1="192" x2="605" y2="192" stroke="#d2dde7"/><text x="64" y="222" font-family="Arial" font-size="15" fill="#182233">If intention was genuine at inception → civil breach</text><text x="64" y="249" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">If intention was dishonest at inception → cheating</text></svg><p class="small">Hypothetical exam visual: examine the mind at the time of promise, not merely the later non-payment.</p><div class="callout"><strong>BNS application:</strong> The serious property-delivery provision is §318(4): cheating plus dishonest inducement to deliver property. Ordinary §318(2) is not the correct maximum-punishment provision when delivery is proved.</div></div></div></div></article>
+</div><div class="fig"><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Mahadeo Prasad case"><rect width="650" height="300" rx="12" fill="#fffaf0"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Mahadeo Prasad · the inception-intention test</text><rect x="30" y="76" width="145" height="70" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Promise</text><text x="53" y="128" font-family="Arial" font-size="13" fill="#182233">cash on delivery</text><path d="M190 111 H245" stroke="#0c7c86" stroke-width="4"/><rect x="260" y="76" width="145" height="70" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="286" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">No intention</text><text x="281" y="128" font-family="Arial" font-size="13" fill="#182233">funds unavailable</text><path d="M420 111 H475" stroke="#0c7c86" stroke-width="4"/><rect x="490" y="76" width="125" height="70" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="515" y="106" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Delivery</text><text x="513" y="128" font-family="Arial" font-size="13" fill="#182233">25 ingots</text><line x1="45" y1="192" x2="605" y2="192" stroke="#d2dde7"/><text x="64" y="222" font-family="Arial" font-size="15" fill="#182233">If intention was genuine at inception → civil breach</text><text x="64" y="249" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">If intention was dishonest at inception → cheating</text></svg><p class="small">Hypothetical exam visual: examine the mind at the time of promise, not merely the later non-payment.</p><div class="callout"><strong>BNS application:</strong> The serious property-delivery provision is §318(4): cheating plus dishonest inducement to deliver property. Ordinary §318(2) is not the correct maximum-punishment provision when delivery is proved.</div></div></div></div></article>
 
 <article class="case" id="akhil"><div class="case-head"><h3>Akhil Kishore Ram v. Emperor</h3><p>AIR 1938 Pat 185 · High Court of Judicature at Patna · IPC §§415/420 · BNS §§318(1)/(4)</p></div><div class="case-body"><div class="case-grid"><div>
 <div class="case-label">Facts</div><p>Akhil Kishore Ram operated a business selling charms and incantations, using thirteen aliases and advertising across several provinces. Six transactions were charged. An advertisement for “Gupta Mantra” promised that objects otherwise requiring lakhs could be achieved by repeating the mantra seven times; it stated that there was no hardship or preparation and offered a reward if the mantra proved fallible. Purchasers paid approximately ₹270 by value-payable post and received printed instructions: repeat the mantra, stare at the moon for fifteen minutes without blinking, maintain a special diet, bathe and keep the process secret.</p><p>The prosecution case was not that the Court had to decide whether magic could work. It was that the advertisement positively represented no hardship or preparation was needed, while the undisclosed instructions imposed a difficult condition. The victims said that if they had known the condition they would not have ordered the material. The trial and Sessions Courts convicted him on all charges.</p>
@@ -368,7 +587,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.two-col{columns:2;column-gap:38px}.two-
 <div class="case-label">Arguments</div><ul><li><strong>Petitioner/defence:</strong> charms and incantations were accepted by many in India and could be genuinely believed in; the prosecution did not prove that the mantras were ineffective or that he knew them to be useless. The Court could not convict merely because it did not share the religious/material belief. Readers should have expected instructions; moon-gazing was not necessarily impossible. At most this was a technical or civil dispute, and sentence was excessive.</li><li><strong>Prosecution/State:</strong> the specific assurance that no hardship or preparation was needed was false or materially misleading; the actual instructions imposed a difficult condition which purchasers said would have changed their decision. The wide advertising, aliases, secrecy condition, reward promise and scale of business showed a calculated scheme to induce payment.</li></ul>
 <div class="case-label">Decision</div><p>The Patna High Court dismissed the applications and upheld conviction. It held that the issue was not whether the mantra was genuinely effective but whether the advertisement deceived purchasers about a material condition and induced them to send money. The undisclosed moon-gazing/preparation requirement contradicted the assurance on which the victims acted. The scale, aliases and design of the business supported the inference of dishonest intention. The sentences were not excessive in the circumstances.</p>
 <div class="principle"><strong>Principle evolved:</strong> Cheating may be established by a materially false representation or dishonest concealment about the conditions of a transaction. The prosecution need not prove the metaphysical inefficacy of a product when it proves that a specific representation about how it could be used was deceptive and induced payment. Good-faith belief is a factual defence only if it genuinely negatives deception/dishonesty.</div>
-</div><div><svg viewBox="0 0 650 330" role="img" aria-label="Hypothetical visual of Akhil Kishore Ram case"><rect width="650" height="330" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Akhil Kishore Ram · representation versus concealed condition</text><rect x="30" y="76" width="175" height="75" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Advertisement</text><text x="50" y="128" font-family="Arial" font-size="13" fill="#182233">“no hardship / preparation”</text><path d="M225 113 H275" stroke="#0c7c86" stroke-width="4"/><rect x="290" y="76" width="160" height="75" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="311" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Hidden condition</text><text x="310" y="128" font-family="Arial" font-size="13" fill="#182233">moon-gazing / diet</text><path d="M470 113 H520" stroke="#0c7c86" stroke-width="4"/><rect x="535" y="76" width="80" height="75" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="548" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Payment</text><text x="550" y="128" font-family="Arial" font-size="13" fill="#182233">₹270</text><line x1="50" y1="197" x2="600" y2="197" stroke="#d2dde7"/><text x="63" y="229" font-family="Arial" font-size="15" fill="#182233">Victims: “we would not have ordered if condition known”</text><rect x="72" y="248" width="500" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="125" y="275" font-family="Arial" font-size="16" font-weight="700" fill="#835707">material deception + inducement → cheating</text></svg><p class="small">Hypothetical visual of the Court’s reasoning: the issue was a false material assurance, not whether the Court believed in magic.</p><div class="callout"><strong>BNS application:</strong> Use §318(1) for the ingredients and §318(4) where the deception dishonestly induced delivery of money/property.</div></div></div></div></article>
+</div><div class="fig"><svg viewBox="0 0 650 330" role="img" aria-label="Hypothetical visual of Akhil Kishore Ram case"><rect width="650" height="330" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Akhil Kishore Ram · representation versus concealed condition</text><rect x="30" y="76" width="175" height="75" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="55" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">Advertisement</text><text x="50" y="128" font-family="Arial" font-size="13" fill="#182233">“no hardship / preparation”</text><path d="M225 113 H275" stroke="#0c7c86" stroke-width="4"/><rect x="290" y="76" width="160" height="75" rx="10" fill="#fff0ef" stroke="#e3b8b0"/><text x="311" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Hidden condition</text><text x="310" y="128" font-family="Arial" font-size="13" fill="#182233">moon-gazing / diet</text><path d="M470 113 H520" stroke="#0c7c86" stroke-width="4"/><rect x="535" y="76" width="80" height="75" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="548" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Payment</text><text x="550" y="128" font-family="Arial" font-size="13" fill="#182233">₹270</text><line x1="50" y1="197" x2="600" y2="197" stroke="#d2dde7"/><text x="63" y="229" font-family="Arial" font-size="15" fill="#182233">Victims: “we would not have ordered if condition known”</text><rect x="72" y="248" width="500" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="125" y="275" font-family="Arial" font-size="16" font-weight="700" fill="#835707">material deception + inducement → cheating</text></svg><p class="small">Hypothetical visual of the Court’s reasoning: the issue was a false material assurance, not whether the Court believed in magic.</p><div class="callout"><strong>BNS application:</strong> Use §318(1) for the ingredients and §318(4) where the deception dishonestly induced delivery of money/property.</div></div></div></div></article>
 </section>
 
 <section id="synthesis">

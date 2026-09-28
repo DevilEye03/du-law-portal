@@ -230,16 +230,20 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v35'), 'sw.js CACHE_NAME is bumped to du-law-portal-v35');
+  assert(swContent.includes('du-law-portal-v36'), 'sw.js CACHE_NAME is bumped to du-law-portal-v36');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
   assert(cssContent.includes('.subjects-breadcrumbs'), '.subjects-breadcrumbs style rule exists in styles.css');
   assert(fs.existsSync('css/notes-responsive.css'), 'css/notes-responsive.css stylesheet exists');
 
-  // Verify sample notes have mobile responsive engine
+  // Verify sample notes have mobile responsive engine & diagram rules
   const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');
   assert(sampleNote.includes('MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE'), 'Notes contain UNIVERSAL MOBILE RESPONSIVE ENGINE');
+
+  const sem1SampleNote = fs.readFileSync('Torts/Topic1_Tort_Intro_Definition_Nature_Scope.html', 'utf8');
+  assert(sem1SampleNote.includes('Swipe horizontally to pan diagram'), 'Semester 1 notes contain diagram swipe indicator');
+  assert(sem1SampleNote.includes('.fig svg'), 'Semester 1 notes contain responsive SVG diagram rules');
 
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');

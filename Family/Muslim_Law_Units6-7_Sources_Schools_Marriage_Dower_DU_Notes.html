@@ -128,6 +128,7 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 
 /* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   Enhanced: Full Responsive Diagrams, Flowcharts & Charts Engine
    ========================================================================== */
 @media screen and (max-width: 768px) {
   /* 1. Root & Viewport Overflow Containment (Rule 3) */
@@ -152,39 +153,382 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
     min-width: 0 !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
-  /* 3. Hero Header & Covers */
-  header.cover, header.hero, .hero, .topbar {
-    padding: 24px 14px 20px !important;
-    border-radius: 8px !important;
-    margin-bottom: 16px !important;
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc {
+    display: none !important;
+  }
+
+  /* 3. Hero & Header Responsive Scaling */
+  header.hero, .hero, .header, .top-bar {
+    padding: 28px 16px 24px !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
-  header.cover h1, header.hero h1, .hero h1 {
-    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+
+  header.hero h1, .hero h1, h1 {
+    font-size: clamp(22px, 6.2vw, 32px) !important;
     line-height: 1.22 !important;
-    margin: 10px 0 6px !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
   }
-  header.cover h2, header.hero .sub, .hero .dek {
-    font-size: 0.95rem !important;
-    line-height: 1.45 !important;
+
+  header.hero .lede, .hero p, .hero-sub, .lead {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
   }
-  .badges, .meta {
-    font-size: 0.82rem !important;
-    line-height: 1.4 !important;
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    opacity: 0.2 !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    pointer-events: none !important;
   }
-  .badge, .tag, .lbl {
-    font-size: 0.75rem !important;
-    padding: 3px 8px !important;
-    margin: 2px !important;
+
+  svg.hero-visual {
+    max-width: 130px !important;
+    height: auto !important;
+    margin: 8px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
     display: inline-block !important;
   }
 
-  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  /* 4. DIAGRAMS & FLOWCHARTS: CONTAINER & HORIZONTAL TOUCH-PAN */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap,
+  .flow-svg, .flow:has(svg), .flow:has(.diagram) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+    padding: 14px 10px !important;
+    margin: 18px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+  }
+
+  /* Visual touch-pan scroll hint badge on mobile diagrams */
+  .fig::after, .figure::after, .scene::after, .svgwrap::after, .flow-svg::after, .flow:has(svg)::after {
+    content: "⇄ Swipe horizontally to pan diagram" !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--mut, #64748b) !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+    letter-spacing: 0.4px !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+  }
+
+  /* Captions & badges on figures & scenes */
+  .fig .cap, .fcap, .scene .badge {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 4px 0 10px !important;
+    color: var(--ink, #14213d) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. SVG DIAGRAM RESIZING & LEGIBILITY */
+  /* Wide SVGs inside scrollable figure cards: maintain legible typography & geometry */
+  .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg, svg.diagram,
+  svg[width]:not([width="18"]):not([width="20"]):not([width="24"]):not(.icon),
+  svg[viewBox*="9"], svg[viewBox*="8"], svg[viewBox*="7"], svg[viewBox*="6"] {
+    display: block !important;
+    min-width: 600px !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Moderate/Small standalone SVGs (viewBox width <= 450) */
+  svg[viewBox*=" 0 0 2"]:not(.crest):not(.hero-visual),
+  svg[viewBox*=" 0 0 3"]:not(.crest),
+  svg[viewBox*=" 0 0 4"]:not(.crest) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. CSS FLOWCHARTS (.flow, .node, .ar, .dn, .step) */
+  .flow:not(.flow-svg):not(:has(svg)) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 14px 12px !important;
+    margin: 18px 0 !important;
+    background: var(--paper, #f8fafc) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar {
+    display: block !important;
+    transform: rotate(90deg) !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    padding: 2px 0 !important;
+    width: auto !important;
+  }
+
+  .flow .dn {
+    display: block !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    margin: 4px auto !important;
+    font-size: 20px !important;
+  }
+
+  .flow .step, .flow > .step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 4px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .flow.vertical {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 8px !important;
+  }
+
+  .flow.vertical .node {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. FAMILY LAW DECISION TREES (.decision-tree, .branches, .branch) */
+  .decision-tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 16px 12px !important;
+    margin: 18px 0 !important;
+    background: #f1f5f9 !important;
+    border-radius: 10px !important;
+  }
+
+  .decision-tree .root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+  }
+
+  .branches {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin: 14px 0 !important;
+  }
+
+  .branch {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 8. TREE DIAGRAMS (.tree, .tree .node, .tree ul) */
+  .tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tree ul {
+    padding-left: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .tree .node {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 9. FCHARTS (.fchart, .fbox, .frow, .farrow) */
+  .fchart {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    gap: 6px !important;
+  }
+
+  .fbox {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .farrow {
+    margin: 4px 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* 10. TIMELINES & SCENES (.timeline, .scene) */
+  .timeline {
+    padding-left: 18px !important;
+    margin-left: 4px !important;
+    border-left-width: 2px !important;
+  }
+
+  .timeline .ev {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin: 12px 0 !important;
+  }
+
+  .timeline .ev:before {
+    left: -24px !important;
+    width: 10px !important;
+    height: 10px !important;
+    top: 5px !important;
+  }
+
+  /* 11. COMPARISON CHARTS, GRIDS & MATRICES (.vs, .grid, .grid2, .grid3, .cgrid, etc.) */
+  .vs, .grid, .grid2, .grid3, .cgrid, .case-grid, .remedy-grid, .revision-grid, .test-grid, .quiz-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .vs > div, .grid > div, .grid2 > div, .grid3 > div, .cgrid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 12. DIAGRAM IMAGES */
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 12px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+  }
+
+  .case-img, .diag-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin: 14px 0 !important;
+    text-align: center !important;
+  }
+
+  /* 13. TABLES: HORIZONTAL SCROLL CONTAINMENT (Rule 3) */
   table {
     display: block !important;
     width: 100% !important;
@@ -195,166 +539,41 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
     margin: 14px 0 !important;
     font-size: 13.5px !important;
   }
-  .table-wrap, .table-container, .table-responsive {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    margin: 14px 0 !important;
-  }
+
   th, td {
     padding: 8px 10px !important;
-    min-width: 85px !important;
-    word-break: break-word !important;
+    white-space: normal !important;
+    min-width: 90px !important;
   }
 
-  /* 5. Typography & Headings */
-  h2, h2.part, .chapter h2 {
-    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
-    margin-top: 28px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.3 !important;
-    word-break: break-word !important;
-  }
-  h3 {
-    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
-    margin-top: 22px !important;
-    line-height: 1.35 !important;
-    padding-left: 8px !important;
-    word-break: break-word !important;
-  }
-  h4, h5 {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-  }
-  p {
-    font-size: 15.5px !important;
-    line-height: 1.65 !important;
-    text-align: left !important;
-    margin: 8px 0 !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  li {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin: 6px 0 !important;
-    overflow-wrap: break-word !important;
-  }
-  ul, ol {
-    padding-left: 20px !important;
-    margin: 8px 0 !important;
-  }
-
-  /* 6. Grids & Multi-column Stacking */
-  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 12px !important;
-    grid-template-columns: 1fr !important;
-  }
-  .vs > div {
-    border-right: none !important;
-    border-bottom: 1px solid var(--line, #dedfd7) !important;
-  }
-  .branch, .fbox, .flow > div {
-    min-width: 0 !important;
-    width: 100% !important;
+  /* 14. PRE & CODE BLOCKS */
+  pre, code, pre code {
     max-width: 100% !important;
-  }
-
-  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
-    padding: 14px 14px !important;
-    margin: 14px 0 !important;
-    border-radius: 8px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  .casefile .cf-head, .casefile .cf-body {
-    padding: 12px 14px !important;
-  }
-
-  /* 8. Code, Monospace & Pre Blocks */
-  pre, code, .stat {
-    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12.5px !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
-    overflow-x: auto !important;
-    font-size: 13px !important;
-    padding: 10px 12px !important;
-  }
-  blockquote {
-    margin: 12px 0 !important;
-    padding: 10px 14px !important;
-    font-size: 15px !important;
   }
 
-  /* 9. Images & SVG Diagrams */
-  img, svg {
-    max-width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+  /* 15. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
   }
-  .fig, .case-visual, figure {
+
+  .sec-num, .chapter-num, .badge-num {
+    margin-bottom: 4px !important;
+  }
+
+  .card, .box, .case, .pyq, .callout, .warn, .tip, .note {
+    width: 100% !important;
     max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    min-width: 0 !important;
+    padding: 14px 12px !important;
     margin: 14px 0 !important;
-  }
-
-  /* 10. Horizontal Navigation & ToC */
-  nav.tocbar, .topbar {
-    padding: 4px 6px !important;
-    width: 100% !important;
-  }
-  nav.tocbar .inner, .topbar .toolbar {
-    display: flex !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 6px 4px !important;
-    gap: 4px !important;
-  }
-  nav.tocbar a, .topbar button {
-    padding: 5px 9px !important;
-    font-size: 11.5px !important;
-    white-space: nowrap !important;
-  }
-  .sidebar {
-    position: static !important;
-    width: 100% !important;
-    max-height: none !important;
-    padding: 0 !important;
-  }
-  .toc {
-    columns: 1 !important;
-    padding: 12px 16px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html, body {
-    font-size: 14.5px !important;
-  }
-  .wrap, .layout, .container, .page-wrap {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  header.cover, header.hero, .hero {
-    padding: 18px 10px 16px !important;
-  }
-  th, td {
-    padding: 6px 8px !important;
-    font-size: 12px !important;
-    min-width: 75px !important;
-  }
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
-    padding: 12px 10px !important;
+    box-sizing: border-box !important;
   }
 }
 /* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
@@ -397,8 +616,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>1.1 Historical foundation (as set out in the class notes)</h3>
-<div class="flow"><div class="fcap">Fig. 1 — From the Prophet to the Schools: timeline (based on DU class notes)</div>
-<svg viewBox="0 0 980 300" width="100%" style="min-width:760px">
+<div class="flow flow-svg"><div class="fcap">Fig. 1 — From the Prophet to the Schools: timeline (based on DU class notes)</div>
+<svg viewBox="0 0 980 300" width="100%">
 <line x1="30" y1="140" x2="950" y2="140" stroke="#14213d" stroke-width="3"/>
 <g font-size="11">
 <circle cx="60" cy="140" r="7" fill="#5b21b6"/><text x="60" y="128" text-anchor="middle" font-weight="bold">571 AD</text><text x="60" y="166" text-anchor="middle" fill="#1f3a68">Birth of the Prophet</text><text x="60" y="180" text-anchor="middle" fill="#1f3a68">(father died before birth;</text><text x="60" y="194" text-anchor="middle" fill="#1f3a68">raised by mother, then</text><text x="60" y="208" text-anchor="middle" fill="#1f3a68">grandfather Abdul Muttalib)</text>
@@ -414,8 +633,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <p class="small">The <b>Sunni–Shia split was political before it was religious</b>: Sunnis (view urged by Ayesha, the Prophet's youngest wife) advocated election — Abu Bakr was elected first Caliph; Shias (view urged by Fatima, the Prophet's daughter) held that spiritual leadership passes by <b>nobility of blood</b> — succession, not election — and installed <b>Ali as first Imam</b>. The murders of Ali, Hasan and Hussain (Karbala, 680 AD, mourned on Muharram) widened the split into legal divergence. The <b>Motazila</b> sect — defectors from the Shia fold, 9th century AD, associated with Ata-al-Ghazzal — associated with neither mainstream.</p>
 
 <h3>1.2 The sources — primary (formal) and secondary (informal)</h3>
-<div class="flow"><div class="fcap">Fig. 2 — Sources of Muslim Law</div>
-<svg viewBox="0 0 960 420" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 2 — Sources of Muslim Law</div>
+<svg viewBox="0 0 960 420" width="100%">
 <defs><marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="360" y="10" width="240" height="44" rx="10" fill="#14213d"/><text x="480" y="38" text-anchor="middle" fill="#f2e8cd" font-size="15" font-weight="bold">SOURCES OF MUSLIM LAW</text>
 <line x1="480" y1="54" x2="480" y2="78" stroke="#14213d" stroke-width="2" marker-end="url(#arA)"/>
@@ -483,8 +702,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <p class="lead">The division is political in origin (succession to the Prophet) but produced <b>legal divergence</b>: differences in reliance on different hadith, different ijma, and different attitudes to qiyas. Shias reject all traditions/words handed down by anyone other than <b>Ali</b> and his line — hence <i>Shia-t-i-Ali</i>, "the faction of Ali". Sunnis accept the traditions and decisions of the Imams and the general body of juristic learning supplementing the Quran.</p>
 </div>
 
-<div class="flow"><div class="fcap">Fig. 3 — The Schools of Muslim Law (FIQH → SUNNI / SHIA)</div>
-<svg viewBox="0 0 980 520" width="100%" style="min-width:760px">
+<div class="flow flow-svg"><div class="fcap">Fig. 3 — The Schools of Muslim Law (FIQH → SUNNI / SHIA)</div>
+<svg viewBox="0 0 980 520" width="100%">
 <defs><marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="390" y="10" width="200" height="42" rx="10" fill="#14213d"/><text x="490" y="36" text-anchor="middle" fill="#f2e8cd" font-size="15" font-weight="bold">FIQH (jurisprudence)</text>
 <line x1="490" y1="52" x2="490" y2="76" stroke="#14213d" stroke-width="2" marker-end="url(#arB)"/>
@@ -595,8 +814,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>3.4 Solemnisation — how a nikah is performed</h3>
-<div class="flow"><div class="fcap">Fig. 4 — Solemnisation of Nikah (from the DU case material — Ghulam Kubra Bibi, and class notes)</div>
-<svg viewBox="0 0 960 330" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 4 — Solemnisation of Nikah (from the DU case material — Ghulam Kubra Bibi, and class notes)</div>
+<svg viewBox="0 0 960 330" width="100%">
 <defs><marker id="arC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="20" y="16" width="280" height="96" rx="10" fill="#eaf0fe" stroke="#1d4ed8"/>
 <text x="160" y="38" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#14213d">STEP 1 · IJAB (proposal)</text>
@@ -674,8 +893,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </table>
 
 <h3>4.4 Prohibitions &amp; impediments — absolute vs relative</h3>
-<div class="flow"><div class="fcap">Fig. 5 — Prohibited relationships in Muslim law</div>
-<svg viewBox="0 0 960 430" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 5 — Prohibited relationships in Muslim law</div>
+<svg viewBox="0 0 960 430" width="100%">
 <defs><marker id="arD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="330" y="10" width="300" height="40" rx="9" fill="#14213d"/><text x="480" y="35" text-anchor="middle" fill="#f2e8cd" font-size="14" font-weight="bold">IMPEDIMENTS TO MARRIAGE</text>
 <line x1="480" y1="50" x2="480" y2="74" stroke="#14213d" stroke-width="2" marker-end="url(#arD)"/>
@@ -745,8 +964,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <div class="section" id="s5">
 <div class="sec-head"><span class="num">PART 5</span><h2>Unit VII — Classification and Types of Muslim Marriages</h2></div>
 
-<div class="flow"><div class="fcap">Fig. 6 — Classification: Sahih · Fasid · Batil (+ Muta as a distinct type)</div>
-<svg viewBox="0 0 960 430" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 6 — Classification: Sahih · Fasid · Batil (+ Muta as a distinct type)</div>
+<svg viewBox="0 0 960 430" width="100%">
 <defs><marker id="arE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="360" y="10" width="240" height="42" rx="10" fill="#14213d"/><text x="480" y="36" text-anchor="middle" fill="#f2e8cd" font-size="14.5" font-weight="bold">MUSLIM MARRIAGE (NIKAH)</text>
 <line x1="480" y1="52" x2="480" y2="76" stroke="#14213d" stroke-width="2" marker-end="url(#arE)"/>
@@ -847,8 +1066,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>6.2 Kinds of dower</h3>
-<div class="flow"><div class="fcap">Fig. 7 — Classification of Dower</div>
-<svg viewBox="0 0 960 400" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 7 — Classification of Dower</div>
+<svg viewBox="0 0 960 400" width="100%">
 <defs><marker id="arF" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="380" y="10" width="200" height="42" rx="10" fill="#14213d"/><text x="480" y="36" text-anchor="middle" fill="#f2e8cd" font-size="14.5" font-weight="bold">DOWER (MAHR)</text>
 <line x1="480" y1="52" x2="480" y2="76" stroke="#14213d" stroke-width="2" marker-end="url(#arF)"/>

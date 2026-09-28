@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DU Master Notes | Unit 8 — Specific Crimes against Children, Human Body and the State</title>
 <style>
 :root{--ink:#182233;--muted:#526174;--navy:#10243f;--blue:#1d5d8f;--teal:#0c7c86;--gold:#c58b2b;--cream:#fbfaf7;--paper:#fff;--line:#dfe5ec;--rose:#fff0ef;--mint:#eaf8f4;--sky:#edf6ff;--lav:#f3efff;--shadow:0 12px 32px rgba(16,36,63,.10)}
@@ -25,6 +25,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
 
 /* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   Enhanced: Full Responsive Diagrams, Flowcharts & Charts Engine
    ========================================================================== */
 @media screen and (max-width: 768px) {
   /* 1. Root & Viewport Overflow Containment (Rule 3) */
@@ -49,39 +50,382 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     min-width: 0 !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
-  /* 3. Hero Header & Covers */
-  header.cover, header.hero, .hero, .topbar {
-    padding: 24px 14px 20px !important;
-    border-radius: 8px !important;
-    margin-bottom: 16px !important;
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc {
+    display: none !important;
+  }
+
+  /* 3. Hero & Header Responsive Scaling */
+  header.hero, .hero, .header, .top-bar {
+    padding: 28px 16px 24px !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
-  header.cover h1, header.hero h1, .hero h1 {
-    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+
+  header.hero h1, .hero h1, h1 {
+    font-size: clamp(22px, 6.2vw, 32px) !important;
     line-height: 1.22 !important;
-    margin: 10px 0 6px !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
   }
-  header.cover h2, header.hero .sub, .hero .dek {
-    font-size: 0.95rem !important;
-    line-height: 1.45 !important;
+
+  header.hero .lede, .hero p, .hero-sub, .lead {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
   }
-  .badges, .meta {
-    font-size: 0.82rem !important;
-    line-height: 1.4 !important;
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    opacity: 0.2 !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    pointer-events: none !important;
   }
-  .badge, .tag, .lbl {
-    font-size: 0.75rem !important;
-    padding: 3px 8px !important;
-    margin: 2px !important;
+
+  svg.hero-visual {
+    max-width: 130px !important;
+    height: auto !important;
+    margin: 8px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
     display: inline-block !important;
   }
 
-  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  /* 4. DIAGRAMS & FLOWCHARTS: CONTAINER & HORIZONTAL TOUCH-PAN */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap,
+  .flow-svg, .flow:has(svg), .flow:has(.diagram) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+    padding: 14px 10px !important;
+    margin: 18px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+  }
+
+  /* Visual touch-pan scroll hint badge on mobile diagrams */
+  .fig::after, .figure::after, .scene::after, .svgwrap::after, .flow-svg::after, .flow:has(svg)::after {
+    content: "⇄ Swipe horizontally to pan diagram" !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--mut, #64748b) !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+    letter-spacing: 0.4px !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+  }
+
+  /* Captions & badges on figures & scenes */
+  .fig .cap, .fcap, .scene .badge {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 4px 0 10px !important;
+    color: var(--ink, #14213d) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. SVG DIAGRAM RESIZING & LEGIBILITY */
+  /* Wide SVGs inside scrollable figure cards: maintain legible typography & geometry */
+  .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg, svg.diagram,
+  svg[width]:not([width="18"]):not([width="20"]):not([width="24"]):not(.icon),
+  svg[viewBox*="9"], svg[viewBox*="8"], svg[viewBox*="7"], svg[viewBox*="6"] {
+    display: block !important;
+    min-width: 600px !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Moderate/Small standalone SVGs (viewBox width <= 450) */
+  svg[viewBox*=" 0 0 2"]:not(.crest):not(.hero-visual),
+  svg[viewBox*=" 0 0 3"]:not(.crest),
+  svg[viewBox*=" 0 0 4"]:not(.crest) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. CSS FLOWCHARTS (.flow, .node, .ar, .dn, .step) */
+  .flow:not(.flow-svg):not(:has(svg)) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 14px 12px !important;
+    margin: 18px 0 !important;
+    background: var(--paper, #f8fafc) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar {
+    display: block !important;
+    transform: rotate(90deg) !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    padding: 2px 0 !important;
+    width: auto !important;
+  }
+
+  .flow .dn {
+    display: block !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    margin: 4px auto !important;
+    font-size: 20px !important;
+  }
+
+  .flow .step, .flow > .step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 4px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .flow.vertical {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 8px !important;
+  }
+
+  .flow.vertical .node {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. FAMILY LAW DECISION TREES (.decision-tree, .branches, .branch) */
+  .decision-tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 16px 12px !important;
+    margin: 18px 0 !important;
+    background: #f1f5f9 !important;
+    border-radius: 10px !important;
+  }
+
+  .decision-tree .root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+  }
+
+  .branches {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin: 14px 0 !important;
+  }
+
+  .branch {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 8. TREE DIAGRAMS (.tree, .tree .node, .tree ul) */
+  .tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tree ul {
+    padding-left: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .tree .node {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 9. FCHARTS (.fchart, .fbox, .frow, .farrow) */
+  .fchart {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    gap: 6px !important;
+  }
+
+  .fbox {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .farrow {
+    margin: 4px 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* 10. TIMELINES & SCENES (.timeline, .scene) */
+  .timeline {
+    padding-left: 18px !important;
+    margin-left: 4px !important;
+    border-left-width: 2px !important;
+  }
+
+  .timeline .ev {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin: 12px 0 !important;
+  }
+
+  .timeline .ev:before {
+    left: -24px !important;
+    width: 10px !important;
+    height: 10px !important;
+    top: 5px !important;
+  }
+
+  /* 11. COMPARISON CHARTS, GRIDS & MATRICES (.vs, .grid, .grid2, .grid3, .cgrid, etc.) */
+  .vs, .grid, .grid2, .grid3, .cgrid, .case-grid, .remedy-grid, .revision-grid, .test-grid, .quiz-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .vs > div, .grid > div, .grid2 > div, .grid3 > div, .cgrid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 12. DIAGRAM IMAGES */
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 12px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+  }
+
+  .case-img, .diag-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin: 14px 0 !important;
+    text-align: center !important;
+  }
+
+  /* 13. TABLES: HORIZONTAL SCROLL CONTAINMENT (Rule 3) */
   table {
     display: block !important;
     width: 100% !important;
@@ -92,166 +436,41 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     margin: 14px 0 !important;
     font-size: 13.5px !important;
   }
-  .table-wrap, .table-container, .table-responsive {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    margin: 14px 0 !important;
-  }
+
   th, td {
     padding: 8px 10px !important;
-    min-width: 85px !important;
-    word-break: break-word !important;
+    white-space: normal !important;
+    min-width: 90px !important;
   }
 
-  /* 5. Typography & Headings */
-  h2, h2.part, .chapter h2 {
-    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
-    margin-top: 28px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.3 !important;
-    word-break: break-word !important;
-  }
-  h3 {
-    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
-    margin-top: 22px !important;
-    line-height: 1.35 !important;
-    padding-left: 8px !important;
-    word-break: break-word !important;
-  }
-  h4, h5 {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-  }
-  p {
-    font-size: 15.5px !important;
-    line-height: 1.65 !important;
-    text-align: left !important;
-    margin: 8px 0 !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  li {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin: 6px 0 !important;
-    overflow-wrap: break-word !important;
-  }
-  ul, ol {
-    padding-left: 20px !important;
-    margin: 8px 0 !important;
-  }
-
-  /* 6. Grids & Multi-column Stacking */
-  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 12px !important;
-    grid-template-columns: 1fr !important;
-  }
-  .vs > div {
-    border-right: none !important;
-    border-bottom: 1px solid var(--line, #dedfd7) !important;
-  }
-  .branch, .fbox, .flow > div {
-    min-width: 0 !important;
-    width: 100% !important;
+  /* 14. PRE & CODE BLOCKS */
+  pre, code, pre code {
     max-width: 100% !important;
-  }
-
-  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
-    padding: 14px 14px !important;
-    margin: 14px 0 !important;
-    border-radius: 8px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  .casefile .cf-head, .casefile .cf-body {
-    padding: 12px 14px !important;
-  }
-
-  /* 8. Code, Monospace & Pre Blocks */
-  pre, code, .stat {
-    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12.5px !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
-    overflow-x: auto !important;
-    font-size: 13px !important;
-    padding: 10px 12px !important;
-  }
-  blockquote {
-    margin: 12px 0 !important;
-    padding: 10px 14px !important;
-    font-size: 15px !important;
   }
 
-  /* 9. Images & SVG Diagrams */
-  img, svg {
-    max-width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+  /* 15. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
   }
-  .fig, .case-visual, figure {
+
+  .sec-num, .chapter-num, .badge-num {
+    margin-bottom: 4px !important;
+  }
+
+  .card, .box, .case, .pyq, .callout, .warn, .tip, .note {
+    width: 100% !important;
     max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    min-width: 0 !important;
+    padding: 14px 12px !important;
     margin: 14px 0 !important;
-  }
-
-  /* 10. Horizontal Navigation & ToC */
-  nav.tocbar, .topbar {
-    padding: 4px 6px !important;
-    width: 100% !important;
-  }
-  nav.tocbar .inner, .topbar .toolbar {
-    display: flex !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 6px 4px !important;
-    gap: 4px !important;
-  }
-  nav.tocbar a, .topbar button {
-    padding: 5px 9px !important;
-    font-size: 11.5px !important;
-    white-space: nowrap !important;
-  }
-  .sidebar {
-    position: static !important;
-    width: 100% !important;
-    max-height: none !important;
-    padding: 0 !important;
-  }
-  .toc {
-    columns: 1 !important;
-    padding: 12px 16px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html, body {
-    font-size: 14.5px !important;
-  }
-  .wrap, .layout, .container, .page-wrap {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  header.cover, header.hero, .hero {
-    padding: 18px 10px 16px !important;
-  }
-  th, td {
-    padding: 6px 8px !important;
-    font-size: 12px !important;
-    min-width: 75px !important;
-  }
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
-    padding: 12px 10px !important;
+    box-sizing: border-box !important;
   }
 }
 /* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
@@ -396,7 +615,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     <div class="case-label">Arguments</div><ul><li><strong>Appellant/defence:</strong> Savitri left voluntarily; she called him, chose the meeting point, insisted on marriage and entered the car on her own. There was no threat, blandishment, prior solicitation or active part in her leaving.</li><li><strong>Prosecution/State:</strong> Savitri was still a minor and remained in her father’s lawful keeping even though temporarily left with a relative; the father had not consented; taking her away and keeping her with the appellant satisfied the offence. Her own consent was not legally material.</li></ul>
     <div class="case-label">Decision</div><p>The Supreme Court allowed the appeal and acquitted Varadarajan. The prosecution proved minority, lawful keeping and absence of guardian consent, but failed to prove the essential first element—taking or enticing.</p>
     <div class="principle"><strong>Ratio / principle:</strong> “Taking” and “allowing” are not synonymous. Where a mature, educated minor voluntarily leaves the guardian’s protection, calls the accused, chooses the meeting and joins him without evidence of inducement or active participation in forming her intention, the accused cannot be said to have taken her away merely because he allowed her to accompany him or helped her not to return. Earlier solicitation or persuasion, even if not immediately before departure, would be sufficient if proved.</div>
-  </div><div><svg viewBox="0 0 650 260" role="img" aria-label="Hypothetical visual of Varadarajan timeline"><rect width="650" height="260" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Varadarajan · the “allowing” pattern</text><line x1="55" y1="140" x2="590" y2="140" stroke="#0c7c86" stroke-width="5"/><circle cx="100" cy="140" r="12" fill="#1d5d8f"/><circle cx="245" cy="140" r="12" fill="#1d5d8f"/><circle cx="390" cy="140" r="12" fill="#1d5d8f"/><circle cx="545" cy="140" r="12" fill="#c58b2b"/><text x="55" y="105" font-family="Arial" font-size="15" fill="#182233">Father places</text><text x="55" y="124" font-family="Arial" font-size="15" fill="#182233">Savitri with relative</text><text x="205" y="105" font-family="Arial" font-size="15" fill="#182233">She calls</text><text x="205" y="124" font-family="Arial" font-size="15" fill="#182233">Varadarajan</text><text x="345" y="105" font-family="Arial" font-size="15" fill="#182233">She enters</text><text x="345" y="124" font-family="Arial" font-size="15" fill="#182233">car voluntarily</text><text x="500" y="105" font-family="Arial" font-size="15" fill="#182233">Marriage</text><text x="500" y="124" font-family="Arial" font-size="15" fill="#182233">registration</text><text x="205" y="205" font-family="Arial" font-size="17" font-weight="700" fill="#147554">No proved taking / enticement → acquittal</text></svg><p class="small">Hypothetical visual, not a reproduction of the evidence. Use it to remember the missing link: active inducement or participation in forming the intention.</p><div class="callout"><strong>BNS application:</strong> Under BNS §137, the threshold is now “child below 18”. The reasoning on the act of taking/enticing remains useful, but the BNS age definition is gender-neutral.</div></div></div></div></article>
+  </div><div class="fig"><svg viewBox="0 0 650 260" role="img" aria-label="Hypothetical visual of Varadarajan timeline"><rect width="650" height="260" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Varadarajan · the “allowing” pattern</text><line x1="55" y1="140" x2="590" y2="140" stroke="#0c7c86" stroke-width="5"/><circle cx="100" cy="140" r="12" fill="#1d5d8f"/><circle cx="245" cy="140" r="12" fill="#1d5d8f"/><circle cx="390" cy="140" r="12" fill="#1d5d8f"/><circle cx="545" cy="140" r="12" fill="#c58b2b"/><text x="55" y="105" font-family="Arial" font-size="15" fill="#182233">Father places</text><text x="55" y="124" font-family="Arial" font-size="15" fill="#182233">Savitri with relative</text><text x="205" y="105" font-family="Arial" font-size="15" fill="#182233">She calls</text><text x="205" y="124" font-family="Arial" font-size="15" fill="#182233">Varadarajan</text><text x="345" y="105" font-family="Arial" font-size="15" fill="#182233">She enters</text><text x="345" y="124" font-family="Arial" font-size="15" fill="#182233">car voluntarily</text><text x="500" y="105" font-family="Arial" font-size="15" fill="#182233">Marriage</text><text x="500" y="124" font-family="Arial" font-size="15" fill="#182233">registration</text><text x="205" y="205" font-family="Arial" font-size="17" font-weight="700" fill="#147554">No proved taking / enticement → acquittal</text></svg><p class="small">Hypothetical visual, not a reproduction of the evidence. Use it to remember the missing link: active inducement or participation in forming the intention.</p><div class="callout"><strong>BNS application:</strong> Under BNS §137, the threshold is now “child below 18”. The reasoning on the act of taking/enticing remains useful, but the BNS age definition is gender-neutral.</div></div></div></div></article>
 
   <article class="case" id="vadgama"><div class="case-head"><h3>Thakorlal D. Vadgama v. State of Gujarat</h3><p>AIR 1973 SC 2313 · IPC §§361, 366 and 376 · BNS §137 plus aggravated BNS §87</p></div><div class="case-body"><div class="case-grid"><div>
     <div class="case-label">Facts</div><p>Vadgama, an industrialist with a factory and adjoining bungalow, became close to Mohini, a school-going girl who had entered her sixteenth year. Over a prolonged period he took her and her family on trips, gave gifts including a Parker pen and cultivated intimacy. Mohini’s parents became suspicious and attempted to prevent contact. Mohini wrote letters complaining of rebukes and ill-treatment. Vadgama learned of her emotional state and, a few days before 16 January 1967, told her to come to his bungalow and that he would keep her permanently. She left home with schoolbooks and went to him. He kept her in the garage/attached rooms, had letters written to create a false trail, attempted to mislead parents/police and concealed her. She was recovered when police traced her.</p>
@@ -405,7 +624,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     <div class="case-label">Arguments</div><ul><li><strong>Appellant/defence:</strong> Mohini came voluntarily; the family’s story was false or motivated by the alleged refusal to appoint her father as manager; the letters showed that she wanted to leave; there was no force or fraud in the departure; the prosecution evidence of sexual intercourse was unsafe for lack of corroboration; <em>Varadarajan</em> showed that voluntary departure is not kidnapping.</li><li><strong>Prosecution/State:</strong> The relationship, gifts, prior conduct, promise of permanent shelter, her immature state, concealment in the garage, dictated letters and efforts to mislead the police showed a continuous course of allurement and active participation. The earlier influence need not be immediately before the departure. The circumstances established the §366 purpose even if the rape charge was not proved beyond reasonable doubt.</li></ul>
     <div class="case-label">Decision</div><p>The appeal was dismissed. The Supreme Court upheld the conviction under IPC §366. It did not disturb the acquittal under §376 because there was no appeal against that acquittal and the High Court had found the rape charge not proved beyond reasonable doubt.</p>
     <div class="principle"><strong>Ratio / principle:</strong> “Taking” means causing to go, escorting or getting into possession; it need not use force or fraud. “Enticing” involves inducement/allurement that creates hope or desire. It can be subtle, gradual and earlier in time. If the minor’s departure was influenced by a promise, offer or inducement emanating from the accused, the accused cannot escape by saying that the child walked out voluntarily. The case is distinguishable from <em>Varadarajan</em> because the evidence showed prior allurement and participation in forming the child’s resolve.</div>
-  </div><div><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Vadgama timeline"><rect width="650" height="300" rx="12" fill="#fffaf0"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Vadgama · the “foundation of inducement” pattern</text><path d="M55 162 C170 90, 250 220, 355 145 S515 105,590 162" fill="none" stroke="#c58b2b" stroke-width="5"/><circle cx="75" cy="150" r="11" fill="#1d5d8f"/><circle cx="205" cy="155" r="11" fill="#1d5d8f"/><circle cx="340" cy="145" r="11" fill="#1d5d8f"/><circle cx="475" cy="125" r="11" fill="#1d5d8f"/><circle cx="585" cy="162" r="11" fill="#b64b56"/><text x="43" y="92" font-family="Arial" font-size="14" fill="#182233">gifts / closeness</text><text x="175" y="218" font-family="Arial" font-size="14" fill="#182233">emotional vulnerability</text><text x="300" y="92" font-family="Arial" font-size="14" fill="#182233">promise of permanent shelter</text><text x="430" y="218" font-family="Arial" font-size="14" fill="#182233">leaves home</text><text x="530" y="92" font-family="Arial" font-size="14" fill="#a04342">concealment</text><text x="156" y="270" font-family="Arial" font-size="17" font-weight="700" fill="#a04342">Earlier influence + active role → enticing</text></svg><p class="small">Hypothetical visual of the legal reasoning: the chain is cumulative; the promise need not be made at the exact moment of departure.</p><div class="callout"><strong>DU exam line:</strong> “If the minor leaves her parental home influenced by any promise, offer or inducement emanating from the accused, the accused is guilty even though the enticement was not immediate prior.”</div></div></div></div></article>
+  </div><div class="fig"><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Vadgama timeline"><rect width="650" height="300" rx="12" fill="#fffaf0"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Vadgama · the “foundation of inducement” pattern</text><path d="M55 162 C170 90, 250 220, 355 145 S515 105,590 162" fill="none" stroke="#c58b2b" stroke-width="5"/><circle cx="75" cy="150" r="11" fill="#1d5d8f"/><circle cx="205" cy="155" r="11" fill="#1d5d8f"/><circle cx="340" cy="145" r="11" fill="#1d5d8f"/><circle cx="475" cy="125" r="11" fill="#1d5d8f"/><circle cx="585" cy="162" r="11" fill="#b64b56"/><text x="43" y="92" font-family="Arial" font-size="14" fill="#182233">gifts / closeness</text><text x="175" y="218" font-family="Arial" font-size="14" fill="#182233">emotional vulnerability</text><text x="300" y="92" font-family="Arial" font-size="14" fill="#182233">promise of permanent shelter</text><text x="430" y="218" font-family="Arial" font-size="14" fill="#182233">leaves home</text><text x="530" y="92" font-family="Arial" font-size="14" fill="#a04342">concealment</text><text x="156" y="270" font-family="Arial" font-size="17" font-weight="700" fill="#a04342">Earlier influence + active role → enticing</text></svg><p class="small">Hypothetical visual of the legal reasoning: the chain is cumulative; the promise need not be made at the exact moment of departure.</p><div class="callout"><strong>DU exam line:</strong> “If the minor leaves her parental home influenced by any promise, offer or inducement emanating from the accused, the accused is guilty even though the enticement was not immediate prior.”</div></div></div></div></article>
 
   <article class="case" id="anversinh"><div class="case-head"><h3>Anversinh alias Kiransinh Fatesinh Zala v. State of Gujarat</h3><p>(2021) 3 SCC 12 · IPC §§363, 366 and 376 · BNS §137(2) and §87 mapping</p></div><div class="case-body"><div class="case-grid"><div>
     <div class="case-label">Facts</div><p>On 14 May 1998, the complainant-father learned that his sixteen-year-old daughter, a domestic worker educated up to Class VII, had not returned. A watchman had last seen her coming out of a vacant bungalow with Anversinh. The appellant had gone to his village with her. Police located both at a farm near Modasa and brought them back. The prosecutrix said she was forcibly taken in an auto-rickshaw and bus, pressured into marriage and sexually assaulted. In cross-examination, however, she admitted that she was in love with the appellant, had earlier consensual intercourse with him and had met him outside home. The investigating officer’s statement under CrPC §161 recorded a pre-existing relationship, their leaving after being seen by a guard, farm work and cohabitation as husband and wife.</p>
@@ -414,7 +633,7 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     <div class="case-label">Arguments</div><ul><li><strong>Appellant:</strong> the High Court accepted the love affair, frequent meetings and consensual sexual relationship while acquitting him of rape; it was contradictory to find that she did not willingly leave parental custody. The prosecutrix did not protest or raise alarm despite opportunities. Under <em>Varadarajan</em>, without active involvement there was no taking or enticing.</li><li><strong>State:</strong> the girl was below 18; her consent could not be a defence. The concurrent findings, recovery from the appellant’s custody and evidence that he induced her to reach a designated place supported the statutory ingredients. The plain language of IPC §§361/366 controlled.</li></ul>
     <div class="case-label">Decision</div><p>The Supreme Court found the kidnapping conviction sustainable. Enticement need not be direct or immediate and may operate through subtle acts such as winning the affection of a minor. Mere recovery from a stranger’s custody would not itself prove kidnapping, but here the evidence demonstrated an active role and inducement. The Court upheld guilt under the kidnapping provisions and did not grant acquittal. It nevertheless reduced the sentence to the period already undergone, considering no force or weapon, the appellant’s age (about 18–19), the love affair, long delay of more than 22 years, rehabilitation, low recidivism risk and absence of grotesque abuse of power.</p>
     <div class="principle"><strong>Ratio / principle:</strong> Consent of a minor below the statutory age is no defence to kidnapping. But prosecution must still prove taking/enticement; mere recovery is not ipso facto enough. Guilt and sentence are distinct inquiries: youth, delay, rehabilitation and proportionality may reduce sentence without erasing conviction.</div>
-  </div><div><svg viewBox="0 0 650 310" role="img" aria-label="Hypothetical visual of Anversinh legal analysis"><rect width="650" height="310" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Anversinh · consent is not the defence</text><rect x="35" y="70" width="175" height="83" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="52" y="98" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Love affair / consent</text><text x="52" y="124" font-family="Arial" font-size="13" fill="#182233">Relevant evidence,</text><text x="52" y="143" font-family="Arial" font-size="13" fill="#182233">not a legal cure.</text><path d="M220 112 H270" stroke="#0c7c86" stroke-width="4" marker-end="url(#a)"/><rect x="280" y="70" width="175" height="83" rx="10" fill="#fff4f1" stroke="#e3b8b0"/><text x="298" y="98" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Active role?</text><text x="298" y="124" font-family="Arial" font-size="13" fill="#182233">Induced designated</text><text x="298" y="143" font-family="Arial" font-size="13" fill="#182233">meeting / removed her</text><path d="M465 112 H515" stroke="#0c7c86" stroke-width="4"/><rect x="525" y="70" width="90" height="83" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="539" y="103" font-family="Arial" font-size="14" font-weight="700" fill="#1d5d8f">Guilt</text><text x="536" y="127" font-family="Arial" font-size="12" fill="#182233">upheld</text><text x="25" y="205" font-family="Arial" font-size="15" fill="#182233">Sentencing lane (separate): youth + 22-year delay + rehabilitation + no force</text><rect x="25" y="225" width="590" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="43" y="252" font-family="Arial" font-size="16" font-weight="700" fill="#835707">conviction affirmed · sentence reduced to time already undergone</text><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#0c7c86"/></marker></defs></svg><p class="small">Hypothetical exam visual: first prove the act of taking/enticement; only then discuss the effect of consent and sentence.</p><div class="callout"><strong>BNS application:</strong> For a post-BNS problem, “child” is below 18 for both sexes. The case is useful for the proposition that voluntary love or consent does not by itself defeat §137, but the prosecution still carries the burden on taking/enticement.</div></div></div></div></article>
+  </div><div class="fig"><svg viewBox="0 0 650 310" role="img" aria-label="Hypothetical visual of Anversinh legal analysis"><rect width="650" height="310" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Anversinh · consent is not the defence</text><rect x="35" y="70" width="175" height="83" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="52" y="98" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Love affair / consent</text><text x="52" y="124" font-family="Arial" font-size="13" fill="#182233">Relevant evidence,</text><text x="52" y="143" font-family="Arial" font-size="13" fill="#182233">not a legal cure.</text><path d="M220 112 H270" stroke="#0c7c86" stroke-width="4" marker-end="url(#a)"/><rect x="280" y="70" width="175" height="83" rx="10" fill="#fff4f1" stroke="#e3b8b0"/><text x="298" y="98" font-family="Arial" font-size="15" font-weight="700" fill="#a04342">Active role?</text><text x="298" y="124" font-family="Arial" font-size="13" fill="#182233">Induced designated</text><text x="298" y="143" font-family="Arial" font-size="13" fill="#182233">meeting / removed her</text><path d="M465 112 H515" stroke="#0c7c86" stroke-width="4"/><rect x="525" y="70" width="90" height="83" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="539" y="103" font-family="Arial" font-size="14" font-weight="700" fill="#1d5d8f">Guilt</text><text x="536" y="127" font-family="Arial" font-size="12" fill="#182233">upheld</text><text x="25" y="205" font-family="Arial" font-size="15" fill="#182233">Sentencing lane (separate): youth + 22-year delay + rehabilitation + no force</text><rect x="25" y="225" width="590" height="42" rx="9" fill="#fff8e8" stroke="#efd59d"/><text x="43" y="252" font-family="Arial" font-size="16" font-weight="700" fill="#835707">conviction affirmed · sentence reduced to time already undergone</text><defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#0c7c86"/></marker></defs></svg><p class="small">Hypothetical exam visual: first prove the act of taking/enticement; only then discuss the effect of consent and sentence.</p><div class="callout"><strong>BNS application:</strong> For a post-BNS problem, “child” is below 18 for both sexes. The case is useful for the proposition that voluntary love or consent does not by itself defeat §137, but the prosecution still carries the burden on taking/enticement.</div></div></div></div></article>
 
   <article class="case" id="vinod"><div class="case-head"><h3>Vinod Dua v. Union of India</h3><p>AIR 2021 SC 3239 · W.P. (Cr.) No. 154 of 2020 · IPC §§124A, 268, 501, 505 · bridge to BNS §152</p></div><div class="case-body"><div class="case-grid"><div>
     <div class="case-label">Facts</div><p>Journalist Vinod Dua uploaded an episode of <em>The Vinod Dua Show</em> on YouTube on 30 March 2020, critically discussing the government’s preparedness and handling of the COVID-19 pandemic, testing facilities, PPE and masks, export of ventilators/sanitiser, migrant labour and the lockdown. The complainant alleged that the programme spread false and malicious news, accused the Prime Minister of using deaths/terror attacks to garner votes, incited violence, created panic and disturbed public tranquillity.</p>
@@ -423,9 +642,9 @@ ul,ol{padding-left:24px}li{margin:4px 0}.tight li{margin:1px 0}.two-col{columns:
     <div class="case-label">Arguments</div><ul><li><strong>Petitioner:</strong> the video was critical analysis of government functioning and did not incite violence or public disorder; the FIR attributed statements he had not made; §§124A and 505 had to be read according to <em>Kedar Nath Singh</em>; the prosecution abused criminal process and violated free speech. A committee safeguard was sought by analogy with professional-negligence cases.</li><li><strong>State/Union/complainant:</strong> the FIR should not be quashed at the investigation stage; the statements were misinformation likely to create panic during a pandemic; food-riot fears and migrant reporting could disturb public order; whether statements were deliberate or innocent required investigation. The proposed committee was said to encroach on the legislative field.</li></ul>
     <div class="case-label">Decision</div><p>The Supreme Court quashed the FIR as an abuse of process. It reiterated from <em>Kedar Nath Singh</em> that a citizen may criticise or comment on government measures and functionaries so long as there is no incitement to violence or intention to create public disorder; only words with pernicious tendency or intention to create public disorder/disturbance of law and order attract §§124A/505. It rejected the requested ten-year-journalist committee as an impermissible judicial encroachment into the legislative domain.</p>
     <div class="principle"><strong>Ratio / exam use:</strong> Criminal speech restrictions must be read narrowly and in conformity with Article 19(1)(a). Mere disapprobation or critical appraisal is not sedition. The case directly concerns IPC §124A/§505, not BNS §152. For §152, use the judgment as a constitutional method: identify the specific statutory national-security trigger and prove purposeful/knowing incitement or endangerment, while respecting the explanation’s protection of lawful disapprobation.</div>
-  </div><div><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Vinod Dua free speech analysis"><rect width="650" height="300" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Vinod Dua · criticism versus incitement</text><rect x="35" y="76" width="150" height="76" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="52" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">YouTube analysis</text><text x="52" y="129" font-family="Arial" font-size="13" fill="#182233">pandemic / policy</text><path d="M198 114 H245" stroke="#0c7c86" stroke-width="4"/><rect x="258" y="76" width="160" height="76" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="275" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Kedar Nath test</text><text x="275" y="129" font-family="Arial" font-size="13" fill="#182233">violence? public disorder?</text><path d="M431 114 H478" stroke="#0c7c86" stroke-width="4"/><rect x="491" y="76" width="125" height="76" rx="10" fill="#fff8e8" stroke="#efd59d"/><text x="512" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#835707">No trigger</text><text x="512" y="129" font-family="Arial" font-size="13" fill="#182233">FIR quashed</text><line x1="30" y1="205" x2="620" y2="205" stroke="#d2dde7"/><text x="40" y="234" font-family="Arial" font-size="15" fill="#182233">BNS §152: repeat the method, but test its own text—secession, armed rebellion,</text><text x="40" y="257" font-family="Arial" font-size="15" fill="#182233">subversive/separatist activity, or danger to sovereignty/unity/integrity.</text></svg><p class="small">Hypothetical analytical visual; the actual case arose under IPC speech offences.</p><div class="callout"><strong>One-line distinction:</strong> “Dua protects criticism from IPC sedition; it does not grant immunity for purposeful/knowing BNS §152 conduct satisfying the new national-security ingredients.”</div></div></div></div></article>
+  </div><div class="fig"><svg viewBox="0 0 650 300" role="img" aria-label="Hypothetical visual of Vinod Dua free speech analysis"><rect width="650" height="300" rx="12" fill="#f7fbfd"/><text x="25" y="32" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Vinod Dua · criticism versus incitement</text><rect x="35" y="76" width="150" height="76" rx="10" fill="#edf6ff" stroke="#aac9e2"/><text x="52" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#1d5d8f">YouTube analysis</text><text x="52" y="129" font-family="Arial" font-size="13" fill="#182233">pandemic / policy</text><path d="M198 114 H245" stroke="#0c7c86" stroke-width="4"/><rect x="258" y="76" width="160" height="76" rx="10" fill="#eaf8f4" stroke="#9bcfc5"/><text x="275" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#147554">Kedar Nath test</text><text x="275" y="129" font-family="Arial" font-size="13" fill="#182233">violence? public disorder?</text><path d="M431 114 H478" stroke="#0c7c86" stroke-width="4"/><rect x="491" y="76" width="125" height="76" rx="10" fill="#fff8e8" stroke="#efd59d"/><text x="512" y="105" font-family="Arial" font-size="15" font-weight="700" fill="#835707">No trigger</text><text x="512" y="129" font-family="Arial" font-size="13" fill="#182233">FIR quashed</text><line x1="30" y1="205" x2="620" y2="205" stroke="#d2dde7"/><text x="40" y="234" font-family="Arial" font-size="15" fill="#182233">BNS §152: repeat the method, but test its own text—secession, armed rebellion,</text><text x="40" y="257" font-family="Arial" font-size="15" fill="#182233">subversive/separatist activity, or danger to sovereignty/unity/integrity.</text></svg><p class="small">Hypothetical analytical visual; the actual case arose under IPC speech offences.</p><div class="callout"><strong>One-line distinction:</strong> “Dua protects criticism from IPC sedition; it does not grant immunity for purposeful/knowing BNS §152 conduct satisfying the new national-security ingredients.”</div></div></div></div></article>
 
-  <article class="case" id="rajaram"><div class="case-head"><h3>DU-listed comparator: State of Haryana v. Raja Ram</h3><p>(1973) 1 SCC 544 · included because the uploaded DU syllabus/IPC capsule lists it under lawful-guardianship kidnapping</p></div><div class="case-body"><div class="case-grid"><div><div class="case-label">Facts and issue</div><p>Santosh Rani, aged about 14, was allegedly promised by Jai Narain that he would keep her like a queen with clothes, food and a servant. After her father prevented Jai Narain from visiting, Jai Narain sent messages through Raja Ram. Raja Ram persuaded Santosh to go to his house, brought Jai Narain and handed her over. The issue was whether Raja Ram could be convicted even though he did not personally go to the parental house to bring her.</p><div class="case-label">Decision and principle</div><p>The Supreme Court restored the conviction. The child’s consent or willingness was immaterial; guardian’s consent was the relevant consent. It was not necessary to prove force or fraud. Raja Ram actively participated in forming Santosh’s intention to leave, and that was enough. A messenger or intermediary can therefore be liable when his persuasion materially contributes to the child’s removal.</p><div class="principle"><strong>Contrast map:</strong> <em>Varadarajan</em> = voluntary departure with no proved inducement; <em>Raja Ram</em> = active persuasion, even through an intermediary; <em>Vadgama</em> = earlier and subtle allurement; <em>Anversinh</em> = consent/love cannot defeat proved active removal.</div></div><div><svg viewBox="0 0 650 210" role="img" aria-label="Hypothetical visual of Raja Ram intermediary persuasion"><rect width="650" height="210" rx="12" fill="#fffaf0"/><text x="25" y="31" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Raja Ram · the intermediary can be a taker/enticer</text><circle cx="115" cy="106" r="30" fill="#c58b2b"/><circle cx="325" cy="106" r="30" fill="#1d5d8f"/><circle cx="535" cy="106" r="30" fill="#b64b56"/><text x="86" y="161" font-family="Arial" font-size="15" fill="#182233">Jai Narain</text><text x="285" y="161" font-family="Arial" font-size="15" fill="#182233">Raja Ram</text><text x="500" y="161" font-family="Arial" font-size="15" fill="#182233">Santosh</text><path d="M150 106 H285" stroke="#0c7c86" stroke-width="4"/><path d="M360 106 H495" stroke="#0c7c86" stroke-width="4"/><text x="181" y="91" font-family="Arial" font-size="13" fill="#182233">messages</text><text x="393" y="91" font-family="Arial" font-size="13" fill="#182233">persuasion</text></svg></div></div></div></article>
+  <article class="case" id="rajaram"><div class="case-head"><h3>DU-listed comparator: State of Haryana v. Raja Ram</h3><p>(1973) 1 SCC 544 · included because the uploaded DU syllabus/IPC capsule lists it under lawful-guardianship kidnapping</p></div><div class="case-body"><div class="case-grid"><div><div class="case-label">Facts and issue</div><p>Santosh Rani, aged about 14, was allegedly promised by Jai Narain that he would keep her like a queen with clothes, food and a servant. After her father prevented Jai Narain from visiting, Jai Narain sent messages through Raja Ram. Raja Ram persuaded Santosh to go to his house, brought Jai Narain and handed her over. The issue was whether Raja Ram could be convicted even though he did not personally go to the parental house to bring her.</p><div class="case-label">Decision and principle</div><p>The Supreme Court restored the conviction. The child’s consent or willingness was immaterial; guardian’s consent was the relevant consent. It was not necessary to prove force or fraud. Raja Ram actively participated in forming Santosh’s intention to leave, and that was enough. A messenger or intermediary can therefore be liable when his persuasion materially contributes to the child’s removal.</p><div class="principle"><strong>Contrast map:</strong> <em>Varadarajan</em> = voluntary departure with no proved inducement; <em>Raja Ram</em> = active persuasion, even through an intermediary; <em>Vadgama</em> = earlier and subtle allurement; <em>Anversinh</em> = consent/love cannot defeat proved active removal.</div></div><div class="fig"><svg viewBox="0 0 650 210" role="img" aria-label="Hypothetical visual of Raja Ram intermediary persuasion"><rect width="650" height="210" rx="12" fill="#fffaf0"/><text x="25" y="31" font-family="Arial" font-weight="700" font-size="18" fill="#12304e">Raja Ram · the intermediary can be a taker/enticer</text><circle cx="115" cy="106" r="30" fill="#c58b2b"/><circle cx="325" cy="106" r="30" fill="#1d5d8f"/><circle cx="535" cy="106" r="30" fill="#b64b56"/><text x="86" y="161" font-family="Arial" font-size="15" fill="#182233">Jai Narain</text><text x="285" y="161" font-family="Arial" font-size="15" fill="#182233">Raja Ram</text><text x="500" y="161" font-family="Arial" font-size="15" fill="#182233">Santosh</text><path d="M150 106 H285" stroke="#0c7c86" stroke-width="4"/><path d="M360 106 H495" stroke="#0c7c86" stroke-width="4"/><text x="181" y="91" font-family="Arial" font-size="13" fill="#182233">messages</text><text x="393" y="91" font-family="Arial" font-size="13" fill="#182233">persuasion</text></svg></div></div></div></article>
 </section>
 
 <section id="synthesis">

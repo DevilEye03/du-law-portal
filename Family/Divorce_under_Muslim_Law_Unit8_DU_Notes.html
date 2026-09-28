@@ -128,6 +128,7 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 
 /* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   Enhanced: Full Responsive Diagrams, Flowcharts & Charts Engine
    ========================================================================== */
 @media screen and (max-width: 768px) {
   /* 1. Root & Viewport Overflow Containment (Rule 3) */
@@ -152,39 +153,382 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
     min-width: 0 !important;
     padding-left: 14px !important;
     padding-right: 14px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
   }
 
-  /* 3. Hero Header & Covers */
-  header.cover, header.hero, .hero, .topbar {
-    padding: 24px 14px 20px !important;
-    border-radius: 8px !important;
-    margin-bottom: 16px !important;
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc {
+    display: none !important;
+  }
+
+  /* 3. Hero & Header Responsive Scaling */
+  header.hero, .hero, .header, .top-bar {
+    padding: 28px 16px 24px !important;
+    width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
   }
-  header.cover h1, header.hero h1, .hero h1 {
-    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+
+  header.hero h1, .hero h1, h1 {
+    font-size: clamp(22px, 6.2vw, 32px) !important;
     line-height: 1.22 !important;
-    margin: 10px 0 6px !important;
     word-break: break-word !important;
+    overflow-wrap: break-word !important;
   }
-  header.cover h2, header.hero .sub, .hero .dek {
-    font-size: 0.95rem !important;
-    line-height: 1.45 !important;
+
+  header.hero .lede, .hero p, .hero-sub, .lead {
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
   }
-  .badges, .meta {
-    font-size: 0.82rem !important;
-    line-height: 1.4 !important;
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    max-height: 80px !important;
+    opacity: 0.2 !important;
+    position: absolute !important;
+    right: 10px !important;
+    top: 10px !important;
+    pointer-events: none !important;
   }
-  .badge, .tag, .lbl {
-    font-size: 0.75rem !important;
-    padding: 3px 8px !important;
-    margin: 2px !important;
+
+  svg.hero-visual {
+    max-width: 130px !important;
+    height: auto !important;
+    margin: 8px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
     display: inline-block !important;
   }
 
-  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  /* 4. DIAGRAMS & FLOWCHARTS: CONTAINER & HORIZONTAL TOUCH-PAN */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap,
+  .flow-svg, .flow:has(svg), .flow:has(.diagram) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x pan-y !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+    padding: 14px 10px !important;
+    margin: 18px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+  }
+
+  /* Visual touch-pan scroll hint badge on mobile diagrams */
+  .fig::after, .figure::after, .scene::after, .svgwrap::after, .flow-svg::after, .flow:has(svg)::after {
+    content: "⇄ Swipe horizontally to pan diagram" !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: var(--mut, #64748b) !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+    letter-spacing: 0.4px !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+  }
+
+  /* Captions & badges on figures & scenes */
+  .fig .cap, .fcap, .scene .badge {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 4px 0 10px !important;
+    color: var(--ink, #14213d) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. SVG DIAGRAM RESIZING & LEGIBILITY */
+  /* Wide SVGs inside scrollable figure cards: maintain legible typography & geometry */
+  .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg, svg.diagram,
+  svg[width]:not([width="18"]):not([width="20"]):not([width="24"]):not(.icon),
+  svg[viewBox*="9"], svg[viewBox*="8"], svg[viewBox*="7"], svg[viewBox*="6"] {
+    display: block !important;
+    min-width: 600px !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* Moderate/Small standalone SVGs (viewBox width <= 450) */
+  svg[viewBox*=" 0 0 2"]:not(.crest):not(.hero-visual),
+  svg[viewBox*=" 0 0 3"]:not(.crest),
+  svg[viewBox*=" 0 0 4"]:not(.crest) {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 6. CSS FLOWCHARTS (.flow, .node, .ar, .dn, .step) */
+  .flow:not(.flow-svg):not(:has(svg)) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 14px 12px !important;
+    margin: 18px 0 !important;
+    background: var(--paper, #f8fafc) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 12px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small {
+    display: block !important;
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    margin-top: 4px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar {
+    display: block !important;
+    transform: rotate(90deg) !important;
+    margin: 4px auto !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+    padding: 2px 0 !important;
+    width: auto !important;
+  }
+
+  .flow .dn {
+    display: block !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    margin: 4px auto !important;
+    font-size: 20px !important;
+  }
+
+  .flow .step, .flow > .step {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 4px 0 !important;
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+  }
+
+  .flow.vertical {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 12px 8px !important;
+  }
+
+  .flow.vertical .node {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. FAMILY LAW DECISION TREES (.decision-tree, .branches, .branch) */
+  .decision-tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 16px 12px !important;
+    margin: 18px 0 !important;
+    background: #f1f5f9 !important;
+    border-radius: 10px !important;
+  }
+
+  .decision-tree .root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 12px !important;
+    text-align: center !important;
+  }
+
+  .branches {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    gap: 12px !important;
+    margin: 14px 0 !important;
+  }
+
+  .branch {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 14px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* 8. TREE DIAGRAMS (.tree, .tree .node, .tree ul) */
+  .tree {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 12px 6px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tree ul {
+    padding-left: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  .tree .node {
+    font-size: 13px !important;
+    padding: 6px 10px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 9. FCHARTS (.fchart, .fbox, .frow, .farrow) */
+  .fchart {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 12px 6px !important;
+    gap: 6px !important;
+  }
+
+  .fbox {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+  }
+
+  .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 8px !important;
+  }
+
+  .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .farrow {
+    margin: 4px 0 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* 10. TIMELINES & SCENES (.timeline, .scene) */
+  .timeline {
+    padding-left: 18px !important;
+    margin-left: 4px !important;
+    border-left-width: 2px !important;
+  }
+
+  .timeline .ev {
+    font-size: 13.5px !important;
+    line-height: 1.55 !important;
+    margin: 12px 0 !important;
+  }
+
+  .timeline .ev:before {
+    left: -24px !important;
+    width: 10px !important;
+    height: 10px !important;
+    top: 5px !important;
+  }
+
+  /* 11. COMPARISON CHARTS, GRIDS & MATRICES (.vs, .grid, .grid2, .grid3, .cgrid, etc.) */
+  .vs, .grid, .grid2, .grid3, .cgrid, .case-grid, .remedy-grid, .revision-grid, .test-grid, .quiz-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .vs > div, .grid > div, .grid2 > div, .grid3 > div, .cgrid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 12. DIAGRAM IMAGES */
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 12px auto !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08) !important;
+  }
+
+  .case-img, .diag-img {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    margin: 14px 0 !important;
+    text-align: center !important;
+  }
+
+  /* 13. TABLES: HORIZONTAL SCROLL CONTAINMENT (Rule 3) */
   table {
     display: block !important;
     width: 100% !important;
@@ -195,166 +539,41 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
     margin: 14px 0 !important;
     font-size: 13.5px !important;
   }
-  .table-wrap, .table-container, .table-responsive {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    margin: 14px 0 !important;
-  }
+
   th, td {
     padding: 8px 10px !important;
-    min-width: 85px !important;
-    word-break: break-word !important;
+    white-space: normal !important;
+    min-width: 90px !important;
   }
 
-  /* 5. Typography & Headings */
-  h2, h2.part, .chapter h2 {
-    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
-    margin-top: 28px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.3 !important;
-    word-break: break-word !important;
-  }
-  h3 {
-    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
-    margin-top: 22px !important;
-    line-height: 1.35 !important;
-    padding-left: 8px !important;
-    word-break: break-word !important;
-  }
-  h4, h5 {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-  }
-  p {
-    font-size: 15.5px !important;
-    line-height: 1.65 !important;
-    text-align: left !important;
-    margin: 8px 0 !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  li {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin: 6px 0 !important;
-    overflow-wrap: break-word !important;
-  }
-  ul, ol {
-    padding-left: 20px !important;
-    margin: 8px 0 !important;
-  }
-
-  /* 6. Grids & Multi-column Stacking */
-  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 12px !important;
-    grid-template-columns: 1fr !important;
-  }
-  .vs > div {
-    border-right: none !important;
-    border-bottom: 1px solid var(--line, #dedfd7) !important;
-  }
-  .branch, .fbox, .flow > div {
-    min-width: 0 !important;
-    width: 100% !important;
+  /* 14. PRE & CODE BLOCKS */
+  pre, code, pre code {
     max-width: 100% !important;
-  }
-
-  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
-    padding: 14px 14px !important;
-    margin: 14px 0 !important;
-    border-radius: 8px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-  .casefile .cf-head, .casefile .cf-body {
-    padding: 12px 14px !important;
-  }
-
-  /* 8. Code, Monospace & Pre Blocks */
-  pre, code, .stat {
-    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12.5px !important;
     white-space: pre-wrap !important;
     word-break: break-word !important;
-    overflow-x: auto !important;
-    font-size: 13px !important;
-    padding: 10px 12px !important;
-  }
-  blockquote {
-    margin: 12px 0 !important;
-    padding: 10px 14px !important;
-    font-size: 15px !important;
   }
 
-  /* 9. Images & SVG Diagrams */
-  img, svg {
-    max-width: 100% !important;
-    height: auto !important;
-    box-sizing: border-box !important;
+  /* 15. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
   }
-  .fig, .case-visual, figure {
+
+  .sec-num, .chapter-num, .badge-num {
+    margin-bottom: 4px !important;
+  }
+
+  .card, .box, .case, .pyq, .callout, .warn, .tip, .note {
+    width: 100% !important;
     max-width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
+    min-width: 0 !important;
+    padding: 14px 12px !important;
     margin: 14px 0 !important;
-  }
-
-  /* 10. Horizontal Navigation & ToC */
-  nav.tocbar, .topbar {
-    padding: 4px 6px !important;
-    width: 100% !important;
-  }
-  nav.tocbar .inner, .topbar .toolbar {
-    display: flex !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding: 6px 4px !important;
-    gap: 4px !important;
-  }
-  nav.tocbar a, .topbar button {
-    padding: 5px 9px !important;
-    font-size: 11.5px !important;
-    white-space: nowrap !important;
-  }
-  .sidebar {
-    position: static !important;
-    width: 100% !important;
-    max-height: none !important;
-    padding: 0 !important;
-  }
-  .toc {
-    columns: 1 !important;
-    padding: 12px 16px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  html, body {
-    font-size: 14.5px !important;
-  }
-  .wrap, .layout, .container, .page-wrap {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-  }
-  header.cover, header.hero, .hero {
-    padding: 18px 10px 16px !important;
-  }
-  th, td {
-    padding: 6px 8px !important;
-    font-size: 12px !important;
-    min-width: 75px !important;
-  }
-  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
-    padding: 12px 10px !important;
+    box-sizing: border-box !important;
   }
 }
 /* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
@@ -422,8 +641,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <div class="note info"><b>Exam point (Masroor Ahmed):</b> The phrase "dissolution of marriage, including <i>talaq, ila, zihar, lian, khula and mubaraat</i>" gives <b>statutory recognition that talaq is only ONE of several modes</b> of dissolution. Islam considers divorce odious yet permits it on grounds of pragmatism — an elaborate lattice of modes exists "with differing amplitude and width under the different schools" (Badar Durrez Ahmed J.).</div>
 
 <h3>1.2 The master map of dissolution</h3>
-<div class="flow"><div class="fcap">Fig. 1 — Master Flowchart: Modes of Dissolution of a Muslim Marriage</div>
-<svg viewBox="0 0 980 640" width="100%" style="min-width:760px">
+<div class="flow flow-svg"><div class="fcap">Fig. 1 — Master Flowchart: Modes of Dissolution of a Muslim Marriage</div>
+<svg viewBox="0 0 980 640" width="100%">
 <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="330" y="12" width="320" height="52" rx="12" fill="#14213d"/>
 <text x="490" y="34" text-anchor="middle" fill="#f2e8cd" font-size="16" font-weight="bold">DISSOLUTION OF MUSLIM</text>
@@ -520,8 +739,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>2.2 The three forms of talaq — Ahsan, Hasan, Bidaat</h3>
-<div class="flow"><div class="fcap">Fig. 2 — Classification of Talaq (Hanafi law)</div>
-<svg viewBox="0 0 960 430" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 2 — Classification of Talaq (Hanafi law)</div>
+<svg viewBox="0 0 960 430" width="100%">
 <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="360" y="10" width="240" height="46" rx="10" fill="#14213d"/>
 <text x="480" y="38" text-anchor="middle" fill="#f2e8cd" font-size="16" font-weight="bold">TALAQ</text>
@@ -563,8 +782,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </svg>
 </div>
 
-<div class="flow"><div class="fcap">Fig. 3 — Lifecycle of Ahsan and Hasan talaq (where revocation is possible)</div>
-<svg viewBox="0 0 960 300" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 3 — Lifecycle of Ahsan and Hasan talaq (where revocation is possible)</div>
+<svg viewBox="0 0 960 300" width="100%">
 <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <text x="150" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b6b3a">AHSAN</text>
 <rect x="20" y="40" width="130" height="46" rx="9" fill="#eaf7ef" stroke="#1b6b3a"/><text x="85" y="60" text-anchor="middle" font-size="11.5" fill="#14213d">Single pronouncement</text><text x="85" y="76" text-anchor="middle" font-size="11.5" fill="#14213d">during TUHR</text>
@@ -599,8 +818,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <div class="note warn"><b>Shia law (contrast for 10-markers):</b> Talaq must be pronounced <b>orally in Arabic, before two competent male witnesses of approved probity</b>; a written talaq is invalid unless the husband is physically incapable of oral pronouncement; talaq under compulsion, jest or intoxication is void; contingent talaq and talaq-ul-bidaat are <b>not recognised at all</b>.</div>
 
 <h3>2.3 Pronouncement, proof and communication — the modern law after <i>Shamim Ara</i> and <i>Masroor Ahmed</i></h3>
-<div class="flow"><div class="fcap">Fig. 4 — Is there an effective talaq? The judicial checklist (Shamim Ara → Masroor Ahmed)</div>
-<svg viewBox="0 0 960 470" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 4 — Is there an effective talaq? The judicial checklist (Shamim Ara → Masroor Ahmed)</div>
+<svg viewBox="0 0 960 470" width="100%">
 <defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="330" y="10" width="300" height="44" rx="10" fill="#14213d"/><text x="480" y="37" text-anchor="middle" fill="#f2e8cd" font-size="14.5" font-weight="bold">Husband claims: "I divorced her"</text>
 <line x1="480" y1="54" x2="480" y2="78" stroke="#14213d" stroke-width="2" marker-end="url(#ar4)"/>
@@ -650,8 +869,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <p><b>Prophetic root (Bukhari, quoted in Yousuf Rawther &amp; Masroor Ahmed):</b> the wife of <b>Thabit ibn Qais</b> came to the Prophet: not angry with Thabit's temper or religion, but afraid she could not observe the bounds of God. The Prophet asked: "Will you give back to Thabit the garden he gave you?" — "Yes." — "Take your garden and divorce her at once." <b>Asma</b>, one of the Prophet's wives, was likewise released at her own request. Lesson: the wife can seek release even without fault against the husband.</p>
 <div class="note info"><b>Masroor Ahmed's gloss:</b> Khula is a divorce which proceeds from the wife "which the husband <b>cannot refuse</b>, subject only to reasonable negotiation" as to what she offers in return. <b>No reason need be specified</b> — it operates on a no-fault/no-blame basis.</div>
 </div>
-<div class="flow"><div class="fcap">Fig. 5 — Khula vs Mubarat (both end in talak-i-bain)</div>
-<svg viewBox="0 0 960 320" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 5 — Khula vs Mubarat (both end in talak-i-bain)</div>
+<svg viewBox="0 0 960 320" width="100%">
 <defs><marker id="ar5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="40" y="20" width="380" height="40" rx="9" fill="#b45309"/><text x="230" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">KHULA — aversion on the WIFE's side</text>
 <rect x="540" y="20" width="380" height="40" rx="9" fill="#1b6b3a"/><text x="730" y="45" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">MUBARAT — aversion is MUTUAL</text>
@@ -695,8 +914,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>3.3 LIAN — divorce for false charge of adultery (Settled Mahomedan Law; Masroor Ahmed para 17)</h3>
-<div class="flow"><div class="fcap">Fig. 6 — Procedure of Lian</div>
-<svg viewBox="0 0 960 250" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 6 — Procedure of Lian</div>
+<svg viewBox="0 0 960 250" width="100%">
 <defs><marker id="ar6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#14213d"/></marker></defs>
 <rect x="20" y="70" width="170" height="72" rx="10" fill="#fdeeee" stroke="#a51c1c"/>
 <text x="105" y="96" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7f1d1d">Husband charges his</text><text x="105" y="114" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7f1d1d">wife with adultery</text><text x="105" y="132" text-anchor="middle" font-size="11.5" fill="#7f1d1d">(zina) and cannot prove it</text>
@@ -763,8 +982,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>4.1 Grounds of s. 2 at a glance</h3>
-<div class="flow"><div class="fcap">Fig. 7 — The nine grounds of the DMMA 1939 (with statutory time-periods)</div>
-<svg viewBox="0 0 980 560" width="100%" style="min-width:740px">
+<div class="flow flow-svg"><div class="fcap">Fig. 7 — The nine grounds of the DMMA 1939 (with statutory time-periods)</div>
+<svg viewBox="0 0 980 560" width="100%">
 <g font-size="12">
 <rect x="14" y="16" width="300" height="86" rx="10" fill="#eaf0fe" stroke="#1d4ed8"/>
 <text x="164" y="38" text-anchor="middle" font-weight="bold" font-size="13" fill="#14213d">(i) HUSBAND'S WHEREABOUTS UNKNOWN</text>
@@ -817,8 +1036,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>4.2 The great controversy — does s. 2(ii) require a duty to maintain?</h3>
-<div class="flow"><div class="fcap">Fig. 8 — Two schools on s. 2(ii) DMMA (the theme of Itwari-era case law &amp; Yousuf Rawther)</div>
-<svg viewBox="0 0 960 330" width="100%" style="min-width:720px">
+<div class="flow flow-svg"><div class="fcap">Fig. 8 — Two schools on s. 2(ii) DMMA (the theme of Itwari-era case law &amp; Yousuf Rawther)</div>
+<svg viewBox="0 0 960 330" width="100%">
 <rect x="20" y="16" width="440" height="252" rx="12" fill="#fdf6e3" stroke="#b45309"/>
 <text x="240" y="42" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#7c4a03">DUTY VIEW — restrictive</text>
 <text x="240" y="62" text-anchor="middle" font-size="11.8" fill="#7c4a03" font-style="italic">"Failed to provide" imports a duty under general Muslim law</text>
@@ -1019,7 +1238,7 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 <p><b>Respondents (AIMPLB/Jamiat):</b> talaq-e-biddat is a matter of personal law/religious practice since 1400 years; uncodified personal law is not "law in force" under Art. 13, hence immune from fundamental-rights review; the Court should not direct legislation; at best, the community would reform itself (the AIMPLB even offered guidelines and a suggestion of a stipulation against instant talaq in nikahnamas). The Union of India supported the petitioners.</p></div>
 <div class="blk dec"><div class="bt">✓ Decision — 3 : 2, talaq-e-biddat set aside</div>
 <div class="flow" style="margin:10px 0"><div class="fcap">Fig. 9 — The bench and the three opinions</div>
-<svg viewBox="0 0 960 330" width="100%" style="min-width:720px">
+<svg viewBox="0 0 960 330" width="100%">
 <rect x="240" y="12" width="480" height="44" rx="10" fill="#14213d"/>
 <text x="480" y="32" text-anchor="middle" fill="#ffd977" font-size="13.5" font-weight="bold">SHAYARA BANO v. UOI — Constitution Bench, 22.08.2017</text>
 <text x="480" y="49" text-anchor="middle" fill="#f2e8cd" font-size="12">Question: does talaq-e-biddat (instant triple talaq) have legal sanction?</text>
@@ -1102,8 +1321,8 @@ ul.cross li::before{content:"✘"; color:var(--rose);}
 </div>
 
 <h3>6.3 Judicial evolution — the full arc</h3>
-<div class="flow"><div class="fcap">Fig. 10 — Timeline: from "valid though sinful" to unconstitutional</div>
-<svg viewBox="0 0 980 210" width="100%" style="min-width:760px">
+<div class="flow flow-svg"><div class="fcap">Fig. 10 — Timeline: from "valid though sinful" to unconstitutional</div>
+<svg viewBox="0 0 980 210" width="100%">
 <line x1="40" y1="100" x2="940" y2="100" stroke="#14213d" stroke-width="3"/>
 <g font-size="11">
 <circle cx="90" cy="100" r="7" fill="#5b21b6"/><text x="90" y="128" text-anchor="middle" font-weight="bold" fill="#14213d">1932 · PC</text><text x="90" y="143" text-anchor="middle" fill="#1f3a68">Rashid Ahmad v.</text><text x="90" y="156" text-anchor="middle" fill="#1f3a68">Anisa Khatun —</text><text x="90" y="169" text-anchor="middle" fill="#a51c1c">bidaat VALID (form wins)</text>
