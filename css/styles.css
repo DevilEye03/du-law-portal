@@ -701,6 +701,8 @@ button{font-family:inherit;cursor:pointer}
 .filter-chip:hover .chip-inner-body{background:var(--bg-elevated);color:var(--text-primary)}
 .filter-chip.active .chip-inner-body{background:#ffffff;color:#0f172a}
 [data-theme="dark"] .filter-chip.active .chip-inner-body{background:#0e1117;color:#ffffff}
+[data-chip-id="completed"],
+[data-chip-id="pending"]{display:none !important}
 .tab-content-pane{display:none}
 .tab-content-pane.active{display:block}
 .hub-content-container{padding-bottom:40px}

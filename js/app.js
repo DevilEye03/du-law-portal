@@ -1003,11 +1003,10 @@
     let chips = [];
 
     if (state.currentTab === 'topics') {
-      chips = [
-        { id: 'all', label: 'All Units' },
-        { id: 'completed', label: '✅ Revised' },
-        { id: 'pending', label: '📖 To Revise' }
-      ];
+      chips = [];
+      if (state.activeQuickFilter === 'completed' || state.activeQuickFilter === 'pending') {
+        state.activeQuickFilter = 'all';
+      }
     } else if (state.currentTab === 'cases') {
       chips = [
         { id: 'all', label: 'All Cases' },
@@ -1029,6 +1028,13 @@
         { id: 'casemap', label: '⚖️ Case–Judge Maps' }
       ];
     }
+
+    if (chips.length === 0) {
+      elements.quickFilterChips.innerHTML = '';
+      elements.quickFilterChips.style.display = 'none';
+      return;
+    }
+    elements.quickFilterChips.style.removeProperty('display');
 
     elements.quickFilterChips.innerHTML = chips.map(c => `
       <button class="filter-chip ${state.activeQuickFilter === c.id ? 'active' : ''}" data-chip-id="${c.id}" type="button">
