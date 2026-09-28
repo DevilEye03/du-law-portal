@@ -405,6 +405,11 @@
     const hero = document.getElementById('heroCinematicContainer');
     const canvas = document.getElementById('waveGridCanvas');
     if (hero && canvas) {
+      // On mobile phones (< 768px), disable heavy 3D WebGL calculations to guarantee 60fps scrolling & instant load
+      if (window.innerWidth < 768) {
+        canvas.style.display = 'none';
+        return;
+      }
       window.waveGridInstance = new WaveGridBackground({
         container: hero,
         canvas: canvas,

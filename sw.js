@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v31";
+const CACHE_NAME = "du-law-portal-v32";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -10,7 +10,6 @@ const ASSETS_TO_CACHE = [
   "./js/interactive_particles.js",
   "./particles.png",
   "./js/books_showcase.js",
-  "./js/data.js",
   "./js/bare_acts.js",
   "./js/bns_converter.js",
   "./js/app.js",
@@ -18,7 +17,7 @@ const ASSETS_TO_CACHE = [
   "./manifest.json"
 ];
 
-// Install Event — Precaching Core Shell
+// Install Event — Precaching Core Shell (excluding heavy dynamic data)
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -44,14 +43,29 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Fetch Event — Network-First for HTML navigation, Cache-First for static assets
+// Fetch Event — High-Performance Hybrid Caching Strategy
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+
+  const url = new URL(event.request.url);
+
+  // 1. Never cache sw.js itself
+  if (url.pathname.endsWith("/sw.js")) {
+    return;
+  }
 
   const isHtml = event.request.mode === "navigate" || 
     (event.request.headers.get("accept") && event.request.headers.get("accept").includes("text/html"));
 
-  if (isHtml) {
+  // 2. Main Portal Shell (Network-First with immediate cache fallback)
+  const isMainShell = isHtml && (
+    url.pathname === "/" ||
+    url.pathname.endsWith("/index.html") ||
+    url.pathname.endsWith("/terms.html") ||
+    url.pathname.endsWith("/privacy.html")
+  );
+
+  if (isMainShell) {
     event.respondWith(
       fetch(event.request)
         .then((networkResponse) => {
@@ -66,26 +80,47 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  // 3. Subject Notes & Dossier HTML (Stale-While-Revalidate for instant 0.01s reader opening)
+  if (isHtml) {
+    event.respondWith(
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(event.request).then((cachedResponse) => {
+          const fetchPromise = fetch(event.request).then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              cache.put(event.request, networkResponse.clone());
+            }
+            return networkResponse;
+          }).catch(() => cachedResponse);
+
+          // Return instant cached copy if available, else wait for network
+          return cachedResponse || fetchPromise;
+        });
+      })
+    );
+    return;
+  }
+
+  // 4. Static Assets (JS, CSS, Images, Fonts, Data) — Stale-While-Revalidate
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((networkResponse) => {
-        if (
-          networkResponse &&
-          networkResponse.status === 200 &&
-          (event.request.url.includes("fonts.googleapis.com") ||
-           event.request.url.includes("fonts.gstatic.com") ||
-           event.request.url.includes("cdnjs.cloudflare.com"))
-        ) {
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-        }
-        return networkResponse;
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.match(event.request).then((cachedResponse) => {
+        const fetchPromise = fetch(event.request).then((networkResponse) => {
+          if (
+            networkResponse &&
+            networkResponse.status === 200 &&
+            (networkResponse.type === "basic" ||
+             url.hostname.includes("fonts.googleapis.com") ||
+             url.hostname.includes("fonts.gstatic.com") ||
+             url.hostname.includes("cdnjs.cloudflare.com"))
+          ) {
+            cache.put(event.request, networkResponse.clone());
+          }
+          return networkResponse;
+        }).catch(() => cachedResponse);
+
+        return cachedResponse || fetchPromise;
       });
     })
   );
 });
+
