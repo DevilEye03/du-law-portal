@@ -147,12 +147,17 @@ try {
   assert(!!drafting, 'Subject "drafting" is registered');
   assert(drafting.code === 'LB-502', 'Drafting code is LB-502');
   assert(drafting.units && drafting.units.length === 7, `Drafting has exactly 7 units (Found: ${drafting.units?.length})`);
-  assert(drafting.cases && drafting.cases.length >= 25, `Drafting landmark cases count >= 25 (Found: ${drafting.cases?.length})`);
-  assert(drafting.pyqs && drafting.pyqs.length >= 30, `Drafting PYQs with model answers >= 30 (Found: ${drafting.pyqs?.length})`);
+  assert(drafting.cases && drafting.cases.length === 51, `Drafting landmark cases count === 51 (Found: ${drafting.cases?.length})`);
+  assert(drafting.pyqs && drafting.pyqs.length === 51, `Drafting PYQs with model answers === 51 (Found: ${drafting.pyqs?.length})`);
   assert(drafting.revisions && drafting.revisions.length === 7, `Drafting revision capsules === 7 (Found: ${drafting.revisions?.length})`);
+  assert(!drafting.cases.some(c => c.issues.includes('Core question of law') || c.arguments.includes('Submissions advanced')), 'Drafting cases have zero generic placeholder text');
 
   for (let u = 1; u <= 7; u++) {
+    const uCases = drafting.cases.filter(c => c.unitNumber === u);
+    const uPyqs = drafting.pyqs.filter(p => p.unitNumber === u);
     const uRev = drafting.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Drafting Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Drafting Unit ${u} has PYQs (Found: ${uPyqs.length})`);
     assert(uRev.length > 0, `Drafting Unit ${u} has revision capsule (Found: ${uRev.length})`);
   }
   drafting.units.forEach(u => {
@@ -165,16 +170,17 @@ try {
   assert(!!industrial, 'Subject "industrial" is registered');
   assert(industrial.code === 'LB-503', 'Industrial Law code is LB-503');
   assert(industrial.units && industrial.units.length === 8, `Industrial Law has exactly 8 units (Found: ${industrial.units?.length})`);
-  assert(industrial.cases && industrial.cases.length >= 50, `Industrial Law landmark cases count >= 50 (Found: ${industrial.cases?.length})`);
-  assert(industrial.pyqs && industrial.pyqs.length >= 80, `Industrial Law PYQs with model answers >= 80 (Found: ${industrial.pyqs?.length})`);
+  assert(industrial.cases && industrial.cases.length === 78, `Industrial Law landmark cases count === 78 (Found: ${industrial.cases?.length})`);
+  assert(industrial.pyqs && industrial.pyqs.length === 73, `Industrial Law PYQs with model answers === 73 (Found: ${industrial.pyqs?.length})`);
   assert(industrial.revisions && industrial.revisions.length === 8, `Industrial Law revision capsules === 8 (Found: ${industrial.revisions?.length})`);
+  assert(!industrial.cases.some(c => c.issues.includes('Core question of law') || c.arguments.includes('Submissions advanced')), 'Industrial Law cases have zero generic placeholder text');
 
   for (let u = 1; u <= 8; u++) {
     const uCases = industrial.cases.filter(c => c.unitNumber === u);
     const uPyqs = industrial.pyqs.filter(p => p.unitNumber === u);
     const uRev = industrial.revisions.filter(r => r.unitNumber === u);
-    assert(uCases.length > 0, `Industrial Law Unit ${u} has at least 1 landmark case (Found: ${uCases.length})`);
-    assert(uPyqs.length > 0, `Industrial Law Unit ${u} has at least 1 PYQ (Found: ${uPyqs.length})`);
+    assert(uCases.length > 0, `Industrial Law Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Industrial Law Unit ${u} has PYQs (Found: ${uPyqs.length})`);
     assert(uRev.length > 0, `Industrial Law Unit ${u} has revision capsule (Found: ${uRev.length})`);
   }
   industrial.units.forEach(u => {
@@ -273,7 +279,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v50'), 'sw.js CACHE_NAME is bumped to du-law-portal-v50');
+  assert(swContent.includes('du-law-portal-v51'), 'sw.js CACHE_NAME is bumped to du-law-portal-v51');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
