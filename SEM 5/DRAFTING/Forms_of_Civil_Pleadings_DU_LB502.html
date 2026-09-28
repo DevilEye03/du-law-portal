@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forms of Pleadings — Civil | DU LL.B. LB-502 Drafting, Pleadings &amp; Conveyance</title>
+<style>
+:root{
+  --ink:#14213d; --ink2:#1d3461; --gold:#c9962e; --gold2:#f2d492; --paper:#fbf8f1;
+  --card:#ffffff; --line:#e5dcc7; --tx:#22252b; --mut:#5c6470; --accent:#7a1f1f;
+  --green:#1e6f50; --green2:#e7f5ef; --red:#a3282a; --red2:#fdecec; --blue:#1c4f8f;
+  --blue2:#eaf1fb; --violet:#5b3a9b; --violet2:#f1ecfb; --orange:#b35c10; --orange2:#fdf1e3;
+  --shadow:0 6px 24px rgba(20,33,61,.10); --radius:14px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; background:var(--paper); color:var(--tx); line-height:1.72; font-size:16.5px;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+a{color:var(--blue); text-decoration:none;}
+a:hover{text-decoration:underline;}
+/* ============ LAYOUT ============ */
+.wrap{display:flex; min-height:100vh;}
+nav#toc{width:305px; flex:0 0 305px; background:linear-gradient(180deg,#14213d 0%,#1d3461 100%); color:#e8ecf5; padding:18px 0 40px; position:sticky; top:0; height:100vh; overflow-y:auto; border-right:3px solid var(--gold); }
+nav#toc .brand{padding:14px 20px 16px; border-bottom:1px solid rgba(255,255,255,.14); margin-bottom:10px;}
+nav#toc .brand .k{font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold2);}
+nav#toc .brand .t{font-family:Georgia,serif; font-size:19px; font-weight:bold; line-height:1.3; margin-top:4px; color:#fff;}
+nav#toc .brand .s{font-size:12px; color:#aab6d0; margin-top:6px;}
+nav#toc a.sec{display:block; padding:8px 20px 8px 24px; color:#cfd8ea; font-size:13.4px; border-left:4px solid transparent; line-height:1.45;}
+nav#toc a.sec:hover{background:rgba(255,255,255,.08); color:#fff; text-decoration:none; border-left-color:var(--gold);}
+nav#toc a.sub{padding-left:44px; font-size:12.4px; color:#9faecb;}
+nav#toc .grouplbl{padding:14px 20px 4px; font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:var(--gold2); opacity:.9;}
+main{flex:1; min-width:0;}
+/* ============ HERO ============ */
+header.hero{background:
+   radial-gradient(1200px 400px at 85% -10%, rgba(201,150,46,.25), transparent 60%),
+   linear-gradient(135deg,#14213d 0%, #1d3461 55%, #27407a 100%);
+  color:#fff; padding:54px 56px 46px; border-bottom:6px solid var(--gold); position:relative; overflow:hidden;}
+header.hero .pattern{position:absolute; inset:0; opacity:.10; background-image:repeating-linear-gradient(45deg, #fff 0 1px, transparent 1px 26px); pointer-events:none;}
+.hero .ribbon{display:inline-block; background:var(--gold); color:#14213d; font-weight:700; font-size:12.5px; letter-spacing:2.6px; text-transform:uppercase; padding:7px 16px; border-radius:4px;}
+.hero h1{font-size:46px; line-height:1.12; margin:18px 0 8px; text-shadow:0 3px 14px rgba(0,0,0,.35);}
+.hero h1 .amp{color:var(--gold2);}
+.hero .lede{font-size:17.5px; color:#d7deee; max-width:980px;}
+.hero .tags{margin-top:22px; display:flex; flex-wrap:wrap; gap:10px;}
+.hero .tag{background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.30); padding:7px 14px; border-radius:30px; font-size:13px; backdrop-filter:blur(2px);}
+.hero .tag b{color:var(--gold2);}
+.hero-crest{position:absolute; right:48px; top:44px; width:132px; height:132px; opacity:.9;}
+/* ============ CONTENT ============ */
+.content{padding:40px 56px 90px; max-width:1180px;}
+section.blk{margin-bottom:58px; scroll-margin-top:18px;}
+.sec-head{display:flex; align-items:flex-start; gap:16px; border-bottom:3px double var(--gold); padding-bottom:12px; margin-bottom:22px;}
+.sec-num{flex:0 0 auto; width:52px; height:52px; border-radius:12px; background:linear-gradient(145deg,var(--ink),var(--ink2)); color:var(--gold2); font-family:Georgia,serif; font-size:22px; font-weight:bold; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow);}
+.sec-head h2{font-size:30px; color:var(--ink); line-height:1.2; letter-spacing:.2px;}
+.sec-head .sub{font-size:13.5px; color:var(--mut); font-family:"Segoe UI",sans-serif; margin-top:4px;}
+h3{font-size:21.5px; color:var(--ink2); margin:30px 0 12px; padding-left:12px; border-left:5px solid var(--gold);}
+h4{font-size:17.5px; color:var(--accent); margin:22px 0 8px;}
+p{margin:10px 0;}
+ul,ol{margin:10px 0 10px 26px;}
+li{margin:6px 0;}
+b,strong{color:var(--ink);}
+small{color:var(--mut);}
+/* source chips */
+.src{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.6px; padding:3px 10px; border-radius:20px; vertical-align:middle; margin-right:6px; text-transform:uppercase;}
+.src.du{background:#fff3d6; color:#8a6100; border:1px solid #ecd9a6;}
+.src.dunotes{background:#e7f0ff; color:#1c4f8f; border:1px solid #c9dbf6;}
+.src.kamkus{background:#f3e9ff; color:#5b3a9b; border:1px solid #ded0f7;}
+.src.icsi{background:#e6f6ef; color:#1e6f50; border:1px solid #c4e8d8;}
+.src.dpc{background:#fdeee4; color:#b35c10; border:1px solid #f5d9c2;}
+.src.web{background:#eef1f4; color:#495260; border:1px solid #d8dee6;}
+.src.case{background:#fdeaea; color:#a3282a; border:1px solid #f4cdcd;}
+/* boxes */
+.box{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px 24px; margin:16px 0; box-shadow:var(--shadow);}
+.box.note{border-left:6px solid var(--blue); background:var(--blue2);}
+.box.warn{border-left:6px solid var(--red); background:var(--red2);}
+.box.tip{border-left:6px solid var(--green); background:var(--green2);}
+.box.gold{border:1px solid #ecd9a6; background:linear-gradient(180deg,#fffaf0,#fff); border-left:6px solid var(--gold);}
+.box.dark{background:var(--ink); color:#e9edf6; border:none;}
+.box.dark h4,.box.dark h3{color:var(--gold2);}
+.box h4{margin-top:0;}
+.quote{font-family:Georgia,serif; font-style:italic; font-size:17px; background:#fffdf6; border:1px dashed var(--gold); border-radius:10px; padding:16px 20px; margin:14px 0; color:#3a3320;}
+.quote .who{display:block; margin-top:8px; font-style:normal; font-weight:bold; font-size:13.5px; color:var(--accent);}
+/* tables */
+table{width:100%; border-collapse:collapse; margin:16px 0; background:#fff; font-size:15px; box-shadow:var(--shadow); border-radius:10px; overflow:hidden;}
+th{background:var(--ink); color:#fff; padding:11px 13px; text-align:left; font-family:Georgia,serif; font-size:14.5px; letter-spacing:.3px;}
+td{padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top;}
+tr:nth-child(even) td{background:#faf7f0;}
+td.hi{font-weight:700; color:var(--ink2); background:#f4f0e4 !important;}
+/* cards grid */
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:16px 0;}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:16px 0;}
+.card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; box-shadow:var(--shadow);}
+.card .ico{font-size:26px;}
+.card h4{margin:8px 0 6px; color:var(--ink);}
+.card p,.card li{font-size:14.6px;}
+/* rule badge */
+.rulebadge{display:inline-flex; align-items:center; justify-content:center; min-width:42px; height:42px; border-radius:50%; background:var(--gold); color:#14213d; font-weight:800; font-family:Georgia,serif; font-size:17px; margin-right:10px;}
+/* flow diagrams with CSS */
+.flow{display:flex; flex-wrap:wrap; align-items:stretch; gap:0; margin:18px 0;}
+.flow .step{background:#fff; border:2px solid var(--ink2); border-radius:10px; padding:12px 14px; font-size:13.6px; min-width:130px; text-align:center; box-shadow:0 3px 10px rgba(20,33,61,.08); position:relative; display:flex; flex-direction:column; justify-content:center;}
+.flow .step b{color:var(--ink); font-size:14px;}
+.flow .step small{display:block; font-size:12px; margin-top:3px;}
+.flow .arw{align-self:center; padding:0 6px; color:var(--gold); font-size:26px; font-weight:bold; line-height:1;}
+.flowcol{display:flex; flex-direction:column; gap:10px;}
+.vflow{display:flex; flex-direction:column; align-items:center; gap:4px; margin:16px 0;}
+.vflow .step{background:#fff; border:2px solid var(--ink2); border-radius:10px; padding:10px 22px; font-size:14px; text-align:center; box-shadow:0 3px 10px rgba(20,33,61,.08); width:max-content; max-width:640px;}
+.vflow .arw{color:var(--gold); font-size:24px; line-height:1;}
+.vflow .diamond{background:#fff8e8; border:2px solid var(--gold); border-radius:4px; transform:none; padding:10px 26px; font-weight:700; color:var(--ink); clip-path:none; position:relative;}
+.yesno{display:flex; gap:30px; font-size:13px; font-weight:700;}
+.yesno .y{color:var(--green);} .yesno .n{color:var(--red);}
+/* timeline */
+.timeline{position:relative; margin:26px 6px; padding-left:0;}
+.tl-item{display:flex; gap:18px; position:relative; padding-bottom:22px;}
+.tl-item::before{content:""; position:absolute; left:19px; top:40px; bottom:-6px; width:3px; background:linear-gradient(var(--gold),var(--ink2));}
+.tl-item:last-child::before{display:none;}
+.tl-dot{flex:0 0 40px; height:40px; border-radius:50%; background:var(--ink); color:var(--gold2); display:flex; align-items:center; justify-content:center; font-weight:800; font-family:Georgia,serif; font-size:15px; border:3px solid var(--gold); z-index:2;}
+.tl-body{background:#fff; border:1px solid var(--line); border-left:5px solid var(--gold); border-radius:10px; padding:12px 18px; flex:1; box-shadow:var(--shadow);}
+.tl-body h4{margin:0 0 4px; color:var(--ink); font-size:16.5px;}
+.tl-body p{font-size:14.6px; margin:4px 0;}
+/* compare */
+.cmp{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0;}
+.cmp .bad,.cmp .good{border-radius:12px; padding:16px 18px; box-shadow:var(--shadow);}
+.cmp .bad{background:var(--red2); border:1px solid #f2c9c9; border-top:6px solid var(--red);}
+.cmp .good{background:var(--green2); border:1px solid #c9e8db; border-top:6px solid var(--green);}
+.cmp h4{margin-top:0;}
+.cmp .bad h4{color:var(--red);} .cmp .good h4{color:var(--green);}
+/* case card */
+.case{background:#fff; border:1px solid #ecd9a6; border-radius:16px; margin:26px 0; overflow:hidden; box-shadow:var(--shadow);}
+.case .chead{background:linear-gradient(120deg,var(--ink),var(--ink2)); color:#fff; padding:16px 22px;}
+.case .chead .cname{font-family:Georgia,serif; font-size:21px; font-weight:bold; color:var(--gold2);}
+.case .chead .ccit{font-size:14px; color:#cdd7ec; margin-top:4px;}
+.case .cmeta{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+.case .cmeta span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); font-size:11.5px; padding:3px 10px; border-radius:20px;}
+.case .cbody{padding:20px 24px;}
+.case .el{margin:12px 0;}
+.case .el h5{font-family:Georgia,serif; font-size:15.5px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; display:flex; align-items:center; gap:8px;}
+.case .el h5::after{content:""; flex:1; height:1px; background:var(--line);}
+.case .principle{background:#fff8e8; border:1px dashed var(--gold); border-radius:10px; padding:14px 16px; margin-top:14px; font-size:15.5px;}
+.case .principle b{color:#8a6100;}
+/* PYQ */
+.pyq{border:2px solid var(--ink2); border-radius:16px; margin:26px 0; background:#fff; overflow:hidden; box-shadow:var(--shadow);}
+.pyq .pyhead{background:repeating-linear-gradient(-45deg,var(--ink2) 0 14px,#22396b 14px 28px); color:#fff; padding:14px 22px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+.pyq .pyhead .badge{background:var(--gold); color:#14213d; font-weight:800; font-size:12.5px; padding:4px 12px; border-radius:20px; letter-spacing:1px;}
+.pyq .pyhead .q{font-family:Georgia,serif; font-size:17px; font-weight:bold;}
+.pyq .pybody{padding:18px 24px;}
+.ans{background:#f7fbf7; border:1px solid #d5ead9; border-radius:10px; padding:16px 18px; margin-top:12px;}
+.ans .lbl{display:inline-block; background:var(--green); color:#fff; font-size:11.5px; font-weight:800; letter-spacing:1.4px; padding:3px 12px; border-radius:4px; margin-bottom:8px;}
+.ans h5{font-family:Georgia,serif; color:var(--ink); font-size:16px; margin:12px 0 5px;}
+/* checklist */
+.checkgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0;}
+.chk{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; box-shadow:var(--shadow);}
+.chk .L{width:44px; height:44px; margin:0 auto 8px; border-radius:10px; background:var(--ink); color:var(--gold2); font-weight:800; font-size:20px; font-family:Georgia,serif; display:flex; align-items:center; justify-content:center;}
+.chk b{display:block; color:var(--ink); font-size:14.5px;}
+.chk small{font-size:12.6px;}
+/* misc */
+.kv{display:grid; grid-template-columns:210px 1fr; gap:6px 16px; margin:12px 0; font-size:15px;}
+.kv dt{font-weight:700; color:var(--ink2);}
+.kv dd{margin:0;}
+.tagrow{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+.pill{background:#fff; border:1px solid var(--line); border-radius:20px; padding:5px 13px; font-size:13px; color:var(--ink2); box-shadow:0 2px 6px rgba(0,0,0,.05);}
+.pill b{color:var(--accent);}
+.mn{background:linear-gradient(120deg,#14213d,#27407a); color:#fff; border-radius:14px; padding:20px 24px; margin:18px 0;}
+.mn .letters{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+.mn .letters span{background:var(--gold); color:#14213d; width:46px; height:46px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:Georgia,serif; font-size:22px;}
+.mn .letters i{align-self:center; font-style:normal; color:#cdd7ec; font-size:13.5px; margin-right:12px; max-width:150px;}
+details.acc{background:#fff; border:1px solid var(--line); border-radius:10px; margin:10px 0; box-shadow:0 2px 8px rgba(0,0,0,.05); overflow:hidden;}
+details.acc summary{cursor:pointer; padding:13px 18px; font-weight:700; color:var(--ink2); background:#f6f2e8; font-family:Georgia,serif; font-size:16px; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+details.acc summary::after{content:"+"; font-size:22px; color:var(--gold); font-weight:700;}
+details.acc[open] summary::after{content:"–";}
+details.acc .accbody{padding:14px 18px;}
+.smallcap{font-variant:small-caps; letter-spacing:1px;}
+hr.soft{border:none; border-top:1px dashed var(--line); margin:26px 0;}
+.pagenote{font-size:12.5px; color:var(--mut); background:#f4f0e4; border-radius:8px; padding:7px 12px; display:inline-block; margin:6px 0 0;}
+footer{background:var(--ink); color:#c9d2e6; padding:30px 56px; font-size:13.5px; border-top:5px solid var(--gold);}
+footer b{color:var(--gold2);}
+#toTop{position:fixed; right:26px; bottom:26px; width:48px; height:48px; border-radius:50%; border:none; background:var(--gold); color:#14213d; font-size:22px; font-weight:bold; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.28); display:none; z-index:60;}
+/* SVG helpers */
+.svgwrap{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; margin:16px 0; box-shadow:var(--shadow); overflow-x:auto;}
+.svgwrap .cap{text-align:center; font-size:13px; color:var(--mut); margin-top:6px; font-style:italic;}
+/* responsive */
+@media (max-width:1080px){
+  nav#toc{display:none;}
+  .content{padding:30px 22px 80px;}
+  header.hero{padding:38px 24px;}
+  .hero h1{font-size:33px;}
+  .hero-crest{display:none;}
+  .grid2,.grid3,.cmp,.checkgrid{grid-template-columns:1fr;}
+  .kv{grid-template-columns:1fr;}
+}
+@media print{
+  nav#toc,#toTop{display:none !important;}
+  body{background:#fff; font-size:12.5px;}
+  .content{padding:0; max-width:none;}
+  .box,.card,.case,.pyq{box-shadow:none; break-inside:avoid;}
+  header.hero{background:#14213d !important; -webkit-print-color-adjust:exact;}
+}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Root & Viewport Overflow Containment (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Container & Layout Fluid Scaling */
+  .wrap, .layout, .container, .page-wrap, main, article, .dossier, .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3. Hero Header & Covers */
+  header.cover, header.hero, .hero, .topbar {
+    padding: 24px 14px 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
+  }
+  header.cover h1, header.hero h1, .hero h1 {
+    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+    line-height: 1.22 !important;
+    margin: 10px 0 6px !important;
+    word-break: break-word !important;
+  }
+  header.cover h2, header.hero .sub, .hero .dek {
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
+  .badges, .meta {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+  .badge, .tag, .lbl {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 14px 0 !important;
+    font-size: 13.5px !important;
+  }
+  .table-wrap, .table-container, .table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+  th, td {
+    padding: 8px 10px !important;
+    min-width: 85px !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. Typography & Headings */
+  h2, h2.part, .chapter h2 {
+    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
+    margin-top: 28px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+  h3 {
+    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
+    margin-top: 22px !important;
+    line-height: 1.35 !important;
+    padding-left: 8px !important;
+    word-break: break-word !important;
+  }
+  h4, h5 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  p {
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+    margin: 8px 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 6px 0 !important;
+    overflow-wrap: break-word !important;
+  }
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 6. Grids & Multi-column Stacking */
+  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .vs > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #dedfd7) !important;
+  }
+  .branch, .fbox, .flow > div {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
+    padding: 14px 14px !important;
+    margin: 14px 0 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  .casefile .cf-head, .casefile .cf-body {
+    padding: 12px 14px !important;
+  }
+
+  /* 8. Code, Monospace & Pre Blocks */
+  pre, code, .stat {
+    max-width: 100% !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: auto !important;
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+  }
+  blockquote {
+    margin: 12px 0 !important;
+    padding: 10px 14px !important;
+    font-size: 15px !important;
+  }
+
+  /* 9. Images & SVG Diagrams */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .fig, .case-visual, figure {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+
+  /* 10. Horizontal Navigation & ToC */
+  nav.tocbar, .topbar {
+    padding: 4px 6px !important;
+    width: 100% !important;
+  }
+  nav.tocbar .inner, .topbar .toolbar {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+  }
+  nav.tocbar a, .topbar button {
+    padding: 5px 9px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+  }
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
+  }
+  .toc {
+    columns: 1 !important;
+    padding: 12px 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14.5px !important;
+  }
+  .wrap, .layout, .container, .page-wrap {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  header.cover, header.hero, .hero {
+    padding: 18px 10px 16px !important;
+  }
+  th, td {
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    min-width: 75px !important;
+  }
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
+    padding: 12px 10px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- ======================= SIDEBAR TOC ======================= -->
+<nav id="toc">
+  <div class="brand">
+    <div class="k">Part A · Pleadings</div>
+    <div class="t">Forms of Pleadings — Civil</div>
+    <div class="s">LB-502 · Drafting, Pleadings &amp; Conveyance<br>Faculty of Law, University of Delhi</div>
+  </div>
+  <div class="grouplbl">Orientation</div>
+  <a class="sec" href="#s0">0 · How to Use &amp; Master Map</a>
+  <a class="sec" href="#s1">1 · Universal Anatomy of a Form</a>
+  <div class="grouplbl">The 12 Civil Forms (pp. 10–37)</div>
+  <a class="sec" href="#s2">2 · Form 1 — O. XXXVII Recovery Suit</a>
+  <a class="sec" href="#s3">3 · Form 2 — Draft Affidavit</a>
+  <a class="sec" href="#s4">4 · Form 3 — Permanent Injunction</a>
+  <a class="sec" href="#s5">5 · Form 4 — Temporary Injunction</a>
+  <a class="sec" href="#s6">6 · Form 5 — O. XXXIX R. 2-A</a>
+  <a class="sec" href="#s7">7 · Form 6 — Indigent Person</a>
+  <a class="sec" href="#s8">8 · Form 7 — Ejectment &amp; Damages</a>
+  <a class="sec" href="#s9">9 · Form 8 — Specific Performance</a>
+  <a class="sec" href="#s10">10 · Form 9 — Model Written Statement</a>
+  <a class="sec" href="#s11">11 · Form 10 — Caveat (s. 148A)</a>
+  <a class="sec" href="#s12">12 · Form 11 — Transfer Petition</a>
+  <a class="sec" href="#s13">13 · Form 12 — Execution (O. 21)</a>
+  <div class="grouplbl">Case Law &amp; Exams</div>
+  <a class="sec" href="#s14">14 · Case-Law Compendium</a>
+  <a class="sub" href="#c1">14.1 Milkhiram v. Chamanlal</a>
+  <a class="sub" href="#c2">14.2 Rajni Kumar</a>
+  <a class="sub" href="#c3">14.3 Samee Khan v. Bindu Khan</a>
+  <a class="sub" href="#c4">14.4 Lavanya C v. Vittal Pai</a>
+  <a class="sub" href="#c5">14.5 Subramaniam Swamy</a>
+  <a class="sub" href="#c6">14.6 Deepak Khosla &amp; caveat</a>
+  <a class="sub" href="#c7">14.7 Indigent &amp; injunction cases</a>
+  <a class="sec" href="#s15">15 · PYQs &amp; Model Answers</a>
+  <a class="sec" href="#s16">16 · Revision Kit &amp; Glossary</a>
+</nav>
+
+<main>
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="pattern"></div>
+  <svg class="hero-crest" viewBox="0 0 100 100" aria-hidden="true">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#f2d492" stroke-width="2.5"/>
+    <rect x="24" y="20" width="52" height="64" rx="4" fill="none" stroke="#f2d492" stroke-width="2.6"/>
+    <path d="M34 34 h32 M34 44 h32 M34 54 h24 M34 64 h30" stroke="#f2d492" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M64 68 l8 8 l14 -18" fill="none" stroke="#f2d492" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span class="ribbon">📘 LL.B. V Term · Paper LB-502 · Part A-II (Pages 10–37)</span>
+  <h1>FORMS <span class="amp">of</span> PLEADINGS — CIVIL</h1>
+  <p class="lede">Absolutely complete, exam-oriented notes on <b>“II · Forms of Pleadings — Civil”</b> — the twelve model
+  civil forms of the University of Delhi’s official case material (Suit under O. XXXVII, Affidavit, Permanent &amp; Temporary
+  Injunctions, O. XXXIX R. 2-A, Indigent Person, Ejectment, Specific Performance, Written Statement, Caveat, Transfer
+  Petition, Execution) — every provision, every paragraph of each model draft explained, case laws in full
+  (facts · issues · arguments · decision · principle), DU PYQs with model answers, and diagrams &amp; flowcharts.</p>
+  <div class="tags">
+    <span class="tag">📘 <b>Primary source:</b> DU Case Material 2025 (pp. 10–37)</span>
+    <span class="tag">🧾 <b>All 12 model forms</b> paragraph-wise</span>
+    <span class="tag">⚖️ <b>Case laws in full detail</b></span>
+    <span class="tag">📝 <b>DU PYQs</b> + KAMKUS question bank</span>
+    <span class="tag">🧭 <b>Diagrams &amp; flowcharts</b></span>
+    <span class="tag">🔗 Companion: <b>Drafting Rules &amp; Skills (pp. 1–9)</b></span>
+  </div>
+</header>
+
+<div class="content">
+
+<section class="blk" id="s0">
+  <div class="sec-head"><div class="sec-num">0</div>
+    <div><h2>How to Use These Notes &amp; the Master Map of the Twelve Forms</h2>
+    <div class="sub">DU Case Material · Part A–II · “FORMS OF PLEADINGS — CIVIL PLEADINGS” (material pp. 10–37)</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>What this unit is</h4>
+    <p>After the theory of Unit I (“Drafting Rules &amp; Skills”, pp. 1–9), the DU case material moves to
+    <b>practice</b>: twelve ready-to-use <b>model forms</b> covering the entire life-cycle of a civil case —
+    <b>institution</b> (suit, plaints), <b>defence</b> (written statement), <b>interim stage</b> (injunctions,
+    affidavit), <b>access to court</b> (indigent person), <b>post-judgment</b> (execution), and
+    <b>special applications</b> (caveat, transfer). Each form is a specimen of the <b>four fundamental rules of
+    pleading</b> operating in real drafting: material facts in chronological order, no evidence, precise dates/sums,
+    verification + supporting affidavit. These notes explain <b>every form paragraph-by-paragraph</b>, add the
+    <b>governing provisions</b> (CPC Orders XXXVII, XXXIX, XXXIII, XXI; ss. 151, 148A, 25; Specific Relief Act;
+    Transfer of Property Act; Limitation Act…), the <b>case law</b>, and the <b>DU/PYQ questions</b> on each form.</p>
+    <p><b>Study method:</b> (1) read the master map below; (2) for each form — first the “provision box” (the law),
+    then the “anatomy/walkthrough” (the DU model paragraph-wise), then the boxed <i>exam points</i>;
+    (3) finish with § 14 (cases) and § 15 (PYQs). Everything marked <span class="src du">DU</span> is verbatim/near-verbatim
+    from the prescribed case material.</p>
+  </div>
+
+  <h3>0.1 The master map — what each form is, and the law that governs it</h3>
+  <table>
+    <tr><th style="width:4%;">#</th><th style="width:26%;">Form (DU title)</th><th style="width:12%;">DU pages</th><th style="width:16%;">Type</th><th>Governing provisions (study at)</th></tr>
+    <tr><td class="hi">1</td><td><b>Suit for recovery under Order XXXVII</b></td><td>10–12</td><td>Plaint (summary suit)</td><td>O. XXXVII Rr. 1–6 CPC · O. VII R. 1 · O. VI R. 2 · Art. 137 Limitation Act · Court Fees Act s. 7 → <a href="#s2">§ 2</a></td></tr>
+    <tr><td class="hi">2</td><td><b>Draft Affidavit</b></td><td>13</td><td>Supporting document</td><td>O. XIX CPC (Rr. 1–3) · s. 139 CPC · O. VI R. 15(4) · IPC 199/200 → BNS 236/237 → <a href="#s3">§ 3</a></td></tr>
+    <tr><td class="hi">3</td><td><b>Suit for Permanent Injunction</b></td><td>14–16</td><td>Plaint</td><td>SRA 1963 ss. 36–43 (esp. ss. 41, 42) · O. VII R. 1 · s. 9 CPC → <a href="#s4">§ 4</a></td></tr>
+    <tr><td class="hi">4</td><td><b>Application for Temporary Injunction (O. XXXIX Rr. 1 &amp; 2)</b></td><td>17–18</td><td>Interlocutory application</td><td>O. XXXIX Rr. 1, 2 · s. 151 CPC · “three-prong” test → <a href="#s5">§ 5</a></td></tr>
+    <tr><td class="hi">5</td><td><b>Application under O. XXXIX R. 2-A</b></td><td>19–20</td><td>Contempt-for-breach application</td><td>O. XXXIX R. 2A · s. 151 CPC · vs. Contempt of Courts Act 1971 → <a href="#s6">§ 6</a></td></tr>
+    <tr><td class="hi">6</td><td><b>Application to sue as Indigent Person (O. XXXIII r/w s. 151)</b></td><td>21–22</td><td>Pauper application with suit</td><td>O. XXXIII Rr. 1–18 · Court Fees Act 1870 · O. 43/44 · Art. 39A · LSA Act 1987 → <a href="#s7">§ 7</a></td></tr>
+    <tr><td class="hi">7</td><td><b>Suit for Ejectment &amp; Damages for Wrongful Use and Occupation</b></td><td>23–25</td><td>Plaint</td><td>TPA ss. 105, 106, 108, 111 · Delhi Rent Control Act s. 3 (₹3,500 exemption) · mesne profits → <a href="#s8">§ 8</a></td></tr>
+    <tr><td class="hi">8</td><td><b>Suit for Specific Performance of Contract</b></td><td>26–27</td><td>Plaint</td><td>SRA ss. 10–20 (esp. ss. 14, 16(c)) · Art. 54 Limitation Act · TPA s. 54 / Registration Act → <a href="#s9">§ 9</a></td></tr>
+    <tr><td class="hi">9</td><td><b>Model Draft Written Statement</b></td><td>28–30</td><td>Defence pleading</td><td>O. VIII Rr. 1–10 · O. VI R. 2 · s. 11 CPC (res judicata) · SRA ss. 14/34/41 · s. 80 CPC · Partnership Act s. 69 · Benami Act s. 4 → <a href="#s10">§ 10</a></td></tr>
+    <tr><td class="hi">10</td><td><b>Caveat under s. 148A CPC</b></td><td>31–32</td><td>Protective application</td><td>s. 148A(1)–(5) CPC · O. VI verification rules → <a href="#s11">§ 11</a></td></tr>
+    <tr><td class="hi">11</td><td><b>Transfer Petition (Civil) under s. 25 CPC</b></td><td>33–35</td><td>Original petition (Supreme Court)</td><td>s. 25 CPC + O. XLI SC Rules 2013 · s. 24 CPC (cross-ref) → <a href="#s12">§ 12</a></td></tr>
+    <tr><td class="hi">12</td><td><b>Execution Application</b></td><td>36–37</td><td>Post-decree application</td><td>ss. 36–74 + O. XXI CPC (esp. R. 11) · Form No. 6, Appendix E · Art. 136 Limitation Act · s. 51 CPC → <a href="#s13">§ 13</a></td></tr>
+  </table>
+
+  <h3>0.2 One-glance architecture — where each form sits in the life of a case</h3>
+  <div class="box gold">
+  <svg viewBox="0 0 940 470" width="100%" role="img" aria-label="Map of the 12 civil forms across the life of a case">
+    <defs><marker id="a0" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c9962e"/></marker></defs>
+    <text x="470" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#14213d">LIFE OF A CIVIL CASE → THE TWELVE DU FORMS</text>
+    <!-- stage boxes -->
+    <rect x="20" y="52" width="196" height="74" rx="10" fill="#1e6f50"/><text x="118" y="76" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">1 · INSTITUTION</text>
+    <text x="118" y="96" text-anchor="middle" fill="#e9edf6" font-size="11.5">Plaint / summary suit</text><text x="118" y="113" text-anchor="middle" fill="#f2d492" font-size="11.5">Forms 1, 3, 7, 8</text>
+    <rect x="236" y="52" width="176" height="74" rx="10" fill="#14508c"/><text x="324" y="76" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">2 · SUPPORT</text>
+    <text x="324" y="96" text-anchor="middle" fill="#e9edf6" font-size="11.5">Affidavit (with every suit)</text><text x="324" y="113" text-anchor="middle" fill="#f2d492" font-size="11.5">Form 2</text>
+    <rect x="432" y="52" width="176" height="74" rx="10" fill="#b35c10"/><text x="520" y="76" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">3 · DEFENCE</text>
+    <text x="520" y="96" text-anchor="middle" fill="#e9edf6" font-size="11.5">Written statement</text><text x="520" y="113" text-anchor="middle" fill="#f2d492" font-size="11.5">Form 9</text>
+    <rect x="628" y="52" width="292" height="74" rx="10" fill="#a3282a"/><text x="774" y="76" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">4 · INTERIM / PROTECTIVE</text>
+    <text x="774" y="96" text-anchor="middle" fill="#e9edf6" font-size="11.5">Injunctions · O. XXXIX R. 2A · Pauper · Caveat</text><text x="774" y="113" text-anchor="middle" fill="#f2d492" font-size="11.5">Forms 4, 5, 6, 10</text>
+    <rect x="20" y="186" width="280" height="74" rx="10" fill="#5b3a9b"/><text x="160" y="210" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">5 · SPECIAL FORUM</text>
+    <text x="160" y="230" text-anchor="middle" fill="#e9edf6" font-size="11.5">Transfer to another court (s. 25, SC)</text><text x="160" y="247" text-anchor="middle" fill="#f2d492" font-size="11.5">Form 11</text>
+    <rect x="320" y="186" width="280" height="74" rx="10" fill="#17402b"/><text x="460" y="210" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">6 · POST-JUDGMENT</text>
+    <text x="460" y="230" text-anchor="middle" fill="#e9edf6" font-size="11.5">Execution of decree (O. XXI)</text><text x="460" y="247" text-anchor="middle" fill="#f2d492" font-size="11.5">Form 12</text>
+    <rect x="620" y="186" width="300" height="74" rx="10" fill="#4a3612"/><text x="770" y="210" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">0 · PRE-EMPTIVE</text>
+    <text x="770" y="230" text-anchor="middle" fill="#e9edf6" font-size="11.5">Before any order is passed</text><text x="770" y="247" text-anchor="middle" fill="#f2d492" font-size="11.5">Caveat also sits here — Form 10</text>
+    <!-- flow arrows -->
+    <line x1="118" y1="126" x2="118" y2="160" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a0)"/>
+    <line x1="324" y1="126" x2="324" y2="160" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a0)"/>
+    <line x1="520" y1="126" x2="520" y2="160" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a0)"/>
+    <line x1="774" y1="126" x2="774" y2="160" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a0)"/>
+    <text x="470" y="176" text-anchor="middle" fill="#6b7280" font-size="11" font-style="italic">filed at whatever stage the need arises →</text>
+    <!-- universal spine -->
+    <rect x="20" y="290" width="900" height="150" rx="12" fill="#14213d"/>
+    <text x="470" y="318" text-anchor="middle" font-weight="bold" fill="#f2d492" font-size="14">EVERY FORM SHARES ONE SPINE (see § 1)</text>
+    <text x="470" y="344" text-anchor="middle" fill="#fff" font-size="12.5">Court heading → Cause title (parties) → Title of the form (provision!) → “MOST RESPECTFULLY SHOWETH” (numbered paragraphs of material facts)</text>
+    <text x="470" y="366" text-anchor="middle" fill="#fff" font-size="12.5">→ PRAYER (lettered) → Signature of party + advocate → VERIFICATION (knowledge vs information) → [Affidavit in support]</text>
+    <text x="470" y="394" text-anchor="middle" fill="#f2d492" font-size="12">Unit-I rules embedded: facts not law · material facts only · no evidence · chronology · figures + words · one fact per paragraph</text>
+    <text x="470" y="418" text-anchor="middle" fill="#9fb3d9" font-size="11.5">Annexures are the evidence-link: “copy annexed as Annexure A/B” — pleaded document, proved later (Rule 3 of Unit I in action)</text>
+  </svg>
+  </div>
+
+  <h3>0.3 Sourcing legend</h3>
+  <p style="font-size:14.5px;">
+  <span class="src du">DU Case Material</span> official model forms pp. 10–37 ·
+  <span class="src dunotes">DU Notes</span> companion DU pleadings notes ·
+  <span class="src kamkus">KAMKUS</span> prescribed-style book (affidavit, IA, execution chapters; question bank) ·
+  <span class="src dpc">DPC Skill</span> paragraph-by-paragraph O. XXXVII walkthrough (skill notes) ·
+  <span class="src web">web</span> bare Acts &amp; leading judgments verified online ·
+  <span class="src icsi">ICSI</span> study material.</p>
+</section>
+
+<section class="blk" id="s1">
+  <div class="sec-head"><div class="sec-num">1</div>
+    <div><h2>The Universal Anatomy of a Civil Form</h2>
+    <div class="sub">Components common to all twelve models — learn once, apply everywhere</div></div>
+  </div>
+
+  <h3>1.1 The eight components (with the provision or rule behind each)</h3>
+  <table>
+    <tr><th style="width:18%;">Component</th><th style="width:38%;">What it contains (DU practice)</th><th>Provision / rule &amp; drafting discipline</th></tr>
+    <tr><td class="hi">1 · Court heading</td><td>“IN THE COURT OF …, … COURT, DELHI” + Suit/I.A./Caveat/Execution number + year; bracketed nature of the form, e.g. “(SUIT UNDER ORDER XXXVII OF THE CPC, 1908)”.</td><td>Correct court = jurisdiction (s. 6 read with ss. 15–17 CPC); title must carry the <b>provision under which the form is filed</b> — grounds must be pleaded in the words of that provision (KAMKUS IA rule).</td></tr>
+    <tr><td class="hi">2 · Cause title</td><td>“IN THE MATTER OF” block: party description — name, s/o, r/o; company “incorporated under the Companies Act, through its Director”; then <b>PLAINTIFF / DEFENDANT</b> (or applicant/respondent, decree-holder/judgment-debtor, caveator).</td><td>O. VI R. 2(2): <b>consistent names &amp; party labels</b> throughout; s. 60 CPC (description to enable attachment); companies sue in firm name — O. XXX; Union of India/State per Art. 300.</td></tr>
+    <tr><td class="hi">3 · Title of the form</td><td>The exact name of the remedy + provision, e.g. “SUIT FOR EJECTMENT AND DAMAGES…”, “APPLICATION UNDER ORDER XXXIX RULE 2-A READ WITH SECTION 151 CPC”.</td><td>Title = notice of relief; must match the prayer (a suit for injunction cannot pray for specific performance).</td></tr>
+    <tr><td class="hi">4 · Body — “MOST RESPECTFULLY SHOWETH”</td><td>Consecutively numbered paragraphs: identity → background (inducement) → transaction → performance → breach/cause → notice/demand → cause of action → limitation → jurisdiction → valuation → maintaining provision.</td><td>O. VI R. 2: <b>material facts only</b>, chronology, one fact per para, dates/sums in figures <i>and</i> words; no evidence — annexure references only (“copy annexed as Annexure ‘A’”).</td></tr>
+    <tr><td class="hi">5 · Grounds (applications)</td><td>Separate headed “GROUNDS” (transfer petition) or numbered grounds inside the body (temp. injunction paras 3–5 = the three-prong test).</td><td>O. VIII R. 7 discipline (grounds stated separately &amp; distinctly); each ground must be fact-based.</td></tr>
+    <tr><td class="hi">6 · PRAYER</td><td>Lettered/numbered (a),(b),(c)…: main relief first, interest/costs, omnibus “such other and further orders”.</td><td>O. VII R. 1(iii) + O. VI R. 6 (conditions precedent distinct); never claim relief outside the invoking provision (O. XXXVII para 17 of Form 1 shows this expressly).</td></tr>
+    <tr><td class="hi">7 · Signature block</td><td>“Place / Date” + party + “Through Advocate”.</td><td>O. VI R. 14 — signed by party <b>and</b> pleader; authorised agent if party cannot sign.</td></tr>
+    <tr><td class="hi">8 · Verification (+ affidavit)</td><td>“Verified at Delhi on … day of …” distinguishing paras true <b>to my knowledge</b> vs <b>on information received and believed to be true</b>; “last para is the humble prayer”.</td><td>O. VI R. 15 (+ R. 15A commercial disputes); O. VI R. 15(4) — plaint supported by affidavit <span class="src kamkus">KAMKUS</span>; false verification = IPC 191/193 → BNS 227/229; affidavit’s own verification: O. XIX R. 3.</td></tr>
+  </table>
+
+  <div class="box dark">
+    <h4>🧩 The one-line story method (skill notes, applied to every form)</h4>
+    <p>“A good pleading tells the Court a <b>legally relevant story in logical sequence</b>.” For any DU form, ask in order:
+    <b>Who? → What transaction? → What performance? → How much? → What default/breach? → What demand/notice?
+    → What cause of action? → Why this Court? → What provision? → What relief? → Who verifies?</b>
+    <span class="src dpc">DPC Skill — A-to-T model flow (used on Form 1, portable to all)</span></p>
+  </div>
+
+  <h3>1.2 The supporting ecosystem — what else is filed with each form</h3>
+  <svg viewBox="0 0 940 380" width="100%" role="img" aria-label="Supporting documents ecosystem for civil forms">
+    <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c9962e"/></marker></defs>
+    <rect x="350" y="20" width="240" height="60" rx="12" fill="#14213d"/>
+    <text x="470" y="46" text-anchor="middle" fill="#f2d492" font-weight="bold" font-size="15">THE MAIN FORM</text>
+    <text x="470" y="66" text-anchor="middle" fill="#fff" font-size="12">plaint · WS · application · petition</text>
+    <line x1="470" y1="80" x2="470" y2="112" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <rect x="350" y="118" width="240" height="52" rx="10" fill="#1e6f50"/>
+    <text x="470" y="140" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">VERIFICATION (O. VI R. 15)</text>
+    <text x="470" y="158" text-anchor="middle" fill="#e9edf6" font-size="11.5">knowledge vs information · date &amp; place</text>
+    <line x1="350" y1="144" x2="180" y2="144" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <line x1="590" y1="144" x2="760" y2="144" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <rect x="30" y="118" width="150" height="52" rx="10" fill="#14508c"/>
+    <text x="105" y="140" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="bold">AFFIDAVIT</text>
+    <text x="105" y="158" text-anchor="middle" fill="#e9edf6" font-size="11">O. XIX · Form 2</text>
+    <rect x="760" y="118" width="150" height="52" rx="10" fill="#14508c"/>
+    <text x="835" y="140" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="bold">VAKALATNAMA</text>
+    <text x="835" y="158" text-anchor="middle" fill="#e9edf6" font-size="11">authorises the advocate</text>
+    <line x1="470" y1="170" x2="470" y2="202" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <rect x="300" y="208" width="340" height="52" rx="10" fill="#b35c10"/>
+    <text x="470" y="230" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">ANNEXURES (pleaded documents)</text>
+    <text x="470" y="248" text-anchor="middle" fill="#e9edf6" font-size="11.5">agreement, cheque, dishonour memo, notice, order copies — “copy annexed as Annexure A”</text>
+    <line x1="300" y1="234" x2="180" y2="234" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <line x1="640" y1="234" x2="760" y2="234" stroke="#c9962e" stroke-width="2.5" marker-end="url(#a1)"/>
+    <rect x="30" y="208" width="150" height="52" rx="10" fill="#5b3a9b"/>
+    <text x="105" y="230" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="bold">COURT-FEE</text>
+    <text x="105" y="248" text-anchor="middle" fill="#e9edf6" font-size="11">Court Fees Act 1870 s. 7</text>
+    <rect x="760" y="208" width="150" height="52" rx="10" fill="#5b3a9b"/>
+    <text x="835" y="230" text-anchor="middle" fill="#fff" font-size="12.5" font-weight="bold">LIST OF DOCUMENTS</text>
+    <text x="835" y="248" text-anchor="middle" fill="#e9edf6" font-size="11">O. VII R. 1-A inventory</text>
+    <rect x="30" y="300" width="880" height="56" rx="10" fill="#fff" stroke="#e3d7bb" stroke-width="2"/>
+    <text x="470" y="322" text-anchor="middle" fill="#14213d" font-size="13" font-weight="bold">RULE OF THUMB</text>
+    <text x="470" y="342" text-anchor="middle" fill="#4a5568" font-size="12">A document is <b>pleaded</b> by reference (material fact) → <b>annexed</b> (notice to the other side) → <b>proved</b> at trial (evidence). Never quote the whole document; state its effect (O. VI R. 9).</text>
+  </svg>
+
+  <div class="box tip">
+    <h4>✍️ Drafting mechanics repeated across all twelve DU forms</h4>
+    <ul>
+      <li><b>Paragraph discipline:</b> every allegation “That…” in its own numbered paragraph; connected facts may share a paragraph only if inseparable (O. VI R. 2(2)).</li>
+      <li><b>Dates &amp; sums</b> in figures and words (O. VI R. 2(3)); the DU forms leave blanks with “Rs. …../- (Amount in words)” — never omit the words.</li>
+      <li><b>Brevity clause:</b> applications incorporate the parent pleading by reference — “contents of the accompanying suit may be read as part and parcel of this application which are not repeated here for the sake of brevity” (DU Forms 4, 6 — KAMKUS IA practice).</li>
+      <li><b>Affidavit off-loading:</b> where facts are long, the application says “For the reasons above in the annexed affidavit, the applicant prays…” (KAMKUS IA drafting rule).</li>
+      <li><b>“Note” at the end of DU forms:</b> the material’s own exam pointers — e.g. Form 1: “correct paragraphs in verification · territorial &amp; pecuniary jurisdiction”; Form 9: “Counter-claim, Set-off can be joined… verified and supported by affidavit”.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 2 : FORM 1 ======================= -->
+<section class="blk" id="s2">
+  <div class="sec-head"><div class="sec-num">2</div>
+    <div><h2>Form 1 — Suit for Recovery under Order XXXVII CPC (DU pp. 10–12)</h2>
+    <div class="sub">The summary suit — provisions, paragraph-wise anatomy, real example, procedure flowchart</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 10–12</span></h4>
+    <p><b>Heading:</b> “IN THE COURT OF DISTRICT JUDGE (DISTRICT ….), ….. COURT, DELHI — SUIT NO. … OF 20..
+    (SUIT UNDER ORDER XXXVII OF THE CODE OF CIVIL PROCEDURE, 1908)” · <b>Parties:</b> M/s ABC Pvt. Ltd. (company
+    through its Director) <i>v.</i> Mr. B (individual) · <b>Title:</b> “SUIT FOR RECOVERY OF RS. …../-(Amount in words)
+    UNDER ORDER XXXVII…” · <b>Body:</b> 17 paragraphs · <b>Prayer:</b> (a)–(d) · <b>Verification</b> ·
+    <b>“[NOTE: The above plaint must be supported by an Affidavit]”</b> · <b>DU student-note:</b>
+    “A student should mention the <b>correct paragraphs in the verification</b>. Also, the student should focus on
+    <b>territorial and pecuniary jurisdiction</b>.”</p>
+    <p><b>The story pleaded:</b> construction company built defendant’s paper-mill building → final bill → defendant
+    gave a cheque → cheque <b>dishonoured</b> → demands → legal notice → non-payment → suit for principal + interest
+    under the summary procedure. (Notice the dual gate: a <b>written contract</b> debt AND a cheque — both squarely
+    inside O. XXXVII R. 1.)</p>
+  </div>
+
+  <h3>2.1 The whole of Order XXXVII — rule by rule</h3>
+  <table>
+    <tr><th style="width:14%;">Rule</th><th>What it says (exam-ready)</th></tr>
+    <tr><td class="hi">R. 1 — Scope</td><td>Order applies to suits for recovery of money or other property by the <b>plaintiff</b> against a <b>defendant</b>, where the claim: (a) is founded upon a <b>bill of exchange, hundi or promissory note</b>; or (b) is for a <b>liquidated demand in money</b> payable by the defendant with or without interest — arising upon a <b>written contract</b>, or upon an <b>enactment</b> (fixed sum / debt other than a penalty), or upon a <b>guarantee</b> (principal claim being debt or liquidated demand). <b>Not</b> for unliquidated damages, declaratory or equitable reliefs.</td></tr>
+    <tr><td class="hi">R. 2 — Institution</td><td>Plaint states expressly that it is filed under O. XXXVII and claims <b>no relief outside</b> the Order. Court issues <b>summons</b>; defendant must appear within <b>10 days</b> of service and give address for service. Then plaintiff serves <b>“summons for judgment”</b> supported by <b>affidavit verifying the cause of action and amount</b>.</td></tr>
+    <tr><td class="hi">R. 3 — Appearance &amp; leave to defend</td><td><b>R. 3(5):</b> within <b>10 days</b> of service of summons for judgment, defendant may apply <b>by affidavit or otherwise</b>, disclosing facts sufficient to entitle him to defend — leave granted <b>unconditionally or on terms</b> (deposit/security). <b>Proviso:</b> leave <b>shall not be refused</b> unless court satisfied the facts disclosed do <b>not indicate a substantial defence</b> or that the intended defence is <b>frivolous/vexatious</b>. <b>2nd Proviso:</b> part admitted → that part must be <b>deposited</b> first. <b>R. 3(6):</b> no appearance / no application / refusal of leave / breach of conditions → <b>plaintiff entitled to judgment forthwith</b> (deemed admissions). <b>R. 3(7):</b> delay excusable for sufficient cause.</td></tr>
+    <tr><td class="hi">R. 4 — Setting aside</td><td>After decree, court may, under <b>special circumstances</b>, set aside the decree, stay/set aside execution and give leave to defend — on such terms as it thinks fit (also s. 151 residual power).</td></tr>
+    <tr><td class="hi">R. 5</td><td>Power to order the bill/note to be <b>deposited with an officer of the court</b>.</td></tr>
+    <tr><td class="hi">R. 6</td><td>Recovery of <b>costs of noting non-acceptance</b> of a dishonoured bill or note.</td></tr>
+  </table>
+  <p class="smallcap"><span class="src web">bare Act verified</span> · related: O. VII R. 1 (plaint contents) · O. VI R. 2 (material facts) · Limitation Act Art. 137 (3 years, ordinary suit) · s. 138 NI Act parallel criminal remedy (DU Form 29) · Court Fees Act s. 7 (valuation) · Commercial Courts Act amendments (summary suits are the workhorse of specified-value commercial litigation under the Commercial Courts Act, 2015).</p>
+
+  <h3>2.2 Procedure flowchart — how a summary suit runs</h3>
+  <div class="box gold">
+  <svg viewBox="0 0 940 300" width="100%" role="img" aria-label="Order 37 summary suit procedure flow">
+    <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c9962e"/></marker></defs>
+    <text x="470" y="24" text-anchor="middle" font-weight="bold" font-size="15.5" fill="#14213d">O. XXXVII PROCEDURE — FROM PLAINT TO DECREE</text>
+    <rect x="14" y="46" width="140" height="74" rx="9" fill="#1e6f50"/><text x="84" y="68" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">1. PLAINT (R. 2)</text><text x="84" y="86" text-anchor="middle" fill="#e9edf6" font-size="10.5">“Suit under O. XXXVII”</text><text x="84" y="102" text-anchor="middle" fill="#f2d492" font-size="10.5">+ affidavit of CoA</text>
+    <rect x="174" y="46" width="130" height="74" rx="9" fill="#14508c"/><text x="239" y="68" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">2. SUMMONS</text><text x="239" y="86" text-anchor="middle" fill="#e9edf6" font-size="10.5">Defendant appears</text><text x="239" y="102" text-anchor="middle" fill="#f2d492" font-size="10.5">within 10 days</text>
+    <rect x="324" y="46" width="150" height="74" rx="9" fill="#14508c"/><text x="399" y="68" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">3. SUMMONS FOR</text><text x="399" y="86" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">JUDGMENT (R. 3)</text><text x="399" y="104" text-anchor="middle" fill="#f2d492" font-size="10.5">by plaintiff + affidavit</text>
+    <rect x="494" y="46" width="170" height="74" rx="9" fill="#b35c10"/><text x="579" y="68" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">4. LEAVE TO DEFEND</text><text x="579" y="86" text-anchor="middle" fill="#e9edf6" font-size="10.5">application in 10 days</text><text x="579" y="102" text-anchor="middle" fill="#f2d492" font-size="10.5">+ affidavit of defence</text>
+    <rect x="684" y="40" width="242" height="88" rx="9" fill="#14213d"/>
+    <text x="805" y="60" text-anchor="middle" fill="#f2d492" font-size="12" font-weight="bold">5. COURT’S DECISION</text>
+    <text x="805" y="78" text-anchor="middle" fill="#fff" font-size="10.5">Unconditional leave → full trial</text>
+    <text x="805" y="94" text-anchor="middle" fill="#fff" font-size="10.5">Conditional (deposit/security) → then trial</text>
+    <text x="805" y="110" text-anchor="middle" fill="#fff" font-size="10.5">Refused / no application → JUDGMENT for plaintiff</text>
+    <line x1="154" y1="83" x2="174" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a2)"/>
+    <line x1="304" y1="83" x2="324" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a2)"/>
+    <line x1="474" y1="83" x2="494" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a2)"/>
+    <line x1="664" y1="83" x2="684" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a2)"/>
+    <rect x="14" y="162" width="446" height="118" rx="9" fill="#fff" stroke="#e3d7bb" stroke-width="2"/>
+    <text x="237" y="186" text-anchor="middle" fill="#14213d" font-size="13" font-weight="bold">THE “SUBSTANTIAL DEFENCE” TEST (leading case)</text>
+    <text x="237" y="208" text-anchor="middle" fill="#4a5568" font-size="11.5"><i>Milkhiram v. Chamanlal Bros.</i>, AIR 1965 SC 1698 (4-Judge Bench):</text>
+    <text x="237" y="226" text-anchor="middle" fill="#4a5568" font-size="11.5">ask whether the defence raises a <b>real issue, not a sham</b> — if the alleged facts are</text>
+    <text x="237" y="243" text-anchor="middle" fill="#4a5568" font-size="11.5">established, is there a good or even plausible defence? → <b>grant leave</b></text>
+    <text x="237" y="262" text-anchor="middle" fill="#a3282a" font-size="11.5">(triable issue + fair defence → ordinarily unconditional leave — see § 14.1)</text>
+    <rect x="480" y="162" width="446" height="118" rx="9" fill="#fff" stroke="#e3d7bb" stroke-width="2"/>
+    <text x="703" y="186" text-anchor="middle" fill="#14213d" font-size="13" font-weight="bold">PLAINTIFF’S AFFIDAVIT (R. 2) = DU FORM 2</text>
+    <text x="703" y="208" text-anchor="middle" fill="#4a5568" font-size="11.5">The DU scheme pairs Form 1 with the Draft Affidavit: deponent (director)</text>
+    <text x="703" y="226" text-anchor="middle" fill="#4a5568" font-size="11.5">swears (i) authority &amp; knowledge from business records, (ii) suit drafted</text>
+    <text x="703" y="243" text-anchor="middle" fill="#4a5568" font-size="11.5">on instructions &amp; true, (iii) annexures are true copies → § 3</text>
+    <text x="703" y="262" text-anchor="middle" fill="#14508c" font-size="11.5">O. VI R. 15(4): plaint “must be supported by an affidavit” (KAMKUS)</text>
+  </svg>
+  </div>
+
+  <h3>2.3 Paragraph-by-paragraph walkthrough (the DU 17-paragraph anatomy)</h3>
+  <table>
+    <tr><th style="width:8%;">Para</th><th style="width:34%;">DU model language (condensed)</th><th style="width:26%;">Fact → legal purpose</th><th>Rule applied (Unit I / provision)</th></tr>
+    <tr><td class="hi">1</td><td>Plaintiff is a company constituted under the Companies Act; Mr. P (Executive Director) is “duly constituted attorney… authorised and competent to sign and verify the plaint, vakalatnama etc., and to institute this suit”.</td><td>Authority to institute (representative capacity)</td><td>O. VI R. 14 signature; O. XXX (company suing); competence/authority pleaded as fact</td></tr>
+    <tr><td class="hi">2</td><td>Business of construction, engineering &amp; designing; “builder of international repute”.</td><td>Background / inducement</td><td>Inducement — kept minimal (exception (b) to Rule 2)</td></tr>
+    <tr><td class="hi">3</td><td>Defendant resides at …</td><td>Identification · service · jurisdiction</td><td>O. VI R. 2(2) names/addresses; s. 16/17 CPC</td></tr>
+    <tr><td class="hi">4–6</td><td>Defendant approached plaintiff to construct paper-mill building → agreement as per site plan &amp; specifications → construction completed &amp; possession handed over on (date).</td><td>Contract → plaintiff’s performance</td><td>Material facts; condition precedent (performance) implied — O. VI R. 6</td></tr>
+    <tr><td class="hi">7</td><td>Final bill of Rs. … raised on (date).</td><td>Quantification trigger</td><td>Sum in figures (+ words per rule)</td></tr>
+    <tr><td class="hi">8–9</td><td>Defendant handed over cheque No. … dated … for Rs. … drawn on … → presented → <b>dishonoured vide bank memo dated …</b></td><td>Instrument + default</td><td>O. XXXVII R. 1 gate (cheque/written contract); document’s effect stated, not its text (O. VI R. 9); bank memo = annexure, not evidence</td></tr>
+    <tr><td class="hi">10</td><td>Immediate information + demand with interest @ …% p.a.; “despite repeated requests and reminders” defendant failed.</td><td>Demand &amp; continued default</td><td>Material facts of demand; no witness-list of reminders (facts ≠ evidence)</td></tr>
+    <tr><td class="hi">11</td><td>Final <b>legal notice dated …</b> demanding Rs. … + interest; no payment despite notice.</td><td>Formal demand (condition precedent to some claims; not to a cheque suit)</td><td>Notice alleged as fact — O. VI R. 11</td></tr>
+    <tr><td class="hi">12</td><td>Amount now due: Rs. … + interest @ …% from (date of bill) to date of filing.</td><td>Relief quantified</td><td>O. VII R. 1(v); interest heads pleaded separately</td></tr>
+    <tr><td class="hi">13</td><td><b>Cause of action</b> first arose when approached → further on completion → on bill → on each demand → “still subsisting”.</td><td>Chronological foundation of the suit</td><td>O. VII R. 1(iii); continuing cause pleaded</td></tr>
+    <tr><td class="hi">14</td><td>“The suit is within the period of limitation.”</td><td>Limitation (Art. 137 — 3 years)</td><td>Limitation pleaded as conclusion + facts already in paras 13 (mixed law/fact — Unit I exception (b))</td></tr>
+    <tr><td class="hi">15</td><td>Territorial jurisdiction: part of cause of action arose here; contract entered here; payments made here; office of defendant here.</td><td>Why <i>this</i> Court</td><td>s. 17 CPC (place where part of cause arises); O. VII R. 1(iv)</td></tr>
+    <tr><td class="hi">16</td><td>Value for court-fee &amp; jurisdiction: Rs. …; court fee Rs. … paid.</td><td>Pecuniary jurisdiction + stamp</td><td>Court Fees Act s. 7; pecuniary limits (Patiala House/District designations)</td></tr>
+    <tr><td class="hi">17</td><td>“This suit is filed under Order XXXVII… and <b>no relief has been claimed which does not fall within the ambit of Order XXXVII</b>.”</td><td>Special procedure invoked</td><td>O. XXXVII R. 2 requirement pleaded as a fact — this single para makes the form compliant</td></tr>
+  </table>
+
+  <div class="box dark">
+    <h4>🔗 Prayer &amp; verification (DU verbatim structure)</h4>
+    <p><b>PRAYER (a)</b> decree for Rs. … ; <b>(b)</b> interest @ …% from (date) to filing — <b>pendente lite</b> and
+    <b>future</b> interest @ …% ; <b>(c)</b> costs of suit ; <b>(d)</b> “such other and further order(s) as may be deemed
+    fit and proper”. — The three interest heads (pre-suit → pendente lite → future) are standard; CPC s. 34 governs
+    interest up to decree and post-decree interest rate (s. 35/35A).</p>
+    <p><b>VERIFICATION (verbatim model):</b> “Verified at Delhi on this … day of ….. 20… that the contents of
+    <b>paras 1 to …</b> of the plaint are true <b>to my knowledge derived from the records of the Plaintiff maintained
+    in the ordinary course of its business</b>, those of <b>paras …. to …</b> are true <b>on information received and
+    believed to be true</b> and last para is the humble prayer to this Hon’ble Court.” — Note the company-specific
+    twist: knowledge = business records (O. VI R. 15; Part I § 6).</p>
+  </div>
+
+  <h3>2.4 Memory system for the exam (skill-notes walkthrough)</h3>
+  <div class="grid2">
+    <div class="box tip">
+      <h4>The A–T flow <span class="src dpc">DPC skill notes</span></h4>
+      <p style="font-size:13.5px; line-height:1.75;"><b>A</b>uthority → <b>B</b>ackground → <b>C</b> defendant →
+      <b>D</b> transaction begins → <b>E</b> agreement → <b>F</b> performance → <b>G</b> bill → <b>H</b> instrument →
+      <b>I</b> default → <b>J</b> demand → <b>K</b> legal notice → <b>L</b> liability quantum → <b>M</b> cause of
+      action → <b>N</b> limitation → <b>O</b> jurisdiction → <b>P</b> valuation/court-fee → <b>Q</b> O. XXXVII gate →
+      <b>R</b> prayer → <b>S</b> verification → <b>T</b> affidavit.</p>
+      <p class="smallcap">One-line aid: “Who? What transaction? What performance? How much? What default? What demand?
+      What cause of action? Why this Court? Why Order XXXVII? What relief?”</p>
+    </div>
+    <div class="box tip">
+      <h4>How Unit I’s four rules appear inside this single plaint <span class="src dpc">DPC skill notes</span></h4>
+      <ul style="font-size:13.5px;">
+        <li><b>Rule 1 (facts not law):</b> the plaint never says “defendant is legally liable” — it explains <i>why</i>.</li>
+        <li><b>Rule 2 (material facts):</b> agreement · construction · bill · cheque · dishonour · demand · non-payment — nothing missing, nothing extra.</li>
+        <li><b>Rule 3 (not evidence):</b> para 9 mentions the bank memo but never becomes an examination-in-chief of the bank manager.</li>
+        <li><b>Rule 4 (concise &amp; precise):</b> short paragraphs, strict chronology, dates in figures + words.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <h4>⚡ Real-example bank: fill the DU skeleton like a practitioner <span class="src dpc">skill notes’ worked example</span></h4>
+    <p>The skill notes fill this very form with a concrete value — <b>“SUIT FOR RECOVERY OF ₹10,00,000/- UNDER ORDER
+    XXXVII”</b> — proving that you should <b>never invent facts in the exam</b>: use exactly the facts supplied in the
+    problem, drop them into this A–T structure, and keep (i) <b>correct verification paragraph numbers</b>,
+    (ii) <b>territorial jurisdiction</b>, (iii) <b>pecuniary jurisdiction</b> — DU’s own three focus points.
+    Parallel remedy note: for a cheque bounce, the same facts also unlock a <b>s. 138 NI Act complaint</b>
+    (DU Form 29, criminal section) — a civil O. XXXVII suit + criminal NI complaint are filed <b>independently</b>
+    (criminal complaint in 1 month of notice expiry; civil suit in 3 years — Art. 137).</p>
+  </div>
+</section>
+
+<!-- ======================= SECTION 3 : FORM 2 ======================= -->
+<section class="blk" id="s3">
+  <div class="sec-head"><div class="sec-num">3</div>
+    <div><h2>Form 2 — Draft Affidavit (DU p. 13)</h2>
+    <div class="sub">The sworn sheet that backs every form — O. XIX CPC, s. 139, parts of an affidavit, model walkthrough</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU p. 13</span></h4>
+    <p><b>Heading:</b> identical cause title to the Form 1 suit (court, suit no., parties) — an affidavit is
+    <b>always entitled in the matter of the case it supports</b>. <b>Title:</b> “AFFIDAVIT OF Sh………, S/O ………, AGED
+    ABOUT…….. YEARS, R/O…………. <b>in the capacity of the director of M/S ABC Pvt. Ltd.</b>”.
+    <b>Opening:</b> “I, ……….. the deponent hereinabove <b>do hereby solemnly affirm and state hereunder</b>:”</p>
+    <table style="margin-top:8px;">
+      <tr><th style="width:8%;">Para</th><th style="width:52%;">DU model text</th><th>What it legally does</th></tr>
+      <tr><td class="hi">1</td><td>“I say that I am the Authorized Representative / Director of the Plaintiff and I am aware of the facts… based upon the records of the Plaintiff maintained in the ordinary course of business and I am duly authorized and competent to swear and file the present suit and affidavit.”</td><td>Identity · capacity · <b>source of knowledge</b> · authority to swear (corporation acting through director)</td></tr>
+      <tr><td class="hi">2</td><td>“I say that the accompanying Suit has been drafted and filed by my counsel upon my instructions and contents of the same are true and correct.”</td><td>Adoption of the plaint’s facts by the deponent — links the pleading to a human being</td></tr>
+      <tr><td class="hi">3</td><td>“I say that the documents filed along with plaint are true copies of originals.”</td><td>Authentication of annexures</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>DEPONENT</b> signature + <b>VERIFICATION (verbatim):</b> “I, ………, do hereby verify on
+    this …… day of …….. 20… at Delhi that the contents of the above said affidavit are <b>true and correct to my
+    knowledge and information and nothing material has been concealed therefrom</b>. — DEPONENT.”</p>
+  </div>
+
+  <h3>3.1 The law of affidavits (study for any “What is an affidavit?” question)</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4>📜 Provisions <span class="src kamkus">KAMKUS (IV) Affidavit</span></h4>
+      <ul>
+        <li><b>Definition:</b> a written declaration on oath — a written statement sworn before a person having authority to administer oaths; confined to facts the deponent can prove.</li>
+        <li><b>Order XIX CPC</b> governs affidavits in civil courts: <b>R. 1</b> — court may order any particular fact to be proved by affidavit; <b>R. 2</b> — court may order attendance of the deponent for <b>cross-examination</b>; <b>R. 3</b> — affidavits shall be <b>confined to relevant facts</b> (no argument, no law).</li>
+        <li><b>s. 139 CPC</b> — who may administer oaths: High Court (affidavits for judicial proceedings), State Govt (others); <b>Oath Commissioners</b> appointed from court staff; advocates/notaries under the Notaries Act also attest.</li>
+        <li><b>Stamp:</b> Stamp Act 1899, Sch. I Art. 4 — affidavits chargeable, but <b>no stamp on affidavits filed/used in courts</b>; court-fee as prescribed.</li>
+        <li><b>Attachment to pleadings:</b> O. VI R. 15(4) — every pleading to be supported by an affidavit (KAMKUS); DU puts the note “must be supported by an Affidavit” under Forms 1, 3, 4, 7, 8.</li>
+      </ul>
+    </div>
+    <div class="box warn">
+      <h4>🚩 Compliance rules &amp; liabilities</h4>
+      <ul>
+        <li>Must “strictly conform to <b>O. XIX R. 3</b>”; if <b>sources of information are not disclosed</b>, the affidavit is not in accordance with law and is <b>inadmissible</b>.</li>
+        <li><b>Verification is essential</b> — otherwise it cannot be treated as an affidavit.</li>
+        <li><b>False affidavit = criminal:</b> IPC <b>s. 199</b> (false statement in a declaration receivable as evidence) &amp; <b>s. 200</b> (using such declaration knowing it false) → <b>BNS ss. 236 &amp; 237</b> <span class="src web">IPC→BNS comparative table (official)</span>; if it becomes “false evidence” in a judicial proceeding: IPC 191/193 → <b>BNS 227/229</b> (Part I § 6).</li>
+        <li><b>No amendment</b> of an affidavit — only a <b>supplementary affidavit</b> with leave of court (KAMKUS rule i); clerical corrections initialled by the attesting authority (rule h).</li>
+        <li><b>Interlocutory exception:</b> where a fact is not within deponent’s knowledge — “<b>I am informed… and verify/believe it to be true</b>”, stating the <b>name &amp; address of the informant</b> (O. XIX R. 3 practice).</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>3.2 Parts of an affidavit — the seven-part anatomy <span class="src kamkus">KAMKUS model form</span></h3>
+  <table>
+    <tr><th style="width:20%;">Part</th><th>Prescribed form / drafting rule</th></tr>
+    <tr><td class="hi">(a) Cause title</td><td>“IN THE COURT OF … at …” / “BEFORE THE …” + suit/case no. + “IN THE MATTER OF …” — always mirror the parent matter.</td></tr>
+    <tr><td class="hi">(b) Description of deponent</td><td>Full name + aliases, age, father’s name, caste/religion, rank/status/profession, true residence + present address — “so as to identify him clearly” (DU: name, s/o, aged, r/o + <i>capacity</i>).</td></tr>
+    <tr><td class="hi">(c) Oath / affirmation</td><td>“I, the above-named deponent, do hereby swear / solemnly affirm as follows” (DU: “do hereby solemnly affirm and state hereunder”).</td></tr>
+    <tr><td class="hi">(d) Recitals</td><td>First para discloses <b>capacity + acquaintance with facts</b>: “I, …, am the plaintiff/defendant/agent… and therefore fully acquainted with the facts deposed to below.” Numbered paragraphs, one fact each; speaks <b>directly, positively, first person</b>; <b>no opinion, no argument, no law</b>.</td></tr>
+    <tr><td class="hi">(e) Verification</td><td>“I …, the above deponent, do hereby swear/affirm that the contents of paragraphs … to … are true to my personal knowledge / true to information received and believed to be true, and that <b>nothing material has been concealed</b>. Verified at … — Deponent.”</td></tr>
+    <tr><td class="hi">(f) Identification</td><td>Deponent identified to the attesting authority (if not personally known) by someone known to him — name recorded at the foot.</td></tr>
+    <tr><td class="hi">(g) Certificate of attestation</td><td>Person before whom sworn certifies the fact, date, time &amp; place; marks/initials exhibits; asks if deponent has read &amp; understood the affidavit.</td></tr>
+  </table>
+
+  <div class="box gold">
+    <h4>🧾 Closing oath formula (memorise) <span class="src kamkus">KAMKUS rule (j)</span></h4>
+    <p style="font-style:italic;">“I swear / solemnly affirm that my declaration is true, that the contents of this
+    affidavit are true, that it <b>conceals nothing material</b>, and that <b>no part of it is false</b>.”</p>
+    <p><b>Counter-affidavit discipline:</b> para 2 (after capacity) must state that the deponent has <b>read the
+    adversary’s affidavit</b> (or it was read over &amp; explained) and understood it — then deal paragraph-by-paragraph
+    “in sequence of his adversary’s affidavit” (KAMKUS) — the affidavit-world twin of O. VIII R. 3 specific denial.</p>
+  </div>
+
+  <div class="box tip">
+    <h4>⚡ Where the DU affidavit fits — and its exam angles</h4>
+    <ul>
+      <li>Form 2 exists because <b>Form 1 (and every other DU plaint) demands it</b> — the affidavit is Form 1’s
+      “supporting confirmation” (skill-notes table: <i>Verification = basis of truth of pleading; Affidavit =
+      deponent’s confirmation + documents</i>).</li>
+      <li><b>Company angle:</b> the deponent swears “in the capacity of director” — corporation pleads through
+      secretary/director/principal officer able to depose (O. VI R. 15 practice, DU point vii).</li>
+      <li><b>Exam question:</b> “What do you mean by an Affidavit?” — answer with: definition → O. XIX Rr. 1–3 →
+      s. 139 → parts → verification rules → false-affidavit liability (§ 15 model answer).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 4 : FORM 3 ======================= -->
+<section class="blk" id="s4">
+  <div class="sec-head"><div class="sec-num">4</div>
+    <div><h2>Form 3 — Suit for Permanent Injunction (DU pp. 14–16)</h2>
+    <div class="sub">Possession-restraint plaint: 15 paragraphs · Specific Relief Act map · material facts of injunction suits</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 14–16</span></h4>
+    <p><b>Court:</b> Senior Civil Judge · <b>Parties:</b> tenant-plaintiff <i>v.</i> two defendants (successor-claimants) ·
+    <b>The story:</b> plaintiff-tenant in premises for years under tenancy of late Sh. … (landlord died) → no rent
+    receipts despite demands → plaintiff spent huge amounts on constructing two rooms at late landlord’s request
+    (rent-adjustment assurance) → plaintiff looks after the ailing landlord → present possession + records (ration card,
+    school card annexed) → defendants threaten to vacate him → first intrusion (threats, throwing household goods,
+    “dire consequences”, boasts of police collusion) → police refuse FIR (defendants already at the police post!) →
+    registered notice to defendants + Chowki Incharge — no action → second raid at odd hours with two more men →
+    neighbours restrain them → police again advise civil court → <b>suit for permanent injunction</b>.</p>
+    <p class="smallcap">DU para 12 is the classic jurisdiction-pleading: “plaintiff has <b>no other efficacious
+    remedy</b> except to approach this Hon’ble Court.”</p>
+  </div>
+
+  <h3>4.1 The Specific Relief Act, 1963 — preventive-relief map (attach to this form)</h3>
+  <table>
+    <tr><th style="width:14%;">Provision</th><th>Substance (and how the DU plaint uses it)</th></tr>
+    <tr><td class="hi">s. 36</td><td><b>Preventive relief</b> is granted at the discretion of the court by injunction — temporary or perpetual. (Background of every injunction prayer.)</td></tr>
+    <tr><td class="hi">s. 37</td><td><b>Temporary injunctions</b> — continue until a specific time/further order; may be granted <b>at any stage</b> of the suit; <b>regulated by the CPC</b> (= Form 4, O. XXXIX). <b>Perpetual injunction</b> only by <b>decree at hearing on the merits</b> (= this Form 3).</td></tr>
+    <tr><td class="hi">s. 38</td><td><b>Perpetual injunction when granted</b> — to prevent breach of an obligation existing in the plaintiff’s favour where damages would be inadequate.</td></tr>
+    <tr><td class="hi">s. 39</td><td><b>Mandatory injunction</b> — to compel performance (court must be able to enforce). Contrast: DU Form 3 is <b>prohibitory</b> (restrain dispossession/interference).</td></tr>
+    <tr><td class="hi">s. 40</td><td><b>Damages</b> in lieu of / in addition to injunction — <b>must be claimed in the plaint</b> (proviso lets court allow later on terms). Drafting point: if you want damages, add the prayer now.</td></tr>
+    <tr><td class="hi">s. 41 (a)–(j)</td><td><b>When injunction is REFUSED</b>: (a) restraining a pending judicial proceeding (unless multiplicity); (b) proceedings in a superior court; (c) application to legislature; (d) criminal proceedings; (e) breach of a contract not specifically enforceable; (f) nuisance not clearly nuisance; (g) continuing breach plaintiff <b>acquiesced</b> in; <b>(h) equally efficacious relief available otherwise</b>; <b>(i) plaintiff’s conduct disentitles him to court’s aid (“clean hands”)</b>; (j) no personal interest. → <i>The model written statement (Form 9) attacks this very plaint through 41(h) &amp; 41(i) — see § 10.</i></td></tr>
+    <tr><td class="hi">s. 42</td><td><b>Negative agreement</b> — injunction to perform the negative part of a contract even if its positive part can’t be specifically enforced (proved performance &amp; no failure on his part).</td></tr>
+  </table>
+  <p class="smallcap">Cross-refs: s. 9 CPC (civil courts’ jurisdiction) · O. VII R. 1 (plaint contents) · O. 39 (interim stage — Form 4) · SRA s. 34 (declaration + consequential relief — pleaded by the defendant in Form 9) · Delhi Rent Control Act (tenant-suits context — § 8).</p>
+
+  <h3>4.2 Paragraph walkthrough — how each DU paragraph earns the decree</h3>
+  <table>
+    <tr><th style="width:8%;">Para</th><th style="width:46%;">Fact pleaded</th><th>Legal work it does</th></tr>
+    <tr><td class="hi">1–2</td><td>Long possession as tenant; tenancy of late Sh. … (died on date); rent Rs. …/month excluding electricity/water; no receipts despite demands.</td><td>Establishes <b>tenancy relationship</b> (TPA s. 105 — § 8) and continuity of possession; deceased-landlord angle explains the vacuum</td></tr>
+    <tr><td class="hi">3</td><td>Huge construction spend at late landlord’s request; assurance to adjust rent; care of the ailing landlord; documents of material available.</td><td>Equity-building inducement + <b>facts suggesting a right</b> beyond bare tenancy (documents to be annexed — pleaded, not proved)</td></tr>
+    <tr><td class="hi">4–6</td><td>Present possession of premises + household goods; records (ration/school card); rent paid up to date; readiness to pay to legal heirs (unknown to plaintiff).</td><td><b>Possession = the right to be protected</b>; willingness to pay — clean hands (answer to SRA s. 41(i) in advance!)</td></tr>
+    <tr><td class="hi">7</td><td>First intrusion on (date): threats to vacate, refusal to disclose identity, throwing household goods, “dire consequences” with goondas, boasts about police.</td><td><b>Threat + attempt = apprehended dispossession</b> — cause of action for injunction (continuing)</td></tr>
+    <tr><td class="hi">8–9</td><td>Same-day report refused by duty officer (defendants already present!); registered notice to defendants + Chowki Incharge — no action.</td><td><b>Approach to state machinery exhausted</b> → supports para 12 “no other efficacious remedy”</td></tr>
+    <tr><td class="hi">10</td><td>Second raid (date) at odd hours with two known men; ordered out; plaintiff frightened; neighbours intervene &amp; restrain forcible dispossession.</td><td><b>Repeated, escalating threat</b> → irreparable injury if not restrained (feeds Form 4’s balance-of-convenience)</td></tr>
+    <tr><td class="hi">11</td><td>Third police attempt → advised to “approach the competent court of law… to get injunction order”.</td><td>Jurisdictional/alternative-remedy fact — police themselves direct to this forum</td></tr>
+    <tr><td class="hi">12–13</td><td>No other efficacious remedy; cause of action arose on each threat date, lastly on …, “still subsists”.</td><td>O. VII R. 1(iii) + continuing cause; mirrors SRA s. 41(h) defence by pleading why no other remedy exists</td></tr>
+    <tr><td class="hi">14–15</td><td>Valuation &amp; court-fee; premises situated within territorial jurisdiction.</td><td>Pecuniary + territorial jurisdiction (s. 16/17 CPC; O. VII R. 1(iv))</td></tr>
+  </table>
+
+  <div class="box dark">
+    <h4>🔗 Prayer + verification (DU structure)</h4>
+    <p><b>(a)</b> permanent-injunction decree restraining defendants, “their representatives, employees, agents etc.”
+    from <b>dispossessing</b> plaintiff forcibly and from <b>interfering in peaceful possession</b>; <b>(b)</b> costs;
+    <b>(c)</b> omnibus orders. Verification splits knowledge/information as usual; “last para is the humble prayer”.
+    <b>Note: “This plaint has to be supported by an affidavit” → Form 2.</b></p>
+  </div>
+
+  <div class="box gold">
+    <h4>⚡ Material facts you must plead in injunction-type suits <span class="src kamkus">KAMKUS material-facts list</span></h4>
+    <ul>
+      <li><b>Ejectment of a trespasser + injunction:</b> allege the defendant “<b>threatens and intends to repeat the
+      illegal act</b>” — a past act alone won’t do.</li>
+      <li><b>Stay against demolition:</b> plead <b>ownership</b> + that plans/map were <b>duly sanctioned</b>; if government
+      land — <b>undisturbed possession over 12 years</b>.</li>
+      <li><b>Copyright injunction:</b> plead the specific infringement — the <b>passage/chapter</b> copied, similarities
+      in plan/sequence/scenes; “infringement of ideas” alone is bad.</li>
+      <li><b>Defamation:</b> words intended to defame (or understood so by men at large); ambiguous words → plead
+      <b>innuendo</b>.</li>
+      <li><b>This DU form’s own material facts:</b> possession, threat of dispossession, repetition-risk, absence of
+      other remedy — each anchored to a date.</li>
+    </ul>
+    <p class="smallcap">Real-world tie: the DU tenant story is a template — swap “paper mill” for “flat” and you have
+    the everyday Delhi suit; pair with Form 4 (temporary injunction) and Form 5 (if the order is violated).</p>
+  </div>
+</section>
+
+<!-- ======================= SECTION 5 : FORM 4 ======================= -->
+<section class="blk" id="s5">
+  <div class="sec-head"><div class="sec-num">5</div>
+    <div><h2>Form 4 — Application for Temporary Injunction, O. XXXIX Rr. 1 &amp; 2 r/w s. 151 CPC (DU pp. 17–18)</h2>
+    <div class="sub">The interlocutory application — rule text, the three-prong test pleaded in DU paragraphs, procedure</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 17–18</span></h4>
+    <p><b>Caption:</b> “IA NO. ____ OF 20… <b>IN</b> SUIT NO. ____ OF 20…” — an interlocutory application always carries
+    the <b>parent suit’s cause title</b>. <b>Parties (real-style names in DU’s model):</b> Sh. Om Veer Singh
+    (Plaintiff/Applicant) <i>v.</i> Dr. U. Basu &amp; Sh. Tapan Kumar (Defendants/Respondents) ·
+    <b>Title:</b> “APPLICATION FOR TEMPORARY INJUNCTION UNDER ORDER XXXIX, RULE 1 &amp; 2 READ WITH SECTION 151 OF THE
+    CODE OF CIVIL PROCEDURE, 1908” · <b>Five paragraphs</b> + prayer (ex-parte ad-interim) + affidavit note.</p>
+    <p><b>The five paragraphs are the exam gold:</b></p>
+    <ol style="margin-left:20px;">
+      <li>Suit for permanent injunction <b>pending</b> before this Court.</li>
+      <li><b>Incorporation:</b> “contents of the accompanying suit… may kindly be read as <b>part and parcel of this
+      application</b> which are not repeated here <b>for the sake of brevity”</b>.</li>
+      <li><b>Prima-facie case</b> + likelihood of success.</li>
+      <li>If not restrained <b>ad-interim</b>, plaintiff shall suffer <b>irreparable loss and injury</b> and the suit
+      shall become <b>anfractuous</b> (winding/pointless) and lead to <b>multiplicity of cases</b>.</li>
+      <li><b>Balance of convenience</b> lies in favour of plaintiff and against defendants.</li>
+    </ol>
+    <p><b>PRAYER:</b> (a) <b>ex-parte ad-interim injunction</b> restraining defendants/associates/servants/agents from
+    interfering in peaceful physical possession and from dispossessing; (b) omnibus. — “This Application has to be
+    supported by an affidavit.”</p>
+  </div>
+
+  <h3>5.1 Rule text — what you must reproduce in an exam answer</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4>Order XXXIX Rule 1 — when temporary injunction may be granted</h4>
+      <p>“Where in any suit it is proved <b>by affidavit or otherwise</b> —</p>
+      <ul>
+        <li><b>(a)</b> that any property in dispute in a suit is in danger of being <b>wasted, damaged or alienated</b>
+        by any party, or wrongfully sold in execution of a decree;</li>
+        <li><b>(b)</b> that the defendant <b>threatens, or intends, to remove or dispose of his property with a view to
+        defrauding his creditors</b>;</li>
+        <li><b>(c)</b> that the defendant <b>threatens to dispossess the plaintiff or otherwise cause injury</b> to the
+        plaintiff in relation to any property in dispute in the suit,</li>
+      </ul>
+      <p>the Court may by order grant a temporary injunction to restrain such act, or make such other order… <b>until
+      the disposal of the suit or until further orders</b>.” — <i>DU para (the tenant suit) fits clause (c) precisely.</i></p>
+    </div>
+    <div class="box">
+      <h4>Order XXXIX Rule 2 — injunction against breach of contract / injury</h4>
+      <p>In a suit for <b>restraining the defendant from committing a breach of contract or other injury of any kind</b>
+      (whether compensation is claimed or not), the plaintiff may, <b>at any time after commencement of the suit</b>
+      and before or after judgment, apply for a temporary injunction to restrain <b>the breach complained of, or any
+      breach of like kind arising out of the same contract or relating to the same property</b>.</p>
+      <p><b>Rule 2 also reaches non-parties</b> who are agents/servants of the defendant with knowledge of the order
+      (practice: implead/notify them — DU prayer names “associates, servants, agents and representatives”).</p>
+      <p><b>Rule 4:</b> any injunction order may be <b>discharged, varied or set aside</b> on application;
+      <b>proviso — if a party knowingly made a false/misleading statement of a material particular and the injunction
+      was ex parte, the Court SHALL vacate it</b> unless reasons are recorded (anti-fraud guard — pair with
+      DU’s affidavit support).</p>
+      <p><b>s. 151 CPC</b> — inherent power to secure ends of justice/prevent abuse (the omnibus engine behind every
+      “and for such other orders” prayer).</p>
+    </div>
+  </div>
+
+  <h3>5.2 The three-prong test — diagrammed on the DU paragraphs</h3>
+  <div class="box gold">
+  <svg viewBox="0 0 940 330" width="100%" role="img" aria-label="Three prong test for temporary injunction">
+    <defs><marker id="a5" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c9962e"/></marker></defs>
+    <text x="470" y="26" text-anchor="middle" font-weight="bold" font-size="15.5" fill="#14213d">TEMPORARY INJUNCTION: ALL THREE PRONGS MUST HOLD</text>
+    <polygon points="470,66 240,250 700,250" fill="none" stroke="#c9962e" stroke-width="3"/>
+    <rect x="360" y="44" width="220" height="52" rx="9" fill="#1e6f50"/>
+    <text x="470" y="66" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">1 · PRIMA FACIE CASE</text>
+    <text x="470" y="86" text-anchor="middle" fill="#e9edf6" font-size="11.5">DU para 3 — “likelihood of success”</text>
+    <rect x="86" y="236" width="250" height="60" rx="9" fill="#14508c"/>
+    <text x="211" y="258" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">2 · IRREPARABLE INJURY</text>
+    <text x="211" y="278" text-anchor="middle" fill="#e9edf6" font-size="11.5">DU para 4 — “irrepairable loss”; suit</text>
+    <text x="211" y="292" text-anchor="middle" fill="#e9edf6" font-size="11.5">“anfractuous”; multiplicity of cases</text>
+    <rect x="606" y="236" width="250" height="60" rx="9" fill="#b35c10"/>
+    <text x="731" y="258" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">3 · BALANCE OF CONVENIENCE</text>
+    <text x="731" y="278" text-anchor="middle" fill="#e9edf6" font-size="11.5">DU para 5 — “lies in favour of the</text>
+    <text x="731" y="292" text-anchor="middle" fill="#e9edf6" font-size="11.5">plaintiff and against the defendants”</text>
+    <line x1="470" y1="96" x2="470" y2="66" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a5)"/>
+    <line x1="395" y1="230" x2="300" y2="250" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a5)"/>
+    <line x1="545" y1="230" x2="640" y2="250" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a5)"/>
+    <text x="470" y="205" text-anchor="middle" fill="#4a5568" font-size="12.5" font-style="italic">property kept in present condition till</text>
+    <text x="470" y="222" text-anchor="middle" fill="#4a5568" font-size="12.5" font-style="italic">“a fair question to raise” is decided</text>
+    <text x="470" y="320" text-anchor="middle" fill="#6b7280" font-size="11.5">Source anchors: DU Form 4 paras 3–5 · O. XXXIX R. 1 (proof “by affidavit or otherwise”) · <i>Paidsetti Bhanknarayna</i> AIR 1999 Ori 92 (§ 14.7)</text>
+  </svg>
+  </div>
+
+  <div class="box tip">
+    <h4>⚡ Practice points to remember</h4>
+    <ul>
+      <li><b>Ex parte ad-interim:</b> the prayer asks for it because notice would defeat the purpose — but O. XXXIX
+      R. 4’s proviso makes the court vacate an ex-parte injunction obtained by a <b>false statement</b>. Hence the
+      mandatory supporting affidavit (DU note) — accuracy is self-protective.</li>
+      <li><b>Drafting language rule (KAMKUS IA chapter):</b> state grounds “in the words of the law under which the
+      application is fitted” — DU’s “prima facie case… irreparable loss… balance of convenience” are the statutory
+      judicial test’s own words.</li>
+      <li><b>Length rule:</b> facts are long → keep them in the affidavit; the application can say “For the reasons above
+      in the annexed affidavit, the applicant prays…” (KAMKUS) — DU Form 4 instead incorporates the <b>suit</b> by
+      reference (para 2) — both are approved brevity-devices.</li>
+      <li><b>Interlocutory applications = filed during pendency</b> (KAMKUS (III)): other examples — O. VI R. 17
+      amendment, s. 144 restitution, s. 151, s. 152 corrections, O. IX Rr. 4/9 (set aside dismissal), objections under
+      s. 47/O. XXI Rr. 58/89–91, O. XXII substitution, <b>O. XXXIX interim injunction</b>, O. XL receiver, O. XLVII
+      review. (Direct answer to KAMKUS Q. 6 — § 15.)</li>
+      <li><b>SRA s. 37(1):</b> temporary injunctions “are regulated by the CPC” — that is the statutory bridge between
+      Form 3 (SRA decree) and Form 4 (CPC interlocutory).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 6 : FORM 5 ======================= -->
+<section class="blk" id="s6">
+  <div class="sec-head"><div class="sec-num">6</div>
+    <div><h2>Form 5 — Application under Order XXXIX Rule 2-A (DU pp. 19–20)</h2>
+    <div class="sub">When the injunction is broken — attachment, civil prison, restoration; the case law that keeps it alive</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 19–20</span></h4>
+    <p><b>Caption:</b> IA No. … <b>IN</b> Suit No. … (parties: ABC <i>v.</i> XYZ, plaintiff/applicant vs defendant/respondent) ·
+    <b>Title:</b> “APPLICATION UNDER ORDER XXXIX RULE 2-A READ WITH SECTION 151 CPC ON BEHALF OF THE PLAINTIFF” ·
+    <b>Five paragraphs — a perfect chronology of disobedience:</b></p>
+    <ol style="margin-left:20px;">
+      <li>Suit for injunction pending; contents of plaint read as part of this application; applicant = tenant of suit
+      premises; respondent = landlord.</li>
+      <li>Interim stay application (O. 39 Rr. 1 &amp; 2) had been filed <b>alongwith the plaint</b> against
+      dispossession without due process.</li>
+      <li><b>On (date) the Court granted interim injunction</b> — no interference in peaceful possession, no
+      dispossession without due process.</li>
+      <li><b>On (date), despite service and knowledge of the order</b>, the respondent “took forcible possession…
+      with the help of anti social elements <b>in utter disregard of the orders of this Hon’ble Court</b>”; applicant’s
+      household goods were <b>thrown on the roadside</b>.</li>
+      <li>Respondent “knowingly and willfully disobeyed and violated” the order → “<b>guilty of disobedience</b>…
+      liable to be <b>detained in civil imprisonment and attachment of his property</b>” — <b>List of properties attached
+      is annexed.</b></li>
+    </ol>
+    <p><b>PRAYER:</b> (a) appropriate action under O. XXXIX R. 2-A — property attached &amp; respondent kept in
+    <b>civil imprisonment for the maximum term</b>; (b) <b>restoration of possession</b> of the suit property;
+    (c) omnibus. <b>Note:</b> “An affidavit, duly attested by <b>oath commissioner</b>, in support of this application
+    is to be attached.”</p>
+  </div>
+
+  <h3>6.1 Rule 2A in full + the remedy architecture</h3>
+  <div class="grid2">
+    <div class="box warn">
+      <h4>📜 Order XXXIX Rule 2A (consequences of disobedience/breach)</h4>
+      <ul>
+        <li><b>(1)</b> On disobedience of any injunction granted or other order made under R. 1 or R. 2, or breach of
+        any term on which it was granted — the Court granting it (or the court to which the suit stands transferred)
+        may order <b>attachment of the property</b> of the person guilty, and may <b>also order his detention in the
+        civil prison for a term not exceeding three months</b>, unless the Court sooner directs his release.</li>
+        <li><b>(2)</b> Attachment shall remain in force <b>not more than one year</b>; if disobedience continues at the
+        end of that year, the attached property <b>may be sold</b>; out of the proceeds the court may award
+        <b>compensation</b> to the injured party and pay the balance to the party entitled.</li>
+      </ul>
+      <p class="smallcap">DU’s “list of properties annexed” = the attachment-target schedule; “maximum term” in the
+      prayer = the 3-month ceiling.</p>
+    </div>
+    <div class="box">
+      <h4>⚖️ Two doors for the same wrong — choose consciously</h4>
+      <table style="width:100%;">
+        <tr><th></th><th>O. XXXIX R. 2A (this form)</th><th>Contempt of Courts Act, 1971 (DU Form 32)</th></tr>
+        <tr><td class="hi">Nature</td><td>Step inside the same suit — civil remedy for breach of the court’s own order</td><td>Independent petition (ss. 11/12 — civil contempt = willful disobedience of any order)</td></tr>
+        <tr><td class="hi">Relief</td><td>Attachment + civil prison ≤ 3 months + compensation from sale + restoration (via s. 151)</td><td>Punishment for contempt + direction to comply</td></tr>
+        <tr><td class="hi">Speed</td><td>Interlocutory — no fresh suit</td><td>Separate proceeding</td></tr>
+      </table>
+      <p class="smallcap">Cross-ref from Part I: the DU <i>Resident Welfare Association</i> contempt petition (pp. 87–88)
+      used the second door for demolition despite status-quo orders — same facts, different remedy.</p>
+    </div>
+  </div>
+
+  <div class="box gold">
+    <h4>🔗 Related provisions at this place</h4>
+    <ul>
+      <li><b>s. 151 CPC</b> — inherent powers (DU title): restoration of possession is usually grounded here (R. 2A
+      itself gives attachment/prison, not restoration).</li>
+      <li><b>O. XXXIX R. 4 proviso</b> — the other side’s shield: an ex-parte injunction obtained by false statement
+      must be vacated; genuine order, however, is enforced even if <b>later set aside</b> (cases below).</li>
+      <li><b>s. 144 CPC</b> — restitution after an order is reversed (mirror remedy when the R. 2A-punished order
+      eventually falls — balance of the system).</li>
+      <li><b>Undertakings:</b> courts often grant injunctions on undertakings; breach of undertaking = contempt
+      independently of R. 2A (DU RWA model used the Contempt Act on exactly this footing).</li>
+    </ul>
+  </div>
+
+  <div class="box dark">
+    <h4>⚖️ The two cases that define this form (full notes in § 14.3–14.4)</h4>
+    <p><b>1. Samee Khan v. Bindu Khan (1998) 7 SCC 622</b> — disobedience of an injunction is <b>not erased</b> even if
+    the injunction order is <b>subsequently set aside</b>; the contemptuous act cannot be retroactively legitimised
+    (severity of punishment may be mitigated). <br>
+    <b>2. Lavanya C v. Vittal Gurudas Pai (2025)</b> — SC (Mithal &amp; Karol JJ.) reaffirmed it: subsequent
+    setting-aside/dismissal “does not absolve liability for its disobedience <i>during its pendency</i>”;
+    contempt powers exist to maintain “the dignity and majesty of law”; on facts, 3-month jail deleted on
+    age-mitigation and compensation raised ₹10 L → ₹13 L + 6% interest — showing the <b>flexibility of quantum within
+    the rule’s framework</b>.</p>
+    <p class="smallcap"><b>Drafting lesson for the exam:</b> in a R. 2A application, always plead (i) existence of the
+    order (date), (ii) <b>service/knowledge</b>, (iii) the precise act of disobedience with dates, (iv) wilfulness,
+    (v) assets for attachment — DU’s five paragraphs are exactly this checklist.</p>
+  </div>
+</section>
+
+<!-- ======================= SECTION 7 : FORM 6 ======================= -->
+<section class="blk" id="s7">
+  <div class="sec-head"><div class="sec-num">7</div>
+    <div><h2>Form 6 — Application to Sue as an Indigent Person, O. XXXIII r/w s. 151 CPC (DU pp. 21–22)</h2>
+    <div class="sub">Justice for the penniless — pauper scheme, contents of the application, court-fee consequences</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 21–22</span></h4>
+    <p><b>Title:</b> “APPLICATION UNDER ORDER XXXIII READ WITH SECTION 151 OF THE CODE OF CIVIL PROCEDURE, 1908” ·
+    <b>Parties:</b> X (applicant/plaintiff) <i>v.</i> Y (respondent/defendant) · <b>Five paragraphs:</b></p>
+    <ol style="margin-left:20px;">
+      <li>The applicant has filed the above-titled suit, pending disposal.</li>
+      <li><b>Incorporation:</b> “contents of the accompanying suit may kindly be read as part and parcel of this
+      application… not repeated for the sake of brevity.”</li>
+      <li>Applicant is an <b>indigent person</b> — “has <b>no movable or immovable property</b> and <b>no source of
+      income</b>. Therefore is unable to pay the requisite amount of court fee stamp as required by law.”</li>
+      <li>Applicant <b>undertakes to pay the entire court fee if the case is decreed in his favour</b>.</li>
+      <li>There are sufficient reasons for acceptance of the application and permission to institute the suit as an
+      indigent person.</li>
+    </ol>
+    <p><b>PRAYER:</b> (a) allow suing as an indigent “in the interest of justice”; (b) omnibus. <b>Verification</b> +
+    “The petition must be supported by an affidavit.”</p>
+    <p class="smallcap"><b>Structural note:</b> the application travels <b>with the plaint</b> (O. XXXIII R. 1–2) —
+    it is the para 3 facts (“property/income”) that carry the whole application: the DU itemises the three
+    statutory negatives — no movable, no immovable, no income.</p>
+  </div>
+
+  <h3>7.1 The Order XXXIII scheme — rule map</h3>
+  <table>
+    <tr><th style="width:20%;">Rule / point</th><th>Substance</th></tr>
+    <tr><td class="hi">R. 1 — who is indigent</td><td>“A person is an <b>indigent person</b> if he is <b>not possessed of sufficient means</b> to enable him to pay the fee prescribed by law”; where no fee is prescribed, if not entitled to property worth <b>₹1,000</b>. Explanation excludes property <b>exempt from attachment</b> in execution (basic living assets) and the subject-matter of the suit from the means-test. <b>Bar:</b> no person shall be allowed to continue as pauper if <b>previously rejected</b> as such (unless since become indigent), or prosecuted him in forma pauperis and withdrawn.</td></tr>
+    <tr><td class="hi">R. 1A — screening</td><td>Every application is <b>inquired into first by the chief ministerial officer</b> of the court (clerk-level verification before judicial notice).</td></tr>
+    <tr><td class="hi">R. 2 — contents of application</td><td>Must state: (i) <b>short title of the suit</b>; (ii) <b>matter in which relief is claimed</b>; (iii) <b>amount/ value</b> of the suit; (iv) <b>what movable/immovable property</b> the applicant owns, with particulars; (v) <b>whether previously rejected</b> as indigent. (DU paras 1–5 map onto this list; add property/previous-rejection statements when drafting fully.)</td></tr>
+    <tr><td class="hi">R. 3 &amp; verification</td><td>Schedule of documents relied on; application <b>verified like a plaint</b> (knowledge/information split — O. VI R. 15 discipline).</td></tr>
+    <tr><td class="hi">Inquiry &amp; rejection</td><td>Court may examine on oath (orally/by commission); <b>reject</b> where not truly indigent, application not in prescribed form, or applicant has <b>fraudulently disposed of property</b> within two months before presentation.</td></tr>
+    <tr><td class="hi">On grant</td><td>Application + plaint are <b>deemed the plaint</b> and the suit proceeds ordinarily; court may frame issues, summon witnesses, and <b>assign a pleader</b> if applicant is unrepresented (legal-aid function).</td></tr>
+    <tr><td class="hi">Court-fee consequences</td><td><b>If plaintiff SUCCEEDS:</b> court computes fees that would have been paid; recoverable from the party directed to pay costs/subject-matter — a <b>first charge on the subject-matter of the suit</b>. <b>If suit dismissed:</b> State recovers the fees from the plaintiff (government machinery).</td></tr>
+    <tr><td class="hi">Appeal</td><td>Order <b>rejecting</b> an application to sue as indigent → appealable under <b>O. 43 R. 1</b>; pauper appeals in forma pauperis under <b>O. 44</b>.</td></tr>
+  </table>
+
+  <div class="grid2" style="margin-top:10px;">
+    <div class="box gold">
+      <h4>⚖️ Case note — <i>A.A. Haja Muniuddin v. Indian Railways</i> <span class="src web">via prescribed-style commentary</span></h4>
+      <p><b>Held:</b> O. XXXIII is an <b>enabling provision</b> permitting a suit without prepayment of court fee;
+      if the suit is dismissed, the State takes steps to recover the fee payable — and that fee stands as a
+      <b>first charge on the subject-matter</b>. (Also confirms “sufficient means” = means beyond bare sustenance for
+      the person <b>and family</b> — a benevolent, extended meaning; even a public limited company can sue as pauper
+      if it truly has no means.)</p>
+    </div>
+    <div class="box">
+      <h4>🔗 Holistic neighbours of this form</h4>
+      <ul>
+        <li><b>Court Fees Act, 1870</b> — the fee being waived (s. 7 valuation; compound-fee regimes).</li>
+        <li><b>Constitution Art. 38, 39A</b> — equal justice &amp; free legal aid as state policy.</li>
+        <li><b>Legal Services Authorities Act, 1987</b> — NALSA/DALSA free lawyers for eligible persons (the modern
+        companion of the pauper scheme: pauper = <b>fee</b> waiver; LSA = <b>counsel</b> provision).</li>
+        <li><b>O. 43 / O. 44</b> — appeal routes (rejection; pauper appeal).</li>
+        <li>DU transfer petition’s “penury” ground (§ 12) shows the same poverty narrative in a different form.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION 8 : FORM 7 ======================= -->
+<section class="blk" id="s8">
+  <div class="sec-head"><div class="sec-num">8</div>
+    <div><h2>Form 7 — Suit for Ejectment &amp; Damages for Wrongful Use and Occupation (DU pp. 23–25)</h2>
+    <div class="sub">Tenancy termination by notice · TPA ss. 105/106/108/111 · damages as wrongful occupation · Delhi Rent Act gateway</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 23–25</span></h4>
+    <p><b>Parties:</b> Mrs. Surjit Kaur Sahi &amp; Mr. Avinder Singh Sahi (owners/plaintiffs) <i>v.</i>
+    <b>Power Grid Corporation of India Ltd.</b> (through Chairman/MD — a Government of India undertaking/defendant) —
+    note how a corporation is sued: through its principal officer. <b>The nine-paragraph story:</b></p>
+    <ol style="margin-left:20px;">
+      <li>Owners of flat no. …, Delhi; let it to M/s National Power Transmission Corporation Ltd. (now Power Grid) for
+      <b>3 years vide unregistered lease deed</b> (Annexure A); <b>delivery of possession simultaneous</b>.</li>
+      <li>3-year term expired → defendant became <b>month-to-month tenant</b>.</li>
+      <li>Repeated requests to vacate (dates) refused → legal notice through counsel under
+      <b>s. 106 Transfer of Property Act</b> terminating tenancy <b>at mid-night of (date)</b> (Annexure B).</li>
+      <li>Notice received on (date) “i.e. clear <b>15 days before</b> the last day of …” → <b>valid s. 106 notice</b>
+      (proof of service annexed).</li>
+      <li>Non-vacation → defendant in <b>wrongful use and occupation @ Rs. …/day</b> (market survey: area rates
+      Rs. …–…/sq. ft.; flat = 370 sq. ft. super area); same rate demanded in the notice; plaintiffs need the flat for
+      their own purposes and cannot afford alternatives at market rates.</li>
+      <li>Current rent only Rs. …/month; <b>premises not governed by the Delhi Rent Control Act (rent &gt; ₹3,500)</b>
+      → this Hon’ble Court has jurisdiction.</li>
+      <li><b>Cause of action</b> arose on each approach, on notice, on refusal — <b>continuing</b>.</li>
+      <li>Property, lease and possession all in Delhi; outside DRC Act → jurisdiction.</li>
+      <li><b>Court fee</b> ad valorem under <b>s. 7 of the Court Fees Act</b> on <b>annual rent</b> (monthly × 12);
+      undertaking to pay any additional fee.</li>
+    </ol>
+    <p><b>PRAYER:</b> (i) ejectment decree; (ii) <b>damages at Rs. … per day for wrongful use and occupation</b>;
+    (iii) omnibus; (iv) costs. <b>Verification</b> + “must be supported by an affidavit.”</p>
+  </div>
+
+  <h3>8.1 The property law inside this plaint</h3>
+  <table>
+    <tr><th style="width:22%;">Provision</th><th>Substance ↔ DU paragraph</th></tr>
+    <tr><td class="hi">TPA s. 105 — lease defined</td><td>Transfer of the right to enjoy property for a certain time/period or in perpetuity, in consideration of a price paid or promised; lessor = transferor, lessee = transferee. <b>DU para 1</b> elements: transferor (owners), transferee (Power Grid), price (rent), subject (flat), enjoyment (possession). <i>Note DU’s “unregistered lease deed” — for terms ≤1 year registration optional (Registration Act s. 17(1)(d) proviso); month-to-month tenancies need no deed.</i></td></tr>
+    <tr><td class="hi">TPA s. 106 — notice to terminate</td><td>Where a lease is for a term without fixing time (or continues after term): it is determinable in the case of <b>immovable property other than agricultural/producing</b> by <b>15 days’ notice</b> (general rule; month-to-month: notice expiring with the end of a month of the tenancy); agricultural leases: one year. <b>DU paras 3–4</b> plead receipt “clear 15 days before” expiry — statutory compliance as a pleaded fact.</td></tr>
+    <tr><td class="hi">TPA s. 108 — rights/obligations</td><td>Lessee must pay rent; lessor may determine the lease on lessee’s <b>breach</b> of obligation; both bound by conditions. Non-vacation post-notice = breach → ejectment + damages.</td></tr>
+    <tr><td class="hi">TPA s. 111 — determination</td><td>Lease determined by efflux of time, expiration of purpose, termination, forfeiture (non-payment of rent where law requires, or breach of condition), etc. <b>DU para 2</b> = efflux of 3-year term → statutory month-to-month tenancy under s. 106 → terminated by notice.</td></tr>
+    <tr><td class="hi">Damages — wrongful use &amp; occupation</td><td>Post-notice occupation = unlawful holding over → mesne-profits-style compensation measured by <b>reasonable market rent</b> (CPC s. 2(12) defines “mesne profits”; ss. 23–24 computation) — DU pleads the <b>market survey</b> (₹/sq. ft. × 370 sq. ft.) precisely because damages must be a <b>pleaded fact with a basis</b>, not evidence.</td></tr>
+    <tr><td class="hi">Delhi Rent Control Act, 1958 — gateway</td><td>DU’s para 6/8: premises let at monthly rent <b>above ₹3,500</b> are <b>outside</b> the DRC Act (exclusion by 1988 amendment) → ordinary civil court, not the Rent Controller. <b>Exam gold:</b> jurisdiction by <i>statutory exclusion</i> — plead it. (If inside DRC: eviction only on the Act’s grounds before the Controller — that is why this para decides the forum.)</td></tr>
+    <tr><td class="hi">Court Fees Act s. 7</td><td>Ad valorem court-fee on yearly rent for possession suits — DU computes monthly rent × 12 and undertakes to pay deficiency.</td></tr>
+  </table>
+
+  <div class="box tip">
+    <h4>⚡ Exam points &amp; drafting upgrades</h4>
+    <ul>
+      <li><b>Add a limitation paragraph</b> in a full draft (DU’s O. XXXVII and specific-performance forms include one;
+      this model omits it — a good answer adds: suit within limitation from expiry of notice).</li>
+      <li><b>Verification quirk to notice:</b> this DU model says facts are true “on the basis of <b>legal advice</b>
+      received” — the statutory formula is <b>knowledge vs information received and believed true</b> (O. VI R. 15).
+      In the exam, follow O. VI R. 15 wording.</li>
+      <li><b>KAMKUS material-fact rule:</b> in an ejectment + injunction suit, plead that the defendant
+      “<b>threatens and intends to repeat the illegal act</b>” — DU para 5 (continuing wrong) does this by pleading the
+      ongoing wrongful occupation.</li>
+      <li><b>Real-life pairing:</b> after ejectment decree comes <b>execution for possession</b> — Form 12 (§ 13);
+      if the tenant holds over during suit, add Form 4 (temporary injunction against interference).</li>
+      <li><b>Costs of litigation angle:</b> KAMKUS notes urban-building ejectments may lie before <b>special
+      tenancy courts/rent tribunals</b> where the rent law applies — always test the forum first (s. 9 CPC bar).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 9 : FORM 8 ======================= -->
+<section class="blk" id="s9">
+  <div class="sec-head"><div class="sec-num">9</div>
+    <div><h2>Form 8 — Suit for Specific Performance of Contract (DU pp. 26–27)</h2>
+    <div class="sub">Agreement-to-sale plaint · SRA ss. 9–25 map · the “ready and willing” pleading that wins cases</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 26–27</span></h4>
+    <p><b>Parties:</b> X (plaintiff) <i>v.</i> Y (defendant) · <b>The fourteen-paragraph story:</b></p>
+    <ol style="margin-left:20px;">
+      <li>Plaintiff a resident of … · <b>2.</b> Defendant is <b>absolute owner</b> of property bearing no…, admeasuring
+      (full description) — “the suit property” · <b>3.</b> Plaintiff needed it for <b>residential purpose</b>; learned
+      defendant interested in selling · <b>4.</b> Approached on (date); terms discussed · <b>5.</b> On (date)
+      <b>agreement in writing</b> — defendant agreed to sell for Rs. … (Annexure A) · <b>6.</b> Earnest money paid;
+      balance on (date); <b>sale deed to be executed and possession handed over on payment of balance</b> ·
+      <b>7.</b> On (date) plaintiff asked him to execute the sale deed + hand over possession → <b>refused</b> ·
+      <b>8.</b> Repeated approaches on various dates → refusal “on one pretext or the other” · <b>9.</b> Final
+      <b>legal notice</b> to perform → no compliance, no reply · <b>10.</b> “<b>The plaintiff is ready and willing to
+      perform his part</b> … by paying the balance amount” · <b>11.</b> Cause of action dates → “still subsisting” ·
+      <b>12.</b> Suit within limitation · <b>13.</b> Territorial jurisdiction (cause of action arose here) ·
+      <b>14.</b> Requisite court fees paid.</li>
+    </ol>
+    <p><b>PRAYER:</b> (a) decree of specific performance directing execution of sale deed + delivery of possession;
+    (b) costs; (c) omnibus. + verification + affidavit note.</p>
+  </div>
+
+  <h3>9.1 Specific Relief Act, 1963 — Chapter III map (ss. 9–25) with DU hooks</h3>
+  <table>
+    <tr><th style="width:18%;">Section</th><th>Substance → where it appears in the DU draft</th></tr>
+    <tr><td class="hi">s. 9</td><td><b>Defences</b> available against a contract-based claim are available against a suit for specific performance → anticipates Form 9-style defences (fraud, limitation, discharge).</td></tr>
+    <tr><td class="hi">s. 10</td><td>Cases in which specific performance is <b>enforceable</b> — compensation inadequate, exact terms ascertainable, etc. (post-2018 Amendment: relief is <b>discretionary</b> — “may” — court weighs grounds).</td></tr>
+    <tr><td class="hi">s. 12</td><td>Part performance — court may direct it “in certain cases” (partial relief angle).</td></tr>
+    <tr><td class="hi">s. 13</td><td>Rights of purchaser/lessee against person with <b>no or imperfect title</b>.</td></tr>
+    <tr><td class="hi">s. 14</td><td><b>Not specifically enforceable:</b> (a) substituted performance obtained (s. 20); (b) continuous duty court cannot supervise; <b>(c) contract dependent on personal qualifications</b>; (d) determinable contracts; (money-adequate cases per s. 14(1)(a)). → <i>Defendant’s weapon in Form 9 para 13.</i></td></tr>
+    <tr><td class="hi">s. 15–16</td><td><b>Who may obtain</b> performance (parties, representatives…) + <b>personal bars</b>: <b>s. 16(c) — plaintiff must aver &amp; prove he has performed or has always been <u>ready and willing</u> to perform</b>. → <b>DU para 10 is this section drafted as a fact</b>; also KAMKUS’s material-facts list: “In a suit for specific performance it is material to allege that the plaintiff has <i>always been willing and is willing</i> to perform his part.”</td></tr>
+    <tr><td class="hi">s. 17–19</td><td>Seller with no title not enforceable; <b>against whom</b> enforceable (parties, representatives, transferees with notice…).</td></tr>
+    <tr><td class="hi">s. 20 (+ 14A, 20A)</td><td>Court’s <b>discretion</b>; <b>substituted performance</b> (2018); experts (14A); infrastructure contracts (20A).</td></tr>
+  </table>
+  <p class="smallcap">Also inside the DU draft: <b>Art. 54 Limitation Act</b> — 3 years from date when performance was
+  <b>refused</b> (paras 7–9 supply the dates; para 12 concludes) · <b>TPA s. 54</b> — sale of immovable ≥ ₹100 only by
+  registered instrument → the <b>agreement</b> must be registered where it creates an interest (KAMKUS: agreements
+  creating an interest in immovable property worth more than ₹100 require registration); the <b>sale deed</b> itself
+  must certainly be registered (Registration Act ss. 17, 49) · <b>earnest money</b> — stipulated in the agreement
+  (para 6) · <b>Stamp duty</b> on the agreement (Stamp Act) · damages alternative (SRA s. 14 read with Contract Act
+  s. 73 — if performance fails, claim compensation instead).</p>
+
+  <div class="box tip">
+    <h4>⚡ Exam points</h4>
+    <ul>
+      <li><b>Never omit para 10 (“ready and willing”)</b> — under s. 16(c) a plaintiff who doesn’t plead it fails at
+      the threshold, however strong the contract.</li>
+      <li><b>Materiality chain:</b> agreement (existence &amp; terms) → registration → earnest money → possession
+      clause → refusal (dates) → notice → readiness → limitation → jurisdiction — DU’s paras are the checklist of
+      material facts for this cause of action.</li>
+      <li><b>Verification template caution:</b> DU’s verification here is lifted from the company suit (“knowledge
+      derived from records… paras …. to 14”) — for an individual plaintiff, use the personal-knowledge/information
+      split (O. VI R. 15) as in Forms 1/7.</li>
+      <li><b>Pair with a temporary injunction</b> (Form 4) to keep the property from being transferred to a
+      third-party pending suit — standard practice for agreement disputes (caveat, Form 10, protects at the
+      appellate stage).</li>
+      <li><b>KAMKUS Q. 17</b> asks for a plaint <i>and</i> WS for specific performance of a contract for purchase of a
+      car — model answers in § 15.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 10 : FORM 9 ======================= -->
+<section class="blk" id="s10">
+  <div class="sec-head"><div class="sec-num">10</div>
+    <div><h2>Form 9 — Model Draft for Written Statement (DU pp. 28–30)</h2>
+    <div class="sub">Sixteen preliminary objections (each with its provision) + the merits-reply technique + verification</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 28–30</span></h4>
+    <p><b>Title:</b> “WRITTEN STATEMENT ON BEHALF OF THE DEFENDANT” · <b>Two-part architecture:</b>
+    <b>I. PRELIMINARY OBJECTIONS (1–16)</b> → <b>II. ON MERITS</b> (“Without prejudice to the preliminary objections
+    stated above, the reply on merits, which is <b>without prejudice to one another</b>, is as under”) → Prayer →
+    Verification (split <b>PO paras</b> and <b>merits paras</b> separately!) → Note: “Counter Claim, Set off can be
+    joined in the Written Statement and the same may be verified and supported by affidavit.”</p>
+  </div>
+
+  <h3>10.1 The sixteen preliminary objections — provision decoded</h3>
+  <table>
+    <tr><th style="width:4%;">#</th><th style="width:36%;">DU objection (condensed)</th><th style="width:26%;">Provision</th><th>What defendant must plead/prove</th></tr>
+    <tr><td class="hi">1</td><td>Suit barred by <b>limitation</b> under Article … of Limitation Act — dismiss on this ground alone.</td><td>Limitation Act (Arts. 137/54/… as per suit) — O. 8 R. 3 defence</td><td>Compute from the pleaded cause-of-action dates; legal objection but needs date-pleading (mixed law/fact — Unit I exception)</td></tr>
+    <tr><td class="hi">2</td><td>Court has <b>no jurisdiction</b> (facts to follow: “…because…”)”. </td><td>ss. 6, 15–21 CPC; O. 7 R. 1(iv) attack</td><td>Must complete the “because” — where party resides/cause arose; bare jurisdiction pleas often rejected</td></tr>
+    <tr><td class="hi">3</td><td>Not properly <b>valued for court fee &amp; jurisdiction</b> — liable to be rejected.</td><td>Court Fees Act s. 7; O. VII R. 1(vi); O. VII R. 11 (rejection grounds)</td><td>State correct valuation (merits para 13 quantifies it)</td></tr>
+    <tr><td class="hi">4</td><td><b>No cause of action</b>.</td><td>O. VII R. 1(iii) essentiality; s. 9 CPC</td><td>Show which pleaded facts are missing/insufficient</td></tr>
+    <tr><td class="hi">5</td><td>Bad for <b>non-joinder of necessary parties</b> (namely …).</td><td>O. 1 Rr. 9–10 CPC</td><td>Name the party + interest making him necessary</td></tr>
+    <tr><td class="hi">6</td><td>Bad for <b>mis-joinder of Z</b>.</td><td>O. 1 R. 9</td><td>Common question absent</td></tr>
+    <tr><td class="hi">7</td><td>Barred by <b>decree dated … in Suit No. … (Y v. X)</b> — <b>res judicata</b>.</td><td>s. 11 CPC (+ O. 8 R. 3)</td><td>Plead prior suit particulars: parties, decree, dates — O. 6 R. 2 discipline</td></tr>
+    <tr><td class="hi">8</td><td>Suit liable to be <b>stayed</b> as a previously instituted suit is pending.</td><td>s. 10 CPC (stay of suit) — distinct from res judicata</td><td>Plead first-instituted suit’s number, court, parties</td></tr>
+    <tr><td class="hi">9</td><td>Suit <b>not properly verified</b> in accordance with law.</td><td>O. 6 R. 15 (verification defects — curable by amendment but must be pleaded)</td><td>Point out the paragraph-split defect</td></tr>
+    <tr><td class="hi">10</td><td>Permanent-injunction suit barred by <b>SRA s. 41(h)</b> — equally efficacious remedy (breach pleaded → sue for specific performance instead).</td><td>Specific Relief Act, 1963 s. 41(h)</td><td>Identify the alternative remedy + why it’s efficacious (§ 4 table)</td></tr>
+    <tr><td class="hi">11</td><td>Also barred by <b>SRA s. 41(i)</b> — plaintiff came with <b>unclean hands</b>; conduct unfair/dishonest/tainted with illegality.</td><td>SRA s. 41(i)</td><td>Plead the specific conduct (facts!) — legality slogans won’t do</td></tr>
+    <tr><td class="hi">12</td><td>Declaration claim barred by <b>SRA s. 34</b> — omitted to claim <b>further consequential relief</b>.</td><td>SRA s. 34</td><td>Show the consequential relief (possession/injunction) available &amp; omitted</td></tr>
+    <tr><td class="hi">13</td><td>Barred by <b>SRA s. 14</b> — contract of <b>personal service</b> cannot be enforced.</td><td>SRA s. 14(1) (personal-qualification contracts)</td><td>Show contract’s nature makes court-supervision impossible</td></tr>
+    <tr><td class="hi">14</td><td>No mandatory <b>pre-suit notice</b>: s. 80 CPC / s. 14(1)(a) Rent Control Act / s. 478 Delhi Municipal Corporation Act.</td><td>s. 80 CPC (Govt suits — 2 months’ notice); special statutes</td><td>Plead service/non-service facts + expiry of statutory period</td></tr>
+    <tr><td class="hi">15</td><td>Plaintiff <b>firm not registered</b> → not competent to sue.</td><td>Indian Partnership Act, 1932 <b>s. 69</b> (suit by unregistered firm barred)</td><td>Non-registration fact; note exceptions (partnership firms sue in firm name — O. 30 CPC)</td></tr>
+    <tr><td class="hi">16</td><td>Suit barred by <b>s. 4 Benami Transactions (Prohibition) Act, 1988</b> — real owner suing in another’s name.</td><td>Benami Act s. 4 (suit for property held benami barred)</td><td>Plead benami indicators: source of consideration, possession, control</td></tr>
+  </table>
+
+  <h3>10.2 “On merits” — the reply technique (verbatim DU method)</h3>
+  <div class="grid2">
+    <div class="box">
+      <h4>Four reply moves DU actually uses</h4>
+      <ol>
+        <li><b>Admit:</b> “contents of para 1 … correct and is admitted.”</li>
+        <li><b>Deny for want of knowledge</b> (defendant can’t know plaintiff’s internal facts): “denied for want of
+        knowledge. <i>The Plaintiff be put to the strict proof of each and every allegation</i>.”</li>
+        <li><b>Flat denial + positive counter-fact:</b> “absolutely incorrect and are denied. It is specifically
+        denied that the Plaintiff is the owner… <b>As a matter of fact, Mr. N is the owner</b>.”</li>
+        <li><b>Split admission:</b> “correct that the Defendant is in possession… remaining contents … are absolutely
+        incorrect and are denied.” + placeholder: “5–10 (each and every allegation must be replied specifically …
+        only illustrative)”.</li>
+      </ol>
+      <p class="smallcap">Then contest jurisdiction (para 12), valuation (para 13 — “correct valuation is Rs. …”).</p>
+    </div>
+    <div class="box warn">
+      <h4>The rules these moves implement</h4>
+      <ul>
+        <li><b>O. 8 R. 3(1):</b> answer every material allegation specifically — <b>evasive denial = deemed admitted</b>.</li>
+        <li><b>O. 8 R. 1:</b> WS within <b>30 days</b> (extendable, max <b>90</b>) — late WS risks judgment (R. 10).</li>
+        <li><b>O. 8 R. 7:</b> distinct grounds separately stated — the 16 POs are model compliance.</li>
+        <li><b>O. 8 R. 8:</b> new grounds arising after suit can be raised (leave practice).</li>
+        <li><b>“Without prejudice to one another”:</b> alternative/consistent defences preserved (O. 6 R. 7 allows
+        consistency issue only for plaintiff; defendant may plead in alternative — Unit I § 7).</li>
+        <li><b>Evidence limit:</b> “put to strict proof” is permissible formula; narrating cross-examination would
+        breach Rule 3 (facts ≠ evidence — <i>Chunni Lal</i>: no pleading → no evidence, Part I § 9.6).</li>
+        <li><b>Set-off (O. 8 R. 6) &amp; counter-claim (R. 6A — treated as a plaint; must say “by way of
+        counter-claim”)</b> — DU’s closing Note; verify like a plaint + affidavit.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box dark">
+    <h4>🔗 Verification of the WS (DU’s split-verification technique — unique &amp; exam-worthy)</h4>
+    <p>“Verified … that the contents of <b>paras 1 to …. of the preliminary objection</b> and <b>para… to… of reply
+    on merits</b> are true <b>to my personal knowledge</b> and those of <b>paras … to …. of preliminary objection and
+    para…to… of reply on merits</b> are true &amp; correct <b>on the basis of legal advice received and believed to be
+    true</b>. Last para is prayer…” — note the model splits the knowledge/information line <b>within each part</b>.
+    (Statutory core remains O. 6 R. 15: specify para-wise what is knowledge vs information; amendable if defective —
+    objection 9 anticipates this.)</p>
+  </div>
+</section>
+
+<!-- ======================= SECTION 11 : FORM 10 ======================= -->
+<section class="blk" id="s11">
+  <div class="sec-head"><div class="sec-num">11</div>
+    <div><h2>Form 10 — Caveat under Section 148A CPC (DU pp. 31–32)</h2>
+    <div class="sub">The notice-guarantee: subsections (1)–(5), DU walkthrough, scope limits, cases</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 31–32</span></h4>
+    <p><b>Court:</b> High Court of Delhi at New Delhi · <b>Caption:</b> “CAVEAT NO. /20… (ARISING OUT OF THE JUDGMENT
+    AND ORDER DATED … IN SUIT NO. … TITLED AS ABC v. XYZ PASSED BY SH. …, CIVIL JUDGE, … DISTRICT, DELHI)” ·
+    <b>Parties:</b> XYZ (petitioner/would-be petitioner) <i>v.</i> ABC (Respondent/Caveator) ·
+    <b>Title:</b> “CAVEAT UNDER SECTION 148-A OF THE CPC — BY RESPONDENT/CAVEATOR”.</p>
+    <p><b>The six paragraphs (note the built-in cross-reference to Unit I!):</b></p>
+    <ol style="margin-left:20px;">
+      <li>The Civil Judge <b>dismissed the plaintiff’s application for amendment under O. VI Rule 17 CPC</b> in the
+      suit (order under challenge).</li>
+      <li>Caveator expects the plaintiff/would-be petitioner to file a <b>Civil Misc. (Main) Petition under Art. 227</b>
+      of the Constitution against that order → <b>hence this caveat</b>.</li>
+      <li>Caveator has a <b>right to appear and contest</b> that petition.</li>
+      <li>Caveator <b>desires notice</b> of the filing — “to enable caveator to appear at the time of hearing for
+      admission and <b>no stay may be granted without hearing</b> the caveator/respondent.”</li>
+      <li>Copy of caveat sent to plaintiff/would-be petitioner by <b>Regd. A/D post</b> (statutory service).</li>
+      <li>Requisite court fee paid.</li>
+    </ol>
+    <p><b>PRAYER:</b> “nothing may be done in [the] Civil Misc. [petition] … without notice to the caveator or his
+    counsel.” + affidavit duly attested by oath commissioner.</p>
+  </div>
+
+  <h3>11.1 Section 148A — the complete mechanism</h3>
+  <table>
+    <tr><th style="width:16%;">Sub-section</th><th>Text-substance &amp; duties</th></tr>
+    <tr><td class="hi">(1) — Right to lodge</td><td>Where an application is <b>expected to be made, or has been made</b>, in a suit or proceeding instituted or about to be instituted, <b>any person claiming a right to appear</b> on the hearing of such application may lodge a caveat. (Third-party with appearance-right qualifies — need not already be a party.)</td></tr>
+    <tr><td class="hi">(2) — Caveator’s duty</td><td>Must <b>serve notice of the caveat by registered post, acknowledgement due</b>, on the person expected to make the application. (DU para 5 is this service — keep the AD card as proof!)</td></tr>
+    <tr><td class="hi">(3) — Court’s duty</td><td>Where, after caveat, any application is filed, the Court <b>shall serve notice of the application on the caveator</b> — mandatory; an order passed without this notice is <b>void</b> (courts: “nullity”). This is the heart of the remedy: <b>notice before adverse interim relief</b>.</td></tr>
+    <tr><td class="hi">(4) — Applicant’s duty</td><td>On receiving caveat notice, the applicant shall <b>forthwith furnish the caveator, at the caveator’s expense</b>, copies of the application and of every paper/document filed in support.</td></tr>
+    <tr><td class="hi">(5) — Life-span</td><td>Caveat <b>remains in force 90 days</b> from lodging — unless the anticipated application is made before expiry (then it lives for that application). No application in 90 days → <b>lapse; fresh caveat needed</b>.</td></tr>
+  </table>
+
+  <div class="vflow" style="margin-top:12px;">
+    <div class="step">① Caveator anticipates an application affecting him (appeal/revision/Art. 227/interim relief)</div>
+    <div class="arw">↓</div>
+    <div class="step">② Lodge caveat + affidavit in the right court — <b>s. 148A(1)</b> · serve RPAD notice on the would-be applicant — <b>s. 148A(2)</b> (DU para 5)</div>
+    <div class="arw">↓</div>
+    <div class="step">③ Application filed within 90 days → Court <b>must notify the caveator</b> — <b>s. 148A(3)</b> (DU para 4’s demand)</div>
+    <div class="arw">↓</div>
+    <div class="step">④ Applicant furnishes copies forthwith at caveator’s cost — <b>s. 148A(4)</b></div>
+    <div class="arw">↓</div>
+    <div class="step">⑤ Caveator heard at admission/stay stage → no ex-parte interim relief · 90 days over, nothing filed → lapse — <b>s. 148A(5)</b></div>
+  </div>
+
+  <div class="grid2" style="margin-top:12px;">
+    <div class="box warn">
+      <h4>🚩 Scope — where a caveat will NOT travel</h4>
+      <ul>
+        <li><b>Civil proceedings only</b> — not maintainable against <b>criminal</b> petitions or <b>Art. 226</b> writs
+        (<i>Deepak Khosla v. UOI</i> — § 14.6). (Criminal side has its own notice regimes; don’t import s. 148A.)</li>
+        <li><b>Probate/letters of administration</b>: the historic home of “caveat” — caution against grant of probate
+        (Indian Succession Act practice; caveat originated there).</li>
+        <li>A caveat buys <b>notice, not victory</b> — it never grants stay by itself; the merits are fought in the
+        reply.</li>
+        <li>Must be lodged in the court where the application is expected; affidavit + vakalatnama + proof of dispatch
+        accompany filing.</li>
+      </ul>
+    </div>
+    <div class="box tip">
+      <h4>⚡ Drafting points &amp; real-life uses</h4>
+      <ul>
+        <li><b>Draft the “order under challenge” precisely</b> (DU para 1: court, judge, suit no., date, nature of
+        order) — ambiguity defeats the caveat’s matching function.</li>
+        <li><b>Name the expected remedy</b> (DU: Art. 227) so the registry can match the incoming petition.</li>
+        <li>Uses: post-judgment Art. 227/revision fear; stay applications in appeals; property-transfer matters;
+        anticipatory litigation strategy in civil money cases.</li>
+        <li><b>DU’s sample order is a dismissed O. 6 R. 17 amendment</b> — the same rule that Part I § 8 explains:
+        refusal of amendment is a classic trigger for High Court revision.</li>
+        <li>90 days → calendar reminder; if the case drags, <b>re-lodge</b>.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION 12 : FORM 11 ======================= -->
+<section class="blk" id="s12">
+  <div class="sec-head"><div class="sec-num">12</div>
+    <div><h2>Form 11 — Transfer Petition (Civil) under Section 25 CPC (DU pp. 33–35)</h2>
+    <div class="sub">Supreme Court’s transfer jurisdiction · O. XLI SC Rules 2013 · two DU variants compared · the governing case</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU’s own statement of the law (quoted from the material) <span class="src du">DU p. 33</span></h4>
+    <p style="font-style:italic;">“Sec 25 of CPC 1908 states that on an application made by a party and after notice to
+    the parties and after hearing them the Supreme Court may at any stage if satisfied that such order is needed
+    <b>in the interest of justice</b> may under this section order that any suit, appeal or any other proceeding be
+    transferred from a High Court or other civil court <b>in one state</b> to [a] High Court or other civil court
+    <b>in another state</b>.”</p>
+    <p><b>Title of the form (verbatim):</b> “IN THE SUPREME COURT OF INDIA — ORIGINAL CIVIL JURISDICTION —
+    TRANSFER PETITION (CIVIL) NO. …. OF 20… <b>(UNDER SECTION 25 OF THE CPC, READ WITH ORDER XLI, SUPREME COURT
+    RULES, 2013)</b>” + “AND IN THE MATTER OF: TRANSFER OF THE DIVORCE PETITION BEING HMA PETITION NO…./20…
+    TITLED AS … v. … PENDING ADJUDICATION BEFORE … (from) TO … (to)” + “To the Hon’ble Chief Justice of India and
+    his Companion Justices…”.</p>
+  </div>
+
+  <h3>12.1 Anatomy of the DU divorce-transfer variant (pp. 33–35)</h3>
+  <table>
+    <tr><th style="width:22%;">Block</th><th>Content</th></tr>
+    <tr><td class="hi">Para 1 — Identification</td><td>Exact HMA petition no., title, court it is pending in, and court where transfer is sought (registry-matching precision).</td></tr>
+    <tr><td class="hi">Para 2 — Brief facts (2.1–2.7)</td><td>Marriage on (date) at (place) per Hindu rites → residence → child born → attitude changed, harassment by respondent &amp; parents → petitioner thrown out, forced to parents’ home → reconciliation attempts failed → <b>2.7</b> respondent’s divorce petition under s. 13 HMA pending (Annexure P-1) → <b>2.8</b> petitioner’s maintenance petition under s. 125 CrPC pending (Annexure P-2). <i>(Note: every pending proceeding is annexured — the transfer target and the connected cases are all on record; s. 125 CrPC is now <b>s. 144 BNSS</b>.)</i></td></tr>
+    <tr><td class="hi">Para 3 — Grounds (i–vi)</td><td><b>i</b> no one to accompany her to court dates · <b>ii</b> no place to stay at the distant city; financially dependent on parents · <b>iii</b> ill-health — back problem; doctor advised against long journeys · <b>iv</b> minor child can’t travel for every hearing · <b>v</b> apprehension of humiliation/defamation at that court · <b>vi</b> her own case pending there — convenience for <b>both</b> parties to contest there.</td></tr>
+    <tr><td class="hi">Paras 4–5 — Clean hands</td><td>“<b>no other similar transfer petition</b> filed in this matter” + court fee affixed.</td></tr>
+    <tr><td class="hi">Prayer + affidavit</td><td>Transfer order + omnibus; “To be supported by an affidavit.”</td></tr>
+  </table>
+
+  <h3>12.2 The companion DU variant — real-world flavour <span class="src dunotes">DU companion notes (W.P. 727/2015)</span></h3>
+  <div class="box">
+    <p><b>JWO B.P. Mishra v. Union of India</b> — a service writ: petitioner (airman) sought transfer of
+    <b>Civil Writ Petition No. 727/2015 (High Court of Delhi) → High Court of Judicature at Allahabad</b>, narrating:
+    harassment under the Air Force Act, rejected ACRs, discharge &amp; stopped pension, GCM without defence counsel,
+    denial of appeal under s. 161(1) Air Force Act, life-threats, family relocated to Pratapgarh (U.P.),<b>penury
+    making Delhi litigation impossible</b>, plus backlog. <b>Grounds I–VI:</b> no faith in respondents (influence/malice)
+    · life-threats · financial inability · discharge/pension stopped · proximity to residence (Allahabad nearer) ·
+    “interest of justice” + no likelihood of disposal due to arrears — with the writ copy as Annexure P-1 and the same
+    “no other similar transfer petition” + affidavit formulae.</p>
+    <p class="smallcap"><b>Compare the two:</b> same skeleton — (identification → brief facts → specific grounds →
+    no-duplication statement → court fee → prayer → affidavit) — different narratives ( matrimonial hardship vs
+    service/military grievance). The skeleton travels; the facts change.</p>
+  </div>
+
+  <div class="grid2">
+    <div class="box gold">
+      <h4>⚖️ The governing case (full note in § 14.5)</h4>
+      <p><b>Dr. Subramaniam Swamy v. Radhakrishna Hegde, (1990) 1 SCC 4:</b> the <b>paramount consideration under
+      s. 25 is the requirement of justice</b> — mere convenience of parties is not enough; it must be shown that trial
+      in the chosen forum will result in <b>denial of justice</b>. If ends of justice demand transfer, the Court should
+      have <b>no hesitation</b>; the <i>dominus litis</i>’s choice of forum “cannot eclipse the requirement of
+      justice”.</p>
+      <p class="smallcap">Drafting consequence: every ground in a s. 25 petition must point at <b>justice</b>
+      (fairness, safety, ability to defend), not merely comfort — DU’s grounds do exactly that (health, child, no
+      shelter, dignity).</p>
+    </div>
+    <div class="box">
+      <h4>🔗 Related provisions at this place</h4>
+      <ul>
+        <li><b>s. 24 CPC</b> — <b>High Court’s</b> transfer power for suits/appeals/interlocutory applications
+        (within/between its subordinate courts) — the intra-state twin of s. 25.</li>
+        <li><b>O. XLI, Supreme Court Rules, 2013</b> — procedure for civil transfer petitions (cited in DU title;
+        criminal transfers use O. XXXIX SC Rules with CrPC s. 406 — now BNSS equivalent).</li>
+        <li><b>Affidavit</b> mandatory (s. 25 “on an application” + SC Rules) — DU note.</li>
+        <li><b>“No other similar petition”</b> para — mirrors the SC registry requirement &amp; anti-abuse discipline;
+        also caveats (§ 11) may be filed by the opposite side anticipating this very petition in the SC.</li>
+        <li>Related narratives: DU Form 10 (caveat) protects when the transfer petition itself is feared; The Hindu Marriage Act has <b>no special transfer section</b> — that is precisely why matrimonial transfers travel under <b>s. 25 CPC</b> (criminal matrimonial cases use CrPC s. 406 → its BNSS equivalent).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION 13 : FORM 12 ======================= -->
+<section class="blk" id="s13">
+  <div class="sec-head"><div class="sec-num">13</div>
+    <div><h2>Form 12 — Execution Application (DU pp. 36–37)</h2>
+    <div class="sub">O. XXI’s tabular petition · the 10 statutory particulars · modes of execution · limitation</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>📘 DU model at a glance <span class="src du">DU pp. 36–37</span></h4>
+    <p><b>Caption:</b> “EXECUTION PETITION NO. … OF 20…. IN CIVIL SUIT NO. … OF 20….” · <b>Parties:</b> A
+    (<b>DECREE HOLDER</b>) <i>v.</i> B (<b>JUDGMENT DEBTOR</b>) · <b>Formula (verbatim):</b> “THE DECREE HOLDER PRAYS
+    FOR EXECUTION OF THE DECREE/ORDER DATED DD/MM/YYYY, <b>THE PARTICULARS WHEREOF ARE STATED IN THE COLUMNS
+    HEREUNDER</b>” — followed by the <b>10-column statutory table</b>:</p>
+    <table style="margin-top:8px;">
+      <tr><th style="width:6%;">Col.</th><th>Particular</th><th style="width:38%;">Why the court needs it</th></tr>
+      <tr><td class="hi">1</td><td>No. of Suit</td><td>Identifies the decree (s. 2(d))</td></tr>
+      <tr><td class="hi">2</td><td>Names of Parties</td><td>Decree-holder vs judgment-debtor (capacity &amp; LR status)</td></tr>
+      <tr><td class="hi">3</td><td>Date of Decree/Order of which execution is sought</td><td>Start-point of enforceability &amp; limitation (Art. 136)</td></tr>
+      <tr><td class="hi">4</td><td>Whether an appeal was filed — and result</td><td>Decree becomes enforceable after dismissal of appeal</td></tr>
+      <tr><td class="hi">5</td><td>Whether any payment received towards satisfaction</td><td>Partial satisfaction — execution only for balance</td></tr>
+      <tr><td class="hi">6</td><td>Whether any application made previously — dates &amp; results</td><td>Repeat execution discipline; prior objection orders</td></tr>
+      <tr><td class="hi">7</td><td>Amount of suit + interest as per decree / other relief</td><td>Exact decretal dues (principal + decretal interest)</td></tr>
+      <tr><td class="hi">8</td><td>Amount of costs, if allowed</td><td>Costs form part of executable dues</td></tr>
+      <tr><td class="hi">9</td><td>Against whom execution is sought</td><td>Judgment-debtor / LRs (s. 50) / transferees</td></tr>
+      <tr><td class="hi">10</td><td>In what manner court’s assistance is sought</td><td>Mode of execution elected (s. 51 — arrest? attachment? delivery?)</td></tr>
+    </table>
+    <p style="margin-top:8px;"><b>PRAYER:</b> execution may be granted · <b>VERIFICATION:</b> “true to my knowledge
+    or belief” · <b>Footnote (verbatim):</b> “The application for execution shall be accompanied by a <b>duly certified
+    copy of the decree or order, or by the Original, or by the Minutes of decree or order until the decree or order is
+    drawn up. Judge may allow execution before sealing of decree order.</b>” · <b>Student note:</b> fill the table
+    per the facts of the case.</p>
+  </div>
+
+  <h3>13.1 The law around the table (ss. 36–74 + Order XXI — 106 rules, the longest Order of the CPC)</h3>
+  <table>
+    <tr><th style="width:24%;">Anchor</th><th>Substance <span class="src kamkus">KAMKUS (VI) Execution Petition</span></th></tr>
+    <tr><td class="hi">What execution is</td><td>“The enforcement of decrees and orders of courts by the process of the court… the formal method by which the party entitled to the benefit of a judgment may obtain that benefit.” Arises only when the judgment-debtor does not comply.</td></tr>
+    <tr><td class="hi">s. 51 CPC — modes</td><td>Court whose duty it is to execute may enforce a decree for money by: <b>(a) delivery of property</b> (movable/immovable); <b>(b) attachment &amp; sale</b>; <b>(c) arrest &amp; detention</b> in civil prison; <b>(d) such other manner as prescribed</b> (garnishee, appointment of receiver, etc. under O. XXI). “Against the person” = arrest &amp; detention; “against property” = attachment &amp; sale → proceeds paid to decree-holder.</td></tr>
+    <tr><td class="hi">Where &amp; by whom</td><td>Application to the <b>court which passed the decree</b> (or court to which it is sent — ss. 39, 42). <b>R. 15:</b> any joint decree-holder; <b>R. 16:</b> transferee of decree; <b>Legal representative</b> of decree-holder (death); <b>s. 50:</b> execution against judgment-debtor’s LRs — only against property inherited, not personally.</td></tr>
+    <tr><td class="hi">Contents — O. XXI R. 11(2)–14</td><td>Writing, signed &amp; verified by applicant <b>or any person acquainted with the facts</b> (corporate decree-holder: president/secretary may verify — KAMKUS); particulars = <b>the DU columns</b>: name of court, suit no., parties, date of decree, appeal + result, nature/character/amount + costs, <b>mode of execution</b> &amp; property description. <b>R. 11A:</b> arrest/detention applications need <b>grounds + affidavit</b>. Statutory form: <b>Form No. 6, Appendix E</b> — “application in tabular form”; non-tabular form alone is not a ground for rejection (KAMKUS).</td></tr>
+    <tr><td class="hi">Defective application</td><td>Missing particulars → scrutiny; court may permit cure/amendment (KAMKUS attributes rejection/amendment to R. 17); rejected application may be re-presented properly framed.</td></tr>
+    <tr><td class="hi">Limitation</td><td><b>Art. 136, Limitation Act — 12 years</b> from the date the decree becomes enforceable; if appeal preferred, from its dismissal (KAMKUS). ← Col. 3 &amp; 4 exist for exactly this computation.</td></tr>
+    <tr><td class="hi">Disputes in execution</td><td>Questions between decree-holder &amp; judgment-debtor (right to execute, partial satisfaction, etc.) → <b>s. 47 CPC</b> (deemed a suit); orders subject to appeal provisions.</td></tr>
+    <tr><td class="hi">Restraint discipline</td><td>Court may decline simultaneous execution against person <b>and</b> property (O. XXI discretion noted by KAMKUS); bona-fide execution is protected, abuse struck down.</td></tr>
+  </table>
+
+  <div class="box gold">
+  <svg viewBox="0 0 940 260" width="100%" role="img" aria-label="Execution flowchart">
+    <defs><marker id="a13" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c9962e"/></marker></defs>
+    <text x="470" y="24" text-anchor="middle" font-weight="bold" font-size="15.5" fill="#14213d">DECREE → REALITY: THE EXECUTION PIPELINE</text>
+    <rect x="14" y="48" width="150" height="70" rx="9" fill="#14213d"/><text x="89" y="72" text-anchor="middle" fill="#f2d492" font-size="12" font-weight="bold">DECREE PASSED</text><text x="89" y="92" text-anchor="middle" fill="#fff" font-size="10.5">s. 2(d) · enforceable</text><text x="89" y="108" text-anchor="middle" fill="#fff" font-size="10.5">(appeal? — col. 4)</text>
+    <rect x="184" y="48" width="160" height="70" rx="9" fill="#a3282a"/><text x="264" y="72" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">TIME LIMIT</text><text x="264" y="92" text-anchor="middle" fill="#e9edf6" font-size="10.5">Art. 136 — 12 years</text><text x="264" y="108" text-anchor="middle" fill="#f2d492" font-size="10.5">from enforceability</text>
+    <rect x="364" y="48" width="180" height="70" rx="9" fill="#1e6f50"/><text x="454" y="72" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">EXECUTION APPLICATION</text><text x="454" y="92" text-anchor="middle" fill="#e9edf6" font-size="10.5">R. 11(2)–14 · Form 6 App. E</text><text x="454" y="108" text-anchor="middle" fill="#f2d492" font-size="10.5">10 columns + affidavit (R. 11A)</text>
+    <rect x="564" y="48" width="160" height="70" rx="9" fill="#14508c"/><text x="644" y="72" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">SCRUTINY &amp; NOTICE</text><text x="644" y="92" text-anchor="middle" fill="#e9edf6" font-size="10.5">certified decree copy</text><text x="644" y="108" text-anchor="middle" fill="#f2d492" font-size="10.5">notice to judgment-debtor</text>
+    <rect x="744" y="40" width="182" height="86" rx="9" fill="#b35c10"/><text x="835" y="60" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">MODE (s. 51)</text><text x="835" y="78" text-anchor="middle" fill="#e9edf6" font-size="10.5">delivery · attachment &amp; sale</text><text x="835" y="94" text-anchor="middle" fill="#e9edf6" font-size="10.5">arrest &amp; detention</text><text x="835" y="110" text-anchor="middle" fill="#f2d492" font-size="10.5">garnishee · receiver …</text>
+    <line x1="164" y1="83" x2="184" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a13)"/>
+    <line x1="344" y1="83" x2="364" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a13)"/>
+    <line x1="544" y1="83" x2="564" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a13)"/>
+    <line x1="724" y1="83" x2="744" y2="83" stroke="#c9962e" stroke-width="2.4" marker-end="url(#a13)"/>
+    <rect x="14" y="150" width="912" height="94" rx="9" fill="#fff" stroke="#e3d7bb" stroke-width="2"/>
+    <text x="470" y="174" text-anchor="middle" fill="#14213d" font-size="13" font-weight="bold">POST-FLOW CHECKS</text>
+    <text x="470" y="196" text-anchor="middle" fill="#4a5568" font-size="11.5">Partial payment? (col. 5) → execute only balance · Prior application? (col. 6) → attach its result · Dispute about execution? → s. 47 CPC (deemed suit)</text>
+    <text x="470" y="216" text-anchor="middle" fill="#4a5568" font-size="11.5">Decree vs Government / LR / transferee → special execution rules (s. 50, s. 39/42 transmission) · KAMKUS model adds a property-schedule + truth-declaration like an affidavit</text>
+    <text x="470" y="236" text-anchor="middle" fill="#14508c" font-size="11.5">Reminder chain: Suit (Form 1/3/7/8) → WS (Form 9) → Decree → <b>THIS FORM</b> → delivery/attachment</text>
+  </svg>
+  </div>
+</section>
+
+<!-- ======================= SECTION 14 : CASES ======================= -->
+<section class="blk" id="s14">
+  <div class="sec-head"><div class="sec-num">14</div>
+    <div><h2>Case-Law Compendium — Facts · Issues · Arguments · Decision · Principles</h2>
+    <div class="sub">Every case attached to these twelve forms</div></div>
+  </div>
+
+  <div class="box note">
+    <h4>Sourcing note</h4>
+    <p>The DU <b>model forms themselves are proformas with blanks</b> and carry no citations inside them. The cases
+    below are therefore drawn — as directed — from the <b>project’s uploaded material</b> (DU companion notes,
+    KAMKUS prescribed-style book, skill notes) plus bare-Act/leading-judgment verification for each form’s governing
+    provision. Each note is in full exam format.</p>
+  </div>
+
+  <!-- CASE 1 -->
+  <div class="case" id="c1">
+    <div class="chead">
+      <div class="cname">1 · Milkhiram (India) Private Ltd. &amp; Ors. v. Chamanlal Bros.</div>
+      <div class="ccit">AIR 1965 SC 1698 : (1965) — Supreme Court of India, 4-Judge Bench (J.R. Mudholkar J.), 23 April 1965 — governing case of Form 1</div>
+      <div class="cmeta"><span>📕 Order XXXVII — leave to defend</span><span>📌 “substantial defence / triable issue” test</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>Facts</h5>
+        <p>The plaintiff-firm sued on <b>promissory notes</b> (and connected bills/guarantee transactions) under the
+        summary procedure of Order XXXVII. The defendants contested on the footing that the real transactions were
+        governed by an <b>agreement involving unliquidated amounts</b> and that the <b>blank cheques delivered as
+        security</b> had been misused. The trial court examined whether the affidavit-defence raised a triable issue —
+        it found the defence “vague” and “not bona fide” (defendant had produced no documentary evidence) — but still
+        granted <b>leave to defend on condition of security for the entire claim and costs</b>. The defendants,
+        aggrieved that leave was not unconditional, carried the matter through the Letters Patent (summarily
+        dismissed) to the Supreme Court by special leave.</p>
+      </div>
+      <div class="el"><h5>Issues</h5>
+        <ol>
+          <li>Did the suit fall within O. XXXVII (appellants’ contention: unliquidated amounts under an agreement are
+          outside the Order; the notes-based cause of action was merely ancillary)?</li>
+          <li>Did the affidavit-disclosure raise a <b>triable issue</b> entitling the defendant to
+          <b>unconditional</b> leave? Was the security-condition justified for want of documentary evidence?</li>
+        </ol>
+      </div>
+      <div class="el"><h5>Arguments — Defendants/Appellants</h5>
+        <p>The defence disclosed a triable issue; therefore it was <b>incumbent on the trial judge to grant
+        unconditional leave</b>; conditioning leave on security for the full claim was punitive where the merits had
+        not been tried.</p>
+      </div>
+      <div class="el"><h5>Arguments — Plaintiff/Respondent</h5>
+        <p>The alleged defence was vague, sham and unsupported; the cause of action rested independently on the
+        promissory notes; the conditional leave was a legitimate safeguard for a claim otherwise liable to
+        summary decree.</p>
+      </div>
+      <div class="el"><h5>Decision</h5>
+        <ul>
+          <li>The Court upheld that the <b>cause of action on the promissory notes was prima facie independent</b> and
+          fell within O. XXXVII — the Order applies notwithstanding connected unliquidated issues.</li>
+          <li>Laid down the <b>test</b>: ask whether the defence raises a <b>real issue and not a sham one</b> —
+          i.e., if the facts alleged by the defendant are established, would they constitute a good or even a
+          <b>plausible defence</b>? If satisfied on that, leave <b>must</b> be given.</li>
+          <li>The <b>trial court was wrong</b> to impose the condition of security for the entire claim merely because
+          documentary evidence had not been produced with the affidavit.</li>
+        </ul>
+      </div>
+      <div class="principle"><b>Principle evolved (the four-point restatement used across High Courts):
+      (1)</b> substantial defence likely to succeed → plaintiff not entitled to sign judgment; defendant gets
+      <b>unconditional</b> leave; <b>(2)</b> triable issues showing a <b>fair or reasonable defence</b> (not
+      necessarily a positively good one) → ordinarily unconditional leave; <b>(3)</b> no substantial defence /
+      frivolous &amp; vexatious → leave refused → summary decree (O. 37 R. 3(6)); <b>(4)</b> part admitted → deposit
+      that part first (2nd proviso). <b>Drafting lesson:</b> the defendant’s leave-application must plead <b>facts
+      constituting the defence</b> in affidavit form — exactly the Unit I discipline (material facts, no evidence).</div>
+    </div>
+  </div>
+
+  <!-- CASE 2 -->
+  <div class="case" id="c2">
+    <div class="chead">
+      <div class="cname">2 · Rajni Kumar v. Suresh Kumar Malhotra</div>
+      <div class="ccit">2003 (3) SCALE 434 — Supreme Court of India — O. XXXVII R. 4 (setting aside)</div>
+      <div class="cmeta"><span>📕 Summary-suit decrees</span><span>📌 “special circumstances” standard</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>Facts &amp; issue</h5>
+        <p>After a decree under the summary procedure, the defendant moved to <b>set it aside under O. XXXVII
+        R. 4</b>. The question: what standard governs setting aside a summary-suit decree and restoring leave to
+        defend?</p>
+      </div>
+      <div class="el"><h5>Decision &amp; principle</h5>
+        <p>The Supreme Court held that the court must assess whether the circumstances are <b>extraordinary or
+        unusual</b> — R. 4 requires <b>“special circumstances”</b>; the power is exercised to prevent grave injustice,
+        not to reward delay. Along with setting aside, the court may <b>stay execution</b> and give leave to appear
+        and defend, <b>on such terms as it thinks fit</b>. <b>Drafting lesson:</b> an application under R. 4 must
+        <b>plead the special circumstances with dates</b> (non-service, illness, force majeure) <b>and</b> disclose the
+        defence on merits — both limbs, in affidavit form.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 3 -->
+  <div class="case" id="c3">
+    <div class="chead">
+      <div class="cname">3 · Samee Khan v. Bindu Khan</div>
+      <div class="ccit">(1998) 7 SCC 622 — Supreme Court of India — governing case of Form 5 (O. XXXIX R. 2A)</div>
+      <div class="cmeta"><span>📕 Disobedience of injunction</span><span>📌 survival of liability after setting aside</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>Facts</h5>
+        <p>An injunction order had been granted in the litigation; the respondent <b>violated it</b> during its
+        pendency; later, the injunction order itself was <b>set aside</b> / the suit concluded against the
+        grantee. The contemnor’s plea: once the order fell, the disobedience could not survive.</p>
+      </div>
+      <div class="el"><h5>Issue</h5><p>Is liability for disobedience of an injunction erased by the subsequent
+      setting aside of that injunction?</p></div>
+      <div class="el"><h5>Arguments</h5>
+        <p><b>Contemnor:</b> the underlying order ceased to exist → no live command → no punishable breach.
+        <b>Opposite party:</b> the dignity of the court requires that a flagrant breach during the order’s life be
+        punishable regardless of later events; otherwise injunctions become optional.</p>
+      </div>
+      <div class="el"><h5>Decision</h5>
+        <p>The Supreme Court held: <b>“Even if the injunction order was subsequently set aside, the disobedience does
+        not get erased.”</b> The contemptuous act cannot be retroactively legitimised; at most, the <b>severity</b> of
+        punishment may be reduced in the changed circumstances.</p>
+      </div>
+      <div class="principle"><b>Principle evolved:</b> O. XXXIX R. 2A liability attaches to the <b>act of
+      disobedience while the order subsisted</b> — subsequent vacation of the order is a mitigating, not an
+      extinguishing, factor. <b>Drafting lesson (Form 5):</b> plead the order-date, knowledge/service and the breach-date
+      so the liability is anchored inside the order’s life — which is precisely DU paras 3–4.</div>
+    </div>
+  </div>
+
+  <!-- CASE 4 -->
+  <div class="case" id="c4">
+    <div class="chead">
+      <div class="cname">4 · Smt. Lavanya C &amp; Anr. v. Vittal Gurudas Pai (since deceased) by Lrs. &amp; Ors.</div>
+      <div class="ccit">(2025) — Supreme Court of India (Mithal &amp; Karol JJ.) — reaffirming &amp; applying O. XXXIX R. 2A</div>
+      <div class="cmeta"><span>📕 Form 5 current law</span><span>📌 quantum: jail vs compensation</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>Facts</h5>
+        <p>The appellants were guilty of <b>disobeying an injunction/undertaking</b> granted before the trial court.
+        The trial court punished them with <b>attachment of property, three months’ civil imprisonment and ₹10 lakh
+        compensation</b>; the High Court upheld liability, citing <i>Samee Khan</i>, observing that even if the
+        injunction was later set aside, disobedience during pendency is not erased, and that the appellants were
+        guilty of breach of their own undertaking. The matter reached the Supreme Court.</p>
+      </div>
+      <div class="el"><h5>Issues</h5>
+        <ol><li>Does subsequent setting-aside of the injunction absolve the disobedience?</li>
+        <li>Was the punishment (3 months’ detention + compensation) appropriate on the facts?</li></ol>
+      </div>
+      <div class="el"><h5>Arguments</h5>
+        <p><b>Appellants:</b> order invalid/aside; advanced age — jail should be excused.
+        <b>Respondents:</b> express violation of a court order; contempt powers exist to maintain the court’s
+        authority; compensation justified by loss.</p>
+      </div>
+      <div class="el"><h5>Decision</h5>
+        <ul>
+          <li>SC <b>confirmed liability</b> — “when there has been an <b>express violation of a Court order</b>… the
+          exercise of contempt jurisdiction cannot be faulted”; disobedience “is not erased” even if the order is
+          subsequently set aside or the suit dismissed (following <i>Samee Khan</i>).</li>
+          <li>On quantum: <b>deleted the three-month imprisonment</b> considering the appellant’s advanced age;
+          <b>enhanced compensation from ₹10 lakh to ₹13 lakh</b> with <b>6% interest</b> from the date of the lower
+          court’s judgment.</li>
+          <li>Reiterated that the powers of contempt exist “to ensure that the <b>dignity and majesty of law</b>”
+          are maintained.</li>
+        </ul>
+      </div>
+      <div class="principle"><b>Principle evolved:</b> (1) breach of an injunction = contempt, surviving later
+      vacation; (2) remedies under R. 2A are <b>discretionary and severable</b> — detention can be substituted by
+      enhanced compensation when mitigation exists; (3) undertakings before courts are enforced like orders.
+      <b>Drafting lesson:</b> Form 5’s prayer for “maximum term” must be balanced with mitigation facts — plead the
+      wilfulness (for liability) precisely; expect the court to calibrate punishment.</div>
+    </div>
+  </div>
+
+  <!-- CASE 5 -->
+  <div class="case" id="c5">
+    <div class="chead">
+      <div class="cname">5 · Dr. Subramaniam Swamy v. Radhakrishna Hegde</div>
+      <div class="ccit">(1990) 1 SCC 4 — Supreme Court of India — governing case of Form 11 (s. 25 CPC)</div>
+      <div class="cmeta"><span>📕 Transfer of proceedings</span><span>📌 “justice over convenience”</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>Facts &amp; issue</h5>
+        <p>An application sought transfer under <b>s. 25 CPC</b>. The Court examined what standard should guide
+        transfer where the forum-choice of the <i>dominus litis</i> conflicts with the respondent’s need for a fair
+        trial.</p>
+      </div>
+      <div class="el"><h5>Arguments</h5>
+        <p><b>Resisting party:</b> suit/petition duly filed in the chosen forum; convenience favours retention.
+        <b>Applicant:</b> trial in that forum would be unfair / justice denied.</p>
+      </div>
+      <div class="el"><h5>Decision &amp; principle</h5>
+        <p>Held: the <b>paramount consideration under s. 25 is the requirement of justice</b>. Mere convenience of
+        the parties (or one of them) is <b>not enough</b> — it must be shown that trial in the chosen forum will
+        result in <b>denial of justice</b>; but if the ends of justice demand transfer, the Court should
+        <b>not hesitate</b>. The plaintiff’s/petitioner’s position as <i>dominus litis</i> “cannot eclipse the
+        requirement of justice — justice must be done at all costs, if necessary by transfer.”</p>
+      </div>
+      <div class="principle"><b>Principle evolved:</b> s. 25 is a <b>justice-driven</b>, not convenience-driven,
+      jurisdiction; forum-choice is a factor, never a trump. <b>Drafting lesson (both DU variants):</b> convert every
+      hardship into a <b>justice-impairment</b> — DU’s divorce variant pleads health, minor child, no shelter, dignity;
+      the B.P. Mishra variant pleads safety, penury, proximity — never merely “far away”.</div>
+    </div>
+  </div>
+
+  <!-- CASE 6 -->
+  <div class="case" id="c6">
+    <div class="chead">
+      <div class="cname">6 · The caveat cases — Deepak Khosla v. UOI · Moideen v. Kadeesa Umma · Employees Association v. RBI</div>
+      <div class="ccit">Delhi High Court / Kerala High Court / (practice) — scope &amp; duties under s. 148A CPC — governing cases of Form 10</div>
+      <div class="cmeta"><span>📕 Caveat limits</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>(a) Deepak Khosla v. Union of India &amp; Ors. <span class="src web">Delhi HC</span></h5>
+        <p><b>Facts:</b> the petitioner lodged a caveat under <b>s. 148A r/w s. 151 CPC</b> praying that a petition
+        (by an accused/other side) not be listed without advance notice and that no ex-parte order be passed without
+        hearing him; the Registry objected that a CPC caveat cannot operate in criminal/quasi proceedings.
+        <b>Held:</b> <b>s. 148A applies exclusively to civil proceedings</b> — a caveat under the CPC is
+        <b>not maintainable against criminal petitions</b> (or Art. 226 matters). <b>Principle:</b> know your forum —
+        for criminal-side notice protection use the specific CrPC/BNSS provisions, not s. 148A.</p>
+      </div>
+      <div class="el"><h5>(b) Moideen v. Kadeesa Umma <span class="src web">Kerala HC</span></h5>
+        <p><b>Facts:</b> partition suit reached final decree; the respondent lodged a caveat under s. 148A seeking
+        notice before any further order. <b>Held/Hearing:</b> the court treated the caveat as a legitimate
+        notice-claim in the civil proceeding — illustrating that caveats are used <b>beyond the plaint stage</b>
+        (execution/final-decree stages too). <b>Principle:</b> caveat protects across the <b>life of a civil
+        matter</b>, not only at institution.</p>
+      </div>
+      <div class="el"><h5>(c) Employees Association v. RBI <span class="src web">practice ruling</span></h5>
+        <p><b>Held:</b> by virtue of <b>s. 148A(4)</b>, the applicant (on receiving caveat notice) is
+        <b>duty-bound to furnish</b> the caveator copies of his application and of all documents referred to, at the
+        caveator’s expense. <b>Principle:</b> the section imposes <b>three duty-holders</b> — caveator (serve AD
+        notice), court (notify caveator), applicant (furnish papers) — non-compliance by any breaks the mechanism;
+        orders without s. 148A(3) notice are void.</p>
+      </div>
+      <div class="principle"><b>Definition to quote:</b> “A caveat is a <b>caution or warning</b> given to the court
+      not to issue any grant or take any step without notice to the party lodging it” (AIR 1978 Cal 492) —
+      a <b>precautionary measure</b> (originally against hurried grants of probate), now statutorily regularised by
+      s. 148A (inserted 1976) with a <b>90-day</b> life.</div>
+    </div>
+  </div>
+
+  <!-- CASE 7 -->
+  <div class="case" id="c7">
+    <div class="chead">
+      <div class="cname">7 · Access &amp; interim-standards cases — A.A. Haja Muniuddin v. Indian Railways · Paidsetti Bhanknarayna v. Paidsetti Rajeshwar Rao</div>
+      <div class="ccit">Supreme Court / AIR 1999 Ori 92 — governing cases of Forms 6 &amp; 4</div>
+      <div class="cmeta"><span>📕 Pauper suits · Temporary injunctions</span></div>
+    </div>
+    <div class="cbody">
+      <div class="el"><h5>(a) A.A. Haja Muniuddin v. Indian Railways <span class="src web">via uploaded commentary</span></h5>
+        <p><b>Held:</b> O. XXXIII is an <b>enabling provision</b> — it lets a person sue without prepaying court fee;
+        if the suit is dismissed, the State recovers the fee and it is a <b>first charge on the subject-matter</b>.
+        “Sufficient means” receives a <b>benevolent, extended meaning</b> (bare sustenance for person + family; exempt
+        property excluded). <b>Principle:</b> access-to-justice provision to be construed liberally; but screening
+        genuine indigence remains the court’s duty (fraudulent disposal → rejection).</p>
+      </div>
+      <div class="el"><h5>(b) Paidsetti Bhanknarayna v. Paidsetti Rajeshwar Rao, AIR 1999 Ori 92 <span class="src web">source text</span></h5>
+        <p><b>Held (temporary injunction standard):</b> the plaintiff need <b>not fully establish his title</b> at
+        the interim stage — it is enough to show a <b>fair question to raise</b> as to the existence of the right
+        claimed, and that the property should be <b>preserved in its present condition</b> until that question is
+        decided. <b>Principle:</b> the three-prong test (prima facie case · irreparable injury · balance of
+        convenience) operates on <b>probability, not proof</b> — which is why Form 4’s paragraphs are assertions of
+        prongs, not evidence.</p>
+      </div>
+      <div class="principle"><b>How to write these in the exam:</b> citation → court/year → facts → issue → both
+      sides → decision → one-line principle → <b>one line tying it to the form you are drafting</b>. The last line
+      converts a “case” into a “Forms of Pleadings” answer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SECTION 15 : PYQs ======================= -->
+<section class="blk" id="s15">
+  <div class="sec-head"><div class="sec-num">15</div>
+    <div><h2>DU Previous-Year Questions &amp; Prescribed-Book Questions — Best Model Answers</h2>
+    <div class="sub">2017 &amp; 2019 DU papers + the KAMKUS question bank, answered strictly from these materials</div></div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">DU · 2017 · Q2</span><span class="q">“On the basis of the facts given below, draft: (a) a suit under Order XXXVII CPC; (b) a complaint under s. 138, NI Act.”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWER — (a) the O. XXXVII suit (answer in DU Form 1’s architecture)</span>
+        <p><b>Heading:</b> IN THE COURT OF DISTRICT JUDGE …, DELHI — SUIT NO. … OF 20… —
+        “(SUIT UNDER ORDER XXXVII OF THE CPC, 1908)” · <b>Cause title</b> with exact names/addresses ·
+        <b>Title:</b> “SUIT FOR RECOVERY OF ₹……/- (in words) UNDER ORDER XXXVII…”</p>
+        <p><b>Body — para plan (A–T system):</b> ① plaintiff + authorised signatory (company: director) →
+        ② business (inducement) → ③ defendant address → ④ how the transaction began → ⑤ agreement/contract terms
+        (the O. 37 R. 1 gateway — written contract/instrument) → ⑥ plaintiff’s performance → ⑦ bill/quantum
+        (figures + words) → ⑧ instrument given (cheque no., date, sum, bank) → ⑨ dishonour/default (bank memo
+        dated…) → ⑩ demand + repeated reminders → ⑪ legal notice (date, what demanded) → ⑫ amount presently due
+        + interest computation → ⑬ cause of action (each date; still subsisting) → ⑭ within limitation (Art. 137)
+        → ⑮ territorial jurisdiction (s. 17: part of cause arose here; payments here; defendant’s office here) →
+        ⑯ valuation + court fee paid (s. 7 CFA) → ⑰ <b>“suit filed under O. XXXVII; no relief outside its ambit”</b>
+        (R. 2 requirement pleaded!) → <b>PRAYER</b> (a) decree (b) interest pre/pendente lite/future (c) costs
+        (d) omnibus → <b>signature (O. VI R. 14)</b> → <b>verification</b> (knowledge = business records vs
+        information; correct para numbers) → <b>note: supported by affidavit (Form 2) + O. VI R. 15(4)</b>.</p>
+        <p><b>Scoring extras:</b> (i) R. 1 eligibility sentence (“claim is a liquidated demand in money arising on a
+        written contract / cheque”); (ii) limitation computation; (iii) correct court per pecuniary limits;
+        (iv) if cheque facts given — mention parallel s. 138 NI complaint (2 months’ limitation chain: 3-month
+        presentation → 15-day notice → 1-month complaint, s. 142(b)).</p>
+        <span class="lbl" style="margin-top:10px;">(b) s. 138 NI complaint</span>
+        <p>See Part I companion notes § 10 (DU Form 29 anatomy: complainant/accused → cheque particulars →
+        legally enforceable debt → return memo → notice u/s 138(b) → 15-day failure → cause of action → jurisdiction
+        (ss. 142/142A) → relief: up to 2 years’ imprisonment / fine up to twice the amount / both → verification +
+        documents list). <b>Both drafts share the same facts — different statutory frames.</b></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">DU · 2017 · Q4 (choose any two)</span><span class="q">Draft: permanent injunction suit / stay application with it / other listed drafts</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWER — permanent injunction suit (DU Form 3 anatomy)</span>
+        <p><b>Heading + title:</b> “SUIT FOR PERMANENT INJUNCTION” · Paras: ① identity + possession/tenancy
+        ② relationship/origin of right (deceased-landlord pattern or ownership) ③ equities + documents annexed
+        ④ present possession + records ⑤ payment/standing (clean hands — SRA s. 41(i) proof) ⑥–⑧ <b>threats/acts with
+        dates</b> (throwing goods, attempts, notices) ⑨ police/machinery approached (alternative-remedy exhaustion)
+        ⑩ repetition risk (KAMKUS: “threatens and intends to repeat”) ⑪ no other efficacious remedy (s. 41(h)
+        shield) ⑫ continuing cause of action ⑬ valuation/fee ⑭ territorial jurisdiction → <b>Prayer:</b>
+        permanent injunction against defendants “and their representatives, employees, agents” + costs + omnibus →
+        verification + affidavit.</p>
+        <p><b>Companion sub-draft — stay/temporary injunction application:</b> IA in suit no. …, under
+        <b>O. XXXIX Rr. 1 &amp; 2 r/w s. 151</b>: paras = suit pending → incorporation of plaint by reference →
+        <b>prima facie case</b> → <b>irreparable loss</b> (suit anfractuous + multiplicity) → <b>balance of
+        convenience</b> → prayer for ex-parte ad-interim restraint → affidavit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">DU · 2019 · PAPER PATTERN</span><span class="q">Part A included a caveat application (s. 148A) among four drafting questions</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWER — caveat (DU Form 10 anatomy + statute)</span>
+        <p><b>Heading:</b> High Court, caveat no., caption identifying the order expected to be challenged (suit no.,
+        date, judge) · Paras: ① the order under challenge (with provision — e.g., O. 6 R. 17 amendment dismissed)
+        ② expected petition (name the remedy — Art. 227/revision/appeal) ③ right to appear &amp; contest
+        ④ <b>desire for notice — no stay/order without hearing</b> (s. 148A(3)) ⑤ <b>RPAD service on the would-be
+        applicant</b> (s. 148A(2)) ⑥ court fee · Prayer: nothing be done without notice · affidavit attested by
+        oath commissioner + proof of dispatch. <b>Score-line:</b> state the 90-day life (s. 148A(5)), applicant’s
+        duty to furnish copies (s. 148A(4)), and the civil-only scope (<i>Deepak Khosla</i>).</p>
+        <span class="lbl" style="margin-top:10px;">Other 2019-type items → where their models live</span>
+        <p>Anticipatory bail → DU Form 28 (criminal section; BNSS s. 482) · Mutual divorce + affidavits → Form 17/18 ·
+        Probate petition → Form 19 · Conveyancing (Part B) → companion Part I notes. The <b>civil-forms skeleton
+        (heading→facts→provision→prayer→verification→affidavit)</b> answers all of them.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">QB · KAMKUS Q.6 &amp; Q.9</span><span class="q">“What do you mean by interlocutory orders?” · “What is ex parte decree?”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWERS</span>
+        <p><b>Interlocutory applications/orders:</b> filed during the pendency/course of a litigation; decided en
+        route, not finally; must be drafted with a pleading’s care — precise, brief, irrelevant-free; grounds in the
+        words of the enabling provision; facts may live in the accompanying affidavit (“for the reasons in the annexed
+        affidavit…”). <b>CPC examples (KAMKUS list):</b> O. 6 R. 17 amendment · s. 95 compensation (arrest/attachment
+        on insufficient grounds) · <b>s. 144 restitution</b> · s. 151 · s. 152 correction of judgments/decrees ·
+        O. 9 Rr. 4 &amp; 9 (set aside dismissal in default) · O. XI R. 1 — interrogatories with leave · objections under
+        s. 47/O. 21 Rr. 58, 89–91, 98 · O. 22 substitution · O. 28 commissions · <b>O. 39 interim injunction</b> ·
+        O. 40 receiver · O. 47 review. <b>This unit’s Forms 4, 5, 6, 12 are all interlocutory.</b></p>
+        <p><b>Ex parte decree:</b> a decree passed without the defendant appearing/responding. In ordinary suits →
+        O. 9 R. 3 (defence heard, defendant refused to cross-examine/witness → decree; or after summons + no
+        appearance). <b>In summary suits</b> (Form 1): O. 37 R. 3(6) — no appearance, no leave application, refusal
+        of leave, or breach of conditions → <b>plaintiff is entitled to judgment forthwith</b> (allegations deemed
+        admitted). Setting aside: O. 9 R. 13 (ordinary) / <b>O. 37 R. 4 (summary — “special circumstances”,
+        <i>Rajni Kumar</i>)</b>. Protection against unfair surprise is the caveat (s. 148A — Form 10).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">QB · KAMKUS Q.13 &amp; Q.14</span><span class="q">“What do you understand by an Affidavit?” · “What is pauper suit?”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWERS</span>
+        <p><b>Affidavit:</b> written statement sworn/affirmed before an authority competent to administer oaths.
+        Framework: <b>O. XIX CPC</b> (R. 1 — proof of facts by affidavit; R. 2 — cross-examination of deponent;
+        R. 3 — confined to relevant facts) · <b>s. 139 CPC</b> who administers (HC for judicial proceedings; State
+        Govt otherwise; Oath Commissioners) · parts: cause title → deponent’s description → oath/affirmation →
+        recitals (capacity + numbered facts) → verification (knowledge vs information; “nothing material concealed”)
+        → identification → attesting authority’s certificate · discipline: no law/argument/opinion; disclose sources
+        (“I am informed…” + informant’s name/address in interlocutory matters) · verification mandatory or it is not
+        an affidavit; no amendment — supplementary affidavit only · <b>false affidavit = IPC 199/200 → BNS 236/237</b>
+        (and IPC 191/193 → BNS 227/229 in judicial proceedings) · supported-plaint requirement: O. VI R. 15(4).
+        <b>DU model:</b> Form 2’s three paras (authority &amp; knowledge from business records · suit true on
+        instructions · annexures true copies) + verification. <i>[Details § 3.]</i></p>
+        <p><b>Pauper suit (forma pauperis):</b> suit by an indigent person without prepaying court fee —
+        <b>O. XXXIII</b> (R. 1 definition &amp; prior-rejection bar; R. 1A clerk’s inquiry; R. 2 contents: short title,
+        relief-matter, value, property particulars, previous rejection; verified like plaint; rejection grounds
+        include fraudulent disposal within 2 months; on grant → treated as plaint; court may assign pleader;
+        <b>fees recovered if he wins — first charge on subject-matter; if he loses — State recovers from him</b>;
+        appeal against rejection: O. 43 R. 1; pauper appeals: O. 44) + Art. 39A &amp; LSA Act 1987 context.
+        <b>DU model:</b> Form 6’s five paragraphs + undertaking to pay fee if decreed. <i>[Details § 7.]</i></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">QB · KAMKUS Q.15 &amp; Q.11</span><span class="q">“Written statement — its two parts?” · “How can a plaint be amended?”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWERS (condensed)</span>
+        <p><b>WS — two parts:</b> (I) <b>Statement on merits/traverse</b> — para-wise specific admission/denial of
+        every material allegation (O. 8 R. 3; evasive denial = deemed admitted) + affirmative new facts of defence;
+        (II) <b>Preliminary objections/legal defences</b> — limitation, jurisdiction, valuation, non/mis-joinder,
+        res judicata (s. 11), stay (s. 10), verification defects, statutory bars (SRA 41(h)/(i)/34/14; s. 80;
+        s. 69 Partnership Act; Benami s. 4) — stated separately (O. 8 R. 7), without prejudice to each other, plus
+        set-off/counter-claim if any (O. 8 Rr. 6/6A — “by way of counter-claim”), verification + affidavit.
+        <b>DU Form 9 is the perfect specimen: 16 POs + merits reply.</b> Timing: 30 days (max 90); silence →
+        judgment (R. 10); no evidence on unpleaded facts (<i>Chunni Lal</i>).</p>
+        <p><b>Amendment of plaint:</b> <b>O. 6 R. 17</b> — court may allow alteration/amendment <b>at any stage on
+        just terms</b>; <b>mandatory limb:</b> all amendments necessary for determining the real controversy shall be
+        made; <b>proviso (2002)</b>: after trial begins — only if due diligence + no prejudice; procedure = application
+        stating proposed amendment + reasons; wide ameliorative purpose (<i>Ganga Bai</i>, <i>B.K. Narayana
+        Pillai</i>, <i>Revajeetu Builders</i>); limits: no new/inconsistent case (O. 6 R. 7), relates back for
+        limitation, cures verification defects. <i>[Full answer: Part I § 10.]</i></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">QB · KAMKUS Q.17 &amp; Q.18</span><span class="q">“Draft a plaint and WS for specific performance of a contract for purchase of a car?” · “Draft a plaint for recovery of money.”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWER — Q.17 specific performance (movable property!)</span>
+        <p><b>Plaint (apply Form 8’s skeleton):</b> heading/title “SUIT FOR SPECIFIC PERFORMANCE OF CONTRACT” →
+        parties → ① plaintiff’s need (car for business/family) → ② defendant absolute owner of car (describe:
+        make, reg. no., chassis/engine no. — <b>movable specificity!</b>) → ③ negotiations on dates →
+        ④ <b>agreement to sell in writing</b> (Annexure A; price; date of delivery) → ⑤ advance/earnest paid
+        (receipt annexed) → ⑥ terms: balance + transfer of possession/RC endorsement → ⑦ demand on date → refusal →
+        ⑧ repeated requests (dates) → ⑨ legal notice → no compliance → ⑩ <b>ready &amp; willing</b> (SRA s. 16(c)) →
+        ⑪ cause of action dates → ⑫ limitation (Art. 54 — 3 years from refusal) → ⑬ territorial jurisdiction
+        (agreement/refusal here) → ⑭ court fee → prayer: decree directing sale + delivery + costs + omnibus →
+        verification + affidavit. <b>Note:</b> for movables, also plead defendant’s <b>continued ownership &amp;
+        non-transfer</b> (or implead transferee — SRA s. 19) and mention remedy-alternative (compensation, SRA s. 14
+        read with Contract Act s. 73).</p>
+        <p><b>WS skeleton (apply Form 9):</b> Preliminary objections — no written agreement (denial) / agreement
+        void-unregistered / purchase for immoral/illegal purpose / limitation / no jurisdiction / benami, etc.
+        (pick facts) + merits reply para-wise (admit/deny/specific counter-facts; deny readiness if true — O. 8 R. 3)
+        + prayer + verification + affidavit; counter-claim for advance refund if entitled (O. 8 R. 6A).</p>
+        <span class="lbl" style="margin-top:10px;">Q.18 recovery of money</span>
+        <p>Use Form 1’s A–T flow: if the claim is a <b>liquidated sum on a written contract/cheque</b> → add para
+        “suit under O. XXXVII” + affidavit (summary); if unliquidated (goods sold at fair price, services) →
+        <b>ordinary plaint</b> under O. 7 R. 1 with same paragraphs minus the O. 37 gate. Never forget: figures
+        <b>+ words</b>, cause-of-action dates, limitation, jurisdiction, valuation, prayer (principal + interest
+        heads + costs), verification with correct paragraph numbers.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pyq">
+    <div class="pyhead"><span class="badge">QB · KAMKUS Q.3</span><span class="q">“What do you understand by cause of action?”</span></div>
+    <div class="pybody">
+      <div class="ans">
+        <span class="lbl">MODEL ANSWER</span>
+        <p><b>Meaning:</b> the factual ground(s) which, if proved, entitle the plaintiff to a judgment — “every fact
+        which would be necessary to be proved, and without which the plaintiff would not be entitled to a decree.”
+        <b>Procedural role:</b> must appear in the plaint — <b>O. 7 R. 1(iii)</b> (facts constituting cause of action
+        and when it arose) + <b>O. 6 R. 2</b> (material facts only); jurisdiction depends on where it arises
+        (ss. 16–17); limitation runs from it (Arts. 54/137…); <b>no cause of action = rejection/dismissal</b>
+        (O. 7 R. 11; and a standard WS objection — DU Form 9 para 4). <b>Illustrations:</b> money suit — loan/advance
+        + refusal; ejectment — tenancy + notice + expiry + refusal (Form 7); specific performance — agreement +
+        readiness + refusal (Form 8). A single application may involve several causes; <b>they must all be pleaded</b>
+        — unpleaded facts cannot be proved at trial (Unit I Rule 2 + <i>Gita Rani Paul</i>).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box tip">
+    <h4>🎯 What the papers are telling you (pattern analysis)</h4>
+    <ul>
+      <li>2017 &amp; 2019 both set <b>pure drafting questions</b> from this unit’s forms — the examiner wants the
+      <b>correct skeleton with correct provisions</b>, not essay-writing.</li>
+      <li>Speed strategy: memorise each form as <b>Heading → Parties → Provision → 8–15 facts → Jurisdiction →
+      Limitation → Valuation → Prayer → Verification → Affidavit</b>; then pour the problem’s facts in.</li>
+      <li>Companion theory Qs (affidavit, pauper, WS, amendment, cause of action, interlocutory, ex parte) recur
+      frequently — answer them with the <b>provision first, DU model second</b>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= SECTION 16 : REVISION ======================= -->
+<section class="blk" id="s16">
+  <div class="sec-head"><div class="sec-num">16</div>
+    <div><h2>Quick Revision Kit, Glossary &amp; Source Index</h2>
+    <div class="sub">Last-minute sheet before the exam</div></div>
+  </div>
+
+  <h3>16.1 The twelve forms in twelve lines</h3>
+  <table>
+    <tr><th style="width:6%;">Form</th><th style="width:30%;">One-liner</th><th>Don’t-forget element</th></tr>
+    <tr><td class="hi">1</td><td>O. XXXVII recovery suit — summary procedure recovery suit — summary procedure</td><td>Para 17 gate sentence + affidavit (R. 2) + 10-day/10-day steps</td></tr>
+    <tr><td class="hi">2</td><td>Sworn affidavit — O. XIX, s. 139</td><td>Capacity + source of knowledge + “nothing material concealed”</td></tr>
+    <tr><td class="hi">3</td><td>Permanent injunction plaint — SRA 36–42</td><td>Threat with dates + “no other efficacious remedy” (s. 41(h)/(i) shield)</td></tr>
+    <tr><td class="hi">4</td><td>Temporary injunction IA — O. XXXIX Rr. 1–2 + s. 151</td><td>Three prongs in 3 paragraphs + ex-parte prayer + affidavit</td></tr>
+    <tr><td class="hi">5</td><td>Breach of injunction → attachment + civil prison ≤ 3 months</td><td>Order date · service/knowledge · wilful act · property schedule</td></tr>
+    <tr><td class="hi">6</td><td>Pauper application — O. XXXIII + s. 151</td><td>No property · no income · no source; fee-on-decree undertaking</td></tr>
+    <tr><td class="hi">7</td><td>Ejectment + damages — TPA 105/106/108/111</td><td>s. 106 notice (15 days) + ₹3,500 DRC exclusion + market-rate damages</td></tr>
+    <tr><td class="hi">8</td><td>Specific performance — SRA 9–25, Art. 54</td><td>Agreement annexed + <b>ready &amp; willing</b> (s. 16(c))</td></tr>
+    <tr><td class="hi">9</td><td>Written statement — O. VIII</td><td>16 POs with provisions + specific merits replies + split verification</td></tr>
+    <tr><td class="hi">10</td><td>Caveat — s. 148A</td><td>RPAD service (2) · court notice (3) · 90-day life (5) · civil only</td></tr>
+    <tr><td class="hi">11</td><td>Transfer petition — s. 25 + O. XLI SC Rules</td><td>Justice-grounded grounds + annexures of connected cases + “no other TP”</td></tr>
+    <tr><td class="hi">12</td><td>Execution — O. XXI R. 11 table, Form 6 App. E</td><td>10 columns + certified decree copy + Art. 136 (12 years) + mode (s. 51)</td></tr>
+  </table>
+
+  <div class="box dark">
+    <h4>✅ Pre-filing checklist (apply to any form)</h4>
+    <div class="mn" style="background:none; padding:0; margin-top:6px;">
+      <div class="letters">
+        <span>H</span><i>Heading carries the provision?</i>
+        <span>P</span><i>Parties’ names consistent &amp; complete?</i>
+        <span>F</span><i>Facts in chronology, one per paragraph?</i>
+        <span>D</span><i>Dates/sums in figures + words?</i>
+        <span>J</span><i>Jurisdiction para (territorial + pecuniary)?</i>
+        <span>L</span><i>Limitation covered?</i>
+        <span>V</span><i>Valuation + court-fee stated?</i>
+        <span>A</span><i>Annexures listed &amp; referred?</i>
+        <span>P</span><i>Prayer matches the title’s provision?</i>
+        <span>S</span><i>Signature (O. 6 R. 14) + verification (R. 15)?</i>
+        <span>A</span><i>Affidavit attached where DU demands it?</i>
+      </div>
+    </div>
+  </div>
+
+  <h3>16.2 Glossary</h3>
+  <table>
+    <tr><th style="width:26%;">Term</th><th>Meaning</th></tr>
+    <tr><td class="hi">Affiant / Deponent</td><td>The person who swears an affidavit.</td></tr>
+    <tr><td class="hi">Oath Commissioner</td><td>Authority appointed to administer oaths/take affidavits (s. 139 CPC practice).</td></tr>
+    <tr><td class="hi">Ad-interim injunction</td><td>Interim protection until final hearing of the application (often ex parte).</td></tr>
+    <tr><td class="hi">Anfractuous</td><td>Winding/pointless — DU para 4: the suit would become pointless without interim relief.</td></tr>
+    <tr><td class="hi">Leave to defend</td><td>Permission (O. 37 R. 3) without which a defendant in a summary suit cannot contest.</td></tr>
+    <tr><td class="hi">Summons for judgment</td><td>Plaintiff’s post-appearance process in a summary suit (O. 37 R. 3).</td></tr>
+    <tr><td class="hi">In forma pauperis</td><td>“As a poor person” — suing without prepaying court fee (O. XXXIII).</td></tr>
+    <tr><td class="hi">Mesne profits</td><td>Profit/share of profit the defendant wrongfully received — CPC s. 2(12); wrongful occupation damages.</td></tr>
+    <tr><td class="hi">Caveat / Caveator</td><td>Statutory warning against ex-parte action; the person lodging it (s. 148A).</td></tr>
+    <tr><td class="hi">Dominus litis</td><td>“Master of the suit” — the party choosing the forum (limited by justice in s. 25).</td></tr>
+    <tr><td class="hi">Counter-claim</td><td>Defendant’s independent claim inside the WS, treated as a plaint (O. 8 R. 6A).</td></tr>
+    <tr><td class="hi">Evasive denial</td><td>Indirect denial — deemed an admission (O. 8 R. 3(2)).</td></tr>
+  </table>
+
+  <h3>16.3 Source index — which uploaded file fed which section</h3>
+  <table>
+    <tr><th style="width:44%;">Uploaded file</th><th>Used for</th></tr>
+    <tr><td class="hi">Drafting case material -2025.pdf (DU official)</td><td>All 12 model forms verbatim (pp. 10–37), TOC, statutory titles, student notes, both transfer variants (divorce; companion W.P. 727/2015).</td></tr>
+    <tr><td class="hi">DPC_1.pdf (skill notes)</td><td>Paragraph-by-paragraph O. XXXVII walkthrough (paras 1–17 + prayer + verification + affidavit) with the filled ₹10,00,000 example, A–T memory flow, fact→legal-purpose table, four-rules connection.</td></tr>
+    <tr><td class="hi">Drafting Pleading &amp; Conveyance by KAMKUS.pdf</td><td>Affidavit chapter (O. XIX, s. 139, parts, rules a–j), interlocutory-application chapter (grounds-in-words-of-law, affidavit off-loading, example list), execution chapter (ss. 36–74, O. XXI particulars, Form 6 App. E, Art. 136), material-facts examples (ejectment/specific performance/copyright/defamation), question bank Qs. 3/6/9/11/13/14/15/17/18.</td></tr>
+    <tr><td class="hi">Drafting, Pleadings Material.pdf (companion DU notes)</td><td>Variant forms (caveat 2017, transfer-of-writ example, SRA 41(h) wording), affidavit support practice.</td></tr>
+    <tr><td class="hi">Drafting_Apperances_Pleadings.pdf (ICSI) + Ryder / commercial-drafting books</td><td>Background drafting craft &amp; instrument concepts (secondary).</td></tr>
+    <tr><td class="hi">Verified web sources</td><td>Bare texts of O. XXXVII/XXXIX/XXXIII/XXI (selected), s. 148A, SRA ss. 14/41/chapter heads, IPC→BNS mapping (236/237), leading cases (Milkhiram, Rajni Kumar, Samee Khan, Lavanya C, Swamy, Deepak Khosla, Paidsetti, Haja Muniuddin), Delhi Rent Act status.</td></tr>
+  </table>
+
+  <div class="box gold">
+    <h4>✅ Final takeaway</h4>
+    <p>These twelve forms are the <b>same form</b> twelve times: heading with provision → cause title → numbered
+    material facts in story-sequence → jurisdiction/limitation/valuation → prayer matching the provision → signature →
+    verification → affidavit. Master that spine once (§ 1), add each form’s <b>governing provisions</b> (§§ 2–13) and
+    its <b>case law</b> (§ 14), and any DU drafting question — today’s or tomorrow’s — becomes an exercise in
+    <b>filling a known structure with given facts</b>. Pair with the Part I companion
+    (<i>Drafting Rules &amp; Skills</i>, pp. 1–9) for the four fundamental rules that all of this implements.</p>
+  </div>
+</section>
+
+</div><!-- /content -->
+
+<footer>
+  <p><b>FORMS OF PLEADINGS — CIVIL (Part A–II, pp. 10–37)</b> · Comprehensive exam notes for
+  <b>LB-502 Drafting, Pleadings &amp; Conveyance · LL.B. V Term · Faculty of Law, University of Delhi</b>.</p>
+  <p style="margin-top:6px;">Primary source: official DU case material (2025), supported by the DU companion notes,
+  KAMKUS prescribed-style book, DPC skill notes, ICSI material, DU past papers (2017/2019) and verified bare Acts/cases.
+  Model answers are drawn from these materials; statutory positions verified as amended to date (BNSS/BNS era notes
+  included where relevant). Prepared for private study — check the latest amendments before the exam.</p>
+</footer>
+</main>
+</div>
+<button id="toTop" title="Back to top">↑</button>
+<script>
+(function(){
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600){ btn.style.display='block'; } else { btn.style.display='none'; }
+  });
+  btn.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+  var links = document.querySelectorAll('nav#toc a.sec');
+  var secs = [];
+  links.forEach(function(l){ var el = document.querySelector(l.getAttribute('href')); if(el) secs.push({l:l, el:el}); });
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY + 130, cur = null;
+    secs.forEach(function(s){ if(s.el.offsetTop <= y) cur = s; });
+    links.forEach(function(l){ l.style.borderLeftColor='transparent'; l.style.color=''; });
+    if(cur){ cur.l.style.borderLeftColor='#c9962e'; cur.l.style.color='#fff'; }
+  });
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a409bb67ad89f47c',t:'MTc5MDMzNjE5NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

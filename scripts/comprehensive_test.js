@@ -230,11 +230,17 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v34'), 'sw.js CACHE_NAME is bumped to du-law-portal-v34');
+  assert(swContent.includes('du-law-portal-v35'), 'sw.js CACHE_NAME is bumped to du-law-portal-v35');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
   assert(cssContent.includes('.subjects-breadcrumbs'), '.subjects-breadcrumbs style rule exists in styles.css');
+  assert(fs.existsSync('css/notes-responsive.css'), 'css/notes-responsive.css stylesheet exists');
+
+  // Verify sample notes have mobile responsive engine
+  const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');
+  assert(sampleNote.includes('MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE'), 'Notes contain UNIVERSAL MOBILE RESPONSIVE ENGINE');
+
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');
   assert(!privacyContent.includes('Team Aditya Shukla'), 'privacy.html contains zero occurrences of Team Aditya Shukla');

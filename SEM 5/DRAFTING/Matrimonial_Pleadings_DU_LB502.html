@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matrimonial Pleadings — DU Forms 13–18 (LB-502) · Deep Notes</title>
+<style>
+:root{
+  --ink:#14213d; --ink2:#1d3461; --gold:#c9962e; --gold2:#f2d492; --paper:#fbf8f1;
+  --card:#ffffff; --line:#e5dcc7; --tx:#22252b; --mut:#5c6470; --accent:#7a1f1f;
+  --green:#1e6f50; --green2:#e7f5ef; --red:#a3282a; --red2:#fdecec; --blue:#1c4f8f;
+  --blue2:#eaf1fb; --violet:#5b3a9b; --violet2:#f1ecfb; --orange:#b35c10; --orange2:#fdf1e3;
+  --shadow:0 6px 24px rgba(20,33,61,.10); --radius:14px;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif; background:var(--paper); color:var(--tx); line-height:1.72; font-size:16.5px;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+a{color:var(--blue); text-decoration:none;}
+a:hover{text-decoration:underline;}
+/* ============ LAYOUT ============ */
+.wrap{display:flex; min-height:100vh;}
+nav#toc{width:305px; flex:0 0 305px; background:linear-gradient(180deg,#14213d 0%,#1d3461 100%); color:#e8ecf5; padding:18px 0 40px; position:sticky; top:0; height:100vh; overflow-y:auto; border-right:3px solid var(--gold); }
+nav#toc .brand{padding:14px 20px 16px; border-bottom:1px solid rgba(255,255,255,.14); margin-bottom:10px;}
+nav#toc .brand .k{font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold2);}
+nav#toc .brand .t{font-family:Georgia,serif; font-size:19px; font-weight:bold; line-height:1.3; margin-top:4px; color:#fff;}
+nav#toc .brand .s{font-size:12px; color:#aab6d0; margin-top:6px;}
+nav#toc a.sec{display:block; padding:8px 20px 8px 24px; color:#cfd8ea; font-size:13.4px; border-left:4px solid transparent; line-height:1.45;}
+nav#toc a.sec:hover{background:rgba(255,255,255,.08); color:#fff; text-decoration:none; border-left-color:var(--gold);}
+nav#toc a.sub{padding-left:44px; font-size:12.4px; color:#9faecb;}
+nav#toc .grouplbl{padding:14px 20px 4px; font-size:10.5px; letter-spacing:2px; text-transform:uppercase; color:var(--gold2); opacity:.9;}
+main{flex:1; min-width:0;}
+/* ============ HERO ============ */
+header.hero{background:
+   radial-gradient(1200px 400px at 85% -10%, rgba(201,150,46,.25), transparent 60%),
+   linear-gradient(135deg,#14213d 0%, #1d3461 55%, #27407a 100%);
+  color:#fff; padding:54px 56px 46px; border-bottom:6px solid var(--gold); position:relative; overflow:hidden;}
+header.hero .pattern{position:absolute; inset:0; opacity:.10; background-image:repeating-linear-gradient(45deg, #fff 0 1px, transparent 1px 26px); pointer-events:none;}
+.hero .ribbon{display:inline-block; background:var(--gold); color:#14213d; font-weight:700; font-size:12.5px; letter-spacing:2.6px; text-transform:uppercase; padding:7px 16px; border-radius:4px;}
+.hero h1{font-size:46px; line-height:1.12; margin:18px 0 8px; text-shadow:0 3px 14px rgba(0,0,0,.35);}
+.hero h1 .amp{color:var(--gold2);}
+.hero .lede{font-size:17.5px; color:#d7deee; max-width:980px;}
+.hero .tags{margin-top:22px; display:flex; flex-wrap:wrap; gap:10px;}
+.hero .tag{background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.30); padding:7px 14px; border-radius:30px; font-size:13px; backdrop-filter:blur(2px);}
+.hero .tag b{color:var(--gold2);}
+.hero-crest{position:absolute; right:48px; top:44px; width:132px; height:132px; opacity:.9;}
+/* ============ CONTENT ============ */
+.content{padding:40px 56px 90px; max-width:1180px;}
+section.blk{margin-bottom:58px; scroll-margin-top:18px;}
+.sec-head{display:flex; align-items:flex-start; gap:16px; border-bottom:3px double var(--gold); padding-bottom:12px; margin-bottom:22px;}
+.sec-num{flex:0 0 auto; width:52px; height:52px; border-radius:12px; background:linear-gradient(145deg,var(--ink),var(--ink2)); color:var(--gold2); font-family:Georgia,serif; font-size:22px; font-weight:bold; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow);}
+.sec-head h2{font-size:30px; color:var(--ink); line-height:1.2; letter-spacing:.2px;}
+.sec-head .sub{font-size:13.5px; color:var(--mut); font-family:"Segoe UI",sans-serif; margin-top:4px;}
+h3{font-size:21.5px; color:var(--ink2); margin:30px 0 12px; padding-left:12px; border-left:5px solid var(--gold);}
+h4{font-size:17.5px; color:var(--accent); margin:22px 0 8px;}
+p{margin:10px 0;}
+ul,ol{margin:10px 0 10px 26px;}
+li{margin:6px 0;}
+b,strong{color:var(--ink);}
+small{color:var(--mut);}
+/* source chips */
+.src{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.6px; padding:3px 10px; border-radius:20px; vertical-align:middle; margin-right:6px; text-transform:uppercase;}
+.src.du{background:#fff3d6; color:#8a6100; border:1px solid #ecd9a6;}
+.src.dunotes{background:#e7f0ff; color:#1c4f8f; border:1px solid #c9dbf6;}
+.src.kamkus{background:#f3e9ff; color:#5b3a9b; border:1px solid #ded0f7;}
+.src.icsi{background:#e6f6ef; color:#1e6f50; border:1px solid #c4e8d8;}
+.src.dpc{background:#fdeee4; color:#b35c10; border:1px solid #f5d9c2;}
+.src.web{background:#eef1f4; color:#495260; border:1px solid #d8dee6;}
+.src.case{background:#fdeaea; color:#a3282a; border:1px solid #f4cdcd;}
+/* boxes */
+.box{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:20px 24px; margin:16px 0; box-shadow:var(--shadow);}
+.box.note{border-left:6px solid var(--blue); background:var(--blue2);}
+.box.warn{border-left:6px solid var(--red); background:var(--red2);}
+.box.tip{border-left:6px solid var(--green); background:var(--green2);}
+.box.gold{border:1px solid #ecd9a6; background:linear-gradient(180deg,#fffaf0,#fff); border-left:6px solid var(--gold);}
+.box.dark{background:var(--ink); color:#e9edf6; border:none;}
+.box.dark h4,.box.dark h3{color:var(--gold2);}
+.box h4{margin-top:0;}
+.quote{font-family:Georgia,serif; font-style:italic; font-size:17px; background:#fffdf6; border:1px dashed var(--gold); border-radius:10px; padding:16px 20px; margin:14px 0; color:#3a3320;}
+.quote .who{display:block; margin-top:8px; font-style:normal; font-weight:bold; font-size:13.5px; color:var(--accent);}
+/* tables */
+table{width:100%; border-collapse:collapse; margin:16px 0; background:#fff; font-size:15px; box-shadow:var(--shadow); border-radius:10px; overflow:hidden;}
+th{background:var(--ink); color:#fff; padding:11px 13px; text-align:left; font-family:Georgia,serif; font-size:14.5px; letter-spacing:.3px;}
+td{padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top;}
+tr:nth-child(even) td{background:#faf7f0;}
+td.hi{font-weight:700; color:var(--ink2); background:#f4f0e4 !important;}
+/* cards grid */
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:16px 0;}
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:16px 0;}
+.card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; box-shadow:var(--shadow);}
+.card .ico{font-size:26px;}
+.card h4{margin:8px 0 6px; color:var(--ink);}
+.card p,.card li{font-size:14.6px;}
+/* rule badge */
+.rulebadge{display:inline-flex; align-items:center; justify-content:center; min-width:42px; height:42px; border-radius:50%; background:var(--gold); color:#14213d; font-weight:800; font-family:Georgia,serif; font-size:17px; margin-right:10px;}
+/* flow diagrams with CSS */
+.flow{display:flex; flex-wrap:wrap; align-items:stretch; gap:0; margin:18px 0;}
+.flow .step{background:#fff; border:2px solid var(--ink2); border-radius:10px; padding:12px 14px; font-size:13.6px; min-width:130px; text-align:center; box-shadow:0 3px 10px rgba(20,33,61,.08); position:relative; display:flex; flex-direction:column; justify-content:center;}
+.flow .step b{color:var(--ink); font-size:14px;}
+.flow .step small{display:block; font-size:12px; margin-top:3px;}
+.flow .arw{align-self:center; padding:0 6px; color:var(--gold); font-size:26px; font-weight:bold; line-height:1;}
+.flowcol{display:flex; flex-direction:column; gap:10px;}
+.vflow{display:flex; flex-direction:column; align-items:center; gap:4px; margin:16px 0;}
+.vflow .step{background:#fff; border:2px solid var(--ink2); border-radius:10px; padding:10px 22px; font-size:14px; text-align:center; box-shadow:0 3px 10px rgba(20,33,61,.08); width:max-content; max-width:640px;}
+.vflow .arw{color:var(--gold); font-size:24px; line-height:1;}
+.vflow .diamond{background:#fff8e8; border:2px solid var(--gold); border-radius:4px; transform:none; padding:10px 26px; font-weight:700; color:var(--ink); clip-path:none; position:relative;}
+.yesno{display:flex; gap:30px; font-size:13px; font-weight:700;}
+.yesno .y{color:var(--green);} .yesno .n{color:var(--red);}
+/* timeline */
+.timeline{position:relative; margin:26px 6px; padding-left:0;}
+.tl-item{display:flex; gap:18px; position:relative; padding-bottom:22px;}
+.tl-item::before{content:""; position:absolute; left:19px; top:40px; bottom:-6px; width:3px; background:linear-gradient(var(--gold),var(--ink2));}
+.tl-item:last-child::before{display:none;}
+.tl-dot{flex:0 0 40px; height:40px; border-radius:50%; background:var(--ink); color:var(--gold2); display:flex; align-items:center; justify-content:center; font-weight:800; font-family:Georgia,serif; font-size:15px; border:3px solid var(--gold); z-index:2;}
+.tl-body{background:#fff; border:1px solid var(--line); border-left:5px solid var(--gold); border-radius:10px; padding:12px 18px; flex:1; box-shadow:var(--shadow);}
+.tl-body h4{margin:0 0 4px; color:var(--ink); font-size:16.5px;}
+.tl-body p{font-size:14.6px; margin:4px 0;}
+/* compare */
+.cmp{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:16px 0;}
+.cmp .bad,.cmp .good{border-radius:12px; padding:16px 18px; box-shadow:var(--shadow);}
+.cmp .bad{background:var(--red2); border:1px solid #f2c9c9; border-top:6px solid var(--red);}
+.cmp .good{background:var(--green2); border:1px solid #c9e8db; border-top:6px solid var(--green);}
+.cmp h4{margin-top:0;}
+.cmp .bad h4{color:var(--red);} .cmp .good h4{color:var(--green);}
+/* case card */
+.case{background:#fff; border:1px solid #ecd9a6; border-radius:16px; margin:26px 0; overflow:hidden; box-shadow:var(--shadow);}
+.case .chead{background:linear-gradient(120deg,var(--ink),var(--ink2)); color:#fff; padding:16px 22px;}
+.case .chead .cname{font-family:Georgia,serif; font-size:21px; font-weight:bold; color:var(--gold2);}
+.case .chead .ccit{font-size:14px; color:#cdd7ec; margin-top:4px;}
+.case .cmeta{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+.case .cmeta span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.28); font-size:11.5px; padding:3px 10px; border-radius:20px;}
+.case .cbody{padding:20px 24px;}
+.case .el{margin:12px 0;}
+.case .el h5{font-family:Georgia,serif; font-size:15.5px; color:var(--accent); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; display:flex; align-items:center; gap:8px;}
+.case .el h5::after{content:""; flex:1; height:1px; background:var(--line);}
+.case .principle{background:#fff8e8; border:1px dashed var(--gold); border-radius:10px; padding:14px 16px; margin-top:14px; font-size:15.5px;}
+.case .principle b{color:#8a6100;}
+/* PYQ */
+.pyq{border:2px solid var(--ink2); border-radius:16px; margin:26px 0; background:#fff; overflow:hidden; box-shadow:var(--shadow);}
+.pyq .pyhead{background:repeating-linear-gradient(-45deg,var(--ink2) 0 14px,#22396b 14px 28px); color:#fff; padding:14px 22px; display:flex; gap:12px; align-items:center; flex-wrap:wrap;}
+.pyq .pyhead .badge{background:var(--gold); color:#14213d; font-weight:800; font-size:12.5px; padding:4px 12px; border-radius:20px; letter-spacing:1px;}
+.pyq .pyhead .q{font-family:Georgia,serif; font-size:17px; font-weight:bold;}
+.pyq .pybody{padding:18px 24px;}
+.ans{background:#f7fbf7; border:1px solid #d5ead9; border-radius:10px; padding:16px 18px; margin-top:12px;}
+.ans .lbl{display:inline-block; background:var(--green); color:#fff; font-size:11.5px; font-weight:800; letter-spacing:1.4px; padding:3px 12px; border-radius:4px; margin-bottom:8px;}
+.ans h5{font-family:Georgia,serif; color:var(--ink); font-size:16px; margin:12px 0 5px;}
+/* checklist */
+.checkgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0;}
+.chk{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; box-shadow:var(--shadow);}
+.chk .L{width:44px; height:44px; margin:0 auto 8px; border-radius:10px; background:var(--ink); color:var(--gold2); font-weight:800; font-size:20px; font-family:Georgia,serif; display:flex; align-items:center; justify-content:center;}
+.chk b{display:block; color:var(--ink); font-size:14.5px;}
+.chk small{font-size:12.6px;}
+/* misc */
+.kv{display:grid; grid-template-columns:210px 1fr; gap:6px 16px; margin:12px 0; font-size:15px;}
+.kv dt{font-weight:700; color:var(--ink2);}
+.kv dd{margin:0;}
+.tagrow{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+.pill{background:#fff; border:1px solid var(--line); border-radius:20px; padding:5px 13px; font-size:13px; color:var(--ink2); box-shadow:0 2px 6px rgba(0,0,0,.05);}
+.pill b{color:var(--accent);}
+.mn{background:linear-gradient(120deg,#14213d,#27407a); color:#fff; border-radius:14px; padding:20px 24px; margin:18px 0;}
+.mn .letters{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+.mn .letters span{background:var(--gold); color:#14213d; width:46px; height:46px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:800; font-family:Georgia,serif; font-size:22px;}
+.mn .letters i{align-self:center; font-style:normal; color:#cdd7ec; font-size:13.5px; margin-right:12px; max-width:150px;}
+details.acc{background:#fff; border:1px solid var(--line); border-radius:10px; margin:10px 0; box-shadow:0 2px 8px rgba(0,0,0,.05); overflow:hidden;}
+details.acc summary{cursor:pointer; padding:13px 18px; font-weight:700; color:var(--ink2); background:#f6f2e8; font-family:Georgia,serif; font-size:16px; list-style:none; display:flex; justify-content:space-between; align-items:center;}
+details.acc summary::after{content:"+"; font-size:22px; color:var(--gold); font-weight:700;}
+details.acc[open] summary::after{content:"–";}
+details.acc .accbody{padding:14px 18px;}
+.smallcap{font-variant:small-caps; letter-spacing:1px;}
+hr.soft{border:none; border-top:1px dashed var(--line); margin:26px 0;}
+.pagenote{font-size:12.5px; color:var(--mut); background:#f4f0e4; border-radius:8px; padding:7px 12px; display:inline-block; margin:6px 0 0;}
+footer{background:var(--ink); color:#c9d2e6; padding:30px 56px; font-size:13.5px; border-top:5px solid var(--gold);}
+footer b{color:var(--gold2);}
+#toTop{position:fixed; right:26px; bottom:26px; width:48px; height:48px; border-radius:50%; border:none; background:var(--gold); color:#14213d; font-size:22px; font-weight:bold; cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,.28); display:none; z-index:60;}
+/* SVG helpers */
+.svgwrap{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; margin:16px 0; box-shadow:var(--shadow); overflow-x:auto;}
+.svgwrap .cap{text-align:center; font-size:13px; color:var(--mut); margin-top:6px; font-style:italic;}
+/* responsive */
+@media (max-width:1080px){
+  nav#toc{display:none;}
+  .content{padding:30px 22px 80px;}
+  header.hero{padding:38px 24px;}
+  .hero h1{font-size:33px;}
+  .hero-crest{display:none;}
+  .grid2,.grid3,.cmp,.checkgrid{grid-template-columns:1fr;}
+  .kv{grid-template-columns:1fr;}
+}
+@media print{
+  nav#toc,#toTop{display:none !important;}
+  body{background:#fff; font-size:12.5px;}
+  .content{padding:0; max-width:none;}
+  .box,.card,.case,.pyq{box-shadow:none; break-inside:avoid;}
+  header.hero{background:#14213d !important; -webkit-print-color-adjust:exact;}
+}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Root & Viewport Overflow Containment (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Container & Layout Fluid Scaling */
+  .wrap, .layout, .container, .page-wrap, main, article, .dossier, .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3. Hero Header & Covers */
+  header.cover, header.hero, .hero, .topbar {
+    padding: 24px 14px 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
+  }
+  header.cover h1, header.hero h1, .hero h1 {
+    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+    line-height: 1.22 !important;
+    margin: 10px 0 6px !important;
+    word-break: break-word !important;
+  }
+  header.cover h2, header.hero .sub, .hero .dek {
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
+  .badges, .meta {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+  .badge, .tag, .lbl {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 14px 0 !important;
+    font-size: 13.5px !important;
+  }
+  .table-wrap, .table-container, .table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+  th, td {
+    padding: 8px 10px !important;
+    min-width: 85px !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. Typography & Headings */
+  h2, h2.part, .chapter h2 {
+    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
+    margin-top: 28px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+  h3 {
+    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
+    margin-top: 22px !important;
+    line-height: 1.35 !important;
+    padding-left: 8px !important;
+    word-break: break-word !important;
+  }
+  h4, h5 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  p {
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+    margin: 8px 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 6px 0 !important;
+    overflow-wrap: break-word !important;
+  }
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 6. Grids & Multi-column Stacking */
+  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .vs > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #dedfd7) !important;
+  }
+  .branch, .fbox, .flow > div {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
+    padding: 14px 14px !important;
+    margin: 14px 0 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  .casefile .cf-head, .casefile .cf-body {
+    padding: 12px 14px !important;
+  }
+
+  /* 8. Code, Monospace & Pre Blocks */
+  pre, code, .stat {
+    max-width: 100% !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: auto !important;
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+  }
+  blockquote {
+    margin: 12px 0 !important;
+    padding: 10px 14px !important;
+    font-size: 15px !important;
+  }
+
+  /* 9. Images & SVG Diagrams */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .fig, .case-visual, figure {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+
+  /* 10. Horizontal Navigation & ToC */
+  nav.tocbar, .topbar {
+    padding: 4px 6px !important;
+    width: 100% !important;
+  }
+  nav.tocbar .inner, .topbar .toolbar {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+  }
+  nav.tocbar a, .topbar button {
+    padding: 5px 9px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+  }
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
+  }
+  .toc {
+    columns: 1 !important;
+    padding: 12px 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14.5px !important;
+  }
+  .wrap, .layout, .container, .page-wrap {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  header.cover, header.hero, .hero {
+    padding: 18px 10px 16px !important;
+  }
+  th, td {
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    min-width: 75px !important;
+  }
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
+    padding: 12px 10px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav id="toc">
+  <div class="brand">
+    <div class="k">Part A · Pleadings</div>
+    <div class="t">Matrimonial Pleadings</div>
+    <div class="s">LB-502 · Drafting, Pleadings &amp; Conveyance<br>Faculty of Law, University of Delhi</div>
+  </div>
+  <div class="grouplbl">Orientation</div>
+  <a class="sec" href="#s0">0 · How to Use &amp; Master Map</a>
+  <a class="sec" href="#s1">1 · Introduction (Item 13, pp. 38–39)</a>
+  <div class="grouplbl">The 6 Matrimonial Forms (pp. 40–50)</div>
+  <a class="sec" href="#s2">2 · Form 14 — RCR Petition, s. 9 HMA</a>
+  <a class="sec" href="#s3">3 · Form 15 — Judicial Separation, s. 10</a>
+  <a class="sec" href="#s4">4 · Form 16 — Divorce Petition, s. 13</a>
+  <a class="sec" href="#s5">5 · Form 17 — Mutual Consent, s. 13B(1)</a>
+  <a class="sec" href="#s6">6 · Form 18 — Matrimonial Affidavit</a>
+  <div class="grouplbl">Deep-Dive Layers</div>
+  <a class="sec" href="#s7">7 · Related Acts, Orders &amp; Rules Map</a>
+  <a class="sec" href="#s8">8 · Case-Law Compendium (Full Cards)</a>
+  <a class="sec" href="#s9">9 · DU's Real Pleading Chain (s. 125 Trilogy)</a>
+  <a class="sec" href="#s10">10 · Material-Facts Doctrine in Matrimonial Cases</a>
+  <a class="sec" href="#s11">11 · DU PYQs + Best Model Answers</a>
+  <a class="sec" href="#s12">12 · Revision Kit, Glossary &amp; Sources</a>
+</nav>
+<div class="content">
+<div class="ribbon"><span class="du">DU CASE MATERIAL · pp. 38–50</span><span class="badge">Items 13–18</span><span class="badge">HMA 1955</span><span class="badge">Family Courts Act 1984</span><span class="badge">8 full case cards</span></div>
+<div class="hero">
+  <div class="hero-crest">HB</div>
+  <div class="smallcap">Part A · II. Forms of Pleadings — Unit III of the DU case material</div>
+  <div class="t">MATRIMONIAL PLEADINGS</div>
+  <div class="lede">The <b>six DU proformas (Items 13–18, pp. 38–50)</b> — introduction, restitution of conjugal rights (s. 9), judicial separation (s. 10), contested divorce (s. 13), mutual-consent divorce (s. 13B(1)) and the matrimonial affidavit — decoded paragraph-by-paragraph, with every related section, order and Act at its place, DU's own drafting directions, the real pleading chain preserved in the DU companion notes, full case cards (facts · issues · both sides' arguments · decision · principle), and DU-semester PYQs with model answers. Maximum portion built straight from the DU case material.</div>
+  <div class="tags"><span class="tag">HMA ss. 9, 10, 11, 13, 13A, 13B, 14, 19–26</span><span class="tag">Family Courts Act ss. 7–8, 9, 16, 19</span><span class="tag">CPC O. 6 &amp; O. 21 Rr. 32–33 (via s. 21 HMA)</span><span class="tag">DVA 2005 · BNSS s. 144</span><span class="tag">BNS ss. 82, 85–86</span></div>
+</div>
+<!-- ======================= S0 : MASTER MAP ======================= -->
+<section id="s0">
+<div class="sec-head"><span class="sec-num">0</span><div><div class="smallcap">Orientation</div><div class="t">How to use this file &amp; the master map of Items 13–18</div></div></div>
+
+<div class="grid2">
+  <div class="box"><div class="smallcap">Study order</div><p>Read <b>§ 1 (introduction)</b> first — DU's introductory pages carry the jurisdictional and mandatory-pleading rules that govern <i>all six</i> forms. Then the four petitions (§§ 2–5) in statute order (s. 9 → s. 10 → s. 13 → s. 13B), then the affidavit (§ 6). §§ 7–10 are the deep layers (related Acts, cases, DU's real-world drafts, the material-facts doctrine). § 11 is the exam endgame.</p></div>
+  <div class="box"><div class="smallcap">Source hierarchy used here</div><p><b>Primary:</b> DU case material pp. 38–50 (Items 13–18) — proformas, drafting directions and the affidavit are reproduced and decoded paragraph-by-paragraph. <b>Companion:</b> the DU companion notes (real s. 125 chain, curative template, transfer petition) + KAMKUS (prescribed book: RCR model, material-facts examples, question bank). <b>Verification:</b> bare Acts (HMA, Family Courts Act, DVA, BNSS, BNS) and reported judgments.</p></div>
+</div>
+
+<div class="box">
+  <div class="smallcap">Master table — what Item 13–18 actually contain</div>
+  <table>
+    <tr><th>Item / DU Form</th><th>Page</th><th>Instrument</th><th>Governing provision</th><th>Court</th><th>Key DU paragraph architecture</th></tr>
+    <tr><td><b>13 — Introduction</b></td><td>38–39</td><td>Chapter note (no proforma)</td><td>HMA ss. 9, 10, 11, 13, 24–26; s. 14; s. 19; Family Courts Act ss. 7–8</td><td>—</td><td>7 kinds of petitions · Bombay HC extra particulars · venue rules · mandatory statements (a)–(f)</td></tr>
+    <tr><td><b>14 — RCR petition</b></td><td>40–42</td><td>Petition for restitution of conjugal rights</td><td><b>s. 9 HMA</b> (+ Explanation — burden on the withdrawer)</td><td>Family Court / District Judge</td><td>Paras 1–11: marriage → status table → children → <b>withdrawal without reasonable excuse</b> → no collusion → no delay → prior-proceedings table → jurisdiction → court-fee → prayer → verification</td></tr>
+    <tr><td><b>15 — Judicial separation</b></td><td>43–44</td><td>Petition for judicial separation</td><td><b>s. 10 HMA</b> (grounds = s. 13(1) &amp; (2))</td><td>Family Court</td><td>Paras 1–13: same skeleton as RCR but para 4 = <b>one or more s. 10 grounds</b> in separate paragraphs + paras 5–6 non-accessory/non-condonation</td></tr>
+    <tr><td><b>16 — Contested divorce</b></td><td>45–47</td><td>Petition for dissolution by decree of divorce</td><td><b>s. 13 HMA</b> (+ s. 14 one-year bar; s. 13A alternate relief)</td><td>Family Court</td><td>Paras 1–13: ground(s) pleaded with particulars (time &amp; place of each matrimonial offence) → condonation negatived → collusion/delay/legal-ground/prior-proceedings → jurisdiction → fee</td></tr>
+    <tr><td><b>17 — Mutual divorce</b></td><td>48–49</td><td><b>Joint</b> petition by Petitioner 1 &amp; Petitioner 2</td><td><b>s. 13B(1) HMA</b> (+ s. 13B(2) two-motion machinery)</td><td>Family Court</td><td>Paras 1–11: marriage → separate-since date → <b>not able to live together</b> → mutual agreement → consent free of force/fraud/undue influence → no collusion → no delay → jurisdiction → fee; <b>separate affidavits</b> of both petitioners</td></tr>
+    <tr><td><b>18 — Matrimonial affidavit</b></td><td>50</td><td>Affidavit of the petitioner</td><td>O. XIX CPC read with s. 21 HMA; Family Courts Act s. 16 (evidence on affidavit)</td><td>—</td><td>Paras 1–6: competence → marriage → no collusion → no delay → consent not obtained by fraud → petition drafted on instructions &amp; read over; verification "nothing material concealed"</td></tr>
+  </table>
+  <p class="smallcap">DU's own pagination pp. 38–50 (case-material page numbers). "DU Form" numbering follows the file order established in Item 12's table (this file's Forms 13–18 continue the 12 civil forms).</p>
+</div>
+
+<div class="box">
+  <div class="smallcap">Diagram 1 — the petition-choice tree every matrimonial draft starts with</div>
+  <svg viewBox="0 0 1160 470" role="img" aria-label="Choice of matrimonial petition flowchart">
+    <defs><marker id="m1a" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#5c6470"/></marker></defs>
+    <rect x="8" y="8" width="1144" height="454" rx="14" fill="#fbf8f1" stroke="#e5dcc7"/>
+    <rect x="390" y="26" width="380" height="46" rx="10" fill="#14213d"/><text x="580" y="55" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">Hindu marriage solemnised (HMA s. 7 · registered s. 8)</text>
+    <rect x="390" y="92" width="380" height="42" rx="10" fill="#1d3461"/><text x="580" y="118" text-anchor="middle" fill="#fff" font-size="14">Discord → legal notice · counselling (FCA s. 9) · mediation</text>
+    <line x1="580" y1="134" x2="580" y2="156" stroke="#5c6470" stroke-width="2" marker-end="url(#m1a)"/>
+    <g font-size="13" text-anchor="middle" font-weight="bold">
+      <rect x="20" y="160" width="245" height="58" rx="10" fill="#eaf1fb" stroke="#1c4f8f"/><text x="142" y="184" fill="#1c4f8f">Stay together wanted?</text><text x="142" y="204" fill="#1c4f8f" font-weight="normal">→ s. 9 RCR (Form 14)</text>
+      <rect x="286" y="160" width="245" height="58" rx="10" fill="#f2eefb" stroke="#5b3a9b"/><text x="408" y="184" fill="#5b3a9b">Pause, don't dissolve?</text><text x="408" y="204" fill="#5b3a9b" font-weight="normal">→ s. 10 Judicial separation</text>
+      <rect x="552" y="160" width="245" height="58" rx="10" fill="#fdecec" stroke="#a3282a"/><text x="674" y="184" fill="#a3282a">Both agree to exit?</text><text x="674" y="204" fill="#a3282a" font-weight="normal">→ s. 13B mutual consent</text>
+      <rect x="818" y="160" width="322" height="58" rx="10" fill="#fdecec" stroke="#a3282a"/><text x="979" y="184" fill="#a3282a">One side blames the other?</text><text x="979" y="204" fill="#a3282a" font-weight="normal">→ s. 13 contested divorce (Form 16)</text>
+    </g>
+    <g stroke="#5c6470" stroke-width="2" fill="none" marker-end="url(#m1a)">
+      <line x1="470" y1="156" x2="150" y2="158"/><line x1="530" y1="156" x2="405" y2="158"/><line x1="640" y1="156" x2="674" y2="158"/><line x1="700" y1="156" x2="960" y2="158"/>
+    </g>
+    <g font-size="12.5">
+      <rect x="20" y="236" width="245" height="66" rx="10" fill="#fff" stroke="#e5dcc7"/><text x="142" y="258" text-anchor="middle" font-weight="bold" fill="#14213d">Decree of RCR</text><text x="142" y="277" text-anchor="middle" fill="#5c6470">executed via O. 21 Rr. 32–33 CPC</text><text x="142" y="294" text-anchor="middle" fill="#5c6470">s. 13(1A)(ii) divorce if ignored 1 yr+</text>
+      <rect x="286" y="236" width="245" height="66" rx="10" fill="#fff" stroke="#e5dcc7"/><text x="408" y="258" text-anchor="middle" font-weight="bold" fill="#14213d">Decree of JS</text><text x="408" y="277" text-anchor="middle" fill="#5c6470">cohabitation suspended (s. 10(2))</text><text x="408" y="294" text-anchor="middle" fill="#5c6470">s. 13(1A)(i) divorce if no resumption 1 yr+</text>
+      <rect x="552" y="236" width="245" height="66" rx="10" fill="#fff" stroke="#e5dcc7"/><text x="674" y="258" text-anchor="middle" font-weight="bold" fill="#14213d">First motion → (6 mths) → 2nd motion</text><text x="674" y="277" text-anchor="middle" fill="#5c6470">s. 13B(2) · cooling-off waivable</text><text x="674" y="294" text-anchor="middle" fill="#5c6470">(Amardeep Singh, 2017)</text>
+      <rect x="818" y="236" width="322" height="66" rx="10" fill="#fff" stroke="#e5dcc7"/><text x="979" y="258" text-anchor="middle" font-weight="bold" fill="#14213d">Trial on the s. 13(1)/(2) ground</text><text x="979" y="277" text-anchor="middle" fill="#5c6470">s. 23 satisfaction · s. 13A alternate JS</text><text x="979" y="294" text-anchor="middle" fill="#5c6470">appeal s. 28 · remarriage s. 15</text>
+    </g>
+    <line x1="20" y1="322" x2="1140" y2="322" stroke="#e5dcc7" stroke-width="2"/>
+    <g font-size="13">
+      <text x="24" y="348" font-weight="bold" fill="#c9962e">ACROSS ALL ROUTES —</text>
+      <text x="24" y="374" fill="#22252b">• Venue: s. 19 HMA (solemnisation / last cohabitation / respondent's residence / wife's residence / petitioner's residence in 7-yr-missing cases) — Family Court wherever established (FCA ss. 7–8).</text>
+      <text x="24" y="398" fill="#22252b">• Gate: no divorce petition before <b>1 year</b> from marriage unless leave under s. 14 proviso (exceptional hardship / exceptional depravity) — DU Item 13 flags this expressly.</text>
+      <text x="24" y="422" fill="#22252b">• Pleadings follow CPC (s. 21 HMA → O. 6): distinct paragraphs, verification O. 6 R. 15, affidavit of petitioner appended (DU's standing note on every form).</text>
+      <text x="24" y="446" fill="#22252b">• Parallel reliefs attach to any petition: maintenance pending suit (s. 24) · custody (s. 26) · alimony (s. 25) · property (s. 27) · respondent's counter-claim (s. 23A) · DVA 2005 reliefs (ss. 18–23).</text>
+    </g>
+  </svg>
+</div>
+
+<div class="grid2">
+  <div class="box tip"><div class="smallcap">Exam lens</div><p>DU papers ask for <b>drafts</b>, not essays — Q3 of the 2017 paper and the 2019 pattern both put a <b>mutual-consent divorce petition + affidavits</b> in Part A. The KAMKUS bank (Q.21, Q.29) asks for the same instrument and judicial separation on desertion. Your marks live in: correct cause-title, statutory section in the title, precise paragraph skeleton, mandatory statements (a)–(f) from Item 13, prayer in statutory language, verification + affidavit.</p></div>
+  <div class="box note"><div class="smallcap">Honest sourcing note (same standard as the civil-forms file)</div><p>DU's matrimonial section is a set of <b>blank proformas — it contains no case citations</b>. The case cards in § 8 are therefore drawn from (i) what the DU companion materials actually contain (the curative template expressly cites <i>Rupa Ashok Hurra</i> with the divorce fact-pattern; the DU syllabus note cites <i>Mohinder Kaur v. Major Singh</i>), (ii) the prescribed KAMKUS book, and (iii) reported judgments verified against their texts. Each card is labelled with its source.</p></div>
+</div>
+</section>
+<!-- ======================= S1 : INTRODUCTION ======================= -->
+<section id="s1">
+<div class="sec-head"><span class="sec-num">1</span><div><div class="smallcap">DU Item 13 · pp. 38–39</div><div class="t">Petitions under the Matrimonial Pleadings — Introduction</div></div></div>
+
+<div class="box">
+  <div class="smallcap">1.1 · DU's opening: what is on the matrimonial side of the docket</div>
+  <p>DU begins: <i>"Before giving any model form of application under the matrimonial laws, it is necessary to know what kind of petitions are contemplated in matrimonial causes."</i> It then lists the <b>seven important petitions under the Hindu Marriage Act, 1955</b>:</p>
+  <table>
+    <tr><th>#</th><th>Petition</th><th>Section</th><th>What it does</th><th>DU form for it</th></tr>
+    <tr><td>1</td><td>Restitution of conjugal rights</td><td><b>s. 9</b></td><td>Restores cohabitation; failure to obey the decree after 1 yr itself becomes a divorce ground — s. 13(1A)(ii)</td><td><b>Form 14 (pp. 40–42)</b></td></tr>
+    <tr><td>2</td><td>Judicial separation</td><td><b>s. 10</b></td><td>Lawful suspension of cohabitation — marriage subsists; rescission possible; non-resumption for 1 yr → divorce under s. 13(1A)(i)</td><td><b>Form 15 (pp. 43–44)</b></td></tr>
+    <tr><td>3</td><td>Void / nullity of marriage</td><td><b>s. 11</b> (void) · <b>s. 12</b> (voidable)</td><td>Declares marriage null (s. 5 conditions, bigamy, unsoundness…) or annuls it on consent-defect grounds</td><td>— (DU lists it; no proforma)</td></tr>
+    <tr><td>4</td><td>Dissolution by decree of divorce</td><td><b>s. 13</b> (+ s. 13A)</td><td>Dissolves the marriage on proved fault grounds / alternate JS relief</td><td><b>Form 16 (pp. 45–47)</b></td></tr>
+    <tr><td>5</td><td>Maintenance pendente lite</td><td><b>s. 24</b></td><td>Maintenance + expenses during the proceeding itself (income test)</td><td>IA (cross-ref: civil-file IA chapter)</td></tr>
+    <tr><td>6</td><td>Alimony and maintenance</td><td><b>s. 25</b></td><td>Permanent alimony — lump sum or periodic; ends on re-marriage/death</td><td>IA / prayer clause in any petition</td></tr>
+    <tr><td>7</td><td>Custody of children</td><td><b>s. 26</b></td><td>Custody, guardianship, access — "welfare of the child" paramount</td><td>IA / interim application</td></tr>
+  </table>
+  <p class="smallcap">DU's own text adds: <i>"Such reliefs are also obtained under the Special Marriage Act, 1954, the Indian Divorce Act, 1889 [sic — the Indian Divorce Act is of 1869], and other personal laws."</i> Sister provisions for cross-referencing: SMA ss. 22 (RCR), 23 (divorce grounds), 28 (mutual consent); Parsi Marriage &amp; Divorce Act s. 36 (RCR); HMA s. 13B is the Hindu counterpart of SMA s. 28.</p>
+</div>
+
+<div class="box">
+  <div class="smallcap">1.2 · The Bombay High Court rules DU reproduces — eight EXTRA particulars for JS / nullity / divorce petitions</div>
+  <p>Beyond O. VII r. 1 CPC and s. 20(1) HMA (contents &amp; verification of petitions), DU says the petition must also state:</p>
+  <table>
+    <tr><th>#</th><th>Particular (DU's wording)</th><th>Why the court needs it / where it is pleaded</th></tr>
+    <tr><td>(i)</td><td>Place and <b>date of marriage</b></td><td>Pleading 1 of every DU form; establishes s. 5/7 compliance + s. 19(a) venue; document = certified extract from the Hindu Marriage Register</td></tr>
+    <tr><td>(ii)</td><td>Name of the <b>state of domicile</b> of wife and husband, before and after marriage</td><td>Conflict-of-laws relevance (s. 2 application; also immigration/second-marriage bigamy exposure)</td></tr>
+    <tr><td>(iii)</td><td>The <b>principal permanent address where they cohabited</b>, including where they "raised together"</td><td>Fixes s. 19(c) "last resided together" venue; frames withdrawal-from-society for s. 9/10/13</td></tr>
+    <tr><td>(iv)</td><td><b>Birth or ages of the issues</b> (children)</td><td>Drawing 3 of every DU form; affects custody (s. 26), s. 14 leave (children's interests), maintenance, and the "welfare" calculus</td></tr>
+    <tr><td>(v)</td><td>Whether there had been any <b>proceeding in India</b> — what, with what result, <b>on whose behalf</b></td><td>The prior-proceedings table (DU drawing 8/10) — screens res judicata (O. 21 R. 41 CPC bars re-trying the same matter between the same parties) and discloses parallel litigation that guides both sides' defences</td></tr>
+    <tr><td>(vi)</td><td><b>Matrimonial offence(s) charged in separate paragraphs with time and place of commission</b></td><td><b>The heart of the petition</b> — O. 6 R. 1 particulars; DU repeats this direction verbatim in Forms 15 &amp; 16; KAMKUS material-facts chapter makes the same point for cruelty/desertion (§ 10 below)</td></tr>
+    <tr><td>(vii)</td><td><b>Property presented at/about the time of marriage</b> and jointly owned</td><td>Feeds s. 27 (disposal of property), s. 25 (alimony) and settlement terms in s. 13B litigation</td></tr>
+    <tr><td>(viii)</td><td>The <b>relief or reliefs</b> prayed for</td><td>Prayer clause — also s. 23(2) HMA (other reliefs in same proceeding) and s. 23A (respondent's counter-relief)</td></tr>
+  </table>
+  <div class="tip"><b>Real example:</b> In the DU companion's <b>s. 125 maintenance chain</b> (§ 9 of this file), the reply pleads the jointly-owned flat ("purchased jointly… but in the name of the applicant… respondent contributed 60%") — that is Bombay particular (vii) at work in a live Delhi Family Court file.</div>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">1.3 · Venue — DU Item 13 + s. 19 HMA verbatim map</div>
+    <p>DU: petitions lie in the court of the <b>District Judge (Family Courts wherever established)</b> within whose local limits the marriage was solemnised, or the parties last resided together, or the respondent resides — <b>but in the metropolises of Mumbai, Calcutta, Chennai and Ahmedabad, in the City Civil Court</b> of that town. Then DU reproduces s. 19:</p>
+    <table>
+      <tr><th>s. 19 HMA</th><th>Venue — "petition shall be presented to the District Court within whose local limits—"</th><th>Drafting note</th></tr>
+      <tr><td>(a)</td><td>the marriage was solemnised</td><td>plead venue-choice in the jurisdiction paragraph (DU drawing 9/11/12)</td></tr>
+      <tr><td>(b)</td><td>the respondent <b>at the time of presentation</b> resides</td><td>usual for contested petitions</td></tr>
+      <tr><td>(c)</td><td>the parties <b>last resided together</b></td><td>usual for RCR/JS where withdrawal is the very cause</td></tr>
+      <tr><td>(d)</td><td><b>wife is petitioner</b> → where <b>she</b> resides on presentation</td><td>protective venue — quote it when the wife files</td></tr>
+      <tr><td>(e)</td><td><b>petitioner</b> resides, where the respondent is <b>outside India</b> or <b>not heard of as alive for 7 years+</b></td><td>pair with s. 13(1)(vii) presumption-of-death grounds</td></tr>
+    </table>
+    <p><b>Family Courts overlay (DU):</b> where Family Courts exist under the <b>Family Courts Act, 1984</b>, petitions lie before the <b>Principal Judge, Family Court</b> — DU cites <b>ss. 7 &amp; 8</b> (jurisdiction; exclusion of other courts' jurisdiction + transfer of pending matters). <b>Delhi reality:</b> HMA matters reach the Principal Judge, Family Court at the Tis Hazari, Patiala House, Rohini, Karkardooma and Dwarka court complexes — cause-titles read "IN THE COURT OF PRINCIPAL JUDGE, FAMILY COURT (DISTRICT ___), ___ COURT, DELHI" exactly as DU's proformas say.</p>
+  </div>
+  <div class="box warn">
+    <div class="smallcap">1.4 · The s. 14 gate DU flags</div>
+    <p>DU: <i>"By virtue of Section 14 [HMA], the petition for divorce cannot be presented within one year of marriage unless leave is taken from the court… on the ground of exceptional hardship."</i></p>
+    <p><b>Section 14 (as it stands):</b> no court shall entertain a divorce petition unless <b>one year has elapsed since the date of the marriage</b>. <b>Proviso:</b> on application made per High Court rules, leave may be granted earlier where the case is one of <b>exceptional hardship to the petitioner or exceptional depravity of the respondent</b>; if leave was obtained by misrepresentation/concealment, the court may either (i) pronounce a decree <b>not to take effect until one year from the marriage</b>, or (ii) dismiss the petition <b>without prejudice</b> to a fresh petition after the year on the same facts. On the leave application the court must have regard to <b>the interests of children of the marriage</b> and <b>reasonable probability of reconciliation</b>.</p>
+    <ul class="letters">
+      <li><b>Drafting consequence 1</b> — check dates <i>before</i> drafting: petition filed at 11 months → either attach a s. 14 leave application (with particulars of exceptional hardship/depravity — often pleaded in a sealed cover to avoid insulting the other side) or hold the draft.</li>
+      <li><b>Drafting consequence 2</b> — s. 14 ≠ the <b>s. 13B(1) one-year-separation</b> requirement: courts have treated them as independent (one Delhi HC view extends the s. 14 proviso route to the 13B(1) separation in rare cases — MAT.APP.(FC) 111/2025 — while the MP HC has read s. 14 as incapable of diluting s. 13B(1)). Exam-safe answer: plead <b>both</b> periods honestly.</li>
+      <li><b>Drafting consequence 3</b> — RCR (s. 9) and JS (s. 10) petitions have <b>no such bar</b>; only divorce petitions do. That is a real strategic difference between Forms 14/15 and Form 16.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">1.5 · DU's mandatory statements — every matrimonial petition must state "distinctly the following facts" (a)–(f)</div>
+  <table>
+    <tr><th>DU Item 13</th><th>Mandatory statement</th><th>Statute / rule behind it</th><th>Where DU operationalises it</th></tr>
+    <tr><td>(a)</td><td>Marriage solemnised with the respondent <b>according to Hindu rites and ceremonies</b> on ___ at ___ — <b>and an affidavit to that effect must be enclosed</b></td><td>s. 5 (conditions) + s. 7 (ceremonies) HMA; s. 8 (registration); O. XIX CPC affidavit; FCA s. 16 (affidavit evidence)</td><td>Para 1 of Forms 14–17 (each requires the register extract + attested affidavit)</td></tr>
+    <tr><td>(b)</td><td><b>No collusion</b> between petitioner and the other party — <b>not required in s. 11 nullity petitions</b></td><td>s. 23(1)(a) HMA (court must be satisfied of no collusion); O. 6 R. 1 fact-pleading</td><td>"That the petition is not presented in collusion…" — Forms 14 (para 5), 15 (7), 16 (7), 17 (7)</td></tr>
+    <tr><td>(c)</td><td>Divorce on <b>cruelty</b> → specifically plead that the petitioner <b>has not condoned</b> the respondent's act</td><td>Proviso to s. 13(1)(ia): burden of proving condonation/accessory/connivance lies <b>on the respondent</b>, over Evidence Act</td><td>Form 16 para 6 (and Form 15 para 6)</td></tr>
+    <tr><td>(d)</td><td><b>Mutual consent</b> divorce → <b>affidavits of both parties must be attached</b></td><td>s. 13B(1); DU Form 17 standing note: "Separate affidavits of Petitioner No. 1 and Petitioner No. 2"</td><td>Form 17 + Form 18 affidavit (signed by each petitioner)</td></tr>
+    <tr><td>(e)</td><td>RCR → plead that the respondent <b>has withdrawn from the company of the petitioner without any reasonable cause</b></td><td>s. 9 HMA + Explanation (burden of proving reasonable excuse on the withdrawer)</td><td>Form 14 para 4</td></tr>
+    <tr><td>(f)</td><td>Give the <b>status and place of residence of the parties before marriage and at filing</b></td><td>s. 20 HMA (contents of petitions); status includes "Hindu by religion or not"</td><td>Form 14/15/16/17 drawing 2 — the Husband-Wife status/age/residence grid</td></tr>
+  </table>
+</div>
+
+<div class="box">
+  <div class="smallcap">1.6 · Provisions DU's introduction silently relies on — read these alongside pp. 38–39</div>
+  <table>
+    <tr><th>Provision</th><th>Subject</th><th>Why it matters to the draft in your hand</th></tr>
+    <tr><td><b>s. 20 HMA</b></td><td>Contents and verification of petitions</td><td>The section DU's (a)–(f) list operationalises: marriage particulars, residence, cause-of-action facts, no collusion/connivance, verification by the petitioner — verification wording in every DU form tracks this</td></tr>
+    <tr><td><b>s. 21 HMA</b></td><td>Application of the CPC, 1908</td><td><b>The bridge:</b> HMA petitions are civil proceedings — O. 6 (pleadings, particulars, verification), O. 7 (contents of plaint → plaint-like petition), O. 8 (written statement), O. 9 (ex parte), O. 21 (execution) apply "so far as may be"</td></tr>
+    <tr><td><b>s. 21A HMA</b></td><td>Power to transfer matrimonial petitions</td><td>Cross-ref DU Form 11 (transfer petition, s. 25 CPC) — the divorce-transfer variant is dissected in the civil-forms file § 12</td></tr>
+    <tr><td><b>s. 21B / 21C HMA</b></td><td>Special provision for trial &amp; disposal · documentary evidence</td><td>Time-bound disposal discipline; courts must focus on documents (register extract, notices, chats, medicals) — annexure discipline in DU forms</td></tr>
+    <tr><td><b>s. 22 HMA</b></td><td>Proceedings <b>in camera</b>; not printed/published</td><td>Ask for in-camera in the first list of dates — DU forms don't say it, but every Delhi Family Court listing does</td></tr>
+    <tr><td><b>s. 23 HMA</b></td><td>Decree in proceedings (what the court must be satisfied of)</td><td>The court can decree <b>only</b> if satisfied: marriage + cause of action + <b>no collusion</b> + no condonation/connivance where applicable + no legal ground — hence DU's paras 5–7 boilerplate</td></tr>
+    <tr><td><b>s. 23A HMA</b></td><td>Relief for respondent in divorce proceedings</td><td>The respondent can claim divorce/other relief by counter-claim even if only JS was prayed — advise clients on both sides</td></tr>
+    <tr><td><b>Limitation Act, 1963</b></td><td>No article for HMA petitions</td><td>Matrimonial petitions are not governed by the Limitation Act — the <b>only</b> statutory clock is s. 14 (divorce) plus "no unnecessary delay" pleading + s. 23 (delay as a legal ground)</td></tr>
+    <tr><td><b>FCA s. 9 · s. 10</b></td><td>Duty to attempt settlement; procedure</td><td>Before merits, the Family Court must endeavour conciliation — hence DU's counselling/notice practice; plead willingness to mediate (s. 13B petitions must show genuine settlement)</td></tr>
+  </table>
+</div>
+</section>
+<!-- ======================= S2 : RCR ======================= -->
+<section id="s2">
+<div class="sec-head"><span class="sec-num">2</span><div><div class="smallcap">DU Form 14 · pp. 40–42</div><div class="t">Petition for Restitution of Conjugal Rights under s. 9, HMA 1955</div></div></div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">2.1 · The section — s. 9 HMA (verbatim core)</div>
+    <p class="quote" style="border-left:4px solid #c9962e;padding-left:14px;font-style:italic;background:#fdf8ec;padding:10px 14px;border-radius:8px;">"When either the husband or the wife has, <b>without reasonable excuse, withdrawn from the society of the other</b>, the aggrieved party may apply, by petition to the district court, for restitution of conjugal rights and the court, <b>on being satisfied of the truth of the statements made in such petition and that there is no legal ground why the application should not be granted</b>, may decree restitution of conjugal rights accordingly. <b>Explanation</b> — Where a question arises whether there has been reasonable excuse for withdrawal from society, <b>the burden of proving reasonable excuse shall be on the person who has withdrawn</b> from the society."</p>
+    <p class="smallcap">Inserted 1955; Explanation added by the Marriage Laws (Amendment) Act, 1976 (the old clause (ii) — wife's exemption when she was in the husband's house at his pleasure — was omitted). Sister provisions: SMA s. 22 (identical wording for SMA marriages); Indian Divorce Act s. 32; Parsi Marriage &amp; Divorce Act s. 36. Remedy's Indian origin: <i>Moonshee Bazloor v. Shamsoonaissa Begum</i> (1867) 10 MIA 406 (PC).</p>
+  </div>
+  <div class="box">
+    <div class="smallcap">2.2 · Elements the petitioner must plead (and prove)</div>
+    <table>
+      <tr><th>#</th><th>Element</th><th>Pleading home in DU Form 14</th><th>Burden</th></tr>
+      <tr><td>1</td><td><b>Valid subsisting Hindu marriage</b> (s. 5 conditions, s. 7 ceremonies, s. 8 registration)</td><td>Para 1 + register extract + affidavit</td><td>Petitioner</td></tr>
+      <tr><td>2</td><td><b>Respondent has withdrawn from the petitioner's "society"</b> — society = consortium: cohabitation, comfort, conjugal intercourse, sexual and domestic life</td><td>Para 4 (date of withdrawal + circumstances in following paragraphs)</td><td>Petitioner (then shifts)</td></tr>
+      <tr><td>3</td><td>Withdrawal is <b>without reasonable excuse</b> — no cruelty, no adultery, no justified abandonment, no legally recognised excuse</td><td>Para 4 phrase "without reasonable excuse" (DU mandatory statement (e))</td><td><b>Respondent</b> (Explanation — reverse burden over Evidence Act)</td></tr>
+      <tr><td>4</td><td><b>No collusion</b> (s. 23(1)(a)) · <b>no delay</b> · <b>no legal ground</b> · <b>no prior proceedings</b> (or their details)</td><td>Paras 5, 6, 7, 8</td><td>Petitioner (averment) / court (satisfaction)</td></tr>
+      <tr><td>5</td><td><b>Jurisdiction</b> — s. 19 venue + Family Court (FCA ss. 7–8)</td><td>Paras 9, 10</td><td>Court (issue can be raised by respondent)</td></tr>
+    </table>
+    <p class="smallcap">Defences that make the "reasonable excuse": the petitioner's own cruelty, adultery by the petitioner, forced conversion, and the like — courts have even refused RCR where the husband insisted the wife give up her lawful service in another town (no withdrawal without excuse on her side). Practical point: <b>an RCR decree does not compel physical cohabitation</b> — see § 2.4.</p>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">2.3 · DU Form 14 — paragraph-by-paragraph decode (the exam draft)</div>
+  <table>
+    <tr><th>Para / drawing</th><th>DU's text (abridged)</th><th>What it does legally</th><th>Proof &amp; provision</th></tr>
+    <tr><td>Caption</td><td>IN THE COURT OF PRINCIPAL JUDGE, FAMILY COURT (DISTRICT…), …COURT, DELHI · HMA PETITION NO. … · X (s/o…, r/o…) <b>PETITIONER</b> v. Y (w/o…, r/o…) <b>RESPONDENT</b> · title: "PETITION FOR RESTITUTION OF CONJUGAL RIGHTS UNDER SECTION 9 OF THE HINDU MARRIAGE ACT, 1955"</td><td>Cause-title: court, case number, parties with relationship-address lines, statutory title — the section must appear <b>in the title</b></td><td>s. 19 HMA · FCA ss. 7–8 · O. 7 R. 1 CPC (suit particulars)</td></tr>
+    <tr><td>1</td><td>Marriage solemnised per Hindu rites on ___ at ___; registered with the Registrar; certified extract of the Hindu Marriage Register filed; <b>attested affidavit attached</b></td><td>Establishes validity + documentary anchor; DU's mandatory (a)</td><td>s. 5, s. 7, s. 8 HMA · O. XIX / FCA s. 16</td></tr>
+    <tr><td>2</td><td>Status/age/place-of-residence <b>grid</b> — Husband &amp; Wife columns × (i) before marriage, (ii) at filing; "whether a party is a Hindu by religion or not is part of status"</td><td>Status pleading: domiciliary state, religion, age — satisfies DU mandatory (f) + Bombay particular (ii)</td><td>s. 20 HMA · DU Item 13 (f)</td></tr>
+    <tr><td>3</td><td>Names, sex, dates of birth/ages of children of the marriage</td><td>Issues of the marriage — welfare, custody cross-claims, s. 14 leave factors</td><td>s. 26 HMA · Bombay particular (iv)</td></tr>
+    <tr><td><b>4</b></td><td><b>"That the respondent has, without reasonable excuse, withdrawn from the society of the petitioner with effect from ___"</b> + circumstances of withdrawal in a few paragraphs per facts</td><td><b>The cause-of-action paragraph.</b> Date fixes limitation-free urgency + the "two years separated" narrative; circumstances = material facts (KAMKUS rule — § 10)</td><td><b>s. 9 + Explanation</b> · O. 6 R. 1 (material facts) · DU mandatory (e)</td></tr>
+    <tr><td>5</td><td>Not presented in collusion with respondent</td><td>Satisfies s. 23(1)(a) precondition — collusion nullifies the decree</td><td>s. 23 HMA</td></tr>
+    <tr><td>6</td><td>No unnecessary or improper delay in filing</td><td>Neutralises the "sleeping on rights" defence</td><td>s. 23 ("legal ground")</td></tr>
+    <tr><td>7</td><td>No other legal ground why relief should not be granted</td><td>Verbatim s. 9 satisfaction language — the statute's own words</td><td>s. 9</td></tr>
+    <tr><td>8</td><td><b>No previous proceedings</b> — OR the 4-column table: parties / nature with section / number &amp; year / court / result</td><td>Res judicata &amp; O. 21 R. 41 screening; pending criminal/DVA/125 cases disclosed</td><td>O. 21 R. 41 CPC · s. 144 BNSS records · DVA matters</td></tr>
+    <tr><td>9</td><td>Marriage at ___; parties last resided together at ___; now residing at ___ — <i>"within the local limits of the ordinary original jurisdiction of this Court"</i></td><td>Invokes <b>s. 19(a)/(b)/(c)/(d)</b> venue — pick the clause that fits the facts</td><td>s. 19 HMA</td></tr>
+    <tr><td>10</td><td>"This Hon'ble Court has jurisdiction to try and entertain this petition"</td><td>The jurisdictional conclusion (fact + law hybrid — plead the facts in 9, the conclusion in 10)</td><td>s. 19 + FCA s. 7</td></tr>
+    <tr><td>11</td><td>Requisite court-fee of ₹___ affixed</td><td>Delhi: court-fee on matrimonial petitions as per the Delhi Court-fees Act schedule (₹20 on most petitions? — fill per current schedule; check at filing)</td><td>Court Fees Act, 1870 (State amendments)</td></tr>
+    <tr><td>Prayer</td><td>Grant a decree of restitution of conjugal rights under s. 9 in favour of petitioner + any other relief "in the interest of justice and equity"</td><td>Relief clause — statute language + residuary clause</td><td>s. 9 · s. 23(2) (other reliefs in same proceeding)</td></tr>
+    <tr><td>Verification</td><td>"states on solemn affirmation that paras 1 to ___ are true to his/her knowledge and paras ___ to ___ are true to information received and believed to be true" · verified at ___ · date · PETITIONER</td><td>Split verification — knowledge vs information; O. 6 R. 15 form; no evidence outside pleadings at first instance</td><td>O. 6 R. 15 CPC (via s. 21 HMA) · s. 20 HMA</td></tr>
+    <tr><td>Note</td><td>"AN AFFIDAVIT OF PETITIONER IS TO BE APPENDED"</td><td>The Form 18 affidavit rides with every petition</td><td>O. XIX · FCA s. 16</td></tr>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">2.4 · After the decree — enforcement (most-missed exam point)</div>
+    <ul class="letters">
+      <li><b>Execution route:</b> O. <b>21 Rr. 32 &amp; 33 CPC</b> (via s. 21 &amp; s. 28A HMA) — R. 32 for acts directed (return/join), R. 33 gives the executing court <b>discretion</b>. Detention available under s. 51 CPC, but see the proviso limits for restitution decrees.</li>
+      <li><b>Hard limit:</b> courts consistently hold a spouse <b>cannot be physically compelled</b> to resume cohabitation — execution runs only to the extent the rules indicate; refusal itself matures into a fresh ground (see <i>Rinju v. Santhosh</i> (2018) Kerala HC: "his/her spouse cannot be compelled to restore conjugal rights… unless and until he/she is willing").</li>
+      <li><b>The strategic payoff:</b> non-compliance for <b>1 year or upwards</b> after the RCR decree = independent divorce ground — <b>s. 13(1A)(ii) HMA</b>. Drafters plead the earlier RCR history in Form 16's prior-proceedings table (para 8/10) precisely for this.</li>
+      <li><b>Distinguish the traps:</b> (i) CPC <b>s. 144</b> ("restitution when decree reversed or modified") ≠ s. 9 RCR — KAMKUS's interlocutory-application list means the CPC provision; (ii) <b>s. 144 BNSS</b> (ex-s. 125 CrPC) is criminal maintenance — not restitution at all.</li>
+      <li><b>Constitutional note</b> (1-mark): s. 9 has survived Art. 14/21 challenges, but commentators still flag forced-cohabitation as Art. 21 tension (JURIST commentary, 2023) — mention in "current debates" answers.</li>
+    </ul>
+  </div>
+  <div class="box tip">
+    <div class="smallcap">2.5 · DU companion's real RCR-flavoured nugget</div>
+    <p>In the companion's <b>s. 125 reply–rejoinder chain</b> (full dissect in § 9), the wife's rejoinder pleads that <i>"she… persuaded this Hon'ble Court to direct the respondent to keep her (petitioner) in his matrimonial company, but instead of honouring the same he again kicked her out"</i> — i.e., a court order to resume matrimonial life already existed and was breached. Real files generate <b>RCR-like directions inside maintenance litigation</b>, and that breach then feeds cruelty/divorce pleadings. In drafting terms: always ask for the full order-history table (DU para 8) — it is the spine of every later petition.</p>
+    <p class="smallcap">Companion's also reproduces a full <b>RCR model petition under "Marriage and Divorce Laws"</b> (11 paras: marriage → she left for mother's illness → waited a fortnight → went to her parents' house, she refused → entitlement → no collusion → no delay → no impediment → "not guilty of any such act or omission which should preclude him" → jurisdiction → prayer directing her "to return and live with him as husband and wife"). Compare: KAMKUS adds the powerful <b>para 9 "clean-hands" averment</b> (petitioner not guilty of acts precluding relief) which DU's Form 14 leaves to para 7 — <b>add it in exams</b>.</p>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">Diagram 2 — life-cycle of an RCR case (s. 9)</div>
+  <svg viewBox="0 0 1160 210" role="img" aria-label="RCR lifecycle flow">
+    <defs><marker id="m2a" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#5c6470"/></marker></defs>
+    <rect x="8" y="8" width="1144" height="194" rx="14" fill="#fbf8f1" stroke="#e5dcc7"/>
+    <g font-size="13" text-anchor="middle" font-weight="bold">
+      <rect x="24" y="60" width="150" height="76" rx="10" fill="#eaf1fb" stroke="#1c4f8f"/><text x="99" y="90" fill="#1c4f8f">Withdrawal from</text><text x="99" y="110" fill="#1c4f8f">society (fact)</text>
+      <rect x="204" y="60" width="150" height="76" rx="10" fill="#eaf1fb" stroke="#1c4f8f"/><text x="279" y="90" fill="#1c4f8f">Petition u/s 9</text><text x="279" y="110" fill="#1c4f8f">+ affidavit</text>
+      <rect x="384" y="60" width="150" height="76" rx="10" fill="#f2eefb" stroke="#5b3a9b"/><text x="459" y="90" fill="#5b3a9b">Notice + reply</text><text x="459" y="110" fill="#5b3a9b">burden SHIFT:</text><text x="459" y="128" fill="#5b3a9b" font-weight="normal">excuse on respondent</text>
+      <rect x="564" y="60" width="150" height="76" rx="10" fill="#f2eefb" stroke="#5b3a9b"/><text x="639" y="90" fill="#5b3a9b">Counselling /</text><text x="639" y="110" fill="#5b3a9b">FCA s. 9 attempt</text>
+      <rect x="744" y="60" width="150" height="76" rx="10" fill="#fdecec" stroke="#a3282a"/><text x="819" y="90" fill="#a3282a">Decree u/s 9</text><text x="819" y="110" fill="#a3282a">(or refusal)</text>
+      <rect x="924" y="60" width="212" height="76" rx="10" fill="#e7f5ef" stroke="#1e6f50"/><text x="1030" y="90" fill="#1e6f50">Execution O. 21 R. 32–33</text><text x="1030" y="110" fill="#1e6f50" font-weight="normal">ignored 1 yr → s. 13(1A)(ii)</text><text x="1030" y="128" fill="#1e6f50" font-weight="normal">divorce; appeal s. 28</text>
+    </g>
+    <g stroke="#5c6470" stroke-width="2" fill="none" marker-end="url(#m2a)">
+      <line x1="174" y1="98" x2="202" y2="98"/><line x1="354" y1="98" x2="382" y2="98"/><line x1="534" y1="98" x2="562" y2="98"/><line x1="714" y1="98" x2="742" y2="98"/><line x1="894" y1="98" x2="922" y2="98"/>
+    </g>
+    <text x="24" y="180" font-size="13" fill="#22252b"><tspan font-weight="bold" fill="#c9962e">Drafting checkpoints →</tspan> date of withdrawal in para 4 · status grid para 2 · no-collusion para 5 · prior-proceedings table para 8 · venue clauses para 9 · split verification · Form 18 affidavit appended.</text>
+  </svg>
+</div>
+</section>
+<!-- ======================= S3 : JS ======================= -->
+<section id="s3">
+<div class="sec-head"><span class="sec-num">3</span><div><div class="smallcap">DU Form 15 · pp. 43–44</div><div class="t">Petition for Judicial Separation under s. 10, HMA 1955</div></div></div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">3.1 · Section 10 HMA — both limbs</div>
+    <p class="quote" style="border-left:4px solid #5b3a9b;padding-left:14px;background:#f7f4fd;padding:10px 14px;border-radius:8px;font-style:italic;">"<b>(1)</b> Either party to a marriage… may present a petition praying for a decree for judicial separation on <b>any of the grounds specified in sub-section (1) of section 13, and in the case of a wife also on any of the grounds specified in sub-section (2)</b> thereof, as grounds on which a petition for divorce might have been presented. <b>(2)</b> Where a decree for judicial separation has been passed, it shall <b>no longer be obligatory for the petitioner to cohabit with the respondent</b>, but the court may, on application by petition of either party… <b>rescind the decree</b> if it considers it just and reasonable."</p>
+    <p><b>Reading rule:</b> s. 10 is a <b>pick-up provision</b> — every divorce ground (and the wife's special grounds) becomes a JS ground. The DU direction in para 4 ("any one or more grounds available under section 10 may be pleaded here… matrimonial offences in separate paragraphs with times and places") means you <b>must plead the s. 13 sub-clause expressly</b> (e.g., "the respondent has treated the petitioner with cruelty within s. 13(1)(ia) read with s. 10").</p>
+  </div>
+  <div class="box">
+    <div class="smallcap">3.2 · What a JS decree does and does not do</div>
+    <table>
+      <tr><th>Effect</th><th>Detail</th></tr>
+      <tr><td>✅ Suspends</td><td>Obligation to cohabitate — separation becomes lawful (s. 10(2), limb 1)</td></tr>
+      <tr><td>❌ Does NOT dissolve</td><td>Marriage subsists: no remarriage (s. 15 still blocked until divorce), status unchanged, adultery remains offence-ish, succession rights intact</td></tr>
+      <tr><td>🔄 Rescission</td><td>Either party may petition to rescind — court if "just and reasonable" (s. 10(2), limb 2): reconciliation route</td></tr>
+      <tr><td>⛓️ Bridge to divorce</td><td>No resumption of cohabitation <b>1 year+</b> after the JS decree → divorce under <b>s. 13(1A)(i)</b></td></tr>
+      <tr><td>⚖️ Alternate relief</td><td>Conversely, in a divorce case the court may grant <b>JS instead of divorce</b> under <b>s. 13A</b> — real example: Family Court did exactly this in <i>A. Jayachandra v. Aneel Kaur</i> (children's welfare); SC later converted to divorce on appeal (§ 8)</td></tr>
+      <tr><td>🆚 vs RCR</td><td>RCR = <i>restore</i> living together (marriage reinforced); JS = <i>license to live apart</i> (marriage preserved but suspended)</td></tr>
+      <tr><td>🆚 vs divorce</td><td>Divorce = dissolution + right to re-marry (s. 15 when appeal time expired or appeal disposed of)</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">3.3 · Grounds available in a JS petition (the s. 10 pick-up chart — also the answer to "grounds of judicial separation" PYQs)</div>
+  <table>
+    <tr><th>Ground</th><th>Section</th><th>Who can use</th><th>Particulars the petition must contain</th></tr>
+    <tr><td>Adultery — voluntary sexual intercourse with another after solemnisation</td><td>s. 13(1)(i)</td><td>Either</td><td>Time/place/identity particulars as nearly as possible; DU Form 16 direction re clause (i) applies via s. 10</td></tr>
+    <tr><td><b>Cruelty</b> — persistent/repeated treatment causing reasonable apprehension of harm</td><td>s. 13(1)(ia)</td><td>Either</td><td>Each incident as a separate paragraph with dates; KAMKUS's cruelty-material-facts example (§ 10); non-condonation in para 6 (DU)</td></tr>
+    <tr><td><b>Desertion</b> — continuous 2 years before filing</td><td>s. 13(1)(ib) + Explanation</td><td>Either</td><td>Fact of leaving + date + <b>animus deserendi</b> + absence of reasonable cause + without consent (KAMKUS material-facts instance)</td></tr>
+    <tr><td>Conversion — ceased to be a Hindu</td><td>s. 13(1)(ii)</td><td>Either</td><td>Act/date of conversion; ceremony if known</td></tr>
+    <tr><td>Incurable unsoundness / mental disorder to the extent petitioner can't reasonably live with respondent (incl. schizophrenia; psychopathic disorder)</td><td>s. 13(1)(iii) + Explanations</td><td>Either</td><td>Certificates, hospital history; the "cannot reasonably be expected to live with" standard</td></tr>
+    <tr><td>Virulent &amp; incurable leprosy</td><td>s. 13(1)(iv)</td><td>Either</td><td>Medical certificate</td></tr>
+    <tr><td>Venereal disease in communicable form</td><td>s. 13(1)(v)</td><td>Either</td><td>Medical certificate; date of knowledge</td></tr>
+    <tr><td>Renunciation — entered religious order</td><td>s. 13(1)(vi)</td><td>Either</td><td>Date &amp; fact of renunciation</td></tr>
+    <tr><td>Not heard of as alive for 7 years+</td><td>s. 13(1)(vii)</td><td>Either</td><td>Who last heard, when, from whom</td></tr>
+    <tr><td>Pre-1955 polygamous marriage / other wife alive</td><td>s. 13(2)(i)</td><td><b>Wife only</b></td><td>Marriage dates; alive-at-petition statement</td></tr>
+    <tr><td>Husband guilty of rape, sodomy or bestiality since solemnisation</td><td>s. 13(2)(ii)</td><td><b>Wife only</b></td><td>Incident particulars; FIR/medical if any</td></tr>
+    <tr><td>Non-cohabitation 1 year+ after a maintenance decree (HAMA s. 18 suit / s. 125-type order)</td><td>s. 13(2)(iii)</td><td><b>Wife only</b></td><td>Decree details + non-resumption facts</td></tr>
+    <tr><td>Repudiated marriage (option of puberty) — married before 15, repudiated between 15–18</td><td>s. 13(2)(iv)</td><td><b>Wife only</b></td><td>Marriage age, dates of attaining age &amp; repudiation</td></tr>
+  </table>
+  <p class="smallcap">Married-fault notes: for JS <b>there is no s. 14 one-year bar</b> (it applies only to "petitions for dissolution by decree of divorce"); DU's paras 5–6 still require non-accessory/non-condonation because s. 23 applies to "proceedings" generally and the same facts will later drive a divorce petition.</p>
+</div>
+
+<div class="box">
+  <div class="smallcap">3.4 · DU Form 15 — paragraph-by-paragraph decode</div>
+  <table>
+    <tr><th>Para</th><th>DU text (abridged)</th><th>Drafting note</th></tr>
+    <tr><td>1–3</td><td>Marriage per Hindu rites + registration + extract + affidavit; status grid (before marriage / at filing); children's particulars</td><td>Identical to Form 14 paras 1–3 — learn one, know all</td></tr>
+    <tr><td><b>4</b></td><td>"That the respondent has___ (<b>any one or more grounds available under section 10</b> may be pleaded here. The <b>matrimonial offences charged should be set in separate paragraphs with times and places</b> of their alleged commission. The facts on which the claim to relief is founded should be stated… as distinctly as the nature of the case permits.)"</td><td><b>Grounds paragraph.</b> One ground per paragraph; cite the s. 13 clause; each incident = date, place, act, witnesses/evidence pointer. DU repeats the Bombay offence-charge rule here.</td></tr>
+    <tr><td>5</td><td>Where ground is s. 13(1)(i) (adultery): petitioner has not been <b>accessory to or connived at or condoned</b> the acts complained of</td><td>Neutralises s. 23 defences — adultery petitions die on connivance/condonation</td></tr>
+    <tr><td>6</td><td>Where ground is cruelty: petitioner has not condoned the cruelty</td><td>DU mandatory (c) — proviso to s. 13(1)(ia) puts ultimate burden on respondent, but you must plead the negative first</td></tr>
+    <tr><td>7–10</td><td>No collusion · no delay · no other legal ground · no prior proceedings (or the 4-column table)</td><td>Standard four — same as Form 14 paras 5–8</td></tr>
+    <tr><td>11–13</td><td>Venue facts (solemnised / last resided / now residing within jurisdiction) · jurisdiction conclusion · court-fee</td><td>s. 19 clauses chosen to fit facts</td></tr>
+    <tr><td>Prayer</td><td>Decree of <b>judicial separation under s. 10</b> + residuary relief</td><td>Section in prayer must match title</td></tr>
+    <tr><td>Verification + note</td><td>Split knowledge/information affirmation; "An affidavit of petitioner is to be appended"</td><td>O. 6 R. 15 + Form 18</td></tr>
+  </table>
+  <div class="note"><b>Mini case-note (from DU's own syllabus family, cited in the DU law-faculty material):</b> <i>Subbarama Reddiar v. Sakaswathi Ammal (1966) Mad</i> — the Madras HC discussed the nature and scope of judicial separation on the ground of adultery: the decree follows once the petitioner proves the adulterous relationship; JS remains available on s. 13 grounds "as grounds on which a petition for divorce might have been presented." Exam use: as the authority that s. 10 mirrors s. 13.</div>
+</div>
+</section>
+<!-- ======================= S4 : DIVORCE s.13 ======================= -->
+<section id="s4">
+<div class="sec-head"><span class="sec-num">4</span><div><div class="smallcap">DU Form 16 · pp. 45–47</div><div class="t">Petition for Dissolution of Marriage by a Decree of Divorce under s. 13, HMA 1955</div></div></div>
+
+<div class="box">
+  <div class="smallcap">4.1 · The architecture of s. 13 — every clause with its drafting instruction</div>
+  <table>
+    <tr><th>Clause</th><th>Ground (statutory words, condensed)</th><th>How to plead it (particulars that win)</th><th>Typical proof</th></tr>
+    <tr><td><b>13(1)(i)</b></td><td>After solemnisation, had <b>voluntary sexual intercourse with any person other than spouse</b> (adultery)</td><td>DU's own direction: <i>"the petitioner should give particulars as nearly as he can, of facts of voluntary sexual intercourse alleged"</i> — names/places/occasions/love-letters/hotel receipts; plead non-accessory/non-condonation in para 5</td><td>RTA entries, messages, admissions, witness depositions (direct evidence rare — circumstances rule)</td></tr>
+    <tr><td><b>13(1)(ia)</b></td><td>Treated petitioner with <b>cruelty</b> (inserted 1976)</td><td>KAMKUS's model (§ 10): drunkness + injuries <b>with dates</b>, abuse before friends, dowry threats, no cohabitation/talk since marriage — "such facts which establish cruelty"; DU para 6 = non-condonation; <b>proviso</b>: once pleaded/proved, burden of showing condonation/accessory/connivance is <b>on respondent</b> notwithstanding Evidence Act</td><td>Medicals, FIR/BNS 85 complaint, CCTV, diary, presence witnesses — continuity/pattern of conduct; "grave and weighty" standard (<i>Aneel Kaur</i>)</td></tr>
+    <tr><td><b>13(1)(ib)</b></td><td><b>Deserted</b> petitioner for a <b>continuous period of not less than 2 years</b> immediately before filing</td><td>Plead: (1) leaving date/place/fact; (2) <b>animus deserendi</b> — declaration to neighbours/relatives she is leaving &amp; won't return (KAMKUS material-facts instance); (3) absence of reasonable cause; (4) without consent/against wish; (5) <b>wilful neglect</b> included (Explanation to s. 13)</td><td>Exit witness, notice replies, travel records; conduct post-separation</td></tr>
+    <tr><td><b>13(1)(ii)</b></td><td>Ceased to be a Hindu by <b>conversion</b></td><td>Date/act of conversion; ceremony; declaration if any</td><td>Public records, conversion deed, witness</td></tr>
+    <tr><td><b>13(1)(iii)</b></td><td>Incurably of unsound mind / mental disorder continuously or intermittently such that petitioner <b>cannot reasonably be expected to live with respondent</b></td><td>Plead the <b>functional standard</b>, not the label; Explanation (a): mental illness, arrested/incomplete development, psychopathic disorder, <b>includes schizophrenia</b>; Explanation (b): psychopathic disorder = persistent disorder resulting in abnormally aggressive/seriously irresponsible conduct</td><td>Psychiatric records, medical board, relatives' depositions</td></tr>
+    <tr><td><b>13(1)(iv)</b></td><td><b>Virulent and incurable</b> form of leprosy</td><td>Both limbs (virulent + incurable) — medical certificate; note WHO/JJVerdict-era debate but text stands</td><td>Civil surgeon certificate</td></tr>
+    <tr><td><b>13(1)(v)</b></td><td>Venereal disease <b>in a communicable form</b></td><td>Diagnosis + stage + date of knowledge</td><td>Medical records</td></tr>
+    <tr><td><b>13(1)(vi)</b></td><td><b>Renounced the world</b> by entering religious order</td><td>Date + act of sannyas; public notoriety of the renunciation</td><td>Witnesses, photographs/public record</td></tr>
+    <tr><td><b>13(1)(vii)</b></td><td>Not heard of as <b>alive for 7 years+</b> by those who would naturally have heard</td><td>Who-last-heard-when; efforts made; pairs with s. 19(e) venue</td><td>Census/ration records, witnesses</td></tr>
+    <tr><td><b>13(1A)(i)</b></td><td>No resumption of cohabitation <b>1 year+</b> after a <b>JS decree</b></td><td>Plead the JS decree (number/date/court) from prior-proceedings table + non-resumption facts</td><td>Decree copy + separation proof</td></tr>
+    <tr><td><b>13(1A)(ii)</b></td><td>No restitution of conjugal rights <b>1 year+</b> after an <b>RCR decree</b></td><td>Plead the RCR decree + execution history/failure</td><td>Decree + execution petition records</td></tr>
+    <tr><td><b>13(2)</b> wife only</td><td>(i) pre-1955 second marriage/other wife alive; (ii) husband guilty of <b>rape, sodomy or bestiality</b> since solemnisation; (iii) non-cohabitation 1 yr+ after <b>maintenance decree</b> (HAMA s. 18 suit); (iv) <b>option of puberty</b> — married before 15, repudiated 15–18 (whether consummated or not)</td><td>Each with dates; (iii) needs decree particulars; (iv) needs DOB + repudiation-date pleading</td><td>Age proofs, decree copies, medical/FIR</td></tr>
+  </table>
+  <p class="smallcap"><b>Desertion Explanation (quote-worthy):</b> "desertion of the petitioner by the other party <b>without reasonable cause and without the consent of or against the wish</b> of such party, and includes the <b>wilful neglect</b> of the petitioner." · <b>s. 13 chapeau:</b> "Any marriage solemnized, whether before or after the commencement of this Act, may, <b>on a petition presented by either the husband or the wife</b>, be dissolved by a decree of divorce on the ground that the other party—".</p>
+</div>
+
+<div class="grid2">
+  <div class="box warn">
+    <div class="smallcap">4.2 · Conditional clauses DU insists on (paras 5 &amp; 6)</div>
+    <ul class="letters">
+      <li><b>Para 5 (adultery ground):</b> "The petitioner has not in any manner been <b>accessory to or connived at or condoned</b> the act(s) complained of." — These are the three s. 23 HMA defences; condonation = <b>forgiveness + restoration</b> of the offending spouse (the <i>Aneel Kaur</i> HC applied this against the husband because a fourth child was born during the dispute — SC later restored the divorce; § 8).</li>
+      <li><b>Para 6 (cruelty ground):</b> "The petitioner has not in any manner <b>condoned</b> the cruelty." — DU mandatory statement (c). Add, in good drafts: <b>petitioner's own clean-hands averment</b> ("not guilty of any act or omission which should preclude relief" — the KAMKUS RCR model's para 9), because s. 23 asks whether <i>any</i> legal ground exists — including the petitioner's own proved cruelty.</li>
+      <li><b>Delay is a "legal ground":</b> para 8 (no unnecessary/improper delay) exists because condonation can be implied from delay + continued cohabitation. If there are gaps in cohabitation, plead them honestly with explanations.</li>
+    </ul>
+  </div>
+  <div class="box">
+    <div class="smallcap">4.3 · Relief-side provisions to invoke in/around Form 16</div>
+    <table>
+      <tr><td><b>s. 13A</b></td><td><b>Alternate relief:</b> in a divorce proceeding the court may, <i>instead of</i> granting divorce, pass a decree of judicial separation if the respondent opposes — real example: FC Hyderabad used it in <i>Aneel Kaur</i> (children's welfare). Plead awareness: "petitioner seeks divorce; in the alternative the court may consider s. 13A relief"</td></tr>
+      <tr><td><b>s. 15</b></td><td>Divorced persons may re-marry — after time for appeal has expired (no appeal) or after disposal of appeal. Drafting: check matrimonial status before accepting a second-marriage brief (else BNS s. 82 bigamy)</td></tr>
+      <tr><td><b>s. 16</b></td><td>Children of void/voidable/annulled marriages remain legitimate — always address custody &amp; maintenance even in nullity work</td></tr>
+      <tr><td><b>s. 17 / s. 18</b></td><td>Punishment of bigamy (→ BNS s. 82, IPC 494 old) · punishment for contravention of other s. 5 conditions — criminal mirror pleadings</td></tr>
+      <tr><td><b>s. 24 / 25 / 26 / 27</b></td><td>Pendente-lite maintenance + expenses · permanent alimony · custody · disposal of property — file as <b>interim IAs</b> with the petition; in 13B, fold into settlement terms</td></tr>
+      <tr><td><b>s. 28 / 28A</b></td><td>Appeals from decrees &amp; orders (to HC) · enforcement of decrees — structure the "what after decree" advice</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">4.4 · DU Form 16 — paragraph-by-paragraph decode</div>
+  <table>
+    <tr><th>Para</th><th>DU text (abridged)</th><th>Legal function</th></tr>
+    <tr><td>1</td><td>Marriage solemnised <b>after commencement of the HMA</b> on ___ at ___; registered; extract + affidavit</td><td>s. 5/7/8 + DU mandatory (a); "after commencement" wording tracks s. 13's own chapeau</td></tr>
+    <tr><td>2</td><td>Status/age/residence grid (before marriage / at filing)</td><td>DU mandatory (f)</td></tr>
+    <tr><td>3</td><td>Children — names, sex, DOB/ages</td><td>Custody/welfare + s. 14 factors</td></tr>
+    <tr><td><b>4</b></td><td>"That the respondent___" — <b>one or more s. 13 grounds</b>; facts stated as distinctly as the case permits; <b>clause (i) adultery needs particulars of the intercourse alleged; matrimonial offences in separate paragraphs with time &amp; place</b></td><td><b>Cause of action.</b> This single paragraph carries O. 6 R. 1 particulars burden; count grounds vs paragraphs — examiners check one-ground-per-paragraph</td></tr>
+    <tr><td>5</td><td>(adultery) not accessory / connived at / condoned</td><td>s. 23 defences negatived</td></tr>
+    <tr><td>6</td><td>(cruelty) not condoned</td><td>Proviso to s. 13(1)(ia) framing + DU mandatory (c)</td></tr>
+    <tr><td>7</td><td>No collusion</td><td>s. 23(1)(a)</td></tr>
+    <tr><td>8</td><td>No unnecessary/improper delay</td><td>Implied-condonation defence</td></tr>
+    <tr><td>9</td><td>No other legal ground why relief should not be granted</td><td>s. 13/s. 23 statutory phrase</td></tr>
+    <tr><td>10</td><td>No previous proceedings OR 4-column table (parties / nature with section / number &amp; year / court / result)</td><td>O. 21 R. 41 + res judicata + disclose parallel DVA/498A-BNS 85/125-BNSS 144 cases</td></tr>
+    <tr><td>11</td><td>Solemnised at ___; last resided together at ___; now residing at ___ — within jurisdiction</td><td>s. 19 venue clauses</td></tr>
+    <tr><td>12–13</td><td>Jurisdiction conclusion · court-fee ₹___</td><td>FCA s. 7 · Court Fees Act</td></tr>
+    <tr><td>Prayer</td><td>Decree of divorce under <b>s. 13</b> + residuary</td><td>Name the clause(s) used in prayer for clarity: "under s. 13(1)(ia) and (ib)"</td></tr>
+    <tr><td>Verification + note</td><td>Split affirmation; petitioner's affidavit to be appended</td><td>O. 6 R. 15 · Form 18</td></tr>
+  </table>
+</div>
+
+<div class="box">
+  <div class="smallcap">Diagram 3 — the contested-divorce journey (Form 16 end-to-end)</div>
+  <svg viewBox="0 0 1160 360" role="img" aria-label="Contested divorce flowchart">
+    <defs><marker id="m3a" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#5c6470"/></marker></defs>
+    <rect x="8" y="8" width="1144" height="344" rx="14" fill="#fbf8f1" stroke="#e5dcc7"/>
+    <g font-size="13.5" text-anchor="middle" font-weight="bold">
+      <rect x="26" y="30" width="170" height="64" rx="10" fill="#eaf1fb" stroke="#1c4f8f"/><text x="111" y="56" fill="#1c4f8f">1 · Ground audit</text><text x="111" y="76" fill="#1c4f8f" font-weight="normal">s. 13(1)/(2) + evidence</text>
+      <rect x="220" y="30" width="170" height="64" rx="10" fill="#eaf1fb" stroke="#1c4f8f"/><text x="305" y="56" fill="#1c4f8f">2 · s. 14 gate check</text><text x="305" y="76" fill="#1c4f8f" font-weight="normal">1 year elapsed? else leave</text>
+      <rect x="414" y="30" width="170" height="64" rx="10" fill="#fdecec" stroke="#a3282a"/><text x="499" y="56" fill="#a3282a">3 · Draft Form 16</text><text x="499" y="76" fill="#a3282a" font-weight="normal">paras 1–13 + IA 24/26</text>
+      <rect x="608" y="30" width="170" height="64" rx="10" fill="#fdecec" stroke="#a3282a"/><text x="693" y="56" fill="#a3282a">4 · FC listing</text><text x="693" y="76" fill="#a3282a" font-weight="normal">in camera s. 22 · WS O. 8</text>
+      <rect x="802" y="30" width="170" height="64" rx="10" fill="#f2eefb" stroke="#5b3a9b"/><text x="887" y="56" fill="#5b3a9b">5 · Settlement attempt</text><text x="887" y="76" fill="#5b3a9b" font-weight="normal">FCA s. 9 counselling</text>
+      <rect x="996" y="30" width="140" height="64" rx="10" fill="#f2eefb" stroke="#5b3a9b"/><text x="1066" y="56" fill="#5b3a9b">6 · Evidence</text><text x="1066" y="76" fill="#5b3a9b" font-weight="normal">s. 15 memo-record</text>
+      <rect x="150" y="140" width="220" height="70" rx="10" fill="#e7f5ef" stroke="#1e6f50"/><text x="260" y="168" fill="#1e6f50">7 · s. 23 satisfaction test</text><text x="260" y="188" fill="#1e6f50" font-weight="normal">marriage · cause of action</text><text x="260" y="205" fill="#1e6f50" font-weight="normal">· no collusion · no condonation</text>
+      <rect x="450" y="140" width="200" height="70" rx="10" fill="#e7f5ef" stroke="#1e6f50"/><text x="550" y="168" fill="#1e6f50">8 · Decree or s. 13A</text><text x="550" y="188" fill="#1e6f50" font-weight="normal">divorce dissolved, OR</text><text x="550" y="205" fill="#1e6f50" font-weight="normal">JS granted instead</text>
+      <rect x="730" y="140" width="200" height="70" rx="10" fill="#fff" stroke="#c9962e"/><text x="830" y="168" fill="#c9962e">9 · Appeal s. 28</text><text x="830" y="188" fill="#5c6470" font-weight="normal">to High Court (facts+law)</text><text x="830" y="205" fill="#5c6470" font-weight="normal">· interim alimony protect</text>
+      <rect x="960" y="140" width="176" height="70" rx="10" fill="#fff" stroke="#c9962e"/><text x="1048" y="168" fill="#c9962e">10 · After finality</text><text x="1048" y="188" fill="#5c6470" font-weight="normal">s. 15 re-marriage window</text><text x="1048" y="205" fill="#5c6470" font-weight="normal">· s. 25 execution · s. 26 custody</text>
+    </g>
+    <g stroke="#5c6470" stroke-width="2" fill="none" marker-end="url(#m3a)">
+      <line x1="196" y1="62" x2="218" y2="62"/><line x1="390" y1="62" x2="412" y2="62"/><line x1="584" y1="62" x2="606" y2="62"/><line x1="778" y1="62" x2="800" y2="62"/><line x1="972" y1="62" x2="994" y2="62"/>
+      <path d="M1066,94 L1066,116 L260,116 L260,138"/><path d="M370,175 L448,175"/><path d="M650,175 L728,175"/><path d="M930,175 L958,175"/>
+    </g>
+    <g font-size="13">
+      <text x="26" y="250" font-weight="bold" fill="#c9962e">INTERIM LAYER (files alongside):</text>
+      <text x="26" y="274" fill="#22252b">s. 24 maintenance pendente lite + expenses (income affidavit) · s. 26 custody/access · DVA 2005 ss. 18–23 (protection/residence/monetary/custody/compensation + s. 23 ex parte) · s. 27 property · s. 23A counter-claim by respondent.</text>
+      <text x="26" y="304" font-weight="bold" fill="#c9962e">CRIMINAL MIRROR (pleaded in para 10 as prior proceedings):</text>
+      <text x="26" y="328" fill="#22252b">BNS s. 85 r/w s. 86 (cruelty to wife — ex-IPC 498A) · BNS s. 82 (bigamy — ex-IPC 494) · s. 144 BNSS maintenance (ex-s. 125 CrPC) · Dowry Prohibition Act, 1961 complaints — all belong in the prior-proceedings table.</text>
+    </g>
+  </svg>
+</div>
+</section>
+<!-- ======================= S5 : s.13B ======================= -->
+<section id="s5">
+<div class="sec-head"><span class="sec-num">5</span><div><div class="smallcap">DU Form 17 · pp. 48–49</div><div class="t">Joint Petition for Dissolution of Marriage by Mutual Consent under s. 13B(1)</div></div></div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">5.1 · Section 13B — both sub-sections (what DU's title says: "UNDER SECTION 13-B(1)")</div>
+    <p class="quote" style="border-left:4px solid #a3282a;padding-left:14px;background:#fdecec;padding:10px 14px;border-radius:8px;font-style:italic;"><b>(1)</b> "A petition for dissolution of marriage by a decree of divorce may be presented to the District Court <b>by both the parties to a marriage together</b>, whether such marriage was solemnized before or after the commencement of the Marriage Laws (Amendment) Act, 1976, on the ground that they have been <b>living separately for a period of one year or more</b>, that they have <b>not been able to live together</b> and that they have <b>mutually agreed that the marriage should be dissolved</b>."<br><br>
+    <b>(2)</b> "On the motion of both the parties made <b>not earlier than six months</b> after the date of presentation of the petition under sub-section (1) and <b>not later than eighteen months</b> after the said date, if the petition is not withdrawn in the meantime, the court shall, on being satisfied, after hearing the parties and after making such inquiry as it thinks fit, that the averments in the petition are true, <b>pass a decree of divorce</b> declaring the marriage to be dissolved."</p>
+    <p class="smallcap">Inserted by Marriage Laws (Amendment) Act, 1976 (in force 25-5-1976) — no-fault / consent theory; counterpart of SMA s. 28; DU's proforma is expressly the <b>first-motion</b> petition (the second motion is a short re-verification listing).</p>
+  </div>
+  <div class="box">
+    <div class="smallcap">5.2 · The three statutory facts + two procedural gates</div>
+    <table>
+      <tr><th>Requirement</th><th>Source</th><th>Where DU pleads it</th></tr>
+      <tr><td><b>Joint filing</b> — both parties petitioners</td><td>s. 13B(1) "by both the parties together"</td><td>Caption: X = <b>Petitioner No. 1</b>, Y = <b>Petitioner No. 2</b>; both sign + separate affidavits</td></tr>
+      <tr><td><b>Living separately 1 year or more</b></td><td>s. 13B(1)</td><td>Para 4: "living separately since ___ and have not been able to live together since then"</td></tr>
+      <tr><td><b>Not able to live together</b> (irreconcilability)</td><td>s. 13B(1)</td><td>Para 4 — reasons in a few paragraphs; settlement terms if any</td></tr>
+      <tr><td><b>Mutual agreement to dissolve</b></td><td>s. 13B(1)</td><td>Para 5</td></tr>
+      <tr><td><b>Consent free of force, fraud or undue influence</b></td><td>s. 13B(2) satisfaction + DU's own drafting direction</td><td>Para 6 (DU's wording) + each party's affidavit para 5 (Form 18)</td></tr>
+      <tr><td><b>No collusion · no delay · no legal ground</b></td><td>s. 23 + DU</td><td>Paras 7, 8, 9</td></tr>
+      <tr><td>6-month cooling-off (waivable)</td><td>s. 13B(2) + <i>Amardeep</i> (2017)</td><td>Practice: move for waiver listing after reconciliation-failure note</td></tr>
+      <tr><td>18-month outer limit</td><td>s. 13B(2)</td><td>Diarise: after 18 months the petition lapses for non-motion (consent must be re-confirmed)</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">Diagram 4 — the two-motion timeline (s. 13B) with waiver routes</div>
+  <svg viewBox="0 0 1160 240" role="img" aria-label="Mutual consent divorce timeline">
+    <defs><marker id="m4a" markerWidth="10" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#5c6470"/></marker></defs>
+    <rect x="8" y="8" width="1144" height="224" rx="14" fill="#fbf8f1" stroke="#e5dcc7"/>
+    <line x1="60" y1="96" x2="1100" y2="96" stroke="#14213d" stroke-width="3"/>
+    <g font-size="13" text-anchor="middle">
+      <circle cx="90" cy="96" r="9" fill="#c9962e"/><text x="90" y="66" font-weight="bold" fill="#14213d">Marriage</text><text x="90" y="130" fill="#5c6470">s. 5/7 · s. 8</text>
+      <circle cx="320" cy="96" r="9" fill="#c9962e"/><text x="320" y="66" font-weight="bold" fill="#14213d">Separation ≥ 1 year</text><text x="320" y="130" fill="#5c6470">s. 13B(1) precondition</text>
+      <circle cx="560" cy="96" r="11" fill="#a3282a"/><text x="560" y="60" font-weight="bold" fill="#a3282a">1st motion — DU Form 17</text><text x="560" y="130" fill="#5c6470">joint petition + affidavits</text>
+      <circle cx="790" cy="96" r="9" fill="#5b3a9b"/><text x="790" y="66" font-weight="bold" fill="#14213d">6 months (cooling-off)</text><text x="790" y="130" fill="#5c6470">reconciliation window — waivable (Amardeep)</text>
+      <circle cx="1020" cy="96" r="11" fill="#1e6f50"/><text x="1020" y="60" font-weight="bold" fill="#1e6f50">2nd motion → decree</text><text x="1020" y="130" fill="#5c6470">before 18 months · s. 13B(2)</text>
+      <g stroke="#5c6470" stroke-width="2" fill="none" marker-end="url(#m4a)">
+        <line x1="99" y1="96" x2="309" y2="96"/><line x1="329" y1="96" x2="548" y2="96"/><line x1="571" y1="96" x2="778" y2="96"/><line x1="799" y1="96" x2="1007" y2="96"/>
+      </g>
+    </g>
+    <g font-size="13" fill="#22252b">
+      <text x="60" y="176"><tspan font-weight="bold" fill="#a3282a">Break-points →</tspan> either party may <b>withdraw consent any time before decree</b> (s. 13B unqualified right — <i>Sureshta Devi</i>; <i>Rajat Gupta</i>) — withdrawal kills the petition.</text>
+      <text x="60" y="202"><tspan font-weight="bold" fill="#1e6f50">Waiver route →</tspan> courts may shorten/waive the 6-month gap where separation already long, mediation failed, settlement complete (<i>Amardeep</i> conditions); SC may go further under Art. 142 (<i>Shilpa Sailesh</i>, 2023).</text>
+      <text x="60" y="228"><tspan font-weight="bold" fill="#c9962e">Parallel-pendency rule →</tspan> 13B petitions are usually paired with quash of connected BNS 85/DVA/125 matters — settle &amp; dispose in the same listing.</text>
+    </g>
+  </svg>
+</div>
+
+<div class="box">
+  <div class="smallcap">5.3 · DU Form 17 — paragraph-by-paragraph decode</div>
+  <table>
+    <tr><th>Para</th><th>DU text (abridged)</th><th>Notes</th></tr>
+    <tr><td>Caption</td><td>IN THE MATTER OF: X … <b>PETITIONER NO. 1</b> AND Y … <b>PETITIONER NO. 2</b> (no "versus" — joint, adversarial label deliberately dropped)</td><td>Ordering: usually husband as P1; either order accepted; both must be Hindus (s. 2)</td></tr>
+    <tr><td>1</td><td>Marriage per Hindu rites on ___ at ___; register extract filed; attested affidavit attached</td><td>Same as other forms</td></tr>
+    <tr><td>2</td><td>Status/age/residence grid</td><td>DU mandatory (f)</td></tr>
+    <tr><td>3</td><td><b>Place where parties last resided together</b> + children's particulars</td><td>13B-specific: cohabitation address + issues — feeds s. 19(c) venue &amp; settlement on custody</td></tr>
+    <tr><td><b>4</b></td><td>Living separately since ___; <b>not been able to live together</b> since; "in few paragraphs, mention the reasons… in case there is a settlement between parties, the same can also be mentioned"</td><td>DU endorses pleading the <b>settlement</b> inside the petition — Delhi FC practice: terms annexed (alimony, stridhan, custody, maintenance, pending cases, return of articles)</td></tr>
+    <tr><td>5</td><td>Parties have <b>mutually agreed</b> the marriage should be dissolved</td><td>s. 13B(1)(c)</td></tr>
+    <tr><td>6</td><td>Consent <b>not obtained by force, fraud or undue influence</b></td><td>The consent-validity averment — tested in court's examination of both parties</td></tr>
+    <tr><td>7–9</td><td>Not in collusion · no undue delay · no other legal ground</td><td>s. 23 overlay</td></tr>
+    <tr><td>10</td><td>Court has jurisdiction — "mention how"</td><td>s. 19: plead solemnisation/last-cohabitation/residence chain expressly</td></tr>
+    <tr><td>11</td><td>Court-fee affixed</td><td>Delhi schedule (check current: petition stage ₹500? — confirm at filing)</td></tr>
+    <tr><td>Prayer</td><td>Decree of divorce on mutual consent dissolving marriage between P1 and P2</td><td>DU's draft contains the typo "mutal consent / Petitioner oNo. 2" — correct it in exams ("mutual", "Petitioner No. 2")</td></tr>
+    <tr><td>Verification</td><td>Signed by <b>both</b> petitioners (DU prints P1 and P2 lines)</td><td>Each verifies knowledge paragraphs — joint verification permitted for joint petition</td></tr>
+    <tr><td>Note</td><td>"<b>Separate affidavits</b> of petitioner no. 1 and petitioner no. 2 to be appended"</td><td>Differentiates Form 17 from all other forms — two Form-18-style affidavits</td></tr>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="box tip">
+    <div class="smallcap">5.4 · Drafting a 13B petition that survives scrutiny — the settlement annexure checklist</div>
+    <ul class="letters">
+      <li><b>Alimony:</b> lump sum ₹___ (with payment schedule) + waiver of future claims (s. 25 disposed by consent).</li>
+      <li><b>Child custody/access:</b> physical + legal custody, visitation days, holidays, passports/schooling (s. 26 — court must still apply welfare test).</li>
+      <li><b>Stridhan &amp; articles:</b> inventory + return date (DVA s. 12/20 parallel claims settled).</li>
+      <li><b>Pending litigation:</b> list BNS 85 / DVA / s. 144 BNSS / Dowry Act matters → agreed quash or withdrawal.</li>
+      <li><b>Residence/property:</b> who vacates the flat, refunds, rental (link to Bombay particular (vii) — jointly held property).</li>
+      <li><b>Non-disparagement + confidentiality</b> + neither party to contest the second motion.</li>
+    </ul>
+    <p class="smallcap">This is precisely what the DU 2017 Q3 model answer demands (§ 11): first motion + affidavits + terms.</p>
+  </div>
+  <div class="box warn">
+    <div class="smallcap">5.5 · Consent-jurisprudence map (detailed cards in § 8)</div>
+    <table>
+      <tr><td><i>Sureshta Devi v. Om Prakash</i> (1991) 3 SCC 251</td><td>Consent must <b>subsist till the decree</b>; withdrawal before decree → no decree</td></tr>
+      <tr><td><i>Anjana Kishore v. Puneet Kishore</i> (2002) 2 SCC 308</td><td>6-month waiver possible in exceptional circumstances; SC can use Art. 142 where consent subsists</td></tr>
+      <tr><td><i>Rajat Gupta v. Rupali Gupta</i> (2018)</td><td>Unqualified right to withdraw consent — undertakings given earlier cannot fetter it</td></tr>
+      <tr><td><i>Amardeep Singh v. Harveen Kaur</i> (2017) 8 SCC 746</td><td>6-month period <b>directory</b>; three conditions for waiver; not to prolong agony</td></tr>
+      <tr><td><i>Shilpa Sailesh v. Varun Sreenivasan</i> (2023)</td><td>Constitution Bench: Art. 142 can dissolve on <b>irretrievable breakdown</b> even beyond s. 13B mechanics — with financial-security safeguards</td></tr>
+    </table>
+    <p class="smallcap">DU's para 6 (force/fraud/undue influence) is the drafting answer to <i>Sureshta Devi</i>-type challenges — the court will question each petitioner separately on it.</p>
+  </div>
+</div>
+</section>
+<!-- ======================= S6 : AFFIDAVIT ======================= -->
+<section id="s6">
+<div class="sec-head"><span class="sec-num">6</span><div><div class="smallcap">DU Form 18 · p. 50</div><div class="t">Draft Affidavit for Matrimonial Pleadings</div></div></div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">6.1 · DU Form 18 — the proforma decoded</div>
+    <table>
+      <tr><th>Element</th><th>DU text (abridged)</th><th>Function</th></tr>
+      <tr><td>Caption</td><td>Court + HMA PETITION NO. … · SMT. A … PETITIONER v. SH. B … RESPONDENT · title "AFFIDAVIT OF SMT. A, W/O…, D/O…, AGED ABOUT…, R/O…"</td><td>Affidavit carries the petition's cause-title; deponent identified by spouse/father/age/residence triple</td></tr>
+      <tr><td>Oath formula</td><td>"I, the above named Deponent do hereby <b>solemnly affirm and declare</b> as under"</td><td>Affirmation (not oath) — O. XIX CPC read with s. 21 HMA; Indian Oaths Act, 1873</td></tr>
+      <tr><td>1</td><td>Deponent is the petitioner; "well aware about the facts… competent to depose"</td><td><b>Competence</b> — personal knowledge (O. 6 R. 15's knowledge limb applied to the affidavit)</td></tr>
+      <tr><td>2</td><td>Marriage solemnised with respondent per Hindu rites on ___ at Delhi</td><td>Repeats the core fact under oath (register extract is the documentary twin)</td></tr>
+      <tr><td>3</td><td>Petition <b>not presented in collusion</b></td><td>s. 23(1)(a) sworn</td></tr>
+      <tr><td>4</td><td><b>No improper or undue delay</b></td><td>condonation-by-delay defence foreclosed on affidavit record</td></tr>
+      <tr><td>5</td><td>Consent (where applicable) <b>not obtained by fraud, force, pressure or undue influence</b></td><td>The s. 13B(2)/Form 17 assurance under oath</td></tr>
+      <tr><td>6</td><td>Contents of the petition u/s ___ HMA "drafted by my counsel as per my instructions… read and understood by me… facts true and correct to my knowledge… <b>may kindly be read as part and parcel of this affidavit</b> (not reproduced for brevity)"</td><td><b>Incorporation clause</b> — the affidavit adopts the whole petition without re-typing; the blank "u/s ___" must name the section (9/10/13/13B)</td></tr>
+      <tr><td>Verification</td><td>"contents… true and correct to my knowledge and information and <b>nothing material has been concealed therefrom</b>" · verified at ___ · DEPONENT</td><td>Stronger than the petition's split verification — "nothing material concealed" is the matrimonial anti-suppression formula</td></tr>
+    </table>
+  </div>
+  <div class="box">
+    <div class="smallcap">6.2 · Where the affidavit gets its force — provisions &amp; consequences</div>
+    <table>
+      <tr><th>Provision</th><th>Point</th></tr>
+      <tr><td><b>O. XIX CPC (ss. 1–5)</b> read with <b>s. 21 HMA</b></td><td>Affidavit = sworn statement in writing, affirmed before notary/oath-commissioner; used for evidence and for verification-by-affidavit where court permits</td></tr>
+      <tr><td><b>Family Courts Act s. 16</b></td><td>Formal-character evidence may be given on affidavit; court may summon deponent for cross-examination — hence DU's note "affidavit of petitioner is to be appended" is a <i>evidentiary</i> instruction, not decoration</td></tr>
+      <tr><td><b>s. 20 HMA</b> (contents &amp; verification of petitions)</td><td>Petition verification + affidavit together discharge s. 20; for 13B, affidavits of <b>both</b> parties (DU mandatory (d))</td></tr>
+      <tr><td><b>O. 6 R. 15 CPC</b></td><td>Verification limits who-deponent is bound by: "true to knowledge" vs "true to information and belief" — never verify the other side's acts as own-knowledge</td></tr>
+      <tr><td><b>False affidavit:</b> IPC 199/200 → <b>BNS ss. 236/237</b></td><td>False statement in verification = offence (up to 3 yrs + fine as applicable) + perjury route (Evidence Act s. 193/340 CrPC procedure → BNSS equivalent) + contempt; DU's "nothing material concealed" wording is your cross-examination target when drafting the other side</td></tr>
+      <tr><td><b>Notary Act, 1952</b></td><td>Attestation: identity + willingness +35/18 etc.; NRI deponents: apostille/consular attestation before Indian filing</td></tr>
+    </table>
+    <div class="tip"><b>Compare with civil Form 2 (deliverable file 1, § 3):</b> structure is identical (oath formula, competence, split truth, incorporation clause, verification) — the matrimonial layer adds (i) <b>collusion &amp; delay</b> paras, (ii) <b>force/fraud consent</b> para for 13B, (iii) <b>"nothing material concealed"</b>, and (iv) the <b>separate-affidavit</b> rule for joint petitions. If you learned Form 2's seven parts, Form 18 is Form 2 + four matrimonial modules.</div>
+  </div>
+</div>
+</section>
+<!-- ======================= S7 : RELATED MAP ======================= -->
+<section id="s7">
+<div class="sec-head"><span class="sec-num">7</span><div><div class="smallcap">Holistic layer</div><div class="t">Every related Act, Order, Rule &amp; section — at its place</div></div></div>
+
+<div class="box">
+  <div class="smallcap">7.1 · The Hindu Marriage Act, 1955 — full section map (what each section does for your draft)</div>
+  <table>
+    <tr><th>§</th><th>Heading</th><th>Relevance to matrimonial pleading</th></tr>
+    <tr><td>1–4</td><td>Short title/extent · Application · Definitions (s. 2: "Hindu" includes Buddhists, Jains, Sikhs; also any person married under this Act) · Overriding effect</td><td>Screening: <b>is this an HMA case at all?</b> — mixed marriages (s. 5(c) special-marrying-pairs), Muslim wife + Hindu husband issues, converts</td></tr>
+    <tr><td>5–8</td><td>Conditions for Hindu marriage (age, capacity, degree, sapinda, ceremonies) · Guardianship in marriage · Ceremonies (saptpadi/ saptapadi makes it valid) · <b>Registration of Hindu marriages</b></td><td>The <b>validity backbone</b> — every form's para 1; s. 8 extract is Exhibit P-1; breach of s. 5 conditions later powers s. 11 nullity &amp; s. 18 punishment</td></tr>
+    <tr><td><b>9</b></td><td>Restitution of conjugal rights (+ Explanation)</td><td><b>Form 14</b> — § 2 above</td></tr>
+    <tr><td><b>10</b></td><td>Judicial separation (two limbs)</td><td><b>Form 15</b> — § 3 above</td></tr>
+    <tr><td><b>11 · 12</b></td><td>Void marriages (s. 5 breaches, bigamy, unsoundness at marriage) · Voidable (impotence, pregnancy by another, consent forced/fraud, venereal, sanity at filing)</td><td>Nullity petitions — DU lists them in Item 13 though no proforma; plead in O. 7 format with s. 14 <b>inapplicable</b> (bar is only for divorce)</td></tr>
+    <tr><td><b>13</b></td><td>Divorce — s. 13(1)(i)–(vii) + Explanation (desertion) + s. 13(1A)(i)–(ii) + s. 13(2) wife's grounds</td><td><b>Form 16</b> — § 4 above</td></tr>
+    <tr><td><b>13A</b></td><td>Alternate relief in divorce proceedings (JS instead of divorce)</td><td>Plead-alternative prayer; FC's discretion (Aneel Kaur example)</td></tr>
+    <tr><td><b>13B</b></td><td>Divorce by mutual consent (1 + 2 sub-sections)</td><td><b>Form 17</b> — § 5 above</td></tr>
+    <tr><td><b>14</b></td><td>No divorce petition within 1 year of marriage (proviso: exceptional hardship/depravity; HC rules for leave; children + reconciliation factors)</td><td>Pre-drafting gate — § 1.4 above</td></tr>
+    <tr><td>15</td><td>Divorced persons when may marry again (appeal time expired/appeal disposed)</td><td>Second-marriage diligence (else BNS s. 82)</td></tr>
+    <tr><td>16</td><td>Legitimacy of children of void/voidable marriages</td><td>Custody/maintenance never blocked by the marriage's fate</td></tr>
+    <tr><td>17 · 18</td><td>Punishment of bigamy · punishment for contravention of other conditions</td><td>Criminal complaints / cross-complaints — disclose in prior-proceedings table</td></tr>
+    <tr><td><b>19</b></td><td>Court to which petition shall be presented</td><td>Venue drafting — § 1.3 above</td></tr>
+    <tr><td><b>20</b></td><td>Contents and verification of petitions</td><td>The statutory home of DU's mandatory (a)–(f)</td></tr>
+    <tr><td><b>21 · 21A–21C</b></td><td>Application of CPC · Transfer of petitions · Special trial/disposal provision · Documentary evidence</td><td>Procedure DNA: O. 6/O. 8/O. 9 apply; s. 21A ties to DU Form 11 (transfer); documents-first practice</td></tr>
+    <tr><td><b>22</b></td><td>Proceedings in camera; prohibition on printing/publishing</td><td>Standard first-day application in Delhi FCs</td></tr>
+    <tr><td><b>23 · 23A</b></td><td>Decree in proceedings (court must be satisfied: marriage, cause of action, no collusion, no condonation/connivance where pleaded, no legal ground, terms re: property/children) · Relief for respondent (counter-claim)</td><td>Why every DU form has paras 5–9; respondent's answer can claim divorce even against a JS-only petition</td></tr>
+    <tr><td><b>24 · 25</b></td><td>Maintenance pendente lite + expenses of proceedings (having regard to means) · Permanent alimony &amp; maintenance (means; remarriage/death end it; security for payment)</td><td>Interim IAs; DU companion's s. 125 chain is the criminal twin (now s. 144 BNSS)</td></tr>
+    <tr><td><b>26 · 27</b></td><td>Custody of children (welfare paramount; access) · Disposal of property between parties</td><td>Always coupled prayers; DVA s. 21 custody is the Magistrate-level mirror</td></tr>
+    <tr><td><b>28 · 28A</b></td><td>Appeals from decrees &amp; orders (to High Court) · Enforcement of decrees and orders</td><td>Post-decree roadmap; execution for alimony via O. 21 R. 32 CPC</td></tr>
+    <tr><td>29–30</td><td>Savings · Repeals</td><td>Transitional validity of pre-1955 marriages</td></tr>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">7.2 · Family Courts Act, 1984 — the procedural home of every DU form</div>
+    <table>
+      <tr><td><b>s. 3</b></td><td>State Government establishes Family Courts (Delhi: by Lt. Governor/DoJ notifications)</td></tr>
+      <tr><td><b>s. 4</b></td><td>Judge qualifications &amp; appointment (persons experienced in social/child welfare)</td></tr>
+      <tr><td><b>s. 7</b></td><td><b>Jurisdiction</b> — deems FC = district court for suits/proceedings: (a) nullity / <b>RCR / JS / dissolution</b>; (b) declaration of validity of marriage or matrimonial status; (c) property between parties to marriage; (d) dowry demands; (e) injunctions in matrimonial matters; (f) maintenance; (g) custody/guardianship; plus (2) magistrate Chapter IX (CrPC 125 → now BNSS 144) maintenance jurisdiction</td></tr>
+      <tr><td><b>s. 8</b></td><td><b>Exclusion</b> — no other district/subordinate civil court, and no first-class magistrate, where FC exists; pending matters transfer to FC. <i>DU cites ss. 7 &amp; 8 in Item 13</i></td></tr>
+      <tr><td><b>s. 9</b></td><td><b>Duty to endeavour settlement</b> — first duty at first hearing; counsellors' aid</td></tr>
+      <tr><td><b>s. 10</b></td><td>Procedure generally as CPC (civil) / CrPC (maintenance), with power to depart for speedy disposal</td></tr>
+      <tr><td><b>s. 14 · 15 · 16</b></td><td>Indian Evidence Act applies but court may receive evidence not strictly admissible · oral evidence recorded as signed memoranda (no full transcripts) · <b>evidence of formal character on affidavit</b> (Form 18's home)</td></tr>
+      <tr><td><b>s. 17 · 18</b></td><td>Judgment must record points + decision + reasons · decree/order has civil-court effect (execution accordingly)</td></tr>
+      <tr><td><b>s. 19</b></td><td><b>Appeal to High Court</b> on facts and law from every non-interlocutory judgment/order (savings for specified interlocutory matters)</td></tr>
+      <tr><td><b>s. 20</b></td><td>Act overrides other laws (conflict rule)</td></tr>
+      <tr><td>ss. 21–23</td><td>Rule-making (Central + State governments on form, practice, counsellors)</td></tr>
+    </table>
+  </div>
+  <div class="box">
+    <div class="smallcap">7.3 · The maintenance/custody &amp; criminal web around every matrimonial petition</div>
+    <table>
+      <tr><th>Statute</th><th>Provision</th><th>Interplay with DU forms</th></tr>
+      <tr><td><b>s. 125 CrPC → s. 144 BNSS</b> (1-7-2024)</td><td>Maintenance order for wife/child/parent unable to maintain, husband with sufficient means; now includes interim maintenance + modification</td><td>The DU companion's full application–reply–rejoinder chain is under this head (§ 9); civil counterpart claims: HMA s. 24/25, DVA s. 20, HAMA s. 18</td></tr>
+      <tr><td><b>DVA, 2005</b></td><td>s. 12 application to Magistrate; reliefs: <b>s. 18</b> protection orders · <b>s. 19</b> residence orders (shared household) · <b>s. 20</b> monetary relief · <b>s. 21</b> custody orders · <b>s. 22</b> compensation · <b>s. 23</b> interim + ex parte orders (on affidavit) · <b>s. 26</b> same reliefs available inside civil/family/criminal proceedings; s. 31 breach penalty</td><td>Parallel universe: wife may run DVA + s. 144 while husband's s. 13 petition pends — every DU form's para 8/10 table must list these; settlements (13B) dispose them together</td></tr>
+      <tr><td><b>BNS, 2023</b></td><td><b>s. 85 r/w s. 86</b> cruelty by husband/relatives (ex-IPC 498A, 3 yrs) · <b>s. 82</b> bigamy (ex-IPC 494) · <b>ss. 236/237</b> false statement in verification (ex-IPC 199/200)</td><td>"Matrimonial offence" narratives: cruelty FIRs both weaponise and get quashed; para 10 disclosure duty; false-affidavit risk for Form 18</td></tr>
+      <tr><td><b>HAMA, 1956</b></td><td>s. 18 wife's maintenance · suit route feeds s. 13(2)(iii) divorce ground after decree + non-cohabitation</td><td>Wife's alternative civil maintenance track</td></tr>
+      <tr><td><b>HMGA, 1956 / G&amp;W Act, 1890</b></td><td>s. 6/17 natural guardianship; welfare doctrine</td><td>Custody IAs under HMA s. 26 draw on these</td></tr>
+      <tr><td><b>Dowry Prohibition Act, 1961</b></td><td>ss. 2 (dowry definition), 3–4 offences</td><td>Allegations here are classic "reasonable excuse" material for s. 9 defence + cruelty narrative for s. 13</td></tr>
+      <tr><td><b>Special Marriage Act, 1954</b></td><td>s. 22 RCR · s. 23 divorce grounds · s. 28 mutual consent</td><td>Inter-faith marriages run this twin statute — same DU architecture, different section numbers</td></tr>
+      <tr><td><b>Indian Divorce Act, 1869 · Parsi M &amp; D Act, 1936 (s. 36) · MW(PRoRD) Act, 1986</b></td><td>Christian · Parsi · Muslim women's divorce remedies</td><td>Du's "and other personal laws" clause — one-line comparative answer material</td></tr>
+      <tr><td><b>CPC (via s. 21 HMA)</b></td><td>O. 6 (pleadings/particulars/verification) · O. 7 (plaint-like contents) · O. 8 (WS within 30 days + extension) · O. 9 (ex parte) · O. 12 (claims) · O. 17 (amendment) · <b>O. 21 Rr. 32–33</b> (RCR/alimony execution) · s. 144 CPC (restitution when decree reversed — <b>not</b> RCR)</td><td>Procedure layer for all six forms</td></tr>
+      <tr><td><b>Constitution</b></td><td>Art. 14 &amp; 21 (cruelty, breakdown, gender-justice debate on s. 9) · Art. 44 (UCI directive — reform essays) · Art. 142 (SC's complete-justice divorce power — <i>Shilpa Sailesh</i>) · Art. 136/137 (review + curative — <i>Rupa Ashok Hurra</i>)</td><td>Constitutional anchors examiners love in "discuss" answers</td></tr>
+    </table>
+    <div class="warn"><b>The three "s. 144" traps:</b> (1) <b>s. 144 BNSS</b> = maintenance (ex-s. 125 CrPC) — the companion's chain; (2) <b>s. 144 CPC</b> = restitution of benefits when a decree is reversed/modified — what KAMKUS's interlocutory list means; (3) <b>s. 144 CrPC</b> (now s. 163 BNSS) = preventive orders — unrelated to family work. Name the Code every time you write "s. 144".</div>
+  </div>
+</div>
+</section>
+<!-- ======================= S8 : CASES ======================= -->
+<section id="s8">
+<div class="sec-head"><span class="sec-num">8</span><div><div class="smallcap">Case-law compendium</div><div class="t">Eight full cards — facts · issues · both sides · decision · principle</div></div></div>
+
+<div class="box note"><b>Sourcing:</b> cards c1–c6 are the exam-core matrimonial judgments (verified against reported texts); c7 is <b>expressly cited in the DU companion's curative-petition draft</b>; c8 is <b>cited in the DU law-faculty syllabus material</b>. DU's proformas themselves are citation-free (stated in § 0).</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">A. Jayachandra v. Aneel Kaur</div><div class="ccit">(2005) 2 SCC 22 · Supreme Court (also reported 2005 (1) RCR (Civil) 309; 2005 (2) LWN 149)</div></div><div class="cmeta">Ground: cruelty s. 13(1)(ia) · procedural: evidence &amp; s. 13A</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> Both parties were medical doctors, co-students who married on 10-10-1978 ("love marriage" — Telugu Brahmin husband, Sikh wife); two children (a fourth child's birth during litigation became a condonation argument). They worked in the hospital run by the husband's father, Dr. A. Ram Murthy. The wife's behaviour towards the husband's family was allegedly insulting/obnoxious/humiliating; no physical contact or sharing of bed for over two years. Husband's notice dated 05-03-1997 proposed divorce by mutual consent; failing response, he filed a s. 13 HMA petition in the <b>Family Court, Hyderabad</b> alleging mental cruelty and desertion (two years). On 18-06-2001 the FC found cruelty proved <b>but passed a decree of judicial separation instead of divorce</b>, taking note of the children's welfare. Both appealed; the <b>High Court (Division Bench) set aside even the JS decree</b>, holding the record insufficient — no hospital witnesses examined, therefore adverse inference — and dismissed the husband's appeal while allowing the wife's.</p>
+    <p><b>Issues:</b> (1) Whether the wife's conduct constituted mental cruelty under s. 13(1)(ia); (2) whether the HC was right to discard the FC's reasoned findings on the specious ground of non-examination of hospital staff; (3) whether irretrievable breakdown could itself yield divorce.</p>
+    <p><b>Husband's arguments:</b> HC never analysed the evidence; FC had examined everything and found cruelty; non-examination of hospital staff cannot negate cogent material; wife's own testimony showed directives aimed at female staff exposing distrust of his fidelity; continuing hostility (injunctions, execution, caveats with wrong addresses); marriage beyond repair → divorce at least on breakdown.</p>
+    <p><b>Wife's arguments:</b> No particulars of cruelty pleaded — vague misbehaviour allegations; evidence scanty (the <i>S. Hanumantha Rao v. S. Ramani</i> (1999) 3 SCC 620 threshold unmet); normal wear and tear till 1993; even if breakdown, breakdown is no ground; condonation — harmony restored, fourth child born 12-05-2000 (forgiveness + restoration).</p>
+    <p><b>Decision:</b> HC judgment set aside as "clearly indefensible"; SC held the FC had analysed the record in detail and its cruelty finding was sound; wife's testimony and later conduct showed "indelible mental agony"; <b>decree of divorce restored in favour of the husband</b>. On breakdown: acknowledged in substance but the decree rested on the proved statutory ground.</p>
+    <p><b>Principles:</b> (i) Cruelty = "wilful and unjustifiable conduct of such character as to cause danger to life, limb or health, bodily or mental, or as to give rise to a reasonable apprehension of such a danger"; must be <b>grave and weighty</b> — more than ordinary wear and tear; where the conduct is <i>per se</i> unlawful, impact need not be separately enquired; mental cruelty includes filthy/abusive language destroying mental peace; (ii) an appellate court must engage with the evidence, not discard findings for missing formal witnesses; (iii) <b>condonation = forgiveness + restoration</b> (sexual relations/childbirth during dispute can evidence it — plead non-condonation carefully, DU para 6).</p>
+    <p><b>Drafting lesson:</b> Every cruelty incident needs date/place/particulars (DU para 4 direction), and para 6 non-condonation must be a positive averment — because conduct-based condonation (resuming cohabitation/childbirth) is the respondent's best defence.</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Naveen Kohli v. Neelu Kohli</div><div class="ccit">(2006) 4 SCC 558 · Supreme Court (judgment 21-03-2006)</div></div><div class="cmeta">Ground: mental cruelty + irretrievable breakdown</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> Married 20-11-1975; three sons; husband built three factories and a bungalow for the family; sons educated at a Nainital public school. Discord intensified by 1994 — parties living separately since May 1994 (10+ years). Husband alleged the wife filed a "very large number" of criminal and civil cases against him, caused police harassment, published newspaper advertisements branding him merely an "employee" of the factory (she being shown as proprietor), withdrew ₹9.5 lakhs from bank accounts, and sought his arrest repeatedly; allegations of adultery against him with one "Shiva Nagi". Husband filed divorce on cruelty (s. 13(1)(ia)); wife denied being quarrelsome/cruel, said she never refused cohabitation, alleged <i>he</i> lived adulterously and assaulted his own son. <b>Family Court granted divorce</b> + ₹5 lakh livelihood allowance (deposited). <b>Allahabad High Court reversed</b>, finding cruelty unproved (evidence not properly appreciated). Husband's SLP succeeded at the SC.</p>
+    <p><b>Issues:</b> (1) Do the wife's litigation-terror + public disparagement amount to mental cruelty? (2) Can a court dissolve where the marriage has irretrievably broken down though breakdown is not a statutory ground?</p>
+    <p><b>Husband's arguments:</b> HC ignored FC findings and misread evidence; catalogue of proceedings/advertisements/bank withdrawals = mental, physical and financial cruelty; separation since 1994 — bond beyond repair; living together impossible.</p>
+    <p><b>Wife's arguments:</b> No cruelty — her complaints and advertisements were legitimate protective steps against an adulterous, violent husband; denial of refusal to cohabit; contested divorce; sought maintenance.</p>
+    <p><b>Decision:</b> HC judgment set aside; SC catalogued <b>17+ proceedings, the newspaper advertisement, ₹9.5 lakh withdrawal, arrest attempts</b> — cumulative effect = grave mental cruelty; marriage "broken down irretrievably… no chance of coming together"; divorce restored; permanent alimony directed (courts below's ₹5 lakh plus reports of ₹25 lakh total maintenance as carried in commentary). Lord Pearce's classic test on cruelty quoted.</p>
+    <p><b>Principles:</b> (i) <b>Cumulative harassment</b> — repeated false litigation, public disparagement and financial coercion aggregate into mental cruelty even without physical violence; (ii) prolonged separation (10 yrs+) + mutual infidelity allegations make cohabitation impossible — the "relationship beyond repair" lens; (iii) the Court urged <b>Parliament to amend the HMA to add irretrievable breakdown</b> (71st Law Commission Report) — legislative-gap dialogue that later flowered in <i>Shilpa Sailesh</i>; (iv) mere allegations/counter-allegations or delay alone don't grant divorce — "extraordinary features" are needed.</p>
+    <p><b>Drafting lesson:</b> In Form 16 para 4, <b>tabulate the harassment chronologically</b> (dates, case numbers, publications) — "cumulative effect" is pleaded as a running account, plus the separation-period narrative that maps onto the breakdown argument.</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Samar Ghosh v. Jaya Ghosh</div><div class="ccit">(2007) 4 SCC 511 · Supreme Court (26-03-2007; B.N. Agrawal, P.P. Naulekar, Dalveer Bhandari JJ)</div></div><div class="cmeta">Ground: mental cruelty · degrees of withdrawal · breakdown factors</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> Marriage followed by deep disagreement over "love, affection, future planning and normal human connections"; wife's alleged inhuman behaviour, refusal to look after the husband during his prolonged illness, unilateral reproductive decisions (refusal to have children / insistence on contraception measures without consent). Parties not living together at least since 27-08-1990 — <b>16+ years of separation</b> by trial. Husband filed for divorce; <b>trial court granted</b>; <b>High Court reversed</b>; Supreme Court restored the decree.</p>
+    <p><b>Issues:</b> (1) Whether the wife's conduct constituted mental cruelty under s. 13(1)(ia); (2) how courts should approach a marriage admittedly dead for 16 years when "irretrievable breakdown" is not in the statute.</p>
+    <p><b>Husband's arguments:</b> Refusal of care during illness, denial of children, unilateral decisions = conduct making cohabitation impossible; separation since 1990 — no emotions left; HC erred in reverting to formalism.</p>
+    <p><b>Wife's arguments:</b> (as recorded) no deliberate cruelty; ordinary marital friction; no statutory breakdown ground; divorce cannot follow merely from separation length.</p>
+    <p><b>Decision:</b> Divorce restored. The Court held: "parties living independently of each other for an adequate period and filing of petition conveys the assumption that marriage has broken down… impossible to preserve or save the marriage"; surveyed the English Divorce Reform Act 1969, Matrimonial Causes Act 1973, Law Commission's <b>71st Report (7-4-1978)</b> (fault vs breakdown theories) and Indian precedent (<i>Chetan Dass</i>, <i>Parveen Mehta</i>), and stated factors for examining irretrievable breakdown — commonly listed as: (a) length of separation; (b) efforts at reconciliation (mediation/counselling failed); (c) criminal/other proceedings between spouses; (d) allegations in pleadings admitting no togetherness; (e) no possibility of reunion.</p>
+    <p><b>Principles:</b> (i) Mental cruelty definition adopted: conduct inflicting mental pain making it "not possible to live together" — of such a nature that parties cannot reasonably be expected to live together; intention is not essential; (ii) the Court articulated <b>degrees of withdrawal from society (A–E spectrum)</b> — from withdrawal within the same home, to withdrawal of consortium, to physical separation, to withdrawal with intention to erode the marriage — used to locate each case; (iii) long separation + failed reconciliation + pleadings = breakdown proof-points that <i>support</i> cruelty findings; (iv) fault theory vs breakdown theory mapped for reform.</p>
+    <p><b>Drafting lesson:</b> For JS/divorce on cruelty+desertion, plead the <b>degree of withdrawal</b> expressly (which rung of the A–E ladder the respondent left at) and the <b>reconciliation-failure trail</b> (notices, mediation, counselling) — those are the exact factors courts inventory.</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Sureshta Devi v. Om Prakash</div><div class="ccit">(1991) 3 SCC 251 · Supreme Court</div></div><div class="cmeta">Ground: s. 13B consent persistence</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> Marriage broke down; a petition for dissolution by mutual consent under s. 13B was presented in which the wife was a signatory/consenting party. By the time the court was moved to pass the decree, the wife <b>declined to persist</b> — asserting she had not freely consented / wished not to proceed (her position hardened that the mutual route was not to be pressed). The husband contended that once consent was on record, the court could proceed regardless of the later posture.</p>
+    <p><b>Issue:</b> Whether a decree under s. 13B can be pronounced when one party's consent does not subsist at the stage of the decree — is consent a one-time input or a continuous requirement?</p>
+    <p><b>Husband's arguments:</b> Consent was given when the petition was filed; the statutory scheme once activated should run to decree; withdrawal at the last stage defeats the legislative purpose of quick no-fault exits.</p>
+    <p><b>Wife's arguments:</b> Mutual consent is the <i>bedrock</i> of s. 13B; a decree without her continuing agreement would violate the section itself; she is entitled to refuse throughout.</p>
+    <p><b>Decision:</b> <b>No decree could be passed.</b> Consent must exist at <i>both</i> stages — presentation and decree; a decree on withdrawn consent would be without jurisdiction in substance. The Court also examined whether the parties were "living separately" as required and laid the groundwork for the two-motion consent doctrine.</p>
+    <p><b>Principles:</b> (i) <b>Matrimonial consent is continuous</b> — it can be withdrawn until the decree; (ii) s. 13B is not a procedural formality but the jurisdictional foundation; (iii) institutional caution: courts must independently satisfy themselves that consent is free — DU's para 6 (force/fraud/undue influence) and separate Form 18 affidavits operationalise exactly this.</p>
+    <p><b>Drafting lesson:</b> In 13B work, never treat the second motion as routine — re-verify consent, refresh affidavits, and if consent lapses, pivot the client to a s. 13 contested petition (or Art. 142 route per <i>Shilpa Sailesh</i> when breakdown + fairness are clear).</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Amardeep Singh v. Harveen Kaur</div><div class="ccit">(2017) 8 SCC 746 · Supreme Court (12-09-2017)</div></div><div class="cmeta">Ground: waiver of s. 13B(2) cooling-off</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> The couple (with children) had been living apart for years — reported ~8 years — and filed a joint s. 13B petition before a <b>Delhi Family Court (filed 08-05-2017)</b>, with all incidental matters (custody, alimony, dowry claims) settled and consent decreed in essence. Because s. 13B(1) itself required one year's separation plus the six-month gap, the parties moved to <b>waive the six-month waiting period</b> so the second motion could be taken up at once. The question reached the Supreme Court (reference on whether the period is mandatory or directory).</p>
+    <p><b>Issue:</b> Is the six-month cooling-off under s. 13B(2) mandatory, or directory/waivable by the court?</p>
+    <p><b>Parties' arguments:</b> Petitioner husband (and effectively both): marriage dead for 8 years — waiting period only prolongs agony; settlement complete; no chance of reconciliation. Respondent's position: no opposition to divorce as such (the dispute was on timing/mechanics).</p>
+    <p><b>Decision:</b> Held: <b>the six-month period is directory, not mandatory</b>. The Court framed waiver conditions: (1) separation period under s. 13B(1) already undergone before first motion (1 year + 6 months often already spent apart); (2) attempts at mediation/reconciliation have failed and chances nil; (3) all incidental matters settled (alimony, custody, etc.). The Court added that the Court should ascertain a <b>genuine settlement</b> free consent; s. 13B imposes no fetters on the court's power to dissolve; the period's purpose (reconsideration opportunity) is exhausted where the marriage is beyond repair. Art. 142 noted as the upper-level safety valve.</p>
+    <p><b>Principles:</b> (i) <b>Cooling-off is a reconciliation opportunity, not a jurisdictional incantation</b> — waiveable where its object is spent; (ii) the deeper requirement is <b>voluntary, informed, settled consent</b>; (iii) courts must not "stretch an already disintegrated marriage".</p>
+    <p><b>Drafting lesson:</b> Attach to a waiver application: separation-date computation sheet, failed-mediation/counselling note, and a signed settlement sheet — the three <i>Amardeep</i> conditions in exhibit form. This is exactly what the DU 2017 Q3 answer must show (§ 11).</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Shilpa Sailesh v. Varun Sreenivasan</div><div class="ccit">Constitution Bench, 01-05-2023 · Transfer Petition (Civil) No. 1118 of 2014 (S.K. Kaul, Sanjiv Khanna, Abhay S. Oka, Vikram Nath, J.K. Maheshwari JJ) · reported (2023) 9 SCC 371</div></div><div class="cmeta">Ground: Art. 142 — irretrievable breakdown as independent dissolution route</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> The parties had moved the Supreme Court (via transfer petition) seeking divorce by mutual consent with waiver of statutory periods — one party in Canada, on medication for depression; husband complained of loneliness and absence of cohabitation amounting to mental strain; efforts by counsellors, mediators, family/panchayat and even courts failed; consent posture fluctuated (initial mutual-consent stance, later opposition). The matter was referred from a 2-judge bench (June 2016) to the 5-judge Constitution Bench; delivered 01-05-2023.</p>
+    <p><b>Issues:</b> (1) Contours of Art. 142(1) ("complete justice") in matrimonial matters; (2) whether the SC can itself dissolve a marriage on <b>irretrievable breakdown</b> even where (a) s. 13B conditions/periods are not fully met and (b) one party's consent is wanting; (3) whether s. 13B(2) waiting period can be dispensed.</p>
+    <p><b>Arguments — those seeking dissolution:</b> marriage "totally unworkable, emotionally dead, beyond salvation"; years of failed reconciliation; statutory fault framework leaves gap cases unrelievable; Art. 142 exists precisely to fill such gaps; financial interests of the opposing spouse can be protected within the same order. <b>Arguments against free-standing Art. 142 divorce:</b> (court's own concern, also from earlier stage) breakdown is not a parliamentary ground; Art. 142 cannot override legislative policy wholesale; consent-based dissolution must not become unilateral divorce by judicial fiat; safeguards for the vulnerable spouse are essential.</p>
+    <p><b>Decision (unanimous):</b> The SC <b>can grant divorce on irretrievable breakdown under Art. 142(1)</b> where the marriage has completely failed and continuation of the formal relationship is unjustified — doing complete justice, with fault-theory dilution allowed in "rare and exceptional" cases; the six-month/s. 13B machinery may be bypassed; but the power is <b>discretion, not right</b> — parties must ordinarily first approach the Family Court; the Court listed factors: <b>length of cohabitation, nature/seriousness of allegations, attempts at reconciliation, period of separation</b> (long separation — 6+ years — a strong indicator), and <b>economic security</b> of the wife/partner must be ensured (grave financial hardship can defeat the relief); connected proceedings (incl. BNS/498A-type) may be quashed in the same order.</p>
+    <p><b>Principles:</b> (i) <b>Irretrievable breakdown is now a judicially recognised dissolution route</b> (via Art. 142, not via s. 13) — the biggest doctrinal shift since 1976; (ii) constitutional justice <i>supplements</i> but respects statutory schemes (restraint + deference to legislature); (iii) protection-not-punishment orientation — financial welfare woven into the decree; (iv) forum discipline — FC first.</p>
+    <p><b>Drafting lesson:</b> Even a s. 13B draft should carry breakdown-proof facts (separation length, failed reconciliation, settlement) — they serve (a) <i>Amardeep</i> waiver, (b) Art. 142 fallback, (c) s. 13 cruelty corroboration. Plead them once, use them thrice.</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Rupa Ashok Hurra v. Ashok Hurra</div><div class="ccit">(2002) 4 SCC 388 · AIR 2002 SC 177 · 5-judge Constitution Bench, 10-04-2002 (B.N. Kirpal CJI, G.B. Pattanaik, H.K. Sema, S.N. Variava, Brijesh Kumar JJ) — <span style="background:#f2d492;padding:1px 6px;border-radius:6px;">CITED IN DU COMPANION'S CURATIVE DRAFT</span></div></div><div class="cmeta">Matrimonial dispute · birth of the curative petition</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> The parties married per Hindu rites at Ahmedabad; differences from early on — wife left the matrimonial home in 1983; mutual-consent divorce proceedings followed; in 1986 the <b>wife withdrew her consent</b> and prayed for dismissal, while the husband maintained consent could not be recalled. Litigation wound upward: a Gujarat HC single-judge order of 17-02-1995 (in the husband's application for the decree) was carried up; the Supreme Court upheld the divorce decree (reportedly in 1997); the wife's <b>review petition under Art. 137 was dismissed</b>. She then moved under Art. 32 alleging gross miscarriage of justice (procedural irregularities/non-consideration of fraud material; also that she was not adequately heard). A 3-judge bench framed constitutional questions and referred to a 5-judge bench.</p>
+    <p><b>Issue:</b> After review is dismissed, does <i>any</i> remedy remain against a final SC judgment — and if so, on what conditions?</p>
+    <p><b>Wife's (applicant's) arguments:</b> Finality must not immunise gross injustice; natural justice was violated (notice/hearing defects); court's inherent power under Art. 142 should permit reopening in such rare cases; she proposed a remedy structure.</p>
+    <p><b>Husband's arguments:</b> Consent decree/judgment is final; review was already refused; unlimited reopening would destroy res judicata and flood the court.</p>
+    <p><b>Decision:</b> The petition's facts did not warrant reopening (dismissed), but the Court <b>laid down the curative jurisdiction</b>: to prevent abuse of process and cure gross miscarriage of justice, SC may reconsider its judgment in exercise of inherent power — via a "<b>curative petition</b>": (1) ground = violation of principles of natural justice (no notice/not heard; judge's undisclosed connection raising reasonable apprehension of bias) affecting the petitioner; (2) grounds must have been taken in the <b>review petition dismissed by circulation</b>; (3) <b>certification by a Senior Advocate</b> of fulfilment of requirements; (4) circulated first to the <b>three senior-most judges</b> + judges who passed the impugned order, if available; rehearing only if a majority agrees; (5) no time limit, but no merits reopens except to cure the stated defect.</p>
+    <p><b>Principles:</b> (i) <b>Finality yields to natural justice at the extreme margin</b> — a fourth-instance cure exists but is deliberately narrow; (ii) the dissent-vs-relief balance: jurisdiction announced even though this petition failed; (iii) matrimonial connection matters for DU: the entire architecture emerged from a <b>divorce-consent withdrawal</b> fight — the same policy thread as <i>Sureshta Devi</i> (consent persistence) running through procedural law.</p>
+    <p><b>Drafting lesson:</b> The DU companion's curative proforma (questions on irretrievable breakdown, res judicata, desertion proof, refusal of divorce where both sides' advocates agreed) shows how matrimonial merits get repackaged as curative questions — and requires the Senior Advocate certificate + Rupa averments verbatim (grounds already taken in review; dismissed by circulation). Use it as the model when asked "draft a curative petition" (a recurring DU-family question).</p>
+  </div>
+</div>
+
+<div class="case">
+  <div class="chead"><div><div class="cname">Mohinder Kaur v. Major Singh</div><div class="ccit">AIR 1972 P &amp; H 184 (Division Bench: Pandit &amp; Gopal Singh JJ) — cited in DU law-faculty syllabus material</div></div><div class="cmeta">Defence limits in RCR</div></div>
+  <div class="cbody">
+    <p><b>Facts:</b> Parties married (per the Act); in the husband's RCR petition, the wife sought to resist restitution by pointing to a contravention of s. 5(iii) HMA (marriage within the prohibited degree/sapinda-type condition — as noted in the DU syllabus extract, the contravention concerned a s. 5 condition).</p>
+    <p><b>Issue:</b> Can breach of a s. 5 condition be pleaded as a <b>defence</b> to an RCR petition when it is not itself a ground for JS, nullity or divorce in the pleaded form?</p>
+    <p><b>Arguments:</b> Wife — marriage contravenes s. 5, so no conjugal obligation can be enforced; Husband — grounds for judicial separation, nullity and divorce are exhaustively given by ss. 10, 11 and 13; a defence outside those provisions cannot defeat s. 9.</p>
+    <p><b>Decision:</b> Held: the marriage in contravention <b>is not a nullity</b> in the manner pleaded; contravention cannot be used as a defence to the RCR petition because the grounds are those enumerated in ss. 10, 11, 13 — "if it is not [a ground for those], then it cannot be pleaded in defence" to s. 9.</p>
+    <p><b>Principles:</b> (i) The HMA's remedies are <b>statutorily enumerated</b> — creative defences outside ss. 9–13's architecture fail; (ii) s. 5 breaches feed specific routes (s. 11 void/s. 12 voidable/s. 18 punishment), not free-floating equities; (iii) for RCR specifically, the defence universe is essentially <b>"reasonable excuse"</b> (proven on the respondent's burden) + s. 23's legal grounds.</p>
+    <p><b>Drafting lesson:</b> For a client resisting RCR: build the reply around <b>documented reasonable excuse</b> (cruelty, adultery, forced-immobility demands, dowry persecution) — with particulars — rather than abstract illegality-of-marriage pleas; and counterclaim what the Act does allow (s. 23A relief, divorce cross-claim where facts justify).</p>
+  </div>
+</div>
+
+<div class="box tip">
+  <div class="smallcap">Six more authorities for two-line citations (verified)</div>
+  <table>
+    <tr><th>Case</th><th>Citation</th><th>One-line use</th></tr>
+    <tr><td><i>Moonshee Bazloor v. Shamsoonaissa Begum</i></td><td>(1867) 10 MIA 406 (PC)</td><td>Origin of RCR remedy in Indian law (England → PC)</td></tr>
+    <tr><td><i>Mrs. Manjula Zaerailal v. Zaerailal Vithal Das</i></td><td>AIR 1975 Guj</td><td>Once withdrawal from society proved, "decree must follow — cohabitation is the normal state contemplated by Hindu marriage"; burden then on withdrawer</td></tr>
+    <tr><td><i>Shobha Rani v. Madhukar Reddi</i></td><td>(1988) 1 SCC 105 / AIR 1988 SC 121</td><td>Cruelty = course of conduct in relation to matrimonial duties adversely affecting the other; dowry-cruelty origin point</td></tr>
+    <tr><td><i>Anjana Kishore v. Puneet Kishore</i></td><td>(2002) 2 SCC 308</td><td>Six-month waiver in exceptional circumstances; Art. 142 concurrence (pre-<i>Amardeep</i>)</td></tr>
+    <tr><td><i>Rajat Gupta v. Rupali Gupta</i></td><td>(2018)</td><td>Unqualified right to withdraw s. 13B consent — no undertaking can bar it; consent must run to decree</td></tr>
+    <tr><td><i>Rinju v. Santhosh</i></td><td>Kerala HC (P.R. Ramachandra Menon &amp; Anil K. Narendran JJ)</td><td>RCR decree execution via O. 21 Rr. 32–33 CPC; spouse <b>cannot be physically compelled</b> — enforcement only to the rules' extent</td></tr>
+  </table>
+</div>
+</section>
+<!-- ======================= S9 : REAL CHAIN ======================= -->
+<section id="s9">
+<div class="sec-head"><span class="sec-num">9</span><div><div class="smallcap">DU companion material · real drafts</div><div class="t">The s. 125 maintenance trilogy — Application → Reply → Rejoinder (full dissection)</div></div></div>
+
+<div class="box">
+  <div class="smallcap">9.1 · Why this chain matters</div>
+  <p>The DU companion notes preserve a <b>complete, real-shaped litigation round-trip</b> in a Delhi Family Court: the wife + minor son's maintenance application, the husband's reply with preliminary objections, and the wife's rejoinder. This is the live context in which Forms 14–17 get written — maintenance fights, criminal complaints and matrimonial petitions orbit each other, and <b>each draft here demonstrates pleading technique the exam asks for</b>. (Statutory home: s. 125 CrPC → <b>s. 144 BNSS</b> since 1-7-2024; Family Courts Act s. 7(2) gives the FC the magistrate's Chapter IX jurisdiction.)</p>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">Draft A — Maintenance application (wife + child)</div>
+    <table>
+      <tr><th>Element</th><th>What it does</th></tr>
+      <tr><td>Caption: IN THE COURT OF PRINCIPAL JUDGE, FAMILY COURT, DELHI · Application No. · IN RE: Ms. X (APPLICANT) v. Mr. Y (RESPONDENT)</td><td>Application-style cause-title ("IN RE"), not petition-style — matches FCA s. 7(2) transfer of magistrate jurisdiction</td></tr>
+      <tr><td>Paras 1–7: marital history, separation, husband's means, liabilities</td><td>Standard means-affairs pleading: income sources, no other dependants/liabilities except maintenance</td></tr>
+      <tr><td>Para 8: <b>"Complainant No. 1 has no independent source of livelihood"</b>, residing with father at Delhi</td><td>The statutory incapacity element (s. 144 BNSS / s. 125 CrPC words: "unable to maintain herself")</td></tr>
+      <tr><td>Para 9: child's schooling (<b>Delhi Public School</b>), monthly expenditure incl. fees, dress, maid</td><td><b>Itemisation</b> — maintenance maths backed by heads of expenditure (the model for s. 24 HMA IAs too)</td></tr>
+      <tr><td>Para 10: complainants reside at Delhi → court competent</td><td>Territorial jurisdiction (place of residence of claimant)</td></tr>
+      <tr><td>Prayer: monthly allowance ₹__ (wife) + ₹__ (child) + <b>costs</b></td><td>Quantum split-wise + costs; note: affidavit to be attached; <b>list of witnesses</b> to be appended</td></tr>
+    </table>
+  </div>
+  <div class="box">
+    <div class="smallcap">Draft B — Reply on behalf of respondent (the husband's real-world structure)</div>
+    <table>
+      <tr><th>Element</th><th>Technique</th></tr>
+      <tr><td><b>Preliminary Objections ¶ 1:</b> "contents… wrong and vehemently denied unless specifically admitted"</td><td>The universal opening — blanket denial + formula of specific admission (same as civil WS practice)</td></tr>
+      <tr><td>¶ 2: wife "left the matrimonial company… without justifiable cause" + took away only son; wishes to continue ties; <b>she refuses mediation</b>; the ASJ-referred mediation "made to fail by demanding ₹50 lakhs"</td><td><b>Turn-around defence:</b> her exit = her withdrawal (feeds his s. 9 RCR potential / negates neglect); refusal-to-settle narrative (FCA s. 9 context)</td></tr>
+      <tr><td>¶ 3: his profession-change history (tuitions → property dealing at her insistence → back to tuitions amid recession, "virtually starving, no income")</td><td><b>Means rebuttal</b> — the core s. 144 defence: inability to pay, with life-story particulars</td></tr>
+      <tr><td>¶ 4–5: FIR XYZ/16, PS Shakurpur, s. 406/498A/34 IPC (now BNS 82/85 + common-intention) at her instance; 10 relatives — MIL, sisters-in-law, brothers — all residing separately, roped in "due to revengeful attitude"</td><td><b>False-case counter-narrative</b> + prior-proceedings disclosure; note: she pleads it as harassment, he as falsity — DU's para 8/10 table is where the case sits</td></tr>
+      <tr><td>¶ 6: her allegations "not commensurate with status" — father a govt employee, mother housewife, 3 sisters + brother; <b>she earns ₹25,000 from a beauty parlor + ₹15,000 rent</b> from the jointly-purchased flat (he contributed 60%)</td><td><b>Own-income defence</b> (s. 144 proviso-type arguments + DVA s. 20 rebuttal) + <b>Bombay particular (vii): jointly-held property particulars</b></td></tr>
+      <tr><td>¶ 7: wedding-expense claim (1500 guests, ₹6,50,000) called "factually incorrect"</td><td>Paragraph-specific denial of quantum allegations (never deny piecemeal facts in bulk)</td></tr>
+      <tr><td>¶¶ 20–21: para-wise denial + "last para under PRAYER is liable to be rejected with costs"</td><td>Close with prayer-matching rebuttal + costs — mirror structure</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="box tip">
+  <div class="smallcap">Draft C — Rejoinder (wife's side) + the cross-petition trap</div>
+  <p>Rejoinder ¶¶ 1–3 open with the classic formula — <i>"contents of para 1… absolutely false and vehemently denied and what is stated in the application… is reiterated"</i> — then deploy: (i) she <b>did not opt for 406/498A action</b> and "persuaded this Hon'ble Court to direct the respondent to keep her in his matrimonial company" — but he "again kicked her out"; (ii) <b>a divorce petition has been filed by the respondent</b> against her; (iii) harassment for "insufficient dowry" caused the withdrawal; (iv) concealment/misrepresentation of his qualifications at marriage.</p>
+  <p><b>The examiner's point:</b> notice the three-proceeding standoff — <b>maintenance (s. 144 BNSS) + criminal (BNS 85/82) + divorce (HMA s. 13/s. 9)</b> — all cross-referencing each other. Every DU matrimonial petition's <b>prior-proceedings table (para 8/10)</b> is designed to capture exactly this triangulation, and every settlement (13B or s. 23 court-facilitated) aims to dissolve all three at once.</p>
+</div>
+
+<div class="grid2">
+  <div class="box note">
+    <div class="smallcap">Also in the companion: the curative template (ties to c7)</div>
+    <p>A full <b>Curative Petition (Civil) under Arts. 129, 137, 141 &amp; 142 read with O. XLVIII SCR 2013</b> proforma — carrying a <i>divorce fact-pattern</i> in its "Question of Law" paragraphs: (a) whether courts err in refusing divorce where "since 1976 there is no cohabitation… no chance of reunion… advocates on both sides so submit"; (b) whether the courts below wrongly applied <b>res judicata</b>; (c) whether "irretrievably broken" marriage should have been dissolved; (d) whether "desertion" findings were erroneous; (e) whether efflux of time + non-resumption suffices — with the mandatory averment that grounds were taken in the review (dismissed by circulation) and the <b>Senior Advocate certificate citing <i>Rupa Ashok Hurra</i>, 2002 (4) SCC 388</b> (card c7). Draft exam answers for "curative petition" from this template + § 8(c7).</p>
+  </div>
+  <div class="box note">
+    <div class="smallcap">Cross-references to the companion civil-forms file</div>
+    <p>• <b>Transfer of the divorce petition</b> — DU Form 11 proforma (s. 25 CPC petition to transfer an HMA petition: wife's transfer plea — thrown out of matrimonial home, minor child, humiliation at hearings, attendance difficulties) and its writ variant (B.P. Mishra-type) are dissected in <i>Forms of Civil Pleadings</i> § 12, along with <i>Dr. Subramaniam Swamy</i> (Art. 142 transfer jurisdiction).<br>• Affidavit fundamentals, O. 6/O. 8 maps, verification law → same file §§ 1, 2, 3, 10.<br>• Execution mechanics (O. 21, s. 51, Art. 136) → same file § 13 — applies to s. 25 alimony decrees too.</p>
+  </div>
+</div>
+</section>
+<!-- ======================= S10 : DOCTRINE ======================= -->
+<section id="s10">
+<div class="sec-head"><span class="sec-num">10</span><div><div class="smallcap">KAMKUS + DU drafting directions</div><div class="t">The material-facts doctrine — as it bites in matrimonial pleadings</div></div></div>
+
+<div class="box">
+  <div class="smallcap">10.1 · The master rule (KAMKUS, prescribed book — reproduced faithfully)</div>
+  <p><i>"In a matrimonial petition, it is not enough to state that the respondent is guilty of cruelty towards the petitioner-wife and that she is entitled to divorce. The petitioner must state all those facts which establish cruelty on the part of the respondent."</i> — then KAMKUS lists what those facts look like: husband drunkard coming home intoxicated and inflicting injuries <b>with dates specified</b>; abuse/beating in presence of friends and relations; not allowed to visit parents after marriage; forcing parting with dowry with threats of beating; <b>"immediately after her marriage till date the respondent did not even talk to her nor he cohabited with her"</b>. <i>"It is such facts which can establish physical or mental cruelty."</i></p>
+  <p>KAMKUS's contra-indicator — <b>Example I of "Bad Pleading"</b>: <i>"The respondent has deserted the petitioner for a statutory period of one year and above, and hence the petitioner is entitled to divorce. Here the legal inferences have been pleaded."</i> Fix: plead the <b>leaving facts</b>, the <b>date</b>, the <b>declaration of intent</b> (animus), the <b>refusal to return</b> — then the statute computes the period for itself.</p>
+  <p class="smallcap">Also from KAMKUS: "In matrimonial matters custom has been recognised… [unless the custom] has repeatedly received judicial recognition, [it] must be pleaded" — i.e., any custom-based plea (or its absence) belongs in the pleading itself. And: <b>never jump to legal conclusions</b> — "the inference of law… should be left to the court"; DU repeats this in Form 16's para 4 direction ("facts… as distinctly as the nature of the case permits").</p>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">10.2 · Ground → material-facts checklist (what the paragraph must contain)</div>
+    <table>
+      <tr><th>Ground</th><th>Material facts to plead (pleading = proof-frame)</th></tr>
+      <tr><td>RCR — withdrawal</td><td>Date of leaving/joining? no — date of <b>withdrawal</b>; where respondent went; refusal after request; demand-letters; absence of excuse</td></tr>
+      <tr><td>Cruelty</td><td>Incident-by-incident: date, place, words used, act, witnesses, effect on health; pattern (frequency); dowry-demand specifics; no cohabitation since date (KAMKUS list above)</td></tr>
+      <tr><td>Desertion</td><td>Left on (date) at (place); <b>said to whom</b> she/he was leaving and never returning (animus deserendi); no justifiable cause; without consent; continued wilful neglect; 2-year computation</td></tr>
+      <tr><td>Adultery</td><td>Particulars of intercourse "as nearly as possible" (DU direction): occasions, places, identities, corroborating traces</td></tr>
+      <tr><td>Non-cohabitation after decree (13(1A))</td><td>Decree particulars + every demand to resume + refusal dates</td></tr>
+      <tr><td>13B mutual</td><td>Separation date; inability to live together (specific episodes + exhaustion of reconciliation); settlement terms; consent-freedom facts</td></tr>
+      <tr><td>Prior proceedings</td><td>Full 4-column table — nature + section + number/year + court + result (res judicata &amp; O. 21 R. 41 screening)</td></tr>
+    </table>
+  </div>
+  <div class="box warn">
+    <div class="smallcap">10.3 · What examiners deduct (compiled from DU's own directions)</div>
+    <ul class="letters">
+      <li><b>Conclusion-paragraphs</b> — "the respondent is guilty of cruelty, hence I am entitled to divorce" (KAMKUS Example I). Zero marks for pure inference.</li>
+      <li><b>Offences not separated</b> — DU twice insists: matrimonial offences in <b>separate paragraphs with time and place</b>. One paragraph = one ground = one incident-cluster.</li>
+      <li><b>Missing mandatory statements</b> — collusion, non-condonation (cruelty/adultery), delay, legal ground, prior-proceedings, status grid, children. These are DU's (a)–(f): answer them in order.</li>
+      <li><b>Section-less titles</b> — "Petition for divorce" instead of "…UNDER SECTION 13 OF THE HMA, 1955".</li>
+      <li><b>Verification without split</b> — knowledge vs information-belief limbs; verification by someone other than the petitioner.</li>
+      <li><b>Wrong court</b> — District Judge where a Family Court exists (FCA s. 8 excludes the other), or wrong s. 19 venue.</li>
+      <li><b>Affidavit forgotten</b> — DU's standing note on every form; for 13B, both petitioners' affidavits.</li>
+      <li><b>Ignoring s. 14</b> — filing divorce at 8 months without the leave application.</li>
+    </ul>
+  </div>
+</div>
+</section>
+<!-- ======================= S11 : PYQs ======================= -->
+<section id="s11">
+<div class="sec-head"><span class="sec-num">11</span><div><div class="smallcap">Exam endgame</div><div class="t">DU semester PYQs + prescribed-bank questions — best model answers</div></div></div>
+
+<div class="box note"><b>Corpus:</b> DU LL.B. term papers (2017 full paper; 2019 paper pattern) as preserved in the project record + the KAMKUS "Important Questions" bank (Qs. 21, 29 — the matrimonial entries). Every model answer below is built from the DU forms in this file. Companion answers on general pleading theory (cause of action, material facts, amendment) live in the first file.</div>
+
+<div class="pyq">
+  <div class="pyhead"><span class="badge">DU · 2017 · Q3</span> Draft a petition for dissolution of marriage by a decree of divorce by mutual consent under s. 13B(1), HMA 1955, along with the affidavits.</div>
+  <div class="pybody"><b>Expected answer:</b> the complete Form 17 (pp. 48–49) in petition format + two Form-18-style affidavits. The examiner's checklist (what earns full marks):</div>
+  <div class="ans">
+    <p><b>1 · Cause title</b> — "IN THE COURT OF PRINCIPAL JUDGE, FAMILY COURT (DISTRICT ___), ___ COURT, DELHI · HMA PETITION NO. ___ OF 20___ · IN THE MATTER OF: X … PETITIONER NO. 1 AND Y … PETITIONER NO. 2 · JOINT PETITION FOR DISSOLUTION OF MARRIAGE BY A DECREE OF DIVORCE BY MUTUAL CONSENT UNDER SECTION 13B(1) OF THE HINDU MARRIAGE ACT, 1955".</p>
+    <p><b>2 · Body — the 11 DU paragraphs in order:</b> (1) marriage per Hindu rites on date at place + register extract + attested affidavit; (2) status/age/residence grid (before marriage &amp; at filing); (3) last-resided-together place + children's particulars; (4) living separately since ___ and <b>not able to live together since then</b> + brief reasons (+ settlement mention); (5) mutual agreement to dissolve; (6) consent <b>not obtained by force, fraud or undue influence</b>; (7) not in collusion; (8) no undue delay; (9) no other legal ground; (10) jurisdiction — plead how (solemnisation/last cohabitation residence, s. 19); (11) court-fee affixed.</p>
+    <p><b>3 · Prayer</b> — decree of divorce on mutual consent dissolving P1–P2 marriage + residuary relief · <b>Signatures</b> of BOTH petitioners through counsel · <b>Verification</b> signed by both.</p>
+    <p><b>4 · Affidavits</b> — "Separate affidavits of Petitioner No. 1 and Petitioner No. 2" (DU's note): Form 18 skeleton ×2 — solemn affirmation; competence; marriage; no collusion; no delay; consent free of force/fraud; incorporation of petition contents read-over clause naming s. 13B(1); verification "true… nothing material concealed".</p>
+    <p><b>5 · Bonus (separately awarded in DU marking)</b> — one-line note that under s. 13B(2) the second motion follows after 6 months (waivable per <i>Amardeep Singh</i> conditions); terms sheet (custody, alimony, stridhan, pending cases) annexed.</p>
+  </div>
+</div>
+
+<div class="pyq">
+  <div class="pyhead"><span class="badge">DU · 2017 · Q4 (d)</span> Attempt any two: (a) Art. 226 habeas corpus writ; (b) permanent injunction suit + stay; (c) letters of administration; <b>(d) application for maintenance under s. 125 CrPC [DU Form 30]</b>.</div>
+  <div class="pybody"><b>Why it's in this file:</b> maintenance is the twin of matrimonial pleading — DU's own companion carries the full chain; the 2019 paper also pairs such applications with the mutual-divorce draft.</div>
+  <div class="ans">
+    <p><b>Model answer skeleton:</b> Court caption (Principal Judge, Family Court / Magistrate 1st class — jurisdiction per FCA s. 7(2)) → parties (wife + minor child as complainants, husband respondent) → paras: (1–2) marriage + solemnisation particulars; (3–4) separation/how respondent left/refused maintenance; (5) respondent's means (income, property, business); (6) absence of other liabilities; (7–8) complainants' <b>no independent source of livelihood</b> + dependant status; (9) <b>child's expenditure heads</b> (school fees, clothing, care) with monthly total; (10) jurisdiction (residence) → prayer: monthly allowance ₹___ for wife + ₹___ for child + costs → verification/affidavit + list of witnesses.</p>
+    <p><b>Update line (2024 onward):</b> write "s. 125 CrPC (now <b>s. 144 BNSS</b>, 2023)" — same elements, plus BNSS's interim-maintenance and modification features. Civil cross-claims: HMA ss. 24/25, DVA s. 20, HAMA s. 18.</p>
+  </div>
+</div>
+
+<div class="pyq">
+  <div class="pyhead"><span class="badge">DU · 2019 · Paper pattern</span> Part A: Caveat (s. 148A CPC) · <b>Mutual-consent divorce petition + affidavits</b> · Anticipatory bail · Probate/will petition — Part B: conveyancing drafts.</div>
+  <div class="pybody"><b>Approach:</b> same as Q3 above — the mutual-divorce entry is <i>the</i> recurring matrimonial question. In a three-hour paper: time-box it — 8 min caption + status grid, 15 min paras 1–11, 10 min two affidavits, 5 min prayer/verification/annexure list; leave the last read for the s. 13B(2) note. Anything missing from DU's (a)–(f) mandatory list = direct mark deduction.</div>
+</div>
+
+<div class="pyq">
+  <div class="pyhead"><span class="badge">KAMKUS · Q.21</span> Draft a petition for divorce by mutual consent under s. 13B of the Hindu Marriage Act, 1955.</div>
+  <div class="pybody"><b>Model answer:</b> identical product to DU 2017 Q3 (the two sources converge — Form 17). Write the caption with section, the 11 paragraphs, the settlement-terms paragraph, prayer under s. 13B, verification by both, affidavit note. <b>Add the KAMKUS polish:</b> the clean-hands sentence ("neither party is guilty of any act which should preclude relief") + a recital of the 1-year separation computation (since s. 13B(1) requires it) — the points where answers lose marks.</div>
+</div>
+
+<div class="pyq">
+  <div class="pyhead"><span class="badge">KAMKUS · Q.29</span> Draft a petition on behalf of the wife for judicial separation on the ground of desertion under the Hindu Marriage Act, 1955.</div>
+  <div class="pybody"><b>Model answer (built on DU Form 15):</b></div>
+  <div class="ans">
+    <p><b>Title:</b> "PETITION FOR JUDICIAL SEPARATION UNDER SECTION 10 OF THE HINDU MARRIAGE ACT, 1955" · Court: Principal Judge, Family Court · Wife = petitioner.</p>
+    <p><b>Paras:</b> 1 — marriage (Hindu rites, date/place, registration, extract + affidavit); 2 — status grid (her status/age/residence before &amp; at filing); 3 — children; <b>4 — grounds, in separate paragraphs:</b> "the respondent has deserted the petitioner for a continuous period of not less than two years immediately preceding this petition, within s. 13(1)(ib) read with s. 10" + facts per paragraph: (4.1) he left the matrimonial home on ___ from ___; (4.2) statements to neighbours/relatives that he would not return (<b>animus deserendi</b> — KAMKUS material-facts instance); (4.3) demands to rejoin on dates → refusals; (4.4) without reasonable cause / without her consent — no cruelty, no adultery by her; (4.5) computing the continuous two years; — 5/6: non-accessory/non-condonation (where grounds touch s. 13(1)(i)/(ia)); 7 — no collusion; 8 — no delay; 9 — no other legal ground; 10 — prior-proceedings table (if any); 11 — venue facts (s. 19); 12 — jurisdiction; 13 — court-fee.</p>
+    <p><b>Prayer:</b> decree of judicial separation under s. 10 + residuary. <b>Verification</b> (knowledge/information split) + note: petitioner's affidavit appended.</p>
+    <p><b>Do-nots:</b> don't write "deserted for one year" (divorce needs 2 years under s. 13(1)(ib); JS ground imports the same clause — plead the continuous period honestly); don't fold multiple grounds into one paragraph; don't skip the status grid.</p>
+  </div>
+</div>
+
+<div class="box tip">
+  <div class="smallcap">"Discuss / explain" companions — condensed model-answer frames</div>
+  <table>
+    <tr><th>Question</th><th>Model skeleton</th></tr>
+    <tr><td><b>Essentials of a s. 9 RCR petition</b></td><td>Subsisting Hindu marriage · withdrawal from society by respondent · without reasonable excuse (burden shift — Explanation) · no collusion (s. 23(1)(a)) · no delay · no legal ground · venue s. 19/FCA 7–8 · verification s. 20 + affidavit · enforcement limits O. 21 Rr. 32–33 + s. 13(1A)(ii) sequel. Cases: <i>Moonshee Bazloor</i> · <i>Manjula</i> · <i>Mohinder Kaur</i> · <i>Rinju</i>.</td></tr>
+    <tr><td><b>Grounds of divorce under s. 13</b></td><td>Table-answer: s. 13(1)(i)–(vii) + Explanation + s. 13(1A)(i)–(ii) + s. 13(2)(i)–(iv) + mutual s. 13B + gate s. 14 + alternate s. 13A — with one-line particulars rule each (DU direction) + cases: <i>Aneel Kaur</i> (cruelty standard), <i>Naveen Kohli</i> (cumulative + breakdown), <i>Samar Ghosh</i> (degrees/factors).</td></tr>
+    <tr><td><b>JS vs divorce</b></td><td>Matrix: subsisting vs dissolved · grounds identical via s. 10 pick-up · cohabitation suspended vs status ended · rescission s. 10(2) vs re-marriage s. 15 · bridge clauses s. 13(1A) both ways · s. 13A cross-over · <i>Subbarama Reddiar</i> for s. 10 scope.</td></tr>
+    <tr><td><b>Safeguards in mutual-consent divorce</b></td><td>1-yr separation + inability + agreement (s. 13B(1)) · force/fraud/undue-influence averment (DU para 6 + affidavits) · continuing consent (<i>Sureshta Devi</i>, <i>Rajat Gupta</i>) · inquiry + 6/18-month machinery (s. 13B(2)) · waiver discipline (<i>Amardeep</i>) · Art. 142 outer valve with fairness factors (<i>Shilpa Sailesh</i>).</td></tr>
+    <tr><td><b>Why verification + affidavit matter</b></td><td>O. 6 R. 15 (petition split-verification) + O. XIX (affidavit) + s. 20 HMA + FCA s. 16 (affidavit evidence) + liability BNS ss. 236/237 + "nothing material concealed" formula (Form 18) + 13B dual-affidavit rule.</td></tr>
+  </table>
+</div>
+</section>
+<!-- ======================= S12 : REVISION ======================= -->
+<section id="s12">
+<div class="sec-head"><span class="sec-num">12</span><div><div class="smallcap">Last-day revision</div><div class="t">Six forms in one view · pre-filing checklist · glossary · sources</div></div></div>
+
+<div class="box">
+  <div class="smallcap">12.1 · The six DU instruments at a glance</div>
+  <table>
+    <tr><th>Form</th><th>Section</th><th>Paras</th><th>Signature</th><th>Non-boilerplate core</th><th>Decree's effect</th></tr>
+    <tr><td>14 · RCR</td><td>s. 9</td><td>11</td><td>Petitioner</td><td>Para 4 withdrawal-without-excuse + circumstances</td><td>Cohabitation restored (enforced O. 21 R. 32–33; ignore → s. 13(1A)(ii))</td></tr>
+    <tr><td>15 · JS</td><td>s. 10</td><td>13</td><td>Petitioner</td><td>Para 4 grounds (each s. 13 clause, separate paras) + 5/6 non-condonation</td><td>Separation lawful; rescindable; no resumption 1 yr → s. 13(1A)(i)</td></tr>
+    <tr><td>16 · Divorce</td><td>s. 13</td><td>13</td><td>Petitioner</td><td>Para 4 ground particulars (adultery particulars direction) + para 5 accessory/condoned + para 6 cruelty non-condoned</td><td>Marriage dissolved; appeal s. 28; re-marry s. 15</td></tr>
+    <tr><td>17 · Mutual</td><td>s. 13B(1)</td><td>11</td><td>Both petitioners</td><td>Para 4 separate-since + not-living-together + settlement; para 5 mutual agreement; para 6 no force/fraud</td><td>Dissolved at 2nd motion (6–18 months, waivable)</td></tr>
+    <tr><td>18 · Affidavit</td><td>O. XIX + FCA 16</td><td>6 + verification</td><td>Deponent</td><td>Para 6 incorporation-on-instructions clause; "nothing material concealed"</td><td>— (evidence support)</td></tr>
+    <tr><td>13 · Intro</td><td>ss. 14, 19, 20 + FCA 7–8</td><td>—</td><td>—</td><td>8 Bombay particulars + (a)–(f) mandatory statements + venue</td><td>— (governs all forms)</td></tr>
+  </table>
+</div>
+
+<div class="grid2">
+  <div class="box">
+    <div class="smallcap">12.2 · Pre-filing checklist (matrimonial)</div>
+    <ul class="letters">
+      <li>Hindu by religion (or s. 2 extended class)? If inter-faith → SMA route.</li>
+      <li>Marriage validity screen: s. 5 conditions, age, ceremonies; s. 8 extract in hand.</li>
+      <li>Venue fixed under s. 19 clause + correct Family Court (FCA s. 8 exclusion).</li>
+      <li>Divorce? one-year bar cleared or s. 14 leave application readied (with children/reconciliation factors).</li>
+      <li>Ground(s) audited against s. 13(1)/(1A)/(2) — evidence list per ground.</li>
+      <li>One ground per paragraph; times &amp; places of each offence.</li>
+      <li>Material facts > conclusions (KAMKUS rule) — cruelty/desertion checklists done.</li>
+      <li>Non-accessory/non-condonation paras where adultery/cruelty pleaded; clean-hands line added.</li>
+      <li>Status/age/residence grid + children's particulars complete.</li>
+      <li>Prior-proceedings table: HMA/DVA/BNS/BNSS/Dowry/HAMA matters listed with results.</li>
+      <li>Jurisdiction para + court-fee as per current Delhi schedule.</li>
+      <li>Prayer names the section; residuary clause added.</li>
+      <li>Split verification (knowledge/information) signed by correct person.</li>
+      <li>Affidavit (Form 18) attached — two, if 13B.</li>
+      <li>Interim needs mapped: s. 24 / s. 26 / s. 25 / DVA s. 23 / in-camera s. 22 applications.</li>
+      <li>13B only: 1-yr separation proof, settlement terms annexed, waiver application (Amardeep 3 conditions) if moving early.</li>
+      <li>Client counselling note (FCA s. 9) — record willingness to mediate.</li>
+      <li>Annexures indexed: P-1 register extract, P-2 notice, P-3 separation proof, P-4 orders, P-5 medicals…</li>
+    </ul>
+  </div>
+  <div class="box">
+    <div class="smallcap">12.3 · Glossary (exam definitions)</div>
+    <table>
+      <tr><td><b>Consortium / society</b></td><td>Whole body of married people's rights — living together, comfort, sexual relations; "society" in s. 9 = this package</td></tr>
+      <tr><td><b>Matrimonial offence</b></td><td>Fault-based ground (adultery/cruelty/desertion…) — DU's "offences charged in separate paragraphs"</td></tr>
+      <tr><td><b>Animus deserendi</b></td><td>Intention to desert — must be pleaded &amp; proved; KAMKUS's neighbours/relatives declaration instance</td></tr>
+      <tr><td><b>Condonation</b></td><td>Forgiveness + restoration of the offending spouse (resumed cohabitation/childbirth = evidence); burden shifts per proviso to s. 13(1)(ia)</td></tr>
+      <tr><td><b>Connivance / collusion</b></td><td>Participating in / secretly cooperating for the decree — s. 23(1)(a) bars; every form denies collusion</td></tr>
+      <tr><td><b>Desertion (statutory)</b></td><td>Without reasonable cause, without consent/against wish, incl. wilful neglect — Explanation to s. 13(1)</td></tr>
+      <tr><td><b>Irretrievable breakdown</b></td><td>Marriage dead beyond repair — non-statutory; Art. 142 route post-<i>Shilpa Sailesh</i>; supports cruelty findings</td></tr>
+      <tr><td><b>Cooling-off</b></td><td>s. 13B(2) 6-month gap — directory (<i>Amardeep</i>), purpose = reconsideration</td></tr>
+      <tr><td><b>Judicial separation</b></td><td>Legal suspension of cohabitation — marriage alive (s. 10)</td></tr>
+      <tr><td><b>Restitution</b></td><td>Two kinds: RCR (s. 9 HMA) vs s. 144 CPC (benefit restoration) — name the Code</td></tr>
+      <tr><td><b>Material facts</b></td><td>Facts constituting the cause of action — pleaded, not inferred (O. 6 R. 1)</td></tr>
+      <tr><td><b>Ordinary/original jurisdiction</b></td><td>The venue phrase DU's forms append to para 9/11/12 — s. 19 limits</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="box">
+  <div class="smallcap">12.4 · Source index</div>
+  <table>
+    <tr><th>Layer</th><th>Sources</th></tr>
+    <tr><td><b>PRIMARY — DU case material (pp. 38–50)</b></td><td>Item 13 intro (7 petitions, Bombay particulars, venue s. 19, s. 14, mandatory (a)–(f)) · Item 14 Form 14 RCR (paras 1–11) · Item 15 Form 15 JS (paras 1–13) · Item 16 Form 16 divorce (paras 1–13 + directions) · Item 17 Form 17 mutual (paras 1–11 + separate-affidavit note) · Item 18 Form 18 affidavit (paras 1–6 + verification)</td></tr>
+    <tr><td><b>DU companion notes</b></td><td>s. 125 application + reply + rejoinder chain (real facts) · curative-petition template citing <i>Rupa Ashok Hurra</i> · transfer-of-divorce petition (Form 11 cross-ref) · Marriage &amp; Divorce Laws RCR model</td></tr>
+    <tr><td><b>KAMKUS (prescribed)</b></td><td>Material-facts chapter (cruelty example, desertion instance, bad-pleading Example I, matrimonial custom) · RCR 11-para model · family-courts note · Important Questions Q.21 &amp; Q.29 · interlocutory-application list (s. 144 CPC)</td></tr>
+    <tr><td><b>Statutes verified</b></td><td>HMA 1955 (full section map; ss. 9, 10, 13, 13A, 13B, 14 texts) · Family Courts Act 1984 (ss. 7, 8, 16, 19…) · DVA 2005 (ss. 12, 18–23, 26) · BNSS s. 144 (ex-s. 125) · BNS ss. 82, 85–86, 236–237 · CPC O. 6/7/8/19/21 Rr. 32–33 · SMA ss. 22/23/28</td></tr>
+    <tr><td><b>Judgments</b></td><td>Full cards: <i>Aneel Kaur</i> (2005) 2 SCC 22 · <i>Naveen Kohli</i> (2006) 4 SCC 558 · <i>Samar Ghosh</i> (2007) 4 SCC 511 · <i>Sureshta Devi</i> (1991) 3 SCC 251 · <i>Amardeep</i> (2017) 8 SCC 746 · <i>Shilpa Sailesh</i> T.P.(C) 1118/2014 (2023) · <i>Rupa Ashok Hurra</i> (2002) 4 SCC 388 [DU] · <i>Mohinder Kaur</i> AIR 1972 P&amp;H 184 [DU] · minis: <i>Moonshee Bazloor</i>, <i>Manjula</i>, <i>Shobha Rani</i>, <i>Anjana Kishore</i>, <i>Rajat Gupta</i>, <i>Rinju</i>, <i>Subbarama Reddiar</i></td></tr>
+    <tr><td><b>PYQs</b></td><td>DU 2017 Q3 (mutual divorce + affidavits) · DU 2017 Q4(d) (s. 125 maintenance, DU Form 30) · DU 2019 pattern row (mutual divorce) · KAMKUS Q.21, Q.29 — answers above</td></tr>
+  </table>
+</div>
+
+<div class="box gold" style="background:#fdf8ec;border:1px solid #e9cf93;">
+  <div class="smallcap">One-line summary of the unit</div>
+  <p style="font-family:Georgia,serif;font-size:17px;"><b>Six proformas, one skeleton:</b> caption → marriage (s. 5/7/8) → status grid → children → <i>the statutory core paragraph</i> (withdrawal · ground · mutual agreement) → non-collusion → non-condonation → no delay → prior-proceedings table → venue (s. 19) → jurisdiction (FCA ss. 7–8) → fee → prayer (section named) → split verification → Form 18 affidavit. Everything else in this unit — every section, Act, case and PYQ — attaches to that skeleton.</p>
+</div>
+</section>
+
+<div class="box" style="text-align:center;background:#14213d;color:#fff;">
+  <p style="color:#fff;margin:6px 0;"><b>MATRIMONIAL PLEADINGS — DU Forms 13–18 (pp. 38–50)</b> · Companion to <i>Rules &amp; Skills of Drafting</i> and <i>Forms of Civil Pleadings</i> · LB-502, Faculty of Law, University of Delhi</p>
+  <p style="color:#c9d3e8;font-size:13px;margin:4px 0;">Built primarily from the uploaded DU case material + companion notes + prescribed KAMKUS book; statutes &amp; judgments verified. For exam use — always check the latest bare-act text and current court-fee schedule at filing.</p>
+</div>
+</div><!-- /.content -->
+<a id="toTop" href="#toc" style="position:fixed;right:22px;bottom:22px;background:#c9962e;color:#14213d;font-weight:bold;padding:10px 16px;border-radius:24px;box-shadow:0 4px 14px rgba(0,0,0,.3);text-decoration:none;font-size:14px;z-index:99;">↑ Top</a>
+</div><!-- /.wrap -->
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a40ac15a9852c1d9',t:'MTc5MDM0NjkyNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

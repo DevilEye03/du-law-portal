@@ -27,6 +27,239 @@ body.focus-mode .sidebar{transform:translateX(-100%)}body.focus-mode .topbar{lef
 @media print{.hero-main{grid-template-columns:minmax(0,1fr) 44mm;gap:6mm}.hero-visual{width:44mm}.hero h1{font-size:39pt;line-height:1.1}.hero .lead{font-size:10.5pt}.hero{min-height:230mm}.hero-tags span{font-size:7.3pt}}
 
 @media print{.edition-line{display:none}}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Root & Viewport Overflow Containment (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Container & Layout Fluid Scaling */
+  .wrap, .layout, .container, .page-wrap, main, article, .dossier, .content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 3. Hero Header & Covers */
+  header.cover, header.hero, .hero, .topbar {
+    padding: 24px 14px 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
+  }
+  header.cover h1, header.hero h1, .hero h1 {
+    font-size: clamp(1.4rem, 6vw, 2.1rem) !important;
+    line-height: 1.22 !important;
+    margin: 10px 0 6px !important;
+    word-break: break-word !important;
+  }
+  header.cover h2, header.hero .sub, .hero .dek {
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
+  }
+  .badges, .meta {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+  .badge, .tag, .lbl {
+    font-size: 0.75rem !important;
+    padding: 3px 8px !important;
+    margin: 2px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. Table Scroll Containment (Prevents 100% of Horizontal Page Blowout) */
+  table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 14px 0 !important;
+    font-size: 13.5px !important;
+  }
+  .table-wrap, .table-container, .table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+  th, td {
+    padding: 8px 10px !important;
+    min-width: 85px !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. Typography & Headings */
+  h2, h2.part, .chapter h2 {
+    font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
+    margin-top: 28px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+  h3 {
+    font-size: clamp(1.1rem, 4.2vw, 1.35rem) !important;
+    margin-top: 22px !important;
+    line-height: 1.35 !important;
+    padding-left: 8px !important;
+    word-break: break-word !important;
+  }
+  h4, h5 {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+  }
+  p {
+    font-size: 15.5px !important;
+    line-height: 1.65 !important;
+    text-align: left !important;
+    margin: 8px 0 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin: 6px 0 !important;
+    overflow-wrap: break-word !important;
+  }
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 6. Grids & Multi-column Stacking */
+  .twocol, .grid2, .vs, .source-grid, .split, .stats, .hero .stats, .flow, .section-index {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+    grid-template-columns: 1fr !important;
+  }
+  .vs > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #dedfd7) !important;
+  }
+  .branch, .fbox, .flow > div {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 7. Case Briefs, Cards, Statutes & Q&A Cards */
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case, .mnemonic, .mnem {
+    padding: 14px 14px !important;
+    margin: 14px 0 !important;
+    border-radius: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  .casefile .cf-head, .casefile .cf-body {
+    padding: 12px 14px !important;
+  }
+
+  /* 8. Code, Monospace & Pre Blocks */
+  pre, code, .stat {
+    max-width: 100% !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: auto !important;
+    font-size: 13px !important;
+    padding: 10px 12px !important;
+  }
+  blockquote {
+    margin: 12px 0 !important;
+    padding: 10px 14px !important;
+    font-size: 15px !important;
+  }
+
+  /* 9. Images & SVG Diagrams */
+  img, svg {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+  }
+  .fig, .case-visual, figure {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin: 14px 0 !important;
+  }
+
+  /* 10. Horizontal Navigation & ToC */
+  nav.tocbar, .topbar {
+    padding: 4px 6px !important;
+    width: 100% !important;
+  }
+  nav.tocbar .inner, .topbar .toolbar {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 6px 4px !important;
+    gap: 4px !important;
+  }
+  nav.tocbar a, .topbar button {
+    padding: 5px 9px !important;
+    font-size: 11.5px !important;
+    white-space: nowrap !important;
+  }
+  .sidebar {
+    position: static !important;
+    width: 100% !important;
+    max-height: none !important;
+    padding: 0 !important;
+  }
+  .toc {
+    columns: 1 !important;
+    padding: 12px 16px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 14.5px !important;
+  }
+  .wrap, .layout, .container, .page-wrap {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  header.cover, header.hero, .hero {
+    padding: 18px 10px 16px !important;
+  }
+  th, td {
+    padding: 6px 8px !important;
+    font-size: 12px !important;
+    min-width: 75px !important;
+  }
+  .card, .casefile, .box, .statute, .qa, .chapter, .ans, .pyq, .case {
+    padding: 12px 10px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
 </style></head><body>
 <a class="skip-link" href="#main">Skip to the study guide</a>
 <aside class="sidebar" aria-label="Study guide navigation"><a class="brand" href="#cover"><span class="brand-mark" aria-hidden="true">§</span><span class="brand-text">The Family Law Desk<span>DU · Unit IV study edition</span></span></a><nav aria-label="Chapters"><div class="nav-group"><div class="nav-group-title">Reading map</div><a class="nav-link" id="toc-orientation" href="#orientation"><span class="n">00</span><span>Reading map</span></a><a class="nav-link" id="toc-foundations" href="#foundations"><span class="n">01</span><span>The legal framework</span></a></div><div class="nav-group"><div class="nav-group-title">The HAMA architecture</div><a class="nav-link" id="toc-hama-framework" href="#hama-framework"><span class="n">02</span><span>HAMA · scope &amp; requisites</span></a><a class="nav-link" id="toc-hama-adopters" href="#hama-adopters"><span class="n">03</span><span>HAMA · adopters &amp; consent</span></a><a class="nav-link" id="toc-hama-givers" href="#hama-givers"><span class="n">04</span><span>HAMA · giving in adoption</span></a><a class="nav-link" id="toc-hama-child" href="#hama-child"><span class="n">05</span><span>HAMA · eligible adoptee</span></a><a class="nav-link" id="toc-hama-conditions" href="#hama-conditions"><span class="n">06</span><span>HAMA · validity conditions</span></a><a class="nav-link" id="toc-hama-effects" href="#hama-effects"><span class="n">07</span><span>HAMA · effects &amp; evidence</span></a></div><div class="nav-group"><div class="nav-group-title">The secular &amp; CARA routes</div><a class="nav-link" id="toc-jj-framework" href="#jj-framework"><span class="n">08</span><span>JJ · 2000 &amp; 2015</span></a><a class="nav-link" id="toc-cara-eligibility" href="#cara-eligibility"><span class="n">09</span><span>CARA · eligibility</span></a><a class="nav-link" id="toc-cara-children" href="#cara-children"><span class="n">10</span><span>CARA · child-status procedure</span></a><a class="nav-link" id="toc-cara-domestic" href="#cara-domestic"><span class="n">11</span><span>CARA · domestic adoption</span></a><a class="nav-link" id="toc-cara-international" href="#cara-international"><span class="n">12</span><span>CARA · international adoption</span></a><a class="nav-link" id="toc-cara-family" href="#cara-family"><span class="n">13</span><span>CARA · relative &amp; step-parent</span></a><a class="nav-link" id="toc-cara-agencies" href="#cara-agencies"><span class="n">14</span><span>CARA · agencies &amp; authorities</span></a><a class="nav-link" id="toc-cara-safeguards" href="#cara-safeguards"><span class="n">15</span><span>CARA · safeguards &amp; schedules</span></a></div><div class="nav-group"><div class="nav-group-title">The four prescribed studies</div><a class="nav-link" id="toc-case-brajendra" href="#case-brajendra"><span class="n">16</span><span>Brajendra / Brijendra</span></a><a class="nav-link" id="toc-case-payal" href="#case-payal"><span class="n">17</span><span>Payal @ Sharinee</span></a><a class="nav-link" id="toc-case-shabnam" href="#case-shabnam"><span class="n">18</span><span>Shabnam Hashmi</span></a><a class="nav-link" id="toc-case-manju" href="#case-manju"><span class="n">19</span><span>Manju Sharma · mismatch</span></a></div><div class="nav-group"><div class="nav-group-title">Examination workshop</div><a class="nav-link" id="toc-synthesis" href="#synthesis"><span class="n">20</span><span>Comparisons &amp; application</span></a><a class="nav-link" id="toc-pyqs" href="#pyqs"><span class="n">21</span><span>DU question bank</span></a><a class="nav-link" id="toc-models-core" href="#models-core"><span class="n">22</span><span>Model answers · M1–M4</span></a><a class="nav-link" id="toc-models-problems" href="#models-problems"><span class="n">23</span><span>Model answers · M5–M8</span></a><a class="nav-link" id="toc-practice" href="#practice"><span class="n">24</span><span>Practice · P1–P6</span></a></div><div class="nav-group"><div class="nav-group-title">Updates &amp; consolidation</div><a class="nav-link" id="toc-updates" href="#updates"><span class="n">25</span><span>Selected legal updates</span></a><a class="nav-link" id="toc-revision" href="#revision"><span class="n">26</span><span>Revision &amp; quiz</span></a><a class="nav-link" id="toc-sources" href="#sources"><span class="n">27</span><span>Sources &amp; audit</span></a></div></nav><div class="sidebar-bottom"><div class="progress-copy"><span>Your reading progress</span><b id="read-count">0 / 28</b></div><div class="chapter-progress" aria-hidden="true"><i id="read-progress"></i></div><p class="sidebar-note">Optional marks are saved only in your browser, where storage is permitted.</p></div></aside>
