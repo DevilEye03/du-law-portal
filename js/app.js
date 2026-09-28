@@ -252,6 +252,84 @@
   };
 
   // =========================================================================
+  // UNIVERSAL CLEAN PATH ROUTER & ROUTE PARSER
+  // =========================================================================
+  function parseRoute(pathname, search, hash) {
+    const rawPath = (pathname || window.location.pathname || '/').replace(/\/+$/, '') || '/';
+    const params = new URLSearchParams(search || window.location.search || '');
+    const currentHash = hash || window.location.hash || '';
+
+    // Direct static resources / pages - bypass SPA routing
+    if (
+      rawPath === '/about' || rawPath === '/about.html' ||
+      rawPath === '/terms' || rawPath === '/terms.html' ||
+      rawPath === '/privacy' || rawPath === '/privacy.html' ||
+      rawPath.endsWith('.html') || rawPath.endsWith('.pdf') || rawPath.endsWith('.svg')
+    ) {
+      return null;
+    }
+
+    // Direct Tools & Modals
+    if (rawPath === '/tools/bare-acts' || params.get('tool') === 'bare-acts') {
+      return { view: 'tool', tool: 'bare-acts' };
+    }
+    if (rawPath === '/tools/bns-converter' || rawPath === '/tools/bns' || params.get('tool') === 'bns') {
+      return { view: 'tool', tool: 'bns' };
+    }
+    if (rawPath === '/tools/flashcards' || params.get('tool') === 'flashcards') {
+      return { view: 'tool', tool: 'flashcards' };
+    }
+    if (rawPath === '/feedback' || currentHash === '#feedback' || params.get('feedback') === 'true') {
+      return { view: 'feedback' };
+    }
+    if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
+      return { view: 'contact' };
+    }
+
+    // Subject route: /subject/:subId or /subject/:subId/:tab
+    const subjectMatch = rawPath.match(/^\/(?:subject|s)\/([a-zA-Z0-9_-]+)(?:\/([a-zA-Z0-9_-]+))?$/i);
+    if (subjectMatch) {
+      const subId = subjectMatch[1].toLowerCase();
+      const tab = subjectMatch[2] ? subjectMatch[2].toLowerCase() : (params.get('tab') || 'topics');
+      return { view: 'hub', subId, tab };
+    }
+
+    // Direct subject alias: e.g. /contract or /contract/cases
+    const cleanSlugMatch = rawPath.match(/^\/([a-zA-Z0-9_-]+)(?:\/([a-zA-Z0-9_-]+))?$/i);
+    if (cleanSlugMatch) {
+      const candidate = cleanSlugMatch[1].toLowerCase();
+      const data = window.DU_LAW_PORTAL_DATA;
+      if (data && data.subjects && data.subjects[candidate]) {
+        const tab = cleanSlugMatch[2] ? cleanSlugMatch[2].toLowerCase() : (params.get('tab') || 'topics');
+        return { view: 'hub', subId: candidate, tab };
+      }
+    }
+
+    // Semester route: /semester-1, /semester/1, /sem-1, /sem/1
+    const semMatch = rawPath.match(/^\/(?:semester|sem)[-/]?([1-6])$/i);
+    if (semMatch) {
+      return { view: 'subjects', semId: parseInt(semMatch[1], 10) };
+    }
+
+    // Legacy query params fallbacks for backwards compatibility
+    const qSub = params.get('subject') || params.get('sub');
+    const qSem = params.get('sem');
+    const qTab = params.get('tab') || 'topics';
+    if (qSub) {
+      return { view: 'hub', subId: qSub, tab: qTab, semId: parseInt(qSem, 10) || undefined };
+    }
+    if (qSem) {
+      return { view: 'subjects', semId: parseInt(qSem, 10) || 1 };
+    }
+    if (params.get('view') === 'subjects') {
+      const savedSem = localStorage.getItem('du_law_selected_semester');
+      return { view: 'subjects', semId: savedSem ? parseInt(savedSem, 10) : 1 };
+    }
+
+    return { view: 'semester' };
+  }
+
+  // =========================================================================
   // TOAST NOTIFICATION SYSTEM
   // =========================================================================
   let toastTimeout = null;
@@ -435,8 +513,9 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
       if (pushHistory) {
+        document.title = 'Make Law Easy — Delhi University Law Notes Portal (LL.B.)';
         if (!window.history.state || window.history.state.view !== 'semester') {
-          window.history.pushState({ view: 'semester' }, '', window.location.pathname);
+          window.history.pushState({ view: 'semester' }, '', '/');
         }
       }
     } else if (viewName === 'subjects') {
@@ -453,6 +532,13 @@
       renderSubjectsGrid();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       window.dispatchEvent(new Event('resize'));
+      if (pushHistory && state.currentSemester) {
+        document.title = `Semester ${state.currentSemester} Subjects & Syllabus | Make Law Easy`;
+        const semUrl = `/semester-${state.currentSemester}`;
+        if (!window.history.state || window.history.state.view !== 'subjects' || window.history.state.semId !== state.currentSemester) {
+          window.history.pushState({ view: 'subjects', semId: state.currentSemester }, '', semUrl);
+        }
+      }
     } else if (viewName === 'hub') {
       elements.subjectHubView.classList.add('active');
       if (elements.mobileBottomNav) elements.mobileBottomNav.classList.add('active');
@@ -661,7 +747,8 @@
     showView('subjects', false);
 
     if (pushHistory) {
-      const semUrl = `?sem=${semId}`;
+      document.title = `Semester ${semId} Subjects & Syllabus | Make Law Easy`;
+      const semUrl = `/semester-${semId}`;
       if (!window.history.state || window.history.state.view !== 'subjects' || window.history.state.semId !== semId) {
         window.history.pushState({ view: 'subjects', semId: semId }, '', semUrl);
       }
@@ -831,9 +918,10 @@
 
     if (pushHistory) {
       const semId = state.currentSemester || 1;
-      const hubUrl = `?sem=${semId}&sub=${subId}`;
+      const hubUrl = `/subject/${subId}`;
+      document.title = `${sub.name} (${sub.code || ''}) | Make Law Easy`;
       if (!window.history.state || window.history.state.view !== 'hub' || window.history.state.subId !== subId) {
-        window.history.pushState({ view: 'hub', semId: semId, subId: subId }, '', hubUrl);
+        window.history.pushState({ view: 'hub', semId: semId, subId: subId, tab: 'topics' }, '', hubUrl);
       }
     }
 
@@ -844,13 +932,28 @@
       semester_id: state.currentSemester
     });
 
-    // Switch to Default Tab
-    switchHubTab('topics');
+    // Switch to Default Tab without pushing redundant history
+    switchHubTab('topics', false);
   }
 
-  function switchHubTab(tabName) {
+  function switchHubTab(tabName, pushHistory = true) {
     state.currentTab = tabName;
     state.activeQuickFilter = 'all';
+
+    if (pushHistory && state.currentSubject) {
+      const subId = state.currentSubject.id;
+      const tabPath = tabName === 'topics' ? `/subject/${subId}` : `/subject/${subId}/${tabName}`;
+      const tabTitles = {
+        topics: `${state.currentSubject.name} (${state.currentSubject.code || ''}) | Make Law Easy`,
+        cases: `Landmark Cases — ${state.currentSubject.name} | Make Law Easy`,
+        pyqs: `PYQs & Model Answers — ${state.currentSubject.name} | Make Law Easy`,
+        revision: `Quick Revision — ${state.currentSubject.name} | Make Law Easy`
+      };
+      document.title = tabTitles[tabName] || `${state.currentSubject.name} | Make Law Easy`;
+      if (!window.history.state || window.history.state.tab !== tabName || window.history.state.subId !== subId) {
+        window.history.pushState({ view: 'hub', semId: state.currentSemester, subId: subId, tab: tabName }, '', tabPath);
+      }
+    }
 
     trackEvent('switch_tab', {
       tab_name: tabName,
@@ -3487,13 +3590,8 @@ Submission Time: ${new Date().toLocaleString()}
       }
       closeHeaderSemDropdown();
 
-      // 3. Restore matching view based on URL parameters and history state
-      const urlParams = new URLSearchParams(window.location.search);
-      const querySub = urlParams.get('subject') || urlParams.get('sub') || (st && st.subId);
-      const querySem = parseInt(urlParams.get('sem'), 10) || (st && st.semId);
+      // 3. Check for reader state
       const isReaderHash = window.location.hash.includes('reader') || (st && st.view === 'reader');
-
-      // Priority A: If reader hash/state is active with fileUrl -> Open Reader
       if (isReaderHash && st && st.fileUrl) {
         if (!elements.readerModal.classList.contains('active')) {
           openReader(st.fileUrl, st.title, st.subInfo, false);
@@ -3501,28 +3599,60 @@ Submission Time: ${new Date().toLocaleString()}
         return;
       }
 
-      // Priority B: If subject is present in URL or state -> All Topics Page (Subject Hub)
-      if (querySub) {
-        if (querySem) state.currentSemester = querySem;
-        if (!state.currentSubject || state.currentSubject.id !== querySub) {
-          openSubjectHub(querySub, false);
+      // 4. Resolve Route using universal route parser
+      const route = parseRoute(window.location.pathname, window.location.search, window.location.hash);
+      if (!route) return;
+
+      if (route.view === 'hub' && route.subId) {
+        if (st && st.semId) {
+          state.currentSemester = st.semId;
+        } else {
+          const data = window.DU_LAW_PORTAL_DATA;
+          if (data && data.semesters) {
+            const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(route.subId));
+            if (foundSem) state.currentSemester = foundSem.id;
+          }
+        }
+        if (!state.currentSubject || state.currentSubject.id !== route.subId) {
+          openSubjectHub(route.subId, false);
         } else {
           showView('hub', false);
+        }
+        const targetTab = route.tab || (st && st.tab) || 'topics';
+        if (['topics', 'cases', 'pyqs', 'revision'].includes(targetTab)) {
+          switchHubTab(targetTab, false);
         }
         return;
       }
 
-      // Priority C: If semester is present in URL or state -> Subject Page (Subjects View)
-      if (querySem) {
-        if (state.currentSemester !== querySem) {
-          state.currentSemester = querySem;
-          localStorage.setItem('du_law_selected_semester', querySem);
+      if (route.view === 'subjects' && route.semId) {
+        const semId = route.semId;
+        if (state.currentSemester !== semId) {
+          state.currentSemester = semId;
+          localStorage.setItem('du_law_selected_semester', semId);
         }
         showView('subjects', false);
         return;
       }
 
-      // Priority D: Otherwise -> Homepage (Semester Selection View)
+      if (route.view === 'tool') {
+        if (route.tool === 'bare-acts') openBareActDrawer();
+        else if (route.tool === 'bns') openBnsConverter();
+        else if (route.tool === 'flashcards') openFlashcardsModal();
+        return;
+      }
+
+      if (route.view === 'feedback') {
+        navigateToFeedback();
+        return;
+      }
+
+      if (route.view === 'contact') {
+        openContactModal();
+        return;
+      }
+
+      // Homepage fallback
       showView('semester', false);
     });
 
@@ -3600,51 +3730,91 @@ Submission Time: ${new Date().toLocaleString()}
       });
     }
 
-    // Initial Routing: Check URL query parameters, then saved semester in localStorage
-    const urlParams = new URLSearchParams(window.location.search);
-    const querySub = urlParams.get('subject') || urlParams.get('sub');
-    const querySem = urlParams.get('sem');
-    const queryView = urlParams.get('view');
-    const queryTab = urlParams.get('tab');
+    // Initial Routing: Parse current URL path, search params, and hash
+    const initialRoute = parseRoute(window.location.pathname, window.location.search, window.location.hash);
 
-    if (querySub) {
+    if (initialRoute && initialRoute.view === 'hub' && initialRoute.subId) {
       const data = window.DU_LAW_PORTAL_DATA;
-      let foundSemId = 1;
-      if (data) {
-        const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(querySub));
+      let foundSemId = initialRoute.semId || 1;
+      if (data && data.semesters) {
+        const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(initialRoute.subId));
         if (foundSem) {
           state.currentSemester = foundSem.id;
           foundSemId = foundSem.id;
         }
       }
-      openSubjectHub(querySub, false);
-      window.history.replaceState({ view: 'hub', semId: state.currentSemester || foundSemId, subId: querySub }, '', window.location.href);
-      if (queryTab && ['topics', 'cases', 'pyqs', 'revision'].includes(queryTab)) {
+      openSubjectHub(initialRoute.subId, false);
+      const activeTab = (initialRoute.tab && ['topics', 'cases', 'pyqs', 'revision'].includes(initialRoute.tab)) ? initialRoute.tab : 'topics';
+      const tabPath = activeTab !== 'topics' ? `/subject/${initialRoute.subId}/${activeTab}` : `/subject/${initialRoute.subId}`;
+      window.history.replaceState({ view: 'hub', semId: state.currentSemester || foundSemId, subId: initialRoute.subId, tab: activeTab }, '', tabPath);
+      if (activeTab !== 'topics') {
         setTimeout(() => {
-          const targetBtn = Array.from(elements.hubTabs).find(b => b.dataset.tab === queryTab);
-          if (targetBtn) targetBtn.click();
+          switchHubTab(activeTab, false);
         }, 50);
       }
-    } else if (querySem) {
-      const semNum = parseInt(querySem, 10) || 1;
+    } else if (initialRoute && initialRoute.view === 'subjects' && initialRoute.semId) {
+      const semNum = initialRoute.semId;
       selectSemester(semNum, false);
-      window.history.replaceState({ view: 'subjects', semId: semNum }, '', window.location.href);
-    } else if (queryView === 'subjects') {
-      const savedSem = localStorage.getItem('du_law_selected_semester');
-      const semNum = savedSem ? parseInt(savedSem, 10) : 1;
-      selectSemester(semNum, false);
-      window.history.replaceState({ view: 'subjects', semId: semNum }, '', `?sem=${semNum}`);
+      window.history.replaceState({ view: 'subjects', semId: semNum }, '', `/semester-${semNum}`);
+    } else if (initialRoute && initialRoute.view === 'tool') {
+      showView('semester', false);
+      if (initialRoute.tool === 'bare-acts') setTimeout(openBareActDrawer, 100);
+      else if (initialRoute.tool === 'bns') setTimeout(openBnsConverter, 100);
+      else if (initialRoute.tool === 'flashcards') setTimeout(openFlashcardsModal, 100);
+    } else if (initialRoute && initialRoute.view === 'feedback') {
+      showView('semester', false);
+      setTimeout(navigateToFeedback, 350);
+    } else if (initialRoute && initialRoute.view === 'contact') {
+      showView('semester', false);
+      setTimeout(openContactModal, 250);
     } else {
       showView('semester', false);
-      window.history.replaceState({ view: 'semester' }, '', window.location.pathname);
+      window.history.replaceState({ view: 'semester' }, '', '/');
     }
+
+    // Global link delegation for seamless SPA navigation
+    document.addEventListener('click', (e) => {
+      const anchor = e.target.closest('a');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      if (
+        anchor.target === '_blank' ||
+        href.startsWith('http://') ||
+        href.startsWith('https://') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('#')
+      ) {
+        return;
+      }
+
+      const route = parseRoute(href, '', '');
+      if (!route) return;
+
+      if (route.view === 'hub' && route.subId) {
+        e.preventDefault();
+        openSubjectHub(route.subId, true);
+        if (route.tab && route.tab !== 'topics') {
+          switchHubTab(route.tab, true);
+        }
+      } else if (route.view === 'subjects' && route.semId) {
+        e.preventDefault();
+        selectSemester(route.semId, true);
+      } else if (route.view === 'semester') {
+        e.preventDefault();
+        showView('semester', true);
+      }
+    });
 
     // Student Feedback System (Google Forms Style)
     initStudentFeedbackForm();
 
-    if (window.location.hash === '#contact' || urlParams.get('contact') === 'true') {
+    if (window.location.hash === '#contact' || (new URLSearchParams(window.location.search)).get('contact') === 'true') {
       setTimeout(openContactModal, 250);
-    } else if (window.location.hash === '#feedback' || urlParams.get('feedback') === 'true') {
+    } else if (window.location.hash === '#feedback' || (new URLSearchParams(window.location.search)).get('feedback') === 'true') {
       setTimeout(navigateToFeedback, 350);
     }
   }

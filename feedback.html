@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NNW78WFV');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Student Academic Survey & Feedback — Make Law Easy</title>
+  <meta name="description" content="Share your feedback, request new subjects, and help elevate the DU LL.B. study portal. Formatted in Google Forms style with DPDP Act 2023 compliance.">
+  <link rel="canonical" href="https://makelaweasy.in/feedback">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .standalone-page-body {
+      background: var(--bg-body, #0a0d14);
+      color: var(--text-primary, #f1f5f9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-header-nav {
+      background: var(--bg-card, rgba(17, 24, 39, 0.95));
+      border-bottom: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 20px;
+    }
+    .tool-header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .tool-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary, #fff);
+    }
+    .tool-brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #7c3aed, #c9a84c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+    }
+    .tool-brand-text h1 {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .tool-brand-text span {
+      font-size: 0.72rem;
+      color: var(--du-gold, #c9a84c);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .tool-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-tool-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: var(--radius-pill, 9999px);
+      color: var(--text-primary, #fff);
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-tool-back:hover {
+      background: var(--primary, #2563eb);
+      border-color: var(--primary, #2563eb);
+      color: #fff;
+      transform: translateX(-2px);
+    }
+    .theme-toggle-standalone {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      color: var(--text-secondary, #cbd5e1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    .feedback-stage-container {
+      max-width: 820px;
+      margin: 30px auto 60px;
+      padding: 0 16px;
+      width: 100%;
+      flex: 1;
+    }
+    .tool-footer {
+      background: var(--bg-card, #0f172a);
+      border-top: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted, #94a3b8);
+      margin-top: auto;
+    }
+    .tool-footer a { color: var(--du-gold, #c9a84c); text-decoration: none; }
+    @media (max-width: 768px) {
+      .tool-header-nav { padding: 10px 14px; }
+      .feedback-stage-container { margin: 16px auto 40px; padding: 0 10px; }
+    }
+  </style>
+</head>
+<body class="standalone-page-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNW78WFV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Top Navigation Header -->
+  <header class="tool-header-nav">
+    <div class="tool-header-inner">
+      <a href="/" class="tool-brand" title="Make Law Easy Homepage">
+        <div class="tool-brand-logo"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="tool-brand-text">
+          <h1>Make Law Easy</h1>
+          <span>DU Law Portal</span>
+        </div>
+      </a>
+      <div class="tool-nav-actions">
+        <a href="/" class="btn-tool-back"><i class="fa-solid fa-arrow-left"></i> <span>Study Portal</span></a>
+        <button class="theme-toggle-standalone" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Feedback Form Stage -->
+  <main class="feedback-stage-container">
+    <div class="gf-container">
+      
+      <!-- Google Form Header Card -->
+      <div class="gf-header-card">
+        <div class="gf-header-strip"></div>
+        <div class="gf-header-content">
+          <div class="gf-crest-pill">
+            <i class="fa-solid fa-graduation-cap"></i> Make Law Easy • Academic Survey
+          </div>
+          <h2 class="gf-form-title">Student Experience &amp; Academic Feedback</h2>
+          <p class="gf-form-desc">
+            Help us elevate your LL.B. preparation. Your feedback directly shapes new subject notes, landmark case additions, and study tools for Delhi University law students.
+          </p>
+          <div class="gf-header-meta">
+            <span><i class="fa-solid fa-envelope"></i> Submissions routed directly to: <code>ankur@makelaweasy.in</code></span>
+          </div>
+          <div class="gf-required-note">
+            <span class="gf-req-star">*</span> Indicates required question
+          </div>
+        </div>
+      </div>
+
+      <!-- The Form -->
+      <form class="gf-form" id="studentFeedbackForm" novalidate>
+
+        <!-- SECTION 1: STUDENT PROFILE -->
+        <div class="gf-section-divider">
+          <div class="gf-section-tag"><i class="fa-solid fa-user-graduate"></i> Section 1 of 3: Academic Profile</div>
+          <p class="gf-section-desc">Tell us a little about your academic journey so we can tailor notes to your specific batch and institution.</p>
+        </div>
+
+        <!-- Q1: Name -->
+        <div class="gf-card" id="qCardName">
+          <div class="gf-question-title">Full Name / Preferred Name</div>
+          <div class="gf-question-sub">Optional — how would you like us to address you?</div>
+          <div class="gf-input-wrap">
+            <input type="text" name="student_name" id="gfStudentName" class="gf-input" placeholder="Your answer" autocomplete="name">
+            <span class="gf-input-line"></span>
+          </div>
+        </div>
+
+        <!-- Q2: Email -->
+        <div class="gf-card" id="qCardEmail" data-required="true">
+          <div class="gf-question-title">Email Address <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">For follow-up, new subject release notifications, and editorial updates.</div>
+          <div class="gf-input-wrap">
+            <input type="email" name="student_email" id="gfStudentEmail" class="gf-input" placeholder="your.name@example.com" required autocomplete="email">
+            <span class="gf-input-line"></span>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address</div>
+        </div>
+
+        <!-- Q3: Law Centre / College -->
+        <div class="gf-card" id="qCardCentre" data-required="true">
+          <div class="gf-question-title">Law Centre / Institution <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">Select your current faculty centre or university.</div>
+          <div class="gf-radio-group">
+            <label class="gf-radio-label">
+              <input type="radio" name="student_centre" value="Campus Law Centre (CLC), Faculty of Law, DU" required>
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Campus Law Centre (CLC), Faculty of Law, DU</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_centre" value="Law Centre–I (LC-1), Faculty of Law, DU">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Law Centre–I (LC-1), Faculty of Law, DU</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_centre" value="Law Centre–II (LC-2), Faculty of Law, DU">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Law Centre–II (LC-2), Faculty of Law, DU</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_centre" value="Other Indian Law School / State University">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Other Indian Law School / State University</span>
+            </label>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select your institution</div>
+        </div>
+
+        <!-- Q4: Semester -->
+        <div class="gf-card" id="qCardSemester" data-required="true">
+          <div class="gf-question-title">Current Semester <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">Select your current LL.B. semester of study.</div>
+          <div class="gf-radio-group grid-two-cols">
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 1" required>
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 1</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 2">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 2</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 3">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 3</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 4">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 4</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 5">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 5</span>
+            </label>
+            <label class="gf-radio-label">
+              <input type="radio" name="student_semester" value="Semester 6">
+              <span class="gf-radio-circle"></span>
+              <span class="gf-radio-text">Semester 6</span>
+            </label>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select your semester</div>
+        </div>
+
+        <!-- SECTION 2: EXPERIENCE EVALUATION -->
+        <div class="gf-section-divider">
+          <div class="gf-section-tag"><i class="fa-solid fa-star"></i> Section 2 of 3: Experience Evaluation</div>
+          <p class="gf-section-desc">Rate the usefulness and depth of our notes and exam revision capsules.</p>
+        </div>
+
+        <!-- Q5: Overall Experience -->
+        <div class="gf-card" id="qCardOverallRating" data-required="true">
+          <div class="gf-question-title">Overall Quality &amp; Value of Make Law Easy <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">How would you rate the overall platform for your LL.B. preparation? (1 = Poor, 5 = Outstanding)</div>
+          <div class="gf-linear-scale">
+            <span class="gf-scale-side-label">Needs Improvement</span>
+            <div class="gf-scale-points">
+              <label class="gf-scale-point"><span class="gf-point-num">1</span><input type="radio" name="overall_rating" value="1" required><span class="gf-scale-dot"></span></label>
+              <label class="gf-scale-point"><span class="gf-point-num">2</span><input type="radio" name="overall_rating" value="2"><span class="gf-scale-dot"></span></label>
+              <label class="gf-scale-point"><span class="gf-point-num">3</span><input type="radio" name="overall_rating" value="3"><span class="gf-scale-dot"></span></label>
+              <label class="gf-scale-point"><span class="gf-point-num">4</span><input type="radio" name="overall_rating" value="4"><span class="gf-scale-dot"></span></label>
+              <label class="gf-scale-point"><span class="gf-point-num">5</span><input type="radio" name="overall_rating" value="5"><span class="gf-scale-dot"></span></label>
+            </div>
+            <span class="gf-scale-side-label">Outstanding</span>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select a rating</div>
+        </div>
+
+        <!-- Q6: Features Used -->
+        <div class="gf-card" id="qCardFeatures" data-required="true">
+          <div class="gf-question-title">Which features do you find most valuable? <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">Select all that have aided your exam prep.</div>
+          <div class="gf-check-group">
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="Full Topic Dossiers & Structured Syllabus Notes"><span class="gf-check-box"></span><span class="gf-check-text">Full Topic Dossiers &amp; Structured Syllabus Notes</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="Landmark Cases (5-Step FIRAC Analysis)"><span class="gf-check-box"></span><span class="gf-check-text">Landmark Cases (5-Step FIRAC Analysis)</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="PYQs & 20-Mark Model Answers"><span class="gf-check-box"></span><span class="gf-check-text">PYQs &amp; 20-Mark Model Answers</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="Quick Revision Capsules & Strategy Tables"><span class="gf-check-box"></span><span class="gf-check-text">Quick Revision Capsules &amp; Strategy Tables</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="Statutory Bare Acts Library & Section Lookup"><span class="gf-check-box"></span><span class="gf-check-text">Statutory Bare Acts Library &amp; Section Lookup</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="BNS 2023 ↔ IPC 1860 Live Converter"><span class="gf-check-box"></span><span class="gf-check-text">BNS 2023 ↔ IPC 1860 Live Converter</span></label>
+            <label class="gf-check-label"><input type="checkbox" name="frequent_features" value="Precedent Recall Flashcards"><span class="gf-check-box"></span><span class="gf-check-text">Precedent Recall Flashcards</span></label>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Please select at least one feature</div>
+        </div>
+
+        <!-- SECTION 3: SUGGESTIONS & CONSENT -->
+        <div class="gf-section-divider">
+          <div class="gf-section-tag"><i class="fa-solid fa-lightbulb"></i> Section 3 of 3: Recommendations &amp; Consent</div>
+          <p class="gf-section-desc">Share your suggestions to make Make Law Easy even more valuable for the community.</p>
+        </div>
+
+        <!-- Q7: Suggestions -->
+        <div class="gf-card" id="qCardSuggestions">
+          <div class="gf-question-title">Suggestions for Improvement or Requests for New Features / Subjects</div>
+          <div class="gf-question-sub">What would make this portal even more helpful for your exams?</div>
+          <div class="gf-input-wrap">
+            <textarea name="student_suggestions" id="gfStudentSuggestions" class="gf-textarea" rows="4" placeholder="Your answer"></textarea>
+            <span class="gf-input-line"></span>
+          </div>
+        </div>
+
+        <!-- Q8: DPDP Consent -->
+        <div class="gf-card" id="qCardConsent" data-required="true">
+          <div class="gf-question-title">Privacy &amp; Data Protection Consent <span class="gf-req-star">*</span></div>
+          <div class="gf-question-sub">In compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act).</div>
+          <div class="gf-check-group">
+            <label class="gf-check-label">
+              <input type="checkbox" name="dpdp_consent" id="gfDpdpConsent" value="consented" required>
+              <span class="gf-check-box"></span>
+              <span class="gf-check-text">
+                I agree that my feedback may be processed by Make Law Easy to enhance academic materials in accordance with the <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &amp; DPDP Act 2023.
+              </span>
+            </label>
+          </div>
+          <div class="gf-error-msg"><i class="fa-solid fa-circle-exclamation"></i> Consent is required to submit feedback</div>
+        </div>
+
+        <!-- Form Actions Row -->
+        <div class="gf-actions-row">
+          <button type="submit" class="gf-submit-btn" id="gfSubmitBtn">
+            <i class="fa-solid fa-paper-plane"></i> <span>Submit Feedback</span>
+          </button>
+          <button type="button" class="gf-clear-btn" id="gfClearBtn" onclick="document.getElementById('studentFeedbackForm').reset()">
+            Clear form
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Post-Submission Success Card (Hidden Initially) -->
+      <div class="gf-success-card" id="gfSuccessCard" style="display: none;" role="alert">
+        <div class="gf-header-strip"></div>
+        <div class="gf-success-body">
+          <div class="gf-success-icon-wrap">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2 class="gf-success-title">Student Experience &amp; Academic Feedback</h2>
+          <p class="gf-success-msg">Your response has been recorded.</p>
+          
+          <div class="gf-dispatch-status" id="gfDispatchStatus">
+            <div class="gf-status-pill success">
+              <i class="fa-solid fa-paper-plane"></i> <span>Transmitted to Editorial Inbox (<code>ankur@makelaweasy.in</code>)</span>
+            </div>
+            <div class="gf-status-pill local-saved">
+              <i class="fa-solid fa-database"></i> <span>Saved to Local Student Feedback Journal</span>
+            </div>
+          </div>
+
+          <div class="gf-success-actions">
+            <a href="/" class="gf-success-btn">
+              <i class="fa-solid fa-book-open"></i> <span>Return to Study Portal</span>
+            </a>
+            <button type="button" class="gf-another-response-btn" id="gfAnotherResponseBtn" onclick="location.reload()">
+              Submit another response
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="tool-footer">
+    <p>© 2026 Make Law Easy • Educational portal for Faculty of Law, University of Delhi. <a href="/terms">Terms</a> • <a href="/privacy">Privacy</a> • <a href="/about">About</a></p>
+  </footer>
+
+  <!-- Submission Script -->
+  <script>
+    (function() {
+      // Theme Management
+      const savedTheme = localStorage.getItem('du_law_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const themeBtn = document.getElementById('themeToggleBtn');
+      function updateThemeIcon(t) {
+        if (!themeBtn) return;
+        themeBtn.innerHTML = t === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+      }
+      updateThemeIcon(savedTheme);
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('du_law_theme', next);
+          updateThemeIcon(next);
+        });
+      }
+
+      const form = document.getElementById('studentFeedbackForm');
+      const successCard = document.getElementById('gfSuccessCard');
+      if (!form) return;
+
+      const cards = form.querySelectorAll('.gf-card');
+      cards.forEach(card => {
+        card.addEventListener('focusin', () => card.classList.add('focused'));
+        card.addEventListener('focusout', () => card.classList.remove('focused'));
+        card.addEventListener('input', () => card.classList.remove('has-error'));
+        card.addEventListener('change', () => card.classList.remove('has-error'));
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let hasError = false;
+        let firstErrorCard = null;
+
+        function markError(card) {
+          if (!card) return;
+          card.classList.add('has-error');
+          hasError = true;
+          if (!firstErrorCard) firstErrorCard = card;
+        }
+
+        const emailInput = form.querySelector('#gfStudentEmail');
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailVal || !emailRegex.test(emailVal)) markError(form.querySelector('#qCardEmail'));
+
+        const centreChecked = form.querySelector('input[name="student_centre"]:checked');
+        if (!centreChecked) markError(form.querySelector('#qCardCentre'));
+
+        const semChecked = form.querySelector('input[name="student_semester"]:checked');
+        if (!semChecked) markError(form.querySelector('#qCardSemester'));
+
+        const ratingChecked = form.querySelector('input[name="overall_rating"]:checked');
+        if (!ratingChecked) markError(form.querySelector('#qCardOverallRating'));
+
+        const featuresChecked = form.querySelectorAll('input[name="frequent_features"]:checked');
+        if (!featuresChecked || featuresChecked.length === 0) markError(form.querySelector('#qCardFeatures'));
+
+        const consentChecked = form.querySelector('#gfDpdpConsent');
+        if (!consentChecked || !consentChecked.checked) markError(form.querySelector('#qCardConsent'));
+
+        if (hasError) {
+          if (firstErrorCard) {
+            firstErrorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            const focusable = firstErrorCard.querySelector('input, textarea');
+            if (focusable) focusable.focus();
+          }
+          return;
+        }
+
+        const payload = {
+          id: 'resp_' + Date.now(),
+          timestamp: new Date().toISOString(),
+          name: form.querySelector('#gfStudentName')?.value.trim() || 'Anonymous Student',
+          email: emailVal,
+          centre: centreChecked.value,
+          semester: semChecked.value,
+          overall_rating: ratingChecked.value + '/5',
+          frequent_features: Array.from(featuresChecked).map(cb => cb.value),
+          suggestions: form.querySelector('#gfStudentSuggestions')?.value.trim() || 'None',
+          consent: 'Agreed to DPDP Act 2023 guidelines'
+        };
+
+        try {
+          const stored = JSON.parse(localStorage.getItem('du_portal_feedback_responses') || '[]');
+          stored.push(payload);
+          localStorage.setItem('du_portal_feedback_responses', JSON.stringify(stored));
+        } catch (err) {
+          console.warn('[Feedback] Local storage write failed:', err);
+        }
+
+        // Show Success Card
+        form.style.display = 'none';
+        if (successCard) {
+          successCard.style.display = 'block';
+          successCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

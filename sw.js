@@ -1,10 +1,14 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v42";
+const CACHE_NAME = "du-law-portal-v43";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./terms.html",
   "./privacy.html",
+  "./feedback.html",
+  "./tools/bare-acts.html",
+  "./tools/bns-converter.html",
+  "./tools/flashcards.html",
   "./css/styles.css",
   "./css/notes-responsive.css",
   "./js/wave_grid_background.js",

@@ -34,19 +34,35 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  fs.stat(fullPath, (err, stats) => {
-    if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/plain' });
-      res.end('404 Not Found: ' + reqPath);
-      return;
-    }
-
+  // 1. Check exact file
+  if (fs.existsSync(fullPath) && fs.statSync(fullPath).isFile()) {
     const ext = path.extname(fullPath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
-
     res.writeHead(200, { 'Content-Type': contentType });
     fs.createReadStream(fullPath).pipe(res);
-  });
+    return;
+  }
+
+  // 2. Check cleanUrls (.html extension match)
+  const htmlPath = fullPath + '.html';
+  if (fs.existsSync(htmlPath) && fs.statSync(htmlPath).isFile()) {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    fs.createReadStream(htmlPath).pipe(res);
+    return;
+  }
+
+  // 3. SPA fallback to index.html for clean extension-less routes (like /semester-1, /subject/contract)
+  if (!path.extname(reqPath)) {
+    const indexPath = path.join(ROOT_DIR, 'index.html');
+    if (fs.existsSync(indexPath)) {
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      fs.createReadStream(indexPath).pipe(res);
+      return;
+    }
+  }
+
+  res.writeHead(404, { 'Content-Type': 'text/plain' });
+  res.end('404 Not Found: ' + reqPath);
 });
 
 server.listen(PORT, () => {
