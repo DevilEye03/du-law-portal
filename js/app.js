@@ -445,6 +445,7 @@
       renderHeaderSemDropdown();
       renderSubjectsGrid();
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
     } else if (viewName === 'hub') {
       elements.subjectHubView.classList.add('active');
       if (elements.mobileBottomNav) elements.mobileBottomNav.classList.add('active');
@@ -1775,7 +1776,22 @@
   function openReader(fileUrl, title, subInfo, pushHistory = true) {
     elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
     elements.readerSubInfo.textContent = subInfo || 'Make Law Easy';
-    elements.readerIframe.src = fileUrl;
+
+    // Safely insert iframe without polluting top window history stack
+    const iframeWrap = document.querySelector('.reader-iframe-wrap');
+    if (iframeWrap) {
+      iframeWrap.innerHTML = '';
+      const iframe = document.createElement('iframe');
+      iframe.className = 'reader-iframe';
+      iframe.id = 'readerIframe';
+      iframe.title = 'Study Notes Reader';
+      iframe.src = fileUrl;
+      iframeWrap.appendChild(iframe);
+      elements.readerIframe = iframe;
+    } else if (elements.readerIframe) {
+      elements.readerIframe.src = fileUrl;
+    }
+
     elements.readerModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 
@@ -1805,7 +1821,10 @@
 
   function closeReader(popHistory = false) {
     elements.readerModal.classList.remove('active');
-    elements.readerIframe.src = 'about:blank';
+    const iframeWrap = document.querySelector('.reader-iframe-wrap');
+    if (iframeWrap) {
+      iframeWrap.innerHTML = '';
+    }
     document.body.style.overflow = '';
 
     if (popHistory && window.history.state && window.history.state.view === 'reader') {
@@ -3439,29 +3458,43 @@ Submission Time: ${new Date().toLocaleString()}
       }
       closeHeaderSemDropdown();
 
-      // 3. Restore matching view based on history state
-      if (!st || st.view === 'semester') {
-        showView('semester', false);
-      } else if (st.view === 'subjects') {
-        if (st.semId && st.semId !== state.currentSemester) {
-          state.currentSemester = st.semId;
-          localStorage.setItem('du_law_selected_semester', st.semId);
-        }
-        showView('subjects', false);
-      } else if (st.view === 'hub') {
-        if (st.semId) state.currentSemester = st.semId;
-        if (st.subId) {
-          if (!state.currentSubject || state.currentSubject.id !== st.subId) {
-            openSubjectHub(st.subId, false);
-          } else {
-            showView('hub', false);
-          }
-        }
-      } else if (st.view === 'reader') {
-        if (st.fileUrl) {
+      // 3. Restore matching view based on URL parameters and history state
+      const urlParams = new URLSearchParams(window.location.search);
+      const querySub = urlParams.get('subject') || urlParams.get('sub') || (st && st.subId);
+      const querySem = parseInt(urlParams.get('sem'), 10) || (st && st.semId);
+      const isReaderHash = window.location.hash.includes('reader') || (st && st.view === 'reader');
+
+      // Priority A: If reader hash/state is active with fileUrl -> Open Reader
+      if (isReaderHash && st && st.fileUrl) {
+        if (!elements.readerModal.classList.contains('active')) {
           openReader(st.fileUrl, st.title, st.subInfo, false);
         }
+        return;
       }
+
+      // Priority B: If subject is present in URL or state -> All Topics Page (Subject Hub)
+      if (querySub) {
+        if (querySem) state.currentSemester = querySem;
+        if (!state.currentSubject || state.currentSubject.id !== querySub) {
+          openSubjectHub(querySub, false);
+        } else {
+          showView('hub', false);
+        }
+        return;
+      }
+
+      // Priority C: If semester is present in URL or state -> Subject Page (Subjects View)
+      if (querySem) {
+        if (state.currentSemester !== querySem) {
+          state.currentSemester = querySem;
+          localStorage.setItem('du_law_selected_semester', querySem);
+        }
+        showView('subjects', false);
+        return;
+      }
+
+      // Priority D: Otherwise -> Homepage (Semester Selection View)
+      showView('semester', false);
     });
 
     // Keyboard ESC to close reader or mobile tools
