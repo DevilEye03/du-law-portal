@@ -12,5 +12,8 @@
     "law-notes"
   ],
   "author": "DevilEye03",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "qrcode": "^1.5.4"
+  }
 }
