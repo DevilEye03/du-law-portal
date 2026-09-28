@@ -1886,7 +1886,9 @@
   // =========================================================================
   function openReader(fileUrl, title, subInfo, pushHistory = true) {
     elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
-    elements.readerSubInfo.textContent = subInfo || 'Make Law Easy';
+    if (elements.readerSubInfo) {
+      elements.readerSubInfo.textContent = (subInfo || (state.currentSubject ? state.currentSubject.shortName || state.currentSubject.name : 'Make Law Easy')).replace(/\s*•\s*DU Notes/gi, '').replace(/\s*•\s*Landmark Precedent/gi, '').replace(/\s*•\s*Last-Minute Revision/gi, '').trim();
+    }
 
     // Safely insert iframe without polluting top window history stack
     const iframeWrap = document.querySelector('.reader-iframe-wrap');

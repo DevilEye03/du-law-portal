@@ -115,23 +115,158 @@
     }
     #readerModal .reader-header,
     .reader-header {
-      height: 52px !important;
-      min-height: 52px !important;
-      max-height: 52px !important;
-      padding: 0 18px !important;
+      height: 44px !important;
+      min-height: 44px !important;
+      max-height: 44px !important;
+      padding: 0 14px !important;
       border-radius: 0 !important;
       border-top: none !important;
       border-left: none !important;
       border-right: none !important;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
       background: var(--sub-gradient) !important;
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
-      gap: 12px !important;
+      gap: 10px !important;
       width: 100% !important;
       flex-shrink: 0 !important;
       z-index: 10 !important;
+      box-sizing: border-box !important;
+    }
+    #readerModal .reader-header-left,
+    .reader-header-left {
+      display: flex !important;
+      align-items: center !important;
+      gap: 10px !important;
+      min-width: 0 !important;
+      flex: 1 1 auto !important;
+      overflow: hidden !important;
+    }
+    #readerModal .btn-reader-back,
+    .btn-reader-back {
+      background: rgba(255, 255, 255, 0.16) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      color: #fff !important;
+      padding: 0 10px !important;
+      height: 30px !important;
+      min-height: 30px !important;
+      border-radius: 6px !important;
+      font-size: 0.8rem !important;
+      font-weight: 700 !important;
+      cursor: pointer !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      flex-shrink: 0 !important;
+      transition: all 0.15s ease !important;
+    }
+    #readerModal .btn-reader-back:hover,
+    .btn-reader-back:hover {
+      background: #fff !important;
+      color: #0f172a !important;
+      transform: translateX(-2px) !important;
+    }
+    #readerModal .reader-header-divider,
+    .reader-header-divider {
+      width: 1px !important;
+      height: 18px !important;
+      background: rgba(255, 255, 255, 0.25) !important;
+      flex-shrink: 0 !important;
+    }
+    #readerModal .reader-title-box,
+    .reader-title-box {
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      min-width: 0 !important;
+      flex: 1 1 auto !important;
+      overflow: hidden !important;
+      white-space: nowrap !important;
+    }
+    #readerModal .reader-badge-sub,
+    .reader-badge-sub {
+      font-size: 0.76rem !important;
+      font-weight: 700 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+      background: rgba(255, 255, 255, 0.12) !important;
+      padding: 2px 8px !important;
+      border-radius: 4px !important;
+      flex-shrink: 0 !important;
+      max-width: 160px !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+    }
+    #readerModal .reader-title-sep,
+    .reader-title-sep {
+      color: rgba(255, 255, 255, 0.4) !important;
+      font-size: 0.8rem !important;
+      flex-shrink: 0 !important;
+    }
+    #readerModal .reader-title-box h3,
+    .reader-title-box h3 {
+      font-size: 0.88rem !important;
+      font-weight: 700 !important;
+      color: #fff !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      min-width: 0 !important;
+    }
+    #readerModal .reader-controls,
+    .reader-controls {
+      display: flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      flex-shrink: 0 !important;
+    }
+    #readerModal .btn-reader-action,
+    .btn-reader-action {
+      background: rgba(255, 255, 255, 0.14) !important;
+      border: 1px solid rgba(255, 255, 255, 0.25) !important;
+      color: #fff !important;
+      width: 32px !important;
+      height: 32px !important;
+      min-height: 32px !important;
+      min-width: 32px !important;
+      padding: 0 !important;
+      border-radius: 6px !important;
+      font-size: 0.82rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      transition: all 0.15s ease !important;
+    }
+    #readerModal .btn-reader-action:hover,
+    .btn-reader-action:hover {
+      background: #fff !important;
+      color: #0f172a !important;
+      transform: translateY(-1px) !important;
+    }
+    #readerModal .btn-reader-close,
+    .btn-reader-close {
+      background: rgba(239, 68, 68, 0.88) !important;
+      border: none !important;
+      color: #fff !important;
+      width: 32px !important;
+      height: 32px !important;
+      min-height: 32px !important;
+      min-width: 32px !important;
+      border-radius: 6px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      font-size: 0.95rem !important;
+      transition: all 0.15s ease !important;
+    }
+    #readerModal .btn-reader-close:hover,
+    .btn-reader-close:hover {
+      background: #dc2626 !important;
+      transform: scale(1.05) !important;
     }
     #readerModal .reader-iframe-wrap,
     .reader-iframe-wrap {
@@ -139,9 +274,9 @@
       width: 100vw !important;
       min-width: 100vw !important;
       max-width: 100vw !important;
-      height: calc(100% - 52px) !important;
-      height: calc(100vh - 52px) !important;
-      height: calc(100dvh - 52px) !important;
+      height: calc(100% - 44px) !important;
+      height: calc(100vh - 44px) !important;
+      height: calc(100dvh - 44px) !important;
       padding: 0 !important;
       margin: 0 !important;
       border: none !important;
@@ -165,16 +300,21 @@
     @media (max-width: 768px) {
       #readerModal .reader-header,
       .reader-header {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        padding: 0 10px !important;
+        height: 42px !important;
+        min-height: 42px !important;
+        max-height: 42px !important;
+        padding: 0 8px !important;
+      }
+      #readerModal .reader-badge-sub,
+      .reader-badge-sub {
+        max-width: 90px !important;
+        font-size: 0.7rem !important;
       }
       #readerModal .reader-iframe-wrap,
       .reader-iframe-wrap {
-        height: calc(100% - 48px) !important;
-        height: calc(100vh - 48px) !important;
-        height: calc(100dvh - 48px) !important;
+        height: calc(100% - 42px) !important;
+        height: calc(100vh - 42px) !important;
+        height: calc(100dvh - 42px) !important;
       }
     }
   </style>
@@ -537,25 +677,25 @@
     <div class="reader-window">
       <div class="reader-header">
         <div class="reader-header-left">
-          <button class="btn-reader-back" id="readerBackBtn" title="Back to Topics" aria-label="Back to Topics">
+          <button class="btn-reader-back" id="readerBackBtn" title="Back to Subject Hub (Esc)" aria-label="Back to Subject Hub">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back</span>
           </button>
+          <span class="reader-header-divider"></span>
           <div class="reader-title-box">
+            <span class="reader-badge-sub" id="readerSubInfo">Make Law Easy</span>
+            <span class="reader-title-sep">&rsaquo;</span>
             <h3 id="readerTitle">Comprehensive Study Notes</h3>
-            <p id="readerSubInfo">Make Law Easy</p>
           </div>
         </div>
         <div class="reader-controls">
-          <button class="btn-reader-action" id="readerFullscreenBtn" title="Toggle Fullscreen" type="button">
+          <button class="btn-reader-action" id="readerFullscreenBtn" title="Toggle Fullscreen Mode (F11)" type="button" aria-label="Toggle Fullscreen">
             <i class="fa-solid fa-expand"></i>
-            <span>Fullscreen</span>
           </button>
-          <button class="btn-reader-action" id="readerNewTabBtn" title="Open in new browser tab" type="button">
+          <button class="btn-reader-action" id="readerNewTabBtn" title="Open Note in New Browser Tab" type="button" aria-label="Open in New Tab">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>New Tab</span>
           </button>
-          <button class="btn-reader-close" id="readerCloseBtn" title="Close (Esc)" aria-label="Close Reader">
+          <button class="btn-reader-close" id="readerCloseBtn" title="Close Reader (Esc)" aria-label="Close Reader">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
