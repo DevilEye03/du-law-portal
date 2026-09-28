@@ -31,7 +31,7 @@ sem1Dirs.forEach(dir => {
     }
 
     // 3. Check for diagram/flowchart mobile rules
-    if (!content.includes('.flow-svg') || !content.includes('.fig::after')) {
+    if (!content.includes('.flow-svg') || !content.includes('100% FULL VISIBILITY')) {
       errors.push('Missing updated diagram responsive rules in stylesheet');
     }
 

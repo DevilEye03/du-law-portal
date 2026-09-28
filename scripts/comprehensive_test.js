@@ -230,7 +230,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v36'), 'sw.js CACHE_NAME is bumped to du-law-portal-v36');
+  assert(swContent.includes('du-law-portal-v37'), 'sw.js CACHE_NAME is bumped to du-law-portal-v37');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
@@ -242,7 +242,7 @@ try {
   assert(sampleNote.includes('MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE'), 'Notes contain UNIVERSAL MOBILE RESPONSIVE ENGINE');
 
   const sem1SampleNote = fs.readFileSync('Torts/Topic1_Tort_Intro_Definition_Nature_Scope.html', 'utf8');
-  assert(sem1SampleNote.includes('Swipe horizontally to pan diagram'), 'Semester 1 notes contain diagram swipe indicator');
+  assert(sem1SampleNote.includes('100% FULL VISIBILITY'), 'Semester 1 notes contain 100% full-visibility diagram rules');
   assert(sem1SampleNote.includes('.fig svg'), 'Semester 1 notes contain responsive SVG diagram rules');
 
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
