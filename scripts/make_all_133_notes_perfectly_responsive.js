@@ -1,4 +1,14 @@
-/* ==========================================================================
+const fs = require('fs');
+const path = require('path');
+
+const allDirs = [
+  'Juris', 'Contract', 'BNS', 'Family', 'Torts',
+  'sem 2/BSA', 'sem 2/PIL', 'sem 2/PROPERTY LAW',
+  'sem 3/company', 'sem 3/cpc', 'sem 3/Media', 'sem 3/wcc',
+  'SEM 5/DRAFTING'
+];
+
+const refinedEngineCss = `/* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
    Full Mobile Responsive: Zero Side-Margin Waste, 100% Full Vector Diagram
    Visibility, Zero Horizontal Viewport Wobble / Page Moving
@@ -473,4 +483,53 @@
     margin-bottom: 2px !important;
   }
 }
-/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */
+/* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE */`;
+
+// Write to css/notes-responsive.css
+fs.writeFileSync('css/notes-responsive.css', refinedEngineCss, 'utf8');
+console.log('✅ Updated css/notes-responsive.css');
+
+// Process all 133 notes files
+let totalProcessed = 0;
+
+allDirs.forEach(dir => {
+  const dirPath = path.join(process.cwd(), dir);
+  if (!fs.existsSync(dirPath)) return;
+  const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.html'));
+
+  files.forEach(f => {
+    const filePath = path.join(dirPath, f);
+    let content = fs.readFileSync(filePath, 'utf8');
+
+    // 1. Standardize viewport meta tag
+    if (/<meta\s+name=["']viewport["']\s+content=["'][^"']*["']\s*\/?>/i.test(content)) {
+      content = content.replace(/<meta\s+name=["']viewport["']\s+content=["'][^"']*["']\s*\/?>/i, '<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    } else if (content.includes('<head>')) {
+      content = content.replace('<head>', '<head>\n<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    }
+
+    // 2. Remove any rigid style="min-width:...px" on SVGs
+    content = content.replace(/(<svg\b[^>]*)\s+style="[^"]*min-width:\s*\d+px[^"]*"/gi, '$1');
+
+    // 3. Replace or inject the refined Universal Responsive Engine
+    const engineStartRegex = /\/\* ==========================================================================\s+MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE[\s\S]*?\/\* END MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE \*\//gi;
+
+    if (engineStartRegex.test(content)) {
+      content = content.replace(engineStartRegex, refinedEngineCss);
+    } else if (content.includes('</style>')) {
+      const lastStyleClose = content.lastIndexOf('</style>');
+      content = content.substring(0, lastStyleClose) + '\n\n' + refinedEngineCss + '\n' + content.substring(lastStyleClose);
+    }
+
+    // 4. Ensure closing body and html tags exist
+    if (!content.includes('</body>')) {
+      content = content.trimEnd() + '\n</body>\n</html>\n';
+    }
+
+    fs.writeFileSync(filePath, content, 'utf8');
+    totalProcessed++;
+  });
+  console.log(`✅ Processed directory: ${dir}`);
+});
+
+console.log(`\n🎉 Successfully processed all ${totalProcessed} HTML notes files across workspace!`);

@@ -78,8 +78,8 @@
 
 /* ==========================================================================
    MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE (320px - 768px)
-   Full Mobile Responsive: Zero Side-Margin Waste, 100% Visible Vector Diagrams,
-   Zero Horizontal Viewport Wobble / Page Moving
+   Full Mobile Responsive: Zero Side-Margin Waste, 100% Full Vector Diagram
+   Visibility, Zero Horizontal Viewport Wobble / Page Moving
    ========================================================================== */
 @media screen and (max-width: 768px) {
   /* 1. Root & Viewport Safety: Zero Horizontal Wobble (Rule 3) */
@@ -121,7 +121,7 @@
   }
 
   /* 3. Hero & Header Responsive Scaling */
-  header.hero, .hero, .header, .top-bar {
+  header.hero, .hero, .header, .top-bar, .topbar {
     padding: 24px 12px 20px !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -130,14 +130,14 @@
     overflow: hidden !important;
   }
 
-  header.hero h1, .hero h1, h1 {
+  header.hero h1, .hero h1, .topbar h1, h1 {
     font-size: clamp(20px, 5.8vw, 30px) !important;
     line-height: 1.2 !important;
     word-break: break-word !important;
     overflow-wrap: break-word !important;
   }
 
-  header.hero .lede, .hero p, .hero-sub, .lead {
+  header.hero .lede, .hero p, .hero-sub, .lead, .sub {
     font-size: 14px !important;
     line-height: 1.48 !important;
   }
@@ -197,7 +197,7 @@
 
   /* 5. Sections & Cards: Compact Mobile Padding (Eliminates Blank Side Margins) */
   section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
-  .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox {
+  .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox, .sourceband {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;

@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v37";
+const CACHE_NAME = "du-law-portal-v38";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
