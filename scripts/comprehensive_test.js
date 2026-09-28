@@ -230,7 +230,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v38'), 'sw.js CACHE_NAME is bumped to du-law-portal-v38');
+  assert(swContent.includes('du-law-portal-v39'), 'sw.js CACHE_NAME is bumped to du-law-portal-v39');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
@@ -239,7 +239,7 @@ try {
 
   // Verify sample notes have mobile responsive engine & diagram rules
   const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');
-  assert(sampleNote.includes('MAKE LAW EASY — UNIVERSAL MOBILE RESPONSIVE ENGINE'), 'Notes contain UNIVERSAL MOBILE RESPONSIVE ENGINE');
+  assert(sampleNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
 
   const sem1SampleNote = fs.readFileSync('Torts/Topic1_Tort_Intro_Definition_Nature_Scope.html', 'utf8');
   assert(sem1SampleNote.includes('100% FULL VISIBILITY'), 'Semester 1 notes contain 100% full-visibility diagram rules');
