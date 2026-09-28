@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v46";
+const CACHE_NAME = "du-law-portal-v47";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -62,12 +62,17 @@ self.addEventListener("fetch", (event) => {
   const isHtml = event.request.mode === "navigate" || 
     (event.request.headers.get("accept") && event.request.headers.get("accept").includes("text/html"));
 
-  // 2. Main Portal Shell (Network-First with immediate cache fallback)
+  // 2. Main Portal Shell & Clean Routed Pages (Network-First with immediate cache fallback)
   const isMainShell = isHtml && (
     url.pathname === "/" ||
+    url.pathname.startsWith("/subject") ||
+    url.pathname.startsWith("/semester") ||
+    url.pathname.startsWith("/sem") ||
+    url.pathname.startsWith("/tools/") ||
     url.pathname.endsWith("/index.html") ||
     url.pathname.endsWith("/terms.html") ||
-    url.pathname.endsWith("/privacy.html")
+    url.pathname.endsWith("/privacy.html") ||
+    url.pathname.endsWith("/feedback.html")
   );
 
   if (isMainShell) {
@@ -80,7 +85,7 @@ self.addEventListener("fetch", (event) => {
           }
           return networkResponse;
         })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html")))
+        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html") || caches.match("/index.html")))
     );
     return;
   }

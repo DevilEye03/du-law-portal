@@ -10,6 +10,7 @@
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -33,8 +34,8 @@
   <meta name="twitter:image" content="https://makelaweasy.in/favicon.svg">
 
   <!-- Favicon & PWA App Manifest -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -48,7 +49,7 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css?v=6.0">
+  <link rel="stylesheet" href="/css/styles.css?v=6.1">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO MARGIN, ZERO BORDER-RADIUS) */
     html.reader-open, body.reader-open {
@@ -1855,18 +1856,18 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="js/wave_grid_background.js?v=4.1" defer></script>
-  <script src="js/interactive_particles.js?v=4.1" defer></script>
-  <script src="js/books_showcase.js?v=4.9" defer></script>
-  <script src="js/data.js?v=5.1" defer></script>
-  <script src="js/bare_acts.js?v=4.8" defer></script>
-  <script src="js/bns_converter.js?v=4.1" defer></script>
-  <script src="js/app.js?v=5.5" defer></script>
+  <script src="/js/wave_grid_background.js?v=4.1" defer></script>
+  <script src="/js/interactive_particles.js?v=4.1" defer></script>
+  <script src="/js/books_showcase.js?v=4.9" defer></script>
+  <script src="/js/data.js?v=5.1" defer></script>
+  <script src="/js/bare_acts.js?v=4.8" defer></script>
+  <script src="/js/bns_converter.js?v=4.1" defer></script>
+  <script src="/js/app.js?v=5.5" defer></script>
 
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
-        navigator.serviceWorker.register("./sw.js")
+        navigator.serviceWorker.register("/sw.js")
           .then(reg => console.log("[PWA] Service Worker registered:", reg.scope))
           .catch(err => console.log("[PWA] SW registration failed:", err));
       });
