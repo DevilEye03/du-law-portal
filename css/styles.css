@@ -558,8 +558,19 @@ button{font-family:inherit;cursor:pointer}
 .hub-tabs-container{margin:20px 0 0;background:var(--bg-card);border-radius:var(--radius-lg);
   padding:8px;box-shadow:var(--shadow-sm);border:1.5px solid var(--border-line);
   position:sticky;top:62px;z-index:100}
-.hub-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-@media(max-width:860px){.hub-tabs{grid-template-columns:repeat(2,1fr);gap:8px}}
+@media(max-width:860px){
+  .hub-tabs-container,
+  .subject-hub-view .hub-tabs-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}
 
 .hub-tab-btn{
   position:relative;border-radius:9999px;border:none;background:transparent;
@@ -1611,26 +1622,17 @@ body.reader-open .quick-filter-chips,
     font-size: 0.78rem;
   }
 
-  /* Sticky Hub Tabs */
-  .hub-tabs-container {
-    top: 56px;
-    margin: 12px 0 0;
-    padding: 4px;
-    border-radius: 12px;
-  }
-  .hub-tabs {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
-  }
-  .hub-tab-btn {
-    padding: 8px 6px;
-    font-size: 0.78rem;
-    min-height: 42px;
-    gap: 6px;
-    border-radius: 8px;
-  }
-  .hub-tab-btn i {
-    font-size: 0.88rem;
+  /* Sticky Hub Tabs: Hidden on mobile when any subject is open */
+  .hub-tabs-container,
+  .subject-hub-view .hub-tabs-container {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
   }
 
   /* Filter Bar & Topic Jump Nav */
