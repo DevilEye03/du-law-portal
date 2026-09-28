@@ -187,6 +187,7 @@
     readerBackBtn: document.getElementById('readerBackBtn'),
     readerCloseBtn: document.getElementById('readerCloseBtn'),
     readerNewTabBtn: document.getElementById('readerNewTabBtn'),
+    readerFullscreenBtn: document.getElementById('readerFullscreenBtn'),
 
     // Toast Notification & Floating Utilities
     toastNotification: document.getElementById('toastNotification'),
@@ -1937,10 +1938,52 @@
     });
 
     // New Tab button
-    elements.readerNewTabBtn.onclick = () => window.open(fileUrl, '_blank');
+    if (elements.readerNewTabBtn) {
+      elements.readerNewTabBtn.onclick = () => window.open(fileUrl, '_blank');
+    }
+
+    // Native Fullscreen toggle button
+    const readerFsBtn = elements.readerFullscreenBtn || document.getElementById('readerFullscreenBtn');
+    if (readerFsBtn && !readerFsBtn._fsBound) {
+      readerFsBtn._fsBound = true;
+      readerFsBtn.onclick = () => {
+        if (!document.fullscreenElement) {
+          if (elements.readerModal.requestFullscreen) {
+            elements.readerModal.requestFullscreen().catch(() => {});
+          } else if (elements.readerModal.webkitRequestFullscreen) {
+            elements.readerModal.webkitRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+        }
+      };
+
+      const updateFsBtn = () => {
+        const isFs = !!document.fullscreenElement;
+        const icon = readerFsBtn.querySelector('i');
+        const span = readerFsBtn.querySelector('span');
+        if (icon) icon.className = isFs ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
+        if (span) span.textContent = isFs ? 'Exit Full' : 'Fullscreen';
+        readerFsBtn.title = isFs ? 'Exit Fullscreen' : 'Toggle Fullscreen';
+      };
+
+      document.addEventListener('fullscreenchange', updateFsBtn);
+      document.addEventListener('webkitfullscreenchange', updateFsBtn);
+    }
   }
 
   function closeReader(popHistory = false) {
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
     elements.readerModal.classList.remove('active');
     document.body.classList.remove('reader-open');
     document.documentElement.classList.remove('reader-open');
