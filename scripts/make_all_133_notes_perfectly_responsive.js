@@ -5,7 +5,7 @@ const allDirs = [
   'Juris', 'Contract', 'BNS', 'Family', 'Torts',
   'sem 2/BSA', 'sem 2/PIL', 'sem 2/PROPERTY LAW',
   'sem 3/company', 'sem 3/cpc', 'sem 3/Media', 'sem 3/wcc',
-  'SEM 5/DRAFTING'
+  'SEM 5/DRAFTING', 'SEM 5/Industrial law'
 ];
 
 const refinedEngineCss = `/* ==========================================================================

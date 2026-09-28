@@ -139,6 +139,49 @@ try {
     assert(fs.existsSync(p), `PIL Dossier file exists: ${u.file}`);
   });
 
+  // Semester 5 Registry Integrity
+  assert(portalData.semesters.some(s => s.id === 5 && s.active), 'Semester 5 is active in registry');
+
+  // Drafting, Pleadings & Conveyance (LB-502) Integrity
+  const drafting = portalData.subjects['drafting'];
+  assert(!!drafting, 'Subject "drafting" is registered');
+  assert(drafting.code === 'LB-502', 'Drafting code is LB-502');
+  assert(drafting.units && drafting.units.length === 7, `Drafting has exactly 7 units (Found: ${drafting.units?.length})`);
+  assert(drafting.cases && drafting.cases.length >= 25, `Drafting landmark cases count >= 25 (Found: ${drafting.cases?.length})`);
+  assert(drafting.pyqs && drafting.pyqs.length >= 30, `Drafting PYQs with model answers >= 30 (Found: ${drafting.pyqs?.length})`);
+  assert(drafting.revisions && drafting.revisions.length === 7, `Drafting revision capsules === 7 (Found: ${drafting.revisions?.length})`);
+
+  for (let u = 1; u <= 7; u++) {
+    const uRev = drafting.revisions.filter(r => r.unitNumber === u);
+    assert(uRev.length > 0, `Drafting Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  drafting.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Drafting Dossier file exists: ${u.file}`);
+  });
+
+  // Industrial Law (LB-503) Integrity
+  const industrial = portalData.subjects['industrial'];
+  assert(!!industrial, 'Subject "industrial" is registered');
+  assert(industrial.code === 'LB-503', 'Industrial Law code is LB-503');
+  assert(industrial.units && industrial.units.length === 8, `Industrial Law has exactly 8 units (Found: ${industrial.units?.length})`);
+  assert(industrial.cases && industrial.cases.length >= 50, `Industrial Law landmark cases count >= 50 (Found: ${industrial.cases?.length})`);
+  assert(industrial.pyqs && industrial.pyqs.length >= 80, `Industrial Law PYQs with model answers >= 80 (Found: ${industrial.pyqs?.length})`);
+  assert(industrial.revisions && industrial.revisions.length === 8, `Industrial Law revision capsules === 8 (Found: ${industrial.revisions?.length})`);
+
+  for (let u = 1; u <= 8; u++) {
+    const uCases = industrial.cases.filter(c => c.unitNumber === u);
+    const uPyqs = industrial.pyqs.filter(p => p.unitNumber === u);
+    const uRev = industrial.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Industrial Law Unit ${u} has at least 1 landmark case (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Industrial Law Unit ${u} has at least 1 PYQ (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `Industrial Law Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  industrial.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Industrial Law Dossier file exists: ${u.file}`);
+  });
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
@@ -230,7 +273,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v49'), 'sw.js CACHE_NAME is bumped to du-law-portal-v49');
+  assert(swContent.includes('du-law-portal-v50'), 'sw.js CACHE_NAME is bumped to du-law-portal-v50');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
@@ -254,6 +297,12 @@ try {
   const sem1SampleNote = fs.readFileSync('Torts/Topic1_Tort_Intro_Definition_Nature_Scope.html', 'utf8');
   assert(sem1SampleNote.includes('100% FULL VISIBILITY'), 'Semester 1 notes contain 100% full-visibility diagram rules');
   assert(sem1SampleNote.includes('.fig svg'), 'Semester 1 notes contain responsive SVG diagram rules');
+
+  const sem5DraftingNote = fs.readFileSync('SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html', 'utf8');
+  assert(sem5DraftingNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 Drafting notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
+
+  const sem5IndustrialNote = fs.readFileSync('SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html', 'utf8');
+  assert(sem5IndustrialNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 Industrial Law notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
 
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');

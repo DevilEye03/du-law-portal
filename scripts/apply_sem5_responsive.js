@@ -1,13 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const allDirs = [
-  'Juris', 'Contract', 'BNS', 'Family', 'Torts',
-  'sem 2/BSA', 'sem 2/PIL', 'sem 2/PROPERTY LAW',
-  'sem 3/company', 'sem 3/cpc', 'sem 3/Media', 'sem 3/wcc',
-  'SEM 5/DRAFTING', 'SEM 5/Industrial law'
-];
-
+const dirs = ['SEM 5/DRAFTING', 'SEM 5/Industrial law'];
 const omniEngineCss = fs.readFileSync('css/notes-responsive.css', 'utf8');
 
 let totalFiles = 0;
@@ -15,7 +9,7 @@ let modifiedFiles = 0;
 let svgViewBoxAdded = 0;
 let inlineMinWidthsRemoved = 0;
 
-allDirs.forEach(dir => {
+dirs.forEach(dir => {
   const dirPath = path.join(process.cwd(), dir);
   if (!fs.existsSync(dirPath)) return;
   const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.html'));
@@ -40,6 +34,12 @@ allDirs.forEach(dir => {
       return combined ? `style="${combined}"` : '';
     });
 
+    // Also remove rigid min-widths in internal <style> blocks if they target large widths
+    content = content.replace(/(min-width\s*:\s*(?:[4-9]\d{2}|\d{4,})px)/gi, (match) => {
+      inlineMinWidthsRemoved++;
+      return 'min-width: 0';
+    });
+
     // 3. Ensure all SVGs have viewBox (if width and height exist)
     content = content.replace(/<svg\b([^>]*?)>/gi, (match, attrs) => {
       if (!/viewBox/i.test(attrs)) {
@@ -53,8 +53,11 @@ allDirs.forEach(dir => {
       return match;
     });
 
-    // 4. Replace or inject the Omni-Responsive Engine
-    // Check for previous engine variations
+    // 4. Wrap any bare <table> that is not already inside a table wrapper
+    // Check if table has a responsive container parent
+    // For safety, the CSS also styles `table { display: block; overflow-x: auto; max-width: 100%; }`
+
+    // 5. Replace or inject the Omni-Responsive Engine
     const engineRegex = /\/\* ==========================================================================\s+MAKE LAW EASY — UNIVERSAL (?:MOBILE RESPONSIVE|OMNI-RESPONSIVE) ENGINE[\s\S]*?\/\* END MAKE LAW EASY — UNIVERSAL (?:MOBILE RESPONSIVE|OMNI-RESPONSIVE) ENGINE \*\//gi;
 
     if (engineRegex.test(content)) {
@@ -66,7 +69,7 @@ allDirs.forEach(dir => {
       content = content.replace('</head>', `<style>\n${omniEngineCss}\n</style>\n</head>`);
     }
 
-    // 5. Ensure valid closing tags
+    // 6. Ensure valid closing tags
     if (!content.includes('</body>')) {
       content = content.trimEnd() + '\n</body>\n</html>\n';
     }
@@ -79,7 +82,7 @@ allDirs.forEach(dir => {
   console.log(`✅ Processed subject folder: ${dir}`);
 });
 
-console.log(`\n🎉 Omni-Responsive Engine applied across all subjects!`);
+console.log(`\n🎉 Omni-Responsive Engine applied across SEM 5 subjects!`);
 console.log(`- Total notes files: ${totalFiles}`);
 console.log(`- Modified files: ${modifiedFiles}`);
 console.log(`- SVGs enriched with viewBox: ${svgViewBoxAdded}`);

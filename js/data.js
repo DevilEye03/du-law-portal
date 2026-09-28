@@ -63,10 +63,13 @@ window.DU_LAW_PORTAL_DATA = {
       "id": 5,
       "name": "Semester V",
       "term": "V Term (Autumn)",
-      "active": false,
-      "badge": "Coming Soon",
-      "description": "Environmental Law, Intellectual Property Rights (IPR), Human Rights, Cyber Law, and Professional Ethics.",
-      "subjectIds": []
+      "active": true,
+      "badge": "2 Core Subjects Loaded (Drafting, Industrial Law)",
+      "description": "Comprehensive study notes, DU landmark cases, past year examination questions, and rapid revision capsules for Drafting, Pleadings & Conveyance (LB-502) and Industrial Law (LB-503).",
+      "subjectIds": [
+        "drafting",
+        "industrial"
+      ]
     },
     {
       "id": 6,
@@ -22746,6 +22749,3694 @@ window.DU_LAW_PORTAL_DATA = {
             "42 Case 42 · Jurisdictional Immunities of the State (Germany v. Italy: Greece Intervening) (ICJ Reports / Landmark International Precedent)",
             "43 Case 43 · Jadhav Case (India v. Pakistan) (ICJ Reports / Landmark International Precedent)"
           ]
+        }
+      ]
+    },
+    "drafting": {
+      "id": "drafting",
+      "code": "LB-502",
+      "name": "Drafting, Pleadings & Conveyance",
+      "shortName": "Drafting",
+      "semester": 5,
+      "folder": "SEM 5/DRAFTING",
+      "theme": {
+        "primary": "#1e3a5f",
+        "primaryDark": "#0d1b2a",
+        "primaryLight": "#2d547d",
+        "accent": "#c59b27",
+        "accentLight": "#faedcd",
+        "bgTint": "#f5f7fa",
+        "border": "#ccd5e1",
+        "badgeBg": "#e8eff8",
+        "badgeColor": "#1e3a5f",
+        "gradient": "linear-gradient(135deg, #0d1b2a 0%, #1e3a5f 55%, #2d547d 100%)",
+        "tagline": "Fundamental Rules of Pleading, Civil Plaints, Criminal Complaints, Matrimonial Petitions & Conveyancing Deeds",
+        "motto": "Order VI CPC • Pleading Skills • Conveyancing Instruments",
+        "quote": "Pleadings are the foundation of litigation; a defect in drafting can prove fatal to the cause of justice.",
+        "icon": "fa-pen-nib"
+      },
+      "units": [
+        {
+          "id": "draft-u1",
+          "number": 1,
+          "title": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "subtitle": "Drafting Rules & Skills — Part A: Pleadings | LB-502 DPC (University of Delhi)",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "statutes": [
+            "O. VI CPC",
+            "O. VII CPC",
+            "O. VIII CPC",
+            "S. 26 CPC",
+            "O. VI R. 2",
+            "O. VI R. 17"
+          ],
+          "topics": [
+            "Meaning, Function & Object of Pleadings",
+            "The Four Fundamental Rules of Pleading (O. VI R. 2)",
+            "Plead Facts, Not Law & Material Facts Only",
+            "Evidence Excluded from Pleadings & Conciseness Rules",
+            "Amendment of Pleadings (O. VI R. 17 CPC)"
+          ]
+        },
+        {
+          "id": "draft-u2",
+          "number": 2,
+          "title": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "subtitle": "Forms of Pleadings — Civil | DU LL.B. LB-502 Drafting, Pleadings & Conveyance",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "statutes": [
+            "O. XXXVII CPC",
+            "O. XXXIX Rr. 1 & 2",
+            "S. 151 CPC",
+            "O. VII R. 1",
+            "S. 34 CPC"
+          ],
+          "topics": [
+            "Suit for Recovery under Order XXXVII CPC (Summary Suits)",
+            "Drafting Affidavits in Support of Plaints and Applications",
+            "Suit for Permanent Injunction & Temporary Injunction (O. XXXIX)",
+            "Suit for Specific Performance of Contract & Possession",
+            "Written Statement with Set-off and Counter-Claim (O. VIII CPC)"
+          ]
+        },
+        {
+          "id": "draft-u3",
+          "number": 3,
+          "title": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "subtitle": "Matrimonial Pleadings — DU Forms 13–18 (LB-502) · Deep Notes",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "statutes": [
+            "S. 9 HMA",
+            "S. 13(1)(ia) HMA",
+            "S. 13B HMA",
+            "S. 24 HMA",
+            "S. 26 HMA"
+          ],
+          "topics": [
+            "Petition for Restitution of Conjugal Rights (S. 9 HMA)",
+            "Petition for Dissolution of Marriage by Divorce on Ground of Cruelty (S. 13)",
+            "Petition for Mutual Consent Divorce (S. 13B HMA)",
+            "Application for Maintenance Pendente Lite & Litigation Expenses (S. 24)",
+            "Application for Child Custody & Visitation Rights (S. 26 HMA)"
+          ]
+        },
+        {
+          "id": "draft-u4",
+          "number": 4,
+          "title": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "subtitle": "Pleadings under the Indian Succession Act, 1925 — DU LL.B. LB-502 (Items 19–21)",
+          "file": "SEM 5/DRAFTING/Succession_Act_Pleadings_DU_LB502.html",
+          "statutes": [
+            "S. 276 ISA",
+            "S. 278 ISA",
+            "S. 372 ISA",
+            "S. 218 ISA"
+          ],
+          "topics": [
+            "Petition for Grant of Probate of a Will (S. 276 ISA 1925)",
+            "Petition for Grant of Letters of Administration (S. 278 ISA 1925)",
+            "Petition for Grant of Succession Certificate (S. 372 ISA 1925)",
+            "Citation, Administration Bond & Caveats in Testamentary Proceedings"
+          ]
+        },
+        {
+          "id": "draft-u5",
+          "number": 5,
+          "title": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "subtitle": "Pleadings under Criminal Law — DU LB-502 | Regular Bail · Anticipatory Bail · s.138 Complaint · Maintenance",
+          "file": "SEM 5/DRAFTING/Pleadings_Under_Criminal_Law_DU_LB502.html",
+          "statutes": [
+            "S. 437 CrPC / S. 480 BNSS",
+            "S. 438 CrPC / S. 482 BNSS",
+            "S. 439 CrPC / S. 483 BNSS",
+            "S. 138 NI Act",
+            "S. 125 CrPC / S. 144 BNSS"
+          ],
+          "topics": [
+            "Application for Regular Bail before Sessions Court & High Court",
+            "Application for Anticipatory Bail (Pre-Arrest Bail)",
+            "Criminal Complaint under Section 138 Negotiable Instruments Act",
+            "Application for Maintenance under Section 125 CrPC / Section 144 BNSS"
+          ]
+        },
+        {
+          "id": "draft-u6",
+          "number": 6,
+          "title": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act",
+          "subtitle": "Other Miscellaneous Pleadings — DU LB-502 | Consumer Complaint · Contempt Petition · PWDVA Petition",
+          "file": "SEM 5/DRAFTING/Other_Miscellaneous_Pleadings_DU_LB502.html",
+          "statutes": [
+            "S. 35 CPA 2019",
+            "S. 11 Contempt of Courts Act 1971",
+            "S. 12 PWDVA 2005",
+            "Art. 215 Const."
+          ],
+          "topics": [
+            "Consumer Complaint before District Commission under Consumer Protection Act 2019",
+            "Contempt Petition under Sections 11 & 12 Contempt of Courts Act 1971",
+            "Application under Section 12 Protection of Women from Domestic Violence Act 2005"
+          ]
+        },
+        {
+          "id": "draft-u7",
+          "number": 7,
+          "title": "Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices",
+          "subtitle": "Conveyancing (Part B) — Component Parts of a Deed + 13 Forms of Deeds & Notices · DU LB-502",
+          "file": "SEM 5/DRAFTING/Conveyancing_Part_B_DU_LB502.html",
+          "statutes": [
+            "S. 54 TPA",
+            "S. 58 TPA",
+            "S. 105 TPA",
+            "S. 122 TPA",
+            "S. 17 Registration Act",
+            "S. 80 CPC"
+          ],
+          "topics": [
+            "Component Parts of a Deed (Habendum, Tenendum, Reddendum & Testimonium)",
+            "Drafting Sale Deed of Immovable Property & Agreement to Sell",
+            "Drafting Simple Mortgage Deed & Usufructuary Mortgage",
+            "Drafting Commercial Lease Deed & Residential Rent Agreement",
+            "Drafting Gift Deed & Revocation Clauses",
+            "Drafting Promissory Note, General Power of Attorney & Special POA",
+            "Drafting Statutory Notice under Section 80 CPC & Legal Notice under Section 138 NI Act"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "draft-c-u1-1",
+          "name": "Pinson v. Lloyds and National Provincial Foreign Bank Ltd.",
+          "citation": "(1941) 2 K.B. 72 : [1941] 2 All E.R. 636 : 57 T.L.R. 558 (English Court of Appeal) — as cited in DU Case Material, p. 3",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-2",
+          "facts": "The litigation arose out of a banking/financial transaction in which the claimants sued the bank group; the contest turned substantially on the sufficiency of the pleadings — the statement of claim and the particulars delivered with it. The defendants contended that the statement of claim failed to disclose material facts, and that the particulars could not be used to patch the deficiencies of a pleading. The matter travelled to the English Court of Appeal , and the observations reproduced in the DU material are attributed to Stable J. (the observations on particulars are of Scott L.J. at pp. 75, 79). DU material reproduces only the principal pronouncement on the function of a pleading ; the facts above are drawn from the reported judgment’",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "The Court accepted the orthodox doctrine and laid down two canons that are still quoted across the common-law world: “The proper function of particulars is not to state the material facts omitted from the statement of claim in order, by filling the gaps, to make good an inherently bad pleading — however common that pernicious practice may have become.” (per Scott L.J., p. 75) A defendant need not, and ought not to, plead to particulars (p. 75); particulars do not amount to",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-2",
+          "name": "Deepak Bajaj v. State of Maharashtra",
+          "citation": "(2008) 16 SCC 14, reported also as 2010 (4) SCC (Cri) 122 — Supreme Court of India (judgment: 12 November 2008)",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-3",
+          "facts": "The appellant Deepak Bajaj was under a preventive detention order dated 22-5-2008 passed under s. 3(1) of the Conservation of Foreign Exchange and Prevention of Smuggling Activities Act, 1974 (COFEPOSA) . The grounds of detention (running into 76 pages ) alleged that he imported 29 duty-free consignments meant as raw material for goods meant to be exported, but sold them in the local market , and misused duty-free replenishment certificates (DFR) , among other allegations. Critically, the detaining authority had relied on confessional statements of witnesses , but the retractions of those confessions — and other relevant material — were not placed before the detaining authority by the sponsoring authority. The challenge was mounted at the p",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c2\"> 2 · Deepak Bajaj v. State of Maharashtra (2008) 16 SCC 14, reported also as 2010 (4) SCC (Cri) 122 — Supreme Court of India (judgment: 12 November 2008) 📕 DU Case Material — inside model Writ Petition (Crl), pp. 64–67 🛡️ Preventive detention · Art. 226/227 📌 COFEPOSA s. 3(1) Facts The appellant Deepak Bajaj was under a preventive detention order dated 22-5-2008 passed under s. 3(1) of the Conservation of Foreign Exchange and Prevention of Smuggling Activities Act, 1974 (COFEPOSA) . The grounds of detention (running into 76 pages ) alleged that he imported 29 duty-free consignments ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-3",
+          "name": "Addl. Secretary to the Government of India v. Smt. Alka Subhash Gadia",
+          "citation": "1992 Supp (1) SCC 496 : 1992 SCC (Cri) 301 — Supreme Court of India",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-4",
+          "facts": "Smt. Alka Subhash Gadia challenged a preventive-detention order before it was executed, by writ petitions under Arts. 226/32. The question of when — and on what grounds — a writ court may interfere with a detention order at the pre-execution stage was authoritatively answered by the Supreme Court.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c3\"> 3 · Addl. Secretary to the Government of India v. Smt. Alka Subhash Gadia 1992 Supp (1) SCC 496 : 1992 SCC (Cri) 301 — Supreme Court of India 📕 Cited in DU Case Material (inside Writ Petition draft + Deepak Bajaj summary) 🛡️ Preventive detention Facts Smt. Alka Subhash Gadia challenged a preventive-detention order before it was executed, by writ petitions under Arts. 226/32. The question of when — and on what grounds — a writ court may interfere with a detention order at the pre-execution stage was authoritatively answered by the Supreme Court. Issue Can a detention order be set asi",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-4",
+          "name": "Rupa Ashok Hurra v. Ashok Hurra & Anr.",
+          "citation": "(2002) 4 SCC 388 : W.P. (C) No. 509/97 (with connected matters) — Supreme Court of India (Constitution Bench)",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-5",
+          "facts": "The petitioner challenged a final judgment of the Supreme Court itself, after the ordinary remedies had been exhausted — review petition was dismissed (by circulation). With no further appeal available, she sought reopening of the judgment on the footing that she had been denied a hearing and that a real party in interest had not been impleaded. The Court examined whether its jurisdiction could be invoked after final disposal in the absence of any statutory right of appeal. How the DU notes use it: the DU material’s model “Curative Petition” contains a certificate keyed to “the requirements laid down in the judgment… reported as 2002 (4) SCC 388 ” — students must plead compliance with this judgment’s conditions.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "The Court acknowledged a residual power to cure a patent defect of jurisdiction / denial of natural justice where no other remedy is available — the “curative petition” — as a rare invocation of Arts. 129/136 read with 141/142. Laid down the guidelines : petition filed within 30 days of the judgment; must be supported by a certificate by a Senior Advocate of there being a “knock at the doors of justice” (strong, prima facie case + disclosure of shortening of limitations); full record of earlier proceedings; review petition must have been by circulation; parties to be",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-5",
+          "name": "Gita Rani Paul v. Dibyendra Kumar",
+          "citation": "AIR 1991 SC 393 — Supreme Court of India (on appeal from Calcutta High Court)",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-6",
+          "facts": "A property dispute travelled from the Calcutta High Court to the Supreme Court. The appellate court (High Court) had accepted an appeal on an issue which was neither raised nor argued before the court below — i.e., it decided the matter on a point outside the pleadings/issues that had framed the litigation at the trial stage.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "The Supreme Court reversed the Calcutta High Court , holding that the High Court fell into error in accepting the appeal on an issue neither raised nor argued before the court below . Principle evolved: No case can be decided on an issue not raised by the pleadings and framed by the court ; “where a claim has never been made… no amount of evidence can be looked into upon a plea which was never put forward” (KAMKUS’s statement of the same doctrine). This is the flip-side of Pinson : pleadings protect both sides — you cannot spring unpleaded issues, and you cannot succeed on facts you never pleaded. Link: also supports Rule 2 (material facts) — plead everything you must prove.",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-6",
+          "name": "Chunni Lal Chawdhary v. Bank of Baroda",
+          "citation": "1981 Sri L.J. 411 (as cited in KAMKUS)",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-7",
+          "facts": "The defendant-bank did not file a written statement in the suit. The trial court and the parties proceeded with evidence; the question was the extent to which a defendant without a WS can participate — cross-examine the plaintiff’s witnesses and lead evidence.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "Held: (i) non-filing of WS does not mean the defendant admitted all facts; he may still take part in the hearing and cross-examine the plaintiff’s witnesses to demolish their version-in-chief ; BUT (ii) he cannot cross-examine on questions of fact which he himself has not pleaded , nor adduce evidence on facts not pleaded by filing any written statement. Principle evolved: Pleading is the gateway of evidence — “no pleading → no evidence on new facts” , yet silence in WS is not a universal admission. Balanced discipline: participation allowed, expansion of issues not. Drafting lesson: this is why the written statement must plead every defence (newly arisen grounds too, O.8 R.8) — the client’s evidentiary rights are capped by his pleadings.",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u1-7",
+          "name": "Other case references inside the DU material & companion sources",
+          "citation": "Cause-titles used in DU model drafts + writ-pleading judgments in KAMKUS",
+          "unitNumber": 1,
+          "unit": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "anchorId": "case-u1-8",
+          "facts": "Material facts as recorded in DU Case Material for Unit 1.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c7\"> 7 · Other case references inside the DU material & companion sources Cause-titles used in DU model drafts + writ-pleading judgments in KAMKUS 📕 DU model drafts 📙 KAMKUS (a) Subeg Singh v. State (UT of Chandigarh) — inside DU’s model SLP (Criminal) Where: DU Case Material, SLP under Art. 136 (pp. 72–75). The model SLP is drafted against the Punjab & Haryana High Court’s order in Criminal Appeal No. 305-DB , titled “Subeg Singh v. State (UT of Chandigarh)”. Brief facts as pleaded in the model: on the night of …, murder of Shri Bachna Ram — cook and domestic servant of Shri Devinder Si",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-1",
+          "name": "Milkhiram (India) Private Ltd. & Ors. v. Chamanlal Bros.",
+          "citation": "AIR 1965 SC 1698 : (1965) — Supreme Court of India, 4-Judge Bench (J.R. Mudholkar J.), 23 April 1965 — governing case of Form 1",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-2",
+          "facts": "The plaintiff-firm sued on promissory notes (and connected bills/guarantee transactions) under the summary procedure of Order XXXVII. The defendants contested on the footing that the real transactions were governed by an agreement involving unliquidated amounts and that the blank cheques delivered as security had been misused. The trial court examined whether the affidavit-defence raised a triable issue — it found the defence “vague” and “not bona fide” (defendant had produced no documentary evidence) — but still granted leave to defend on condition of security for the entire claim and costs . The defendants, aggrieved that leave was not unconditional, carried the matter through the Letters Patent (summarily dismissed) to the Supreme Court ",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "The Court upheld that the cause of action on the promissory notes was prima facie independent and fell within O. XXXVII — the Order applies notwithstanding connected unliquidated issues. Laid down the test : ask whether the defence raises a real issue and not a sham one — i.e., if the facts alleged by the defendant are established, would they constitute a good or even a plausible defence ? If satisfied on that, leave must be given. The trial court was wrong to impose the condition of security for the entire claim merely because documentary evidence had not been produced with the affidavit. Principle evolved (the four-point restatement used across High Courts): (1) substantial defence likely to succeed →",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-2",
+          "name": "Rajni Kumar v. Suresh Kumar Malhotra",
+          "citation": "2003 (3) SCALE 434 — Supreme Court of India — O. XXXVII R. 4 (setting aside)",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-3",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c2\"> 2 · Rajni Kumar v. Suresh Kumar Malhotra 2003 (3) SCALE 434 — Supreme Court of India — O. XXXVII R. 4 (setting aside) 📕 Summary-suit decrees 📌 “special circumstances” standard Facts & issue After a decree under the summary procedure, the defendant moved to set it aside under O. XXXVII R. 4 . The question: what standard governs setting aside a summary-suit decree and restoring leave to defend? Decision & principle The Supreme Court held that the court must assess whether the circumstances are extraordinary or unusual — R. 4 requires “special circumstances” ; the power is exercised to",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-3",
+          "name": "Samee Khan v. Bindu Khan",
+          "citation": "(1998) 7 SCC 622 — Supreme Court of India — governing case of Form 5 (O. XXXIX R. 2A)",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-4",
+          "facts": "An injunction order had been granted in the litigation; the respondent violated it during its pendency; later, the injunction order itself was set aside / the suit concluded against the grantee. The contemnor’s plea: once the order fell, the disobedience could not survive.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "The Supreme Court held: “Even if the injunction order was subsequently set aside, the disobedience does not get erased.” The contemptuous act cannot be retroactively legitimised; at most, the severity of punishment may be reduced in the changed circumstances. Principle evolved: O. XXXIX R. 2A liability attaches to the act of disobedience while the order subsisted — subsequent vacation of the order is a mitigating, not an extinguishing, factor. Drafting lesson (Form 5): plead the order-date, knowledge/service and the breach-date so the liability is anchored inside the order’s life — which is precisely DU paras 3–4.",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-4",
+          "name": "Smt. Lavanya C & Anr. v. Vittal Gurudas Pai (since deceased) by Lrs. & Ors.",
+          "citation": "(2025) — Supreme Court of India (Mithal & Karol JJ.) — reaffirming & applying O. XXXIX R. 2A",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-5",
+          "facts": "The appellants were guilty of disobeying an injunction/undertaking granted before the trial court. The trial court punished them with attachment of property, three months’ civil imprisonment and ₹10 lakh compensation ; the High Court upheld liability, citing Samee Khan , observing that even if the injunction was later set aside, disobedience during pendency is not erased, and that the appellants were guilty of breach of their own undertaking. The matter reached the Supreme Court.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "SC confirmed liability — “when there has been an express violation of a Court order … the exercise of contempt jurisdiction cannot be faulted”; disobedience “is not erased” even if the order is subsequently set aside or the suit dismissed (following Samee Khan ). On quantum: deleted the three-month imprisonment considering the appellant’s advanced age; enhanced compensation from ₹10 lakh to ₹13 lakh with 6% interest from the date of the lower court’s judgment. Reiterated that the powers of contempt exist “to ensure that the dignity and majesty of law ” are maintained. Principle evolved: (1) breach of an injunction = contempt, surviving later vacation; (2) remedies under R. 2A are discretionary and severable — detention can be substituted by enhanced compensation when mitigation exists; (3) undertakings before courts are enforced like orde",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-5",
+          "name": "Dr. Subramaniam Swamy v. Radhakrishna Hegde",
+          "citation": "(1990) 1 SCC 4 — Supreme Court of India — governing case of Form 11 (s. 25 CPC)",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-6",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c5\"> 5 · Dr. Subramaniam Swamy v. Radhakrishna Hegde (1990) 1 SCC 4 — Supreme Court of India — governing case of Form 11 (s. 25 CPC) 📕 Transfer of proceedings 📌 “justice over convenience” Facts & issue An application sought transfer under s. 25 CPC . The Court examined what standard should guide transfer where the forum-choice of the dominus litis conflicts with the respondent’s need for a fair trial. Arguments Resisting party: suit/petition duly filed in the chosen forum; convenience favours retention. Applicant: trial in that forum would be unfair / justice denied. Decision & principle",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-6",
+          "name": "The caveat cases — Deepak Khosla v. UOI · Moideen v. Kadeesa Umma · Employees Association v. RBI",
+          "citation": "Delhi High Court / Kerala High Court / (practice) — scope & duties under s. 148A CPC — governing cases of Form 10",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-7",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c6\"> 6 · The caveat cases — Deepak Khosla v. UOI · Moideen v. Kadeesa Umma · Employees Association v. RBI Delhi High Court / Kerala High Court / (practice) — scope & duties under s. 148A CPC — governing cases of Form 10 📕 Caveat limits (a) Deepak Khosla v. Union of India & Ors. Delhi HC Facts: the petitioner lodged a caveat under s. 148A r/w s. 151 CPC praying that a petition (by an accused/other side) not be listed without advance notice and that no ex-parte order be passed without hearing him; the Registry objected that a CPC caveat cannot operate in criminal/quasi proceedings. Held: s.",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u2-7",
+          "name": "Access & interim-standards cases — A.A. Haja Muniuddin v. Indian Railways · Paidsetti Bhanknarayna v. Paidsetti Rajeshwar Rao",
+          "citation": "Supreme Court / AIR 1999 Ori 92 — governing cases of Forms 6 & 4",
+          "unitNumber": 2,
+          "unit": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "anchorId": "case-u2-8",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"c7\"> 7 · Access & interim-standards cases — A.A. Haja Muniuddin v. Indian Railways · Paidsetti Bhanknarayna v. Paidsetti Rajeshwar Rao Supreme Court / AIR 1999 Ori 92 — governing cases of Forms 6 & 4 📕 Pauper suits · Temporary injunctions (a) A.A. Haja Muniuddin v. Indian Railways via uploaded commentary Held: O. XXXIII is an enabling provision — it lets a person sue without prepaying court fee; if the suit is dismissed, the State recovers the fee and it is a first charge on the subject-matter . “Sufficient means” receives a benevolent, extended meaning (bare sustenance for person + famil",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-1",
+          "name": "A. Jayachandra v. Aneel Kaur",
+          "citation": "(2005) 2 SCC 22 · Supreme Court (also reported 2005 (1) RCR (Civil) 309; 2005 (2) LWN 149)",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-2",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> A. Jayachandra v. Aneel Kaur (2005) 2 SCC 22 · Supreme Court (also reported 2005 (1) RCR (Civil) 309; 2005 (2) LWN 149) Ground: cruelty s. 13(1)(ia) · procedural: evidence & s. 13A Facts: Both parties were medical doctors, co-students who married on 10-10-1978 (\"love marriage\" — Telugu Brahmin husband, Sikh wife); two children (a fourth child's birth during litigation became a condonation argument). They worked in the hospital run by the husband's father, Dr. A. Ram Murthy. The wife's behaviour towards the husband's family was allegedly insulting/obnoxious/humiliating; no physical contact or",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-2",
+          "name": "Naveen Kohli v. Neelu Kohli",
+          "citation": "(2006) 4 SCC 558 · Supreme Court (judgment 21-03-2006)",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-3",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Naveen Kohli v. Neelu Kohli (2006) 4 SCC 558 · Supreme Court (judgment 21-03-2006) Ground: mental cruelty + irretrievable breakdown Facts: Married 20-11-1975; three sons; husband built three factories and a bungalow for the family; sons educated at a Nainital public school. Discord intensified by 1994 — parties living separately since May 1994 (10+ years). Husband alleged the wife filed a \"very large number\" of criminal and civil cases against him, caused police harassment, published newspaper advertisements branding him merely an \"employee\" of the factory (she being shown as proprietor), wi",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-3",
+          "name": "Samar Ghosh v. Jaya Ghosh",
+          "citation": "(2007) 4 SCC 511 · Supreme Court (26-03-2007; B.N. Agrawal, P.P. Naulekar, Dalveer Bhandari JJ)",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-4",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Samar Ghosh v. Jaya Ghosh (2007) 4 SCC 511 · Supreme Court (26-03-2007; B.N. Agrawal, P.P. Naulekar, Dalveer Bhandari JJ) Ground: mental cruelty · degrees of withdrawal · breakdown factors Facts: Marriage followed by deep disagreement over \"love, affection, future planning and normal human connections\"; wife's alleged inhuman behaviour, refusal to look after the husband during his prolonged illness, unilateral reproductive decisions (refusal to have children / insistence on contraception measures without consent). Parties not living together at least since 27-08-1990 — 16+ years of separatio",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-4",
+          "name": "Sureshta Devi v. Om Prakash",
+          "citation": "(1991) 3 SCC 251 · Supreme Court",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-5",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Sureshta Devi v. Om Prakash (1991) 3 SCC 251 · Supreme Court Ground: s. 13B consent persistence Facts: Marriage broke down; a petition for dissolution by mutual consent under s. 13B was presented in which the wife was a signatory/consenting party. By the time the court was moved to pass the decree, the wife declined to persist — asserting she had not freely consented / wished not to proceed (her position hardened that the mutual route was not to be pressed). The husband contended that once consent was on record, the court could proceed regardless of the later posture. Issue: Whether a decree",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-5",
+          "name": "Amardeep Singh v. Harveen Kaur",
+          "citation": "(2017) 8 SCC 746 · Supreme Court (12-09-2017)",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-6",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Amardeep Singh v. Harveen Kaur (2017) 8 SCC 746 · Supreme Court (12-09-2017) Ground: waiver of s. 13B(2) cooling-off Facts: The couple (with children) had been living apart for years — reported ~8 years — and filed a joint s. 13B petition before a Delhi Family Court (filed 08-05-2017) , with all incidental matters (custody, alimony, dowry claims) settled and consent decreed in essence. Because s. 13B(1) itself required one year's separation plus the six-month gap, the parties moved to waive the six-month waiting period so the second motion could be taken up at once. The question reached the ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-6",
+          "name": "Shilpa Sailesh v. Varun Sreenivasan",
+          "citation": "Constitution Bench, 01-05-2023 · Transfer Petition (Civil) No. 1118 of 2014 (S.K. Kaul, Sanjiv Khanna, Abhay S. Oka, Vikram Nath, J.K. Maheshwari JJ) · reported (2023) 9 SCC 371",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-7",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Shilpa Sailesh v. Varun Sreenivasan Constitution Bench, 01-05-2023 · Transfer Petition (Civil) No. 1118 of 2014 (S.K. Kaul, Sanjiv Khanna, Abhay S. Oka, Vikram Nath, J.K. Maheshwari JJ) · reported (2023) 9 SCC 371 Ground: Art. 142 — irretrievable breakdown as independent dissolution route Facts: The parties had moved the Supreme Court (via transfer petition) seeking divorce by mutual consent with waiver of statutory periods — one party in Canada, on medication for depression; husband complained of loneliness and absence of cohabitation amounting to mental strain; efforts by counsellors, medi",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-7",
+          "name": "Rupa Ashok Hurra v. Ashok Hurra",
+          "citation": "(2002) 4 SCC 388 · AIR 2002 SC 177 · 5-judge Constitution Bench, 10-04-2002 (B.N. Kirpal CJI, G.B. Pattanaik, H.K. Sema, S.N. Variava, Brijesh Kumar JJ) — CITED IN DU COMPANION'S CURATIVE DRAFT",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-8",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Rupa Ashok Hurra v. Ashok Hurra (2002) 4 SCC 388 · AIR 2002 SC 177 · 5-judge Constitution Bench, 10-04-2002 (B.N. Kirpal CJI, G.B. Pattanaik, H.K. Sema, S.N. Variava, Brijesh Kumar JJ) — CITED IN DU COMPANION'S CURATIVE DRAFT Matrimonial dispute · birth of the curative petition Facts: The parties married per Hindu rites at Ahmedabad; differences from early on — wife left the matrimonial home in 1983; mutual-consent divorce proceedings followed; in 1986 the wife withdrew her consent and prayed for dismissal, while the husband maintained consent could not be recalled. Litigation wound upward: ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u3-8",
+          "name": "Mohinder Kaur v. Major Singh",
+          "citation": "AIR 1972 P & H 184 (Division Bench: Pandit & Gopal Singh JJ) — cited in DU law-faculty syllabus material",
+          "unitNumber": 3,
+          "unit": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "anchorId": "case-u3-9",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Mohinder Kaur v. Major Singh AIR 1972 P & H 184 (Division Bench: Pandit & Gopal Singh JJ) — cited in DU law-faculty syllabus material Defence limits in RCR Facts: Parties married (per the Act); in the husband's RCR petition, the wife sought to resist restitution by pointing to a contravention of s. 5(iii) HMA (marriage within the prohibited degree/sapinda-type condition — as noted in the DU syllabus extract, the contravention concerned a s. 5 condition). Issue: Can breach of a s. 5 condition be pleaded as a defence to an RCR petition when it is not itself a ground for JS, nullity or divorce ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "draft-c-u4-1",
+          "name": "H. Venkatachala Iyengar v. B.N. Thimmajamma",
+          "citation": "AIR 1959 SC 443",
+          "unitNumber": 4,
+          "unit": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "file": "SEM 5/DRAFTING/Succession_Act_Pleadings_DU_LB502.html",
+          "anchorId": "case-u4-2",
+          "facts": "The propounder of a will applied for probate. Suspicious circumstances surrounded the execution, including the propounder taking a leading part in execution and substantial benefit thereunder.",
+          "issues": "What is the nature and standard of evidence required to prove execution and attestation of a will when suspicious circumstances are alleged?",
+          "arguments": "Appellant argued execution was strictly proven per s. 63 Succession Act and s. 68 Evidence Act. Respondent argued propounder failed to dispel suspicious circumstances.",
+          "ratio": "The propounder must prove that the testator signed the will in sound disposing state of mind and understood the nature of dispositions. Where suspicious circumstances exist, the court will not grant probate until the propounder satisfies the judicial conscience by cogent evidence.",
+          "examTips": "The locus classicus on proof of wills in probate petitions under Section 276 of the Indian Succession Act, 1925."
+        },
+        {
+          "id": "draft-c-u4-2",
+          "name": "Krishna Kumar Birla v. Rajendra Singh Lodha",
+          "citation": "(2008) 4 SCC 300",
+          "unitNumber": 4,
+          "unit": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "file": "SEM 5/DRAFTING/Succession_Act_Pleadings_DU_LB502.html",
+          "anchorId": "case-u4-3",
+          "facts": "In the Priyamvada Devi Birla will dispute, caveators claiming under a prior mutual will sought to enter caveats opposing grant of probate to Lodha.",
+          "issues": "Who has caveatable interest to contest a probate petition under Section 283 and Section 284 of the Indian Succession Act?",
+          "arguments": "Appellants claimed substantial interest in the estate. Respondent argued only persons who would inherit in intestacy or under another testamentary paper have caveatable interest.",
+          "ratio": "A person who has a caveatable interest must show an interest in the estate of the deceased which is likely to be adversely affected by the grant of probate. A mere creditor or stranger with no claim in estate has no caveatable interest.",
+          "examTips": "Crucial authority to cite on who can file a caveat opposing a probate petition in DU semester examinations."
+        },
+        {
+          "id": "draft-c-u5-1",
+          "name": "Gurbaksh Singh Sibbia v. State of Punjab",
+          "citation": "(1980) 2 SCC 565",
+          "unitNumber": 5,
+          "unit": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "file": "SEM 5/DRAFTING/Pleadings_Under_Criminal_Law_DU_LB502.html",
+          "anchorId": "case-u5-2",
+          "facts": "Constitution Bench decision examining whether restrictive limitations should be read into the judicial discretion to grant anticipatory bail under Section 438 CrPC.",
+          "issues": "What are the principles and scope of discretion governing the grant of anticipatory bail by Sessions Courts and High Courts?",
+          "arguments": "State contended that anticipatory bail should be granted only in exceptional and rare cases. Petitioners argued personal liberty under Article 21 requires wide judicial discretion without rigid fetters.",
+          "ratio": "The power to grant anticipatory bail is wide and untrammeled by rigid formulas. The court must balance personal liberty against the need for effective investigation. Anticipatory bail can be granted before registration of FIR if reasonable apprehension of arrest on accusation of non-bailable offence exists.",
+          "examTips": "Mandatory landmark Constitution Bench decision for drafting anticipatory bail applications under Section 438 CrPC / Section 482 BNSS."
+        },
+        {
+          "id": "draft-c-u5-2",
+          "name": "Sushila Aggarwal v. State (NCT of Delhi)",
+          "citation": "(2020) 5 SCC 1",
+          "unitNumber": 5,
+          "unit": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "file": "SEM 5/DRAFTING/Pleadings_Under_Criminal_Law_DU_LB502.html",
+          "anchorId": "case-u5-3",
+          "facts": "Five-judge Constitution Bench resolved conflicting rulings on whether anticipatory bail must be limited in duration or continue until conclusion of trial.",
+          "issues": "Whether anticipatory bail should be granted for a limited period or can continue till the culmination of trial.",
+          "arguments": "One side relied on Mhetre holding no time limit. Other side relied on Salauddin holding bail must be for limited duration to enable accused to seek regular bail.",
+          "ratio": "Anticipatory bail should not be routinely limited in duration; it normally continues till the culmination of trial unless special circumstances justify a time-limit. Imposing unreasonable restrictions on anticipatory bail impairs Article 21 personal liberty.",
+          "examTips": "Indispensable recent Constitution Bench ruling to quote in DU Semester 5 bail drafting questions."
+        },
+        {
+          "id": "draft-c-u5-3",
+          "name": "Dashrath Rupsingh Rathod v. State of Maharashtra",
+          "citation": "(2014) 9 SCC 129",
+          "unitNumber": 5,
+          "unit": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "file": "SEM 5/DRAFTING/Pleadings_Under_Criminal_Law_DU_LB502.html",
+          "anchorId": "case-u5-4",
+          "facts": "Examined territorial jurisdiction for filing Section 138 Negotiable Instruments Act complaints following dishonour of cheques.",
+          "issues": "Which court has territorial jurisdiction to entertain a Section 138 NI Act criminal complaint?",
+          "arguments": "Complainant argued jurisdiction exists where statutory notice was issued or received. Accused argued only where drawee bank is located.",
+          "ratio": "Territorial jurisdiction lies exclusively where the drawee bank is situated where cheque is dishonoured. (Later amended by Parliament in Section 142(2) NI Act to place jurisdiction where payee maintains account if delivered for collection).",
+          "examTips": "Essential for drafting jurisdiction paragraphs in Section 138 NI Act complaints."
+        },
+        {
+          "id": "draft-c-u6-1",
+          "name": "Lucknow Development Authority v. M.K. Gupta",
+          "citation": "(1994) 1 SCC 243",
+          "unitNumber": 6,
+          "unit": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act",
+          "file": "SEM 5/DRAFTING/Other_Miscellaneous_Pleadings_DU_LB502.html",
+          "anchorId": "case-u6-2",
+          "facts": "Flat buyers complained against statutory housing authorities for excessive delay in delivery of possession and defective construction.",
+          "issues": "Whether statutory development authorities and sovereign housing bodies are amenable to consumer jurisdiction under the Consumer Protection Act for deficiency in service.",
+          "arguments": "Authority argued it performed statutory functions and did not provide commercial services. Complainant argued housing construction falls within definition of service.",
+          "ratio": "Housing construction and allotment of plots by development authorities constitutes \"service\" under the Consumer Protection Act. Public authorities are liable for deficiency in service and arbitrary harassment of citizens.",
+          "examTips": "Primary authority for drafting consumer complaints against real estate builders and statutory development authorities under CPA 2019."
+        },
+        {
+          "id": "draft-c-u6-2",
+          "name": "S.R. Batra v. Taruna Batra",
+          "citation": "(2007) 3 SCC 169",
+          "unitNumber": 6,
+          "unit": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act",
+          "file": "SEM 5/DRAFTING/Other_Miscellaneous_Pleadings_DU_LB502.html",
+          "anchorId": "case-u6-3",
+          "facts": "Wife filed application under Section 12 PWDVA 2005 seeking right of residence in a house owned exclusively by her mother-in-law.",
+          "issues": "What constitutes a \"shared household\" under Section 2(s) and Section 17 of the Protection of Women from Domestic Violence Act, 2005?",
+          "arguments": "Wife claimed right to reside in any house where she lived with her husband. In-laws argued property owned exclusively by mother-in-law is not a shared household.",
+          "ratio": "A shared household means a house belonging to or taken on rent by the husband, or belonging to the joint family of which the husband is a member. (Later expanded by 3-judge bench in Satish Chander Ahuja (2020) 10 SCC 781 allowing residence even in mother-in-law’s house during subsistence of shared living).",
+          "examTips": "Crucial for drafting residence applications under Section 12 & Section 17 of the PWDVA 2005."
+        },
+        {
+          "id": "draft-c-u7-1",
+          "name": "Ram Kumar Das v. Jagadish Chandra Deo",
+          "citation": "AIR 1952 SC 23",
+          "unitNumber": 7,
+          "unit": "Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices",
+          "file": "SEM 5/DRAFTING/Conveyancing_Part_B_DU_LB502.html",
+          "anchorId": "case-u7-2",
+          "facts": "Tenancy created without registered instrument for manufacturing purposes; tenant paid rent annually. Landlord issued 15-day notice to quit under Section 106 TPA.",
+          "issues": "How does Section 106 of the Transfer of Property Act operate when lease is not in writing or duration is unspecified?",
+          "arguments": "Tenant argued lease was for manufacturing purposes requiring 6 months notice. Landlord argued periodic tenancy terminable by 15 days notice.",
+          "ratio": "In the absence of a contract or local usage to the contrary, a lease of immovable property for agricultural or manufacturing purposes is deemed to be from year to year, terminable by 6 months notice; other leases are deemed month to month, terminable by 15 days notice.",
+          "examTips": "Foundational authority for drafting statutory notices of termination of lease under Section 106 TPA."
+        }
+      ],
+      "pyqs": [
+        {
+          "id": "draft-pyq-u1-1",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2017 · Q1(a)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“What are the fundamental rules of pleadings in respect of drafting a plaint?”",
+          "modelAnswer": "MODEL ANSWER Introduction: Pleadings are statements of facts in writing drawn up and filed by each party stating what his contention shall be at trial and giving his opponent all details needed to prepare his answer (DU definition). In India, “pleading” means plaint or written statement (O. 6, R. 1 CPC). The English law of pleading has four fundamental rules on which Order VI CPC is based — and every plaint must satisfy all four. Rule 1 — Pleading must state FACTS and not LAW Neither provisions of law nor conclusions of mixed law and fact may be alleged; the judge draws legal inferences from pleaded facts (judicial notice of Indian law). Illustrations: pleading only “Abu Mohammad made a gift” is bad — plead how the gift was made, accepted and possession delivered; “defendant is negligent” is bad — plead how and in what respect; “contract is rescinded” bad — plead the manner of rescission. Exceptions: (a) foreign law (no judicial notice — plead as fact); (b) mixed questions of law and fact (limitation, set-off — plead facts + conclusion); (c) condition precedent intended to be contested must be distinctly specified (O. 6, R. 6 — e.g., legality of s. 80 notice); (d) custom and trade usage pleaded like facts (unless judicially recognised as law); (e) negligence, unlawful act etc. must be specifically pleaded. Rule 2 — All MATERIAL FACTS and material facts only (O. 6, R. 2) Material facts = facts essential to cause of action/defence which the party must prove to succeed. If in doubt, plead it — an unpleaded fact cannot be proved at trial. Instances: Shia-law widow must plead husband was a Shia; alternative relief needs its facts; age/time facts; nature of title-deed; loss of maintenance by desertion/adultery; custom in precise form. Exceptions: (a) contents of documents — state the effect briefly (sale-deed dated…) unless precise words material; (b) matters of inducement — introductory facts, kept to minimum; (c) performance of conditions precedent implied unless contested; (d) matters law presumes / burden on other side (consideration in note-suit, s. 118 NI Act); (e) evidence — never. Rule 3 — FACTS, not EVIDENCE Plead facta probanda (facts to be proved), not facta probantia (facts by which proved). Illustrations: malicious-prosecution plaintiff pleads “actuated by malice” only — not the revenge-vow evidence; insurance defence pleads “died of his own hand” — not pistol-purchase details. Exception: where fact-in-issue and evidence mix (custom proved by village administration paper), the record itself is pleaded. Rule 4 — Concise, with precision and certainty Summary form, strict chronological order , active voice, consistent names, consecutively numbered paragraphs (one fact per para), dates/sums in figures (as well as words — O.6 R.2(3)); concise but never obscure ; parties cannot change their case. Signature by party + advocate (O. 6, R. 14) and verification distinguishing own knowledge vs information (O. 6, R. 15); corporation pleads through secretary/director/principal officer; false verification is punishable (IPC 191/193 → BNS 227/229). Conclusion: A plaint obeying these four rules narrows the controversy to definite issues, prevents surprise, saves proof-expense and enables the court to frame issues (O. 14) — “the court has no power to disregard the pleading.”"
+        },
+        {
+          "id": "draft-pyq-u1-2",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2017 · Q5(b)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“How is ‘conveyancing’ different from ‘pleadings’?”",
+          "modelAnswer": "MODEL ANSWER Pleadings (dictionary ‘plead’ = to state and argue a case) are the parties’ contentions in a dispute reduced to writing — beginning-stage documents of a lawsuit (plaint + written statement + related petitions/replies). They apply to court proceedings , civil and criminal, and aim to determine what the parties are fighting about ; they are filed to invoke the court’s adjudicatory process. Conveyancing (‘conveyance’ = act by which property is voluntarily transferred by written instrument) is the drafting of documents executed outside court — wills, sale deeds, leases, mortgages, gifts — whose purpose is to create evidence of a transaction , not to argue a dispute. They may later be used in court only if a dispute arises. Basis Pleadings Conveyancing Sphere Court proceedings Out-of-court documentation Purpose Adjudicate live disputes; frame issues Effect transactions; record rights Audience Judge + opposite party Parties, registrars, third parties Governing law CPC Orders VI–VIII, CrPC/BNSS, Evidence law TPA, Registration Act, Stamp Act, Indian Succession Act Examples Plaint, WS, complaint, writ, bail application Sale deed, will, GPA, lease, partnership deed One-line answer: “Pleadings are applicable to court proceedings; conveyancing is applicable to documentation done outside the court — though such documents may be used in proceedings to substantiate a contention.” (DU material) Both, however, are products of the same skill: synthesis of law and fact in language form ."
+        },
+        {
+          "id": "draft-pyq-u1-3",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "PRESCRIBED QB · KAMKUS Q1",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“What do you mean by pleading? Discuss its fundamental rules.”",
+          "modelAnswer": "MODEL ANSWER (structure for a 10-mark question) Meaning: (i) O. 6, R. 1: pleading = plaint or written statement; (ii) working definition: written statements, drawn up and filed by each party, stating his trial-contentions with details the opponent needs to prepare his answer; (iii) plaint = statement of claim with cause of action and particulars (O. 7, R. 1); WS = statement of defences dealing with every material fact + new facts + objections; (iv) classification: original / subsequent (reply to set-off as of right; replication/reply) / additional (O. 6 R. 5; O. 8 Rr. 8–9). Fundamental rules (state the four in bold, then 2–3 lines each with provision + one illustration + one exception as in the 2017 answer above): Facts, not law (+ 5 exceptions); 2. All material facts and only them (O. 6 R. 2; test of materiality; documents’ effect / inducement exceptions); 3. Facts, not evidence (facta probanda vs facta probantia); 4. Concise, precise, certain (chronology, numbered paras, signature & verification). Object-link (value addition): These rules operationalise the object of pleadings — fair notice, precise issues, eradication of irrelevancy — as Stable J. said in Pinson v. Lloyds Bank , a pleading defines with precision the area beyond which conflict must not extend. Conclusion: Rules are the skeleton; skill (style, marshalling of facts) is the flesh — both needed for the “perfect pleading” the DU material demands."
+        },
+        {
+          "id": "draft-pyq-u1-4",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "EXPECTED · UNIT I",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Explain the objects and functions of pleadings. What advantages flow from them?”",
+          "modelAnswer": "MODEL ANSWER Objects: assist the court and parties in adjudication; fair notice of opponent’s case; ascertain points of agreement/difference → definite issue; eradicate irrelevancy; know what facts to prove; avoid surprise; save expense of unnecessary evidence; confine conflict (no power to disregard pleadings). Advantages (DU’s four): (i) parties know exactly what is left in dispute (libel example — may settle for apology+costs); (ii) know precisely what facts to prove — no waste, no surprise; (iii) determine the appropriate mode of trial (may be a pure point of law); (iv) record the precise question so successors don’t fight the same battle again. Quote: Stable J. in Pinson (function of pleading) + Lord Halsbury (each side fully alive to the questions to be argued). Converse: unpleaded issues cannot be decided ( Gita Rani Paul ); unpleaded facts cannot be proved ( Chunni Lal Chawdhary )."
+        },
+        {
+          "id": "draft-pyq-u1-5",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "EXPECTED · RULE 1",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Pleadings must state facts and not law — discuss exceptions.”",
+          "modelAnswer": "MODEL ANSWER Rule: no legal provisions or legal conclusions in pleadings; judge applies law to facts (judicial notice). Reason: court’s duty to examine every applicable law; parties may argue law any time (non-maintainability may be urged even if not pleaded). Illustrations: gift (plead making/acceptance/delivery of possession); negligence (plead duty + breach facts); money-suit defence (plead never borrowed / goods never ordered or delivered / not equal to sample); rescission (plead manner); declaratory suit (plead how related, not “legal heir”). Exceptions (five, DU): (a) foreign law — pleaded as fact (courts don’t take judicial notice; prove by expert opinion, Evidence Act ss. 45–47); (b) mixed law & fact — plead both (limitation, set-off, res judicata, estoppel u/s 116 Evidence Act — but at first instance); (c) condition precedent contested — O. 6 R. 6 (s. 80 notice); (d) custom & trade usage — like facts unless judicially recognised force of law; unpleaded usage → no evidence; (e) negligence/unlawful/wrongful acts — specific facts required. Close with: pleadings are tolerated legal inferences only where the facts justifying them are themselves pleaded."
+        },
+        {
+          "id": "draft-pyq-u1-6",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "EXPECTED · RULE 3",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Distinguish between facta probanda and facta probantia with illustrations.”",
+          "modelAnswer": "MODEL ANSWER Aspect Facta Probanda Facta Probantia Meaning Facts to be proved — the material facts relied upon Facts by which they are proved — evidence Pleaded? Yes — in the plaint/WS No — reserved for evidence stage Nature Relevant facts whose proof establishes facts in issue Documents, witnesses, conversations — “proof-machinery” Illustration “Defendant was actuated by malice in prosecuting plaintiff” “Plaintiff had earlier given evidence; defendant vowed revenge” Illustration 2 “Assured died of his own hand” (defence) “Assured bought pistol days before; made preparations” Rule/O. 6 R. 2 Mixed cases exception: where custom is proved only by the village administration paper, that record itself must be pleaded. Consequence of mixing: pleading becomes prolix, reveals defence prematurely, invites applications (O. 6 R. 16 striking out) and confuses issue-framing (O. 14)."
+        },
+        {
+          "id": "draft-pyq-u1-7",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "EXPECTED · SIGNATURE & VERIFICATION",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Discuss the law relating to signature and verification of pleadings.”",
+          "modelAnswer": "MODEL ANSWER Signature — O. 6, R. 14: party + pleader; if party cannot sign (absence/good cause), duly authorised person signs; authorisation produced in court; purpose — prevent denial of authorisation. DU point v: signed by party and advocate; agent if party unable. Verification — O. 6, R. 15: at the foot, by party or person acquainted with facts to court’s satisfaction; specify, by paragraph numbers, what is verified of own knowledge vs information received and believed true ; sign with date & place; affidavit in support (R. 15(4)); R. 15A for commercial disputes. DU points vi–vii: verification by parties/by person acquainted; corporation — secretary/director/principal officer able to depose. Model clause (quote the specimen in § 6). Liability: false verification = false evidence — IPC ss. 191/193 → BNS ss. 227/229 (up to 7 years in judicial proceedings). Defective verification is not fatal — curable by amendment, relates back — but causes delay (KAMKUS). Purpose: fix personal responsibility before adjudication."
+        },
+        {
+          "id": "draft-pyq-u1-8",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "EXPECTED · ALTERNATIVE PLEAS",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Can a party plead in the alternative? Illustrate with DU examples.”",
+          "modelAnswer": "MODEL ANSWER Yes — law does not prohibit a plaintiff relying on several distinct rights in the alternative, or a defendant raising as many defences as he likes. DU illustrations (all five): adopted-son vs will; proprietary vs easementary right; estoppel + denial of pre-emption custom; widow-separated vs 12-year adverse possession; promissory note not-executed vs limitation-barred. Disciplines: (1) plead each alternative separately and expressly — courts will not act on implication; (2) plead the facts of each alternative (son-vs-mother’s-donee illustration: dominion, control, knowledge of unsound mind); (3) alternatives must not be mutually destructive ; (4) statutory anchors — O. 6 R. 12 (alternative implied contracts), O. 8 Rr. 6/6A (set-off/counter-claim), O. 7 (alternative relief)."
+        },
+        {
+          "id": "draft-pyq-u1-9",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "KAMKUS Q11",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“How can a plaint be amended?”",
+          "modelAnswer": "MODEL ANSWER Provision: O. 6, R. 17 CPC — court may at any stage allow either party to alter/amend pleadings on such terms as may be just; all amendments necessary for determining the real questions in controversy shall be made (mandatory limb). Proviso (2002): no application after commencement of trial unless, despite due diligence, the matter could not have been raised earlier. Procedure: application (IA) stating proposed amendment + reasons; court considers delay, bad faith, prejudice compensable by costs. Principles: amendment is of wide ameliorative purpose — prevent multiplicity; justice on merits; parties not refused relief for mistake/negligence/inadvertence unless mala fide or incurable injury ( Ganga Bai ; B.K. Narayana Pillai ; Revajeetu Builders ). Limits: no new/inconsistent case (O. 6 R. 7); no constructive res judicata; amendment relates back to original date (so limitation is saved) — cf. also defective verification cured by amendment. Material facts omitted at peril — hence amend before trial, not after."
+        },
+        {
+          "id": "draft-pyq-u1-10",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2017 · Q1(b)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“Draft a bail application under s. 437 CrPC for an accused alleged to have committed offence under s. 380 IPC.”",
+          "modelAnswer": "MODEL DRAFTING PLAN (answer structure + specimen skeleton) A. Structure (mirror the DU model “Application for Regular Bail”, Form 27): Heading & title: “IN THE COURT OF LEARNED MAGISTRATE… / APPLICATION UNDER SECTION 437 OF THE CODE OF CRIMINAL PROCEDURE, 1973 ON BEHALF OF THE ACCUSED…” — cause title + case no. + complainant vs accused. “MOST RESPECTFULLY SHOWETH” — numbered paragraphs: 1–2. Identity of applicant-accused: name, son/w/o, age, address, occupation (Rule: exact names & addresses; consistent spelling)"
+        },
+        {
+          "id": "draft-pyq-u1-11",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2017 · Q2",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "On a dishonoured cheque of ₹2 crores, draft: (a) Suit under Order XXXVII CPC; (b) Complaint under s. 138 NI Act.",
+          "modelAnswer": "MODEL ANSWER (dual-drafting framework) (a) Order XXXVII suit — mirror DU Form 1 (Suit for Recovery under O. XXXVII): Court heading + “SUIT FOR RECOVERY OF ₹2,00,00,000/- (Rupees Two Crore only) UNDER ORDER XXXVII CPC”. Parties paragraph (company through authorised director — competence to sue); cause-title block. Body paras: business of plaintiff; defendant’s residence; how transaction began; agreement; plaintiff’s performance; final bill; cheque particulars — No., date, ₹2,00,00,000, drawn on bank (specificity rule!); presentation & dishonour memo with reason (“insufficient funds”); demand after dishonour; legal notice with interest rate + period; amount presently due with interest computation; limitation (cheque presented within 3 months of its date — s. 138 first proviso; civil suit within 3 years — Art. 137 Limitation Act; criminal complaint within one month of cause of action — s. 142(b) NI); jurisdiction (place of drawing/cheque delivery — s. 142 NI; O. 7 R. 1); valuation & court-fee ; O. XXXVII averments (suit founded on negotiable instrument; no just defence in statement as per R. 3 grounds); prayer + verification. (b) s. 138 NI complaint — mirror DU Form 29: complainant details; accused details; cheque details (No./date/amount/bank); cheque in discharge of legally enforceable debt/ liability (plead the underlying debt — material fact); presentation & return memo; notice u/s 138(b) dated … served on …; 15-day period expired on … without payment → cause of action arose on …; complaint filed within one month (s. 142(b)); jurisdiction (place of drawee bank branch — ss. 142/142A NI); relief: punishment u/s 138 — imprisonment up to two years, or fine up to twice the amount of the cheque, or both (plus compensation u/s 357(3) CrPC where appropriate); verification; list of documents (cheque, dishonour memo, notice, annexures). Cross-application of Unit I rules: same facts, two fora — plead facts once in each draft with forum-specific statutory particulars; keep evidence out; chronological numbering."
+        },
+        {
+          "id": "draft-pyq-u1-12",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2017 · Q3 & Q4",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Mutual-consent divorce first motion + affidavits (Q3) · Attempt any two of: Art. 226 habeas corpus writ; permanent injunction suit + stay; letters of administration; s. 125 CrPC maintenance (Q4)",
+          "modelAnswer": "MODEL ANSWERS (condensed frameworks — DU Forms 17, 24, 3, 19, and DU Form 30 maintenance application) Draft Non-negotiable skeleton Mutual divorce (first motion) — s. 13B(1) + s. 13(1)(b) HMA Cause title; marriage solemnised (date/place/registration); living apart ≥ 1 year; no coercion/fraud; no prior litigation; joint petition statement of irretrievable breakdown; terms re: alimony, custody, dowry claims (if any); first-motion prayer; both parties’ affidavits (own-knowledge verification) + witness lines; O. mutual-consent cooling period notes (6 months, waivable — Amardeep Singh ). Art. 226 — habeas corpus Heading: HIGH COURT; parties (petitioner, State, person detaining, detenu as respondent); facts of illegal confinement (date, place, circumstances); no alternative efficacious remedy ; no laches; grounds: Art. 21 violation, no legal authority; prayer to produce detenu + inquire; verification + annexures (FIR, notices). Suit for permanent injunction + stay Parties; tenancy/ownership facts; defendant’s threat of dispossession/eviction (material facts); prima facie case + balance of convenience + irreparable injury (in stay application, O. 39 R. 1–2); undertaking as to damages; prayer; verification. Letters of Administration Deceased’s death facts; intestacy; petitioner’s class/relationship (title to obtain L/A); estate particulars; no will; explanation for delay in applying, if any (Art. 137 Limitation Act); bond/indemnity undertaking; petition as DU Form 20. s. 125 CrPC (now BNSS s. 144 ) — DU Form 30 Petitioner-wife facts; marriage + subsisting relationship; husband’s means (salary/IPS officer) as pleaded; desertion & thrown out without cause (material facts); dependents; relief with amount + periodicity; verification. Golden thread across all four: jurisdiction para → limitation para → statutory-ingredient paras (facts only) → prayer → verification. That thread is precisely what Unit I teaches."
+        },
+        {
+          "id": "draft-pyq-u1-13",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "DU · 2019 · PAPER PATTERN",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Part A: Caveat (s. 148A CPC) · Mutual divorce · Anticipatory bail · Probate/will petition — Part B: Conveyancing drafts",
+          "modelAnswer": "HOW TO ATTEMPT (pattern-based model approach) Question type Key ingredients to hit (per DU forms) Caveat under s. 148A CPC (DU Form 10) Cause title of apprehended proceeding; applicant’s antecedents to the transaction; likelihood of filing of appeal/revision ; undertaking to serve notice; deposit condition (s. 148A(1)); prayer to notify caveator before passing order; verification. Rule applied: precise dates, consistent party labels. Anticipatory bail (DU Form 28 — s. 482 BNSS; formerly s. 438 CrPC) FIR/sections; apprehension of arrest (name of police/station — pleaded as fact); no necessity of custodial interrogation; co-accused status; jurisdiction of Sessions/HC per case law; undertakings to join investigation; interim protection till final hearing; verification. Mutual divorce + affidavits (DU Form 17) As Q3 above — plus each party’s separate affidavit paragraphs distinguishing “own knowledge” (verification rule in action). Probate/will petition (DU Form 19) Will’s date/executors; testator’s death; petition to grant of probate in the High Court (Indian Succession Act, 1925 — Part XI; petition with will annexed; caveat/notice to persons likely to contest; estate & duty particulars; codicils, if any; verification on paragraph-wise knowledge). Part B — conveyancing (3 Qs) Use component-parts checklist (Part B Unit I of DU: title, date, parties, recitals, testatum, operating clause, schedule, exceptions, habendum, covenants, testimonium, signatures/attestation) — e.g., will, GPA, agreement-to-sale, sale deed, lease with registration clause. Pro-tip: DU repeats drafting-by-format (any 4 of 7). Speed comes from memorising the DU model forms’ paragraph architecture; accuracy comes from Unit I — every paragraph you write must pass the F-M-E-C test (Facts, Material, Evidence-free, Concise)."
+        },
+        {
+          "id": "draft-pyq-u1-14",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "year": "QB · KAMKUS Q15",
+          "marks": "15 Marks",
+          "type": "Essay",
+          "question": "“What do you mean by written statement? What are the two parts of a W.S.?”",
+          "modelAnswer": "MODEL ANSWER Meaning: the defendant’s statement of defence dealing with every material fact alleged in the plaint, setting up new facts in his favour, and taking objections to the claim — filed under O. 8 CPC (within 30 days, extendable to 90). Non-filing does not admit everything ( Chunni Lal Chawdhary ), but bars evidence on unpleaded facts. Part I — Statement on merits (traverse): para-wise admission/denial of each material allegation of the plaint, as required by O. 8 R. 3 — specific denial, specifying which parts are admitted; evasive denials prohibited; new facts of defence pleaded affirmatively. Part II — Preliminary objections / legal defences: jurisdiction, limitation, res judicata, estoppel, non-joinder, discharge, set-off (O. 8 R. 6) and counter-claim (O. 8 R. 6A, to be expressly stated “by way of counter-claim”) — each raised separately and distinctly (O. 8 R. 7), with alternative pleas expressly labelled. Close: verification + signature (O. 6 Rr. 14–15) as in plaint."
+        },
+        {
+          "id": "draft-pyq-u2-1",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "DU · 2017 · Q2",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“On the basis of the facts given below, draft: (a) a suit under Order XXXVII CPC; (b) a complaint under s. 138, NI Act.”",
+          "modelAnswer": "MODEL ANSWER — (a) the O. XXXVII suit (answer in DU Form 1’s architecture) Heading: IN THE COURT OF DISTRICT JUDGE …, DELHI — SUIT NO. … OF 20… — “(SUIT UNDER ORDER XXXVII OF THE CPC, 1908)” · Cause title with exact names/addresses · Title: “SUIT FOR RECOVERY OF ₹……/- (in words) UNDER ORDER XXXVII…” Body — para plan (A–T system): ① plaintiff + authorised signatory (company: director) → ② business (inducement) → ③ defendant address → ④ how the transaction began → ⑤ agreement/contract terms (the O. 37 R. 1 gateway — written contract/instrument) → ⑥ plaintiff’s performance → ⑦ bill/quantum (figures + words) → ⑧ instrument given (cheque no., date, sum, bank) → ⑨ dishonour/default (bank memo dated…) → ⑩ demand + repeated reminders → ⑪ legal notice (date, what demanded) → ⑫ amount presently due + interest computation → ⑬ cause of action (each date; still subsisting) → ⑭ within limitation (Art. 137) → ⑮ territorial jurisdiction (s. 17: part of cause arose here; payments here; defendant’s office here) → ⑯ valuation + court fee paid (s. 7 CFA) → ⑰ “suit filed under O. XXXVII; no relief outside its ambit” (R. 2 requirement pleaded!) → PRAYER (a) decree (b) interest pre/pendente lite/future (c) costs (d) omnibus → signature (O. VI R. 14) → verification (knowledge = business records vs information; correct para numbers) → note: supported by affidavit (Form 2) + O. VI R. 15(4) . Scoring extras: (i) R. 1 eligibility sentence (“claim is a liquidated demand in money arising on a written contract / cheque”); (ii) limitation computation; (iii) correct court per pecuniary limits; (iv) if cheque facts given — mention parallel s. 138 NI complaint (2 months’ limitation chain: 3-month presentation → 15-day notice → 1-month complaint, s. 142(b)). (b) s. 138 NI complaint See Part I companion notes § 10 (DU Form 29 anatomy: complainant/accused → cheque particulars → legally enforceable debt → return memo → notice u/s 138(b) → 15-day failure → cause of action → jurisdiction (ss. 142/142A) → relief: up to 2 years’ imprisonment / fine up to twice the amount / both → verification + documents list). Both drafts share the same facts — different statutory frames."
+        },
+        {
+          "id": "draft-pyq-u2-2",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "DU · 2017 · Q4 (choose any two)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Draft: permanent injunction suit / stay application with it / other listed drafts",
+          "modelAnswer": "MODEL ANSWER — permanent injunction suit (DU Form 3 anatomy) Heading + title: “SUIT FOR PERMANENT INJUNCTION” · Paras: ① identity + possession/tenancy ② relationship/origin of right (deceased-landlord pattern or ownership) ③ equities + documents annexed ④ present possession + records ⑤ payment/standing (clean hands — SRA s. 41(i) proof) ⑥–⑧ threats/acts with dates (throwing goods, attempts, notices) ⑨ police/machinery approached (alternative-remedy exhaustion) ⑩ repetition risk (KAMKUS: “threatens and intends to repeat”) ⑪ no other efficacious remedy (s. 41(h) shield) ⑫ continuing cause of action ⑬ valuation/fee ⑭ territorial jurisdiction → Prayer: permanent injunction against defendants “and their representatives, employees, agents” + costs + omnibus → verification + affidavit. Companion sub-draft — stay/temporary injunction application: IA in suit no. …, under O. XXXIX Rr. 1 & 2 r/w s. 151 : paras = suit pending → incorporation of plaint by reference → prima facie case → irreparable loss (suit anfractuous + multiplicity) → balance of convenience → prayer for ex-parte ad-interim restraint → affidavit."
+        },
+        {
+          "id": "draft-pyq-u2-3",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "DU · 2019 · PAPER PATTERN",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Part A included a caveat application (s. 148A) among four drafting questions",
+          "modelAnswer": "MODEL ANSWER — caveat (DU Form 10 anatomy + statute) Heading: High Court, caveat no., caption identifying the order expected to be challenged (suit no., date, judge) · Paras: ① the order under challenge (with provision — e.g., O. 6 R. 17 amendment dismissed) ② expected petition (name the remedy — Art. 227/revision/appeal) ③ right to appear & contest ④ desire for notice — no stay/order without hearing (s. 148A(3)) ⑤ RPAD service on the would-be applicant (s. 148A(2)) ⑥ court fee · Prayer: nothing be done without notice · affidavit attested by oath commissioner + proof of dispatch. Score-line: state the 90-day life (s. 148A(5)), applicant’s duty to furnish copies (s. 148A(4)), and the civil-only scope ( Deepak Khosla ). Other 2019-type items → where their models live Anticipatory bail → DU Form 28 (criminal section; BNSS s. 482) · Mutual divorce + affidavits → Form 17/18 · Probate petition → Form 19 · Conveyancing (Part B) → companion Part I notes. The civil-forms skeleton (heading→facts→provision→prayer→verification→affidavit) answers all of them."
+        },
+        {
+          "id": "draft-pyq-u2-4",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "QB · KAMKUS Q.6 & Q.9",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“What do you mean by interlocutory orders?” · “What is ex parte decree?”",
+          "modelAnswer": "MODEL ANSWERS Interlocutory applications/orders: filed during the pendency/course of a litigation; decided en route, not finally; must be drafted with a pleading’s care — precise, brief, irrelevant-free; grounds in the words of the enabling provision; facts may live in the accompanying affidavit (“for the reasons in the annexed affidavit…”). CPC examples (KAMKUS list): O. 6 R. 17 amendment · s. 95 compensation (arrest/attachment on insufficient grounds) · s. 144 restitution · s. 151 · s. 152 correction of judgments/decrees · O. 9 Rr. 4 & 9 (set aside dismissal in default) · O. XI R. 1 — interrogatories with leave · objections under s. 47/O. 21 Rr. 58, 89–91, 98 · O. 22 substitution · O. 28 commissions · O. 39 interim injunction · O. 40 receiver · O. 47 review. This unit’s Forms 4, 5, 6, 12 are all interlocutory. Ex parte decree: a decree passed without the defendant appearing/responding. In ordinary suits → O. 9 R. 3 (defence heard, defendant refused to cross-examine/witness → decree; or after summons + no appearance). In summary suits (Form 1): O. 37 R. 3(6) — no appearance, no leave application, refusal of leave, or breach of conditions → plaintiff is entitled to judgment forthwith (allegations deemed admitted). Setting aside: O. 9 R. 13 (ordinary) / O. 37 R. 4 (summary — “special circumstances”, Rajni Kumar ) . Protection against unfair surprise is the caveat (s. 148A — Form 10)."
+        },
+        {
+          "id": "draft-pyq-u2-5",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "QB · KAMKUS Q.13 & Q.14",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“What do you understand by an Affidavit?” · “What is pauper suit?”",
+          "modelAnswer": "MODEL ANSWERS Affidavit: written statement sworn/affirmed before an authority competent to administer oaths. Framework: O. XIX CPC (R. 1 — proof of facts by affidavit; R. 2 — cross-examination of deponent; R. 3 — confined to relevant facts) · s. 139 CPC who administers (HC for judicial proceedings; State Govt otherwise; Oath Commissioners) · parts: cause title → deponent’s description → oath/affirmation → recitals (capacity + numbered facts) → verification (knowledge vs information; “nothing material concealed”) → identification → attesting authority’s certificate · discipline: no law/argument/opinion; disclose sources (“I am informed…” + informant’s name/address in interlocutory matters) · verification mandatory or it is not an affidavit; no amendment — supplementary affidavit only · false affidavit = IPC 199/200 → BNS 236/237 (and IPC 191/193 → BNS 227/229 in judicial proceedings) · supported-plaint requirement: O. VI R. 15(4). DU model: Form 2’s three paras (authority & knowledge from business records · suit true on instructions · annexures true copies) + verification. [Details § 3.] Pauper suit (forma pauperis): suit by an indigent person without prepaying court fee — O. XXXIII (R. 1 definition & prior-rejection bar; R. 1A clerk’s inquiry; R. 2 contents: short title, relief-matter, value, property particulars, previous rejection; verified like plaint; rejection grounds include fraudulent disposal within 2 months; on grant → treated as plaint; court may assign pleader; fees recovered if he wins — first charge on subject-matter; if he loses — State recovers from him ; appeal against rejection: O. 43 R. 1; pauper appeals: O. 44) + Art. 39A & LSA Act 1987 context. DU model: Form 6’s five paragraphs + undertaking to pay fee if decreed. [Details § 7.]"
+        },
+        {
+          "id": "draft-pyq-u2-6",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "QB · KAMKUS Q.15 & Q.11",
+          "marks": "15 Marks",
+          "type": "Essay",
+          "question": "“Written statement — its two parts?” · “How can a plaint be amended?”",
+          "modelAnswer": "MODEL ANSWERS (condensed) WS — two parts: (I) Statement on merits/traverse — para-wise specific admission/denial of every material allegation (O. 8 R. 3; evasive denial = deemed admitted) + affirmative new facts of defence; (II) Preliminary objections/legal defences — limitation, jurisdiction, valuation, non/mis-joinder, res judicata (s. 11), stay (s. 10), verification defects, statutory bars (SRA 41(h)/(i)/34/14; s. 80; s. 69 Partnership Act; Benami s. 4) — stated separately (O. 8 R. 7), without prejudice to each other, plus set-off/counter-claim if any (O. 8 Rr. 6/6A — “by way of counter-claim”), verification + affidavit. DU Form 9 is the perfect specimen: 16 POs + merits reply. Timing: 30 days (max 90); silence → judgment (R. 10); no evidence on unpleaded facts ( Chunni Lal ). Amendment of plaint: O. 6 R. 17 — court may allow alteration/amendment at any stage on just terms ; mandatory limb: all amendments necessary for determining the real controversy shall be made; proviso (2002) : after trial begins — only if due diligence + no prejudice; procedure = application stating proposed amendment + reasons; wide ameliorative purpose ( Ganga Bai , B.K. Narayana Pillai , Revajeetu Builders ); limits: no new/inconsistent case (O. 6 R. 7), relates back for limitation, cures verification defects. [Full answer: Part I § 10.]"
+        },
+        {
+          "id": "draft-pyq-u2-7",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "QB · KAMKUS Q.17 & Q.18",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“Draft a plaint and WS for specific performance of a contract for purchase of a car?” · “Draft a plaint for recovery of money.”",
+          "modelAnswer": "MODEL ANSWER — Q.17 specific performance (movable property!) Plaint (apply Form 8’s skeleton): heading/title “SUIT FOR SPECIFIC PERFORMANCE OF CONTRACT” → parties → ① plaintiff’s need (car for business/family) → ② defendant absolute owner of car (describe: make, reg. no., chassis/engine no. — movable specificity! ) → ③ negotiations on dates → ④ agreement to sell in writing (Annexure A; price; date of delivery) → ⑤ advance/earnest paid (receipt annexed) → ⑥ terms: balance + transfer of possession/RC endorsement → ⑦ demand on date → refusal → ⑧ repeated requests (dates) → ⑨ legal notice → no compliance → ⑩ ready & willing (SRA s. 16(c)) → ⑪ cause of action dates → ⑫ limitation (Art. 54 — 3 years from refusal) → ⑬ territorial jurisdiction (agreement/refusal here) → ⑭ court fee → prayer: decree directing sale + delivery + costs + omnibus → verification + affidavit. Note: for movables, also plead defendant’s continued ownership & non-transfer (or implead transferee — SRA s. 19) and mention remedy-alternative (compensation, SRA s. 14 read with Contract Act s. 73). WS skeleton (apply Form 9): Preliminary objections — no written agreement (denial) / agreement void-unregistered / purchase for immoral/illegal purpose / limitation / no jurisdiction / benami, etc. (pick facts) + merits reply para-wise (admit/deny/specific counter-facts; deny readiness if true — O. 8 R. 3) + prayer + verification + affidavit; counter-claim for advance refund if entitled (O. 8 R. 6A). Q.18 recovery of money Use Form 1’s A–T flow: if the claim is a liquidated sum on a written contract/cheque → add para “suit under O. XXXVII” + affidavit (summary); if unliquidated (goods sold at fair price, services) → ordinary plaint under O. 7 R. 1 with same paragraphs minus the O. 37 gate. Never forget: figures + words , cause-of-action dates, limitation, jurisdiction, valuation, prayer (principal + interest heads + costs), verification with correct paragraph numbers."
+        },
+        {
+          "id": "draft-pyq-u2-8",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "year": "QB · KAMKUS Q.3",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "“What do you understand by cause of action?”",
+          "modelAnswer": "MODEL ANSWER Meaning: the factual ground(s) which, if proved, entitle the plaintiff to a judgment — “every fact which would be necessary to be proved, and without which the plaintiff would not be entitled to a decree.” Procedural role: must appear in the plaint — O. 7 R. 1(iii) (facts constituting cause of action and when it arose) + O. 6 R. 2 (material facts only); jurisdiction depends on where it arises (ss. 16–17); limitation runs from it (Arts. 54/137…); no cause of action = rejection/dismissal (O. 7 R. 11; and a standard WS objection — DU Form 9 para 4). Illustrations: money suit — loan/advance + refusal; ejectment — tenancy + notice + expiry + refusal (Form 7); specific performance — agreement + readiness + refusal (Form 8). A single application may involve several causes; they must all be pleaded — unpleaded facts cannot be proved at trial (Unit I Rule 2 + Gita Rani Paul )."
+        },
+        {
+          "id": "draft-pyq-u3-1",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "year": "DU · 2017 · Q3",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "modelAnswer": "1 · Cause title — \"IN THE COURT OF PRINCIPAL JUDGE, FAMILY COURT (DISTRICT ___), ___ COURT, DELHI · HMA PETITION NO. ___ OF 20___ · IN THE MATTER OF: X … PETITIONER NO. 1 AND Y … PETITIONER NO. 2 · JOINT PETITION FOR DISSOLUTION OF MARRIAGE BY A DECREE OF DIVORCE BY MUTUAL CONSENT UNDER SECTION 13B(1) OF THE HINDU MARRIAGE ACT, 1955\". 2 · Body — the 11 DU paragraphs in order: (1) marriage per Hindu rites on date at place + register extract + attested affidavit; (2) status/age/residence grid (before marriage & at filing); (3) last-resided-together place + children's particulars; (4) living separately since ___ and not able to live together since then + brief reasons (+ settlement mention); (5) mutual agreement to dissolve; (6) consent not obtained by force, fraud or undue influence ; (7) not in collusion; (8) no undue delay; (9) no other legal ground; (10) jurisdiction — plead how (solemnisation/last cohabitation residence, s. 19); (11) court-fee affixed. 3 · Prayer — decree of divorce on mutual consent dissolving P1–P2 marriage + residuary relief · Signatures of BOTH petitioners through counsel · Verification signed by both. 4 · Affidavits — \"Separate affidavits of Petitioner No. 1 and Petitioner No. 2\" (DU's note): Form 18 skeleton ×2 — solemn affirmation; competence; marriage; no collusion; no delay; consent free of force/fraud; incorporation of petition contents read-over clause naming s. 13B(1); verification \"true… nothing material concealed\". 5 · Bonus (separately awarded in DU marking) — one-line note that under s. 13B(2) the second motion follows after 6 months (waivable per Amardeep Singh conditions); terms sheet (custody, alimony, stridhan, pending cases) annexed."
+        },
+        {
+          "id": "draft-pyq-u3-2",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "year": "DU · 2017 · Q4 (d)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "modelAnswer": "Model answer skeleton: Court caption (Principal Judge, Family Court / Magistrate 1st class — jurisdiction per FCA s. 7(2)) → parties (wife + minor child as complainants, husband respondent) → paras: (1–2) marriage + solemnisation particulars; (3–4) separation/how respondent left/refused maintenance; (5) respondent's means (income, property, business); (6) absence of other liabilities; (7–8) complainants' no independent source of livelihood + dependant status; (9) child's expenditure heads (school fees, clothing, care) with monthly total; (10) jurisdiction (residence) → prayer: monthly allowance ₹___ for wife + ₹___ for child + costs → verification/affidavit + list of witnesses. Update line (2024 onward): write \"s. 125 CrPC (now s. 144 BNSS , 2023)\" — same elements, plus BNSS's interim-maintenance and modification features. Civil cross-claims: HMA ss. 24/25, DVA s. 20, HAMA s. 18."
+        },
+        {
+          "id": "draft-pyq-u3-3",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "year": "DU · 2019 · Paper pattern",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "modelAnswer": "Approach: same as Q3 above — the mutual-divorce entry is the recurring matrimonial question. In a three-hour paper: time-box it — 8 min caption + status grid, 15 min paras 1–11, 10 min two affidavits, 5 min prayer/verification/annexure list; leave the last read for the s. 13B(2) note. Anything missing from DU's (a)–(f) mandatory list = direct mark deduction."
+        },
+        {
+          "id": "draft-pyq-u3-4",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "year": "KAMKUS · Q.21",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "modelAnswer": "Model answer: identical product to DU 2017 Q3 (the two sources converge — Form 17). Write the caption with section, the 11 paragraphs, the settlement-terms paragraph, prayer under s. 13B, verification by both, affidavit note. Add the KAMKUS polish: the clean-hands sentence (\"neither party is guilty of any act which should preclude relief\") + a recital of the 1-year separation computation (since s. 13B(1) requires it) — the points where answers lose marks."
+        },
+        {
+          "id": "draft-pyq-u3-5",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "year": "KAMKUS · Q.29",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "modelAnswer": "Title: \"PETITION FOR JUDICIAL SEPARATION UNDER SECTION 10 OF THE HINDU MARRIAGE ACT, 1955\" · Court: Principal Judge, Family Court · Wife = petitioner. Paras: 1 — marriage (Hindu rites, date/place, registration, extract + affidavit); 2 — status grid (her status/age/residence before & at filing); 3 — children; 4 — grounds, in separate paragraphs: \"the respondent has deserted the petitioner for a continuous period of not less than two years immediately preceding this petition, within s. 13(1)(ib) read with s. 10\" + facts per paragraph: (4.1) he left the matrimonial home on ___ from ___; (4.2) statements to neighbours/relatives that he would not return ( animus deserendi — KAMKUS material-facts instance); (4.3) demands to rejoin on dates → refusals; (4.4) without reasonable cause / without her consent — no cruelty, no adultery by her; (4.5) computing the continuous two years; — 5/6: non-accessory/non-condonation (where grounds touch s. 13(1)(i)/(ia)); 7 — no collusion; 8 — no delay; 9 — no other legal ground; 10 — prior-proceedings table (if any); 11 — venue facts (s. 19); 12 — jurisdiction; 13 — court-fee. Prayer: decree of judicial separation under s. 10 + residuary. Verification (knowledge/information split) + note: petitioner's affidavit appended. Do-nots: don't write \"deserted for one year\" (divorce needs 2 years under s. 13(1)(ib); JS ground imports the same clause — plead the continuous period honestly); don't fold multiple grounds into one paragraph; don't skip the status grid."
+        },
+        {
+          "id": "draft-pyq-u4-1",
+          "unitNumber": 4,
+          "unitTitle": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "year": "DU · 2017 · Q4 (option c)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 4: Pleadings under Indian Succession Act, 1925",
+          "modelAnswer": "1 · Cause title — \"IN THE COURT OF THE DISTRICT JUDGE (DISTRICT ___), ___ COURT, DELHI · CASE NO. ___ UNDER ACT XXXIX OF 1925 · IN THE MATTER OF A PETITION FOR LETTERS OF ADMINISTRATION OF THE ESTATE OF THE LATE ___ · X petitioner v. State + Y respondents · PETITION FOR GRANT OF LETTERS OF ADMINISTRATION\". 2 · Mandatory particulars, as paragraphs — (a) death facts : date, place, leaving properties within jurisdiction; (b) intestacy + diligent search, no will found (or, if a will exists and this is with-will L/A: annex the will, plead no executor/refusal/death of executor); (c) petitioner's class/relationship and right — \"the only son … entitled to the grant\" (s. 278(1)(c); s. 218 entitlement); (d) estate particulars — Schedules A (assets) & B (liabilities), value stated; (e) relatives table with residences (s. 278(1)(b)); (f) fixed abode of deceased within jurisdiction (s. 278(1)(e)); (g) no application to any other court (s. 279); (h) explanation for delay , if any, in applying (Limitation: applications of this kind fall under Art. 137, Limitation Act, 1960 — plead facts negating laches); (i) bond/indemnity undertaking — readiness to execute the administration-bond with sureties (s. 291(1)); (j) court-fee affixed + undertaking for later-found property. 3 · Prayer — \"That letters of administration to the estate of the deceased may be granted to your petitioner\" + further relief. 4 · Verification — petitioner: \"true to the best of my information and belief\" (last para knowledge) + note \"To be supported by affidavit\"; if a will is annexed, add the two attesting-witness verifications (s. 281 pattern). 5 · Differentiators examiners look for — cite s. 278 in the heading or first line; distinguish from probate (\"no executor claims; the Court's grant, not certification\"); mention the security bond ; keep facts-only paragraphing (O. VI r. 1 discipline from Unit I)."
+        },
+        {
+          "id": "draft-pyq-u4-2",
+          "unitNumber": 4,
+          "unitTitle": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "year": "DU · 2019 · Paper Pattern (Part A)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 4: Pleadings under Indian Succession Act, 1925",
+          "modelAnswer": "1 · Forum first — probate is drafted for the High Court (testamentary side) — \"Probate Case No. ___\" cause title; the petition is \"with the will annexed\" (Part IX, Ch. IV — ss. 276 ff.). 2 · Content spine — will's date & executors named; testator's death (date/place/residence); original will as annexure (+ codicils, if any , annexed and separately attested as in the companion form); how bequeathed (names/relations/shares/exclusions); all relatives as respondents; Schedule-A estate & liabilities; \"no application to any other court\" (s. 279); claim \"as named executor\" (s. 222); jurisdiction: fixed abode/property within jurisdiction (ss. 264/300); court-fee affixed + later-property undertaking; undertaking to administer per the will. 3 · Verification architecture — paragraph-wise: petitioner on information-and-belief, each attesting witness on execution (\"present and saw the testator affix his signature and acknowledge the writing as his Last Will\" — s. 281), plus the affidavit note. 4 · Caveat-awareness bonus — mention that persons likely to contest are already on record (DU para 5) and that a caveat under ss. 284–285 / O. XL CPC would convert the matter into a suit — shows the contest-side knowledge the same paper tests via its caveat question. 5 · Pitfalls — never draft it \"by the heirs\"; never omit the will annexure; never claim as \"legal heir\" in a probate petition; never leave relatives out (s. 283 citation logic)."
+        },
+        {
+          "id": "draft-pyq-u4-3",
+          "unitNumber": 4,
+          "unitTitle": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "year": "KAMKUS · Important Questions · Q.8",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 4: Pleadings under Indian Succession Act, 1925",
+          "modelAnswer": "Definition: \"Codicil\" is defined in s. 2(b) of the Indian Succession Act, 1925 as \"an instrument made in relation to a will, and explaining, altering or adding to its disposition, and shall be deemed to form part of the will.\" (GCA, 1873 s. 3(64) also folds codicils into \"will\".) Nature: a codicil is a supplement to an already-executed will — it explains, alters or adds to the will's dispositions and is legally part of the will . When the changes are minor , a codicil is the proper instrument; when the changes are substantial , the correct practice is to execute a fresh will and revoke the earlier one. Rules: (i) it requires the same formalities as a will — writing, signature, attestation by two witnesses (s. 63); (ii) on inconsistency between will and codicil, the codicil prevails ; (iii) it speaks from the testator's death; (iv) revoked by the same modes as an unprivileged will (s. 70). Practical/pleading link: the DU companion's probate petition is taken out for \" the said Last Will … together with a Codicil \" — proof through separate attesting-witness declarations for each instrument, prayer for probate of \"Will together with the Codicil\", and even an executorship claimed \"as sole executor named in the codicil \" (codicil can appoint/alter executors). In the courtroom: probate of a codicil discovered after the original grant has its own machinery (s. 225; s. 262 for L/A with will annexed)."
+        },
+        {
+          "id": "draft-pyq-u4-4",
+          "unitNumber": 4,
+          "unitTitle": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "year": "Likely variant frames",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "Problem / Examination Question on Topic 4: Pleadings under Indian Succession Act, 1925",
+          "modelAnswer": "Frame A — \"Draft a petition for grant of succession certificate\" : use § 4's checklist — heading must recite s. 372 , 11 paras, split verification, prayer (i) s. 374 powers + prayer (ii) s. 375 security exemption. Frame B — \"Draft a caveat against grant of probate\" : separate skill — O. XL CPC + s. 284 ISA, Schedule V form, with affidavit of caveatable interest in 8 days (§ 6) — do not confuse with the s. 148A CPC caveat of DU Form 10 (file 1). Frame C — short note: \"Probate versus letters of administration\" : § 5's matrix in prose — title source (will vs grant), applicant (executor vs beneficiary/heir), effect on intermediate acts (s. 227 vs s. 221), bond, petition section (s. 276 vs s. 278)."
+        },
+        {
+          "id": "draft-pyq-u5-1",
+          "unitNumber": 5,
+          "unitTitle": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Examine the statutory framework and judicial principles governing Pleadings under Criminal Law & Special Enactments. Discuss with leading Supreme Court authorities.",
+          "modelAnswer": "### Model Answer Outline\n\n1. **Statutory Framework & Object:** Detail the primary provisions and legislative purpose.\n2. **Key Legal Issues & Interpretations:** Analyze the core controversies and principles settled by the Supreme Court.\n3. **Landmark Judicial Precedents:** Cite and discuss the ratio decidendi of leading cases.\n4. **Critical Analysis & Conclusion:** Synthesize the current legal position with practical examination takeaways."
+        },
+        {
+          "id": "draft-pyq-u6-1",
+          "unitNumber": 6,
+          "unitTitle": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Examine the statutory framework and judicial principles governing Miscellaneous Petitions — Consumer, Contempt & DV Act. Discuss with leading Supreme Court authorities.",
+          "modelAnswer": "### Model Answer Outline\n\n1. **Statutory Framework & Object:** Detail the primary provisions and legislative purpose.\n2. **Key Legal Issues & Interpretations:** Analyze the core controversies and principles settled by the Supreme Court.\n3. **Landmark Judicial Precedents:** Cite and discuss the ratio decidendi of leading cases.\n4. **Critical Analysis & Conclusion:** Synthesize the current legal position with practical examination takeaways."
+        },
+        {
+          "id": "draft-pyq-u7-1",
+          "unitNumber": 7,
+          "unitTitle": "Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Examine the statutory framework and judicial principles governing Conveyancing — Deeds, Instruments & Statutory Notices. Discuss with leading Supreme Court authorities.",
+          "modelAnswer": "### Model Answer Outline\n\n1. **Statutory Framework & Object:** Detail the primary provisions and legislative purpose.\n2. **Key Legal Issues & Interpretations:** Analyze the core controversies and principles settled by the Supreme Court.\n3. **Landmark Judicial Precedents:** Cite and discuss the ratio decidendi of leading cases.\n4. **Critical Analysis & Conclusion:** Synthesize the current legal position with practical examination takeaways."
+        }
+      ],
+      "revisions": [
+        {
+          "id": "draft-rev-u1",
+          "unitNumber": 1,
+          "unitTitle": "Topic 1: Fundamental Rules & Skills of Pleadings",
+          "badge": "Unit 1 Capsule",
+          "title": "Topic 1: Fundamental Rules & Skills of Pleadings — Rapid Revision Capsule",
+          "anchorId": "rev-u1",
+          "file": "SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "“Abu Mohammad made a gift of his property to the plaintiff.”",
+                "Plead how the gift was made, how it was accepted , and how possession was delivered — the facts constituting a valid gift under Muslim law.",
+                "“Made a gift” = conclusion of law from unpleaded facts."
+              ],
+              [
+                "“The defendant has been guilty of negligence.”",
+                "State how and in what respect he was negligent and how he became bound to use due care to prevent injury to others.",
+                "Duty + breach must be pleaded as facts."
+              ],
+              [
+                "Defence: “The defendant does not owe the plaintiff.”",
+                "“He never borrowed ; goods were never ordered / never delivered ; or they were not equal to sample .”",
+                "Denial of indebtedness without facts is a plea of law."
+              ],
+              [
+                "“The contract is rescinded.”",
+                "Plead in what manner and by what means it was rescinded.",
+                "Rescission is a legal conclusion; mode is fact."
+              ],
+              [
+                "“The defendant defamed the plaintiff.” KAMKUS",
+                "Plead the public utterances/publications , the exact words , their meaning, and innuendo where ambiguous.",
+                "Words + publication = facts; ‘defamed’ = inference."
+              ],
+              [
+                "“The respondent is guilty of cruelty; petitioner entitled to divorce.” KAMKUS",
+                "Plead that husband came home drunk and beat her on specific dates , abused her before relations, denied visits to parents, demanded dowry with threats, never cohabited, etc.",
+                "Only such facts establish physical/mental cruelty."
+              ],
+              [
+                "“Plaintiff is the legal heir of the deceased.”",
+                "Show how he was related , the relationship of other claimants, and facts showing he was nearer in relation .",
+                "‘Legal heir’ is an inference of law. KAMKUS"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 1: Fundamental Rules & Skills of Pleadings."
+        },
+        {
+          "id": "draft-rev-u2",
+          "unitNumber": 2,
+          "unitTitle": "Topic 2: Forms of Pleadings — Civil Plaints & Applications",
+          "badge": "Unit 2 Capsule",
+          "title": "Topic 2: Forms of Pleadings — Civil Plaints & Applications — Rapid Revision Capsule",
+          "anchorId": "rev-u2",
+          "file": "SEM 5/DRAFTING/Forms_of_Civil_Pleadings_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "1",
+                "Suit for recovery under Order XXXVII",
+                "10–12"
+              ],
+              [
+                "2",
+                "Draft Affidavit",
+                "13"
+              ],
+              [
+                "3",
+                "Suit for Permanent Injunction",
+                "14–16"
+              ],
+              [
+                "4",
+                "Application for Temporary Injunction (O. XXXIX Rr. 1 & 2)",
+                "17–18"
+              ],
+              [
+                "5",
+                "Application under O. XXXIX R. 2-A",
+                "19–20"
+              ],
+              [
+                "6",
+                "Application to sue as Indigent Person (O. XXXIII r/w s. 151)",
+                "21–22"
+              ],
+              [
+                "7",
+                "Suit for Ejectment & Damages for Wrongful Use and Occupation",
+                "23–25"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 2: Forms of Pleadings — Civil Plaints & Applications."
+        },
+        {
+          "id": "draft-rev-u3",
+          "unitNumber": 3,
+          "unitTitle": "Topic 3: Matrimonial Pleadings (HMA 1955)",
+          "badge": "Unit 3 Capsule",
+          "title": "Topic 3: Matrimonial Pleadings (HMA 1955) — Rapid Revision Capsule",
+          "anchorId": "rev-u3",
+          "file": "SEM 5/DRAFTING/Matrimonial_Pleadings_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "13 — Introduction",
+                "38–39",
+                "Chapter note (no proforma)"
+              ],
+              [
+                "14 — RCR petition",
+                "40–42",
+                "Petition for restitution of conjugal rights"
+              ],
+              [
+                "15 — Judicial separation",
+                "43–44",
+                "Petition for judicial separation"
+              ],
+              [
+                "16 — Contested divorce",
+                "45–47",
+                "Petition for dissolution by decree of divorce"
+              ],
+              [
+                "17 — Mutual divorce",
+                "48–49",
+                "Joint petition by Petitioner 1 & Petitioner 2"
+              ],
+              [
+                "18 — Matrimonial affidavit",
+                "50",
+                "Affidavit of the petitioner"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 3: Matrimonial Pleadings (HMA 1955)."
+        },
+        {
+          "id": "draft-rev-u4",
+          "unitNumber": 4,
+          "unitTitle": "Topic 4: Pleadings under Indian Succession Act, 1925",
+          "badge": "Unit 4 Capsule",
+          "title": "Topic 4: Pleadings under Indian Succession Act, 1925 — Rapid Revision Capsule",
+          "anchorId": "rev-u4",
+          "file": "SEM 5/DRAFTING/Succession_Act_Pleadings_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "19 — Probate",
+                "51–53 (PDF 58–60)",
+                "Petition for grant of probate (will + executors)"
+              ],
+              [
+                "20 — Letters of Administration",
+                "54–56 (PDF 61–63)",
+                "Petition for grant of letters of administration (with the will annexed, by a beneficiary)"
+              ],
+              [
+                "21 — Succession Certificate",
+                "57–58 (PDF 64–65)",
+                "Succession petition for debts & securities of the deceased"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 4: Pleadings under Indian Succession Act, 1925."
+        },
+        {
+          "id": "draft-rev-u5",
+          "unitNumber": 5,
+          "unitTitle": "Topic 5: Pleadings under Criminal Law & Special Enactments",
+          "badge": "Unit 5 Capsule",
+          "title": "Topic 5: Pleadings under Criminal Law & Special Enactments — Rapid Revision Capsule",
+          "anchorId": "rev-u5",
+          "file": "SEM 5/DRAFTING/Pleadings_Under_Criminal_Law_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "27",
+                "Application for Grant of Bail (regular bail, already in custody)",
+                "Chief Judicial Magistrate (District), Delhi"
+              ],
+              [
+                "28",
+                "Application for the Grant of Anticipatory Bail",
+                "Sessions Judge (District), Delhi"
+              ],
+              [
+                "29",
+                "Complaint under s. 138, the Negotiable Instruments Act",
+                "Judicial Magistrate First Class (NI Act), Delhi"
+              ],
+              [
+                "30",
+                "Application for Maintenance (wife + minor son through mother)",
+                "Principal Judge, Family Court, Delhi"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 5: Pleadings under Criminal Law & Special Enactments."
+        },
+        {
+          "id": "draft-rev-u6",
+          "unitNumber": 6,
+          "unitTitle": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act",
+          "badge": "Unit 6 Capsule",
+          "title": "Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act — Rapid Revision Capsule",
+          "anchorId": "rev-u6",
+          "file": "SEM 5/DRAFTING/Other_Miscellaneous_Pleadings_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "31",
+                "Complaint under the Consumer Protection Act, 2019 — telecom deficiency, dual opposite parties",
+                "District Consumer Disputes Redressal Commission (District), Delhi"
+              ],
+              [
+                "32",
+                "Contempt Petition under ss. 11 & 12 of the Contempt of Courts Act, 1971 — DDA defied status-quo",
+                "High Court of Delhi (in the pending Civil Writ)"
+              ],
+              [
+                "33",
+                "Complaint under s. 12 of the Protection of Women from Domestic Violence Act, 2005 — widow vs father-in-law",
+                "Chief Judicial Magistrate (District), Delhi"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 6: Miscellaneous Petitions — Consumer, Contempt & DV Act."
+        },
+        {
+          "id": "draft-rev-u7",
+          "unitNumber": 7,
+          "unitTitle": "Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices",
+          "badge": "Unit 7 Capsule",
+          "title": "Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices — Rapid Revision Capsule",
+          "anchorId": "rev-u7",
+          "file": "SEM 5/DRAFTING/Conveyancing_Part_B_DU_LB502.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "A · Description/Name/Title",
+                "All deeds should be described by the name of the transaction: “ THIS DEED OF MORTGAGE ”, “THIS DEED OF SALE”, “THIS LEASE”, “THIS DEED OF GIFT”. Complex/uncertain transactions: describe simply as “ THIS DEED ”. Usually in capitals.",
+                "d1 caption rule + title must match the act/section you invoke. DU’s own slips in Part A (title-vs-heading) are the exam’s favourite trap — one name, used everywhere."
+              ],
+              [
+                "B · Date and Place",
+                "“THIS LEASE made on the first day of February one thousand nine hundred and ninety nine.” Date = date of signing. Several parties signing on different dates → last date is the date of the deed ; each signer’s date shown against his signature. Write dates in words (figures in brackets) to avoid mistake/forgery. Place stated clearly at the start.",
+                "KAMKUS 📗: if no date mentioned, presumption = effective from date of execution ; some deeds from delivery ; wills take effect from death, not execution . Real: companion fills “6.8.85” in the sale-recital chain; DU SPA/GPA specimens: “executed at New Delhi on this 1st day of January 20…”."
+              ],
+              [
+                "C · Parties",
+                "(1) Transferee not a necessary party (deed not invalid without him) except in a Lease — but always a proper party. (2) Third person joined when consent/concurrence validates transfer/complete title. (3) Description — full description to prevent identification difficulty: parentage, occupation, residence + municipal/survey no., street, city; rural: village, sub-division, tehsil, development block; SC/ST transferor: mention caste/tribe + permission from competent authority . (4) Juridical persons — company, association, body, idol , corporation sole/aggregate. (5) Idol acts through a natural person — his name disclosed. (6) Reference labels — “the Vendor/purchaser/lessor/lessee”; avoid resembling opposites (mortgagor/mortgagee; vendor/vendee) → prefer “borrower/mortgagee”, “vendor/purchaser”; else “party of the first/second part” — but short name always preferable and used throughout .",
+                "Contract Act s. 11 capacity (major + sound mind + not disqualified). KAMKUS 📗 drafting formulas: company = “registered under the Companies Act, registered office at…”; firm = “partner of and acting for the firm M/s…”; minor = “acting through natural guardian…”; lunatic = “through manager appointed by the Court”; Government: contracts in the name of President/Governor (Art. 299 CPC/KAMKUS note — Constitution Art. 299) . DU vendor clause formula: “hereinafter called the VENDOR which expression shall… mean and include his heirs, executors, administrators and assigns of the FIRST PART”."
+              ],
+              [
+                "D · Recitals",
+                "Two kinds: Narrative Recitals — past history of property + facts/instruments showing title and parties’ relation to the matter; Introductory Recitals — explain the motivation for executing the deed. Form: begin with “ WHEREAS ”; with several, repeat or use “AND WHEREAS”, or numbered paragraphs with WHEREAS at the top.",
+                "KAMKUS 📗: recitals = “narrative of what led to the necessity… brief history/motive”; must show a complete unbroken chain , properly connected; construction rule: if operative part is unambiguous recitals don’t affect construction; if operative part is ambiguous, RECITALS GOVERN . DU examples: sale deed recital chain = vendor’s own purchase (doc no. 5560, Book I, Vol. 5318, pp. 136–152) → plan sanctioned → part-sale agreement; will’s WHEREAS = marriage/children/grandchildren."
+              ],
+              [
+                "E · Testatum",
+                "Operative part opens with the witnessing clause: “ NOW THIS DEED WITNESSES ” — refers to introductory recitals, states consideration and its receipt; “words of testatum are of no importance as affecting the operation — their sole use is to direct attention”; with several objects add “ AS FOLLOWS ”.",
+                "Drafting habit: testatum = the hinge from story (recitals) to law (operative). DU usage: agreement “NOW IT IS AGREED…”, lease “NOW THIS AGREEMENT WITNESSETH AS UNDER”, mortgage “NOW THIS DEED, THEREFORE WITNESSES AS UNDER” — note DU’s lease title/operative mismatch (Deed labelled but operative says “AGREEMENT” — a d1 consistency point)."
+              ],
+              [
+                "F · Consideration",
+                "“As contracts are necessarily for consideration ( Sec. 10 of the Contract Act ), it is advisable to express the consideration”; necessary for stamp duty — s. 27 Indian Stamp Act requires consideration “fully and truly set forth”; penalty for omission: fine up to ₹5,000 (s. 64) .",
+                "Verified text 🌐: s. 27 = “The consideration (if any) and all other facts and circumstances affecting the chargeability… shall be fully and truly set forth”; s. 64 = fine ≤ ₹5,000 (some States amended to 3 months/₹10,000) · s. 62 = fine ≤ ₹500 for executing unstamped instrument (KAMKUS) · s. 35 = unstamped inadmissible. Real: DU sale splits ₹2,00,000 already received + ₹50,000 by cheque — every rupee traced."
+              ],
+              [
+                "G · Receipt",
+                "Receipt may be embodied instead of a separate receipt: “NOW THIS DEED WITNESSES THAT in pursuance of the aforesaid agreement and in consideration of Rs. ___ paid by the purchaser to the vendor before the execution hereof, the receipt of which the vendor hereby acknowledges .”",
+                "Why embedded: Stamp Act — a separate written receipt is itself chargeable (s. 13 / Schedule I, Article on receipts) → one instrument, one duty. DU sale deed ¶1 = this receipt clause in numbered form (“receipt of which the Vendor hereby admit and acknowledge”)."
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Topic 7: Conveyancing — Deeds, Instruments & Statutory Notices."
+        }
+      ]
+    },
+    "industrial": {
+      "id": "industrial",
+      "code": "LB-503",
+      "name": "Industrial Law",
+      "shortName": "Industrial Law",
+      "semester": 5,
+      "folder": "SEM 5/Industrial law",
+      "theme": {
+        "primary": "#7c2d12",
+        "primaryDark": "#451a03",
+        "primaryLight": "#9a3412",
+        "accent": "#ea580c",
+        "accentLight": "#ffedd5",
+        "bgTint": "#fffaf5",
+        "border": "#fed7aa",
+        "badgeBg": "#ffedd5",
+        "badgeColor": "#7c2d12",
+        "gradient": "linear-gradient(135deg, #451a03 0%, #7c2d12 55%, #9a3412 100%)",
+        "tagline": "Industrial Relations Code 2020, Dispute Settlement, Strikes, Lockouts, Wage Determination & Social Security",
+        "motto": "IR Code 2020 • Dispute Settlement • Code on Wages 2019",
+        "quote": "Industrial law seeks to balance the conflicting interests of capital and labour to achieve social justice and economic peace.",
+        "icon": "fa-industry"
+      },
+      "units": [
+        {
+          "id": "ind-u1",
+          "number": 1,
+          "title": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "subtitle": "LB-503 Industrial Law | Unit 1: Dispute Settlement under the Industrial Relations Code, 2020",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "statutes": [
+            "S. 2(k) IDA",
+            "S. 2(q) IRC",
+            "S. 3 IRC",
+            "S. 4 IRC",
+            "S. 44 IRC",
+            "S. 49 IRC",
+            "S. 53 IRC"
+          ],
+          "topics": [
+            "Constitutional & Statutory Philosophy of Dispute Settlement Machinery",
+            "Definitions: Industrial Dispute, Workman, Industry, Settlement & Award",
+            "Bi-partite Machinery: Works Committee & Grievance Redressal Committee",
+            "Conciliation Machinery: Conciliation Officers & Boards of Conciliation",
+            "Voluntary Arbitration & Industrial Tribunals under the 2020 Code"
+          ]
+        },
+        {
+          "id": "ind-u2",
+          "number": 2,
+          "title": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "subtitle": "LB-503 Industrial Law | Unit 2: Reference of the Industrial Dispute (s.54 IR Code; Jurisdiction; Defective Reference)",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "statutes": [
+            "S. 10 IDA",
+            "S. 54 IRC",
+            "S. 12(5) IDA",
+            "Art. 226 Const."
+          ],
+          "topics": [
+            "Power of Appropriate Government to Refer Disputes (S. 10 IDA / S. 54 IRC)",
+            "Nature of Administrative Discretion: Subjective Satisfaction vs Objective Facts",
+            "Judicial Review of Reference Orders & Writs of Mandamus / Certiorari",
+            "Competence of Tribunal to Examine Validity of Reference & Incidental Matters"
+          ]
+        },
+        {
+          "id": "ind-u3",
+          "number": 3,
+          "title": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "subtitle": "Unit 3 · Awards & Settlements — LB-503 Industrial Law · DU LL.B. V Term",
+          "file": "SEM 5/Industrial law/Unit-3-Awards-and-Settlements-Notes.html",
+          "statutes": [
+            "S. 18 IDA",
+            "S. 19 IDA",
+            "S. 17 IDA",
+            "S. 17A IDA",
+            "S. 2(b) IDA",
+            "S. 2(p) IDA"
+          ],
+          "topics": [
+            "Definition, Form & Contents of an Award vs Settlement",
+            "Persons on Whom Settlements and Awards are Binding (S. 18 IDA / S. 58 IRC)",
+            "Period of Operation, Duration and Termination of Awards & Settlements (S. 19)",
+            "Withholding of Publication of Award: The Sirsilk Principle",
+            "Judicial Review of Industrial Awards under Arts. 136 and 226 of the Constitution"
+          ]
+        },
+        {
+          "id": "ind-u4",
+          "number": 4,
+          "title": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "subtitle": "Unit 4 · Managerial Prerogative & Disciplinary Action — LB-503 Industrial Law · DU LL.B. V Term",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "statutes": [
+            "S. 11A IDA",
+            "S. 33 IDA",
+            "Industrial Employment (Standing Orders) Act 1946"
+          ],
+          "topics": [
+            "Concept of Managerial Prerogative and Disciplinary Action for Misconduct",
+            "Principles of Natural Justice in Domestic Inquiry (Nemo Judex & Audi Alteram Partem)",
+            "Steps in Domestic Inquiry: Charge-sheet, Explanation, Inquiry Officer, Report & Punishment",
+            "Effect of Defective or No Inquiry: Employer’s Right to Lead Evidence before Tribunal"
+          ]
+        },
+        {
+          "id": "ind-u5",
+          "number": 5,
+          "title": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "subtitle": "Unit 5 · Powers of the Adjudicatory Authorities & Doctrine of Proportionality — LB-503 Industrial Law",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "statutes": [
+            "S. 11A IDA",
+            "S. 44 IRC",
+            "Art. 136 Const."
+          ],
+          "topics": [
+            "Power of Tribunal to Give Appropriate Relief in Discharge or Dismissal (S. 11A)",
+            "Scope of Appellate Jurisdiction under Section 11A: Reappreciation of Evidence",
+            "Doctrine of Proportionality: Interference with Quantum of Punishment",
+            "Reliefs: Reinstatement with Full Back Wages vs Lump Sum Compensation"
+          ]
+        },
+        {
+          "id": "ind-u6",
+          "number": 6,
+          "title": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "subtitle": "Unit 6 · Restraints on Managerial Prerogatives — §33 & §33-A IDA / §90 & §91 IRC",
+          "file": "SEM 5/Industrial law/Unit-6-Restraints-on-Managerial-Prerogatives-Notes.html",
+          "statutes": [
+            "S. 33(1) IDA",
+            "S. 33(2)(b) IDA",
+            "S. 33A IDA",
+            "S. 90 IRC",
+            "S. 91 IRC"
+          ],
+          "topics": [
+            "Object & Scope of Section 33: Preservation of Status Quo during Pendency of Proceedings",
+            "Distinction between Section 33(1) (Connected Matters) and Section 33(2)(b) (Unconnected Matters)",
+            "Mandatory Requirements of Section 33(2)(b): Action Taken, One Month Wages & Approval Application",
+            "Section 33-A Complaint by Aggrieved Workman: Dual Jurisdiction of Tribunal",
+            "Concept of Protected Workman and Special Statutory Safeguards"
+          ]
+        },
+        {
+          "id": "ind-u7",
+          "number": 7,
+          "title": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "subtitle": "Unit 7 · Wages — Concept & Kinds (Minimum, Fair, Living Wage) & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "statutes": [
+            "Code on Wages 2019",
+            "Minimum Wages Act 1948",
+            "Payment of Wages Act 1936",
+            "Payment of Bonus Act 1965",
+            "Art. 23 Const.",
+            "Art. 39(d) Const."
+          ],
+          "topics": [
+            "Concepts of Minimum Wage, Fair Wage and Living Wage (Crown Aluminium & Express Newspapers)",
+            "The Industry-cum-Region Formula and Capacity to Pay (Greaves Cotton Rule)",
+            "Revision of Minimum Wages & Linking with Consumer Price Index (Reptakos Brett)",
+            "Statutory Framework under Code on Wages 2019: Floor Wage, Deductions & Claims",
+            "Article 23 Constitutional Protection: Asiad Workers Case (PUDR v. Union of India)"
+          ]
+        },
+        {
+          "id": "ind-u8",
+          "number": 8,
+          "title": "Unit 8: The Code on Social Security, 2020",
+          "subtitle": "Unit 8 – The Code on Social Security, 2020 | LB-503 Industrial Law · Master Notes",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "statutes": [
+            "Code on Social Security 2020",
+            "Employees’ Compensation Act 1923",
+            "Maternity Benefit Act 1961",
+            "Payment of Gratuity Act 1972"
+          ],
+          "topics": [
+            "Consolidation of 9 Social Security Enactments under the 2020 Code",
+            "Employees’ Compensation: Liability of Employer for Accidents Arising Out of & In Course of Employment",
+            "Doctrine of Notional Extension of Employer’s Premises (Saurashtra Salt & BEST Cases)",
+            "Maternity Benefit: Mandatory Leave, Cash Benefits & Crèche Facilities",
+            "Gratuity: Eligibility, Continuous Service & Forfeiture Grounds",
+            "Social Security for Gig Workers, Platform Workers & Unorganised Workers"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "ind-c-u1-1",
+          "name": "North Brook Jute Co. Ltd. v. Their Workmen",
+          "citation": "AIR 1960 SC 879",
+          "unitNumber": 1,
+          "unit": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "anchorId": "case-u1-2",
+          "facts": "A jute company introduced a rationalisation scheme; the Works Committee, duly constituted, approved it. Workers resisted; a lock-out followed; the Tribunal awarded wages for the lock-out period. The employer argued before the Supreme Court that the workers must be deemed to have agreed because their representatives on the Works Committee had accepted the scheme.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Case — North Brook Jute Co. Ltd. v. Their Workmen, AIR 1960 SC 879 Facts A jute company introduced a rationalisation scheme; the Works Committee, duly constituted, approved it. Workers resisted; a lock-out followed; the Tribunal awarded wages for the lock-out period. The employer argued before the Supreme Court that the workers must be deemed to have agreed because their representatives on the Works Committee had accepted the scheme. Issue Can a Works Committee's approval bind the workers on a change in conditions of service (rationalisation)? Held No. Worker-representatives on the Works Com",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u1-2",
+          "name": ".2 Matters within and outside the purview of a Works Committee (tripartite guidelines, carried forward in practice)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 1,
+          "unit": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "anchorId": "case-u1-3",
+          "facts": "Material facts as recorded in DU Case Material for Unit 1.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Supporting authorities Kemp & Co. Ltd. v. Their Workmen , (1955) 1 LLJ 48 (LAT): recommendations of a Works Committee on which workers are not fairly represented are of no value; the committee's decision \"carries great weight but is not conclusive\"; constitution can be challenged if unfair. Union of India v. M.T.S.S.D. Workers' Union (1988, as noted in Jain): where a union commands more than 50% of the workers it should be given representation in constituting the WC; where no union has a majority, representation in proportion to strength — the logic now codified through the negotiating union",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u1-3",
+          "name": ".2 Government reference and its judicial review (IDA era — now confined to s.54 NIT references, but still examined)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 1,
+          "unit": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "anchorId": "case-u1-4",
+          "facts": "Material facts as recorded in DU Case Material for Unit 1.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Jaswant Sugar Mills Ltd. v. Lakshmi Chand, AIR 1963 SC 677 Facts: Conciliation officer refused permission under s.33 to dismiss workmen; employer sought special leave. Held: though the officer must act judicially in deciding the s.33 application, he is not invested with the State's judicial power to adjudicate rights with finality; he is an administrative authority ; no appeal lies under Art. 136 (relief lies under Art. 226/227). Principle: Conciliation Officer ≠ tribunal. 20.2 Government reference and its judicial review (IDA era — now confined to s.54 NIT references, but still examined)",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u1-4",
+          "name": ".3 Tribunal's jurisdiction, procedure and awards",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 1,
+          "unit": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "anchorId": "case-u1-5",
+          "facts": "By notification dated 22 May 2001 the Ministry of Labour, under s.7B IDA , constituted a National Tribunal at Calcutta and referred to it the question whether FDC Ltd.'s termination of 58 medical representatives (dismissed between 1997 and 1999 in different States for different alleged misconducts) was legal and justified. FDC challenged the notification under Art. 226.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> FDC Ltd. v. Union of India, 136 (2007) DLT 266 : (2007) 2 LLJ 413 (Del) (Shiv Narayan Dhingra J.) — DU material notes: \"Section 54, IR Code pari materia with s.7B IDA\" Facts By notification dated 22 May 2001 the Ministry of Labour, under s.7B IDA , constituted a National Tribunal at Calcutta and referred to it the question whether FDC Ltd.'s termination of 58 medical representatives (dismissed between 1997 and 1999 in different States for different alleged misconducts) was legal and justified. FDC challenged the notification under Art. 226. Arguments — FDC Each MR's case rested on individual",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-1",
+          "name": "Delhi High Court · Shiv Narayan Dhingra, J. · writ petition under Art. 226 · \"s.54 IR Code pari materia with s.7B IDA\"",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-2",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Delhi High Court · Shiv Narayan Dhingra, J. · writ petition under Art. 226 · \"s.54 IR Code pari materia with s.7B IDA\" Background & facts FDC Ltd. is a pharmaceutical company with medical representatives (MRs) posted across India. Between 1997 and 1999 it terminated the services of a number of MRs, in each case on that MR's own facts (misconduct of different kinds; some during probation, some during training). Individual MRs raised disputes in the States where they worked; statements of claim were filed before Labour Courts/Tribunals in various States, some proceedings were pending an",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-2",
+          "name": "Supreme Court · M.M. Dutt, J. (for the Bench) · appeal by special leave from the Patna High Court (Ranchi Bench)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-3",
+          "facts": "The appellant Sangh represented about 900 convoy drivers who drove newly manufactured TELCO vehicles from the Jamshedpur works to destinations across the country. By a letter of demand dated 16-10-1986 addressed to the General Manager, TELCO, the Sangh demanded that all convoy drivers be given permanent status and the facilities available to permanent TELCO employees from the dates of their appointment — a demand that \"proceeds on the basis that the convoy drivers are all workmen of TELCO\" (¶2). The Deputy Labour Commissioner , by letter dated 26-2-1979 (in an earlier round) informed the Sangh that, in view of the Law Department's opinion of 1973 that there was no relationship of master and servant between TELCO and the convoy drivers, the ",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Supreme Court · M.M. Dutt, J. (for the Bench) · appeal by special leave from the Patna High Court (Ranchi Bench) Facts The appellant Sangh represented about 900 convoy drivers who drove newly manufactured TELCO vehicles from the Jamshedpur works to destinations across the country. By a letter of demand dated 16-10-1986 addressed to the General Manager, TELCO, the Sangh demanded that all convoy drivers be given permanent status and the facilities available to permanent TELCO employees from the dates of their appointment — a demand that \"proceeds on the basis that the convoy drivers are",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-3",
+          "name": "Supreme Court · D.P. Mohapatra, J. · appeal from the Delhi High Court's order of 10-7-2000 · (DU extract omits ¶¶11–15, 17, 21–30, which survey the precedents)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-4",
+          "facts": "The appellant was employed by M/s Usha International Ltd. and held the post of \"Area Sales Executive\" (appointment order dated 21/22-4-1983) when his services were terminated by order dated 20-12-1995 (communicated 28-12-1995). No show-cause notice was served and no enquiry held; one month's salary was sent with the letter (¶3). He challenged the termination; conciliation failed and the Conciliation Officer sent a failure report on 23-10-1996 . By order dated 14-7-1998 the Government of NCT of Delhi declined to refer the dispute to the Industrial Tribunal/Labour Court, recording: \" Admittedly, the applicant was designated as Area Sales Executive and performing the duties of an Area Sales Executive, as such he is not covered by the definitio",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Supreme Court · D.P. Mohapatra, J. · appeal from the Delhi High Court's order of 10-7-2000 · (DU extract omits ¶¶11–15, 17, 21–30, which survey the precedents) Facts The appellant was employed by M/s Usha International Ltd. and held the post of \"Area Sales Executive\" (appointment order dated 21/22-4-1983) when his services were terminated by order dated 20-12-1995 (communicated 28-12-1995). No show-cause notice was served and no enquiry held; one month's salary was sent with the letter (¶3). He challenged the termination; conciliation failed and the Conciliation Officer sent a failure",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-4",
+          "name": "State of Madras v. C.P. Sarathy",
+          "citation": "AIR 1953 SC 53 (Patanjali Sastri C.J.) — the foundation case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-5",
+          "facts": "The South Indian Cinema Employees' Association submitted a memorandum to the Labour Commissioner, Madras, demanding increased wages and dearness allowance, bonus of three months' wages, leave, provident fund etc. from the managements of the cinema theatres in Madras city. Conciliation failed; the Commissioner's report said the managements would not accept his terms. The Government referred \" the industrial dispute between the workers and managements of the cinema talkies in the city of Madras \" generally to an Industrial Tribunal — without naming individual theatres or specifying items. Twenty-four theatres received notice. Four (including Prabhat Talkies) objected that no dispute at all existed between them and their own workers, who had r",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — State of Madras v. C.P. Sarathy , AIR 1953 SC 53 (Patanjali Sastri C.J.) — the foundation case Facts The South Indian Cinema Employees' Association submitted a memorandum to the Labour Commissioner, Madras, demanding increased wages and dearness allowance, bonus of three months' wages, leave, provident fund etc. from the managements of the cinema theatres in Madras city. Conciliation failed; the Commissioner's report said the managements would not accept his terms. The Government referred \" the industrial dispute between the workers and managements of the cinema talkies in the city of",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-5",
+          "name": "State of Bombay v. K.P. Krishnan",
+          "citation": "AIR 1960 SC 1223",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-6",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — State of Bombay v. K.P. Krishnan , AIR 1960 SC 1223 Facts: Firestone workmen raised four demands (gratuity, holidays, classification, unconditional bonus for 1953). The Conciliation Officer's failure report noted \"considerable substance\" in the bonus claim. The Government refused a reference under s.12(5) because the workmen had resorted to go-slow during the year — i.e., to punish them. Held: s.12(5) requires the Government to consider the report and decide whether \"there is a case for reference\"; it may take into account the prima facie merits and expediency, but the reasons it reco",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-6",
+          "name": "Bombay Union of Journalists v. State of Bombay",
+          "citation": "AIR 1964 SC 1617",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-7",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Bombay Union of Journalists v. State of Bombay , AIR 1964 SC 1617 Facts: Two employees of the \"Free Press Journal\" were retrenched; the union sought a reference; the Government declined, recording reasons that the union attacked as an adjudication of the merits and as taking irrelevant matters into account. Held: In deciding whether to refer, the Government may consider whether the claim is prima facie frivolous or belated, whether it is an industrial dispute at all (espousal), and expediency — but it \"cannot delve into the merits\". The Government's function is administrative; its con",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-7",
+          "name": "Ram Avtar Sharma v. State of Haryana",
+          "citation": "AIR 1985 SC 915",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-8",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Ram Avtar Sharma v. State of Haryana , AIR 1985 SC 915 The Government refused to refer termination disputes, recording that the workmen's services had been \"terminated in accordance with the terms of appointment\" and that the terminations were justified. Held: the Government \"cannot adjudicate on the merits of the dispute\"; such a refusal is a usurpation of the Tribunal's jurisdiction; the Court quashed the refusal and directed a reference. Together with M.P. Irrigation it supplies the \"merits are for the Tribunal\" rule that Telco ¶12 calls \"well settled\".",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-8",
+          "name": "Secretary, Indian Tea Association v. Ajit Kumar Barat , (2000) 3 SCC 93",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-9",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Secretary, Indian Tea Association v. Ajit Kumar Barat , (2000) 3 SCC 93 An Assistant Manager of a tea garden claimed to be a workman; the Government refused a reference after examining the record (his managerial functions were undisputed on the documents). Held: the refusal was valid — the Government may look at the material to see whether the person is prima facie a workman and whether an industrial dispute exists, provided it does not decide contested facts. The Court laid down the five-point summary (see §5 quotable box). Use: the counter-weight to Telco / Sharad Kumar : where the ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-9",
+          "name": "Sultan Singh v. State of Haryana",
+          "citation": "(1996) 2 SCC 66 · Avon Services Production Agencies v. Industrial Tribunal, Haryana , AIR 1979 SC 170 · Nagalinga Nadar Sons v. Headload Workers' Union , AIR 1951 SC 203",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-10",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Sultan Singh v. State of Haryana , (1996) 2 SCC 66 · Avon Services Production Agencies v. Industrial Tribunal, Haryana , AIR 1979 SC 170 · Nagalinga Nadar Sons v. Headload Workers' Union , AIR 1951 SC 203 Sultan Singh : no hearing need be given to the employer before the Government makes a reference, since no rights are decided and the employer gets a full hearing before the Tribunal. Avon Services : an earlier refusal does not exhaust the power — the Government may later refer the same dispute, on fresh material or on reconsideration, without notice to the employer. Nagalinga Nadar :",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-10",
+          "name": "Western India Match Co. Ltd. v. Western India Match Co. Workers Union",
+          "citation": "AIR 1970 SC 1205",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-11",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Western India Match Co. Ltd. v. Western India Match Co. Workers Union , AIR 1970 SC 1205 The Government refused a reference in 1962 and, on a fresh application, referred the same dispute in 1968. Held: the words \"at any time\" in s.10(1) impose no time-limit and a refusal is not a final adjudication; the Government may reconsider and refer, though it should not refer a dispute so stale as to be dead. Use: reconsideration power; the same logic explains why the Supreme Court in Telco could send the matter back \"for reconsideration\".",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-11",
+          "name": "Delhi Cloth & General Mills Co. v. Shambhu Nath Mukherjee",
+          "citation": "AIR 1978 SC 8",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-12",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Delhi Cloth & General Mills Co. v. Shambhu Nath Mukherjee , AIR 1978 SC 8 Several workmen struck off the rolls for absence; the Government referred the disputes of some and refused others in identical situations. Held: an unexplained differential refusal is discriminatory and violates Article 14 ; the reference was directed. Use: adds a constitutional ground to the administrative-law grounds of review; also relevant to a Central Government that refers one company's multi-State dispute to the NIT but refuses an identical one.",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-12",
+          "name": "State of Bihar v. D.N. Ganguly",
+          "citation": "AIR 1958 SC 1018 (and State of Maharashtra v. K.E. Union , AIR 1955 SC 635)",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-13",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — State of Bihar v. D.N. Ganguly , AIR 1958 SC 1018 (and State of Maharashtra v. K.E. Union , AIR 1955 SC 635) Facts (Ganguly): After referring a dispute about dismissed workmen of a Jamshedpur company, the Government cancelled the reference (on a settlement with some workmen) and made a fresh one. Held: the IDA gives no power to cancel or supersede a reference; s.21 General Clauses Act does not apply because the Act discloses a contrary intention (rights attach on reference; s.33B is the only withdrawal-and-transfer power); the cancellation and the second reference were invalid; the Tr",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-13",
+          "name": "Nedungadi Bank Ltd. v. K.P. Madhavankutty",
+          "citation": "(2000) 2 SCC 455 · Shalimar Works Ltd. v. Workmen , AIR 1959 SC 1217 · Ajaib Singh v. Sirhind Co-op. Society , (1999) 6 SCC 82",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-14",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Nedungadi Bank Ltd. v. K.P. Madhavankutty , (2000) 2 SCC 455 · Shalimar Works Ltd. v. Workmen , AIR 1959 SC 1217 · Ajaib Singh v. Sirhind Co-op. Society , (1999) 6 SCC 82 Shalimar Works : no period of limitation governs a reference. Ajaib Singh : the Limitation Act does not apply to references, but delay may affect relief. Nedungadi Bank : a reference made seven years after dismissal (the workman having accepted the decision) was of a \"dead\" dispute and was quashed — \"the Government must be satisfied that a dispute exists\". Code: the problem is now met by statute — Form II application",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-14",
+          "name": "Sindhu Resettlement Corporation Ltd. v. Industrial Tribunal of Gujarat",
+          "citation": "(1968) I LLJ 834 (SC) (quoted in TISCO ¶16)",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-15",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Sindhu Resettlement Corporation Ltd. v. Industrial Tribunal of Gujarat , (1968) I LLJ 834 (SC) (quoted in TISCO ¶16) A retrenched employee and his union demanded only retrenchment compensation from the management, but asked the Government to refer a dispute about reinstatement . Held: \"If no dispute at all is raised by the employees with the management, any request sent by them to the Government would only be a demand by them and not an industrial dispute between them and their employer\"; a reference of reinstatement, never demanded, was incompetent. Principles: (i) a demand on the em",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-15",
+          "name": "Bombay Gumasta Union v. M.R. Bhope , 1995 II CLR 453 (Bom) · Indian Paper Pulp Co. Ltd. v. Workers' Union , AIR 1949 FC 148 · British India Corporation v. Industrial Tribunal, Punjab , AIR 1957 SC 354",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-16",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Bombay Gumasta Union v. M.R. Bhope , 1995 II CLR 453 (Bom) · Indian Paper Pulp Co. Ltd. v. Workers' Union , AIR 1949 FC 148 · British India Corporation v. Industrial Tribunal, Punjab , AIR 1957 SC 354 Bhope : the Government \"can add, amend or modify the reference without cancelling or withdrawing the original reference\" and correct clerical mistakes. Indian Paper Pulp : \"a mere defect in drafting will not invalidate the reference\" — but the order must be self-contained (reasons cannot later be supplemented: Commissioner of Police v. Gordhandas Bhanji , AIR 1952 SC 16). British India C",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-16",
+          "name": "Delhi Cloth & General Mills Co. Ltd. v. Workmen",
+          "citation": "AIR 1967 SC 469 (former DU case 6 — not in the 2026 list but indispensable)",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-17",
+          "facts": "Two units of the company — the Delhi Cloth Mills and the Swatantra Bharat Mills — saw work stoppages in 1962–63. The management's case was that the workmen went on a strike at DCM and a sit-down strike at SBM; it declared a lock-out at DCM. The Government referred several items to the Industrial Tribunal, the material terms being framed on the footing that there had been a \"strike\" at both units and a \"lock-out\" at DCM, and asking whether the strikes were justified/legal and whether the workmen were entitled to wages for the lock-out period at DCM and for the sit-down-strike period at SBM. Before the Tribunal the workmen contended that there had been no strike at all but a lock-out/closure from the start; the Tribunal examined that question",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Delhi Cloth & General Mills Co. Ltd. v. Workmen , AIR 1967 SC 469 (former DU case 6 — not in the 2026 list but indispensable) Facts Two units of the company — the Delhi Cloth Mills and the Swatantra Bharat Mills — saw work stoppages in 1962–63. The management's case was that the workmen went on a strike at DCM and a sit-down strike at SBM; it declared a lock-out at DCM. The Government referred several items to the Industrial Tribunal, the material terms being framed on the footing that there had been a \"strike\" at both units and a \"lock-out\" at DCM, and asking whether the strikes were",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-17",
+          "name": "Supreme Court · K.S. Radhakrishnan & A.K. Sikri, JJ. (judgment by Sikri, J.) · appeals by special leave from the Jharkhand High Court (Single Judge and Division Bench)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-18",
+          "facts": "TISCO (now Tata Steel Ltd.), besides steel, ran a cement division . Following a disinvestment policy it sold the cement division to Lafarge India Pvt. Ltd. by a Business Transfer Agreement dated 9.3.1999, effective 1.11.1999 . The BTA provided that Lafarge would take over the company personnel \"in terms of Section 25FF\" of the IDA on the statutory conditions: (a) service not interrupted by the transfer; (b) terms after transfer not less favourable; (c) the purchaser liable to pay retrenchment compensation on the basis of continuous service (¶3). The decision was communicated to the cement-division employees; according to TISCO, Lafarge issued them fresh letters of appointment and they started working with Lafarge — including respondents 8–8",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Supreme Court · K.S. Radhakrishnan & A.K. Sikri, JJ. (judgment by Sikri, J.) · appeals by special leave from the Jharkhand High Court (Single Judge and Division Bench) Facts TISCO (now Tata Steel Ltd.), besides steel, ran a cement division . Following a disinvestment policy it sold the cement division to Lafarge India Pvt. Ltd. by a Business Transfer Agreement dated 9.3.1999, effective 1.11.1999 . The BTA provided that Lafarge would take over the company personnel \"in terms of Section 25FF\" of the IDA on the statutory conditions: (a) service not interrupted by the transfer; (b) terms ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-18",
+          "name": "Indian Tourism Development Corporation v. Delhi Administration , 1982 Lab IC 1309 (Del FB) (as narrated in TISCO ¶14–15)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-19",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Indian Tourism Development Corporation v. Delhi Administration , 1982 Lab IC 1309 (Del FB) (as narrated in TISCO ¶14–15) Facts: A worker at the sweets counter of ITDC's Sona Rupa Restaurant was caught misappropriating sale proceeds; after initially admitting the theft he instigated other employees to \"militant and violent acts\" and abstention from work. The management decided to close down the restaurant , informed the workmen, and issued a closure notice offering full and final settlement. The workmen raised a dispute alleging a lock-out ; the management in conciliation said it was a",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u2-19",
+          "name": "Moolchand Kharati Ram Hospital v. Labour Commissioner , 1998 (III) LLJ 1139 (Del); appeal dismissed, (2002) 10 SCC 708 (as narrated in TISCO ¶16–17)",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 2,
+          "unit": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "anchorId": "case-u2-20",
+          "facts": "Material facts as recorded in DU Case Material for Unit 2.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> CASE — Moolchand Kharati Ram Hospital v. Labour Commissioner , 1998 (III) LLJ 1139 (Del); appeal dismissed, (2002) 10 SCC 708 (as narrated in TISCO ¶16–17) Facts: The management said the workmen had gone on strike ; the workmen said the management had declared a lock-out . The reference asked only \"whether the workmen were entitled to wages for the lock-out period\". Held: since the existence of a lock-out was itself disputed, \"this kind of reference would not permit the management to prove that it was in fact a case of 'strike'\"; following ITDC , the reference was quashed. The Court quoted E",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u3-1",
+          "name": "A.4 Persons Bound — IDA §18 and IRC §57 Compared",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 3,
+          "unit": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "file": "SEM 5/Industrial law/Unit-3-Awards-and-Settlements-Notes.html",
+          "anchorId": "case-u3-2",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> Related authorities you can cite (beyond the two prescribed cases) Herbertsons Ltd. v. Workmen of Herbertsons Ltd., (1977) 2 SCC 515 — A settlement signed with the recognised union, if just and fair, binds all workmen; the Tribunal cannot substitute its own view of the terms; mere disagreement with parts of a settlement is not a ground to disturb it. P. Virudhachalam v. Lotus Mills, (1998) 2 SCC 625 — Reaffirms that a §12(3)/§18(3) conciliation settlement is a collective agreement binding on all workmen, including dissenting minority unions, and even on workers who did not participate. State",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u3-2",
+          "name": "C.8 A Practical Check-list for a Review Problem",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 3,
+          "unit": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "file": "SEM 5/Industrial law/Unit-3-Awards-and-Settlements-Notes.html",
+          "anchorId": "case-u3-3",
+          "facts": "Material facts as recorded in DU Case Material for Unit 3.",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "> FDC Ltd. v. Union of India, 136 (2007) DLT 266 Context (the course cross-reference): the case material notes that the power to refer to a National Industrial Tribunal under §7-B of the IDA is “pari materia” with §54 read with §46 of the IR Code (Central Government’s power to refer, to an NIT, a dispute involving questions of national importance or establishments in more than one State). The problem: the Central Government referred to a National Industrial Tribunal the individual termination disputes of 58 medical representatives of one company — workers spread over several States, each with ",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u4-1",
+          "name": "⑩ Delhi Cloth & General Mills Ltd. v. Kushal Bhan CASE No. 10 · Unit 4",
+          "citation": "AIR 1960 SC 806 · (1960) 3 SCR 227 · Appeal by special leave under Article 136 from the Industrial Tribunal · Bench: K.N. Wanchoo J. · A §33(2)(b) approval case",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-2",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"dcm\"> ⑩ Delhi Cloth & General Mills Ltd. v. Kushal Bhan CASE No. 10 · Unit 4 AIR 1960 SC 806 · (1960) 3 SCR 227 · Appeal by special leave under Article 136 from the Industrial Tribunal · Bench: K.N. Wanchoo J. · A §33(2)(b) approval case Context — why this case is the first page of Unit 4 This is the foundational case on whether an employer must await the outcome of a criminal trial before proceeding with (or completing) a domestic enquiry on the same facts. It is also a case about the limits of the Tribunal’s jurisdiction under §33(2) — the Tribunal is not an appellate forum over the employer’s disciplinary discretion. Every later case i...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-2",
+          "name": "⑪ Associated Cement Co. Ltd. v. Workmen CASE No. 11 · Unit 4",
+          "citation": "(1964) 3 SCR 652 · AIR 1964 SC 1595 · Appeal by special leave from the award of the Industrial Tribunal, Punjab, Patiala · Bench: P.B. Gajendragadkar J. · Reference under §10(1)(d) IDA",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-3",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"accc\"> ⑪ Associated Cement Co. Ltd. v. Workmen CASE No. 11 · Unit 4 (1964) 3 SCR 652 · AIR 1964 SC 1595 · Appeal by special leave from the award of the Industrial Tribunal, Punjab, Patiala · Bench: P.B. Gajendragadkar J. · Reference under §10(1)(d) IDA Context — the procedural checklist case Associated Cement is the authority for the essential procedural requirements of a valid domestic enquiry — in particular (i) that an officer who witnessed the alleged misconduct should not also hold the enquiry, (ii) that evidence must be led before the charged employee is examined, (iii) that the employee should be told in advance when the enquiry wi...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-3",
+          "name": "⑫ Tata Oil Mills Co. Ltd. v. Workmen CASE No. 12 · Unit 4",
+          "citation": "AIR 1965 SC 155 · (1964) 7 SCR 555 · Appeal by special leave from the Industrial Tribunal, Ernakulam · Bench: P.B. Gajendragadkar, C.J. (three-Judge Bench) · Both a §33(2) approval case and a fresh §10 reference",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-4",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"tataoil\"> ⑫ Tata Oil Mills Co. Ltd. v. Workmen CASE No. 12 · Unit 4 AIR 1965 SC 155 · (1964) 7 SCR 555 · Appeal by special leave from the Industrial Tribunal, Ernakulam · Bench: P.B. Gajendragadkar, C.J. (three-Judge Bench) · Both a §33(2) approval case and a fresh §10 reference Context — three doctrines in one judgment Tata Oil Mills decides: (i) the scope of a standing-order clause covering misconduct “ within or without the factory ” — the “rational connection” test ; (ii) the standard for holding an enquiry unfair — a fair enquiry is not vitiated by the employee’s own default in producing witnesses; and (iii) a mere error of law or fa...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-4",
+          "name": "⑬ Indian Overseas Bank, Anna Salai v. P. Ganesan CASE No. 13 · Unit 4",
+          "citation": "2007 (13) SCALE 446 · (2008) 1 SCC 650 · Civil Appeal Nos. 6134-6137 of 2006, decided 23 November 2007 · Bench: S.B. Sinha & H.S. Bedi, JJ. · Appeal from the Madras High Court (W.P. Nos. 26176-79 of 2005)",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-5",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"ganesan\"> ⑬ Indian Overseas Bank, Anna Salai v. P. Ganesan CASE No. 13 · Unit 4 2007 (13) SCALE 446 · (2008) 1 SCC 650 · Civil Appeal Nos. 6134-6137 of 2006, decided 23 November 2007 · Bench: S.B. Sinha & H.S. Bedi, JJ. · Appeal from the Madras High Court (W.P. Nos. 26176-79 of 2005) Context — the modern statement of the law IOB v. Ganesan is the most recent authority in the prescribed list on simultaneous proceedings and the one that examiners expect for the “dilatory employee” and “additional charges” points. It is also, importantly, a case where relief was refused not because the law favoured the employer’s legal theory, but because th...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-5",
+          "name": "⑭ Kusheshwar Dubey v. Bharat Coking Coal Ltd. CASE No. 14 · Unit 4",
+          "citation": "AIR 1988 SC 2118 · (1988) 4 SCC 319 · Civil Appeal from the Patna High Court · Bench: K.N. Singhal? — no: Ranganath Misra and M.N. Venkatachaliah, JJ. · Dispute over a Munsif’s injunction restraining simultaneous proceedings",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-6",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"kusheshwar\"> ⑭ Kusheshwar Dubey v. Bharat Coking Coal Ltd. CASE No. 14 · Unit 4 AIR 1988 SC 2118 · (1988) 4 SCC 319 · Civil Appeal from the Patna High Court · Bench: K.N. Singhal? — no: Ranganath Misra and M.N. Venkatachaliah, JJ. · Dispute over a Munsif’s injunction restraining simultaneous proceedings Context — the “no strait-jacket formula” case Kusheshwar Dubey is the case in the prescribed list that answers the remedial question: what remedy does an employee have against simultaneous departmental proceedings? Answer: he has no inherent right to a stay, but he is free to bring a civil suit for an injunction ; if the court grants a sta...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-6",
+          "name": "⑮ Prem Nath Bali v. Registrar, High Court of Delhi CASE No. 15 · Unit 4",
+          "citation": "(2015) 16 SCC 415 · Civil Appeal arising out of SLP against the judgment of the Delhi High Court in W.P.(C) No. 2046 of 2001 dated 21.08.2008 · Bench: J. Chelameswar and Abhay Manohar Sapre, JJ. (judgment delivered by Sapre J.), 16 December 2015 · A CCS (CCA) Rules, 1965 case read across into industrial law",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-7",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"premnath\"> ⑮ Prem Nath Bali v. Registrar, High Court of Delhi CASE No. 15 · Unit 4 (2015) 16 SCC 415 · Civil Appeal arising out of SLP against the judgment of the Delhi High Court in W.P.(C) No. 2046 of 2001 dated 21.08.2008 · Bench: J. Chelameswar and Abhay Manohar Sapre, JJ. (judgment delivered by Sapre J.), 16 December 2015 · A CCS (CCA) Rules, 1965 case read across into industrial law Context — the “delay in the enquiry” case This is the only prescribed case on the consequences of an inordinately delayed disciplinary enquiry , and it contains the two propositions examiners most want from it: (i) the six-month (outer limit) / one-year ...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-7",
+          "name": "“Must a domestic enquiry be stayed pending a criminal trial on the same facts? Discuss the law and advise an employee who has been charged departmentally while a criminal case is pending against him.”",
+          "citation": "Adapted from Dec 2024, Q.5 · Time budget: 22–25 minutes for 15 marks",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-8",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> “Must a domestic enquiry be stayed pending a criminal trial on the same facts? Discuss the law and advise an employee who has been charged departmentally while a criminal case is pending against him.” Adapted from Dec 2024, Q.5 · Time budget: 22–25 minutes for 15 marks 1. Introduction — locate the gap in the statute Neither the Industrial Disputes Act, 1947 nor the Industrial Employment (Standing Orders) Act, 1946 contains any provision on whether an employer must await the outcome of a criminal prosecution before acting on the same facts departmentally. The IRC, 2020 is likewise silent. The entire doctrine is therefore judge-made , worked ...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-8",
+          "name": "“An altercation at a public park: two workmen of ‘Happy International’ fought over the production bonus scheme; the employer invoked the standing order on misconduct ‘within or without the factory’ and dismissed them. The Industrial Tribunal found the fight to be ‘purely private’. Advise / Discuss.”",
+          "citation": "Nov–Dec 2025, Q.3 (facts as recorded in the Cornell notes) · Tata Oil Mills is the direct authority",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-9",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> “An altercation at a public park: two workmen of ‘Happy International’ fought over the production bonus scheme; the employer invoked the standing order on misconduct ‘within or without the factory’ and dismissed them. The Industrial Tribunal found the fight to be ‘purely private’. Advise / Discuss.” Nov–Dec 2025, Q.3 (facts as recorded in the Cornell notes) · Tata Oil Mills is the direct authority 1. Issues Does the certified standing order covering “fighting, riotous or disorderly behaviour within or without the factory” extend to an altercation in a public park? Did the employer conduct a fair enquiry consistent with Associated Cement ? W...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u4-9",
+          "name": "“The enquiry was held ex parte; the workman was later acquitted in the criminal case. What is the Labour Court’s power under §11-A? Can it reduce the punishment?”",
+          "citation": "Based on Dec 2024 Q.3; May–June 2025 Q.3; Nov–Dec 2025 Q.6 (bank clerk) · Unit 5 territory, answered with Unit-4 case law",
+          "unitNumber": 4,
+          "unit": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "anchorId": "case-u4-10",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> “The enquiry was held ex parte; the workman was later acquitted in the criminal case. What is the Labour Court’s power under §11-A? Can it reduce the punishment?” Based on Dec 2024 Q.3; May–June 2025 Q.3; Nov–Dec 2025 Q.6 (bank clerk) · Unit 5 territory, answered with Unit-4 case law Skeleton, with the Unit-4 anchors marked Framework: a dismissal for misconduct is a “discharge/dismissal” within §2-A read with §11-A; the Tribunal’s jurisdiction is triggered by a reference. Earlier, the Tribunal’s power was confined by Indian Iron & Steel , AIR 1958 SC 130 (no appellate review; interference only for want of good faith, victimisation/ULP, basi...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u5-1",
+          "name": "⑯ The Workmen of M/s Firestone Tyre & Rubber Co. of India P. Ltd. v. The Management CASE No. 16 · Unit 5",
+          "citation": "AIR 1973 SC 1227 · (1973) 1 SCC 813 · (1973) 3 SCR 587 · Four connected Civil Appeals by special leave (Nos. 1461, 1995, 1996 and 2386 of 1972) · Bench: C.A. Vaidialingam, J. · The definitive interpretation of §11-A",
+          "unitNumber": 5,
+          "unit": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "anchorId": "case-u5-2",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"firestone\"> ⑯ The Workmen of M/s Firestone Tyre & Rubber Co. of India P. Ltd. v. The Management CASE No. 16 · Unit 5 AIR 1973 SC 1227 · (1973) 1 SCC 813 · (1973) 3 SCR 587 · Four connected Civil Appeals by special leave (Nos. 1461, 1995, 1996 and 2386 of 1972) · Bench: C.A. Vaidialingam, J. · The definitive interpretation of §11-A Context — why this is the case of the unit Section 11-A was inserted in December 1971. Within eighteen months the Supreme Court had to decide what it meant. Firestone answers two questions : (i) the proper interpretation of §11-A — whether it enlarged the Tribunal’s power over the finding of misconduct, over the...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u5-2",
+          "name": "⑰ Hombe Gowda Educational Trust v. State of Karnataka CASE No. 17 · Unit 5",
+          "citation": "(2006) 1 SCC 430 · Civil Appeals arising out of SLP (C) Nos. … of 2003, decided 2 December 2005 · Bench: S.B. Sinha, J. · The outer limit on the power to modify punishment",
+          "unitNumber": 5,
+          "unit": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "anchorId": "case-u5-3",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"hombe\"> ⑰ Hombe Gowda Educational Trust v. State of Karnataka CASE No. 17 · Unit 5 (2006) 1 SCC 430 · Civil Appeals arising out of SLP (C) Nos. … of 2003, decided 2 December 2005 · Bench: S.B. Sinha, J. · The outer limit on the power to modify punishment Context — the case that put a fence around §11-A Firestone said the Tribunal may award a lesser punishment. Hombe Gowda says how far it may go: the jurisdiction is a “limited jurisdiction” and it may be exercised “only when … it is found to be grossly disproportionate ” — a threshold captured in the formula that interference must rest on a finding that “no reasonable person could inflict ...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u5-3",
+          "name": "⑱ Scooters India Ltd. v. Labour Court CASE No. 18 · Unit 5",
+          "citation": "AIR 1989 SC 149 — Special Leave Petition (Civil) directed against the Allahabad High Court’s dismissal of W.P. No. 2305 of 1986 · Bench: R.S. Pathak, C.J. and S. Natarajan, J. · Decided on the U.P. analogue of §11-A, §6(2-A) of the U.P. Industrial Disputes Act, 1947",
+          "unitNumber": 5,
+          "unit": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "anchorId": "case-u5-4",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"scooters\"> ⑱ Scooters India Ltd. v. Labour Court CASE No. 18 · Unit 5 AIR 1989 SC 149 — Special Leave Petition (Civil) directed against the Allahabad High Court’s dismissal of W.P. No. 2305 of 1986 · Bench: R.S. Pathak, C.J. and S. Natarajan, J. · Decided on the U.P. analogue of §11-A, §6(2-A) of the U.P. Industrial Disputes Act, 1947 Context — the power working, and being upheld The value of Scooters India in this unit is that it shows the other side of the coin from Hombe Gowda : a Labour Court which accepted the enquiry as fair and the misconduct as proved , and yet set aside the dismissal and ordered reinstatement with 75% back wages ...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u5-4",
+          "name": "⑳ Raghubir Singh v. General Manager, Haryana Roadways, Hissar CASE No. 20 · Unit 5",
+          "citation": "2014 (6) SLR 6 (SC) · 2014 AIR SCW 5515 · Civil Appeal No. 8434 of 2014 (arising out of SLP (C) No. 22487 of 2012), decided 3 September 2014 · Bench: Sudhansu Jyoti Mukhopadhaya and V. Gopala Gowda, JJ. (judgment by Gopala Gowda J.) · Proportionality as a constitutional standard",
+          "unitNumber": 5,
+          "unit": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "anchorId": "case-u5-5",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"raghubir\"> ⑳ Raghubir Singh v. General Manager, Haryana Roadways, Hissar CASE No. 20 · Unit 5 2014 (6) SLR 6 (SC) · 2014 AIR SCW 5515 · Civil Appeal No. 8434 of 2014 (arising out of SLP (C) No. 22487 of 2012), decided 3 September 2014 · Bench: Sudhansu Jyoti Mukhopadhaya and V. Gopala Gowda, JJ. (judgment by Gopala Gowda J.) · Proportionality as a constitutional standard Context — why this case closes the unit Raghubir Singh is the case that shows the doctrine of proportionality operating outside the narrow frame of §11-A — as an Article 14/16/19/21 standard against a statutory public employer (Haryana Roadways, a State undertaking). It i...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u6-1",
+          "name": "㉑ The Management of Hotel Imperial v. Hotel Workers’ Union CASE No. 21 · Unit 6",
+          "citation": "(1960) 1 SCR 476 : AIR 1959 SC 1342 · Three connected Civil Appeals by special leave from the Labour Appellate Tribunal of India · Bench: K.N. Wanchoo, J. (three-Judge Bench) · The foundational case on suspension pending §33 and on a Tribunal’s power to grant interim relief",
+          "unitNumber": 6,
+          "unit": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "file": "SEM 5/Industrial law/Unit-6-Restraints-on-Managerial-Prerogatives-Notes.html",
+          "anchorId": "case-u6-2",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"hotelimperial\"> ㉑ The Management of Hotel Imperial v. Hotel Workers’ Union CASE No. 21 · Unit 6 (1960) 1 SCR 476 : AIR 1959 SC 1342 · Three connected Civil Appeals by special leave from the Labour Appellate Tribunal of India · Bench: K.N. Wanchoo, J. (three-Judge Bench) · The foundational case on suspension pending §33 and on a Tribunal’s power to grant interim relief Context — the problem the case solves An employer completes a proper domestic enquiry, concludes that a workman deserves dismissal, and then discovers that it cannot dismiss him at once : an industrial dispute is pending and §33 requires the permission of the authority. What...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u6-2",
+          "name": "㉒ Fakirbhai Fulabhai Solanki v. Presiding Officer CASE No. 22 · Unit 6",
+          "citation": "(1986) 3 SCC 131 : AIR 1986 SC 1168 · Civil Appeals by special leave from the Industrial Tribunal, Gujarat (Application (IT) No. 88 of 1979 and Complaint (IT) No. 124 of 1979 in Reference (IT) No. 434 of 1978) · Bench: E.S. Venkataramiah, J. · The case that put natural justice into the suspension rule",
+          "unitNumber": 6,
+          "unit": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "file": "SEM 5/Industrial law/Unit-6-Restraints-on-Managerial-Prerogatives-Notes.html",
+          "anchorId": "case-u6-3",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"fakirbhai\"> ㉒ Fakirbhai Fulabhai Solanki v. Presiding Officer CASE No. 22 · Unit 6 (1986) 3 SCC 131 : AIR 1986 SC 1168 · Civil Appeals by special leave from the Industrial Tribunal, Gujarat (Application (IT) No. 88 of 1979 and Complaint (IT) No. 124 of 1979 in Reference (IT) No. 434 of 1978) · Bench: E.S. Venkataramiah, J. · The case that put natural justice into the suspension rule Context — the qualification of Hotel Imperial Hotel Imperial permitted implied suspension without pay . But its reasoning assumed a Tribunal that decides permission applications quickly — “those were perhaps halcyon days ”, as the Court was later to say. Fakir...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u6-3",
+          "name": "㉓ Ram Lakhan v. Presiding Officer CASE No. 23 · Unit 6",
+          "citation": "(2000) 10 SCC 201 · Civil Appeals by special leave from the High Court of Delhi (W.P. against the order of the Presiding Officer, Industrial Tribunal, Tis Hazari, Delhi) · Bench: S. Saghir Ahmad, J. ( three-Judge Bench , constituted by an order of 2 January 1996) · The capstone : reconciliation and the default rule",
+          "unitNumber": 6,
+          "unit": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "file": "SEM 5/Industrial law/Unit-6-Restraints-on-Managerial-Prerogatives-Notes.html",
+          "anchorId": "case-u6-4",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA).",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "id=\"ramlakhan\"> ㉓ Ram Lakhan v. Presiding Officer CASE No. 23 · Unit 6 (2000) 10 SCC 201 · Civil Appeals by special leave from the High Court of Delhi (W.P. against the order of the Presiding Officer, Industrial Tribunal, Tis Hazari, Delhi) · Bench: S. Saghir Ahmad, J. ( three-Judge Bench , constituted by an order of 2 January 1996) · The capstone : reconciliation and the default rule Context — resolving a conflict of authority Tribunals and High Courts had split: some applied Hotel Imperial and refused any subsistence allowance where the standing orders were silent (the very view taken by the Industrial Tribunal and the Delhi High Court in t...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-1",
+          "name": "M/s Crown Aluminium Works, Belur (represented by Jeewanlal (1929) Ltd.) v. Their Workmen",
+          "citation": "1958 SCR 651 : AIR 1958 SC 130 · Before P.B. Gajendragadkar, J. · Appeal by special leave under Article 136 against the award of the Labour Appellate Tribunal · LB-503 case material, pp. 167–179",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-2",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> M/s Crown Aluminium Works, Belur (represented by Jeewanlal (1929) Ltd.) v. Their Workmen 1958 SCR 651 : AIR 1958 SC 130 · Before P.B. Gajendragadkar, J. · Appeal by special leave under Article 136 against the award of the Labour Appellate Tribunal · LB-503 case material, pp. 167–179 Three-tier wage structure Downward revision of wages Concessional payments / bounty vs wages Capacity to pay Section 10, IDA Context — the problem the case solves The case is the Supreme Court’s first sustained analysis of the three categories of wage structures and of the question that has haunted Indian wage adjudication ever since: may a wage structure once f...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-2",
+          "name": "Greaves Cotton & Co. Ltd. and three other companies v. Their Workmen",
+          "citation": "(1964) 5 SCR 362 : AIR 1964 SC 689 (the LB-503 case list cites it as AIR 1964 SC 639) · Before K.N. Wanchoo, J. · Nine appeals by special leave from the awards of the Industrial Tribunal, Bombay · LB-503 case material, pp. 180–192",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-3",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Greaves Cotton & Co. Ltd. and three other companies v. Their Workmen (1964) 5 SCR 362 : AIR 1964 SC 689 (the LB-503 case list cites it as AIR 1964 SC 639) · Before K.N. Wanchoo, J. · Nine appeals by special leave from the awards of the Industrial Tribunal, Bombay · LB-503 case material, pp. 180–192 Industry-cum-region formula “Density test” Total wage packet Adjustment increments Uniform DA Gratuity ceiling Context — why the case matters This is the case that converted a slogan (“industry-cum-region”) into a usable method. It tells a tribunal when to look sideways at competitors and when to look around at the neighbourhood; it insists that ...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-3",
+          "name": "The Workmen v. The Management of Reptakos Brett & Co. Ltd.",
+          "citation": "(1992) 1 SCC 290 : AIR 1992 SC 504 · Before Kuldip Singh, J. · Appeal by special leave against the award of the Industrial Tribunal, Madras (14 October 1987) as upheld by the Madras High Court (Single Judge and Division Bench) · LB-503 case material, pp. 193–205",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-4",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> The Workmen v. The Management of Reptakos Brett & Co. Ltd. (1992) 1 SCC 290 : AIR 1992 SC 504 · Before Kuldip Singh, J. · Appeal by special leave against the award of the Industrial Tribunal, Madras (14 October 1987) as upheld by the Madras High Court (Single Judge and Division Bench) · LB-503 case material, pp. 193–205 Slab system of DA Over-neutralisation Sixth component Burden of proof 30-year settlement history Context — the modern turning point Reptakos Brett is the case in which the Supreme Court (i) updated the concept of the minimum wage for the 1990s by adding a sixth, social component , and (ii) re-affirmed Crown Aluminium ’s prot...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-4",
+          "name": "People’s Union for Democratic Rights v. Union of India — the Asiad construction workers’ case",
+          "citation": "AIR 1982 SC 1473 · Supreme Court of India, writ petition under Article 32 treated as a public interest petition on a letter to Bhagwati, J. · Judgment by P.N. Bhagwati, J. · Order dated 11 May 1982 · LB-503 case material, pp. 206–218",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-5",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> People’s Union for Democratic Rights v. Union of India — the Asiad construction workers’ case AIR 1982 SC 1473 · Supreme Court of India, writ petition under Article 32 treated as a public interest petition on a letter to Bhagwati, J. · Judgment by P.N. Bhagwati, J. · Order dated 11 May 1982 · LB-503 case material, pp. 206–218 Public interest litigation Article 23 — forced labour Minimum wage as fundamental right Principal employer’s liability Jamadar commission Context — the constitutionalisation of the minimum wage Until 1982 the minimum wage was, in the eyes of the law, a statutory entitlement: a rate fixed under the Minimum Wages Act, 19...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-5",
+          "name": "Model answer 1 — December 2024, Q. 8(a): “Discuss People’s Union for Democratic Rights v. Union of India (AIR 1982 SC 1473).”",
+          "citation": "15 marks · suggested length 900–1,100 words · Bhagwati, J. · Article 23 · Minimum Wages Act, 1948",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-6",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Model answer 1 — December 2024, Q. 8(a): “Discuss People’s Union for Democratic Rights v. Union of India (AIR 1982 SC 1473).” 15 marks · suggested length 900–1,100 words · Bhagwati, J. · Article 23 · Minimum Wages Act, 1948 Introduction Before 1982, a wage below the notified minimum was a breach of the Minimum Wages Act, 1948, remediable in the ordinary way — through the inspectorate, claims under §20 and prosecution. In People’s Union for Democratic Rights v. Union of India , AIR 1982 SC 1473, the Supreme Court holding the field through Bhagwati, J. converted that statutory breach into a violation of a fundamental right . The decision is t...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-6",
+          "name": "Model answer 2 — December 2024, Q. 8(b): “Discuss the fixation of fair wages by the industrial adjudicator.”",
+          "citation": "15 marks · suggested length 900–1,100 words · Fair Wages Committee, 1948 · Greaves Cotton · capacity to pay",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-7",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Model answer 2 — December 2024, Q. 8(b): “Discuss the fixation of fair wages by the industrial adjudicator.” 15 marks · suggested length 900–1,100 words · Fair Wages Committee, 1948 · Greaves Cotton · capacity to pay Introduction — why the adjudicator fixes wages at all In India wages were historically determined by collective bargaining or by industrial adjudication, because there was no comprehensive wage-fixation statute until the Minimum Wages Act, 1948, and even that Act reached only “scheduled employments”. Industrial tribunals therefore became, in effect, wage-fixing bodies for the organised sector — a development the Supreme Court a...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-7",
+          "name": "Model answer 3 — May–June 2025, Q. 7 (High difficulty): “Explain the concept of minimum, fair and living wages with reference to Crown Aluminium Works v. Workmen .”",
+          "citation": "15 marks · suggested length 1,000–1,200 words · Part A + Case 24",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-8",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Model answer 3 — May–June 2025, Q. 7 (High difficulty): “Explain the concept of minimum, fair and living wages with reference to Crown Aluminium Works v. Workmen .” 15 marks · suggested length 1,000–1,200 words · Part A + Case 24 Introduction Wages are the point at which the two great claims of industrial law — the employer’s claim to a viable enterprise and the worker’s claim to a life of human dignity — meet and are reconciled. Indian law reconciles them through a three-tier hierarchy of wage concepts derived from the report of the Committee on Fair Wages (1948) and constitutionalised by Article 43 (living wage), Article 39(a) (adequate m...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-8",
+          "name": "Model answer 4 — May–June 2025, Q. 8(b) and November–December 2025, Q. 8(a): Short note on the industry-cum-region formula",
+          "citation": "5–7 marks · suggested length 300–400 words · Greaves Cotton , AIR 1964 SC 689",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-9",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Model answer 4 — May–June 2025, Q. 8(b) and November–December 2025, Q. 8(a): Short note on the industry-cum-region formula 5–7 marks · suggested length 300–400 words · Greaves Cotton , AIR 1964 SC 689 The note Fair wages — wages above the statutory minimum but below the living wage — are fixed on the industry-cum-region principle laid down in Greaves Cotton & Co. Ltd. v. Workmen , AIR 1964 SC 689. The phrase, borrowed from the report of the Committee on Fair Wages (1948), requires the wage of a concern’s workmen to be compared with the wages paid in comparable concerns in the same industry and in the same region . It has two aspects, and th...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u7-9",
+          "name": "Model answers 5 — predicted and “high-probability” questions with answer plans",
+          "citation": "The following four are drawn from the paper analyses’ predicted list for Units 7 and 8 (Unit 7 items)",
+          "unitNumber": 7,
+          "unit": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "anchorId": "case-u7-10",
+          "facts": "Material factual matrix as digested in DU Case Material for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019.",
+          "issues": "Fundamental questions of law, statutory interpretation and natural justice.",
+          "arguments": "Arguments of both sides on jurisdiction, industrial peace and proportional discipline.",
+          "ratio": "> Model answers 5 — predicted and “high-probability” questions with answer plans The following four are drawn from the paper analyses’ predicted list for Units 7 and 8 (Unit 7 items) (a) “Explain the concept of minimum, fair and living wage. Discuss the sixth component added by the Supreme Court in Reptakos Brett .” Plan: ① three-tier table (content, test, statutory source) — ② the 1948 Fair Wages Committee classifications — ③ the 1957 norms, five components — ④ Reptakos Brett : facts (Madras unit, worker demanded need-based minimum on ₹50–55 of 1940 and 192% neutralisation, 30-year-old settlement with a slab DA scheme), the Court’s holding t...",
+          "examTips": "Mandatory precedent to quote in Semester 5 examinations."
+        },
+        {
+          "id": "ind-c-u8-1",
+          "name": ". General Manager, B.E.S.T. Undertaking, Bombay v. Mrs. Agnes",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 8,
+          "unit": "Unit 8: The Code on Social Security, 2020",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "anchorId": "case-u8-2",
+          "facts": "Nanu Raman was a driver in the Undertaking's city bus service. On 20 July 1957 he finished his shift at about 7.45 p.m. at the Jogeshwari depot . To go home to Santa Cruz he boarded another B.E.S.T. bus, travelling under a facility given to the Undertaking's staff. Near Erla Bridge, Andheri , the bus collided with a stationary lorry ; Raman was thrown out, sustained serious injuries and died in hospital on 26 July 1957 . The Undertaking's Standing Orders/Rules for traffic staff were in evidence — inter alia Rule 19 (drivers and conductors in uniform may travel free in the Undertaking's buses, with limits on the number of staff who may travel in one bus), and rules showing that drivers were posted to various depots across Greater Bombay, had",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"case-agnes\"> 1. General Manager, B.E.S.T. Undertaking, Bombay v. Mrs. Agnes (1964) 3 SCR 930 · AIR 1964 SC 193 · decided 10 May 1963 · Supreme Court, three judges · majority: K. Subba Rao J.; dissent: Raghubar Dayal J. · Workmen's Compensation Act, 1923, §3(1) [now Code §74(1)] Claimant Mrs. Agnes, widow of Nanu Raman, bus driver of the B.E.S.T. Undertaking (Bombay Municipal Corporation) Claim Rs 3,500 under §3(1) WC Act before the Commissioner for Workmen's Compensation, Bombay Course of litigation Commissioner dismissed → Bombay High Court allowed the appeal → Supreme Court (by majority)",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u8-2",
+          "name": ". Daivshala & Others v. Oriental Insurance Company Ltd. & Another",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 8,
+          "unit": "Unit 8: The Code on Social Security, 2020",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "anchorId": "case-u8-3",
+          "facts": "The deceased was employed as a watchman — a Second Schedule employment [item (xxxiii)]. His duty hours on 22 April 2003 were 3 a.m. to 11 a.m. While he was on his way to the factory to report in time, he met with a road accident at a place about five kilometres from the factory and died. His widow Daivshala and other dependants claimed compensation under the EC Act against the employer and its insurer, Oriental Insurance. The Commissioner allowed the claim; the High Court, in the insurer's first appeal, held that an accident on a public road five kilometres away, before the commencement of duty, could not be said to arise out of and in the course of employment, relying on the line of cases that restricted notional extension (notably Francis",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"case-daivshala\"> 2. Daivshala & Others v. Oriental Insurance Company Ltd. & Another 2025 INSC 904 · 2025 SCC OnLine SC 1534 · Supreme Court · judgment by K.V. Viswanathan J. · Employee's Compensation Act, 1923, §3(1) [now Code §74(1), (4)] Deceased Shahu Sampatrao Jadhavar, night watchman at a sugar factory (respondent No. 2), Osmanabad district, Maharashtra Accident 22 April 2003, while proceeding to the factory for the 3 a.m.–11 a.m. shift; spot about 5 km from the workplace Course of litigation Commissioner for Workmen's Compensation & Civil Judge (Sr. Dn.), Osmanabad — WC Application N",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u8-3",
+          "name": ". Royal Western India Turf Club Ltd. v. Employees' State Insurance Corporation & Others",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 8,
+          "unit": "Unit 8: The Code on Social Security, 2020",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "anchorId": "case-u8-4",
+          "facts": "Several departments of the Club (workshop, garage, security, carpentry, personnel, accounts) had been covered under the ESI Act from 28 January 1968 . In ESI Application No. 16 of 1976 before the ESI Court, Bombay, the Club and the Corporation filed consent terms (based on an Inspection Report of 29 Nov 1975 and a Memorandum of 14 Apr 1976) recording that those departments were and would remain covered, while “the employees of Racing Administration Department, casual labour engaged on race track, temporary staff engaged on race days for issue of tickets/dividends were not covered.” On 18 September 1978 the Government of Maharashtra issued a fresh notification under §1(5) extending the Act to the remaining departments of the Club. The Corpor",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"case-turf\"> 3. Royal Western India Turf Club Ltd. v. Employees' State Insurance Corporation & Others (2016) 4 SCC 521 · AIR 2016 SC 1143 · Civil Appeal No. 49 of 2006 (with CA 1575/2006, 3421–3422/2012) · decided 29 Feb 2016 · V. Gopala Gowda & Arun Mishra JJ (judgment by Arun Mishra J.) · ESI Act, 1948, §§1(5), 2(9), 2(22), 2(23), 39, 42; ESI (Central) Rules, 1950, r. 2(2A); ESI (General) Regulations, 1950, regs. 26–31, 36 Appellant Royal Western India Turf Club Ltd. — conducts horse-racing at the Mahalaxmi Race Course (Mumbai) and Pune Prior round Three-judge bench, 31 July 2014 ( Bangal",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u8-4",
+          "name": ". Dr. Kavita Yadav v. Secretary, Ministry of Health and Family Welfare Department & Others",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 8,
+          "unit": "Unit 8: The Code on Social Security, 2020",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "anchorId": "case-u8-5",
+          "facts": "The appellant was appointed on 6 June 2014 on a purely temporary, residency-scheme basis for one year, extendable annually to a maximum of three years . Her tenure was extended twice, the final term ending on 11 June 2017 . On 24 May 2017 she applied for maternity benefit commencing 1 June 2017 . The employer granted benefit only for 11 days (1–11 June 2017) , treating her entitlement as ending with her contract. During her earlier pregnancy the same employer had extended maternity benefits to her as a contractual employee, and it was undisputed that she had worked more than 80 days in the twelve months preceding her expected delivery (§5(2)). The Tribunal and the High Court accepted the employer's stand that “actual absence” under §5(1) pr",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"case-kavita\"> 4. Dr. Kavita Yadav v. Secretary, Ministry of Health and Family Welfare Department & Others (2024) 1 SCC 421 · decided 17 Aug 2023 · Supreme Court, three judges: Aniruddha Bose, Sanjay Kumar & S.V.N. Bhatti JJ · Maternity Benefit Act, 1961, §§5, 8, 12(2)(a), 27 [now Code §§60, 64, 68, 161] Appellant Dr. Kavita Yadav, pathologist, Senior Resident (Pathology), Janakpuri Super Speciality Hospital (autonomous institute under the Government of NCT of Delhi) Counsel Mr. Sourabh Gupta (appellant); Ms. Rachita Garg (respondent employer) Course of litigation Employer allowed benefit o",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        },
+        {
+          "id": "ind-c-u8-5",
+          "name": ". Birla Institute of Technology v. State of Jharkhand & Others",
+          "citation": "DU Prescribed Landmark Case",
+          "unitNumber": 8,
+          "unit": "Unit 8: The Code on Social Security, 2020",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "anchorId": "case-u8-6",
+          "facts": "On superannuation the teacher claimed gratuity under the 1972 Act; BIT refused, contending that a teacher is not an “employee” under §2(e). The authorities and the High Court upheld the claim. In the Supreme Court, the Bench initially (order of 7 January 2019 ) allowed BIT's appeal on the strength of Ahmedabad Pvt. Primary Teachers Association v. Administrative Officer (2004) 1 SCC 755, which had held that teachers, whose principal function is imparting education, do not perform “skilled, semi-skilled or unskilled, manual, supervisory, technical or clerical work” and hence were not employees. Neither counsel had brought to the Court's notice that Parliament had, by the Payment of Gratuity (Amendment) Act, 2009 (Act 47 of 2009) , published o",
+          "issues": "Core question of law, jurisdiction or statutory compliance examined by the bench.",
+          "arguments": "Submissions advanced by respective parties on the relevant statutory provisions and judicial precedents.",
+          "ratio": "id=\"case-bit\"> 5. Birla Institute of Technology v. State of Jharkhand & Others AIR 2019 SC 1309 · Civil Appeal No. 2530 of 2012 · orders of 7 Jan 2019 (recalled) and 7 Mar 2019 · Abhay Manohar Sapre & Indu Malhotra JJ · Payment of Gratuity Act, 1972, §2(e) as amended by Act 47 of 2009 [now Code §2(26), Chapter V] Appellant Birla Institute of Technology (BIT), Mesra, Ranchi — “a premier technical educational institute” Respondent No. 4 Assistant Professor, joined 16 Sept 1971, superannuated 30 Nov 2001 Course of litigation Controlling authority (7 Sept 2002): gratuity Rs 3,38,796 with 10% inter",
+          "examTips": "High-yield landmark authority to cite for maximum marks in DU LL.B. semester examination answers."
+        }
+      ],
+      "pyqs": [
+        {
+          "id": "ind-pyq-u1-1",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Dec 2024 · Q.1 · 15 marks (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Dec 2024 · Q.1 · 15 marks (problem) Sheetal, employed for eight years as a \"senior sales executive\" in a pharmaceutical company, was dismissed after a domestic inquiry for alleged misconduct. Her union raised a dispute; conciliation failed. The appropriate Government declined to refer the dispute, recording that (i) Sheetal, drawing ₹45,000 p.m. and supervising two junior salesmen, was not a \"workman\", and (ii) the inquiry appeared fair, so \"no useful purpose would be served\". Advise Sheetal on her remedies. Would your answer differ under the Industrial Relations Code, 2020?",
+          "modelAnswer": "> Dec 2024 · Q.1 · 15 marks (problem) Sheetal, employed for eight years as a \"senior sales executive\" in a pharmaceutical company, was dismissed after a domestic inquiry for alleged misconduct. Her union raised a dispute; conciliation failed. The appropriate Government declined to refer the dispute, recording that (i) Sheetal, drawing ₹45,000 p.m. and supervising two junior salesmen, was not a \"workman\", and (ii) the inquiry appeared fair, so \"no useful purpose would be served\". Advise Sheetal on her remedies. Would your answer differ under the Industrial Relations Code, 2020? Issues Can the appropriate Government, while deciding whether to refer under IDA ss.10(1)/12(5), decide that Sheetal is not a \"workman\" or that the inquiry was fair? What is the remedy against such a refusal? How is the same fact-situation processed under the Code? Law and application — IDA position (the frame of the question and of the DU cases) Under s.12(5) the Government, on receiving the conciliation failure report, \"may\" refer the dispute if satisfied that there is a case for reference, and if it does not refer it must record and communicate reasons. The power is administrative ( State of Madras v. C.P. Sarathy , AIR 1953 SC 53): the Government forms a prima facie opinion whether an industrial dispute exists or is apprehended; it may decline a reference that is frivolous, stale or patently outside the Act ( Bombay Union of Journalists v. State of Bombay , AIR 1964 SC 1617). But it cannot adjudicat"
+        },
+        {
+          "id": "ind-pyq-u1-2",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Dec 2024 · Q.4(a) · 10 marks",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Dec 2024 · Q.4(a) · 10 marks Explain the conciliation machinery for the settlement of industrial disputes. What is the legal effect of a settlement arrived at in conciliation and of a failure of conciliation? (Answer with reference to the IR Code, 2020 and the 2026 Rules.)",
+          "modelAnswer": "> Dec 2024 · Q.4(a) · 10 marks Explain the conciliation machinery for the settlement of industrial disputes. What is the legal effect of a settlement arrived at in conciliation and of a failure of conciliation? (Answer with reference to the IR Code, 2020 and the 2026 Rules.) Introduction. Conciliation is the statutory mediation of an industrial dispute by a Government-appointed Conciliation Officer (CO) who investigates, persuades and records — but does not decide. It is the compulsory middle tier of the Code's machinery between bi-partite forums (ss.3–4, 14) and adjudication (ss.44–46). Under the IDA it was compulsory only in public utility services on a strike notice (s.12(1)); under s.53(1) it is compulsory in every case. Machinery. (1) Appointment — s.43 IDA s.4 : appropriate Government appoints COs for areas/industries, permanently or temporarily (CLC(C) organisation in the Central sphere). (2) Trigger — s.53(1) : an existing or apprehended dispute, or a strike/lock-out notice under s.62; also the GRC route for individual grievances (s.4(8), R.8); proviso — no conciliation after two years from the dispute's arising. (3) Duties — s.53(2) : investigate without delay all matters affecting the merits and right settlement; do all things to induce a fair and amicable settlement; s.53(3) : on settlement, send a report with the signed memorandum (Form I, R.4); s.53(4) : on failure, send a full report of steps, facts and reasons; s.53(5) : within 45 days (14 days where a s.62 not"
+        },
+        {
+          "id": "ind-pyq-u1-3",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Dec 2024 · Q.4(b) · 10 marks",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Dec 2024 · Q.4(b) · 10 marks \"An award of a voluntary arbitrator under the industrial law is not beyond the reach of judicial review.\" Discuss the grounds and the constitutional provisions under which such an award may be challenged.",
+          "modelAnswer": "> Dec 2024 · Q.4(b) · 10 marks \"An award of a voluntary arbitrator under the industrial law is not beyond the reach of judicial review.\" Discuss the grounds and the constitutional provisions under which such an award may be challenged. Nature of the arbitrator. Under s.42 IDA s.10A the parties choose the arbitrator, but the statute supplies the agreement's form (Form V), requires publication (R.21), allows a s.42(5) notification binding non-signatories, bars strikes during arbitration (s.62(1)(f)), makes the award an \"award\" (s.2(e)) enforceable after 30 days (s.55), binding (s.57(2)–(3)), executable as a decree (s.49(10)) and penal on breach (s.86), and excludes the Arbitration and Conciliation Act, 1996 (s.42(8)). The arbitrator is therefore a statutory (quasi-statutory) tribunal , not a private arbitrator. Constitutional routes. (1) Art. 226 : Rohtas Industries Ltd. v. Rohtas Industries Staff Union , AIR 1976 SC 425 (DU material) — certiorari runs against \"any person or authority\"; a s.10A award, being the decision of a quasi-statutory body enforceable by State machinery, is \"within the rainbow of statutory tribunals amenable to Art. 226\"; the compensation award was quashed for an error of law apparent on its face. (2) Art. 227 : Engineering Mazdoor Sabha v. Hind Cycles , AIR 1963 SC 874 — even though the s.10A arbitrator was held not to be a \"tribunal\" for Art. 136, the High Court's supervisory jurisdiction extends to him. (3) Art. 136 : after the 1964 amendments, Gujarat"
+        },
+        {
+          "id": "ind-pyq-u1-4",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "May–June 2025 · Q.1 · 15 marks",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "May–June 2025 · Q.1 · 15 marks \"The Industrial Tribunal is not a court, yet its award is a 'determination' by a 'tribunal' within Article 136 of the Constitution.\" Critically examine with reference to Bharat Bank Ltd. v. Employees . Has the Industrial Relations Code, 2020 altered the position?",
+          "modelAnswer": "> May–June 2025 · Q.1 · 15 marks \"The Industrial Tribunal is not a court, yet its award is a 'determination' by a 'tribunal' within Article 136 of the Constitution.\" Critically examine with reference to Bharat Bank Ltd. v. Employees . Has the Industrial Relations Code, 2020 altered the position? Framework. Art. 136(1) empowers the Supreme Court, in its discretion, to grant special leave from any \"judgment, decree, determination, sentence or order\" of \"any court or tribunal\"; Art. 136(2) excludes Armed Forces tribunals. Two words carry the debate — \"tribunal\" and \"determination\". Bharat Bank (1950 SCR 459). [Facts in five lines — strike of 9 March 1949, discharges, three-member Tribunal under s.7, item 18 \"retrenchment and victimization\", award of 19 January 1950 signed by two members, SLP.] Preliminary objection (Alladi Krishnaswami Aiyar for the Union): tribunal = court; the Tribunal decides on social justice and can make new contracts, so it does not exercise the judicial power of the State; the award is \"lifeless\" until the Government's s.15(2) declaration; remedy is Art. 226. Majority (Kania C.J., Fazl Ali, Mahajan JJ.): (1) Art. 136 is of the widest amplitude and overriding; (2) \"tribunal\" would be redundant if it meant \"court\"; it denotes a body constituted by the State and invested with some of the State's judicial functions , having the trappings of a court ( R. v. LCC ; Shell Co. ; Huddart Parker ; Cooper v. Wilson ); (3) the Industrial Tribunal satisfies the test — "
+        },
+        {
+          "id": "ind-pyq-u1-5",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "May–June 2025 · Q.4 · 15 marks (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "May–June 2025 · Q.4 · 15 marks (problem) Workers of XYZ Ltd. allege that the employer imposed an illegal lock-out from 1 April and claim wages for the period. The dispute before the Industrial Tribunal is framed as: \"Whether the lock-out declared by the management from 1 April is legal and justified; if not, to what relief are the workers entitled?\" The employer pleads that the establishment was in fact permanently closed on 1 April owing to losses and that the Tribunal cannot go into \"closure\" as it is outside the dispute. Decide. Would your answer differ if the Central Government had referred the matter to the NIT?",
+          "modelAnswer": "> May–June 2025 · Q.4 · 15 marks (problem) Workers of XYZ Ltd. allege that the employer imposed an illegal lock-out from 1 April and claim wages for the period. The dispute before the Industrial Tribunal is framed as: \"Whether the lock-out declared by the management from 1 April is legal and justified; if not, to what relief are the workers entitled?\" The employer pleads that the establishment was in fact permanently closed on 1 April owing to losses and that the Tribunal cannot go into \"closure\" as it is outside the dispute. Decide. Would your answer differ if the Central Government had referred the matter to the NIT? Issues Is the Tribunal confined to the dispute as framed, and can it examine the plea of closure? Lock-out v. closure — the legal distinction and consequences. The NIT variant. Law Jurisdiction and the terms of the dispute. Under IDA s.10(4) the Tribunal had to confine its adjudication to the points referred and matters incidental thereto ( Delhi Cloth & General Mills v. Workmen , AIR 1967 SC 469; Pottery Mazdoor Panchayat v. Perfect Pottery , AIR 1979 SC 1356). Under the Code the Tribunal's jurisdiction arises on the party's application in Form II ( s.53(6) ) or a s.54 reference; it adjudicates the dispute as framed and questions incidental to it, and it alone decides objections to its jurisdiction ( Dharangadhra ). Whether the cessation on 1 April was a \"lock-out\" or a \"closure\" is a jurisdictional fact incidental to — indeed inseparable from — the question w"
+        },
+        {
+          "id": "ind-pyq-u1-6",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "May–June 2025 · Q.8(a) · 5 marks (short note)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "May–June 2025 · Q.8(a) · 5 marks (short note) Voluntary arbitration under s.10A of the IDA [now s.42 of the IR Code, 2020].",
+          "modelAnswer": "> May–June 2025 · Q.8(a) · 5 marks (short note) Voluntary arbitration under s.10A of the IDA [now s.42 of the IR Code, 2020]. Meaning. Voluntary reference by the employer and workers, by written agreement , of an existing or apprehended industrial dispute to arbitrator(s) of their choice, at any time before it is before a Tribunal/NIT ( s.42(1) ). Essentials: prescribed form (Form V) signed per R.20/R.22, naming arbitrator(s) — who may include a Tribunal member; umpire where even number ( s.42(2) ); copy to Government and CO; publication ( s.42(4) , R.21) — mandatory ( Karnal Leather , 1990); Government's notification where signatories represent the majority, giving non-signatories a hearing ( s.42(5) ) and enabling prohibition of strike/lock-out ( s.42(7) ; s.62(1)(f)); arbitrator investigates and submits a signed award ( s.42(6) ); A&C Act 1996 excluded ( s.42(8) ). Effect: the award is an \"award\" (s.2(e)); enforceable 30 days after communication (s.55); binds signatories (s.57(2)) or, if notified, all concerned including future workers (s.57(3)); operates one year (s.58(3)); executable and recoverable (ss.49(10), 59); breach punishable (s.86). Powers: own procedure; industrial-law principles; may re-appraise inquiry evidence ( Rajinder Kumar Kindra ) and grant s.50 relief ( Gujarat Steel Tubes ); cannot alter statutory conditions ( FACT ). Review: Art. 226 ( Rohtas — error of law apparent), Art. 227 ( Engineering Mazdoor Sabha ), Art. 136 ( Gujarat Steel Tubes ). ss.42 and"
+        },
+        {
+          "id": "ind-pyq-u1-7",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "May–June 2025 · Q.8(c) · 5 marks (short note)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "May–June 2025 · Q.8(c) · 5 marks (short note) Powers of the Conciliation Officer.",
+          "modelAnswer": "> May–June 2025 · Q.8(c) · 5 marks (short note) Powers of the Conciliation Officer. Appointed under s.43 IDA s.4 to mediate in and promote settlement. Powers: (1) to hold conciliation in any existing/apprehended dispute or on a s.62 notice — a duty (\"shall\", s.53(1) ) that arms him to summon the parties; (2) to investigate the dispute and all matters affecting its merits and to do all things fit to induce a fair settlement ( s.53(2) ); (3) to follow his own procedure ( s.49(1) ) — joint/separate sittings, video-conferencing (R.23); (4) to enter premises after reasonable notice ( s.49(2) ; Kripa Shankar Jaiswal : absence of notice does not affect jurisdiction); (5) to enforce attendance of any person and to call for and inspect documents , with civil-court powers for these limited purposes ( s.49(6) ) — but not to administer oath or adjudicate; (6) to record a settlement (Form I) and report it, whereupon it binds all workers (ss.53(3), 57(3)); (7) to submit a failure report with reasons within 45/14 days (s.53(4)–(5)), which now entitles any party to move the Tribunal within 90 days (s.53(6)); (8) to grant/refuse permission or approval under s.90 for action against workers during pendency; (9) to receive strike/lock-out notices and reports (s.62(6), R.25–26) and copies of private settlements (R.4); (10) status of a public servant (s.49(7)) with the duty of confidentiality (s.61). Limits: functions are administrative — he cannot pass a final order ( Sasamusa Sugar Works ; Secur"
+        },
+        {
+          "id": "ind-pyq-u1-8",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Nov–Dec 2025 · Q.1 · 15 marks (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Nov–Dec 2025 · Q.1 · 15 marks (problem) The management of ABC Mills and the recognised union agreed in writing to refer their wage-revision dispute to Mr. J, a retired District Judge, as arbitrator under s.10A [s.42]. The agreement was forwarded to the Government and published; a majority notification was issued. Mr. J heard the parties and, without recording any evidence on the company's financial capacity and without giving reasons, rejected the union's demand. The union wants to challenge the award directly in the Supreme Court under Art. 136. Advise. Would your answer be the same if the award had been made by the Industrial Tribunal? Would it differ if the arbitration agreement had not been published?",
+          "modelAnswer": "> Nov–Dec 2025 · Q.1 · 15 marks (problem) The management of ABC Mills and the recognised union agreed in writing to refer their wage-revision dispute to Mr. J, a retired District Judge, as arbitrator under s.10A [s.42]. The agreement was forwarded to the Government and published; a majority notification was issued. Mr. J heard the parties and, without recording any evidence on the company's financial capacity and without giving reasons, rejected the union's demand. The union wants to challenge the award directly in the Supreme Court under Art. 136. Advise. Would your answer be the same if the award had been made by the Industrial Tribunal? Would it differ if the arbitration agreement had not been published? Issues Is an award of a s.10A/s.42 arbitrator appealable under Art. 136? Which forum should the union approach? Grounds available on these facts. Comparison with a Tribunal award. Effect of non-publication of the agreement. Law and application (1) Forum. The Bharat Bank test requires a State-constituted body invested with judicial functions and trappings. Engineering Mazdoor Sabha v. Hind Cycles (1963) held the s.10A arbitrator (as the section then stood) not a \"tribunal\" for Art. 136 because his authority derived from the parties' agreement — leaving Arts. 226/227. Rohtas Industries (1976, DU material) held the award amenable to Art. 226 as the decision of a quasi-statutory body, noting the 1964 amendments (publication, binding effect under s.18, enforceability under s.17"
+        },
+        {
+          "id": "ind-pyq-u1-9",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Nov–Dec 2025 · Q.8(c) · 5 marks (short note)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Nov–Dec 2025 · Q.8(c) · 5 marks (short note) Withholding publication of an award — Sirsilk Ltd. v. Government of Andhra Pradesh — and the position under the IR Code, 2020.",
+          "modelAnswer": "> Nov–Dec 2025 · Q.8(c) · 5 marks (short note) Withholding publication of an award — Sirsilk Ltd. v. Government of Andhra Pradesh — and the position under the IR Code, 2020. IDA position. s.17(1) required every award to be published within 30 days of receipt; s.17(2) made the published award final; s.17A made it enforceable 30 days after publication. In Sirsilk Ltd. v. Govt. of A.P. , AIR 1964 SC 160, the parties settled after the award reached the Government but before publication and jointly asked that it not be published; the Government refused, treating s.17(1) as mandatory. The Supreme Court held: publication is ordinarily mandatory and the Government has no discretion to withhold it (a safeguard against executive interference); but where a valid settlement under s.18(1) has been reached before publication, publishing the award would create two conflicting binding instruments and defeat the Act's object of industrial peace; in that exceptional case the Government should withhold publication and the settlement prevails. Related: the 30-day period is directory ( Remington Rand , 1968); the Government cannot modify an award except under s.17A where it is a party. Under the Code. Gazette publication is abolished: the award is communicated to the parties and the Government ( s.55(2) ) and becomes enforceable on the expiry of 30 days ( s.55(3) ); only where the Government is a party (or for NIT awards) may it defer/reject/modify on public grounds (s.55(3)–(5)). So the Sirsilk "
+        },
+        {
+          "id": "ind-pyq-u1-10",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "C.L.C. 2004/2006; L.C.-I 2002; C.L.C. 2000/2001; L.C.-I 2004/2006; L.C.-II 2002/2004/2005; L.C.-I 2005 (three variants combined)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "C.L.C. 2004/2006; L.C.-I 2002; C.L.C. 2000/2001; L.C.-I 2004/2006; L.C.-II 2002/2004/2005; L.C.-I 2005 (three variants combined) (a) \"The Supreme Court has no jurisdiction to grant special leave to appeal from the award of an Industrial Tribunal as the latter is neither a court nor does it exercise the judicial power of the State.\" Comment. (b) \"The Industrial Disputes Act is intended to be a self-contained Act and seeks to achieve social justice on the basis of conciliation, arbitration or adjudication. Notwithstanding the finality attached to the orders/awards of these authorities, it is still desirable that there be some forum to correct any misuse of power or procedural irregularities by such authorities.\" Do you feel Art. 136 has provided such a forum? Give reasons. (c) Discuss and define the jurisdiction of the Supreme Court vis-à-vis the determinations of industrial tribunals.",
+          "modelAnswer": "> C.L.C. 2004/2006; L.C.-I 2002; C.L.C. 2000/2001; L.C.-I 2004/2006; L.C.-II 2002/2004/2005; L.C.-I 2005 (three variants combined) (a) \"The Supreme Court has no jurisdiction to grant special leave to appeal from the award of an Industrial Tribunal as the latter is neither a court nor does it exercise the judicial power of the State.\" Comment. (b) \"The Industrial Disputes Act is intended to be a self-contained Act and seeks to achieve social justice on the basis of conciliation, arbitration or adjudication. Notwithstanding the finality attached to the orders/awards of these authorities, it is still desirable that there be some forum to correct any misuse of power or procedural irregularities by such authorities.\" Do you feel Art. 136 has provided such a forum? Give reasons. (c) Discuss and define the jurisdiction of the Supreme Court vis-à-vis the determinations of industrial tribunals. Thesis. The proposition in (a) was the respondents' preliminary objection in Bharat Bank and was rejected by the majority; (b) and (c) ask for the reasons and the limits. Structure: (1) the text of Art. 136 and the \"self-contained code\" premise; (2) the meaning of \"tribunal\" — Bharat Bank's functional test; (3) why the Industrial Tribunal qualifies; (4) the answer to the \"judicial power of the State\" argument; (5) the discipline of the jurisdiction; (6) the position under the IR Code. 1. Text and premise. Art. 136 is discretionary and overriding, reaching \"any court or tribunal\" and any \"determ"
+        },
+        {
+          "id": "ind-pyq-u1-11",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "L.C.-I 2002; L.C.-II 2009 (variant)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "L.C.-I 2002; L.C.-II 2009 (variant) Are the decisions/orders of the following authorities appealable under Art. 136 before the Supreme Court? Give reasons: (i) Conciliation Officer; (ii) Arbitrator; (iii) Industrial Tribunal.",
+          "modelAnswer": "> L.C.-I 2002; L.C.-II 2009 (variant) Are the decisions/orders of the following authorities appealable under Art. 136 before the Supreme Court? Give reasons: (i) Conciliation Officer; (ii) Arbitrator; (iii) Industrial Tribunal. Test: a State-constituted body exercising part of the State's judicial power with the trappings of a court ( Bharat Bank ; Associated Cement v. P.N. Sharma ). (i) Conciliation Officer — No. His functions are administrative: he mediates, investigates, records settlement or failure (ss.43, 53); he decides no rights and passes no binding order ( Sasamusa ; Security Paper Mill ). Even where he must act judicially — permission/approval under s.90 (IDA s.33) — he is not a tribunal because he cannot finally adjudicate rights ( Jaswant Sugar Mills v. Lakshmi Chand , AIR 1963 SC 677). Remedy: Art. 226/227. A memorandum of settlement is not an \"order\" against which certiorari lies (Jain), though the settlement's validity can be tested before the Tribunal. (ii) Arbitrator under s.42 (IDA s.10A) — Yes, with a history. Initially \"No\": Engineering Mazdoor Sabha v. Hind Cycles (1963) — authority flows from the parties' agreement; not a tribunal (but Art. 227). After the 1964 amendments (publication, majority notification binding non-signatories, enforceability under s.17A, binding effect under s.18, strike bar under s.23) the arbitrator became a statutory tribunal: Rohtas Industries (1976) — Art. 226 lies; Gujarat Steel Tubes (1980) — Art. 136 entertained; arbitrator"
+        },
+        {
+          "id": "ind-pyq-u1-12",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "L.C.-I 2001; C.L.C. 2005",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "L.C.-I 2001; C.L.C. 2005 (a) In Bharat Bank the Supreme Court held that Industrial Tribunals are \"tribunals\" for the purposes of Art. 136. Discuss the reasons given in support. (b) \"The Industrial Tribunal has, to use a well-known expression, 'all the trappings of a court' and performs functions which cannot but be regarded as judicial.\" Elucidate in the light of the provisions of the Act and the Rules.",
+          "modelAnswer": "> L.C.-I 2001; C.L.C. 2005 (a) In Bharat Bank the Supreme Court held that Industrial Tribunals are \"tribunals\" for the purposes of Art. 136. Discuss the reasons given in support. (b) \"The Industrial Tribunal has, to use a well-known expression, 'all the trappings of a court' and performs functions which cannot but be regarded as judicial.\" Elucidate in the light of the provisions of the Act and the Rules. Reasons in Bharat Bank (Mahajan J.; Kania C.J. and Fazl Ali J. concurring): (1) the width and overriding character of Art. 136 and the deliberate addition of \"tribunal\" and \"determination\"; (2) the definitional survey ( R. v. LCC , Shell Co. , Huddart Parker , Cooper v. Wilson , Halsbury) yielding the State-investiture-plus-trappings test; (3) the statutory analysis of the IDA showing the Tribunal decides a lis according to the Act with judicial procedure and personnel; (4) Western India Automobile Assn. : power to create new obligations is a legislatively conferred jurisdiction exercised judicially; (5) the s.15(2) declaration is ministerial — Rex v. Electricity Commissioners , Rex v. Minister of Health , the Army Act analogy and the necessity for Art. 136(2)'s express exclusion of military tribunals; (6) it is not an arbitral body chosen by the parties; (7) Art. 226's availability does not narrow Art. 136, and expedition in industrial matters demands quick correction of abuse. Trappings, provision by provision (IDA + 1957 Central Rules → Code + 2026 Rules). Trapping IDA / "
+        },
+        {
+          "id": "ind-pyq-u1-13",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "L.C.-II 2000/2001; L.C.-I 2005 (short note)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "L.C.-II 2000/2001; L.C.-I 2005 (short note) \"The different authorities constituted under the Act are set up with different ends in view and are invested with powers and duties necessary for the achievement of the purposes for which they are set up.\" Discuss the powers and functions of the various authorities for settlement and adjudication of industrial disputes. / Write a short note on the dispute-settlement machinery.",
+          "modelAnswer": "> L.C.-II 2000/2001; L.C.-I 2005 (short note) \"The different authorities constituted under the Act are set up with different ends in view and are invested with powers and duties necessary for the achievement of the purposes for which they are set up.\" Discuss the powers and functions of the various authorities for settlement and adjudication of industrial disputes. / Write a short note on the dispute-settlement machinery. Under the Code the authorities are: (1) Works Committee (s.3; R.5) — amity, consultation, day-to-day friction; no binding power ( North Brook Jute ). (2) Grievance Redressal Committee (s.4; R.6–8) — individual grievances; decision by majority with worker-majority safeguard; feeds conciliation and the Tribunal. (3) Negotiating union/council (s.14; R.9) — collective bargaining agent; settlements outside conciliation (s.57(1)). (4) Conciliation Officer (ss.43, 53; R.23) — investigate, mediate, record settlement (binding on all — s.57(3)) or failure; limited compulsive powers (s.49(2), (6)); s.90 permissions; administrative in character. (5) Arbitrator (s.42; R.20–22) — consensual adjudicator; award binding and enforceable; s.50 powers. (6) Industrial Tribunal (s.44) — compulsory adjudication on a party's application; civil-court powers (s.49); relief in dismissals (s.50); computation (s.59(2)); complaints (s.91); TU disputes (s.22); EPF appeals. (7) National Industrial Tribunal (ss.46, 54) — national/multi-State disputes on Central reference; ousts Tribunals. ("
+        },
+        {
+          "id": "ind-pyq-u1-14",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "C.L.C. 2003/2006; L.C.-II 2004; L.C.-II 2005 (short notes)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "C.L.C. 2003/2006; L.C.-II 2004; L.C.-II 2005 (short notes) (a) Conciliation. (b) Distinction between the institutions of \"Conciliation Officer\" and \"Board of Conciliation\". (c) Duties of Conciliation Officers.",
+          "modelAnswer": "> C.L.C. 2003/2006; L.C.-II 2004; L.C.-II 2005 (short notes) (a) Conciliation. (b) Distinction between the institutions of \"Conciliation Officer\" and \"Board of Conciliation\". (c) Duties of Conciliation Officers. (a) Conciliation — see §10 and the Dec 2024 Q.4(a) answer: definition; voluntary v. compulsory; s.43 appointment; s.53 duties and timelines; R.23 procedure; s.49 powers; s.60 deemed dates; s.62/s.90 consequences of pendency; effect of settlement (s.57(3), s.58) and of failure (s.53(6)); administrative character ( Jaswant Sugar Mills ); cases ( Kripa Shankar Jaiswal ; Royal Calcutta Golf Club ; Sirsilk ). (b) CO v. Board of Conciliation (historical — Boards abolished by the Code). Point Conciliation Officer (IDA s.4 → Code s.43) Board of Conciliation (IDA s.5 — abolished) Composition Single Government officer, permanent or ad hoc Chairman (independent) + 2 or 4 members representing parties, constituted ad hoc by Government Initiation Suo motu / on notice / application — automatic in all disputes (Code) Only on Government reference under s.10(1)(a) Powers Limited: entry, attendance, documents (s.11(2),(4) → s.49(2),(6)); no oath; informal Full civil-court powers (s.11(3)); proceedings deemed judicial; could examine on oath Time for report 14 days (PUS) → Code: 45 days / 14 days 2 months (s.13(5)) Consequence of failure Report to Government (IDA) → party's right to move Tribunal (Code s.53(6)) Report with recommendations; Government could refer; in PUS with notice, Gover"
+        },
+        {
+          "id": "ind-pyq-u1-15",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "L.C.-I 2002/2003",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "L.C.-I 2002/2003 How are Labour/Industrial Tribunals different from ordinary courts of law?",
+          "modelAnswer": "> L.C.-I 2002/2003 How are Labour/Industrial Tribunals different from ordinary courts of law? Aspect Ordinary civil court Industrial Tribunal / NIT Source and nature of jurisdiction General, plenary; from CPC/Constitution Statutory creature; limited to industrial disputes brought by application/reference (ss.44, 53(6), 54); cannot travel beyond the Code Function Enforces existing legal rights; declares the law as it is May create new rights and obligations (wage structures, service conditions) — \"industrial adjudication\" guided by social justice ( Western India Automobile ; Bharat Bank; Bombay Labour Union ) Parties Individuals; judgment binds parties and privies Collective; award binds all present and future workers (s.57(3)(d)) Procedure and evidence Bound by CPC and Evidence Act Own procedure (s.49(1)); not bound by the technical rules of the Evidence Act, but must observe its fundamental principles and natural justice ( Bareilly Electricity Supply Co. v. Workmen , AIR 1972 SC 330), but must decide on evidence and natural justice (Bharat Bank) Remedies Damages, specific performance (not of personal service contracts) Reinstatement , back wages, lesser punishment (s.50); interim relief; wage revision Personnel Judges only Judicial + Administrative Member; assessors (s.49(4)–(5)) Appeal Statutory appeals None; finality (s.45, 55); only Arts. 226/227/136 Representation Advocates as of right Lawyers only with consent + leave (s.94(4)) Duration of decision Res judicata, perpetu"
+        },
+        {
+          "id": "ind-pyq-u1-16",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "C.L.C. 2002; L.C.-I 2005",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "C.L.C. 2002; L.C.-I 2005 A company retrenched one workman by paying retrenchment compensation. The workman alleged victimisation and raised a dispute; conciliation failed; the Government refused to refer, stating that \"the case did not disclose any legal flaw and was not a fit case for reference\". Decide. Can a court in any situation direct the appropriate Government to make a reference?",
+          "modelAnswer": "> C.L.C. 2002; L.C.-I 2005 A company retrenched one workman by paying retrenchment compensation. The workman alleged victimisation and raised a dispute; conciliation failed; the Government refused to refer, stating that \"the case did not disclose any legal flaw and was not a fit case for reference\". Decide. Can a court in any situation direct the appropriate Government to make a reference? IDA. The refusal decides the merits (\"no legal flaw\") — impermissible: the Government's power under ss.10(1)/12(5) is administrative and confined to a prima facie view of whether a dispute exists; whether retrenchment complied with ss.25F/25G and whether it was colourable victimisation are adjudicatory questions. Following K.P. Krishnan (extraneous/non-germane reasons → mandamus to reconsider), Ram Avtar Sharma (refusal on merits quashed), Telco Convoy (Government cannot adjudicate), the High Court would quash the refusal and direct the Government to reconsider and, in appropriate cases, to refer. Can the court \"direct a reference\"? Ordinarily it directs reconsideration ; but where the only reasons are patently extraneous and no other conclusion is possible, courts have directed the reference itself ( Telco Convoy ; Sharad Kumar ). The Government may also refer later on fresh material ( Western India Match ; Sultan Singh ). Since this is an individual retrenchment, s.2A also gave the workman the direct Labour Court route (post-2010). Code. The problem dissolves: retrenchment of an individua"
+        },
+        {
+          "id": "ind-pyq-u1-17",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "L.C.-II 2001/2002/2005 (recast)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "L.C.-II 2001/2002/2005 (recast) Describe the powers of the appropriate Government to refer industrial disputes for adjudication [IDA s.10(1)]. Has the IR Code, 2020 abolished the reference system? Evaluate the change.",
+          "modelAnswer": "> L.C.-II 2001/2002/2005 (recast) Describe the powers of the appropriate Government to refer industrial disputes for adjudication [IDA s.10(1)]. Has the IR Code, 2020 abolished the reference system? Evaluate the change. IDA s.10(1). Where the Government was \"of opinion that any industrial dispute exists or is apprehended\", it could at any time by order in writing refer (a) to a Board, (b) any connected matter to a Court of Inquiry, (c) a Second-Schedule matter to a Labour Court, (d) any matter to a Tribunal; provisos: Third-Schedule matters affecting ≤100 workmen could go to a Labour Court; in PUS with a s.22 notice the reference was mandatory unless frivolous/vexatious; s.10(1A) Central reference to the National Tribunal; s.10(2) mandatory reference on joint application; s.10(3) prohibition of strikes; s.10(4) confinement to points referred; s.10(5) common reference; s.10(6) NT ouster. The power was administrative ( Sarathy ), reviewable for extraneous reasons ( K.P. Krishnan ), not a power to adjudicate ( Telco Convoy , Sharad Kumar ), exercisable \"at any time\" even after refusal ( Western India Match ), and constitutionally valid ( DCGM v. Shambhu Nath ). The Code. Yes — for the Industrial Tribunal the reference system is abolished: access is by the party's application after the failure report ( s.53(6) ) or after 45 days for termination disputes ( s.4(10) ); TU disputes and negotiating-union disputes go directly ( s.22 , R.9(8)); the Tribunal frames its own issues. The re"
+        },
+        {
+          "id": "ind-pyq-u1-18",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "year": "Jain, \"Further Questions\" (undated DU paper)",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Jain, \"Further Questions\" (undated DU paper) An award submitted by an arbitrator under s.10A [s.42] and published by the Government had gone against the union. What arguments would you advance on behalf of the union to challenge it, and in which forum?",
+          "modelAnswer": "> Jain, \"Further Questions\" (undated DU paper) An award submitted by an arbitrator under s.10A [s.42] and published by the Government had gone against the union. What arguments would you advance on behalf of the union to challenge it, and in which forum? Forum: High Court under Arts. 226/227 ( Rohtas ; Engineering Mazdoor Sabha ), with Art. 136 available thereafter (and in principle directly — Gujarat Steel Tubes ). Arguments (in descending order of strength, adapted to facts): (1) Nullity for non-compliance with s.42/R.20–21 — agreement not in Form V, not signed by authorised representatives (R.20/R.22), arbitrator's consent missing, agreement not published ( Karnal Leather ), or entered into after the dispute was already before the Tribunal (s.42(1)); (2) Excess of jurisdiction — matters outside the agreement decided; conditions fixed by statute altered ( FACT ); non-signatory workers bound without a s.42(5) notification; (3) Natural justice — no hearing/evidence/cross-examination; bias or interest of the arbitrator; (4) Error of law apparent on the face — e.g., misapplication of wage-fixation principles, treating an illegal strike as per se disentitling reinstatement or as a tort ( Rohtas ), ignoring s.50 proportionality ( Gujarat Steel Tubes ); (5) Unreasoned/non-speaking award ; (6) Perversity — finding on no evidence (Bharat Bank principle); (7) if a subsequent settlement exists, Sirsilk reasoning that the consensual instrument should prevail. Relief: certiorari quashin"
+        },
+        {
+          "id": "ind-pyq-u2-1",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Dec 2024 · Q.1 · 15 marks (problem) · text reconstructed from topic analysis",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Dec 2024 · Q.1 · 15 marks (problem) · text reconstructed from topic analysis Sheetal worked for eight years as a \"Senior Sales Executive\" in a pharmaceutical company and was dismissed after a domestic inquiry for alleged misconduct. Her union raised a dispute; conciliation failed. The appropriate Government, acting on the opinion of its Law Department, declined to refer the dispute to the Labour Court, recording that (i) Sheetal, drawing ₹45,000 per month and supervising two junior salesmen, was not a \"workman\", and (ii) in the light of the legal opinion it would not be \"just and appropriate\" to make a reference. Advise Sheetal. Would your answer differ under the Industrial Relations Code, 2020?",
+          "modelAnswer": "id=\"q18a\"> Dec 2024 · Q.1 · 15 marks (problem) · text reconstructed from topic analysis Sheetal worked for eight years as a \"Senior Sales Executive\" in a pharmaceutical company and was dismissed after a domestic inquiry for alleged misconduct. Her union raised a dispute; conciliation failed. The appropriate Government, acting on the opinion of its Law Department, declined to refer the dispute to the Labour Court, recording that (i) Sheetal, drawing ₹45,000 per month and supervising two junior salesmen, was not a \"workman\", and (ii) in the light of the legal opinion it would not be \"just and appropriate\" to make a reference. Advise Sheetal. Would your answer differ under the Industrial Relations Code, 2020? Issues (1) Can the appropriate Government, in deciding whether to refer under IDA s.10(1) read with s.12(5), decide that Sheetal is not a \"workman\"? (2) Is a refusal founded on a Law Department opinion that a reference would not be \"just and appropriate\" a valid exercise of the power? (3) What are her remedies? (4) How is the position altered by the Code? Law The referring power is administrative and rests on the Government's prima facie opinion that an industrial dispute exists or is apprehended ( State of Madras v. C.P. Sarathy , AIR 1953 SC 53). Section 12(5) requires the Government, on the failure report, to consider whether \"there is a case for reference\" and, if it declines, to record and communicate reasons ; those reasons must be germane — a refusal on extraneous or"
+        },
+        {
+          "id": "ind-pyq-u2-2",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "May–June 2025 · Q.4 (problem) · text reconstructed from topic analysis",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "May–June 2025 · Q.4 (problem) · text reconstructed from topic analysis Following violent incidents by some workmen, the management of a restaurant issued a notice on 31 December closing the establishment permanently and offering full and final settlement. The union contended that the management had declared a lock-out. Conciliation failed. The Government referred to the Tribunal: \"Whether the workmen are entitled to wages for the period of lock-out w.e.f. 1 January, and if so, what directions are necessary?\" The management challenges the reference contending that the real dispute — whether there was a lock-out or a closure — has not been referred and that the Tribunal cannot go into it. Decide. Would the position be different under the Industrial Relations Code, 2020?",
+          "modelAnswer": "id=\"q18b\"> May–June 2025 · Q.4 (problem) · text reconstructed from topic analysis Following violent incidents by some workmen, the management of a restaurant issued a notice on 31 December closing the establishment permanently and offering full and final settlement. The union contended that the management had declared a lock-out. Conciliation failed. The Government referred to the Tribunal: \"Whether the workmen are entitled to wages for the period of lock-out w.e.f. 1 January, and if so, what directions are necessary?\" The management challenges the reference contending that the real dispute — whether there was a lock-out or a closure — has not been referred and that the Tribunal cannot go into it. Decide. Would the position be different under the Industrial Relations Code, 2020? Issues (1) Under IDA s.10(4), can the Tribunal, on a reference worded as above, examine whether the stoppage was a closure rather than a lock-out? (2) If not, is the reference defective and what is the remedy? (3) Was the Government entitled to frame the reference on the assumption of a lock-out? (4) Code position. Law Section 10(4) confines the adjudicator \"to those points [specified] and matters incidental thereto\". \"Incidental\" means ancillary to the point referred, not a matter that alters its foundation: in Delhi Cloth & General Mills v. Workmen , AIR 1967 SC 469 a reference framed on the basis that there had been a strike and a lock-out bound the Tribunal to that basis — the workers could not de"
+        },
+        {
+          "id": "ind-pyq-u2-3",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "May–June 2025 · Q.6 (essay) · text reconstructed from topic analysis",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "May–June 2025 · Q.6 (essay) · text reconstructed from topic analysis \"The power of the appropriate Government to refer an industrial dispute for adjudication under section 10(1) of the Industrial Disputes Act is discretionary, but the discretion is controlled by judicial review.\" Discuss with reference to decided cases. How far does this statement hold good under the Industrial Relations Code, 2020?",
+          "modelAnswer": "id=\"q18c\"> May–June 2025 · Q.6 (essay) · text reconstructed from topic analysis \"The power of the appropriate Government to refer an industrial dispute for adjudication under section 10(1) of the Industrial Disputes Act is discretionary, but the discretion is controlled by judicial review.\" Discuss with reference to decided cases. How far does this statement hold good under the Industrial Relations Code, 2020? 1. The power and its discretionary character Section 10(1) empowered the appropriate Government, \"where [it] is of opinion that any industrial dispute exists or is apprehended\", to refer the dispute \"at any time, by order in writing\" to a Board, Court, Labour Court, Tribunal or (s.10(1A)) National Tribunal; s.12(5) added that after a failure report it \"may\" refer if satisfied there is a case for reference and must otherwise record reasons. The discretion had three dimensions: whether to refer, when (\"at any time\" — Western India Match , AIR 1970 SC 1205; no limitation — Shalimar Works ), and what and to whom (points of dispute, s.10(4); forum; establishments to be included, s.10(5)). Only two situations made a reference obligatory: the second proviso (s.22 notice in a public utility) and s.10(2) (joint application). 2. Nature: administrative and subjective State of Madras v. C.P. Sarathy , AIR 1953 SC 53 settled that the order of reference is an administrative act, not judicial or quasi-judicial; the factual existence or apprehension of a dispute and the expediency of a"
+        },
+        {
+          "id": "ind-pyq-u2-4",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Nov–Dec 2025 · Q.2 (problem) · text reconstructed from topic analysis",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "Nov–Dec 2025 · Q.2 (problem) · text reconstructed from topic analysis The employees' association of cinema theatres in a city submitted demands for higher wages and bonus to the Labour Commissioner. Conciliation with the managements failed. The Government referred \"the industrial dispute between the workers and managements of the cinema theatres in the city\" to the Tribunal without naming the theatres or the items. Prabhat Talkies, one of the theatres, whose workers had raised no demand, objected before the Tribunal that no dispute existed between it and its workers; the objection was rejected and an award was passed and declared binding. Prabhat Talkies did not implement it and its manager was prosecuted for breach of the award. He contends that the reference was invalid for vagueness and for want of any dispute concerning his theatre, so that the award is void. Decide. How would the situation be dealt with under the Industrial Relations Code, 2020?",
+          "modelAnswer": "id=\"q18d\"> Nov–Dec 2025 · Q.2 (problem) · text reconstructed from topic analysis The employees' association of cinema theatres in a city submitted demands for higher wages and bonus to the Labour Commissioner. Conciliation with the managements failed. The Government referred \"the industrial dispute between the workers and managements of the cinema theatres in the city\" to the Tribunal without naming the theatres or the items. Prabhat Talkies, one of the theatres, whose workers had raised no demand, objected before the Tribunal that no dispute existed between it and its workers; the objection was rejected and an award was passed and declared binding. Prabhat Talkies did not implement it and its manager was prosecuted for breach of the award. He contends that the reference was invalid for vagueness and for want of any dispute concerning his theatre, so that the award is void. Decide. How would the situation be dealt with under the Industrial Relations Code, 2020? Issues (1) Is a general reference of an industry-wide dispute, without naming parties or items, valid? (2) Can an establishment where no demand was made be bound? (3) Can the validity of the reference/award be attacked collaterally in the prosecution? (4) Code position. Law and application The facts are those of State of Madras v. C.P. Sarathy , AIR 1953 SC 53. The Supreme Court (reversing the Madras High Court, which had quashed the prosecution under IDA s.29) held: (a) the Government must satisfy itself on the facts "
+        },
+        {
+          "id": "ind-pyq-u2-5",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-1 · L.C.II 2001 / 2002 / 2005 (essay)",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "19-1 · L.C.II 2001 / 2002 / 2005 (essay) Describe the powers of the appropriate Government to refer industrial disputes for adjudication under section 10(1) of the I.D. Act.",
+          "modelAnswer": "> 19-1 · L.C.II 2001 / 2002 / 2005 (essay) Describe the powers of the appropriate Government to refer industrial disputes for adjudication under section 10(1) of the I.D. Act. Structure. (1) Text and pre-conditions : opinion that a dispute \"exists or is apprehended\" ( Sarathy : subjective, on facts brought to notice; \"apprehended\" covers likely spread); \"at any time\" (no limitation — Shalimar Works ; reconsideration — Western India Match ; but not a dead dispute — Nedungadi Bank ); \"by order in writing\" (no form prescribed; drafting defects not fatal — Indian Paper Pulp ; but self-contained — Gordhandas Bhanji ). (2) Choice of forum : Board (a), Court of Inquiry (b), Labour Court for Second-Schedule matters (c), Tribunal for Second/Third (d); provisos — Third-Schedule dispute affecting ≤100 workmen may go to a Labour Court; public-utility s.22 notice → \"shall\" refer unless frivolous/vexatious/inexpedient; Central Government may use State forums; s.10(1A) National Tribunal for national-importance/multi-State disputes ( FDC ). (3) Mandatory references : s.10(2) joint application (\"Ten-Two reference\"). (4) Ancillary powers : fix the period for the award (s.10(2A)); prohibit strikes/lock-outs (s.10(3); Edward Keventers — cannot be used to prejudge closure v. lock-out); specify points of dispute — Tribunal confined to them and incidental matters (s.10(4); DCGM ); include other establishments (s.10(5)); ouster of other forums on NIT reference (s.10(6)); s.10(7)–(8). (5) Nature : ad"
+        },
+        {
+          "id": "ind-pyq-u2-6",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-2 · L.C. 2001 / 2002 (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-2 · L.C. 2001 / 2002 (problem) During the pendency of the adjudication proceedings, the employer made a representation to the Government that the reference of the dispute should not have been made. The Government, on being satisfied with the representation, withdrew the said adjudication proceedings. Discuss the validity of the order of withdrawal. Can the court direct the Government to withdraw the reference?",
+          "modelAnswer": "> 19-2 · L.C. 2001 / 2002 (problem) During the pendency of the adjudication proceedings, the employer made a representation to the Government that the reference of the dispute should not have been made. The Government, on being satisfied with the representation, withdrew the said adjudication proceedings. Discuss the validity of the order of withdrawal. Can the court direct the Government to withdraw the reference? Law. The IDA conferred no power to cancel, withdraw or supersede a reference. In State of Bihar v. D.N. Ganguly , AIR 1958 SC 1018 the Government cancelled a pending reference and made a fresh one; the Supreme Court held the cancellation invalid: s.21 of the General Clauses Act (power to rescind) does not apply because the Act shows a \"different intention\" — once a reference is made, statutory consequences follow (Tribunal's duty to adjudicate, ss.15, 17 publication, s.19 operation, s.23 strike bar, s.33 freeze), and the parties acquire rights which the Government cannot destroy; the 1956 insertion of s.33B, allowing withdrawal only for transfer to another forum, confirms that no general power exists. Consequently the Tribunal must proceed to an award; even a settlement reached during pendency is to be recorded as an award, not treated as a withdrawal (see 19-3). A second reference of different matters is valid ( K.E. Union , AIR 1955 SC 635), but that is not withdrawal. Application. The order withdrawing the proceedings on the employer's representation is ultra vi"
+        },
+        {
+          "id": "ind-pyq-u2-7",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-3 · L.C. 2003 (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-3 · L.C. 2003 (problem) Before the Tribunal could submit its award, the parties to the dispute arrived at a settlement. Can the Tribunal treat the reference as cancelled or withdrawn? What should it do?",
+          "modelAnswer": "> 19-3 · L.C. 2003 (problem) Before the Tribunal could submit its award, the parties to the dispute arrived at a settlement. Can the Tribunal treat the reference as cancelled or withdrawn? What should it do? No. D.N. Ganguly holds that a reference, once made, \"must result in adjudication and must end with the passing of the award\"; the Tribunal \"has no power to treat the reference as withdrawn\". The correct course is for the Tribunal to incorporate the terms of the settlement in its award (a consent/settlement award), after satisfying itself that the settlement is fair and was arrived at by the parties properly represented — a practice affirmed in later cases and reflected in the requirement that awards be in writing and signed (IDA s.16; Code s.55(1) ). Two consequences follow: (i) the settlement so incorporated binds under s.18(3) (Code s.57(3)) — i.e., all present and future workmen of the establishment, not merely the signatories as a private settlement would (s.18(1)/s.57(1)); (ii) the award's operation and termination are governed by s.19 (Code s.58). If the settlement covers only part of the reference, the Tribunal records it as to that part and adjudicates the rest. A settlement reached in conciliation during pendency is separately binding under s.18(3)/s.57(3) and the Tribunal should take note of it ( National Engineering Industries ). Under the Code the position is the same for the NIT; for Form II applications the applicant may withdraw on settlement, but a Tribuna"
+        },
+        {
+          "id": "ind-pyq-u2-8",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-4 · L.C.II 2000 / 2002 (essay)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-4 · L.C.II 2000 / 2002 (essay) Discuss the restrictions on the power of the appropriate Government to refer or refuse to refer an industrial dispute for adjudication. To what extent is the Government's decision subject to judicial review?",
+          "modelAnswer": "> 19-4 · L.C.II 2000 / 2002 (essay) Discuss the restrictions on the power of the appropriate Government to refer or refuse to refer an industrial dispute for adjudication. To what extent is the Government's decision subject to judicial review? Answer with the twelve-ground table in §6, organised as: (A) Restrictions inherent in the statute — an \"industrial dispute\" must exist or be apprehended ( Sindhu ; Sarathy ); the order must be in writing and by the appropriate Government (or delegate under s.39); the forum must be competent (Schedules; s.7B conditions — FDC ); reasons must be recorded and communicated for a refusal after conciliation (s.12(5)); no cancellation ( D.N. Ganguly ); mandatory references in s.10(1) second proviso and s.10(2). (B) Restrictions imposed by judicial review — relevance of considerations ( K.P. Krishnan ; Sharad Kumar ); no adjudication ( Telco ; Ram Avtar Sharma ; M.P. Irrigation ); no discrimination ( Shambhu Nath ); no mala fides ( British India Corporation ); no stale/dead disputes ( Nedungadi Bank ); application of mind to statutory conditions ( FDC ); neutral drafting ( Express Newspapers ; ITDC ; TISCO ). (C) Extent of review — the court does not examine sufficiency of material or expediency ( Sarathy propositions; Barat ); it examines legality; remedies graduated (reconsider → refer → fresh reference → quash). (D) Code — restrictions now bite only on s.54/s.92(2)/s.95/s.55(3)-proviso decisions; everything else is party-driven."
+        },
+        {
+          "id": "ind-pyq-u2-9",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-5 · L.C.I 2002 / 2003 / 2005",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "19-5 · L.C.I 2002 / 2003 / 2005 Write a short note on / critically examine the decision in State of Madras v. C.P. Sarathy .",
+          "modelAnswer": "> 19-5 · L.C.I 2002 / 2003 / 2005 Write a short note on / critically examine the decision in State of Madras v. C.P. Sarathy . Note : facts, holding and the four propositions as in §10. Critical examination : (i) Strengths — it keeps the Government out of adjudication and prevents employers from stalling industry-wide adjudication by technical pleas; the \"apprehended\" limb allows industry-level settlement of common demands (the wage-board logic later used for national references); it protects awards from collateral attack in prosecutions, preserving finality (now s.45/s.57). (ii) Weaknesses — an unreviewable \"subjective opinion\" can shelter arbitrary references; binding an establishment that had no dispute sits uneasily with the definition of \"industrial dispute\" (a dispute between these employers and their workmen — cf. Sindhu ) and with natural justice, though s.18(3)(b) (party summoned) mitigates it; the Court's own advice to specify parties and points was honoured in the breach, producing the defective-reference litigation from Express Newspapers to TISCO . (iii) Later development — the courts qualified the \"unreviewable\" language: refusals are reviewed for relevance ( K.P. Krishnan ), usurpation ( Telco ) and discrimination ( Shambhu Nath ); references are reviewed for absence of dispute ( Sindhu ), staleness ( Nedungadi ), mala fides, statutory conditions ( FDC ) and prejudicial wording ( TISCO ) — so Sarathy now stands only for \"no review of sufficiency of material and"
+        },
+        {
+          "id": "ind-pyq-u2-10",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-6 · C.L.C. 2001 (essay); L.C.I 2001 / 2002 / 2004 / 2005 (short note)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-6 · C.L.C. 2001 (essay); L.C.I 2001 / 2002 / 2004 / 2005 (short note) Discuss the scope of the jurisdiction of adjudicating authorities under section 10(4) of the I.D. Act, indicating the ambit of \"matters incidental\" to an industrial dispute.",
+          "modelAnswer": "> 19-6 · C.L.C. 2001 (essay); L.C.I 2001 / 2002 / 2004 / 2005 (short note) Discuss the scope of the jurisdiction of adjudicating authorities under section 10(4) of the I.D. Act, indicating the ambit of \"matters incidental\" to an industrial dispute. Use §12: the text of s.10(4); the twin ideas — confinement (Tribunal a creature of the reference — National Engineering ; Hochtief Gammon ; Burma-Shell ; award beyond terms ultra vires — Western India Match Co. v. Industrial Tribunal , AIR 1958 SC 398) and incidental extension (the \"magic words\" that let Tribunals grant adequate relief — Jain). Incidental includes : interim relief ( Hotel Imperial , AIR 1959 SC 1342 — wages and ₹25 p.m. in lieu of food to suspended workmen though not a point of reference); consequential relief and computation; the Tribunal's own jurisdictional facts ( Syndicate Bank — workman status implicit in the reference; Telco ; Sharad Kumar ); construction of the reference from surrounding circumstances ( Jaipur Udyog ; ITC Monghyr ); characterisation of an action where the wording leaves it open ( Express Newspapers ). Incidental excludes : re-opening the factual foundation of the reference ( DCGM , AIR 1967 SC 469 — strike/lock-out assumed; Pottery Mazdoor Panchayat — fact of closure); demands the Government specifically omitted ( Precision Bearings — High Cost Allowance); grievances of a class not referred ( Burma-Shell ); relief not claimed. Consequence : the burden of correct framing falls on the Governm"
+        },
+        {
+          "id": "ind-pyq-u2-11",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-7 · C.L.C. 2001; L.C.II 2000 / 2002 (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-7 · C.L.C. 2001; L.C.II 2000 / 2002 (problem) The management pleads that it closed the undertaking; the workmen say it was a lock-out. The Government refers \"whether the lock-out is justified and what wages are payable\". The management objects before the Tribunal that there was no lock-out. Can the Tribunal decide the objection? Advise the management.",
+          "modelAnswer": "> 19-7 · C.L.C. 2001; L.C.II 2000 / 2002 (problem) The management pleads that it closed the undertaking; the workmen say it was a lock-out. The Government refers \"whether the lock-out is justified and what wages are payable\". The management objects before the Tribunal that there was no lock-out. Can the Tribunal decide the objection? Advise the management. This is §18-B in older dress. Distinguish the two lines: if the reference asks \"whether the lock-out is justified\", the existence of the lock-out is assumed and the Tribunal cannot re-open it ( DCGM ; Pottery Mazdoor ) — the management's objection fails before the Tribunal ; its remedy is a writ to quash the reference and obtain a neutral one ( ITDC ; Moolchand ; TISCO ). If the wording is neutral or ambiguous (\"whether the action of the management in stopping work … is justified\"), the Tribunal can and must decide whether it was a closure or a lock-out as a matter going to its jurisdiction ( Express Newspapers ). Advise the management to move under Art. 226 promptly (delay and participation may weaken the challenge — Hindustan Lever ; River Steam ), seeking quashing with a direction for a fresh reference, and meanwhile to plead closure and reserve the objection before the Tribunal. Add the Code translation (Tribunal frames issues; s.44(7) bench; closure compensation s.75/permission s.80)."
+        },
+        {
+          "id": "ind-pyq-u2-12",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-8 · L.C.I 2004; C.L.C. 2004 (problem)",
+          "marks": "20 Marks",
+          "type": "Problem",
+          "question": "19-8 · L.C.I 2004; C.L.C. 2004 (problem) The workmen demanded the introduction of a gratuity scheme. On conciliation failure the Government referred the demand to the Tribunal. The employer objects that a demand for a new benefit is not an \"industrial dispute\", that the Tribunal cannot create rights not existing in the contract, and that the Government had no material to form the opinion that a dispute existed. Decide.",
+          "modelAnswer": "> 19-8 · L.C.I 2004; C.L.C. 2004 (problem) The workmen demanded the introduction of a gratuity scheme. On conciliation failure the Government referred the demand to the Tribunal. The employer objects that a demand for a new benefit is not an \"industrial dispute\", that the Tribunal cannot create rights not existing in the contract, and that the Government had no material to form the opinion that a dispute existed. Decide. (1) Industrial dispute. A demand for a gratuity scheme is a dispute \"connected with the terms of employment or conditions of labour\" (s.2(k); Code s.2(q)); a demand raised on the employer and refused crystallises the dispute ( Sindhu ; Shambhu Nath Goyal ). Novelty of the benefit is irrelevant. (2) Power to create new rights. Industrial adjudication is not confined to enforcing existing contracts: the Tribunal \"can confer rights and privileges … which it considers essential for keeping industrial peace\" and may create new obligations ( Western India Automobile Association v. Industrial Tribunal, Bombay , AIR 1949 FC 111; Bharat Bank , Unit 1; Rohtas Industries ). Gratuity schemes have repeatedly been framed by Tribunals and upheld ( Delhi Cloth & General Mills Co. v. Workmen , AIR 1970 SC 919 — gratuity scheme; the Payment of Gratuity Act, 1972 s.4(5) preserves better terms under any award or agreement, confirming that award-based schemes are contemplated). The objection fails, subject to s.10(4): the Tribunal must confine itself to the gratuity demand referr"
+        },
+        {
+          "id": "ind-pyq-u2-13",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-9 · Predicted (Cornell): \"The Government's power to refer is administrative, not quasi-judicial.\" Examine the consequences of this characterisation.",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "19-9 · Predicted (Cornell): \"The Government's power to refer is administrative, not quasi-judicial.\" Examine the consequences of this characterisation.",
+          "modelAnswer": "> 19-9 · Predicted (Cornell): \"The Government's power to refer is administrative, not quasi-judicial.\" Examine the consequences of this characterisation. Consequences flow in six directions: (1) procedure — no notice or hearing before reference or refusal ( Nagalinga Nadar ; Sultan Singh ; Avon ), though High Courts differed on hearings before a reference made after an earlier refusal ( Escorts / Electronics Ltd. v. Goodyear / American Express / Muthukrishnan FB); (2) review — no certiorari for error of law on the face of a \"decision\" because nothing is decided; review is for administrative-law illegality (relevance, purpose, mind, discrimination, jurisdictional conditions — K.P. Krishnan , FDC ) and, for refusals, mandamus ( Telco ); (3) finality — a refusal does not bar a later reference ( Western India Match ) and a reference does not decide any jurisdictional fact ( Telco ; TISCO — status remains open on a proper reference); (4) forum — no Art. 136 against the Government (not a tribunal); Art. 226 only; (5) content — the Government must not adjudicate (usurpation ground) nor pre-judge by drafting ( TISCO ), because an administrative act cannot decide a lis ; (6) reasons — required by statute only for refusals (s.12(5)); for s.54 the record must show the basis of the opinion ( FDC ). Contrast the Tribunal, which is quasi-judicial: hearing, reasons, res judicata within limits, Art. 136 ( Bharat Bank ). Conclude with the Code: the characterisation now matters mainly for s.54"
+        },
+        {
+          "id": "ind-pyq-u2-14",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-10 · Predicted (Cornell): A \"Zonal Manager\" of an insurance company, drawing ₹1.2 lakh p.m. but performing only sales-target and reporting functions, is dismissed. The Central Government refuses to refer, holding that a Zonal Manager is not a workman. Advise.",
+          "marks": "10 Marks",
+          "type": "Problem",
+          "question": "19-10 · Predicted (Cornell): A \"Zonal Manager\" of an insurance company, drawing ₹1.2 lakh p.m. but performing only sales-target and reporting functions, is dismissed. The Central Government refuses to refer, holding that a Zonal Manager is not a workman. Advise.",
+          "modelAnswer": "> 19-10 · Predicted (Cornell): A \"Zonal Manager\" of an insurance company, drawing ₹1.2 lakh p.m. but performing only sales-target and reporting functions, is dismissed. The Central Government refuses to refer, holding that a Zonal Manager is not a workman. Advise. Apply Sharad Kumar : designation is not conclusive; the Government may not decide a status question that turns on the nature of duties and evidence; refusal on designation is refusal on an extraneous consideration → writ; direction to refer \"including the question whether he is a workman\". Balance with Barat : if his own documents showed undisputed managerial functions (power to appoint, discipline, sanction leave, control budgets), a refusal on a proper reading of the record could stand. Here the duties described are sales/reporting — the status is genuinely contested, so Sharad Kumar governs. Code: insurance company → Central Government is the appropriate Government (s.2(b)); he applies to the Central Industrial Tribunal (Form II; two-member bench, s.44(7)); \"worker\" under s.2(zr) excludes persons employed mainly in a managerial or administrative capacity and supervisors above ₹18,000 — but includes sales promotion employees; the Tribunal decides on evidence; no refusal stage exists."
+        },
+        {
+          "id": "ind-pyq-u2-15",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-11 · Predicted (Cornell): 750 workers engaged through a contractor demand permanency from the principal employer; the State Government refuses to refer because \"there is no employer–employee relationship\". Advise.",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "19-11 · Predicted (Cornell): 750 workers engaged through a contractor demand permanency from the principal employer; the State Government refuses to refer because \"there is no employer–employee relationship\". Advise.",
+          "modelAnswer": "> 19-11 · Predicted (Cornell): 750 workers engaged through a contractor demand permanency from the principal employer; the State Government refuses to refer because \"there is no employer–employee relationship\". Advise. Telco Convoy Drivers on all fours (900 convoy drivers; refusal on a law-department opinion of no master–servant relationship; Supreme Court: Government cannot decide the relationship; direction to refer within one month). Add: the existence of the relationship (sham contract; control test — Hussainbhai v. Alath Factory Employees' Union , AIR 1978 SC 1410; Steel Authority of India v. National Union Waterfront Workers , (2001) 7 SCC 1 on the consequences of abolition of contract labour) is a mixed question for the Tribunal. Remedy: writ; mandamus to refer (given the repeated pattern, courts direct reference). Code: no State reference; the union applies under s.53(6) after conciliation; \"industry\" under s.2(p) expressly covers workers employed \"through any agency, including a contractor\", and the Tribunal decides whether the principal employer is the \"employer\" (s.2(m)); permanency demands are also matters for negotiation under s.14 and, if it is a \"notice of change\" matter, s.40. If the contractor system spans many States and many establishments (e.g., an industry-wide practice), the Central Government could consider a s.54 NIT reference — subject to FDC ."
+        },
+        {
+          "id": "ind-pyq-u2-16",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "19-12 · Predicted (Cornell): (a) \"Under the Code, the distinction between Labour Courts and Industrial Tribunals has disappeared.\" Explain the jurisdiction of adjudicatory authorities under the Code. (b) Trace the evolution of judicial review of the reference power from Sarathy to TISCO .",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "19-12 · Predicted (Cornell): (a) \"Under the Code, the distinction between Labour Courts and Industrial Tribunals has disappeared.\" Explain the jurisdiction of adjudicatory authorities under the Code. (b) Trace the evolution of judicial review of the reference power from Sarathy to TISCO .",
+          "modelAnswer": "> 19-12 · Predicted (Cornell): (a) \"Under the Code, the distinction between Labour Courts and Industrial Tribunals has disappeared.\" Explain the jurisdiction of adjudicatory authorities under the Code. (b) Trace the evolution of judicial review of the reference power from Sarathy to TISCO . (a) Use §11: the IDA's three forums and two Schedules are replaced by one Industrial Tribunal (s.44) with a bench-composition rule (s.44(7)) and one NIT (s.46); sources of jurisdiction (ss.4, 22, 53(6), 54, 59(2), 90–91, 92, 95; EPF appeals via s.102); territorial/appropriate-Government limits (s.2(b); s.92(3)); scope (points + incidental — DCGM ; jurisdictional facts — Telco ); limitation (90 days/2 years); finality and review (s.45; s.97 civil bar; Arts. 226/227/136). Note what is lost (the Labour Court as a cheaper, single-judge forum for Second-Schedule matters — partly recreated by single-member sittings) and gained (uniformity; no \"wrong-forum\" references). (b) Use the timeline in §3 and the grounds in §6: Sarathy (1953) — subjective opinion, no review of material; D.N. Ganguly (1958) — no recall; K.P. Krishnan (1960) — germane reasons; mandamus; Bombay Union of Journalists (1964) — prima facie merits permitted; Express Newspapers (1962)/ DCGM (1967) — drafting and confinement; Sindhu (1968) — must be a real dispute; Shambhu Nath (1978) — Art. 14; Ram Avtar Sharma / M.P. Irrigation (1985) — no merits, only perverse/frivolous; Telco (1989) — direction to refer; Barat (2000) — five-poi"
+        },
+        {
+          "id": "ind-pyq-u2-17",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 1 — s.54 reference of a pan-India banking dispute",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 1 — s.54 reference of a pan-India banking dispute Unions of twelve public-sector banks demand a uniform five-day week. After conciliation fails in several States, the Central Government refers \"the dispute between the managements of the banks named in Schedule A and their workmen regarding the demand for a five-day working week\" to the National Industrial Tribunal. Two banks contend that no demand was ever served on them and that the NIT lacks jurisdiction. Decide.",
+          "modelAnswer": "> Problem 1 — s.54 reference of a pan-India banking dispute Unions of twelve public-sector banks demand a uniform five-day week. After conciliation fails in several States, the Central Government refers \"the dispute between the managements of the banks named in Schedule A and their workmen regarding the demand for a five-day working week\" to the National Industrial Tribunal. Two banks contend that no demand was ever served on them and that the NIT lacks jurisdiction. Decide. Skeleton: s.54 conditions — many establishments (twelve banks, different owners), all States → Condition B satisfied; also arguably Condition A (future service conditions of banking workers generally) — FDC distinguished (not one establishment's branches). Opinion formed on failure reports → material exists; court will not weigh its sufficiency ( Sarathy ). Banks without a served demand: bound through the \"apprehended dispute\" limb and their inclusion as parties ( Sarathy ; s.57(3)(b) — summoned parties unless summoned without proper cause); a demand on the industry through IBA-level negotiations suffices ( Sindhu distinguished — a demand did exist industry-wide). Terms are neutral (demand identified; no assumption). Result: reference valid; NIT has jurisdiction; the two banks may show before the NIT that they were summoned without proper cause. Add: NIT composition (s.46), award timeline (s.54(2), s.55), postponement power of the Central Government (s.55(3) proviso) for an award with national-economy imp"
+        },
+        {
+          "id": "ind-pyq-u2-18",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 2 — s.92(2) transfer to the NIT",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 2 — s.92(2) transfer to the NIT Forty Form II applications by dismissed gig-platform delivery workers are pending before Tribunals in nine States. The Central Government, \"to avoid conflicting awards\", withdraws all forty and transfers them to the NIT under s.92(2), without further reasons. Advise the platform and the workers.",
+          "modelAnswer": "> Problem 2 — s.92(2) transfer to the NIT Forty Form II applications by dismissed gig-platform delivery workers are pending before Tribunals in nine States. The Central Government, \"to avoid conflicting awards\", withdraws all forty and transfers them to the NIT under s.92(2), without further reasons. Advise the platform and the workers. Skeleton: s.92(2) requires \"reasons to be stated\" and presupposes a dispute the NIT can adjudicate under s.46 (national importance / multi-State establishments). Forty fact-bound individual dismissals of one platform = FDC 's \"cluster of individual disputes\"; one platform operating in nine States = \"one establishment having branches\" — Condition B fails; avoiding conflicting awards is not a statutory criterion ( FDC ¶5–¶9, ¶12). \"Without further reasons\" = non-application of mind. Both sides may challenge under Art. 226 (writ lies against NIT-related orders — FDC ¶11); workers additionally on convenience/access (¶10, ¶12). Contrast: if the common question were whether platform workers are \"workers\" under s.2(zr) at all — a question of law affecting the sector nationally — a test-case transfer with reasons could satisfy Condition A. Also note that unlike IDA s.10(6) there is no automatic quashing of the State proceedings; until a valid transfer, they continue."
+        },
+        {
+          "id": "ind-pyq-u2-19",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 3 — one-sided Form II application",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 3 — one-sided Form II application A union's Form II application asks the Tribunal to decide \"the quantum of wages payable for the illegal lock-out from 1 March\". The employer's reply pleads a lawful closure on 28 February after a s.80 permission. The Tribunal frames a single issue: \"What wages are payable for the lock-out period?\" The employer seeks a writ. Advise.",
+          "modelAnswer": "> Problem 3 — one-sided Form II application A union's Form II application asks the Tribunal to decide \"the quantum of wages payable for the illegal lock-out from 1 March\". The employer's reply pleads a lawful closure on 28 February after a s.80 permission. The Tribunal frames a single issue: \"What wages are payable for the lock-out period?\" The employer seeks a writ. Advise. Skeleton: Under the Code the application is not a Government reference, so the DCGM assumption problem does not arise from the applicant's pleading — the Tribunal must frame issues from both pleadings. By framing an issue that assumes an \"illegal lock-out\", the Tribunal has committed the TISCO / ITDC error itself: it has decided the real dispute (closure v. lock-out; legality) without trial and shut out the defence. Remedy: first, an application to the Tribunal to recast the issues (it has full control of its procedure — s.49) and to implead/verify the s.80 permission; if refused, Art. 227 supervisory jurisdiction (error of jurisdiction in framing) — High Courts will intervene where the framing forecloses a defence, though not for merely inartistic issues ( Hindustan Lever ). Proper issues: (1) whether the establishment was closed on 28 February with valid permission under s.80; (2) if not, whether the stoppage was a lock-out and whether it was legal/justified (s.62–63); (3) wages/compensation. Two-member bench required (s.44(7): legality of lock-out; closure)."
+        },
+        {
+          "id": "ind-pyq-u2-20",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 4 — wrong Tribunal (appropriate Government)",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 4 — wrong Tribunal (appropriate Government) Workers of a contractor engaged by a major port trust apply to the State Industrial Tribunal, which passes an award of reinstatement. The port trust challenges it as a nullity. Decide.",
+          "modelAnswer": "> Problem 4 — wrong Tribunal (appropriate Government) Workers of a contractor engaged by a major port trust apply to the State Industrial Tribunal, which passes an award of reinstatement. The port trust challenges it as a nullity. Decide. Skeleton: Major ports are in the Central sphere (s.2(b)), and the definition extends to the establishments of contractors for such establishments; the appropriate Government is the Central Government; the State Tribunal had no jurisdiction unless the Central Government had empowered it under s.92(3). Jurisdiction cannot be conferred by consent or waiver; the award is a nullity (IDA analogues: Heavy Engineering Mazdoor Union ; SAIL ). Remedy for workers: fresh Form II application to the Central Industrial Tribunal; limitation problem — the 90-day period has run; argue exclusion of time spent bona fide in a wrong forum (s.14 Limitation Act by analogy; the Code's period is procedural and the Tribunal may condone if the Rules permit) — flag as an unsettled point. Also mention s.92(1) cannot cure it (transfer only between Tribunals of the same appropriate Government)."
+        },
+        {
+          "id": "ind-pyq-u2-21",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 5 — stale dispute",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 5 — stale dispute A worker dismissed in January 2023 applies to the GRC in June 2025, then to the conciliation officer, and files Form II in December 2025. The employer objects on limitation. Decide under the Code; contrast the IDA.",
+          "modelAnswer": "> Problem 5 — stale dispute A worker dismissed in January 2023 applies to the GRC in June 2025, then to the conciliation officer, and files Form II in December 2025. The employer objects on limitation. Decide under the Code; contrast the IDA. Skeleton: Code: GRC application within one year of the cause (s.4(5)) — missed; conciliation officer shall not hold proceedings for an individual dispute after two years from the date the dispute arose (s.53(1) proviso) — the January 2025 outer limit has passed; Form II within 90 days of the failure report (s.53(6); R.23(9)). The application is barred at the conciliation stage itself; the Tribunal, deciding its own jurisdictional facts, will dismiss it as not maintainable unless the delay can be explained within whatever condonation the Rules allow (flag). IDA contrast: no limitation for a reference ( Shalimar Works ); s.2A(3) three years for direct applications; but courts refused stale references ( Nedungadi Bank — seven years) and moulded relief for delay ( Ajaib Singh ). Policy point: the Code trades the Government's discretion on staleness for fixed periods."
+        },
+        {
+          "id": "ind-pyq-u2-22",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 6 — single-member award in a dismissal case",
+          "marks": "DU Semester Exam",
+          "type": "Essay",
+          "question": "Problem 6 — single-member award in a dismissal case The Administrative Member alone hears and decides a dismissal application, the Judicial Member being on leave. Is the award valid?",
+          "modelAnswer": "> Problem 6 — single-member award in a dismissal case The Administrative Member alone hears and decides a dismissal application, the Judicial Member being on leave. Is the award valid? Skeleton: s.44(7) makes discharge/dismissal matters triable by a bench of both members; composition is a limb of jurisdiction; s.44(9) allows proceedings to continue during vacancies, not single-member decisions of two-member matters; award without jurisdiction → quashed under Art. 226/227; matter reheard by a full bench; s.47 applies only to differences of opinion between two sitting members. Compare IDA: awards by an unqualified presiding officer were nullities (s.7C disqualifications) — same logic."
+        },
+        {
+          "id": "ind-pyq-u2-23",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 7 — State Government \"refers\" a dispute",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 7 — State Government \"refers\" a dispute After the Code's commencement a State Government, by notification, \"refers\" a wage dispute in a sugar mill to the Industrial Tribunal \"under section 54\". The employer objects. Decide.",
+          "modelAnswer": "> Problem 7 — State Government \"refers\" a dispute After the Code's commencement a State Government, by notification, \"refers\" a wage dispute in a sugar mill to the Industrial Tribunal \"under section 54\". The employer objects. Decide. Skeleton: s.54 vests the power in the Central Government alone and only for the NIT; a State Government has no referring power under the Code; the notification is a nullity (Jain ground (i) — wrong author). The Tribunal, however, may treat the union's demand as an application if the union files Form II within time after conciliation (s.53(6)); the Government cannot be a proxy applicant. If the sugar mill's dispute is genuinely of national importance (e.g., a question about the applicability of the Code to seasonal establishments across States), the State may request the Central Government to consider s.54 — the Central Government's refusal or grant would then be reviewable on FDC / Telco lines."
+        },
+        {
+          "id": "ind-pyq-u2-24",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "year": "Problem 8 — application on a matter covered by a subsisting settlement",
+          "marks": "DU Semester Exam",
+          "type": "Problem",
+          "question": "Problem 8 — application on a matter covered by a subsisting settlement A settlement in conciliation (2024, three years) fixes wages. In 2025 the union applies to the Tribunal for a wage revision, contending the settlement was unfair. The employer objects that the matter is not referable/adjudicable.",
+          "modelAnswer": "> Problem 8 — application on a matter covered by a subsisting settlement A settlement in conciliation (2024, three years) fixes wages. In 2025 the union applies to the Tribunal for a wage revision, contending the settlement was unfair. The employer objects that the matter is not referable/adjudicable. Skeleton: A conciliation settlement binds all workers (s.57(3)) for its period and thereafter until terminated by 60 days' notice (s.58); during subsistence, a dispute on the covered matter is ordinarily not adjudicable (IDA cases on s.19; Jain ground (x)); but whether the settlement is binding/fair or was obtained by fraud is itself an adjudicable dispute ( National Engineering Industries — Tribunal may examine a settlement pleaded in bar). The Tribunal decides the preliminary question with the merits ( D.P. Maheshwari ); if the settlement is upheld, the application is dismissed as premature; the union's course is to terminate the settlement after its period (s.58) and raise a fresh demand (or negotiate under s.14). Strike on the covered matter meanwhile barred (s.62(1)(g)). 21. Master tables 21.1 Case–principle matrix (Unit 2) Case Court · year Principle Syllabus head · Code hook FDC Ltd. v. Union of India (DU 3) Del HC · 2007 Three pre-requisites of an NIT reference; \"national importance\" and \"establishments in more than one State\" defined; one enterprise's branches ≠ many establishments; non-application of mind; NIT subject to Arts. 226/227 (a) · s.54, s.46, s.92(2) Telco Co"
+        },
+        {
+          "id": "ind-pyq-u3-1",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.1 The Unit 3 questions actually asked (compiled from the course’s PYQ analysis)",
+          "modelAnswer": "Unit 3 in the last three DU papers Paper Q. No. Question (as analysed in the course materials) Weight Dec 2024 Q.2 Problem on §17(1) publication and its conflict with a settlement — whether the Government can be restrained from publishing / can withhold the award (the Sirsilk problem). 15 Q.4(b) Judicial review of a §10-A arbitration award — grounds, and the High Court’s power to interfere (the Rohtas problem). 8 May–June 2025 Q.2(a) Whether late publication (on the 31st day) invalidates the award. [Remington Rand] 8 Q.2(b) Sirsilk scenario — settlement reached before publication: can the Government be asked not to publish? 8 Nov–Dec 2025 Q.1 Bharat Bank ; comparative angle (“will your answer be the same if …?”). 15 Q.8(c) §17(1) — withholding publication of an award (short note / medium answer). 8 Q.2 Reference validity (Sarathy) + criminal prosecution for non-implementation of a settlement/award — §29 in action. 15 The repetition pattern — read this twice §17(1) / Sirsilk appeared in all three papers (Dec 2024 Q.2; May–June 2025 Q.2(a) and Q.2(b); Nov–Dec 2025 Q.8(c)). That makes the mandatory/directory distinction and the withholding exception the highest-probability contents of any Unit 3 question. The other Unit 3 anchor is Article 136 / Article 226 review of awards (May–June 2025 Q.1; Nov–Dec 2025 Q.1; Dec 2024 Q.4(b)), which is Bharat Bank and Rohtas territory. Between them, these two clusters cover roughly four-fifths of the Unit 3 marks awarded so far."
+        },
+        {
+          "id": "ind-pyq-u3-2",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.2 Model Answer — 15 Marks",
+          "modelAnswer": "Q. “The award of an Industrial Tribunal was sent to the appropriate Government on 1 January. Before it could be published, the employer and the workmen’s union arrived at a settlement on the same matters, on terms more favourable to the workmen than the award, and both parties jointly requested the Government not to publish. The Government proposes to publish the award because §17(1) uses the word ‘shall’. Advise the parties.” (Dec 2024 Q.2; cf. Nov–Dec 2025 Q.8(c), May–June 2025 Q.2(b)) 1. The issue. The question is whether the Government’s duty to publish an award under §17(1) of the Industrial Disputes Act, 1947 is absolute, or whether it must yield, in an exceptional case, to a settlement that has already become binding under §18(1). The answer requires (i) the construction of §17(1), (ii) the reconciliation of §17(1) with §18(1) and §18(3), and (iii) the procedural conditions of the exception. 2. The statutory framework. §17(1): every award “shall, within a period of thirty days from the date of its receipt by the appropriate Government, be published”. §17(2): the published award is “final and shall not be called in question by any court in any manner whatsoever”. §17-A(1): the award becomes enforceable on the expiry of thirty days from publication, subject to the Government’s power (in the confined cases) to declare it not enforceable. §18(1): a settlement arrived at otherwise than in conciliation binds the parties to the agreement. §18(3): a settlement arrived at in co"
+        },
+        {
+          "id": "ind-pyq-u3-3",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.3 Model Answer — 10 Marks",
+          "modelAnswer": "Q. The award was received by the State Government on 14 October and was published in the Gazette on 15 November — the 31st day. The employer contends that the award is a nullity. Advise. (May–June 2025 Q.2(a)) 1. Issue. Whether the thirty-day period in §17(1) is mandatory, so that publication on the thirty-first day renders the award void and unenforceable. 2. The provision. §17(1) contains two distinct requirements: the obligation to publish, and the period within which publication must occur. §17(2) attaches finality to the award “published under sub-section (1)”; §17-A(1) makes the award enforceable thirty days after publication; §19 fixes the period of operation with reference to enforceability. Non-compliance with §17 entails no penalty anywhere in the Act. 3. The obligation is mandatory. In Sirsilk Ltd. v. Government of Andhra Pradesh , AIR 1964 SC 160, the Supreme Court held that §17(1) casts a mandatory duty on the Government to publish: the word “shall”, the finality conferred by §17(2) on the published award, and the dependence of §§17-A and 19 upon publication all point that way. The Government cannot pick and choose among awards. This, however, decides only that it must publish; it does not decide when . 4. The time limit is directory. On the very next occasion, The Remington Rand of India Ltd. v. The Workmen , AIR 1968 SC 224, the Supreme Court drew the distinction. On facts materially identical to these (the award was published on the 31st day), the Court held t"
+        },
+        {
+          "id": "ind-pyq-u3-4",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.4 Model Answer — 15 Marks",
+          "modelAnswer": "Q. “The Supreme Court’s power under Article 136 extends to the awards of Industrial Tribunals; yet the Court is not a court of error.” Discuss with reference to Bharat Bank Ltd. v. Employees . Would your answer be the same if the challenge were made to the High Court under Article 226 against an arbitration award under §10-A? (May–June 2025 Q.1; Nov–Dec 2025 Q.1) 1. The constitutional text. Article 136(1) confers on the Supreme Court a discretionary power to grant special leave to appeal from any “judgment, decree, determination, sentence or order in any cause or matter passed or made by any court or tribunal in the territory of India”. Two expressions do the work here: “tribunal” and “determination”. Article 226, by contrast, is wider in reach (any person or authority) but narrower in remedy (writs and directions), and is exercised by the High Courts. 2. Bharat Bank: the preliminary objection. In Bharat Bank Ltd. v. Employees , AIR 1950 SC 188, the Government and the respondents objected that an Industrial Tribunal’s award could not be appealed under Article 136 at all — because “tribunal” meant a body exercising the judicial functions of the State and giving a final judgment carrying legal sanction of its own force; because the award acquired binding force only from the Government’s declaration under the then §15(2); and because an award which can even be rejected (in Government-employee disputes) cannot be a “determination”. 3. The holding. The objection was overruled. The"
+        },
+        {
+          "id": "ind-pyq-u3-5",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.5 Short-note bank (5-markers that can be asked cold)",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u3-6",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(a) Duration and termination of a settlement",
+          "modelAnswer": "§2(p) defines a settlement; §19(1)–(2) and (7) fix its life. It operates from the agreed date, else from the date of signing. It binds for the agreed period, or, if none is agreed, for six months, and continues thereafter until two months from the date on which a written notice of termination is given (sixty days under §58(2) IRC). The notice is ineffective unless given by a party representing the majority of persons bound . There is no statutory ceiling on the period of a settlement (unlike the award’s one-year/three-year rule) and no Government power to extend it. A settlement may also be displaced by a valid fresh settlement or award; and it may be challenged on grounds of fraud, misrepresentation, coercion or unfairness, which will be adjudicated as a fresh industrial dispute. Breach is punishable under §29/§86(17)–(18) and money due is recoverable under §33-C/§59."
+        },
+        {
+          "id": "ind-pyq-u3-7",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(b) §17-A / §55(3) — commencement of the award",
+          "modelAnswer": "An award becomes enforceable thirty days after publication (§17-A(1) IDA) or communication (§55(3) IRC). The proviso allows the appropriate Government to declare that the award shall not become enforceable where the award is in a dispute to which the Government is a party, or is an award of the National Industrial Tribunal, and it is inexpedient on public grounds affecting national economy or social justice to give effect to it. Within 90 days the Government may reject or modify the award and must lay it before the legislature; the award then becomes enforceable 15 days after laying, or on the expiry of the 90 days if no order is made. Subject to this, the award operates from the date specified in it or from the date it becomes enforceable. The provision has been held unconstitutional by the AP High Court (1997) and the Madras High Court (2011, 2014) as an exercise of judicial power by the executive; IRC §55(3)–(5) reproduces it, and no Supreme Court ruling settles the question."
+        },
+        {
+          "id": "ind-pyq-u3-8",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(c) §36-A IDA / §95 IRC — interpretation of award or settlement",
+          "modelAnswer": "Where a difficulty or doubt arises as to the interpretation of any provision of an award or settlement, the appropriate Government may refer the question to a Labour Court, Tribunal or National Tribunal (under the Code, to the Industrial Tribunal or the National Industrial Tribunal). The authority decides the question after hearing the parties, and the decision is final and binding on all the parties . The provision is a machinery provision, not a power of review: it makes an award workable where its meaning is ambiguous, but it cannot be used to rewrite, expand or correct an award, nor to reopen the merits. It shows that even the “final” award is subject to a limited, statutory interpretive jurisdiction. Its existence is also a reason why courts insist that an award be capable of being given effect to as it stands — clarity and precision in drafting awards is itself a legal obligation."
+        },
+        {
+          "id": "ind-pyq-u3-9",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(d) Can a minority union terminate a settlement?",
+          "modelAnswer": "No. A settlement under §18(1)/§18(3) binds, and §19(7)/§58(7) provides that a notice of termination has no effect unless given by a party representing the majority of the persons bound by the settlement or award. The purpose is to prevent a splinter group from unravelling a collective bargain on which the workforce has relied. Consistent with this, Herbertsons Ltd. v. Workmen , (1977) 2 SCC 515, held that a settlement signed with the recognised union, if just and fair, binds all workmen, even a small minority who are not its members, and the Tribunal cannot sit in appeal over its terms; P. Virudhachalam v. Lotus Mills , (1998) 2 SCC 625, applied the same principle to §12(3)/§18(3) settlements, holding them binding even on objecting minority unions. The minority’s remedy is to raise a fresh dispute on a matter not covered by the settlement, or after its duration ends, or to challenge its validity for fraud/unfairness — not to terminate it."
+        },
+        {
+          "id": "ind-pyq-u3-10",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(e) Is §17(1) mandatory or directory?",
+          "modelAnswer": "Both, in different limbs. The obligation to publish is mandatory ( Sirsilk ): the word “shall”, the finality attaching to the published award under §17(2), and the dependence of §17-A and §19 on publication all compel that construction. The thirty-day period is directory ( Remington Rand ): no penalty for delay, no invalidation, genuine causes of delay may exist, and a contrary view would cause needless harassment and fresh references. The single exception to the obligation is the Sirsilk situation — a binding §18(1) settlement on the same matters jointly intimated to the Government before publication, where publication must be withheld to reconcile §18(1) with §18(3)."
+        },
+        {
+          "id": "ind-pyq-u3-11",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(f) Nature of an award — in one paragraph",
+          "modelAnswer": "An award under §2(b)/§2(e) is the interim or final determination of an industrial dispute or of any question relating thereto by a Labour Court, Industrial Tribunal, NIT or a §10-A/§42 arbitrator. It is a quasi-judicial act of a statutory tribunal which enjoys the “trappings of a court” ( Bharat Bank ); it is constitutive — it may create new obligations or modify contracts, which no civil court could do ( Western India Automobile Association ; Rohtas v. Brijnandan Pandey ); it must be in writing and signed (§16/§55(1)); it becomes binding on all the persons in §18(3)/§57(3) once enforceable (§17-A/§55(3)); it operates for one year, extendable to a maximum of three (§19(3)–(6)/§58(3)–(6)); and it is subject to judicial review on four limited grounds but is not appealable as of right."
+        },
+        {
+          "id": "ind-pyq-u3-12",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.6 Predicted Unit 3 questions for the next paper",
+          "modelAnswer": "“Distinguish between a settlement and an award with respect to (i) the source of obligation, (ii) the persons bound, and (iii) duration. Which does the statute prefer, and why?” “A settlement was signed by the recognised union; a rival union with 30% membership challenges it. Advise the employer.” [§18(1)/(3); Herbertsons; §19(7)] “Analyse §17-A of the IDA in the light of the decisions of the Andhra Pradesh and Madras High Courts. Is the power of the appropriate Government to reject or modify an award constitutionally sustainable?” [Highest-probability “critical” question] “Examine the grounds on which an award may be quashed by the High Court under Article 226, with particular reference to an award of a §10-A arbitrator.” [Rohtas] “What is the effect of §17(2) IDA and §97 IRC on the writ jurisdiction of the High Courts?” [Bharat Bank; Rohtas; Premier Automobiles] “The Tribunal rejected the employer’s application for approval; simultaneously the Government declined to publish the award. Discuss the remedies available.” [§§17, 17-A, 33; Art. 226 mandamus] “An employer implements the award but the workmen claim arrears at a higher rate; the employer says the award is ambiguous. What is the remedy?” [§36-A/§95 interpretation reference; §33-C/§59 recovery] “Compare the machinery for the resolution of industrial disputes relating to settlements and awards under the IDA, 1947 and the IR Code, 2020. Do the changes strengthen or weaken industrial adjudication?” [Part E]"
+        },
+        {
+          "id": "ind-pyq-u3-13",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.7 Answer-writing technique (from the examiner-preference analysis)",
+          "modelAnswer": "Seven out of eight questions in each paper are problem-based. Open with a one-line “issue” statement, then the statutory framework, then the authorities, then the advice — and answer the question actually asked, in the order asked. “Legal opinion” format: where the paper says “advise”, write as counsel — state facts briefly, frame the issue, state the law, apply it, and conclude with concrete advice (“A should file …/is entitled to …”). Comparative questions: use a table. “Will your answer be the same if …?” invites a contrast of the two situations along the same headings. Quotes are rewarded. Keep the ten lines from Part F.4 memorised; use two or three, accurately attributed. Always add the IRC overlay in one paragraph — statutory changes (§55(2) communication; §55(3)–(5); §§57, 58, 95, 97; §50(2)), and flag the constitutional question. This is what separates an average answer from an excellent one in 2026. Diagrams earn marks if drawn neatly — the timeline of Figure 3 or the two-column card of Figure 7 makes an answer memorable in a crowded script."
+        },
+        {
+          "id": "ind-pyq-u4-1",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.1 Unit-4 in three years of papers — the grid",
+          "modelAnswer": "Paper Q. Question / topic (as recorded) What it tests from Unit 4 Dec 2024 Q.5 Disciplinary proceedings during a pending criminal case — whether, and in what circumstances, a domestic enquiry must be stayed, and what the employee’s remedy is. The complete Kushal Bhan → Tata Oil Mills → Kusheshwar Dubey trilogy; the “grave/complex” exception; the civil-suit remedy; IOB v. Ganesan as the modern refinement. Dec 2024 Q.3 Tribunal’s powers on dismissal/discharge — quote-based §11-A analysis. The pre-§11-A position ( Indian Iron ), the Firestone principles, and the statutory reappraisal power — i.e., Unit 4’s transition into Unit 5. Dec 2024 Q.4 / Q.7 / Q.8 Short notes; suspension allowance during §33(1) proceedings; wage questions. §33(1) vs §33(2); suspension and subsistence (IESO §10-A, IRC §38); “what is misconduct”. May–June 2025 Q.3 §11-A — domestic enquiry; ex parte enquiry; acquittal in a criminal case. Kushal Bhan (acquittal does not vitiate a fair enquiry), Associated Cement (ex parte enquiry defects), the Firestone fresh-evidence rules, §11-A relief. Nov–Dec 2025 Q.3 Domestic enquiry; standing order; off-premises misconduct ( Tata Oil Mills facts — the “Happy International” hypothetical: a fight in a public park over the production bonus scheme). The rational-connection test ; when the “within or without the factory” clause applies; the enquiry-validity checklist; the Tribunal’s limited review. Nov–Dec 2025 Q.6 §11-A — Labour Court’s power to modify punishment (bank cler"
+        },
+        {
+          "id": "ind-pyq-u4-2",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.2 Model answer — Dec 2024, Q.5 (10/15 marks)",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u4-3",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“Must a domestic enquiry be stayed pending a criminal trial on the same facts? Discuss the law and advise an employee who has been charged departmentally while a criminal case is pending against him.”",
+          "modelAnswer": "Adapted from Dec 2024, Q.5 · Time budget: 22–25 minutes for 15 marks 1. Introduction — locate the gap in the statute Neither the Industrial Disputes Act, 1947 nor the Industrial Employment (Standing Orders) Act, 1946 contains any provision on whether an employer must await the outcome of a criminal prosecution before acting on the same facts departmentally. The IRC, 2020 is likewise silent. The entire doctrine is therefore judge-made , worked out in a line running from Delhi Cloth & General Mills Ltd. v. Kushal Bhan (1960) through Tata Oil Mills (1965) and Kusheshwar Dubey (1988) to Indian Overseas Bank v. P. Ganesan (2007). The starting point of the doctrine is the managerial prerogative to maintain discipline (Firestone principle (1)); the qualification is the employee’s right to a fair defence. 2. The foundational rule — DCM v. Kushal Bhan , AIR 1960 SC 806 The company dismissed a peon charged with the theft of a co-employee’s cycle, after an enquiry which he refused to attend because his criminal trial was pending. The Supreme Court granted the §33(2) approval that the Tribunal had refused, holding: “It is true that very often employers stay enquiries pending the decision of the criminal trial courts and that is fair; but we cannot say that principles of natural justice require that an employer must wait for the decision … of the criminal trial court before taking action against an employee.” “ If the case is of a grave nature or involves questions of fact or law, which a"
+        },
+        {
+          "id": "ind-pyq-u4-4",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.3 Model answer — Nov–Dec 2025, Q.3 (problem on off-premises misconduct)",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u4-5",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“An altercation at a public park: two workmen of ‘Happy International’ fought over the production bonus scheme; the employer invoked the standing order on misconduct ‘within or without the factory’ and dismissed them. The Industrial Tribunal found the fight to be ‘purely private’. Advise / Discuss.”",
+          "modelAnswer": "Nov–Dec 2025, Q.3 (facts as recorded in the Cornell notes) · Tata Oil Mills is the direct authority 1. Issues Does the certified standing order covering “fighting, riotous or disorderly behaviour within or without the factory” extend to an altercation in a public park? Did the employer conduct a fair enquiry consistent with Associated Cement ? Was the Tribunal entitled to substitute its own appreciation of the motive? What is the scope of review? If the enquiry was valid, can the punishment be interfered with? 2. Rule — the rational-connection test In Tata Oil Mills Co. Ltd. v. Workmen , AIR 1965 SC 155, the Supreme Court read down the identical clause: “ It would … be unreasonable to include within Standing Order 22(viii) any riotous behaviour without the factory which was the result of purely private and individual dispute , and in course of which tempers of both the contestants became hot. In order that Standing Order 22(viii) may be attracted, the appellant should be able to show that the disorderly or riotous behaviour had some rational connection with the employment of the assailant and the victim .” And the test was satisfied there because the assault arose out of the victim’s support for the incentive bonus scheme and the rival-union politics around it — “if Raghavan assaulted Augustine solely for the reason that Augustine was supporting the plea for more production, that cannot be said to be outside the purview of Standing Order 22(viii)”. Corollaries: (i) the standi"
+        },
+        {
+          "id": "ind-pyq-u4-6",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "If the fight was over the bonus scheme / union rivalry",
+          "modelAnswer": "It has a rational connection with the employment of both combatants — exactly the Tata Oil Mills situation (a quarrel about production bonus and rival unions). The standing order applies; the Tribunal’s finding that it was “purely private” would be erroneous and liable to be set aside , being contrary to the law laid down by the Supreme Court on an identical clause."
+        },
+        {
+          "id": "ind-pyq-u4-7",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "If the fight was over a wholly personal matter (the “wedding” variant)",
+          "modelAnswer": "The standing order does not reach it (the predicted contrast question: a fight at a wedding over a personal matter). The dismissal then fails for want of proved statutory misconduct — the employer cannot punish for conduct outside the certified code; and if the punishment was for union activity it may also be an unfair labour practice (Fifth Schedule, Item 1) and victimisation . 4. The enquiry Specific charge-sheet with particulars of the date, place, participants and the standing-order clause invoked ( Punjab National Bank , quoted in Firestone ). Independent enquiry officer — not one who witnessed the fight ( Associated Cement : “desirable that the enquiry should be left to be held by some other person who does not claim to be an eyewitness”). Sequence — evidence against the workmen first, cross-examination, then their explanation; not the reverse ( Associated Cement , Malak Ram). All material put to the workmen — CCTV footage, witness statements of other workers, gate registers; no reliance on a co-worker’s separate enquiry ( Associated Cement , Vishwa Nath). Advance notice of the enquiry date and a real opportunity to lead defence witnesses (but no right to indefinite adjournments: Tata Oil Mills ). Reasoned report furnished to the workmen with an opportunity to represent before the penalty ( Karunakar ; S.K. Sharma’s prejudice test). 5. The Tribunal’s review — what it may and may not do If the enquiry was fair and the finding plausible , the Tribunal cannot sit in appeal"
+        },
+        {
+          "id": "ind-pyq-u4-8",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.4 Model answer — the §11-A questions that use Unit-4 law",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u4-9",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "“The enquiry was held ex parte; the workman was later acquitted in the criminal case. What is the Labour Court’s power under §11-A? Can it reduce the punishment?”",
+          "modelAnswer": "Based on Dec 2024 Q.3; May–June 2025 Q.3; Nov–Dec 2025 Q.6 (bank clerk) · Unit 5 territory, answered with Unit-4 case law Skeleton, with the Unit-4 anchors marked Framework: a dismissal for misconduct is a “discharge/dismissal” within §2-A read with §11-A; the Tribunal’s jurisdiction is triggered by a reference. Earlier, the Tribunal’s power was confined by Indian Iron & Steel , AIR 1958 SC 130 (no appellate review; interference only for want of good faith, victimisation/ULP, basic error or violation of natural justice, perverse finding). The 1971 change: §11-A (w.e.f. 15.12.1971) and Firestone (AIR 1973 SC 1227, paras 36–38) — where a proper enquiry was held, the Tribunal may reappraise the evidence : “what was once largely in the realm of the satisfaction of the employer, has ceased to be so; and now it is the satisfaction of the Tribunal that finally decides the matter”. The proviso confines it to the materials on record . Ex parte enquiry: an ex parte enquiry is not void per se if notice was properly served and the workman chose not to appear (contrast Associated Cement , where the defects were the employer’s own: eyewitness officer, wrong sequence, undisclosed material). But if the workman was denied the report or a hearing on it, the Karunakar prejudice test applies, and the matter is ordinarily remitted rather than quashed. Criminal acquittal: does not automatically vitiate a fair enquiry on the same facts ( Kushal Bhan : different standards of proof). It becomes decis"
+        },
+        {
+          "id": "ind-pyq-u4-10",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.5 Short notes — the five that keep recurring",
+          "modelAnswer": "Short note Content in 120–150 words Managerial prerogative & its limits The right to discipline and to choose the punishment is a managerial function (Firestone 1; Indian Iron ). It is not absolute: the action must be bona fide , after a fair enquiry , on evidence , and it is reviewable for victimisation, unfair labour practice, mala fides, perversity and breach of natural justice. Since §11-A (1971)/IRC §50, the Tribunal may even reappraise the evidence; under L. Michael the English master-and-servant doctrine of absolute termination has no place in Indian industrial law; under DTC arbitrary termination offends fairness. Conclusion: a regulated prerogative. §33(1) vs §33(2) IDA (and IRC §90) §33(1): during pendency, no alteration of service conditions connected with the dispute, and no punishment for connected misconduct, without express permission in writing — permission is prior . §33(2): for misconduct unconnected with the dispute the employer may punish, but only after paying one month’s wages and applying for approval — approval is subsequent and, under Jaipur Zila (CB, 2002), mandatory : failure to apply or withdrawal makes the dismissal void and inoperative . §33(3) adds the protected-workman shield. Contravention → §33-A complaint (IRC §91). Protected workman Under §33(3) read with the Explanation and §33(4), a protected workman is a workman who, being a member of the executive or an office-bearer of a registered trade union connected with the establishment, is recog"
+        },
+        {
+          "id": "ind-pyq-u4-11",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "G.6 Ten predicted questions for the next paper (with the first line of the answer)",
+          "modelAnswer": "# Predicted question (from the notes’ repetition analysis and the untested gap) Open with 1 “A domestic enquiry was conducted by the Factory Manager who claimed to have witnessed the misconduct; he questioned the workman extensively before examining any witness, and relied on the attendance register without putting it to him. Advise the workman.” [ Associated Cement ] “The enquiry suffers from all four Associated Cement infirmities; it is ‘nothing more than a sham or an empty formality’.” 2 “X was suspended and the enquiry continued for seven years without conclusion. Advise on (a) permissibility of the delay, and (b) its effect on pension.” [ Prem Nath Bali ] “Six months is the outer limit and one year the maximum; a seven-year enquiry with the employee on subsistence allowance is indefensible.” 3 “Two employees fought at a wedding over a personal matter; the employer dismissed them under the standing order on ‘within or without the factory’ misconduct. Advise.” [ Tata Oil Mills , contrasted] “The clause is attracted only where the conduct has a rational connection with the employment.” 4 “What is the effect of a subsequent criminal acquittal on a domestic enquiry finding of guilt on the same facts?” “Nothing automatic — Kushal Bhan ; but an honourable acquittal on identical facts is decisive — G.M. Tank .” 5 “Critically analyse the raising of thresholds for standing orders and retrenchment from 100 to 300 workers under the IRC, 2020, in the light of managerial prerogative.”"
+        },
+        {
+          "id": "ind-pyq-u4-12",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Rewarded",
+          "modelAnswer": "Stating the statutory gap first (“neither the IDA nor the IESO Act provides…”). Quoting one phrase per case , verbatim and accurately. Framing the answer around the managerial prerogative vs. natural justice balance. Marking the unit boundaries : “ Prem Nath Bali is a service-law decision, persuasive in industrial adjudication”. Noting the status of the IRC, 2020 (enacted; questions should deal with the IDA position and note the Code’s provisions)."
+        },
+        {
+          "id": "ind-pyq-u4-13",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Punished",
+          "modelAnswer": "Citing Kushal Bhan as creating a mandatory stay rule (it is only “advisable”). Stating that off-premises misconduct is covered without the rational-connection qualifier. Reversing §33(1) permission and §33(2) approval . Treating the “administrative” character of a §10 reference as “unreviewable”. Answering as if the IRC, 2020 were fully in force without noting its status, or citing “ §82 ” instead of §90/§91 for pendency."
+        },
+        {
+          "id": "ind-pyq-u5-1",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.1 The pattern — how this unit has been examined",
+          "modelAnswer": "Paper Question (as framed on the paper) Marks What the examiner is testing Dec 2024 Critically examine the proposition that the industrial adjudicator has, in matters of discharge and dismissal, replaced the employer’s satisfaction with its own — with the section and its proviso determining the extent of that power. 10–15 Construction of §11-A; Firestone “the satisfaction of the Tribunal … finally decides”; the counterweight of the proviso; the Hombe Gowda limit on quantum. May–June 2025 A workman is dismissed following an ex parte domestic enquiry, and is later acquitted in the criminal case arising out of the same allegations. What arguments are available to him under §11-A before the Labour Court? 10–15 Application of §11-A: validity of an ex-parte enquiry (natural justice); the effect of acquittal; the Tribunal’s power to reappraise; Raghubir Singh as the modern illustration. Nov–Dec 2025 A bank employee (clerk) is dismissed for a proved act of misconduct. The Labour Court reduces the punishment. Discuss whether such modification is permissible under §11-A and on what principles. 10–15 Proportionality: Hombe Gowda (limited jurisdiction, gross disproportionality) contrasted with Scooters India ; loss of confidence in banking; the need for reasons. Other years (recurring) Short notes: (i) retrospectivity of §11-A; (ii) employer’s right to lead fresh evidence; (iii) “materials on record”; (iv) §11-A and §33 compared; (v) §17-B / §56 IRC. 5 each Precision on Firestone ’s four"
+        },
+        {
+          "id": "ind-pyq-u5-2",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.2 Model answer — 15 marks (the dedicated Unit-5 answer)",
+          "modelAnswer": "Question “Discuss the powers of the adjudicatory authorities in cases of discharge and dismissal of workmen under the Industrial Disputes Act, 1947, and examine the application of the doctrine of proportionality in the award of punishments, with reference to the prescribed case law.” Answer 1. Introduction — the problem the law faced. Before 1971 the industrial adjudicator stood at the door of the employer’s disciplinary power but could not enter. In Indian Iron & Steel Co. Ltd. v. Their Workmen , AIR 1958 SC 130, the Supreme Court held that where a proper domestic enquiry had been held and a plausible conclusion of misconduct reached, the Tribunal had no jurisdiction to substitute its own judgment , interference being confined to four narrow grounds — want of good faith, victimisation or unfair labour practice, a basic error or violation of the principles of natural justice, and a perverse finding. Critically, the quantum of punishment lay wholly within the managerial function : once misconduct was proved, the Tribunal could neither reduce nor vary the punishment. The result was “binary justice” — either a crushing dismissal was confirmed or the workman was reinstated with full back wages, and the industrial adjudicator had no middle course. The Statement of Objects and Reasons of the Industrial Disputes (Amendment) Act, 1971 (Act 45 of 1971) records both the mischief and its cure, and expressly invokes ILO Recommendation No. 119 of 1963 , which recommended that a worker agg"
+        },
+        {
+          "id": "ind-pyq-u5-3",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.3 Model answer — Dec 2024 (critical examination of the adjudicator’s power)",
+          "modelAnswer": "Question (critically examine) “Section 11-A has replaced the satisfaction of the employer with the satisfaction of the Tribunal in matters of discharge and dismissal — yet the power is neither unfettered nor unreviewable.” Critically examine. Answer — structure (a) The proposition accepted, in part. The statement captures the essence of the change: before 1971 the Tribunal could not sit in judgment over a plausible finding nor touch the penalty ( Indian Iron & Steel ); after Firestone “ the satisfaction of the Tribunal … finally decides the matter ”. The subject of the newly decisive satisfaction is the composite test “ was the order of discharge or dismissal justified? ” — a question of the Tribunal’s own formation, not a review of the employer’s directions. (b) Why it is “not unfettered” — five fetters. (i) The proviso : “materials on record”, no fresh evidence — the Tribunal cannot make out a case nobody pleaded. (ii) Deference to a proper enquiry : “very cogent reasons” are required to depart from a correct finding ( Firestone , para 53). (iii) Proportionality threshold : interference with quantum only where “grossly disproportionate” — “no reasonable person could inflict such punishment” ( Hombe Gowda ). (iv) No reduction on irrelevant/compassionate grounds ( Bharat Forge ). (v) Employer’s surviving rights : the first-time evidence right where no enquiry/defective enquiry; and, before the adjudicator, the freedom to choose a penalty within the range of reasonable penalti"
+        },
+        {
+          "id": "ind-pyq-u5-4",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.4 Model answer — May–June 2025 (ex parte enquiry + acquittal)",
+          "modelAnswer": "Question A workman is dismissed after an ex parte domestic enquiry; he is subsequently acquitted in the criminal case on the same facts. Advise him on the arguments available before the Labour Court. Answer 1. Attacking the enquiry. An ex parte enquiry is not per se invalid — the enquiry officer may proceed if the workman, duly served, wilfully absents himself; but the employer must be able to show valid service of the charge-sheet and of the enquiry notice , and that the procedure was fair. Where the charge-sheet was never served (as in Raghubir Singh , where it was sent to a village address while the workman was in custody, followed only by a newspaper notice), the enquiry is a nullity and natural justice stands violated: the workman must have notice of the specific allegations, the evidence must be led and tested in his presence, and he must have liberty to lead defence evidence ( Calcutta Dock Labour Board v. Jaffar Imam ; D.K. Yadav v. J.M.A. Industries ). Add the non-supply of the enquiry report and the absence of a second show-cause notice on the proposed punishment ( Union of India v. Mohd. Ramzan Khan ; MD, ECIL v. Karunakar ), noting that post- Karunakar the objection must be shown to have caused prejudice to justify interference. 2. If the enquiry is found defective , the matter is at large before the Tribunal ( Firestone ; Motipur Sugar Factory ). The employer may then lead evidence for the first time, but the burden of proving the misconduct lies on the employer "
+        },
+        {
+          "id": "ind-pyq-u5-5",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.5 Model answer — Nov–Dec 2025 (bank clerk; modification of punishment)",
+          "modelAnswer": "Question A bank clerk is dismissed for a proved act of misconduct. The Labour Court reduces the punishment to stoppage of two increments. Discuss the permissibility and principles of such modification. Answer 1. The source of the power. The Labour Court’s power is §11-A IDA / §50 IRC . It is not conditioned upon any defect in the enquiry: in Scooters India the enquiries were found “fair and lawful”, the misconduct proved, and the award of reinstatement with 75% back wages was still upheld, because the discretion had been exercised “in a judicial manner and not in an arbitrary manner”. The section expressly permits “the award of any lesser punishment in lieu of discharge or dismissal … as the circumstances of the case may require”. 2. But the jurisdiction is limited. Hombe Gowda fixes the threshold: interference with quantum is permissible “only when … it is found to be grossly disproportionate” — the test being “no reasonable person could inflict such punishment” — or where the management has failed to consider relevant facts bearing on quantum . A reduction resting on sympathy, on the workman’s family circumstances, or on the “compassionate” view of the adjudicator is impermissible ( Bharat Forge : such an order “cannot be passed on an irrational or extraneous factor and certainly not on a compassionate ground”). Nor may the Tribunal sit as an appellate authority over the employer’s choice ( V. Ramana ; KSRTC v. A.T. Mane ). 3. Banking is a context of heightened trust. The a"
+        },
+        {
+          "id": "ind-pyq-u5-6",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.6 Short notes — the five-markers that recur",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u5-7",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(a) Retrospectivity of §11-A",
+          "modelAnswer": "§11-A applies only to disputes referred on or after 15-12-1971 ( Firestone , paras 65–67). Reasons: it abridges the employer’s rights recognised in Indian Iron , and a provision which impairs existing rights is not retrospective absent “clear, express and manifest indication”; and the proviso’s words “ in any proceeding under this section ” presuppose a proceeding arising after the section began. The word “has been referred” is capable of a wider reading but “cannot be isolated from the context”. The date of the order of dismissal is irrelevant; the date of the reference governs."
+        },
+        {
+          "id": "ind-pyq-u5-8",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(b) Employer’s right to lead fresh evidence",
+          "modelAnswer": "Where no enquiry was held or the enquiry is defective , the employer may lead evidence for the first time before the Tribunal; a defective enquiry stands on the same footing as no enquiry ( Motipur ); the right was not abrogated by §11-A because (i) there is no express or implied abrogation, and (ii) any other view would be inconsistent with §33. The Tribunal may not refuse the opportunity if sought at the proper stage. The workman may lead evidence contra , and the merits are “ at large ”."
+        },
+        {
+          "id": "ind-pyq-u5-9",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(c) “Materials on record”",
+          "modelAnswer": "A composite expression covering (i) the enquiry evidence and proceedings; (ii) that plus further evidence led before the Tribunal; (iii) evidence led before the Tribunal for the first time where there was no/defective enquiry, together with the workman’s rebuttal. The proviso to §11-A/§50 bars only the Tribunal’s own fresh evidence — the adjudicator is not an appellate court with power to remit for evidence."
+        },
+        {
+          "id": "ind-pyq-u5-10",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(d) §11-A compared with §33",
+          "modelAnswer": "§33 governs the employer’s action during the pendency of a dispute (permission/approval; IRC §90); it is a protective provision operating before or alongside the adjudication. §11-A governs the final adjudication of the discharge/dismissal once referred. §11-A did not change §33; proceedings under §33 form part of the materials on record before the §11-A Tribunal; and because a §33 Tribunal may itself allow first-time evidence, §11-A must be construed to preserve that right (otherwise “startling results”)."
+        },
+        {
+          "id": "ind-pyq-u5-11",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(e) §17-B IDA / §56 IRC — wages pending appeal",
+          "modelAnswer": "Where an award directs reinstatement and the employer appeals to the High Court/Supreme Court, the employer must pay full wages last drawn (including maintenance allowance) during the pendency, provided the workman was not employed in any establishment and files an affidavit to that effect; if the employer proves the workman was gainfully employed at adequate remuneration , the direction may be confined to the balance period or refused. It makes the reinstatement remedy real and protects livelihood (Art 21)."
+        },
+        {
+          "id": "ind-pyq-u5-12",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(f) Reinstatement with back wages — the burden",
+          "modelAnswer": "Reinstatement with back wages is the normal rule once the termination is found illegal ( Hindustan Tin Works ; Surendra Kumar Verma — “as if the order has never been”); the employer who resists back wages must plead and prove that the workman was gainfully employed; denial would “indirectly punish” the workman ( Deepali Gundu Surwase ). But the Tribunal may mould relief — awarding no back wages, or wages from the date of the demand notice, as in Raghubir Singh ."
+        },
+        {
+          "id": "ind-pyq-u5-13",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.7 Predicted questions for the coming examinations (with answer skeletons)",
+          "modelAnswer": "Likely question Skeleton of the answer “Trace the evolution of the adjudicatory power over dismissal from Indian Iron & Steel to Firestone .” Pre-1971 law (four grounds; no power over quantum; Indian Iron ) → Statement of Objects and Reasons + ILO Rec. 119 → §11-A text → Firestone ’s paragraph 32 restatement → the two new powers + preserved right + prospectivity → post- Firestone tightening ( Hombe Gowda ) → IRC §50. “‘The jurisdiction to interfere with the quantum of punishment is limited’ — discuss.” Hombe Gowda (limited jurisdiction; gross disproportionality; no reasonable person test; provocation and selective vindictiveness rejected) → contrasted with Scooters India (reasoned reduction upheld) → Bharat Forge , V. Ramana , A.T. Mane → conclusion on degree and reasons. “Examine the employer’s right to adduce evidence for the first time before the Tribunal.” Motipur , DCM , R.K. Jain → Firestone paras 42–48 (no abrogation; §33 congruity; small-employer example) → Cooper Engineering → procedure (ask at the proper stage; no power to refuse) → workman’s contra evidence → the merits “at large”. “§11-A is prospective — do you agree?” Text/context argument (“has been referred”, proviso “in any proceeding under this section”) → presumption against retrospectivity where rights are abridged → holding (references on/after 15-12-1971) → the point’s enduring value as a canon of construction. “Compare Scooters India and Hombe Gowda .” Use the six-row reconciliation table in Part B.4: sa"
+        },
+        {
+          "id": "ind-pyq-u5-14",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.8 Answer-writing technique for this unit",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u5-15",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Do",
+          "modelAnswer": "Open with the statutory text and the date (Act 45 of 1971, w.e.f. 15-12-1971). Quote one phrase per proposition — “not justified”, “any lesser punishment”, “materials on record”, “very cogent reasons”, “grossly disproportionate”, “no reasonable person could inflict such punishment”, “shocks the conscience”. Structure by issue , not by case: justification → finding → quantum → relief → procedure. Name the case and the judge/bench where it adds authority ( Firestone — Vaidialingam J.; Hombe Gowda — S.B. Sinha J.; Raghubir Singh — V. Gopala Gowda J.). Use the statutory successor in a footnote-style line: “now §50, IRC, 2020”."
+        },
+        {
+          "id": "ind-pyq-u5-16",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Do not",
+          "modelAnswer": "Do not say §11-A applies retrospectively — the commonest error. Do not say §11-A abolished the employer’s right to lead fresh evidence. Do not say the Tribunal can impose whatever punishment it likes — it can only award any lesser punishment, and only for gross disproportionality. Do not cite “§83 IRC” for §11-A — it is §50. Do not merge Scooters India with Hombe Gowda — the contrast is the answer. Do not forget the proviso — most answers lose marks by discussing the Tribunal’s power without its limit."
+        },
+        {
+          "id": "ind-pyq-u6-1",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.1 The pattern — how this unit has been examined",
+          "modelAnswer": "Paper Question (as framed on the paper) Marks What the examiner is testing Dec 2024 A workman, whose industrial dispute is pending before the Industrial Tribunal, is suspended after a domestic enquiry. Discuss whether he is entitled to any payment during the pendency of the management’s application under §33(1) of the Industrial Disputes Act, 1947. 10–15 The Hotel Imperial – Fakirbhai – Ram Lakhan trilogy; the implied suspension power; the subsistence allowance; the default rule. Nov–Dec 2025 A protected workman is suspended after a domestic enquiry finds him guilty; the management applies under §33(3) for permission to dismiss him. The standing orders are silent on subsistence allowance and he is paid nothing for five years. Advise him. 10–15 §33(3) and the protected workman; natural justice as the foundation of the allowance; the default rule; the remedy for a vitiated permission. Other years / short notes (i) Distinguish §33(1) from §33(2); (ii) complaint under §33-A; (iii) protected workman under §33(3)–(4); (iv) interim relief under §10(4); (v) consequences of contravention of §33. 5 each Precision on sub-sections and consequences, and on the difference between permission and approval . Cross-unit Compare the restraints under §33 and §11-A; or: has the IRC, 2020 made any material change to the law of managerial prerogative? 10–15 Linkage with Unit 5 (§11-A/§50) and with the labour codes. Weighting (from the class-material analysis) Subsistence allowance during §33 penden"
+        },
+        {
+          "id": "ind-pyq-u6-2",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.2 Model answer — 15 marks (the dedicated Unit-6 answer)",
+          "modelAnswer": "Question “Discuss the restraints imposed by §33 of the Industrial Disputes Act, 1947 (now §90 of the Industrial Relations Code, 2020) on the employer’s managerial prerogative during the pendency of industrial proceedings, and explain the law relating to the suspension of a workman and the payment of subsistence allowance during such pendency, with reference to the prescribed case law.” Answer 1. Introduction — the mischief. Industrial adjudication takes time. If, during that time, an employer were free to dismiss the disputants or to alter the very conditions of service under adjudication, the reference would be decided in a vacuum created by the employer: the workman would be dismissed, the union decapitated and the dispute rendered academic. Section 33 of the Industrial Disputes Act, 1947 — re-enacted as §90 of the Industrial Relations Code, 2020 — prevents this by making the employer’s disciplinary and managerial powers subject to the supervision of the authority before which the proceeding is pending . Its object, in the words of the Supreme Court in Air India v. V.A. Rebellow , is “to protect the workmen against victimisation or unfair labour practices , consistently with the preservation of the employer’s bona fide right to maintain discipline and efficiency in the industry”. 2. The statutory scheme — a graded restraint. The restraint is not uniform; it is calibrated to the connection between the employer’s proposed action and the pending dispute: §33(1) — connected mat"
+        },
+        {
+          "id": "ind-pyq-u6-3",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.3 Model answer — Dec 2024 Q.7 (suspension allowance during §33(1) pendency)",
+          "modelAnswer": "Question “The management has applied for permission under §33(1) of the Industrial Disputes Act, 1947 to dismiss a workman, and has suspended him pending the decision. Is the workman entitled to any payment during this period? Discuss.” Answer — structure (a) The starting point is that suspension does not end the employment. Cite Khem Chand (AIR 1963 SC 687): “An order of suspension … does not put an end to his service … He continues to be a member of the service in spite of the order of suspension.” The workman therefore remains entitled to the incidents of a subsisting relationship — in particular to a subsistence allowance. (b) The employer’s right to suspend is judicially implied, not statutory. Hotel Imperial : at common law there is no implied power of suspension without pay; but §33 works a “fundamental change” in the master-servant law, and it is “just and fair” that Tribunals imply a term permitting suspension where a proper enquiry was held, dismissal decided upon, and permission is compelled. If permission is granted, no wages for the period; if refused, all wages from the date of suspension. (c) But the implied term does not permit payment of nothing. Fakirbhai : the question whether total denial of subsistence violates natural justice was not considered in Hotel Imperial ; in a §33 proceeding — which in that case lasted nearly six years — the workman must be enabled to defend himself, and a reasonable allowance must be implied from the date of suspension, its rat"
+        },
+        {
+          "id": "ind-pyq-u6-4",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.4 Model answer — Nov–Dec 2025 Q.4 (protected workman; five years without allowance)",
+          "modelAnswer": "Question (adapted from the 2025 paper) “A protected workman was suspended for alleged misconduct after a domestic enquiry found him guilty. The management filed an application under §33(3) for permission to dismiss him. The standing orders are silent on subsistence allowance, and he received no wages for five years while the Tribunal proceedings were pending. Advise him.” Answer 1. Frame the two questions separately. (i) Was the suspension lawful? (ii) Was the total denial of any allowance for five years lawful? The trilogy answers them in that order — and the second question is the live one. 2. The statutory position. The workman being a protected workman (Explanation to §33(3), recognised under Rule 61 of the Industrial Disputes (Central) Rules, 1957, within the §33(4) cap of 1%, minimum five, maximum one hundred), the employer could not dismiss or punish him during the pendency of the proceeding except with the express permission in writing of the authority. The management rightly applied under §33(3) — but note that §33(5) requires the application to be decided within three months , and a five-year pendency therefore indicates a failure of the statutory scheme to which Parliament itself responded. 3. The suspension itself is lawful. Hotel Imperial : an implied term permits suspension where a proper enquiry has been held and dismissal decided upon; the enquiry here was held and the finding was adverse, so the suspension is not per se vulnerable — provided the enquiry was f"
+        },
+        {
+          "id": "ind-pyq-u6-5",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.5 Model answer — the recurring 10-marker: §33(1) versus §33(2)",
+          "modelAnswer": "Question “Distinguish between §33(1) and §33(2) of the Industrial Disputes Act, 1947. What is the consequence of non-compliance in each case?” Answer — skeleton in full 1. Common field, divided control. Both sub-sections operate only “during the pendency of a proceeding in respect of an industrial dispute”. They divide the employer’s acts into those connected with the dispute and those not connected , and attach different controls to each. 2. §33(1) — connected matters require prior permission. Two prohibitions: (a) altering, to the prejudice of the workmen concerned, the conditions of service applicable immediately before the commencement of the proceeding; (b) discharging or punishing them for misconduct connected with the dispute — unless the authority grants express permission in writing . Permission is a condition precedent ; the authority’s jurisdiction is wider, since it is asked to decide whether the employer should be allowed to act at all. 3. §33(2) — unconnected matters require subsequent approval. The employer may act in accordance with the standing orders (or the contract, where there are none), but for a dismissal or discharge the proviso requires one month’s wages to be paid and an application for approval to be made; and the approval application must be decided within three months (§33(5)). The enquiry is limited to a prima facie case , and the authority cannot impose conditions ( Lord Krishna Textile Mills ). The three requisites were stated in Lalla Ram . 4."
+        },
+        {
+          "id": "ind-pyq-u6-6",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.6 Short notes — the five-markers that recur",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u6-7",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(a) Complaint under §33-A / §91",
+          "modelAnswer": "Where an employer contravenes §33 during the pendency of a proceeding, “any employee aggrieved by such contravention may make a complaint in writing” — to the conciliation officer/Board (who must take it into account in mediation), or to the arbitrator/Labour Court/Tribunal/National Tribunal, which “shall adjudicate upon the complaint as if it were a dispute referred to or pending before it” and submit its award. It is a direct remedy, bypassing the §10 reference ; the authority must nevertheless go into the merits, since contravention alone does not entitle the workman to reinstatement as of right. Under the IRC, §91 preserves it and adds the mediation route."
+        },
+        {
+          "id": "ind-pyq-u6-8",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(b) Protected workman under §33(3)–(4)",
+          "modelAnswer": "A workman who, being “a member of the executive or other office-bearer of a registered trade union connected with the establishment”, is recognised as such under the rules (Rule 61 of the Industrial Disputes (Central) Rules, 1957: nomination by the union, ordinarily by 30 April; recognition mandatory within the cap), and whose number may not exceed 1% of the workmen, subject to a minimum of five and a maximum of one hundred . Against him, no prejudicial alteration of service conditions and no punishment or dismissal is permissible during pendency without the authority’s express permission in writing . It is protection against victimisation, not immunity from discipline."
+        },
+        {
+          "id": "ind-pyq-u6-9",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(c) The implied-suspension doctrine",
+          "modelAnswer": "Hotel Imperial : at common law suspension without pay needs a statutory or contractual basis; but because §33 bars immediate dismissal after a proper enquiry, an Industrial Tribunal may imply a term permitting suspension pending permission, so that the contract of employment is temporarily suspended on both sides. Conditions: (i) proper enquiry; (ii) decision to dismiss; (iii) §33 compulsion. Consequences: permission granted → no wages for the period; permission refused → all wages from the date of suspension. It is qualified by the duty to pay a subsistence allowance ( Fakirbhai ; Ram Lakhan )."
+        },
+        {
+          "id": "ind-pyq-u6-10",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(d) The default rule on subsistence allowance",
+          "modelAnswer": "Ram Lakhan : the allowance is payable at the rate prescribed by the standing orders or service rules; in the absence of any such provision, the workman is entitled to full salary during the period of suspension. The rule is worker-protective in the extreme because most standing orders fix only a fraction of wages — and it gives employers a clear incentive to prescribe a rate. The rationale is that the delay in deciding the §33 application is as much outside the workman’s control as the employer’s, and he “survives only on his salary”."
+        },
+        {
+          "id": "ind-pyq-u6-11",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(e) Interim relief — §10(4) and §50(2) IRC",
+          "modelAnswer": "The Tribunal must confine itself to the points referred “and matters incidental thereto”; interim relief relating to the same matter (e.g., wages pending a reinstatement reference) is such an incidental matter and requires no separate reference ( Hotel Imperial ). It is not an “interim award” and need not be published under §17 — but it should not be the whole of the final relief. The IRC now codifies the power in §50(2) : the Tribunal “may, in the interest of justice, grant such interim relief as it may consider necessary”."
+        },
+        {
+          "id": "ind-pyq-u6-12",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "(f) “One month’s wages” — the small clause with large consequences",
+          "modelAnswer": "The proviso to §33(2)(b) requires that the workman be paid wages for one month before discharge/dismissal, in addition to the application for approval. The object is to give the workman immediate means pending the approval decision — a legislative recognition of the same need that Fakirbhai addressed for suspensions. Failure to pay (or a short payment, e.g. omitting due increments) can lead to refusal of approval; and, with Jaipur Zila , a failure to comply with the proviso makes the dismissal vulnerable to being treated as void and inoperative."
+        },
+        {
+          "id": "ind-pyq-u6-13",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.7 Predicted questions for the coming examinations (with answer skeletons)",
+          "modelAnswer": "Likely question Skeleton “‘The right of the Management to suspend and the right of the employee to receive subsistence allowance are intertwined and both must survive together.’ Discuss.” Quote the line → context ( Ram Lakhan , three-Judge Bench, 1996 reference order) → the two earlier cases and their different questions → the unifying reasoning (delay outside both parties’ control) → the default rule → consequences of breach (natural justice; vitiation) → the IRC’s silence. “A protected workman is suspended and paid nothing for five years. Advise him.” §33(3)/Rule 61 status → §33(5) three-month limit → Hotel Imperial (suspension lawful) → Fakirbhai (denial vitiates) → Ram Lakhan (full salary in default) → remedies: challenge the permission, claim arrears, seek interim relief. “Compare §33 of the IDA with §11-A: two different controls on the employer.” §33 = restraint during pendency (permission/approval; protected workmen; §33-A remedy); §11-A = adjudication of the termination dispute (justification, lesser punishment, materials on record). Link: Firestone itself used §33 to interpret §11-A; §33 proceedings are part of the materials on record; both are re-enacted (§90 and §50). “Has the IRC, 2020 materially changed the law of managerial prerogative in disciplinary matters?” Compare: §33 → §90 (same scheme; “protected worker”; §40 cross-reference), §33-A → §91 (adds mediation), §11-A → §50 (adds direct application and interim relief). Net: continuity in substance; the uncodif"
+        },
+        {
+          "id": "ind-pyq-u6-14",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "F.8 Answer-writing technique for this unit",
+          "modelAnswer": ""
+        },
+        {
+          "id": "ind-pyq-u6-15",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Do",
+          "modelAnswer": "Classify first: connected or unconnected? protected or not? That classification decides the answer. State the requirement precisely: “express permission in writing” for §33(1)/(3); “wages for one month and an application for approval” for §33(2)(b); “three months” for §33(5). Use the trilogy in order: Hotel Imperial (may suspend) → Fakirbhai (must pay something) → Ram Lakhan (must pay everything, if the rules are silent). Quote the two sentences that carry the unit: “the right of the Management to suspend and the right of the employee to receive subsistence allowance are intertwined and both must survive together”; and from Fakirbhai , “such denial leads to violation of principles of natural justice and consequently vitiates the proceedings”. Bring in Article 21 and Chandrabhan Tale — examiners reward the constitutional dimension. End with the IRC: §90/§91, and the fact that the allowance doctrine remains uncodified."
+        },
+        {
+          "id": "ind-pyq-u6-16",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Do not",
+          "modelAnswer": "Do not say “no wages are payable during suspension”. The correct statement is: full wages are not payable, but a subsistence allowance is — and full salary if the rules are silent. Do not cite Hotel Imperial alone. That is the commonest Unit-6 error and gives only half the answer. Do not reverse §33(1) and §33(2). Connected = prior permission; unconnected = subsequent approval. Do not say a protected workman cannot be dismissed at all. He can — with prior permission; the protection is procedural. Do not forget §33(5)’s three months , or the first proviso’s power of extension. Do not misnumber the IRC provisions: it is §90 and §91 (not “§82/§83”)."
+        },
+        {
+          "id": "ind-pyq-u7-1",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Model answer 1 — December 2024, Q. 8(a): “Discuss People’s Union for Democratic Rights v. Union of India (AIR 1982 SC 1473).”",
+          "modelAnswer": "15 marks · suggested length 900–1,100 words · Bhagwati, J. · Article 23 · Minimum Wages Act, 1948 Introduction Before 1982, a wage below the notified minimum was a breach of the Minimum Wages Act, 1948, remediable in the ordinary way — through the inspectorate, claims under §20 and prosecution. In People’s Union for Democratic Rights v. Union of India , AIR 1982 SC 1473, the Supreme Court holding the field through Bhagwati, J. converted that statutory breach into a violation of a fundamental right . The decision is the constitutional capstone of Indian wage law: it makes the minimum wage enforceable under Article 32, against private employers, at the instance of any public-spirited person, and it locates the source of that enforceability in Article 23’s prohibition of begar and other similar forms of forced labour. Facts in brief PUDR, acting on a report prepared by three social scientists who had investigated the conditions of workmen on the various construction projects connected with the Asian Games, 1982 in Delhi, wrote to the Court. The letter was treated as a writ petition. The works — flyovers, stadia, swimming pools, the Games village — were executed by contractors engaged by the Delhi Development Authority, the Delhi Administration and the New Delhi Municipal Committee, who were registered as principal employers under §7 of the Contract Labour (Regulation and Abolition) Act, 1970 . The workmen, brought from Rajasthan, Uttar Pradesh and Orissa by jamadars , were entit"
+        },
+        {
+          "id": "ind-pyq-u7-2",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Model answer 2 — December 2024, Q. 8(b): “Discuss the fixation of fair wages by the industrial adjudicator.”",
+          "modelAnswer": "15 marks · suggested length 900–1,100 words · Fair Wages Committee, 1948 · Greaves Cotton · capacity to pay Introduction — why the adjudicator fixes wages at all In India wages were historically determined by collective bargaining or by industrial adjudication, because there was no comprehensive wage-fixation statute until the Minimum Wages Act, 1948, and even that Act reached only “scheduled employments”. Industrial tribunals therefore became, in effect, wage-fixing bodies for the organised sector — a development the Supreme Court accepted in Crown Aluminium Works v. Workmen , AIR 1958 SC 130, while cautioning that the tribunal’s power is not one of “wish-fulfilment” but a “sober and dispassionate” exercise guided by the requirements of social justice on the one hand and the financial capacity of the industry on the other. The three-tier framework the adjudicator works within The Committee on Fair Wages (1948) distinguished three concepts. The living wage (Article 43) represents frugal comfort — food, clothing and shelter, plus education, health, social needs and provision against old age. The minimum wage provides not merely for bare sustenance but for the preservation of the worker’s efficiency, and must be paid irrespective of the employer’s capacity to pay. The fair wage lies between the two: it is above the minimum and below the living wage, and it takes into account the capacity of the industry to pay, the prevailing rates of wages in the same or similar industries in "
+        },
+        {
+          "id": "ind-pyq-u7-3",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Model answer 3 — May–June 2025, Q. 7 (High difficulty): “Explain the concept of minimum, fair and living wages with reference to Crown Aluminium Works v. Workmen .”",
+          "modelAnswer": "15 marks · suggested length 1,000–1,200 words · Part A + Case 24 Introduction Wages are the point at which the two great claims of industrial law — the employer’s claim to a viable enterprise and the worker’s claim to a life of human dignity — meet and are reconciled. Indian law reconciles them through a three-tier hierarchy of wage concepts derived from the report of the Committee on Fair Wages (1948) and constitutionalised by Article 43 (living wage), Article 39(a) (adequate means of livelihood) and Article 23 (forced labour), and applied in a line of decisions of which Crown Aluminium Works v. Workmen , AIR 1958 SC 130, is the starting point. 1. The three tiers Tier Content Governing test Living wage Food, clothing and shelter plus a measure of frugal comfort : education for children, protection against ill-health, essential social needs and provision against old age and other misfortunes Article 43; aspirational ceiling; no statute fixes it; the State is to endeavour to secure it Fair wage A wage above the minimum but below the living wage — between the worker’s need for a higher standard of living and the industry’s capacity to pay The industry-cum-region formula ( Greaves Cotton ); capacity to pay is relevant; reducible in exceptional circumstances Minimum wage Not merely bare subsistence but the preservation of the worker’s efficiency — food, clothing, housing, fuel and lighting plus a margin for education and medical needs (the 1957 norms, enlarged by the sixth compon"
+        },
+        {
+          "id": "ind-pyq-u7-4",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Model answer 4 — May–June 2025, Q. 8(b) and November–December 2025, Q. 8(a): Short note on the industry-cum-region formula",
+          "modelAnswer": "5–7 marks · suggested length 300–400 words · Greaves Cotton , AIR 1964 SC 689 The note Fair wages — wages above the statutory minimum but below the living wage — are fixed on the industry-cum-region principle laid down in Greaves Cotton & Co. Ltd. v. Workmen , AIR 1964 SC 689. The phrase, borrowed from the report of the Committee on Fair Wages (1948), requires the wage of a concern’s workmen to be compared with the wages paid in comparable concerns in the same industry and in the same region . It has two aspects, and the question which predominates is answered by the density of comparable units: where there are many comparable concerns of similar standing, the industry aspect predominates and their wage packets set the standard ( Hindusthan Motors Ltd. v. Workmen ); where the employer is the sole or almost sole concern of its kind in the region, the region aspect predominates and the adjudicator must look to the general level of wages in the region ( French Motor Car Co. v. Workmen , AIR 1962 SC 1323). Three practical rules follow. First , the comparison is of the total wage packet — and the whole of it, that is, basic wage, dearness allowance and other allowances — not of the basic wage alone, since a comparison of one component alone can be misleading. Second , the comparison must be with genuinely comparable concerns; the object is a fair comparison, not an identical one, and the inclusion of unsuitable or capricious units would defeat the exercise. Third , the formula is "
+        },
+        {
+          "id": "ind-pyq-u7-5",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Model answers 5 — predicted and “high-probability” questions with answer plans",
+          "modelAnswer": "The following four are drawn from the paper analyses’ predicted list for Units 7 and 8 (Unit 7 items) (a) “Explain the concept of minimum, fair and living wage. Discuss the sixth component added by the Supreme Court in Reptakos Brett .” Plan: ① three-tier table (content, test, statutory source) — ② the 1948 Fair Wages Committee classifications — ③ the 1957 norms, five components — ④ Reptakos Brett : facts (Madras unit, worker demanded need-based minimum on ₹50–55 of 1940 and 192% neutralisation, 30-year-old settlement with a slab DA scheme), the Court’s holding that the 1957 formula was outmoded and the addition of the sixth component at 25%, the correction of the ₹26 figure, and the shifting of the burden of proof to the employer — ⑤ the caution in the judgment that the sixth component is a “guideline” for fixation of minimum wages, to be applied by wage-fixing authorities and not a licence for any tribunal to rewrite settlements — ⑥ conclusion: the concept moves from subsistence to dignity; and §7 of the Code on Wages leaves the norms to be prescribed, so the 1957-plus-1992 formula remains the practical standard. (b) “Can an employer seek downward revision of an existing dearness allowance scheme on the ground of ‘over-neutralisation’? Discuss with reference to Crown Aluminium Works and Reptakos Brett .” Plan: ① the two limits — no reduction at or near the minimum ( Crown Aluminium ; Hydro (Engineers) ), and reduction possible above the minimum only on proved incapacity — ②"
+        },
+        {
+          "id": "ind-pyq-u8-1",
+          "unitNumber": 8,
+          "unitTitle": "Unit 8: The Code on Social Security, 2020",
+          "year": "DU LL.B. Recent Exam",
+          "marks": "20 Marks",
+          "type": "Essay",
+          "question": "Examine the statutory framework and judicial principles governing The Code on Social Security, 2020. Discuss with leading Supreme Court authorities.",
+          "modelAnswer": "### Model Answer Outline\n\n1. **Statutory Framework & Object:** Detail the primary provisions and legislative purpose.\n2. **Key Legal Issues & Interpretations:** Analyze the core controversies and principles settled by the Supreme Court.\n3. **Landmark Judicial Precedents:** Cite and discuss the ratio decidendi of leading cases.\n4. **Critical Analysis & Conclusion:** Synthesize the current legal position with practical examination takeaways."
+        }
+      ],
+      "revisions": [
+        {
+          "id": "ind-rev-u1",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020",
+          "badge": "Unit 1 Capsule",
+          "title": "Unit 1: Dispute Settlement under Industrial Relations Code, 2020 — Rapid Revision Capsule",
+          "anchorId": "rev-u1",
+          "file": "SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Seventh Schedule, List III (Concurrent) — Entry 22 \"Trade unions; industrial and labour disputes\"; Entry 24 \"Welfare of labour including conditions of work, provident funds, employers' liability, workmen's compensation…\"",
+                "Parliament enacted the Code under these entries; States may make rules (s.99 — \"appropriate Government\") and even amend the Code for their territory with Presidential assent under Art. 254(2) (as they did with the IDA — e.g., Maharashtra, U.P., Gujarat amendments). The Central Rules, 2026 apply only in the Central sphere; each State notifies its own IR Rules.",
+                "Leading Precedent"
+              ],
+              [
+                "Art. 19(1)(c) freedom of association; Art. 19(1)(g) trade/business",
+                "Right to form unions is fundamental; right to strike is not a fundamental right but a statutory/legal right regulated by s.62 ( All India Bank Employees' Assn. v. National Industrial Tribunal , AIR 1962 SC 171; T.K. Rangarajan v. State of T.N. , (2003) 6 SCC 581). Regulation of lock-out is a reasonable restriction on 19(1)(g).",
+                "Leading Precedent"
+              ],
+              [
+                "Art. 14 & 21",
+                "Fair procedure before Tribunals; natural justice (Bharat Bank — \"benevolent despotism is foreign to a democratic Constitution\"); classification for GRC/WC thresholds must be reasonable.",
+                "Leading Precedent"
+              ],
+              [
+                "Arts. 38, 39(a),(d),(e), 41, 42, 43, 43A (DPSP)",
+                "Living wage, humane conditions, equal pay, participation of workers in management (43A) — the constitutional rationale of the Works Committee and GRC; Tribunals decide \"in accordance with social justice\" — the reason Mukherjea J. in Bharat Bank thought their function was not purely judicial.",
+                "Leading Precedent"
+              ],
+              [
+                "Art. 136 special leave \"from any judgment, decree, determination, sentence or order in any cause or matter passed or made by any court or tribunal \"; Art. 136(2) excludes Armed Forces tribunals",
+                "The question in Bharat Bank: is an Industrial Tribunal a \"tribunal\" and is its award a \"determination\"? Held yes (3:2). See Part VI.",
+                "Leading Precedent"
+              ],
+              [
+                "Art. 226 writs (certiorari, mandamus, prohibition); Art. 227 superintendence over \"all courts and tribunals\"",
+                "Primary route for judicial review of conciliation failures, arbitration awards ( Rohtas Industries ), and Tribunal awards. Art. 227 covers even bodies that are not \"tribunals\" for Art. 136 ( Engineering Mazdoor Sabha ). Alternative remedy is a rule of discretion, not of jurisdiction.",
+                "Leading Precedent"
+              ],
+              [
+                "Art. 323B(2)(h)",
+                "Empowers the appropriate Legislature to provide for tribunals for \"industrial and labour disputes\" — constitutional sanction for the Industrial Tribunal/NIT model (though the Code's tribunals are ordinary statutory tribunals, and their members' service conditions are governed by s.184 of the Finance Act, 2017 read with the Tribunals Reforms Act, 2021 ).",
+                "Leading Precedent"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 1: Dispute Settlement under Industrial Relations Code, 2020."
+        },
+        {
+          "id": "ind-rev-u2",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities",
+          "badge": "Unit 2 Capsule",
+          "title": "Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities — Rapid Revision Capsule",
+          "anchorId": "rev-u2",
+          "file": "SEM 5/Industrial law/IR_Code_Unit2_Reference_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "s.2(b) appropriate Government",
+                "Central Government for railways, mines, oil fields, major ports, air transport, telecom, banking & insurance companies, Central PSUs and their subsidiaries/autonomous bodies, establishments under Central authority (incl. their contractors); the State Government for all others. Decides which Government's Tribunal has jurisdiction and which Government exercises ss.92(1), 95, 96.",
+                "IDA s.2(a) — largely the same; the Code adds the \"continues to be Central even if shareholding falls below 50%\" explanation."
+              ],
+              [
+                "s.2(q) industrial dispute",
+                "Collective disputes + individual disputes about discharge, dismissal, retrenchment or termination (no espousal needed).",
+                "IDA s.2(k) + s.2A ."
+              ],
+              [
+                "s.2(y) , s.2(zn)",
+                "\"National Industrial Tribunal\" = one constituted under s.46; \"Tribunal\" = Industrial Tribunal under s.44.",
+                "IDA s.2(r), 2(ll) ."
+              ],
+              [
+                "s.44 Industrial Tribunal",
+                "Constituted by the appropriate Government; Judicial + Administrative Member; s.44(7): matters that must go to a two-member bench (standing orders, discharge/dismissal, legality of strike/lock-out, retrenchment/closure, Trade-Union disputes); s.44(9) vacancies.",
+                "IDA ss.7, 7A — Labour Court/Tribunal split abolished; Second/Third Schedule allocation abolished."
+              ],
+              [
+                "s.45",
+                "Decisions of a Tribunal/NIT are final (subject to constitutional review).",
+                "Implied under IDA s.17(2) finality of awards."
+              ],
+              [
+                "s.47",
+                "Difference of opinion between the two members → referred to the Judicial Member of another Tribunal/NIT (as notified).",
+                "New."
+              ],
+              [
+                "s.48",
+                "Disqualifications: not independent; age 65 years.",
+                "IDA s.7C ."
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 2: Reference of Industrial Disputes to Adjudicatory Authorities."
+        },
+        {
+          "id": "ind-rev-u3",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Awards & Settlements — Binding Nature & Enforcement",
+          "badge": "Unit 3 Capsule",
+          "title": "Unit 3: Awards & Settlements — Binding Nature & Enforcement — Rapid Revision Capsule",
+          "anchorId": "rev-u3",
+          "file": "SEM 5/Industrial law/Unit-3-Awards-and-Settlements-Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Industrial Disputes Act, 1947",
+                "The parent statute for the entire Unit 3 jurisprudence; repealed by IR Code §104 once the Code came into force.",
+                "All Unit 3 case law (Bharat Bank, Rohtas, Sirsilk, Remington Rand) was decided under the IDA and is still cited as the source of doctrine ."
+              ],
+              [
+                "Industrial Relations Code, 2020",
+                "One of the four Labour Codes consolidating 29 central labour laws. Per the DU course outline, the four Codes were notified into force with effect from 21 November 2025 .",
+                "Settlement/Award provisions are now read in the Code: §55 (form, communication, commencement of award), §56 (full wages pending HC/SC proceedings), §57 (persons bound), §58 (period of operation), §46 (National Industrial Tribunal), §95 (interpretation doubts)."
+              ],
+              [
+                "Industrial Relations (Central) Rules, 2026",
+                "Notified 8 May 2026 under IR Code §99; supersede the Industrial Disputes (Central) Rules, 1957 (Parts II, V–VIII) and the Standing Orders Central Rules, 1946 to the extent covered.",
+                "Prescribe the Form I memorandum of settlement , electronic filing, registers of settlements, IT/NIT procedure (Rule 5: Works Committee; Rule 9: negotiating union)."
+              ],
+              [
+                "Earlier Courses / older notes",
+                "Notes prepared before Nov. 2025 state that “the IR Code is enacted but not brought into force; answer under the IDA”.",
+                "That caveat is now superseded . Answer on the Code, use the IDA + case law as interpretive support, and always say which provision you are using ."
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 3: Awards & Settlements — Binding Nature & Enforcement."
+        },
+        {
+          "id": "ind-rev-u4",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)",
+          "badge": "Unit 4 Capsule",
+          "title": "Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry) — Rapid Revision Capsule",
+          "anchorId": "rev-u4",
+          "file": "SEM 5/Industrial law/Unit-4-Managerial-Prerogative-Disciplinary-Action.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "10",
+                "Delhi Cloth & General Mills Ltd. v. Kushal Bhan",
+                "AIR 1960 SC 806; (1960) 3 SCR 227 (Wanchoo J.)"
+              ],
+              [
+                "11",
+                "Associated Cement Co. Ltd. v. Workmen",
+                "(1964) 3 SCR 652; AIR 1964 SC 1595 (Gajendragadkar J.)"
+              ],
+              [
+                "12",
+                "Tata Oil Mills Co. Ltd. v. Workmen",
+                "AIR 1965 SC 155; (1964) 7 SCR 555 (Gajendragadkar C.J.)"
+              ],
+              [
+                "13",
+                "Indian Overseas Bank, Anna Salai v. P. Ganesan",
+                "2007 (13) SCALE 446; (2008) 1 SCC 650 (S.B. Sinha J., 23 Nov 2007)"
+              ],
+              [
+                "14",
+                "Kusheshwar Dubey v. Bharat Coking Coal Ltd.",
+                "AIR 1988 SC 2118; (1988) 4 SCC 319 (Ranganath Misra J.)"
+              ],
+              [
+                "15",
+                "Prem Nath Bali v. Registrar, High Court of Delhi",
+                "(2015) 16 SCC 415 (Sapre J.; Chelameswar J.)"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 4: Managerial Prerogative & Disciplinary Action (Domestic Inquiry)."
+        },
+        {
+          "id": "ind-rev-u5",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality",
+          "badge": "Unit 5 Capsule",
+          "title": "Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality — Rapid Revision Capsule",
+          "anchorId": "rev-u5",
+          "file": "SEM 5/Industrial law/Unit-5-Adjudicatory-Powers-Proportionality-Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "“Powers of the Adjudicatory Authorities”",
+                "The powers of the Labour Court , the Industrial Tribunal and the National Industrial Tribunal when an industrial dispute relating to discharge, dismissal or termination of an individual workman is referred to them under §10 (the reference being competent because of the deeming provision in §2-A ).",
+                "Leading Precedent"
+              ],
+              [
+                "“in cases of Discharge/Dismissal”",
+                "The section applies only to termination disputes — not to transfers, suspensions, non-promotions, or other service grievances (those travel under other heads, e.g., Schedule II item 1, or are dealt with under §33/IRC §90). A “discharge” is a termination simpliciter; a “dismissal” is a punitive termination for misconduct; both are governed.",
+                "Leading Precedent"
+              ],
+              [
+                "“Application of Doctrine of Proportionality in awarding Punishments”",
+                "The adjudicator’s power to substitute a lesser punishment — “the punishment must fit the misconduct”. Its outer limit, as settled in Hombe Gowda (2006), is that the Tribunal may interfere with quantum only where the punishment is “grossly disproportionate” and “no reasonable person could inflict such punishment” .",
+                "Leading Precedent"
+              ],
+              [
+                "“(section 50; 56)”",
+                "The provisions of the Industrial Relations Code, 2020 that replace, respectively, §11-A IDA (substantive remedial power over discharge/dismissal — §50 , with a new sub-section (2) conferring interim relief ) and §17-B IDA (payment of full wages last drawn to a workman who has won reinstatement, while the employer’s challenge is pending in the High Court/Supreme Court — §56 ). The syllabus deliberately asks you to know both the old and the new statute.",
+                "Leading Precedent"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 5: Powers of Adjudicatory Authorities & Doctrine of Proportionality."
+        },
+        {
+          "id": "ind-rev-u6",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)",
+          "badge": "Unit 6 Capsule",
+          "title": "Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA) — Rapid Revision Capsule",
+          "anchorId": "rev-u6",
+          "file": "SEM 5/Industrial law/Unit-6-Restraints-on-Managerial-Prerogatives-Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory Foundation",
+                "Mandatory compliance with procedural requirements & substantive criteria",
+                "DU Case Material Rule"
+              ],
+              [
+                "Judicial Doctrine",
+                "Application of natural justice, fair hearing & proportionality",
+                "Supreme Court Landmark Rulings"
+              ],
+              [
+                "Drafting & Exam Strategy",
+                "Identify cause of action, verify jurisdiction, relief sought & cite exact section numbers",
+                "Model Examination Takeaways"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 6: Restraints on Managerial Prerogatives (§33 & §33-A IDA)."
+        },
+        {
+          "id": "ind-rev-u7",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019",
+          "badge": "Unit 7 Capsule",
+          "title": "Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019 — Rapid Revision Capsule",
+          "anchorId": "rev-u7",
+          "file": "SEM 5/Industrial law/Unit-7-Wages-and-Code-on-Wages-2019-Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "“Concept” of wages",
+                "§A.1–A.3",
+                "Common-law wage bargain versus welfare-state adjudication ( Crown Aluminium , quoting Sir Frank Tillyard); §§38, 39(a), 41, 42, 43, Constitution"
+              ],
+              [
+                "Kinds — (a) Minimum Wage",
+                "§A.4",
+                "Crown Aluminium Works v. Workmen , AIR 1958 SC 130 (Case 24); Standard Vacuum (1961); Unichoyi (1961); Code §§2(s), 5–9"
+              ],
+              [
+                "Kinds — (b) Fair Wage",
+                "§A.5, §C",
+                "Greaves Cotton & Co. Ltd. v. Workmen , AIR 1964 SC 689 (Case 25); Hindusthan Motors (1962); French Motor Car Co. (1962)"
+              ],
+              [
+                "Kinds — (c) Living Wage",
+                "§A.6",
+                "Fair Wages Committee (1948); Reptakos Brett (1992); Article 43"
+              ],
+              [
+                "Definition of “wage”",
+                "§F.2",
+                "Code on Wages, 2019, §2(y) — with the 50% add-back proviso and the 15% in-kind Explanation"
+              ],
+              [
+                "Fixation of minimum wage",
+                "§F.3",
+                "Code §§5, 6, 7, 8 (+ §10–§14); repealed Minimum Wages Act, 1948, §§3–5"
+              ],
+              [
+                "Floor wage / power of Government to fix it",
+                "§F.4",
+                "Code §9 (with §42 Advisory Boards); contrast the advisory “National Floor Level Minimum Wage”"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 7: Wages — Concepts, Kinds & The Code on Wages, 2019."
+        },
+        {
+          "id": "ind-rev-u8",
+          "unitNumber": 8,
+          "unitTitle": "Unit 8: The Code on Social Security, 2020",
+          "badge": "Unit 8 Capsule",
+          "title": "Unit 8: The Code on Social Security, 2020 — Rapid Revision Capsule",
+          "anchorId": "rev-u8",
+          "file": "SEM 5/Industrial law/Unit8_Code_on_Social_Security_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Employees' Compensation — Definitions",
+                "Part B (§2 definitions of the Code + Second Schedule + old Act equivalents)",
+                "Short notes / problem preliminaries"
+              ],
+              [
+                "Concept of injury “arising out of and in the course of employment”",
+                "Part C (tests, English & Indian case law, notional extension, §74(2)–(4), ESI analogues §34–35)",
+                "Asked every year"
+              ],
+              [
+                "Disablement — partial & total, temporary & permanent",
+                "Part D (§2(55), 2(56), 2(83), Fourth Schedule, quantum §76)",
+                "Short notes / part of problems"
+              ],
+              [
+                "Code on Social Security, 2020 — §2(55), §2(56), Chapter VII §§73–99",
+                "Parts B, D, E (section-wise)",
+                "Statutory backbone of answers"
+              ],
+              [
+                "Gratuity — definition & scope; Chapter V §§53–58",
+                "Part G",
+                "Short notes (features; teachers)"
+              ],
+              [
+                "Maternity Benefit — Chapter VI §§59–72",
+                "Part H",
+                "Problem asked 2 of last 3 papers"
+              ],
+              [
+                "Prescribed cases: Agnes (1964); Daivshala (2025); Royal Western India Turf Club (2016); Dr. Kavita Yadav (2024) [+ Birla Institute of Technology (2019) in the gratuity segment of the case material]",
+                "Part I (facts · issues · arguments of both sides · decision · principle) and woven through Parts C–H",
+                "Core of every answer"
+              ]
+            ]
+          },
+          "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 8: The Code on Social Security, 2020."
         }
       ]
     }
