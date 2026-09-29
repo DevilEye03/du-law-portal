@@ -436,284 +436,315 @@
           <!-- Injected dynamically by app.js -->
         </div>
       </div>
+    </section>
 
-      <!-- =============================================================
-           STUDENT COMMUNITY & ACADEMIC COMMENTS SECTION
-           ============================================================= -->
-      <section class="community-comments-section" id="communityCommentsSection" aria-label="Student Academic Discussions and Comments">
-        <div class="comments-section-container">
-          
-          <!-- Section Header with Crest & Badges -->
-          <div class="comments-section-header">
-            <div class="comments-badge-strip">
-              <span class="comments-crest-badge"><i class="fa-solid fa-comments"></i> Student Discussion Board</span>
-              <span class="comments-status-badge"><span class="live-pulse-dot"></span> Active Peer Community</span>
+    <!-- ---------------------------------------------------------------
+         VIEW 4: STUDENT ACADEMIC DISCUSSIONS & COMMUNITY HUB
+         --------------------------------------------------------------- -->
+    <section class="discussions-view community-comments-section" id="communityCommentsSection" aria-label="Student Academic Discussions and Comments">
+      <div class="comments-section-container">
+        
+        <!-- Breadcrumbs Navigation Bar -->
+        <div class="discussions-breadcrumbs-bar">
+          <button type="button" id="discussionsBackBtn" class="discussions-back-btn" title="Return to All Semesters">
+            <i class="fa-solid fa-arrow-left"></i> <span>Home / All Semesters</span>
+          </button>
+          <span class="discussions-breadcrumb-sep">/</span>
+          <span class="discussions-breadcrumb-tag"><i class="fa-solid fa-comments"></i> Student Discussions Hub</span>
+        </div>
+
+        <!-- Section Header with Crest & Badges -->
+        <div class="comments-section-header">
+          <div class="comments-badge-strip">
+            <span class="comments-crest-badge"><i class="fa-solid fa-comments"></i> Student Discussion Board</span>
+            <span class="comments-status-badge"><span class="live-pulse-dot"></span> Active Peer Community</span>
+          </div>
+          <h2 class="comments-section-title">Academic Discussions &amp; Student Insights</h2>
+          <p class="comments-section-desc">
+            Engage with fellow Delhi University law scholars. Ask case law questions, discuss judicial doctrines, share exam preparation strategies, and review subject dossiers across CLC, LC-1, and LC-2.
+          </p>
+
+          <!-- Metrics Counter Bar -->
+          <div class="comments-metrics-grid">
+            <div class="comments-metric-card">
+              <div class="metric-icon" style="color: #60a5fa;"><i class="fa-solid fa-message"></i></div>
+              <div class="metric-val" id="metricTotalComments">160+</div>
+              <div class="metric-label">Academic Discussions</div>
             </div>
-            <h2 class="comments-section-title">Academic Discussions &amp; Student Insights</h2>
-            <p class="comments-section-desc">
-              Engage with fellow Delhi University law scholars. Ask case law questions, discuss judicial doctrines, share exam preparation strategies, and review subject dossiers across CLC, LC-1, and LC-2.
-            </p>
-
-            <!-- Metrics Counter Bar -->
-            <div class="comments-metrics-grid">
-              <div class="comments-metric-card">
-                <div class="metric-icon" style="color: #60a5fa;"><i class="fa-solid fa-message"></i></div>
-                <div class="metric-val" id="metricTotalComments">160+</div>
-                <div class="metric-label">Academic Discussions</div>
-              </div>
-              <div class="comments-metric-card">
-                <div class="metric-icon" style="color: #f59e0b;"><i class="fa-solid fa-star"></i></div>
-                <div class="metric-val" id="metricAvgRating">4.95 <span>/ 5.0</span></div>
-                <div class="metric-label">Student Satisfaction</div>
-              </div>
-              <div class="comments-metric-card">
-                <div class="metric-icon" style="color: #34d399;"><i class="fa-solid fa-building-columns"></i></div>
-                <div class="metric-val">3 Centres</div>
-                <div class="metric-label">CLC &bull; LC-1 &bull; LC-2</div>
-              </div>
-              <div class="comments-metric-card">
-                <div class="metric-icon" style="color: #a78bfa;"><i class="fa-solid fa-certificate"></i></div>
-                <div class="metric-val">100%</div>
-                <div class="metric-label">Curated &amp; Verified</div>
-              </div>
+            <div class="comments-metric-card">
+              <div class="metric-icon" style="color: #f59e0b;"><i class="fa-solid fa-star"></i></div>
+              <div class="metric-val" id="metricAvgRating">4.95 <span>/ 5.0</span></div>
+              <div class="metric-label">Student Satisfaction</div>
+            </div>
+            <div class="comments-metric-card">
+              <div class="metric-icon" style="color: #34d399;"><i class="fa-solid fa-building-columns"></i></div>
+              <div class="metric-val">3 Centres</div>
+              <div class="metric-label">CLC &bull; LC-1 &bull; LC-2</div>
+            </div>
+            <div class="comments-metric-card">
+              <div class="metric-icon" style="color: #a78bfa;"><i class="fa-solid fa-certificate"></i></div>
+              <div class="metric-val">100%</div>
+              <div class="metric-label">Curated &amp; Verified</div>
             </div>
           </div>
+        </div>
 
-          <!-- Comment Compose Card -->
-          <div class="comment-compose-card" id="commentComposeCard">
-            <div class="compose-header">
-              <div class="compose-header-left">
-                <div class="compose-avatar-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                <div>
-                  <h3 class="compose-title">Post a Legal Comment or Ask a Doubt</h3>
-                  <p class="compose-sub">Contribute to the collective wisdom of Delhi University LL.B. scholars</p>
-                </div>
+        <!-- Interactive Filter, Search & Compose Toggle Bar -->
+        <div class="comments-filter-bar">
+          <div class="comments-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="commentsSearchInput" placeholder="Search discussions by doctrine, case name, student, or college...">
+            <button type="button" id="commentsSearchClearBtn" class="comments-search-clear" style="display:none;" title="Clear search">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="comments-filter-controls">
+            <!-- Subject Dropdown Filter -->
+            <div class="filter-dropdown-wrap">
+              <select id="commentsSubjectFilter" class="comments-select-filter">
+                <option value="all">All Subjects</option>
+                <option value="company">Company Law (LB-303)</option>
+                <option value="cpc">CPC &amp; Limitation (LB-301)</option>
+                <option value="contract">Law of Contract (LB-102)</option>
+                <option value="bns">Law of Crimes / BNS (LB-103)</option>
+                <option value="juris">Jurisprudence–I (LB-101)</option>
+                <option value="property">Property Law (LB-204)</option>
+                <option value="pil">Public International Law (LB-205)</option>
+                <option value="family">Family Law–I (LB-104)</option>
+                <option value="torts">Law of Torts (LB-105)</option>
+                <option value="drafting">Drafting &amp; Conveyance (LB-502)</option>
+                <option value="industrial">Industrial Law (LB-503)</option>
+                <option value="wcc">White Collar Crimes (LB-3037)</option>
+              </select>
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="filter-dropdown-wrap">
+              <select id="commentsSortSelect" class="comments-select-filter">
+                <option value="helpful">Sort: Most Helpful 👍</option>
+                <option value="newest">Sort: Newest First 🕒</option>
+                <option value="rating">Sort: Highest Rated ⭐</option>
+              </select>
+            </div>
+
+            <!-- Toggle Compose Card Button -->
+            <button type="button" class="btn-toggle-compose" id="btnToggleCompose" aria-expanded="false" aria-controls="commentComposeCard">
+              <i class="fa-solid fa-pen-nib"></i>
+              <span id="btnToggleComposeLabel">Ask Doubt / Post</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="comments-category-pills" id="commentsCategoryPills">
+          <button class="comm-cat-pill active" data-cat="all">
+            <i class="fa-solid fa-list-check"></i> All Discussions (<span id="catCountAll">10</span>)
+          </button>
+          <button class="comm-cat-pill" data-cat="cases">
+            <i class="fa-solid fa-scale-balanced"></i> Case Doubts (<span id="catCountCases">3</span>)
+          </button>
+          <button class="comm-cat-pill" data-cat="exam">
+            <i class="fa-solid fa-file-pen"></i> Exam Strategy (<span id="catCountExam">3</span>)
+          </button>
+          <button class="comm-cat-pill" data-cat="review">
+            <i class="fa-solid fa-star"></i> Notes Reviews (<span id="catCountReview">2</span>)
+          </button>
+          <button class="comm-cat-pill" data-cat="tips">
+            <i class="fa-solid fa-lightbulb"></i> Study Tips (<span id="catCountTips">2</span>)
+          </button>
+        </div>
+
+        <!-- Comment Compose Card (Hidden by default, opens on Ask Doubt / Post click) -->
+        <div class="comment-compose-card" id="commentComposeCard" style="display: none;">
+          <div class="compose-header">
+            <div class="compose-header-left">
+              <div class="compose-avatar-icon"><i class="fa-solid fa-pen-nib"></i></div>
+              <div>
+                <h3 class="compose-title">Post a Legal Comment or Ask a Doubt</h3>
+                <p class="compose-sub">Contribute to the collective wisdom of Delhi University LL.B. scholars</p>
               </div>
+            </div>
+            <div class="compose-header-right">
               <div class="compose-guidelines-pill" title="Respectful academic discourse. Adheres to BCI Rule 36 and educational fair dealing.">
                 <i class="fa-solid fa-scale-balanced"></i> Academic Code
               </div>
-            </div>
-
-            <form class="comment-compose-form" id="commentComposeForm" novalidate>
-              <div class="compose-fields-grid">
-                
-                <!-- Field 1: Name / Handle -->
-                <div class="compose-field-group">
-                  <label for="commentAuthorName" class="compose-label">Your Name / Handle <span class="req-star">*</span></label>
-                  <div class="compose-input-wrap">
-                    <i class="fa-solid fa-user-graduate compose-input-icon"></i>
-                    <input type="text" id="commentAuthorName" class="compose-input" placeholder="e.g. Priya Sharma, LL.B. '25" required maxlength="60">
-                  </div>
-                </div>
-
-                <!-- Field 2: Law Centre / Faculty -->
-                <div class="compose-field-group">
-                  <label for="commentAuthorCentre" class="compose-label">Faculty / Law Centre <span class="req-star">*</span></label>
-                  <div class="compose-input-wrap">
-                    <i class="fa-solid fa-building-columns compose-input-icon"></i>
-                    <select id="commentAuthorCentre" class="compose-select" required>
-                      <option value="Campus Law Centre (CLC), Faculty of Law, DU">Campus Law Centre (CLC), DU</option>
-                      <option value="Law Centre–I (LC-1), Faculty of Law, DU">Law Centre–I (LC-1), DU</option>
-                      <option value="Law Centre–II (LC-2), Faculty of Law, DU">Law Centre–II (LC-2), DU</option>
-                      <option value="Faculty of Law, Delhi University (Alumnus / Scholar)">Faculty of Law, DU (Alumnus)</option>
-                      <option value="National Law University (NLU) / Other Law School">National Law University (NLU) / Other</option>
-                      <option value="Judicial Services Aspirant / Advocate">Judicial Aspirant / Advocate</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Field 3: Semester -->
-                <div class="compose-field-group">
-                  <label for="commentAuthorSemester" class="compose-label">Semester / Term <span class="req-star">*</span></label>
-                  <div class="compose-input-wrap">
-                    <i class="fa-solid fa-graduation-cap compose-input-icon"></i>
-                    <select id="commentAuthorSemester" class="compose-select" required>
-                      <option value="Semester 1 (LL.B.)">Semester 1 (Term 1)</option>
-                      <option value="Semester 2 (LL.B.)">Semester 2 (Term 2)</option>
-                      <option value="Semester 3 (LL.B.)">Semester 3 (Term 3)</option>
-                      <option value="Semester 4 (LL.B.)">Semester 4 (Term 4)</option>
-                      <option value="Semester 5 (LL.B.)">Semester 5 (Term 5)</option>
-                      <option value="Semester 6 (LL.B.)">Semester 6 (Term 6)</option>
-                      <option value="LL.M. / Judicial Aspirant">LL.M. / Judicial Aspirant</option>
-                    </select>
-                  </div>
-                </div>
-
-                <!-- Field 4: Subject Tag -->
-                <div class="compose-field-group">
-                  <label for="commentSubjectTag" class="compose-label">Subject / Course Dossier <span class="req-star">*</span></label>
-                  <div class="compose-input-wrap">
-                    <i class="fa-solid fa-book compose-input-icon"></i>
-                    <select id="commentSubjectTag" class="compose-select" required>
-                      <option value="general">General LL.B. / Portal Review</option>
-                      <option value="juris">Jurisprudence–I (LB-101)</option>
-                      <option value="contract">Law of Contract (LB-102)</option>
-                      <option value="bns">Law of Crimes–I / BNS 2023 (LB-103)</option>
-                      <option value="family">Family Law–I (LB-104)</option>
-                      <option value="torts">Law of Torts &amp; Consumer Protection (LB-105)</option>
-                      <option value="property">Property Law (LB-204)</option>
-                      <option value="pil">Public International Law (LB-205)</option>
-                      <option value="company">Company Law (LB-303)</option>
-                      <option value="cpc">Civil Procedure Code &amp; Limitation (LB-301)</option>
-                      <option value="wcc">White Collar Crimes (LB-3037)</option>
-                      <option value="drafting">Drafting, Pleadings &amp; Conveyance (LB-502)</option>
-                      <option value="industrial">Industrial Law &amp; Labour Codes (LB-503)</option>
-                    </select>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Category Pills & Star Rating Selection -->
-              <div class="compose-meta-row">
-                <div class="compose-category-wrap">
-                  <span class="meta-row-label">Category:</span>
-                  <div class="compose-cat-pills" id="composeCatPills">
-                    <button type="button" class="cat-pill-btn active" data-cat="cases"><i class="fa-solid fa-scale-balanced"></i> Case Doubt</button>
-                    <button type="button" class="cat-pill-btn" data-cat="exam"><i class="fa-solid fa-file-pen"></i> Exam Strategy</button>
-                    <button type="button" class="cat-pill-btn" data-cat="review"><i class="fa-solid fa-star"></i> Notes Review</button>
-                    <button type="button" class="cat-pill-btn" data-cat="tips"><i class="fa-solid fa-lightbulb"></i> Study Tip</button>
-                  </div>
-                </div>
-
-                <div class="compose-rating-wrap">
-                  <span class="meta-row-label">Rating:</span>
-                  <div class="compose-star-rating" id="composeStarRating" role="radiogroup" aria-label="Comment Rating">
-                    <button type="button" class="star-btn active" data-val="1" aria-label="1 Star"><i class="fa-solid fa-star"></i></button>
-                    <button type="button" class="star-btn active" data-val="2" aria-label="2 Stars"><i class="fa-solid fa-star"></i></button>
-                    <button type="button" class="star-btn active" data-val="3" aria-label="3 Stars"><i class="fa-solid fa-star"></i></button>
-                    <button type="button" class="star-btn active" data-val="4" aria-label="4 Stars"><i class="fa-solid fa-star"></i></button>
-                    <button type="button" class="star-btn active" data-val="5" aria-label="5 Stars"><i class="fa-solid fa-star"></i></button>
-                    <span class="star-label-text" id="composeStarLabel">5.0 (Exceptional)</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Field: Comment Body Textarea -->
-              <div class="compose-field-group compose-textarea-group">
-                <div class="compose-textarea-header">
-                  <label for="commentContent" class="compose-label">Your Comment / Academic Question <span class="req-star">*</span></label>
-                  <span class="compose-char-counter"><span id="commentCharCount">0</span> / 1,000</span>
-                </div>
-                <textarea id="commentContent" class="compose-textarea" rows="4" placeholder="Share your legal insights, ask a doubt on case ratios (e.g. Salomon, Carlill), suggest exam tips, or review these notes..." required maxlength="1000"></textarea>
-              </div>
-
-              <!-- Quick Helper Chips -->
-              <div class="compose-quick-chips">
-                <span class="quick-chip-label">Quick Inserts:</span>
-                <button type="button" class="quick-insert-btn" data-insert="[Case Citation]: ">+ Case Citation</button>
-                <button type="button" class="quick-insert-btn" data-insert="[DU PYQ Year]: ">+ PYQ Year</button>
-                <button type="button" class="quick-insert-btn" data-insert="[Statutory Section]: ">+ Section Reference</button>
-                <button type="button" class="quick-insert-btn" data-insert="[Exam Tip]: ">+ Exam Tip</button>
-              </div>
-
-              <!-- Consent & Submit Row -->
-              <div class="compose-actions-row">
-                <label class="compose-consent-label">
-                  <input type="checkbox" id="commentDpdpConsent" required checked>
-                  <span class="compose-checkbox-custom"></span>
-                  <span class="compose-consent-text">
-                    I agree to publish this academic comment in accordance with the <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &amp; DPDP Act 2023.
-                  </span>
-                </label>
-
-                <div class="compose-btn-group">
-                  <button type="button" class="compose-btn-clear" id="commentClearBtn">Clear</button>
-                  <button type="submit" class="compose-btn-submit liquid-metal-btn" id="commentSubmitBtn">
-                    <span class="btn-icon-wrap"><i class="fa-solid fa-paper-plane"></i></span>
-                    <span class="btn-lbl">Post Comment</span>
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <!-- Interactive Filter & Search Controls Bar -->
-          <div class="comments-filter-bar">
-            <div class="comments-search-box">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" id="commentsSearchInput" placeholder="Search discussions by doctrine, case name, student, or college...">
-              <button type="button" id="commentsSearchClearBtn" class="comments-search-clear" style="display:none;" title="Clear search">
+              <button type="button" class="btn-compose-close" id="composeCloseBtn" title="Close Compose Card" aria-label="Close Form">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
+          </div>
 
-            <div class="comments-filter-controls">
-              <!-- Subject Dropdown Filter -->
-              <div class="filter-dropdown-wrap">
-                <select id="commentsSubjectFilter" class="comments-select-filter">
-                  <option value="all">All Subjects</option>
-                  <option value="company">Company Law (LB-303)</option>
-                  <option value="cpc">CPC &amp; Limitation (LB-301)</option>
-                  <option value="contract">Law of Contract (LB-102)</option>
-                  <option value="bns">Law of Crimes / BNS (LB-103)</option>
-                  <option value="juris">Jurisprudence–I (LB-101)</option>
-                  <option value="property">Property Law (LB-204)</option>
-                  <option value="pil">Public International Law (LB-205)</option>
-                  <option value="family">Family Law–I (LB-104)</option>
-                  <option value="torts">Law of Torts (LB-105)</option>
-                  <option value="drafting">Drafting &amp; Conveyance (LB-502)</option>
-                  <option value="industrial">Industrial Law (LB-503)</option>
-                  <option value="wcc">White Collar Crimes (LB-3037)</option>
-                </select>
+          <form class="comment-compose-form" id="commentComposeForm" novalidate>
+            <div class="compose-fields-grid">
+              
+              <!-- Field 1: Name / Handle -->
+              <div class="compose-field-group">
+                <label for="commentAuthorName" class="compose-label">Your Name / Handle <span class="req-star">*</span></label>
+                <div class="compose-input-wrap">
+                  <i class="fa-solid fa-user-graduate compose-input-icon"></i>
+                  <input type="text" id="commentAuthorName" class="compose-input" placeholder="e.g. Priya Sharma, LL.B. '25" required maxlength="60">
+                </div>
               </div>
 
-              <!-- Sort Dropdown -->
-              <div class="filter-dropdown-wrap">
-                <select id="commentsSortSelect" class="comments-select-filter">
-                  <option value="helpful">Sort: Most Helpful 👍</option>
-                  <option value="newest">Sort: Newest First 🕒</option>
-                  <option value="rating">Sort: Highest Rated ⭐</option>
-                </select>
+              <!-- Field 2: Law Centre / Faculty -->
+              <div class="compose-field-group">
+                <label for="commentAuthorCentre" class="compose-label">Faculty / Law Centre <span class="req-star">*</span></label>
+                <div class="compose-input-wrap">
+                  <i class="fa-solid fa-building-columns compose-input-icon"></i>
+                  <select id="commentAuthorCentre" class="compose-select" required>
+                    <option value="Campus Law Centre (CLC), Faculty of Law, DU">Campus Law Centre (CLC), DU</option>
+                    <option value="Law Centre–I (LC-1), Faculty of Law, DU">Law Centre–I (LC-1), DU</option>
+                    <option value="Law Centre–II (LC-2), Faculty of Law, DU">Law Centre–II (LC-2), DU</option>
+                    <option value="Faculty of Law, Delhi University (Alumnus / Scholar)">Faculty of Law, DU (Alumnus)</option>
+                    <option value="National Law University (NLU) / Other Law School">National Law University (NLU) / Other</option>
+                    <option value="Judicial Services Aspirant / Advocate">Judicial Aspirant / Advocate</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Field 3: Semester -->
+              <div class="compose-field-group">
+                <label for="commentAuthorSemester" class="compose-label">Semester / Term <span class="req-star">*</span></label>
+                <div class="compose-input-wrap">
+                  <i class="fa-solid fa-graduation-cap compose-input-icon"></i>
+                  <select id="commentAuthorSemester" class="compose-select" required>
+                    <option value="Semester 1 (LL.B.)">Semester 1 (Term 1)</option>
+                    <option value="Semester 2 (LL.B.)">Semester 2 (Term 2)</option>
+                    <option value="Semester 3 (LL.B.)">Semester 3 (Term 3)</option>
+                    <option value="Semester 4 (LL.B.)">Semester 4 (Term 4)</option>
+                    <option value="Semester 5 (LL.B.)">Semester 5 (Term 5)</option>
+                    <option value="Semester 6 (LL.B.)">Semester 6 (Term 6)</option>
+                    <option value="LL.M. / Judicial Aspirant">LL.M. / Judicial Aspirant</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Field 4: Subject Tag -->
+              <div class="compose-field-group">
+                <label for="commentSubjectTag" class="compose-label">Subject / Course Dossier <span class="req-star">*</span></label>
+                <div class="compose-input-wrap">
+                  <i class="fa-solid fa-book compose-input-icon"></i>
+                  <select id="commentSubjectTag" class="compose-select" required>
+                    <option value="general">General LL.B. / Portal Review</option>
+                    <option value="juris">Jurisprudence–I (LB-101)</option>
+                    <option value="contract">Law of Contract (LB-102)</option>
+                    <option value="bns">Law of Crimes–I / BNS 2023 (LB-103)</option>
+                    <option value="family">Family Law–I (LB-104)</option>
+                    <option value="torts">Law of Torts &amp; Consumer Protection (LB-105)</option>
+                    <option value="property">Property Law (LB-204)</option>
+                    <option value="pil">Public International Law (LB-205)</option>
+                    <option value="company">Company Law (LB-303)</option>
+                    <option value="cpc">Civil Procedure Code &amp; Limitation (LB-301)</option>
+                    <option value="wcc">White Collar Crimes (LB-3037)</option>
+                    <option value="drafting">Drafting, Pleadings &amp; Conveyance (LB-502)</option>
+                    <option value="industrial">Industrial Law &amp; Labour Codes (LB-503)</option>
+                  </select>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Category Pills & Star Rating Selection -->
+            <div class="compose-meta-row">
+              <div class="compose-category-wrap">
+                <span class="meta-row-label">Category:</span>
+                <div class="compose-cat-pills" id="composeCatPills">
+                  <button type="button" class="cat-pill-btn active" data-cat="cases"><i class="fa-solid fa-scale-balanced"></i> Case Doubt</button>
+                  <button type="button" class="cat-pill-btn" data-cat="exam"><i class="fa-solid fa-file-pen"></i> Exam Strategy</button>
+                  <button type="button" class="cat-pill-btn" data-cat="review"><i class="fa-solid fa-star"></i> Notes Review</button>
+                  <button type="button" class="cat-pill-btn" data-cat="tips"><i class="fa-solid fa-lightbulb"></i> Study Tip</button>
+                </div>
+              </div>
+
+              <div class="compose-rating-wrap">
+                <span class="meta-row-label">Rating:</span>
+                <div class="compose-star-rating" id="composeStarRating" role="radiogroup" aria-label="Comment Rating">
+                  <button type="button" class="star-btn active" data-val="1" aria-label="1 Star"><i class="fa-solid fa-star"></i></button>
+                  <button type="button" class="star-btn active" data-val="2" aria-label="2 Stars"><i class="fa-solid fa-star"></i></button>
+                  <button type="button" class="star-btn active" data-val="3" aria-label="3 Stars"><i class="fa-solid fa-star"></i></button>
+                  <button type="button" class="star-btn active" data-val="4" aria-label="4 Stars"><i class="fa-solid fa-star"></i></button>
+                  <button type="button" class="star-btn active" data-val="5" aria-label="5 Stars"><i class="fa-solid fa-star"></i></button>
+                  <span class="star-label-text" id="composeStarLabel">5.0 (Exceptional)</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Category Filter Pills -->
-          <div class="comments-category-pills" id="commentsCategoryPills">
-            <button class="comm-cat-pill active" data-cat="all">
-              <i class="fa-solid fa-list-check"></i> All Discussions (<span id="catCountAll">10</span>)
-            </button>
-            <button class="comm-cat-pill" data-cat="cases">
-              <i class="fa-solid fa-scale-balanced"></i> Case Doubts (<span id="catCountCases">3</span>)
-            </button>
-            <button class="comm-cat-pill" data-cat="exam">
-              <i class="fa-solid fa-file-pen"></i> Exam Strategy (<span id="catCountExam">3</span>)
-            </button>
-            <button class="comm-cat-pill" data-cat="review">
-              <i class="fa-solid fa-star"></i> Notes Reviews (<span id="catCountReview">2</span>)
-            </button>
-            <button class="comm-cat-pill" data-cat="tips">
-              <i class="fa-solid fa-lightbulb"></i> Study Tips (<span id="catCountTips">2</span>)
-            </button>
-          </div>
-
-          <!-- Comment Stream Container -->
-          <div class="comments-stream-wrap">
-            <div class="comments-stream" id="commentsStream">
-              <!-- Rendered dynamically by app.js -->
+            <!-- Field: Comment Body Textarea -->
+            <div class="compose-field-group compose-textarea-group">
+              <div class="compose-textarea-header">
+                <label for="commentContent" class="compose-label">Your Comment / Academic Question <span class="req-star">*</span></label>
+                <span class="compose-char-counter"><span id="commentCharCount">0</span> / 1,000</span>
+              </div>
+              <textarea id="commentContent" class="compose-textarea" rows="4" placeholder="Share your legal insights, ask a doubt on case ratios (e.g. Salomon, Carlill), suggest exam tips, or review these notes..." required maxlength="1000"></textarea>
             </div>
 
-            <!-- Empty State (Hidden by default) -->
-            <div class="comments-empty-state" id="commentsEmptyState" style="display: none;">
-              <div class="empty-icon"><i class="fa-solid fa-comment-slash"></i></div>
-              <h3>No Discussions Found</h3>
-              <p>No comments match your search filter. Try clearing filters or be the first to share an insight!</p>
-              <button type="button" class="btn-reset-filters" id="commentsResetFiltersBtn">
-                <i class="fa-solid fa-arrows-rotate"></i> Reset Filters
-              </button>
+            <!-- Quick Helper Chips -->
+            <div class="compose-quick-chips">
+              <span class="quick-chip-label">Quick Inserts:</span>
+              <button type="button" class="quick-insert-btn" data-insert="[Case Citation]: ">+ Case Citation</button>
+              <button type="button" class="quick-insert-btn" data-insert="[DU PYQ Year]: ">+ PYQ Year</button>
+              <button type="button" class="quick-insert-btn" data-insert="[Statutory Section]: ">+ Section Reference</button>
+              <button type="button" class="quick-insert-btn" data-insert="[Exam Tip]: ">+ Exam Tip</button>
             </div>
 
-            <!-- Pagination / Load More Button -->
-            <div class="comments-load-more-wrap" id="commentsLoadMoreWrap">
-              <button type="button" class="comments-load-more-btn" id="commentsLoadMoreBtn">
-                <i class="fa-solid fa-chevron-down"></i> <span>Show More Academic Discussions</span>
-              </button>
-            </div>
-          </div>
+            <!-- Consent & Submit Row -->
+            <div class="compose-actions-row">
+              <label class="compose-consent-label">
+                <input type="checkbox" id="commentDpdpConsent" required checked>
+                <span class="compose-checkbox-custom"></span>
+                <span class="compose-consent-text">
+                  I agree to publish this academic comment in accordance with the <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> &amp; DPDP Act 2023.
+                </span>
+              </label>
 
+              <div class="compose-btn-group">
+                <button type="button" class="compose-btn-clear" id="commentClearBtn">Clear</button>
+                <button type="submit" class="compose-btn-submit liquid-metal-btn" id="commentSubmitBtn">
+                  <span class="btn-icon-wrap"><i class="fa-solid fa-paper-plane"></i></span>
+                  <span class="btn-lbl">Post Comment</span>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-      </section>
+
+        <!-- Comment Stream Container (Existing Comments Shown Prominently) -->
+        <div class="comments-stream-wrap">
+          <div class="comments-stream" id="commentsStream">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+
+          <!-- Empty State (Hidden by default) -->
+          <div class="comments-empty-state" id="commentsEmptyState" style="display: none;">
+            <div class="empty-icon"><i class="fa-solid fa-comment-slash"></i></div>
+            <h3>No Discussions Found</h3>
+            <p>No comments match your search filter. Try clearing filters or be the first to share an insight!</p>
+            <button type="button" class="btn-reset-filters" id="commentsResetFiltersBtn">
+              <i class="fa-solid fa-arrows-rotate"></i> Reset Filters
+            </button>
+          </div>
+
+          <!-- Pagination / Load More Button -->
+          <div class="comments-load-more-wrap" id="commentsLoadMoreWrap">
+            <button type="button" class="comments-load-more-btn" id="commentsLoadMoreBtn">
+              <i class="fa-solid fa-chevron-down"></i> <span>Show More Academic Discussions</span>
+            </button>
+          </div>
+
+          <!-- Bottom Prompt to Invite Participation -->
+          <div class="comments-bottom-prompt" id="commentsBottomPrompt">
+            <div class="bottom-prompt-text">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span>Have a doubt on a case ratio or want to share notes feedback?</span>
+            </div>
+            <button type="button" class="btn-prompt-compose" id="btnPromptCompose">
+              <i class="fa-solid fa-pen-nib"></i> <span>Ask Doubt / Post Comment</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <!-- ---------------------------------------------------------------

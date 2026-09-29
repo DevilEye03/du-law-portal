@@ -125,6 +125,7 @@
     footerContactBarCommentsLink: document.getElementById('footerContactBarCommentsLink'),
     footerCommentsLink: document.getElementById('footerCommentsLink'),
     communityCommentsSection: document.getElementById('communityCommentsSection'),
+    commentComposeCard: document.getElementById('commentComposeCard'),
     commentComposeForm: document.getElementById('commentComposeForm'),
     commentAuthorName: document.getElementById('commentAuthorName'),
     commentAuthorCentre: document.getElementById('commentAuthorCentre'),
@@ -150,11 +151,18 @@
     commentsLoadMoreBtn: document.getElementById('commentsLoadMoreBtn'),
     metricTotalComments: document.getElementById('metricTotalComments'),
     metricAvgRating: document.getElementById('metricAvgRating'),
+    btnToggleCompose: document.getElementById('btnToggleCompose'),
+    btnToggleComposeLabel: document.getElementById('btnToggleComposeLabel'),
+    composeCloseBtn: document.getElementById('composeCloseBtn'),
+    commentsBottomPrompt: document.getElementById('commentsBottomPrompt'),
+    btnPromptCompose: document.getElementById('btnPromptCompose'),
+    discussionsBackBtn: document.getElementById('discussionsBackBtn'),
 
     // Views
     semesterView: document.getElementById('semesterView'),
     subjectsView: document.getElementById('subjectsView'),
     subjectHubView: document.getElementById('subjectHubView'),
+    discussionsView: document.getElementById('communityCommentsSection'),
 
     // Semester View Elements
     semesterGrid: document.getElementById('semesterGrid'),
@@ -324,8 +332,13 @@
     if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
       return { view: 'contact' };
     }
-    if (rawPath === '/comments' || rawPath === '/discussions' || currentHash === '#comments' || currentHash === '#communityCommentsSection' || params.get('comments') === 'true') {
-      return { view: 'comments', subject: params.get('subject') || null };
+    if (
+      rawPath === '/comments' || rawPath === '/discussions' ||
+      currentHash === '#comments' || currentHash === '#discussions' ||
+      currentHash === '#communityCommentsSection' || currentHash.startsWith('#comm-') ||
+      params.get('comments') === 'true' || params.get('discussions') === 'true'
+    ) {
+      return { view: 'discussions', subject: params.get('subject') || null };
     }
 
     // Subject route: /subject/:subId or /subject/:subId/:tab
@@ -542,6 +555,7 @@
     elements.semesterView.classList.remove('active');
     elements.subjectsView.classList.remove('active');
     elements.subjectHubView.classList.remove('active');
+    if (elements.discussionsView) elements.discussionsView.classList.remove('active');
     if (elements.mobileBottomNav) elements.mobileBottomNav.classList.remove('active');
 
     if (viewName === 'semester') {
@@ -585,6 +599,21 @@
       elements.subjectHubView.classList.add('active');
       if (elements.mobileBottomNav) elements.mobileBottomNav.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (viewName === 'discussions') {
+      document.body.removeAttribute('data-active-subject');
+      if (elements.discussionsView) elements.discussionsView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Discussions';
+      }
+      renderCommentsStream();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        document.title = 'Student Academic Discussions & Insights | Make Law Easy';
+        if (!window.history.state || window.history.state.view !== 'discussions') {
+          window.history.pushState({ view: 'discussions' }, '', '/discussions');
+        }
+      }
     }
   }
 
@@ -3857,8 +3886,7 @@ Submission Time: ${new Date().toLocaleString()}
     }
   }
 
-  function navigateToComments(subjectFilter = null) {
-    showView('semester');
+  function navigateToComments(subjectFilter = null, pushHistory = true) {
     if (subjectFilter) {
       state.commentsSubjectFilter = subjectFilter;
       if (elements.commentsSubjectFilter) {
@@ -3868,18 +3896,70 @@ Submission Time: ${new Date().toLocaleString()}
         elements.commentSubjectTag.value = subjectFilter;
       }
     }
-    renderCommentsStream();
-
-    setTimeout(() => {
-      const el = document.getElementById('communityCommentsSection');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 200);
+    showView('discussions', pushHistory);
   }
 
   function initCommentsModule() {
     renderCommentsStream();
+
+    // Toggle Compose Card Helper
+    const toggleComposeForm = (forceOpen = null) => {
+      if (!elements.commentComposeCard) return;
+      const isCurrentlyOpen = elements.commentComposeCard.style.display !== 'none';
+      const shouldOpen = (forceOpen !== null) ? forceOpen : !isCurrentlyOpen;
+
+      if (shouldOpen) {
+        elements.commentComposeCard.style.display = 'block';
+        if (elements.btnToggleCompose) {
+          elements.btnToggleCompose.classList.add('is-open');
+          elements.btnToggleCompose.setAttribute('aria-expanded', 'true');
+        }
+        if (elements.btnToggleComposeLabel) {
+          elements.btnToggleComposeLabel.textContent = 'Close Form';
+        }
+        setTimeout(() => {
+          elements.commentComposeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          if (elements.commentAuthorName) elements.commentAuthorName.focus();
+        }, 50);
+      } else {
+        elements.commentComposeCard.style.display = 'none';
+        if (elements.btnToggleCompose) {
+          elements.btnToggleCompose.classList.remove('is-open');
+          elements.btnToggleCompose.setAttribute('aria-expanded', 'false');
+        }
+        if (elements.btnToggleComposeLabel) {
+          elements.btnToggleComposeLabel.textContent = 'Ask Doubt / Post';
+        }
+      }
+    };
+
+    // Toggle Compose Button Listener
+    if (elements.btnToggleCompose) {
+      elements.btnToggleCompose.addEventListener('click', () => {
+        toggleComposeForm();
+      });
+    }
+
+    // Close Compose Button Listener
+    if (elements.composeCloseBtn) {
+      elements.composeCloseBtn.addEventListener('click', () => {
+        toggleComposeForm(false);
+      });
+    }
+
+    // Bottom Prompt Compose Button Listener
+    if (elements.btnPromptCompose) {
+      elements.btnPromptCompose.addEventListener('click', () => {
+        toggleComposeForm(true);
+      });
+    }
+
+    // Back to Semesters Navigation Link in Discussions View
+    if (elements.discussionsBackBtn) {
+      elements.discussionsBackBtn.addEventListener('click', () => {
+        showView('semester', true);
+      });
+    }
 
     // 1. Compose Star Rating Interactivity
     if (elements.composeStarRating) {
@@ -4024,9 +4104,10 @@ Submission Time: ${new Date().toLocaleString()}
 
         saveNewComment(newComment);
 
-        // Reset form
+        // Reset form & collapse compose card
         elements.commentContent.value = '';
         if (elements.commentCharCount) elements.commentCharCount.textContent = '0';
+        toggleComposeForm(false);
       });
     }
 
@@ -4649,8 +4730,8 @@ Submission Time: ${new Date().toLocaleString()}
         return;
       }
 
-      if (route.view === 'comments') {
-        navigateToComments(route.subject);
+      if (route.view === 'comments' || route.view === 'discussions') {
+        navigateToComments(route.subject, false);
         return;
       }
 
@@ -4769,11 +4850,14 @@ Submission Time: ${new Date().toLocaleString()}
     } else if (initialRoute && initialRoute.view === 'contact') {
       showView('semester', false);
       setTimeout(openContactModal, 250);
-    } else if (initialRoute && initialRoute.view === 'comments') {
-      showView('semester', false);
-      setTimeout(() => {
-        navigateToComments(initialRoute.subject);
-      }, 250);
+    } else if (initialRoute && (initialRoute.view === 'comments' || initialRoute.view === 'discussions')) {
+      showView('discussions', false);
+      if (initialRoute.subject) {
+        state.commentsSubjectFilter = initialRoute.subject;
+        if (elements.commentsSubjectFilter) elements.commentsSubjectFilter.value = initialRoute.subject;
+        if (elements.commentSubjectTag) elements.commentSubjectTag.value = initialRoute.subject;
+        renderCommentsStream();
+      }
     } else {
       const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
       if (curPath === '/terms' || curPath === '/terms.html') {
@@ -4826,9 +4910,9 @@ Submission Time: ${new Date().toLocaleString()}
       } else if (route.view === 'semester') {
         e.preventDefault();
         showView('semester', true);
-      } else if (route.view === 'comments') {
+      } else if (route.view === 'comments' || route.view === 'discussions') {
         e.preventDefault();
-        navigateToComments(route.subject);
+        navigateToComments(route.subject, true);
       }
     });
 
@@ -4839,9 +4923,9 @@ Submission Time: ${new Date().toLocaleString()}
       setTimeout(openContactModal, 250);
     } else if (window.location.hash === '#feedback' || (new URLSearchParams(window.location.search)).get('feedback') === 'true') {
       setTimeout(navigateToFeedback, 350);
-    } else if (window.location.hash === '#comments' || window.location.hash === '#communityCommentsSection' || window.location.hash.startsWith('#comm-') || (new URLSearchParams(window.location.search)).get('comments') === 'true') {
+    } else if (window.location.hash === '#comments' || window.location.hash === '#discussions' || window.location.hash === '#communityCommentsSection' || window.location.hash.startsWith('#comm-') || (new URLSearchParams(window.location.search)).get('comments') === 'true' || (new URLSearchParams(window.location.search)).get('discussions') === 'true') {
       setTimeout(() => {
-        navigateToComments();
+        showView('discussions', false);
         if (window.location.hash.startsWith('#comm-')) {
           const targetCard = document.getElementById(window.location.hash.substring(1));
           if (targetCard) targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });

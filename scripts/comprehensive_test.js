@@ -279,7 +279,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v53'), 'sw.js CACHE_NAME is bumped to du-law-portal-v53');
+  assert(/du-law-portal-v(5[4-9]|[6-9]\d)/.test(swContent), 'sw.js CACHE_NAME is bumped to du-law-portal-v54 or higher');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
   assert(htmlContent.includes('id="communityCommentsSection"'), 'communityCommentsSection container exists in index.html');
