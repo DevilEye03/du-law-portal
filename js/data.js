@@ -64,11 +64,12 @@ window.DU_LAW_PORTAL_DATA = {
       "name": "Semester V",
       "term": "V Term (Autumn)",
       "active": true,
-      "badge": "2 Core Subjects Loaded (Drafting, Industrial Law)",
-      "description": "Comprehensive study notes, DU landmark cases, past year examination questions, and rapid revision capsules for Drafting, Pleadings & Conveyance (LB-502) and Industrial Law (LB-503).",
+      "badge": "3 Subjects Loaded (Drafting, Industrial Law, IT Laws)",
+      "description": "Comprehensive study notes, DU landmark cases, past year examination questions, and rapid revision capsules for Drafting (LB-502), Industrial Law (LB-503), and Information Technology Law (LB-5031).",
       "subjectIds": [
         "drafting",
-        "industrial"
+        "industrial",
+        "it_laws"
       ]
     },
     {
@@ -27392,6 +27393,2071 @@ window.DU_LAW_PORTAL_DATA = {
           },
           "examStrategy": "Structure answers systematically: Statutory Provision → Essential Ingredients → Landmark Precedents → Application to Facts → Specific Relief.",
           "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 8: The Code on Social Security, 2020."
+        }
+      ]
+    },
+    "it_laws": {
+      "id": "it_laws",
+      "code": "LB-5031",
+      "name": "Information Technology Law",
+      "shortName": "IT Laws",
+      "semester": 5,
+      "folder": "SEM 5/IT LAWS",
+      "theme": {
+        "primary": "#0b2545",
+        "primaryDark": "#061527",
+        "primaryLight": "#13315c",
+        "accent": "#1b6ca8",
+        "accentLight": "#e8f1fa",
+        "bgTint": "#f4f6fb",
+        "border": "#dfe5f0",
+        "badgeBg": "#e8f1fa",
+        "badgeColor": "#0b2545",
+        "gradient": "linear-gradient(135deg, #0b2545 0%, #13315c 55%, #1b6ca8 100%)",
+        "tagline": "Information Technology Act 2000, Cyber Crimes, Electronic Records, Intermediary Liability & Cyberspace Jurisdiction",
+        "motto": "IT Act 2000 • Cyber Crimes • Safe Harbour • E-Commerce",
+        "quote": "The law of cyberspace must evolve as rapidly as technology itself, safeguarding fundamental speech while enforcing accountability in the digital realm.",
+        "icon": "fa-laptop-code"
+      },
+      "units": [
+        {
+          "id": "it-u1",
+          "number": 1,
+          "title": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit I: Introduction) | DU LL.B. V Term LB-5031 Master Notes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 1(2) IT Act",
+            "S. 1(4) IT Act",
+            "S. 2(1)(i) IT Act",
+            "S. 2(1)(j) IT Act",
+            "S. 2(1)(k) IT Act",
+            "S. 2(1)(v) IT Act",
+            "S. 81 IT Act",
+            "UNCITRAL Model Law 1996"
+          ],
+          "topics": [
+            "Evolution, Need & Scope of Cyber Law & Cyberspace",
+            "UNCITRAL Model Law on Electronic Commerce, 1996",
+            "Objects, Scheme & Legislative History of IT Act, 2000",
+            "Key Definitions: Computer, Computer System, Network, Resource & Communication Device",
+            "Exclusions under First Schedule (S. 1(4)) & Overriding Effect (S. 81)"
+          ]
+        },
+        {
+          "id": "it-u2",
+          "number": 2,
+          "title": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit II: Legal Recognition & Authentication of Electronic Records) | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 3 IT Act",
+            "S. 3A IT Act",
+            "S. 4 IT Act",
+            "S. 5 IT Act",
+            "S. 6 IT Act",
+            "S. 17–34 IT Act",
+            "S. 65B IEA / S. 63 BSA 2023"
+          ],
+          "topics": [
+            "Functional Equivalence Approach & Legal Recognition of Electronic Records (S. 4)",
+            "Authentication: Asymmetric Cryptosystem & Digital Signatures (S. 3)",
+            "Electronic Signatures & Technology-Neutral Regime (S. 3A & Second Schedule)",
+            "Electronic Governance & Delivery of Services by Service Provider (Ss. 6–9)",
+            "Certifying Authorities (CA), Controller (CCA) & Digital Signature Certificates",
+            "Admissibility of Electronic Records: S. 65B Evidence Act / S. 63 BSA 2023 (Arjun Panditrao)"
+          ]
+        },
+        {
+          "id": "it-u3",
+          "number": 3,
+          "title": "Unit 3: Civil Liabilities & Cyber Torts",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit III: Civil Liabilities / Cyber Torts) | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 43 IT Act",
+            "S. 43A IT Act",
+            "S. 46 IT Act",
+            "S. 47 IT Act",
+            "S. 57 IT Act / TDSAT",
+            "IT (SPDI) Rules 2011",
+            "DPDP Act 2023"
+          ],
+          "topics": [
+            "Civil Contraventions & Compensation under Section 43 (Unauthorized Access, Virus, Damage)",
+            "Corporate Liability for Failure to Protect Sensitive Personal Data (S. 43A & SPDI Rules 2011)",
+            "Adjudicating Officer: Appointment, Powers & Jurisdiction under Section 46",
+            "Quantum of Compensation: Factors & Criteria under Section 47",
+            "Appellate Machinery: Cyber Appellate Tribunal / TDSAT under Section 57",
+            "SIM Swap Fraud & Banking Cyber Torts (Sanjay Dhande, Chander Kalani)"
+          ]
+        },
+        {
+          "id": "it-u4",
+          "number": 4,
+          "title": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit IV: Criminal Liabilities / Cyber Crimes) | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 65 IT Act",
+            "S. 66 IT Act",
+            "S. 66A IT Act (Struck Down)",
+            "S. 66C IT Act",
+            "S. 66D IT Act",
+            "S. 66E IT Act",
+            "S. 66F IT Act",
+            "S. 67 IT Act",
+            "S. 67A IT Act",
+            "S. 67B IT Act",
+            "S. 72 & 72A IT Act",
+            "BNS 2023 / IPC 1860"
+          ],
+          "topics": [
+            "Tampering with Computer Source Documents (S. 65 & Syed Asifuddin)",
+            "Hacking, Identity Theft & Cheating by Personation (Ss. 66, 66C, 66D)",
+            "Violation of Privacy & Cyber Terrorism (Ss. 66E, 66F)",
+            "The Demise of Section 66A: Shreya Singhal and Freedom of Online Speech",
+            "Obscenity, Sexually Explicit Content & Child Abuse Material (Ss. 67, 67A, 67B)",
+            "Breach of Confidentiality & Disclosure of Information in Breach of Contract (Ss. 72, 72A)",
+            "Parallel Prosecutions under IT Act and IPC / Bharatiya Nyaya Sanhita 2023"
+          ]
+        },
+        {
+          "id": "it-u5",
+          "number": 5,
+          "title": "Unit 5: Intermediary Liability & Safe Harbour",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit V: Intermediary Liability) | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 2(1)(w) IT Act",
+            "S. 79 IT Act",
+            "IT (Intermediary Guidelines and Digital Media Ethics Code) Rules 2021",
+            "Copyright Act 1957 S. 51(a)(ii)"
+          ],
+          "topics": [
+            "Definition & Scope of Intermediary under Section 2(1)(w)",
+            "Safe Harbour Protection under Section 79 & Legislative Evolution post-Avinash Bajaj (Baazee.com)",
+            "Conditions for Exemption: Passive Conduit, Lack of Knowledge & Due Diligence",
+            "Notice & Takedown Regime: Judicial Reading of S. 79(3)(b) in Shreya Singhal (Court Order/Govt Notice)",
+            "Copyright Infringement & Secondary Liability: MySpace Inc. v. Super Cassettes Industries",
+            "E-Commerce Marketplaces vs Direct Selling: Amazon v. Modicare & Christian Louboutin",
+            "Due Diligence & Compliance Framework under IT Intermediary Rules, 2021 (SSMIs)"
+          ]
+        },
+        {
+          "id": "it-u6",
+          "number": 6,
+          "title": "Unit 6: Cyber Security & Critical Infrastructure",
+          "subtitle": "Part A – The Information Technology Act, 2000 (Unit VI: Cyber Security) | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 69 IT Act",
+            "S. 69A IT Act",
+            "S. 69B IT Act",
+            "S. 70 IT Act",
+            "S. 70A IT Act",
+            "S. 70B IT Act",
+            "CERT-In Directions 2022",
+            "Information Technology (Blocking Rules) 2009"
+          ],
+          "topics": [
+            "Interception, Monitoring & Decryption of Information (S. 69 & Procedural Safeguards)",
+            "Blocking for Public Access under Section 69A & Confidentiality of Orders",
+            "Protected Systems & National Critical Information Infrastructure Protection Centre (NCIIPC, Ss. 70, 70A)",
+            "Indian Computer Emergency Response Team (CERT-In) Powers & Reporting Mandates (S. 70B)",
+            "Surveillance, Privacy & Constitutional Proportionality (Puttaswamy, Anuradha Bhasin, Ratan Tata)"
+          ]
+        },
+        {
+          "id": "it-u7",
+          "number": 7,
+          "title": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "subtitle": "Part B – Applicability of Other Laws on E-Commerce · Unit VII: E-Contracts | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 10A IT Act",
+            "S. 11 IT Act",
+            "S. 12 IT Act",
+            "S. 13 IT Act",
+            "Indian Contract Act 1872 Ss. 3–10",
+            "Arbitration & Conciliation Act 1996 S. 7(4)(b)"
+          ],
+          "topics": [
+            "Validity of Contracts Formed through Electronic Means (S. 10A IT Act)",
+            "Types of Online Contracts: Browse-wrap, Click-wrap & Shrink-wrap Agreements",
+            "Attribution & Deemed Attribution of Electronic Records (S. 11)",
+            "Acknowledgment of Receipt of Electronic Records (S. 12)",
+            "Time & Place of Despatch and Receipt (S. 13) vs Postal Acceptance Rule",
+            "Enforceability of Email Contracts & Arbitration Clauses (Trimex v. Vedanta Aluminium)"
+          ]
+        },
+        {
+          "id": "it-u8",
+          "number": 8,
+          "title": "Unit 8: Jurisdiction in Cyberspace",
+          "subtitle": "Part B – Applicability of Other Laws on E-Commerce · Unit IX: Jurisdiction in Cyberspace | DU LL.B. V Term LB-5031",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "statutes": [
+            "S. 1(2) IT Act",
+            "S. 75 IT Act",
+            "S. 20 CPC",
+            "S. 134 TM Act / S. 62 Copyright Act",
+            "CrPC Ss. 177–188"
+          ],
+          "topics": [
+            "Extraterritorial Jurisdiction of the IT Act (Ss. 1(2) & 75: Offence Outside India Involving Computer in India)",
+            "Civil Jurisdiction in Cyberspace: Section 20(c) CPC & Cause of Action Online",
+            "Personal Jurisdiction & \"Long-Arm\" Statutes: Minimum Contacts Test (International Shoe)",
+            "Passive vs Interactive Websites: The Zippo Sliding Scale Test",
+            "Purposeful Availment & \"Targeting\" in India: The Division Bench Ruling in Banyan Tree v. Murali Krishna Reddy",
+            "Trademark & Copyright Infringement Jurisdiction: WWE v. Reshma Collection & Impresario",
+            "Territorial Jurisdiction in Cyber Crimes: IPC/BNS & S. 179 CrPC (Maqbool Fida Husain)"
+          ]
+        }
+      ],
+      "cases": [
+        {
+          "id": "it-c-u1-1",
+          "name": "Syed Asifuddin v. The State of Andhra Pradesh",
+          "citation": "2006 (1) ALD (Cri) 96 · 2005 CriLJ 4314 · High Court of Andhra Pradesh · Decided 29 July 2005 · s.482 CrPC petition",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u1-2",
+          "facts": "Material facts as recorded in DU Case Material for Syed Asifuddin v. The State of Andhra Pradesh.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "id=\"s9a\"> Prescribed Case 1 · Part A, Unit I Syed Asifuddin v. The State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 High Court of Andhra Pradesh Decided 29 July 2005 s.482 CrPC petition 1 Procedural posture Two criminal petitions filed by different persons under s.482 of the Code of Criminal Procedure, 1973 , heard together and disposed of by a common order, seeking the quashing of F.I.R. No. 20 of 2003 registered by the Criminal Investigation Department (C.I.D.) Police, Hyderabad. The F.I.R. was registered under ss.409, 420 and 120B IPC , s.65 of the Information Technology Act, 2000 and s.63 of the Copyright Act, 1957 . While admitting the petitions, the Court had stayed investigation; the matters were finally heard on the vac",
+          "principleEvolved": "id=\"s9a\"> Prescribed Case 1 · Part A, Unit I Syed Asifuddin v. The State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 High Court of Andhra Pradesh Decided 29 July 2005 s.482 CrPC petition 1 Procedural posture Two criminal petitions filed by different persons under s.482 of the Code of Criminal Procedure, 1973 , heard together and disposed of by a common order, seeking the quashing of F.I.R. No. 20 of 2003 registered by the Criminal Inv",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u1-2",
+          "name": "Diebold Systems Pvt. Ltd. v. The Commissioner",
+          "citation": "ILR 2005 KAR 2210 · 2006 (144) STC 59 (Kar) · High Court of Karnataka · Decided 31 January 2005 · H.L. Dattu & H.N. Nagamohan Das, JJ.",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u1-3",
+          "facts": "Material facts as recorded in DU Case Material for Diebold Systems Pvt. Ltd. v. The Commissioner.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "id=\"s9b\"> Prescribed Case 2 · Part A, Unit I Diebold Systems Pvt. Ltd. v. The Commissioner ILR 2005 KAR 2210 2006 (144) STC 59 (Kar) High Court of Karnataka Decided 31 January 2005 H.L. Dattu & H.N. Nagamohan Das, JJ. 1 Nature of the proceeding An appeal before the High Court of Karnataka against the order of the Commissioner of Commercial Taxes , who had, in suo motu revisional proceedings under s.22&#8209;A(1) of the Karnataka Sales Tax Act, 1957 (KST Act) , revised the classification of Automated Teller Machines (ATMs) and subjected their sale to a higher rate of tax. The appeal turned entirely on a question of statutory classification : is an ATM a “computer” / “computer terminal”, or an “electronic good”? 2 Facts The appellant, Diebold",
+          "principleEvolved": "id=\"s9b\"> Prescribed Case 2 · Part A, Unit I Diebold Systems Pvt. Ltd. v. The Commissioner ILR 2005 KAR 2210 2006 (144) STC 59 (Kar) High Court of Karnataka Decided 31 January 2005 H.L. Dattu & H.N. Nagamohan Das, JJ. 1 Nature of the proceeding An appeal before the High Court of Karnataka against the order of the Commissioner of Commercial Taxes , who had, in suo motu revisional proceedings under s.22&#8209;A(1) of the Karnataka Sales Tax Act, 19",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u1-3",
+          "name": "Sanjay Kumar v. State of Haryana",
+          "citation": "Punjab & Haryana High Court · Decided 10 January 2013 · CRM No. 1353 of 2013; CRR No. 66 of 2013 (O&M) · Paramjeet Singh, J.",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u1-4",
+          "facts": "Material facts as recorded in DU Case Material for Sanjay Kumar v. State of Haryana.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "id=\"s9c\"> Companion case (next prescribed authority for s.65 in the DU case material) Sanjay Kumar v. State of Haryana Punjab & Haryana High Court Decided 10 January 2013 CRM No. 1353 of 2013; CRR No. 66 of 2013 (O&M) Paramjeet Singh, J. 1 Facts The petitioner was deputed by M/s Virmati Software and Telecommunication Ltd. to maintain the software system supplied to Vijay Bank, NIT, Faridabad, and also looked after the software systems of certain other banks. In that capacity he had access to the banks’ computerised accounting systems and could enter into ledgers and other accounts. While reconciling accounts, discrepancies were discovered: the petitioner, who held SB Account No. 21499 in his own name in the bank, had manipulated entries by ",
+          "principleEvolved": "id=\"s9c\"> Companion case (next prescribed authority for s.65 in the DU case material) Sanjay Kumar v. State of Haryana Punjab & Haryana High Court Decided 10 January 2013 CRM No. 1353 of 2013; CRR No. 66 of 2013 (O&M) Paramjeet Singh, J. 1 Facts The petitioner was deputed by M/s Virmati Software and Telecommunication Ltd. to maintain the software system supplied to Vijay Bank, NIT, Faridabad, and also looked after the software systems of certain ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u2-1",
+          "name": "Syed Asifuddin v. State of Andhra Pradesh",
+          "citation": "2006 (1) ALD (Cri) 96 · 2005 CriLJ 4314 · Andhra Pradesh High Court · 29 July 2005",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u2-2",
+          "facts": "Material facts as recorded in DU Case Material for Syed Asifuddin v. State of Andhra Pradesh.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT · SUPPORTING AUTHORITY 1 Syed Asifuddin v. State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 Andhra Pradesh High Court 29 July 2005 1 Facts Reliance Infocomm launched a subsidised handset scheme — the Dhirubhai Ambani Pioneer Offer — with a three&#8209;year network lock&#8209;in . Employees of TATA Indicom allegedly re&#8209;programmed the Electronic Serial Number (ESN) of Reliance&#8209;locked Samsung / LG handsets so that subscribers could migrate networks. An FIR was registered under ss.409, 420 and 120&#8209;B of the IPC , s.65 of the IT Act , and s.63 of the Copyright Act, 1957 . 2 Issues Is a cell phone a \"computer\" within s.2(1)(i) of the IT Act? Does altering the ESN amount to \"tampering with computer so",
+          "principleEvolved": "> CASE&#8209;MAT · SUPPORTING AUTHORITY 1 Syed Asifuddin v. State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 Andhra Pradesh High Court 29 July 2005 1 Facts Reliance Infocomm launched a subsidised handset scheme — the Dhirubhai Ambani Pioneer Offer — with a three&#8209;year network lock&#8209;in . Employees of TATA Indicom allegedly re&#8209;programmed the Electronic Serial Number (ESN) of Reliance&#8209;locked Samsung / LG handsets s",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u2-2",
+          "name": "Diebold Systems Pvt. Ltd. v. The Commissioner",
+          "citation": "ILR 2005 KAR 2210 · Karnataka High Court · 31 January 2005 · Tier 3",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u2-3",
+          "facts": "Material facts as recorded in DU Case Material for Diebold Systems Pvt. Ltd. v. The Commissioner.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT · SUPPORTING AUTHORITY 2 Diebold Systems Pvt. Ltd. v. The Commissioner ILR 2005 KAR 2210 Karnataka High Court 31 January 2005 Tier 3 1 Facts & Issue The question was the sales&#8209;tax classification of an ATM — in substance, whether an ATM is a \"computer\" for the purposes of the relevant fiscal Entry. The Revenue relied on the IT Act's enlarged definition of \"computer\" to argue that an ATM fell within the higher&#8209;rated category. 2 Holding The Karnataka High Court held that the enlarged definition of \"computer\" under the IT Act cannot be transplanted to interpret an Entry under a fiscal statute ; an ATM was accordingly not treated as a \"computer\" for the purposes of the sales&#8209;tax classification in issue. 3 Argum",
+          "principleEvolved": "> CASE&#8209;MAT · SUPPORTING AUTHORITY 2 Diebold Systems Pvt. Ltd. v. The Commissioner ILR 2005 KAR 2210 Karnataka High Court 31 January 2005 Tier 3 1 Facts & Issue The question was the sales&#8209;tax classification of an ATM — in substance, whether an ATM is a \"computer\" for the purposes of the relevant fiscal Entry. The Revenue relied on the IT Act's enlarged definition of \"computer\" to argue that an ATM fell within the higher&#8209;rated cat",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u2-3",
+          "name": "Anvar P.V. v. P.K. Basheer & Ors.",
+          "citation": "(2014) 10 SCC 473 · Civil Appeal No. 4226 of 2012 · Supreme Court of India · Decided 18 September 2014 · 3&#8209;Judge Bench",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u2-4",
+          "facts": "Material facts as recorded in DU Case Material for Anvar P.V. v. P.K. Basheer & Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 1 · TIER 1 · LEADING AUTHORITY Anvar P.V. v. P.K. Basheer & Ors. (2014) 10 SCC 473 Civil Appeal No. 4226 of 2012 Supreme Court of India Decided 18 September 2014 3&#8209;Judge Bench 1 Citation & Bench Anvar P.V. v. P.K. Basheer , (2014) 10 SCC 473; Civil Appeal No. 4226 of 2012; Supreme Court of India; decided 18 September 2014 . Bench: Chief Justice R.M. Lodha, Kurian Joseph and Rohinton Fali Nariman, JJ. Judgment delivered by Kurian, J. Reported in the DU case material at page 79 et seq. Available at indiankanoon.org/doc/187283766/. 2 Admission of Facts In the general election to the Kerala Legislative Assembly held on 13 April 2011 , the first respondent, P.K. Basheer , was declared elected to the 034 Eranad Legislative ",
+          "principleEvolved": "> CASE&#8209;MAT 1 · TIER 1 · LEADING AUTHORITY Anvar P.V. v. P.K. Basheer & Ors. (2014) 10 SCC 473 Civil Appeal No. 4226 of 2012 Supreme Court of India Decided 18 September 2014 3&#8209;Judge Bench 1 Citation & Bench Anvar P.V. v. P.K. Basheer , (2014) 10 SCC 473; Civil Appeal No. 4226 of 2012; Supreme Court of India; decided 18 September 2014 . Bench: Chief Justice R.M. Lodha, Kurian Joseph and Rohinton Fali Nariman, JJ. Judgment delivered by K",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u2-4",
+          "name": "Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal",
+          "citation": "(2020) 7 SCC 1 · 2020 SCC Online SC 571 · Constitution Bench · Supreme Court of India",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u2-5",
+          "facts": "Material facts as recorded in DU Case Material for Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 2 · TIER 1 · CONSTITUTION BENCH Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal (2020) 7 SCC 1 2020 SCC Online SC 571 Constitution Bench Supreme Court of India 1 Citation & Bench Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal , (2020) 7 SCC 1; 2020 SCC Online SC 571; Supreme Court of India, Constitution Bench . Printed in the DU case material as a bullet under Anvar P.V. at page 79 et seq. 2 Admission of Facts The case arose in the context of corruption prosecutions in which the prosecution relied on electronic records — in the leading matter, recorded conversations and call records — tendered as secondary electronic evidence. Following Anvar P.V. , High Courts had divided on whether the s.65B(4) certificate ",
+          "principleEvolved": "> CASE&#8209;MAT 2 · TIER 1 · CONSTITUTION BENCH Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal (2020) 7 SCC 1 2020 SCC Online SC 571 Constitution Bench Supreme Court of India 1 Citation & Bench Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal , (2020) 7 SCC 1; 2020 SCC Online SC 571; Supreme Court of India, Constitution Bench . Printed in the DU case material as a bullet under Anvar P.V. at page 79 et seq. 2 Admission of Facts The ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u2-5",
+          "name": "Vinod Kaushik v. Madhvika Joshi",
+          "citation": "W.P.(C) No. 160/2012 · Delhi High Court · Order dated 27 January 2012 · Vipin Sanghi, J.",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u2-6",
+          "facts": "Material facts as recorded in DU Case Material for Vinod Kaushik v. Madhvika Joshi.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 3 · TIER 2 · AUTHENTICATION CREDENTIALS Vinod Kaushik v. Madhvika Joshi W.P.(C) No. 160/2012 Delhi High Court Order dated 27 January 2012 Vipin Sanghi, J. 1 Citation & Bench Vinod Kaushik v. Madhvika Joshi , W.P.(C) No. 160/2012, Delhi High Court, order dated 27 January 2012 , Vipin Sanghi, J. Printed in the DU case material at page 11 et seq. 2 Admission of Facts The petition was filed under Article 226 of the Constitution to assail an order passed by Sh. Rajesh Aggarwal, the Adjudicating Officer under the Information Technology Act, 2000, Government of Maharashtra , in Complaint No. 2/2010 preferred by the petitioners before him. The reason for approaching the High Court was that the Cyber Appellate Tribunal, New Delhi — ",
+          "principleEvolved": "> CASE&#8209;MAT 3 · TIER 2 · AUTHENTICATION CREDENTIALS Vinod Kaushik v. Madhvika Joshi W.P.(C) No. 160/2012 Delhi High Court Order dated 27 January 2012 Vipin Sanghi, J. 1 Citation & Bench Vinod Kaushik v. Madhvika Joshi , W.P.(C) No. 160/2012, Delhi High Court, order dated 27 January 2012 , Vipin Sanghi, J. Printed in the DU case material at page 11 et seq. 2 Admission of Facts The petition was filed under Article 226 of the Constitution to as",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-1",
+          "name": "Vinod Kaushik v. Madhvika Joshi",
+          "citation": "W.P.(C) No. 160/2012 · Delhi High Court · Order dated 27 January 2012 · Vipin Sanghi, J. · Article 226",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-2",
+          "facts": "Material facts as recorded in DU Case Material for Vinod Kaushik v. Madhvika Joshi.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 1 · TIER 1 · LEADING AUTHORITY ON s.43 QUANTUM Vinod Kaushik v. Madhvika Joshi W.P.(C) No. 160/2012 Delhi High Court Order dated 27 January 2012 Vipin Sanghi, J. Article 226 1 Citation & Bench Vinod Kaushik v. Madhvika Joshi , W.P.(C) No. 160/2012, Delhi High Court, order dated 27 January 2012 , Vipin Sanghi, J. A petition under Article 226 of the Constitution assailing the order of Sh. Rajesh Aggarwal, Adjudicating Officer under the Information Technology Act, 2000, Government of Maharashtra , in Complaint No. 2/2010 . Available at https://it.maharashtra.gov.in/Site/Upload/ACT/Madhvika%20Vs%20Kaushik-highcourt.PDF 2 Admission of Facts The petition was filed under Article 226 to assail an order passed by the Adjudicating Of",
+          "principleEvolved": "> CASE&#8209;MAT 1 · TIER 1 · LEADING AUTHORITY ON s.43 QUANTUM Vinod Kaushik v. Madhvika Joshi W.P.(C) No. 160/2012 Delhi High Court Order dated 27 January 2012 Vipin Sanghi, J. Article 226 1 Citation & Bench Vinod Kaushik v. Madhvika Joshi , W.P.(C) No. 160/2012, Delhi High Court, order dated 27 January 2012 , Vipin Sanghi, J. A petition under Article 226 of the Constitution assailing the order of Sh. Rajesh Aggarwal, Adjudicating Officer under",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-2",
+          "name": "Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd.",
+          "citation": "Complaint No. 1 of 2013 · Adjudicating Officer, Government of Maharashtra · Decided 15 April 2013 · Sh. Rajesh Aggarwal",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-3",
+          "facts": "Material facts as recorded in DU Case Material for Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT · TIER 2 · S.43(b) & THE CLEAN&#8209;HANDS DOCTRINE Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd. Complaint No. 1 of 2013 Adjudicating Officer, Government of Maharashtra Decided 15 April 2013 Sh. Rajesh Aggarwal 1 Citation & Bench Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd. , Complaint No. 1 of 2013, Adjudicating Officer under the Information Technology Act, 2000, Government of Maharashtra, decided 15 April 2013 by Sh. Rajesh Aggarwal (the same Adjudicating Officer who decided Vinod Kaushik and Sanjay Dhande ). Available at https://it.maharashtra.gov.in/Site/Upload/ACT/AmitPatwardhanVsRudIndiaVipinRao%2015Apr%202013%20Rajesh%20Aggarwal.pdf 2 Admission of Facts The complainant, Amit Dilip Patwardhan , filed a c",
+          "principleEvolved": "> CASE&#8209;MAT · TIER 2 · S.43(b) & THE CLEAN&#8209;HANDS DOCTRINE Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd. Complaint No. 1 of 2013 Adjudicating Officer, Government of Maharashtra Decided 15 April 2013 Sh. Rajesh Aggarwal 1 Citation & Bench Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd. , Complaint No. 1 of 2013, Adjudicating Officer under the Information Technology Act, 2000, Government of Maharashtra, decided 15 April 2013 by ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-3",
+          "name": "Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India",
+          "citation": "Complaint No. 30 of 2013 (dated 26 September 2013) · Decided 16 January 2014 · Adjudicating Officer (Mumbai) · Sh. Rajesh Aggarwal · Affirmed: 2020 SCC OnLine T",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-4",
+          "facts": "Material facts as recorded in DU Case Material for Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 2 · TIER 1 · THE LEADING s.43A AUTHORITY Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India Complaint No. 30 of 2013 (dated 26 September 2013) Decided 16 January 2014 Adjudicating Officer (Mumbai) Sh. Rajesh Aggarwal Affirmed: 2020 SCC OnLine TDSAT 124 1 Citation & Bench Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India , Complaint No. 30 of 2013, dated 26 September 2013, decided 16 January 2014 by Sh. Rajesh Aggarwal, Adjudicating Officer (Mumbai) . Printed in full in the DU case material at pages 4–14. Available at http://it.maharashtra.gov.in/Site//ACT/DIT_Adjudication_SanjayDhande_vs_ICICI&Ors-16012014 2 Admission of Facts — the complete chronology The complainants 1 and 2 are the Directors of M/s Sango Consult",
+          "principleEvolved": "> CASE&#8209;MAT 2 · TIER 1 · THE LEADING s.43A AUTHORITY Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India Complaint No. 30 of 2013 (dated 26 September 2013) Decided 16 January 2014 Adjudicating Officer (Mumbai) Sh. Rajesh Aggarwal Affirmed: 2020 SCC OnLine TDSAT 124 1 Citation & Bench Sh. Sanjay Govind Dhande v. ICICI Bank; Vodafone India , Complaint No. 30 of 2013, dated 26 September 2013, decided 16 January 2014 by Sh. Rajesh Aggarwal, A",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-4",
+          "name": "Vodafone Idea Ltd v. Sanjay Govind Dhande",
+          "citation": "2020 SCC OnLine TDSAT 124 · Telecom Disputes Settlement and Appellate Tribunal (TDSAT) · Shiva Kirti Singh, Chairperson · s.43(g) and s.43A",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-5",
+          "facts": "Material facts as recorded in DU Case Material for Vodafone Idea Ltd v. Sanjay Govind Dhande.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> TIER 2 · APPEAL BEFORE TDSAT · THE APPELLATE AUTHORITY Vodafone Idea Ltd v. Sanjay Govind Dhande 2020 SCC OnLine TDSAT 124 Telecom Disputes Settlement and Appellate Tribunal (TDSAT) Shiva Kirti Singh, Chairperson s.43(g) and s.43A 1 Citation & Bench Vodafone Idea Ltd v. Sanjay Govind Dhande and others , 2020 SCC OnLine TDSAT 124 , decided by the Telecom Disputes Settlement and Appellate Tribunal under s.57 of the IT Act, Shiva Kirti Singh, Chairperson — the appellate decision affirming the Adjudicating Officer's order of 16 January 2014. The DU case material cites this decision in its table of authorities but does not reproduce it in full; the summary below follows the reported judgment and is flagged accordingly. 2 The issues on appeal W",
+          "principleEvolved": "> TIER 2 · APPEAL BEFORE TDSAT · THE APPELLATE AUTHORITY Vodafone Idea Ltd v. Sanjay Govind Dhande 2020 SCC OnLine TDSAT 124 Telecom Disputes Settlement and Appellate Tribunal (TDSAT) Shiva Kirti Singh, Chairperson s.43(g) and s.43A 1 Citation & Bench Vodafone Idea Ltd v. Sanjay Govind Dhande and others , 2020 SCC OnLine TDSAT 124 , decided by the Telecom Disputes Settlement and Appellate Tribunal under s.57 of the IT Act, Shiva Kirti Singh, Chai",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-5",
+          "name": "State Bank of India v. Shri Chander Kalani",
+          "citation": "Cyber Appeal No. 13 of 2015 · TDSAT · Decided 31 July 2018 · Shiva Kirti Singh, Chairperson · s.57 read with ss.43A, 46, 47, 61, 62",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-6",
+          "facts": "Material facts as recorded in DU Case Material for State Bank of India v. Shri Chander Kalani.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 3 · TIER 1 · THE DEFINITIVE s.43A JUDGMENT State Bank of India v. Shri Chander Kalani Cyber Appeal No. 13 of 2015 TDSAT Decided 31 July 2018 Shiva Kirti Singh, Chairperson s.57 read with ss.43A, 46, 47, 61, 62 1 Citation & Bench State Bank of India v. Shri Chander Kalani , Cyber Appeal No. 13 of 2015 , Telecom Disputes Settlement and Appellate Tribunal, decided 31 July 2018 , Shiva Kirti Singh, Chairperson . An appeal under s.57 of the IT Act against the order dated 12 January 2015 of the Adjudicating Officer, Government of Maharashtra (Principal Secretary, IT) in Complaint No. 1 of 2014 . Available at https://it.maharashtra.gov.in/Site/Upload/ACT/SBI-Vs-Chander-Kalani-TDSAT-31July2018_201809061010495837.pdf — printed in fu",
+          "principleEvolved": "> CASE&#8209;MAT 3 · TIER 1 · THE DEFINITIVE s.43A JUDGMENT State Bank of India v. Shri Chander Kalani Cyber Appeal No. 13 of 2015 TDSAT Decided 31 July 2018 Shiva Kirti Singh, Chairperson s.57 read with ss.43A, 46, 47, 61, 62 1 Citation & Bench State Bank of India v. Shri Chander Kalani , Cyber Appeal No. 13 of 2015 , Telecom Disputes Settlement and Appellate Tribunal, decided 31 July 2018 , Shiva Kirti Singh, Chairperson . An appeal under s.57 ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-6",
+          "name": "Chander Kalani v. State Bank of India",
+          "citation": "Complaint No. 1 of 2014 · Adjudicating Officer, Government of Maharashtra · Order dated 12 January 2015 · Principal Secretary, IT, Government of Maharashtra",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-7",
+          "facts": "Material facts as recorded in DU Case Material for Chander Kalani v. State Bank of India.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> TIER 2 · THE ORDER UNDER APPEAL · ADJUDICATING OFFICER Chander Kalani v. State Bank of India Complaint No. 1 of 2014 Adjudicating Officer, Government of Maharashtra Order dated 12 January 2015 Principal Secretary, IT, Government of Maharashtra 1 Citation & Bench Chander Kalani v. State Bank of India , Complaint No. 1 of 2014, decided 12 January 2015 by the Adjudicating Officer, Government of Maharashtra (Principal Secretary, IT) . Available at https://it.maharashtra.gov.in/Site/Upload/ACT/SBI-Vs-Chander-Kalani-AO-order_201809061011371075.pdf 2 Admission of Facts The complainants — Shri Chander Kalani and Smt. Romi Kalani , senior citizens and NRIs — had an NRI account and six joint fixed deposits with the Bank. They had never sought inter",
+          "principleEvolved": "> TIER 2 · THE ORDER UNDER APPEAL · ADJUDICATING OFFICER Chander Kalani v. State Bank of India Complaint No. 1 of 2014 Adjudicating Officer, Government of Maharashtra Order dated 12 January 2015 Principal Secretary, IT, Government of Maharashtra 1 Citation & Bench Chander Kalani v. State Bank of India , Complaint No. 1 of 2014, decided 12 January 2015 by the Adjudicating Officer, Government of Maharashtra (Principal Secretary, IT) . Available at ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u3-7",
+          "name": "SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra",
+          "citation": "Suit No. 1201/2001 · Renumbered as New Suit No. 65/14 · Delhi District Court · Decided 12 February 2014 · Ex parte ad interim injunction",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u3-8",
+          "facts": "Material facts as recorded in DU Case Material for SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 4 · TIER 2 · INDIA'S FIRST CYBER&#8209;DEFAMATION CASE SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra Suit No. 1201/2001 Renumbered as New Suit No. 65/14 Delhi District Court Decided 12 February 2014 Ex parte ad interim injunction 1 Citation & Bench SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra , Suit No. 1201/2001, renumbered as New Suit No. 65/14 , decided by the Delhi District Court on 12 February 2014 . The order is reported at http://www.indiankanoon.org/doc/149167816/ and is cited in the DU case material's table of authorities. The DU case material does not reproduce the order in full; the brief below follows the reported order and the DU case&#8209;material summary, and that provenance is flagged. 2 Admission ",
+          "principleEvolved": "> CASE&#8209;MAT 4 · TIER 2 · INDIA'S FIRST CYBER&#8209;DEFAMATION CASE SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra Suit No. 1201/2001 Renumbered as New Suit No. 65/14 Delhi District Court Decided 12 February 2014 Ex parte ad interim injunction 1 Citation & Bench SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra , Suit No. 1201/2001, renumbered as New Suit No. 65/14 , decided by the Delhi District Court on 12 February 2014 . The order is re",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-1",
+          "name": "Syed Asifuddin v. The State of Andhra Pradesh",
+          "citation": "2006 (1) ALD (Cri) 96 · 2005 CriLJ 4314 · Andhra Pradesh High Court · Decided 29 July 2005 · Criminal Petitions under s.482 Cr.P.C. · FIR No. 20 of 2003",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-2",
+          "facts": "Material facts as recorded in DU Case Material for Syed Asifuddin v. The State of Andhra Pradesh.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 1 · TIER 1 · THE FOUNDATIONAL s.65 AUTHORITY Syed Asifuddin v. The State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 Andhra Pradesh High Court Decided 29 July 2005 Criminal Petitions under s.482 Cr.P.C. FIR No. 20 of 2003 1 Citation & Bench Syed Asifuddin v. The State of Andhra Pradesh , 2006 (1) ALD (Cri) 96; 2005 CriLJ 4314 , decided by the Andhra Pradesh High Court on 29 July 2005 . Two criminal petitions filed under s.482 of the Code of Criminal Procedure, 1973 seeking the relief of quashing FIR No. 20 of 2003 registered by the Criminal Investigation Department (C.I.D.) Police, Hyderabad, under ss.409, 420 and 120B of the Indian Penal Code, 1860, s.65 of the Information Technology Act, 2000 and s.63 of the C",
+          "principleEvolved": "> CASE&#8209;MAT 1 · TIER 1 · THE FOUNDATIONAL s.65 AUTHORITY Syed Asifuddin v. The State of Andhra Pradesh 2006 (1) ALD (Cri) 96 2005 CriLJ 4314 Andhra Pradesh High Court Decided 29 July 2005 Criminal Petitions under s.482 Cr.P.C. FIR No. 20 of 2003 1 Citation & Bench Syed Asifuddin v. The State of Andhra Pradesh , 2006 (1) ALD (Cri) 96; 2005 CriLJ 4314 , decided by the Andhra Pradesh High Court on 29 July 2005 . Two criminal petitions filed und",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-2",
+          "name": "Sanjay Kumar v. State of Haryana",
+          "citation": "CRM No. 1353 of 2013 · CRR No. 66 of 2013 (O&M) · Punjab & Haryana High Court · Decided 10 January 2013 · Paramjeet Singh, J. · Conviction under ss.420, 467, 46",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-3",
+          "facts": "Material facts as recorded in DU Case Material for Sanjay Kumar v. State of Haryana.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 2 · TIER 1 · ss.65, 66 READ WITH IPC FORGERY AND CHEATING Sanjay Kumar v. State of Haryana CRM No. 1353 of 2013 CRR No. 66 of 2013 (O&M) Punjab & Haryana High Court Decided 10 January 2013 Paramjeet Singh, J. Conviction under ss.420, 467, 468, 471 IPC and ss.65, 66 IT Act 1 Citation & Bench Sanjay Kumar v. State of Haryana , CRM No. 1353 of 2013; CRR No. 66 of 2013 (O&M) , Punjab & Haryana High Court, decided 10 January 2013 by Paramjeet Singh, J. A criminal revision against the judgment dated 21.08.2012 of the learned Sessions Judge, Faridabad, dismissing the petitioner's appeal against the judgment of conviction dated 01.09.2011 and order of sentence dated 03.09.2011 of the Judicial Magistrate First Class, Faridabad. Prin",
+          "principleEvolved": "> CASE&#8209;MAT 2 · TIER 1 · ss.65, 66 READ WITH IPC FORGERY AND CHEATING Sanjay Kumar v. State of Haryana CRM No. 1353 of 2013 CRR No. 66 of 2013 (O&M) Punjab & Haryana High Court Decided 10 January 2013 Paramjeet Singh, J. Conviction under ss.420, 467, 468, 471 IPC and ss.65, 66 IT Act 1 Citation & Bench Sanjay Kumar v. State of Haryana , CRM No. 1353 of 2013; CRR No. 66 of 2013 (O&M) , Punjab & Haryana High Court, decided 10 January 2013 by P",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-3",
+          "name": "State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath",
+          "citation": "C.C. No. 489 of 2010 · VI Addl. Chief Metropolitan Magistrate, Hyderabad · Decided 31 March 2015 · Sri P. Bhaskara Rao, Addl. CMM · s.66 IT Act",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-4",
+          "facts": "Material facts as recorded in DU Case Material for State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 3 · TIER 2 · THE HACKING INVESTIGATIVE CHAIN State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath C.C. No. 489 of 2010 VI Addl. Chief Metropolitan Magistrate, Hyderabad Decided 31 March 2015 Sri P. Bhaskara Rao, Addl. CMM s.66 IT Act 1 Citation & Bench State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath , C.C. No. 489 of 2010 , decided by Sri P. Bhaskara Rao, VI Addl. Chief Metropolitan Magistrate, Hyderabad on 31 March 2015 . Charge sheet in Cr. No. 18/2008 . Available at www.prashantmali.com/cyber&#8209;law&#8209;cases. Printed in the DU case material at pages 36–38. 2 Admission of Facts PW.1, Arcot K. Balraj , Chief Manager (",
+          "principleEvolved": "> CASE&#8209;MAT 3 · TIER 2 · THE HACKING INVESTIGATIVE CHAIN State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath C.C. No. 489 of 2010 VI Addl. Chief Metropolitan Magistrate, Hyderabad Decided 31 March 2015 Sri P. Bhaskara Rao, Addl. CMM s.66 IT Act 1 Citation & Bench State of A.P. through Inspector of Police, Cyber Crimes P.S., C.I.D., Hyderabad v. Prabhakar Sampath , C.C. No. 489 of 2010 , decide",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-4",
+          "name": "National Association of Software and Service Companies v. Ajay Sood and Others",
+          "citation": "119 (2005) DLT 596 · 2005 (30) PTC 437 Del · Delhi High Court · Pradeep Nandrajog, J. · C.S. (OS) No. 285/2005 · Order dated 2 March 2005",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-5",
+          "facts": "Material facts as recorded in DU Case Material for National Association of Software and Service Companies v. Ajay Sood and Others.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 4 · TIER 1 · THE DOCTRINAL ANCESTOR OF ss.66C AND 66D National Association of Software and Service Companies v. Ajay Sood and Others 119 (2005) DLT 596 2005 (30) PTC 437 Del Delhi High Court Pradeep Nandrajog, J. C.S. (OS) No. 285/2005 Order dated 2 March 2005 1 Citation & Bench National Association of Software and Service Companies v. Ajay Sood and others , 119 (2005) DLT 596; 2005 (30) PTC 437 Del , Delhi High Court, Pradeep Nandrajog, J. A suit (C.S. (OS) No. 285/2005) for a permanent injunction, rendition of accounts and damages, decided in the context of an application ( I.A. 2351/2005 ) under Order 23 Rule 3 of the Code of Civil Procedure, 1908 recording a compromise. The order granting the ex parte ad interim injunct",
+          "principleEvolved": "> CASE&#8209;MAT 4 · TIER 1 · THE DOCTRINAL ANCESTOR OF ss.66C AND 66D National Association of Software and Service Companies v. Ajay Sood and Others 119 (2005) DLT 596 2005 (30) PTC 437 Del Delhi High Court Pradeep Nandrajog, J. C.S. (OS) No. 285/2005 Order dated 2 March 2005 1 Citation & Bench National Association of Software and Service Companies v. Ajay Sood and others , 119 (2005) DLT 596; 2005 (30) PTC 437 Del , Delhi High Court, Pradeep Na",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-5",
+          "name": "Aveek Sarkar v. State of West Bengal",
+          "citation": "Criminal Appeal No. 902 of 2004 · Supreme Court of India · Decided 3 February 2014 · K.S. Radhakrishnan, J. · (2014) 4 SCC 257",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-6",
+          "facts": "Material facts as recorded in DU Case Material for Aveek Sarkar v. State of West Bengal.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 5 · TIER 1 · THE CONTROLLING OBSCENITY TEST Aveek Sarkar v. State of West Bengal Criminal Appeal No. 902 of 2004 Supreme Court of India Decided 3 February 2014 K.S. Radhakrishnan, J. (2014) 4 SCC 257 1 Citation & Bench Aveek Sarkar v. State of West Bengal , Criminal Appeal No. 902 of 2004 , Supreme Court of India, decided 3 February 2014 by K.S. Radhakrishnan, J. Reported at (2014) 4 SCC 257. An appeal against the judgment of the Calcutta High Court declining to quash proceedings under s.482 Cr.P.C. in Case No. C.796 of 1993 (corresponding to T.R. No. 35 of 1994) pending before the Judicial Magistrate's Court, Alipore. Printed in the DU case material at pages 42–50. 2 Admission of Facts A German magazine, \"STERN\", having wo",
+          "principleEvolved": "> CASE&#8209;MAT 5 · TIER 1 · THE CONTROLLING OBSCENITY TEST Aveek Sarkar v. State of West Bengal Criminal Appeal No. 902 of 2004 Supreme Court of India Decided 3 February 2014 K.S. Radhakrishnan, J. (2014) 4 SCC 257 1 Citation & Bench Aveek Sarkar v. State of West Bengal , Criminal Appeal No. 902 of 2004 , Supreme Court of India, decided 3 February 2014 by K.S. Radhakrishnan, J. Reported at (2014) 4 SCC 257. An appeal against the judgment of the",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-6",
+          "name": "Maqbool Fida Husain v. Raj Kumar Pandey",
+          "citation": "Criminal Revision Petition No. 114/2007 · Delhi High Court · Decided 8 May 2008 · Sanjay Kishan Kaul, J. · ss.292, 294, 298, 500 IPC",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-7",
+          "facts": "Material facts as recorded in DU Case Material for Maqbool Fida Husain v. Raj Kumar Pandey.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 6 · TIER 2 · ARTISTIC FREEDOM AND ONLINE PUBLICATION Maqbool Fida Husain v. Raj Kumar Pandey Criminal Revision Petition No. 114/2007 Delhi High Court Decided 8 May 2008 Sanjay Kishan Kaul, J. ss.292, 294, 298, 500 IPC 1 Citation & Bench Maqbool Fida Husain v. Raj Kumar Pandey , Criminal Revision Petition No. 114/2007 , Delhi High Court, decided 8 May 2008 by Sanjay Kishan Kaul, J. Revision petitions challenging the summoning orders passed by the learned ACMM, Delhi, on the transfer of consolidated complaint cases from Pandharpur (Maharashtra), Rajkot (Gujarat), Indore and Bhopal (Madhya Pradesh) under the Supreme Court's directions in T.P. (Cri.) No. 129/2006, 182/2006 and 224/2006 , pursuant to the order dated 04&#8209;12&",
+          "principleEvolved": "> CASE&#8209;MAT 6 · TIER 2 · ARTISTIC FREEDOM AND ONLINE PUBLICATION Maqbool Fida Husain v. Raj Kumar Pandey Criminal Revision Petition No. 114/2007 Delhi High Court Decided 8 May 2008 Sanjay Kishan Kaul, J. ss.292, 294, 298, 500 IPC 1 Citation & Bench Maqbool Fida Husain v. Raj Kumar Pandey , Criminal Revision Petition No. 114/2007 , Delhi High Court, decided 8 May 2008 by Sanjay Kishan Kaul, J. Revision petitions challenging the summoning orde",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-7",
+          "name": "State of Tamil Nadu v. Suhas Katti",
+          "citation": "C.C. No. 4680/2004 · Addl. Chief Metropolitan Magistrate, Egmore, Chennai · Decided 5 November 2004 · Shri Arul Raj, Addl. CMM · ss.469, 509 IPC and s.67 IT Act",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-8",
+          "facts": "Material facts as recorded in DU Case Material for State of Tamil Nadu v. Suhas Katti.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 7 · TIER 1 · THE FIRST s.67 CONVICTION State of Tamil Nadu v. Suhas Katti C.C. No. 4680/2004 Addl. Chief Metropolitan Magistrate, Egmore, Chennai Decided 5 November 2004 Shri Arul Raj, Addl. CMM ss.469, 509 IPC and s.67 IT Act 1 Citation & Bench State of Tamil Nadu v. Suhas Katti , C.C. No. 4680/2004 , decided by Shri Arul Raj, Additional Chief Metropolitan Magistrate, Egmore, Chennai on 5 November 2004 — one of India's earliest cyber&#8209;crime convictions, within about seven months of the filing. Source: http://www.prashantmali.com/cyber&#8209;law&#8209;cases and http://www.legalserviceindia.com/lawforum/index.php?topic=2238.0. Printed in the DU case material at pages 51–54. 2 Admission of Facts The Assistant Commissione",
+          "principleEvolved": "> CASE&#8209;MAT 7 · TIER 1 · THE FIRST s.67 CONVICTION State of Tamil Nadu v. Suhas Katti C.C. No. 4680/2004 Addl. Chief Metropolitan Magistrate, Egmore, Chennai Decided 5 November 2004 Shri Arul Raj, Addl. CMM ss.469, 509 IPC and s.67 IT Act 1 Citation & Bench State of Tamil Nadu v. Suhas Katti , C.C. No. 4680/2004 , decided by Shri Arul Raj, Additional Chief Metropolitan Magistrate, Egmore, Chennai on 5 November 2004 — one of India's earliest ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-8",
+          "name": "The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu",
+          "citation": "C.C. No. 3700686/PS/2009 · Addl. Chief Metropolitan Magistrate, 37th Court, Esplanade, Mumbai · Decided 3 July 2015 · Shri M. R. Natu, Addl. CMM · ss.509 IPC, 6",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-9",
+          "facts": "Material facts as recorded in DU Case Material for The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 8 · TIER 2 · THE PUBLICATION REQUIREMENT AND THE s.66E FALLBACK The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu C.C. No. 3700686/PS/2009 Addl. Chief Metropolitan Magistrate, 37th Court, Esplanade, Mumbai Decided 3 July 2015 Shri M. R. Natu, Addl. CMM ss.509 IPC, 67, 67A and 66E IT Act 1 Citation & Bench The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu , C.C. No. 3700686/PS/2009 , decided by Shri M. R. Natu, Additional Chief Metropolitan Magistrate, 37th Court, Esplanade, Mumbai on 3 July 2015 . Available at http://www.cyberlawconsulting.com/Yogesh%20Prabhu%20Vs%20State&#8209;%20Cyber%20Stalking.pdf. Printed in the DU case material at pages 55–65. 2 Admission of Facts Sonali Asoka Sawai lodged a report",
+          "principleEvolved": "> CASE&#8209;MAT 8 · TIER 2 · THE PUBLICATION REQUIREMENT AND THE s.66E FALLBACK The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu C.C. No. 3700686/PS/2009 Addl. Chief Metropolitan Magistrate, 37th Court, Esplanade, Mumbai Decided 3 July 2015 Shri M. R. Natu, Addl. CMM ss.509 IPC, 67, 67A and 66E IT Act 1 Citation & Bench The State (Cyber Cell) v. Yogisha @ Yogesh Pandurang Prabhu , C.C. No. 3700686/PS/2009 , decided by Shri M. R. Natu,",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-9",
+          "name": "Just Rights for Children Alliance v. S. Harish",
+          "citation": "2024 SCC OnLine SC 2611 · (2024) INSC 716 · Supreme Court of India · Decided 23 September 2024 · D.Y. Chandrachud, CJI and J.B. Pardiwala, JJ. · Criminal Appeal",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-10",
+          "facts": "Material facts as recorded in DU Case Material for Just Rights for Children Alliance v. S. Harish.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT 9 · TIER 1 · THE CSEAM AUTHORITY Just Rights for Children Alliance v. S. Harish 2024 SCC OnLine SC 2611 (2024) INSC 716 Supreme Court of India Decided 23 September 2024 D.Y. Chandrachud, CJI and J.B. Pardiwala, JJ. Criminal Appeal Nos. 2161&#8209;2162 of 2024 1 Citation & Bench Just Rights for Children Alliance v. S. Harish , 2024 SCC OnLine SC 2611 ; (2024) INSC 716, Supreme Court of India, decided 23 September 2024 by the Chief Justice of India, D.Y. Chandrachud, and J.B. Pardiwala, JJ. , in Criminal Appeal Nos. 2161&#8209;2162 of 2024. An appeal against the judgment of the Madras High Court quashing proceedings against the respondent. 2 Admission of Facts A National Crime Records Bureau (NCRB) Cyber Tipline Report flagge",
+          "principleEvolved": "> CASE&#8209;MAT 9 · TIER 1 · THE CSEAM AUTHORITY Just Rights for Children Alliance v. S. Harish 2024 SCC OnLine SC 2611 (2024) INSC 716 Supreme Court of India Decided 23 September 2024 D.Y. Chandrachud, CJI and J.B. Pardiwala, JJ. Criminal Appeal Nos. 2161&#8209;2162 of 2024 1 Citation & Bench Just Rights for Children Alliance v. S. Harish , 2024 SCC OnLine SC 2611 ; (2024) INSC 716, Supreme Court of India, decided 23 September 2024 by the Chief",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-10",
+          "name": "Ritu Kohli Case (Delhi)",
+          "citation": "Delhi · One of India's earliest reported cyber&#8209;stalking complaints · Pre&#8209;2008 Amendment",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-11",
+          "facts": "Material facts as recorded in DU Case Material for Ritu Kohli Case (Delhi).",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT · TIER 3 · CYBER STALKING Ritu Kohli Case (Delhi) Delhi One of India's earliest reported cyber&#8209;stalking complaints Pre&#8209;2008 Amendment 1 Citation & provenance The Ritu Kohli case (Delhi) is one of India's earliest reported cyber&#8209;stalking complaints , pre&#8209;dating the 2008 Amendment 's insertion of ss.66A and 66E. The DU case material lists the case in its syllabus and table of authorities but does not reproduce the judgment; the summary below follows the DU&#8209;aligned case&#8209;matrix notes and standard accounts, and that provenance is flagged. 2 Facts The complainant, Ritu Kohli , was subjected to a sustained campaign of online harassment by an acquaintance who, after she rebuffed his advances, beg",
+          "principleEvolved": "> CASE&#8209;MAT · TIER 3 · CYBER STALKING Ritu Kohli Case (Delhi) Delhi One of India's earliest reported cyber&#8209;stalking complaints Pre&#8209;2008 Amendment 1 Citation & provenance The Ritu Kohli case (Delhi) is one of India's earliest reported cyber&#8209;stalking complaints , pre&#8209;dating the 2008 Amendment 's insertion of ss.66A and 66E. The DU case material lists the case in its syllabus and table of authorities but does not reprodu",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u4-11",
+          "name": "Rakesh v. Central Bureau of Investigation",
+          "citation": "Delhi District Court · Decided 5 February 2011 · Delhi Blast case · s.66F read with s.66",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u4-12",
+          "facts": "Material facts as recorded in DU Case Material for Rakesh v. Central Bureau of Investigation.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> CASE&#8209;MAT · TIER 3 · CYBER TERRORISM Rakesh v. Central Bureau of Investigation Delhi District Court Decided 5 February 2011 Delhi Blast case s.66F read with s.66 1 Citation & provenance Rakesh v. Central Bureau of Investigation , decided by the Delhi District Court on 5 February 2011 — one of the earliest prosecutions under s.66F (cyber terrorism), inserted by the 2008 Amendment. The DU case material lists the case in its syllabus under \"Cyber Terrorism (s.66F)\" with the parenthetical \"(Delhi Blast case — terror e&#8209;mail sent by hacking 'Wi Fi in Mumbai')\" but does not reproduce the judgment; the summary below follows that syllabus description and standard accounts, and that provenance is flagged. 2 Facts Following the Delhi bomb",
+          "principleEvolved": "> CASE&#8209;MAT · TIER 3 · CYBER TERRORISM Rakesh v. Central Bureau of Investigation Delhi District Court Decided 5 February 2011 Delhi Blast case s.66F read with s.66 1 Citation & provenance Rakesh v. Central Bureau of Investigation , decided by the Delhi District Court on 5 February 2011 — one of the earliest prosecutions under s.66F (cyber terrorism), inserted by the 2008 Amendment. The DU case material lists the case in its syllabus under \"C",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-1",
+          "name": "Shreya Singhal and Ors. v. Union of India and Ors.",
+          "citation": "Supreme Court of India · Writ Petition (Criminal) No. 167 of 2012 · Decided 24 March 2015 · (2015) 5 SCC 1 · R.F. Nariman J. (for himself and Chelameswar J.)",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-2",
+          "facts": "Material facts as recorded in DU Case Material for Shreya Singhal and Ors. v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 1 · the anchor case of the Unit Shreya Singhal and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Criminal) No. 167 of 2012 Decided 24 March 2015 (2015) 5 SCC 1 R.F. Nariman J. (for himself and Chelameswar J.) 01 Citation and provenance Primary source: the full judgment is printed in the DU case material (CMITLAW&#8209;2026) at pp. 132–179. It appears in the syllabus twice — once under Unit V (Intermediary Liability) and once under Unit VI (Cyber Security, s.66A) . For Unit V, only the s.79 limb matters; for Unit VI, the s.66A and s.69A limbs. Learn both, and be explicit about which limb you are discussing. 02 Facts A batch of writ petitions under Article 32 challenged provisions of the IT Act, 2000. The ",
+          "principleEvolved": "> Case brief 1 · the anchor case of the Unit Shreya Singhal and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Criminal) No. 167 of 2012 Decided 24 March 2015 (2015) 5 SCC 1 R.F. Nariman J. (for himself and Chelameswar J.) 01 Citation and provenance Primary source: the full judgment is printed in the DU case material (CMITLAW&#8209;2026) at pp. 132–179. It appears in the syllabus twice — once under Unit V (Intermediary Liab",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-2",
+          "name": "My Space Inc. v. Super Cassettes Industries Ltd.",
+          "citation": "Delhi High Court, Division Bench · FAO(OS) 540/2011 · C.M. APPL. 20174/2011, 13919 & 17996/2015 · Decided 23 December 2016 · (2017) 236 DLT 478; (2017) 69 PTC 1",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-3",
+          "facts": "Material facts as recorded in DU Case Material for My Space Inc. v. Super Cassettes Industries Ltd..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 2 · the definitive copyright-intermediary authority My Space Inc. v. Super Cassettes Industries Ltd. Delhi High Court, Division Bench FAO(OS) 540/2011 C.M. APPL. 20174/2011, 13919 & 17996/2015 Decided 23 December 2016 (2017) 236 DLT 478; (2017) 69 PTC 1 S. Ravindra Bhat and Deepa Sharma JJ. 01 Citation and provenance Primary source: the full Division Bench judgment is printed in the DU case material (CMITLAW&#8209;2026) at pp. 88–125 — 38 pages , the longest judgment in the Unit. It is an interlocutory appeal against an interim injunction, and the Court was careful to say so: it expressly cautioned, following International Confederation of Societies of Authors and Composers v. Aditya Pandey , 2016 SCC Online 967, that elaborate",
+          "principleEvolved": "> Case brief 2 · the definitive copyright-intermediary authority My Space Inc. v. Super Cassettes Industries Ltd. Delhi High Court, Division Bench FAO(OS) 540/2011 C.M. APPL. 20174/2011, 13919 & 17996/2015 Decided 23 December 2016 (2017) 236 DLT 478; (2017) 69 PTC 1 S. Ravindra Bhat and Deepa Sharma JJ. 01 Citation and provenance Primary source: the full Division Bench judgment is printed in the DU case material (CMITLAW&#8209;2026) at pp. 88–125",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-3",
+          "name": "Google India Pvt. Ltd. v. M/s Visaka Industries Ltd.",
+          "citation": "High Court of Andhra Pradesh · Criminal Petition No. 7207 of 2009 · Decided 19 April 2011 · s.482 Cr.P.C. · Samudrala Govindarajulu J.",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-4",
+          "facts": "Material facts as recorded in DU Case Material for Google India Pvt. Ltd. v. M/s Visaka Industries Ltd..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 3 · s.79 as a fact-dependent defence Google India Pvt. Ltd. v. M/s Visaka Industries Ltd. High Court of Andhra Pradesh Criminal Petition No. 7207 of 2009 Decided 19 April 2011 s.482 Cr.P.C. Samudrala Govindarajulu J. 01 Citation and provenance Primary source: the full order is printed in the DU case material (CMITLAW&#8209;2026) at pp. 126–128. It is a short but exceptionally dense order, and it is the only case in the syllabus that prints the pre&#8209;2008 text of s.79 alongside the post&#8209;2008 substituted text. That makes it indispensable for a question that turns on the date of the offending conduct. It is also the case that went to the Supreme Court — see Case brief 6 below, where the appeal was decided on 11 December ",
+          "principleEvolved": "> Case brief 3 · s.79 as a fact-dependent defence Google India Pvt. Ltd. v. M/s Visaka Industries Ltd. High Court of Andhra Pradesh Criminal Petition No. 7207 of 2009 Decided 19 April 2011 s.482 Cr.P.C. Samudrala Govindarajulu J. 01 Citation and provenance Primary source: the full order is printed in the DU case material (CMITLAW&#8209;2026) at pp. 126–128. It is a short but exceptionally dense order, and it is the only case in the syllabus that ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-4",
+          "name": "Vyakti Vikas Kendra, Indian Public Charitable Trust v. Jitender Bagga",
+          "citation": "High Court of Delhi · CS(OS) No. 1340/2012 · I.A. No. 8877/2012 · Decided 9 May 2012 · Manmohan Singh J.",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-5",
+          "facts": "Material facts as recorded in DU Case Material for Vyakti Vikas Kendra, Indian Public Charitable Trust v. Jitender Bagga.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 4 · the 36-hour takedown, before it was codified Vyakti Vikas Kendra, Indian Public Charitable Trust v. Jitender Bagga High Court of Delhi CS(OS) No. 1340/2012 I.A. No. 8877/2012 Decided 9 May 2012 Manmohan Singh J. 01 Citation and provenance Primary source: the order is printed in the DU case material (CMITLAW&#8209;2026) at pp. 129–131. Note that the printed extract begins at paragraph 5 — the first four paragraphs (the plaint's formal structure and the prayer) are not reproduced. That does not affect the reasoning, which is complete. 02 Facts The four plaintiffs — Vyakti Vikas Kendra, India Public Charitable Trust (a registered public charitable trust constituted to implement and promote the spiritual, educational, social an",
+          "principleEvolved": "> Case brief 4 · the 36-hour takedown, before it was codified Vyakti Vikas Kendra, Indian Public Charitable Trust v. Jitender Bagga High Court of Delhi CS(OS) No. 1340/2012 I.A. No. 8877/2012 Decided 9 May 2012 Manmohan Singh J. 01 Citation and provenance Primary source: the order is printed in the DU case material (CMITLAW&#8209;2026) at pp. 129–131. Note that the printed extract begins at paragraph 5 — the first four paragraphs (the plaint's fo",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-5",
+          "name": "Avinash Bajaj v. State (N.C.T. of Delhi)",
+          "citation": "High Court of Delhi · Petition under s.482 Cr.P.C. · Decided 29 May 2008 · Reported at 116 (2005) DLT 427 (as cited by the SC); 2008 (105) DRJ 721",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-6",
+          "facts": "Material facts as recorded in DU Case Material for Avinash Bajaj v. State (N.C.T. of Delhi).",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 5 · corporate vs. personal liability of officers Avinash Bajaj v. State (N.C.T. of Delhi) High Court of Delhi Petition under s.482 Cr.P.C. Decided 29 May 2008 Reported at 116 (2005) DLT 427 (as cited by the SC); 2008 (105) DRJ 721 📌 Provenance — read this first The full judgment of Avinash Bajaj v. State is not printed in the DU case material. It is listed in the syllabus twice — under Unit IV (obscenity, alongside Suhas Katti ) and under Unit V (intermediary liability). This brief is therefore reconstructed from the published order and from the Supreme Court's own account of it in Google India v. Vishakha Industries , 2019 SCC OnLine SC 1587, where the Union of India relied on it as the paradigm of the pre&#8209;amendment pos",
+          "principleEvolved": "> Case brief 5 · corporate vs. personal liability of officers Avinash Bajaj v. State (N.C.T. of Delhi) High Court of Delhi Petition under s.482 Cr.P.C. Decided 29 May 2008 Reported at 116 (2005) DLT 427 (as cited by the SC); 2008 (105) DRJ 721 📌 Provenance — read this first The full judgment of Avinash Bajaj v. State is not printed in the DU case material. It is listed in the syllabus twice — under Unit IV (obscenity, alongside Suhas Katti ) and",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-6",
+          "name": "Google India Pvt. Ltd. v. M/s Vishakha Industries Ltd. and Anr.",
+          "citation": "Supreme Court of India · Criminal Appeal No. 1987 of 2014 · Decided 10/11 December 2019 · 2019 SCC OnLine SC 1587 · K.M. Joseph and Ashok Bhushan JJ.",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-7",
+          "facts": "Material facts as recorded in DU Case Material for Google India Pvt. Ltd. v. M/s Vishakha Industries Ltd. and Anr..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 6 · the appellate sequel — and the definitive word on pre-amendment s.79 Google India Pvt. Ltd. v. M/s Vishakha Industries Ltd. and Anr. Supreme Court of India Criminal Appeal No. 1987 of 2014 Decided 10/11 December 2019 2019 SCC OnLine SC 1587 K.M. Joseph and Ashok Bhushan JJ. 01 Citation and provenance Primary source: the judgment is not printed in the DU case material; it is cited in the syllabus by citation alone ( Google India Pvt. Ltd. v. Vishakha Industries , 2019 SCC OnLine SC 1587). This brief is drawn from the published judgment. Its value is that it is the appellate sequel to Case brief 3 — the same complaint, the same articles, the same Google Group — decided by the Supreme Court eight and a half years later. Read t",
+          "principleEvolved": "> Case brief 6 · the appellate sequel — and the definitive word on pre-amendment s.79 Google India Pvt. Ltd. v. M/s Vishakha Industries Ltd. and Anr. Supreme Court of India Criminal Appeal No. 1987 of 2014 Decided 10/11 December 2019 2019 SCC OnLine SC 1587 K.M. Joseph and Ashok Bhushan JJ. 01 Citation and provenance Primary source: the judgment is not printed in the DU case material; it is cited in the syllabus by citation alone ( Google India P",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-7",
+          "name": "Amway India Enterprises Pvt. Ltd. v. 1Mg Technologies Pvt. Ltd. & Anr.",
+          "citation": "High Court of Delhi (Single Judge) · I.A. 11335/2018 in CS(OS) 410/2018 · Decided 8 July 2019 · (2019) 260 DLT 690; (2019) 79 PTC 425 · Prathiba M. Singh J.",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-8",
+          "facts": "Material facts as recorded in DU Case Material for Amway India Enterprises Pvt. Ltd. v. 1Mg Technologies Pvt. Ltd. & Anr..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 7 · the passive/active question — the Single Judge's view Amway India Enterprises Pvt. Ltd. v. 1Mg Technologies Pvt. Ltd. & Anr. High Court of Delhi (Single Judge) I.A. 11335/2018 in CS(OS) 410/2018 Decided 8 July 2019 (2019) 260 DLT 690; (2019) 79 PTC 425 Prathiba M. Singh J. 📌 Provenance — and read the next section immediately after this one This judgment is not printed in the DU case material; it is cited in the syllabus by citation and Indian Kanoon link. More importantly, it was set aside on appeal by the Division Bench in Amazon Seller Services Pvt. Ltd. v. Modicare Ltd. , 31 January 2020 (Case brief 8). It is nevertheless essential, for two reasons: (1) the Division Bench's reasoning can only be understood as a response",
+          "principleEvolved": "> Case brief 7 · the passive/active question — the Single Judge's view Amway India Enterprises Pvt. Ltd. v. 1Mg Technologies Pvt. Ltd. & Anr. High Court of Delhi (Single Judge) I.A. 11335/2018 in CS(OS) 410/2018 Decided 8 July 2019 (2019) 260 DLT 690; (2019) 79 PTC 425 Prathiba M. Singh J. 📌 Provenance — and read the next section immediately after this one This judgment is not printed in the DU case material; it is cited in the syllabus by citat",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-8",
+          "name": "Amazon Seller Services Pvt. Ltd. v. Modicare Ltd. & Ors.",
+          "citation": "High Court of Delhi, Division Bench · FAO(OS) 133, 134, 135, 141, 142 and 157 of 2019 · Decided 31 January 2020 · AIR OnLine 2020 Del 169 · S. Muralidhar and Ta",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-9",
+          "facts": "Material facts as recorded in DU Case Material for Amazon Seller Services Pvt. Ltd. v. Modicare Ltd. & Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 8 · the current position — no passive/active distinction Amazon Seller Services Pvt. Ltd. v. Modicare Ltd. & Ors. High Court of Delhi, Division Bench FAO(OS) 133, 134, 135, 141, 142 and 157 of 2019 Decided 31 January 2020 AIR OnLine 2020 Del 169 S. Muralidhar and Talwant Singh JJ. 01 Citation and provenance Primary source: not printed in the DU case material; cited in the syllabus and in the DU case material's own self&#8209;learning exercise (which gives the hint: \"Amazon seller Services Private Limited v. Amway India Enterprises Private Limited, Del (DB) decided on Jan 31, 2020\"). The appellants were Amazon Seller Services Pvt. Ltd. , Cloudtail India Pvt. Ltd. and Snapdeal Pvt. Ltd. ; the respondents were Amway , Oriflame and",
+          "principleEvolved": "> Case brief 8 · the current position — no passive/active distinction Amazon Seller Services Pvt. Ltd. v. Modicare Ltd. & Ors. High Court of Delhi, Division Bench FAO(OS) 133, 134, 135, 141, 142 and 157 of 2019 Decided 31 January 2020 AIR OnLine 2020 Del 169 S. Muralidhar and Talwant Singh JJ. 01 Citation and provenance Primary source: not printed in the DU case material; cited in the syllabus and in the DU case material's own self&#8209;learning",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u5-9",
+          "name": "X v. Union of India and Ors.",
+          "citation": "High Court of Delhi · Writ Petition (Criminal) No. 1082 of 2020 · Decided 20 April 2021 · Anup Jairam Bhambhani J. · Dr. Paval Duggal as amicus curiae",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u5-10",
+          "facts": "Material facts as recorded in DU Case Material for X v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 9 · making takedown orders actually work X v. Union of India and Ors. High Court of Delhi Writ Petition (Criminal) No. 1082 of 2020 Decided 20 April 2021 Anup Jairam Bhambhani J. Dr. Paval Duggal as amicus curiae 01 Citation and provenance Primary source: not printed in the DU case material; cited in the syllabus by citation and number. It is the most recent of the nine prescribed cases and the one that most directly tests the 2021 Rules against the Shreya Singhal framework. Note carefully: this is not the later X Corp. litigation over the Sahyog portal , which concerns s.79(3)(b) as a source of executive blocking power. The 2021 case is about a victim seeking effective directions against intermediaries. 02 Facts X , an Indian ",
+          "principleEvolved": "> Case brief 9 · making takedown orders actually work X v. Union of India and Ors. High Court of Delhi Writ Petition (Criminal) No. 1082 of 2020 Decided 20 April 2021 Anup Jairam Bhambhani J. Dr. Paval Duggal as amicus curiae 01 Citation and provenance Primary source: not printed in the DU case material; cited in the syllabus by citation and number. It is the most recent of the nine prescribed cases and the one that most directly tests the 2021 R",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u6-1",
+          "name": "Shreya Singhal and Ors. v. Union of India and Ors.",
+          "citation": "Supreme Court of India · Writ Petition (Criminal) No. 167 of 2012 · Decided 24 March 2015 · (2015) 5 SCC 1; AIR 2015 SC 1523 · R.F. Nariman J. (for himself and ",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u6-2",
+          "facts": "Material facts as recorded in DU Case Material for Shreya Singhal and Ors. v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 1 · the foundational cyber‑security decision — printed in full in the DU case material Shreya Singhal and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Criminal) No. 167 of 2012 Decided 24 March 2015 (2015) 5 SCC 1; AIR 2015 SC 1523 R.F. Nariman J. (for himself and J. Chelameswar J.) 📌 How to use this brief This judgment appears in both Unit V (intermediary liability, where the s.79(3)(b) reading‑down is the point) and Unit VI (cyber security, where the s.66A / s.69A holding is the point). The brief below gives the complete picture, but concentrates on the cyber‑security limb : the striking down of s.66A , the upholding of s.69A and the 2009 Blocking Rules , and the striking down of s.118(d) of the Kera",
+          "principleEvolved": "> Case brief 1 · the foundational cyber‑security decision — printed in full in the DU case material Shreya Singhal and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Criminal) No. 167 of 2012 Decided 24 March 2015 (2015) 5 SCC 1; AIR 2015 SC 1523 R.F. Nariman J. (for himself and J. Chelameswar J.) 📌 How to use this brief This judgment appears in both Unit V (intermediary liability, where the s.79(3)(b) reading‑down is the ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u6-2",
+          "name": "Ratan N. Tata v. Union of India and Ors.",
+          "citation": "Supreme Court of India · Writ Petition (Civil) No. 98 of 2010 · Filed 26–29 November 2010; heard on notice from 2 December 2010 · Substantive directions 17 Octo",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u6-3",
+          "facts": "Material facts as recorded in DU Case Material for Ratan N. Tata v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 2 · the Radia tapes — lawful interception versus unlawful disclosure Ratan N. Tata v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) No. 98 of 2010 Filed 26–29 November 2010; heard on notice from 2 December 2010 Substantive directions 17 October 2013 and 29 April 2014; heard again September 2022 The “Radia tapes” litigation 📌 Provenance and an important caution This judgment is not printed in the DU case material; it is cited in the syllabus by number and date. It is also a procedural rather than a final merits judgment — the writ petition was heard on notice, the CBI was directed to investigate the leak, and the Union of India ultimately submitted (in September 2022, before a Bench of Justices D.Y. Chand",
+          "principleEvolved": "> Case brief 2 · the Radia tapes — lawful interception versus unlawful disclosure Ratan N. Tata v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) No. 98 of 2010 Filed 26–29 November 2010; heard on notice from 2 December 2010 Substantive directions 17 October 2013 and 29 April 2014; heard again September 2022 The “Radia tapes” litigation 📌 Provenance and an important caution This judgment is not printed in the DU case materi",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u6-3",
+          "name": "Sreekanth C. Nair v. Licensee / Developer of the Website www.incometaxpune.com",
+          "citation": "High Court of Kerala at Ernakulam · Crl. R.P. No. 2900 of 2008 · Decided 28 August 2008 · V. Ramkumar J. · Available at indiankanoon.org/doc/1915848/",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u6-4",
+          "facts": "Material facts as recorded in DU Case Material for Sreekanth C. Nair v. Licensee / Developer of the Website www.incometaxpune.com.",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 3 · blocking before the rules matured — the procedural limit on courts Sreekanth C. Nair v. Licensee / Developer of the Website www.incometaxpune.com High Court of Kerala at Ernakulam Crl. R.P. No. 2900 of 2008 Decided 28 August 2008 V. Ramkumar J. Available at indiankanoon.org/doc/1915848/ 📌 Provenance and significance The judgment is not printed in the DU case material; the syllabus gives the citation and the Indian Kanoon link. It is a very short revision petition — but it is the earliest of the prescribed Unit VI cases, and it is the one that shows what happened before the 2009 Blocking Rules were framed: blocking was governed by an executive order of 2003 , and courts had to improvise. Read it as a historical‑development ",
+          "principleEvolved": "> Case brief 3 · blocking before the rules matured — the procedural limit on courts Sreekanth C. Nair v. Licensee / Developer of the Website www.incometaxpune.com High Court of Kerala at Ernakulam Crl. R.P. No. 2900 of 2008 Decided 28 August 2008 V. Ramkumar J. Available at indiankanoon.org/doc/1915848/ 📌 Provenance and significance The judgment is not printed in the DU case material; the syllabus gives the citation and the Indian Kanoon link. I",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u6-4",
+          "name": "Justice K.S. Puttaswamy (Retd.) and Anr. v. Union of India and Ors.",
+          "citation": "Supreme Court of India · Writ Petition (Civil) No. 494 of 2012 (reference) · Decided 24 August 2017 · (2017) 10 SCC 1; 2017 SCC OnLine SC 996 · Nine‑Judge Const",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u6-5",
+          "facts": "Material facts as recorded in DU Case Material for Justice K.S. Puttaswamy (Retd.) and Anr. v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 4 · the case that supplies this Unit's master test Justice K.S. Puttaswamy (Retd.) and Anr. v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) No. 494 of 2012 (reference) Decided 24 August 2017 (2017) 10 SCC 1; 2017 SCC OnLine SC 996 Nine‑Judge Constitution Bench 📌 Provenance The judgment is not printed in the DU case material; the syllabus cites it by citation, and the DU case material's own self‑learning exercise for this Unit gives the hint: “State does not have absolute power to restrict fundamental freedoms in cyberspace. Does it apply to information privacy also? Is the Right to information Privacy lies only against the State or does it extend against private sector too? (Hint — Justice K.S. Puttaswa",
+          "principleEvolved": "> Case brief 4 · the case that supplies this Unit's master test Justice K.S. Puttaswamy (Retd.) and Anr. v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) No. 494 of 2012 (reference) Decided 24 August 2017 (2017) 10 SCC 1; 2017 SCC OnLine SC 996 Nine‑Judge Constitution Bench 📌 Provenance The judgment is not printed in the DU case material; the syllabus cites it by citation, and the DU case material's own self‑learning exerc",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u6-5",
+          "name": "Anuradha Bhasin and Ors. v. Union of India and Ors.",
+          "citation": "Supreme Court of India · Writ Petition (Civil) Nos. 1031 of 2019, 1164 of 2019; W.P. (Crl.) No. 225 of 2019 · Decided 10 January 2020 · (2020) 3 SCC 637; 2020 S",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u6-6",
+          "facts": "Material facts as recorded in DU Case Material for Anuradha Bhasin and Ors. v. Union of India and Ors..",
+          "issues": "Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "> Case brief 5 · internet shutdowns — the doctrine of proportionality applied to the whole network Anuradha Bhasin and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) Nos. 1031 of 2019, 1164 of 2019; W.P. (Crl.) No. 225 of 2019 Decided 10 January 2020 (2020) 3 SCC 637; 2020 SCC OnLine SC 25 N.V. Ramana, Subhash Reddy and B.R. Gavai JJ. 01 Citation and provenance Not printed in the DU case material; cited in the syllabus by citation. It is the most recent of the prescribed Unit VI cases and the one that carries the Puttaswamy framework from content‑specific blocking (s.69A) to network‑wide suspension — a different statutory regime, with different actors, and different constitutional stakes. 02 Facts Following the",
+          "principleEvolved": "> Case brief 5 · internet shutdowns — the doctrine of proportionality applied to the whole network Anuradha Bhasin and Ors. v. Union of India and Ors. Supreme Court of India Writ Petition (Civil) Nos. 1031 of 2019, 1164 of 2019; W.P. (Crl.) No. 225 of 2019 Decided 10 January 2020 (2020) 3 SCC 637; 2020 SCC OnLine SC 25 N.V. Ramana, Subhash Reddy and B.R. Gavai JJ. 01 Citation and provenance Not printed in the DU case material; cited in the syllab",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u7-1",
+          "name": "Trimex International FZE Ltd. v. Vedanta Aluminium Ltd.",
+          "citation": "(2010) 3 SCC 1 · AIR 2010 SC 2221 · Supreme Court of India",
+          "unitNumber": 7,
+          "unit": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u7-1",
+          "facts": "Trimex (Dubai mineral trader) e-mailed a commercial offer to Vedanta for bauxite supply containing an arbitration clause. Following detailed e-mail negotiations, Vedanta confirmed acceptance of 5 shipments. Trimex entered into upstream and shipping commitments. Later Vedanta requested a hold and rejected the formal arbitration notice, contending no formal contract was signed.",
+          "issues": "Whether an unconditional acceptance conveyed over e-mail constitutes a valid, binding contract with an enforceable arbitration clause under Section 10A IT Act and Section 7(4)(b) Arbitration and Conciliation Act without formal signatures.",
+          "arguments": "Trimex argued intention to be bound was demonstrated by clear e-mail acceptance and subsequent conduct. Vedanta contended drafts were non-binding pending formal signed execution.",
+          "ratio": "Held by the Supreme Court: Once a contract is concluded through e-mail exchanges, the absence of a formal signed contract does not invalidate the agreement. Under Section 10A of the IT Act, 2000, contracts formed through electronic communications are legally valid, binding and enforceable.",
+          "principleEvolved": "Held by the Supreme Court: Once a contract is concluded through e-mail exchanges, the absence of a formal signed contract does not invalidate the agreement. Under Section 10A of the IT Act, 2000, contracts formed through electronic communications are legally valid, binding and enforceable.",
+          "examTips": "Top citation in e-commerce! Quote Sathasivam J. and emphasize that Section 10A legitimizes e-mail contracts provided the requirements of the Contract Act are met."
+        },
+        {
+          "id": "it-c-u7-2",
+          "name": "World Wrestling Entertainment, Inc. v. Reshma Collection & Ors.",
+          "citation": "2014 (60) PTC 452 (Del) · Delhi High Court Division Bench",
+          "unitNumber": 7,
+          "unit": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u7-2",
+          "facts": "WWE filed a suit in Delhi for trademark infringement against sellers of counterfeit goods in Mumbai, invoking Delhi jurisdiction on the ground that its official website was accessible and permitted transactions in Delhi.",
+          "issues": "Whether an interactive commercial website accessible in a forum gives that forum court territorial jurisdiction under Section 20(c) CPC and Section 134 Trade Marks Act.",
+          "arguments": "Plaintiff argued modern e-commerce means contract formation happens at the buyer’s end where acceptance is received under Section 13 IT Act and Bhagwandas Kedia principle.",
+          "ratio": "A Division Bench of the Delhi High Court held that when an interactive website invites customers to place orders and pay online, acceptance is communicated to the buyer at their desktop; hence a part of cause of action arises where the transaction occurs.",
+          "principleEvolved": "A Division Bench of the Delhi High Court held that when an interactive website invites customers to place orders and pay online, acceptance is communicated to the buyer at their desktop; hence a part of cause of action arises where the transaction occurs.",
+          "examTips": "Landmark decision harmonizing Bhagwandas Kedia (instantaneous communication) with Section 13(2) IT Act in online transactions."
+        },
+        {
+          "id": "it-c-u7-3",
+          "name": "P.R. Transport Agency v. Union of India & Ors.",
+          "citation": "AIR 2006 All 23 · Allahabad High Court Division Bench",
+          "unitNumber": 7,
+          "unit": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u7-3",
+          "facts": "Bharat Coking Coal Ltd. accepted P.R. Transport Agency’s e-tender through an acceptance letter e-mailed from Dhanbad to the petitioner’s computer in Chandauli (UP). Later BCCL cancelled the tender alleging another cheque was dishonoured. P.R. Transport filed a writ in Allahabad High Court.",
+          "issues": "Where does the cause of action arise in contracts formed via e-mail under Section 13(3) of the IT Act, 2000?",
+          "arguments": "BCCL argued Jharkhand courts had sole jurisdiction because server and acceptance originated in Dhanbad. Petitioner argued acceptance was received at Chandauli, UP.",
+          "ratio": "Under Section 13(3) of the IT Act, an electronic record is deemed to be received at the place where the addressee has his place of business. Since petitioner’s principal place of business was Chandauli (UP), acceptance was received in UP, establishing Allahabad High Court’s territorial jurisdiction.",
+          "principleEvolved": "Under Section 13(3) of the IT Act, an electronic record is deemed to be received at the place where the addressee has his place of business. Since petitioner’s principal place of business was Chandauli (UP), acceptance was received in UP, establishing Allahabad High Court’s territorial jurisdiction.",
+          "examTips": "Essential authority for Section 13(3) IT Act! Replaces physical server location with the statutory \"place of business\" rule."
+        },
+        {
+          "id": "it-c-u8-1",
+          "name": "Banyan Tree Holding (P) Ltd. v. A. Murali Krishna Reddy & Anr.",
+          "citation": "CS (OS) No. 894/2008 · Delhi High Court, Division Bench · Decided 23 November 2009 · S. Muralidhar J. (for the Division Bench) · Reported: 2010 (42) PTC 361 (De",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-2",
+          "facts": "The plaintiff, Banyan Tree Holding (P) Limited , is a company with its registered office at Singapore , part of a group of companies in the hospitality business. Since 1994 it adopted and used the word mark \"Banyan Tree\" and the banyan tree device . It claims that by extensive and continuous use the mark and device acquired secondary meaning, became highly distinctive and came to be associated with the plaintiff and its sister concerns. It has maintained the websites www.banyantree.com and www.banyantreespa.com since 1996, both accessible in India. The plaintiff does not hold a registration for the mark or device in India; its application was stated to be pending. Since 2002 it has, in collaboration with the Oberoi Group, been operating 15 spas across India . In October 2007 the plaintiff learnt that the defendants had initiated work on a",
+          "issues": "Whether s.20(a) or s.20(b) CPC applies at all, given that neither party resides or carries on business in Delhi. Whether s.134(2) of the Trade Marks Act, 1999 or s.62(2) of the Copyright Act, 1957 can supply jurisdiction in a passing-off action brought by a plaintiff not carrying on business in the forum. Whether, in the absence of a long-arm statute, the mere accessibility of the defendant's website in Delhi vests jurisdiction in the Delhi High Court under s.20(c) CPC. What test applies — \"purposeful availment\" or the plaintiff's \"purposeful avoidance\"? Whether the \"effects\" test can be applied independently of the \"sliding scale\" test. What",
+          "arguments": "For the Plaintiff (Mr. Praveen Anand) Three-factor test. In determining whether the court has territorial jurisdiction, three factors must be accounted for: (a) the nature of the website, (b) the intention of the website's host to market its products in Delhi, and (c) the effect of such action by the defendants in Delhi. Taxonomy. The website may be passive , interactive or active . Where the website is passive, in the express absence of any intention to market, the forum court would have no jurisdiction. \"Passive plus\". A mere advertisement on the website, without any move by the defendants to block access to Delhi viewers through a device o",
+          "ratio": "⚖️ Answer to Question (i) — when does hosting a universally accessible website lend jurisdiction? \"For the purposes of a passing off action, or an infringement action where the plaintiff is not carrying on business within the jurisdiction of a court, and where there is no long arm statute, the Plaintiff would have to show that the Defendant purposefully availed itself of the jurisdiction of the forum court. It is not enough merely to show that the website hosted by the Defendant is an interactive one. It would have to be shown that the nature of the activity indulged in by the Defendant by the use of the website was with an intention to conclude a commercial transaction with the website user . ... Secondly, for the purposes of the 'effects' test, the Plaintiff must necessarily plead and show prima facie that the specific targeting of the ",
+          "principleEvolved": "⚖️ Answer to Question (i) — when does hosting a universally accessible website lend jurisdiction? \"For the purposes of a passing off action, or an infringement action where the plaintiff is not carrying on business within the jurisdiction of a court, and where there is no long arm statute, the Plaintiff would have to show that the Defendant purposefully availed itself of the jurisdiction of the forum court. It is not enough merely to show that th",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u8-2",
+          "name": "P.R. Transport Agency v. Union of India & Ors.",
+          "citation": "AIR 2006 All 23 · Allahabad High Court, Division Bench · Decided 24 September 2005 · Sushil Harkauli & Umeshwar Pandey, JJ. · Also reported: 2006 (1) AWC 504",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-3",
+          "facts": "An e-auction was held by Bharat Coking Coal Limited (BCCL) — a public sector undertaking under the Union of India — for the allocation of coal from the Dobari Colliery in Jharkhand. The petitioner, P.R. Transport Agency (PRTA) , submitted a bid for 4,000 metric tonnes of coal at Rs. 1,625 per metric tonne . PRTA's bid was accepted, and the acceptance of the tender was communicated to PRTA by e-mail . The e-mail was received at PRTA's place of business at Chandauli (also spelt Chamauli), with its only other place of business at Varanasi — both in the State of Uttar Pradesh. The registered partnership deed of the petitioner, dated 7 July 2000, recorded Chandauli as its principal place of business . Subsequently the acceptance was cancelled. The case for the respondents, as recorded in the judgment, was that \"there was some other person whos",
+          "issues": "Where does an e-contract conclude when the acceptance is communicated electronically — at the sender's place or the addressee's place? Did a part of the cause of action arise within the territorial jurisdiction of the Allahabad High Court? Can a contractual ouster/exclusion clause oust the writ jurisdiction of a High Court under Article 226 of the Constitution? What is the effect of s.13(3) of the Information Technology Act, 2000 on the place of contract?",
+          "arguments": "Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.",
+          "ratio": "Held Jurisdiction exists. \"In view of the facts mentioned in the supplementary-affidavit, read with Information Technology Act, the acceptance having been received by the Petitioner at Chandauli/Varanasi, the contract became complete by receipt of such acceptance at Varanasi/Chandauli, both of which places are within the territorial jurisdiction of this Court. Therefore, a part of the cause of action having arisen in U.P., this Court has territorial jurisdiction to entertain the writ petition .\" The deeming rule applies. Section 13(3) IT Act deems the electronic record to be received at the place where the addressee has his place of business. Since the petitioner's principal place of business was Chandauli and its only other place of business Varanasi — both in U.P. — the acceptance was received in U.P. The ouster clause cannot oust Artic",
+          "principleEvolved": "Held Jurisdiction exists. \"In view of the facts mentioned in the supplementary-affidavit, read with Information Technology Act, the acceptance having been received by the Petitioner at Chandauli/Varanasi, the contract became complete by receipt of such acceptance at Varanasi/Chandauli, both of which places are within the territorial jurisdiction of this Court. Therefore, a part of the cause of action having arisen in U.P., this Court has territor",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u8-3",
+          "name": "Super Cassettes Industries Ltd. (T-Series) v. Myspace Inc.",
+          "citation": "IA Nos. 15781/2008 & 3085/2009 in CS (OS) 2682/2008 (Del, single judge) — 29.07.2011 · FAO (OS) 540/2011, C.M. APPL. 20174/2011, 13919 & 17996/2015 (Del, DB) — ",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-4",
+          "facts": "The plaintiff, Super Cassettes Industries Limited (SCIL), popularly \"T-Series\" , began in recorded audio and videocassette production and became one of India's largest music companies. It owns and controls copyright in more than 100,000 songs in various languages, and claims to acquire and produce cinematograph films, music videos (audio-visual songs), sound recordings, underlying musical works (melody) and literary works (lyrics), investing substantial sums and bearing the risks. Its business is the exploitation of those works by sale of audio/video records or by licensing their use, on multiple platforms including satellite television, radio, digital, the Internet and mobile platforms. Under the TPPL scheme (\"T-Series Public Performance Licenses\") it licenses restaurants, discotheques, TV and radio stations, malls, hotels and public per",
+          "issues": "Whether a Delhi court had territorial jurisdiction over a foreign internet intermediary whose India-centric version was served to Indian users — i.e. whether the defendant \"carried on business\" in Delhi under s.20(a)/(b) CPC, or the cause of action arose there under s.20(c). Whether MySpace is an \"intermediary\" within s.2(1)(w) of the IT Act, 2000. Whether the safe harbour in s.79 is available to MySpace, and how s.79 is to be read with the proviso to s.81 and s.51(a)(ii) of the Copyright Act, 1957. What is the nature of interim relief that can be granted against an internet intermediary — and whether an injunction covering \"future works\" is ",
+          "arguments": "For the plaintiff, SCIL MySpace modifies content wilfully and has placed advertisements to make profits; it therefore cannot seek protection under the safe harbour provisions. By virtue of the overriding s.81 and its proviso , the safe harbour is of no avail; only the Copyright Act, specifically s.51(a) , applies. MySpace initiates the transmission , negating s.79(2)(b), by setting up a website enabling users to transmit information. s.79(2)(c) is inapplicable because the due diligence required was not exercised. MySpace contravened s.79(3)(a) and (b) when it aided and abetted copyright infringement. The learned Single Judge correctly held th",
+          "ratio": "The three conclusions (para 67) \"Sections 79 and 81 of the IT Act and Section 51(a)(ii) of the Copyright Act have to be read harmoniously . Accordingly, it is held that proviso to Section 81 does not preclude the affirmative defence of safe harbor for an intermediary in case of copyright actions .\" \"Section 51(a)(ii), in the case of internet intermediaries contemplates actual knowledge and not general awareness . Additionally, to impose liability on an intermediary, conditions under Section 79 of the IT Act have to be fulfilled .\" \"In case of Internet intermediaries, interim relief has to be specific and must point to the actual content, which is being infringed.\" ⚖️ The relief substituted for the impugned order SCIL shall provide an updated catalogue of \"specific\" works in which it holds copyright, along with the location/URL of such wor",
+          "principleEvolved": "The three conclusions (para 67) \"Sections 79 and 81 of the IT Act and Section 51(a)(ii) of the Copyright Act have to be read harmoniously . Accordingly, it is held that proviso to Section 81 does not preclude the affirmative defence of safe harbor for an intermediary in case of copyright actions .\" \"Section 51(a)(ii), in the case of internet intermediaries contemplates actual knowledge and not general awareness . Additionally, to impose liability",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u8-4",
+          "name": "World Wrestling Entertainment, Inc. v. M/s Reshma Collection & Ors.",
+          "citation": "FAO (OS) 506/2013 in C.M. Nos. 17627/2013 & 18606/2013 · Delhi High Court, Division Bench · Decided 15 October 2014 · Badar Durrez Ahmed, J. · Also reported: 20",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-5",
+          "facts": "The appellant/plaintiff, World Wrestling Entertainment, Inc. , is a company incorporated under the laws of the State of Delaware, United States of America . All the defendants reside in Mumbai and do not carry on business within the jurisdiction of the Delhi court. The suit claimed permanent injunction based on alleged infringement of copyright , infringement of trade marks , passing off , dilution , rendition of accounts, damages and delivery up. The plaintiff is engaged in the development, production and marketing of television programming, pay-per-view programming, live events, and the licensing and sale of branded consumer products featuring the World Wrestling Entertainment (WWE) brand. The WWE scratch logo and \"World Wrestling Entertainment\" are registered trade marks worldwide including India ; the plaintiff is also the owner of th",
+          "issues": "Whether, on the averments in the plaint, the plaintiff — a foreign company with no office in Delhi — \"carries on business\" in Delhi within the meaning of s.134(2) TMA and s.62(2) Copyright Act. Whether the Dhodha House three conditions are satisfied. Where does a contract concluded over the internet take place — and does that place the \"essential part of the business\" there? Whether the Kedia rule for telephone contracts applies to internet contracts. Whether the plaint ought to have been returned under Order VII Rule 10 CPC on a demurrer.",
+          "arguments": "For the appellant/plaintiff (Mr. Praveen Anand) The use of the word \"include\" in s.134(2) TMA and s.62(2) Copyright Act makes those provisions broader than s.20 CPC ( Exphar SA v. Eupharma Laboratories Ltd. , AIR 2004 SC 1682). \"Carries on business\" is not confined to the head office ; it can include a branch office ( Wipro Ltd. , Madras High Court). Indeed no office at all is needed : the plain meaning of the expression conveys that \"wherever there is a business activity — be it the principal place or branch or branches — the party concerned is said to carry on business at such places.\" In Dhodha House itself the Supreme Court observed that ",
+          "ratio": "Held \"In our view, although the learned Single Judge had made a correct reference to the decision of the Supreme Court in the case of Bhagwan Goverdhandas Kedia , the full ramifications of that decision were not perceived by him. When the two decisions of the Supreme Court in Bhagwan Goverdhandas Kedia and Dhodha House are considered in the manner indicated above, it would appear that, on the averments made by the appellant/plaintiff in the plaint, the Delhi High Court would, on a demurrer, have jurisdiction to entertain the suit inasmuch as the appellant/plaintiff would be regarded as carrying on business in Delhi within the meaning of the expression under Section 134(2) of the Trademarks Act, 1999 and Section 62(2) of the Copyright Act, 1957.\" \"Consequently, the learned Single Judge ought not to have returned the plaint under Order 7 Ru",
+          "principleEvolved": "Held \"In our view, although the learned Single Judge had made a correct reference to the decision of the Supreme Court in the case of Bhagwan Goverdhandas Kedia , the full ramifications of that decision were not perceived by him. When the two decisions of the Supreme Court in Bhagwan Goverdhandas Kedia and Dhodha House are considered in the manner indicated above, it would appear that, on the averments made by the appellant/plaintiff in the plain",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u8-5",
+          "name": "Bigtree Entertainment Pvt. Ltd. v. Saturday Sunday Media Internet & Ors.",
+          "citation": "CS (COMM) Nos. 53/2015 & 54/2015 · Delhi High Court · Decided 21 December 2015 · Valmiki J. Mehta, J. (oral judgment) · Also reported: 226 (2016) DLT 497; MANU/",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-6",
+          "facts": "Two suits were filed by the same plaintiff: CS (COMM) No. 53/2015 against Saturday Sunday Media Internet & Ors. , whose address in the memo of parties was at Gurgaon, Haryana — outside Delhi; CS (COMM) No. 54/2015 against M/s iPlatform Media Technologies Pvt. Ltd. and Anr. , whose address was at Bengaluru, Karnataka — outside Delhi. The plaintiff, Bigtree Entertainment Pvt. Ltd. — the operator of the online movie and entertainment ticketing platform \"BOOKMYSHOW.COM\" — is a company registered under the Companies Act, 1956, with its address as per the memo of parties at Mumbai . As the Court recorded, \"it has no office in Delhi be it a principal office or a head office or a registered office or even a branch office.\" Both suits sought permanent injunction restraining the infringement of trade mark, passing off and damages . In CS (COMM) 53/",
+          "issues": "Whether the expression \"carrying on business\" in s.134(2) TMA (and s.62(2) Copyright Act) can be satisfied by a company that has no office of any kind in the forum, merely because its website is accessible there and transactions with forum customers are concluded there. Whether the Explanation to s.20 CPC applies to the plaintiff as well as the defendant. Whether WWE governs this situation. Whether the court should transfer the suits to a more convenient forum.",
+          "arguments": "For the plaintiff The Division Bench in WWE held that where internet transactions take place, there would be territorial jurisdiction at the place where the internet transaction is done by accessing the website. In WWE the plaintiff was a foreign company with no office in Delhi, yet jurisdiction was upheld. That reasoning applies here. WWE did not decide the case of a company plaintiff with no office, but its principle — the \"virtual shop\" — does. The plaintiff's ticketing services are availed by consumers in Delhi; contracts and transactions are concluded in Delhi; the essential part of the business takes place in Delhi. The plaintiff chose ",
+          "ratio": "Held No jurisdiction. A conjoint reading of Patel Roadways and Sanjay Dalia \"shows that wherever a plaintiff or a defendant is a corporation, carrying on business by such a corporation or company necessarily has to be taken alongwith existence of a branch office or a principal office or a registered office, with the place where the cause of action also is said to have arisen .\" The plaintiff had no office in Delhi; therefore it did not carry on business in Delhi; s.134(2) TMA could not be invoked. WWE distinguished. The Division Bench's judgment \"does not deal with and pronounce upon the issue as to Delhi having jurisdiction although the plaintiff is a company and such a plaintiff/Company neither has a principal office nor a head office nor a registered office nor a branch office at Delhi.\" The alternative route was available but not plea",
+          "principleEvolved": "Held No jurisdiction. A conjoint reading of Patel Roadways and Sanjay Dalia \"shows that wherever a plaintiff or a defendant is a corporation, carrying on business by such a corporation or company necessarily has to be taken alongwith existence of a branch office or a principal office or a registered office, with the place where the cause of action also is said to have arisen .\" The plaintiff had no office in Delhi; therefore it did not carry on b",
+          "examTips": "Figure 5 — WWE , Big Tree and Impresario compared. All three are internet-jurisdiction cases; the outcomes differ because the plaintiffs relied on different routes and had different presences in the forum."
+        },
+        {
+          "id": "it-c-u8-6",
+          "name": "Impresario Entertainment & Hospitality Pvt. Ltd. v. S & D Hospitality",
+          "citation": "CS (COMM) 111/2017 · I.A. Nos. 1950/2017 & 3139/2017 · Delhi High Court · Reserved 9 November 2017 · Decided 3 January 2018 · Mukta Gupta, J. · Also reported: 2",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-7",
+          "facts": "The plaintiff , Impresario Entertainment & Hospitality Pvt. Ltd., is a company incorporated under the Companies Act, 1956, with its registered office in Mumbai , carrying on business in Delhi from 12, Hauz Kaz Village, New Delhi-110016 , and operating a restaurant under the name and style of \"SOCIAL\" . It is engaged in providing restaurant services and operating/managing coffee shops. Some of its well-known restaurants and coffee shops include \"SOCIAL\" , \"SMOKE\" (Pune) and others. It got the trade mark \"STONE WATER GRILL\" registered under Classes 30, 42 and 43 in November 2007, and claims to be the registered proprietor of the trade mark \"SOCIAL\" and its variants since May 2014. It also uses the beverage mark \"A GAME OF SLING\" . The defendant , S & D Hospitality, was operating two restaurants in Hyderabad under the trade mark \"SOCIAL MONK",
+          "issues": "Whether the defendant has its registered office, or carries on business, within the territorial jurisdiction of the Delhi High Court. Whether the plaintiff's own carrying on of business in Delhi is sufficient, and whether the plaintiff's principal place of business is in Delhi or Mumbai. Whether the presence of the defendant on Zomato.com and Dine-Out — interactive restaurant guides through which reservations can be made from Delhi — gives rise to a part of the cause of action in Delhi. Whether the defendant's use of similar marks on those platforms, and the booking of a table by one Delhi customer , amounts to a \"trap transaction\" sufficient",
+          "arguments": "For the plaintiff Its principal office for franchising and licensing of all its brands is in Delhi ; it has no office or branch in Hyderabad. It carries on business in Delhi through its office at 12, Hauz Khas Village, with about 250 personnel , and through its various outlets. The defendant has entered into a contract with Zomato.com, a company having its office in Delhi , to promote its business throughout India. Zomato and Dine-Out are interactive restaurant guides through which reservations can be made at the outlets of the defendant from Delhi and the defendant can be contacted. Through Zomato and Dine-Out the defendant targets customers",
+          "ratio": "Held No territorial jurisdiction. \"In view of the discussion aforesaid since this Court has no territorial jurisdiction to entertain the suit, the same is returned to be filed in the Court of competent jurisdiction .\" The application under Order VII Rule 10 CPC (I.A. No. 3139/2017) was allowed and the plaint returned. The application under Order XXXIX Rules 1 and 2 CPC (I.A. No. 1950/2017) was not decided , since the court had no jurisdiction to entertain the suit. The Court recorded that the plaintiff, \"prima facie having not shown the purposeful availment test\", could not sustain the suit in Delhi. A review petition (Review Pet. 129/2018) was dismissed on 31 May 2023, the Court reiterating that \"Merely by reserving a table in the defendant's restaurant at Hyderabad, the contract does not get concluded .\"",
+          "principleEvolved": "Held No territorial jurisdiction. \"In view of the discussion aforesaid since this Court has no territorial jurisdiction to entertain the suit, the same is returned to be filed in the Court of competent jurisdiction .\" The application under Order VII Rule 10 CPC (I.A. No. 3139/2017) was allowed and the plaint returned. The application under Order XXXIX Rules 1 and 2 CPC (I.A. No. 1950/2017) was not decided , since the court had no jurisdiction to ",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        },
+        {
+          "id": "it-c-u8-7",
+          "name": "Maqbool Fida Husain v. Raj Kumar Pandey & Ors.",
+          "citation": "Criminal Revision Petition No. 114/2007 (also Crl. Rev. P. 280/2007) · Delhi High Court · Decided 8 May 2008 · Sanjay Kishan Kaul, J.",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "case-it-u8-8",
+          "facts": "The petitioner, M.F. Husain , an accomplished and celebrated painter, made \"a contemporary painting celebrating nudity\". It \"depicts India in an abstract and graphical representation of a woman in nude with her hair flowing in the form of Himalayas displaying her agony.\" The painting was sold to a private collector in 2004 , after which the petitioner \"did not deal with the same in any manner whatsoever\". Subsequently, in 2006 , the painting — entitled \"Bharat Mata\" — \"was advertised as part of an on-line auction for charity for Kashmir earthquake victims organised by a non-governmental organisation with which the petitioner claims to have no involvement.\" The petitioner stated that he had never given the painting its title. \"The advertisement of the said painting led to large scale protests for which the petitioner also had to tender an ",
+          "issues": "Whether the painting is \"obscene\" within the meaning of s.292 IPC, and whether the offences under ss.294 and 298 IPC are made out. Whether an artist may be prosecuted for a painting uploaded on a website accessible to people across the globe. What is the true scope of the magistrate's duty under s.202 CrPC before issuing process, especially where the accused resides outside the magistrate's jurisdiction? Which court has territorial jurisdiction to try complaints arising out of a single internet publication that offends readers in several States? Whether the criminal jurisdiction of Indian courts over internet publications requires legislative",
+          "arguments": "For the petitioner, M.F. Husain The painting was sold in 2004 and the petitioner had nothing to do with it thereafter; the 2006 online auction was organised by an NGO with which he had no involvement , and he never gave the painting its title. On the face of it, the painting is neither lascivious nor does it appeal to the prurient interest; it \"has not lost its artistic value/touch\". Nudity alone is not obscenity. There is no mens rea : \"since the scope of the subject is so limited, it does not really require any evidence to be led and on the face of it, both the elements i.e. mens rea and actus reus appear to be absent.\" For s.298 IPC, mere ",
+          "ratio": "Held on jurisdiction The Court recorded the ASG's submission that \"as such our Criminal Code does not deal with such jurisdictional aspect directly and submitted that the answer only rested in the power conferred to the Supreme Court of India under Section 406 of the said Code which procedure has been adopted in the present case.\" The Court accepted that Chapter XIII CrPC governs, and set out ss.177, 178, 179 and 186 with the authorities above. \"In my considered view, this particular aspect of jurisdiction fettered within the parameters of scrutiny of Section 202 of the said Code as discussed above derives its importance especially with the advent of the technological explosion where a person sitting anywhere across the globe can get access to what ever information he has been looking for just with a click of a mouse. Therefore, it has be",
+          "principleEvolved": "Held on jurisdiction The Court recorded the ASG's submission that \"as such our Criminal Code does not deal with such jurisdictional aspect directly and submitted that the answer only rested in the power conferred to the Supreme Court of India under Section 406 of the said Code which procedure has been adopted in the present case.\" The Court accepted that Chapter XIII CrPC governs, and set out ss.177, 178, 179 and 186 with the authorities above. \"",
+          "examTips": "Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks."
+        }
+      ],
+      "pyqs": [
+        {
+          "id": "it-pyq-u1-1",
+          "number": "Q1",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks · 100–150 words",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-2",
+          "question": "Meaning and scope of Information Technology",
+          "modelAnswer": "Information Technology means the use of computers to store, retrieve, transmit and manipulate data — reducing information into electronic form so that it can be processed and distributed without the geographic and time constraints of paper. The IT Act, 2000 does not define “IT”; instead it defines its objects — “information” ( s.2(1)(v) : data, message, text, images, sound, voice, codes, computer programmes, software, databases, micro film, computer generated micro fiche), “computer” ( s.2(1)(i) ), “computer system” ( s.2(1)(l) ), “computer network” ( s.2(1)(j) ), “computer resource” ( s.2(1)(k) ) and “communication device” ( s.2(1)(ha) ) — and its conduct: “access” ( s.2(1)(a) ), transmission, and alteration ( ss.43, 65, 66 ). Its principal uses are academics, e&#8209;commerce (B2B, B2C, C2C), social networking, governance, finance, healthcare and critical infrastructure — each of which the Act regulates through functional equivalence."
+        },
+        {
+          "id": "it-pyq-u1-2",
+          "number": "Q2",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-3",
+          "question": "Cyberspace — meaning and characteristics",
+          "modelAnswer": "Cyberspace is a notional environment in which communication over computer networks occurs — a borderless, conceptual space in which information is stored, processed and transmitted, unconstrained by geography or jurisdiction. Its characteristics are: borderless (information crosses state boundaries instantaneously), decentralised (no central authority controls the whole network), asynchronous (communication need not be simultaneous), pseudonymous (attribution is difficult) and persistent (published data is extraordinarily difficult to truly delete). The legal difficulty is that traditional law assumes territorial jurisdiction, synchronous dispute resolution and clear attribution — all of which cyberspace subverts. India’s answer lies in s.75 (extraterritorial reach where a computer or network is located in India), ss.11–13 (attribution, acknowledgment, despatch and receipt) and, in private law, the purposeful&#8209;availment test of Banyan Tree Holding v. A. Murali Krishna Reddy . Regulation is also architectural: per Lawrence Lessig, “code” itself regulates cyberspace alongside law, norms and markets."
+        },
+        {
+          "id": "it-pyq-u1-3",
+          "number": "Q3",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-4",
+          "question": "Distinguish the Internet, the World Wide Web and E&#8209;mail",
+          "modelAnswer": "The Internet is the global infrastructure — an interconnected network of computer networks using TCP/IP, descended from ARPANET. The World Wide Web is one application layer running on that infrastructure, using HTTP/HTTPS and HTML, invented by Tim Berners&#8209;Lee at CERN in 1989; it created the domain&#8209;name system and made e&#8209;commerce visually possible. E&#8209;mail is another application layer (SMTP to send; IMAP/POP3 to retrieve) providing asynchronous message and file exchange. The distinction matters legally: the Internet is the “computer network” of s.2(1)(j) and the anchor of s.75 jurisdiction; the Web generated domain names, website jurisdiction and platform liability; e&#8209;mail generated the first legally significant electronic contracts and remains the most litigated form of electronic evidence under s.63 BSA . All three generate “information” and “electronic records” which ss.4–5 IT Act legally recognise."
+        },
+        {
+          "id": "it-pyq-u1-4",
+          "number": "Q4",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-5",
+          "question": "Purpose and object of the Information Technology Act, 2000",
+          "modelAnswer": "Enacted as Act 21 of 2000 (assent 9 June 2000; in force 17 October 2000), the Act was passed to provide legal recognition for transactions carried out by means of electronic data interchange and other means of electronic communication, commonly referred to as “electronic commerce” , involving alternatives to paper&#8209;based methods of communication and storage, to facilitate electronic filing of documents with Government agencies, and to amend the IPC, the Indian Evidence Act 1872, the Bankers’ Books Evidence Act 1891 and the RBI Act 1934. Its five objects are: (1) remove the legal disability of electronic form — ss.4, 5, 10A ; (2) facilitate e&#8209;commerce by eliminating the writing&#8209;and&#8209;signature hurdle — ss.6–10A , 11–13 ; (3) create a regulatory regime for digital signatures and certifying authorities supervised by the Controller — ss.3, 3A, 17–42, 73–74 ; (4) create civil and criminal liabilities — ss.43, 43A, 46, 65–75 ; and (5) make consequential amendments to other statutes — ss.91–94 . It was substantially amended by the IT (Amendment) Act, 2008 (in force 27 October 2009) to achieve technology neutrality and to add privacy, cyber security and cyber&#8209;crime provisions."
+        },
+        {
+          "id": "it-pyq-u1-5",
+          "number": "Q5",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-6",
+          "question": "Applicability of the IT Act and the First Schedule exclusions (s.1(4))",
+          "modelAnswer": "By s.1(2) the Act extends to the whole of India and, save as otherwise provided, applies also to any offence or contravention committed outside India by any person; s.75 gives it extraterritorial reach where the computer, computer system or computer network involved is located in India. But s.1(4) provides that nothing in the Act applies to documents or transactions specified in the First Schedule : (a) a negotiable instrument other than a cheque (NI Act, s.13 ); (b) a power of attorney (Powers&#8209;of&#8209;Attorney Act, s.1A ); (c) a trust (Indian Trusts Act, s.3 ); (d) a will or any other testamentary disposition (Succession Act, s.2(h) ); (e) any contract for the sale or conveyance of immovable property or any interest therein; and (f) any other class notified by the Central Government. These exclusions are the single most frequently tested scope limitation in the Act and must be stated in every answer on the scope of electronic recognition."
+        },
+        {
+          "id": "it-pyq-u1-6",
+          "number": "Q6",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-7",
+          "question": "Overriding effect of the IT Act (s.81)",
+          "modelAnswer": "s.81(1) provides that the provisions of the Act shall have effect notwithstanding anything inconsistent therewith contained in any other law for the time being in force . This is a consistency, not a repeal, provision: the Act adapts pre&#8209;existing law to electronic form and does not make unlawful what was previously lawful. The proviso — inserted by the 2008 amendment — protects any right conferred under the Copyright Act, 1957 or the Patents Act, 1970 , so the s.79 intermediary safe harbour cannot be used to license infringement. In My Space Inc. v. Super Cassettes Industries Ltd. (Del HC, DB, 2016) the Court read ss.79 and 81 harmoniously with s.51(a)(ii) of the Copyright Act, holding that copyright infringement against an intermediary requires actual knowledge — specific notice identifying the work and its URL — with removal within 36 hours."
+        },
+        {
+          "id": "it-pyq-u1-7",
+          "number": "Q7",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-8",
+          "question": "Interface of information technology and law: current challenges",
+          "modelAnswer": "IT law is a multi&#8209;disciplinary interface spanning contract, tort, IP, criminal, constitutional and administrative law, resting on Art. 19(1)(a) & (g), Art. 21 (privacy — Puttaswamy ), Art. 14, and Entries 31 and 97 of List I. The five challenges prescribed are: (1) mobiles — the handset is both a computer ( s.2(1)(i) ) and a communication device ( s.2(1)(ha) ), and SIM&#8209;swap frauds generate s.43A apportionment ( Sanjay Dhande ; Chander Kalani ); (2) cyber security — phishing, ransomware, DDoS, supply&#8209;chain and AI threats, answered by ss.69, 69A, 70, 70B and CERT&#8209;In Directions 2022; (3) cloud computing and data privacy — data residency versus free flow, s.43A /SPDI Rules 2011 superseded by the DPDP Act 2023 and Rules 2025; (4) misuse of social media — misinformation, hate speech, NCII and doxxing, answered by ss.69A, 79–81 and the Intermediary Guidelines 2021 (amended 2026 for deepfakes); and (5) cyber crimes — financial frauds, stalking, pornography, identity theft, IPR crimes, cyber terrorism and defamation, under ss.43, 65–67B, 72, 72A read with the BNS 2023."
+        },
+        {
+          "id": "it-pyq-u1-8",
+          "number": "Q8",
+          "year": "SHORT NOTE",
+          "marks": "5–7 marks",
+          "type": "Essay",
+          "unitNumber": 1,
+          "unit": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u1-9",
+          "question": "Is an ATM a computer? (Diebold Systems)",
+          "modelAnswer": "In Diebold Systems Pvt. Ltd. v. The Commissioner , ILR 2005 KAR 2210, the Karnataka High Court held that an ATM is not a computer by itself and not a “computer terminal” for the purposes of the Karnataka Sales Tax Act, 1957. Parliament had defined “computer” very widely — and exhaustively, through the word “means” — to suit the purpose and object of the IT Act; but that enlarged definition cannot be used to interpret an Entry under fiscal legislation . Entries in taxing statutes are construed in their common&#8209;parlance sense, not technically; and since an ATM is merely an electronic device connected to a remote computer that performs the requested tasks, it is an “electronic good” under Entry 4 of Part ‘E’ taxable at 12%, not a “computer/computer terminal” under Entry 20 of Part ‘C’ at 4%. Principle: statutory definitions are purposive and context&#8209;bound — the very rule that, applied in Syed Asifuddin , made a cell phone a “computer” under the IT Act."
+        },
+        {
+          "id": "it-pyq-u2-1",
+          "number": "Q1",
+          "year": "MAY–JUNE 2025",
+          "marks": "Q.3 · Essay",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-2",
+          "question": "Explain the functions of public and private keys and describe the authentication process under the IT Act 2000. Are there shortcomings?",
+          "modelAnswer": "Structure Introduction. The functional&#8209;equivalence doctrine (MLEC Art. 7; MLES Art. 6). India's answer is two&#8209;track: s.3 (digital signature, technology&#8209;specific) and s.3A (electronic signature, technology&#8209;neutral). Definitions. s.2(1)(f) asymmetric cryptosystem; s.2(1)(x) key pair; s.2(1)(zc) private key; s.2(1)(zd) public key; s.2(1)(p) digital signature. Functions. The public key verifies ; the private key creates . The four functions — confidentiality, authentication, integrity, non&#8209;repudiation — with the express caveat that confidentiality is not a function of the signature but of encryption. The authentication process. The eight steps of Fig. 6, citing s.3(1)–(4) and the Explanation to s.3(2). Diagram. Redraw Fig. 6 (or a simplified version: M → hash → private key → signature → transmit → public key → compare). Shortcomings. Choose four: technological rigidity; dual&#8209;track mismatch; sub&#8209;delegation; private&#8209;key custody; institutional mismatch; First Schedule gap; the proof bottleneck. Conclusion. Use the model conclusion at §14.4. Key argument to hit Build the definitions → the s.3 mechanism → contrast with s.3A → conclude with the Shah & Srivastava \"legislative chaos\" critique. The examiner is testing whether you can distinguish s.3 from s.3A and whether you know that s.2(1)(zc) is the private key ."
+        },
+        {
+          "id": "it-pyq-u2-2",
+          "number": "Q2",
+          "year": "NOV–DEC 2024",
+          "marks": "Q.1 · Essay",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-3",
+          "question": "What are the ways to authenticate an electronic record? Can biometrics be used? On what grounds can an Electronic Signature Certificate be suspended?",
+          "modelAnswer": "Part A — the ways to authenticate s.3 — digital signature. Asymmetric cryptosystem + hash function, via a DSC from a licensed CA (ss.17–42). s.3A — electronic signature. Any technique that is reliable under s.3A(2) and specified in the Second Schedule. s.2(1)(d) — \"affixing electronic signature\" = \"adoption of any methodology or procedure\". s.14 / s.15 — secure electronic record and secure electronic signature. Part B — can biometrics be used? Yes — because s.2(1)(d) is technology&#8209;neutral and the Second Schedule's entry 1 (e&#8209;authentication using Aadhaar or other e&#8209;KYC services) expressly contemplates OTP, fingerprint minutiae and iris authentication. But it must satisfy all four conditions of s.3A(2)(a)–(d) : linked to the signatory alone; under the signatory's control at the time of signing; alteration to the signature detectable; alteration to the information detectable. A biometric captured without consent, or an authentication factor shared with another, fails limb (b). Part C — grounds for suspension s.37(1)(a)(i) request of the subscriber; s.37(1)(a)(ii) request of a person duly authorised to act on his behalf; s.37(1)(b) the CA's opinion that the certificate should be suspended in the public interest . Add the safeguards: s.37(2) no suspension exceeding fifteen days unless the subscriber is heard; s.37(3) forthwith communication to the subscriber; s.39 publication in the repository. Then, for completeness, add revocation under s.38(1)(a)–(c) and s.38(2)(a)–(d), with s.38(3) hearing and s.38(4) communication, and state the suspension/revocation difference."
+        },
+        {
+          "id": "it-pyq-u2-3",
+          "number": "Q3",
+          "year": "NOV–DEC 2025",
+          "marks": "Q.1 · Problem",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-4",
+          "question": "Examine the validity of an e-contract where signatures are affixed via an online signing platform and one party denies validity.",
+          "modelAnswer": "Framework Is there a contract at all? s.10A : where proposals, acceptances and their revocation are expressed in electronic form or by means of an electronic record, the contract shall not be deemed unenforceable solely on that ground . Apply the Indian Contract Act, 1872 (offer, acceptance, consideration, free consent, capacity, lawful object) to the e&#8209;mail/click exchange. Is the record a document? s.4 — in electronic form and accessible for subsequent reference. An online signing platform stores a signed PDF in the cloud: both conditions met. Is the signature legally effective? s.5 — an electronic signature affixed in the manner prescribed. If the platform uses Aadhaar e&#8209;Sign or an OTP&#8209;based e&#8209;KYC, that is an s.3A signature under Second Schedule entry 1. If it uses a DSC , it is an s.3 signature. Either is recognised. Apply the s.3A(2) four&#8209;fold reliability test to the platform's audit trail: (a) was the authentication data linked to the denying party alone (her own Aadhaar / her own mobile OTP)? (b) was it under her control at the time of signing? (c) and (d) is any alteration to the signature or to the document detectable? If the platform's audit trail shows the signing link was opened, the OTP was delivered to her registered number and entered, and the document hash was sealed — all four limbs are satisfied. Attribution. s.11(b) — was the person who clicked the link authorised by the denying party? s.11(c) — if the platform's system acted automatically on her behalf, the record is still hers. Presumptions. s.14 makes the record secure; IEA s.85B(2)(a) → BSA s.87 presumes the integrity of a secure electronic record; IEA s.85C → BSA s.89 presumes the ESC was issued by the CA and accepted by the subscriber. The denying party must disprove , not merely assert. Estoppel. A party who has affixed a signature by a method she chose, and who has enjoyed the benefit of the contract, is estopped from denying its validity — unless she proves compromise of her authentication factor and that she complied with s.42 (reasonable care to retain control of the private key) and s.40A(c) (prompt notification of compromise). Conclusion. The contract is valid . The later denial does not invalidate it if the four&#8209;fold reliability test is satisfied and the presumptions are not displaced. Trap to avoid Do not say \"an e&#8209;contract is invalid because it is not on paper\" or \"because there is no wet&#8209;ink signature\". Both propositions are expressly negated by ss.4, 5 and 10A . Equally, do not assume that every online signing platform produces a legally valid signature — the answer turns on the audit trail and the four s.3A(2) conditions, not on the platform's branding."
+        },
+        {
+          "id": "it-pyq-u2-4",
+          "number": "Q4",
+          "year": "LIKELY / REPEATED",
+          "marks": "Essay",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-5",
+          "question": "Discuss the interplay between s.65B of the Evidence Act (now s.63 BSA) and the IT Act's authentication provisions, referencing Anvar P.V. and Arjun Panditrao Khotkar.",
+          "modelAnswer": "Structure Use the five&#8209;point skeleton at §8.2 of these notes: (1) frame the two problems — authentication vs. admissibility; (2) state the rule from Anvar P.V. (ss.65A/65B a complete code; Navjot Sandhu overruled; certification a mandatory condition precedent, except for primary evidence); (3) state the refinement from Arjun Panditrao Khotkar (reaffirmed; certificate ideally with the chargesheet but may be furnished later on a genuine attempt or court direction; inapplicable to primary evidence); (4) bring in the IT Act layer — IEA s.73A / BSA s.73 (court may direct the subscriber, the Controller or the CA to produce the DSC and may direct any person to apply the public key and verify), and IEA s.47A / BSA s.47A (the opinion of the issuing CA is a relevant fact), plus s.45A (Examiner of Electronic Evidence); (5) conclude with BSA s.63(4)'s dual&#8209;signature + hash value requirement and the unsettled s.61 BSA debate."
+        },
+        {
+          "id": "it-pyq-u2-5",
+          "number": "Q5",
+          "year": "LIKELY / CRITICAL",
+          "marks": "Essay",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-6",
+          "question": "Critically examine whether India's PKI-centric CA hierarchy remains fit for purpose given the dominance of Aadhaar e-Sign and OTP authentication.",
+          "modelAnswer": "Structure Describe the hierarchy (Fig. 8): Controller (s.17) → repository/publication functions (s.18(ca)–(cb)) → licensed CAs (ss.21–27) → subscribers (ss.35–42) → suspension/revocation (ss.37–39) → relying parties. The case that it remains fit: even Aadhaar e&#8209;Sign routes through a CA and a trusted third party (Second Schedule entries 1(b) and 2); the CA still generates the DSC, still verifies identity under Form C, and still operates under the Controller's e&#8209;authentication guidelines. The hierarchy survives by absorption , not replacement. The case that it does not: the licensing architecture was designed for DSC&#8209;on&#8209;token use, not for an OTP ecosystem; the Second Schedule techniques are added by notification rather than by legislation, so the operative framework is unstable; s.5's \"manner prescribed\" means the substance is in Rules, raising sub&#8209;delegation concerns; and the practical volume of Aadhaar e&#8209;Sign dwarfs DSC use. Conclusion: the regime is doctrinally sound but institutionally stale . Cite Shah & Srivastava and Vakul Sharma. Recommend: express statutory recognition of technology&#8209;neutral tiers (the eIDAS model), a repository that works in practice, and reform of the First Schedule."
+        },
+        {
+          "id": "it-pyq-u2-6",
+          "number": "Q6",
+          "year": "NOV–DEC 2025",
+          "marks": "Q.8(b) · Short note",
+          "type": "Essay",
+          "unitNumber": 2,
+          "unit": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u2-7",
+          "question": "Time and place of despatch and receipt of electronic record.",
+          "modelAnswer": "Answer Use the seven&#8209;point short note at §12.3: source (s.13, MLEC Art. 15); time of despatch s.13(1); time of receipt s.13(2) (designated → entry; non&#8209;designated → retrieval / entry into any resource); place s.13(3) with the s.13(5) rules for multiple places of business, usual place of residence and bodies corporate; s.13(4) irrelevance of the resource's location; the displacement of the postal rule and the codification of the instantaneous&#8209;communication doctrine in Bhagwan Goverdhandas Kedia v. Girdharilal Parshottamdas , AIR 1966 SC 543 (revisited in World Wrestling Entertainment v. Reshma Collections ); and the jurisdictional consequence that the contract is made at the addressee's place of business, subject always to \"save as otherwise agreed\"."
+        },
+        {
+          "id": "it-pyq-u3-1",
+          "number": "Q1",
+          "year": "May–June 2025, Q.2 · 12–14 marks · Problem question",
+          "marks": "May–June 2025, Q.2 · 12–14 marks · Problem question",
+          "type": "Problem",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-2",
+          "question": "PYQ 1 \"A's account is debited after her SIM is duplicated due to Y's (telecom) negligence; X (bank) claims it sent SMS alerts; Y claims it does not handle 'content' and hence not personal data. Decide.\" May–June 2025, Q.2 · 12–14 marks · Problem question",
+          "modelAnswer": "> PYQ 1 \"A's account is debited after her SIM is duplicated due to Y's (telecom) negligence; X (bank) claims it sent SMS alerts; Y claims it does not handle 'content' and hence not personal data. Decide.\" May–June 2025, Q.2 · 12–14 marks · Problem question Model answer Step 1 — Identify the legal basis. This is a s.43A question, not a s.43 question. Both X (the bank) and Y (the telecom operator) are body corporates within the Explanation to s.43A — \"any company\" and, inclusively, a firm, sole proprietorship or other association of individuals engaged in commercial or professional activities. Section 43, which applies to any person and to any computer resource, is not the primary provision, though the fraudster's own conduct would attract s.43(a) and (b) if he could be identified and joined. Step 2 — Apply the three&#8209;element test of State Bank of India v. Chander Kalani , 2020 (TDSAT, 31.07.2018) to each respondent. (i) Possession / dealing / handling of sensitive personal data in its own computer resource. As to X : A's account details, account numbers and financial information are sensitive personal data or information within Rule 3(ii) of the SPDI Rules, 2011 — \"financial information such as bank account or credit card or debit card or other payment instrument details\" — read with clauses (vii) and (viii) , which extend to any detail relating thereto provided for providing a service, and to information received for processing under a lawful contract. The bank was \"clea"
+        },
+        {
+          "id": "it-pyq-u3-2",
+          "number": "Q2",
+          "year": "Nov–Dec 2024, Q.3(b) · 10–12 marks · Problem question",
+          "marks": "Nov–Dec 2024, Q.3(b) · 10–12 marks · Problem question",
+          "type": "Problem",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-3",
+          "question": "PYQ 2 \"X's SIM is stopped for two days due to public holidays; fraudsters obtain a duplicate SIM and transact ₹80 lakh. Discuss liability of Bank and telecom Service Provider.\" Nov–Dec 2024, Q.3(b) · 10–12 marks · Problem question",
+          "modelAnswer": "> PYQ 2 \"X's SIM is stopped for two days due to public holidays; fraudsters obtain a duplicate SIM and transact ₹80 lakh. Discuss liability of Bank and telecom Service Provider.\" Nov–Dec 2024, Q.3(b) · 10–12 marks · Problem question Model answer Step 1 — The governing provision is s.43A , read with the Explanation and the SPDI Rules, 2011 . Both the bank and the telecom service provider are body corporates . Step 2 — The Chander Kalani three&#8209;element test is applied to each. The pattern is directly parallel to Sanjay Dhande , and the examiner expects you to say so expressly and to follow the same apportionment analysis. Step 3 — The telecom service provider. The failure is the issuance of a duplicate SIM on forged documents. The relevant omissions, drawn from Dhande : failure to check the photograph on the forged licence against the database; failure to match the signature; the online File Net system being down; the applicant returning in ten minutes with forged details and a photograph printed on ordinary scanned paper; no payment receipt for the duplicate&#8209;SIM fee ; the store manager backdating his signature; and — the decisive point — failure to make a single phone call to the original number to confirm . The registered mobile number is the identifier the bank uses for alerts and OTPs; a duplicate SIM therefore hands the fraudster the keys to the account. In Dhande the AO held that \"a mere phone call on the Complainant's mobile number, which is the minimum due di"
+        },
+        {
+          "id": "it-pyq-u3-3",
+          "number": "Q3",
+          "year": "Nov–Dec 2025, Q.2 · 12–15 marks · Problem question",
+          "marks": "Nov–Dec 2025, Q.2 · 12–15 marks · Problem question",
+          "type": "Essay",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-4",
+          "question": "PYQ 3 \"Ex&#8209;employee uses undeactivated login credentials to access and leak client data. Discuss liability of the company and the ex&#8209;employee.\" Nov–Dec 2025, Q.2 · 12–15 marks · Problem question",
+          "modelAnswer": "> PYQ 3 \"Ex&#8209;employee uses undeactivated login credentials to access and leak client data. Discuss liability of the company and the ex&#8209;employee.\" Nov–Dec 2025, Q.2 · 12–15 marks · Problem question Model answer Step 1 — Two separate defendants, two separate provisions. This question deliberately presents one s.43 defendant (the ex&#8209;employee, an individual) and one s.43A defendant (the company, a body corporate). Do not conflate them. Step 2 — The ex&#8209;employee: s.43, and specifically clause (a) read with clause (b). Clause (a): \"accesses or secures access to such computer, computer system or computer network or resource without permission of the owner or any other person who is in charge of a computer, computer system or computer network or resource\". The ex&#8209;employee's employment having ended, he no longer has permission. The fact that the credentials are technically valid but undeactivated is irrelevant: permission is the criterion, and permission has ceased. This is the point the question is testing. Clause (b): \"downloads, copies or extracts any data, data base or information from such computer, computer system or computer network or resource\" — the client data he removes. Clause (e) may also be engaged if he \"disrupts or causes disruption of\" the system; clause (g) if he \"assists any person to facilitate access\"; clause (j) if he \"steals, conceals, destroys or alters or causes any person to steal, conceal, destroy or alter any information residing"
+        },
+        {
+          "id": "it-pyq-u3-4",
+          "number": "Q4",
+          "year": "Likely long question · 15 marks · Doctrinal",
+          "marks": "Likely long question · 15 marks · Doctrinal",
+          "type": "Essay",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-5",
+          "question": "PYQ 4 \"Discuss the elements of s.43A liability and illustrate with Sanjay Dhande and Chander Kalani .\" Likely long question · 15 marks · Doctrinal",
+          "modelAnswer": "Model answer — structure Introduction. s.43A was inserted by the Information Technology (Amendment) Act, 2008 (in force 27 October 2009). It creates a negligence&#8209;based, compensation&#8209;only liability on a body corporate for failure to protect sensitive personal data or information , with a statutory ceiling of ₹5 crore . Quote the section. The Explanation. Set out the three definitions — body corporate (any company, and including a firm, sole proprietorship or other association of individuals engaged in commercial or professional activities); reasonable security practices and procedures (practices designed to protect information from unauthorised access, damage, use, modification, disclosure or impairment, as specified in an agreement or in any law in force and, in their absence, as prescribed); and sensitive personal data or information (as prescribed). Note TDSAT's statement in Chander Kalani that all three are widely worded . The three elements , quoting Chander Kalani para 16 verbatim, and elaborating each: (i) possession, dealing or handling; (ii) negligence in security practices and procedures — with the signature&#8209;verification carve&#8209;out ; (iii) causation of wrongful loss or wrongful gain. The SPDI Rules. Rule 3's list and the public&#8209;domain exclusions; Rule 4's privacy policy; Rule 8's IS/ISO/IEC 27001 standard and the deemed&#8209;compliance route; the audit obligation for high&#8209;volume entities. Illustration — Sanjay Dhande . The duplicate&#8209;SIM facts; the ICICI failures; the Vodafone failures; the metadata holding ; the multi&#8209;defendant apportionment (₹6 lakh / ₹12 lakh); the 12% compound interest direction; the systemic recommendations to DeitY, DoT, TRAI and the Banking Secretary; and the TDSAT affirmation in 2020 SCC OnLine TDSAT 124 , which added s.43(g) liability. Illustration — Chander Kalani . The fraudulent&#8209;e&#8209;mail facts; the A&#8209;2 Form scanned signature ; the FD details leaked by the bank itself; the Rule 3(ii), (vii) and (viii) analysis; the Rule 4 and Rule 8 failures; the summary&#8209;procedure holding ; and the quantum holding that contributory blame does not reduce compensation where the award is confined to actual loss out of a ₹1 crore claim. Contrast with s.43 — different defendants, different subject matter, different liability standards, different caps. Critical evaluation. The \"awkward middle ground\" between strict liability and negligence; the judicially developed burden&#8209;shifting ; the absence of an apportionment formula; the institutional competence of the AO. Currency. The DPDP Act, 2023 and the DPDP Rules, 2025 (notified 13 November 2025; phased 12–18&#8209;month compliance; full commencement targeted 13 May 2027 ); the Data Protection Board of India; breach&#8209;notification duties; the point that s.43A continues to govern pre&#8209;commencement conduct . Conclusion. Use the model conclusion at §16.3."
+        },
+        {
+          "id": "it-pyq-u3-5",
+          "number": "Q5",
+          "year": "Likely long question · 15 marks · Critical essay",
+          "marks": "Likely long question · 15 marks · Critical essay",
+          "type": "Essay",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-6",
+          "question": "PYQ 5 \"Critically analyse whether s.43A remains relevant or necessary after the DPDP Act, 2023 and the DPDP Rules, 2025.\" Likely long question · 15 marks · Critical essay",
+          "modelAnswer": "Model answer — the arguments on both sides s.43A is still relevant and necessary Transitional necessity. s.43A liability for conduct occurring before full DPDP commencement remains litigated under the old framework — as the continuing Buradkar (TDSAT, September 2024) and Bank of India v. Sandeep line demonstrates. A live cause of action. Claims accruing before commencement are not extinguished by the DPDP Act; they continue to be adjudicated under s.43A through the AO → TDSAT → High Court ladder. Accessibility. The s.46 forum is summary, specialist and inexpensive — a victim can file a complaint without counsel and without court fee. The DPDP regime's remedies run through the Data Protection Board, whose accessibility is as yet untested. A proven remedial record. Dhande and Chander Kalani produced actual, substantial awards — ₹18 lakhs and ₹40 lakhs respectively — within months, without any need for a full civil suit. No express repeal. The DPDP Act does not repeal s.43A; it supersedes the SPDI Rules regime only as it comes into force."
+        },
+        {
+          "id": "it-pyq-u3-6",
+          "number": "Q6",
+          "year": "Recurring across papers",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 3,
+          "unit": "Unit 3: Civil Liabilities & Cyber Torts",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u3-7",
+          "question": "PYQ 6 Short notes / objective questions — the most frequently repeated Recurring across papers",
+          "modelAnswer": "Prompt Two&#8209;to&#8209;four line answer Adjudicating Officer under s.46 An officer appointed by the Central Government (in practice, a state IT Secretary) who adjudicates claims for compensation for contraventions of the Act, exercising the powers of a civil court for summoning and discovery, with jurisdiction up to ₹5 crore ; the inquiry is summary , governed by the rules of natural justice. Cyber Appellate Tribunal / TDSAT The appellate forum under s.57 ; the Cyber Appellate Tribunal was abolished and its functions transferred to TDSAT under the TRAI Act, 1997 (as amended 2017). Appeal within 45 days ; further appeal to the High Court under s.62 within 60 days . s.43 versus s.43A s.43: any person , any computer resource , act&#8209;based, no cap. s.43A: body corporate only , sensitive personal data only , negligence&#8209;based , ₹5 crore cap . Metadata as sensitive personal data Sanjay Dhande : caller and called number logs, locations, duration and time of call are \"highly sensitive personal data\"; a telecom company's claim not to \"handle\" such data \"has no merit at all\". Clean hands in s.46 adjudication Amit Dilip Patwardhan v. Rud India Chains Pvt. Ltd. (AO, 15.04.2013): a contravention was found, but the complainant — who had diverted the respondent's customers to a rival — was denied compensation on the equitable doctrine of clean hands . Token fine under s.66C Vinod Kaushik : the Delhi HC upheld a ₹100 token fine imposed by the AO under s.66C, holding it open to the respondent to challenge the AO's jurisdiction to levy it in appropriate proceedings. Rule 8 SPDI Rules Absent an agreement or a law, the IS/ISO/IEC 27001 standard or any other notified standard is the compliance benchmark; a body corporate that has implemented it is deemed to have complied with reasonable security practices and procedures. s.67C Obliges an intermediary to preserve and retain specified information for the prescribed duration, manner and format — read with the Intermediary Guidelines and Digital Media Ethics Code Rules, 2021 (as amended 2026). s.72A Punishes a person including an intermediary who, while providing services under a lawful contract , discloses material containing personal information with intent to cause, or knowledge of likelihood of causing, wrongful loss or wrongful gain — up to 3 years / ₹5 lakh . s.79A Enables the Central Government to specify an Examiner of Electronic Evidence ; read with s.45A of the Evidence Act, 1872 (carried into the BSA, 2023 ), which makes the Examiner's opinion a relevant fact. Online defamation — first Indian case SMC Pneumatics (India) Pvt. Ltd. v. Jogesh Kwatra (Delhi District Court, 12.02.2014): ex parte ad interim injunction restraining an ex&#8209;employee from sending defamatory e&#8209;mails to the plaintiff and its subsidiaries worldwide. s.75 extra&#8209;territoriality The Act applies to an offence or contravention committed outside India by any person irrespective of his nationality — the answer to the Vinod Kaushik self&#8209;learning exercise on access executed from abroad."
+        },
+        {
+          "id": "it-pyq-u4-1",
+          "number": "Q1",
+          "year": "Nov–Dec 2025, Q.4 · 12–15 marks · Problem question",
+          "marks": "Nov–Dec 2025, Q.4 · 12–15 marks · Problem question",
+          "type": "Problem",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-2",
+          "question": "PYQ 1 \"A creator uploads sexually explicit/vulgar videos that go viral; police register cases under ss.67, 67A IT Act and ss.292, 294 IPC. Discuss liability of creator and platform.\" Nov–Dec 2025, Q.4 · 12–15 marks · Problem question",
+          "modelAnswer": "> PYQ 1 \"A creator uploads sexually explicit/vulgar videos that go viral; police register cases under ss.67, 67A IT Act and ss.292, 294 IPC. Discuss liability of creator and platform.\" Nov–Dec 2025, Q.4 · 12–15 marks · Problem question Model answer Step 1 — Classify the material. Apply the Aveek Sarkar community&#8209;standards test . Is the material (i) lascivious , (ii) appealing to the prurient interest , or (iii) tending to deprave and corrupt persons likely to read, see or hear it, judged as a whole, in context, by the standard of an average person applying contemporary community standards — not the most susceptible reader, and not the Hicklin isolated&#8209;passage test, which Aveek Sarkar expressly rejected. Then ask the further question: does the material depict a sexually explicit act ? If yes, s.67A ; if it also depicts a child, s.67B . Nudity per se is not obscenity — but a sexually explicit act is a higher, more objective threshold than obscenity, and it does not require the community&#8209;standards analysis to be satisfied at all: the question is simply whether the material contains a sexually explicit act or conduct. Step 2 — The creator's liability. The creator is the primary publisher . Section 67 punishes whoever \"publishes or transmits or causes to be published or transmitted in the electronic form\" obscene material — first conviction: up to 3 years and fine up to ₹5 lakh; subsequent: up to 5 years and fine up to ₹10 lakh; cognizable, bailable (first convic"
+        },
+        {
+          "id": "it-pyq-u4-2",
+          "number": "Q2",
+          "year": "Nov–Dec 2025, Q.3 · 12–15 marks · Problem question",
+          "marks": "Nov–Dec 2025, Q.3 · 12–15 marks · Problem question",
+          "type": "Problem",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-3",
+          "question": "PYQ 2 \"An employee tampers with payroll source code to redirect salaries; another steals credentials to send fraudulent emails. Discuss liability of both under the IT Act.\" Nov–Dec 2025, Q.3 · 12–15 marks · Problem question",
+          "modelAnswer": "> PYQ 2 \"An employee tampers with payroll source code to redirect salaries; another steals credentials to send fraudulent emails. Discuss liability of both under the IT Act.\" Nov–Dec 2025, Q.3 · 12–15 marks · Problem question Model answer Step 1 — Employee 1: the source&#8209;code tamperer. Two provisions apply cumulatively. s.65 — tampering with computer source documents. The elements are: (i) the accused knowingly or intentionally concealed, destroyed or altered computer source code, or knowingly or intentionally caused another to do so; (ii) the code was used for a computer, computer programme, computer system or computer network; and (iii) the code was \"required to be kept or maintained by law\" — a disjunctive test, either limb sufficing ( Syed Asifuddin ). The payroll module's source code is plainly \"computer source code\" within the Explanation — \"the listing of programmes, computer commands, design and layout and programme analysis of computer resource in any form\". Punishment: up to 3 years and/or fine up to ₹2 lakh . Cognizable, bailable. s.66 — computer&#8209;related offences. The alteration of the payroll database is an act referred to in s.43(i) — \"destroys, deletes or alters any information residing in a computer resource or diminishes its value or utility or affects it injuriously by any means\" — and it was done dishonestly (wrongful gain to the employee, wrongful loss to the employer) within IPC s.24 / BNS s.2(7) . Punishment: up to 3 years and/or fine up to ₹5 "
+        },
+        {
+          "id": "it-pyq-u4-3",
+          "number": "Q3",
+          "year": "Nov–Dec 2024, Q.2 · 10–12 marks · Problem question",
+          "marks": "Nov–Dec 2024, Q.2 · 10–12 marks · Problem question",
+          "type": "Essay",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-4",
+          "question": "PYQ 3 \"Mr. A makes a website with obscene content about teachers/students after suspension. Decide obscenity and applicable IT Act provisions.\" Nov–Dec 2024, Q.2 · 10–12 marks · Problem question",
+          "modelAnswer": "> PYQ 3 \"Mr. A makes a website with obscene content about teachers/students after suspension. Decide obscenity and applicable IT Act provisions.\" Nov–Dec 2024, Q.2 · 10–12 marks · Problem question Model answer Step 1 — The obscenity analysis. Apply Aveek Sarkar . The material on the website must be judged as a whole , in the context in which it appears, by the standard of an average person applying contemporary community standards . The Hicklin test — isolated passages judged by their tendency to deprave and corrupt the most susceptible reader — is no longer the correct test . Nudity per se is not obscenity; the material must have a tendency of \"exciting lustful thoughts\" . A grievance&#8209;driven website criticising teachers and students is unlikely to satisfy that test unless the content is sexually explicit. Step 2 — The applicable IT Act provisions, in order of gravity. s.67 — if the material is obscene (lascivious, or appealing to the prurient interest, or tending to deprave and corrupt). Up to 3 years and fine up to ₹5 lakh on first conviction. s.67A — if the material contains a sexually explicit act or conduct , a higher and more objective threshold than obscenity. Up to 5 years and fine up to ₹10 lakh on first conviction; cognizable, non&#8209;bailable . s.66E — if the website captures, publishes or transmits the image of a private area of any person without consent — e.g. morphed images, or images taken from a private source. \"Private area\" is defined in the Explana"
+        },
+        {
+          "id": "it-pyq-u4-4",
+          "number": "Q4",
+          "year": "Likely long question · 15 marks · Doctrinal",
+          "marks": "Likely long question · 15 marks · Doctrinal",
+          "type": "Essay",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-5",
+          "question": "PYQ 4 \"Discuss the elements and judicial interpretation of s.65 (tampering with computer source code), using Syed Asifuddin and Sanjay Kumar v. State of Haryana .\" Likely long question · 15 marks · Doctrinal",
+          "modelAnswer": "Model answer — structure Introduction. Quote s.65 verbatim and its Explanation. Note that s.65 is the Act's original offence — present in the unamended 2000 Act — and that its object is to protect the intellectual property invested in the computer , going beyond what copyright law provides . Punishment: up to 3 years and/or fine up to ₹2 lakh ; cognizable, bailable. The elements , as laid down in Syed Asifuddin para 21: (i) the act (intentional or knowing concealment, destruction or alteration, or causing another to do so); (ii) the object (computer source code used for a computer, computer programme, computer system or computer network); (iii) the legal requirement (the code is \"required to be kept or maintained by law\"); and (iv) the mental element (intention or knowledge — contrast s.66's dishonesty or fraudulence). The disjunctive \"or\". Quote the key passage from Syed Asifuddin : \"The disjunctive word 'or' is used by the Legislature between the phrases 'when the computer source code is required to be kept' and the other phrase 'maintained by law for the time being in force' and, therefore, both the situations are different .\" Add the Court's caveat that whether a cell phone operator is maintaining computer source code is a matter of evidence . The definition of computer source code. Quote the Explanation — \"the listing of programmes, computer commands, design and layout and programme analysis of computer resource in any form \" — and the Court's four limbs. Then the holding that ESN and SID are computer source code . A cell phone is a computer. Set out the Court's reasoning on the circuit board, the microprocessor and the MTSO, and quote: \"it is not possible to accept the submission that a cell phone is not a computer.\" Cross&#8209;refer to Diebold Systems v. Commissioner for the proposition that the IT Act's enlarged definition does not travel to other statutes. Copyright overlap. Explain that s.63 of the Copyright Act, 1957 applies to the alteration of another's computer programme, because a computer programme is an original literary work under s.2(o) protected by ss.13 and 14(b), and that s.63B punishes knowing use of an infringing copy. Sections 65 and 63 are cumulative . Sanjay Kumar — the concurrent application of ss.65 and 66. Set out the facts, the trial court's findings, and the holding that the accused \"tampered with the computer source document and ... also altered in the information which resided in the computer resource and by doing so he committed the offences under Sections 65 and 66\". Note the s.72 acquittal and the reason for it. Critical evaluation. The breadth of \"in any form\"; the evidential uncertainty as to what is \"required to be kept or maintained by law\"; the risk of overlap with the Copyright Act producing parallel prosecutions for the same act; and the absence of any statutory guidance on what counts as \"design and layout\". Conclusion. Use the model conclusion at §21.3."
+        },
+        {
+          "id": "it-pyq-u4-5",
+          "number": "Q5",
+          "year": "Likely long question · 15 marks · Critical essay",
+          "marks": "Likely long question · 15 marks · Critical essay",
+          "type": "Problem",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-6",
+          "question": "PYQ 5 \"Critically examine the Supreme Court's holding in Just Rights for Children Alliance v. S. Harish on possession&#8209;based CSEAM liability and its implications for intermediary/platform obligations.\" Likely long question · 15 marks · Critical essay",
+          "modelAnswer": "Model answer — the arguments on both sides The holding is sound Textual. Section 67B expressly reaches one who \" browses, downloads \" — conduct that does not require transmission. Section 15 POCSO independently criminalises storage in specified circumstances. The plain words do not require distribution. Purposive. Passive consumption creates and sustains the market for CSEAM; each view is a fresh violation of the depicted child's rights. A transmission&#8209;only reading would leave a large enforcement gap. Practical. In the digital environment, possession is the most readily provable offence; requiring proof of transmission would make prosecution impracticable. Terminological reform is overdue. \"Child pornography\" wrongly characterises the material as a form of expression; \"CSEAM\" correctly frames it as evidence of abuse. The relaxed identification threshold is proportionate. Requiring formal age&#8209;determination before a charge sheet would defeat the purpose of prosecutorial screening."
+        },
+        {
+          "id": "it-pyq-u4-6",
+          "number": "Q6",
+          "year": "Likely long question · 12–15 marks · Doctrinal",
+          "marks": "Likely long question · 12–15 marks · Doctrinal",
+          "type": "Essay",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-7",
+          "question": "PYQ 6 \"Distinguish s.67/67A (publication&#8209;based obscenity offences) from s.66E (privacy&#8209;intrusion offence, no publication requirement), using Yogisha Prabhu .\" Likely long question · 12–15 marks · Doctrinal",
+          "modelAnswer": "Model answer Feature ss.67 / 67A s.66E Subject matter Material that is obscene (s.67) or contains a sexually explicit act (s.67A). An image of a private area of a person — the naked or undergarment clad genitals, pubic area, buttocks or anus, or in the case of a female her exposed nipples or naked or undergarment clad breasts. Acts punished Publishing or transmitting , or causing to be published or transmitted , in electronic form. Capturing, publishing or transmitting an image of a private area without consent, under circumstances violating privacy. Capturing alone suffices. Publication required? Yes. The material must be made available to the public or a section of it. No. The core wrong is the intrusion upon privacy ; transmission to a single person is enough. Consent Not an element — the material's character is. Essential — the image must be captured, published or transmitted without consent . Gender Neutral. Gender&#8209;neutral — unlike IPC s.354C (voyeurism), which protects only women. Punishment s.67: up to 3 years + ₹5 lakh (first); 5 years + ₹10 lakh (subsequent); bailable (first). s.67A: up to 5 years + ₹10 lakh (first); 7 years + ₹10 lakh (subsequent); non&#8209;bailable . Up to 3 years and/or fine up to ₹2 lakh ; bailable. Governing test The Aveek Sarkar community&#8209;standards test — the work as a whole, in context, by the average person. The Explanation's definitions of \"capture\", \"private area\", \"publish\" and \"transmit\"; no community&#8209;standards analysis."
+        },
+        {
+          "id": "it-pyq-u4-7",
+          "number": "Q7",
+          "year": "Recurring across papers",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 4,
+          "unit": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u4-8",
+          "question": "PYQ 7 Short notes / objective questions — the most frequently repeated Recurring across papers",
+          "modelAnswer": "Prompt Two&#8209;to&#8209;four line answer s.43 read with s.66 s.66 provides that \"if any person, dishonestly or fraudulently, does any act referred to in section 43 \", he is punishable with up to 3 years and/or fine up to ₹5 lakh . The Explanation imports the IPC definitions of \"dishonestly\" (s.24) and \"fraudulently\" (s.25). s.65 and the disjunctive \"or\" Section 65 applies where the source code is \" required to be kept or maintained by law \". Syed Asifuddin held the test is disjunctive — \"both the situations are different\" — so either limb suffices. Cell phone as a \"computer\" Syed Asifuddin : \"it is not possible to accept the submission that a cell phone is not a computer\", because its operation depends on a circuit board and microprocessor coordinated with a Mobile Telephone Switching Office. s.66C versus s.66D s.66C — fraudulent or dishonest use of another's electronic signature, password or unique identification feature . s.66D — cheating by personation using a communication device or computer resource. Both: up to 3 years and fine up to ₹1 lakh. Phishing NAASCOM v. Ajay Sood : \"a form of internet fraud\" in which a person pretending to be a legitimate association such as a bank or an insurance company extracts personal data such as access codes and passwords, by misrepresenting the identity of the legitimate party. Community standards test Aveek Sarkar : obscenity is judged as a whole, in context, and by the message conveyed , by the standard of an average person applying contemporary community standards . The Hicklin test is abandoned . Nudity per se is not obscenity. Publication requirement Yogisha Prabhu : ss.67 and 67A require publication to persons beyond the victim ; where material is sent only to the victim, s.66E is the cognate lesser offence. CSEAM S. Harish (2024): mere possession or viewing of child sexual exploitation material is independently punishable under s.15 POCSO and s.67B ; \"child pornography\" should be replaced by \"Child Sexual Exploitation and Abuse Material\" ; and courts need only reach prima facie subjective satisfaction that a depiction involves a child. s.66F Cyber terrorism — imprisonment for life ; cognizable, non&#8209;bailable. Limb (A): intent to threaten the unity, integrity, security or sovereignty of India or to strike terror, by denying access, unauthorised access, or introducing a computer contaminant, with the consequence of death, injury, property damage or disruption of essential services (actual or likely). Limb (B): unauthorised access to restricted information with reason to believe it may injure India's interests. Cyber stalking No dedicated IT Act provision after s.66A was struck down in Shreya Singhal . Prosecuted under IPC s.354D / BNS s.78 (expressly including monitoring a woman's use of the internet, e&#8209;mail or electronic communication) read with IPC s.509 / BNS s.79 , and where applicable ss.66E, 67 and 67A. s.75 extra&#8209;territoriality The Act applies to an offence or contravention committed outside India by any person irrespective of nationality , where the act involves a computer, computer system or computer network located in India . s.72 versus s.72A s.72 — unauthorised disclosure by a person who secured access in pursuance of powers under the Act ; up to 2 years / ₹1 lakh. s.72A — disclosure of personal information in breach of a lawful contract , with intent or knowledge of likelihood of causing wrongful loss or gain; up to 3 years / ₹5 lakh. Electronic evidence in a cyber trial Evidence Act s.65B / BSA, 2023 s.63 : the dual certificate (device custodian + expert) accompanied by a hash value is a condition precedent to admissibility. Yogisha Prabhu illustrates the forensic method — mirror image, hash values, unallocated&#8209;cluster recovery, file&#8209;creation&#8209;date matching."
+        },
+        {
+          "id": "it-pyq-u5-1",
+          "number": "Q1",
+          "year": "Nov–Dec 2025",
+          "marks": "Q.7 · 10–12 marks",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-2",
+          "question": "\"Explain intermediary liability under the IT Act as amended, with case law; discuss obligations regarding removal of unlawful content.\"",
+          "modelAnswer": "> Nov–Dec 2025 Q.7 · 10–12 marks \"Explain intermediary liability under the IT Act as amended, with case law; discuss obligations regarding removal of unlawful content.\" Model answer Thesis. Intermediary liability in India rests on a conditional safe harbour : s.79(1) exempts an intermediary from liability for third&#8209;party information, data or communication links made available or hosted by it, notwithstanding anything contained in any law , but only if it satisfies the s.79(2) conditions and does not fall within the s.79(3) disqualifiers. The content of the obligation is supplied not by the Act but by the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021 , as amended in 2022, 2023, 2025 and 2026. (1) Who is an intermediary — s.2(1)(w). Any person who, on behalf of another, receives, stores or transmits an electronic record or provides any service with respect to it — including telecom and internet service providers, web&#8209;hosting providers, search engines, online&#8209;payment sites, online&#8209;auction sites, online market places and cyber cafés (s.2(1)(na)). The definition is record&#8209;specific and the list is inclusive; intermediary status is a question of fact for trial ( Google India v. Vishakha Industries , 2019 SCC OnLine SC 1587). (2) The safe harbour — s.79(2). Three gates: (a) function limited to providing access; or (b) the intermediary does not initiate the transmission, select the receiver, or select or modify the information; an"
+        },
+        {
+          "id": "it-pyq-u5-2",
+          "number": "Q2",
+          "year": "Nov–Dec 2025",
+          "marks": "Q.4 · problem question",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-3",
+          "question": "An intermediary allows creators to upload videos; one contains obscene/child content. Discuss the liability of the creator and of the platform.",
+          "modelAnswer": "Model answer Thesis. The two liabilities are separate and differently sourced . The creator answers as author under the substantive criminal law; the platform answers, if at all, under s.79 , and only if it has forfeited the safe harbour. (1) The creator's liability. Under the IT Act: s.67 (publishing or transmitting obscene material in electronic form — up to 3 years and ₹5 lakh on first conviction, 5 years and ₹10 lakh on second); s.67A (material containing sexually explicit acts — up to 5 years and ₹10 lakh on first conviction, 7 years on conviction or failure to pay); and, if the content involves a child, s.67B — which punishes not only publishing or transmitting but also collecting, seeking, browsing, downloading, advertising, promoting, exchanging or distributing material depicting children in a sexual act or conduct, and expressly extends to possession for storage or distribution, with the Explanation defining \"children\" as persons under 18. Under Just Rights for Children Alliance v. S. Harish , 2024 SCC OnLine SC 2611, possession of child sexual abuse and exploitative material is independently punishable under s.15 POCSO as well as s.67B . Concurrently, the creator faces s.294 BNS (sale of obscene objects to a minor / obscene acts and songs) and, where the material involves a minor, the POCSO Act itself. Where the content is synthetically generated , the 2026 Amendment Rules add labelling and provenance obligations on the platform side. (2) The platform's liability — run the s.79 test. Gate 1 (s.79(2)(a) or (b)): a video platform provides services in addition to access, so it must satisfy s.79(2)(b) — it does not initiate transmission (the creator does), does not select the receiver (any user may view), and does not select or modify the content (upload and playback are automated). On the My Space reasoning, automated format conversion and recommendation do not amount to \"modification\" at the prima facie stage. Gate 2 (s.79(2)(c)): has it published terms tracking Rule 3(1)(b), appointed a Grievance Officer, and complied with the takedown clocks? Gate 3 (s.79(3)): has it conspired, abetted, aided or induced? Has it received a court order or Government notification and failed to act within the prescribed clock? (3) The critical point. A private complaint from a viewer — however graphic — does not by itself forfeit the safe harbour after Shreya Singhal . But the 2021 Rules' grievance machinery and the 2&#8209;hour NCII clock create a practical duty to act quickly, and the 2026 Amendment Rules' automated&#8209;detection obligations for CSEAM and NCII push toward proactive detection. Applying S. Harish 's possession&#8209;liability logic , a platform's own storage of the material may attract independent s.67B exposure where it lacks adequate detection systems — the sharpest available argument against the platform. Conclusion. The creator is liable under ss.67/67A/67B (and POCSO and s.294 BNS); the platform is liable only if it fails the s.79(2) gates or falls within s.79(3). The decisive questions are (i) whether it received a court order or Government notification and failed to act within the clock, and (ii) whether, for the most serious categories, its failure to deploy detection systems amounts to possession or facilitation under s.67B as explained in S. Harish ."
+        },
+        {
+          "id": "it-pyq-u5-3",
+          "number": "Q3",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-4",
+          "question": "Critically analyse the Supreme Court's treatment of s.79(3)(b) in Shreya Singhal v. Union of India and its continuing relevance to platform content-moderation practice.",
+          "modelAnswer": "> Essay 10–15 marks Critically analyse the Supreme Court's treatment of s.79(3)(b) in Shreya Singhal v. Union of India and its continuing relevance to platform content-moderation practice. Model answer Thesis. The reading&#8209;down of s.79(3)(b) is the single most consequential judicial intervention in Indian intermediary law: it converted a provision that would have made platforms private censors into one that reserves the trigger for removal to judicial and executive authority — and it left a practical gap that the 2021 Rules and X v. Union of India have been struggling to close ever since. (1) The problem. Read literally, s.79(3)(b) required an intermediary to remove content upon receiving \"actual knowledge\" from any source — including, on Rule 3(4) of the 2011 Rules, an \"affected person in writing or through e&#8209;mail signed with electronic signature\". The petitioners argued this forced intermediaries to exercise their own judgment on contested claims, without any of the safeguards that s.69A and the 2009 Blocking Rules provided. (2) The Court's reasoning. s.79 is an exemption provision , closely related to the offence provisions; under s.69A, blocking can occur only by a reasoned order after procedural safeguards including a hearing to the originator and intermediary; and \"the intermediary applying its own mind… is noticeably absent\" from that scheme. Practically, it would be \"very difficult for intermediaries like Google, Facebook etc. to act when millions of reques"
+        },
+        {
+          "id": "it-pyq-u5-4",
+          "number": "Q4",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-5",
+          "question": "Discuss how the Delhi High Court in My Space Inc. v. Super Cassettes Industries Ltd. harmonised s.79 of the IT Act, the proviso to s.81, and s.51(a)(ii) of the Copyright Act, 1957.",
+          "modelAnswer": "> Essay 10–15 marks Discuss how the Delhi High Court in My Space Inc. v. Super Cassettes Industries Ltd. harmonised s.79 of the IT Act, the proviso to s.81, and s.51(a)(ii) of the Copyright Act, 1957. Model answer Thesis. The Division Bench's achievement was to read three provisions — which the Single Judge had treated as competing regimes — as supplementary parts of a single scheme , and to replace an unworkable catalogue&#8209;wide injunction with a specific, 36&#8209;hour notice&#8209;and&#8209;takedown regime. (1) The three provisions. s.79 exempts an intermediary from liability for third&#8209;party information, subject to s.79(2) and (3). s.81 gives the IT Act overriding effect, but its proviso preserves the right of any person to exercise any right under the Copyright Act, 1957 or the Patents Act, 1970. s.51(a)(ii) of the Copyright Act deems copyright infringed where a person \"permits for profit any place to be used for the communication of the work to the public\", unless he \"was not aware and had no reasonable ground for believing\" that the communication would be an infringement. (2) The interpretive problem. The proviso to s.81 was inserted at the same time as s.79 was substituted, which led the Single Judge to conclude that the Copyright Act was a complete code and that s.79 could not be read harmoniously with it. MySpace argued the opposite: if Parliament intended an exception to the s.79 defence, it would have placed a proviso within s.79. (3) The Court's harmonis"
+        },
+        {
+          "id": "it-pyq-u5-5",
+          "number": "Q5",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-6",
+          "question": "Critically examine the due diligence obligations of Significant Social Media Intermediaries under the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, as amended in 2022, 2023 and 2026.",
+          "modelAnswer": "> Essay 10–15 marks Critically examine the due diligence obligations of Significant Social Media Intermediaries under the IT (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, as amended in 2022, 2023 and 2026. Model answer Thesis. The Rules create a two&#8209;tier regime: baseline due diligence for every intermediary under Rule 3, and enhanced, scale&#8209;triggered obligations for Significant Social Media Intermediaries — those with more than 50 lakh registered users in India — under Rule 4. The amendments between 2022 and 2026 have progressively expanded both tiers, most recently toward automated detection and labelling of synthetically generated information. (1) Baseline obligations (Rule 3). Publish rules, privacy policy and user agreement (Rule 3(1)(a)); inform users of the Rule 3(1)(b) prohibited&#8209;content categories and take reasonable efforts to prevent their publication (Rule 3(1)(b), as amended in 2022); notify users at least annually (Rule 3(1)(f)); appoint a Grievance Officer , acknowledge complaints within 24 hours and resolve within 7 days (Rule 3(2), as amended in 2026); act on court&#8209;ordered or Government&#8209;notified unlawful content within 3 hours (Rule 3(1)(d), reduced from 36 hours by the 2026 Amendment); act on non&#8209;consensual intimate imagery within 2 hours (Rule 3(2)(b), reduced from 24 hours); and, since 2026, deploy automated tools to prevent unlawful SGI, and prominently label permissible SGI with permanent metadata"
+        },
+        {
+          "id": "it-pyq-u5-6",
+          "number": "Q6",
+          "year": "DU self&#8209;learning exercise",
+          "marks": "Printed in the DU case material, p.125",
+          "type": "Problem",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-7",
+          "question": "\"Due diligence under section 79 of the Information Technology Act has been narrowed whereas the safe harbour rule is wide. Analyse with reasons in support of the statement.\" [Hint — Amazon Seller Services Pvt. Ltd. v. Amway India Enterprises Pvt. Ltd., Del (DB), decided on 31 January 2020]",
+          "modelAnswer": "> DU self&#8209;learning exercise Printed in the DU case material, p.125 \"Due diligence under section 79 of the Information Technology Act has been narrowed whereas the safe harbour rule is wide. Analyse with reasons in support of the statement.\" [Hint — Amazon Seller Services Pvt. Ltd. v. Amway India Enterprises Pvt. Ltd., Del (DB), decided on 31 January 2020] Model answer Understanding the proposition. The statement captures a genuine asymmetry in the drafting and judicial construction of s.79. The safe harbour — s.79(1) — is drafted in the widest possible terms: \"notwithstanding anything contained in any law for the time being in force\", an intermediary \"shall not be liable for any third party information, data, or communication link made available or hosted by him\". The due diligence condition — s.79(2)(c) — by contrast, has been construed narrowly and demandingly. The result is that the door is wide but the keyhole is small. (1) Why the safe harbour is wide. (a) The non&#8209;obstante clause : after the 2008 Amendment, the exemption operates notwithstanding any law — the IPC, the Copyright Act, the Trade Marks Act — and not merely, as under the pre&#8209;2008 text, \"under this Act, rules or regulations made thereunder\". (b) The only restrictions written into the section are s.79(2) and s.79(3): \"but subject to the provisions of sub&#8209;sections (2) and (3)\". As the Division Bench put it in My Space , \"irrespective of any other law, an intermediary is guaranteed a safe "
+        },
+        {
+          "id": "it-pyq-u5-7",
+          "number": "Q7",
+          "year": "DU self&#8209;learning exercise",
+          "marks": "Printed in the DU case material, p.125",
+          "type": "Problem",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-8",
+          "question": "\"Under section 79 of the IT Act, 2000, the court held — for an intermediary it is required that they initiate transmission, select the receiver of the transmission, select or modify the information contained in the transmission. 'One can be intermediary and still be deprived of the safe harbour provision.' Under section 2(1)(w) of the IT Act, 2000, is it necessary that an intermediary must be active or passive? Under what condition can the safe harbour rule under section 79 be made applicable to passive players in the online medium which are placed outside India?\"",
+          "modelAnswer": "> DU self&#8209;learning exercise Printed in the DU case material, p.125 \"Under section 79 of the IT Act, 2000, the court held — for an intermediary it is required that they initiate transmission, select the receiver of the transmission, select or modify the information contained in the transmission. 'One can be intermediary and still be deprived of the safe harbour provision.' Under section 2(1)(w) of the IT Act, 2000, is it necessary that an intermediary must be active or passive? Under what condition can the safe harbour rule under section 79 be made applicable to passive players in the online medium which are placed outside India?\" Model answer (1) Correcting the premise. The proposition as printed inverts the statutory language. s.79(2)(b) requires that the intermediary does not (i) initiate the transmission, (ii) select the receiver of the transmission, and (iii) select or modify the information contained in the transmission. The three are things the intermediary must refrain from doing , and they are conjunctive — all three must be absent. In My Space the Division Bench applied the test limb by limb and found the requirements prima facie satisfied, precisely because MySpace did none of them: it did not initiate (the \"share\" feature's \"usage… rests purely in the hands of third party users\"), it did not select the receiver (\"anyone with Internet access can open its website and be a receiver/viewer\"), and its modification was \"to the format and not to the content \" and wa"
+        },
+        {
+          "id": "it-pyq-u5-8",
+          "number": "Q8",
+          "year": "Short notes",
+          "marks": "5 marks each",
+          "type": "Essay",
+          "unitNumber": 5,
+          "unit": "Unit 5: Intermediary Liability & Safe Harbour",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u5-9",
+          "question": "Write short notes on any five of the following.",
+          "modelAnswer": "Model answer skeletons (a) Intermediary — s.2(1)(w). Any person who, on behalf of another, receives, stores or transmits an electronic record or provides any service with respect to it; includes telecom, network and internet service providers, web&#8209;hosting providers, search engines, online&#8209;payment sites, online&#8209;auction sites, online market places and cyber cafés. Record&#8209;specific; inclusive list; status is a question of fact for trial ( Google India v. Vishakha , 2019). (b) Cyber café — s.2(1)(na). A facility offering internet access to the public in the ordinary course of business. Expressly included in the s.2(1)(w) list, hence an intermediary owing s.79 due diligence, and additionally regulated by the IT (Guidelines for Cyber Café) Rules, 2011 : registration with a designated agency; verification of every user's identity (photograph where identity cannot be proved); a log register maintained for one year; monthly reports to the licensing agency; and inspection by a police officer not below the rank of inspector. Read with s.67C preservation and s.72A's prohibition on disclosure in breach of a lawful contract. (c) The safe harbour under s.79. s.79(1) exempts an intermediary, notwithstanding any law, from liability for third&#8209;party information, data or communication links. Conditional on s.79(2)(a) or (b) and (c); lost under s.79(3)(a) or (b). An affirmative defence, not a blanket immunity ( My Space ), pleaded by the defendant after the plaintiff establishes a wrong ( Amazon v. Modicare ). (d) \"Actual knowledge\" after Shreya Singhal . Read down to mean a court order or a notification by the appropriate Government or its agency , conforming to the Article 19(2) subject matters; \"unlawful acts\" beyond Article 19(2) cannot form part of s.79; Rule 3(4) of the 2011 Rules read down correspondingly. Copyright exception: in a s.51(a)(ii) claim, a specific, work&#8209;and&#8209;URL&#8209;identifying notice from the rights&#8209;holder suffices ( My Space ). (e) The 36&#8209;hour rule and its successors. Rule 3(4) of the 2011 Rules required action within 36 hours of actual knowledge, with 90&#8209;day preservation; read down in Shreya Singhal so that knowledge must come through a court order. Applied judicially in Vyakti Vikas Kendra v. Jitender Bagga (2012) and in the substituted relief in My Space (2016); codified as Rule 3(1)(d) of the 2021 Rules; reduced to 3 hours by the Amendment Rules, 2026, with a 2&#8209;hour clock for non&#8209;consensual intimate imagery. (f) Corporate versus personal liability of officers. Avinash Bajaj v. State (Del HC, 29 May 2008): a prima facie case was made out against the company under ss.292(1)(a) and 292(2)(d) IPC and s.67 IT Act; the charges under s.292 IPC against the MD individually were quashed, but the prosecution under s.67 read with s.85 IT Act continued . Under s.85, persons in charge of and responsible for the conduct of a company's business are liable unless they prove the offence was committed without their knowledge or that they exercised all due diligence. The IT Act has no dedicated \"officer in default\" provision. (g) Synthetically generated information (SGI). Defined by the Amendment Rules, 2026 (in force 20 February 2026) as audio, visual or audio&#8209;visual information artificially or algorithmically created, generated, modified or altered using a computer resource so as to appear authentic, depicting persons, events or scenes that have not occurred. Rule 2(1A) treats SGI as \"information\" for Rule 3(1)(b), 3(1)(d) and Rules 4(2) and 4(4). Rule 3(3) requires automated detection of unlawful SGI, prominent labelling, prefixed audio disclosure, and permanent metadata/provenance with a unique identifier, which the intermediary must not allow to be removed. Note on technique. A five&#8209;mark short note should run to roughly 120–180 words: definition or rule → the operative provision → one case authority → one consequence . Never open a short note with history; open with the rule."
+        },
+        {
+          "id": "it-pyq-u6-1",
+          "number": "Q1",
+          "year": "Nov–Dec 2024",
+          "marks": "Q.6(b) · 10–12 marks",
+          "type": "Essay",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-2",
+          "question": "\"Discuss provisions relating to cybersecurity under the IT Act with the help of decided cases.\"",
+          "modelAnswer": "> Nov–Dec 2024 Q.6(b) · 10–12 marks \"Discuss provisions relating to cybersecurity under the IT Act with the help of decided cases.\" Model answer Thesis. The IT Act's cyber‑security architecture rests on four distinct executive powers — interception (s.69), blocking (s.69A), traffic‑data collection (s.69B) and protected‑system designation (s.70, with the institutional machinery of ss.70A and 70B) — each procedurally fenced by the 2009 Rules and each governed by the legality → legitimate aim → proportionality test laid down in K.S. Puttaswamy v. Union of India , (2017) 10 SCC 1. (1) Interception — s.69 and the 2009 Interception Rules. The Central or State Government, or a specially authorised officer, satisfied of necessity or expediency in the enumerated interests — sovereignty and integrity of India, defence, security of the State, friendly relations with foreign States, public order, preventing incitement to a cognizable offence, and investigation of any offence — may by reasoned written order direct any agency of the appropriate Government to intercept, monitor or decrypt information. The competent authority is the Union or State Home Secretary; Rule 8 requires consideration of alternative means; Rule 11 limits a direction to 60 days , renewable to a maximum of 180 days ; Rule 22 requires a Review Committee to meet at least every two months with power to set aside directions. Subscribers and intermediaries must extend technical assistance on pain of seven years' imprisonmen"
+        },
+        {
+          "id": "it-pyq-u6-2",
+          "number": "Q2",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-3",
+          "question": "Critically analyse the doctrine of proportionality as developed in Justice K.S. Puttaswamy v. Union of India and its application to state surveillance powers under the IT Act.",
+          "modelAnswer": "Model answer Thesis. Puttaswamy supplied the master test; the Unit VI powers are its first and hardest application; and the application is incomplete — s.69A has been tested and upheld, while s.69 and the CERT‑In retention mandate have not. (1) The doctrine. A nine‑Judge Constitution Bench unanimously held that the right to privacy is a fundamental right intrinsic to Article 21 and traceable to Articles 14 and 19, overruling M.P. Sharma v. Satish Chandra (1954) and Kharak Singh v. State of U.P. (1962) to the contrary. It adopted a three‑fold test — legality (a valid law), legitimate State aim (necessity in a democratic society), and proportionality (rational nexus plus least‑restrictive alternative) — later refined into four prongs by Anuradha Bhasin : legitimate goal; suitability; absence of an equally effective but less restrictive alternative; and non‑disproportionate effect. The Court also insisted on the territorial and temporal dimension: the restriction must be tailored to the extent of the emergency, the nature of the urgency, and the duration necessary. (2) Applied to s.69A blocking — the successful application. Legality: s.69A is an enacted provision and the 2009 Rules are valid subordinate legislation. Legitimate aim: the grounds are a near‑verbatim recitation of the Article 19(2) subjects — sovereignty and integrity, defence, security of the State, friendly relations, public order, incitement to a cognizable offence. Proportionality: the Rules supply a hearing to the originator and the intermediary with at least 48 hours' notice; a reasoned written order assailable under Article 226; and a Review Committee that may unblock. The Supreme Court accordingly held s.69A to be “a narrowly drawn provision with several safeguards”. Contrast s.66A , struck down in the same judgment: its grounds lay wholly outside Article 19(2), and it was vague, overbroad and chilling. (3) Applied to network shutdown — the corrective application. Anuradha Bhasin applied the same test to the Temporary Suspension of Telecom Services Rules, 2017 and s.144 CrPC . It held that internet access is instrumental to Articles 19(1)(a) and 19(1)(g); that “you must not use a steam hammer to crack a nut, if a nutcracker would do” ; that lack of technology to block selectively is not a justification for a total shutdown; that indefinite suspension is impermissible; that the Review Committee must review every seven working days ; and that orders must be published . Orders “passed mechanically or in a cryptic manner cannot be said to be orders passed in accordance with law”. (4) The incomplete applications — where the critique lies. (a) s.69 interception has never been comprehensively reviewed post‑ Puttaswamy , despite being the more invasive power. Its legitimate aim limb is itself questionable, because s.69(1) permits interception “for investigation of any offence” — a ground that is not an Article 19(2) subject matter. (b) Authorisation is executive : the competent authority is the Home Secretary and the Review Committee is headed by the Cabinet Secretary — the executive authorises and reviews its own action, with no judicial authorisation. (c) The CERT‑In 2022 Directions impose indiscriminate 180‑day log retention and five‑year VPN subscriber retention — precisely the vice identified in the CJEU's Digital Rights Ireland and Tele2 Sverige/Watson decisions, and not yet tested in India. (d) Rule 16's confidentiality undermines the very writ‑review safeguard on which Shreya Singhal 's validation of s.69A rested. Conclusion. Puttaswamy 's proportionality doctrine is now the governing framework for every exercise of the ss.69, 69A and 70 powers, and it has already produced concrete results — the validation of a procedurally safeguarded blocking regime, and the prohibition of indefinite internet shutdowns. But its application is uneven : content blocking and network suspension have been judicially tested, while interception, indiscriminate data retention and the practical operation of the blocking rules have not. The doctrine is established; its enforcement is incomplete."
+        },
+        {
+          "id": "it-pyq-u6-3",
+          "number": "Q3",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-4",
+          "question": "\"Discuss the right to be forgotten in Indian law — is there a codified right, and how do courts currently handle such claims?\"",
+          "modelAnswer": "Model answer Thesis. There is no codified right to be forgotten in India . What exists is the narrower erasure right in the DPDP Act, 2023 , and a fragmented body of High Court decisions recognising a limited right to delinking , reasoned from the Puttaswamy privacy right and the European Google Spain doctrine. (1) The European source. In Google Spain SL v. AEPD , Case C‑131/12 (CJEU, 2014), the Court of Justice held that a data subject may require a search engine to de‑list results for a search on his name where the information is inadequate, irrelevant, no longer relevant or excessive in relation to the purposes of processing and the time elapsed. The right was later codified in Article 17 of the GDPR . It is important to be precise about its character: it is a de‑listing right against search engines , not a right to erase the underlying article, and it is balanced against the public interest in access to information. (2) The Indian statutory position. There is no provision in the IT Act conferring a right to be forgotten. The closest analogue is the right to erasure in s.12 of the Digital Personal Data Protection Act, 2023 , operationalised by the DPDP Rules, 2025 : a Data Principal may require erasure of personal data that is no longer necessary for the specified purpose, or where consent has been withdrawn, subject to legal retention requirements. This is narrower than the European right — it is consent‑based and purpose‑based , not time‑based . A person whose ten‑year‑old acquittal report remains online cannot demand its erasure under s.12 merely because time has passed and public interest has waned. (3) The Indian judicial approach. High Courts — in Delhi, Karnataka, Kerala and Gujarat — have recognised a limited right to have outdated or irrelevant personal information delinked from search results or removed from court‑judgment repositories, reasoning from the Puttaswamy privacy right and, expressly, from Google Spain . The claims that have succeeded typically concern acquittals, matrimonial disputes and sensitive personal matters . But the case law is fragmented and non‑uniform : there are no settled criteria for how much time must pass, how public interest is to be assessed, or whether relief runs against the search engine or the primary publisher . There is no Supreme Court authority definitively settling the doctrine's scope. (4) The three unresolved tensions. (a) De‑listing versus primary‑source removal — the European right runs against search engines; Indian claimants often seek removal of the underlying article or judgment, which raises very different free‑expression and open‑justice questions. (b) Privacy versus open justice — court judgments are public documents and judicial records resist erasure; the Supreme Court has consistently resisted the redaction or removal of judgments. (c) Who decides — in Europe the data controller decides, subject to regulator oversight; India has no equivalent adjudicatory mechanism for a forgetting claim. Conclusion. India has no codified right to be forgotten. It has a narrower statutory erasure right in the DPDP Act, and an inconsistent body of High Court decisions recognising a limited delisting right. The result is an asymmetry worth stating explicitly in an exam: India's surveillance‑proportionality jurisprudence is now well developed after Puttaswamy and Anuradha Bhasin , while its digital‑forgetting jurisprudence remains fragmented and uncodified — leaving a significant gap between India's protection of the individual against the State's eyes and its protection of the individual against the permanence of the record."
+        },
+        {
+          "id": "it-pyq-u6-4",
+          "number": "Q4",
+          "year": "DU self‑learning exercise",
+          "marks": "Printed in the DU case material, p.179–180",
+          "type": "Problem",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-5",
+          "question": "\"The Intermediaries are required to take down or block content upon notification — the court has clarified that such takedown will only be upon receipt of an order from a government agency or a court and not at the discretion of the intermediary or on receipt of request by an affected person. Don't you think that the Court has diluted the due diligence obligation of the Intermediaries in India, to a great extent, as now Intermediaries instead of being proactive in monitoring obligations pertaining to the offensive matter on their websites, will wait for a government notification or court order to remove them from their site?\"",
+          "modelAnswer": "> DU self‑learning exercise Printed in the DU case material, p.179–180 \"The Intermediaries are required to take down or block content upon notification — the court has clarified that such takedown will only be upon receipt of an order from a government agency or a court and not at the discretion of the intermediary or on receipt of request by an affected person. Don't you think that the Court has diluted the due diligence obligation of the Intermediaries in India, to a great extent, as now Intermediaries instead of being proactive in monitoring obligations pertaining to the offensive matter on their websites, will wait for a government notification or court order to remove them from their site?\" Model answer Understanding the question. The exercise asks whether the Shreya Singhal reading‑down of s.79(3)(b) and Rule 3(4) of the 2011 Rules — confining “actual knowledge” to a court order or a Government notification — has diluted the due diligence obligation, and whether the result is that intermediaries will now simply wait for a court order instead of proactively monitoring. (1) The reading‑down and its rationale. In Shreya Singhal the Supreme Court held that s.79 is an exemption provision closely related to the offence provisions; that under s.69A blocking can occur only by a reasoned order after safeguards including a hearing; and that “the intermediary applying its own mind… is noticeably absent” from that scheme. Practically, it would be “very difficult for intermediaries "
+        },
+        {
+          "id": "it-pyq-u6-5",
+          "number": "Q5",
+          "year": "DU self‑learning exercise",
+          "marks": "Printed in the DU case material, p.180",
+          "type": "Problem",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-6",
+          "question": "\"State does not have absolute power to restrict fundamental freedoms in cyberspace. Does it apply to information privacy also? Is the Right to information Privacy lies only against the State or does it extend against private sector too? (Hint — Justice K.S. Puttaswamy (Retd.) v. Union of India)\"",
+          "modelAnswer": "> DU self‑learning exercise Printed in the DU case material, p.180 \"State does not have absolute power to restrict fundamental freedoms in cyberspace. Does it apply to information privacy also? Is the Right to information Privacy lies only against the State or does it extend against private sector too? (Hint — Justice K.S. Puttaswamy (Retd.) v. Union of India)\" Model answer (1) The State's power is not absolute — the framework. No fundamental right is absolute, and the freedom of speech and expression under Article 19(1)(a) is expressly “subject to” reasonable restrictions under Article 19(2). But the restriction must satisfy the Puttaswamy three‑fold test : legality (a valid law), legitimate aim (a constitutional ground), and proportionality (rational nexus and least‑restrictive means). In cyberspace specifically: s.66A was struck down in Shreya Singhal because it was vague, overbroad, unconfined to any Article 19(2) ground and chilling; s.69A was upheld because its grounds are confined to the Article 19(2) subjects, reasons must be recorded in writing, and the 2009 Rules supply a hearing and a Review Committee; and indefinite internet shutdowns were held impermissible in Anuradha Bhasin because they failed the proportionality and periodic‑review requirements. So the State's power in cyberspace is conditional, reasoned and reviewable — not absolute. (2) Does the same framework apply to informational privacy? Yes — and more strongly. In Puttaswamy the nine‑Judge Bench held th"
+        },
+        {
+          "id": "it-pyq-u6-6",
+          "number": "Q6",
+          "year": "Essay",
+          "marks": "10–15 marks",
+          "type": "Essay",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-7",
+          "question": "\"Distinguish the powers under ss.69, 69A and 70 of the IT Act, 2000, with reference to their respective procedural safeguards and judicial treatment.\"",
+          "modelAnswer": "Model answer Structure. A tabular comparison is the right form for this question, followed by three short paragraphs on judicial treatment. Reproduce the table at §1.3 above and then add: s.69 — interception. A covert power over the content of communications, exercised by a reasoned written order of the competent authority (the Union or State Home Secretary) directing an agency of the appropriate Government to intercept, monitor or decrypt. Its grounds are the widest in the cluster because they include “for investigation of any offence” . Its safeguards are in the 2009 Interception Rules: Rule 8's alternative‑means requirement; Rule 11's 60‑day validity renewable to 180 days; Rule 22's Review Committee every two months; Rules 15–17's confidentiality; and Rules 12–13's record‑keeping. Judicial treatment: the Telegraph Act analogue was scrutinised in PUCL (1997), which read procedural safeguards into s.5(2) and held telephone tapping to infract Article 21 unless permitted under the procedure established by law. But s.69 itself has never been comprehensively reviewed post‑ Puttaswamy — the Unit's most important gap. s.69A — blocking. An overt power over public access to already‑published information, exercised by a reasoned written order of the Central Government or an authorised officer, directed to an agency of the Government or an intermediary . Its grounds are confined to the Article 19(2) subjects , with no general investigative limb. Its safeguards are in the 2009 Blocking Rules: the Designated Officer (not below Joint Secretary); the Nodal Officer; the Committee of Government personnel; Rule 8's 48‑hour notice and hearing to the originator as well as the intermediary ; the Secretary, DoIT's approval; Rule 9's emergency route with 48‑hour Committee consideration; Rule 14's Review Committee; and Rule 16's confidentiality. Judicial treatment: expressly upheld in Shreya Singhal as “a narrowly drawn provision with several safeguards”, the Court holding that the absence of ss.95 and 96 CrPC safeguards did not make the Rules infirm. s.70 — protected systems. A protective power, exercised by notification in the Official Gazette declaring a computer resource affecting Critical Information Infrastructure a protected system, followed by a written authorisation of persons who may access it. Its “safeguard” is the access‑control mechanism itself; there is no hearing, no review committee and no reasons requirement, because the provision does not restrict speech but creates an access‑control offence . Judicial treatment: not seriously contested — the critical‑infrastructure logic is uncontroversial — but note that unauthorised access or attempt carries up to ten years , the second‑highest penalty in the Act after cyber terrorism (s.66F). Conclusion. The three powers differ in object (content versus access versus infrastructure), addressee (a Government agency versus an intermediary or agency versus all persons), grounds (broadest for s.69; Article 19(2)‑confined for s.69A; consequence‑based for s.70), and judicial treatment (untested post‑ Puttaswamy for s.69; upheld in Shreya Singhal for s.69A; uncontested for s.70). The common thread is the Puttaswamy three‑fold test, and the common weakness is the reliance on internal executive review rather than independent authorisation."
+        },
+        {
+          "id": "it-pyq-u6-7",
+          "number": "Q7",
+          "year": "Short notes",
+          "marks": "5 marks each",
+          "type": "Essay",
+          "unitNumber": 6,
+          "unit": "Unit 6: Cyber Security & Critical Infrastructure",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u6-8",
+          "question": "Write short notes on any five of the following.",
+          "modelAnswer": "Model answer skeletons (a) Section 69A and the 2009 Blocking Rules. Power to block public access to information on Article 19(2)‑proximate grounds, by reasoned written order. Procedure: complaint → Nodal Officer → Designated Officer (Joint Secretary or above) → Committee → Rule 8 hearing (not less than 48 hours) to originator and intermediary → Secretary DoIT approval → blocking order. Rule 9 emergency blocking without hearing, Committee consideration within 48 hours. Rule 14 Review Committee every two months; Rule 16 confidentiality. Upheld in Shreya Singhal as “a narrowly drawn provision with several safeguards”. Intermediary non‑compliance: up to seven years. (b) The Puttaswamy three‑fold test. Legality (a valid law); legitimate State aim (a constitutional ground); proportionality (rational nexus between object and means, and least‑restrictive alternative). Refined into four prongs in Anuradha Bhasin : legitimate goal; suitability; absence of an equally effective but less restrictive alternative; non‑disproportionate effect — with attention to the restriction's territorial and temporal scope. The master formula for every state intrusion into digital privacy. (c) Protected systems. Under s.70, the appropriate Government may declare by notification any computer resource which directly or indirectly affects Critical Information Infrastructure to be a protected system; CII means a resource whose incapacitation or destruction would have a debilitating impact on national security, economy, public health or safety. Access is by written authorisation. Unauthorised access or attempt : up to ten years and fine — the second‑highest penalty in the Act. (d) The right to be forgotten in India. Not codified. Sources: the DPDP Act, 2023, s.12 erasure right (consent‑based and purpose‑based, not time‑based); and a fragmented body of High Court decisions (Delhi, Karnataka, Kerala, Gujarat) recognising limited delinking , drawing on Google Spain SL v. AEPD (CJEU, 2014) and the Puttaswamy privacy right. No Supreme Court authority on scope. Three unresolved tensions: de‑listing versus primary‑source removal; privacy versus open justice; and the absence of an adjudicatory mechanism. (e) CERT‑In and the 2022 Directions. s.70B makes CERT‑In the national incident‑response agency, empowered to call for information and issue directions. Its Directions of 28 April 2022 require: incident reporting within 6 hours of awareness; 180‑day rolling ICT log retention within India ; NTP synchronisation; a named Point of Contact; and 5‑year subscriber‑information retention by VPS, cloud, data‑centre and VPN providers. Non‑compliance: up to one year (s.70B(7)). Privacy critique: indiscriminate retention of the kind struck down in the CJEU's Digital Rights Ireland . (f) Ratan Tata and the duty of confidentiality. The Radia tapes were intercepted under s.5(2) of the Telegraph Act , not s.69 IT Act. The case's contribution is the distinction between the legality of interception and the legality of subsequent disclosure : a procedurally compliant interception does not license the publication of the material, and the State owes a duty of confidentiality in respect of intercepted communications. The Court framed three issues — privacy against the Government, privacy against the Press, and the right to know. Criticised for supplying no remedy. Note on technique. A five‑mark short note runs to roughly 120–180 words: definition or rule → the operative provision → one case authority → one consequence . In this Unit, never open a short note on s.69A or on privacy without naming the Puttaswamy three‑fold test ."
+        },
+        {
+          "id": "it-pyq-u7-1",
+          "number": "Q1",
+          "year": "DU LL.B. Examination",
+          "marks": "15–20 Marks",
+          "type": "Problem",
+          "unitNumber": 7,
+          "unit": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u7-2",
+          "question": "Q.1 Mr. Arjun enters an online agreement via email with a US company. Both parties digitally sign via an online platform. The company later denies the validity of the electronic signature. Examine the validity of this e-contract.",
+          "modelAnswer": "> DU Previous Year Question · Nov–Dec 2025 · Question 1 · Unit VII (E-Contracts) · the only real DU PYQ for this Unit Q.1 Mr. Arjun enters an online agreement via email with a US company. Both parties digitally sign via an online platform. The company later denies the validity of the electronic signature. Examine the validity of this e-contract. Step 1 — Identify the three legal questions the problem actually raises. (i) Is an agreement formed by e-mail a valid contract? (ii) Is an electronic signature legally valid? (iii) What must the company prove to defeat it? Answer all three; a candidate who answers only (ii) loses half the marks. Step 2 — The medium is not a ground of invalidity (s.10A IT Act, 2000). Section 10A provides that \"where in a contract formation, the communication of proposals, the acceptance of proposals, the revocation of proposals and acceptances, as the case may be, are expressed in electronic form or by means of an electronic record, such contract shall not be deemed to be unenforceable solely on the ground that such electronic form or means was used for that purpose.\" Mr. Arjun's e-mailed agreement with a US company is therefore not unenforceable merely because it was formed by e-mail. Note the word \"solely\" : the section removes only the electronic medium as a ground of invalidity, and does not cure defects of offer, acceptance, consideration, capacity, consent or object, which remain governed by the Indian Contract Act, 1872 . Step 3 — The substantiv"
+        },
+        {
+          "id": "it-pyq-u8-1",
+          "number": "Q1",
+          "year": "DU self-learning exercise printed after Banyan Tree · pp. 230 of the case material",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-2",
+          "question": "Exercise 1 DU self-learning exercise printed after Banyan Tree · pp. 230 of the case material",
+          "modelAnswer": "\"Can [a] Delhi court assume jurisdiction if the defendant in [the] above case provided spa services in Hyderabad, and instead of booking orders directly, enters into a contract with an online platform X, to book orders in Delhi through its website for spa services in Hyderabad. The plaintiff has registered office in Tokyo. In other words, does cause of action arise in Delhi. (Hint — Impresario Entertainment Case)\""
+        },
+        {
+          "id": "it-pyq-u8-2",
+          "number": "Q2",
+          "year": "DU self-learning exercise printed after World Wrestling Entertainment · p. 194",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-3",
+          "question": "Exercise 2 DU self-learning exercise printed after World Wrestling Entertainment · p. 194",
+          "modelAnswer": "Model answer The proposition: mere display of articles on a website, without proof of genuine transactions, is not enough to establish that the plaintiff carries on business in the jurisdiction. Both limbs of the exercise point the same way, and the answer should be given in two parts. Part A — Why mere display is not enough. WWE did not hold that a website display alone constitutes carrying on business. It held that where transactions are actually concluded with customers in the forum — offers made there, subject to confirmation through the website, money paid from there — \"the essential part of the business of the [plaintiff], insofar as its transactions with customers in [the forum] are concerned, takes place in [the forum]\". The reasoning is explicitly transactional: \"The offers are made by customers at Delhi. The offers are subject to confirmation/acceptance of the appellant/plaintiff through its website. The money would emanate or be paid from Delhi.\" A website that displays articles but permits no transaction is, on the Banyan Tree taxonomy, a passive website; and \"a passive website, with no intention to specifically target audiences outside the State where the host of the website is located, cannot vest the forum court with jurisdiction.\" Part B — The minimum contacts framework. The hint directs the student to the American doctrine, which supplies the vocabulary for the answer. Under International Shoe , the defendant must have such minimum contacts with the forum that the suit does not offend \"traditional notions of fair play and substantial justice\". Under Burger King , jurisdiction requires that the defendant purposefully availed itself of the privilege of conducting activities within the forum, thereby invoking its benefits and protections. Under Bensusan , a defendant who has \"simply created a web site and permitted anyone who could find it to access it\" is like one who places a product into the stream of commerce — not purposeful availment. Under Neogen , the mere availability of a website is \"an attenuated contact that falls short of purposeful availment\". Applied to the plaintiff's side of the question: mere availability of a website is an attenuated contact . It is the transactions — the deliberate, repeated conclusion of sales with forum customers — that constitute the purposeful invocation of the forum's market. Hence the plaintiff should be required to prove some genuine transactions , not merely the display of articles. Part C — The qualification for a natural person. For a natural person , the position is more favourable than for a company. The Explanation to s.20 CPC — which requires an office — applies only to a corporation . A natural person can carry on business at a place without an office there. But the burden is still on the plaintiff to plead, in the plaint (Order VII Rule 1(e) and (f)), and then to support, the facts showing the transactions. On a demurrer under Order VII Rule 10 CPC, only the averments in the plaint are examined ( WWE ); at the later, evidential stage, the plaintiff must prove them. Conclusion. Mere display of articles on an accessible website does not permit the presumption that the plaintiff carries on business in that jurisdiction. The plaintiff must plead and prove genuine transactions with forum customers. The minimum contacts framework supplies the reason: availability is an attenuated contact; the concluded transactions are the purposeful availment."
+        },
+        {
+          "id": "it-pyq-u8-3",
+          "number": "Q3",
+          "year": "DU self-learning exercise printed after World Wrestling Entertainment · p. 194",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-4",
+          "question": "Exercise 3 DU self-learning exercise printed after World Wrestling Entertainment · p. 194",
+          "modelAnswer": "Model answer Short answer: No. Step 1 — Identify the ground relied on. The plaintiff invokes s.134(2) TMA / s.62(2) Copyright Act on the footing of its own carrying on of business in Delhi, and not the defendant's activities giving rise to a part of the cause of action in Delhi. That choice is fatal. Step 2 — Apply the Explanation to s.20 CPC. \"A corporation shall be deemed to carry on business at its sole or principal office in India or, in respect of any cause of action arising at any place where it has also a subordinate office, at such place.\" Read with Patel Roadways Ltd. v. Prasad Trading Co. , (1991) 4 SCC 270, the Explanation \"is really an explanation to Clause (a)\" and clarifies where a corporation can be said to carry on business. As Big Tree put it: \"In law unless a company has an office at a place, it cannot be said to be carrying on business at that particular place .\" Step 3 — Apply Sanjay Dalia . In Indian Performing Rights Society Ltd. v. Sanjay Dalia , (2015) 10 SCC 161, the Supreme Court held that the restrictive meaning of \"carries on business\" adopted for a defendant corporation applies equally to a plaintiff corporation invoking the special forums. And it added the restriction: \"in case Plaintiff is residing or carrying on business at a particular place/having its head office and at such place cause of action has also arisen wholly or in part, Plaintiff cannot ignore such a place under the guise that he is carrying on business at other far flung places also.\" Step 4 — Apply the restriction to these facts. Here the cause of action has arisen in Mumbai , where the company has a branch office. The company therefore cannot ignore Mumbai and sue in Delhi, where it has no office at all. The accessibility of its website in Delhi does not supply the missing office. Step 5 — Distinguish WWE . WWE did not pronounce upon the position of a company plaintiff with no office in the forum; its \"virtual shop\" reasoning was applied to a plaintiff that had pleaded and relied on its carrying on of business in Delhi. Where the plaintiff is a company with no office in the forum, the Explanation governs and the plaint must be returned. Step 6 — Note the alternative route. Had the plaintiff instead pleaded that the defendant's impugned activities took place in Delhi so that a part of the cause of action arose there under s.20(c), Delhi could have had territorial jurisdiction. That route was identified by the Big Tree court itself and was not taken. Conclusion. No. A company plaintiff with no office in Delhi does not \"carry on business\" in Delhi merely because its interactive website is accessible there. Where the cause of action has arisen in Mumbai, where the company has a branch office, the suit must be filed in Mumbai, and the Delhi plaint must be returned under Order VII Rule 10 CPC."
+        },
+        {
+          "id": "it-pyq-u8-4",
+          "number": "Q4",
+          "year": "DU self-learning exercise printed after Maqbool Fida Husain · p. 78",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-5",
+          "question": "Exercise 4 DU self-learning exercise printed after Maqbool Fida Husain · p. 78",
+          "modelAnswer": "Model answer Yes — the same principle applies, and the answer is the same. Step 1 — The statutory test is medium-neutral. The Court in Maqbool Fida Husain expressly held that \"both under the Indian Penal Code, 1860 and the Information Technology Act, 2000 the test to determine obscenity is similar\", and that s.67 IT Act \"is the first statutory provisions dealing with obscenity on the Internet\". A poem published on a website is therefore judged by the same test as a painting: is it lascivious ; does it appeal to the prurient interest ; does its effect, taken as a whole, tend to deprave and corrupt persons who are likely to read, see or hear it? (s.292(1) IPC, mirrored in s.67 IT Act.) Step 2 — Apply the Husain reasoning to words. The Court held that nudity alone is not obscenity: \"just because the artist has expressed it in nude does not make the painting obscene per se\". It held that the work must be read as a whole : \"If the painting is looked as a whole, it would reveal that ... the aesthetic touch to the painting dwarfs the so called obscenity\". It held that offence or disgust is not the test: \"some might feel offended or disgusted ... but that by itself and nothing more in my opinion is not sufficient to qualify the test of obscenity.\" And it held that there is no mens rea where the impulse is artistic: \"the object of painting the woman in nude is also part of the same expression and is obviously not to stimulate the viewer's prurience but instead to shake up the very conscious of the viewer\". Step 3 — A poem describing Mother India in the same fashion. On the same reasoning, a poet who describes the nation as a distressed, unclothed woman is using a metaphor for the nation's suffering , not writing to arouse prurience. Read as a whole, the poem would be judged by its literary and artistic merit, and \"the aesthetic touch ... dwarfs the so called obscenity\". The offence or disgust of a reader who stumbles upon it \"by itself and nothing more\" is not the test. There would be no deliberate intention to outrage religious feelings under s.298 IPC, and no defamation under s.500 IPC. Step 4 — Bring in Samresh Bose v. Amal Mitra , (1986) AIR 967. The Supreme Court in Samresh Bose drew the distinction between obscenity and vulgarity : a vulgar or coarse expression is not necessarily obscene. Obscenity requires the tendency to deprave and corrupt; mere vulgarity, coarseness or bad taste does not suffice. The Court also held that a work must be judged by contemporary standards and read as a whole, not by isolated words lifted out of context. That is precisely the technique the Husain court applied to the painting, and it is the technique to apply to the poem. Step 5 — The jurisdictional dimension. The jurisdictional problem is worse for a poem, because words are easier to transmit than images. A poem published on a website is accessible everywhere, so Chapter XIII CrPC would give every magistrate in India jurisdiction (s.177 read with s.178(1), (2), (3) and (4), and s.179). The answer, as in Husain , lies in s.202 scrutiny by the magistrate and in consolidation and transfer under s.406 CrPC — and, ultimately, in legislation. Conclusion. The same principle applies. The test of obscenity is identical under s.292 IPC and s.67 IT Act; the work must be read as a whole; offence or disgust is not the test; nudity or explicitness alone is not obscenity; and vulgarity must be distinguished from obscenity ( Samresh Bose ). A poem describing Mother India in the same fashion as Husain's painting would not be obscene, and no offence would be made out."
+        },
+        {
+          "id": "it-pyq-u8-5",
+          "number": "Q5",
+          "year": "DU self-learning exercise printed after My Space · p. 125",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-6",
+          "question": "Exercise 5 DU self-learning exercise printed after My Space · p. 125",
+          "modelAnswer": "Model answer Section 2(1)(w) contains no active/passive distinction. It defines \"intermediary\", with respect to any particular electronic records, as \"any person who on behalf of another person receives, stores or transmits that record or provides any service with respect to that record \", and includes \"telecom service providers, network service providers, internet service providers, web-hosting service providers, search engines, online payment sites, online-auction sites, online-market places and cyber cafes\". The definition is functional, not behavioural. The My Space Division Bench held that MySpace \"facially falls within Section 2(1)(w) and qualifies as an intermediary/Internet service provider because it acts as a 'conduit'/portal for information where users can upload and view content.\" The court's language is instructive: MySpace \"provides a neutral platform \". So the question is whether the person is acting as a conduit or neutral platform for third-party content — not whether the person is \"active\" or \"passive\" in some abstract sense. Where the active/passive distinction does matter is under s.79(2)(b) , which conditions the safe harbour on the intermediary not (i) initiating the transmission, (ii) selecting the receiver of the transmission, and (iii) selecting or modifying the information contained in the transmission. A platform that initiates transmission or selects or modifies content loses the safe harbour — as SCIL argued MySpace had, by inserting advertisements and taking a limited licence to reformat user content. The Division Bench's answer was that MySpace's modifications were \"automatic and ... part of the core system with the only purpose of making the content compatible with the webpage\", so it complied with s.79(2)(b). Conclusion. Under s.2(1)(w) an intermediary need be neither \"active\" nor \"passive\"; the test is functional — does the person receive, store or transmit, or provide a service with respect to, third-party electronic records? The active/passive distinction is relevant only at the next stage, under s.79(2)(b) and (3), in deciding whether the safe harbour is available."
+        },
+        {
+          "id": "it-pyq-u8-6",
+          "number": "Q6",
+          "year": "DU self-learning exercise printed after My Space · p. 125",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-7",
+          "question": "Exercise 6 DU self-learning exercise printed after My Space · p. 125",
+          "modelAnswer": "Model answer Step 1 — Jurisdiction first. Before the safe harbour can be invoked, an Indian court must have jurisdiction over the passive offshore player. Applying Banyan Tree : a passive website, with no intention to specifically target audiences outside the State where the host is located, cannot vest the forum court with jurisdiction. So the threshold condition is that the offshore player must have purposefully availed itself of the Indian jurisdiction — its site must have been specifically targeted at viewers in India for commercial transactions , and some such transaction must have been entered into with an Indian user, causing injury in India. The My Space facts satisfied this: when a user accessed Myspace from India, \"she/he is automatically redirected to the website's India-centric version \". Step 2 — The conditions in s.79(2). The safe harbour under s.79(1) applies only if: (a) the functions of the intermediary are limited to providing access to a communication system over which information made available by third parties is transmitted or temporarily stored or hosted; or (b) the intermediary does not (i) initiate the transmission, (ii) select the receiver of the transmission, and (iii) select or modify the information contained in the transmission; and (c) the intermediary observes due diligence while discharging its duties under the Act and observes such other guidelines as the Central Government may prescribe. Step 3 — The exceptions in s.79(3). The safe harbour is lost if (a) the intermediary has conspired, abetted, aided or induced the commission of the unlawful act; or (b) upon receiving actual knowledge , or being notified by the appropriate Government or its agency, that information, data or a communication link residing in or connected to a computer resource controlled by the intermediary is being used to commit an unlawful act, the intermediary fails to expeditiously remove or disable access to that material without vitiating the evidence. In My Space the Court held that s.51(a)(ii) of the Copyright Act, in the case of internet intermediaries, \"contemplates actual knowledge and not general awareness \", and that the scope was widened in Shreya Singhal v. Union of India , (2015) 5 SCC 1, where actual knowledge was held to mean a court order in cases relatable to Article 19. Step 4 — The harmonious reading with s.81 and the Copyright Act. Section 79 grants \"a measured privilege ... an affirmative defence and not a blanket immunity\". It must be read with the proviso to s.81 and with s.51(a)(ii) of the Copyright Act; but for the proviso, copyright owners would have had no recourse against intermediaries at all. Step 5 — The practical conditions for an offshore passive player. On the above, the safe harbour can be made applicable to a passive offshore player where: (i) the Indian court has jurisdiction because the player targeted India; (ii) the player's function is limited to access, or it does not initiate, select the receiver, or select or modify; (iii) it observes the due diligence prescribed by the Intermediary Guidelines Rules; (iv) it has not conspired, abetted, aided or induced; and (v) on receiving actual knowledge — a court order or a government notification — it removes or disables access expeditiously , without vitiating evidence. The My Space relief — an updated catalogue of specific works with URLs, take-down within 36 hours , and accounts kept for damages — is the model. Conclusion. The safe harbour is available to a passive offshore player only if the Indian court has jurisdiction over it (which requires targeting, not mere accessibility), the s.79(2) conditions are satisfied, the due diligence prescribed by the Rules is observed, none of the s.79(3) exceptions applies, and actual knowledge is acted on expeditiously. The safe harbour is an affirmative defence, not a blanket immunity."
+        },
+        {
+          "id": "it-pyq-u8-7",
+          "number": "Q7",
+          "year": "DU self-learning exercise printed after My Space · p. 125",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-8",
+          "question": "Exercise 7 DU self-learning exercise printed after My Space · p. 125",
+          "modelAnswer": "\"Due diligence under section 79 of the information technology act has been narrowed whereas the safe harbour rule is wide. Analyse with reasons in support of the statement. [Hint — Amazon Seller Services Private Limited v. Amway India Enterprises Private Limited , Del (DB) decided on Jan 31, 2020.]\""
+        },
+        {
+          "id": "it-pyq-u8-8",
+          "number": "Q8",
+          "year": "DU self-learning exercise printed after My Space · p. 125",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-9",
+          "question": "Exercise 8 DU self-learning exercise printed after My Space · p. 125",
+          "modelAnswer": "Model answer The problem. Where objectionable content is shared not by a human user but by a malware program (a bot), the intermediary's notice-and-take-down machinery faces two difficulties: the volume of shares may be enormous and automated, and the \"user\" cannot be identified or terminated. The intermediary may be said to have \"actual knowledge\" only of the symptom, not of the source. What a CAPTCHA does. A CAPTCHA (\"Completely Automated Public Turing test to tell Computers and Humans Apart\") is a challenge-response test designed to be answerable by a human and not by a machine. By requiring a successful response before an action can be completed, a CAPTCHA interposes a human gate between the automated program and the platform. How it bears on intermediary liability. Four points: It restores the human actor, and with it the s.79(2)(b) analysis. Where content is shared by a human who has passed a CAPTCHA, the intermediary can say that it did not initiate the transmission, did not select the receiver, and did not select or modify the information. Where the share is machine-generated, the \"transmission\" is arguably not initiated by a third party at all, which weakens the safe-harbour analysis. It converts general awareness into identifiable knowledge. Section 79(3)(b) requires the intermediary to act on actual knowledge . A CAPTCHA-gated action produces an attributable, traceable event — the specific account, the specific timestamp, the specific URL — which is exactly what the My Space relief requires: \"an updated catalogue of 'specific' works ... along with the location/URL of such work\". It is part of \"due diligence\" under s.79(2)(c). Deploying CAPTCHA is a reasonable, proportionate technical measure — one of the four OECD steps the My Space Court identified (notice and take down; notice and notice; notice and disconnection; filtering ). It is the intermediary's answer to the charge that it \"did not move its little finger\" (as the Google India v. Visaka Industries court put it when refusing the safe harbour). It does not create a duty to monitor. This is the crucial limit. CAPTCHA is a filtering measure applied at the point of action, not a general obligation to scan content. My Space held that requiring an intermediary to identify infringing content from millions of uploads \"could have a chilling effect on free speech\" and would amount to \"unwarranted private censorship\". So CAPTCHA helps because it is targeted and action-linked , not because it surveils. Conclusion. CAPTCHA resolves intermediary liability issues in malware-driven sharing by re-establishing the human actor, producing the specific and traceable knowledge that s.79(3)(b) requires, and constituting proportionate due diligence of the \"filtering\" kind — without converting the intermediary into a general monitor of content, which My Space and Shreya Singhal forbid."
+        },
+        {
+          "id": "it-pyq-u8-9",
+          "number": "Q9",
+          "year": "DU self-learning exercise printed after My Space · p. 125",
+          "marks": "15–20 Marks",
+          "type": "Essay",
+          "unitNumber": 8,
+          "unit": "Unit 8: Jurisdiction in Cyberspace",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "anchorId": "pyq-it-u8-10",
+          "question": "Exercise 9 DU self-learning exercise printed after My Space · p. 125",
+          "modelAnswer": "Model answer Step 1 — What a VPN does. A Virtual Private Network encrypts the user's traffic and routes it through a remote server, so that the user's IP address and location are concealed from the destinations visited and, often, from the user's own ISP. It is a legitimate cyber-security tool — it is used by corporations, journalists and, in India, by CERT-In's own advisories for securing remote access. Step 2 — The two privacy interests in tension. (i) The user's interest in anonymity and location privacy. A VPN protects the user's identity and location from the sites visited and from network observers. (ii) The countervailing interest in attribution. The same feature frustrates the attribution of electronic records under s.11 IT Act (attribution to the originator, including by an information system programmed to operate automatically), the investigation of offences, and the identification of the person behind unlawful content — the very identification that Banyan Tree 's \"purposeful availment\" test and Maqbool Fida Husain 's jurisdictional analysis require. Step 3 — The five-year retention problem. Storing VPN logs for five years creates privacy issues on four axes. First, purpose limitation : logs retained for cyber security are inevitably available for other purposes. Second, function creep and surveillance : s.69 IT Act permits interception, monitoring or decryption in the interest of the sovereignty and integrity of India, defence, security of the State, friendly relations with foreign States or public order, or for preventing incitement to the commission of a cognizable offence, or for the investigation of any offence — subject to the procedure and safeguards prescribed. Five-year retention makes that power far more potent. Third, the intermediary's own position : s.67C IT Act obliges intermediaries to preserve and retain information as prescribed for such duration as may be prescribed; and s.2(1)(w) expressly includes VPN and network service providers within \"intermediary\", so the s.79 safe harbour analysis applies to them. Fourth, data localisation and cross-border transfer : retention in India versus abroad raises the territorial questions that this Unit is about. Step 4 — The legal framework. The Digital Personal Data Protection Act, 2023 and the Rules notified under it now govern the processing of personal data, including by virtue of the obligations they impose on data fiduciaries in respect of purpose limitation, storage limitation and security safeguards. The Puttaswamy line of decisions establishes that privacy is a fundamental right and that any invasion must satisfy legality, legitimate aim, proportionality and procedural safeguards. The answer must therefore balance the security justification against those requirements. Conclusion. Yes — the use of a VPN for cyber security, coupled with five-year data retention, creates real privacy issues: it conceals the user's identity and location while simultaneously building a detailed, long-lived record of users' activity that is available for surveillance and for attribution. The issues are to be resolved by applying the DPDP Act 2023, the Puttaswamy proportionality test, and the safeguards in ss.67C and 69 IT Act — and, in this Unit's terms, by asking which State's law governs the retained data and where the computer resource holding it is located."
+        }
+      ],
+      "revisions": [
+        {
+          "id": "it-rev-u1",
+          "unitNumber": 1,
+          "unitTitle": "Unit 1: Introduction & Fundamentals of Cyber Law",
+          "badge": "Unit 1 Capsule",
+          "title": "Unit 1: Introduction & Fundamentals of Cyber Law — Rapid Revision Capsule",
+          "anchorId": "rev-it-u1",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Store",
+                "Writing data to a hard disk, server, cloud, SIM, pen drive or database",
+                "s.2(1)(k) computer resource; s.2(1)(l) computer system"
+              ],
+              [
+                "Retrieve",
+                "Searching, reading and extracting stored data",
+                "s.2(1)(a) “access” — gaining entry into, instructing or communicating with the logical, arithmetical or memory function resources of a computer, computer system or computer network"
+              ],
+              [
+                "Transmit",
+                "Sending data across a network — email, SMS, WhatsApp, API call",
+                "s.2(1)(j) computer network; s.2(1)(ha) communication device"
+              ],
+              [
+                "Manipulate",
+                "Altering, deleting, adding to, or re&#8209;programming data or code",
+                "s.65 tampering with computer source code; s.43 / s.66 damage & hacking"
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 1: Introduction & Fundamentals of Cyber Law."
+        },
+        {
+          "id": "it-rev-u2",
+          "unitNumber": 2,
+          "unitTitle": "Unit 2: Legal Recognition & Authentication of Electronic Records",
+          "badge": "Unit 2 Capsule",
+          "title": "Unit 2: Legal Recognition & Authentication of Electronic Records — Rapid Revision Capsule",
+          "anchorId": "rev-it-u2",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-II_Legal_Recognition_and_Authentication_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory text",
+                "Verbatim or near&#8209;verbatim provision of the IT Act, 2000 (as amended in 2008) or of the UNCITRAL Model Laws.",
+                "Quote it. A section quoted correctly in an exam answer is worth three paraphrased ones."
+              ],
+              [
+                "Definition / element",
+                "An element, a limb of a test, or a definitional clause you must break out separately.",
+                "Use as the skeleton of your answer — every element is one paragraph."
+              ],
+              [
+                "Real example",
+                "An everyday, Indian, verifiable illustration.",
+                "One example per answer is the difference between a \"good\" and a \"very good\" answer."
+              ],
+              [
+                "Case law",
+                "Facts, issues, arguments of both sides, decision, ratio — the DU prescribed format.",
+                "Learn the ratio and the one&#8209;line citation."
+              ],
+              [
+                "Comparative / critique",
+                "Foreign models (UNCITRAL, US, EU, UK) and scholarly criticism.",
+                "For \"critically examine\" and \"discuss\" questions only."
+              ],
+              [
+                "DU PYQ",
+                "A question actually asked in a DU semester examination.",
+                "Answer it in the exact structure given."
+              ],
+              [
+                "Diagram",
+                "A flowchart or schematic. Every one has a caption telling you how to redraw it in an answer script.",
+                "Redraw, don't describe. Examiners reward diagrams."
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 2: Legal Recognition & Authentication of Electronic Records."
+        },
+        {
+          "id": "it-rev-u3",
+          "unitNumber": 3,
+          "unitTitle": "Unit 3: Civil Liabilities & Cyber Torts",
+          "badge": "Unit 3 Capsule",
+          "title": "Unit 3: Civil Liabilities & Cyber Torts — Rapid Revision Capsule",
+          "anchorId": "rev-it-u3",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-III_Civil_Liabilities_Cyber_Torts_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory text",
+                "Verbatim or near&#8209;verbatim provision of the IT Act, 2000 (as amended in 2008), the SPDI Rules 2011, or the DPDP Act 2023.",
+                "Quote it. Section 43's ten clauses, quoted accurately, are the single highest&#8209;yield passage in this Unit."
+              ],
+              [
+                "Definition / element",
+                "An element, a limb of a test, or a definitional clause you must break out separately.",
+                "Use as the skeleton of your answer — every element is one paragraph."
+              ],
+              [
+                "Real example",
+                "An everyday, Indian, verifiable illustration.",
+                "One example per answer is the difference between a \"good\" and a \"very good\" answer."
+              ],
+              [
+                "Case law",
+                "Facts, issues, arguments of both sides, decision, principle evolved — the DU prescribed format.",
+                "Learn the ratio and the one&#8209;line citation."
+              ],
+              [
+                "Comparative / critique",
+                "Foreign models (EU GDPR, US sectoral, UK) and scholarly criticism.",
+                "For \"critically examine\" and \"discuss\" questions only."
+              ],
+              [
+                "DU PYQ",
+                "A question actually asked in a DU semester examination.",
+                "Answer it in the exact structure given."
+              ],
+              [
+                "Diagram",
+                "A flowchart or schematic. Every one has a caption telling you how to redraw it in an answer script.",
+                "Redraw, don't describe. Examiners reward diagrams."
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 3: Civil Liabilities & Cyber Torts."
+        },
+        {
+          "id": "it-rev-u4",
+          "unitNumber": 4,
+          "unitTitle": "Unit 4: Criminal Liabilities & Cyber Crimes",
+          "badge": "Unit 4 Capsule",
+          "title": "Unit 4: Criminal Liabilities & Cyber Crimes — Rapid Revision Capsule",
+          "anchorId": "rev-it-u4",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IV_Criminal_Liabilities_Cyber_Crimes_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory text",
+                "Verbatim or near&#8209;verbatim provision of the IT Act, 2000 (as amended in 2008), the POCSO Act, 2012, or the IPC/BNS.",
+                "Quote it. The Explanations to ss.65, 66E and 67B are the highest&#8209;yield passages in this Unit."
+              ],
+              [
+                "Definition / element",
+                "An element, a limb of a test, or a definitional clause you must break out separately.",
+                "Use as the skeleton of your answer — every element is one paragraph."
+              ],
+              [
+                "Real example",
+                "An everyday, Indian, verifiable illustration.",
+                "One example per answer is the difference between a \"good\" and a \"very good\" answer."
+              ],
+              [
+                "Case law",
+                "Facts, issues, arguments of both sides, decision, principle evolved — the DU prescribed format.",
+                "Learn the ratio and the one&#8209;line citation."
+              ],
+              [
+                "Comparative / critique",
+                "Foreign models (Hicklin/Roth/Butler/Miller) and scholarly criticism.",
+                "For \"critically examine\" and \"discuss\" questions only."
+              ],
+              [
+                "DU PYQ",
+                "A question actually asked in a DU semester examination.",
+                "Answer it in the exact structure given."
+              ],
+              [
+                "Diagram",
+                "A flowchart or schematic. Every one has a caption telling you how to redraw it in an answer script.",
+                "Redraw, don't describe. Examiners reward diagrams."
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 4: Criminal Liabilities & Cyber Crimes."
+        },
+        {
+          "id": "it-rev-u5",
+          "unitNumber": 5,
+          "unitTitle": "Unit 5: Intermediary Liability & Safe Harbour",
+          "badge": "Unit 5 Capsule",
+          "title": "Unit 5: Intermediary Liability & Safe Harbour — Rapid Revision Capsule",
+          "anchorId": "rev-it-u5",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-V_Intermediary_Liability_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory text",
+                "Verbatim or near&#8209;verbatim provision of the IT Act, 2000, the IT Rules 2021 (as amended), or a companion statute.",
+                "Quote s.79(2) and (3) in full — examiners reward the exact conditions. Quote the Rule 3(1)(d) clock."
+              ],
+              [
+                "Definition / element",
+                "An element, a limb of a test, or a definitional clause you must break out separately.",
+                "Use as the skeleton of your answer — every element is one paragraph."
+              ],
+              [
+                "Real example",
+                "An everyday, Indian, verifiable illustration.",
+                "One example per answer is the difference between a \"good\" and a \"very good\" answer."
+              ],
+              [
+                "Case law",
+                "Facts, issues, arguments of both sides, decision, principle evolved — the DU prescribed format.",
+                "Learn the ratio and the one&#8209;line citation. Nine briefs, in syllabus order."
+              ],
+              [
+                "Comparative / critique",
+                "Foreign models (CDA s.230, DMCA, e&#8209;Commerce Directive, DSA, Online Safety Act) and scholarly criticism.",
+                "For \"critically examine\" and \"discuss\" questions only."
+              ],
+              [
+                "DU PYQ",
+                "A question actually asked in a DU semester examination, or set in the DU case material as a self&#8209;learning exercise.",
+                "Answer it in the exact structure given."
+              ],
+              [
+                "Diagram",
+                "A flowchart or schematic. Every one has a caption telling you how to redraw it in an answer script.",
+                "Redraw, don't describe. Examiners reward diagrams."
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 5: Intermediary Liability & Safe Harbour."
+        },
+        {
+          "id": "it-rev-u6",
+          "unitNumber": 6,
+          "unitTitle": "Unit 6: Cyber Security & Critical Infrastructure",
+          "badge": "Unit 6 Capsule",
+          "title": "Unit 6: Cyber Security & Critical Infrastructure — Rapid Revision Capsule",
+          "anchorId": "rev-it-u6",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VI_Cyber_Security_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Statutory text",
+                "Verbatim or near&#8209;verbatim provision of the IT Act, 2000, the 2009 Rules, or a companion statute.",
+                "Quote the Puttaswamy three&#8209;fold test and the s.69A grounds in full — the single most exam&#8209;critical formula in this Unit."
+              ],
+              [
+                "Definition / element",
+                "An element, a limb of a test, or a definitional clause you must break out separately.",
+                "Use as the skeleton of your answer — every element is one paragraph."
+              ],
+              [
+                "Real example",
+                "An everyday, Indian, verifiable illustration.",
+                "One example per answer is the difference between a \"good\" and a \"very good\" answer."
+              ],
+              [
+                "Case law",
+                "Facts, issues, arguments of both sides, decision, principle evolved — the DU prescribed format.",
+                "Learn the ratio and the one&#8209;line citation. Five briefs, in syllabus order."
+              ],
+              [
+                "Comparative / critique",
+                "Foreign models (FISA, UK Investigatory Powers Act, Digital Rights Ireland, Google Spain ) and scholarly criticism.",
+                "For \"critically examine\" and \"discuss\" questions only."
+              ],
+              [
+                "DU PYQ",
+                "A question actually asked in a DU semester examination, or set in the DU case material as a self&#8209;learning exercise.",
+                "Answer it in the exact structure given."
+              ],
+              [
+                "Diagram",
+                "A flowchart or schematic. Every one has a caption telling you how to redraw it in an answer script.",
+                "Redraw, don't describe. Examiners reward diagrams."
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 6: Cyber Security & Critical Infrastructure."
+        },
+        {
+          "id": "it-rev-u7",
+          "unitNumber": 7,
+          "unitTitle": "Unit 7: E-Contracts, Attribution & Dispatch",
+          "badge": "Unit 7 Capsule",
+          "title": "Unit 7: E-Contracts, Attribution & Dispatch — Rapid Revision Capsule",
+          "anchorId": "rev-it-u7",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-VII_E-Contracts_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "Trimex International FZE v. Vedanta Aluminium Ltd.",
+                "SC, 22.01.2010 · (2010) 3 SCC 1",
+                "Can e-mails alone conclude a binding contract — with an arbitration clause in them?"
+              ],
+              [
+                "World Wrestling Entertainment v. Reshma Collections",
+                "Del HC (DB), 15.10.2014 · FAO (OS) 506/2013",
+                "When and where is a contract made on a website?"
+              ],
+              [
+                "P.R. Transport Agency v. Union of India",
+                "All HC (DB), AIR 2006 All 23",
+                "Where does an e-mailed acceptance take effect?"
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 7: E-Contracts, Attribution & Dispatch."
+        },
+        {
+          "id": "it-rev-u8",
+          "unitNumber": 8,
+          "unitTitle": "Unit 8: Jurisdiction in Cyberspace",
+          "badge": "Unit 8 Capsule",
+          "title": "Unit 8: Jurisdiction in Cyberspace — Rapid Revision Capsule",
+          "anchorId": "rev-it-u8",
+          "file": "SEM 5/IT LAWS/IT_Act_2000_Unit-IX_Jurisdiction_in_Cyberspace_DU_LB5031_Notes.html",
+          "type": "Master Revision Capsule",
+          "table": {
+            "headers": [
+              "Concept / Provision",
+              "Core Rule & Judicial Test",
+              "Landmark Precedent"
+            ],
+            "rows": [
+              [
+                "1",
+                "Banyan Tree Holdings (P) Ltd. v. A. Murali Krishna Reddy",
+                "Del HC (DB), 23.11.2009 · CS (OS) 894/2008"
+              ],
+              [
+                "2",
+                "P.R. Transport Agency v. Union of India",
+                "All HC (DB), 24.09.2005 · AIR 2006 All 23"
+              ],
+              [
+                "3",
+                "Super Cassettes Industries Ltd. v. Myspace Inc.",
+                "Del HC (single judge) 29.07.2011 · IA 15781/2008 in CS (OS) 2682/2008; Del HC (DB) 23.12.2016 · FAO (OS) 540/2011"
+              ],
+              [
+                "4",
+                "World Wrestling Entertainment v. Reshma Collections",
+                "Del HC (DB), 15.10.2014 · FAO (OS) 506/2013"
+              ],
+              [
+                "5",
+                "Big Tree Entertainment v. Saturday Sunday Media Internet",
+                "Del HC, 21.12.2015 · CS (COMM) 53/2015 & 54/2015"
+              ],
+              [
+                "6",
+                "Impresario Entertainment v. S & D Hospitality",
+                "Del HC, 03.01.2018 · IA 1950/2017 in CS (COMM) 111/2017"
+              ],
+              [
+                "7",
+                "Maqbool Fida Husain v. Raj Kumar Pandey",
+                "Del HC, 08.05.2008 · Crl. Rev. P. 114/2007"
+              ]
+            ]
+          },
+          "examStrategy": "State the statutory definition (IT Act) → distinguish civil contravention (s.43) vs crime (s.65/66) → analyze knowledge/mens rea → apply Supreme Court tests (Shreya Singhal, Arjun Panditrao, Trimex).",
+          "caseMap": "Authoritative decisions prescribed in University of Delhi Case Materials for Unit 8: Jurisdiction in Cyberspace."
         }
       ]
     }

@@ -602,6 +602,33 @@
           "Wages & The Code on Wages, 2019",
           "The Code on Social Security, 2020"
         ]
+      },
+      {
+        id: "it_laws",
+        code: "LB-5031",
+        title: "Information Technology Law",
+        author: "LB-5031 • Make Law Easy",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "8 Comprehensive Units",
+        casesCount: "50 Landmark Cases",
+        desc: "Information Technology Act 2000, Cyber Crimes, Electronic Records, Intermediary Liability & Cyberspace Jurisdiction.",
+        spineBg: "#0b2545",
+        spineInk: "#e3b95c",
+        spineFont: "700 34px Georgia",
+        backBg: "#061527",
+        backInk: "235,241,250",
+        edge: "#e8f1fa",
+        chapters: [
+          "Unit I: Introduction & Scope of IT Act, 2000",
+          "Unit II: Legal Recognition & Authentication of Electronic Records",
+          "Unit III: Civil Liabilities & Cyber Torts (ss. 43, 43A, 46)",
+          "Unit IV: Criminal Liabilities & Cyber Crimes (ss. 65–67C, 72A)",
+          "Unit V: Intermediary Liability & Safe Harbour (s. 79 & 2021 Rules)",
+          "Unit VI: Cyber Security, Critical Infrastructure & CERT-In",
+          "Unit VII: E-Contracts, Attribution & Dispatch (ss. 10A–13)",
+          "Unit IX: Jurisdiction in Cyberspace (ss. 1(2), 75 & Long-Arm Tests)"
+        ]
       }
     ],
     6: [

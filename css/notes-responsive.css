@@ -142,16 +142,16 @@
     word-break: break-word !important;
   }
 
-  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL SUBJECTS */
   section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
   .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
   .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
   .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
-  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .defcard, .principle-box, .pyq-card,
   .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
   .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
   .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
-  .case-block, .case-box, .sub-section, .case-detail {
+  .case-block, .caseblock, .case-box, .sub-section, .case-detail, .argcard, .verdict, .srcnote {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
@@ -337,7 +337,7 @@
   .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
   .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
   .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
-  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
   .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
   .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
   .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
@@ -359,7 +359,7 @@
   }
 
   /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
-  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -370,7 +370,16 @@
     margin: 10px 0 !important;
   }
 
-  table, table.tbl, .table-wrap table, .tblwrap table {
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
     display: block !important;
     width: 100% !important;
     max-width: 100% !important;

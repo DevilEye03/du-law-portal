@@ -3550,6 +3550,38 @@ Submission Time: ${new Date().toLocaleString()}
       content: 'For Public International Law (LB-205), always cite North Sea Continental Shelf Cases (1969) when discussing the twin requirements of Customary International Law: State practice and opinio juris sive necessitatis.',
       helpfulCount: 28,
       replies: []
+    },
+    {
+      id: 'comm-111',
+      author: 'Rohit Khandelwal',
+      initials: 'RK',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'it_laws',
+      subjectName: 'Information Technology Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 172800000,
+      timeAgo: '2 days ago',
+      content: 'The new IT Laws (LB-5031) notes for Semester 5 are phenomenal! The Shreya Singhal intermediary liability breakdown under Section 79 and the Syed Asifuddin case brief on Section 65 source code tampering are exactly what DU asks in term exams.',
+      helpfulCount: 31,
+      replies: [
+        {
+          id: 'rep-111-1',
+          author: 'Pooja Verma',
+          initials: 'PV',
+          centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+          centreShort: 'CLC • DU',
+          semester: 'Semester 5 (LL.B.)',
+          semesterShort: 'Sem 5',
+          timestamp: Date.now() - 86400000,
+          timeAgo: '1 day ago',
+          content: 'Agreed! Also check Unit 7 on E-Contracts and the Trimex v. Vedanta analysis — it clarifies Section 10A perfectly for problem questions.'
+        }
+      ]
     }
   ];
 
@@ -3687,7 +3719,8 @@ Submission Time: ${new Date().toLocaleString()}
       cpc: 'CPC & Limitation',
       wcc: 'White Collar Crimes',
       drafting: 'Drafting & Conveyance',
-      industrial: 'Industrial Law'
+      industrial: 'Industrial Law',
+      it_laws: 'Information Technology Law'
     };
     return map[subId] || 'Delhi University Law';
   }

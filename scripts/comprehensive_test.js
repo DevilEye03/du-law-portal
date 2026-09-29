@@ -188,6 +188,28 @@ try {
     assert(fs.existsSync(p), `Industrial Law Dossier file exists: ${u.file}`);
   });
 
+  // Information Technology Law (LB-5031) Integrity
+  const itLaws = portalData.subjects['it_laws'];
+  assert(!!itLaws, 'Subject "it_laws" is registered');
+  assert(itLaws.code === 'LB-5031', 'IT Law code is LB-5031');
+  assert(itLaws.units && itLaws.units.length === 8, `IT Law has exactly 8 units (Found: ${itLaws.units?.length})`);
+  assert(itLaws.cases && itLaws.cases.length === 50, `IT Law landmark cases count === 50 (Found: ${itLaws.cases?.length})`);
+  assert(itLaws.pyqs && itLaws.pyqs.length === 52, `IT Law PYQs with model answers === 52 (Found: ${itLaws.pyqs?.length})`);
+  assert(itLaws.revisions && itLaws.revisions.length === 8, `IT Law revision capsules === 8 (Found: ${itLaws.revisions?.length})`);
+
+  for (let u = 1; u <= 8; u++) {
+    const uCases = itLaws.cases.filter(c => c.unitNumber === u);
+    const uPyqs = itLaws.pyqs.filter(p => p.unitNumber === u);
+    const uRev = itLaws.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `IT Law Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `IT Law Unit ${u} has PYQs (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `IT Law Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  itLaws.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `IT Law Dossier file exists: ${u.file}`);
+  });
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
@@ -321,6 +343,10 @@ try {
 
   const sem5IndustrialNote = fs.readFileSync('SEM 5/Industrial law/IR_Code_Unit1_Dispute_Settlement_Notes.html', 'utf8');
   assert(sem5IndustrialNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 Industrial Law notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
+
+  const sem5ItLawsNote = fs.readFileSync('SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html', 'utf8');
+  assert(sem5ItLawsNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 IT Laws notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
+  assert(sem5ItLawsNote.includes('notes-responsive.css'), 'Semester 5 IT Laws notes link notes-responsive.css');
 
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');
