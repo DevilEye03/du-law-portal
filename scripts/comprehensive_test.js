@@ -279,7 +279,9 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v51'), 'sw.js CACHE_NAME is bumped to du-law-portal-v51');
+  assert(swContent.includes('du-law-portal-v52'), 'sw.js CACHE_NAME is bumped to du-law-portal-v52');
+  assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
+  assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');

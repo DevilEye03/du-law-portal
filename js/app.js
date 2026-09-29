@@ -3819,6 +3819,19 @@ Submission Time: ${new Date().toLocaleString()}
       showView('semester', false);
       setTimeout(openContactModal, 250);
     } else {
+      const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
+      if (curPath === '/terms' || curPath === '/terms.html') {
+        window.location.replace('/terms.html');
+        return;
+      }
+      if (curPath === '/privacy' || curPath === '/privacy.html') {
+        window.location.replace('/privacy.html');
+        return;
+      }
+      if (curPath === '/about' || curPath === '/about.html') {
+        window.location.replace('/about.html');
+        return;
+      }
       showView('semester', false);
       window.history.replaceState({ view: 'semester' }, '', '/');
     }

@@ -10,11 +10,12 @@
   <!-- End Google Tag Manager -->
 
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms and Conditions of Use &amp; Academic Disclaimer — Make Law Easy</title>
   <meta name="description" content="Terms and Conditions of Use, Academic Fair Dealing Disclaimer (Section 52 Copyright Act 1957), and Bar Council of India Non-Solicitation Statement for Make Law Easy (makelaweasy.in).">
-  <link rel="canonical" href="https://makelaweasy.in/terms.html">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://makelaweasy.in/terms">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -168,6 +169,7 @@
       padding: 7px 14px;
       border-radius: var(--radius-full);
       border: 1px solid transparent;
+      white-space: nowrap;
       transition: var(--transition);
     }
 
@@ -186,6 +188,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-shrink: 0;
     }
 
     .action-btn {
@@ -200,6 +203,7 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
+      white-space: nowrap;
       text-decoration: none;
       transition: var(--transition);
     }
@@ -214,6 +218,7 @@
       background: rgba(56, 189, 248, 0.1);
       border: 1px solid rgba(56, 189, 248, 0.28);
       color: var(--cyan-accent);
+      white-space: nowrap;
     }
 
     .portal-back-btn:hover {
@@ -985,32 +990,41 @@
     @media (max-width: 640px) {
       .main-wrapper {
         padding: 16px 12px 40px;
+        min-width: 0;
       }
       .document-hero {
         padding: 20px 14px;
         border-radius: var(--radius-md);
+        min-width: 0;
       }
       .legal-section {
         padding: 20px 14px;
+        scroll-margin-top: 154px;
+        min-width: 0;
+      }
+      .mobile-toc-bar {
+        top: 96px;
+      }
+      .mobile-toc-drawer a.active {
+        background: rgba(201, 168, 76, 0.15);
+        color: var(--gold-light);
+        font-weight: 600;
       }
       .at-a-glance-grid {
         grid-template-columns: 1fr;
         gap: 12px;
         margin-top: 20px;
         padding-top: 18px;
+        min-width: 0;
       }
       .glance-card {
         padding: 14px;
-      }
-      .header-nav {
-        display: none;
-      }
-      #printBtn {
-        display: none;
+        min-width: 0;
       }
       .top-header-inner {
         padding: 8px 12px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         gap: 8px;
@@ -1037,9 +1051,13 @@
         gap: 6px;
         flex-shrink: 0;
       }
+      #printBtn {
+        display: none;
+      }
       .action-btn {
         padding: 5px 9px;
         font-size: 0.82rem;
+        white-space: nowrap;
       }
       .action-btn span {
         display: none;
@@ -1047,13 +1065,29 @@
       .portal-back-btn {
         order: -1;
         padding: 5px 10px;
+        white-space: nowrap;
       }
       .portal-back-btn span {
         display: inline !important;
         font-size: 0.78rem;
       }
+      .header-nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+        padding-top: 6px;
+        border-top: 1px solid var(--border-subtle);
+        order: 3;
+      }
+      .nav-pill {
+        padding: 4px 10px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+      }
       .hero-title {
         font-size: 1.45rem;
+        overflow-wrap: break-word;
       }
       .hero-subtitle {
         font-size: 0.92rem;
@@ -1073,6 +1107,7 @@
       .meta-badge {
         padding: 4px 10px;
         font-size: 0.76rem;
+        white-space: nowrap;
       }
     }
 
@@ -1159,9 +1194,9 @@
       </a>
 
       <nav class="header-nav" aria-label="Legal document switcher">
-        <a href="terms.html" class="nav-pill active" aria-current="page">Terms of Service</a>
-        <a href="privacy.html" class="nav-pill">Privacy Policy</a>
-        <a href="about.html" class="nav-pill">About Us</a>
+        <a href="/terms" class="nav-pill active" aria-current="page">Terms of Service</a>
+        <a href="/privacy" class="nav-pill">Privacy Policy</a>
+        <a href="/about" class="nav-pill">About Us</a>
       </nav>
 
       <div class="header-actions">
@@ -1647,11 +1682,11 @@
       <div class="footer-links">
         <a href="/">Home</a>
         <span>&bull;</span>
-        <a href="about.html">About Us</a>
+        <a href="/about">About Us</a>
         <span>&bull;</span>
-        <a href="terms.html">Terms of Service</a>
+        <a href="/terms">Terms of Service</a>
         <span>&bull;</span>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="/privacy">Privacy Policy</a>
         <span>&bull;</span>
         <a href="mailto:ankur@makelaweasy.in">Contact Us</a>
         <span>&bull;</span>
@@ -1693,6 +1728,31 @@
         });
       }
 
+      // Universal Safe Clipboard Copy
+      function copyText(str) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          return navigator.clipboard.writeText(str);
+        }
+        return new Promise((resolve, reject) => {
+          const ta = document.createElement('textarea');
+          ta.value = str;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          try {
+            const success = document.execCommand('copy');
+            document.body.removeChild(ta);
+            if (success) resolve();
+            else reject(new Error('execCommand failed'));
+          } catch(err) {
+            document.body.removeChild(ta);
+            reject(err);
+          }
+        });
+      }
+
       // 2. Print & Share actions
       const printBtn = document.getElementById('printBtn');
       if (printBtn) {
@@ -1713,7 +1773,7 @@
       const copyShareBtn = document.getElementById('copyShareBtn');
       if (copyShareBtn) {
         copyShareBtn.addEventListener('click', function() {
-          navigator.clipboard.writeText(window.location.href).then(() => {
+          copyText(window.location.href).then(() => {
             showToast('Document link copied to clipboard');
           }).catch(() => {
             showToast('Link ready: ' + window.location.href);
@@ -1731,27 +1791,47 @@
             targetEl.scrollIntoView({ behavior: 'smooth' });
             history.pushState(null, null, targetId);
             const fullUrl = window.location.origin + window.location.pathname + targetId;
-            navigator.clipboard.writeText(fullUrl).then(() => {
+            copyText(fullUrl).then(() => {
               showToast('Direct section link copied to clipboard');
             }).catch(() => {});
           }
         });
       });
 
-      // 4. ScrollSpy for Left Sidebar TOC
+      // 4. ScrollSpy for Left Sidebar TOC & Mobile Drawer
       const sections = document.querySelectorAll('.legal-section');
       const tocLinks = document.querySelectorAll('.sidebar-toc-list .toc-link');
+      const mobileDrawerLinks = document.querySelectorAll('#mobileTocDrawer a');
+      const mobileTocToggle = document.getElementById('mobileTocToggle');
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const activeId = entry.target.getAttribute('id');
+            // Desktop Sidebar TOC
             tocLinks.forEach(link => {
               if (link.getAttribute('href') === '#' + activeId) {
                 link.classList.add('active');
-                link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                if (window.innerWidth > 1023) {
+                  link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                }
               } else {
                 link.classList.remove('active');
+              }
+            });
+
+            // Mobile TOC Drawer Highlight & Button Label
+            mobileDrawerLinks.forEach(mLink => {
+              if (mLink.getAttribute('href') === '#' + activeId) {
+                mLink.classList.add('active');
+                if (mobileTocToggle) {
+                  const span = mobileTocToggle.querySelector('span');
+                  if (span) {
+                    span.innerHTML = '<i class="fa-solid fa-list-ol"></i> ' + mLink.textContent;
+                  }
+                }
+              } else {
+                mLink.classList.remove('active');
               }
             });
           }
@@ -1779,7 +1859,6 @@
       }
 
       // 6. Mobile TOC Accordion Toggle
-      const mobileTocToggle = document.getElementById('mobileTocToggle');
       const mobileTocDrawer = document.getElementById('mobileTocDrawer');
       const mobileTocChevron = document.getElementById('mobileTocChevron');
 

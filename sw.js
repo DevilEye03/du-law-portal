@@ -1,10 +1,14 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v51";
+const CACHE_NAME = "du-law-portal-v52";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
+  "./terms",
   "./terms.html",
+  "./privacy",
   "./privacy.html",
+  "./about",
+  "./about.html",
   "./feedback.html",
   "./tools/bare-acts.html",
   "./tools/bns-converter.html",
@@ -69,9 +73,16 @@ self.addEventListener("fetch", (event) => {
     url.pathname.startsWith("/semester") ||
     url.pathname.startsWith("/sem") ||
     url.pathname.startsWith("/tools/") ||
-    url.pathname.endsWith("/index.html") ||
+    url.pathname === "/terms" ||
+    url.pathname === "/terms.html" ||
     url.pathname.endsWith("/terms.html") ||
+    url.pathname === "/privacy" ||
+    url.pathname === "/privacy.html" ||
     url.pathname.endsWith("/privacy.html") ||
+    url.pathname === "/about" ||
+    url.pathname === "/about.html" ||
+    url.pathname.endsWith("/about.html") ||
+    url.pathname.endsWith("/index.html") ||
     url.pathname.endsWith("/feedback.html")
   );
 
@@ -85,7 +96,21 @@ self.addEventListener("fetch", (event) => {
           }
           return networkResponse;
         })
-        .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html") || caches.match("/index.html")))
+        .catch(() => {
+          return caches.match(event.request).then((cached) => {
+            if (cached) return cached;
+            if (url.pathname === "/terms" || url.pathname.endsWith("/terms.html")) {
+              return caches.match("./terms.html") || caches.match("/terms.html");
+            }
+            if (url.pathname === "/privacy" || url.pathname.endsWith("/privacy.html")) {
+              return caches.match("./privacy.html") || caches.match("/privacy.html");
+            }
+            if (url.pathname === "/about" || url.pathname.endsWith("/about.html")) {
+              return caches.match("./about.html") || caches.match("/about.html");
+            }
+            return caches.match("./index.html") || caches.match("/index.html");
+          });
+        })
     );
     return;
   }
