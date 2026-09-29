@@ -279,11 +279,17 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v52'), 'sw.js CACHE_NAME is bumped to du-law-portal-v52');
+  assert(swContent.includes('du-law-portal-v53'), 'sw.js CACHE_NAME is bumped to du-law-portal-v53');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
+  assert(htmlContent.includes('id="communityCommentsSection"'), 'communityCommentsSection container exists in index.html');
+  assert(htmlContent.includes('id="commentComposeForm"'), 'commentComposeForm exists in index.html');
+  assert(htmlContent.includes('id="commentsStream"'), 'commentsStream container exists in index.html');
+  assert(htmlContent.includes('id="headerCommentsBtn"'), 'headerCommentsBtn exists in index.html');
+  assert(htmlContent.includes('id="mtdCommentsBtn"'), 'mtdCommentsBtn exists in index.html');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
+  assert(htmlContent.includes('id="readerCommentsBtn"'), 'id="readerCommentsBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
   assert(cssContent.includes('.subjects-breadcrumbs'), '.subjects-breadcrumbs style rule exists in styles.css');
@@ -297,6 +303,10 @@ try {
 
   const appJsContent = fs.readFileSync('js/app.js', 'utf8');
   assert(appJsContent.includes('function parseRoute('), 'Universal clean path router parseRoute exists in js/app.js');
+  assert(appJsContent.includes('initCommentsModule'), 'initCommentsModule exists in js/app.js');
+  assert(appJsContent.includes('DEFAULT_COMMENTS'), 'DEFAULT_COMMENTS registry exists in js/app.js');
+  assert(cssContent.includes('.community-comments-section'), '.community-comments-section styles exist in styles.css');
+  assert(cssContent.includes('.comment-card'), '.comment-card styles exist in styles.css');
 
   // Verify sample notes have mobile responsive engine & diagram rules
   const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');

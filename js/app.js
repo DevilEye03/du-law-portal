@@ -37,7 +37,14 @@
       searchQuery: '',
       expandedId: null
     },
-    subjectsViewMode: localStorage.getItem('du_subjects_view_mode') || 'books'
+    subjectsViewMode: localStorage.getItem('du_subjects_view_mode') || 'books',
+    commentsSearchQuery: '',
+    commentsCategoryFilter: 'all',
+    commentsSubjectFilter: 'all',
+    commentsSort: 'helpful',
+    commentsPageSize: 6,
+    composeRating: 5,
+    composeCategory: 'cases'
   };
 
   // DOM Elements Cache
@@ -112,6 +119,37 @@
     copyEmailText: document.getElementById('copyEmailText'),
     themeToggleBtn: document.getElementById('themeToggleBtn'),
     brandLogo: document.getElementById('brandLogo'),
+    headerCommentsBtn: document.getElementById('headerCommentsBtn'),
+    readerCommentsBtn: document.getElementById('readerCommentsBtn'),
+    mtdCommentsBtn: document.getElementById('mtdCommentsBtn'),
+    footerContactBarCommentsLink: document.getElementById('footerContactBarCommentsLink'),
+    footerCommentsLink: document.getElementById('footerCommentsLink'),
+    communityCommentsSection: document.getElementById('communityCommentsSection'),
+    commentComposeForm: document.getElementById('commentComposeForm'),
+    commentAuthorName: document.getElementById('commentAuthorName'),
+    commentAuthorCentre: document.getElementById('commentAuthorCentre'),
+    commentAuthorSemester: document.getElementById('commentAuthorSemester'),
+    commentSubjectTag: document.getElementById('commentSubjectTag'),
+    composeCatPills: document.getElementById('composeCatPills'),
+    composeStarRating: document.getElementById('composeStarRating'),
+    composeStarLabel: document.getElementById('composeStarLabel'),
+    commentContent: document.getElementById('commentContent'),
+    commentCharCount: document.getElementById('commentCharCount'),
+    commentDpdpConsent: document.getElementById('commentDpdpConsent'),
+    commentClearBtn: document.getElementById('commentClearBtn'),
+    commentSubmitBtn: document.getElementById('commentSubmitBtn'),
+    commentsSearchInput: document.getElementById('commentsSearchInput'),
+    commentsSearchClearBtn: document.getElementById('commentsSearchClearBtn'),
+    commentsSubjectFilter: document.getElementById('commentsSubjectFilter'),
+    commentsSortSelect: document.getElementById('commentsSortSelect'),
+    commentsCategoryPills: document.getElementById('commentsCategoryPills'),
+    commentsStream: document.getElementById('commentsStream'),
+    commentsEmptyState: document.getElementById('commentsEmptyState'),
+    commentsResetFiltersBtn: document.getElementById('commentsResetFiltersBtn'),
+    commentsLoadMoreWrap: document.getElementById('commentsLoadMoreWrap'),
+    commentsLoadMoreBtn: document.getElementById('commentsLoadMoreBtn'),
+    metricTotalComments: document.getElementById('metricTotalComments'),
+    metricAvgRating: document.getElementById('metricAvgRating'),
 
     // Views
     semesterView: document.getElementById('semesterView'),
@@ -285,6 +323,9 @@
     }
     if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
       return { view: 'contact' };
+    }
+    if (rawPath === '/comments' || rawPath === '/discussions' || currentHash === '#comments' || currentHash === '#communityCommentsSection' || params.get('comments') === 'true') {
+      return { view: 'comments', subject: params.get('subject') || null };
     }
 
     // Subject route: /subject/:subId or /subject/:subId/:tab
@@ -3267,11 +3308,916 @@ Submission Time: ${new Date().toLocaleString()}
     }
   }
 
+  // =========================================================================
+  // STUDENT COMMUNITY & ACADEMIC COMMENTS MODULE
+  // =========================================================================
+  const DEFAULT_COMMENTS = [
+    {
+      id: 'comm-101',
+      author: 'Aarav Sharma',
+      initials: 'AS',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 3 (LL.B.)',
+      semesterShort: 'Sem 3',
+      subjectId: 'company',
+      subjectName: 'Company Law',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 7200000,
+      timeAgo: '2 hours ago',
+      content: 'In Foss v. Harbottle, the exception regarding ultra vires acts and fraud on the minority is articulated with tremendous clarity. For the DU Term Exam 20-marker question on derivative action, should we focus primarily on the English common law precedents (Foss, Edwards v Halliwell) or prioritize Indian statutory remedies under Sections 241 & 244 of Companies Act 2013?',
+      helpfulCount: 42,
+      replies: [
+        {
+          id: 'rep-101-1',
+          author: 'Editorial Team • Faculty of Law Mentor',
+          initials: 'ED',
+          isEditorial: true,
+          timestamp: Date.now() - 3600000,
+          timeAgo: '1 hour ago',
+          content: 'Excellent academic query, Aarav! In DU semester evaluations, follow a 3-tier structure: (1) Common Law origin (Foss v Harbottle rule & 4 Edwards v Halliwell exceptions), (2) Indian judicial adoption (e.g., Needle Industries and Rajahmundry Electric Supply Corp), and (3) Modern statutory codification under Section 241, 242 and 244 (Oppression and Mismanagement).'
+        }
+      ]
+    },
+    {
+      id: 'comm-102',
+      author: 'Meher Kaur',
+      initials: 'MK',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'contract',
+      subjectName: 'Law of Contract',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 18000000,
+      timeAgo: '5 hours ago',
+      content: 'The FIRAC structure for Carlill v. Carbolic Smoke Ball Co. helped me finally understand why notification of acceptance was waived under Section 8 of the Indian Contract Act. Truly phenomenal notes for Term 1!',
+      helpfulCount: 38,
+      replies: [
+        {
+          id: 'rep-102-1',
+          author: 'Devansh Roy (LC-1, Sem 3)',
+          initials: 'DR',
+          isEditorial: false,
+          timestamp: Date.now() - 14400000,
+          timeAgo: '4 hours ago',
+          content: 'Also remember to cite State of Bihar v. Bengal Chemical (1954) as the leading Indian authority on general offers!'
+        }
+      ]
+    },
+    {
+      id: 'comm-103',
+      author: 'Rohan Verma',
+      initials: 'RV',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 2 (LL.B.)',
+      semesterShort: 'Sem 2',
+      subjectId: 'property',
+      subjectName: 'Property Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 43200000,
+      timeAgo: '12 hours ago',
+      content: 'For Transfer of Property Act (LB-204), Section 52 (Lis Pendens) combined with Bellamy v. Sabine is an almost guaranteed 20-mark question every year. Make sure to note that transfer during litigation is not void, but only subordinate to the decree of the court.',
+      helpfulCount: 34,
+      replies: []
+    },
+    {
+      id: 'comm-104',
+      author: 'Devika Nambiar',
+      initials: 'DN',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'drafting',
+      subjectName: 'Drafting & Conveyance',
+      category: 'review',
+      categoryLabel: 'Notes Review',
+      rating: 5,
+      timestamp: Date.now() - 86400000,
+      timeAgo: 'Yesterday',
+      content: 'The Drafting (LB-502) section is an absolute lifesaver. The exact High Court criminal revision draft and the regular bail application under S. 437/439 CrPC matches DU examination expectations to the word.',
+      helpfulCount: 29,
+      replies: []
+    },
+    {
+      id: 'comm-105',
+      author: 'Kunal Singhania',
+      initials: 'KS',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'bns',
+      subjectName: 'Law of Crimes / BNS 2023',
+      category: 'tips',
+      categoryLabel: 'Study Tip',
+      rating: 5,
+      timestamp: Date.now() - 129600000,
+      timeAgo: '1 day ago',
+      content: 'The BNS 2023 ↔ IPC 1860 Live Converter modal is brilliant. Being able to cross-reference Section 302 IPC directly with Section 103 BNS and see the changes in organized crime clauses made studying so fast.',
+      helpfulCount: 31,
+      replies: []
+    },
+    {
+      id: 'comm-106',
+      author: 'Siddharth Mehta',
+      initials: 'SM',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 3 (LL.B.)',
+      semesterShort: 'Sem 3',
+      subjectId: 'cpc',
+      subjectName: 'CPC & Limitation',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 172800000,
+      timeAgo: '2 days ago',
+      content: 'Mastering the difference between Res Judicata (Section 11) and Res Sub-Judice (Section 10) in CPC: Section 10 bars the trial of a suit, whereas Section 11 bars the institution or decision of the matter itself. Duchess of Kingston case is crucial.',
+      helpfulCount: 27,
+      replies: []
+    },
+    {
+      id: 'comm-107',
+      author: 'Ananya Gupta',
+      initials: 'AG',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'juris',
+      subjectName: 'Jurisprudence–I',
+      category: 'tips',
+      categoryLabel: 'Study Tip',
+      rating: 5,
+      timestamp: Date.now() - 259200000,
+      timeAgo: '3 days ago',
+      content: 'For Jurisprudence Unit 2: Austin command theory vs Hart rule of recognition. The matrix table provided in these notes contrasting primary and secondary rules saved me at least 4 hours of textbook searching.',
+      helpfulCount: 23,
+      replies: []
+    },
+    {
+      id: 'comm-108',
+      author: 'Vikramaditya Roy',
+      initials: 'VR',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'industrial',
+      subjectName: 'Industrial Law',
+      category: 'review',
+      categoryLabel: 'Notes Review',
+      rating: 5,
+      timestamp: Date.now() - 345600000,
+      timeAgo: '4 days ago',
+      content: 'Industrial Law dossiers for Semester 5 with Bangalore Water Supply case and the Code on Wages 2019 comparative chart are unmatched. Highly recommended to all batchmates in LC-1.',
+      helpfulCount: 25,
+      replies: []
+    },
+    {
+      id: 'comm-109',
+      author: 'Tanvi Bhatia',
+      initials: 'TB',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'family',
+      subjectName: 'Family Law–I',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 432000000,
+      timeAgo: '5 days ago',
+      content: 'In Section 13B(2) HMA (mutual consent divorce), Supreme Court in Amardeep Singh v. Harveen Kaur held the 6-month statutory waiting period is directory, not mandatory. Beautifully highlighted in the landmark cases capsule!',
+      helpfulCount: 21,
+      replies: []
+    },
+    {
+      id: 'comm-110',
+      author: 'Kabir Sen',
+      initials: 'KS',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 2 (LL.B.)',
+      semesterShort: 'Sem 2',
+      subjectId: 'pil',
+      subjectName: 'Public International Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 518400000,
+      timeAgo: '6 days ago',
+      content: 'For Public International Law (LB-205), always cite North Sea Continental Shelf Cases (1969) when discussing the twin requirements of Customary International Law: State practice and opinio juris sive necessitatis.',
+      helpfulCount: 28,
+      replies: []
+    }
+  ];
+
+  function getStoredUserComments() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_comments') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function getStoredCustomReplies() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_comment_replies') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function getUpvotedCommentIds() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_upvoted_comments') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function getUpvoteDeltas() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_upvote_deltas') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function getAllComments() {
+    const userComments = getStoredUserComments();
+    const customReplies = getStoredCustomReplies();
+    const upvoteDeltas = getUpvoteDeltas();
+
+    const mergedDefaults = DEFAULT_COMMENTS.map(c => {
+      const delta = upvoteDeltas[c.id] || 0;
+      const extraReplies = customReplies[c.id] || [];
+      return {
+        ...c,
+        helpfulCount: Math.max(0, c.helpfulCount + delta),
+        replies: [...c.replies, ...extraReplies]
+      };
+    });
+
+    const enrichedUserComments = userComments.map(c => {
+      const delta = upvoteDeltas[c.id] || 0;
+      const extraReplies = customReplies[c.id] || [];
+      return {
+        ...c,
+        helpfulCount: Math.max(0, (c.helpfulCount || 0) + delta),
+        replies: [...(c.replies || []), ...extraReplies]
+      };
+    });
+
+    return [...enrichedUserComments, ...mergedDefaults];
+  }
+
+  function toggleCommentUpvote(commentId) {
+    const upvotedIds = getUpvotedCommentIds();
+    const idx = upvotedIds.indexOf(commentId);
+    const isUpvoted = idx !== -1;
+    const upvoteDeltas = getUpvoteDeltas();
+
+    if (isUpvoted) {
+      upvotedIds.splice(idx, 1);
+      upvoteDeltas[commentId] = (upvoteDeltas[commentId] || 0) - 1;
+    } else {
+      upvotedIds.push(commentId);
+      upvoteDeltas[commentId] = (upvoteDeltas[commentId] || 0) + 1;
+    }
+
+    localStorage.setItem('du_portal_upvoted_comments', JSON.stringify(upvotedIds));
+    localStorage.setItem('du_portal_upvote_deltas', JSON.stringify(upvoteDeltas));
+
+    renderCommentsStream();
+  }
+
+  function addCommentReply(commentId, authorName, replyText) {
+    if (!replyText || !replyText.trim()) return;
+    const customReplies = getStoredCustomReplies();
+    if (!customReplies[commentId]) customReplies[commentId] = [];
+
+    const cleanAuthor = authorName && authorName.trim() ? authorName.trim() : 'Law Scholar';
+    const initials = cleanAuthor.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'LS';
+
+    const newReply = {
+      id: `rep-${Date.now()}`,
+      author: cleanAuthor,
+      initials: initials,
+      isEditorial: false,
+      timestamp: Date.now(),
+      timeAgo: 'Just now',
+      content: replyText.trim()
+    };
+
+    customReplies[commentId].push(newReply);
+    localStorage.setItem('du_portal_comment_replies', JSON.stringify(customReplies));
+
+    showToast('Reply added to academic discussion!');
+    renderCommentsStream();
+  }
+
+  function saveNewComment(commentData) {
+    const userComments = getStoredUserComments();
+    userComments.unshift(commentData);
+    localStorage.setItem('du_portal_comments', JSON.stringify(userComments));
+    showToast('Comment published to Make Law Easy community board!');
+    renderCommentsStream();
+
+    setTimeout(() => {
+      const el = document.getElementById(commentData.id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 150);
+  }
+
+  function getSubjectNameFromId(subId) {
+    const map = {
+      general: 'General LL.B. Portal',
+      juris: 'Jurisprudence–I',
+      contract: 'Law of Contract',
+      bns: 'Law of Crimes / BNS 2023',
+      family: 'Family Law–I',
+      torts: 'Law of Torts',
+      property: 'Property Law',
+      pil: 'Public International Law',
+      company: 'Company Law',
+      cpc: 'CPC & Limitation',
+      wcc: 'White Collar Crimes',
+      drafting: 'Drafting & Conveyance',
+      industrial: 'Industrial Law'
+    };
+    return map[subId] || 'Delhi University Law';
+  }
+
+  function getCategoryLabelFromKey(key) {
+    const map = {
+      cases: 'Case Doubt',
+      exam: 'Exam Strategy',
+      review: 'Notes Review',
+      tips: 'Study Tip'
+    };
+    return map[key] || 'Discussion';
+  }
+
+  function renderCommentsStream() {
+    if (!elements.commentsStream) return;
+
+    const allComments = getAllComments();
+    const upvotedIds = getUpvotedCommentIds();
+
+    // 1. Calculate Metrics
+    if (elements.metricTotalComments) {
+      elements.metricTotalComments.textContent = `${allComments.length + 140}+`;
+    }
+    if (elements.metricAvgRating) {
+      const sum = allComments.reduce((acc, c) => acc + (c.rating || 5), 0);
+      const avg = (sum / (allComments.length || 1)).toFixed(2);
+      elements.metricAvgRating.innerHTML = `${avg} <span>/ 5.0</span>`;
+    }
+
+    // 2. Filter Comments
+    const q = (state.commentsSearchQuery || '').toLowerCase().trim();
+    const cat = state.commentsCategoryFilter || 'all';
+    const sub = state.commentsSubjectFilter || 'all';
+
+    let filtered = allComments.filter(c => {
+      // Category match
+      if (cat !== 'all' && c.category !== cat) return false;
+      // Subject match
+      if (sub !== 'all' && c.subjectId !== sub) return false;
+      // Search match
+      if (q) {
+        const text = `${c.author} ${c.centre} ${c.subjectName} ${c.content} ${c.categoryLabel}`.toLowerCase();
+        if (!text.includes(q)) return false;
+      }
+      return true;
+    });
+
+    // 3. Category count badges under current subject & search
+    const baseList = allComments.filter(c => {
+      if (sub !== 'all' && c.subjectId !== sub) return false;
+      if (q) {
+        const text = `${c.author} ${c.centre} ${c.subjectName} ${c.content} ${c.categoryLabel}`.toLowerCase();
+        if (!text.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const countAll = baseList.length;
+    const countCases = baseList.filter(c => c.category === 'cases').length;
+    const countExam = baseList.filter(c => c.category === 'exam').length;
+    const countReview = baseList.filter(c => c.category === 'review').length;
+    const countTips = baseList.filter(c => c.category === 'tips').length;
+
+    const setBadge = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
+    setBadge('catCountAll', countAll);
+    setBadge('catCountCases', countCases);
+    setBadge('catCountExam', countExam);
+    setBadge('catCountReview', countReview);
+    setBadge('catCountTips', countTips);
+
+    // 4. Sort
+    if (state.commentsSort === 'newest') {
+      filtered.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+    } else if (state.commentsSort === 'rating') {
+      filtered.sort((a, b) => (b.rating || 5) - (a.rating || 5));
+    } else {
+      // 'helpful' default
+      filtered.sort((a, b) => (b.helpfulCount || 0) - (a.helpfulCount || 0));
+    }
+
+    // 5. Empty State Check
+    if (filtered.length === 0) {
+      elements.commentsStream.innerHTML = '';
+      if (elements.commentsEmptyState) elements.commentsEmptyState.style.display = 'block';
+      if (elements.commentsLoadMoreWrap) elements.commentsLoadMoreWrap.style.display = 'none';
+      return;
+    }
+
+    if (elements.commentsEmptyState) elements.commentsEmptyState.style.display = 'none';
+
+    // 6. Pagination Slice
+    const visibleList = filtered.slice(0, state.commentsPageSize);
+
+    // 7. Render Comment Cards
+    const htmlCards = visibleList.map(c => {
+      const isUpvoted = upvotedIds.includes(c.id);
+      const starsHtml = Array.from({ length: 5 }, (_, i) => {
+        const filled = i < (c.rating || 5);
+        return `<i class="fa-${filled ? 'solid' : 'regular'} fa-star"></i>`;
+      }).join('');
+
+      const repliesHtml = (c.replies && c.replies.length > 0) ? `
+        <div class="comment-replies-thread">
+          ${c.replies.map(r => `
+            <div class="comment-reply-card ${r.isEditorial ? 'editorial' : ''}">
+              <div class="reply-header">
+                <div class="reply-author-info">
+                  <i class="fa-solid ${r.isEditorial ? 'fa-scale-balanced' : 'fa-reply'}" style="color:${r.isEditorial ? '#2563eb' : 'inherit'};"></i>
+                  <span>${r.author}</span>
+                  ${r.isEditorial ? '<span class="reply-editorial-badge"><i class="fa-solid fa-check"></i> Editorial Note</span>' : ''}
+                </div>
+                <span class="reply-time">${r.timeAgo || 'Recently'}</span>
+              </div>
+              <div class="reply-content">${r.content}</div>
+            </div>
+          `).join('')}
+        </div>
+      ` : '';
+
+      return `
+        <article class="comment-card" id="${c.id}" data-comment-id="${c.id}">
+          <div class="comment-header">
+            <div class="comment-author-wrap">
+              <div class="comment-avatar">${c.initials || 'DU'}</div>
+              <div class="comment-author-meta">
+                <div class="comment-author-name-row">
+                  <span class="comment-author-name">${c.author}</span>
+                  <span class="comment-verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Law Student</span>
+                </div>
+                <div class="comment-sub-meta">
+                  <span class="comment-centre-tag"><i class="fa-solid fa-building-columns"></i> ${c.centreShort || 'DU Law'}</span>
+                  <span class="footer-dot">&bull;</span>
+                  <span class="comment-sem-tag"><i class="fa-solid fa-graduation-cap"></i> ${c.semesterShort || 'LL.B.'}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-meta-right">
+              <div class="comment-stars">${starsHtml}</div>
+              <span class="comment-time">${c.timeAgo || 'Recently'}</span>
+            </div>
+          </div>
+
+          <div class="comment-tags-row">
+            <span class="comment-tag-pill subject"><i class="fa-solid fa-book"></i> ${c.subjectName}</span>
+            <span class="comment-tag-pill category"><i class="fa-solid fa-tag"></i> ${c.categoryLabel}</span>
+          </div>
+
+          <div class="comment-body">${c.content}</div>
+
+          ${repliesHtml}
+
+          <div class="comment-card-footer">
+            <div class="comment-actions-left">
+              <button type="button" class="btn-comment-action ${isUpvoted ? 'upvoted' : ''}" data-action="upvote" data-id="${c.id}" title="${isUpvoted ? 'Remove upvote' : 'Mark as helpful'}">
+                <i class="fa-${isUpvoted ? 'solid' : 'regular'} fa-thumbs-up"></i>
+                <span>Helpful (${c.helpfulCount || 0})</span>
+              </button>
+
+              <button type="button" class="btn-comment-action" data-action="toggle-reply" data-id="${c.id}" title="Reply to this discussion">
+                <i class="fa-solid fa-reply"></i>
+                <span>Reply ${(c.replies && c.replies.length > 0) ? `(${c.replies.length})` : ''}</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn-comment-share" data-action="share" data-id="${c.id}" title="Copy direct link to this comment">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i> <span>Share</span>
+            </button>
+          </div>
+
+          <div class="comment-inline-reply-box" id="replyBox-${c.id}" style="display: none;">
+            <div class="reply-form-top-row">
+              <input type="text" class="reply-name-input" id="replyName-${c.id}" placeholder="Your Name / Handle (e.g. Rahul K., Sem 1)" maxlength="50">
+            </div>
+            <textarea class="reply-textarea" id="replyText-${c.id}" rows="2" placeholder="Write an academic response, statutory reference, or ratio tip..."></textarea>
+            <div class="reply-actions-row">
+              <button type="button" class="btn-reply-cancel" data-action="cancel-reply" data-id="${c.id}">Cancel</button>
+              <button type="button" class="btn-reply-submit" data-action="submit-reply" data-id="${c.id}">
+                <i class="fa-solid fa-paper-plane"></i> <span>Post Reply</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    elements.commentsStream.innerHTML = htmlCards;
+
+    // Load More Visibility
+    if (elements.commentsLoadMoreWrap) {
+      elements.commentsLoadMoreWrap.style.display = (filtered.length > state.commentsPageSize) ? 'block' : 'none';
+    }
+  }
+
+  function navigateToComments(subjectFilter = null) {
+    showView('semester');
+    if (subjectFilter) {
+      state.commentsSubjectFilter = subjectFilter;
+      if (elements.commentsSubjectFilter) {
+        elements.commentsSubjectFilter.value = subjectFilter;
+      }
+      if (elements.commentSubjectTag) {
+        elements.commentSubjectTag.value = subjectFilter;
+      }
+    }
+    renderCommentsStream();
+
+    setTimeout(() => {
+      const el = document.getElementById('communityCommentsSection');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 200);
+  }
+
+  function initCommentsModule() {
+    renderCommentsStream();
+
+    // 1. Compose Star Rating Interactivity
+    if (elements.composeStarRating) {
+      const starBtns = elements.composeStarRating.querySelectorAll('.star-btn');
+      const starLabels = {
+        1: '1.0 (Needs Improvement)',
+        2: '2.0 (Fair)',
+        3: '3.0 (Good Notes)',
+        4: '4.0 (Very Helpful)',
+        5: '5.0 (Exceptional & Comprehensive)'
+      };
+
+      const updateStars = (val) => {
+        state.composeRating = val;
+        starBtns.forEach(btn => {
+          const btnVal = parseInt(btn.dataset.val, 10);
+          if (btnVal <= val) {
+            btn.classList.add('active');
+            btn.innerHTML = '<i class="fa-solid fa-star"></i>';
+          } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '<i class="fa-regular fa-star"></i>';
+          }
+        });
+        if (elements.composeStarLabel) {
+          elements.composeStarLabel.textContent = starLabels[val] || `${val}.0`;
+        }
+      };
+
+      starBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = parseInt(btn.dataset.val, 10);
+          updateStars(val);
+        });
+      });
+    }
+
+    // 2. Compose Category Pills
+    if (elements.composeCatPills) {
+      const catBtns = elements.composeCatPills.querySelectorAll('.cat-pill-btn');
+      catBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          state.composeCategory = btn.dataset.cat;
+        });
+      });
+    }
+
+    // 3. Textarea Live Character Counter
+    if (elements.commentContent && elements.commentCharCount) {
+      elements.commentContent.addEventListener('input', (e) => {
+        const len = e.target.value.length;
+        elements.commentCharCount.textContent = len;
+        if (len >= 950) {
+          elements.commentCharCount.style.color = '#ef4444';
+        } else {
+          elements.commentCharCount.style.color = 'var(--text-muted)';
+        }
+      });
+    }
+
+    // 4. Quick Insert Chips
+    const quickInsertBtns = document.querySelectorAll('.quick-insert-btn');
+    quickInsertBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!elements.commentContent) return;
+        const ins = btn.dataset.insert || '';
+        const start = elements.commentContent.selectionStart;
+        const end = elements.commentContent.selectionEnd;
+        const val = elements.commentContent.value;
+        elements.commentContent.value = val.substring(0, start) + ins + val.substring(end);
+        elements.commentContent.focus();
+        elements.commentContent.selectionStart = elements.commentContent.selectionEnd = start + ins.length;
+        if (elements.commentCharCount) elements.commentCharCount.textContent = elements.commentContent.value.length;
+      });
+    });
+
+    // 5. Compose Form Submit
+    if (elements.commentComposeForm) {
+      elements.commentComposeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = (elements.commentAuthorName ? elements.commentAuthorName.value : '').trim();
+        const centre = elements.commentAuthorCentre ? elements.commentAuthorCentre.value : 'Faculty of Law, DU';
+        const semester = elements.commentAuthorSemester ? elements.commentAuthorSemester.value : 'Semester 1';
+        const subjectId = elements.commentSubjectTag ? elements.commentSubjectTag.value : 'general';
+        const content = (elements.commentContent ? elements.commentContent.value : '').trim();
+        const consent = elements.commentDpdpConsent ? elements.commentDpdpConsent.checked : false;
+
+        if (!name) {
+          alert('Please enter your name or preferred handle.');
+          if (elements.commentAuthorName) elements.commentAuthorName.focus();
+          return;
+        }
+
+        if (!content || content.length < 10) {
+          alert('Please provide a substantive academic comment or question (at least 10 characters).');
+          if (elements.commentContent) elements.commentContent.focus();
+          return;
+        }
+
+        if (!consent) {
+          alert('Please confirm DPDP Act consent to publish this academic comment.');
+          return;
+        }
+
+        const cleanAuthor = name;
+        const initials = cleanAuthor.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'DU';
+
+        // Derive short centre badge
+        let centreShort = 'DU Law';
+        if (centre.includes('CLC')) centreShort = 'CLC • DU';
+        else if (centre.includes('LC-1')) centreShort = 'LC-1 • DU';
+        else if (centre.includes('LC-2')) centreShort = 'LC-2 • DU';
+        else if (centre.includes('NLU')) centreShort = 'NLU Scholar';
+
+        // Derive short semester
+        let semesterShort = 'LL.B.';
+        const semMatch = semester.match(/Semester\s*([0-9]+)/i);
+        if (semMatch) semesterShort = `Sem ${semMatch[1]}`;
+
+        const newComment = {
+          id: `comm-${Date.now()}`,
+          author: cleanAuthor,
+          initials: initials,
+          centre: centre,
+          centreShort: centreShort,
+          semester: semester,
+          semesterShort: semesterShort,
+          subjectId: subjectId,
+          subjectName: getSubjectNameFromId(subjectId),
+          category: state.composeCategory || 'cases',
+          categoryLabel: getCategoryLabelFromKey(state.composeCategory || 'cases'),
+          rating: state.composeRating || 5,
+          timestamp: Date.now(),
+          timeAgo: 'Just now',
+          content: content,
+          helpfulCount: 0,
+          replies: []
+        };
+
+        saveNewComment(newComment);
+
+        // Reset form
+        elements.commentContent.value = '';
+        if (elements.commentCharCount) elements.commentCharCount.textContent = '0';
+      });
+    }
+
+    // 6. Clear Form Button
+    if (elements.commentClearBtn) {
+      elements.commentClearBtn.addEventListener('click', () => {
+        if (elements.commentContent) elements.commentContent.value = '';
+        if (elements.commentCharCount) elements.commentCharCount.textContent = '0';
+      });
+    }
+
+    // 7. Search Input & Clear
+    if (elements.commentsSearchInput) {
+      elements.commentsSearchInput.addEventListener('input', (e) => {
+        state.commentsSearchQuery = e.target.value;
+        if (elements.commentsSearchClearBtn) {
+          elements.commentsSearchClearBtn.style.display = e.target.value ? 'block' : 'none';
+        }
+        renderCommentsStream();
+      });
+    }
+    if (elements.commentsSearchClearBtn) {
+      elements.commentsSearchClearBtn.addEventListener('click', () => {
+        if (elements.commentsSearchInput) elements.commentsSearchInput.value = '';
+        state.commentsSearchQuery = '';
+        elements.commentsSearchClearBtn.style.display = 'none';
+        renderCommentsStream();
+      });
+    }
+
+    // 8. Subject Filter Select
+    if (elements.commentsSubjectFilter) {
+      elements.commentsSubjectFilter.addEventListener('change', (e) => {
+        state.commentsSubjectFilter = e.target.value;
+        renderCommentsStream();
+      });
+    }
+
+    // 9. Sort Select
+    if (elements.commentsSortSelect) {
+      elements.commentsSortSelect.addEventListener('change', (e) => {
+        state.commentsSort = e.target.value;
+        renderCommentsStream();
+      });
+    }
+
+    // 10. Category Filter Pills
+    if (elements.commentsCategoryPills) {
+      const pills = elements.commentsCategoryPills.querySelectorAll('.comm-cat-pill');
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          state.commentsCategoryFilter = pill.dataset.cat || 'all';
+          renderCommentsStream();
+        });
+      });
+    }
+
+    // 11. Reset Filters Button
+    if (elements.commentsResetFiltersBtn) {
+      elements.commentsResetFiltersBtn.addEventListener('click', () => {
+        state.commentsSearchQuery = '';
+        state.commentsCategoryFilter = 'all';
+        state.commentsSubjectFilter = 'all';
+        if (elements.commentsSearchInput) elements.commentsSearchInput.value = '';
+        if (elements.commentsSearchClearBtn) elements.commentsSearchClearBtn.style.display = 'none';
+        if (elements.commentsSubjectFilter) elements.commentsSubjectFilter.value = 'all';
+        if (elements.commentsCategoryPills) {
+          const pills = elements.commentsCategoryPills.querySelectorAll('.comm-cat-pill');
+          pills.forEach(p => p.classList.remove('active'));
+          const allPill = elements.commentsCategoryPills.querySelector('.comm-cat-pill[data-cat="all"]');
+          if (allPill) allPill.classList.add('active');
+        }
+        renderCommentsStream();
+      });
+    }
+
+    // 12. Load More Button
+    if (elements.commentsLoadMoreBtn) {
+      elements.commentsLoadMoreBtn.addEventListener('click', () => {
+        state.commentsPageSize += 6;
+        renderCommentsStream();
+      });
+    }
+
+    // 13. Delegated Event Handlers for Stream Items (Upvote, Reply, Share)
+    if (elements.commentsStream) {
+      elements.commentsStream.addEventListener('click', (e) => {
+        const upvoteBtn = e.target.closest('[data-action="upvote"]');
+        if (upvoteBtn) {
+          const id = upvoteBtn.dataset.id;
+          toggleCommentUpvote(id);
+          return;
+        }
+
+        const replyToggleBtn = e.target.closest('[data-action="toggle-reply"]');
+        if (replyToggleBtn) {
+          const id = replyToggleBtn.dataset.id;
+          const box = document.getElementById(`replyBox-${id}`);
+          if (box) {
+            box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+            if (box.style.display === 'flex') {
+              const ta = document.getElementById(`replyText-${id}`);
+              if (ta) ta.focus();
+            }
+          }
+          return;
+        }
+
+        const cancelReplyBtn = e.target.closest('[data-action="cancel-reply"]');
+        if (cancelReplyBtn) {
+          const id = cancelReplyBtn.dataset.id;
+          const box = document.getElementById(`replyBox-${id}`);
+          if (box) box.style.display = 'none';
+          return;
+        }
+
+        const submitReplyBtn = e.target.closest('[data-action="submit-reply"]');
+        if (submitReplyBtn) {
+          const id = submitReplyBtn.dataset.id;
+          const nameInput = document.getElementById(`replyName-${id}`);
+          const textInput = document.getElementById(`replyText-${id}`);
+          const name = nameInput ? nameInput.value : '';
+          const text = textInput ? textInput.value : '';
+          if (!text || !text.trim()) {
+            alert('Please enter your reply text.');
+            if (textInput) textInput.focus();
+            return;
+          }
+          addCommentReply(id, name, text);
+          return;
+        }
+
+        const shareBtn = e.target.closest('[data-action="share"]');
+        if (shareBtn) {
+          const id = shareBtn.dataset.id;
+          const url = `${window.location.origin}/#${id}`;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(() => {
+              showToast('Direct link to discussion copied to clipboard!');
+            }).catch(() => {
+              prompt('Copy link to this discussion:', url);
+            });
+          } else {
+            prompt('Copy link to this discussion:', url);
+          }
+          return;
+        }
+      });
+    }
+
+    // 14. Global Navigation Buttons
+    if (elements.headerCommentsBtn) {
+      elements.headerCommentsBtn.addEventListener('click', () => {
+        navigateToComments();
+      });
+    }
+    if (elements.mtdCommentsBtn) {
+      elements.mtdCommentsBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToComments();
+      });
+    }
+    if (elements.readerCommentsBtn) {
+      elements.readerCommentsBtn.addEventListener('click', () => {
+        closeReader();
+        const activeSub = state.currentSubject ? state.currentSubject.id : null;
+        navigateToComments(activeSub);
+      });
+    }
+    if (elements.footerContactBarCommentsLink) {
+      elements.footerContactBarCommentsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToComments();
+      });
+    }
+    if (elements.footerCommentsLink) {
+      elements.footerCommentsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToComments();
+      });
+    }
+  }
+
   function init() {
     // Theme setup
     applyTheme(state.darkMode);
     initAudioPlayer();
     updateStarBadge();
+    initCommentsModule();
 
     // Hero Action Buttons
     if (elements.heroExploreBtn) {
@@ -3703,6 +4649,11 @@ Submission Time: ${new Date().toLocaleString()}
         return;
       }
 
+      if (route.view === 'comments') {
+        navigateToComments(route.subject);
+        return;
+      }
+
       // Homepage fallback
       showView('semester', false);
     });
@@ -3818,6 +4769,11 @@ Submission Time: ${new Date().toLocaleString()}
     } else if (initialRoute && initialRoute.view === 'contact') {
       showView('semester', false);
       setTimeout(openContactModal, 250);
+    } else if (initialRoute && initialRoute.view === 'comments') {
+      showView('semester', false);
+      setTimeout(() => {
+        navigateToComments(initialRoute.subject);
+      }, 250);
     } else {
       const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
       if (curPath === '/terms' || curPath === '/terms.html') {
@@ -3870,6 +4826,9 @@ Submission Time: ${new Date().toLocaleString()}
       } else if (route.view === 'semester') {
         e.preventDefault();
         showView('semester', true);
+      } else if (route.view === 'comments') {
+        e.preventDefault();
+        navigateToComments(route.subject);
       }
     });
 
@@ -3880,6 +4839,14 @@ Submission Time: ${new Date().toLocaleString()}
       setTimeout(openContactModal, 250);
     } else if (window.location.hash === '#feedback' || (new URLSearchParams(window.location.search)).get('feedback') === 'true') {
       setTimeout(navigateToFeedback, 350);
+    } else if (window.location.hash === '#comments' || window.location.hash === '#communityCommentsSection' || window.location.hash.startsWith('#comm-') || (new URLSearchParams(window.location.search)).get('comments') === 'true') {
+      setTimeout(() => {
+        navigateToComments();
+        if (window.location.hash.startsWith('#comm-')) {
+          const targetCard = document.getElementById(window.location.hash.substring(1));
+          if (targetCard) targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 350);
     }
   }
 
