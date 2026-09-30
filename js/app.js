@@ -3741,9 +3741,9 @@ Submission Time: ${new Date().toLocaleString()}
     const allComments = getAllComments();
     const upvotedIds = getUpvotedCommentIds();
 
-    // 1. Calculate Metrics
+    // 1. Calculate Metrics (Real number of active discussions on the platform)
     if (elements.metricTotalComments) {
-      elements.metricTotalComments.textContent = `${allComments.length + 140}+`;
+      elements.metricTotalComments.textContent = String(allComments.length);
     }
     if (elements.metricAvgRating) {
       const sum = allComments.reduce((acc, c) => acc + (c.rating || 5), 0);
