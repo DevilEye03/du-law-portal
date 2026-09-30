@@ -1466,8 +1466,8 @@
         <button class="mtd-action-card" id="mtdContactBtn">
           <div class="mtd-card-icon contact" style="background:linear-gradient(135deg,#0284c7,#0369a1);color:#fff;"><i class="fa-solid fa-headset"></i></div>
           <div class="mtd-card-text">
-            <h4>Contact &amp; Telegram Community</h4>
-            <p>Email ankur@makelaweasy.in &amp; join Telegram group</p>
+            <h4>Contact &amp; Student Community</h4>
+            <p>WhatsApp Community, Telegram &amp; Email support</p>
           </div>
           <i class="fa-solid fa-chevron-right mtd-arrow"></i>
         </button>
@@ -1497,10 +1497,34 @@
 
     <div class="contact-modal-body">
       <p class="contact-intro-text">
-        Have questions on semester syllabus, case briefs, note contributions, or feedback? Reach out directly through Telegram or Email:
+        Have questions on semester syllabus, case briefs, note contributions, or feedback? Reach out directly through WhatsApp, Telegram or Email:
       </p>
 
       <div class="contact-channels-grid">
+        <!-- WhatsApp Community Card -->
+        <div class="contact-channel-card whatsapp-card">
+          <div class="channel-card-top">
+            <div class="channel-icon-pill whatsapp-pill">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="channel-badge whatsapp-badge">
+              <span class="live-pulse-dot whatsapp-dot"></span> Active Community
+            </div>
+          </div>
+          <div class="channel-card-info">
+            <h4>Official WhatsApp Community</h4>
+            <p>Join fellow DU LL.B. scholars for instant study materials, case notes, semester updates &amp; peer discussions.</p>
+            <div class="channel-address-box">
+              <code>chat.whatsapp.com/K2TwWAythGcDzTTTMkWcDL</code>
+            </div>
+          </div>
+          <div class="channel-card-actions">
+            <a href="https://chat.whatsapp.com/K2TwWAythGcDzTTTMkWcDL" target="_blank" rel="noopener noreferrer" class="contact-action-btn whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Community <i class="fa-solid fa-arrow-up-right-from-square small-external-icon"></i>
+            </a>
+          </div>
+        </div>
+
         <!-- Telegram Channel Card -->
         <div class="contact-channel-card telegram-card">
           <div class="channel-card-top">
@@ -2158,14 +2182,23 @@
       <p class="footer-text">
         An academic initiative crafted for serious law students. Strictly aligned with syllabus guidelines, landmark case materials, and past examination papers.
       </p>
-      <div class="footer-contact-bar">
-        <span class="footer-contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:ankur@makelaweasy.in">ankur@makelaweasy.in</a></span>
-        <span class="footer-contact-sep">&bull;</span>
-        <span class="footer-contact-item"><i class="fa-brands fa-telegram"></i> <a href="https://t.me/+5suDyPQc065jYWY1" target="_blank" rel="noopener noreferrer">Telegram Channel</a></span>
-        <span class="footer-contact-sep">&bull;</span>
-        <span class="footer-contact-item"><i class="fa-solid fa-comments" style="color: #60a5fa;"></i> <a href="#communityCommentsSection" id="footerContactBarCommentsLink">Discussions</a></span>
-        <span class="footer-contact-sep">&bull;</span>
-        <span class="footer-contact-item"><i class="fa-solid fa-comment-dots" style="color: #a78bfa;"></i> <a href="#studentFeedbackSection" id="footerContactBarFeedbackLink">Student Feedback</a></span>
+      <!-- Community & Contact Channels (Icon Buttons) -->
+      <div class="footer-contact-bar footer-social-icons-bar" role="navigation" aria-label="Community & Contact Channels">
+        <a href="https://chat.whatsapp.com/K2TwWAythGcDzTTTMkWcDL" class="footer-social-icon-btn btn-whatsapp" target="_blank" rel="noopener noreferrer" title="Join WhatsApp Community" aria-label="WhatsApp Community" data-tooltip="WhatsApp Community">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/+5suDyPQc065jYWY1" class="footer-social-icon-btn btn-telegram" target="_blank" rel="noopener noreferrer" title="Join Telegram Channel" aria-label="Telegram Channel" data-tooltip="Telegram Channel">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="mailto:ankur@makelaweasy.in" class="footer-social-icon-btn btn-mail" id="footerMailBtn" title="Direct Email Support (ankur@makelaweasy.in)" aria-label="Email ankur@makelaweasy.in" data-tooltip="Email ankur@makelaweasy.in">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="#communityCommentsSection" class="footer-social-icon-btn btn-discussions" id="footerContactBarCommentsLink" title="Academic Discussions & Doubts" aria-label="Academic Discussions" data-tooltip="Discussions">
+          <i class="fa-solid fa-comments"></i>
+        </a>
+        <a href="#studentFeedbackSection" class="footer-social-icon-btn btn-feedback" id="footerContactBarFeedbackLink" title="Student Experience & Feedback" aria-label="Student Feedback" data-tooltip="Feedback">
+          <i class="fa-solid fa-comment-dots"></i>
+        </a>
       </div>
       <div class="footer-legal-links">
         <a href="/about">About Us</a>
