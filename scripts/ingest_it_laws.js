@@ -148,113 +148,191 @@ const IT_UNITS_CONFIG = [
   }
 ];
 
-// Special case definitions for Unit 7 to ensure 100% legal accuracy
-const UNIT_7_SPECIAL_CASES = [
-  {
-    name: 'Trimex International FZE Ltd. v. Vedanta Aluminium Ltd.',
-    citation: '(2010) 3 SCC 1 · AIR 2010 SC 2221 · Supreme Court of India',
-    facts: 'Trimex (Dubai mineral trader) e-mailed a commercial offer to Vedanta for bauxite supply containing an arbitration clause. Following detailed e-mail negotiations, Vedanta confirmed acceptance of 5 shipments. Trimex entered into upstream and shipping commitments. Later Vedanta requested a hold and rejected the formal arbitration notice, contending no formal contract was signed.',
-    issues: 'Whether an unconditional acceptance conveyed over e-mail constitutes a valid, binding contract with an enforceable arbitration clause under Section 10A IT Act and Section 7(4)(b) Arbitration and Conciliation Act without formal signatures.',
-    arguments: 'Trimex argued intention to be bound was demonstrated by clear e-mail acceptance and subsequent conduct. Vedanta contended drafts were non-binding pending formal signed execution.',
-    ratio: 'Held by the Supreme Court: Once a contract is concluded through e-mail exchanges, the absence of a formal signed contract does not invalidate the agreement. Under Section 10A of the IT Act, 2000, contracts formed through electronic communications are legally valid, binding and enforceable.',
-    examTips: 'Top citation in e-commerce! Quote Sathasivam J. and emphasize that Section 10A legitimizes e-mail contracts provided the requirements of the Contract Act are met.'
-  },
-  {
-    name: 'World Wrestling Entertainment, Inc. v. Reshma Collection & Ors.',
-    citation: '2014 (60) PTC 452 (Del) · Delhi High Court Division Bench',
-    facts: 'WWE filed a suit in Delhi for trademark infringement against sellers of counterfeit goods in Mumbai, invoking Delhi jurisdiction on the ground that its official website was accessible and permitted transactions in Delhi.',
-    issues: 'Whether an interactive commercial website accessible in a forum gives that forum court territorial jurisdiction under Section 20(c) CPC and Section 134 Trade Marks Act.',
-    arguments: 'Plaintiff argued modern e-commerce means contract formation happens at the buyer’s end where acceptance is received under Section 13 IT Act and Bhagwandas Kedia principle.',
-    ratio: 'A Division Bench of the Delhi High Court held that when an interactive website invites customers to place orders and pay online, acceptance is communicated to the buyer at their desktop; hence a part of cause of action arises where the transaction occurs.',
-    examTips: 'Landmark decision harmonizing Bhagwandas Kedia (instantaneous communication) with Section 13(2) IT Act in online transactions.'
-  },
-  {
-    name: 'P.R. Transport Agency v. Union of India & Ors.',
-    citation: 'AIR 2006 All 23 · Allahabad High Court Division Bench',
-    facts: 'Bharat Coking Coal Ltd. accepted P.R. Transport Agency’s e-tender through an acceptance letter e-mailed from Dhanbad to the petitioner’s computer in Chandauli (UP). Later BCCL cancelled the tender alleging another cheque was dishonoured. P.R. Transport filed a writ in Allahabad High Court.',
-    issues: 'Where does the cause of action arise in contracts formed via e-mail under Section 13(3) of the IT Act, 2000?',
-    arguments: 'BCCL argued Jharkhand courts had sole jurisdiction because server and acceptance originated in Dhanbad. Petitioner argued acceptance was received at Chandauli, UP.',
-    ratio: 'Under Section 13(3) of the IT Act, an electronic record is deemed to be received at the place where the addressee has his place of business. Since petitioner’s principal place of business was Chandauli (UP), acceptance was received in UP, establishing Allahabad High Court’s territorial jurisdiction.',
-    examTips: 'Essential authority for Section 13(3) IT Act! Replaces physical server location with the statutory "place of business" rule.'
+// Div Depth Counter to extract balanced inner HTML of any container
+function extractDivContent(html, startPattern) {
+  const match = html.match(startPattern);
+  if (!match) return '';
+  const startIdx = match.index + match[0].length;
+  let depth = 1;
+  const tagRegex = /<\/?div\b[^>]*>/gi;
+  tagRegex.lastIndex = startIdx;
+  let m;
+  while ((m = tagRegex.exec(html)) !== null) {
+    if (m[0].startsWith('</')) {
+      depth--;
+      if (depth === 0) {
+        return html.slice(startIdx, m.index).trim();
+      }
+    } else {
+      depth++;
+    }
   }
-];
+  return html.slice(startIdx).trim();
+}
+
+function parseCaseBody(bodyHtml) {
+  const h4Regex = /<h4[^>]*>([\s\S]*?)<\/h4>([\s\S]*?)(?=<h4|<\/div>\s*<\/div>|$)/gi;
+  let m;
+  const sections = [];
+  while ((m = h4Regex.exec(bodyHtml)) !== null) {
+    const rawHead = m[1].replace(/<[^>]+>/g, '').trim();
+    const content = m[2].trim();
+    sections.push({ head: rawHead, html: content });
+  }
+
+  let facts = '';
+  let issues = '';
+  let arguments = '';
+  let ratio = '';
+  let principle = '';
+  let examTips = '';
+
+  for (const sec of sections) {
+    const h = sec.head.toLowerCase();
+
+    // Check if both facts and issues are combined in one heading
+    if (h.includes('fact') && h.includes('issue')) {
+      facts += (facts ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+      if (!issues) issues = `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('fact') || h.includes('procedural') || h.includes('plea') || h.includes('admission') || h.includes('the scheme') || h.includes('provenance')) {
+      facts += (facts ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('issue') || h.includes('statutory issue') || h.includes('points for determination') || h.includes('questions referred')) {
+      issues += (issues ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('argument') || h.includes('submission') || h.includes('arguments of both sides') || h.includes('for the petitioners') || h.includes('respondents')) {
+      arguments += (arguments ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('ratio') || h.includes('reasoning') || h.includes('holding') || h.includes('decision') || h.includes('matrix of holding')) {
+      ratio += (ratio ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('principle') || h.includes('doctrine')) {
+      principle += (principle ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('exam') || h.includes('significance') || h.includes('takeaway') || h.includes('criticism') || h.includes('application')) {
+      examTips += (examTips ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    } else if (h.includes('citation') || h.includes('bench')) {
+      if (!facts) {
+        facts = `<h4>${sec.head}</h4>` + sec.html;
+      } else {
+        facts = `<h4>${sec.head}</h4>` + sec.html + '<hr>' + facts;
+      }
+    } else {
+      ratio += (ratio ? '<hr>' : '') + `<h4>${sec.head}</h4>` + sec.html;
+    }
+  }
+
+  // Pre-h4 fallback for facts if empty
+  if (!facts) {
+    const preH4 = bodyHtml.split(/<h4/i)[0];
+    if (preH4 && preH4.trim().length > 20) {
+      facts = preH4.trim();
+    }
+  }
+
+  let principleEvolved = '';
+  if (principle && examTips) {
+    principleEvolved = `${principle}<hr>${examTips}`;
+  } else if (principle) {
+    principleEvolved = principle;
+  } else if (examTips) {
+    principleEvolved = examTips;
+  }
+
+  return { facts, issues, arguments, ratio, principleEvolved, examTips };
+}
+
+function parseUnit7Section(content, secId, name, citation, unitNumber, unitTitle, fileRel, idx) {
+  const startIdx = content.indexOf(`id="${secId}"`);
+  if (startIdx === -1) return null;
+  const nextSecIdx = content.indexOf('<section id="', startIdx + 15);
+  const chunk = nextSecIdx !== -1 ? content.slice(startIdx, nextSecIdx) : content.slice(startIdx);
+
+  const h3Regex = /<h3[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h3|<\/section>|$)/gi;
+  let m;
+  let facts = '';
+  let issues = '';
+  let arguments = '';
+  let ratio = '';
+  let principle = '';
+
+  while ((m = h3Regex.exec(chunk)) !== null) {
+    const rawH = m[1].replace(/<[^>]+>/g, '').trim();
+    const h = rawH.toLowerCase();
+    const body = m[2].trim();
+
+    if (h.includes('fact')) {
+      facts += (facts ? '<hr>' : '') + `<h4>${rawH}</h4>` + body;
+    } else if (h.includes('issue')) {
+      issues += (issues ? '<hr>' : '') + `<h4>${rawH}</h4>` + body;
+    } else if (h.includes('argument')) {
+      arguments += (arguments ? '<hr>' : '') + `<h4>${rawH}</h4>` + body;
+    } else if (h.includes('decision') || h.includes('reasoning')) {
+      ratio += (ratio ? '<hr>' : '') + `<h4>${rawH}</h4>` + body;
+    } else {
+      ratio += (ratio ? '<hr>' : '') + `<h4>${rawH}</h4>` + body;
+    }
+  }
+
+  // Model exam boxes
+  const boxMatches = Array.from(chunk.matchAll(/<div class="box[^"]*">([\s\S]*?)<\/div>/gi));
+  boxMatches.forEach(bm => {
+    if (bm[0].includes('principle') || bm[0].includes('Model exam paragraph') || bm[0].includes('exam')) {
+      principle += (principle ? '<hr>' : '') + bm[0];
+    }
+  });
+
+  return {
+    id: `it-c-u7-${idx}`,
+    name,
+    citation,
+    unitNumber: 7,
+    unit: unitTitle,
+    file: fileRel,
+    anchorId: secId,
+    facts,
+    issues,
+    arguments,
+    ratio,
+    principleEvolved: principle || ratio.slice(0, 500),
+    examTips: principle || 'Key judicial authority under IT Act 2000.'
+  };
+}
 
 function extractCasesFromNote(content, fileRel, unitNumber, unitTitle) {
   if (unitNumber === 7) {
-    return UNIT_7_SPECIAL_CASES.map((sc, idx) => ({
-      id: `it-c-u7-${idx + 1}`,
-      name: sc.name,
-      citation: sc.citation,
-      unitNumber: 7,
-      unit: unitTitle,
-      file: fileRel,
-      anchorId: `case-it-u7-${idx + 1}`,
-      facts: sc.facts,
-      issues: sc.issues,
-      arguments: sc.arguments,
-      ratio: sc.ratio,
-      principleEvolved: sc.ratio.substring(0, 400),
-      examTips: sc.examTips
-    }));
+    return [
+      parseUnit7Section(content, 'u7s6', 'Trimex International FZE Ltd. v. Vedanta Aluminium Ltd.', '(2010) 3 SCC 1 · AIR 2010 SC 2221 · Supreme Court of India', 7, unitTitle, fileRel, 1),
+      parseUnit7Section(content, 'u7s7', 'World Wrestling Entertainment, Inc. v. M/s Reshma Collection & Ors.', '2014 (60) PTC 452 (Del) (DB) · Delhi High Court Division Bench', 7, unitTitle, fileRel, 2),
+      parseUnit7Section(content, 'u7s8', 'P.R. Transport Agency v. Union of India & Ors.', 'AIR 2006 All 23 · Allahabad High Court Division Bench', 7, unitTitle, fileRel, 3)
+    ].filter(Boolean);
   }
 
   const cases = [];
-  let idx = 1;
+  const parts = content.split(/<div class="casehead"/gi);
+  for (let i = 1; i < parts.length; i++) {
+    const chunk = parts[i];
+    const titleM = chunk.match(/<h3>([\s\S]*?)<\/h3>/i) || chunk.match(/<h4>([\s\S]*?)<\/h4>/i);
+    const citeM = chunk.match(/<span class="cite">([\s\S]*?)<\/span>/i);
+    const title = titleM ? titleM[1].replace(/<[^>]+>/g, '').trim() : `Case ${i}`;
+    const cite = citeM ? citeM[1].replace(/<[^>]+>/g, '').trim() : 'DU Case Material Precedent';
 
-  const caseBlocks = content.split(/<div class="caseblock"/gi);
-  if (caseBlocks.length > 1) {
-    for (let i = 1; i < caseBlocks.length; i++) {
-      const block = caseBlocks[i];
-      
-      const h3Match = block.match(/<h[34][^>]*>([\s\S]*?)<\/h[34]>/i);
-      let title = h3Match ? stripHtml(h3Match[1]) : '';
-      
-      if (!title || title.match(/^\d+\s+/)) {
-        const cnMatch = block.match(/<div class="cn"[^>]*>([\s\S]*?)<\/div>/i);
-        const nameMatch = block.match(/<b>([A-Z][a-zA-Z\s.,&'\-()]+v\.\s+[A-Z][a-zA-Z\s.,&'\-()]+)<\/b>/i);
-        if (nameMatch) {
-          title = stripHtml(nameMatch[1]);
-        } else if (cnMatch) {
-          title = stripHtml(cnMatch[1]);
-        }
-      }
+    const bodyIdx = chunk.indexOf('<div class="casebody">');
+    const endBodyIdx = chunk.indexOf('</div>\n  </div>', bodyIdx);
+    const bodyHtml = bodyIdx !== -1 ? chunk.slice(bodyIdx + 22, endBodyIdx !== -1 ? endBodyIdx : undefined) : '';
 
-      if (!title || title.length < 3) continue;
+    const parsed = parseCaseBody(bodyHtml);
 
-      const citeMatches = Array.from(block.matchAll(/<span class="cite">([\s\S]*?)<\/span>/gi)).map(m => stripHtml(m[1]));
-      let citation = citeMatches.length > 0 ? citeMatches.join(' · ') : 'DU Prescribed Landmark Case';
-
-      const factsMatch = block.match(/<h4>[^<]*Facts[\s\S]*?<\/h4>([\s\S]*?)(?=<h4>|<\/div>\s*<\/div>|$)/i);
-      let facts = factsMatch ? stripHtml(factsMatch[1]) : `Material facts as recorded in DU Case Material for ${title}.`;
-
-      const issuesMatch = block.match(/<h4>[^<]*Issues[\s\S]*?<\/h4>([\s\S]*?)(?=<h4>|<\/div>\s*<\/div>|$)/i);
-      let issues = issuesMatch ? stripHtml(issuesMatch[1]) : `Whether the impugned acts fall within the scope of the Information Technology Act, 2000 and related penal/civil provisions.`;
-
-      const argsMatch = block.match(/<h4>[^<]*Arguments[\s\S]*?<\/h4>([\s\S]*?)(?=<h4>|<\/div>\s*<\/div>|$)/i);
-      let args = argsMatch ? stripHtml(argsMatch[1]) : `Parties advanced detailed submissions regarding the interpretation of cyber law provisions, technical definitions, and constitutional safeguards.`;
-
-      const ratioMatch = block.match(/<h4>[^<]*(?:Ratio|Decision|Holdings|Principle)[\s\S]*?<\/h4>([\s\S]*?)(?=<h4>|<\/div>\s*<\/div>|$)/i);
-      let ratio = ratioMatch ? stripHtml(ratioMatch[1]) : stripHtml(block).substring(0, 750);
-
-      const tipsMatch = block.match(/<h4>[^<]*(?:Exam|Takeaway|Analysis)[\s\S]*?<\/h4>([\s\S]*?)(?=<h4>|<\/div>\s*<\/div>|$)/i);
-      let examTips = tipsMatch ? stripHtml(tipsMatch[1]) : `Quote the exact ratio and statutory sections in DU LL.B. semester exams for maximum marks.`;
-
-      cases.push({
-        id: `it-c-u${unitNumber}-${idx++}`,
-        name: title,
-        citation: citation.substring(0, 160),
-        unitNumber: unitNumber,
-        unit: unitTitle,
-        file: fileRel,
-        anchorId: `case-it-u${unitNumber}-${idx}`,
-        facts: facts.substring(0, 850),
-        issues: issues.substring(0, 650),
-        arguments: args.substring(0, 650),
-        ratio: ratio.substring(0, 850),
-        principleEvolved: ratio.substring(0, 450),
-        examTips: examTips.substring(0, 450)
-      });
-    }
+    cases.push({
+      id: `it-c-u${unitNumber}-${i}`,
+      name: title,
+      citation: cite,
+      unitNumber: unitNumber,
+      unit: unitTitle,
+      file: fileRel,
+      anchorId: `case-it-u${unitNumber}-${i}`,
+      facts: parsed.facts,
+      issues: parsed.issues,
+      arguments: parsed.arguments,
+      ratio: parsed.ratio,
+      principleEvolved: parsed.principleEvolved,
+      examTips: parsed.examTips
+    });
   }
 
   return cases;
@@ -262,55 +340,63 @@ function extractCasesFromNote(content, fileRel, unitNumber, unitTitle) {
 
 function extractPyqsFromNote(content, fileRel, unitNumber, unitTitle) {
   const pyqs = [];
-  let idx = 1;
+  const rawBlocks = content.split(/<div class="pyq"[^>]*>/gi);
 
-  const rawPyqs = content.split(/<div class="pyq"/gi);
-  if (rawPyqs.length > 1) {
-    for (let i = 1; i < rawPyqs.length; i++) {
-      const chunk = rawPyqs[i].substring(0, 5000);
-      
-      let qText = '';
-      const qtextM = chunk.match(/<span class="qtext">([\s\S]*?)<\/span>/i);
-      const qnM = chunk.match(/<div class="q">([\s\S]*?)<\/div>/i);
-      const qhM = chunk.match(/<div class="qh">([\s\S]*?)<\/div>/i);
-      if (qtextM) qText = stripHtml(qtextM[1]);
-      else if (qnM) qText = stripHtml(qnM[1]);
-      else if (qhM) qText = stripHtml(qhM[1]);
+  for (let i = 1; i < rawBlocks.length; i++) {
+    const block = rawBlocks[i];
+    const hasAns = /<div class="ans"[^>]*>/i.test(block);
 
-      if (!qText) qText = `Examination Problem / Question on ${unitTitle}`;
+    let qText = '';
+    let modelAnswer = '';
 
-      let year = 'DU LL.B. Examination';
-      const yrM = chunk.match(/<span class="yr">([\s\S]*?)<\/span>/i);
-      const qmetaM = chunk.match(/<span class="qmeta">([\s\S]*?)<\/span>/i);
-      if (qmetaM) year = stripHtml(qmetaM[1]);
-      else if (yrM) year = stripHtml(yrM[1]);
+    if (hasAns) {
+      modelAnswer = extractDivContent(block, /<div class="ans"[^>]*>/i);
+      const qtextM = block.match(/<span class="qtext"[^>]*>([\s\S]*?)<\/span>/i) || block.match(/<p class="qtext"[^>]*>([\s\S]*?)<\/p>/i);
+      const qbM = block.match(/<div class="qb"[^>]*>([\s\S]*?)<\/div>/i);
+      const qM = block.match(/<div class="q"[^>]*>([\s\S]*?)<\/div>/i);
 
-      let marks = '15–20 Marks';
-      const marksM = chunk.match(/<span class="marks">([\s\S]*?)<\/span>/i);
-      if (marksM) marks = stripHtml(marksM[1]);
-      else if (year.includes('marks')) marks = year;
-
-      let ansText = '';
-      const ansM = chunk.match(/<div class="ans">([\s\S]*?)<\/div>/i);
-      const qbM = chunk.match(/<div class="qb">([\s\S]*?)<\/div>/i);
-      if (ansM) ansText = stripHtml(ansM[1]);
-      else if (qbM) ansText = stripHtml(qbM[1]);
-      else ansText = stripHtml(chunk).substring(0, 1500);
-
-      pyqs.push({
-        id: `it-pyq-u${unitNumber}-${idx++}`,
-        number: `Q${idx - 1}`,
-        year: year,
-        marks: marks,
-        type: qText.length > 220 ? 'Problem' : 'Essay',
-        unitNumber: unitNumber,
-        unit: unitTitle,
-        file: fileRel,
-        anchorId: `pyq-it-u${unitNumber}-${idx}`,
-        question: qText,
-        modelAnswer: ansText
-      });
+      if (qtextM) {
+        qText = qtextM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      } else if (qbM) {
+        qText = qbM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      } else if (qM) {
+        qText = qM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      }
+    } else {
+      modelAnswer = extractDivContent(block, /<div class="qb"[^>]*>/i);
+      const qtextM = block.match(/<span class="qtext"[^>]*>([\s\S]*?)<\/span>/i);
+      const qhM = block.match(/<div class="qh"[^>]*>([\s\S]*?)<\/div>/i);
+      if (qtextM) {
+        qText = qtextM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      } else if (qhM) {
+        qText = qhM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+      }
     }
+
+    let year = 'DU LL.B. Examination';
+    const yrM = block.match(/<span class="yr">([\s\S]*?)<\/span>/i);
+    const qmetaM = block.match(/<span class="qmeta">([\s\S]*?)<\/span>/i);
+    if (qmetaM) year = qmetaM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    else if (yrM) year = yrM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+
+    let marks = '20 Marks';
+    const marksM = block.match(/<span class="marks">([\s\S]*?)<\/span>/i);
+    if (marksM) marks = marksM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+    else if (year.includes('marks') || year.includes('Marks')) marks = year;
+
+    pyqs.push({
+      id: `it-pyq-u${unitNumber}-${i}`,
+      number: `Q${i}`,
+      year,
+      marks,
+      type: qText.length > 200 ? 'Problem' : 'Essay',
+      unitNumber,
+      unit: unitTitle,
+      file: fileRel,
+      anchorId: `pyq-it-u${unitNumber}-${i}`,
+      question: qText || `Examination Question on ${unitTitle}`,
+      modelAnswer
+    });
   }
 
   return pyqs;

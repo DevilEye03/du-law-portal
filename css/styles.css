@@ -1114,6 +1114,84 @@ button{font-family:inherit;cursor:pointer}
   font-weight: 700;
 }
 
+/* Rich Case Text Block & Model Answer Enhancements */
+.case-text-block h4 {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--sub-primary);
+  margin: 14px 0 6px 0;
+  letter-spacing: -0.01em;
+}
+.case-text-block h4:first-child {
+  margin-top: 0;
+}
+.case-text-block h5 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin: 10px 0 4px 0;
+}
+.case-text-block p {
+  margin-bottom: 10px;
+  line-height: 1.68;
+}
+.case-text-block p:last-child {
+  margin-bottom: 0;
+}
+.case-text-block ul,
+.case-text-block ol {
+  margin: 8px 0 10px 20px;
+  padding: 0;
+  line-height: 1.65;
+}
+.case-text-block li {
+  margin-bottom: 6px;
+}
+.case-text-block hr {
+  border: 0;
+  border-top: 1px dashed var(--border-line);
+  margin: 14px 0;
+}
+.case-text-block .argcard,
+.model-ans-content .argcard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin: 10px 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.case-text-block .argcard.pet,
+.model-ans-content .argcard.pet {
+  border-left: 3px solid #2563eb;
+}
+.case-text-block .argcard.res,
+.model-ans-content .argcard.res {
+  border-left: 3px solid #d97706;
+}
+.case-text-block .verdict,
+.model-ans-content .verdict {
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.25);
+  border-left: 4px solid #059669;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  margin: 12px 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+.case-text-block .box,
+.model-ans-content .box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin: 10px 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
 /* Backward compatibility fallbacks */
 .firac-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 @media(max-width:860px){.firac-grid{grid-template-columns:1fr}}
