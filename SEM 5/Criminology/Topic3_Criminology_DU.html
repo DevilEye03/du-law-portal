@@ -114,7 +114,343 @@ footer{margin-top:50px;padding:22px 0;border-top:2px solid var(--line);font-size
   .top{display:none} details{page-break-inside:avoid} .case{page-break-inside:avoid}
   details>summary{display:none} details>*{display:block !important}
 }
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .paper, .note-container, .notes-body, .reading-container,
+  .syllabus-container, .toc-container, .wrapper, .site-main, .main-wrap,
+  .doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+  .firac-wrapper, .briefs-container, .pyq-wrap, .deck, section.card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. HERO & HEADERS: ZERO MARGIN OVERFLOW */
+  header, header.hero, .hero, .header, .topbar, .cover, .banner, .title-card,
+  .title-block, .topic-header, .subject-banner, .part-head {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 14px 18px !important;
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  header.hero h1, .hero h1, .header h1, h1 {
+    font-size: clamp(20px, 5.8vw, 27px) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 4. EXPANDABLE DETAILS, ACCORDIONS, CALLOUTS, CARDS & CASES */
+  details, .card, .case, .q, .pyq, .box, .callout, .warnbox, .okbox,
+  .info-box, .statute, .statute-card, .note, .tip, .exam-tip, .def, .defbox,
+  .highlight, .highlight-box, .rule-box, .quote, blockquote, .card-body,
+  .case-card, .part-body, .timeline-item, .capsule, .analysis-box, .summary-box,
+  .ans, .model-answer, .qt, .qh, .solution, .judges-box, .facts, .issues, .ratio,
+  .princ, .exam-card, .bare-act-box, .illustration-box, .provision-card,
+  .procedure-card, .precedent-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. TYPOGRAPHY & LISTS */
+  .part-head .num, .num, .bno, .cno, .sno {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow, .fork {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox, .fork .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+
 </style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
 </head>
 <body><a id="top"></a>
 <header class="hero">
@@ -2792,14 +3128,14 @@ requiring reporting of cyber incidents within <b>six hours</b>.</div>
 </tbody></table></div>
 
 <h4>Domain names as trade marks — the three cases in the commentary</h4>
-<div class="case">
+<div class="case" id="crim-case-u2-1">
 <div class="hd"><span class="nm">Rediff Communications Ltd. v. Cyberbooth &amp; Ramesh Nahata</span><span class="ct">AIR 2000 Bom 27</span></div>
 <div class="bd"><dl>
 <dt>Holding</dt><dd>“A <b>domain name is more than an internet address</b> and [is] therefore entitled to
 protection under the Trade Marks Act.” The defendant’s “radiff.com” was restrained as deceptively similar to
 “rediff.com”.</dd>
 </dl></div></div>
-<div class="case">
+<div class="case" id="crim-case-u2-2">
 <div class="hd"><span class="nm">Satyam Infoway Ltd. v. Sifynet Solutions (P) Ltd.</span><span class="ct">(2004) 6 SCC 145</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellants, incorporated in 1995, had traded under the domain name “Sifynet” since June 1999
@@ -2820,7 +3156,7 @@ reputation”. Appeal allowed; the High Court’s decision set aside and the Cit
 <dt>Principle</dt><dd>Domain names are protected by the law of passing off; the internet is not a
 law-free zone.</dd>
 </dl></div></div>
-<div class="case">
+<div class="case" id="crim-case-u2-3">
 <div class="hd"><span class="nm">Yahoo! Inc. v. Akash Arora</span><span class="ct">1999 PTC (19) 201 (Del)</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>The defendant used “YahooIndia.com” for internet-related services. He contended that
@@ -3135,7 +3471,7 @@ Prostitution of Others, 1950</b>, which India signed on 9 May 1950; renamed and 
 <tr><td><b>ss.22A, 22AA, 23A</b></td><td>Establishment of <b>Special Courts</b>; s.22B allows summary trial, but the sentence in such a trial <b>cannot exceed one year</b></td><td>—</td></tr>
 <tr><td><b>Advisory body</b></td><td>“The State Government may associate with [the] Special Police Officer a <b>non-official advisory body</b> consisting of not more than five leading social welfare workers of the area, <b>including [a] woman social welfare worker</b>” — <i>Delhi Administration v. Ram Singh</i> AIR 1962 SC 63</td><td>—</td></tr>
 </tbody></table></div>
-<div class="case">
+<div class="case" id="crim-case-u2-4">
 <div class="hd"><span class="nm">Shama Bai v. State of Uttar Pradesh</span><span class="ct">AIR 1959 All 57</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>The constitutional validity of the Suppression of Immoral Traffic Act, 1956 was
@@ -3202,7 +3538,7 @@ NALSA’s <b>Compensation Scheme for Women Victims/Survivors of Sexual Assault, 
 </div>
 
 <h3>32.3 The leading Indian cases</h3>
-<div class="case">
+<div class="case" id="crim-case-u2-5">
 <div class="hd"><span class="nm">Vishal Jeet v. Union of India</span><span class="ct">(1990) 3 SCC 318</span><span class="tag">trafficking</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A public interest petition under Art. 32 complaining of (i) forced prostitution of girls and
@@ -3227,7 +3563,7 @@ therefore cannot be eradicated by punitive measures alone.</dd>
 trafficking but to rescue, rehabilitate and reintegrate. The Court also made the enduring observation that
 <b>the victim of trafficking must not be treated as an offender</b>.</dd>
 </dl></div></div>
-<div class="case">
+<div class="case" id="crim-case-u2-6">
 <div class="hd"><span class="nm">Gaurav Jain v. Union of India</span><span class="ct">AIR 1997 SC 3021; (1997) 8 SCC 114</span><span class="tag">trafficking</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A PIL arising out of an article titled “A Red Light Trap: Society Gives No Chance to Prostitutes’
@@ -3252,7 +3588,7 @@ which places the judgment squarely within Bonger’s economic explanation of cri
 history: a review bench in <i>Gaurav Jain</i> (1998) clarified that directions in a PIL must be within the scope
 of the pleadings.</dd>
 </dl></div></div>
-<div class="case">
+<div class="case" id="crim-case-u2-7">
 <div class="hd"><span class="nm">Budhadev Karmaskar v. State of West Bengal</span><span class="ct">(2011) 11 SCC 538; orders of 19 and 26 May 2022</span><span class="tag">sex work</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A criminal appeal against conviction for the brutal murder of a sex worker. The Supreme Court,
@@ -3272,7 +3608,7 @@ occupation.</dd>
 from <b>voluntary adult sex work</b>, which is not. This is the modern answer to the criticism of s.8 ITPA and the
 key case to cite on the victim-versus-offender problem.</dd>
 </dl></div></div>
-<div class="case">
+<div class="case" id="crim-case-u2-8">
 <div class="hd"><span class="nm">Prajwala v. Union of India</span><span class="ct">(2015) and subsequent orders; see also <i>In Re: Prajwala Letter</i> (2018)</span><span class="tag">trafficking</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>An NGO’s letter enclosing videos of sexual assault circulating on the internet; and a
@@ -3760,7 +4096,7 @@ adopted by the UN General Assembly in 1990</b>, the <b>Vienna Convention, 1988</
 </tbody></table></div>
 
 <h3>37.3 <i>Vijay Madanlal Choudhary v. Union of India</i> — the leading case</h3>
-<div class="case">
+<div class="case" id="crim-case-u2-9">
 <div class="hd"><span class="nm">Vijay Madanlal Choudhary v. Union of India</span><span class="ct">(2022) SCC OnLine SC 929 (27 July 2022); 3-Judge Bench, A.M. Khanwilkar J.</span><span class="tag">money laundering</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>Over <b>240 petitions</b> were heard together, challenging the constitutional validity of
@@ -4256,7 +4592,7 @@ which the concepts of this topic are actually litigated in India; several have a
 <i>Satyam Infoway</i>, <i>Rediff</i>, <i>Yahoo!</i> §29.3; <i>Vijay Madanlal Choudhary</i> §37.3). What follows
 completes the set.</div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-10">
 <div class="hd"><span class="nm">Keshub Mahindra v. State of Madhya Pradesh</span><span class="ct">(1996) 6 SCC 129 — the Bhopal case</span><span class="tag">socio-economic offence</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>On the night of <b>2–3 December 1984</b> approximately 40 tonnes of <b>methyl isocyanate</b>
@@ -4293,7 +4629,7 @@ a penal sanction. Contrast <i>M.C. Mehta</i> (below), and note the legislative r
 (Protection) Act, 1986, the Public Liability Insurance Act, 1991 and the NGT Act, 2010.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-11">
 <div class="hd"><span class="nm">M.C. Mehta v. Union of India</span><span class="ct">(1987) 1 SCC 395 — the Oleum Gas Leak case</span><span class="tag">absolute liability</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>On 4 and 6 December 1985, oleum gas escaped from a unit of Shriram Foods and Fertiliser
@@ -4321,7 +4657,7 @@ Enviro-Legal Action v. Union of India</i> (1996) 3 SCC 212 (polluter pays) and <
 v. Union of India</i> (1996) 5 SCC 647 (precautionary principle).</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-12">
 <div class="hd"><span class="nm">Ishar Das v. State of Punjab</span><span class="ct">(1973) 2 SCC 65</span><span class="tag">47th Report</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was convicted of selling <b>adulterated milk</b> under the Prevention of Food
@@ -4342,7 +4678,7 @@ are a class apart in sentencing</b>. See also <i>Prem Ballab v. State (Delhi Adm
 s.18 of the Probation of Offenders Act, 1958.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-13">
 <div class="hd"><span class="nm">Standard Chartered Bank v. Directorate of Enforcement</span><span class="ct">(2005) 4 SCC 530 (Constitution Bench, 3:2)</span><span class="tag">corporate liability</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The bank faced adjudication and prosecution under the <b>Foreign Exchange Regulation Act,
@@ -4373,7 +4709,7 @@ attribution (from company to director) requires either active role plus <i>mens 
 provision.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-14">
 <div class="hd"><span class="nm">Shreya Singhal v. Union of India</span><span class="ct">(2015) 5 SCC 1</span><span class="tag">cyber crime</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>Two young women were arrested in Maharashtra in 2012 — one for a Facebook post questioning the
@@ -4408,7 +4744,7 @@ that the criminal justice system is not a machine for applying law but a set of 
 habits.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-15">
 <div class="hd"><span class="nm">State of Tamil Nadu v. Suhas Katti</span><span class="ct">C.C. No. 4680 of 2004, Court of the Additional CMM, Egmore, Chennai; judgment 5 November 2004</span><span class="tag">cyber crime</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The accused, a family friend of the complainant, wished to marry her; she married another man
@@ -4434,7 +4770,7 @@ online harassment of a woman by a rejected suitor — also anticipates the stalk
 introduced in 2013 (now ss.77–78 BNS).</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-16">
 <div class="hd"><span class="nm">Vineet Narain v. Union of India</span><span class="ct">(1998) 1 SCC 226 — the Jain Hawala case</span><span class="tag">privileged class deviance</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>In 1991, in the course of an investigation into terrorist funding, the CBI seized diaries and
@@ -4469,7 +4805,7 @@ hawala prosecutions themselves collapsed for want of admissible evidence — the
 insufficient corroboration — which is itself an illustration of the thesis.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-17">
 <div class="hd"><span class="nm">Sita Soren v. Union of India</span><span class="ct">(2024) 5 SCC 629 (7-Judge Bench, 4 March 2024)</span><span class="tag">privileged class deviance</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant, a member of the Jharkhand Legislative Assembly, was alleged to have accepted a
@@ -4500,7 +4836,7 @@ the most important recent dismantling of a legal immunity that had operated as p
 and it should be cited in every answer on that head.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-18">
 <div class="hd"><span class="nm">State of Gujarat v. Mohanlal Jitamalji Porwal</span><span class="ct">(1987) 2 SCC 364</span><span class="tag">economic offences</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A prosecution under the Customs Act and the Gold (Control) Act in which the prosecution had
@@ -4521,7 +4857,7 @@ characteristics (1) and (5) — avarice, and deliberate and wilful conduct.</b> 
 <i>Gautam Kundu v. Directorate of Enforcement</i> (2015) 16 SCC 1.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-19">
 <div class="hd"><span class="nm">Bandhua Mukti Morcha v. Union of India</span><span class="ct">(1984) 3 SCC 161</span><span class="tag">trafficking / bonded labour</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>An organisation working for the release of bonded labourers addressed a letter to the Supreme
@@ -4549,7 +4885,7 @@ India</i> (1982) 3 SCC 235 (payment below minimum wage is “forced labour” un
 meaningless</b>) — a proposition that applies with equal force to trafficking victims.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-20">
 <div class="hd"><span class="nm">M.C. Mehta v. State of Tamil Nadu</span><span class="ct">(1996) 6 SCC 756 — the Sivakasi child labour case</span><span class="tag">child labour</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A fire in a fireworks factory at <b>Sivakasi</b> in 1991 killed a number of workers, including
@@ -4570,7 +4906,7 @@ Report’s “augmentation of the wealth of the country” interest. Read with A
 <i>Bachpan Bachao Andolan v. Union of India</i> (2011) 5 SCC 1.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-21">
 <div class="hd"><span class="nm">Tofan Singh v. State of Tamil Nadu</span><span class="ct">(2021) 4 SCC 1 (3-Judge Bench, 2:1)</span><span class="tag">narcotics</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was convicted under the NDPS Act substantially on the basis of a
@@ -4600,7 +4936,7 @@ view of s.50 PMLA — the two decisions together are the best available material
 Report’s licence to depart from ordinary criminal procedure should extend.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-22">
 <div class="hd"><span class="nm">Hira Singh v. Union of India</span><span class="ct">(2020) 20 SCC 272 (3-Judge Bench)</span><span class="tag">narcotics</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>Whether, in determining whether a seizure is of a “small” or “commercial” quantity
@@ -4622,7 +4958,7 @@ the asymmetry Topic 3 exists to expose. This is the best single case for arguing
 recommended in 1972 has fallen on the wrong hands.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-23">
 <div class="hd"><span class="nm">Subramanian Swamy v. Director, CBI</span><span class="ct">(2014) 8 SCC 682 (Constitution Bench)</span><span class="tag">privileged class deviance</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>Section 6A of the Delhi Special Police Establishment Act, 1946 (inserted in 2003 after
@@ -4646,7 +4982,7 @@ form (for enquiries into recommendations made or decisions taken in the discharg
 s.17A survives the reasoning in <i>Subramanian Swamy</i> is an open and highly examinable question.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u2-24">
 <div class="hd"><span class="nm">Lalita Kumari v. Government of Uttar Pradesh</span><span class="ct">(2014) 2 SCC 1 (Constitution Bench)</span><span class="tag">crime statistics</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A writ petition under Art. 32 by the father of a minor girl who had been abducted, complaining
@@ -4694,7 +5030,7 @@ state a statute, attach the section.</p>
 <h2 id="s43">44. Previous Year Questions, expected questions and rapid revision</h2>
 
 <h3>44.1 The Topic-3 PYQ from the DU solved papers</h3>
-<div class="q"><div class="qh"><span class="pill">2017 · Q1(c)</span></div>
+<div class="q" id="crim-pyq-u2-1"><div class="qh"><span class="pill">2017 · Q1(c)</span></div>
 <div class="qt">Attempt briefly any two of the following: … <b>(c) Human trafficking.</b></div>
 <div class="ans"><div class="al">Model answer — reproduce the DU answer, then extend it</div>
 <p><b>1. Definition.</b> “Human trafficking is the practice of people being trapped, lured, coerced or otherwise
@@ -4746,7 +5082,7 @@ prosecution of the trafficker, and the social answer is livelihood, education an
 “<b>powerlessness… arising out of gender disparities and the lack of economic choices</b>”.</p>
 </div></div>
 
-<div class="q"><div class="qh"><span class="pill">2022 · Q5 — uses NCRB data</span></div>
+<div class="q" id="crim-pyq-u2-2"><div class="qh"><span class="pill">2022 · Q5 — uses NCRB data</span></div>
 <div class="qt">According to data published in 2019 by the National Crime Records Bureau (NCRB), as against the
 actual capacity of Indian prisons, i.e. 4,03,739 prisoners, there are 4,78,600 prisoners. Moreover, the conditions
 in jails continue to be inhuman [and] require urgent and drastic reforms as suggested and recommended in

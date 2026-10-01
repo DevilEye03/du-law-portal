@@ -57,7 +57,343 @@ code{background:#f1f5f9;padding:.1rem .4rem;border-radius:6px;font-size:.9em}
 .pill{display:inline-block;background:#ede9fe;color:#3b0764;border-radius:8px;padding:.1rem .6rem;margin:.15rem;font-size:.85rem;font-weight:600}
 footer{text-align:center;color:var(--muted);font-size:.85rem;padding:1.5rem}
 @media print{header.hero{color:#000;background:none;border-bottom:3px solid #000}header.hero p{color:#333}section.card,nav.toc{box-shadow:none;break-inside:avoid}details{break-inside:avoid}}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .paper, .note-container, .notes-body, .reading-container,
+  .syllabus-container, .toc-container, .wrapper, .site-main, .main-wrap,
+  .doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+  .firac-wrapper, .briefs-container, .pyq-wrap, .deck, section.card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. HERO & HEADERS: ZERO MARGIN OVERFLOW */
+  header, header.hero, .hero, .header, .topbar, .cover, .banner, .title-card,
+  .title-block, .topic-header, .subject-banner, .part-head {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 14px 18px !important;
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  header.hero h1, .hero h1, .header h1, h1 {
+    font-size: clamp(20px, 5.8vw, 27px) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 4. EXPANDABLE DETAILS, ACCORDIONS, CALLOUTS, CARDS & CASES */
+  details, .card, .case, .q, .pyq, .box, .callout, .warnbox, .okbox,
+  .info-box, .statute, .statute-card, .note, .tip, .exam-tip, .def, .defbox,
+  .highlight, .highlight-box, .rule-box, .quote, blockquote, .card-body,
+  .case-card, .part-body, .timeline-item, .capsule, .analysis-box, .summary-box,
+  .ans, .model-answer, .qt, .qh, .solution, .judges-box, .facts, .issues, .ratio,
+  .princ, .exam-card, .bare-act-box, .illustration-box, .provision-card,
+  .procedure-card, .precedent-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. TYPOGRAPHY & LISTS */
+  .part-head .num, .num, .bno, .cno, .sno {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow, .fork {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox, .fork .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+
 </style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
 </head>
 <body>
 <header class="hero">

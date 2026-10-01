@@ -114,7 +114,343 @@ footer{margin-top:50px;padding:22px 0;border-top:2px solid var(--line);font-size
   .top{display:none} details{page-break-inside:avoid} .case{page-break-inside:avoid}
   details>summary{display:none} details>*{display:block !important}
 }
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .paper, .note-container, .notes-body, .reading-container,
+  .syllabus-container, .toc-container, .wrapper, .site-main, .main-wrap,
+  .doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+  .firac-wrapper, .briefs-container, .pyq-wrap, .deck, section.card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. HERO & HEADERS: ZERO MARGIN OVERFLOW */
+  header, header.hero, .hero, .header, .topbar, .cover, .banner, .title-card,
+  .title-block, .topic-header, .subject-banner, .part-head {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 14px 18px !important;
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  header.hero h1, .hero h1, .header h1, h1 {
+    font-size: clamp(20px, 5.8vw, 27px) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 4. EXPANDABLE DETAILS, ACCORDIONS, CALLOUTS, CARDS & CASES */
+  details, .card, .case, .q, .pyq, .box, .callout, .warnbox, .okbox,
+  .info-box, .statute, .statute-card, .note, .tip, .exam-tip, .def, .defbox,
+  .highlight, .highlight-box, .rule-box, .quote, blockquote, .card-body,
+  .case-card, .part-body, .timeline-item, .capsule, .analysis-box, .summary-box,
+  .ans, .model-answer, .qt, .qh, .solution, .judges-box, .facts, .issues, .ratio,
+  .princ, .exam-card, .bare-act-box, .illustration-box, .provision-card,
+  .procedure-card, .precedent-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. TYPOGRAPHY & LISTS */
+  .part-head .num, .num, .bno, .cno, .sno {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow, .fork {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox, .fork .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+
 </style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
 </head>
 <body><a id="top"></a>
 <header class="hero">
@@ -1687,7 +2023,7 @@ Privy Council’s Caribbean line — mandatory death sentences struck down.</div
 <h2 id="s20">21. The background cases — <i>Jagmohan</i>, <i>Ediga Anamma</i> and <i>Rajendra Prasad</i></h2>
 <p>You cannot brief <i>Bachan Singh</i> without these three, because the whole of <i>Bachan Singh</i> is a
 reconciliation of them.</p>
-<div class="case">
+<div class="case" id="crim-case-u4-1">
 <div class="hd"><span class="nm">Jagmohan Singh v. State of Uttar Pradesh</span><span class="ct">(1973) 1 SCC 20; (1973) 2 SCR 541 — Constitution Bench</span><span class="tag">constitutionality</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>The appellant was convicted of murder and sentenced to death under s.302 IPC. He
@@ -1723,7 +2059,7 @@ hearing) and <b>s.354(3)</b> (special reasons), which supplied exactly the two p
 appellant in <i>Jagmohan</i> had complained of.</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u4-2">
 <div class="hd"><span class="nm">Ediga Anamma v. State of Andhra Pradesh</span><span class="ct">(1974) 4 SCC 443; AIR 1974 SC 799 — Krishna Iyer, J.</span><span class="tag">the turn to the criminal</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A young woman was convicted of the murder of her paramour’s wife and child and sentenced to
@@ -1743,7 +2079,7 @@ although on the date of that decision this provision had not come into force.”
 briefed in Topic 2 for its discussion of female criminality.)</dd>
 </dl></div></div>
 
-<div class="case">
+<div class="case" id="crim-case-u4-3">
 <div class="hd"><span class="nm">Rajendra Prasad v. State of Uttar Pradesh</span><span class="ct">(1979) 3 SCC 646 — Krishna Iyer and Desai JJ. (Sen J. dissenting)</span><span class="tag">the high-water mark of abolitionism</span></div>
 <div class="bd"><dl>
 <dt>Holding</dt><dd>By a majority of 2:1, the Court held that after the enactment of <b>s.354(3)</b> the
@@ -1767,7 +2103,7 @@ objected to the word “<b>only</b>” in the Art. 19 passage. <b>In short: <i>R
 <i>Jagmohan</i> the antithesis, and <i>Bachan Singh</i> the synthesis.</b></dd>
 </dl></div></div>
 <h2 id="s21">22. CASE 1 — <i>Bishnu Deo Shaw v. State of West Bengal</i> (1979) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-4">
 <div class="hd"><span class="nm">Bishnu Deo Shaw v. State of West Bengal</span><span class="ct">AIR 1979 SC 964; (1979) 3 SCC 714 — Chinnappa Reddy, J., with a concurring judgment of Krishna Iyer, J.</span><span class="tag du">Reproduced in the DU Case Material, pp. 176–185</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was convicted by the Additional Sessions Judge, Alipore, of the
@@ -1968,7 +2304,7 @@ that mitigating factors must receive “a liberal and expansive construction”,
 foremost objects of criminal justice. <b>State the disapproval expressly and then state what survives.</b></dd>
 </dl></div></div>
 <h2 id="s22">23. CASE 2 — <i>Bachan Singh v. State of Punjab</i> (1980) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-5">
 <div class="hd"><span class="nm">Bachan Singh v. State of Punjab</span><span class="ct">AIR 1980 SC 898; (1980) 2 SCC 684 — CONSTITUTION BENCH (5 Judges): Y.V. Chandrachud C.J., A.C. Gupta, N.L. Untwalia, R.S. Sarkaria and P.N. Bhagwati JJ.; majority judgment by SARKARIA J., BHAGWATI J. dissenting</span><span class="tag du">Reproduced in the DU Case Material, pp. 186–210</span></div>
 <div class="bd"><dl>
 <dt>Facts and how the reference arose</dt><dd><div class="src"><span class="lbl">VERBATIM — paras 1–3 <span class="tag du">DU</span></span>
@@ -2221,7 +2557,7 @@ substitute for the <i>Bachan Singh</i> test (§33). (v) The NLUD data (§19.2) s
 along lines of class and community.</dd>
 </dl></div></div>
 <h2 id="s23">24. CASE 3 — <i>Machhi Singh v. State of Punjab</i> (1983) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-6">
 <div class="hd"><span class="nm">Machhi Singh v. State of Punjab</span><span class="ct">AIR 1983 SC 957; (1983) 3 SCC 470 — M.P. Thakkar, J.</span><span class="tag du">Reproduced in the DU Case Material, pp. 211–215</span></div>
 <div class="bd"><dl>
 <dt>The opening — the synthesis</dt><dd><div class="src"><span class="lbl">VERBATIM — para 1 <span class="tag du">DU</span></span>
@@ -2448,7 +2784,7 @@ test</b>” and the “<b>criminal test</b>” must <b>all</b> be satisfied, and
 two questions, and the four modern qualifications.</figcaption>
 </figure>
 <h2 id="s24">25. CASE 4 — <i>Allauddin Mian v. State of Bihar</i> (1989) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-7">
 <div class="hd"><span class="nm">Allauddin Mian &amp; Sharif Mian v. State of Bihar</span><span class="ct">AIR 1989 SC 1456; (1989) 3 SCC 5 — A.M. Ahmadi and S. Natarajan, JJ.</span><span class="tag du">Reproduced in the DU Case Material, pp. 216–221</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM <span class="tag du">DU</span></span>
@@ -2620,7 +2956,7 @@ the court to choose [the] sentence [to be] awarded.</b>”</div></dd>
 </dl></div></div>
 
 <h2 id="s25">26. CASE 5 — <i>Mohd. Chaman v. State (NCT of Delhi)</i> (2001)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-8">
 <div class="hd"><span class="nm">Mohd. Chaman v. State (NCT of Delhi)</span><span class="ct">(2001) 2 SCC 28 — D.P. Mohapatra and Shivaraj V. Patil, JJ.</span><span class="tag">rape and murder of an infant · commutation</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant, aged about <b>30</b>, a tenant living in the same building, committed
@@ -2660,7 +2996,7 @@ most effective illustration of the <b>inconsistency</b> in Indian capital senten
 (§33).</dd>
 </dl></div></div>
 <h2 id="s26">27. CASE 6 — <i>Lehna v. State of Haryana</i> (2002)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-9">
 <div class="hd"><span class="nm">Lehna v. State of Haryana</span><span class="ct">(2002) 3 SCC 76 — Doraiswamy Raju and Arijit Pasayat, JJ.</span><span class="tag du">Analysed at length in the prescribed reading by Kaul</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>As the DU material records <span class="tag du">DU</span>: “the <b>genesis of [the] dispute
@@ -2705,7 +3041,7 @@ the law of capital sentencing, <i>Lehna</i> as reported by Kaul is the bridge.</
 </dl></div></div>
 
 <h2 id="s27">28. CASE 7 — <i>Dhananjoy Chatterjee v. State of West Bengal</i> (1994 / 2004)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-10">
 <div class="hd"><span class="nm">Dhananjoy Chatterjee alias Dhana v. State of West Bengal</span><span class="ct">(1994) 2 SCC 220; and the review/mercy proceedings reported at JT 2004 (4) SC 242 — A.S. Anand and N.P. Singh, JJ.</span><span class="tag">death confirmed and executed</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was a <b>security guard</b> at a residential building in Bhowanipore, Calcutta.
@@ -2765,7 +3101,7 @@ it.</dd>
 </dl></div></div>
 
 <h2 id="s28">29. CASE 8 — <i>Swamy Shraddananda (2) v. State of Karnataka</i> (2008)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-11">
 <div class="hd"><span class="nm">Swamy Shraddananda alias Murali Manohar Mishra (2) v. State of Karnataka</span><span class="ct">AIR 2008 SC 3040; (2008) 13 SCC 767 — B.N. Agrawal, G.S. Singhvi and Aftab Alam, JJ. (judgment of AFTAB ALAM, J.)</span><span class="tag">the middle path</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant married <b>Shakereh</b>, a wealthy woman of an aristocratic Bangalore family
@@ -2834,7 +3170,7 @@ remission.</dd>
 </dl></div></div>
 
 <h2 id="s29">30. CASE 9 — <i>Essa @ Anjum Abdul Razak Memon v. State of Maharashtra</i> (2013) <span class="tag du">DU</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-12">
 <div class="hd"><span class="nm">Essa @ Anjum Abdul Razak Memon (A-3) v. The State of Maharashtra</span><span class="ct">(2013) 3 SCALE 1; (2013) 13 SCC 1 — P. Sathasivam and B.S. Chauhan, JJ.</span><span class="tag du">Reproduced in the DU Case Material, pp. 222–231</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appeals arose out of the <b>Bombay serial bomb blasts of 12 March 1993</b>, in which
@@ -2892,7 +3228,7 @@ State” (§19.2). Cite it whenever a question asks whether the death penalty sh
 terrorism.</dd>
 </dl></div></div>
 <h2 id="s30">31. CASE 10 — <i>Sunil Dutt Sharma v. State (Govt. of NCT of Delhi)</i> (2014) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-13">
 <div class="hd"><span class="nm">Sunil Dutt Sharma v. State (Govt. of NCT of Delhi)</span><span class="ct">(2014) 4 SCC 375 — Ranjan Gogoi and Shiva Kirti Singh, JJ. (judgment of RANJAN GOGOI, J.)</span><span class="tag du">Reproduced in the DU Case Material, pp. 232–241</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — paras 1–2 <span class="tag du">DU</span></span>
@@ -3020,7 +3356,7 @@ sentencing); on the <b>reform of sentencing</b>; and for the two checklists, whi
 </dl></div></div>
 
 <h2 id="s31">32. CASE 11 — <i>Santosh Kumar Satishbhushan Bariyar v. State of Maharashtra</i> (2009)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-14">
 <div class="hd"><span class="nm">Santosh Kumar Satishbhushan Bariyar v. State of Maharashtra</span><span class="ct">(2009) 6 SCC 498 — S.B. Sinha and Cyriac Joseph, JJ. (judgment of S.B. SINHA, J.)</span><span class="tag">per incuriam · burden on the State</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>Four unemployed young men, including the appellant, <b>kidnapped their friend</b> Sanjay Gopal
@@ -3073,7 +3409,7 @@ evidence, the residual doubt is a <b>mitigating</b> factor on sentence.</dd>
 </dl></div></div>
 
 <h2 id="s32">33. CASE 12 — <i>Mukesh v. State (NCT of Delhi)</i> (2017)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-15">
 <div class="hd"><span class="nm">Mukesh &amp; Anr. v. State (NCT of Delhi) &amp; Ors.</span><span class="ct">(2017) 6 SCC 1 — Dipak Misra, R. Banumathi and Ashok Bhushan, JJ.</span><span class="tag">the Nirbhaya case</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>On the night of <b>16 December 2012</b>, a 23-year-old physiotherapy intern and her male
@@ -3585,7 +3921,7 @@ v. FURLOUGH:</b> parole is granted for a <b>specific reason</b> (illness or deat
 harvesting) and is <b>not a matter of right</b>; furlough is granted <b>periodically without any reason</b>, as
 a matter of right under the rules, to a long-term prisoner, and is <b>counted as remission</b>.</div>
 <h2 id="s41">42. CASE 13 — <i>Jogi Nayak v. State</i> (1965)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-16">
 <div class="hd"><span class="nm">Jogi Nayak v. State</span><span class="ct">AIR 1965 SC 106 (reported also as a decision of the Orissa High Court, per R.K. Das, J.)</span><span class="tag pyq">Summarised in the DU solved paper, 2022 Answer 3</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — DU solved paper, 2022 Answer 3 <span class="tag pyq">PYQ</span></span>
@@ -3648,7 +3984,7 @@ law</b> under the <b>JJ Act, 2015</b>, and the maximum institutional disposal av
 </dl></div></div>
 
 <h2 id="s42">43. CASE 14 — <i>Abdul Qayum v. The State of Bihar</i> (1972) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-17">
 <div class="hd"><span class="nm">Abdul Qayum v. The State of Bihar</span><span class="ct">AIR 1972 SC 214; (1972) 1 SCC 103 — P. Jaganmohan Reddy, J.</span><span class="tag du">Reproduced in the DU Case Material, pp. 258–260</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — para 1 <span class="tag du">DU</span></span>
@@ -3780,7 +4116,7 @@ citizen.</b>”</div></dd>
 </dl></div></div>
 
 <h2 id="s43">44. CASE 15 — <i>State v. Bhola</i> (2003)</h2>
-<div class="case">
+<div class="case" id="crim-case-u4-18">
 <div class="hd"><span class="nm">State of Maharashtra v. Bhola (also reported as State v. Bhola)</span><span class="ct">(2003) 3 SCC 1</span><span class="tag">gravity of offence and probation</span></div>
 <div class="bd"><dl>
 <dt>Facts and issue</dt><dd>The respondent had been convicted of an offence, and the High Court, in exercise of
@@ -3815,7 +4151,7 @@ given.</b>” Add <b><i>Phul Singh v. State of Haryana</i> (1979) 4 SCC 413</b>,
 person in his early 20s commits rape” <span class="tag pyq">PYQ</span>.</dd>
 </dl></div></div>
 <h2 id="s44">45. CASE 16 — <i>Dalbir Singh v. State of Haryana</i> (2000) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-19">
 <div class="hd"><span class="nm">Dalbir Singh v. State of Haryana</span><span class="ct">(2000) 5 SCC 82 — K.T. Thomas and R.P. Sethi, JJ. (judgment of THOMAS, J.)</span><span class="tag du">Reproduced in the DU Case Material, pp. 261–263</span></div>
 <div class="bd"><dl>
 <dt>The opening — the most quoted passage on deterrence in the prescribed cases</dt><dd><div class="src"><span class="lbl">VERBATIM — para 1 <span class="tag du">DU</span></span>
@@ -3915,7 +4251,7 @@ under s.304-A and urged the legislature to enhance the punishment.</dd>
 </dl></div></div>
 
 <h2 id="s45">46. CASE 17 — <i>M.C.D. v. State of Delhi</i> (2005) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-20">
 <div class="hd"><span class="nm">Municipal Corporation of Delhi v. State of Delhi &amp; Anr.</span><span class="ct">(2005) 4 SCC 605 — Ashok Bhan and A.R. Lakshmanan, JJ.</span><span class="tag du">Reproduced in the DU Case Material, pp. 264–270</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — paras 2–7 <span class="tag du">DU</span></span>
@@ -4036,7 +4372,7 @@ report has been called for.</dd>
 </dl></div></div>
 
 <h2 id="s46">47. CASE 18 — <i>Chhanni v. State of U.P.</i> (2006) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u4-21">
 <div class="hd"><span class="nm">Chhanni v. State of Uttar Pradesh</span><span class="ct">(2006) 5 SCC 396 — Arijit Pasayat and S.H. Kapadia, JJ. (judgment of ARIJIT PASAYAT, J.)</span><span class="tag du">Reproduced in the DU Case Material, pp. 271–275</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — paras 2–4 <span class="tag du">DU</span></span>
@@ -4249,7 +4585,7 @@ rungs</b> (s.361/s.402) and <b>reaching the top one</b> (s.354(3)/s.393(3)).</fi
 <h2 id="s48">49. PREVIOUS YEAR QUESTIONS, expected questions, rapid revision and glossary</h2>
 
 <h3>49.1 DU 2022 · Q.3 — the Ravi problem</h3>
-<div class="q"><div class="qh"><span class="pill">2022 · Q.3</span></div>
+<div class="q" id="crim-pyq-u4-1"><div class="qh"><span class="pill">2022 · Q.3</span></div>
 <div class="qt"><b>Ravi, who has committed an offence under Section 394 (voluntarily causing hurt in robbery)
 of IPC — the punishment for which is imprisonment [for] life or rigorous imprisonment for a term which may
 extend to 10 years and fine — pleads for the grant of probation on the basis that the offence is punishable
@@ -4368,7 +4704,7 @@ s.361/s.402. That is the complete answer.</p>
 </div></div>
 
 <h3>49.2 DU 2017 · Q.6(a) — the reformative philosophy</h3>
-<div class="q"><div class="qh"><span class="pill">2017 · Q.6(a)</span></div>
+<div class="q" id="crim-pyq-u4-2"><div class="qh"><span class="pill">2017 · Q.6(a)</span></div>
 <div class="qt">“In the era of human rights jurisprudence, the philosophy of <b>deterrent punishment has given
 way to that of Reformative philosophy</b> for the rehabilitation and reassimilation of the offender in the
 society.” <b>Discuss and state whether it serves the Indian conditions.</b></div>
@@ -4415,7 +4751,7 @@ ss.354(3) and 361 CrPC read together.
 </div></div>
 
 <h3>49.3 DU 2017 · Q.6(b) — the evolution of the death penalty in India</h3>
-<div class="q"><div class="qh"><span class="pill">2017 · Q.6(b)</span></div>
+<div class="q" id="crim-pyq-u4-3"><div class="qh"><span class="pill">2017 · Q.6(b)</span></div>
 <div class="qt">Describe the <b>evolution and development of law relating to death penalty in India</b>. Cite
 relevant reports and case law.</div>
 <div class="ans"><div class="al">Answer plan — the DU script’s own skeleton, expanded</div>
@@ -4458,7 +4794,7 @@ balance the extreme attitudes of retentionists and abolitionists</b>.” <span c
 </div></div>
 
 <h3>49.4 DU 2017 · Q.7(b) — the counterfeit-medicines problem</h3>
-<div class="q"><div class="qh"><span class="pill">2017 · Q.7(b)</span></div>
+<div class="q" id="crim-pyq-u4-4"><div class="qh"><span class="pill">2017 · Q.7(b)</span></div>
 <div class="qt"><b>X, aged 18 years, is convicted for the offence of selling counterfeit medicines over the
 counter. Can he seek release under the Probation of Offenders Act, 1958 or under the Criminal Procedure
 Code?</b></div>

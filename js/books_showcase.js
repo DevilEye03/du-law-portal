@@ -658,7 +658,33 @@
           "Unit VII: E-Contracts, Attribution & Dispatch (ss. 10A–13)",
           "Unit IX: Jurisdiction in Cyberspace (ss. 1(2), 75 & Long-Arm Tests)"
         ]
-      }
+      },
+      {
+        id: "criminology",
+        code: "LB-5033",
+        title: "Criminology",
+        author: "LB-5033 • Make Law Easy",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "7 Comprehensive Units",
+        casesCount: "88 Landmark Cases",
+        desc: "Criminological Theories, Indian Crime Reality, Juvenile Delinquency, Penology, Victimology & Police/Prison Reforms.",
+        spineBg: "#1e293b",
+        spineInk: "#fbbf24",
+        spineFont: "700 36px Georgia",
+        backBg: "#0f172a",
+        backInk: "251,191,36",
+        edge: "#fef3c7",
+        chapters: [
+          "Unit 1: Criminological Theories: Explaining Crime Causation",
+          "Unit 2: The Indian Crime Reality (Organised, White Collar & Cyber Crimes)",
+          "Unit 3: Juvenile Delinquency & The Juvenile Justice Act, 2015",
+          "Unit 4: Punishment and Its Justifications: Penology & Capital Punishment",
+          "Unit 5: Victimology: Rights of Victims, Remedies & Compensation",
+          "Unit 6: The Indian Police System: Role, Custodial Violence & Police Reforms",
+          "Unit 7: The Indian Prison System: Prisoner Rights, Open Prisons & Prison Reforms"
+        ]
+      },
     ],
     6: [
       {

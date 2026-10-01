@@ -114,7 +114,343 @@ footer{margin-top:50px;padding:22px 0;border-top:2px solid var(--line);font-size
   .top{display:none} details{page-break-inside:avoid} .case{page-break-inside:avoid}
   details>summary{display:none} details>*{display:block !important}
 }
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .paper, .note-container, .notes-body, .reading-container,
+  .syllabus-container, .toc-container, .wrapper, .site-main, .main-wrap,
+  .doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+  .firac-wrapper, .briefs-container, .pyq-wrap, .deck, section.card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. HERO & HEADERS: ZERO MARGIN OVERFLOW */
+  header, header.hero, .hero, .header, .topbar, .cover, .banner, .title-card,
+  .title-block, .topic-header, .subject-banner, .part-head {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 24px 14px 18px !important;
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  header.hero h1, .hero h1, .header h1, h1 {
+    font-size: clamp(20px, 5.8vw, 27px) !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 8px 0 !important;
+  }
+
+  /* 4. EXPANDABLE DETAILS, ACCORDIONS, CALLOUTS, CARDS & CASES */
+  details, .card, .case, .q, .pyq, .box, .callout, .warnbox, .okbox,
+  .info-box, .statute, .statute-card, .note, .tip, .exam-tip, .def, .defbox,
+  .highlight, .highlight-box, .rule-box, .quote, blockquote, .card-body,
+  .case-card, .part-body, .timeline-item, .capsule, .analysis-box, .summary-box,
+  .ans, .model-answer, .qt, .qh, .solution, .judges-box, .facts, .issues, .ratio,
+  .princ, .exam-card, .bare-act-box, .illustration-box, .provision-card,
+  .procedure-card, .precedent-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 12px 10px !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. TYPOGRAPHY & LISTS */
+  .part-head .num, .num, .bno, .cno, .sno {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow, .fork {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox, .fork .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+
 </style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
 </head>
 <body><a id="top"></a>
 <header class="hero">
@@ -2318,7 +2654,7 @@ ask who gave the date of birth to the school, whether any document was produced 
 entry is contemporaneous. It is also why <i>Rishipal Singh Solanki</i> holds that the presumption arising from
 s.94(2) documents is <b>rebuttable by contra evidence</b>.</div>
 <h2 id="s27">28. CASE 1 — <i>Sheela Barse v. Union of India</i> (1986)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-1">
 <div class="hd"><span class="nm">Sheela Barse &amp; Anr. v. Union of India &amp; Ors.</span><span class="ct">1986 SCALE (2) 230; (1986) 3 SCC 596 and 632; AIR 1986 SC 1773 — Bhagwati C.J. and Ranganath Misra J.; orders of 15 April, 12 July, 5 August and 13 August 1986</span><span class="tag">children in jail · speedy trial</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>Sheela Barse, a Mumbai-based journalist and social activist, had for years visited prisons and
@@ -2431,7 +2767,7 @@ comment on implementation.</dd>
 </dl></div></div>
 
 <h2 id="s28">29. CASE 2 — <i>Sanjay Suri v. Delhi Administration</i> (1988) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u3-2">
 <div class="hd"><span class="nm">Sanjay Suri v. Delhi Administration</span><span class="ct">AIR 1988 SC 414 — Ranganath Misra, J.</span><span class="tag du">Reproduced in the DU Case Material, pp. 132–135</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — opening of the judgment <span class="tag du">DU</span></span>
@@ -2572,7 +2908,7 @@ segregating them from hardened adult criminals.</b>”</div></dd>
 </dl></div></div>
 
 <h2 id="s29">30. CASE 3 — <i>Raghbir v. State of Haryana</i> (1981) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u3-3">
 <div class="hd"><span class="nm">Raghbir v. State of Haryana</span><span class="ct">AIR 1981 SC 2037 — Baharul Islam, J. (3-Judge Bench)</span><span class="tag du">Reproduced in the DU Case Material (2017 edn., pp. 98–101)</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM — opening of the judgment <span class="tag du">DU</span></span>
@@ -2674,7 +3010,7 @@ Criminal Procedure, 1973</b>” — and <b>s.23</b> forbids joint proceedings wi
 provision in the new Code is <b>s.22 BNSS</b>.</dd>
 </dl></div></div>
 <h2 id="s30">31. CASE 4 — <i>Pratap Singh v. State of Jharkhand</i> (2005) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u3-4">
 <div class="hd"><span class="nm">Pratap Singh v. State of Jharkhand &amp; Anr.</span><span class="ct">2005 (1) SCALE 763; (2005) 3 SCC 551 — CONSTITUTION BENCH (5 Judges); judgment of Sema, J. and a concurring judgment of S.B. Sinha, J.</span><span class="tag du">Reproduced in the DU Case Material (2017 edn., pp. 104–117)</span></div>
 <div class="bd"><dl>
 <dt>Facts and the reference</dt><dd>The appellant claimed that he was a juvenile on the date of the alleged
@@ -2841,7 +3177,7 @@ Court.</b>”</dd>
 </dl></div></div>
 
 <h2 id="s31">32. CASE 5 — <i>Sudesh Kumar v. State of Uttarakhand</i> (2008) <span class="tag du">DU verbatim</span></h2>
-<div class="case">
+<div class="case" id="crim-case-u3-5">
 <div class="hd"><span class="nm">Sudesh Kumar v. State of Uttarakhand</span><span class="ct">(2008) 3 SCC 111 — P.P. Naolekar, J., with a concurring judgment of C.K. Thakker, J.</span><span class="tag du">Reproduced in the DU Case Material, pp. 136–142</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd><div class="src"><span class="lbl">VERBATIM <span class="tag du">DU</span></span>
@@ -2998,7 +3334,7 @@ then draw the contrast with <i>Pratap Singh</i> — that contrast is the whole p
 syllabus alongside the JJ Act cases.</dd>
 </dl></div></div>
 <h2 id="s32">33. CASE 6 — <i>Daya Nand v. State of Haryana</i> (2011)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-6">
 <div class="hd"><span class="nm">Daya Nand v. State of Haryana</span><span class="ct">AIR 2011 SC 593; (2011) 2 SCC 224 — Aftab Alam and R.M. Lodha, JJ.; judgment of 7 January 2011</span><span class="tag">juvenility · retrospective benefit of the 2000 Act</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was convicted <b>under s.376 read with s.511 IPC</b> (attempt to commit rape)
@@ -3064,7 +3400,7 @@ municipal register.</dd>
 </dl></div></div>
 
 <h2 id="s33">34. CASE 7 — <i>Union of India v. Ex-GNR Ajeet Singh</i> (2013)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-7">
 <div class="hd"><span class="nm">Union of India and Others v. Ex-GNR Ajeet Singh</span><span class="ct">(2013) 4 SCC 186 — B.S. Chauhan and F.M. Ibrahim Kalifulla, JJ.</span><span class="tag">joint trial · Army Act · s.18 of the 2000 Act</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The respondent, a Gunner in the Indian Army, was tried by a <b>General Court Martial (GCM)</b>
@@ -3120,7 +3456,7 @@ respondent.”</div></dd>
 </dl></div></div>
 
 <h2 id="s34">35. CASE 8 — <i>Sampurna Behura v. Union of India</i> (2018)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-8">
 <div class="hd"><span class="nm">Sampurna Behura v. Union of India</span><span class="ct">(2018) 4 SCC 433 — Madan B. Lokur and Deepak Gupta, JJ.; judgment of 9 February 2018</span><span class="tag">implementation · structural directions</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A public interest petition under Art. 32, pending since <b>2005</b>, concerning the
@@ -3207,7 +3543,7 @@ SCC 578</b>, a companion decision of Lokur J. on the same theme.</dd>
 </dl></div></div>
 
 <h2 id="s35">36. CASE 9 — <i>Rishipal Singh Solanki v. State of Uttar Pradesh</i> (2021)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-9">
 <div class="hd"><span class="nm">Rishipal Singh Solanki v. State of Uttar Pradesh &amp; Ors.</span><span class="ct">(2022) 8 SCC 602; Criminal Appeal No. 1240 of 2021, decided 18 November 2021 — B.V. Nagarathna, J.</span><span class="tag">age determination · the eleven principles</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was the <b>complainant/informant</b> in a criminal case. The second respondent,
@@ -3298,7 +3634,7 @@ school certificate and had no power to review its own order.</dd>
 </dl></div></div>
 
 <h2 id="s36">37. CASE 10 — <i>Vinod Katara v. State of Uttar Pradesh</i> (2022)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-10">
 <div class="hd"><span class="nm">Vinod Katara v. State of Uttar Pradesh</span><span class="ct">2022 SCC OnLine SC 1204; 2022 INSC 946; judgment of 12 September 2022 — J.B. Pardiwala, J.</span><span class="tag">belated juvenility claim · limits of the ossification test</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The writ applicant had been convicted of murder by the Additional Sessions Judge, Agra, and
@@ -3381,7 +3717,7 @@ claim was entertained decades after the 1983 offence. Cite <i>Vinod Katara</i> f
 and <i>Rahul Kumar Yadav</i> for the <b>procedural duty to inquire</b>.</dd>
 </dl></div></div>
 <h2 id="s37">38. CASE 11 — <i>Barun Chandra Thakur v. Master Bholu</i> (2022)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-11">
 <div class="hd"><span class="nm">Barun Chandra Thakur v. Master Bholu &amp; Anr.</span><span class="ct">2022 SCC OnLine SC 870; 2022 INSC 715; judgment of 13 July 2022 — Dinesh Maheshwari and Vikram Nath, JJ.</span><span class="tag">preliminary assessment · s.15</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A boy of Class II was found unconscious with his <b>throat slit in the toilet of his
@@ -3485,7 +3821,7 @@ making.</dd>
 </dl></div></div>
 
 <h2 id="s38">39. CASE 12 — <i>Rahul Kumar Yadav v. State of Bihar</i> (2024)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-12">
 <div class="hd"><span class="nm">Rahul Kumar Yadav v. The State of Bihar</span><span class="ct">[2024] 5 S.C.R. 501; 2024 INSC 359; Criminal Appeal No. 177 of 2018, order of 25 April 2024 — B.R. Gavai and Sandeep Mehta, JJ. (per Mehta, J.)</span><span class="tag">belated juvenility · duty to inquire</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant was convicted, along with a co-accused, of <b>murder and robbery</b> under
@@ -3558,7 +3894,7 @@ affidavits.</dd>
 </dl></div></div>
 
 <h2 id="s39">40. CASE 13 — <i>Child in Conflict with Law through his mother v. State of Karnataka</i> (2024)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-13">
 <div class="hd"><span class="nm">Child in Conflict with Law through his Mother v. State of Karnataka &amp; Anr.</span><span class="ct">2024 SCC OnLine SC 798; Criminal Appeal arising out of SLP (Crl.) No. 3033 of 2024, decided 7 May 2024 — C.T. Ravikumar and Rajesh Bindal, JJ.</span><span class="tag">s.14(3) · directory or mandatory</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>The appellant, a child in conflict with law, was alleged to have committed a <b>heinous
@@ -3639,7 +3975,7 @@ to the interest of CCLs”), and it is a strong critical paragraph for an essay 
 </dl></div></div>
 
 <h2 id="s40">41. CASE 14 — <i>Rajni v. State of Uttar Pradesh</i> (2025)</h2>
-<div class="case">
+<div class="case" id="crim-case-u3-14">
 <div class="hd"><span class="nm">Rajni v. State of Uttar Pradesh &amp; Anr.</span><span class="ct">2025 SCC OnLine SC 602; 2025 LiveLaw (SC) 602; judgment of 20 May 2025 — Abhay S. Oka and Ujjal Bhuyan, JJ.</span><span class="tag">no power of review · primacy of documents · bail</span></div>
 <div class="bd"><dl>
 <dt>Facts</dt><dd>A case under <b>s.307 IPC</b> (attempt to murder) was registered at the Medical College
@@ -3865,7 +4201,7 @@ insurgent groups. The legal answer is <b>ss.76, 77, 78 and 83 JJ Act</b> and <b>
 <h2 id="s43">44. PREVIOUS YEAR QUESTIONS with model answers, and expected questions</h2>
 
 <h3>44.1 DU 2022 · Q.2 — the problem question on Sahil</h3>
-<div class="q"><div class="qh"><span class="pill">2022 · Q.2</span></div>
+<div class="q" id="crim-pyq-u3-1"><div class="qh"><span class="pill">2022 · Q.2</span></div>
 <div class="qt"><b>Sahil, a boy aged 17 years, committed Rape of his classmate somewhere in outer-Delhi. Since the
 rape has caused great resentment in the victim’s village, the police promptly arrested Sahil and the Magistrate
 remanded him to judicial custody. Sahil was detained as an under-trial in the Tihar Prison. On being put for
@@ -4013,7 +4349,7 @@ governing philosophy is <b>reformative</b>.</p>
 </div></div>
 
 <h3>44.2 DU 2017 · Q.5(a) and (b)</h3>
-<div class="q"><div class="qh"><span class="pill">2017 · Q.5(a)</span></div>
+<div class="q" id="crim-pyq-u3-2"><div class="qh"><span class="pill">2017 · Q.5(a)</span></div>
 <div class="qt">“Historically, children who broke the law were treated in the same way as adult offenders.
 However, the belief that young people could not totally be held responsible for their actions underpinned
 developments that established separate systems of youth justice.” In the light of the above statement, briefly
@@ -4040,7 +4376,7 @@ despite objections</b>”. (8) <b>The 2021 Amendment</b>. (9) <b>Conclusion</b> 
 timeline in <b>Figure 3</b>.
 </div></div>
 
-<div class="q"><div class="qh"><span class="pill">2017 · Q.5(b)</span></div>
+<div class="q" id="crim-pyq-u3-3"><div class="qh"><span class="pill">2017 · Q.5(b)</span></div>
 <div class="qt">What are the <b>powers and functions of the Juvenile Justice Board and the Child Welfare
 Committee</b> in relation to juveniles in conflict with law and children in need of care and protection under
 the Juvenile Justice (Care and Protection of Children) Act, 2015?</div>

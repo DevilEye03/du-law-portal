@@ -235,6 +235,31 @@ try {
   const sem3 = portalData.semesters.find(s => s.id === 3);
   assert(sem3 && sem3.subjectIds.includes('constitution'), 'Semester 3 includes subject "constitution"');
 
+  // Criminology (LB-5033) Integrity
+  const crim = portalData.subjects['criminology'];
+  assert(!!crim, 'Subject "criminology" is registered');
+  assert(crim.code === 'LB-5033', 'Criminology code is LB-5033');
+  assert(crim.units && crim.units.length === 7, `Criminology has exactly 7 units (Found: ${crim.units?.length})`);
+  assert(crim.cases && crim.cases.length === 88, `Criminology landmark cases count === 88 (Found: ${crim.cases?.length})`);
+  assert(crim.pyqs && crim.pyqs.length === 33, `Criminology PYQs with model answers === 33 (Found: ${crim.pyqs?.length})`);
+  assert(crim.revisions && crim.revisions.length === 7, `Criminology revision capsules === 7 (Found: ${crim.revisions?.length})`);
+
+  for (let u = 1; u <= 7; u++) {
+    const uCases = crim.cases.filter(c => c.unitNumber === u);
+    const uPyqs = crim.pyqs.filter(p => p.unitNumber === u);
+    const uRev = crim.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Criminology Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Criminology Unit ${u} has PYQs (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `Criminology Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  crim.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Criminology Dossier file exists: ${u.file}`);
+  });
+
+  const sem5 = portalData.semesters.find(s => s.id === 5);
+  assert(sem5 && sem5.subjectIds.includes('criminology'), 'Semester 5 includes subject "criminology"');
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
