@@ -1,14 +1,11 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v59";
+const CACHE_NAME = "du-law-portal-v60";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
   "./terms",
-  "./terms.html",
   "./privacy",
-  "./privacy.html",
   "./about",
-  "./about.html",
   "./feedback.html",
   "./tools/bare-acts.html",
   "./tools/bns-converter.html",
@@ -99,14 +96,14 @@ self.addEventListener("fetch", (event) => {
         .catch(() => {
           return caches.match(event.request).then((cached) => {
             if (cached) return cached;
-            if (url.pathname === "/terms" || url.pathname.endsWith("/terms.html")) {
-              return caches.match("./terms.html") || caches.match("/terms.html");
+            if (url.pathname === "/terms" || url.pathname.endsWith("/terms") || url.pathname.endsWith("/terms.html")) {
+              return caches.match("./terms") || caches.match("/terms") || caches.match("./terms.html") || caches.match("/terms.html");
             }
-            if (url.pathname === "/privacy" || url.pathname.endsWith("/privacy.html")) {
-              return caches.match("./privacy.html") || caches.match("/privacy.html");
+            if (url.pathname === "/privacy" || url.pathname.endsWith("/privacy") || url.pathname.endsWith("/privacy.html")) {
+              return caches.match("./privacy") || caches.match("/privacy") || caches.match("./privacy.html") || caches.match("/privacy.html");
             }
-            if (url.pathname === "/about" || url.pathname.endsWith("/about.html")) {
-              return caches.match("./about.html") || caches.match("/about.html");
+            if (url.pathname === "/about" || url.pathname.endsWith("/about") || url.pathname.endsWith("/about.html")) {
+              return caches.match("./about") || caches.match("/about") || caches.match("./about.html") || caches.match("/about.html");
             }
             return caches.match("./index.html") || caches.match("/index.html");
           });

@@ -4893,16 +4893,11 @@ Submission Time: ${new Date().toLocaleString()}
       }
     } else {
       const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
-      if (curPath === '/terms' || curPath === '/terms.html') {
-        window.location.replace('/terms.html');
-        return;
-      }
-      if (curPath === '/privacy' || curPath === '/privacy.html') {
-        window.location.replace('/privacy.html');
-        return;
-      }
-      if (curPath === '/about' || curPath === '/about.html') {
-        window.location.replace('/about.html');
+      if (
+        curPath === '/terms' || curPath === '/terms.html' ||
+        curPath === '/privacy' || curPath === '/privacy.html' ||
+        curPath === '/about' || curPath === '/about.html'
+      ) {
         return;
       }
       showView('semester', false);

@@ -1554,7 +1554,7 @@
             <h2>16. Privacy and Data Protection Reference</h2>
             <a href="#sec16" class="anchor-btn" title="Copy link to this section"><i class="fa-solid fa-link"></i></a>
           </div>
-          <p><strong>16.1.</strong> Your privacy is paramount. We practice strict data minimization. Please review our <a href="privacy.html">Privacy Policy</a> to understand how technical telemetry, local storage preferences, and optional feedback are handled in compliance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong>.</p>
+          <p><strong>16.1.</strong> Your privacy is paramount. We practice strict data minimization. Please review our <a href="/privacy">Privacy Policy</a> to understand how technical telemetry, local storage preferences, and optional feedback are handled in compliance with the <strong>Digital Personal Data Protection Act, 2023 (DPDP Act, India)</strong>.</p>
         </section>
 
         <!-- Section 17 -->
@@ -1813,7 +1813,14 @@
               if (link.getAttribute('href') === '#' + activeId) {
                 link.classList.add('active');
                 if (window.innerWidth > 1023) {
-                  link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                  const tocList = document.getElementById('sidebarTocList');
+                  if (tocList) {
+                    const linkRect = link.getBoundingClientRect();
+                    const listRect = tocList.getBoundingClientRect();
+                    if (linkRect.top < listRect.top || linkRect.bottom > listRect.bottom) {
+                      tocList.scrollTop += (linkRect.top - listRect.top - 40);
+                    }
+                  }
                 }
               } else {
                 link.classList.remove('active');

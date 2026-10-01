@@ -1432,7 +1432,7 @@
               <li>Google Publisher &amp; AdSense Privacy Policies and Google Analytics 4 transparency standards.</li>
             </ul>
           </p>
-          <p><strong>1.3.</strong> This Policy must be read in conjunction with our <a href="terms.html">Terms and Conditions of Use &amp; Legal Disclaimer</a>.</p>
+          <p><strong>1.3.</strong> This Policy must be read in conjunction with our <a href="/terms">Terms and Conditions of Use &amp; Legal Disclaimer</a>.</p>
         </section>
 
         <!-- Section 2 -->
@@ -2015,7 +2015,14 @@
               if (link.getAttribute('href') === '#' + activeId) {
                 link.classList.add('active');
                 if (window.innerWidth > 1023) {
-                  link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                  const tocList = document.getElementById('sidebarTocList');
+                  if (tocList) {
+                    const linkRect = link.getBoundingClientRect();
+                    const listRect = tocList.getBoundingClientRect();
+                    if (linkRect.top < listRect.top || linkRect.bottom > listRect.bottom) {
+                      tocList.scrollTop += (linkRect.top - listRect.top - 40);
+                    }
+                  }
                 }
               } else {
                 link.classList.remove('active');
