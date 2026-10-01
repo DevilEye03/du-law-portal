@@ -1142,6 +1142,18 @@
   // TAB 1: ALL TOPICS / COMPREHENSIVE NOTES
   // -------------------------------------------------------------------------
   const TOPIC_MAXIMS = {
+    // Constitutional Law - I (LB-301)
+    'constitution-1': 'Lex Suprema • The Constitution is the supreme Grundnorm of the Indian Republic',
+    'constitution-2': 'Indestructible Union of Destructible States • Article 1 Sovereign Territory Architecture',
+    'constitution-3': 'Salus Populi Suprema Lex • Executive accountability and constitutional governance',
+    'constitution-4': 'Lex Parliamenti • Legislative supremacy, democratic mandates and parliamentary privileges',
+    'constitution-5': 'Necessitas Non Habet Legem • Strict constitutional limits on executive ordinances',
+    'constitution-6': 'Fiat Justitia Ruat Caelum • Independence of the Judiciary and institutional integrity',
+    'constitution-7': 'Ubi Jus Ibi Remedium • Epistolary writ jurisdiction and Public Interest Litigation',
+    'constitution-8': 'Ut Res Magis Valeat Quam Pereat • Harmonious construction of legislative powers',
+    'constitution-9': 'Commercium Sine Obstaculo • Freedom of trade, commerce and intercourse across borders',
+    'constitution-10': 'Salus Populi Suprema Lex • Constitutional checks against arbitrary emergency proclamations',
+
     // Jurisprudence
     'juris-1': 'Yato Dharmastato Jayah • Where there is Dharma, there is Victory',
     'juris-2': 'Lex Loci • The Law of the Land',
@@ -3720,7 +3732,8 @@ Submission Time: ${new Date().toLocaleString()}
       wcc: 'White Collar Crimes',
       drafting: 'Drafting & Conveyance',
       industrial: 'Industrial Law',
-      it_laws: 'Information Technology Law'
+      it_laws: 'Information Technology Law',
+        constitution: 'Constitutional Law - I'
     };
     return map[subId] || 'Delhi University Law';
   }

@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 5 – Legislative Power of the Executive (Ordinances) (Arts 123, 213, 13) | LB-301 Constitutional Law I | DU Comprehensive Notes</title>
+<style>
+:root{
+  --ink:#14213d; --gold:#f4a261; --gold2:#e76f51; --teal:#0b6e6e; --teal2:#0f9b8e;
+  --bg:#f7f9fc; --card:#ffffff; --line:#dde5f0; --muted:#5b6b84; --accent:#264653;
+  --green:#1b7f4d; --red:#b3261e; --purple:#5e60ce; --soft:#eef4fb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px}
+h1,h2,h3,h4,h5,.sans{font-family:'Segoe UI',Arial,Helvetica,sans-serif}
+a{color:var(--teal)}
+/* ======= LAYOUT ======= */
+.layout{display:flex;max-width:1500px;margin:0 auto;gap:0}
+nav#toc{width:310px;flex:0 0 310px;position:sticky;top:0;height:100vh;overflow-y:auto;background:#0e2a47;color:#eaf2fb;padding:18px 14px 60px;z-index:50}
+nav#toc h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;border-bottom:1px solid #23486e;padding-bottom:10px}
+nav#toc a{display:block;color:#d7e5f5;text-decoration:none;font-size:13.5px;padding:7px 9px;border-radius:7px;margin:2px 0;font-family:'Segoe UI',Arial,sans-serif;line-height:1.45}
+nav#toc a:hover{background:#1b4570;color:#fff}
+nav#toc a.sec{font-weight:700;color:#ffd9a8;margin-top:10px}
+nav#toc a.case{padding-left:20px;color:#9fe0d4}
+main{flex:1;min-width:0;padding:0 34px 90px}
+/* ======= HERO ======= */
+.hero{background:linear-gradient(135deg,#0e2a47 0%,#14507a 55%,#0b6e6e 100%);color:#fff;margin:0 -34px 30px;padding:44px 40px 38px;border-bottom:5px solid var(--gold)}
+.hero .tag{display:inline-block;background:var(--gold);color:#14213d;font-weight:800;font-size:12.5px;letter-spacing:.12em;padding:5px 14px;border-radius:30px;text-transform:uppercase;font-family:'Segoe UI',Arial,sans-serif}
+.hero h1{font-size:clamp(26px,3.4vw,42px);margin:16px 0 8px;line-height:1.25}
+.hero p.sub{font-size:16.5px;color:#d9ecf7;max-width:950px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.hero .meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:8px;font-size:13.5px;font-family:'Segoe UI',Arial,sans-serif}
+/* ======= MOBILE NAV ======= */
+#navtoggle{display:none;position:sticky;top:0;z-index:60;background:#0e2a47;color:#ffd9a8;border:0;width:100%;padding:13px 18px;text-align:left;font-size:16px;font-weight:700;cursor:pointer;font-family:'Segoe UI',Arial,sans-serif}
+#navtoggle span{float:right}
+/* ======= CONTENT BLOCKS ======= */
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 32px;margin-bottom:30px;box-shadow:0 2px 10px rgba(20,33,61,.05)}
+section>h2{font-size:clamp(21px,2.4vw,28px);color:var(--accent);border-left:6px solid var(--gold2);padding-left:14px;margin-bottom:6px;line-height:1.3}
+section>h2 .num{display:block;font-size:13px;letter-spacing:.16em;color:var(--gold2);text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.lead{color:var(--muted);font-size:16.5px;margin-bottom:18px;font-style:italic}
+h3{font-size:19.5px;color:var(--teal);margin:26px 0 10px;padding-bottom:6px;border-bottom:2px dashed var(--line)}
+h4{font-size:17px;color:var(--accent);margin:18px 0 8px}
+h5{font-size:15.5px;color:var(--purple);margin:14px 0 6px}
+p{margin-bottom:12px;text-align:justify}
+ul,ol{margin:8px 0 14px 26px}
+li{margin-bottom:7px}
+strong{color:#0d3b66}
+em{color:#334}
+blockquote{background:#fff8ee;border-left:5px solid var(--gold);margin:14px 0;padding:13px 18px;font-style:italic;border-radius:0 10px 10px 0;color:#4a3b22}
+blockquote .src{display:block;font-style:normal;font-weight:700;font-size:13px;color:#9c6b12;margin-top:7px;font-family:'Segoe UI',Arial,sans-serif}
+.cite{background:#e8f4f4;border:1px solid #bfe3e0;padding:2px 8px;border-radius:6px;font-size:14.5px;font-weight:700;color:#0b6e6e;white-space:nowrap;font-family:'Segoe UI',Arial,sans-serif}
+/* cards & grids */
+.grid{display:grid;gap:16px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card h4{margin-top:0;color:#14507a}
+.card.a{background:#eefaf3;border-color:#bfe8d2}
+.card.b{background:#fff4ec;border-color:#ffd9c2}
+.card.c{background:#f2f0fd;border-color:#d5d1f7}
+.card.d{background:#fdf2f6;border-color:#f6cfe0}
+.kbox{background:#0e2a47;color:#eaf2fb;border-radius:12px;padding:18px 20px;margin:16px 0}
+.kbox h4{color:var(--gold);margin-top:0}
+/* tables */
+.twrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:640px;background:#fff;font-size:15.4px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#14507a;color:#fff;font-family:'Segoe UI',Arial,sans-serif;font-size:14.5px;letter-spacing:.02em}
+tr:nth-child(even) td{background:#f6f9fd}
+td strong{color:#0d3b66}
+/* case blocks */
+.case{border:2px solid #0b6e6e;border-radius:16px;margin:26px 0;overflow:hidden;background:#fff}
+.case>.casehead{background:linear-gradient(90deg,#0b6e6e,#12857f);color:#fff;padding:16px 22px}
+.case>.casehead .cnum{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffd9a8;font-weight:800;font-family:'Segoe UI',Arial,sans-serif}
+.case>.casehead h3{color:#fff;border:0;margin:4px 0 4px;font-size:clamp(18px,2.2vw,23px)}
+.case>.casehead .cmeta{font-size:14px;font-family:'Segoe UI',Arial,sans-serif;color:#d6f5f1}
+.casebody{padding:20px 24px}
+.casebody h4{background:#e9f7f5;padding:8px 12px;border-radius:8px;border-left:4px solid var(--teal2);margin-top:18px}
+.casebody h4:first-child{margin-top:0}
+.facts{background:#fbfdff;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.issue{background:#fff4ec;border-left:4px solid var(--gold2);padding:10px 14px;margin:8px 0;border-radius:0 8px 8px 0}
+.argu{background:#f4f8ff;border:1px solid #d5e4f7;border-radius:10px;padding:12px 16px;margin:8px 0}
+.argu.pet{border-left:5px solid var(--teal)}
+.argu.res{border-left:5px solid var(--gold2)}
+.held{background:#eefaf3;border:1px solid #bfe8d2;border-radius:10px;padding:14px 16px}
+.principle{background:#0e2a47;color:#eaf6ff;border-radius:10px;padding:14px 18px;margin-top:12px}
+.principle h5{color:var(--gold);margin-top:0;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px}
+/* timeline */
+.tl{position:relative;margin:18px 0 10px;padding-left:26px;border-left:4px solid var(--teal2)}
+.tl .ev{position:relative;background:#f6f9fd;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px}
+.tl .ev::before{content:"";position:absolute;left:-35px;top:16px;width:16px;height:16px;background:var(--gold);border:3px solid #0b6e6e;border-radius:50%}
+.tl .ev b.yr{color:var(--gold2);font-family:'Segoe UI',Arial,sans-serif}
+/* flow diagram wrapper */
+.fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:18px 0;text-align:center;overflow-x:auto}
+.fig .cap{font-size:13.5px;color:var(--muted);font-family:'Segoe UI',Arial,sans-serif;margin-top:8px;font-style:italic}
+svg .box{fill:#eef4fb;stroke:#14507a;stroke-width:1.6}
+svg .box2{fill:#fff4ec;stroke:#e76f51;stroke-width:1.6}
+svg .box3{fill:#eefaf3;stroke:#1b7f4d;stroke-width:1.6}
+svg .box4{fill:#f2f0fd;stroke:#5e60ce;stroke-width:1.6}
+svg text{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;fill:#14213d}
+svg .arw{stroke:#5b6b84;stroke-width:1.8;fill:none;marker-end:url(#arr)}
+svg .ttl{font-weight:700;font-size:14.5px}
+/* pyq */
+.pyq{border:2px solid #5e60ce;border-radius:14px;margin:24px 0;overflow:hidden}
+.pyq .pyqhead{background:linear-gradient(90deg,#5e60ce,#7d7ef0);color:#fff;padding:13px 20px;font-family:'Segoe UI',Arial,sans-serif}
+.pyq .pyqhead b{color:#ffe89a}
+.pyq .pyqbody{padding:18px 22px;background:#fbfaff}
+.qtext{background:#f2f0fd;border-left:5px solid var(--purple);padding:12px 16px;border-radius:0 8px 8px 0;font-weight:600;margin-bottom:14px}
+.ans h5{color:var(--purple);margin-top:16px;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:13px}
+/* misc helpers */
+.mini{font-size:14px;color:var(--muted)}
+.tagline{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tagline span{background:#eef4fb;border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:13.5px;font-family:'Segoe UI',Arial,sans-serif}
+details{background:#f6f9fd;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:#14507a;font-family:'Segoe UI',Arial,sans-serif}
+details[open]{background:#fff}
+hr.soft{border:0;border-top:1px dashed var(--line);margin:22px 0}
+.badge{display:inline-block;background:var(--gold2);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:12px;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:.05em}
+.badge.g{background:var(--green)} .badge.p{background:var(--purple)} .badge.b{background:#14507a}
+.art{display:inline-block;background:#14507a;color:#fff;border-radius:6px;padding:1px 8px;font-family:'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;white-space:nowrap}
+.quotebox{background:#f0f7ff;border:1px solid #cfe2f7;border-radius:10px;padding:12px 16px;margin:10px 0;font-style:italic;color:#233}
+.quotebox .src{display:block;font-style:normal;font-weight:700;font-size:12.5px;color:#14507a;margin-top:6px;font-family:'Segoe UI',Arial,sans-serif}
+.warn{background:#fff1f0;border:1px solid #f5c6c2;border-left:5px solid var(--red);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0}
+.good{background:#eefaf3;border:1px solid #bfe8d2;border-left:5px solid var(--green);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0}
+@media (max-width:1024px){
+  #navtoggle{display:block}
+  .layout{display:block}
+  nav#toc{position:fixed;left:0;top:0;width:min(84vw,330px);flex:none;transform:translateX(-105%);transition:transform .3s ease;height:100vh;box-shadow:4px 0 20px rgba(0,0,0,.35)}
+  nav#toc.open{transform:translateX(0)}
+  main{padding:0 16px 70px}
+  .hero{margin:0 -16px 22px;padding:30px 20px}
+  section{padding:22px 18px}
+  body{font-size:16.5px}
+  table{font-size:14.6px;min-width:560px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  section{padding:18px 14px;border-radius:10px}
+  .casebody{padding:14px 14px}
+  .hero .meta span{font-size:12.5px}
+  blockquote{padding:11px 13px}
+  h3{font-size:17.5px}
+}
+#scrim{display:none;position:fixed;inset:0;background:rgba(6,18,33,.55);z-index:45}
+#scrim.show{display:block}
+
+
+/* MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .defcard, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .caseblock, .case-box, .sub-section, .case-detail, .argcard, .verdict, .srcnote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll, .table-container {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  .twrap table, .tblwrap table, .table-wrap table, .tbl-scroll table, .tw table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 480px !important;
+    max-width: none !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+  }
+
+  table:not(.twrap table):not(.tblwrap table):not(.table-wrap table) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
+</head>
+<body>
+<button id="navtoggle">☰ Topic 5 — Navigation &amp; Contents <span>≡</span></button>
+<div class="layout">
+<nav id="toc">
+<h2>Topic 5 · Ordinances</h2>
+<a class="sec" href="#s-scope">Orientation &amp; Exam Map</a>
+<a class="sec" href="#s-power">§1 The Ordinance Power — Arts 123 &amp; 213</a>
+<a class="sec" href="#s-cond">§2 Essential Conditions for Promulgation</a>
+<a class="sec" href="#s-art13">§3 'Ordinance' under Article 13</a>
+<a class="sec" href="#s-jr">§4 Judicial Review of Ordinances</a>
+<a class="sec" href="#s-cases">§5 Case Notes (31–33 — DU Format)</a>
+<a class="case" href="#c-wadhwa">31. D.C. Wadhwa v. State of Bihar</a>
+<a class="case" href="#c-akroy">32. A.K. Roy v. Union of India</a>
+<a class="case" href="#c-kks">33. Krishna Kumar Singh v. State of Bihar</a>
+<a class="sec" href="#s-acts">§6 Related Acts, Rules &amp; Amendments</a>
+<a class="sec" href="#s-real">§7 Real-World Examples</a>
+<a class="sec" href="#s-pyq">§8 DU PYQs + Model Answers</a>
+<a class="sec" href="#s-rev">§9 Rapid Revision Kit</a>
+</nav>
+<main>
+
+<div class="hero">
+<span class="tag">DU LL.B. · LB-301 · Topic 5 of 8 · 3 Classes</span>
+<h1>Legislative Power of the Executive — Ordinances</h1>
+<p class="sub">Everything in one file: the ordinance-making power of the President and the Governor under <b>Articles 123 and 213</b> — essential conditions for promulgation, the 'Ordinance' as a species of <b>law under Article 13</b>, the entire jurisprudence on <b>judicial review</b>, and the doctrine on <b>validity of successive promulgation of the same ordinance</b> — with all three syllabus cases (31 D.C. Wadhwa, 32 A.K. Roy, 33 Krishna Kumar Singh) in facts / issues / arguments of both sides / decision / principle format, maximum DU case material, flowcharts, related Acts &amp; amendments inline, real-world examples, and solved DU semester PYQs.</p>
+<div class="meta">
+<span>📜 Cases 31–33 of the DU syllabus</span>
+<span>⚖️ 2 cases from DU case material + 1 researched externally</span>
+<span>🗂️ PYQ: Dec-2024 Q5(a) · Centenary Q8(b)</span>
+<span>📱 Mobile-responsive</span>
+</div>
+</div>
+
+<section id="s-scope">
+<h2><span class="num">Section 0 · Orientation</span>What this Topic Covers &amp; How Examiners Test It</h2>
+<p class="lead">The Constitution lets the executive legislate — but only provisionally, only in a recess, and only on sufferance of the legislature. This Topic is the story of that leash: where it is drawn (Arts 123 &amp; 213), what happens when the executive pulls it too hard (Wadhwa), how the courts got their grip on it (A.K. Roy), and what happens when the same ordinance is promulgated over and over forever (Krishna Kumar Singh).</p>
+
+<div class="grid g3">
+<div class="card"><h4>📜 Syllabus (DU 2022 — Topic 5, 3 Classes)</h4>
+<p><b>Legislative Power of the Executive (Ordinances)</b>:</p>
+<ul style="font-size:14.8px">
+<li><b>(a)</b> Essential conditions for promulgation</li>
+<li><b>(b)</b> 'Ordinance' under Article 13</li>
+<li><b>(c)</b> Judicial review</li>
+<li><b>(d)</b> Validity of successive promulgation of the same ordinance</li>
+<li>Constitutional provisions: <b>Articles 123 &amp; 213</b> (read with Arts 13, 85, 174, 200–201)</li>
+</ul></div>
+<div class="card a"><h4>Case list (cases 31–33)</h4>
+<ul style="font-size:14.8px">
+<li><b>31.</b> <i>D.C. Wadhwa v. State of Bihar</i> (1987) 1 SCC 378 — <span class="badge">DU EXCERPT</span> <span class="mini">(book p. 159)</span></li>
+<li><b>32.</b> <i>A.K. Roy v. Union of India</i> (1982) 1 SCC 271 — <span class="badge p">RESEARCHED</span> <span class="mini">(no DU excerpt; researched externally + DU's own quotations of its ratio in the KKS material)</span></li>
+<li><b>33.</b> <i>Krishna Kumar Singh v. State of Bihar</i> (2017) 3 SCC 1 — <span class="badge">DU EXCERPT</span> <span class="mini">(book p. 165; seven-Judge Bench)</span></li>
+</ul></div>
+<div class="card c"><h4>🗂️ How DU tests this Topic</h4>
+<ul style="font-size:14.8px">
+<li><b>Dec-2024 Q5(a)</b> (10 marks) — the KKS question: on lapse/disapproval, does the pre-ordinance state of affairs revive <i>ipso jure</i>? Do the ordinance's legal effects stand obliterated? <span class="badge p">ANSWERED §8</span></li>
+<li><b>Centenary Q8(b)</b> (10 marks) — short note: "Ordinance making power of the executive." <span class="badge p">ANSWERED §8</span></li>
+<li>Case-format questions on Wadhwa / A.K. Roy / KKS; short notes on Arts 123/213 conditions; essay on re-promulgation ("ordinance-raj").</li>
+</ul></div>
+</div>
+
+<div class="kbox">
+<h4>🎯 The five propositions that answer 80% of Topic 5 questions</h4>
+<ol style="margin-left:20px">
+<li><b>Ordinance = legislation, not executive action.</b> It is a law-making power of a <i>limited, conditional, provisional</i> kind — exercised in the recess of the Houses on the executive's <i>subjective satisfaction</i> of "immediate action" (A.K. Roy; DU material: "no distinction in principle between a law made by the legislature and an ordinance … both equally subject to constitutional limitations").</li>
+<li><b>It has the "same force and effect as if enacted" by the legislature</b> (Art 123(2) / 213(2)) — therefore it is equally a "law" under <b>Article 13(3)(a)</b> and equally subject to fundamental rights (A.K. Roy).</li>
+<li><b>It is a lease, not a freehold.</b> Maximum natural life ≈ <b>7½ months</b>: six weeks from re-assembly + a fresh session that must be summoned within ~3 months (Arts 85/174) + six weeks again (Wadhwa, DU para: "emergency power of limited life").</li>
+<li><b>Re-promulgation is the constitutional fault-line.</b> Serially re-promulgating the same ordinance to keep a law alive without facing the legislature is a <b>colourable exercise of power / fraud on the Constitution</b> (Wadhwa); when done mechanically, without fresh satisfaction, it is <b>"fundamentally at odds with the scheme of Arts 123/213"</b> and the ordinances are <b>bereft of legal effects</b> (Krishna Kumar Singh).</li>
+<li><b>On lapse: no automatic blanket revival AND no automatic obliteration.</b> An ordinance that <i>ceases to operate</i> is not void <i>ab initio</i>; what survives is decided by construction + <b>public interest &amp; constitutional necessity</b> (and irreversibility), with power to <b>mould relief</b> (Krishna Kumar Singh). But an ordinance that is <b>void under Art 123(3)/213(3)</b> (or unconstitutional under Art 13) was void from the start.</li>
+</ol>
+</div>
+
+<div class="tagline">
+<span>⚖️ Art 123 (President) · Art 213 (Governor)</span>
+<span>🔔 Recess condition</span>
+<span>📝 Immediate-action satisfaction</span>
+<span>🏛️ Laid before the House(s)</span>
+<span>⏳ Six weeks / disapproval / withdrawal</span>
+<span>🔁 Successive promulgation</span>
+<span>🛡️ Art 13(3)(a) — ordinance is "law"</span>
+<span>🔍 Justiciability of satisfaction</span>
+<span>👑 "There must not be ordinance-raj"</span>
+</div>
+</section>
+
+<section id="s-power">
+<h2><span class="num">Section 1 · The Instrument</span>The Ordinance Power — Articles 123 &amp; 213 Side by Side</h2>
+<p class="lead">An <b>ordinance</b> is a formal, general legislative instrument promulgated by the executive head (President at the Union, Governor in a State) when the legislature is not in session, which has the force of an Act. It is the Constitution's emergency valve for legislation — used when circumstances "render it necessary … to take immediate action" and there is no time to wait for a Bill.</p>
+
+<h3>1.1 Article 123 — Ordinances promulgated by the President (verbatim)</h3>
+<blockquote><b>123. Power of President to promulgate Ordinances during recess of Parliament.—</b>
+(1) If at any time, <u>except when both Houses of Parliament are in session</u>, the President is satisfied that circumstances exist which render it necessary for him to take immediate action, he may promulgate such Ordinances as the circumstances appear to him to require.
+(2) An Ordinance promulgated under this article shall have <u>the same force and effect as an Act of Parliament</u>, but every such Ordinance—
+<b>(a)</b> shall be laid before both Houses of Parliament and shall cease to operate at the expiration of <u>six weeks from the reassembly of Parliament</u>, or, if before the expiration of that period <u>resolutions disapproving it are passed by both Houses</u>, upon the passing of <u>the second of those resolutions</u>; and
+<b>(b)</b> may be withdrawn at any time by the President.
+<i>Explanation</i>.—Where the Houses of Parliament are summoned to reassemble on different dates, the period of six weeks shall be reckoned from the later of those dates for the purposes of this clause.
+(3) If and so far as an Ordinance under this article makes any provision which <u>Parliament would not under this Constitution be competent to enact</u>, it shall be void.
+(4)* * * * *<span class="src">Text: Constitution of India (Part V, Chapter III — Legislative Powers of the President). Note: <b>Article 123 has no proviso</b> — the only bar in clause (1) is the session bar; and clause (4) survives only as "* * * * *" — the old clause making the President's satisfaction "final and conclusive and … not … questioned in any court", expressly deleted by s. 16 of the Constitution (Forty-fourth Amendment) Act, 1978 (DU material).</span></blockquote>
+
+<div class="warn"><b>Session bar — the clean reading (a favourite exam trap):</b>
+<ul>
+<li><b>Art 123(1):</b> the President may promulgate "at any time, <u>except when both Houses of Parliament are in session</u>". So the power is available in a recess of Parliament — when <b>at least one House</b> is not sitting (including when the Lok Sabha is dissolved and only the Rajya Sabha sits — a classic fact-pattern). An ordinance promulgated <b>while both Houses are in session falls outside the power altogether</b>.</li>
+<li><b>Art 213(1):</b> unavailable when the <b>Legislative Assembly is in session</b> (unicameral), or when <b>both Houses</b> of the State Legislature are in session (bicameral State). A bicameral State's Council sitting alone does not bar promulgation.</li>
+<li><b>Art 123 has no proviso; Art 213 has one</b> — the Governor needs <b>presidential instructions</b> for ordinances in the three President-connected cases (a)–(c). The design logic: the Governor cannot do by ordinance what he could not do by Bill without engaging the President (Arts 197/200-type screens).</li>
+<li><b>Never write:</b> "an ordinance may be promulgated only when <i>either</i> House is not in session" or invent a Union proviso — both are standard answer-killers.</li>
+</ul></div>
+
+<h3>1.2 Article 213 — Ordinances promulgated by the Governor</h3>
+<blockquote><b>213. Power of Governor to promulgate Ordinances during recess of Legislature.—</b>
+(1) If at any time, <u>except when the Legislative Assembly of a State is in session, or where there is a Legislative Council in a State, except when both Houses of the Legislature are in session</u>, the Governor is satisfied that circumstances exist which render it necessary for him to take immediate action, he may promulgate such Ordinances as the circumstances appear to him to require:
+<b>Provided that the Governor shall not, without instructions from the President, promulgate any such Ordinance if—</b>
+<b>(a)</b> a Bill containing the same provisions would under this Constitution have required the previous sanction of the President for the introduction thereof into the Legislature; or
+<b>(b)</b> he would have deemed it necessary to reserve a Bill containing the same provisions for the consideration of the President; or
+<b>(c)</b> an Act of the Legislature of the State containing the same provisions would under this Constitution have been invalid unless, having been reserved for the consideration of the President, it had received the assent of the President.
+(2) An Ordinance promulgated under this article shall have <u>the same force and effect as an Act of the Legislature of the State assented to by the Governor</u>, but every such Ordinance—
+<b>(a)</b> shall be laid before the Legislative Assembly of the State, or where there is a Legislative Council in the State, before both the Houses, and shall cease to operate at the expiration of <u>six weeks from the reassembly of the Legislature</u>, or if before the expiration of that period a resolution disapproving it is passed by the <u>Legislative Assembly and agreed to by the Legislative Council, if any</u>, upon the passing of the resolution or, as the case may be, on the resolution being agreed to by the Council; and
+<b>(b)</b> may be withdrawn at any time by the Governor.
+<i>Explanation</i>.—Where the Houses of the Legislature of a State having a Legislative Council are summoned to reassemble on different dates, the period of six weeks shall be reckoned from the later of those dates for the purposes of this clause.
+(3) If and so far as an Ordinance under this article makes any provision which <u>would not be valid if enacted in an Act of the Legislature of the State assented to by the Governor</u>, it shall be void:
+<b>Provided that</b>, for the purposes of repugnancy under the Concurrent List, an Ordinance promulgated under this article <b>in pursuance of instructions from the President</b> shall be deemed to be an Act of the Legislature of the State which has been reserved for the consideration of the President and assented to by him.
+(4)* * * * *<span class="src">Text: Constitution of India (Part VI, Chapter IV — Legislative Power of the Governor). Three exam-relevant features: <b>(i)</b> the session bar distinguishes unicameral/bicameral States; <b>(ii)</b> the proviso is not an absolute ban — the Governor may promulgate <b>with presidential instructions</b> in cases (a)–(c), protecting the Art 197/200 assent-and-reservation channels; <b>(iii)</b> clause (4) is deleted ("* * * * *") — the DU material records that "by a similar amendment, clause 4 was introduced into Article 213 … expressly deleted by Section 16 of the Forty-fourth Amendment".</span></blockquote>
+
+<div class="grid g2">
+<div class="card"><h4>🔑 The three-move grammar common to both articles</h4>
+<ol>
+<li><b>Entry condition</b> — recess + <i>satisfaction of necessity for immediate action</i> (Arts 123(1)/213(1)).</li>
+<li><b>Life-cycle condition</b> — <i>same force and effect as an Act</i>; <i>laid before the House(s)</i>; <i>ceases</i> after six weeks from re-assembly, or earlier on a disapproval resolution (Arts 123(2)/213(2)(a)); or <i>withdrawn</i> at will (123(2)(b)/213(2)(b)).</li>
+<li><b>Competence condition</b> — <i>void</i> if it legislates on a subject needing the President's assent without it (Arts 123(3)/213(3)); screened by the provisos.</li>
+</ol>
+</div>
+<div class="card b"><h4>⚖️ Union–State mirror (exam table bait)</h4>
+<ul>
+<li><b>Who:</b> President (123) / Governor (213).</li>
+<li><b>Recess trigger:</b> "except when <u>both Houses</u> are in session" (123 — no proviso) / "except when the Legislative Assembly is in session (or both Houses where there is a Council)" (213 — plus the presidential-instructions proviso (a)–(c)).</li>
+<li><b>Disapproval:</b> at the Union, <b>both Houses</b> must pass disapproving resolutions — effective "upon the passing of the <u>second</u> of those resolutions"; at the State, the Assembly must pass it and the Council (if any) must agree — effective on passing/agreement.</li>
+<li><b>Screen:</b> none in Art 123 / Art 213 proviso: the Governor needs <b>instructions from the President</b> where (a) the Bill would need the President's previous sanction, (b) he would reserve the Bill under Art 200(2), or (c) the Bill's Act would be invalid without presidential assent.</li>
+<li><b>Savings:</b> Art 123 Explanation for different reassembly dates of the two Houses.</li>
+</ul>
+</div>
+</div>
+
+<div class="twrap">
+<table>
+<tr><th style="width:22%">Feature</th><th style="width:39%">Art 123 — President</th><th style="width:39%">Art 213 — Governor</th></tr>
+<tr><td><strong>Satisfaction</strong></td><td>"circumstances exist which render it necessary … to take immediate action"</td><td>identical words</td></tr>
+<tr><td><strong>Session bar</strong></td><td>bar applies only "when <u>both Houses of Parliament are in session</u>" — available when at least one House is not sitting; <b>no proviso</b></td><td>bar applies when the Assembly is in session (or both Houses where a Council exists); <b>proviso</b>: needs <em>instructions from the President</em> in cases (a)–(c)</td></tr>
+<tr><td><strong>Force &amp; effect</strong></td><td>"same force and effect as an Act of Parliament"</td><td>"same force and effect as an Act of the Legislature of the State assented to by the Governor"</td></tr>
+<tr><td><strong>Laying</strong></td><td>before <b>both</b> Houses of Parliament</td><td>before the Legislative Assembly (before <b>both</b> Houses where a Council exists)</td></tr>
+<tr><td><strong>Cease</strong></td><td>6 weeks from "the reassembly of Parliament" (Explanation: <u>later</u> reassembly date if Houses differ) — or earlier on disapproval resolutions passed by <b>both</b> Houses ("the second of those resolutions")</td><td>6 weeks from "the reassembly of the Legislature" (Explanation likewise) — or earlier on a resolution passed by the Assembly <b>and agreed to by the Council, if any</b></td></tr>
+<tr><td><strong>Withdrawal</strong></td><td>by the President at any time — 123(2)(b)</td><td>by the Governor at any time — 213(2)(b)</td></tr>
+<tr><td><strong>Voidness</strong></td><td>123(3): provision "which Parliament would not under this Constitution be competent to enact" → void</td><td>213(3): provision "which would not be valid if enacted in an Act of the Legislature of the State assented to by the Governor" → void; proviso deems a President-instructed ordinance reserved &amp; assented (repugnancy)</td></tr>
+<tr><td><strong>Old immunity clause</strong></td><td>former clause (4): satisfaction "final and conclusive … not … questioned in any court" — <strong>deleted by 44th Amdt s. 16</strong> (text now "* * * * *")</td><td>corresponding clause similarly deleted (DU material: "By a similar amendment, clause 4 was introduced into Article 213 … expressly deleted by Section 16 of the Forty-fourth Amendment")</td></tr>
+<tr><td><strong>Practice</strong></td><td>President has <strong>never</strong> re-promulgated an ordinance since 1950 (DU facts in Wadhwa)</td><td>re-promulgation by Governors is where the doctrine exploded (Bihar 1967–81: 256 ordinances; 69 re-promulgated — DU facts)</td></tr>
+</table>
+</div>
+
+<h3>1.3 Nature of the power — legislative, not executive</h3>
+<div class="grid g2">
+<div class="card a">
+<h4>A.K. Roy (syllabus case 32) — settled law</h4>
+<ul>
+<li>The ordinance power is <b>legislative in nature</b> — the executive makes <i>law</i> (general, binding, prospective) though the instrument is issued by the executive.</li>
+<li>It is <b>not confined to "virgin land"</b> — Parliament may amend, repeal or alter existing laws by ordinance (para 30 of the judgment; cf. <i>R.K. Garg v. UOI</i>, cited in the DU material: ordinances <b>may amend tax laws</b>).</li>
+<li><b>No American strict separation</b> of powers in India (para 23): the Constitution blends the streams — Parliament itself delegates rule-making to the executive throughout the statute-book, and the executive legislates by ordinance in recess.</li>
+<li>DU quotation of its ratio (reproduced in the Krishna Kumar material): <b>"no distinction in principle between a law made by the legislature and an ordinance … both equally subject to constitutional limitations … [for] extraordinary situations and not [to] be perverted to serve political ends."</b></li>
+</ul>
+</div>
+<div class="card">
+<h4>Why "legislative" matters doctrinally</h4>
+<ul>
+<li><b>Art 13 applies</b> — an ordinance is a "law" (13(3)(a)); it can take away fundamental rights only within the limits of 13(2) (see §3).</li>
+<li><b>Political control substitutes for legislative control</b> — the classic check is not prior consent but (i) the six-week disapproval mechanism, (ii) the confidence/no-confidence power, (iii) the Governor's/President's veto points — Ambedkar's Constituent Assembly speech on legislative control over ordinances is quoted in the DU material (via <i>R.K. Garg</i>).</li>
+<li><b>But the initiator is the executive</b> — exercised on the aid and advice of the Council of Ministers (Arts 74/163; cross-ref Topic 3 §5, <i>Samsher Singh</i>): the "satisfaction" is ministerial satisfaction, formed by the Cabinet and communicated to the President/Governor.</li>
+<li><b>Provisional by design</b> — B.N. Rau's memorandum and the colonial pedigree (below) show it was drafted as <i>temporary, recess legislation</i>, pending the House's return.</li>
+</ul>
+</div>
+</div>
+
+<h3>1.4 Historical pedigree — from the Indian Councils Act to Krishna Kumar</h3>
+<div class="tl">
+<div class="ev"><b class="yr">1861 — Indian Councils Act, s. 23:</b> the Governor-General could make ordinances without the legislature's assent — the colonial seed of Art 123 (DU, KKS history).</div>
+<div class="ev"><b class="yr">1915 — Government of India Act:</b> the ordinance power continued in the colonial scheme (DU, KKS history).</div>
+<div class="ev"><b class="yr">1935 — Government of India Act, s. 42:</b> the fully developed colonial ordinance regime; its "immediate action" formula was transplanted into Arts 123 &amp; 213 (DU, KKS history).</div>
+<div class="ev"><b class="yr">1949 — Constituent Assembly:</b> B.N. Rau's memorandum treated the ordinance as provisional legislation; the Assembly <b>rejected</b> B. Bocket Sahib's amendment to Art 13 — leaving "law" expressly inclusive of an "Ordinance" (CA Debates Vol. 8, p. 203; DU/KKS and A.K. Roy material).</div>
+<div class="ev"><b class="yr">1950 — Constitution:</b> Arts 123 &amp; 213 enacted with an immunity clause making the President's satisfaction "final and conclusive and … not … questioned in any court".</div>
+<div class="ev"><b class="yr">1976–78 — 42nd &amp; 44th Amendments:</b> the satisfaction-immunity clause expressly <b>deleted by s. 16 of the 44th Amendment Act, 1978</b> — reopening judicial review (DU material; Art 123(4) now "* * * * *").</div>
+<div class="ev"><b class="yr">1980 — National Security Ordinance:</b> promulgated (Ord. 2 of 1980) after MISA's lapse — the litigation becomes <i>A.K. Roy</i>.</div>
+<div class="ev"><b class="yr">1982 — A.K. Roy v. UOI:</b> ordinance = law; power legislative; satisfaction reviewable but not justiciable as to adequacy; Arts 14/19/21 fully apply.</div>
+<div class="ev"><b class="yr">1987 — D.C. Wadhwa v. State of Bihar:</b> serial re-promulgation = colourable exercise / fraud on the Constitution; "There must not be ordinance-raj".</div>
+<div class="ev"><b class="yr">2017 — Krishna Kumar Singh v. State of Bihar:</b> seven-Judge Bench — successive promulgation fundamentally at odds with Arts 123/213; laying mandatory; survival test = public interest + constitutional necessity; relief can be moulded; two old cases overruled.</div>
+</div>
+
+<h3>1.5 Lifecycle of an ordinance (flowchart)</h3>
+<div class="fig">
+<svg viewBox="0 0 900 356" width="100%" style="max-width:880px" role="img" aria-label="Lifecycle of an ordinance">
+<defs><marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#5b6b84"/></marker></defs>
+<rect class="box" x="14" y="18" width="210" height="64" rx="10"/>
+<text class="ttl" x="119" y="40" text-anchor="middle">1 · RECESS + SATISFACTION</text>
+<text x="119" y="60" text-anchor="middle">"both Houses in session" bar; "necessary</text>
+<text x="119" y="76" text-anchor="middle">immediate action" — Art 123(1)/213(1)</text>
+<line class="arw" x1="224" y1="50" x2="276" y2="50"/>
+<rect class="box2" x="280" y="18" width="210" height="64" rx="10"/>
+<text class="ttl" x="385" y="40" text-anchor="middle">2 · PROMULGATED</text>
+<text x="385" y="60" text-anchor="middle">In force — same force &amp; effect</text>
+<text x="385" y="76" text-anchor="middle">as an Act — Art 123(2)/213(2)</text>
+<line class="arw" x1="490" y1="50" x2="536" y2="50"/>
+<rect class="box" x="540" y="18" width="230" height="64" rx="10"/>
+<text class="ttl" x="655" y="40" text-anchor="middle">3 · LAID before both Houses</text>
+<text x="655" y="60" text-anchor="middle">/ Assembly (Council too, if any) —</text>
+<text x="655" y="76" text-anchor="middle">mandatory (Krishna Kumar Singh)</text>
+<line class="arw" x1="655" y1="82" x2="655" y2="116"/>
+<rect class="box4" x="540" y="120" width="230" height="66" rx="10"/>
+<text class="ttl" x="655" y="142" text-anchor="middle">4 · SIX-WEEK CLOCK</text>
+<text x="655" y="162" text-anchor="middle">from re-assembly (Explanation:</text>
+<text x="655" y="178" text-anchor="middle">later date if Houses differ)</text>
+<line class="arw" x1="545" y1="84" x2="472" y2="116"/>
+<rect class="box4" x="120" y="120" width="340" height="66" rx="10"/>
+<text class="ttl" x="290" y="142" text-anchor="middle">EARLIER DISAPPROVAL</text>
+<text x="290" y="162" text-anchor="middle">both Houses' resolutions → "the second of</text>
+<text x="290" y="178" text-anchor="middle">those resolutions" (123) · Assembly + Council (213)</text>
+<line class="arw" x1="655" y1="186" x2="655" y2="226"/>
+<rect class="box2" x="430" y="228" width="300" height="64" rx="10"/>
+<text class="ttl" x="580" y="250" text-anchor="middle">ORDINANCE CEASES</text>
+<text x="580" y="270" text-anchor="middle">at 6 weeks (or sooner on disapproval) —</text>
+<text x="580" y="286" text-anchor="middle">silence ≠ ratification; NO approval path in text</text>
+<line class="arw" x1="290" y1="188" x2="426" y2="234"/>
+<line class="arw" x1="340" y1="84" x2="206" y2="116"/>
+<rect class="box4" x="14" y="120" width="260" height="66" rx="10"/>
+<text class="ttl" x="144" y="142" text-anchor="middle">WITHDRAWAL at any time</text>
+<text x="144" y="162" text-anchor="middle">by the President/Governor —</text>
+<text x="144" y="178" text-anchor="middle">Art 123(2)(b) / 213(2)(b)</text>
+<line class="arw" x1="144" y1="188" x2="424" y2="258"/>
+<rect class="box" x="40" y="310" width="400" height="34" rx="8"/>
+<text x="240" y="332" text-anchor="middle" font-size="12.5">Only way forward: replace by a Bill → Act (never by re-promulgation abuse)</text>
+<rect class="box3" x="470" y="310" width="400" height="34" rx="8"/>
+<text x="670" y="332" text-anchor="middle" font-size="12.5">Ceased ≠ void ab initio — survival per Krishna Kumar test (§5)</text>
+</svg>
+<div class="cap">Fig. 1 — Life-cycle of an ordinance under Arts 123 &amp; 213: entry (recess + satisfaction), currency (force of an Act), legislative check (mandatory laying + six-week clock + disapproval), exit (cessation/withdrawal). <b>Note the asymmetry with emergency proclamations (Arts 352/356/360): Arts 123/213 contain no approval mechanism — an ordinance dies at six weeks no matter what; disapproval only shortens its life.</b> Then the post-lapse survival question that Krishna Kumar Singh answers (§5).</div>
+</div>
+</section>
+
+<section id="s-cond">
+<h2><span class="num">Section 2 · Syllabus Item (a)</span>Essential Conditions for Promulgation</h2>
+<p class="lead">Syllabus item (a) asks for the <i>conditions precedent and concurrent</i> that make an ordinance constitutionally valid. Ten conditions — three entry conditions, four life-cycle conditions, and three exit/conduct conditions — plus Art 213's presidential-instructions proviso (Art 123 has none). Frame any answer as: <b>validity = entry satisfied + life-cycle observed + competence intact + conduct non-abusive.</b></p>
+
+<h3>2.1 The master checklist</h3>
+<div class="twrap">
+<table>
+<tr><th style="width:5%">#</th><th style="width:26%">Condition</th><th style="width:44%">What the text/case-law requires</th><th style="width:25%">Source &amp; consequence of breach</th></tr>
+<tr><td><strong>1</strong></td><td><strong>Recess of the House(s)</strong></td><td>Union: power available "at any time, <u>except when both Houses of Parliament are in session</u>" (Art 123(1) — no proviso); State: unavailable when the Assembly sits (or both Houses where a Council exists) (Art 213(1)). <b>An ordinance can never be promulgated as a substitute for a Bill before Houses that are actually sitting</b> — promulgation while both Houses sit falls outside the power altogether.</td><td>Arts 123(1), 213(1). Breach → promulgation outside the enabling condition; colourable if used to avoid a live Bill (Wadhwa).</td></tr>
+<tr><td><strong>2</strong></td><td><strong>Satisfaction of necessity for "immediate action"</strong></td><td>The President/Governor must be <i>satisfied that circumstances exist which render it necessary to take immediate action</i>. This is a <b>subjective</b> satisfaction formed on ministerial advice (aid &amp; advice: Arts 74/163) — but it must be a <i>bona fide</i> satisfaction directed at genuine urgency, not routine legislation.</td><td>Arts 123(1)/213(1); A.K. Roy (power meant for "unusual and exceptional circumstances"; petitioners must show absence of foundation); satisfaction reviewable for fraud/no-satisfaction after 44th Amdt (§4).</td></tr>
+<tr><td><strong>3</strong></td><td><strong>Legislative competence intact</strong></td><td>The subject must be within the legislature's Lists (Union/State/Concurrent — read with Arts 245–246, 254). <b>Art 123(3):</b> a provision "which Parliament would not under this Constitution be competent to enact" → void. <b>Art 213(3):</b> a provision "which would not be valid if enacted in an Act of the Legislature of the State assented to by the Governor" → void (with the presidential-instructions/repugnancy proviso).</td><td>Arts 123(3)/213(3); Art 213 proviso (cases (a)–(c): President's previous sanction; Art 200(2) reservation; assent-required invalidity — all needing <em>instructions from the President</em>).</td></tr>
+<tr><td><strong>4</strong></td><td><strong>Constitutional/FR conformity</strong></td><td>As a "law" the ordinance must satisfy Arts 14, 19, 21 etc. — Art 13(2) applies directly; a provision contravening Part III is void to that extent (13(3)(a) reads "Ordinance" into "law").</td><td>Art 13; A.K. Roy (ordinance = law; Arts 14/19/21 "not dead letters"); Krishna Kumar HC: 4th ordinance hit by Art 14.</td></tr>
+<tr><td><strong>5</strong></td><td><strong>Aid &amp; advice of the Council of Ministers</strong></td><td>Promulgation is an executive function performed on the advice of the Cabinet (cross-ref Topic 3 §5, <i>Samsher Singh</i>): the "satisfaction" is the Council's satisfaction routed through the President/Governor. Ordinances are announced by the government, not spontaneously by the head of State.</td><td>Arts 74(1), 163; government ordinance-issuance practice (§6).</td></tr>
+<tr><td><strong>6</strong></td><td><strong>Laying before the House(s)</strong></td><td>"It <u>shall</u> be laid before both Houses of Parliament" / "before the Legislative Assembly … or where there is a Legislative Council … before both the Houses" — <b>mandatory</b>, and to be done promptly so the six-week clock and disapproval machinery can engage. The majority in Krishna Kumar gave three reasons for treating laying as an obligation of the constitutional scheme; a government cannot keep an ordinance alive by avoiding the legislature.</td><td>Arts 123(2)(a)/213(2)(a); KKS majority. Never laid → it was never before the House at all, could never be disapproved, and still ceases at six weeks (Lokur's scenario analysis) — plus breach of a mandatory duty.</td></tr>
+<tr><td><strong>7</strong></td><td><strong>Subjection to the six-week clock</strong></td><td>Ordinance ceases at the expiry of <b>six weeks from re-assembly</b> (Explanation: where the Houses reassemble on different days, count from the <b>later</b> date). <b>There is no approval mechanism in Arts 123/213</b> — the ordinance dies at six weeks no matter what the House does; silence is neither ratification nor approval. Lokur J. (KKS): contrast Arts 352(4), 356(3), 360(2), which expressly keep proclamations alive only on <i>affirmative approval</i> — ordinances get no such treatment; disapproval only <i>shortens</i> the life.</td><td>Arts 123(2)(a)/213(2)(a); KKS (Lokur).</td></tr>
+<tr><td><strong>8</strong></td><td><strong>Exposure to disapproval</strong></td><td>Union: disapproval requires resolutions passed by <b>both Houses</b> — effective "upon the passing of the <u>second</u> of those resolutions". State: a resolution passed by the Assembly <b>and agreed to by the Council, if any</b> — effective on passing/agreement. Disapproval and six-week lapse produce the same legal endpoint — the ordinance <b>ceases to operate</b> (only sooner).</td><td>Arts 123(2)(a)/213(2)(a); Dec-2024 Q5(a) expressly pairs "lapsing" with "passing of a resolution of disapproval".</td></tr>
+<tr><td><strong>9</strong></td><td><strong>Right of withdrawal</strong></td><td>The President/Governor may withdraw the ordinance "at any time" — a standing executive check running the other way (governments withdraw ordinances that become politically or legally untenable).</td><td>Arts 123(2)(b)/213(2)(b).</td></tr>
+<tr><td><strong>10</strong></td><td><strong>No abuse of the re-promulgation device</strong></td><td>After cessation/withdrawal, a fresh ordinance on the same subject requires a <b>fresh, genuine satisfaction of immediate necessity</b>. Mechanically re-promulgating identical ordinances — especially to keep a law alive for years without ever letting the legislature vote on it — is a <b>colourable exercise / fraud on the Constitution</b> (Wadhwa) and, when done without real deliberation, <b>"fundamentally at odds with the scheme of Arts 123/213"</b> (Krishna Kumar). (India has no express textual bar on re-promulgation — the doctrine is judge-made.)</td><td>Wadhwa; Krishna Kumar Singh; §5.</td></tr>
+</table>
+</div>
+
+<div class="grid g2">
+<div class="card a"><h4>⏱️ The "7½ months" arithmetic (Wadhwa, DU)</h4>
+<p>The <b>maximum natural life</b> of a single ordinance:</p>
+<ol>
+<li><b>6 weeks</b> running while the Houses reassemble/recess — an ordinance may be promulgated just after a session ends;</li>
+<li>the next session must be convened within <b>~3 months</b> (Art 85: Parliament summoned so as to meet at least twice a year / gap ≤ 6 months; Art 174: State Assembly — same rhythm; and the Constitution expects prompt reassembly after a recess);</li>
+<li>then another <b>6 weeks</b> from re-assembly before cessation.</li>
+</ol>
+<p>≈ <b>7½ months</b> — which is why the DU material calls it an "<b>emergency power of limited life</b>". An ordinance kept alive for 1–14 years (Bihar 1967–81 facts) is <i>ipso facto</i> evidence of abuse.</p></div>
+<div class="card b"><h4>🚫 The Governor's screen — Art 213 proviso (Art 123 has none)</h4>
+<p><b>Text:</b> "Provided that the Governor shall not, <b>without instructions from the President</b>, promulgate any such Ordinance if—</p>
+<ul>
+<li><b>(a)</b> a Bill containing the same provisions would under this Constitution have required the <b>previous sanction of the President</b> for its introduction into the Legislature; or</li>
+<li><b>(b)</b> he would have deemed it necessary to <b>reserve</b> a Bill containing the same provisions for the consideration of the President (Art 200(2)); or</li>
+<li><b>(c)</b> an Act with the same provisions would have been <b>invalid unless reserved and assented to by the President</b>.</li>
+</ul>
+<p><b>Reading it precisely:</b> it is not an absolute ban — the Governor <i>may</i> promulgate in cases (a)–(c) <b>if the President instructs him</b>. Its purpose: the Governor cannot do <b>by ordinance</b> what he could not do <b>by Bill</b> without engaging the President — no circumvention of the Art 200/201 assent-and-reservation channel (and, through the repugnancy proviso to 213(3), a President-instructed ordinance is deemed reserved &amp; assented for Art 254 purposes).</p>
+<p class="mini">Exam tip: when the question says "essential conditions", mention (i) the session bar, (ii) the satisfaction, (iii) the Art 213 proviso + instructions, (iv) laying, (v) the six-week/disapproval machinery, (vi) withdrawal, (vii) competence — most answers miss the proviso entirely.</p></div>
+</div>
+
+<h4>Condition 2 unpacked — what counts as "immediate action"?</h4>
+<div class="quotebox">"[The ordinance power is] meant to be used in <b>unusual and exceptional circumstances</b> and not perverted to serve political ends."<span class="src">Ratio of A.K. Roy v. UOI, as quoted in the DU case material (Krishna Kumar Singh excerpt)</span></div>
+<ul>
+<li><b>Positive view:</b> urgency need not be an emergency — legislative urgency (a lapsed statute, a budget cycle, a calamity) suffices; the satisfaction is the executive's to form.</li>
+<li><b>Negative view (the abuse test):</b> using the ordinance for <i>ordinary, recurring, or perpetually renewable</i> legislation — "governing by ordinance" — negates the very condition of promulgation. Wadhwa: the power is "<b>emergency power of limited life</b>"; serial re-promulgation shows there was never "immediate action" necessity — only a desire to avoid the legislature.</li>
+<li><b>Judicial posture:</b> courts will not re-form the satisfaction (no <i>adequacy</i> review), but will ask whether a satisfaction <i>could exist at all</i> on the material — and whether the pattern of promulgation reveals a <b>colourable device</b> (§4).</li>
+</ul>
+
+<h3>2.2 Disapproval vs lapse vs withdrawal vs voidness — the four exits (must-not-confuse)</h3>
+<div class="twrap">
+<table>
+<tr><th style="width:18%">Exit route</th><th style="width:30%">Text</th><th style="width:26%">When it happens</th><th style="width:26%">Legal effect</th></tr>
+<tr><td><strong>Withdrawal</strong></td><td>123(2)(b) / 213(2)(b)</td><td>any time, by President/Governor</td><td>ceases from withdrawal; acts done during currency stand</td></tr>
+<tr><td><strong>Lapse (six weeks)</strong></td><td>123(2)(a)/213(2)(a)</td><td>six weeks from re-assembly expire — <b>no approval mechanism exists</b>; silence neither ratifies nor saves</td><td>ceases prospectively; <b>not</b> void ab initio; survival per KKS test</td></tr>
+<tr><td><strong>Disapproval</strong></td><td>123(2)(a): "the second of those resolutions" (both Houses); 213(2)(a): Assembly's resolution <em>agreed to by the Council, if any</em></td><td>both Houses (Union) / Assembly + Council (State) resolve against it — before the six weeks run out</td><td>same endpoint as lapse — ordinance ceases, only sooner (KKS: disapproval and lapsing sit in the same box)</td></tr>
+<tr><td><strong>Voidness</strong></td><td>123(3) (Parliament not competent to enact) / 213(3) (provision would not be valid as a Governor-assented Act); Art 13(2); Arts 14/19/21</td><td>competence/validity defect or FR/constitutional violation</td><td><b>void</b> — and if void on constitutionality grounds, void <i>ab initio</i> (independent of cessation): acts under it are a nullity</td></tr>
+</table>
+</div>
+
+<div class="good"><b>Golden sentence for Q5(a):</b> "<i>Cessation</i> is prospective — the ordinance is not void at inception; <i>voidness</i> under Art 123(3)/213(3)/Article 13 is retroactive — the ordinance never existed as valid law. Krishna Kumar Singh asks which box the ordinance falls in <i>before</i> asking what survives."</div>
+
+<h3>2.3 The session rhythm that disciplines the power (related provisions)</h3>
+<div class="grid g3">
+<div class="card"><h4>Art 85 — Parliament</h4><p>President summons each House so that it meets at least twice a year and the gap between sittings ≤ 6 months; the ordinance's six-week clock runs from re-assembly — the Constitution's design keeps recesses short.</p></div>
+<div class="card"><h4>Art 174 — State Assemblies</h4><p>Same rhythm for the Governor's ordinance: the session bar (213(1)) and the six-week clock (213(2)) are anchored to Assembly sittings. Wadhwa's maximum-life calculation runs through Art 174.</p></div>
+<div class="card"><h4>Arts 200 / 201 — Governor's Bill routes</h4><p>Assent / withhold / <b>reserve</b> / return — the channel the Art 213 proviso protects: an ordinance may not be used to achieve what reservation to the President would have blocked.</p></div>
+</div>
+<div class="mini">Cross-ref: during President's rule under <b>Art 356(1)(b)</b>, the powers of the State Legislature become exercisable "by or under the authority of Parliament", and <b>Art 357(1)(a)</b> lets Parliament confer on the President the State Legislature's power to make laws (with Art 357(2) preserving such laws after the Proclamation ceases) — the legislative machinery that replaces the ordinary Art 213 channel when the Governor's functions have been assumed.</div>
+</section>
+
+<section id="s-art13">
+<h2><span class="num">Section 3 · Syllabus Item (b)</span>'Ordinance' under Article 13</h2>
+<p class="lead">Article 13 is the fundamental-rights filter through which <i>every</i> law must pass — and it expressly names the ordinance. This is why an ordinance can destroy lives (detention), salaries, or status, but can never destroy a fundamental right: the ordinance itself is "law" made by "the State".</p>
+
+<h3>3.1 Article 13 verbatim (so far as it concerns ordinances)</h3>
+<blockquote><b>13. Laws inconsistent with or in derogation of the fundamental rights.—</b>
+(1) All laws in force in the territory of India immediately before the commencement of this Constitution, in so far as they are inconsistent with the provisions of this Part, shall, to the extent of such inconsistency, be <b>void</b>.
+(2) <b>The State shall not make any law</b> which takes away or abridges the rights conferred by this Part and any law made in contravention of this clause shall, to the extent of the contravention, be <b>void</b>.
+(3) In this article, unless the context otherwise requires,—
+<b>(a) "law" includes any Ordinance, order, bye-law, rule, regulation, notification, custom or usage having in the territory of India the force of law;</b>
+(b) "laws in force" includes laws passed or made by a Legislature or other competent authority … before the commencement of this Constitution and not previously repealed …
+(4) Nothing in this article shall apply to any amendment of this Constitution made under article 368.<span class="src">Constitution of India (Wikisource, Part III) — Clause (3)(a) is the hinge of syllabus item (b): the Framers deliberately put "Ordinance" first in the list of instruments having "the force of law".</span></blockquote>
+
+<div class="grid g2">
+<div class="card"><h4>Why (3)(a) exists — the Constituent Assembly link</h4>
+<ul>
+<li>The Assembly <b>rejected B. Bocket Sahib's amendment</b> to keep "Ordinance" out of "law" (CA Debates Vol. 8, p. 203; recorded in A.K. Roy and in the DU KKS material) — a deliberate choice that the ordinance is fully justiciable under Part III.</li>
+<li><b>Art 13(1)</b> ("laws in force … before commencement") is <i>not</i> the ordinance hook — ordinances are post-Constitution instruments; the hook is <b>13(2) + 13(3)(a)</b>: "the State shall not make any law" … and "law includes any Ordinance".</li>
+<li>The President/Governor is part of "the State" (Art 12 for Part III; Art 367 for general construction) — so the promulgator is squarely inside 13(2).</li>
+<li><b>Art 13(4)</b> closes the back door: no "law" (hence no ordinance) can amend the Constitution under Art 368 — <b>an ordinance can never touch the basic structure or any constitutional provision</b>; constitutional amendment requires the Art 368 procedure alone.</li>
+</ul></div>
+<div class="card c"><h4>The syllogism examiners love</h4>
+<p style="font-size:15.5px"><b>P1.</b> Art 123(2)/213(2): an ordinance has "the same force and effect as if it were an Act".<br>
+<b>P2.</b> Art 13(3)(a): "law" includes "any Ordinance".<br>
+<b>P3.</b> Art 13(2): the State shall not make any law taking away/abridging Part III rights; such law is void to that extent.<br>
+<b>C.</b> Therefore an ordinance violating Arts 14/19/21 is <b>void to the extent of the violation</b> — enforceable in writ jurisdiction exactly like an Act (Art 32/226). <i>A.K. Roy</i>: Arts 14, 19, 21 "must not be reduced to dead letters" (para 31).</p>
+<p class="mini">Corollary used in <i>A.K. Roy</i>: the National Security Ordinance, keeping preventive detention alive after MISA, had to satisfy Art 21's "procedure established by law" (post-44th Amdt wording) — and it survived only because read down with safeguards.</p></div>
+</div>
+
+<h3>3.2 Article 13 in action — how ordinances have been struck/validated</h3>
+<div class="twrap">
+<table>
+<tr><th style="width:24%">Instrument</th><th style="width:36%">Art 13 / FR challenge</th><th style="width:40%">Outcome</th></tr>
+<tr><td><strong>National Security Ordinance, 1980</strong> (A.K. Roy)</td><td>Is an ordinance "law" under Art 21? Does preventive detention by ordinance satisfy 13(2)/13(3)(a)?</td><td>Yes — ordinance IS law; the Ordinance/NSA framework upheld as <b>preventive, not punitive</b>, with advisory-board and humane-treatment safeguards; s. 3(2) read down (Art 14 ear-mark).</td></tr>
+<tr><td><strong>Bihar Sanskrit Schools Ordinances</strong> (Krishna Kumar)</td><td>Patna HC held the <b>4th ordinance void for Art 14</b> (arbitrariness/illegality of the management-takeover scheme); Art 14 also underpinned the re-promulgation challenge (Wadhwa: ordinances used as a device = arbitrary).</td><td>SC (7 Judges): the entire series Ord. 32/1989 → Ord. 2/1992 is a <b>fraud on constitutional power</b> — "bereft of any legal effects"; no rights/status created; relief moulded (salaries already paid not recovered).</td></tr>
+<tr><td><strong>BIEC Ordinance, 1985</strong> (Wadhwa)</td><td>Intermediate-education ordinance kept alive by re-promulgation.</td><td><b>Struck down</b> by the Supreme Court in the Wadhwa litigation itself.</td></tr>
+<tr><td><strong>Ordinances amending tax laws</strong> (R.K. Garg, quoted in DU material)</td><td>Competence, not FR: can an ordinance amend the Income-tax Act?</td><td>Yes — legislative power includes amendment; equality (Art 14) applies to tax ordinances like any law.</td></tr>
+</table>
+</div>
+
+<div class="warn"><b>Boundaries of the Art 13 angle (so you don't overclaim):</b>
+<ul>
+<li>Art 13 polices <b>fundamental rights</b>, not legislative competence — competence defects run through Arts 245–246 + 123(3)/213(3); policy wisdom runs nowhere (political questions).</li>
+<li>Art 13(1) is irrelevant to ordinances (pre-Constitution laws); never cite it for ordinance challenges.</li>
+<li>Art 13(4) means an ordinance can never be a "constitutional amendment" — e.g., an ordinance cannot alter Part III itself, delete a Fundamental Right, or do indirectly what Art 368 procedure requires.</li>
+<li>DPSPs (Part IV) are not enforced through Art 13 — but Art 39(b)/(c) ordinances (e.g., land-ceiling/property ordinances in the DU cases) remain subject to Arts 14/19/21 and to the re-promulgation doctrine.</li>
+</ul></div>
+</section>
+
+<section id="s-jr">
+<h2><span class="num">Section 4 · Syllabus Item (c)</span>Judicial Review of Ordinances</h2>
+<p class="lead">The old text said the President's satisfaction was "final and conclusive and … not … questioned in any court". The Forty-fourth Amendment tore that clause out (Art 123(4) now reads "* * * * *"), and <i>A.K. Roy</i> + <i>Krishna Kumar Singh</i> built the modern review doctrine in its place: <b>the satisfaction is reviewable, but the court reviews the existence and legality of the satisfaction — not its adequacy.</b></p>
+
+<h3>4.1 The evolution — five steps</h3>
+<div class="tl">
+<div class="ev"><b class="yr">Step 1 — Original text:</b> Art 123(4)/corresponding Art 213 clause: "the satisfaction of the President mentioned in clause (1) shall be final and conclusive and shall not be questioned in any court on any ground" (quoted in DU material; encountered in <i>R.C. Cooper</i> debate at p. 295 of the reported discussion).</div>
+<div class="ev"><b class="yr">Step 2 — Deletion:</b> "This amendment was expressly deleted by Section 16 of the Forty-fourth Amendment" (DU material). With the immunity clause gone, the door reopened for review of ordinance-making.</div>
+<div class="ev"><b class="yr">Step 3 — A.K. Roy (1982), paras 26–27:</b> after deletion, the President's satisfaction is <b>not a purely political question</b>; judicial review is <b>not totally excluded</b> — but the petitioners must lay a foundation showing that no circumstances could have justified the satisfaction (they failed on facts).</div>
+<div class="ev"><b class="yr">Step 4 — Standard fixed (KKS, following Bommai / Indra Sawhney):</b> the court does <b>not</b> substitute its view on the <i>adequacy</i> of satisfaction; it asks (i) was there <b>any relevant material</b>? (ii) was there <b>fraud on the power / oblique purpose</b>? (iii) was there <b>no satisfaction at all</b> (actuated by mala fides or total non-application of mind)?</div>
+<div class="ev"><b class="yr">Step 5 — Structural review (Wadhwa → KKS):</b> beyond satisfaction, courts review <b>the existence and proper exercise of the power itself</b>: competence (123(3)/213(3)), procedural conditions (recess, laying, six weeks), Art 13/Arts 14-19-21 conformity, and the <b>re-promulgation pattern</b> — "the Court cannot examine the satisfaction, but it can examine whether the power existed and was properly exercised" (Wadhwa, DU).</div>
+</div>
+
+<h3>4.2 The review decision-tree (flowchart)</h3>
+<div class="fig">
+<svg viewBox="0 0 920 470" width="100%" style="max-width:900px" role="img" aria-label="Judicial review decision tree for ordinances">
+<defs><marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#5b6b84"/></marker></defs>
+<rect class="box" x="330" y="14" width="260" height="44" rx="10"/>
+<text class="ttl" x="460" y="41" text-anchor="middle">Challenge to an Ordinance (Art 32/226)</text>
+<line class="arw" x1="460" y1="58" x2="460" y2="86"/>
+<rect class="box" x="300" y="88" width="320" height="52" rx="10"/>
+<text class="ttl" x="460" y="110" text-anchor="middle">Q1 · Competence</text>
+<text x="460" y="130" text-anchor="middle">Subject within the Lists? 123(3) competence / 213(3) validity defect?</text>
+<line class="arw" x1="460" y1="140" x2="460" y2="168"/>
+<rect class="box" x="300" y="170" width="320" height="52" rx="10"/>
+<text class="ttl" x="460" y="192" text-anchor="middle">Q2 · Conditions of promulgation</text>
+<text x="460" y="212" text-anchor="middle">Recess? Satisfaction recorded? Laid? Six-week clock/disapproval rules observed?</text>
+<line class="arw" x1="460" y1="222" x2="460" y2="250"/>
+<rect class="box" x="300" y="252" width="320" height="52" rx="10"/>
+<text class="ttl" x="460" y="274" text-anchor="middle">Q3 · Article 13 / Part III</text>
+<text x="460" y="294" text-anchor="middle">Takes away/abridges FR? (13(2), 13(3)(a)) Arts 14, 19, 21 satisfied?</text>
+<line class="arw" x1="460" y1="304" x2="460" y2="332"/>
+<rect class="box" x="300" y="334" width="320" height="52" rx="10"/>
+<text class="ttl" x="460" y="356" text-anchor="middle">Q4 · Satisfaction &amp; purpose</text>
+<text x="460" y="376" text-anchor="middle">Any relevant material? Fraud/oblique? Or NO satisfaction at all?</text>
+<line class="arw" x1="460" y1="386" x2="460" y2="414"/>
+<rect class="box2" x="300" y="416" width="320" height="48" rx="10"/>
+<text class="ttl" x="460" y="436" text-anchor="middle">Q5 · Re-promulgation pattern</text>
+<text x="460" y="455" text-anchor="middle">Mechanical/serial device to evade legislature? → Wadhwa / KKS</text>
+<line class="arw" x1="780" y1="36" x2="622" y2="36"/>
+<rect class="box2" x="782" y="14" width="130" height="44" rx="10"/>
+<text x="847" y="32" text-anchor="middle" font-size="12.5">FAIL Q1 → VOID</text>
+<text x="847" y="49" text-anchor="middle" font-size="12.5">(123(3)/213(3))</text>
+<line class="arw" x1="780" y1="114" x2="622" y2="114"/>
+<rect class="box2" x="782" y="92" width="130" height="44" rx="10"/>
+<text x="847" y="110" text-anchor="middle" font-size="12.5">FAIL → ceases</text>
+<text x="847" y="127" text-anchor="middle" font-size="12.5">/ invalidity</text>
+<line class="arw" x1="780" y1="196" x2="622" y2="196"/>
+<rect class="box2" x="782" y="174" width="130" height="44" rx="10"/>
+<text x="847" y="192" text-anchor="middle" font-size="12.5">FAIL → VOID</text>
+<text x="847" y="209" text-anchor="middle" font-size="12.5">(Art 13(2))</text>
+<line class="arw" x1="780" y1="278" x2="622" y2="278"/>
+<rect class="box2" x="782" y="256" width="130" height="44" rx="10"/>
+<text x="847" y="274" text-anchor="middle" font-size="12.5">FAIL → QUASH</text>
+<text x="847" y="291" text-anchor="middle" font-size="12.5">(reviewable)</text>
+<line class="arw" x1="780" y1="440" x2="622" y2="440"/>
+<rect class="box2" x="782" y="416" width="130" height="48" rx="10"/>
+<text x="847" y="434" text-anchor="middle" font-size="12.5">FAIL → struck</text>
+<text x="847" y="451" text-anchor="middle" font-size="12.5">down as fraud</text>
+<rect class="box3" x="20" y="170" width="240" height="130" rx="10"/>
+<text class="ttl" x="140" y="194" text-anchor="middle">NOT justiciable</text>
+<text x="140" y="216" text-anchor="middle" font-size="12.5">· adequacy of satisfaction</text>
+<text x="140" y="234" text-anchor="middle" font-size="12.5">· "was urgency enough?"</text>
+<text x="140" y="252" text-anchor="middle" font-size="12.5">· policy/merits of the law</text>
+<text x="140" y="270" text-anchor="middle" font-size="12.5">· forcing the legislature</text>
+<text x="140" y="290" text-anchor="middle" font-size="12.5">(courts cannot compel law-making)</text>
+<line class="arw" x1="264" y1="235" x2="298" y2="235"/>
+<rect class="box3" x="20" y="334" width="240" height="116" rx="10"/>
+<text class="ttl" x="140" y="358" text-anchor="middle">REMEDIES available</text>
+<text x="140" y="380" text-anchor="middle" font-size="12.5">· strike down (Wadhwa, KKS)</text>
+<text x="140" y="398" text-anchor="middle" font-size="12.5">· read down (A.K. Roy s. 3(2))</text>
+<text x="140" y="416" text-anchor="middle" font-size="12.5">· declare void + mould relief</text>
+<text x="140" y="434" text-anchor="middle" font-size="12.5">(KKS — no salary recovery)</text>
+</svg>
+<div class="cap">Fig. 2 — The five-question judicial-review ladder for ordinances. Each rung is independently fatal; the bottom rung (re-promulgation) is where Wadhwa and Krishna Kumar Singh live. The green panel marks what courts deliberately leave alone.</div>
+</div>
+
+<h3>4.3 Doctrinal toolkit — the propositions to quote</h3>
+<div class="grid g2">
+<div class="card a"><h4>What courts CAN review</h4>
+<ul>
+<li><b>Existence of the power</b> — subject-matter competence (123(3)/213(3), Lists); "the Court cannot examine the satisfaction, but it can examine whether the power exists" (Wadhwa).</li>
+<li><b>Procedural conditions</b> — recess condition, laying, six-week clock, withdrawal (Wadhwa: no savings clause can keep a ceased ordinance alive).</li>
+<li><b>Fundamental rights</b> — full Art 13 review (A.K. Roy; Arts 14/19/21 not dead letters, para 31).</li>
+<li><b>Existence of any satisfaction / relevant material / absence of fraud or oblique purpose</b> (A.K. Roy paras 26–27; KKS adopting the Bommai–Indra Sawhney standard).</li>
+<li><b>The re-promulgation pattern as a colourable device</b> (Wadhwa) and as "fraud on constitutional power" (KKS).</li>
+<li><b>Locus</b> — any citizen may challenge in public interest; no need for a specially affected party (Wadhwa: locus standi relaxed for ordinance abuse).</li>
+</ul></div>
+<div class="card b"><h4>What courts will NOT review</h4>
+<ul>
+<li><b>Adequacy</b> of the satisfaction — how urgent is "urgent enough" is the executive's call, formed on advice;</li>
+<li><b>Wisdom/policy</b> of the ordinance's content — legislation is for the political process (disapproval resolution + no-confidence being the designed checks — Ambedkar, per R.K. Garg in DU material);</li>
+<li><b>Compelling legislation</b> — courts cannot order Parliament/Assembly to pass a Bill; the remedy is strike-down + political accountability ("There must not be ordinance-raj" — a constitutional-verdict, not an injunction);</li>
+<li><b>Pre-1978 style blanket immunity</b> — dead: the final-and-conclusive clause is deleted; review exists but is calibrated (the three limits above).</li>
+</ul></div>
+</div>
+
+<div class="kbox">
+<h4>📝 How to open a 10-mark answer on judicial review of ordinances</h4>
+<p style="margin-left:4px">"Judicial review of ordinances operates at two levels: <b>review of the power</b> (competence, procedural conditions, fundamental rights) — which is broad and unqualified; and <b>review of the satisfaction</b> — which is narrow and calibrated. The Forty-fourth Amendment's deletion of the 'final and conclusive' clause (Art 123(4) now '* * * * *') shifted the balance: <i>A.K. Roy</i> held judicial review 'not totally excluded', while <i>Krishna Kumar Singh</i> fixed the standard as relevance-and-fraud, not adequacy — and <i>D.C. Wadhwa</i> added that the courts control the <i>life-span</i> of ordinances through the colourable-device doctrine."</p>
+</div>
+</section>
+
+<section id="s-cases">
+<h2><span class="num">Section 5 · Syllabus Item (d) + Case List</span>Case Notes 31–33 — Facts / Issues / Arguments / Decision / Principle</h2>
+<p class="lead">The three syllabus cases form one argument: <b>A.K. Roy</b> settles what an ordinance <i>is</i> (law, legislative, reviewable); <b>Wadhwa</b> settles how long it may live (limited life; re-promulgation abuse = colourable); <b>Krishna Kumar Singh</b> settles what happens when the abuse becomes systematic and the ordinance dies (fraud on constitutional power; effects tested by public interest &amp; constitutional necessity). Maximum DU case material below; A.K. Roy is researched externally (no DU excerpt) and carries DU's own quotation of its ratio.</p>
+
+<!-- ================= 31 WADHWA ================= -->
+<div class="case" id="c-wadhwa">
+<div class="casehead">
+<div class="cnum">Case 31 · DU syllabus · DU case material (book p. 159)</div>
+<h3>D.C. Wadhwa v. State of Bihar (1987) 1 SCC 378</h3>
+<div class="cmeta">Supreme Court of India · Public-interest writ jurisdiction · Bhagwati C.J. speaking for the Court · <b>The "ordinance-raj" case</b></div>
+</div>
+<div class="casebody">
+
+<h4>1 · Facts <span class="badge g">DU MATERIAL</span></h4>
+<div class="facts">
+<ul>
+<li><b>The petitions:</b> four writ petitions under <b>Article 32</b> challenging ordinances promulgated by the Governor of Bihar. The DU extract opens with the Court's treatment of <b>locus standi (paras 2–3)</b>: citizens who are not personally affected may still challenge an ordinance in the public interest — where the question is abuse of a constitutional power, the interest of every citizen is engaged.</li>
+<li><b>The three ordinances in issue:</b>
+<ol>
+<li><b>Bihar Forest Produce (Regulation of Supply) (Third) Ordinance, 1983</b>;</li>
+<li><b>Bihar Intermediate Education Council (Third) Ordinance, 1983</b>;</li>
+<li><b>Bihar Bricks Supply (Third) Ordinance, 1983</b> — note the telling "(Third)": each subject already had earlier ordinances in the same series.</li>
+</ol></li>
+<li><b>The statistical indictment (DU facts):</b> in the period <b>1967–1981</b> the State of Bihar promulgated <b>256 ordinances</b>; many remained alive for <b>1 to 14 years</b>; <b>69 ordinances were re-promulgated with the President's permission</b>; promulgations came in herds — e.g., <b>54 ordinances on a single day, 26-8-1973</b>.</li>
+<li><b>The documentary proof:</b> the DU extract reproduces <b>verbatim a Bihar Government circular — PA/MISC.1040/80-872, dated 29-7-1981</b> — evidence of the institutionalised, departmentalised practice of re-promulgating ordinances as a routine alternative to legislation.</li>
+<li><b>Outcome on the facts:</b> in the same litigation the Supreme Court <b>struck down the Bihar Intermediate Education Council Ordinance, 1985 (BIEC Ordinance)</b>.</li>
+</ul>
+</div>
+
+<h4>2 · Issues</h4>
+<div class="issue"><b>I1.</b> Whether a citizen may move the Supreme Court to challenge ordinances in which he is not personally interested (public-interest locus).</div>
+<div class="issue"><b>I2.</b> Whether the ordinance-making power may be used to keep a law in force <b>indefinitely</b> by successive re-promulgation without ever allowing the legislature to consider it — i.e., what is the constitutional shelf-life of an ordinance?</div>
+<div class="issue"><b>I3.</b> Whether the Court can examine the President's/Governor's <b>satisfaction</b> under Art 123(1)/213(1), or whether that satisfaction is beyond judicial review.</div>
+<div class="issue"><b>I4.</b> Whether any safeguard (e.g., a savings clause keeping rights alive) can extend an ordinance beyond its constitutional life; and what relief the Court may grant against the abuse.</div>
+
+<h4>3 · Arguments of both sides</h4>
+<div class="argu pet">
+<p style="margin-bottom:6px"><b>🏛️ For the petitioners (citizens challenging the ordinances):</b></p>
+<ul>
+<li>The three ordinances — part of endless "(Third)" series — show that the government was <b>governing by ordinance</b>, using Arts 123/213 as a standing substitute for legislation; the legislature was never given a chance to vote.</li>
+<li>Re-promulgation defeats the Constitution's design: the six-week clock, the laying requirement and the disapproval resolution are the <b>only legislative checks</b> — serial re-promulgation makes them a dead letter.</li>
+<li>An ordinance is an <b>emergency power of limited life</b>; a device that keeps laws alive for years (1–14 years) is by definition <b>not</b> the exercise of a limited power — it is a <b>colourable exercise</b>: power used for a purpose beyond the power (frustrating legislative control).</li>
+<li>No savings clause can save it: Art 123(2)/213(2) make cessation automatic — the Constitution attaches <b>no permanence</b> to an ordinance; the executive cannot extend its own lease by drafting trickery.</li>
+<li>The Court should look at the <b>power</b>, the <b>pattern</b> and the <b>documentary record</b> — the circular of 29-7-1981 is proof enough.</li>
+</ul>
+</div>
+<div class="argu res">
+<p style="margin-bottom:6px"><b>🏛️ For the State of Bihar (respondent):</b></p>
+<ul>
+<li>Each ordinance was <b>independently and validly promulgated</b> — the Governor's satisfaction was formed each time; the President's permission was obtained where the practice required it (the DU facts note 69 re-promulgations "with the President's permission").</li>
+<li>The <b>satisfaction is subjective</b> — under the constitutional text (and the then-understood final-and-conclusive clause) it is not for the Court to say that circumstances did not require immediate action.</li>
+<li>Whether to legislate, when to legislate, and how long a subject needs an ordinance are <b>policy questions</b> for the political branches; the Court cannot compel the legislature to sit or to pass laws.</li>
+<li>Each ordinance ceased in due course and was replaced by a fresh act of promulgation — there is no single law that has run without legislative interruption for 14 years; every individual step was intra vires.</li>
+</ul>
+</div>
+
+<h4>4 · Decision <span class="badge g">DU MATERIAL — Bhagwati C.J., paras 4–8</span></h4>
+<div class="held">
+<ol>
+<li><b>Public-interest locus allowed</b> (paras 2–3): citizens may challenge ordinances that they allege are being used to subvert the legislative process.</li>
+<li><b>Character of the power:</b> the ordinance power is an <b>"emergency power of limited life"</b>. Its maximum natural life is about <b>7½ months</b> (six weeks + a session that must be convened within roughly three months under Art 174/85 + six weeks). Any device that stretches it to years, decades or "1–14 years" is outside the power's nature.</li>
+<li><b>Colourable exercise / fraud on the Constitution:</b> repeated re-promulgation of the same or substantially the same ordinances — keeping a law alive while systematically avoiding the legislature — is a <b>colourable exercise of the power</b>: because the power cannot achieve that result directly (indefinite life), achieving it indirectly through repetition is a fraud on the Constitution. Ordinance-making cannot be used to do what only the legislature could do: enact permanent law.</li>
+<li><b>Scope of review:</b> the Court <b>cannot examine the satisfaction</b> itself (no reweighing of urgency), <b>but it can examine whether the power existed and was properly exercised</b> — the existence of the legislative competence, the conditions of promulgation, and whether the device used was colourable.</li>
+<li><b>No savings possible:</b> under Art 123(2)/213(2) the ordinance ceases automatically — <b>no savings clause can keep it alive</b>; the Constitution does not let the executive draft itself perpetual life.</li>
+<li><b>Executive practice contrasted:</b> the <b>President of India has never re-promulgated an ordinance since 1950</b> — the abuse is an executive-government (State) phenomenon, which shows it is a failure of political accountability, not of constitutional design.</li>
+<li><b>Verdict:</b> the re-promulgated ordinance including the <b>BIEC Ordinance, 1985, was struck down</b>; and the Court's ringing direction to the system: <b>"There must not be ordinance-raj."</b></li>
+</ol>
+</div>
+
+<h4>5 · Principle evolved</h4>
+<div class="principle">
+<h5>Ratio of D.C. Wadhwa</h5>
+<ul style="margin-left:18px">
+<li>The ordinance power is a <b>temporary, limited-life emergency power</b>; its constitutional shelf-life is measured in months (≈7½), not years.</li>
+<li><b>Successive re-promulgation used to keep a law alive without legislative consideration is a colourable exercise of power — a fraud on the Constitution</b> — and is strike-downable by the Court.</li>
+<li><b>Justiciability is split in two:</b> the executive's satisfaction of urgency is not justiciable; the <b>existence, conditions and legitimate exercise of the power</b> (including the re-promulgation device) are fully justiciable.</li>
+<li>Citizens may sue in the public interest to enforce these limits — ordinance abuse is a matter of constitutional concern for every citizen.</li>
+<li>Shorthand to quote: <b>"There must not be ordinance-raj."</b></li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ================= 32 A.K. ROY ================= -->
+<div class="case" id="c-akroy">
+<div class="casehead">
+<div class="cnum">Case 32 · DU syllabus · no DU excerpt — researched externally + DU's quotation of its ratio in the Krishna Kumar material</div>
+<h3>A.K. Roy v. Union of India (1982) 1 SCC 271</h3>
+<div class="cmeta">AIR 1982 SC 710 · Five-Judge Constitution Bench: Chandrachud C.J., Bhagwati, A.C. Gupta, Tulzapurkar and D.A. Desai JJ. · <b>The foundational ordinance case</b></div>
+</div>
+<div class="casebody">
+
+<h4>1 · Facts <span class="badge p">EXTERNAL RESEARCH</span></h4>
+<div class="facts">
+<ul>
+<li>The <b>National Security Ordinance (Ordinance No. 2 of 1980)</b> was promulgated in January 1980 as the statutory life of the <b>Maintenance of Internal Security Act, 1971 (MISA)</b> was running out (MISA's non-permanent provisions lapsed on 31-3-1980) — the Ordinance provided for preventive detention on grounds connected with the security of the State, with an advisory-board mechanism, and was followed by the National Security Act, 1980.</li>
+<li><b>Writ petitions under Art 32</b> followed, including by <b>A.K. Roy</b> — then a sitting Member of Parliament who was himself <b>detained under the National Security Act, 1980</b> on the order of the District Magistrate, Dhanbad — challenging (i) the ordinance and the Act made thereon, (ii) specific detention provisions, and (iii) associated constitutional provisions (including a challenge to s. 1(2) of the 44th Amendment, on which the majority declined the mandamus sought).</li>
+<li>The litigation forced the Supreme Court to answer, for the first time at Constitution-Bench strength, <b>the three foundational questions about ordinances</b>: Is an ordinance a "law" for Arts 21/13? Is the ordinance power legislative or executive? Is the President's satisfaction justiciable after the Forty-fourth Amendment deleted the final-and-conclusive clause?</li>
+<li><b>DU note:</b> there is <b>no extract of this case in the DU case material</b>; the DU Krishna Kumar Singh material nevertheless <b>quotes its ratio</b> (used below), and the rest of this card is researched from the reported judgment.</li>
+</ul>
+</div>
+
+<h4>2 · Issues</h4>
+<div class="issue"><b>I1.</b> Is an ordinance promulgated under Art 123 a <b>"law"</b> within the meaning of <b>Article 13(3)(a)</b> and "procedure established by law" under <b>Article 21</b> (post-44th Amendment)?</div>
+<div class="issue"><b>I2.</b> Is the ordinance-making power <b>legislative or executive</b>? Is it confined to legislating only on a "virgin field" / fresh subject, or may it amend, alter, repeal existing law?</div>
+<div class="issue"><b>I3.</b> After the Forty-fourth Amendment deleted the clause making the President's satisfaction "final and conclusive", is the satisfaction under Art 123(1) <b>justiciable</b>, or is it a political question beyond judicial review?</div>
+<div class="issue"><b>I4.</b> Are Arts 14, 19 and 21 reduced to "dead letters" when the State chooses to legislate by ordinance instead of by Act?</div>
+<div class="issue"><b>I5.</b> (Beyond ordinances) Are the detention provisions of the National Security framework valid — preventive or punitive — and are the constitutional challenges (incl. s. 1(2) of the 44th Amendment) made out?</div>
+
+<h4>3 · Arguments of both sides</h4>
+<div class="argu pet">
+<p style="margin-bottom:6px"><b>🏛️ For the petitioners (including A.K. Roy):</b></p>
+<ul>
+<li>An ordinance is an <b>executive act</b>, not a law made by the legislature — hence not "law" under Art 13/21; the Constitution's guarantees were framed for legislative laws, and the Founders had rejected proposals to constitutionalise ordinances (the B. Bocket Sahib episode runs the other way).</li>
+<li>Even if it is law, the ordinance power is at most a power to fill a <b>temporary, novel gap</b> — it cannot be a parallel legislature sustaining detention statutes indefinitely; using it to perpetuate MISA-like detention by an ordinance that keeps being replaced defeats legislative scrutiny (the Wadhwa objection already visible).</li>
+<li>The <b>satisfaction is justiciable</b> — more so after the Forty-fourth Amendment deleted the final-and-conclusive clause; where fundamental rights (Art 21 liberty) hang on it, the Court must examine whether any material existed for "immediate action".</li>
+<li>Arts 14/19/21 must bite the ordinance: detention on vague grounds, without the safeguards of a legislative enactment, cannot survive Part III.</li>
+</ul>
+</div>
+<div class="argu res">
+<p style="margin-bottom:6px"><b>🏛️ For the Union of India:</b></p>
+<ul>
+<li><b>Art 123(2) is conclusive:</b> an ordinance has "the same force and effect as if enacted by Parliament" — a thing with the force of an Act is by definition a law; Art 13(3)(a) expressly includes "any Ordinance" in "law". The Assembly rejected the amendment (B. Bocket Sahib) that would have excluded it.</li>
+<li>The power is <b>legislative in nature</b> and undelimited as to "new" vs "old" subject-matter — competence runs on the Lists, not on novelty; ordinances throughout independent India have amended taxation and regulatory codes.</li>
+<li>India follows <b>no rigid separation of powers</b>; the Constitution deliberately lets the executive legislate in recess, on the aid and advice of the Council, with the legislature's six-week check as the designed control.</li>
+<li>The <b>satisfaction is the President's</b>, formed on ministerial advice; urgency is not justiciable — courts lack the information and the constitutional warrant to re-form it. The petitions lay no foundation showing that no circumstances could have existed.</li>
+<li>The National Security framework is <b>preventive, not punitive</b>, with an advisory board and statutory safeguards — it satisfies Art 21 read with Arts 14/19; s. 3(2) can be read down.</li>
+</ul>
+</div>
+
+<h4>4 · Decision</h4>
+<div class="held">
+<ol>
+<li><b>Ordinance = law (I1):</b> an ordinance promulgated under Art 123 (and 213) <b>is "law"</b> for Arts 21 and 13(3)(a). The Court relied on Art 123(2)'s "same force and effect as if enacted by Parliament" and the Constituent Assembly's rejection of B. Bocket Sahib's amendment to Art 13 (CA Debates, Vol. 8, p. 203). Detention by ordinance must therefore satisfy Art 21's "procedure established by law".</li>
+<li><b>Legislative power, full field (I2, para 30):</b> the ordinance power is <b>legislative</b> and is <b>not confined to a "virgin field"</b> — it may alter, repeal and re-enact existing law (consistent with <i>R.K. Garg</i>, cited in the DU material: an ordinance may amend tax laws).</li>
+<li><b>No American separation (I3, para 23):</b> the American strict-separation doctrine does not apply; India's Constitution mixes legislative and executive streams with legislative control by disapproval resolution and no-confidence (Ambedkar's analysis, per <i>R.K. Garg</i> in DU).</li>
+<li><b>Satisfaction reviewable but calibrated (I3, paras 26–27):</b> after the Forty-fourth Amendment deleted the final-and-conclusive clause, the President's satisfaction is <b>not a purely political question</b> and <b>judicial review is not totally excluded</b> — but the Court will not substitute its own view of adequacy; the petitioners must show that <b>no circumstances could have justified</b> the satisfaction, and they <b>failed on facts</b> (no such foundation was laid).</li>
+<li><b>Arts 14/19/21 alive (I4, para 31):</b> choosing the ordinance route cannot reduce Part III to <b>dead letters</b> — constitutional limitations apply "equally" to ordinances and Acts.</li>
+<li><b>NSA upheld with safeguards (I5):</b> the National Security framework is <b>preventive, not punitive</b>, upheld subject to advisory-board and humane-treatment safeguards; <b>s. 3(2) read down</b> (Art 14); the challenge to s. 1(2) of the 44th Amendment failed (mandamus refused by majority).</li>
+</ol>
+</div>
+
+<h4>5 · Principle evolved</h4>
+<div class="principle">
+<h5>Ratio of A.K. Roy — as quoted in the DU case material (Krishna Kumar Singh extract)</h5>
+<blockquote style="background:#12344d;border-left-color:#f4a261;color:#eaf6ff;margin-top:0">"[There is] <b>no distinction in principle between a law made by the legislature and an ordinance</b> … both are <b>equally subject to constitutional limitations</b> … [the power exists for] <b>extraordinary situations and not [to] be perverted to serve political ends</b>."<span class="src">Ratio of A.K. Roy, quoted in the DU material for Krishna Kumar Singh</span></blockquote>
+<ul style="margin-left:18px">
+<li><b>Doctrinal package:</b> (1) ordinance = law (Art 13(3)(a) + Art 123(2)); (2) power is legislative, unrestricted as to novelty; (3) no strict separation of powers in India; (4) Part III applies to ordinances in full; (5) satisfaction is reviewable for existence/foundation — not for adequacy; (6) the power exists for <b>unusual and exceptional circumstances</b>, never as a perversion for political ends.</li>
+<li>These propositions are the <b>spine of every Topic 5 answer</b>: Wadhwa builds the life-span doctrine on them; Krishna Kumar builds the re-promulgation and survival doctrines on them.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ================= 33 KRISHNA KUMAR SINGH ================= -->
+<div class="case" id="c-kks">
+<div class="casehead">
+<div class="cnum">Case 33 · DU syllabus · DU case material (book p. 165)</div>
+<h3>Krishna Kumar Singh v. State of Bihar (2017) 3 SCC 1</h3>
+<div class="cmeta">Decided 1-2-2017 · Seven-Judge Constitution Bench (per DU material: Chandrachud, Thakur, Lokur, Bobde, Goel, Lalit and Nageswara Rao JJ.) · Majority 5:2 (DU) · <b>The re-promulgation &amp; survival case</b></div>
+</div>
+<div class="casebody">
+
+<h4>1 · Facts <span class="badge g">DU MATERIAL</span></h4>
+<div class="facts">
+<ul>
+<li><b>The scheme:</b> the State of Bihar took over the management and control of <b>429 government-aided Sanskrit schools</b>. The takeover — and everything that followed — was done <b>only by ordinance</b>, never by an Act, over roughly <b>1989 to 1992</b>.</li>
+<li><b>The chain:</b> the first ordinance — <b>Ord. 32 of 1989</b> — was promulgated on <b>18-12-1989</b>; it was followed by <b>five successive ordinances</b>; then a <b>fresh ordinance dated 13-8-1990</b> whose <b>clauses 3 and 4 were materially altered</b> (the DU extract sets out the differing clause text — the series was not a mechanical roll-over; the scheme kept being restructured while never facing the Assembly); the chain continued to <b>Ord. 2 of 1992</b>, which <b>lapsed in 1992</b>.</li>
+<li><b>Not one ordinance in the series was ever laid before the Legislative Assembly</b> — so the House was never engaged: no scrutiny, no possibility of disapproval, each ordinance quietly left to run out or be replaced by the next. (This is the factual centre of the "laying is mandatory" holding.)</li>
+<li><b>The human stakes:</b> teachers and employees of the 429 schools claimed that under the ordinance regime (especially the absorption clauses) they had acquired <b>permanent rights</b> — government-employee status and continuing salaries — and management committees claimed continuing control of the schools.</li>
+<li><b>Past Hierarchy at Patna (High Court):</b> (i) the ordinances created <b>no permanent vesting</b> of management — committees' control ended with the ordinances; (ii) the <b>successive promulgation was contrary to D.C. Wadhwa</b>; (iii) the <b>4th ordinance was void for violation of Article 14</b>; (iv) salaries were payable to employees <b>up to 30-4-1992</b> (i.e., through the cessation window of the last ordinance); (v) management of the schools <b>reverted</b> to the committees/State structure in accordance with law. Appeals and cross-appeals reached the Supreme Court, which restored the reference to a seven-Judge Bench.</li>
+</ul>
+</div>
+
+<h4>2 · Issues</h4>
+<div class="issue"><b>I1.</b> Is the <b>successive (serial) promulgation</b> of the same ordinance constitutional — is it <i>per se</i> impermissible, or permissible when justified by fresh necessity (Wadhwa's colourable-device rule refined)?</div>
+<div class="issue"><b>I2.</b> Is the obligation to <b>lay the ordinance before the House mandatory</b>? What follows from never laying it — invalidity, or automatic cessation at six weeks?</div>
+<div class="issue"><b>I3.</b> When an ordinance <b>ceases to operate</b> (by lapse of six weeks or by a resolution of disapproval), does the pre-ordinance state of affairs <b>revive <i>ipso jure</i></b>? Do the ordinance's legal effects — rights, status, salaries — <b>stand obliterated</b> as a matter of law? (The exact Dec-2024 Q5(a) question.)</div>
+<div class="issue"><b>I4.</b> What is the difference between an ordinance that is <b>void</b> (Art 213(3)) and one that <b>ceases to operate</b> (Art 213(2)) — and does an ordinance ever become void <i>ab initio</i> by lapse?</div>
+<div class="issue"><b>I5.</b> What is the <b>correct relief</b> — can the Court mould it (e.g., protect salaries already paid while denying prospective rights)?</div>
+<div class="issue"><b>I6.</b> Do the older decisions holding that an ordinance's effects can "endure" irreversibly after lapse — <i>State of Orissa v. Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy v. State of A.P.</i> — still represent the law?</div>
+
+<h4>3 · Arguments of both sides</h4>
+<div class="argu pet">
+<p style="margin-bottom:6px"><b>🏛️ For the employees/committees asserting rights under the ordinances ("effects survive" side):</b></p>
+<ul>
+<li>For nearly three years the State itself governed the 429 schools under an unbroken chain of ordinances; the employees performed service, drew salaries, and were treated as government employees under the scheme — their rights and status <b>relied upon and acted upon</b> cannot evaporate the moment the last ordinance lapses.</li>
+<li>Where an ordinance creates concluded transactions and <b>irreversible</b> consequences (salaries paid, services rendered, management exercised), the law recognises that such effects <b>endure</b> — the older line of authority (<i>Bhupendra Kumar Bose</i>; <i>T. Venkata Reddy</i>) so held; a repeal/cessation does not undo completed acts.</li>
+<li>On re-promulgation: each promulgation was a <b>fresh act of the Governor</b> based on a fresh satisfaction; the material alterations (clauses 3 and 4 changed in the 13-8-1990 ordinance) show genuine legislative reworking, not mechanical roll-over; necessity continued because the Assembly had not legislated.</li>
+<li>The State is <b>estopped</b> from denying the consequences of its own three-year scheme — public interest requires continuity of pay and status for teachers who served under it.</li>
+</ul>
+</div>
+<div class="argu res">
+<p style="margin-bottom:6px"><b>🏛️ For the State / opposing position ("cessation ends effects" side):</b></p>
+<ul>
+<li>An ordinance by constitutional design is <b>provisional</b>: Art 213(2) says it "shall cease to operate" — it was never meant to confer permanence. <b>No ordinance can legislate its own immortality</b>: the Constitution attaches no degree of permanence to actions or transactions during its currency, absent a valid savings clause — and a device that achieves permanence by re-promulgation is itself the fraud Wadhwa condemned.</li>
+<li><b>Non-laying is fatal to survival:</b> an ordinance that is never laid was never before the House at all — no scrutiny, no disapproval possible; the executive simply ran out the clock repeatedly — each series member died at six weeks (or earlier), and the High Court was right to treat the schemes as having no ongoing force.</li>
+<li>Permanent absorption of hundreds of teachers into government service <b>by ordinance alone</b> — bypassing the Assembly's service-legislation competence and the President's-assent screens — would let a Governor do by ordinance what a Bill could not easily do.</li>
+<li>The <b>re-promulgation pattern is the tell:</b> the very need to re-promulgate five, six, eight times proves there was no "immediate action" necessity — only a strategy to avoid the legislature (Wadhwa; and the Art 14 vice found by the High Court in the 4th ordinance).</li>
+</ul>
+</div>
+
+<h4>4 · Decision</h4>
+<div class="held">
+<p style="margin-bottom:8px"><b>(A) The separate opinion of Lokur J. (reproduced in the DU material under "Dissenting Opinion"; he agreed with the majority on the outcome):</b></p>
+<ol>
+<li><b>Successive promulgation is not <i>per se</i> a fraud</b> — but it must never be <b>mechanical</b>: each promulgation requires genuine, fresh satisfaction of immediate necessity and real deliberation; re-promulgation used as a mere relay to keep a law alive without legislative consideration is impermissible.</li>
+<li><b>The three Art 213(2) scenarios:</b> (i) ordinance laid but <b>not disapproved</b> → it still <b>ceases at six weeks</b> — the text contains <b>no approval mechanism</b>; <b>silence is not approval</b> and cannot ratify (contrast Arts 352(4), 356(3) and 360(2), which keep proclamations alive only on <i>affirmative approval</i>); (ii) laid and <b>disapproved</b> → it ceases immediately on the resolution (Assembly's resolution + Council's agreement, if any); (iii) <b>never laid</b> → the House never had it — it could never be scrutinised or disapproved, and it must also cease at six weeks, while the omission itself breaches an obligatory constitutional duty. Running through: the <b>laying requirement is obligatory</b>; the majority held this for three reasons.</li>
+<li><b>Void vs ceased:</b> an ordinance is <b>void under Art 213(3)</b> when it legislates beyond competence (assent-required subject) — that defect goes to birth; an ordinance that simply <b>ceases under Art 213(2)</b> (six weeks/disapproval/withdrawal) is <b>not void at inception</b> — cessation operates <b>prospectively</b>. <b>"The ordinance is not void at its inception."</b></li>
+<li><b>Enduring-rights theory rejected:</b> an ordinance <b>cannot create an enduring or irreversible right</b> in a citizen; consequently the contrary views in <i>State of Orissa v. Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy v. State of A.P.</i> are <b>overruled</b>.</li>
+</ol>
+<p style="margin-bottom:8px"><b>(B) Chandrachud J. for the Court (the majority "Judgement"):</b></p>
+<ol>
+<li><b>Constitutional history:</b> the power descends from the Indian Councils Act, 1861 (s. 23) → 1915 Act → Government of India Act, 1935 (s. 42); B.N. Rau's memorandum treated the ordinance as <b>provisional legislation</b>; in the Constituent Assembly the rejection of B. Bocket Sahib's amendment fixed ordinances as "law" under Art 13.</li>
+<li><b>Framework:</b> <i>R.K. Garg</i> (ordinances may amend tax laws; legislative control = disapproval resolution + no-confidence, per Ambedkar); <i>A.K. Roy</i> (no distinction in principle between Act and ordinance; both subject to constitutional limitations); <i>R.C. Cooper</i> (the satisfaction-immunity debate); the <b>Forty-fourth Amendment's deletion</b> of the immunity clause (Art 123(4) now "* * * * *") — after which review of satisfaction is governed by the <b>Bommai/Indra Sawhney standard: no review of adequacy; review for fraud on power, oblique purpose, or no satisfaction at all</b>.</li>
+<li><b>Laying is mandatory</b> (three reasons): the text is in mandatory terms; laying is the mechanism of <b>legislative control</b> without which the six-week and disapproval machinery cannot operate; and permitting omission would let the executive keep laws alive unseen by the legislature — <b>a government cannot bypass the House by never laying the ordinance</b>.</li>
+<li><b>Re-promulgation:</b> serial re-promulgation is <b>"fundamentally at odds with the scheme of Arts 123 and 213"</b> — the six-week clock exists precisely so that the ordinance must either die or face the legislature; using fresh promulgations to defeat that clock is a fraud on the constitutional power (confirming and extending <i>Wadhwa</i>).</li>
+<li><b>The survival test:</b> whether rights, privileges, obligations and liabilities survive a ceased ordinance must be decided as a matter of <b>construction</b>, guided by <b>public interest and constitutional necessity</b> — with <b>irreversibility</b> a relevant consideration; there is no blanket rule of automatic obliteration and no blanket rule of automatic survival. English authorities on the effects of lapse/repeal (Wicks; <i>Warren v. Windle</i>; <i>Steavenson</i>) were considered.</li>
+<li><b>Relief may be moulded:</b> in a suitable case the Court may shape the remedy rather than declare an all-or-nothing position.</li>
+<li><b>The declaration on these facts:</b> every ordinance in the series — <b>Ord. 32/1989 through Ord. 2/1992</b> — is a <b>fraud on the constitutional power</b>; the ordinances are <b>bereft of any legal effects and consequences</b>; they <b>do not create rights or confer the status of government employees</b> on the teachers; the High Court's core conclusions were affirmed. <b>Moulded relief:</b> the Court did <b>not order recovery of salaries already paid</b> — concluded payments stand; no prospective absorption/status follows.</li>
+</ol>
+</div>
+
+<h4>5 · Principle evolved</h4>
+<div class="principle">
+<h5>Ratio of Krishna Kumar Singh v. State of Bihar — nine propositions</h5>
+<ol style="margin-left:18px">
+<li><b>Ordinance-ages are finite and conditional:</b> the constitutional scheme of Arts 123/213 — recess condition, six-week clock, laying, disapproval — is an integrated machinery of legislative control; defeating it by serial re-promulgation is a <b>fraud on constitutional power</b>.</li>
+<li><b>Successive promulgation is "fundamentally at odds" with Arts 123/213</b> — legitimate only where a genuinely fresh necessity and real deliberation exist (Lokur: not <i>per se</i> invalid; the majority: structurally suspect, abuse strike-downable).</li>
+<li><b>Laying is mandatory</b> — silence of the executive to lay = illegality; the ordinance cannot survive six weeks un-laid, and non-laying is itself a constitutional default.</li>
+<li><b>Silence is not approval</b> — nothing the House does (short of disapproval) can save an ordinance past six weeks: it simply dies (proclamations, by contrast, survive only on affirmative approval — Arts 352(4)/356(3)/360(2)).</li>
+<li><b>Cease ≠ void <i>ab initio</i>:</b> cessation (Art 213(2)) operates prospectively; voidness (Art 213(3)/Art 13) goes to birth — the classification controls every "what survives" question.</li>
+<li><b>Survival is decided, not assumed:</b> construction of the instrument + <b>public interest &amp; constitutional necessity</b> (+ irreversibility as a guiding consideration) — no <i>ipso jure</i> blanket revival of the pre-ordinance state of affairs; no automatic obliteration of all effects.</li>
+<li><b>Relief can be moulded</b> — deny the claimed status/rights prospectively while protecting concluded, irreversible consequences (salaries paid) in public interest.</li>
+<li><b>Overruled:</b> <i>State of Orissa v. Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy v. State of A.P.</i> — to the extent they allowed ordinances to create enduring, irreversible rights.</li>
+<li><b>Ordinances cannot self-perpetuate:</b> permanence must come from the legislature — the only body whose Bills face assent, reservation and debate.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<h3>5.4 Wadhwa → Krishna Kumar: the doctrine in one view (comparison)</h3>
+<div class="twrap">
+<table>
+<tr><th style="width:22%">Question</th><th style="width:39%">D.C. Wadhwa (1987)</th><th style="width:39%">Krishna Kumar Singh (2017)</th></tr>
+<tr><td><strong>Core target</strong></td><td>serial re-promulgation keeping laws alive 1–14 years</td><td>same device + never laying the ordinances + employees claiming permanent rights from them</td></tr>
+<tr><td><strong>Doctrine</strong></td><td>colourable exercise / fraud on the Constitution; "ordinance-raj" banned</td><td>"fundamentally at odds with Arts 123/213"; fraud on constitutional power; ordinances "bereft of any legal effects"</td></tr>
+<tr><td><strong>Satisfaction</strong></td><td>not examinable; existence/proper exercise of power examinable</td><td>same, refined: Bommai/Indra Sawhney standard — relevance, fraud, no-satisfaction</td></tr>
+<tr><td><strong>Laying</strong></td><td>conditions of promulgation examinable</td><td>holding: laying is <b>mandatory</b> (three reasons); never laid = default</td></tr>
+<tr><td><strong>After cessation</strong></td><td>no savings clause can extend life</td><td>full answer: cease ≠ void; survival by construction + public interest/constitutional necessity; relief moulded</td></tr>
+<tr><td><strong>Old cases</strong></td><td>—</td><td>overrules <i>Bhupendra Kumar Bose</i> &amp; <i>T. Venkata Reddy</i> (enduring-effects theory)</td></tr>
+<tr><td><strong>Relief</strong></td><td>BIEC Ordinance 1985 struck down</td><td>whole series Ord. 32/1989–Ord. 2/1992 declared fraud; no rights/status; salaries paid not recovered</td></tr>
+</table>
+</div>
+
+<div class="fig">
+<svg viewBox="0 0 900 190" width="100%" style="max-width:880px" role="img" aria-label="Legitimacy spectrum of re-promulgation">
+<defs><marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" fill="#5b6b84"/></marker></defs>
+<rect class="box3" x="16" y="40" width="200" height="96" rx="12"/>
+<text class="ttl" x="116" y="66" text-anchor="middle">GREEN · Single ordinance</text>
+<text x="116" y="90" text-anchor="middle" font-size="12.5">Recess + genuine necessity;</text>
+<text x="116" y="108" text-anchor="middle" font-size="12.5">laid for scrutiny; dies at 6 wks;</text>
+<text x="116" y="126" text-anchor="middle" font-size="12.5">no re-promulgation</text>
+<line class="arw" x1="218" y1="88" x2="258" y2="88"/>
+<rect class="box" x="260" y="40" width="210" height="96" rx="12"/>
+<text class="ttl" x="365" y="66" text-anchor="middle">AMBER · Fresh re-promulgation</text>
+<text x="365" y="90" text-anchor="middle" font-size="12.5">New satisfaction, altered scheme,</text>
+<text x="365" y="108" text-anchor="middle" font-size="12.5">real necessity — not per se</text>
+<text x="365" y="126" text-anchor="middle" font-size="12.5">invalid (Lokur J., KKS)</text>
+<line class="arw" x1="472" y1="88" x2="512" y2="88"/>
+<rect class="box2" x="514" y="40" width="190" height="96" rx="12"/>
+<text class="ttl" x="609" y="66" text-anchor="middle">RED · Mechanical relay</text>
+<text x="609" y="90" text-anchor="middle" font-size="12.5">Same law re-wrapped to dodge</text>
+<text x="609" y="108" text-anchor="middle" font-size="12.5">the legislature — colourable</text>
+<text x="609" y="126" text-anchor="middle" font-size="12.5">(Wadhwa: fraud on Constitution)</text>
+<line class="arw" x1="706" y1="88" x2="746" y2="88"/>
+<rect class="box2" x="748" y="40" width="140" height="96" rx="12"/>
+<text class="ttl" x="818" y="66" text-anchor="middle">BLACK · Systematic</text>
+<text x="818" y="90" text-anchor="middle" font-size="12.5">Never laid; years of</text>
+<text x="818" y="108" text-anchor="middle" font-size="12.5">serial re-promulgation</text>
+<text x="818" y="126" text-anchor="middle" font-size="12.5">→ KKS: bereft of</text>
+<text x="818" y="141" text-anchor="middle" font-size="12.5">legal effects</text>
+<text x="450" y="175" text-anchor="middle" font-size="12.5" fill="#5b6b84">Legitimacy of the ordinance series →</text>
+</svg>
+<div class="cap">Fig. 3 — The re-promulgation spectrum built from Wadhwa and Krishna Kumar Singh: legitimacy depends on (i) freshness of satisfaction, (ii) genuine deliberation/altered need, (iii) exposure to the legislature (laying), and (iv) duration. Bihar's 1967–92 practice lived at the black end.</div>
+</div>
+</section>
+
+<section id="s-acts">
+<h2><span class="num">Section 6 · Linkages</span>Related Acts, Constitutional Provisions &amp; Amendments</h2>
+<p class="lead">Ordinances do not float free — they sit inside a web of colonial statutes, constitutional amendments, session machinery and emergency provisions. Examiners reward the student who draws these threads in.</p>
+
+<div class="grid g2">
+<div class="card"><h4>📜 Colonial ancestry (DU material — KKS history)</h4>
+<ul>
+<li><b>Indian Councils Act, 1861, s. 23</b> — the Governor-General's ordinance power: the original template (power to make laws without the legislature's assent).</li>
+<li><b>Government of India Act, 1915</b> — the power carried forward in the colonial scheme.</li>
+<li><b>Government of India Act, 1935, s. 42</b> — the mature colonial ordinance regime; its "immediate action" formula, laying and cessation machinery were transplanted into Arts 123 &amp; 213.</li>
+<li><b>Constituent Assembly</b> — B.N. Rau's memorandum treated the ordinance as <i>provisional legislation</i>; the Assembly rejected B. Bocket Sahib's amendment to keep "Ordinance" out of Art 13 (CA Debates Vol. 8, p. 203).</li>
+</ul></div>
+<div class="card a"><h4>🛠️ Amendments that reshaped the doctrine</h4>
+<ul>
+<li><b>Constitution (Forty-fourth Amendment) Act, 1978, s. 16</b> — <b>deleted</b> the clause making the President's/Governor's satisfaction "final and conclusive and … not … questioned in any court" (Art 123(4) and Art 213(4) now read "* * * * *" — DU material). This single deletion re-opened judicial review: <i>A.K. Roy</i> paras 26–27; KKS standard.</li>
+<li><b>42nd (1976) &amp; 44th (1978) Amendments — Art 21:</b> the 42nd substituted "due process"; the 44th restored <b>"procedure established by law"</b> — the exact wording A.K. Roy construes when holding that detention by ordinance must satisfy Part III.</li>
+<li><b>Art 13(4) + Art 368</b> — an ordinance can never amend the Constitution; constitutional amendment requires the Art 368 procedure exclusively.</li>
+<li><b>Art 123(3) / 213(3)</b> — the built-in voidness clauses (competence / validity-as-an-Act defects) plus the 213(3) repugnancy proviso (President-instructed ordinance deemed reserved &amp; assented — Art 254 interaction).</li>
+</ul></div>
+<div class="card b"><h4>🗓️ Session &amp; assent machinery the clock depends on</h4>
+<ul>
+<li><b>Art 85</b> (Parliament's sessions; gap ≤ 6 months) and <b>Art 174</b> (State Assemblies) — fix the outer rhythm of the six-week clock (Wadhwa's 7½-month calculation runs through Art 174).</li>
+<li><b>Arts 200/201</b> — Governor's assent/withhold/reserve/return: the channel protected by the Art 213 proviso (a)–(c) (and by the reservation-ordinances of the DU facts).</li>
+<li><b>Arts 352(4), 356(3), 360(2)</b> — the contrast set Lokur J. uses: proclamations survive only on <i>affirmative approval</i>; ordinances have no such mechanism (silence ≠ approval).</li>
+<li><b>Arts 356(1)(b), 357</b> — during President's rule the State Legislature's powers become exercisable "by or under the authority of Parliament", and Parliament may confer the State's law-making power on the President (Art 357(2) preserves such laws after the Proclamation ends) — the machinery that replaces the ordinary channel when the Governor's functions are assumed.</li>
+</ul></div>
+<div class="card c"><h4>⚖️ Executive-accountability provisions read into the power</h4>
+<ul>
+<li><b>Arts 74/163 + <i>Samsher Singh</i> (Topic 3 §5):</b> promulgation and withdrawal are exercised on the aid and advice of the Council of Ministers — the "satisfaction" is ministerial satisfaction.</li>
+<li><b>Political control (Ambedkar, per <i>R.K. Garg</i> in DU):</b> the designed checks are the disapproval resolution and the no-confidence motion — because the ordinance never faces a legislative vote.</li>
+<li><b>General Clauses Act, 1897, s. 6 (background analogy):</b> statutory repeals ordinarily do not disturb accrued rights "unless a different intention appears" — the classic repeal-savings logic by which older decisions explained surviving effects; <i>Krishna Kumar</i> severed that analogy for ordinances: lapse is governed by Arts 123/213 and the construction/public-interest test — an ordinance cannot borrow statutory savings to engineer permanence.</li>
+<li><b>Ordinance practice instruments:</b> Gazette publication + laying of a copy before the House (routine executive practice); the DU Wadhwa facts show the darker side — the Bihar circular <b>PA/MISC.1040/80-872 dated 29-7-1981</b> institutionalising re-promulgation.</li>
+</ul></div>
+</div>
+</section>
+
+<section id="s-real">
+<h2><span class="num">Section 7 · Context</span>Real-World Examples to Drop into Answers</h2>
+<p class="lead">Examiners reward specificity. These five chains — one from the DU material, four from public record — turn abstract doctrine into memorable argument.</p>
+
+<div class="grid g2">
+<div class="card d"><h4>1️⃣ Bihar 1967–81 — the original "ordinance-raj" <span class="badge">DU FACTS</span></h4>
+<p><b>256 ordinances</b> in fourteen years; <b>54 promulgated on a single day (26-8-1973)</b>; lives stretching <b>1–14 years</b>; <b>69 re-promulgated</b> with the President's permission; the government's own circular (29-7-1981) on record; the BIEC Ordinance, 1985 struck down; Bhagwati C.J.: <b>"There must not be ordinance-raj."</b> Contrast recorded in the same judgment: <b>the President has never re-promulgated an ordinance since 1950.</b></p></div>
+<div class="card d"><h4>2️⃣ Krishna Kumar's 429 Sanskrit schools <span class="badge">DU FACTS</span></h4>
+<p>A management scheme running <b>only on ordinances from 18-12-1989 (Ord. 32/1989) to Ord. 2/1992</b> — five successive ordinances plus a materially altered fresh ordinance of 13-8-1990, <b>never once laid</b> — ending in the seven-Judge declaration that the whole series was a <b>fraud on constitutional power, bereft of legal effects</b>, with relief moulded (salaries paid not recovered). The perfect fact-pattern for any question on re-promulgation or post-lapse effects.</p></div>
+<div class="card d"><h4>3️⃣ Triple talaq — ordinances as a bridge to legislation</h4>
+<p><i>Shayara Bano</i> (22-8-2017) struck down instant triple talaq; the government promulgated the <b>Muslim Women (Protection of Rights on Marriage) Ordinance</b> (10-9-2017), re-promulgated it on <b>6-1-2018</b> (it lapsed), re-promulgated again on <b>19-7-2018</b> (it lapsed), and finally Parliament enacted the <b>Act of 2019</b> in July 2019. A textbook illustration of <i>justified</i> repeated promulgation (fresh necessity each time, crossed with eventual legislative cover) — pair with Lokur J.'s "not <i>per se</i> fraud" line, and with the majority's insistence that the bridge must not become a residence.</p></div>
+<div class="card d"><h4>4️⃣ Enemy Property — the re-promulgation chain</h4>
+<p>The <b>Enemy Property (Amendment and Validation) Ordinance</b> was promulgated <b>four times between January 2016 and February 2017</b> (each time bridging the gap after the previous one lapsed or an Act was challenged), twice replaced by an Act (2016 and 2017). A post-<i>Wadhwa</i> example commentators invoke for the "serial promulgation" critique — useful to show the doctrine's continuing bite.</p></div>
+<div class="card d"><h4>5️⃣ Farm laws — full lifecycle: ordinance → Act → repeal</h4>
+<p>Three reform ordinances (June 2020) → the <b>three Farm Acts, 2020</b> (September 2020) → <b>repeal by Parliament (November 2021)</b>. Shows both faces: the executive using the recess power for structural reform, and the legislature — the only body that can give permanence — ultimately deciding. Also frames the KKS point: permanence is Parliament's business.</p></div>
+<div class="card d"><h4>6️⃣ The never-repeated Presidency</h4>
+<p>Du Wadhwa facts: since 1950 <b>no President has re-promulgated an ordinance</b> — re-promulgation is a disease of governments without legislative accountability, which is exactly why the courts policed it first in Bihar and then, seven Judges deep, in <i>Krishna Kumar Singh</i>.</p></div>
+</div>
+</section>
+
+<section id="s-pyq">
+<h2><span class="num">Section 8 · Solved Papers</span>DU PYQs with Model Answers</h2>
+<p class="lead">Both Topic 5 questions that DU has actually set — reproduced verbatim with full-marks model answers built on the DU material.</p>
+
+<!-- ================= PYQ 1 ================= -->
+<div class="pyq">
+<div class="pyqhead">📘 <b>PYQ 1</b> — LL.B. (Hons.) III Semester Examination, <b>December 2024</b> · Q5(a) · 10 marks</div>
+<div class="pyqbody">
+<div class="qtext">"'Where an ordinance has ceased to operate, would it result ipso jure in a revival of the state of affairs which existed before the ordinance was promulgated? Would the legal effects created by the ordinance stand obliterated as a matter of law upon the lapsing of an ordinance or passing of a resolution of disapproval?' Answer this question in the light of the judgment <i>Krishna Kumar</i> v. <i>State of Bihar</i> [(2017) 3 SCC 1]."</div>
+<div class="ans">
+<h5>Model answer (structure = the KKS framework itself)</h5>
+<p><b>Introduction — why the question is asked.</b> The two questions are mirror-images: does cessation <i>restore</i> the pre-ordinance world automatically (<i>ipso jure</i> revival), and does it <i>erase</i> the ordinance's world automatically (<i>ipso jure</i> obliteration)? The seven-Judge Constitution Bench in <i>Krishna Kumar Singh v. State of Bihar</i> (2017) 3 SCC 1 answered <b>neither question in the absolute</b>. It first classified the kind of legal exit, then replaced both blanket theories with a principled, case-by-case test — while overruling the older blanket theory in <i>State of Orissa v. Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy v. State of A.P.</i></p>
+
+<p><b>Step 1 — Classify before you consequences (the decisive move).</b></p>
+<div class="twrap"><table>
+<tr><th style="width:30%">Kind of exit</th><th style="width:34%">Text</th><th style="width:36%">Effect on the ordinance</th></tr>
+<tr><td><strong>Void at birth</strong></td><td>Art 213(3)/123(3) (provision the legislature could not validly enact); Art 13(2) + Arts 14/19/21</td><td><b>Void <i>ab initio</i></b> — never valid law; acts under it are a nullity; the pre-ordinance state of affairs was never lawfully displaced — automatic reversion follows from <i>nullity</i>, not from lapse</td></tr>
+<tr><td><strong>Cease to operate</strong></td><td>Art 213(2)/123(2): six weeks from re-assembly · disapproval resolution · withdrawal</td><td><b>Prospective cessation only.</b> Lokur J.: "the ordinance is not void at its inception" — it was valid law while it stood; the clock stops <u>from cessation onward</u></td></tr>
+</table></div>
+
+<p><b>Step 2 — Answer to Question 1 (automatic revival?). NO — not as a blanket rule.</b> Because the ordinance was valid law during its currency, the world it created does not spring back <i>ipso jure</i> in all respects the moment it lapses or is disapproved. What survives is decided by <b>construction of the ordinance</b> guided by <b>public interest and constitutional necessity</b>, with <b>irreversibility</b> as a relevant consideration, and the Court retains power to <b>mould the relief</b> (Chandrachud J. for the Court). <i>Caveat:</i> where the ordinance was <b>void ab initio</b> (constitutional invalidity or Art 213(3)), reversion is immediate and automatic — but that is the consequence of invalidity, not of cessation.</p>
+
+<p><b>Step 3 — Answer to Question 2 (automatic obliteration?). NO — equally not as a blanket rule.</b> Cessation does not wipe the ordinance's completed legal effects: rights acquired, acts done and obligations discharged during the currency remain prima facie intact — and no new effect can accrue after cessation. What the KKS Court rejected is the <i>opposite</i> absolutism: an ordinance <b>cannot create enduring, irreversible rights</b> that bind the State forever — the surviving-effects theory of <i>Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy</i> is expressly <b>overruled</b>. An ordinance cannot legislate its own immortality.</p>
+
+<p><b>Step 4 — Lapse and disapproval are the same box.</b> Under Arts 123(2)(a)/213(2)(a) a resolution of disapproval and expiry of the six weeks both mean one thing: the ordinance <b>ceases to operate</b>. (Disapproval merely ends it sooner; and note the mechanics: both Houses at the Union — effective on "the passing of the second of those resolutions"; the Assembly's resolution with the Council's agreement, if any, at the State. Silence saves nothing — there is no approval mechanism; contrast Arts 352(4)/356(3)/360(2).) The consequences analysis in Steps 2–3 therefore applies identically to both routes — precisely what the question's "or" invites you to say.</p>
+
+<p><b>Step 5 — Apply to the facts of KKS.</b> The chain of ordinances from <b>Ord. 32 of 1989 to Ord. 2 of 1992</b> (429 Sanskrit schools; never laid; serially re-promulgated) was held a <b>fraud on the constitutional power</b> — the ordinances were <b>bereft of any legal effects and consequences</b>: they <b>did not create rights or confer government-employee status</b> on the teachers. Yet the Court <b>moulded the relief</b>: <b>salaries already paid were not recovered</b>. That single disposition is the whole answer: no prospective rights from a fraudulently sustained scheme; but concluded, irreversible, publicly-beneficial consequences are protected — neither blanket revival nor blanket obliteration.</p>
+
+<p><b>Conclusion (the two sentences examiners look for):</b> (1) Lapse or disapproval does <u>not</u> result <i>ipso jure</i> in revival of the pre-ordinance state of affairs — cessation is prospective, and survival of effects is decided by construction + public interest + constitutional necessity (unless the ordinance was void <i>ab initio</i>, where reversion flows from nullity). (2) Nor do the ordinance's legal effects stand obliterated as a matter of law — they endure where public interest and constitutional necessity require it and the Court so moulds its relief — but they can never harden into enduring rights, the <i>Bhupendra Bose–Venkata Reddy</i> theory having been overruled.</p>
+
+<details><summary>📎 30-second exam skeleton (memorise)</summary>
+<ol>
+<li>Classify: void ab initio (213(3)/13) vs ceased (213(2)) — "not void at its inception" (Lokur).</li>
+<li>Cease = prospective; no ipso jure revival.</li>
+<li>Effects survive/die per construction + public interest + constitutional necessity (+ irreversibility); court may mould relief.</li>
+<li>Disapproval = lapse (same box; mechanics; silence saves nothing).</li>
+<li>KKS application: fraud → bereft of effects → no absorption; but salaries paid not recovered.</li>
+<li>Overruling: Bhupendra Bose &amp; Venkata Reddy (enduring rights) — the middle path is the KKS path.</li>
+</ol></details>
+</div>
+</div>
+</div>
+
+<!-- ================= PYQ 2 ================= -->
+<div class="pyq">
+<div class="pyqhead">📘 <b>PYQ 2</b> — Centenary Chance Examination (LL.B. III Year) · Q8(b) · 10 marks <span style="font-weight:400;font-size:13px">("Attempt any two of the following")</span></div>
+<div class="pyqbody">
+<div class="qtext">"Ordinance making power of the executive."</div>
+<div class="ans">
+<h5>Model answer — short note</h5>
+<p><b>Meaning &amp; constitutional basis.</b> The ordinance is the Constitution's emergency channel of legislation: the executive (President under <b>Art 123</b>, Governor under <b>Art 213</b>) may make general law when the legislature cannot act immediately. Its pedigree runs from <b>s. 23 of the Indian Councils Act, 1861</b> through the Government of India Acts of 1915 and 1935 (s. 42); the Framers transplanted it as <i>provisional legislation</i> (B.N. Rau's memorandum) and, by rejecting B. Bocket Sahib's amendment (CA Debates Vol. 8, p. 203), made an ordinance expressly a "law" under <b>Art 13(3)(a)</b>.</p>
+
+<p><b>Nature: legislative, not executive.</b> <i>A.K. Roy v. UOI</i> (1982) settles that the power is <b>legislative</b> in nature, not confined to a "virgin field" (it may amend and repeal existing law — cf. <i>R.K. Garg</i>: ordinances may amend tax laws); India follows no rigid American separation; but it exists for <b>"unusual and exceptional circumstances and not [to] be perverted to serve political ends"</b>. It is exercised on the aid and advice of the Council of Ministers (<i>Samsher</i>), and an ordinance has <b>"the same force and effect as an Act"</b> (Arts 123(2)/213(2)).</p>
+
+<p><b>Essential conditions (syllabus item (a)).</b> (1) <b>Recess</b>: unavailable "when both Houses of Parliament are in session" (123(1)); unavailable when the Assembly sits — or both Houses where a Council exists (213(1)). (2) <b>Satisfaction</b> of circumstances requiring <b>immediate action</b> — subjective but bonâ fide. (3) <b>Competence</b>: within the Lists; Art 123(3) voids provisions "Parliament would not … be competent to enact"; Art 213(3) voids provisions invalid as a Governor-assented Act. (4) The <b>Art 213 proviso</b>: the Governor needs <b>instructions from the President</b> in cases (a)–(c) (previous-sanction Bills; Art 200(2) reservation; assent-required invalidity). (5) <b>Laying</b> before both Houses/Assembly — <b>mandatory</b> (KKS, three reasons). (6) <b>Six-week clock</b> from re-assembly (Explanation: later date), ended by lapse — <b>no approval mechanism exists</b>; <b>disapproval</b> shortens life (both Houses/"second of those resolutions" at the Union; Assembly + Council at the State; silence saves nothing). (7) <b>Withdrawal</b> at any time (123(2)(b)/213(2)(b)). (8) <b>No abuse of re-promulgation</b> — a genuinely fresh satisfaction is required for each fresh promulgation. Maximum natural life ≈ <b>7½ months</b> (Wadhwa) — an emergency power of limited life.</p>
+
+<p><b>'Ordinance' under Article 13 (syllabus item (b)).</b> Art 13(2): "The State shall not make any law" taking away or abridging Part III rights; Art 13(3)(a) defines "law" to "include any Ordinance". Hence an ordinance violating Arts 14/19/21 is void to that extent — writ-reviewable exactly like an Act (<i>A.K. Roy</i>: Arts 14/19/21 must not become "dead letters"; detention by ordinance must satisfy Art 21's "procedure established by law"). Art 13(4) with Art 368: an ordinance can never amend the Constitution.</p>
+
+<p><b>Judicial review (syllabus item (c)).</b> The old clause making the satisfaction "final and conclusive … not … questioned in any court" was <b>deleted by s. 16 of the 44th Amendment (1978)</b> (Arts 123(4)/213(4) now "* * * * *"). After deletion, <i>A.K. Roy</i> (paras 26–27) held review "not totally excluded" — but courts test only for <b>relevant material, fraud/oblique purpose, or absence of satisfaction</b> (the <i>Bommai–Indra Sawhney</i> standard adopted in KKS), never for adequacy. Alongside, courts review the <b>power</b> itself: competence, procedural conditions, fundamental rights — and, decisively, the re-promulgation pattern (Wadhwa: "the Court cannot examine the satisfaction, but it can examine whether the power exists"). Remedies: strike down (Wadhwa — BIEC Ordinance 1985; KKS — whole series), read down (<i>A.K. Roy</i> s. 3(2)), or mould relief (KKS — no recovery of salaries paid). Locus: any citizen in public interest (Wadhwa, paras 2–3).</p>
+
+<p><b>Successive promulgation (syllabus item (d)).</b> Serially re-promulgating the same ordinance to keep a law alive while dodging the legislature is a <b>colourable exercise / fraud on the Constitution</b> ("There must not be ordinance-raj" — <i>D.C. Wadhwa</i> (1987); Bihar's 256 ordinances, 69 re-promulgated, lives of 1–14 years). In <i>Krishna Kumar Singh</i> (2017, 7 Judges) re-promulgation was held <b>"fundamentally at odds with the scheme of Arts 123 and 213"</b>; mechanically re-promulgated, never-laid ordinances (Ord. 32/1989–Ord. 2/1992) were a <b>fraud on constitutional power, bereft of legal effects</b> — but relief was moulded; and the enduring-rights theory of <i>Bhupendra Kumar Bose</i> and <i>T. Venkata Reddy</i> was overruled (survival = construction + public interest + constitutional necessity).</p>
+
+<p><b>Conclusion.</b> The ordinance power is a constitutional necessity with a constitutional leash: recess-only, satisfaction-bound, competence-bound, rights-bound, six-weeks-bound — and now, after Wadhwa and Krishna Kumar Singh, re-promulgation-bound. As the DU material's A.K. Roy ratio puts it, ordinance and Act are "equally subject to constitutional limitations"; when the leash is pulled too hard, courts strike down — while leaving the legislative clock, not the executive, the last word.</p>
+
+<details><summary>📎 30-second exam skeleton (memorise)</summary>
+<ol>
+<li>Define + pedigree (1861 → 1935 → 1950; Rau; CA debate).</li>
+<li>Nature: legislative (A.K. Roy; R.K. Garg); force of an Act; aid &amp; advice.</li>
+<li>Conditions: recess · satisfaction · competence/proviso · laying · 6 weeks/disapproval · withdrawal · anti-abuse; 7½ months.</li>
+<li>Art 13: 13(2)+(3)(a) → ordinance = law; 13(4)+368 → no constitutional amendment.</li>
+<li>JR: 44th Amdt deletion → A.K. Roy (not excluded) → KKS standard (relevance/fraud) + power-review (Wadhwa).</li>
+<li>Re-promulgation: Wadhwa colourable → KKS fraud/bereft-of-effects + survival test.</li>
+<li>Close: examples (Bihar 256; triple talaq; enemy property).</li>
+</ol></details>
+</div>
+</div>
+</div>
+</section>
+
+<section id="s-rev">
+<h2><span class="num">Section 9 · Last-Minute</span>Rapid Revision Kit</h2>
+
+<div class="grid g2">
+<div class="card"><h4>⚡ 25 one-liners</h4>
+<ol style="font-size:14.8px">
+<li>Art 123 (President) · Art 213 (Governor) — mirror provisions; both headed "during recess".</li>
+<li>Bar: "when <b>both</b> Houses are in session" (123) / Assembly (or both Houses, bicameral) (213). <b>Art 123 has no proviso.</b></li>
+<li>Art 213 proviso: Governor needs <b>instructions from the President</b> in cases (a)–(c).</li>
+<li>Force: "same force and effect as an Act" (123) / "as an Act of the State assented to by the Governor" (213).</li>
+<li>Laid before <b>both</b> Houses / Assembly (+ Council) — <b>mandatory</b> (KKS, 3 reasons).</li>
+<li>Six weeks from re-assembly; Explanation = later date; <b>no approval mechanism</b> — silence saves nothing.</li>
+<li>Disapproval: both Houses → "second of those resolutions" (123) / Assembly + Council agreement (213).</li>
+<li>Withdrawal at any time — 123(2)(b)/213(2)(b).</li>
+<li>123(3): provision Parliament "would not … be competent to enact" → void.</li>
+<li>213(3): provision not valid as a Governor-assented Act → void; repugnancy proviso (presidential instructions).</li>
+<li>123(4)/213(4) deleted by <b>44th Amdt s. 16</b> — "* * * * *" — satisfaction no longer final-and-conclusive.</li>
+<li>Ordinance = <b>law</b>: Art 13(3)(a) (CA rejected B. Bocket Sahib's amendment — Debates Vol 8 p.203).</li>
+<li>Art 13(2): State shall not take away FRs — ordinance void to that extent.</li>
+<li>Art 13(4)+368: no constitutional amendment by ordinance.</li>
+<li>Power is <b>legislative</b>, not confined to "virgin field" (A.K. Roy, para 30; R.K. Garg on tax laws).</li>
+<li>No American strict separation (A.K. Roy, para 23); Arts 14/19/21 not dead letters (para 31).</li>
+<li>Satisfaction reviewable for <b>existence/relevant material/fraud/no-satisfaction</b> — never adequacy (A.K. Roy 26–27; KKS).</li>
+<li>Wadhwa: max life ≈ <b>7½ months</b>; re-promulgation = colourable/fraud; <b>"There must not be ordinance-raj"</b>; BIEC Ord 1985 struck; public-interest locus.</li>
+<li>President never re-promulgated since 1950 (Wadhwa facts).</li>
+<li>KKS = <b>7 Judges, 5:2</b> (DU); A.K. Roy = <b>5 Judges</b>; Wadhwa = Bhagwati C.J.</li>
+<li>KKS: re-promulgation "fundamentally at odds with Arts 123/213"; never-laid series = fraud; ordinances "bereft of any legal effects".</li>
+<li>Cease ≠ void <i>ab initio</i> (Lokur); void under 213(3)/Art 13 = void from birth.</li>
+<li>Survival test: construction + <b>public interest &amp; constitutional necessity</b> (+ irreversibility); relief <b>moulded</b>.</li>
+<li><b>Overruled:</b> <i>Bhupendra Kumar Bose</i> &amp; <i>T. Venkata Reddy</i> (enduring-rights theory).</li>
+<li>Ultimate contrast: proclamations need affirmative approval (352(4)/356(3)/360(2)); ordinances simply die.</li>
+</ol></div>
+<div class="card b"><h4>🔢 High-yield numbers &amp; names</h4>
+<ul style="font-size:14.8px">
+<li><b>256</b> ordinances (Bihar 1967–81) · <b>69</b> re-promulgated · <b>54</b> on 26-8-1973 · lives of <b>1–14 years</b></li>
+<li><b>29-7-1981</b> — circular PA/MISC.1040/80-872 (DU verbatim)</li>
+<li><b>≈7½ months</b> maximum natural life (Wadhwa)</li>
+<li><b>429</b> Sanskrit schools · Ord. <b>32/1989 (18-12-1989)</b> → Ord. <b>2/1992</b> · fresh ordinance <b>13-8-1990</b> (clauses 3 &amp; 4 altered) · HC salaries till <b>30-4-1992</b></li>
+<li><b>7-Judge</b> Bench, 5:2 (KKS) · <b>5-Judge</b> Bench (A.K. Roy: Chandrachud C.J., Bhagwati, A.C. Gupta, Tulzapurkar, D.A. Desai JJ.)</li>
+<li>Ord. <b>2 of 1980</b> — National Security Ordinance · MISA lapsed <b>31-3-1980</b> · NSA upheld with safeguards; s. 3(2) read down</li>
+<li>CA Debates <b>Vol. 8, p. 203</b> · 44th Amdt <b>s. 16</b> · Indian Councils Act <b>1861 s. 23</b> · GOI Act <b>1935 s. 42</b></li>
+<li>Key paragraph pins: A.K. Roy <b>paras 23, 24, 26, 27, 30, 31</b> · Wadhwa <b>paras 2–3, 4–8</b> (Bhagwati C.J.)</li>
+<li>Cases to name-drop: <i>R.K. Garg</i> (tax ordinances) · <i>R.C. Cooper</i> (satisfaction debate) · <i>Bommai</i>/<i>Indra Sawhney</i> (review standard) · <i>Samsher</i> (aid &amp; advice) · English line in KKS: <i>Wicks</i>, <i>Warren v. Windle</i>, <i>Steavenson</i></li>
+</ul></div>
+</div>
+
+<div class="grid g2">
+<div class="card d"><h4>陷阱 Common traps — do NOT write these</h4>
+<ul style="font-size:14.8px">
+<li>"Power available when <i>either</i> House is not in session" — wrong; the bar is <b>both Houses in session</b>.</li>
+<li>Inventing a proviso to Art 123 — there is none.</li>
+<li>"If both Houses approve, the ordinance becomes an Act" — <b>no such mechanism</b>; it dies at six weeks regardless.</li>
+<li>Saying lapse/disapproval makes the ordinance void <i>ab initio</i> — cessation is prospective (KKS).</li>
+<li>Saying satisfaction is totally non-justiciable — true only before the 44th Amendment; today: calibrated review.</li>
+<li>Saying ordinances cannot touch existing law — A.K. Roy para 30 says otherwise ("virgin field" rejected).</li>
+<li>Citing Art 13(1) for ordinances — the hooks are 13(2) + 13(3)(a).</li>
+<li>Claiming the President's re-promulgation practice caused the abuse — the DU facts say the opposite.</li>
+<li>Forgetting that disapproval needs <b>both</b> Houses at the Union ("second of those resolutions" ≠ either House alone).</li>
+<li>Saying KKS restored permanent absorption — it denied status but moulded relief (salaries paid stand).</li>
+</ul></div>
+<div class="card a"><h4>🎯 60-second opening lines (ready to write)</h4>
+<p style="font-size:14.8px"><b>For Q5(a):</b> "Krisna Kumar's answer is neither <i>ipso jure</i> revival nor <i>ipso jure</i> obliteration: the Bench first asked <i>void or ceased?</i>, then replaced both absolutisms with construction + public interest + constitutional necessity, and moulded its relief."</p>
+<p style="font-size:14.8px"><b>For a re-promulgation essay:</b> "Wadhwa drew the line; Krishna Kumar enforced it. Serial re-promulgation converts a limited-life emergency power into a permanent shadow statute — colourable under Wadhwa, and where mechanical and unlaid, bereft of legal effects under Krishna Kumar."</p>
+<p style="font-size:14.8px"><b>For judicial review:</b> "The 44th Amendment deleted the final-and-conclusive clause; A.K. Roy opened the door ('not totally excluded'); Krishna Kumar fixed the standard — relevance, fraud, no-satisfaction — and left adequacy to politics."</p>
+<p style="font-size:14.8px"><b>For Art 13:</b> "Because Art 13(3)(a) names the ordinance, every ordinance lives under the twin conditions of Art 13(2) — and dies, in part or whole, the moment it abridges Part III."</p>
+</div>
+</div>
+</section>
+
+<footer style="background:#0e2a47;color:#cfe1f2;border-radius:14px;padding:22px 26px;margin:10px 0 40px;font-family:'Segoe UI',Arial,sans-serif;font-size:14.5px">
+<p><b style="color:#ffd9a8">Topic 5 – Legislative Power of the Executive (Ordinances) (Arts 123, 213, 13)</b> · LB-301 Constitutional Law-I (DU) · Compiled from: DU case material (<i>D.C. Wadhwa</i> and <i>Krishna Kumar Singh</i> extracts — book pp. 159, 165; <i>A.K. Roy</i> has no DU extract and is researched externally, incorporating DU's quotation of its ratio), Constitution of India verbatim (Arts 13, 85, 174, 200–201, 123, 213, 352–357), DU question papers (LL.B. III Semester, <b>December 2024 — Q5(a)</b>; <b>Centenary Chance Examination — Q8(b)</b>), and researched commentary on the 2017 seven-Judge reference.</p>
+<p style="color:#8fb3d4">Companion files: <i>Topic1-General-ConstitutionalLaw-LB301-DU-Notes.html</i> · <i>Topic2-UnionAndItsTerritory-LB301-DU-Notes.html</i> · <i>Topic3-UnionAndStateExecutives-LB301-DU-Notes.html</i>. Case citations follow the DU syllabus; paragraph numbers refer to the reported judgments. Cross-check all references against the prescribed text before exams.</p>
+</footer>
+
+</main>
+</div>
+<div id="scrim"></div>
+<script>
+(function(){
+  var t=document.getElementById('navtoggle'),n=document.getElementById('toc'),s=document.getElementById('scrim');
+  function close(){n.classList.remove('open');s.classList.remove('show');}
+  t.addEventListener('click',function(){n.classList.toggle('open');s.classList.toggle('show');});
+  s.addEventListener('click',close);
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<=1024)close();});});
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4352fd2ffb8117e',t:'MTc5MDc5MTg1MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

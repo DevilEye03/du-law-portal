@@ -292,6 +292,35 @@
     ],
     3: [
       {
+        id: "constitution",
+        code: "LB-301",
+        title: "Constitutional Law–I",
+        author: "LB-301 • Make Law Easy",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "10 Comprehensive Units",
+        casesCount: "75 Landmark Cases",
+        desc: "Constitutional Architecture, Preamble, Territory, Union & State Executives, Parliament, Ordinances, Higher Judiciary, Writs, Legislative Powers & Emergency.",
+        spineBg: "#0c2340",
+        spineInk: "#f5c358",
+        spineFont: "700 36px Georgia",
+        backBg: "#061220",
+        backInk: "245,195,88",
+        edge: "#f5eedc",
+        chapters: [
+          "Unit 1: General Principles, Constitutionalism & Basic Structure",
+          "Unit 2: The Union & Its Territory (Arts. 1–4)",
+          "Unit 3: The Union & State Executives (Arts. 52–78, 153–167)",
+          "Unit 4: Parliament & State Legislatures (Arts. 79–122)",
+          "Unit 5: Legislative Power of Executive: Ordinances (Arts. 123, 213)",
+          "Unit 6: Union & State Judiciary Architecture & Collegium",
+          "Unit 7: Procedural Innovations, PIL & Prerogative Writs (Art. 32)",
+          "Unit 8: Distribution of Legislative Powers & Doctrines (Arts. 245–255)",
+          "Unit 9: Freedom of Trade, Commerce & Intercourse (Arts. 301–307)",
+          "Unit 10: Emergency Provisions & President's Rule (Arts. 352–360)"
+        ]
+      },
+      {
         id: "cpc",
         code: "LB-301",
         title: "Civil Procedure & Limitation",

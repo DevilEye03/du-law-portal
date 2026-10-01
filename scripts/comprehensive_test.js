@@ -210,6 +210,31 @@ try {
     assert(fs.existsSync(p), `IT Law Dossier file exists: ${u.file}`);
   });
 
+  // Constitutional Law - I (LB-301) Integrity
+  const consti = portalData.subjects['constitution'];
+  assert(!!consti, 'Subject "constitution" is registered');
+  assert(consti.code === 'LB-301', 'Constitutional Law code is LB-301');
+  assert(consti.units && consti.units.length === 10, `Constitutional Law has exactly 10 units (Found: ${consti.units?.length})`);
+  assert(consti.cases && consti.cases.length === 75, `Constitutional Law landmark cases count === 75 (Found: ${consti.cases?.length})`);
+  assert(consti.pyqs && consti.pyqs.length === 38, `Constitutional Law PYQs with model answers === 38 (Found: ${consti.pyqs?.length})`);
+  assert(consti.revisions && consti.revisions.length === 10, `Constitutional Law revision capsules === 10 (Found: ${consti.revisions?.length})`);
+
+  for (let u = 1; u <= 10; u++) {
+    const uCases = consti.cases.filter(c => c.unitNumber === u);
+    const uPyqs = consti.pyqs.filter(p => p.unitNumber === u);
+    const uRev = consti.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Constitutional Law Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Constitutional Law Unit ${u} has PYQs (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `Constitutional Law Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  consti.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Constitutional Law Dossier file exists: ${u.file}`);
+  });
+
+  const sem3 = portalData.semesters.find(s => s.id === 3);
+  assert(sem3 && sem3.subjectIds.includes('constitution'), 'Semester 3 includes subject "constitution"');
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
