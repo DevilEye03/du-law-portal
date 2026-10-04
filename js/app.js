@@ -870,54 +870,10 @@
     const subjectIds = currentSemObj.subjectIds;
     const subjectsList = subjectIds.map(id => data.subjects[id]).filter(Boolean);
 
-    // Render Quick Subject Navigation Strip
+    // Quick Subject Navigation Strip (Hidden across all semesters per user directive)
     if (elements.subjectsQuickBar) {
-      elements.subjectsQuickBar.innerHTML = subjectsList.map((sub, idx) => {
-        const isFirst = idx === 0;
-        const totalUnits = sub.units ? sub.units.length : 0;
-        return `
-          <button class="subject-quick-pill ${isFirst ? 'active' : ''}" 
-                  data-sub-id="${sub.id}" 
-                  data-sub-idx="${idx}"
-                  type="button" 
-                  title="Select ${sub.name} (${sub.code})">
-            <span class="pill-code">${sub.code}</span>
-            <span class="pill-name">${sub.name}</span>
-            <span class="pill-badge">${totalUnits} Units</span>
-            <span class="pill-open-hub" title="Open ${sub.name} Hub" data-open-hub="${sub.id}">
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-          </button>
-        `;
-      }).join('');
-
-      elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill').forEach(pill => {
-        pill.addEventListener('click', (e) => {
-          const subId = pill.dataset.subId;
-          const idx = parseInt(pill.dataset.subIdx, 10);
-
-          // If clicked specifically on the arrow circle, open hub immediately
-          if (e.target.closest('.pill-open-hub')) {
-            e.stopPropagation();
-            openSubjectHub(subId);
-            return;
-          }
-
-          // Otherwise, bring book to center in 3D showcase and open it
-          elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill').forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-
-          if (window.DUBooksShowcase) {
-            window.DUBooksShowcase.selectSubjectByIndex(idx);
-          }
-        });
-
-        // Double click opens hub directly
-        pill.addEventListener('dblclick', () => {
-          const subId = pill.dataset.subId;
-          openSubjectHub(subId);
-        });
-      });
+      elements.subjectsQuickBar.innerHTML = '';
+      elements.subjectsQuickBar.style.display = 'none';
     }
 
     elements.subjectsGrid.innerHTML = subjectsList.map(sub => {
@@ -982,17 +938,7 @@
 
   function updateActiveSubjectPill(idx, book) {
     if (!elements.subjectsQuickBar) return;
-    const pills = elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill');
-    pills.forEach(p => {
-      const pIdx = parseInt(p.dataset.subIdx, 10);
-      const pId = p.dataset.subId;
-      if (pIdx === idx || (book && book.id === pId)) {
-        p.classList.add('active');
-        p.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      } else {
-        p.classList.remove('active');
-      }
-    });
+    // Quick-bar is hidden per user directive
   }
 
   // =========================================================================

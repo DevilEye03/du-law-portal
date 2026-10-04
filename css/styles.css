@@ -6379,19 +6379,9 @@ body.drawer-open {
   display: grid !important;
 }
 
-/* Quick Subject Navigation Strip */
+/* Quick Subject Navigation Strip (Hidden per design directive) */
 .subjects-quick-bar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 14px 0 6px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 4px 2px 10px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-  min-width: 0;
-  max-width: 100%;
+  display: none !important;
 }
 
 .subjects-quick-bar::-webkit-scrollbar {
