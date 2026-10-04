@@ -351,9 +351,12 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(/du-law-portal-v(5[4-9]|[6-9]\d)/.test(swContent), 'sw.js CACHE_NAME is bumped to du-law-portal-v54 or higher');
+  assert(swContent.includes('du-law-portal-v63'), 'sw.js CACHE_NAME is bumped to du-law-portal-v63');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
+  assert(htmlContent.includes('id="subjectsQuickBar"'), 'subjectsQuickBar container exists in index.html');
+  assert(cssContent.includes('.subjects-quick-bar'), '.subjects-quick-bar style rule exists in styles.css');
+  assert(cssContent.includes('.subject-quick-pill'), '.subject-quick-pill style rule exists in styles.css');
   assert(htmlContent.includes('id="communityCommentsSection"'), 'communityCommentsSection container exists in index.html');
   assert(htmlContent.includes('id="commentComposeForm"'), 'commentComposeForm exists in index.html');
   assert(htmlContent.includes('id="commentsStream"'), 'commentsStream container exists in index.html');
@@ -366,6 +369,13 @@ try {
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
   assert(cssContent.includes('.subjects-breadcrumbs'), '.subjects-breadcrumbs style rule exists in styles.css');
   assert(fs.existsSync('css/notes-responsive.css'), 'css/notes-responsive.css stylesheet exists');
+
+  const appContent = fs.readFileSync('js/app.js', 'utf8');
+  assert(appContent.includes('updateActiveSubjectPill'), 'updateActiveSubjectPill function exists in js/app.js');
+
+  const booksShowcaseContent = fs.readFileSync('js/books_showcase.js', 'utf8');
+  assert(booksShowcaseContent.includes('openBookBySubjectId'), 'openBookBySubjectId method exists in js/books_showcase.js');
+  assert(booksShowcaseContent.includes('selectSubjectByIndex'), 'selectSubjectByIndex method exists in js/books_showcase.js');
 
   // Verify standalone multi-page tools exist
   assert(fs.existsSync('tools/bare-acts.html'), 'tools/bare-acts.html exists');

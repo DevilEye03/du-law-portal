@@ -1173,6 +1173,7 @@
   let containerEl, canvasEl, prevBtn, nextBtn, closeBtn, openSlip, detailPanel;
   let codeBadge, semBadge, detailTitle, detailDesc, unitsCount, yearBadge, actionBtn;
   let onExploreSubjectCallback;
+  let onCarouselChangeCallback;
 
   let renderer, scene, camera;
   let bookRoot;
@@ -1529,10 +1530,20 @@
     const total = bookInstances.length;
     currentCarouselIndex = (currentCarouselIndex + dir + total) % total;
     updateSlots();
+    if (typeof onCarouselChangeCallback === 'function' && bookInstances[currentCarouselIndex]) {
+      onCarouselChangeCallback(currentCarouselIndex, bookInstances[currentCarouselIndex].cfg);
+    }
   }
 
   function openBook(book) {
     selectedBook = book;
+    const bookIdx = bookInstances.indexOf(book);
+    if (bookIdx !== -1) {
+      currentCarouselIndex = bookIdx;
+      if (typeof onCarouselChangeCallback === 'function') {
+        onCarouselChangeCallback(currentCarouselIndex, book.cfg);
+      }
+    }
     if (openSlip) openSlip.classList.remove('visible');
     if (closeBtn) closeBtn.classList.add('visible');
     if (prevBtn) prevBtn.style.opacity = '0';
@@ -1632,6 +1643,7 @@
       yearBadge = opts.yearBadge;
       actionBtn = opts.actionBtn;
       onExploreSubjectCallback = opts.onExploreSubject;
+      onCarouselChangeCallback = opts.onCarouselChange;
 
       if (!containerEl || !canvasEl) return;
 
@@ -1824,11 +1836,51 @@
       });
 
       updateSlots();
+
+      if (typeof onCarouselChangeCallback === 'function' && bookInstances[0]) {
+        onCarouselChangeCallback(0, bookInstances[0].cfg);
+      }
     },
 
     openBookByIndex: function (idx) {
       if (bookInstances[idx]) {
         openBook(bookInstances[idx]);
+      }
+    },
+
+    openBookBySubjectId: function (subId) {
+      const idx = bookInstances.findIndex(b => b.cfg && b.cfg.id === subId);
+      if (idx !== -1) {
+        openBook(bookInstances[idx]);
+      }
+    },
+
+    selectSubjectByIndex: function (idx) {
+      if (idx >= 0 && idx < bookInstances.length) {
+        currentCarouselIndex = idx;
+        if (selectedBook) {
+          openBook(bookInstances[idx]);
+        } else {
+          updateSlots();
+          if (typeof onCarouselChangeCallback === 'function' && bookInstances[idx]) {
+            onCarouselChangeCallback(idx, bookInstances[idx].cfg);
+          }
+        }
+      }
+    },
+
+    selectSubjectById: function (subId) {
+      const idx = bookInstances.findIndex(b => b.cfg && b.cfg.id === subId);
+      if (idx !== -1) {
+        currentCarouselIndex = idx;
+        if (selectedBook) {
+          openBook(bookInstances[idx]);
+        } else {
+          updateSlots();
+          if (typeof onCarouselChangeCallback === 'function') {
+            onCarouselChangeCallback(idx, bookInstances[idx].cfg);
+          }
+        }
       }
     },
 

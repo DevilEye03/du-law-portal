@@ -170,6 +170,7 @@
     // Subjects View Elements & 3D Books Showcase
     currentSemHeading: document.getElementById('currentSemHeading'),
     currentSemDesc: document.getElementById('currentSemDesc'),
+    subjectsQuickBar: document.getElementById('subjectsQuickBar'),
     viewModeBooksBtn: document.getElementById('viewModeBooksBtn'),
     viewModeGridBtn: document.getElementById('viewModeGridBtn'),
     booksShowcaseWrap: document.getElementById('booksShowcaseWrap'),
@@ -738,13 +739,10 @@
       const roman = romanNumerals[sem.id] || sem.id;
 
       const loadedCount = (sem.subjectIds && sem.subjectIds.length) || 0;
-      let subjectCountText = `${loadedCount} Subjects Included`;
-      if (sem.id === 1) subjectCountText = `${loadedCount} Core Subjects Included`;
-      else if (sem.id === 2) subjectCountText = `${loadedCount} Core Subject Loaded (Law of Evidence)`;
-      else if (sem.id === 3) subjectCountText = `${loadedCount} Core Subjects Included`;
-      else if (sem.id === 4) subjectCountText = '5 Subjects Included';
-      else if (sem.id === 5) subjectCountText = '5 Subjects Included';
-      else if (sem.id === 6) subjectCountText = '4 Subjects Included';
+      let subjectCountText = `${loadedCount} Core Subjects Loaded`;
+      if (!isActive) {
+        subjectCountText = sem.id === 4 ? '5 Subjects Coming Soon' : '4 Subjects Coming Soon';
+      }
 
       const topBadgeText = isActive ? `${loadedCount} Subjects Loaded` : 'Coming Soon';
 
@@ -872,6 +870,56 @@
     const subjectIds = currentSemObj.subjectIds;
     const subjectsList = subjectIds.map(id => data.subjects[id]).filter(Boolean);
 
+    // Render Quick Subject Navigation Strip
+    if (elements.subjectsQuickBar) {
+      elements.subjectsQuickBar.innerHTML = subjectsList.map((sub, idx) => {
+        const isFirst = idx === 0;
+        const totalUnits = sub.units ? sub.units.length : 0;
+        return `
+          <button class="subject-quick-pill ${isFirst ? 'active' : ''}" 
+                  data-sub-id="${sub.id}" 
+                  data-sub-idx="${idx}"
+                  type="button" 
+                  title="Select ${sub.name} (${sub.code})">
+            <span class="pill-code">${sub.code}</span>
+            <span class="pill-name">${sub.name}</span>
+            <span class="pill-badge">${totalUnits} Units</span>
+            <span class="pill-open-hub" title="Open ${sub.name} Hub" data-open-hub="${sub.id}">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+        `;
+      }).join('');
+
+      elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill').forEach(pill => {
+        pill.addEventListener('click', (e) => {
+          const subId = pill.dataset.subId;
+          const idx = parseInt(pill.dataset.subIdx, 10);
+
+          // If clicked specifically on the arrow circle, open hub immediately
+          if (e.target.closest('.pill-open-hub')) {
+            e.stopPropagation();
+            openSubjectHub(subId);
+            return;
+          }
+
+          // Otherwise, bring book to center in 3D showcase and open it
+          elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          if (window.DUBooksShowcase) {
+            window.DUBooksShowcase.selectSubjectByIndex(idx);
+          }
+        });
+
+        // Double click opens hub directly
+        pill.addEventListener('dblclick', () => {
+          const subId = pill.dataset.subId;
+          openSubjectHub(subId);
+        });
+      });
+    }
+
     elements.subjectsGrid.innerHTML = subjectsList.map(sub => {
       const theme = sub.theme;
       const totalUnits = sub.units ? sub.units.length : 0;
@@ -929,6 +977,21 @@
         const subId = card.dataset.subId;
         openSubjectHub(subId);
       });
+    });
+  }
+
+  function updateActiveSubjectPill(idx, book) {
+    if (!elements.subjectsQuickBar) return;
+    const pills = elements.subjectsQuickBar.querySelectorAll('.subject-quick-pill');
+    pills.forEach(p => {
+      const pIdx = parseInt(p.dataset.subIdx, 10);
+      const pId = p.dataset.subId;
+      if (pIdx === idx || (book && book.id === pId)) {
+        p.classList.add('active');
+        p.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      } else {
+        p.classList.remove('active');
+      }
     });
   }
 
@@ -4839,6 +4902,9 @@ Submission Time: ${new Date().toLocaleString()}
         unitsCount: elements.bsUnitsCount,
         yearBadge: elements.bsYear,
         actionBtn: elements.bsActionExplore,
+        onCarouselChange: (idx, book) => {
+          updateActiveSubjectPill(idx, book);
+        },
         onExploreSubject: (book) => {
           if (book && book.id) {
             openSubjectHub(book.id);

@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v62";
+const CACHE_NAME = "du-law-portal-v63";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -10,15 +10,16 @@ const ASSETS_TO_CACHE = [
   "./tools/bare-acts.html",
   "./tools/bns-converter.html",
   "./tools/flashcards.html",
-  "./css/styles.css",
+  "./css/styles.css?v=63.0",
   "./css/notes-responsive.css",
-  "./js/wave_grid_background.js",
-  "./js/interactive_particles.js",
+  "./js/wave_grid_background.js?v=63.0",
+  "./js/interactive_particles.js?v=63.0",
   "./particles.png",
-  "./js/books_showcase.js",
-  "./js/bare_acts.js",
-  "./js/bns_converter.js",
-  "./js/app.js",
+  "./js/books_showcase.js?v=63.0",
+  "./js/data.js?v=63.0",
+  "./js/bare_acts.js?v=63.0",
+  "./js/bns_converter.js?v=63.0",
+  "./js/app.js?v=63.0",
   "./favicon.svg",
   "./manifest.json"
 ];
@@ -136,6 +137,27 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.match(event.request).then((cachedResponse) => {
+        if (!cachedResponse) {
+          return cache.match(event.request, { ignoreSearch: true }).then((fallbackResponse) => {
+            const initial = fallbackResponse || null;
+            const fetchPromise = fetch(event.request).then((networkResponse) => {
+              if (
+                networkResponse &&
+                networkResponse.status === 200 &&
+                (networkResponse.type === "basic" ||
+                 url.hostname.includes("fonts.googleapis.com") ||
+                 url.hostname.includes("fonts.gstatic.com") ||
+                 url.hostname.includes("cdnjs.cloudflare.com"))
+              ) {
+                cache.put(event.request, networkResponse.clone());
+              }
+              return networkResponse;
+            }).catch(() => initial);
+
+            return initial || fetchPromise;
+          });
+        }
+
         const fetchPromise = fetch(event.request).then((networkResponse) => {
           if (
             networkResponse &&
