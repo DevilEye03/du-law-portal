@@ -234,6 +234,29 @@ try {
 
   const sem3 = portalData.semesters.find(s => s.id === 3);
   assert(sem3 && sem3.subjectIds.includes('constitution'), 'Semester 3 includes subject "constitution"');
+  assert(sem3 && sem3.subjectIds.includes('special_contracts'), 'Semester 3 includes subject "special_contracts"');
+
+  // Special Contracts (LB-304) Integrity
+  const spl = portalData.subjects['special_contracts'];
+  assert(!!spl, 'Subject "special_contracts" is registered');
+  assert(spl.code === 'LB-304', 'Special Contracts code is LB-304');
+  assert(spl.units && spl.units.length === 8, `Special Contracts has exactly 8 units (Found: ${spl.units?.length})`);
+  assert(spl.cases && spl.cases.length === 58, `Special Contracts landmark cases count === 58 (Found: ${spl.cases?.length})`);
+  assert(spl.pyqs && spl.pyqs.length === 124, `Special Contracts PYQs with model answers === 124 (Found: ${spl.pyqs?.length})`);
+  assert(spl.revisions && spl.revisions.length === 8, `Special Contracts revision capsules === 8 (Found: ${spl.revisions?.length})`);
+
+  for (let u = 1; u <= 8; u++) {
+    const uCases = spl.cases.filter(c => c.unitNumber === u);
+    const uPyqs = spl.pyqs.filter(p => p.unitNumber === u);
+    const uRev = spl.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Special Contracts Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Special Contracts Unit ${u} has PYQs (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `Special Contracts Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  spl.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Special Contracts Dossier file exists: ${u.file}`);
+  });
 
   // Criminology (LB-5033) Integrity
   const crim = portalData.subjects['criminology'];
@@ -351,7 +374,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v64'), 'sw.js CACHE_NAME is bumped to du-law-portal-v64');
+  assert(swContent.includes('du-law-portal-v65'), 'sw.js CACHE_NAME is bumped to du-law-portal-v65');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
   assert(htmlContent.includes('id="subjectsQuickBar"'), 'subjectsQuickBar container exists in index.html');
@@ -364,6 +387,7 @@ try {
   assert(htmlContent.includes('id="mtdCommentsBtn"'), 'mtdCommentsBtn exists in index.html');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
+  assert(htmlContent.includes('id="readerCommentsBtn"'), 'id="readerCommentsBtn" exists in index.html');
   assert(htmlContent.includes('id="readerCommentsBtn"'), 'id="readerCommentsBtn" exists in index.html');
   assert(htmlContent.includes('id="subjectsBackBtn"'), 'id="subjectsBackBtn" exists in index.html');
   assert(cssContent.includes('.btn-reader-back'), '.btn-reader-back style rule exists in styles.css');
@@ -397,6 +421,10 @@ try {
   const sem1SampleNote = fs.readFileSync('Torts/Topic1_Tort_Intro_Definition_Nature_Scope.html', 'utf8');
   assert(sem1SampleNote.includes('100% FULL VISIBILITY'), 'Semester 1 notes contain 100% full-visibility diagram rules');
   assert(sem1SampleNote.includes('.fig svg'), 'Semester 1 notes contain responsive SVG diagram rules');
+
+  const sem3SplContractNote = fs.readFileSync('sem 3/spl contract/topic1_agency_partnership.html', 'utf8');
+  assert(sem3SplContractNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Special Contracts notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
+  assert(sem3SplContractNote.includes('notes-responsive.css'), 'Special Contracts notes link notes-responsive.css');
 
   const sem5DraftingNote = fs.readFileSync('SEM 5/DRAFTING/Drafting_Rules_and_Skills_DU_LB502.html', 'utf8');
   assert(sem5DraftingNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 Drafting notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');

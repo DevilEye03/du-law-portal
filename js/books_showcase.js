@@ -380,6 +380,33 @@
         ]
       },
       {
+        id: "special_contracts",
+        code: "LB-304",
+        title: "Special Contracts",
+        author: "LB-304 • Make Law Easy",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "8 Comprehensive Units",
+        casesCount: "58 Landmark Cases",
+        desc: "Indian Partnership Act 1932 & Sale of Goods Act 1930: Mutual Agency, Property, Dissolution, Caveat Emptor, Nemo Dat & Unpaid Seller Remedies.",
+        spineBg: "#78350f",
+        spineInk: "#fef3c7",
+        spineFont: "700 36px Georgia",
+        backBg: "#451a03",
+        backInk: "254,243,199",
+        edge: "#fffbeb",
+        chapters: [
+          "Unit 1: Concept of Agency & The Nature of Partnership",
+          "Unit 2: Relations of Partners to One Another and to Third Parties",
+          "Unit 3: Incoming & Outgoing Partners and Registration of a Firm",
+          "Unit 4: Dissolution of a Firm",
+          "Unit 5: Formation of Contracts of Sale",
+          "Unit 6: Conditions and Warranties",
+          "Unit 7: Effects of Contract of Sale: Transfer of Property & Nemo Dat",
+          "Unit 8: Rights of the Unpaid Seller"
+        ]
+      },
+      {
         id: "wcc",
         code: "LB-3037",
         title: "White Collar Crimes",
