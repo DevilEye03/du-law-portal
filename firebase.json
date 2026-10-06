@@ -8,6 +8,11 @@
       "**/node_modules/**",
       "scripts/**",
       "scratch/**",
+      "android-app/**",
+      "dist-apk/**",
+      "**/*.apk",
+      "**/*.aab",
+      "**/*.jks",
       "CNAME",
       "package.json",
       "package-lock.json"
