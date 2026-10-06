@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Make Law Easy</string>
+    <string name="offline_title">No Internet Connection</string>
+    <string name="offline_desc">Please connect to the internet to load study notes, landmark case briefs, and revision capsules.</string>
+    <string name="retry_button">Try Again</string>
+    <string name="exit_prompt">Press back again to exit</string>
+</resources>
