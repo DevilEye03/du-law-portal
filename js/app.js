@@ -464,6 +464,15 @@
       elements.themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
       localStorage.setItem('du_law_theme', 'light');
     }
+    if (elements.readerIframe && elements.readerIframe.contentDocument && elements.readerIframe.contentDocument.documentElement) {
+      try {
+        if (isDark) {
+          elements.readerIframe.contentDocument.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          elements.readerIframe.contentDocument.documentElement.removeAttribute('data-theme');
+        }
+      } catch (e) {}
+    }
   }
 
   function applySubjectTheme(subTheme, subId) {
@@ -2003,6 +2012,13 @@
       iframe.id = 'readerIframe';
       iframe.title = 'Study Notes Reader';
       iframe.src = fileUrl;
+      iframe.addEventListener('load', () => {
+        try {
+          if (state.darkMode && iframe.contentDocument && iframe.contentDocument.documentElement) {
+            iframe.contentDocument.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      });
       iframeWrap.appendChild(iframe);
       elements.readerIframe = iframe;
     } else if (elements.readerIframe) {

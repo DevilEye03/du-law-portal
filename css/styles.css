@@ -1520,13 +1520,13 @@ body.reader-open .quick-filter-chips,
   pointer-events: none !important;
 }
 
-.reader-modal{position:fixed;top:0;left:0;right:0;bottom:0;width:100vw !important;max-width:100vw !important;
-  min-width:100vw !important;height:100vh !important;height:100dvh !important;max-height:100vh !important;
+.reader-modal{position:fixed;top:0;left:0;right:0;bottom:0;width:100% !important;max-width:100% !important;
+  min-width:0 !important;height:100vh !important;height:100dvh !important;max-height:100vh !important;
   max-height:100dvh !important;background:#0b0f19 !important;z-index:99999;display:none;align-items:stretch;
   justify-content:stretch;padding:0 !important;margin:0 !important;border:none !important;border-radius:0 !important;
   overflow:hidden !important}
 .reader-modal.active{display:flex !important}
-.reader-window{width:100vw !important;max-width:100vw !important;min-width:100vw !important;height:100vh !important;
+.reader-window{width:100% !important;max-width:100% !important;min-width:0 !important;height:100vh !important;
   height:100dvh !important;max-height:100vh !important;max-height:100dvh !important;background:var(--bg-card);
   border-radius:0 !important;box-shadow:none !important;display:flex !important;flex-direction:column !important;
   overflow:hidden !important;border:none !important;margin:0 !important;padding:0 !important}
@@ -1555,7 +1555,7 @@ body.reader-open .quick-filter-chips,
   min-height:32px;min-width:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;
   cursor:pointer;font-size:.95rem;transition:all .15s ease}
 .btn-reader-close:hover{background:#dc2626;transform:scale(1.05)}
-.reader-iframe-wrap{flex:1;width:100vw !important;min-width:0;max-width:100vw !important;
+.reader-iframe-wrap{flex:1;width:100% !important;min-width:0;max-width:100% !important;
   height:calc(100% - 44px) !important;height:calc(100vh - 44px) !important;height:calc(100dvh - 44px) !important;
   background:#fff;overflow:hidden;-webkit-overflow-scrolling:touch;position:relative}
 .reader-iframe{width:100% !important;height:100% !important;min-width:0;max-width:100% !important;border:none !important;display:block}

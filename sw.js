@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v66";
+const CACHE_NAME = "du-law-portal-v67";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -10,16 +10,16 @@ const ASSETS_TO_CACHE = [
   "./tools/bare-acts.html",
   "./tools/bns-converter.html",
   "./tools/flashcards.html",
-  "./css/styles.css?v=66.0",
-  "./css/notes-responsive.css",
-  "./js/wave_grid_background.js?v=66.0",
-  "./js/interactive_particles.js?v=66.0",
+  "./css/styles.css?v=67.0",
+  "./css/notes-responsive.css?v=67.0",
+  "./js/wave_grid_background.js?v=67.0",
+  "./js/interactive_particles.js?v=67.0",
   "./particles.png",
-  "./js/books_showcase.js?v=66.0",
-  "./js/data.js?v=66.0",
-  "./js/bare_acts.js?v=66.0",
-  "./js/bns_converter.js?v=66.0",
-  "./js/app.js?v=66.0",
+  "./js/books_showcase.js?v=67.0",
+  "./js/data.js?v=67.0",
+  "./js/bare_acts.js?v=67.0",
+  "./js/bns_converter.js?v=67.0",
+  "./js/app.js?v=67.0",
   "./favicon.svg",
   "./manifest.json"
 ];

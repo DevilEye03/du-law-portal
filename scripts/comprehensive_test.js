@@ -385,7 +385,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v66'), 'sw.js CACHE_NAME is bumped to du-law-portal-v66');
+  assert(swContent.includes('du-law-portal-v67'), 'sw.js CACHE_NAME is bumped to du-law-portal-v67');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
   assert(htmlContent.includes('id="subjectsQuickBar"'), 'subjectsQuickBar container exists in index.html');
