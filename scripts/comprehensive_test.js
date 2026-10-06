@@ -283,6 +283,17 @@ try {
   const sem5 = portalData.semesters.find(s => s.id === 5);
   assert(sem5 && sem5.subjectIds.includes('criminology'), 'Semester 5 includes subject "criminology"');
 
+  // Verify all 18 subjects have quick revision htmlContent across all 150 units
+  let totalRevHtml = 0;
+  Object.keys(portalData.subjects).forEach(subKey => {
+    const s = portalData.subjects[subKey];
+    assert(s.revisions && s.revisions.length === s.units.length, `${subKey} has exactly ${s.units.length} revision capsules`);
+    s.revisions.forEach(r => {
+      if (r.htmlContent && r.htmlContent.length > 50) totalRevHtml++;
+    });
+  });
+  assert(totalRevHtml === 150, `All 150 units across all 18 subjects have rich note quick revision htmlContent (Found: ${totalRevHtml}/150)`);
+
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
 }
@@ -374,7 +385,7 @@ try {
   assert(cssContent.includes('.feedback-modal-dialog'), '.feedback-modal-dialog style rule exists in styles.css');
 
   const swContent = fs.readFileSync('sw.js', 'utf8');
-  assert(swContent.includes('du-law-portal-v65'), 'sw.js CACHE_NAME is bumped to du-law-portal-v65');
+  assert(swContent.includes('du-law-portal-v66'), 'sw.js CACHE_NAME is bumped to du-law-portal-v66');
   assert(swContent.includes('/terms'), 'sw.js ASSETS_TO_CACHE includes /terms');
   assert(swContent.includes('/privacy'), 'sw.js ASSETS_TO_CACHE includes /privacy');
   assert(htmlContent.includes('id="subjectsQuickBar"'), 'subjectsQuickBar container exists in index.html');

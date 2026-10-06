@@ -1874,11 +1874,11 @@
 
     // Filter by quick chips
     if (state.activeQuickFilter === 'mustquote') {
-      revisions = revisions.filter(r => r.table && r.table.rows && r.table.rows.length > 0);
+      revisions = revisions.filter(r => (r.table && r.table.rows && r.table.rows.length > 0) || (r.htmlContent && /table|mustquote|statut|section/i.test(r.htmlContent)));
     } else if (state.activeQuickFilter === 'strategy') {
-      revisions = revisions.filter(r => !!r.examStrategy);
+      revisions = revisions.filter(r => !!r.examStrategy || (r.htmlContent && /strategy|tips|scoring|exam/i.test(r.htmlContent)));
     } else if (state.activeQuickFilter === 'casemap') {
-      revisions = revisions.filter(r => !!r.caseMap);
+      revisions = revisions.filter(r => !!r.caseMap || (r.htmlContent && /case|judge|v\./i.test(r.htmlContent)));
     }
 
     // Filter by search query
@@ -1890,7 +1890,8 @@
         (r.badge && r.badge.toLowerCase().includes(q)) ||
         (r.examStrategy && r.examStrategy.toLowerCase().includes(q)) ||
         (r.caseMap && r.caseMap.toLowerCase().includes(q)) ||
-        (r.table && r.table.rows && r.table.rows.some(row => row.some(cell => cell.toLowerCase().includes(q))))
+        (r.table && r.table.rows && r.table.rows.some(row => row.some(cell => cell.toLowerCase().includes(q)))) ||
+        (r.htmlContent && r.htmlContent.toLowerCase().includes(q))
       );
     }
 
@@ -1908,14 +1909,14 @@
     elements.revisionContainer.innerHTML = `
       <div class="revision-container">
         ${revisions.map(r => `
-          <div class="rev-card fade-in" id="rev-unit-${r.unitNumber}">
+          <div class="rev-card fade-in" id="rev-unit-${r.unitNumber || (r.unit || '')}">
             <div class="rev-card-header">
               <div class="rev-card-header-left">
-                <span class="rev-unit-badge">Unit ${r.unitNumber}</span>
-                <span class="rev-badge-pill">${r.badge}</span>
+                <span class="rev-unit-badge">Unit ${r.unitNumber || (r.unit || '')}</span>
+                ${r.badge ? `<span class="rev-badge-pill">${r.badge}</span>` : ''}
               </div>
               <div class="rev-card-header-right">
-                <button class="btn-rev-reader topic-liquid-metal-btn" data-file="${r.file}" data-anchor="${r.anchorId || ''}" data-title="${r.unitTitle}" type="button">
+                <button class="btn-rev-reader topic-liquid-metal-btn" data-file="${r.file || ''}" data-anchor="${r.anchorId || ''}" data-title="${escapeHtml(r.unitTitle || r.title || '')}" type="button">
                   <div class="metal-inner-body">
                     <div class="metal-icon-circle">
                       <i class="fa-solid fa-arrow-right"></i>
@@ -1927,39 +1928,45 @@
             </div>
 
             <div class="rev-card-title-area">
-              <h3>${r.title}</h3>
-              <div class="rev-unit-subtitle">${r.unitTitle}</div>
+              <h3>${r.title || r.unitTitle || ('Unit ' + r.unitNumber)}</h3>
+              ${r.unitTitle && r.unitTitle !== r.title ? `<div class="rev-unit-subtitle">${r.unitTitle}</div>` : ''}
             </div>
 
             <div class="rev-content-body">
-              ${r.table ? `
-                <div class="rev-table-wrap">
-                  <table class="rev-table">
-                    <thead>
-                      <tr>${r.table.headers.map(h => `<th>${h}</th>`).join('')}</tr>
-                    </thead>
-                    <tbody>
-                      ${r.table.rows.map(row => `
-                        <tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>
-                      `).join('')}
-                    </tbody>
-                  </table>
+              ${r.htmlContent ? `
+                <div class="rev-note-html">
+                  ${r.htmlContent}
                 </div>
-              ` : ''}
+              ` : `
+                ${r.table ? `
+                  <div class="rev-table-wrap">
+                    <table class="rev-table">
+                      <thead>
+                        <tr>${r.table.headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                      </thead>
+                      <tbody>
+                        ${r.table.rows.map(row => `
+                          <tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                ` : ''}
 
-              ${r.examStrategy ? `
-                <div class="rev-exam-strategy">
-                  <div class="rev-callout-label"><i class="fa-solid fa-star"></i> Exam Strategy &amp; Scoring Tips</div>
-                  <p>${r.examStrategy}</p>
-                </div>
-              ` : ''}
+                ${r.examStrategy ? `
+                  <div class="rev-exam-strategy">
+                    <div class="rev-callout-label"><i class="fa-solid fa-star"></i> Exam Strategy &amp; Scoring Tips</div>
+                    <p>${r.examStrategy}</p>
+                  </div>
+                ` : ''}
 
-              ${r.caseMap ? `
-                <div class="rev-case-map">
-                  <div class="rev-callout-label"><i class="fa-solid fa-scale-balanced"></i> Case–Judge–Court Map</div>
-                  <p>${r.caseMap}</p>
-                </div>
-              ` : ''}
+                ${r.caseMap ? `
+                  <div class="rev-case-map">
+                    <div class="rev-callout-label"><i class="fa-solid fa-scale-balanced"></i> Case–Judge–Court Map</div>
+                    <p>${r.caseMap}</p>
+                  </div>
+                ` : ''}
+              `}
             </div>
           </div>
         `).join('')}
