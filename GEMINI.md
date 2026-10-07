@@ -41,6 +41,10 @@ Before finalizing any coding task:
 4. Commit & push changes: `git add -A && git commit -m "..." && git push origin main`
 5. Always deploy to Firebase Hosting: `firebase deploy --only hosting` (Per user directive: always deploy all changes to the live website so mobile/client devices receive fresh service worker updates).
 
+### Rule 6: Website-Only Scope Policy (App Isolation)
+All ongoing and future updates, UI tweaks, content additions, and feature enhancements must be made **exclusively on the website codebase** (`index.html`, `css/`, `js/`, notes, tools, etc.) and **NEVER in the mobile app** (`android-app/`, `dist-apk/`), unless the user explicitly asks to modify or rebuild the Android app. *(Note: Because the Android app loads `https://makelaweasy.in` directly inside its native wrapper, any website updates are automatically rendered in the app dynamically without requiring app rebuilds).*
+
 ---
 
 *For full file maps, subject IDs, FIRAC case structures, and 3D visual system guidelines, consult `PROJECT_BRAIN.md`.*
+
