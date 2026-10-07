@@ -44,7 +44,8 @@
     commentsSort: 'helpful',
     commentsPageSize: 6,
     composeRating: 5,
-    composeCategory: 'cases'
+    composeCategory: 'cases',
+    savedScrollY: 0
   };
 
   // DOM Elements Cache
@@ -1998,6 +1999,9 @@
   // 4. EMBEDDED FULL NOTES READER MODAL (Print PDF removed)
   // =========================================================================
   function openReader(fileUrl, title, subInfo, pushHistory = true) {
+    // Preserve current scroll position before locking background scroll
+    state.savedScrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
     elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
     if (elements.readerSubInfo) {
       elements.readerSubInfo.textContent = (subInfo || (state.currentSubject ? state.currentSubject.shortName || state.currentSubject.name : 'Make Law Easy')).replace(/\s*•\s*DU Notes/gi, '').replace(/\s*•\s*Landmark Precedent/gi, '').replace(/\s*•\s*Last-Minute Revision/gi, '').trim();
@@ -2115,12 +2119,17 @@
     }
     document.body.style.overflow = '';
 
+    // Reliably restore user scroll position without jumping
+    if (typeof state.savedScrollY === 'number') {
+      window.scrollTo(0, state.savedScrollY);
+    }
+
     // Restore the 4 hub tab buttons when reader is closed
     if (elements.hubTabsContainer) {
       elements.hubTabsContainer.style.removeProperty('display');
       elements.hubTabsContainer.classList.remove('is-hidden');
     }
-    if (elements.mobileBottomNav && elements.subjectHubView.classList.contains('active')) {
+    if (elements.mobileBottomNav && elements.subjectHubView && elements.subjectHubView.classList.contains('active')) {
       elements.mobileBottomNav.style.removeProperty('display');
     }
 
@@ -2136,6 +2145,10 @@
       closeReader(false);
     }
   }
+
+  // Expose global methods for Native Android App shell & external callers
+  window.isReaderOpen = () => Boolean(elements.readerModal && elements.readerModal.classList.contains('active'));
+  window.closeNotesReader = () => handleReaderBack();
 
   function handleHubBack() {
     if (window.history.state && window.history.state.view === 'hub') {

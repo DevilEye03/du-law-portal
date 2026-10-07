@@ -29,7 +29,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 class MainActivity : AppCompatActivity() {
 
     private lateinit var webView: WebView
-    private lateinit var swipeRefresh: SwipeRefreshLayout
     private lateinit var progressBar: ProgressBar
     private lateinit var offlineLayout: View
     private lateinit var btnRetry: Button
@@ -57,6 +56,11 @@ class MainActivity : AppCompatActivity() {
         const val FIREBASE_HOST = "make-law-easy.web.app"
     }
 
+    class WebAppInterface(private val activity: MainActivity) {
+        @android.webkit.JavascriptInterface
+        fun isNativeApp(): Boolean = true
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         // Install modern Android 12+ splash screen
         installSplashScreen()
@@ -65,12 +69,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         webView = findViewById(R.id.webView)
-        swipeRefresh = findViewById(R.id.swipeRefresh)
         progressBar = findViewById(R.id.progressBar)
         offlineLayout = findViewById(R.id.offlineLayout)
         btnRetry = findViewById(R.id.btnRetry)
 
-        setupSwipeRefresh()
         setupWebView()
         setupOfflineRetry()
         setupBackNavigation()
@@ -78,27 +80,6 @@ class MainActivity : AppCompatActivity() {
         loadPortalUrl(savedInstanceState)
     }
 
-    private fun setupSwipeRefresh() {
-        swipeRefresh.setColorSchemeColors(
-            getColor(R.color.brand_gold),
-            getColor(R.color.brand_navy)
-        )
-        swipeRefresh.setOnChildScrollUpCallback { _, _ ->
-            webView.scrollY > 0
-        }
-        swipeRefresh.setOnRefreshListener {
-            if (isNetworkAvailable()) {
-                webView.reload()
-            } else {
-                swipeRefresh.isRefreshing = false
-                if (webView.url == null) {
-                    showOfflineScreen(true)
-                } else {
-                    Toast.makeText(this, R.string.offline_title, Toast.LENGTH_SHORT).show()
-                }
-            }
-        }
-    }
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
@@ -127,10 +108,14 @@ class MainActivity : AppCompatActivity() {
         settings.allowFileAccess = true
         settings.allowContentAccess = true
         settings.mediaPlaybackRequiresUserGesture = false
+        settings.userAgentString = "${settings.userAgentString} MakeLawEasyApp/1.0"
 
+        // Inject Native App Bridge
+        webView.addJavascriptInterface(WebAppInterface(this), "AndroidApp")
 
         // Enable Cookies
         val cookieManager = CookieManager.getInstance()
+
         cookieManager.setAcceptCookie(true)
         cookieManager.setAcceptThirdPartyCookies(webView, true)
 
@@ -142,7 +127,6 @@ class MainActivity : AppCompatActivity() {
                     progressBar.progress = newProgress
                 } else {
                     progressBar.visibility = View.GONE
-                    swipeRefresh.isRefreshing = false
                 }
             }
 
@@ -215,7 +199,6 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 progressBar.visibility = View.GONE
-                swipeRefresh.isRefreshing = false
             }
 
             override fun onReceivedError(
@@ -245,21 +228,18 @@ class MainActivity : AppCompatActivity() {
     private fun setupBackNavigation() {
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                // 1. Check if the reader modal or an in-page modal is active via hash/history
-                if (webView.url?.contains("#reader") == true || webView.canGoBack()) {
-                    webView.evaluateJavascript(
-                        "(function() { if (window.history.state && window.history.state.view === 'reader') { window.history.back(); return true; } return false; })()"
-                    ) { handled ->
-                        if (handled != "true") {
-                            if (webView.canGoBack()) {
-                                webView.goBack()
-                            } else {
-                                handleExitPress()
-                            }
+                // 1. Check if the reader modal or an in-page modal is active via JS
+                webView.evaluateJavascript(
+                    "(function() { if (window.isReaderOpen && window.isReaderOpen()) { window.closeNotesReader(); return true; } if (window.history.state && window.history.state.view === 'reader') { window.history.back(); return true; } return false; })()"
+                ) { handled ->
+                    val isHandled = handled?.trim('"', '\'') == "true"
+                    if (!isHandled) {
+                        if (webView.canGoBack()) {
+                            webView.goBack()
+                        } else {
+                            handleExitPress()
                         }
                     }
-                } else {
-                    handleExitPress()
                 }
             }
         })
@@ -298,12 +278,13 @@ class MainActivity : AppCompatActivity() {
     private fun showOfflineScreen(show: Boolean) {
         if (show) {
             offlineLayout.visibility = View.VISIBLE
-            swipeRefresh.visibility = View.GONE
+            webView.visibility = View.GONE
         } else {
             offlineLayout.visibility = View.GONE
-            swipeRefresh.visibility = View.VISIBLE
+            webView.visibility = View.VISIBLE
         }
     }
+
 
     private fun isNetworkAvailable(): Boolean {
         val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

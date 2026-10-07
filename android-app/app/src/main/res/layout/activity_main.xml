@@ -7,18 +7,13 @@
     android:background="@color/bg_dark"
     tools:context=".MainActivity">
 
-    <!-- Swipe Refresh Layout containing the WebView -->
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
+    <!-- Direct Fullscreen Hardware-Accelerated WebView (Zero scroll conflicts, zero touch hijacking) -->
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_dark" />
 
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/bg_dark" />
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <!-- Top Loading Progress Bar -->
     <ProgressBar
