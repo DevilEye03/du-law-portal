@@ -1,0 +1,439 @@
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (v2.0)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Responsive: Zero Horizontal Wobble, Zero Viewport Drift,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+
+/* 1. UNCONDITIONAL ROOT & VIEWPORT LOCK (Rule 3)
+   Applies across ALL screen widths (320px to 4K desktop) and inside iframes.
+   Prevents any horizontal movement, wobble, or scrollbar spill. */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: clip !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. UNIVERSAL CONTAINER CONTAINMENT (UNCONDITIONAL) */
+.wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+.content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+.quicknav-inner, .hero-inner, .doc-wrap, .main-wrap, .paper, .note-container,
+.notes-body, .reading-container, .syllabus-container, .wrapper, .site-main,
+.doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+.firac-wrapper, .briefs-container, .pyq-wrap, .deck {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Prevent decorative pseudo-elements from bleeding outside viewport */
+.cover, header.hero, .hero, .casehead, .case-hd {
+  position: relative !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hero banners & headers must never leak out with negative margins */
+header.hero, header.doc, header.top, header.cover, header.topbar,
+header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+.cover, .case-hero, .doc-header {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* 3. UNIVERSAL TABLE CONTAINMENT (UNCONDITIONAL) */
+.tw, .twrap, .tblwrap, .tbl-wrap, .table-wrap, .tbl-scroll, .scroll, .table-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+  margin: 12px 0 !important;
+}
+
+.tw table, .twrap table, .tblwrap table, .tbl-wrap table, .table-wrap table, .tbl-scroll table, .scroll table, .table-container table {
+  display: table !important;
+  width: 100% !important;
+  min-width: 480px !important;
+  max-width: none !important;
+  border-collapse: collapse !important;
+  box-sizing: border-box !important;
+}
+
+/* Fallback: Auto-contain any table without an outer scroll wrapper */
+table:not(.tw table):not(.twrap table):not(.tblwrap table):not(.tbl-wrap table):not(.table-wrap table):not(.tbl-scroll table):not(.scroll table):not(.table-container table) {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  margin: 12px 0 !important;
+  box-sizing: border-box !important;
+}
+
+th, td {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 4. TIMELINE & OFFSET MARKERS CONTAINMENT */
+.tl, .timeline {
+  margin-left: 14px !important;
+  max-width: calc(100% - 14px) !important;
+  box-sizing: border-box !important;
+}
+
+/* 5. SVG & MEDIA CONTAINMENT */
+svg, img {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+svg:not(.crest):not(.icon):not([width="18"]):not([width="20"]):not([width="24"]):not([height="18"]):not([height="20"]):not([height="24"]) {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+.fig, .figure, figure, .case-visual, .diagram-wrap, .flow-svg, .diagram-frame, .diagram-box, .svgbox {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 6. PRE & CODE BLOCKS CONTAINMENT */
+pre, code, pre code, .stat, .mnem {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 7. FLEXBOX OVERFLOW DEFENSE (Rule 3) */
+.brand, .navlinks, .topbar, .topbar-in, .hero .meta, .chips, .tags,
+.badge-row, .meta-strip, .hero-meta, .sec-head, .header-card, .chapter-header,
+.casehead, .case-hd, .q, .pyq, .pyq-hd, .qh, .badge, .chip, .tag {
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT ADAPTATIONS (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: clip !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  /* Reclaim side margins on mobile touchscreens */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar, aside.toc {
+    display: none !important;
+  }
+
+  /* Header & Hero Scaling */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Horizontal Navigation & Swipe */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips & Meta */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* All Cards, Boxes & Sections */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .defcard, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .caseblock, .case-box, .sub-section, .case-detail, .argcard, .verdict, .srcnote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* Diagrams & Visuals */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Flowcharts: vertical orientation */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Multi-column Grid collapse */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Table cells on mobile */
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   DARK THEME PALETTE FOR NOTES
+   ========================================================================== */
+[data-theme="dark"] body {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+[data-theme="dark"] .card, [data-theme="dark"] section, [data-theme="dark"] .box.plain,
+[data-theme="dark"] .mini, [data-theme="dark"] .toc, [data-theme="dark"] details,
+[data-theme="dark"] .fig, [data-theme="dark"] .case, [data-theme="dark"] .pyq,
+[data-theme="dark"] .tw, [data-theme="dark"] .twrap, [data-theme="dark"] .tblwrap {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+[data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] td {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] strong, [data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] th {
+  color: #f1f5f9 !important;
+}
+[data-theme="dark"] tr:nth-child(even) td {
+  background: #192231 !important;
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (v2.0) */

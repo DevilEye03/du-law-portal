@@ -1,0 +1,5033 @@
+/**
+ * DELHI UNIVERSITY LAW NOTES PORTAL — ENHANCED APPLICATION SCRIPT
+ * Mobile-Reactive, Highly Interactive, with Study Progress Tracking & Quick Filters
+ */
+
+(function () {
+  'use strict';
+
+  // Application State
+  const state = {
+    currentSemester: null,
+    currentSubject: null,
+    currentTab: 'topics', // 'topics' | 'cases' | 'pyqs' | 'revision'
+    searchQuery: '',
+    selectedUnitFilter: 'all',
+    activeQuickFilter: 'all',
+    darkMode: localStorage.getItem('du_law_theme') === 'dark' || (new URLSearchParams(window.location.search)).get('theme') === 'dark',
+    starred: JSON.parse(localStorage.getItem('du_portal_starred') || '[]'),
+    personalNotes: JSON.parse(localStorage.getItem('du_portal_notes') || '{}'),
+    mockTimerSecs: 10800,
+    mockTimerInterval: null,
+    mockTimerRunning: false,
+    mockSelectedQuestions: new Set(),
+    audioSpeechRate: 1.0,
+    audioUtterance: null,
+    audioIsPlaying: false,
+    completedUnits: JSON.parse(localStorage.getItem('du_law_completed_units') || '{}'),
+    bookmarkedPyqs: JSON.parse(localStorage.getItem('du_law_bookmarked_pyqs') || '[]'),
+    flashcards: {
+      deck: [],
+      currentIndex: 0,
+      isFlipped: false,
+      masteredIds: JSON.parse(localStorage.getItem('du_law_flashcard_mastery') || '[]')
+    },
+    bareActs: {
+      activeAct: 'all',
+      searchQuery: '',
+      expandedId: null
+    },
+    subjectsViewMode: localStorage.getItem('du_subjects_view_mode') || 'books',
+    commentsSearchQuery: '',
+    commentsCategoryFilter: 'all',
+    commentsSubjectFilter: 'all',
+    commentsSort: 'helpful',
+    commentsPageSize: 6,
+    composeRating: 5,
+    composeCategory: 'cases',
+    savedScrollY: 0
+  };
+
+  // DOM Elements Cache
+  const elements = {
+    // Header & Global
+    headerMockExamBtn: document.getElementById('headerMockExamBtn'),
+    headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
+    headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
+    headerBareActBtn: document.getElementById('headerBareActBtn'),
+    headerStarBadge: document.getElementById('headerStarBadge'),
+    heroExploreBtn: document.getElementById('heroExploreBtn'),
+    heroMockBtn: document.getElementById('heroMockBtn'),
+    heroBnsBtn: document.getElementById('heroBnsBtn'),
+    bnsModalOverlay: document.getElementById('bnsModalOverlay'),
+    bnsModal: document.getElementById('bnsModal'),
+    bnsCloseBtn: document.getElementById('bnsCloseBtn'),
+    bnsSearchInput: document.getElementById('bnsSearchInput'),
+    bnsCategoryPills: document.getElementById('bnsCategoryPills'),
+    bnsCardsContainer: document.getElementById('bnsCardsContainer'),
+    mockModalOverlay: document.getElementById('mockModalOverlay'),
+    mockModal: document.getElementById('mockModal'),
+    mockCloseBtn: document.getElementById('mockCloseBtn'),
+    mockSubjectSelect: document.getElementById('mockSubjectSelect'),
+    mockSelectionCounter: document.getElementById('mockSelectionCounter'),
+    mockSelectedCount: document.getElementById('mockSelectedCount'),
+    btnGenMockPaper: document.getElementById('btnGenMockPaper'),
+    btnEvaluateMock: document.getElementById('btnEvaluateMock'),
+    btnPrintMock: document.getElementById('btnPrintMock'),
+    mockPaperContent: document.getElementById('mockPaperContent'),
+    mockQuestionsList: document.getElementById('mockQuestionsList'),
+    mockTimerClock: document.getElementById('mockTimerClock'),
+    mockTimerToggleBtn: document.getElementById('mockTimerToggleBtn'),
+    mockTimerResetBtn: document.getElementById('mockTimerResetBtn'),
+    bookmarksOverlay: document.getElementById('bookmarksOverlay'),
+    bookmarksDrawer: document.getElementById('bookmarksDrawer'),
+    bookmarksCloseBtn: document.getElementById('bookmarksCloseBtn'),
+    bookmarksList: document.getElementById('bookmarksList'),
+    floatingAudioBar: document.getElementById('floatingAudioBar'),
+    audioPlayerTitle: document.getElementById('audioPlayerTitle'),
+    audioPlayerSubtitle: document.getElementById('audioPlayerSubtitle'),
+    audioPlayPauseBtn: document.getElementById('audioPlayPauseBtn'),
+    audioPlayPauseIcon: document.getElementById('audioPlayPauseIcon'),
+    audioStopBtn: document.getElementById('audioStopBtn'),
+    audioSpeedBtn: document.getElementById('audioSpeedBtn'),
+    siteHeader: document.querySelector('.site-header'),
+    headerSemesterBtn: document.getElementById('headerSemesterBtn'),
+    headerSemText: document.getElementById('headerSemText'),
+    headerSemDropdownWrap: document.getElementById('headerSemDropdownWrap'),
+    semDropdownBackdrop: document.getElementById('semDropdownBackdrop'),
+    headerSemDropdownMenu: document.getElementById('headerSemDropdownMenu'),
+    headerSemDropdownList: document.getElementById('headerSemDropdownList'),
+    headerSemDdAllBtn: document.getElementById('headerSemDdAllBtn'),
+    headerMobileMenuBtn: document.getElementById('headerMobileMenuBtn'),
+    mobileToolsOverlay: document.getElementById('mobileToolsOverlay'),
+    mobileToolsDrawer: document.getElementById('mobileToolsDrawer'),
+    mobileToolsCloseBtn: document.getElementById('mobileToolsCloseBtn'),
+    mtdMockBtn: document.getElementById('mtdMockBtn'),
+    mtdBnsBtn: document.getElementById('mtdBnsBtn'),
+    mtdBareActBtn: document.getElementById('mtdBareActBtn'),
+    mtdFlashcardsBtn: document.getElementById('mtdFlashcardsBtn'),
+    mtdBookmarksBtn: document.getElementById('mtdBookmarksBtn'),
+    mtdSemesterBtn: document.getElementById('mtdSemesterBtn'),
+    mtdContactBtn: document.getElementById('mtdContactBtn'),
+    headerContactBtn: document.getElementById('headerContactBtn'),
+    headerTelegramBtn: document.getElementById('headerTelegramBtn'),
+    headerEmailBtn: document.getElementById('headerEmailBtn'),
+    contactModalOverlay: document.getElementById('contactModalOverlay'),
+    contactModal: document.getElementById('contactModal'),
+    contactModalCloseBtn: document.getElementById('contactModalCloseBtn'),
+    copyContactEmailBtn: document.getElementById('copyContactEmailBtn'),
+    copyEmailIcon: document.getElementById('copyEmailIcon'),
+    copyEmailText: document.getElementById('copyEmailText'),
+    themeToggleBtn: document.getElementById('themeToggleBtn'),
+    brandLogo: document.getElementById('brandLogo'),
+    headerCommentsBtn: document.getElementById('headerCommentsBtn'),
+    readerCommentsBtn: document.getElementById('readerCommentsBtn'),
+    mtdCommentsBtn: document.getElementById('mtdCommentsBtn'),
+    footerContactBarCommentsLink: document.getElementById('footerContactBarCommentsLink'),
+    footerCommentsLink: document.getElementById('footerCommentsLink'),
+    communityCommentsSection: document.getElementById('communityCommentsSection'),
+    commentComposeCard: document.getElementById('commentComposeCard'),
+    commentComposeForm: document.getElementById('commentComposeForm'),
+    commentAuthorName: document.getElementById('commentAuthorName'),
+    commentAuthorCentre: document.getElementById('commentAuthorCentre'),
+    commentAuthorSemester: document.getElementById('commentAuthorSemester'),
+    commentSubjectTag: document.getElementById('commentSubjectTag'),
+    composeCatPills: document.getElementById('composeCatPills'),
+    composeStarRating: document.getElementById('composeStarRating'),
+    composeStarLabel: document.getElementById('composeStarLabel'),
+    commentContent: document.getElementById('commentContent'),
+    commentCharCount: document.getElementById('commentCharCount'),
+    commentDpdpConsent: document.getElementById('commentDpdpConsent'),
+    commentClearBtn: document.getElementById('commentClearBtn'),
+    commentSubmitBtn: document.getElementById('commentSubmitBtn'),
+    commentsSearchInput: document.getElementById('commentsSearchInput'),
+    commentsSearchClearBtn: document.getElementById('commentsSearchClearBtn'),
+    commentsSubjectFilter: document.getElementById('commentsSubjectFilter'),
+    commentsSortSelect: document.getElementById('commentsSortSelect'),
+    commentsCategoryPills: document.getElementById('commentsCategoryPills'),
+    commentsStream: document.getElementById('commentsStream'),
+    commentsEmptyState: document.getElementById('commentsEmptyState'),
+    commentsResetFiltersBtn: document.getElementById('commentsResetFiltersBtn'),
+    commentsLoadMoreWrap: document.getElementById('commentsLoadMoreWrap'),
+    commentsLoadMoreBtn: document.getElementById('commentsLoadMoreBtn'),
+    metricTotalComments: document.getElementById('metricTotalComments'),
+    metricAvgRating: document.getElementById('metricAvgRating'),
+    btnToggleCompose: document.getElementById('btnToggleCompose'),
+    btnToggleComposeLabel: document.getElementById('btnToggleComposeLabel'),
+    composeCloseBtn: document.getElementById('composeCloseBtn'),
+    commentsBottomPrompt: document.getElementById('commentsBottomPrompt'),
+    btnPromptCompose: document.getElementById('btnPromptCompose'),
+    discussionsBackBtn: document.getElementById('discussionsBackBtn'),
+
+    // Views
+    semesterView: document.getElementById('semesterView'),
+    subjectsView: document.getElementById('subjectsView'),
+    subjectHubView: document.getElementById('subjectHubView'),
+    discussionsView: document.getElementById('communityCommentsSection'),
+
+    // Semester View Elements
+    semesterGrid: document.getElementById('semesterGrid'),
+
+    // Subjects View Elements & 3D Books Showcase
+    currentSemHeading: document.getElementById('currentSemHeading'),
+    currentSemDesc: document.getElementById('currentSemDesc'),
+    subjectsQuickBar: document.getElementById('subjectsQuickBar'),
+    viewModeBooksBtn: document.getElementById('viewModeBooksBtn'),
+    viewModeGridBtn: document.getElementById('viewModeGridBtn'),
+    booksShowcaseWrap: document.getElementById('booksShowcaseWrap'),
+    booksShowcaseContainer: document.getElementById('booksShowcaseContainer'),
+    booksCanvas: document.getElementById('booksCanvas'),
+    bsPrev: document.getElementById('bsPrev'),
+    bsNext: document.getElementById('bsNext'),
+    bsCloseBtn: document.getElementById('bsCloseBtn'),
+    bsOpenSlip: document.getElementById('bsOpenSlip'),
+    bsDetailPanel: document.getElementById('bsDetailPanel'),
+    bsCodeBadge: document.getElementById('bsCodeBadge'),
+    bsSemBadge: document.getElementById('bsSemBadge'),
+    bsDetailTitle: document.getElementById('bsDetailTitle'),
+    bsDetailDesc: document.getElementById('bsDetailDesc'),
+    bsUnitsCount: document.getElementById('bsUnitsCount'),
+    bsYear: document.getElementById('bsYear'),
+    bsActionExplore: document.getElementById('bsActionExplore'),
+    subjectsGrid: document.getElementById('subjectsGrid'),
+    changeSemBtn: document.getElementById('changeSemBtn'),
+    subjectsBackBtn: document.getElementById('subjectsBackBtn'),
+    subjectsBreadcrumbSem: document.getElementById('subjectsBreadcrumbSem'),
+
+    // Subject Hub Elements
+    hubBreadcrumbSem: document.getElementById('hubBreadcrumbSem'),
+    hubBreadcrumbSub: document.getElementById('hubBreadcrumbSub'),
+    hubBackBtn: document.getElementById('hubBackBtn'),
+    hubCodeTag: document.getElementById('hubCodeTag'),
+    hubMottoTag: document.getElementById('hubMottoTag'),
+    hubTitle: document.getElementById('hubTitle'),
+    hubTagline: document.getElementById('hubTagline'),
+    hubUnitsPill: document.getElementById('hubUnitsPill'),
+    hubCasesPill: document.getElementById('hubCasesPill'),
+    hubPyqsPill: document.getElementById('hubPyqsPill'),
+    hubRevPill: document.getElementById('hubRevPill'),
+
+    // Progress Tracker
+    subjectProgressCount: document.getElementById('subjectProgressCount'),
+    subjectProgressText: document.getElementById('subjectProgressText'),
+    subjectProgressBar: document.getElementById('subjectProgressBar'),
+
+    // Hub Tabs & Filter
+    hubTabs: document.querySelectorAll('.hub-tab-btn'),
+    hubTabsContainer: document.querySelector('.hub-tabs-container'),
+    tabContentPanes: document.querySelectorAll('.tab-content-pane'),
+    hubSearchInput: document.getElementById('hubSearchInput'),
+    searchClearBtn: document.getElementById('searchClearBtn'),
+    unitFilterSelect: document.getElementById('unitFilterSelect'),
+    quickFilterChips: document.getElementById('quickFilterChips'),
+
+    // Tab Contents Containers
+    topicsContainer: document.getElementById('topicsContainer'),
+    casesContainer: document.getElementById('casesContainer'),
+    pyqsContainer: document.getElementById('pyqsContainer'),
+    revisionContainer: document.getElementById('revisionContainer'),
+
+    // Reader Modal (Print PDF removed as requested)
+    readerModal: document.getElementById('readerModal'),
+    readerTitle: document.getElementById('readerTitle'),
+    readerSubInfo: document.getElementById('readerSubInfo'),
+    readerIframe: document.getElementById('readerIframe'),
+    readerBackBtn: document.getElementById('readerBackBtn'),
+    readerCloseBtn: document.getElementById('readerCloseBtn'),
+    readerNewTabBtn: document.getElementById('readerNewTabBtn'),
+    readerFullscreenBtn: document.getElementById('readerFullscreenBtn'),
+
+    // Toast Notification & Floating Utilities
+    toastNotification: document.getElementById('toastNotification'),
+    toastMsg: document.getElementById('toastMsg'),
+    scrollTopBtn: document.getElementById('scrollTopBtn'),
+    mobileBottomNav: document.getElementById('mobileBottomNav'),
+    mobileNavItems: document.querySelectorAll('.mobile-nav-item'),
+
+    // Hub Hero Action Buttons
+    hubStartFlashcardsBtn: document.getElementById('hubStartFlashcardsBtn'),
+    hubOpenBareActBtn: document.getElementById('hubOpenBareActBtn'),
+
+    // Quick Bare Act Drawer Elements
+    bareActOverlay: document.getElementById('bareActOverlay'),
+    bareActDrawer: document.getElementById('bareActDrawer'),
+    bareActCloseBtn: document.getElementById('bareActCloseBtn'),
+    badActTabs: document.getElementById('badActTabs'),
+    bareActSearchInput: document.getElementById('bareActSearchInput'),
+    bareActClearSearch: document.getElementById('bareActClearSearch'),
+    badQuickRibbonWrap: document.getElementById('badQuickRibbonWrap'),
+    badQuickSecRibbon: document.getElementById('badQuickSecRibbon'),
+    bareActListContainer: document.getElementById('bareActListContainer'),
+    bareActList: document.getElementById('bareActList'),
+
+    // Flashcards Modal Elements
+    flashcardsModalOverlay: document.getElementById('flashcardsModalOverlay'),
+    flashcardsModal: document.getElementById('flashcardsModal'),
+    fcCloseBtn: document.getElementById('fcCloseBtn'),
+    activeFlashcard: document.getElementById('activeFlashcard'),
+    fcCardInner: document.getElementById('fcCardInner'),
+    fcFrontUnit: document.getElementById('fcFrontUnit'),
+    fcFrontName: document.getElementById('fcFrontName'),
+    fcFrontCitation: document.getElementById('fcFrontCitation'),
+    fcFrontFacts: document.getElementById('fcFrontFacts'),
+    fcFrontIssue: document.getElementById('fcFrontIssue'),
+    fcBackHolding: document.getElementById('fcBackHolding'),
+    fcBackDoctrine: document.getElementById('fcBackDoctrine'),
+    fcCurrentIdx: document.getElementById('fcCurrentIdx'),
+    fcTotalCount: document.getElementById('fcTotalCount'),
+    fcPrevBtn: document.getElementById('fcPrevBtn'),
+    fcNextBtn: document.getElementById('fcNextBtn'),
+    fcShuffleBtn: document.getElementById('fcShuffleBtn'),
+    fcBtnReview: document.getElementById('fcBtnReview'),
+    fcBtnMastered: document.getElementById('fcBtnMastered'),
+
+    // Student Feedback Elements (Google Form Style)
+    studentFeedbackSection: document.getElementById('studentFeedbackSection'),
+    studentFeedbackForm: document.getElementById('studentFeedbackForm'),
+    gfSubmitBtn: document.getElementById('gfSubmitBtn'),
+    gfClearBtn: document.getElementById('gfClearBtn'),
+    gfSuccessCard: document.getElementById('gfSuccessCard'),
+    gfResetBtn: document.getElementById('gfResetBtn'),
+    gfEmailBackupBtn: document.getElementById('gfEmailBackupBtn'),
+    headerFeedbackBtn: document.getElementById('headerFeedbackBtn'),
+    footerFeedbackLink: document.getElementById('footerFeedbackLink'),
+    footerContactBarFeedbackLink: document.getElementById('footerContactBarFeedbackLink'),
+    footerContactBtn: document.getElementById('footerContactBtn'),
+    contactModalFeedbackBtn: document.getElementById('contactModalFeedbackBtn'),
+    feedbackModalOverlay: document.getElementById('feedbackModalOverlay'),
+    feedbackModalCloseBtn: document.getElementById('feedbackModalCloseBtn'),
+    gfCloseModalSuccessBtn: document.getElementById('gfCloseModalSuccessBtn'),
+    mtdFeedbackBtn: document.getElementById('mtdFeedbackBtn')
+  };
+
+  // =========================================================================
+  // UNIVERSAL CLEAN PATH ROUTER & ROUTE PARSER
+  // =========================================================================
+  function parseRoute(pathname, search, hash) {
+    const rawPath = (pathname || window.location.pathname || '/').replace(/\/+$/, '') || '/';
+    const params = new URLSearchParams(search || window.location.search || '');
+    const currentHash = hash || window.location.hash || '';
+
+    // Direct static resources / pages - bypass SPA routing
+    if (
+      rawPath === '/about' || rawPath === '/about.html' ||
+      rawPath === '/terms' || rawPath === '/terms.html' ||
+      rawPath === '/privacy' || rawPath === '/privacy.html' ||
+      rawPath.endsWith('.html') || rawPath.endsWith('.pdf') || rawPath.endsWith('.svg')
+    ) {
+      return null;
+    }
+
+    // Direct Tools & Modals
+    if (rawPath === '/tools/bare-acts' || params.get('tool') === 'bare-acts') {
+      return { view: 'tool', tool: 'bare-acts' };
+    }
+    if (rawPath === '/tools/bns-converter' || rawPath === '/tools/bns' || params.get('tool') === 'bns') {
+      return { view: 'tool', tool: 'bns' };
+    }
+    if (rawPath === '/tools/flashcards' || params.get('tool') === 'flashcards') {
+      return { view: 'tool', tool: 'flashcards' };
+    }
+    if (rawPath === '/feedback' || currentHash === '#feedback' || params.get('feedback') === 'true') {
+      return { view: 'feedback' };
+    }
+    if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
+      return { view: 'contact' };
+    }
+    if (
+      rawPath === '/comments' || rawPath === '/discussions' ||
+      currentHash === '#comments' || currentHash === '#discussions' ||
+      currentHash === '#communityCommentsSection' || currentHash.startsWith('#comm-') ||
+      params.get('comments') === 'true' || params.get('discussions') === 'true'
+    ) {
+      return { view: 'discussions', subject: params.get('subject') || null };
+    }
+
+    // Subject route: /subject/:subId or /subject/:subId/:tab
+    const subjectMatch = rawPath.match(/^\/(?:subject|s)\/([a-zA-Z0-9_-]+)(?:\/([a-zA-Z0-9_-]+))?$/i);
+    if (subjectMatch) {
+      const subId = subjectMatch[1].toLowerCase();
+      const tab = subjectMatch[2] ? subjectMatch[2].toLowerCase() : (params.get('tab') || 'topics');
+      return { view: 'hub', subId, tab };
+    }
+
+    // Direct subject alias: e.g. /contract or /contract/cases
+    const cleanSlugMatch = rawPath.match(/^\/([a-zA-Z0-9_-]+)(?:\/([a-zA-Z0-9_-]+))?$/i);
+    if (cleanSlugMatch) {
+      const candidate = cleanSlugMatch[1].toLowerCase();
+      const data = window.DU_LAW_PORTAL_DATA;
+      if (data && data.subjects && data.subjects[candidate]) {
+        const tab = cleanSlugMatch[2] ? cleanSlugMatch[2].toLowerCase() : (params.get('tab') || 'topics');
+        return { view: 'hub', subId: candidate, tab };
+      }
+    }
+
+    // Semester route: /semester-1, /semester/1, /sem-1, /sem/1
+    const semMatch = rawPath.match(/^\/(?:semester|sem)[-/]?([1-6])$/i);
+    if (semMatch) {
+      return { view: 'subjects', semId: parseInt(semMatch[1], 10) };
+    }
+
+    // Legacy query params fallbacks for backwards compatibility
+    const qSub = params.get('subject') || params.get('sub');
+    const qSem = params.get('sem');
+    const qTab = params.get('tab') || 'topics';
+    if (qSub) {
+      return { view: 'hub', subId: qSub, tab: qTab, semId: parseInt(qSem, 10) || undefined };
+    }
+    if (qSem) {
+      return { view: 'subjects', semId: parseInt(qSem, 10) || 1 };
+    }
+    if (params.get('view') === 'subjects') {
+      const savedSem = localStorage.getItem('du_law_selected_semester');
+      return { view: 'subjects', semId: savedSem ? parseInt(savedSem, 10) : 1 };
+    }
+
+    return { view: 'semester' };
+  }
+
+  // =========================================================================
+  // TOAST NOTIFICATION SYSTEM
+  // =========================================================================
+  let toastTimeout = null;
+  function showToast(msg, icon = 'fa-circle-check') {
+    if (!elements.toastNotification) return;
+    elements.toastMsg.textContent = msg;
+    const iconEl = elements.toastNotification.querySelector('i');
+    if (iconEl) iconEl.className = `fa-solid ${icon}`;
+
+    elements.toastNotification.classList.add('show');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      elements.toastNotification.classList.remove('show');
+    }, 2400);
+  }
+
+  // =========================================================================
+  // MARKDOWN TO HTML PARSER (For Revision, Tables & Model Answers)
+  // =========================================================================
+  function renderMarkdown(md) {
+    if (!md) return '';
+    let html = md.trim();
+
+    // Auto-hyperlink Statutory Section mentions to Quick Bare Act Drawer
+    const secMentionRegex = /\b(?:Section|Sec\.?|S\.)\s*([0-9]+[A-Z]?(?:\([0-9a-zA-Z]+\))*)/gi;
+    html = html.replace(secMentionRegex, (match, secNum) => {
+      return `<a href="javascript:void(0)" class="bare-act-link" data-sec="${secNum}" title="Open Section ${secNum} in Bare Act Drawer"><i class="fa-solid fa-book-bookmark"></i> ${match}</a>`;
+    });
+
+    // Markdown Tables to responsive HTML tables
+    const tableRegex = /\|(.+)\|[\r\n]+\|[-:| ]+\|[\r\n]+((?:\|.+[\|\r\n]+)+)/g;
+    html = html.replace(tableRegex, (match, headerRow, bodyRows) => {
+      const headers = headerRow.split('|').filter(h => h.trim()).map(h => `<th>${h.trim()}</th>`).join('');
+      const rows = bodyRows.trim().split('\n').map(row => {
+        const cols = row.split('|').filter(c => c.trim()).map(c => `<td>${c.trim()}</td>`).join('');
+        return cols ? `<tr>${cols}</tr>` : '';
+      }).join('');
+      return `<div class="table-responsive rev-table-wrap md-table-wrap" style="overflow-x:auto; width:100%; max-width:100%; box-sizing:border-box; margin:14px 0; -webkit-overflow-scrolling:touch;"><table class="rev-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>`;
+    });
+
+    // Headings
+    html = html.replace(/^### (.*$)/gim, '<h4 style="font-size:1.1rem; margin:16px 0 8px; color:var(--sub-primary);">$1</h4>');
+    html = html.replace(/^## (.*$)/gim, '<h3 style="font-size:1.25rem; margin:20px 0 10px; color:var(--text-main);">$1</h3>');
+
+    // Bullet Lists (only markdown dash bullets, don't corrupt existing HTML <ol> or <ul>)
+    html = html.replace(/^(\s*)-\s+(.*$)/gim, '<li class="md-bullet">$2</li>');
+    html = html.replace(/((?:<li class="md-bullet">.*<\/li>[\r\n]*)+)/g, '<ul style="margin:8px 0 14px 18px; line-height:1.55;">$1</ul>');
+
+    // Bold, Italic, Strikethrough
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+
+    // Line breaks for plain markdown paragraphs (don't break already structured HTML blocks)
+    if (!/<(?:p|div|table|h[1-6]|ul|ol|blockquote)[>\s]/i.test(html)) {
+      html = html.replace(/\n\n+/g, '<br><br>').replace(/\n/g, '<br>');
+    }
+
+    // Ensure any raw HTML <table> is enclosed in a responsive scroll wrapper
+    html = html.replace(/(<table\b[^>]*>[\s\S]*?<\/table>)/gi, (tbl) => {
+      return `<div class="table-responsive" style="width:100%; overflow-x:auto; margin:14px 0; -webkit-overflow-scrolling:touch;">${tbl}</div>`;
+    });
+
+    return html;
+  }
+
+  // =========================================================================
+  // THEME & COLOR SYSTEM
+  // =========================================================================
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      elements.themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      localStorage.setItem('du_law_theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      elements.themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      localStorage.setItem('du_law_theme', 'light');
+    }
+    if (elements.readerIframe && elements.readerIframe.contentDocument && elements.readerIframe.contentDocument.documentElement) {
+      try {
+        if (isDark) {
+          elements.readerIframe.contentDocument.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          elements.readerIframe.contentDocument.documentElement.removeAttribute('data-theme');
+        }
+      } catch (e) {}
+    }
+  }
+
+  function applySubjectTheme(subTheme, subId) {
+    if (!subTheme) return;
+    const root = document.documentElement;
+    root.style.setProperty('--sub-primary', subTheme.primary);
+    root.style.setProperty('--sub-primary-dark', subTheme.primaryDark);
+    root.style.setProperty('--sub-primary-light', subTheme.primaryLight);
+    root.style.setProperty('--sub-accent', subTheme.accent);
+    root.style.setProperty('--sub-accent-light', subTheme.accentLight);
+    root.style.setProperty('--sub-bg-tint', subTheme.bgTint);
+    root.style.setProperty('--sub-border', subTheme.border);
+    root.style.setProperty('--sub-badge-bg', subTheme.badgeBg);
+    root.style.setProperty('--sub-badge-color', subTheme.badgeColor);
+    root.style.setProperty('--sub-gradient', subTheme.gradient);
+    if (subId) {
+      document.body.setAttribute('data-active-subject', subId);
+    }
+  }
+
+  // =========================================================================
+  // ANALYTICS TRACKER (Google Analytics 4 / gtag)
+  // =========================================================================
+  function trackEvent(eventName, params = {}) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', eventName, params);
+      }
+    } catch (err) {
+      // Non-blocking analytics
+    }
+  }
+
+  // =========================================================================
+  // STUDY PROGRESS TRACKER
+  // =========================================================================
+  function getSubjectProgress(subId, totalUnits) {
+    if (!totalUnits || totalUnits === 0) return { completed: 0, percent: 0 };
+    const list = state.completedUnits[subId] || [];
+    const completed = list.length;
+    const percent = Math.min(100, Math.round((completed / totalUnits) * 100));
+    return { completed, percent };
+  }
+
+  function toggleUnitCompleted(subId, unitNum) {
+    if (!state.completedUnits[subId]) {
+      state.completedUnits[subId] = [];
+    }
+    const list = state.completedUnits[subId];
+    const idx = list.indexOf(unitNum);
+    let isNowCompleted = false;
+
+    if (idx === -1) {
+      list.push(unitNum);
+      isNowCompleted = true;
+      showToast(`Unit ${unitNum} marked as Revised! 🎉`, 'fa-circle-check');
+    } else {
+      list.splice(idx, 1);
+      isNowCompleted = false;
+      showToast(`Unit ${unitNum} unmarked`, 'fa-circle-xmark');
+    }
+
+    localStorage.setItem('du_law_completed_units', JSON.stringify(state.completedUnits));
+    updateProgressUI();
+    renderTopicsTab(state.currentSubject);
+    return isNowCompleted;
+  }
+
+  function updateProgressUI() {
+    if (!state.currentSubject) return;
+    const subId = state.currentSubject.id;
+    const total = state.currentSubject.units ? state.currentSubject.units.length : 0;
+    const { completed, percent } = getSubjectProgress(subId, total);
+
+    if (elements.subjectProgressCount) elements.subjectProgressCount.textContent = `${completed} of ${total} topics`;
+    if (elements.subjectProgressText) elements.subjectProgressText.textContent = `${percent}% Done`;
+    if (elements.subjectProgressBar) elements.subjectProgressBar.style.width = `${percent}%`;
+  }
+
+  // =========================================================================
+  // VIEW SWITCHING
+  // =========================================================================
+  function showView(viewName, pushHistory = false) {
+    document.body.classList.remove('reader-open');
+    document.documentElement.classList.remove('reader-open');
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.removeProperty('display');
+      elements.hubTabsContainer.classList.remove('is-hidden');
+    }
+    elements.semesterView.classList.remove('active');
+    elements.subjectsView.classList.remove('active');
+    elements.subjectHubView.classList.remove('active');
+    if (elements.discussionsView) elements.discussionsView.classList.remove('active');
+    if (elements.mobileBottomNav) elements.mobileBottomNav.classList.remove('active');
+
+    if (viewName === 'semester') {
+      document.body.removeAttribute('data-active-subject');
+      elements.semesterView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Choose Semester';
+      }
+      renderHeaderSemDropdown();
+      renderSemesterSelection();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        document.title = 'Make Law Easy — Delhi University Law Notes Portal (LL.B.)';
+        if (!window.history.state || window.history.state.view !== 'semester') {
+          window.history.pushState({ view: 'semester' }, '', '/');
+        }
+      }
+    } else if (viewName === 'subjects') {
+      document.body.removeAttribute('data-active-subject');
+      elements.subjectsView.classList.add('active');
+      if (elements.headerSemText && state.currentSemester) {
+        elements.headerSemText.textContent = `Semester ${state.currentSemester}`;
+      }
+      if (elements.subjectsBreadcrumbSem && state.currentSemester) {
+        const romMap = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI' };
+        elements.subjectsBreadcrumbSem.textContent = `Semester ${romMap[state.currentSemester] || state.currentSemester}`;
+      }
+      renderHeaderSemDropdown();
+      renderSubjectsGrid();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory && state.currentSemester) {
+        document.title = `Semester ${state.currentSemester} Subjects & Syllabus | Make Law Easy`;
+        const semUrl = `/semester-${state.currentSemester}`;
+        if (!window.history.state || window.history.state.view !== 'subjects' || window.history.state.semId !== state.currentSemester) {
+          window.history.pushState({ view: 'subjects', semId: state.currentSemester }, '', semUrl);
+        }
+      }
+    } else if (viewName === 'hub') {
+      elements.subjectHubView.classList.add('active');
+      if (elements.mobileBottomNav) elements.mobileBottomNav.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (viewName === 'discussions') {
+      document.body.removeAttribute('data-active-subject');
+      if (elements.discussionsView) elements.discussionsView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Discussions';
+      }
+      renderCommentsStream();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        document.title = 'Student Academic Discussions & Insights | Make Law Easy';
+        if (!window.history.state || window.history.state.view !== 'discussions') {
+          window.history.pushState({ view: 'discussions' }, '', '/discussions');
+        }
+      }
+    }
+  }
+
+  // =========================================================================
+  // HEADER SEMESTER DROPDOWN (Click & Hover Interactive Menu)
+  // =========================================================================
+  let semDropdownHoverTimer = null;
+  let lastHoverOpenTime = 0;
+
+  function isFinePointer() {
+    return !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+  }
+
+  function openHeaderSemDropdown(fromHover = false) {
+    if (!elements.headerSemDropdownWrap) return;
+    clearTimeout(semDropdownHoverTimer);
+    if (fromHover) {
+      lastHoverOpenTime = Date.now();
+    }
+    elements.headerSemDropdownWrap.classList.add('is-open');
+    if (elements.siteHeader) {
+      elements.siteHeader.classList.add('has-open-dropdown');
+    }
+    if (elements.headerSemesterBtn) {
+      elements.headerSemesterBtn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  function closeHeaderSemDropdown() {
+    if (!elements.headerSemDropdownWrap) return;
+    clearTimeout(semDropdownHoverTimer);
+    elements.headerSemDropdownWrap.classList.remove('is-open');
+    if (elements.siteHeader) {
+      elements.siteHeader.classList.remove('has-open-dropdown');
+    }
+    if (elements.headerSemesterBtn) {
+      elements.headerSemesterBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  function toggleHeaderSemDropdown() {
+    if (!elements.headerSemDropdownWrap) return;
+    // Debounce against simulated clicks right after hover on hybrid/touch screens
+    if (Date.now() - lastHoverOpenTime < 400 && elements.headerSemDropdownWrap.classList.contains('is-open')) {
+      return;
+    }
+    if (elements.headerSemDropdownWrap.classList.contains('is-open')) {
+      closeHeaderSemDropdown();
+    } else {
+      openHeaderSemDropdown(false);
+    }
+  }
+
+  function renderHeaderSemDropdown() {
+    const data = window.DU_LAW_PORTAL_DATA;
+    if (!data || !elements.headerSemDropdownList) return;
+
+    const romanNumerals = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
+    elements.headerSemDropdownList.innerHTML = data.semesters.map(sem => {
+      const isSelected = state.currentSemester === sem.id;
+      const roman = romanNumerals[sem.id] || sem.id;
+      const count = sem.subjectIds ? sem.subjectIds.length : 0;
+      const statusText = sem.active ? `${count} Subjects` : 'Coming Soon';
+      const badgeClass = sem.active ? 'badge-active' : 'badge-upcoming';
+
+      return `
+        <div class="sem-dd-item ${sem.active ? 'active-sem' : 'upcoming-sem'} ${isSelected ? 'is-selected' : ''}" 
+             data-sem-id="${sem.id}" 
+             role="menuitem"
+             tabindex="0"
+             title="${sem.name} (${sem.term})">
+          <div class="sem-dd-roman">${roman}</div>
+          <div class="sem-dd-info">
+            <div class="sem-dd-name-row">
+              <span class="sem-dd-name">${sem.name}</span>
+              ${isSelected ? '<span class="sem-dd-curr-tag"><i class="fa-solid fa-circle-check"></i> Active</span>' : ''}
+            </div>
+            <div class="sem-dd-term">${sem.term} &bull; <span class="sem-dd-badge ${badgeClass}">${statusText}</span></div>
+          </div>
+          <div class="sem-dd-arrow">
+            <i class="fa-solid ${sem.active ? 'fa-chevron-right' : 'fa-lock'}"></i>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    elements.headerSemDropdownList.querySelectorAll('.sem-dd-item').forEach(item => {
+      const handleSelect = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const semId = parseInt(item.dataset.semId, 10);
+        const semObj = data.semesters.find(s => s.id === semId);
+        if (semObj && semObj.active) {
+          selectSemester(semId);
+          closeHeaderSemDropdown();
+        } else {
+          showToast(`${semObj ? semObj.name : 'This semester'} is coming soon! Uploading in few days. ⏳`, 'fa-clock');
+          closeHeaderSemDropdown();
+        }
+      };
+
+      item.addEventListener('click', handleSelect);
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleSelect(e);
+        }
+      });
+    });
+  }
+
+  // =========================================================================
+  // 1. SEMESTER SELECTION VIEW
+  // =========================================================================
+  function renderSemesterSelection() {
+    const data = window.DU_LAW_PORTAL_DATA;
+    if (!data) return;
+
+    elements.semesterGrid.innerHTML = data.semesters.map(sem => {
+      const isActive = sem.active;
+      const romanNumerals = ['', 'I', 'II', 'III', 'IV', 'V', 'VI'];
+      const roman = romanNumerals[sem.id] || sem.id;
+
+      const loadedCount = (sem.subjectIds && sem.subjectIds.length) || 0;
+      let subjectCountText = `${loadedCount} Core Subjects Loaded`;
+      if (!isActive) {
+        subjectCountText = sem.id === 4 ? '5 Subjects Coming Soon' : '4 Subjects Coming Soon';
+      }
+
+      const topBadgeText = isActive ? `${loadedCount} Subjects Loaded` : 'Coming Soon';
+
+      return `
+        <div class="sem-card ${isActive ? 'active-sem' : 'coming-soon'}" data-sem-id="${sem.id}">
+          <div class="sem-card-strip"></div>
+          <div class="sem-card-inner">
+            <div class="sem-card-top">
+              <span class="sem-roman">${roman}</span>
+              <span class="sem-status-badge ${isActive ? 'badge-active' : 'badge-upcoming'}">
+                <i class="fa-solid ${isActive ? 'fa-circle-check' : 'fa-clock'}"></i>
+                <span>${topBadgeText}</span>
+              </span>
+            </div>
+            <div class="sem-card-body">
+              <h3>${sem.name}</h3>
+              <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>${sem.term}</span></div>
+              <div class="sem-subject-count-pill">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>${subjectCountText}</span>
+              </div>
+            </div>
+            <button class="sem-liquid-metal-btn ${isActive ? 'active-sem-btn' : 'disabled-sem-btn'}" ${!isActive ? 'disabled' : ''} type="button">
+              <div class="metal-inner-body">
+                <div class="metal-icon-circle">
+                  <i class="fa-solid ${isActive ? 'fa-arrow-right' : 'fa-clock'}"></i>
+                </div>
+                <span class="metal-btn-lbl">${isActive ? `Enter ${sem.name} Subjects` : 'Uploading in Few Days'}</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    elements.semesterGrid.querySelectorAll('.sem-card.active-sem').forEach(card => {
+      card.addEventListener('click', () => {
+        const semId = parseInt(card.dataset.semId, 10);
+        selectSemester(semId);
+      });
+    });
+
+    elements.semesterGrid.querySelectorAll('.sem-card.coming-soon').forEach(card => {
+      card.addEventListener('click', () => {
+        const semId = parseInt(card.dataset.semId, 10);
+        const semObj = data.semesters.find(s => s.id === semId);
+        showToast(`${semObj ? semObj.name : 'This semester'} is coming soon! Uploading in few days. ⏳`, 'fa-clock');
+      });
+    });
+
+    elements.semesterGrid.querySelectorAll('.sem-liquid-metal-btn').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+    });
+  }
+
+  function selectSemester(semId, pushHistory = true) {
+    state.currentSemester = semId;
+    localStorage.setItem('du_law_selected_semester', semId);
+    if (elements.headerSemText) {
+      elements.headerSemText.textContent = `Semester ${semId}`;
+    }
+    if (elements.subjectsBreadcrumbSem) {
+      const romMap = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI' };
+      elements.subjectsBreadcrumbSem.textContent = `Semester ${romMap[semId] || semId}`;
+    }
+    renderHeaderSemDropdown();
+    showView('subjects', false);
+
+    if (pushHistory) {
+      document.title = `Semester ${semId} Subjects & Syllabus | Make Law Easy`;
+      const semUrl = `/semester-${semId}`;
+      if (!window.history.state || window.history.state.view !== 'subjects' || window.history.state.semId !== semId) {
+        window.history.pushState({ view: 'subjects', semId: semId }, '', semUrl);
+      }
+    }
+    trackEvent('select_semester', { semester_id: semId, semester_name: `Semester ${semId}` });
+  }
+
+  // =========================================================================
+  // 2. SUBJECTS SELECTION VIEW
+  // =========================================================================
+  function applySubjectsViewMode(mode) {
+    mode = 'books';
+    state.subjectsViewMode = 'books';
+    localStorage.setItem('du_subjects_view_mode', 'books');
+
+    if (elements.subjectsView) {
+      elements.subjectsView.classList.remove('mode-grid');
+      elements.subjectsView.classList.add('mode-books');
+    }
+
+    if (elements.viewModeBooksBtn && elements.viewModeGridBtn) {
+      elements.viewModeBooksBtn.classList.add('active');
+      elements.viewModeGridBtn.classList.remove('active');
+    }
+
+    // Ensure Three.js canvas resizes appropriately
+    if (window.DUBooksShowcase) {
+      window.dispatchEvent(new Event('resize'));
+    }
+  }
+
+  function renderSubjectsGrid() {
+    const data = window.DU_LAW_PORTAL_DATA;
+    if (!data || !state.currentSemester) return;
+
+    const currentSemObj = data.semesters.find(s => s.id === state.currentSemester);
+    if (!currentSemObj) return;
+
+    elements.currentSemHeading.textContent = `${currentSemObj.name} — Core Subjects`;
+    elements.currentSemDesc.textContent = `${currentSemObj.term} • Select any subject dossier below to open syllabus, landmark cases, and PYQ dossier.`;
+
+    // Apply active view mode (3D Books or Standard Grid)
+    applySubjectsViewMode(state.subjectsViewMode || 'books');
+
+    // Load current semester into 3D Books Showcase
+    if (window.DUBooksShowcase) {
+      window.DUBooksShowcase.loadSemester(state.currentSemester);
+    }
+
+    const subjectIds = currentSemObj.subjectIds;
+    const subjectsList = subjectIds.map(id => data.subjects[id]).filter(Boolean);
+
+    // Quick Subject Navigation Strip (Hidden across all semesters per user directive)
+    if (elements.subjectsQuickBar) {
+      elements.subjectsQuickBar.innerHTML = '';
+      elements.subjectsQuickBar.style.display = 'none';
+    }
+
+    elements.subjectsGrid.innerHTML = subjectsList.map(sub => {
+      const theme = sub.theme;
+      const totalUnits = sub.units ? sub.units.length : 0;
+      const { completed, percent } = getSubjectProgress(sub.id, totalUnits);
+
+      return `
+        <div class="subject-card fade-in" data-sub-id="${sub.id}" data-subject="${sub.id}" style="--card-accent: ${theme.primary};">
+          <div class="sub-card-banner" style="background: ${theme.gradient};">
+            <div class="sub-code-row">
+              <span class="sub-code-badge">${sub.code}</span>
+              <div class="sub-icon-box"><i class="fa-solid ${theme.icon}"></i></div>
+            </div>
+            <div class="sub-card-banner-content">
+              ${theme.motto ? `<div class="sub-card-motto"><i class="fa-solid fa-scroll"></i> ${theme.motto}</div>` : ''}
+              <h3>${sub.name}</h3>
+              <p class="sub-tagline">${theme.tagline}</p>
+            </div>
+          </div>
+
+          <div class="sub-card-body">
+            <div class="sub-stats-row">
+              <div class="stat-item">
+                <div class="stat-value">${totalUnits}</div>
+                <div class="stat-label">Units</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">${sub.cases ? sub.cases.length : 0}</div>
+                <div class="stat-label">Cases</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">${sub.pyqs ? sub.pyqs.length : 0}</div>
+                <div class="stat-label">PYQs</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">${percent}%</div>
+                <div class="stat-label">Revised</div>
+              </div>
+            </div>
+
+            <div class="sub-open-btn topic-liquid-metal-btn">
+              <div class="metal-inner-body">
+                <div class="metal-icon-circle">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+                <span class="metal-btn-lbl">Open Subject Hub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    elements.subjectsGrid.querySelectorAll('.subject-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const subId = card.dataset.subId;
+        openSubjectHub(subId);
+      });
+    });
+  }
+
+  function updateActiveSubjectPill(idx, book) {
+    if (!elements.subjectsQuickBar) return;
+    // Quick-bar is hidden per user directive
+  }
+
+  // =========================================================================
+  // 3. SUBJECT HUB VIEW & SPECIALIZED TABS
+  // =========================================================================
+  function openSubjectHub(subId, pushHistory = true) {
+    const data = window.DU_LAW_PORTAL_DATA;
+    const sub = data.subjects[subId];
+    if (!sub) {
+      showToast('Comprehensive notes for this subject are uploading soon!', 'fa-clock');
+      return;
+    }
+
+    state.currentSubject = sub;
+    state.currentTab = 'topics';
+    state.searchQuery = '';
+    state.selectedUnitFilter = 'all';
+    state.activeQuickFilter = 'all';
+
+    // Apply Subject Theme!
+    applySubjectTheme(sub.theme, sub.id);
+
+    // Update Hub Banner Header
+    elements.hubBreadcrumbSem.textContent = `Semester ${state.currentSemester}`;
+    elements.hubBreadcrumbSub.textContent = sub.shortName;
+    elements.hubCodeTag.textContent = sub.code || '';
+    if (elements.hubMottoTag) {
+      if (sub.theme.motto) {
+        elements.hubMottoTag.textContent = sub.theme.motto;
+        elements.hubMottoTag.style.display = 'inline-block';
+      } else {
+        elements.hubMottoTag.style.display = 'none';
+      }
+    }
+    elements.hubTitle.textContent = sub.name;
+    elements.hubTagline.textContent = sub.theme.tagline;
+
+    // Update Metric Counter Pills
+    elements.hubUnitsPill.innerHTML = `📚 <b>${(sub.units || []).length}</b> Units / Topics`;
+    elements.hubCasesPill.innerHTML = `⚖️ <b>${(sub.cases || []).length}</b> Landmark Cases`;
+    elements.hubPyqsPill.innerHTML = `📝 <b>${(sub.pyqs || []).length}</b> DU PYQs with Answers`;
+    elements.hubRevPill.innerHTML = `⚡ <b>${(sub.revisions || sub.revision || []).length}</b> Topic Revision Capsules`;
+
+    // Update Progress
+    updateProgressUI();
+
+    // Populate Unit Filter Select Dropdown
+    elements.unitFilterSelect.innerHTML = '<option value="all">All Units / Topics</option>' +
+      sub.units.map(u => `<option value="${u.number}">Unit ${u.number}: ${u.title}</option>`).join('');
+
+    // Reset Search Input
+    elements.hubSearchInput.value = '';
+    if (elements.searchClearBtn) elements.searchClearBtn.style.display = 'none';
+
+    // Switch to Hub View
+    showView('hub', false);
+
+    if (pushHistory) {
+      const semId = state.currentSemester || 1;
+      const hubUrl = `/subject/${subId}`;
+      document.title = `${sub.name} (${sub.code || ''}) | Make Law Easy`;
+      if (!window.history.state || window.history.state.view !== 'hub' || window.history.state.subId !== subId) {
+        window.history.pushState({ view: 'hub', semId: semId, subId: subId, tab: 'topics' }, '', hubUrl);
+      }
+    }
+
+    trackEvent('view_subject_hub', {
+      subject_id: subId,
+      subject_name: sub.name,
+      subject_code: sub.code,
+      semester_id: state.currentSemester
+    });
+
+    // Switch to Default Tab without pushing redundant history
+    switchHubTab('topics', false);
+  }
+
+  function switchHubTab(tabName, pushHistory = true) {
+    state.currentTab = tabName;
+    state.activeQuickFilter = 'all';
+
+    if (pushHistory && state.currentSubject) {
+      const subId = state.currentSubject.id;
+      const tabPath = tabName === 'topics' ? `/subject/${subId}` : `/subject/${subId}/${tabName}`;
+      const tabTitles = {
+        topics: `${state.currentSubject.name} (${state.currentSubject.code || ''}) | Make Law Easy`,
+        cases: `Landmark Cases — ${state.currentSubject.name} | Make Law Easy`,
+        pyqs: `PYQs & Model Answers — ${state.currentSubject.name} | Make Law Easy`,
+        revision: `Quick Revision — ${state.currentSubject.name} | Make Law Easy`
+      };
+      document.title = tabTitles[tabName] || `${state.currentSubject.name} | Make Law Easy`;
+      if (!window.history.state || window.history.state.tab !== tabName || window.history.state.subId !== subId) {
+        window.history.pushState({ view: 'hub', semId: state.currentSemester, subId: subId, tab: tabName }, '', tabPath);
+      }
+    }
+
+    trackEvent('switch_tab', {
+      tab_name: tabName,
+      subject_id: state.currentSubject ? state.currentSubject.id : ''
+    });
+
+    // Update Desktop Tabs
+    elements.hubTabs.forEach(btn => {
+      if (btn.dataset.tab === tabName) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Update Mobile Bottom Nav
+    elements.mobileNavItems.forEach(item => {
+      if (item.dataset.tab === tabName) {
+        item.classList.add('active');
+      } else {
+        item.classList.remove('active');
+      }
+    });
+
+    // Show corresponding tab pane
+    elements.tabContentPanes.forEach(pane => {
+      if (pane.id === `${tabName}TabPane`) {
+        pane.classList.add('active');
+      } else {
+        pane.classList.remove('active');
+      }
+    });
+
+    // Render Quick Filter Chips for active tab
+    renderQuickFilterChips();
+
+    // Render active tab content
+    renderActiveTabContent();
+  }
+
+  // -------------------------------------------------------------------------
+  // QUICK FILTER CHIPS
+  // -------------------------------------------------------------------------
+  function renderQuickFilterChips() {
+    if (!elements.quickFilterChips) return;
+    let chips = [];
+
+    if (state.currentTab === 'topics') {
+      chips = [];
+      if (state.activeQuickFilter === 'completed' || state.activeQuickFilter === 'pending') {
+        state.activeQuickFilter = 'all';
+      }
+    } else if (state.currentTab === 'cases') {
+      chips = [
+        { id: 'all', label: 'All Cases' },
+        { id: 'sc', label: 'Supreme Court of India' },
+        { id: 'landmark', label: 'Landmark Precedents' }
+      ];
+    } else if (state.currentTab === 'pyqs') {
+      chips = [
+        { id: 'all', label: 'All PYQs' },
+        { id: '20', label: '20 Marks (Essays)' },
+        { id: '10', label: '10 Marks (Problems)' },
+        { id: 'bookmarked', label: '★ Bookmarked' }
+      ];
+    } else if (state.currentTab === 'revision') {
+      chips = [
+        { id: 'all', label: 'All Topic Capsules' },
+        { id: 'mustquote', label: '⭐ Must-Quote Lines & Tables' },
+        { id: 'strategy', label: '💡 Exam Strategies' },
+        { id: 'casemap', label: '⚖️ Case–Judge Maps' }
+      ];
+    }
+
+    if (chips.length === 0) {
+      elements.quickFilterChips.innerHTML = '';
+      elements.quickFilterChips.style.display = 'none';
+      return;
+    }
+    elements.quickFilterChips.style.removeProperty('display');
+
+    elements.quickFilterChips.innerHTML = chips.map(c => `
+      <button class="filter-chip ${state.activeQuickFilter === c.id ? 'active' : ''}" data-chip-id="${c.id}" type="button">
+        <div class="chip-inner-body">
+          <span>${c.label}</span>
+        </div>
+      </button>
+    `).join('');
+
+    elements.quickFilterChips.querySelectorAll('.filter-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.activeQuickFilter = btn.dataset.chipId;
+        renderQuickFilterChips();
+        renderActiveTabContent();
+      });
+    });
+  }
+
+  function renderActiveTabContent() {
+    const sub = state.currentSubject;
+    if (!sub) return;
+
+    if (state.currentTab === 'topics') {
+      renderTopicsTab(sub);
+    } else if (state.currentTab === 'cases') {
+      renderCasesTab(sub);
+    } else if (state.currentTab === 'pyqs') {
+      renderPyqsTab(sub);
+    } else if (state.currentTab === 'revision') {
+      renderRevisionTab(sub);
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 1: ALL TOPICS / COMPREHENSIVE NOTES
+  // -------------------------------------------------------------------------
+  const TOPIC_MAXIMS = {
+    // Constitutional Law - I (LB-301)
+    'constitution-1': 'Lex Suprema • The Constitution is the supreme Grundnorm of the Indian Republic',
+    'constitution-2': 'Indestructible Union of Destructible States • Article 1 Sovereign Territory Architecture',
+    'constitution-3': 'Salus Populi Suprema Lex • Executive accountability and constitutional governance',
+    'constitution-4': 'Lex Parliamenti • Legislative supremacy, democratic mandates and parliamentary privileges',
+    'constitution-5': 'Necessitas Non Habet Legem • Strict constitutional limits on executive ordinances',
+    'constitution-6': 'Fiat Justitia Ruat Caelum • Independence of the Judiciary and institutional integrity',
+    'constitution-7': 'Ubi Jus Ibi Remedium • Epistolary writ jurisdiction and Public Interest Litigation',
+    'constitution-8': 'Ut Res Magis Valeat Quam Pereat • Harmonious construction of legislative powers',
+    'constitution-9': 'Commercium Sine Obstaculo • Freedom of trade, commerce and intercourse across borders',
+    'constitution-10': 'Salus Populi Suprema Lex • Constitutional checks against arbitrary emergency proclamations',
+
+    // Jurisprudence
+    'juris-1': 'Yato Dharmastato Jayah • Where there is Dharma, there is Victory',
+    'juris-2': 'Lex Loci • The Law of the Land',
+    'juris-3': 'Audi Alteram Partem • Hear the other side (Universal Natural Justice)',
+    'juris-4': 'Stare Decisis et non quieta movere • Stand by decisions and do not disturb settled law',
+    'juris-5': 'Consuetudo pro lege servatur • Custom is observed as law',
+    'juris-6': 'Quod principi placuit, legis habet vigorem • What pleases the sovereign has the force of law',
+    'juris-7': 'Lex injusta non est lex • An unjust law is not law',
+
+    // Contract
+    'contract-1': 'Pacta Sunt Servanda • Agreements must be kept',
+    'contract-2': 'Consensus Ad Idem • Meeting of minds on the same thing in the same sense',
+    'contract-3': 'Invitatio ad offerendum • An invitation to treat is not an offer',
+    'contract-4': 'Ex Nudo Pacto Non Oritur Actio • No action arises from a bare agreement without consideration',
+    'contract-5': 'Privilegium personae non praejudicat juri alii • Infancy protection against contractual liability',
+    'contract-7': 'Ex Turpi Causa Non Oritur Actio • No action arises from an unlawful cause',
+    'contract-8': 'Lex Non Cogit Ad Impossibilia • The law does not compel the impossible (Doctrine of Frustration)',
+    'contract-9': 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy',
+    'contract-10': 'Nemo debet locupletari ex aliena jactura • No one should be enriched at another\'s expense',
+
+    // BNS / Criminal Law
+    'bns-1': 'Actus Non Facit Reum Nisi Mens Sit Rea • An act does not make one guilty unless the mind is guilty',
+    'bns-2': 'Ignorantia facti excusat, ignorantia juris non excusat • Mistake of fact excuses, mistake of law does not',
+    'bns-3': 'Vim vi repellere licet • It is lawful to repel force with force (Private Defence)',
+    'bns-4': 'Qui Facit Per Alium Facit Per Se • He who acts through another acts himself (Joint Liability)',
+    'bns-5': 'Noli me tangere • Inviolability of bodily integrity and dignity of women',
+    'bns-6': 'Furiosus solo furore punitur • An act with malice aforethought defines murder',
+    'bns-7': 'Injuria Sine Damno • Infringement of absolute personal rights is punishable',
+    'bns-8': 'Salus Populi Suprema Lex • The welfare and safety of the people is the supreme law',
+    'bns-9': 'Animus Furandi • The intention to steal is the essence of theft',
+    'bns-10': 'Fraus Omnia Corrumpit • Fraud vitiates and corrupts everything',
+
+    // Family Law
+    'family-1': 'Semper praesumitur pro matrimonio • Law always presumes in favour of marriage',
+    'family-2': 'Restitutio In Integrum • Restoration of conjugal rights and matrimonial relief',
+    'family-3': 'Jus In Personam • Maintenance is an inherent personal legal right',
+    'family-4': 'Adoptio naturam imitatur • Adoption imitates nature (CARA Guidelines)',
+    'family-5': 'Parens Patriae • The welfare of the child is paramount',
+    'family-6': 'Mahr est donatio propter nuptias • Dower is an unconditional right of the wife',
+    'family-8': 'Divortium inter invitos non facile conceditur • Irretrievable breakdown and dissolution',
+
+    // Law of Torts
+    'torts-1': 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a legal remedy',
+    'torts-2': 'Volenti Non Fit Injuria • To a willing person, no legal injury is done',
+    'torts-3': 'Res Ipsa Loquitur • The thing speaks for itself (Prima facie negligence)',
+    'torts-4': 'Actio personalis moritur cum persona • Duty of care extends to psychiatric injury',
+    'torts-5': 'In jure non remota causa sed proxima spectatur • Look to proximate, not remote cause',
+    'torts-6': 'Sic Utere Tuo Ut Alienum Non Laedas • Use your property so as not to injure another (Strict Liability)',
+    'torts-7': 'Respondeat Superior • Let the principal or master answer for the agent',
+    'torts-8': 'Bonam famam praestare est optimum • Defamation protects reputation as property',
+    'torts-9': 'Caveat Venditor • Let the seller beware (Consumer Protection Act)',
+
+    // Company Law
+    'company-1': 'Salomon v. Salomon Principle • Corporate personality distinct from its members',
+    'company-2': 'Uberrima Fides • Promoters stand in a fiduciary position of utmost good faith',
+    'company-3': 'Ultra Vires • Acts beyond the constitutional charter of the company are void',
+    'company-4': 'Fidei Commissum • Golden Rule of full disclosure in prospectuses',
+    'company-5': 'Delegatus Non Potest Delegare • Directors hold fiduciary powers for the company',
+    'company-6': 'Quod omnes tangit ab omnibus approbetur • Democratic majority rule in corporate meetings',
+    'company-7': 'Foss v. Harbottle Rule & Exceptions • Protection of minority against oppression',
+    'company-8': 'Pari Passu • Equal and rateable distribution in corporate winding-up',
+    'company-9': 'Nemo Debet Esse Judex In Propria Causa • Quasi-judicial integrity before NCLT / NCLAT',
+    'company-10': 'Salus Populi Suprema Lex • Corporate Social Responsibility and ESG standards',
+
+    // CPC & Limitation
+    'cpc-1': 'Res Judicata Pro Veritate Accipitur • A matter judged is accepted as true (Section 11)',
+    'cpc-2': 'Appellatio est provocatio de minori judice ad majorem • An appeal is a statutory right to a higher court',
+    'cpc-3': 'Actus Curiae Neminem Gravabit • An act of the court shall prejudice no man (Section 151)',
+    'cpc-4': 'Ut Res Magis Valeat Quam Pereat • Liberal amendment of pleadings to determine the real controversy',
+    'cpc-5': 'Audi Alteram Partem • No decree without affording full opportunity of hearing',
+    'cpc-6': 'Vigilantibus Non Dormientibus Jura Subveniunt • The law assists the vigilant in summary debts (O. 37)',
+    'cpc-7': 'Status Quo Ante • Prima facie balance of convenience in temporary injunctions (O. 39)',
+    'cpc-8': 'Interest Reipublicae Ut Sit Finis Litium • It is in the public interest that litigation must end',
+    'cpc-9': 'Lex Non Cogit Ad Impossibilia • Sufficient cause excuses delay in limitation computation',
+    'cpc-10': 'Nec Vi, Nec Clam, Nec Precario • Acquisition of easement: without force, secrecy, or licence',
+    'cpc-11': 'Expressio Unius Est Exclusio Alterius • Strict interpretation of the limitation schedule',
+
+    // White Collar Crimes
+    'wcc-1': 'Strict Liability in Socio-Economic Offences • Exclusion of common law mens rea',
+    'wcc-2': 'Differential Association Theory • Crime in upper socio-economic strata is learned',
+    'wcc-3': 'Pecunia Non Olet • Statutory presumption of corruption under Section 20 PC Act',
+    'wcc-4': 'Commodum Ex Injuria Sua Nemo Habere Debet • No one shall profit from money-laundering crime (PMLA)',
+    'wcc-5': 'Salus Populi Suprema Lex Esto • Public health and food adulteration strict liability (FSSA)',
+    'wcc-6': 'Reversa Onus Probandi • Reverse burden of proof for psychotropic substances (NDPS S. 35 & 54)',
+
+    // Media & Law
+    'media-1': 'Fourth Estate Watchdog • Airwaves Public Trust & Democratic Speech (CAB 1995)',
+    'media-2': 'Dignitas Personae • Free Speech, Informational Privacy & Hate Speech Limits (Puttaswamy)',
+    'media-3': 'Audi Alteram Partem • Right to Information & Prevention of Trial by Media Prejudices',
+    'media-4': 'Actus Curiae Neminem Gravabit • Contempt of Court, Open Justice & Section 13(b) Truth',
+    'media-5': 'Salus Populi Suprema Lex • Airwaves Regulation & IT Intermediary Safe Harbour (S. 79)',
+    'media-6': 'Caveat Venditor • Protected Commercial Speech (Tata Press) & Misleading Ad Prohibitions',
+    'media-7': 'Fiat Justitia Ruat Caelum • Inherent Postponement of Trial Reporting & Censorship Standards',
+    'media-8': 'Lex Parliamenti • Article 361A Legislative Reporting Shield & Paid News Inquiries'
+  };
+
+  function getTopicMaxim(subId, unitNumber, unitTitle, subTheme) {
+    if (!subId) return 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy';
+    const key = `${subId}-${unitNumber}`;
+    if (TOPIC_MAXIMS[key]) return TOPIC_MAXIMS[key];
+
+    // Smart keyword matching for future upcoming topics
+    const t = (unitTitle || '').toLowerCase();
+    if (t.includes('res judicata')) return 'Res Judicata Pro Veritate Accipitur • A matter judged is accepted as true';
+    if (t.includes('injunction') || t.includes('interlocutory')) return 'Status Quo Ante • Preserve the subject-matter in dispute';
+    if (t.includes('appeal') || t.includes('revision')) return 'Appellatio est provocatio de minori judice ad majorem';
+    if (t.includes('contract') || t.includes('agreement')) return 'Pacta Sunt Servanda • Agreements must be kept';
+    if (t.includes('consideration')) return 'Ex Nudo Pacto Non Oritur Actio • Consideration is essential';
+    if (t.includes('negligence') || t.includes('tort')) return 'Ubi Jus Ibi Remedium • Where there is a right, there is a remedy';
+    if (t.includes('mens rea') || t.includes('crime') || t.includes('offence')) return 'Actus Non Facit Reum Nisi Mens Sit Rea';
+    if (t.includes('defamation')) return 'Bonam famam praestare est optimum • Protection of reputation';
+    if (t.includes('constitution') || t.includes('state')) return 'Salus Populi Suprema Lex • Welfare of the people is the supreme law';
+    if (t.includes('director') || t.includes('fiduciary')) return 'Delegatus Non Potest Delegare • Fiduciary duty';
+    if (t.includes('evidence')) return 'Affirmatis est probare • The burden of proof lies on the affirmant';
+    if (t.includes('property') || t.includes('transfer')) return 'Nemo dat quod non habet • No one gives what he does not have';
+
+    // Fallback to subject's motto or quote
+    if (subTheme && subTheme.motto) return subTheme.motto;
+    return 'Ubi Jus Ibi Remedium • Where there is a legal right, there is a remedy';
+  }
+
+  function renderTopicsTab(sub) {
+    let units = sub.units || [];
+    const completedList = state.completedUnits[sub.id] || [];
+
+    // Filter by unit dropdown
+    if (state.selectedUnitFilter !== 'all') {
+      const uNum = parseInt(state.selectedUnitFilter, 10);
+      units = units.filter(u => u.number === uNum);
+    }
+
+    // Filter by quick chips
+    if (state.activeQuickFilter === 'completed') {
+      units = units.filter(u => completedList.includes(u.number));
+    } else if (state.activeQuickFilter === 'pending') {
+      units = units.filter(u => !completedList.includes(u.number));
+    }
+
+    // Filter by search query
+    if (state.searchQuery) {
+      const q = state.searchQuery.toLowerCase();
+      units = units.filter(u => {
+        const m = u.maxim || getTopicMaxim(sub.id, u.number, u.title, sub.theme);
+        return (
+          u.title.toLowerCase().includes(q) ||
+          (m && m.toLowerCase().includes(q)) ||
+          (u.subtitle && u.subtitle.toLowerCase().includes(q)) ||
+          (u.statutes && u.statutes.toLowerCase().includes(q)) ||
+          (u.topics && u.topics.some(t => t.toLowerCase().includes(q)))
+        );
+      });
+    }
+
+    if (units.length === 0) {
+      elements.topicsContainer.innerHTML = `
+        <div class="empty-state">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h4>No units matched your filter</h4>
+          <p>Try resetting filters or searching for another keyword.</p>
+        </div>
+      `;
+      return;
+    }
+
+    elements.topicsContainer.innerHTML = `
+      <div class="topics-grid">
+        ${units.map(u => {
+          const isDone = completedList.includes(u.number);
+          const maxim = u.maxim || getTopicMaxim(sub.id, u.number, u.title, sub.theme);
+          return `
+            <div class="unit-card fade-in ${isDone ? 'is-completed' : ''}" data-unit="${u.number}" data-file="${u.file}" data-title="${u.title}">
+              <div>
+                <div class="unit-card-header">
+                  <div class="unit-badge-number">${u.number}</div>
+                  <div class="unit-card-titles">
+                    <div style="display:flex; align-items:center; justify-content:space-between; gap:6px;">
+                      <span class="unit-subject-tag">${sub.shortName || sub.name}</span>
+                      <button class="unit-check-btn ${isDone ? 'checked' : ''}" data-unit="${u.number}" title="Toggle revision status">
+                        <i class="fa-solid ${isDone ? 'fa-check' : 'fa-circle'}"></i>
+                        <span>${isDone ? 'Revised' : 'Mark Done'}</span>
+                      </button>
+                    </div>
+                    <h4 class="unit-card-title">${u.title}</h4>
+                  </div>
+                </div>
+
+                <div class="unit-maxim-box">
+                  <div class="unit-maxim-header">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <span>Legal Maxim</span>
+                  </div>
+                  <div class="unit-maxim-text">"${maxim}"</div>
+                </div>
+              </div>
+
+              <div class="unit-actions-row">
+                <button class="btn-read-notes topic-liquid-metal-btn" data-file="${u.file}" data-title="${u.title}" data-unit="${u.number}" type="button">
+                  <div class="metal-inner-body">
+                    <div class="metal-icon-circle">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="metal-btn-lbl">Read Full Notes</span>
+                  </div>
+                </button>
+                <button class="btn-open-newtab" data-file="${u.file}" title="Open standalone note in new window" type="button">
+                  <div class="newtab-inner">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    // Attach listeners
+    elements.topicsContainer.querySelectorAll('.unit-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.unit-check-btn') || e.target.closest('.btn-open-newtab') || e.target.closest('.btn-read-notes')) {
+          return;
+        }
+        const file = card.dataset.file;
+        const title = card.dataset.title;
+        const unit = card.dataset.unit;
+        if (file) {
+          openReader(file, `Unit ${unit}: ${title}`, `${sub.name} • DU Notes`);
+        }
+      });
+    });
+
+    elements.topicsContainer.querySelectorAll('.unit-check-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const uNum = parseInt(btn.dataset.unit, 10);
+        toggleUnitCompleted(sub.id, uNum);
+      });
+    });
+
+    elements.topicsContainer.querySelectorAll('.btn-read-notes').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const file = btn.dataset.file;
+        const title = btn.dataset.title;
+        const unit = btn.dataset.unit;
+        openReader(file, `Unit ${unit}: ${title}`, `${sub.name} • DU Notes`);
+      });
+      btn.addEventListener('mousemove', e => {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
+    });
+
+    elements.topicsContainer.querySelectorAll('.btn-open-newtab').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.open(btn.dataset.file, '_blank');
+      });
+    });
+  }
+
+  // Helper to format case text blocks into semantic paragraphs or bullet lists
+  function formatCaseContent(val) {
+    if (!val) return '';
+    const str = String(val).trim();
+    if (!str) return '';
+    // If it already contains HTML block tags, preserve them
+    if (/<(p|ul|ol|li|div|blockquote|br\s*\/?)[\s>]/i.test(str)) {
+      return str;
+    }
+    const paragraphs = str.split(/\n{2,}/);
+    return paragraphs.map(p => {
+      let trimmed = p.trim();
+      if (!trimmed) return '';
+      trimmed = trimmed.replace(/^(\[[^\]]+\]:?|Held\s*(?:\([^)]+\))?:?)/i, '<strong>$1</strong>');
+      const lines = trimmed.split(/\n+/);
+      if (lines.length > 1 && lines.every(l => /^\s*(?:[•\-\*]|\(\w+\)|\d+[\.\)])\s+/.test(l))) {
+        return `<ul class="case-bullet-list">${lines.map(l => `<li>${l.replace(/^\s*(?:[•\-\*]|\(\w+\)|\d+[\.\)])\s+/, '')}</li>`).join('')}</ul>`;
+      }
+      return `<p>${lines.join('<br>')}</p>`;
+    }).join('');
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 2: LANDMARK CASES (FIRAC CARDS) — TOPIC-WISE SEGREGATED
+  // -------------------------------------------------------------------------
+  function renderCasesTab(sub) {
+    let cases = sub.cases || [];
+
+    // Filter by unit dropdown
+    if (state.selectedUnitFilter !== 'all') {
+      const uNum = parseInt(state.selectedUnitFilter, 10);
+      cases = cases.filter(c => c.unitNumber === uNum);
+    }
+
+    // Filter by quick chips
+    if (state.activeQuickFilter === 'sc') {
+      cases = cases.filter(c => (c.citation && c.citation.includes('SC')) || (c.name && c.name.includes('State of')));
+    }
+
+    // Filter by search query
+    if (state.searchQuery) {
+      const q = state.searchQuery.toLowerCase();
+      cases = cases.filter(c =>
+        c.name.toLowerCase().includes(q) ||
+        (c.citation && c.citation.toLowerCase().includes(q)) ||
+        (c.facts && c.facts.toLowerCase().includes(q)) ||
+        (c.ratio && c.ratio.toLowerCase().includes(q)) ||
+        (c.unit && c.unit.toLowerCase().includes(q))
+      );
+    }
+
+    if (cases.length === 0) {
+      elements.casesContainer.innerHTML = `
+        <div class="empty-state">
+          <i class="fa-solid fa-scale-unbalanced"></i>
+          <h4>No landmark cases found</h4>
+          <p>Try searching for another case name or clearing filters.</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Group cases topic-wise by unitNumber
+    const groups = {};
+    cases.forEach(c => {
+      const uNum = c.unitNumber || 1;
+      if (!groups[uNum]) {
+        groups[uNum] = {
+          unitNumber: uNum,
+          unitTitle: c.unit || `Topic / Unit ${uNum}`,
+          items: []
+        };
+      }
+      groups[uNum].items.push(c);
+    });
+    const sortedGroupKeys = Object.keys(groups).map(Number).sort((a, b) => a - b);
+
+    elements.casesContainer.innerHTML = `
+      <!-- Topic Jump & Filter Navigation Bar -->
+      ${sortedGroupKeys.length > 1 ? `
+        <div class="topic-jump-nav fade-in">
+          <span class="jump-nav-title"><i class="fa-solid fa-scale-balanced"></i> Topic Filter / Jump:</span>
+          <div class="jump-chips-wrap">
+            <button class="jump-chip ${state.selectedUnitFilter === 'all' ? 'active' : ''}" data-target-unit="all">
+              All Topics <span class="chip-count">${cases.length}</span>
+            </button>
+            ${sortedGroupKeys.map(k => `
+              <button class="jump-chip ${state.selectedUnitFilter === String(k) ? 'active' : ''}" data-target-unit="${k}">
+                Unit ${k} <span class="chip-count">${groups[k].items.length}</span>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Topic-Wise Segregated Container -->
+      <div class="topic-segregated-container">
+        ${sortedGroupKeys.map(k => {
+          const grp = groups[k];
+          return `
+            <div class="topic-group-section fade-in" id="cases-group-unit-${grp.unitNumber}">
+              <div class="topic-group-header">
+                <div class="topic-group-header-left">
+                  <span class="topic-group-badge"><i class="fa-solid fa-folder-open"></i> Unit ${grp.unitNumber}</span>
+                  <span class="topic-group-count"><i class="fa-solid fa-scale-balanced"></i> ${grp.items.length} ${grp.items.length === 1 ? 'Landmark Precedent' : 'Landmark Precedents'}</span>
+                </div>
+                <h3 class="topic-group-title">${grp.unitTitle}</h3>
+              </div>
+
+              <div class="cases-list">
+                ${grp.items.map(c => `
+                  <div class="case-card fade-in">
+                    <div class="case-card-header">
+                      <div class="case-title-area">
+                        <h3>${c.name}</h3>
+                        <div class="case-citation">${c.citation || 'Prescribed DU Case Material Precedent'}</div>
+                      </div>
+                      <div class="case-badge-actions">
+                        <button class="btn-card-star ${state.starred.some(s => s.id === c.id) ? 'starred' : ''}" data-star-id="${c.id}" data-star-type="case" data-star-title="${encodeURIComponent(c.name)}" title="Star Precedent"><i class="fa-${state.starred.some(s => s.id === c.id) ? 'solid' : 'regular'} fa-star"></i></button><button class="btn-card-note ${state.personalNotes[c.id] ? 'has-note' : ''}" data-note-id="${c.id}" title="Personal Note"><i class="fa-regular fa-note-sticky"></i></button>                        <button class="btn-copy-cite" data-cite="${c.name} ${c.citation ? '— ' + c.citation : ''}" title="Copy Citation" type="button">
+                          <div class="copy-cite-inner">
+                            <i class="fa-solid fa-copy"></i> <span>Copy Citation</span>
+                          </div>
+                        </button>
+                        <span class="case-unit-tag">${c.unit}</span>
+                      </div>
+                    </div>
+
+                    <div class="case-card-body">
+                      <!-- 1. Facts -->
+                      <div class="case-struct-box struct-facts">
+                        <div class="struct-box-header">
+                          <span class="struct-step-badge step-1">1</span>
+                          <span class="struct-box-title"><i class="fa-solid fa-book-open"></i> Essential Facts & Procedural History</span>
+                        </div>
+                        <div class="case-text-block">${formatCaseContent(c.facts)}</div>
+                      </div>
+
+                      <!-- 2. Issues -->
+                      ${c.issues ? `
+                        <div class="case-struct-box struct-issues">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-2">2</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-circle-question"></i> Key Legal Issues Framed</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.issues)}</div>
+                        </div>
+                      ` : ''}
+
+                      <!-- 3. Arguments -->
+                      ${c.arguments ? `
+                        <div class="case-struct-box struct-arguments">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-3">3</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-comments"></i> Arguments of the Parties</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.arguments)}</div>
+                        </div>
+                      ` : ''}
+
+                      <!-- 4. Ratio -->
+                      <div class="case-struct-box struct-ratio">
+                        <div class="struct-box-header">
+                          <span class="struct-step-badge step-4">4</span>
+                          <span class="struct-box-title"><i class="fa-solid fa-scale-balanced"></i> Ratio Decidendi (Court's Decision & Reasoning)</span>
+                        </div>
+                        <div class="case-text-block">${formatCaseContent(c.ratio)}</div>
+                      </div>
+
+                      <!-- 5. Principle Evolved -->
+                      ${(c.principleEvolved || c.principles || c.examTips) ? `
+                        <div class="case-struct-box struct-principle">
+                          <div class="struct-box-header">
+                            <span class="struct-step-badge step-5">5</span>
+                            <span class="struct-box-title"><i class="fa-solid fa-lightbulb"></i> Principle Evolved & Legal Doctrine</span>
+                          </div>
+                          <div class="case-text-block">${formatCaseContent(c.principleEvolved || c.principles || c.examTips)}</div>
+                        </div>
+                      ` : ''}
+
+                      <div class="case-footer-actions">
+                        <button class="btn-case-reader" data-file="${c.file}" data-anchor="${c.anchorId || ''}" data-name="${c.name}">
+                          <i class="fa-solid fa-file-lines"></i> View Complete Note & Precedent Analysis <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    // Jump Chip click handlers
+    elements.casesContainer.querySelectorAll('.jump-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const targetUnit = chip.dataset.targetUnit;
+        if (elements.unitFilterSelect) {
+          elements.unitFilterSelect.value = targetUnit;
+        }
+        state.selectedUnitFilter = targetUnit;
+        renderCasesTab(sub);
+        if (targetUnit !== 'all') {
+          const targetEl = document.getElementById(`cases-group-unit-${targetUnit}`);
+          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Copy Citation buttons
+
+    elements.casesContainer.querySelectorAll('.btn-card-star').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleStar({
+          id: btn.dataset.starId,
+          type: 'case',
+          title: decodeURIComponent(btn.dataset.starTitle)
+        });
+      });
+    });
+
+    elements.casesContainer.querySelectorAll('.btn-card-note').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        promptNote(btn.dataset.noteId);
+      });
+    });
+
+    elements.casesContainer.querySelectorAll('.btn-copy-cite').forEach(btn => {
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cite = btn.dataset.cite;
+        navigator.clipboard.writeText(cite).then(() => {
+          showToast('Citation copied to clipboard! 📋', 'fa-copy');
+        }).catch(() => {
+          showToast('Copied: ' + cite.slice(0, 30) + '...', 'fa-copy');
+        });
+      });
+    });
+
+    // View in Full Unit Notes
+    elements.casesContainer.querySelectorAll('.btn-case-reader').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const file = btn.dataset.file;
+        const anchor = btn.dataset.anchor;
+        const name = btn.dataset.name;
+        const targetUrl = anchor ? `${file}#${anchor}` : file;
+        openReader(targetUrl, name, `${sub.name} • Landmark Precedent`);
+      });
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 3: PREVIOUS YEAR QUESTIONS (PYQS) & MODEL ANSWERS — TOPIC-WISE SEGREGATED
+  // -------------------------------------------------------------------------
+  function renderPyqsTab(sub) {
+    let pyqs = sub.pyqs || [];
+
+    // Filter by unit
+    if (state.selectedUnitFilter !== 'all') {
+      const uNum = parseInt(state.selectedUnitFilter, 10);
+      pyqs = pyqs.filter(p => p.unitNumber === uNum);
+    }
+
+    // Filter by quick chips
+    if (state.activeQuickFilter === '20') {
+      pyqs = pyqs.filter(p => (p.marks && (p.marks.includes('20') || p.marks.includes('15'))));
+    } else if (state.activeQuickFilter === '10') {
+      pyqs = pyqs.filter(p => (p.marks && (p.marks.includes('10') || p.marks.includes('7'))));
+    } else if (state.activeQuickFilter === 'bookmarked') {
+      pyqs = pyqs.filter(p => state.bookmarkedPyqs.includes(p.id));
+    }
+
+    // Filter by search query
+    if (state.searchQuery) {
+      const q = state.searchQuery.toLowerCase();
+      pyqs = pyqs.filter(p =>
+        p.question.toLowerCase().includes(q) ||
+        (p.modelAnswer && p.modelAnswer.toLowerCase().includes(q)) ||
+        (p.unit && p.unit.toLowerCase().includes(q))
+      );
+    }
+
+    if (pyqs.length === 0) {
+      elements.pyqsContainer.innerHTML = `
+        <div class="empty-state">
+          <i class="fa-solid fa-file-circle-question"></i>
+          <h4>No questions found</h4>
+          <p>Try searching for a different question topic or reset filters.</p>
+        </div>
+      `;
+      return;
+    }
+
+    // Group pyqs topic-wise by unitNumber
+    const groups = {};
+    pyqs.forEach(p => {
+      const uNum = p.unitNumber || 1;
+      if (!groups[uNum]) {
+        groups[uNum] = {
+          unitNumber: uNum,
+          unitTitle: p.unit || `Topic / Unit ${uNum}`,
+          items: []
+        };
+      }
+      groups[uNum].items.push(p);
+    });
+    const sortedGroupKeys = Object.keys(groups).map(Number).sort((a, b) => a - b);
+
+    elements.pyqsContainer.innerHTML = `
+      <!-- Topic Jump & Filter Navigation Bar -->
+      ${sortedGroupKeys.length > 1 ? `
+        <div class="topic-jump-nav fade-in">
+          <span class="jump-nav-title"><i class="fa-solid fa-book-bookmark"></i> Topic Filter / Jump:</span>
+          <div class="jump-chips-wrap">
+            <button class="jump-chip ${state.selectedUnitFilter === 'all' ? 'active' : ''}" data-target-unit="all">
+              All Topics <span class="chip-count">${pyqs.length}</span>
+            </button>
+            ${sortedGroupKeys.map(k => `
+              <button class="jump-chip ${state.selectedUnitFilter === String(k) ? 'active' : ''}" data-target-unit="${k}">
+                Unit ${k} <span class="chip-count">${groups[k].items.length}</span>
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+      <!-- Topic-Wise Segregated Container -->
+      <div class="topic-segregated-container">
+        ${sortedGroupKeys.map(k => {
+          const grp = groups[k];
+          return `
+            <div class="topic-group-section fade-in" id="pyq-group-unit-${grp.unitNumber}">
+              <div class="topic-group-header">
+                <div class="topic-group-header-left">
+                  <span class="topic-group-badge"><i class="fa-solid fa-folder-open"></i> Unit ${grp.unitNumber}</span>
+                  <span class="topic-group-count"><i class="fa-solid fa-clipboard-question"></i> ${grp.items.length} ${grp.items.length === 1 ? 'Question' : 'Questions'}</span>
+                </div>
+                <h3 class="topic-group-title">${grp.unitTitle}</h3>
+              </div>
+
+              <div class="pyq-list">
+                ${grp.items.map((p, idx) => {
+                  const isBookmarked = state.bookmarkedPyqs.includes(p.id);
+                  return `
+                    <div class="pyq-card fade-in" id="${p.id}">
+                      <div class="pyq-header">
+                        <div class="pyq-badge-group">
+                          <span class="pyq-no-badge">${p.number || `Q${idx + 1}`}</span>
+                          <span class="pyq-marks-badge">${p.marks || '20 Marks'}</span>
+                          <button class="btn-bookmark-pyq ${isBookmarked ? 'bookmarked' : ''}" data-pyq-id="${p.id}" title="${isBookmarked ? 'Remove Bookmark' : 'Bookmark Question'}">
+                            <i class="fa-${isBookmarked ? 'solid' : 'regular'} fa-bookmark"></i>
+                          </button>
+                        </div>
+                        <span class="pyq-unit-label">${p.unit}</span>
+                      </div>
+
+                      <div class="pyq-body">
+                        <div class="pyq-question-text">${p.question}</div>
+
+                        <div class="model-ans-accordion">
+                          <div class="model-ans-header">
+                            <span><i class="fa-solid fa-lightbulb"></i> View High-Scoring Model Answer & Strategy</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                          </div>
+                          <div class="model-ans-content" style="display: none;">
+                            ${renderMarkdown(p.modelAnswer)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    // Jump Chip click handlers
+    elements.pyqsContainer.querySelectorAll('.jump-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const targetUnit = chip.dataset.targetUnit;
+        if (elements.unitFilterSelect) {
+          elements.unitFilterSelect.value = targetUnit;
+        }
+        state.selectedUnitFilter = targetUnit;
+        renderPyqsTab(sub);
+        if (targetUnit !== 'all') {
+          const targetEl = document.getElementById(`pyq-group-unit-${targetUnit}`);
+          if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Accordion toggles with smooth transition & chevron flip
+    elements.pyqsContainer.querySelectorAll('.model-ans-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const chevron = header.querySelector('.chevron-icon');
+        const isClosed = (content.style.display === 'none' || content.style.display === '');
+
+        if (isClosed) {
+          content.style.display = 'block';
+          if (chevron) chevron.style.transform = 'rotate(180deg)';
+        } else {
+          content.style.display = 'none';
+          if (chevron) chevron.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+
+    // Bookmark buttons
+    elements.pyqsContainer.querySelectorAll('.btn-bookmark-pyq').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const pyqId = btn.dataset.pyqId;
+        const idx = state.bookmarkedPyqs.indexOf(pyqId);
+        if (idx === -1) {
+          state.bookmarkedPyqs.push(pyqId);
+          showToast('Question bookmarked! ★', 'fa-bookmark');
+        } else {
+          state.bookmarkedPyqs.splice(idx, 1);
+          showToast('Bookmark removed', 'fa-bookmark');
+        }
+        localStorage.setItem('du_law_bookmarked_pyqs', JSON.stringify(state.bookmarkedPyqs));
+        renderPyqsTab(sub);
+      });
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // TAB 4: QUICK LAST-MINUTE REVISION (LMR)
+  // -------------------------------------------------------------------------
+  function renderRevisionTab(sub) {
+    let revisions = sub.revisions || sub.revision || [];
+
+    // Filter by unit dropdown
+    if (state.selectedUnitFilter !== 'all') {
+      const uNum = parseInt(state.selectedUnitFilter, 10);
+      revisions = revisions.filter(r => r.unitNumber === uNum);
+    }
+
+    // Filter by quick chips
+    if (state.activeQuickFilter === 'mustquote') {
+      revisions = revisions.filter(r => (r.table && r.table.rows && r.table.rows.length > 0) || (r.htmlContent && /table|mustquote|statut|section/i.test(r.htmlContent)));
+    } else if (state.activeQuickFilter === 'strategy') {
+      revisions = revisions.filter(r => !!r.examStrategy || (r.htmlContent && /strategy|tips|scoring|exam/i.test(r.htmlContent)));
+    } else if (state.activeQuickFilter === 'casemap') {
+      revisions = revisions.filter(r => !!r.caseMap || (r.htmlContent && /case|judge|v\./i.test(r.htmlContent)));
+    }
+
+    // Filter by search query
+    if (state.searchQuery) {
+      const q = state.searchQuery.toLowerCase();
+      revisions = revisions.filter(r =>
+        (r.unitTitle && r.unitTitle.toLowerCase().includes(q)) ||
+        (r.title && r.title.toLowerCase().includes(q)) ||
+        (r.badge && r.badge.toLowerCase().includes(q)) ||
+        (r.examStrategy && r.examStrategy.toLowerCase().includes(q)) ||
+        (r.caseMap && r.caseMap.toLowerCase().includes(q)) ||
+        (r.table && r.table.rows && r.table.rows.some(row => row.some(cell => cell.toLowerCase().includes(q)))) ||
+        (r.htmlContent && r.htmlContent.toLowerCase().includes(q))
+      );
+    }
+
+    if (revisions.length === 0) {
+      elements.revisionContainer.innerHTML = `
+        <div class="empty-state">
+          <i class="fa-solid fa-bolt"></i>
+          <h4>No revision capsules match your filter</h4>
+          <p>Try selecting 'All Units' from the dropdown or clear your search.</p>
+        </div>
+      `;
+      return;
+    }
+
+    elements.revisionContainer.innerHTML = `
+      <div class="revision-container">
+        ${revisions.map(r => `
+          <div class="rev-card fade-in" id="rev-unit-${r.unitNumber || (r.unit || '')}">
+            <div class="rev-card-header">
+              <div class="rev-card-header-left">
+                <span class="rev-unit-badge">Unit ${r.unitNumber || (r.unit || '')}</span>
+                ${r.badge ? `<span class="rev-badge-pill">${r.badge}</span>` : ''}
+              </div>
+              <div class="rev-card-header-right">
+                <button class="btn-rev-reader topic-liquid-metal-btn" data-file="${r.file || ''}" data-anchor="${r.anchorId || ''}" data-title="${escapeHtml(r.unitTitle || r.title || '')}" type="button">
+                  <div class="metal-inner-body">
+                    <div class="metal-icon-circle">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <span class="metal-btn-lbl">Read Full Notes</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div class="rev-card-title-area">
+              <h3>${r.title || r.unitTitle || ('Unit ' + r.unitNumber)}</h3>
+              ${r.unitTitle && r.unitTitle !== r.title ? `<div class="rev-unit-subtitle">${r.unitTitle}</div>` : ''}
+            </div>
+
+            <div class="rev-content-body">
+              ${r.htmlContent ? `
+                <div class="rev-note-html">
+                  ${r.htmlContent}
+                </div>
+              ` : `
+                ${r.table ? `
+                  <div class="rev-table-wrap">
+                    <table class="rev-table">
+                      <thead>
+                        <tr>${r.table.headers.map(h => `<th>${h}</th>`).join('')}</tr>
+                      </thead>
+                      <tbody>
+                        ${r.table.rows.map(row => `
+                          <tr>${row.map(cell => `<td>${cell}</td>`).join('')}</tr>
+                        `).join('')}
+                      </tbody>
+                    </table>
+                  </div>
+                ` : ''}
+
+                ${r.examStrategy ? `
+                  <div class="rev-exam-strategy">
+                    <div class="rev-callout-label"><i class="fa-solid fa-star"></i> Exam Strategy &amp; Scoring Tips</div>
+                    <p>${r.examStrategy}</p>
+                  </div>
+                ` : ''}
+
+                ${r.caseMap ? `
+                  <div class="rev-case-map">
+                    <div class="rev-callout-label"><i class="fa-solid fa-scale-balanced"></i> Case–Judge–Court Map</div>
+                    <p>${r.caseMap}</p>
+                  </div>
+                ` : ''}
+              `}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+
+    // Attach reader click listeners
+    elements.revisionContainer.querySelectorAll('.btn-rev-reader').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const file = btn.dataset.file;
+        const anchor = btn.dataset.anchor;
+        const title = btn.dataset.title;
+        const url = anchor ? `${file}#${anchor}` : file;
+        openReader(url, `${title} • Revision Capsule`, `${sub.name} • Last-Minute Revision`);
+      });
+    });
+  }
+
+  // =========================================================================
+  // 4. EMBEDDED FULL NOTES READER MODAL (Print PDF removed)
+  // =========================================================================
+  function openReader(fileUrl, title, subInfo, pushHistory = true) {
+    // Preserve current scroll position before locking background scroll
+    state.savedScrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    elements.readerTitle.textContent = title || 'Comprehensive Study Notes';
+    if (elements.readerSubInfo) {
+      elements.readerSubInfo.textContent = (subInfo || (state.currentSubject ? state.currentSubject.shortName || state.currentSubject.name : 'Make Law Easy')).replace(/\s*•\s*DU Notes/gi, '').replace(/\s*•\s*Landmark Precedent/gi, '').replace(/\s*•\s*Last-Minute Revision/gi, '').trim();
+    }
+
+    // Safely insert iframe without polluting top window history stack
+    const iframeWrap = document.querySelector('.reader-iframe-wrap');
+    if (iframeWrap) {
+      iframeWrap.innerHTML = '';
+      const iframe = document.createElement('iframe');
+      iframe.className = 'reader-iframe';
+      iframe.id = 'readerIframe';
+      iframe.title = 'Study Notes Reader';
+      iframe.src = fileUrl;
+      iframe.addEventListener('load', () => {
+        try {
+          if (state.darkMode && iframe.contentDocument && iframe.contentDocument.documentElement) {
+            iframe.contentDocument.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      });
+      iframeWrap.appendChild(iframe);
+      elements.readerIframe = iframe;
+    } else if (elements.readerIframe) {
+      elements.readerIframe.src = fileUrl;
+    }
+
+    elements.readerModal.classList.add('active');
+    document.body.classList.add('reader-open');
+    document.documentElement.classList.add('reader-open');
+    document.body.style.overflow = 'hidden';
+
+    // Hide the 4 hub tab buttons when any topic is open
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.setProperty('display', 'none', 'important');
+      elements.hubTabsContainer.classList.add('is-hidden');
+    }
+    if (elements.mobileBottomNav) {
+      elements.mobileBottomNav.style.setProperty('display', 'none', 'important');
+    }
+
+    if (pushHistory) {
+      const semId = state.currentSemester || 1;
+      const subId = state.currentSubject ? state.currentSubject.id : null;
+      const baseSearch = `?sem=${semId}${subId ? '&sub=' + subId : ''}`;
+      window.history.pushState({
+        view: 'reader',
+        semId: semId,
+        subId: subId,
+        fileUrl: fileUrl,
+        title: title || '',
+        subInfo: subInfo || ''
+      }, '', baseSearch + '#reader');
+    }
+
+    trackEvent('read_notes', {
+      file: fileUrl,
+      title: title || '',
+      subject: state.currentSubject ? state.currentSubject.id : ''
+    });
+
+    // New Tab button
+    if (elements.readerNewTabBtn) {
+      elements.readerNewTabBtn.onclick = () => window.open(fileUrl, '_blank');
+    }
+
+    // Native Fullscreen toggle button
+    const readerFsBtn = elements.readerFullscreenBtn || document.getElementById('readerFullscreenBtn');
+    if (readerFsBtn && !readerFsBtn._fsBound) {
+      readerFsBtn._fsBound = true;
+      readerFsBtn.onclick = () => {
+        if (!document.fullscreenElement) {
+          if (elements.readerModal.requestFullscreen) {
+            elements.readerModal.requestFullscreen().catch(() => {});
+          } else if (elements.readerModal.webkitRequestFullscreen) {
+            elements.readerModal.webkitRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen().catch(() => {});
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          }
+        }
+      };
+
+      const updateFsBtn = () => {
+        const isFs = !!document.fullscreenElement;
+        const icon = readerFsBtn.querySelector('i');
+        const span = readerFsBtn.querySelector('span');
+        if (icon) icon.className = isFs ? 'fa-solid fa-compress' : 'fa-solid fa-expand';
+        if (span) span.textContent = isFs ? 'Exit Full' : 'Fullscreen';
+        readerFsBtn.title = isFs ? 'Exit Fullscreen' : 'Toggle Fullscreen';
+      };
+
+      document.addEventListener('fullscreenchange', updateFsBtn);
+      document.addEventListener('webkitfullscreenchange', updateFsBtn);
+    }
+  }
+
+  function closeReader(popHistory = false) {
+    if (document.fullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+    elements.readerModal.classList.remove('active');
+    document.body.classList.remove('reader-open');
+    document.documentElement.classList.remove('reader-open');
+    const iframeWrap = document.querySelector('.reader-iframe-wrap');
+    if (iframeWrap) {
+      iframeWrap.innerHTML = '';
+    }
+    document.body.style.overflow = '';
+
+    // Reliably restore user scroll position without jumping
+    if (typeof state.savedScrollY === 'number') {
+      window.scrollTo(0, state.savedScrollY);
+    }
+
+    // Restore the 4 hub tab buttons when reader is closed
+    if (elements.hubTabsContainer) {
+      elements.hubTabsContainer.style.removeProperty('display');
+      elements.hubTabsContainer.classList.remove('is-hidden');
+    }
+    if (elements.mobileBottomNav && elements.subjectHubView && elements.subjectHubView.classList.contains('active')) {
+      elements.mobileBottomNav.style.removeProperty('display');
+    }
+
+    if (popHistory && window.history.state && window.history.state.view === 'reader') {
+      window.history.back();
+    }
+  }
+
+  function handleReaderBack() {
+    if (window.history.state && window.history.state.view === 'reader') {
+      window.history.back();
+    } else {
+      closeReader(false);
+    }
+  }
+
+  // Expose global methods for Native Android App shell & external callers
+  window.isReaderOpen = () => Boolean(elements.readerModal && elements.readerModal.classList.contains('active'));
+  window.closeNotesReader = () => handleReaderBack();
+
+  function handleHubBack() {
+    if (window.history.state && window.history.state.view === 'hub') {
+      window.history.back();
+    } else {
+      if (state.currentSemester) {
+        selectSemester(state.currentSemester, true);
+      } else {
+        showView('semester', true);
+      }
+    }
+  }
+
+  function handleSubjectsBack() {
+    if (window.history.state && window.history.state.view === 'subjects') {
+      window.history.back();
+    } else {
+      showView('semester', true);
+    }
+  }
+
+  // =========================================================================
+  // INITIALIZATION & EVENT LISTENERS
+  // =========================================================================
+  
+  // =========================================================================
+  // 5. PRECEDENT RECALL FLASHCARDS CONTROLLER (3D Flip Deck)
+  // =========================================================================
+  function openFlashcardsModal(subjectId, filterUnit) {
+    const data = window.DU_LAW_PORTAL_DATA;
+    if (!data) return;
+
+    const subId = subjectId || state.currentSubject || 'contract';
+    const sub = data.subjects[subId];
+    if (!sub || !sub.cases || sub.cases.length === 0) {
+      showToast('No landmark cases available for flashcards in this subject.');
+      return;
+    }
+
+    let deck = [...sub.cases];
+    if (filterUnit && filterUnit !== 'all') {
+      const uNum = parseInt(filterUnit, 10);
+      const filtered = deck.filter(c => c.unitNumber === uNum);
+      if (filtered.length > 0) deck = filtered;
+    }
+
+    state.flashcards.deck = deck;
+    state.flashcards.currentIndex = 0;
+    state.flashcards.isFlipped = false;
+
+    // Update Header info
+    if (elements.fcSubjectTitle) elements.fcSubjectTitle.textContent = `${sub.name} — Precedent Recall`;
+    if (elements.fcDeckInfo) elements.fcDeckInfo.textContent = `Active Deck: ${deck.length} Landmark Authorities`;
+
+    renderFlashcardCard();
+
+    if (elements.flashcardsModal) elements.flashcardsModal.classList.add('active');
+    document.body.classList.add('modal-open');
+
+    // Attach keyboard listener
+    document.addEventListener('keydown', handleFlashcardKeydown);
+  }
+
+  function closeFlashcardsModal() {
+    if (elements.flashcardsModal) elements.flashcardsModal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+    document.removeEventListener('keydown', handleFlashcardKeydown);
+  }
+
+  function renderFlashcardCard() {
+    const fcState = state.flashcards;
+    if (!fcState.deck || fcState.deck.length === 0) return;
+
+    const currentCard = fcState.deck[fcState.currentIndex];
+    const total = fcState.deck.length;
+    const currentNum = fcState.currentIndex + 1;
+
+    // Reset flip
+    fcState.isFlipped = false;
+    if (elements.activeFlashcard) elements.activeFlashcard.classList.remove('is-flipped');
+
+    // Progress bar and counter
+    if (elements.fcCounterText) elements.fcCounterText.textContent = `Card ${currentNum} of ${total}`;
+    if (elements.fcProgressFill) elements.fcProgressFill.style.width = `${(currentNum / total) * 100}%`;
+
+    // Calculate mastered count for current deck
+    const masteredCount = fcState.deck.filter(c => fcState.masteredIds.includes(c.name)).length;
+    if (elements.fcMasteryStats) elements.fcMasteryStats.textContent = `${masteredCount} of ${total} Mastered`;
+
+    // Front Face (Prompt / Dilemma)
+    if (elements.fcFrontUnit) elements.fcFrontUnit.textContent = currentCard.unit || 'Landmark Precedent';
+    if (elements.fcFrontFacts) elements.fcFrontFacts.textContent = currentCard.facts || 'Material facts as recorded in DU Case Material.';
+    if (elements.fcFrontIssue) elements.fcFrontIssue.textContent = currentCard.issues || 'Core legal issue examined by the bench.';
+
+    // Back Face (Precedent / Ratio)
+    if (elements.fcBackUnit) elements.fcBackUnit.textContent = currentCard.unit || 'Precedent Revealed';
+    if (elements.fcBackCite) elements.fcBackCite.textContent = currentCard.citation || 'DU Case Material';
+    if (elements.fcBackCaseName) elements.fcBackCaseName.textContent = currentCard.name;
+    if (elements.fcBackRatio) elements.fcBackRatio.textContent = currentCard.ratio || 'Established doctrine and judicial ratio.';
+
+    if (elements.fcBackTip && elements.fcBackTipBox) {
+      if (currentCard.examTips) {
+        elements.fcBackTip.textContent = currentCard.examTips;
+        elements.fcBackTipBox.style.display = 'block';
+      } else {
+        elements.fcBackTipBox.style.display = 'none';
+      }
+    }
+
+    // Update mastery buttons active style
+    const isMastered = fcState.masteredIds.includes(currentCard.name);
+    if (elements.fcBtnMastered) elements.fcBtnMastered.classList.toggle('active', isMastered);
+    if (elements.fcBtnReview) elements.fcBtnReview.classList.toggle('active', !isMastered);
+  }
+
+  function flipFlashcard() {
+    state.flashcards.isFlipped = !state.flashcards.isFlipped;
+    if (elements.activeFlashcard) {
+      elements.activeFlashcard.classList.toggle('is-flipped', state.flashcards.isFlipped);
+    }
+  }
+
+  function nextFlashcard() {
+    if (state.flashcards.deck.length === 0) return;
+    if (state.flashcards.currentIndex < state.flashcards.deck.length - 1) {
+      state.flashcards.currentIndex++;
+    } else {
+      state.flashcards.currentIndex = 0; // wrap around
+    }
+    renderFlashcardCard();
+  }
+
+  function prevFlashcard() {
+    if (state.flashcards.deck.length === 0) return;
+    if (state.flashcards.currentIndex > 0) {
+      state.flashcards.currentIndex--;
+    } else {
+      state.flashcards.currentIndex = state.flashcards.deck.length - 1; // wrap around
+    }
+    renderFlashcardCard();
+  }
+
+  function shuffleFlashcards() {
+    const deck = state.flashcards.deck;
+    if (!deck || deck.length <= 1) return;
+
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+    state.flashcards.currentIndex = 0;
+    renderFlashcardCard();
+    showToast('Flashcard deck shuffled! 🔀');
+  }
+
+  function markFlashcardMastery(isMastered) {
+    const fcState = state.flashcards;
+    if (!fcState.deck || fcState.deck.length === 0) return;
+    const currentCard = fcState.deck[fcState.currentIndex];
+
+    if (isMastered) {
+      if (!fcState.masteredIds.includes(currentCard.name)) {
+        fcState.masteredIds.push(currentCard.name);
+      }
+      showToast(`Mastered: ${currentCard.name} 🎉`);
+    } else {
+      fcState.masteredIds = fcState.masteredIds.filter(name => name !== currentCard.name);
+      showToast(`Queued for Review: ${currentCard.name}`);
+    }
+
+    localStorage.setItem('du_law_flashcard_mastery', JSON.stringify(fcState.masteredIds));
+    renderFlashcardCard();
+
+    // Auto-advance after brief pause
+    setTimeout(() => {
+      nextFlashcard();
+    }, 380);
+  }
+
+  function handleFlashcardKeydown(e) {
+    if (!elements.flashcardsModal || !elements.flashcardsModal.classList.contains('active')) return;
+
+    if (e.code === 'Space' || e.key === ' ') {
+      e.preventDefault();
+      flipFlashcard();
+    } else if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+      e.preventDefault();
+      nextFlashcard();
+    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault();
+      prevFlashcard();
+    } else if (e.key === '1') {
+      e.preventDefault();
+      markFlashcardMastery(false);
+    } else if (e.key === '2') {
+      e.preventDefault();
+      markFlashcardMastery(true);
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closeFlashcardsModal();
+    }
+  }
+
+  // =========================================================================
+  // 6. QUICK BARE ACT DRAWER CONTROLLER & LIQUID METAL SECTION SHOWCASE
+  // =========================================================================
+  function openBareActDrawer(searchSec, filterAct) {
+    if (!elements.bareActDrawer) return;
+
+    // Detect appropriate act from current subject if not explicitly given
+    let targetAct = filterAct || state.bareActs.activeAct;
+    if (!filterAct && state.currentSubject) {
+      const subActMap = {
+        contract: 'ica',
+        bns: 'bns',
+        family: 'hma',
+        torts: 'cpa',
+        company: 'ca',
+        cpc: 'cpc',
+        media: 'all',
+        juris: 'all'
+      };
+      if (subActMap[state.currentSubject]) {
+        targetAct = subActMap[state.currentSubject];
+      }
+    }
+
+    state.bareActs.activeAct = targetAct || 'all';
+
+    // Set search query if passed
+    if (searchSec) {
+      state.bareActs.searchQuery = String(searchSec).trim();
+      if (elements.bareActSearchInput) {
+        elements.bareActSearchInput.value = state.bareActs.searchQuery;
+      }
+      if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'block';
+    } else if (!state.bareActs.searchQuery) {
+      if (elements.bareActSearchInput) elements.bareActSearchInput.value = '';
+      if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'none';
+    }
+
+    // Update tab styles
+    const tabs = elements.badActTabs ? elements.badActTabs.querySelectorAll('.bad-tab') : [];
+    tabs.forEach(t => {
+      t.classList.toggle('active', t.dataset.act === state.bareActs.activeAct);
+    });
+
+    elements.bareActDrawer.classList.add('open');
+    if (elements.bareActOverlay) elements.bareActOverlay.classList.add('open');
+    document.body.classList.add('drawer-open');
+
+    renderQuickSecRibbon();
+    renderBareActList();
+
+    // If searchSec specified, scroll to matching card
+    if (searchSec) {
+      setTimeout(() => {
+        const targetCard = elements.bareActList ? elements.bareActList.querySelector('.bad-section-card') : null;
+        if (targetCard) {
+          targetCard.classList.add('open', 'highlighted');
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 150);
+    }
+  }
+
+  function closeBareActDrawer() {
+    if (elements.bareActDrawer) elements.bareActDrawer.classList.remove('open');
+    if (elements.bareActOverlay) elements.bareActOverlay.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+  }
+
+  // Render the horizontal quick-navigation ribbon of liquid metal section buttons
+  function renderQuickSecRibbon() {
+    if (!elements.badQuickSecRibbon) return;
+    if (!window.BARE_ACTS_DB || !window.BARE_ACTS_DB.getByAct) return;
+
+    const currentAct = state.bareActs.activeAct;
+    let actSections = [];
+
+    if (currentAct === 'all') {
+      actSections = window.BARE_ACTS_DB.sections.slice(0, 30);
+    } else {
+      actSections = window.BARE_ACTS_DB.getByAct(currentAct);
+    }
+
+    if (!actSections || actSections.length === 0) {
+      if (elements.badQuickRibbonWrap) elements.badQuickRibbonWrap.style.display = 'none';
+      return;
+    }
+
+    if (elements.badQuickRibbonWrap) elements.badQuickRibbonWrap.style.display = 'block';
+
+    elements.badQuickSecRibbon.innerHTML = actSections.map(s => {
+      const isSelected = state.bareActs.expandedId === s.id;
+      return `
+        <button class="bad-quick-sec-btn ${isSelected ? 'active' : ''}" data-sec-id="${s.id}" type="button" title="Section ${s.sec}: ${escapeHtml(s.title)}">
+          <div class="metal-inner-body">
+            <div class="metal-icon-circle">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <span class="metal-btn-lbl">S. ${s.sec}</span>
+          </div>
+        </button>
+      `;
+    }).join('');
+
+    // Attach click listeners to quick section buttons
+    elements.badQuickSecRibbon.querySelectorAll('.bad-quick-sec-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const secId = btn.dataset.secId;
+        state.bareActs.expandedId = secId;
+
+        // Highlight active ribbon button
+        elements.badQuickSecRibbon.querySelectorAll('.bad-quick-sec-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // If a search query was filtering out other sections, clear it
+        if (state.bareActs.searchQuery) {
+          state.bareActs.searchQuery = '';
+          if (elements.bareActSearchInput) elements.bareActSearchInput.value = '';
+          if (elements.bareActClearSearch) elements.bareActClearSearch.style.display = 'none';
+          renderBareActList();
+        }
+
+        // Find matching section card, open it, highlight it, and scroll to it
+        const targetCard = elements.bareActList ? elements.bareActList.querySelector(`.bad-section-card[data-id="${secId}"]`) : null;
+        if (targetCard) {
+          elements.bareActList.querySelectorAll('.bad-section-card').forEach(c => c.classList.remove('highlighted'));
+          targetCard.classList.add('open', 'highlighted');
+          targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  }
+
+  function renderBareActList() {
+    if (!elements.bareActList) return;
+    if (!window.BARE_ACTS_DB || !window.BARE_ACTS_DB.search) {
+      elements.bareActList.innerHTML = `<div class="empty-state"><p>Bare Act database loading...</p></div>`;
+      return;
+    }
+
+    const sections = window.BARE_ACTS_DB.search(state.bareActs.searchQuery, state.bareActs.activeAct);
+
+    if (sections.length === 0) {
+      elements.bareActList.innerHTML = `
+        <div class="empty-state">
+          <i class="fa-solid fa-book-open"></i>
+          <h4>No statutory provisions found</h4>
+          <p>Try searching for another section number, keyword, or clear search.</p>
+          <button class="btn-clear-search" onclick="document.getElementById('bareActClearSearch').click()">Clear Search</button>
+        </div>
+      `;
+      return;
+    }
+
+    elements.bareActList.innerHTML = sections.map(s => {
+      const actObj = window.BARE_ACTS_DB.acts.find(a => a.id === s.actId) || { short: s.act, badge: 'Statute' };
+      const isOpen = s.id === state.bareActs.expandedId || sections.length === 1;
+
+      // Format ingredients checklist
+      let ingredientsHtml = '';
+      if (s.ingredients && Array.isArray(s.ingredients) && s.ingredients.length > 0) {
+        ingredientsHtml = `
+          <div class="bad-ingredients-card">
+            <div class="bad-ingredients-header">
+              <i class="fa-solid fa-list-check"></i>
+              <span>Essential Statutory Ingredients</span>
+            </div>
+            <ul class="bad-ingredients-list">
+              ${s.ingredients.map(ing => `
+                <li class="bad-ingredient-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>${escapeHtml(ing)}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        `;
+      }
+
+      // Format Plain English Explanation
+      let explanationHtml = '';
+      if (s.explanation) {
+        explanationHtml = `
+          <div class="bad-plain-expl-card">
+            <div class="bad-plain-expl-header">
+              <i class="fa-solid fa-book-sparkles"></i>
+              <span>What This Means in Plain English</span>
+            </div>
+            <p class="bad-plain-expl-text">${escapeHtml(s.explanation)}</p>
+          </div>
+        `;
+      }
+
+      // Format Landmark Precedents & Holdings
+      let casesHtml = '';
+      if (s.cases && Array.isArray(s.cases) && s.cases.length > 0) {
+        casesHtml = `
+          <div class="bad-cases-card">
+            <div class="bad-cases-header">
+              <i class="fa-solid fa-gavel"></i>
+              <span>Landmark DU Precedents &amp; Holdings</span>
+            </div>
+            <div class="bad-cases-list">
+              ${s.cases.map(c => `
+                <div class="bad-case-item">
+                  <i class="fa-solid fa-landmark"></i>
+                  <span>${escapeHtml(c)}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // Format DU Exam Tips
+      let examTipHtml = '';
+      if (s.examTips) {
+        examTipHtml = `
+          <div class="bad-exam-tip-card">
+            <div class="bad-exam-tip-header">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>DU Exam &amp; PYQ Application Strategy</span>
+            </div>
+            <p class="bad-exam-tip-text">${escapeHtml(s.examTips)}</p>
+          </div>
+        `;
+      } else if (s.analysis) {
+        examTipHtml = `
+          <div class="bad-analysis-box">
+            <div class="bad-box-label"><i class="fa-solid fa-lightbulb"></i> DU Exam Analysis &amp; Precedent Links</div>
+            <p class="bad-analysis-text">${escapeHtml(s.analysis)}</p>
+          </div>
+        `;
+      }
+
+      return `
+        <article class="bad-section-card ${isOpen ? 'open' : ''}" data-id="${s.id}">
+          <header class="bad-card-header">
+            <div class="bad-card-header-left">
+              <!-- Liquid Metal Section Button for Each Section -->
+              <button class="sec-liquid-metal-btn" type="button" title="Section ${s.sec}">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Section ${s.sec}</span>
+                </div>
+              </button>
+
+              <div class="bad-sec-title-group">
+                <h4 class="bad-sec-main-title">${escapeHtml(s.title)}</h4>
+                <div class="bad-sec-meta-row">
+                  ${s.unit ? `<span class="bad-unit-pill"><i class="fa-solid fa-layer-group"></i> ${escapeHtml(s.unit)}</span>` : ''}
+                  ${s.badge ? `<span class="bad-theme-pill">${escapeHtml(s.badge)}</span>` : `<span class="bad-act-tag">${actObj.short}</span>`}
+                </div>
+              </div>
+            </div>
+            <div class="bad-card-header-right">
+              <i class="fa-solid fa-chevron-down bad-chevron"></i>
+            </div>
+          </header>
+          <div class="bad-card-body">
+            <!-- Verbatim Statutory Text -->
+            <div class="bad-statutory-box">
+              <div class="bad-box-label"><i class="fa-solid fa-scale-balanced"></i> Verbatim Statutory Text</div>
+              <pre class="bad-statutory-text">${escapeHtml(s.text)}</pre>
+            </div>
+
+            <!-- Essential Ingredients Checklist -->
+            ${ingredientsHtml}
+
+            <!-- Plain English Explanation -->
+            ${explanationHtml}
+
+            <!-- Landmark Precedents & Ratios -->
+            ${casesHtml}
+
+            <!-- DU Exam & PYQ Strategy -->
+            ${examTipHtml}
+
+            <!-- Action Buttons -->
+            <div class="bad-card-actions">
+              <button class="bad-btn-action copy-sec-btn" data-text="${encodeURIComponent('Section ' + s.sec + ' — ' + s.title + ' (' + s.act + ')\n\n' + s.text + (s.ingredients ? '\n\nEssential Ingredients:\n- ' + s.ingredients.join('\n- ') : ''))}">
+                <i class="fa-solid fa-copy"></i> <span>Copy Statutory Text</span>
+              </button>
+              <button class="bad-btn-action cite-sec-btn" data-cite="${encodeURIComponent('Section ' + s.sec + ', ' + s.act)}">
+                <i class="fa-solid fa-quote-left"></i> <span>Quick Citation</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    // Attach accordion expand/collapse listeners
+    elements.bareActList.querySelectorAll('.bad-card-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.closest('.bad-section-card');
+        card.classList.toggle('open');
+      });
+    });
+
+    // Copy text listeners
+    elements.bareActList.querySelectorAll('.copy-sec-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const text = decodeURIComponent(btn.dataset.text);
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Statutory text copied to clipboard! 📋');
+        }).catch(() => {
+          showToast('Copied to clipboard');
+        });
+      });
+    });
+
+    // Cite text listeners
+    elements.bareActList.querySelectorAll('.cite-sec-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const cite = decodeURIComponent(btn.dataset.cite);
+        navigator.clipboard.writeText(cite).then(() => {
+          showToast(`Citation copied: ${cite}`);
+        });
+      });
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  
+  // ===================================================================
+  // FEATURE 1: AUDIO READ-ALOUD (Metro Mode - Disabled)
+  // ===================================================================
+  function initAudioPlayer() {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+  }
+
+  function playAudio(title, text) {
+    // Disabled for now
+  }
+
+  function toggleAudioPlayback() {}
+  function stopAudioPlayback() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    state.audioIsPlaying = false;
+    state.audioUtterance = null;
+  }
+  function cycleAudioSpeed() {}
+
+  // ===================================================================
+  // FEATURE 2: STARRED PRECEDENTS & PERSONAL NOTES
+  // ===================================================================
+  function updateStarBadge() {
+    if (elements.headerStarBadge) {
+      elements.headerStarBadge.textContent = state.starred.length;
+      elements.headerStarBadge.style.display = state.starred.length > 0 ? 'inline-block' : 'none';
+    }
+  }
+
+  function toggleStar(item) {
+    const idx = state.starred.findIndex(s => s.id === item.id);
+    if (idx >= 0) {
+      state.starred.splice(idx, 1);
+      showToast('Removed from Starred Precedents');
+    } else {
+      state.starred.push({ id: item.id, title: item.title, type: item.type });
+      showToast('Added to Starred Precedents! ⭐');
+    }
+    localStorage.setItem('du_portal_starred', JSON.stringify(state.starred));
+    updateStarBadge();
+    renderActiveTabContent();
+    if (elements.bookmarksDrawer && elements.bookmarksDrawer.classList.contains('active')) renderBookmarksList();
+  }
+
+  function promptNote(itemId) {
+    const existing = state.personalNotes[itemId] || '';
+    const note = window.prompt('Enter personal note or mnemonic for this card:', existing);
+    if (note !== null) {
+      if (note.trim()) {
+        state.personalNotes[itemId] = note.trim();
+        showToast('Personal note saved! 📌');
+      } else {
+        delete state.personalNotes[itemId];
+        showToast('Note deleted');
+      }
+      localStorage.setItem('du_portal_notes', JSON.stringify(state.personalNotes));
+      renderActiveTabContent();
+    }
+  }
+
+  function openBookmarksDrawer() {
+    if (elements.bookmarksDrawer) {
+      elements.bookmarksDrawer.classList.add('active');
+      if (elements.bookmarksOverlay) elements.bookmarksOverlay.classList.add('active');
+      renderBookmarksList();
+    }
+  }
+
+  function closeBookmarksDrawer() {
+    if (elements.bookmarksDrawer) elements.bookmarksDrawer.classList.remove('active');
+    if (elements.bookmarksOverlay) elements.bookmarksOverlay.classList.remove('active');
+  }
+
+  function renderBookmarksList() {
+    if (!elements.bookmarksList) return;
+    if (state.starred.length === 0) {
+      elements.bookmarksList.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);"><i class="fa-regular fa-star" style="font-size:2.5rem;color:#cbd5e1;margin-bottom:12px;"></i><h4 style="margin:0;font-size:1rem;color:var(--text-color);">No starred items yet</h4><p style="font-size:0.8rem;margin:6px 0 0;">Click the star on any Case or PYQ card to save it here for rapid exam revision.</p></div>';
+      return;
+    }
+    elements.bookmarksList.innerHTML = state.starred.map(item => {
+      const hasNote = state.personalNotes[item.id];
+      return '<div class="bm-item-card" data-id="' + item.id + '"><div class="bm-item-title">' + item.title + '</div><div class="bm-item-meta"><span><i class="fa-solid fa-tag"></i> ' + (item.type === 'case' ? 'Landmark Precedent' : 'PYQ Model Answer') + '</span><button class="btn-delete-note" data-remove-star="' + item.id + '" style="color:#ef4444;"><i class="fa-solid fa-trash-can"></i></button></div>' + (hasNote ? '<div class="personal-card-note" style="margin-top:4px;"><span><i class="fa-solid fa-thumbtack"></i> ' + hasNote + '</span></div>' : '') + '</div>';
+    }).join('');
+
+    elements.bookmarksList.querySelectorAll('[data-remove-star]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const id = btn.dataset.removeStar;
+        const idx = state.starred.findIndex(s => s.id === id);
+        if (idx >= 0) {
+          state.starred.splice(idx, 1);
+          localStorage.setItem('du_portal_starred', JSON.stringify(state.starred));
+          updateStarBadge();
+          renderBookmarksList();
+          renderActiveTabContent();
+        }
+      });
+    });
+  }
+
+  // ===================================================================
+  // FEATURE 2.5: MOBILE QUICK TOOLS MENU
+  // ===================================================================
+  function openMobileTools() {
+    if (elements.mobileToolsDrawer && elements.mobileToolsOverlay) {
+      elements.mobileToolsDrawer.classList.add('active');
+      elements.mobileToolsOverlay.classList.add('active');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeMobileTools() {
+    if (elements.mobileToolsDrawer && elements.mobileToolsOverlay) {
+      elements.mobileToolsDrawer.classList.remove('active');
+      elements.mobileToolsOverlay.classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  // ===================================================================
+  // FEATURE 2.8: CONTACT & SUPPORT MODAL
+  // ===================================================================
+  function openContactModal() {
+    if (elements.contactModal && elements.contactModalOverlay) {
+      elements.contactModalOverlay.classList.add('active');
+      elements.contactModal.classList.add('active');
+      elements.contactModal.setAttribute('aria-hidden', 'false');
+      elements.contactModalOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeContactModal() {
+    if (elements.contactModal && elements.contactModalOverlay) {
+      elements.contactModal.classList.remove('active');
+      elements.contactModalOverlay.classList.remove('active');
+      elements.contactModal.setAttribute('aria-hidden', 'true');
+      elements.contactModalOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  function copyContactEmail() {
+    const email = 'ankur@makelaweasy.in';
+    const performCopy = (text) => {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-999999px';
+        textarea.style.top = '-999999px';
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        return new Promise((resolve, reject) => {
+          document.execCommand('copy') ? resolve() : reject(new Error('Copy failed'));
+          textarea.remove();
+        });
+      }
+    };
+
+    performCopy(email).then(() => {
+      if (elements.copyEmailText) elements.copyEmailText.textContent = 'Copied!';
+      if (elements.copyEmailIcon) elements.copyEmailIcon.className = 'fa-solid fa-check';
+      if (elements.copyContactEmailBtn) elements.copyContactEmailBtn.classList.add('copied');
+      showToast('Email copied to clipboard! 📋', 'fa-copy');
+      setTimeout(() => {
+        if (elements.copyEmailText) elements.copyEmailText.textContent = 'Copy';
+        if (elements.copyEmailIcon) elements.copyEmailIcon.className = 'fa-regular fa-copy';
+        if (elements.copyContactEmailBtn) elements.copyContactEmailBtn.classList.remove('copied');
+      }, 2200);
+    }).catch(err => {
+      console.error('Failed to copy email:', err);
+      showToast('ankur@makelaweasy.in', 'fa-envelope');
+    });
+  }
+
+  // ===================================================================
+  // FEATURE 3: BNS 2023 ↔ IPC 1860 CONVERTER
+  // ===================================================================
+  function openBnsConverter() {
+    if (elements.bnsModal && elements.bnsModalOverlay) {
+      elements.bnsModal.classList.add('active');
+      elements.bnsModalOverlay.classList.add('active');
+      renderBnsConverterCards('all', '');
+      if (elements.bnsSearchInput) elements.bnsSearchInput.focus();
+    }
+  }
+
+  function closeBnsConverter() {
+    if (elements.bnsModal && elements.bnsModalOverlay) {
+      elements.bnsModal.classList.remove('active');
+      elements.bnsModalOverlay.classList.remove('active');
+    }
+  }
+
+  function renderBnsConverterCards(cat, query) {
+    if (!elements.bnsCardsContainer) return;
+    const db = window.BNS_CONVERTER_DB;
+    if (!db || !db.sections) {
+      elements.bnsCardsContainer.innerHTML = '<p style="padding:20px;">Converter database loading...</p>';
+      return;
+    }
+
+    let items = db.sections;
+    if (cat && cat !== 'all') {
+      items = items.filter(s => (s.chapter && s.chapter.includes(cat)) || (s.offense && s.offense.includes(cat)));
+    }
+
+    if (query) {
+      const q = query.toLowerCase();
+      items = items.filter(s =>
+        s.bns.toLowerCase().includes(q) ||
+        s.ipc.toLowerCase().includes(q) ||
+        s.offense.toLowerCase().includes(q) ||
+        s.summary.toLowerCase().includes(q) ||
+        (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
+      );
+    }
+
+    if (items.length === 0) {
+      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No penal section match found</h4><p>Try searching for section numbers (e.g. 302, 103, 34, 498A) or offence names.</p></div>';
+      return;
+    }
+
+    elements.bnsCardsContainer.innerHTML = items.map(s => {
+      return '<div class="bns-comp-card fade-in"><div class="bns-comp-header"><div class="bns-comp-offense"><i class="fa-solid fa-gavel" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div><span class="bns-comp-badge ' + (s.ipc === '[NEW IN BNS]' ? 'new-prov' : '') + '">' + (s.ipc === '[NEW IN BNS]' ? '★ Brand New in BNS' : 'Key Substitution') + '</span></div><div class="bns-comp-body"><div class="bns-section-box bns-side"><div class="bns-sec-tag">NEW STATUTE: BNS 2023</div><div class="bns-sec-num">' + s.bns + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);">' + s.summary + '</p></div><div class="bns-section-box ipc-side"><div class="bns-sec-tag">OLD STATUTE: IPC 1860</div><div class="bns-sec-num">' + s.ipc + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-muted);">' + (s.chapter || 'Indian Penal Code 1860 Reference') + '</p></div></div><div class="bns-comp-footer"><div class="bns-changes-text"><b>Legislative Transition:</b> ' + s.changes + '</div>' + (s.cases && s.cases.length > 0 ? '<div class="bns-precedents-row"><span><b>Landmark Cases:</b></span> ' + s.cases.map(c => '<span class="bns-case-tag">' + c + '</span>').join('') + '</div>' : '') + (s.duExamTip ? '<div class="bns-exam-tip"><i class="fa-solid fa-lightbulb" style="margin-right:4px;"></i> <b>DU Exam Tip:</b> ' + s.duExamTip + '</div>' : '') + '</div></div>';
+    }).join('');
+  }
+
+  // ===================================================================
+  // FEATURE 4: DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
+  // ===================================================================
+  function openMockExam() {
+    if (elements.mockModal && elements.mockModalOverlay) {
+      elements.mockModal.classList.add('active');
+      elements.mockModalOverlay.classList.add('active');
+      generateMockPaper();
+    }
+  }
+
+  function closeMockExam() {
+    if (elements.mockModal && elements.mockModalOverlay) {
+      elements.mockModal.classList.remove('active');
+      elements.mockModalOverlay.classList.remove('active');
+      pauseMockTimer();
+    }
+  }
+
+  function startMockTimer() {
+    if (state.mockTimerRunning) return;
+    state.mockTimerRunning = true;
+    if (elements.mockTimerToggleBtn) elements.mockTimerToggleBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    state.mockTimerInterval = setInterval(() => {
+      if (state.mockTimerSecs > 0) {
+        state.mockTimerSecs--;
+        updateMockTimerDisplay();
+      } else {
+        pauseMockTimer();
+        showToast('Time is up! 3 Hours completed.');
+      }
+    }, 1000);
+  }
+
+  function pauseMockTimer() {
+    state.mockTimerRunning = false;
+    clearInterval(state.mockTimerInterval);
+    if (elements.mockTimerToggleBtn) elements.mockTimerToggleBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+  }
+
+  function resetMockTimer() {
+    pauseMockTimer();
+    state.mockTimerSecs = 10800; // 3 hours
+    updateMockTimerDisplay();
+  }
+
+  function updateMockTimerDisplay() {
+    if (!elements.mockTimerClock) return;
+    const h = Math.floor(state.mockTimerSecs / 3600);
+    const m = Math.floor((state.mockTimerSecs % 3600) / 60);
+    const s = state.mockTimerSecs % 60;
+    const str = [h, m, s].map(v => String(v).padStart(2, '0')).join(':');
+    elements.mockTimerClock.textContent = str;
+
+    if (state.mockTimerSecs < 900) {
+      elements.mockTimerClock.classList.add('warning');
+    } else {
+      elements.mockTimerClock.classList.remove('warning');
+    }
+  }
+
+  function generateMockPaper() {
+    if (!elements.mockQuestionsList) return;
+    const subjId = elements.mockSubjectSelect ? elements.mockSubjectSelect.value : 'all';
+
+    let pool = [];
+    const subjects = window.DU_LAW_PORTAL_DATA.subjects;
+
+    if (subjId === 'all') {
+      Object.keys(subjects).forEach(sid => {
+        if (subjects[sid] && subjects[sid].pyqs) {
+          pool.push(...subjects[sid].pyqs.map(q => ({ ...q, subjectName: subjects[sid].name })));
+        }
+      });
+    } else if (subjects[subjId] && subjects[subjId].pyqs) {
+      pool = subjects[subjId].pyqs.map(q => ({ ...q, subjectName: subjects[subjId].name }));
+    }
+
+    if (pool.length === 0) {
+      elements.mockQuestionsList.innerHTML = '<p style="padding:20px;">No questions found for this subject.</p>';
+      return;
+    }
+
+    // Shuffle and pick 8 realistic exam questions
+    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+    const selected8 = shuffled.slice(0, 8);
+
+    state.mockSelectedQuestions.clear();
+    updateMockSelectionCounter();
+    resetMockTimer();
+    startMockTimer();
+
+    elements.mockQuestionsList.innerHTML = selected8.map((q, idx) => {
+      const qNum = idx + 1;
+      return '<div class="mock-question-card fade-in" id="mock-q-' + qNum + '">' +
+        '<div class="mock-q-header">' +
+          '<div class="mock-q-meta">' +
+            '<span class="mock-q-num">Q.' + qNum + '</span>' +
+            '<span class="mock-q-marks">[20 Marks]</span>' +
+            '<span class="mock-q-source"><i class="fa-solid fa-graduation-cap"></i> ' + (q.subjectName || '') + ' &bull; ' + (q.year || 'DU LL.B. Term Exam') + '</span>' +
+          '</div>' +
+          '<label class="mock-q-select-label">' +
+            '<input type="checkbox" class="mock-q-checkbox" data-q="' + qNum + '"> ' +
+            '<span>Attempt this Question</span>' +
+          '</label>' +
+        '</div>' +
+        '<div class="mock-q-text">' + q.question + '</div>' +
+        '<div class="mock-scratchpad">' +
+          '<label><i class="fa-solid fa-pencil"></i> Student Rough Outline &amp; Issue Spotting Scratchpad (Auto-saved):</label>' +
+          '<textarea placeholder="Type your 4-step IRAC outline, issues, sections to cite, and case names here..."></textarea>' +
+        '</div>' +
+        '<div class="mock-evaluated-answer" id="eval-ans-' + qNum + '">' +
+          '<div class="eval-rubric-grid">' +
+            '<div class="rubric-cell"><div class="rubric-label">Issue Spotting &amp; Facts</div><div class="rubric-pts">4 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Statutory Provisions Cited</div><div class="rubric-pts">5 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Landmark Precedents &amp; Ratios</div><div class="rubric-pts">7 Marks</div></div>' +
+            '<div class="rubric-cell"><div class="rubric-label">Logical Reasoning &amp; Conclusion</div><div class="rubric-pts">4 Marks</div></div>' +
+          '</div>' +
+          '<div style="background:var(--bg-tint);padding:16px;border-radius:8px;font-size:0.9rem;line-height:1.6;">' +
+            '<h4 style="margin:0 0 10px;color:var(--primary);"><i class="fa-solid fa-award"></i> Comprehensive Model Answer:</h4>' +
+            (q.modelAnswer ? renderMarkdown(q.modelAnswer) : (q.answer ? q.answer : '<p>Consult the primary unit notes for detailed case ratios.</p>')) +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    elements.mockQuestionsList.querySelectorAll('.mock-q-checkbox').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const qNum = cb.dataset.q;
+        const card = document.getElementById('mock-q-' + qNum);
+        if (cb.checked) {
+          if (state.mockSelectedQuestions.size >= 5) {
+            cb.checked = false;
+            showToast('DU Exam Rule: Maximum 5 questions can be attempted!');
+            return;
+          }
+          state.mockSelectedQuestions.add(qNum);
+          if (card) card.classList.add('selected-question');
+        } else {
+          state.mockSelectedQuestions.delete(qNum);
+          if (card) card.classList.remove('selected-question');
+        }
+        updateMockSelectionCounter();
+      });
+    });
+  }
+
+  function updateMockSelectionCounter() {
+    const cnt = state.mockSelectedQuestions.size;
+    if (elements.mockSelectedCount) elements.mockSelectedCount.textContent = cnt;
+    if (elements.mockSelectionCounter) {
+      if (cnt === 5) {
+        elements.mockSelectionCounter.className = 'mock-selection-counter ready';
+        elements.mockSelectionCounter.innerHTML = '<i class="fa-solid fa-circle-check"></i> Perfect! Exactly 5 Questions Selected';
+      } else {
+        elements.mockSelectionCounter.className = 'mock-selection-counter';
+        elements.mockSelectionCounter.innerHTML = 'Attempting: <b>' + cnt + '</b> / 5 Questions Chosen';
+      }
+    }
+  }
+
+  function evaluateMockExam() {
+    if (state.mockSelectedQuestions.size === 0) {
+      showToast('Please select the questions you attempted before evaluating!');
+      return;
+    }
+    pauseMockTimer();
+    document.querySelectorAll('.mock-evaluated-answer').forEach(el => el.classList.add('revealed'));
+    showToast('Exam Completed! All Model Answers & Evaluation Rubrics Unfolded. 🎉');
+  }
+
+  // =========================================================================
+  // STUDENT EXPERIENCE & FEEDBACK SURVEY CONTROLLER (Google Form Style Modal)
+  // =========================================================================
+  function openFeedbackModal() {
+    if (elements.studentFeedbackSection && elements.feedbackModalOverlay) {
+      elements.feedbackModalOverlay.classList.add('active');
+      elements.studentFeedbackSection.classList.add('active');
+      elements.studentFeedbackSection.setAttribute('aria-hidden', 'false');
+      elements.feedbackModalOverlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+    }
+  }
+
+  function closeFeedbackModal() {
+    if (elements.studentFeedbackSection && elements.feedbackModalOverlay) {
+      elements.studentFeedbackSection.classList.remove('active');
+      elements.feedbackModalOverlay.classList.remove('active');
+      elements.studentFeedbackSection.setAttribute('aria-hidden', 'true');
+      elements.feedbackModalOverlay.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+    }
+  }
+
+  function navigateToFeedback() {
+    openFeedbackModal();
+  }
+
+  function initStudentFeedbackForm() {
+    const form = elements.studentFeedbackForm;
+    if (!form) return;
+
+    // Connect Modal Close Triggers
+    if (elements.feedbackModalCloseBtn) {
+      elements.feedbackModalCloseBtn.addEventListener('click', closeFeedbackModal);
+    }
+    if (elements.feedbackModalOverlay) {
+      elements.feedbackModalOverlay.addEventListener('click', closeFeedbackModal);
+    }
+    if (elements.gfCloseModalSuccessBtn) {
+      elements.gfCloseModalSuccessBtn.addEventListener('click', closeFeedbackModal);
+    }
+
+    // Connect Trigger Buttons
+    if (elements.headerFeedbackBtn) {
+      elements.headerFeedbackBtn.addEventListener('click', navigateToFeedback);
+    }
+    if (elements.footerFeedbackLink) {
+      elements.footerFeedbackLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToFeedback();
+      });
+    }
+    if (elements.footerContactBarFeedbackLink) {
+      elements.footerContactBarFeedbackLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToFeedback();
+      });
+    }
+    if (elements.contactModalFeedbackBtn) {
+      elements.contactModalFeedbackBtn.addEventListener('click', () => {
+        closeContactModal();
+        navigateToFeedback();
+      });
+    }
+    if (elements.mtdFeedbackBtn) {
+      elements.mtdFeedbackBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToFeedback();
+      });
+    }
+
+    // Google Form Card Focus & Live Error Clearing
+    const cards = form.querySelectorAll('.gf-card');
+    cards.forEach(card => {
+      card.addEventListener('focusin', () => card.classList.add('focused'));
+      card.addEventListener('focusout', () => card.classList.remove('focused'));
+      card.addEventListener('input', () => card.classList.remove('has-error'));
+      card.addEventListener('change', () => card.classList.remove('has-error'));
+    });
+
+    // Form Submission Handler
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      let hasError = false;
+      let firstErrorCard = null;
+
+      function markError(card) {
+        if (!card) return;
+        card.classList.add('has-error');
+        hasError = true;
+        if (!firstErrorCard) firstErrorCard = card;
+      }
+
+      // 1. Email Validation (Required)
+      const emailInput = form.querySelector('#gfStudentEmail');
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailVal || !emailRegex.test(emailVal)) {
+        markError(form.querySelector('#qCardEmail'));
+      }
+
+      // 2. Centre Validation (Required Radio)
+      const centreChecked = form.querySelector('input[name="student_centre"]:checked');
+      if (!centreChecked) {
+        markError(form.querySelector('#qCardCentre'));
+      }
+
+      // 3. Semester Validation (Required Radio)
+      const semChecked = form.querySelector('input[name="student_semester"]:checked');
+      if (!semChecked) {
+        markError(form.querySelector('#qCardSemester'));
+      }
+
+      // 4. Overall Rating Validation (Required Scale)
+      const ratingChecked = form.querySelector('input[name="overall_rating"]:checked');
+      if (!ratingChecked) {
+        markError(form.querySelector('#qCardOverallRating'));
+      }
+
+      // 5. Frequent Features Validation (At least one checkbox)
+      const featuresChecked = form.querySelectorAll('input[name="frequent_features"]:checked');
+      if (!featuresChecked || featuresChecked.length === 0) {
+        markError(form.querySelector('#qCardFeatures'));
+      }
+
+      // 6. DPDP Consent Validation (Required Checkbox)
+      const consentChecked = form.querySelector('#gfDpdpConsent');
+      if (!consentChecked || !consentChecked.checked) {
+        markError(form.querySelector('#qCardConsent'));
+      }
+
+      if (hasError) {
+        if (firstErrorCard) {
+          firstErrorCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          const focusable = firstErrorCard.querySelector('input, textarea');
+          if (focusable) focusable.focus();
+        }
+        showToast('Please complete all required questions marked with *', 'fa-circle-exclamation');
+        return;
+      }
+
+      // Gather Payload
+      const nameVal = form.querySelector('#gfStudentName')?.value.trim() || 'Anonymous Student';
+      const discoveryChecked = form.querySelector('input[name="student_discovery"]:checked');
+      const careerChecked = form.querySelector('input[name="student_career"]:checked');
+      const casesRating = form.querySelector('input[name="cases_rating"]:checked');
+      const pyqsRating = form.querySelector('input[name="pyqs_rating"]:checked');
+      const favVal = form.querySelector('#gfStudentFavorite')?.value.trim() || '';
+      const sugVal = form.querySelector('#gfStudentSuggestions')?.value.trim() || '';
+
+      const selectedFeatures = Array.from(featuresChecked).map(cb => cb.value);
+      const selectedUpcoming = Array.from(form.querySelectorAll('input[name="upcoming_subjects"]:checked')).map(cb => cb.value);
+      const selectedTools = Array.from(form.querySelectorAll('input[name="new_tools"]:checked')).map(cb => cb.value);
+
+      const payload = {
+        id: 'resp_' + Date.now(),
+        timestamp: new Date().toISOString(),
+        name: nameVal,
+        email: emailVal,
+        centre: centreChecked.value,
+        semester: semChecked.value,
+        discovery: discoveryChecked ? discoveryChecked.value : 'Not specified',
+        career: careerChecked ? careerChecked.value : 'Not specified',
+        overall_rating: ratingChecked.value + '/5',
+        frequent_features: selectedFeatures,
+        cases_rating: casesRating ? casesRating.value + '/5' : 'Not rated',
+        pyqs_rating: pyqsRating ? pyqsRating.value + '/5' : 'Not rated',
+        upcoming_subjects: selectedUpcoming,
+        new_tools: selectedTools,
+        favorite_thing: favVal || 'N/A',
+        suggestions: sugVal || 'None',
+        consent: 'Agreed to DPDP Act 2023 guidelines'
+      };
+
+      // 1. Local Storage Persistence
+      try {
+        const stored = JSON.parse(localStorage.getItem('du_portal_feedback_responses') || '[]');
+        stored.push(payload);
+        localStorage.setItem('du_portal_feedback_responses', JSON.stringify(stored));
+      } catch (err) {
+        console.warn('[Feedback] Local storage write failed:', err);
+      }
+
+      // 2. Transmit to ankur@makelaweasy.in via FormSubmit AJAX endpoint
+      const submitBtn = elements.gfSubmitBtn;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending to Editorial Inbox...</span>';
+      }
+
+      const postData = new FormData();
+      postData.append('_subject', `🎓 New Student Survey: ${payload.name} (${payload.centre})`);
+      postData.append('_template', 'table');
+      postData.append('_captcha', 'false');
+      postData.append('Student Name', payload.name);
+      postData.append('Email Address', payload.email);
+      postData.append('Law Centre / College', payload.centre);
+      postData.append('LL.B. Semester', payload.semester);
+      postData.append('Discovery Source', payload.discovery);
+      postData.append('Career Objective', payload.career);
+      postData.append('Overall Portal Rating', payload.overall_rating);
+      postData.append('Frequently Used Features', payload.frequent_features.join(', ') || 'None selected');
+      postData.append('FIRAC Cases Clarity', payload.cases_rating);
+      postData.append('DU Model Answers Quality', payload.pyqs_rating);
+      postData.append('Requested Subjects', payload.upcoming_subjects.join(', ') || 'None');
+      postData.append('Requested Tools', payload.new_tools.join(', ') || 'None');
+      postData.append('Favorite Aspect', payload.favorite_thing);
+      postData.append('Suggestions & Typos', payload.suggestions);
+      postData.append('Submission Date & Time', new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
+
+      fetch('https://formsubmit.co/ajax/ankur@makelaweasy.in', {
+        method: 'POST',
+        body: postData,
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        console.log('[Feedback] Dispatch response status:', res.status);
+      }).catch(err => {
+        console.warn('[Feedback] Network transmission deferred:', err);
+      });
+
+      // 3. Prepare Fail-safe Email Client Link
+      if (elements.gfEmailBackupBtn) {
+        const mailSub = encodeURIComponent(`Make Law Easy — Feedback from ${payload.name} (${payload.centre})`);
+        const mailBody = encodeURIComponent(
+`Make Law Easy — Student Feedback & User Profile
+======================================================
+Name: ${payload.name}
+Email: ${payload.email}
+Institution: ${payload.centre}
+Semester: ${payload.semester}
+Discovery: ${payload.discovery}
+Career Goal: ${payload.career}
+
+PORTAL RATINGS & FEEDBACK
+------------------------------------------------------
+Overall Experience: ${payload.overall_rating}
+Frequent Features: ${payload.frequent_features.join(', ')}
+FIRAC Cases Rating: ${payload.cases_rating}
+Model Answers Rating: ${payload.pyqs_rating}
+
+UPCOMING SUBJECTS & REQUESTED TOOLS
+------------------------------------------------------
+Requested Subjects: ${payload.upcoming_subjects.join(', ')}
+Requested Tools: ${payload.new_tools.join(', ')}
+
+STUDENT REMARKS
+------------------------------------------------------
+Favorite Aspect: ${payload.favorite_thing}
+Suggestions & Bugs: ${payload.suggestions}
+
+DPDP Act 2023 Consent: Confirmed
+Submission Time: ${new Date().toLocaleString()}
+`
+        );
+        elements.gfEmailBackupBtn.href = `mailto:ankur@makelaweasy.in?subject=${mailSub}&body=${mailBody}`;
+      }
+
+      // 4. Transition to Success Card
+      setTimeout(() => {
+        form.style.display = 'none';
+        if (elements.gfSuccessCard) {
+          elements.gfSuccessCard.style.display = 'block';
+          elements.gfSuccessCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        showToast('Feedback submitted successfully! Thank you.', 'fa-circle-check');
+      }, 400);
+    });
+
+    // Reset / Submit Another Response Handler
+    if (elements.gfResetBtn) {
+      elements.gfResetBtn.addEventListener('click', () => {
+        form.reset();
+        cards.forEach(c => c.classList.remove('has-error'));
+        if (elements.gfSubmitBtn) {
+          elements.gfSubmitBtn.disabled = false;
+          elements.gfSubmitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Submit Feedback</span>';
+        }
+        if (elements.gfSuccessCard) elements.gfSuccessCard.style.display = 'none';
+        form.style.display = 'block';
+        if (elements.studentFeedbackSection) {
+          elements.studentFeedbackSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // Clear Form Button Handler
+    if (elements.gfClearBtn) {
+      elements.gfClearBtn.addEventListener('click', () => {
+        if (confirm('Clear form? All answers entered in this survey will be cleared.')) {
+          form.reset();
+          cards.forEach(c => c.classList.remove('has-error'));
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+  }
+
+  // =========================================================================
+  // STUDENT COMMUNITY & ACADEMIC COMMENTS MODULE
+  // =========================================================================
+  const DEFAULT_COMMENTS = [
+    {
+      id: 'comm-101',
+      author: 'Aarav Sharma',
+      initials: 'AS',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 3 (LL.B.)',
+      semesterShort: 'Sem 3',
+      subjectId: 'company',
+      subjectName: 'Company Law',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 7200000,
+      timeAgo: '2 hours ago',
+      content: 'In Foss v. Harbottle, the exception regarding ultra vires acts and fraud on the minority is articulated with tremendous clarity. For the DU Term Exam 20-marker question on derivative action, should we focus primarily on the English common law precedents (Foss, Edwards v Halliwell) or prioritize Indian statutory remedies under Sections 241 & 244 of Companies Act 2013?',
+      helpfulCount: 42,
+      replies: [
+        {
+          id: 'rep-101-1',
+          author: 'Editorial Team • Faculty of Law Mentor',
+          initials: 'ED',
+          isEditorial: true,
+          timestamp: Date.now() - 3600000,
+          timeAgo: '1 hour ago',
+          content: 'Excellent academic query, Aarav! In DU semester evaluations, follow a 3-tier structure: (1) Common Law origin (Foss v Harbottle rule & 4 Edwards v Halliwell exceptions), (2) Indian judicial adoption (e.g., Needle Industries and Rajahmundry Electric Supply Corp), and (3) Modern statutory codification under Section 241, 242 and 244 (Oppression and Mismanagement).'
+        }
+      ]
+    },
+    {
+      id: 'comm-102',
+      author: 'Meher Kaur',
+      initials: 'MK',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'contract',
+      subjectName: 'Law of Contract',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 18000000,
+      timeAgo: '5 hours ago',
+      content: 'The FIRAC structure for Carlill v. Carbolic Smoke Ball Co. helped me finally understand why notification of acceptance was waived under Section 8 of the Indian Contract Act. Truly phenomenal notes for Term 1!',
+      helpfulCount: 38,
+      replies: [
+        {
+          id: 'rep-102-1',
+          author: 'Devansh Roy (LC-1, Sem 3)',
+          initials: 'DR',
+          isEditorial: false,
+          timestamp: Date.now() - 14400000,
+          timeAgo: '4 hours ago',
+          content: 'Also remember to cite State of Bihar v. Bengal Chemical (1954) as the leading Indian authority on general offers!'
+        }
+      ]
+    },
+    {
+      id: 'comm-103',
+      author: 'Rohan Verma',
+      initials: 'RV',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 2 (LL.B.)',
+      semesterShort: 'Sem 2',
+      subjectId: 'property',
+      subjectName: 'Property Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 43200000,
+      timeAgo: '12 hours ago',
+      content: 'For Transfer of Property Act (LB-204), Section 52 (Lis Pendens) combined with Bellamy v. Sabine is an almost guaranteed 20-mark question every year. Make sure to note that transfer during litigation is not void, but only subordinate to the decree of the court.',
+      helpfulCount: 34,
+      replies: []
+    },
+    {
+      id: 'comm-104',
+      author: 'Devika Nambiar',
+      initials: 'DN',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'drafting',
+      subjectName: 'Drafting & Conveyance',
+      category: 'review',
+      categoryLabel: 'Notes Review',
+      rating: 5,
+      timestamp: Date.now() - 86400000,
+      timeAgo: 'Yesterday',
+      content: 'The Drafting (LB-502) section is an absolute lifesaver. The exact High Court criminal revision draft and the regular bail application under S. 437/439 CrPC matches DU examination expectations to the word.',
+      helpfulCount: 29,
+      replies: []
+    },
+    {
+      id: 'comm-105',
+      author: 'Kunal Singhania',
+      initials: 'KS',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'bns',
+      subjectName: 'Law of Crimes / BNS 2023',
+      category: 'tips',
+      categoryLabel: 'Study Tip',
+      rating: 5,
+      timestamp: Date.now() - 129600000,
+      timeAgo: '1 day ago',
+      content: 'The BNS 2023 ↔ IPC 1860 Live Converter modal is brilliant. Being able to cross-reference Section 302 IPC directly with Section 103 BNS and see the changes in organized crime clauses made studying so fast.',
+      helpfulCount: 31,
+      replies: []
+    },
+    {
+      id: 'comm-106',
+      author: 'Siddharth Mehta',
+      initials: 'SM',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 3 (LL.B.)',
+      semesterShort: 'Sem 3',
+      subjectId: 'cpc',
+      subjectName: 'CPC & Limitation',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 172800000,
+      timeAgo: '2 days ago',
+      content: 'Mastering the difference between Res Judicata (Section 11) and Res Sub-Judice (Section 10) in CPC: Section 10 bars the trial of a suit, whereas Section 11 bars the institution or decision of the matter itself. Duchess of Kingston case is crucial.',
+      helpfulCount: 27,
+      replies: []
+    },
+    {
+      id: 'comm-107',
+      author: 'Ananya Gupta',
+      initials: 'AG',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'juris',
+      subjectName: 'Jurisprudence–I',
+      category: 'tips',
+      categoryLabel: 'Study Tip',
+      rating: 5,
+      timestamp: Date.now() - 259200000,
+      timeAgo: '3 days ago',
+      content: 'For Jurisprudence Unit 2: Austin command theory vs Hart rule of recognition. The matrix table provided in these notes contrasting primary and secondary rules saved me at least 4 hours of textbook searching.',
+      helpfulCount: 23,
+      replies: []
+    },
+    {
+      id: 'comm-108',
+      author: 'Vikramaditya Roy',
+      initials: 'VR',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'industrial',
+      subjectName: 'Industrial Law',
+      category: 'review',
+      categoryLabel: 'Notes Review',
+      rating: 5,
+      timestamp: Date.now() - 345600000,
+      timeAgo: '4 days ago',
+      content: 'Industrial Law dossiers for Semester 5 with Bangalore Water Supply case and the Code on Wages 2019 comparative chart are unmatched. Highly recommended to all batchmates in LC-1.',
+      helpfulCount: 25,
+      replies: []
+    },
+    {
+      id: 'comm-109',
+      author: 'Tanvi Bhatia',
+      initials: 'TB',
+      centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+      centreShort: 'CLC • DU',
+      semester: 'Semester 1 (LL.B.)',
+      semesterShort: 'Sem 1',
+      subjectId: 'family',
+      subjectName: 'Family Law–I',
+      category: 'cases',
+      categoryLabel: 'Case Doubt',
+      rating: 5,
+      timestamp: Date.now() - 432000000,
+      timeAgo: '5 days ago',
+      content: 'In Section 13B(2) HMA (mutual consent divorce), Supreme Court in Amardeep Singh v. Harveen Kaur held the 6-month statutory waiting period is directory, not mandatory. Beautifully highlighted in the landmark cases capsule!',
+      helpfulCount: 21,
+      replies: []
+    },
+    {
+      id: 'comm-110',
+      author: 'Kabir Sen',
+      initials: 'KS',
+      centre: 'Law Centre–I (LC-1), Faculty of Law, DU',
+      centreShort: 'LC-1 • DU',
+      semester: 'Semester 2 (LL.B.)',
+      semesterShort: 'Sem 2',
+      subjectId: 'pil',
+      subjectName: 'Public International Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 518400000,
+      timeAgo: '6 days ago',
+      content: 'For Public International Law (LB-205), always cite North Sea Continental Shelf Cases (1969) when discussing the twin requirements of Customary International Law: State practice and opinio juris sive necessitatis.',
+      helpfulCount: 28,
+      replies: []
+    },
+    {
+      id: 'comm-111',
+      author: 'Rohit Khandelwal',
+      initials: 'RK',
+      centre: 'Law Centre–II (LC-2), Faculty of Law, DU',
+      centreShort: 'LC-2 • DU',
+      semester: 'Semester 5 (LL.B.)',
+      semesterShort: 'Sem 5',
+      subjectId: 'it_laws',
+      subjectName: 'Information Technology Law',
+      category: 'exam',
+      categoryLabel: 'Exam Strategy',
+      rating: 5,
+      timestamp: Date.now() - 172800000,
+      timeAgo: '2 days ago',
+      content: 'The new IT Laws (LB-5031) notes for Semester 5 are phenomenal! The Shreya Singhal intermediary liability breakdown under Section 79 and the Syed Asifuddin case brief on Section 65 source code tampering are exactly what DU asks in term exams.',
+      helpfulCount: 31,
+      replies: [
+        {
+          id: 'rep-111-1',
+          author: 'Pooja Verma',
+          initials: 'PV',
+          centre: 'Campus Law Centre (CLC), Faculty of Law, DU',
+          centreShort: 'CLC • DU',
+          semester: 'Semester 5 (LL.B.)',
+          semesterShort: 'Sem 5',
+          timestamp: Date.now() - 86400000,
+          timeAgo: '1 day ago',
+          content: 'Agreed! Also check Unit 7 on E-Contracts and the Trimex v. Vedanta analysis — it clarifies Section 10A perfectly for problem questions.'
+        }
+      ]
+    }
+  ];
+
+  function getStoredUserComments() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_comments') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function getStoredCustomReplies() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_comment_replies') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function getUpvotedCommentIds() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_upvoted_comments') || '[]');
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function getUpvoteDeltas() {
+    try {
+      return JSON.parse(localStorage.getItem('du_portal_upvote_deltas') || '{}');
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function getAllComments() {
+    const userComments = getStoredUserComments();
+    const customReplies = getStoredCustomReplies();
+    const upvoteDeltas = getUpvoteDeltas();
+
+    const mergedDefaults = DEFAULT_COMMENTS.map(c => {
+      const delta = upvoteDeltas[c.id] || 0;
+      const extraReplies = customReplies[c.id] || [];
+      return {
+        ...c,
+        helpfulCount: Math.max(0, c.helpfulCount + delta),
+        replies: [...c.replies, ...extraReplies]
+      };
+    });
+
+    const enrichedUserComments = userComments.map(c => {
+      const delta = upvoteDeltas[c.id] || 0;
+      const extraReplies = customReplies[c.id] || [];
+      return {
+        ...c,
+        helpfulCount: Math.max(0, (c.helpfulCount || 0) + delta),
+        replies: [...(c.replies || []), ...extraReplies]
+      };
+    });
+
+    return [...enrichedUserComments, ...mergedDefaults];
+  }
+
+  function toggleCommentUpvote(commentId) {
+    const upvotedIds = getUpvotedCommentIds();
+    const idx = upvotedIds.indexOf(commentId);
+    const isUpvoted = idx !== -1;
+    const upvoteDeltas = getUpvoteDeltas();
+
+    if (isUpvoted) {
+      upvotedIds.splice(idx, 1);
+      upvoteDeltas[commentId] = (upvoteDeltas[commentId] || 0) - 1;
+    } else {
+      upvotedIds.push(commentId);
+      upvoteDeltas[commentId] = (upvoteDeltas[commentId] || 0) + 1;
+    }
+
+    localStorage.setItem('du_portal_upvoted_comments', JSON.stringify(upvotedIds));
+    localStorage.setItem('du_portal_upvote_deltas', JSON.stringify(upvoteDeltas));
+
+    renderCommentsStream();
+  }
+
+  function addCommentReply(commentId, authorName, replyText) {
+    if (!replyText || !replyText.trim()) return;
+    const customReplies = getStoredCustomReplies();
+    if (!customReplies[commentId]) customReplies[commentId] = [];
+
+    const cleanAuthor = authorName && authorName.trim() ? authorName.trim() : 'Law Scholar';
+    const initials = cleanAuthor.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'LS';
+
+    const newReply = {
+      id: `rep-${Date.now()}`,
+      author: cleanAuthor,
+      initials: initials,
+      isEditorial: false,
+      timestamp: Date.now(),
+      timeAgo: 'Just now',
+      content: replyText.trim()
+    };
+
+    customReplies[commentId].push(newReply);
+    localStorage.setItem('du_portal_comment_replies', JSON.stringify(customReplies));
+
+    showToast('Reply added to academic discussion!');
+    renderCommentsStream();
+  }
+
+  function saveNewComment(commentData) {
+    const userComments = getStoredUserComments();
+    userComments.unshift(commentData);
+    localStorage.setItem('du_portal_comments', JSON.stringify(userComments));
+    showToast('Comment published to Make Law Easy community board!');
+    renderCommentsStream();
+
+    setTimeout(() => {
+      const el = document.getElementById(commentData.id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 150);
+  }
+
+  function getSubjectNameFromId(subId) {
+    const map = {
+      general: 'General LL.B. Portal',
+      juris: 'Jurisprudence–I',
+      contract: 'Law of Contract',
+      bns: 'Law of Crimes / BNS 2023',
+      family: 'Family Law–I',
+      torts: 'Law of Torts',
+      property: 'Property Law',
+      pil: 'Public International Law',
+      company: 'Company Law',
+      cpc: 'CPC & Limitation',
+      wcc: 'White Collar Crimes',
+      drafting: 'Drafting & Conveyance',
+      industrial: 'Industrial Law',
+      it_laws: 'Information Technology Law',
+        constitution: 'Constitutional Law - I'
+    };
+    return map[subId] || 'Delhi University Law';
+  }
+
+  function getCategoryLabelFromKey(key) {
+    const map = {
+      cases: 'Case Doubt',
+      exam: 'Exam Strategy',
+      review: 'Notes Review',
+      tips: 'Study Tip'
+    };
+    return map[key] || 'Discussion';
+  }
+
+  function renderCommentsStream() {
+    if (!elements.commentsStream) return;
+
+    const allComments = getAllComments();
+    const upvotedIds = getUpvotedCommentIds();
+
+    // 1. Calculate Metrics (Real number of active discussions on the platform)
+    if (elements.metricTotalComments) {
+      elements.metricTotalComments.textContent = String(allComments.length);
+    }
+    if (elements.metricAvgRating) {
+      const sum = allComments.reduce((acc, c) => acc + (c.rating || 5), 0);
+      const avg = (sum / (allComments.length || 1)).toFixed(2);
+      elements.metricAvgRating.innerHTML = `${avg} <span>/ 5.0</span>`;
+    }
+
+    // 2. Filter Comments
+    const q = (state.commentsSearchQuery || '').toLowerCase().trim();
+    const cat = state.commentsCategoryFilter || 'all';
+    const sub = state.commentsSubjectFilter || 'all';
+
+    let filtered = allComments.filter(c => {
+      // Category match
+      if (cat !== 'all' && c.category !== cat) return false;
+      // Subject match
+      if (sub !== 'all' && c.subjectId !== sub) return false;
+      // Search match
+      if (q) {
+        const text = `${c.author} ${c.centre} ${c.subjectName} ${c.content} ${c.categoryLabel}`.toLowerCase();
+        if (!text.includes(q)) return false;
+      }
+      return true;
+    });
+
+    // 3. Category count badges under current subject & search
+    const baseList = allComments.filter(c => {
+      if (sub !== 'all' && c.subjectId !== sub) return false;
+      if (q) {
+        const text = `${c.author} ${c.centre} ${c.subjectName} ${c.content} ${c.categoryLabel}`.toLowerCase();
+        if (!text.includes(q)) return false;
+      }
+      return true;
+    });
+
+    const countAll = baseList.length;
+    const countCases = baseList.filter(c => c.category === 'cases').length;
+    const countExam = baseList.filter(c => c.category === 'exam').length;
+    const countReview = baseList.filter(c => c.category === 'review').length;
+    const countTips = baseList.filter(c => c.category === 'tips').length;
+
+    const setBadge = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    };
+    setBadge('catCountAll', countAll);
+    setBadge('catCountCases', countCases);
+    setBadge('catCountExam', countExam);
+    setBadge('catCountReview', countReview);
+    setBadge('catCountTips', countTips);
+
+    // 4. Sort
+    if (state.commentsSort === 'newest') {
+      filtered.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+    } else if (state.commentsSort === 'rating') {
+      filtered.sort((a, b) => (b.rating || 5) - (a.rating || 5));
+    } else {
+      // 'helpful' default
+      filtered.sort((a, b) => (b.helpfulCount || 0) - (a.helpfulCount || 0));
+    }
+
+    // 5. Empty State Check
+    if (filtered.length === 0) {
+      elements.commentsStream.innerHTML = '';
+      if (elements.commentsEmptyState) elements.commentsEmptyState.style.display = 'block';
+      if (elements.commentsLoadMoreWrap) elements.commentsLoadMoreWrap.style.display = 'none';
+      return;
+    }
+
+    if (elements.commentsEmptyState) elements.commentsEmptyState.style.display = 'none';
+
+    // 6. Pagination Slice
+    const visibleList = filtered.slice(0, state.commentsPageSize);
+
+    // 7. Render Comment Cards
+    const htmlCards = visibleList.map(c => {
+      const isUpvoted = upvotedIds.includes(c.id);
+      const starsHtml = Array.from({ length: 5 }, (_, i) => {
+        const filled = i < (c.rating || 5);
+        return `<i class="fa-${filled ? 'solid' : 'regular'} fa-star"></i>`;
+      }).join('');
+
+      const repliesHtml = (c.replies && c.replies.length > 0) ? `
+        <div class="comment-replies-thread">
+          ${c.replies.map(r => `
+            <div class="comment-reply-card ${r.isEditorial ? 'editorial' : ''}">
+              <div class="reply-header">
+                <div class="reply-author-info">
+                  <i class="fa-solid ${r.isEditorial ? 'fa-scale-balanced' : 'fa-reply'}" style="color:${r.isEditorial ? '#2563eb' : 'inherit'};"></i>
+                  <span>${r.author}</span>
+                  ${r.isEditorial ? '<span class="reply-editorial-badge"><i class="fa-solid fa-check"></i> Editorial Note</span>' : ''}
+                </div>
+                <span class="reply-time">${r.timeAgo || 'Recently'}</span>
+              </div>
+              <div class="reply-content">${r.content}</div>
+            </div>
+          `).join('')}
+        </div>
+      ` : '';
+
+      return `
+        <article class="comment-card" id="${c.id}" data-comment-id="${c.id}">
+          <div class="comment-header">
+            <div class="comment-author-wrap">
+              <div class="comment-avatar">${c.initials || 'DU'}</div>
+              <div class="comment-author-meta">
+                <div class="comment-author-name-row">
+                  <span class="comment-author-name">${c.author}</span>
+                  <span class="comment-verified-tag"><i class="fa-solid fa-circle-check"></i> Verified Law Student</span>
+                </div>
+                <div class="comment-sub-meta">
+                  <span class="comment-centre-tag"><i class="fa-solid fa-building-columns"></i> ${c.centreShort || 'DU Law'}</span>
+                  <span class="footer-dot">&bull;</span>
+                  <span class="comment-sem-tag"><i class="fa-solid fa-graduation-cap"></i> ${c.semesterShort || 'LL.B.'}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-meta-right">
+              <div class="comment-stars">${starsHtml}</div>
+              <span class="comment-time">${c.timeAgo || 'Recently'}</span>
+            </div>
+          </div>
+
+          <div class="comment-tags-row">
+            <span class="comment-tag-pill subject"><i class="fa-solid fa-book"></i> ${c.subjectName}</span>
+            <span class="comment-tag-pill category"><i class="fa-solid fa-tag"></i> ${c.categoryLabel}</span>
+          </div>
+
+          <div class="comment-body">${c.content}</div>
+
+          ${repliesHtml}
+
+          <div class="comment-card-footer">
+            <div class="comment-actions-left">
+              <button type="button" class="btn-comment-action ${isUpvoted ? 'upvoted' : ''}" data-action="upvote" data-id="${c.id}" title="${isUpvoted ? 'Remove upvote' : 'Mark as helpful'}">
+                <i class="fa-${isUpvoted ? 'solid' : 'regular'} fa-thumbs-up"></i>
+                <span>Helpful (${c.helpfulCount || 0})</span>
+              </button>
+
+              <button type="button" class="btn-comment-action" data-action="toggle-reply" data-id="${c.id}" title="Reply to this discussion">
+                <i class="fa-solid fa-reply"></i>
+                <span>Reply ${(c.replies && c.replies.length > 0) ? `(${c.replies.length})` : ''}</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn-comment-share" data-action="share" data-id="${c.id}" title="Copy direct link to this comment">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i> <span>Share</span>
+            </button>
+          </div>
+
+          <div class="comment-inline-reply-box" id="replyBox-${c.id}" style="display: none;">
+            <div class="reply-form-top-row">
+              <input type="text" class="reply-name-input" id="replyName-${c.id}" placeholder="Your Name / Handle (e.g. Rahul K., Sem 1)" maxlength="50">
+            </div>
+            <textarea class="reply-textarea" id="replyText-${c.id}" rows="2" placeholder="Write an academic response, statutory reference, or ratio tip..."></textarea>
+            <div class="reply-actions-row">
+              <button type="button" class="btn-reply-cancel" data-action="cancel-reply" data-id="${c.id}">Cancel</button>
+              <button type="button" class="btn-reply-submit" data-action="submit-reply" data-id="${c.id}">
+                <i class="fa-solid fa-paper-plane"></i> <span>Post Reply</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    elements.commentsStream.innerHTML = htmlCards;
+
+    // Load More Visibility
+    if (elements.commentsLoadMoreWrap) {
+      elements.commentsLoadMoreWrap.style.display = (filtered.length > state.commentsPageSize) ? 'block' : 'none';
+    }
+  }
+
+  function navigateToComments(subjectFilter = null, pushHistory = true) {
+    if (subjectFilter) {
+      state.commentsSubjectFilter = subjectFilter;
+      if (elements.commentsSubjectFilter) {
+        elements.commentsSubjectFilter.value = subjectFilter;
+      }
+      if (elements.commentSubjectTag) {
+        elements.commentSubjectTag.value = subjectFilter;
+      }
+    }
+    showView('discussions', pushHistory);
+  }
+
+  function initCommentsModule() {
+    renderCommentsStream();
+
+    // Toggle Compose Card Helper
+    const toggleComposeForm = (forceOpen = null) => {
+      if (!elements.commentComposeCard) return;
+      const isCurrentlyOpen = elements.commentComposeCard.style.display !== 'none';
+      const shouldOpen = (forceOpen !== null) ? forceOpen : !isCurrentlyOpen;
+
+      if (shouldOpen) {
+        elements.commentComposeCard.style.display = 'block';
+        if (elements.btnToggleCompose) {
+          elements.btnToggleCompose.classList.add('is-open');
+          elements.btnToggleCompose.setAttribute('aria-expanded', 'true');
+        }
+        if (elements.btnToggleComposeLabel) {
+          elements.btnToggleComposeLabel.textContent = 'Close Form';
+        }
+        setTimeout(() => {
+          elements.commentComposeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          if (elements.commentAuthorName) elements.commentAuthorName.focus();
+        }, 50);
+      } else {
+        elements.commentComposeCard.style.display = 'none';
+        if (elements.btnToggleCompose) {
+          elements.btnToggleCompose.classList.remove('is-open');
+          elements.btnToggleCompose.setAttribute('aria-expanded', 'false');
+        }
+        if (elements.btnToggleComposeLabel) {
+          elements.btnToggleComposeLabel.textContent = 'Ask Doubt / Post';
+        }
+      }
+    };
+
+    // Toggle Compose Button Listener
+    if (elements.btnToggleCompose) {
+      elements.btnToggleCompose.addEventListener('click', () => {
+        toggleComposeForm();
+      });
+    }
+
+    // Close Compose Button Listener
+    if (elements.composeCloseBtn) {
+      elements.composeCloseBtn.addEventListener('click', () => {
+        toggleComposeForm(false);
+      });
+    }
+
+    // Bottom Prompt Compose Button Listener
+    if (elements.btnPromptCompose) {
+      elements.btnPromptCompose.addEventListener('click', () => {
+        toggleComposeForm(true);
+      });
+    }
+
+    // Back to Semesters Navigation Link in Discussions View
+    if (elements.discussionsBackBtn) {
+      elements.discussionsBackBtn.addEventListener('click', () => {
+        showView('semester', true);
+      });
+    }
+
+    // 1. Compose Star Rating Interactivity
+    if (elements.composeStarRating) {
+      const starBtns = elements.composeStarRating.querySelectorAll('.star-btn');
+      const starLabels = {
+        1: '1.0 (Needs Improvement)',
+        2: '2.0 (Fair)',
+        3: '3.0 (Good Notes)',
+        4: '4.0 (Very Helpful)',
+        5: '5.0 (Exceptional & Comprehensive)'
+      };
+
+      const updateStars = (val) => {
+        state.composeRating = val;
+        starBtns.forEach(btn => {
+          const btnVal = parseInt(btn.dataset.val, 10);
+          if (btnVal <= val) {
+            btn.classList.add('active');
+            btn.innerHTML = '<i class="fa-solid fa-star"></i>';
+          } else {
+            btn.classList.remove('active');
+            btn.innerHTML = '<i class="fa-regular fa-star"></i>';
+          }
+        });
+        if (elements.composeStarLabel) {
+          elements.composeStarLabel.textContent = starLabels[val] || `${val}.0`;
+        }
+      };
+
+      starBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = parseInt(btn.dataset.val, 10);
+          updateStars(val);
+        });
+      });
+    }
+
+    // 2. Compose Category Pills
+    if (elements.composeCatPills) {
+      const catBtns = elements.composeCatPills.querySelectorAll('.cat-pill-btn');
+      catBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          catBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          state.composeCategory = btn.dataset.cat;
+        });
+      });
+    }
+
+    // 3. Textarea Live Character Counter
+    if (elements.commentContent && elements.commentCharCount) {
+      elements.commentContent.addEventListener('input', (e) => {
+        const len = e.target.value.length;
+        elements.commentCharCount.textContent = len;
+        if (len >= 950) {
+          elements.commentCharCount.style.color = '#ef4444';
+        } else {
+          elements.commentCharCount.style.color = 'var(--text-muted)';
+        }
+      });
+    }
+
+    // 4. Quick Insert Chips
+    const quickInsertBtns = document.querySelectorAll('.quick-insert-btn');
+    quickInsertBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!elements.commentContent) return;
+        const ins = btn.dataset.insert || '';
+        const start = elements.commentContent.selectionStart;
+        const end = elements.commentContent.selectionEnd;
+        const val = elements.commentContent.value;
+        elements.commentContent.value = val.substring(0, start) + ins + val.substring(end);
+        elements.commentContent.focus();
+        elements.commentContent.selectionStart = elements.commentContent.selectionEnd = start + ins.length;
+        if (elements.commentCharCount) elements.commentCharCount.textContent = elements.commentContent.value.length;
+      });
+    });
+
+    // 5. Compose Form Submit
+    if (elements.commentComposeForm) {
+      elements.commentComposeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = (elements.commentAuthorName ? elements.commentAuthorName.value : '').trim();
+        const centre = elements.commentAuthorCentre ? elements.commentAuthorCentre.value : 'Faculty of Law, DU';
+        const semester = elements.commentAuthorSemester ? elements.commentAuthorSemester.value : 'Semester 1';
+        const subjectId = elements.commentSubjectTag ? elements.commentSubjectTag.value : 'general';
+        const content = (elements.commentContent ? elements.commentContent.value : '').trim();
+        const consent = elements.commentDpdpConsent ? elements.commentDpdpConsent.checked : false;
+
+        if (!name) {
+          alert('Please enter your name or preferred handle.');
+          if (elements.commentAuthorName) elements.commentAuthorName.focus();
+          return;
+        }
+
+        if (!content || content.length < 10) {
+          alert('Please provide a substantive academic comment or question (at least 10 characters).');
+          if (elements.commentContent) elements.commentContent.focus();
+          return;
+        }
+
+        if (!consent) {
+          alert('Please confirm DPDP Act consent to publish this academic comment.');
+          return;
+        }
+
+        const cleanAuthor = name;
+        const initials = cleanAuthor.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'DU';
+
+        // Derive short centre badge
+        let centreShort = 'DU Law';
+        if (centre.includes('CLC')) centreShort = 'CLC • DU';
+        else if (centre.includes('LC-1')) centreShort = 'LC-1 • DU';
+        else if (centre.includes('LC-2')) centreShort = 'LC-2 • DU';
+        else if (centre.includes('NLU')) centreShort = 'NLU Scholar';
+
+        // Derive short semester
+        let semesterShort = 'LL.B.';
+        const semMatch = semester.match(/Semester\s*([0-9]+)/i);
+        if (semMatch) semesterShort = `Sem ${semMatch[1]}`;
+
+        const newComment = {
+          id: `comm-${Date.now()}`,
+          author: cleanAuthor,
+          initials: initials,
+          centre: centre,
+          centreShort: centreShort,
+          semester: semester,
+          semesterShort: semesterShort,
+          subjectId: subjectId,
+          subjectName: getSubjectNameFromId(subjectId),
+          category: state.composeCategory || 'cases',
+          categoryLabel: getCategoryLabelFromKey(state.composeCategory || 'cases'),
+          rating: state.composeRating || 5,
+          timestamp: Date.now(),
+          timeAgo: 'Just now',
+          content: content,
+          helpfulCount: 0,
+          replies: []
+        };
+
+        saveNewComment(newComment);
+
+        // Reset form & collapse compose card
+        elements.commentContent.value = '';
+        if (elements.commentCharCount) elements.commentCharCount.textContent = '0';
+        toggleComposeForm(false);
+      });
+    }
+
+    // 6. Clear Form Button
+    if (elements.commentClearBtn) {
+      elements.commentClearBtn.addEventListener('click', () => {
+        if (elements.commentContent) elements.commentContent.value = '';
+        if (elements.commentCharCount) elements.commentCharCount.textContent = '0';
+      });
+    }
+
+    // 7. Search Input & Clear
+    if (elements.commentsSearchInput) {
+      elements.commentsSearchInput.addEventListener('input', (e) => {
+        state.commentsSearchQuery = e.target.value;
+        if (elements.commentsSearchClearBtn) {
+          elements.commentsSearchClearBtn.style.display = e.target.value ? 'block' : 'none';
+        }
+        renderCommentsStream();
+      });
+    }
+    if (elements.commentsSearchClearBtn) {
+      elements.commentsSearchClearBtn.addEventListener('click', () => {
+        if (elements.commentsSearchInput) elements.commentsSearchInput.value = '';
+        state.commentsSearchQuery = '';
+        elements.commentsSearchClearBtn.style.display = 'none';
+        renderCommentsStream();
+      });
+    }
+
+    // 8. Subject Filter Select
+    if (elements.commentsSubjectFilter) {
+      elements.commentsSubjectFilter.addEventListener('change', (e) => {
+        state.commentsSubjectFilter = e.target.value;
+        renderCommentsStream();
+      });
+    }
+
+    // 9. Sort Select
+    if (elements.commentsSortSelect) {
+      elements.commentsSortSelect.addEventListener('change', (e) => {
+        state.commentsSort = e.target.value;
+        renderCommentsStream();
+      });
+    }
+
+    // 10. Category Filter Pills
+    if (elements.commentsCategoryPills) {
+      const pills = elements.commentsCategoryPills.querySelectorAll('.comm-cat-pill');
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          state.commentsCategoryFilter = pill.dataset.cat || 'all';
+          renderCommentsStream();
+        });
+      });
+    }
+
+    // 11. Reset Filters Button
+    if (elements.commentsResetFiltersBtn) {
+      elements.commentsResetFiltersBtn.addEventListener('click', () => {
+        state.commentsSearchQuery = '';
+        state.commentsCategoryFilter = 'all';
+        state.commentsSubjectFilter = 'all';
+        if (elements.commentsSearchInput) elements.commentsSearchInput.value = '';
+        if (elements.commentsSearchClearBtn) elements.commentsSearchClearBtn.style.display = 'none';
+        if (elements.commentsSubjectFilter) elements.commentsSubjectFilter.value = 'all';
+        if (elements.commentsCategoryPills) {
+          const pills = elements.commentsCategoryPills.querySelectorAll('.comm-cat-pill');
+          pills.forEach(p => p.classList.remove('active'));
+          const allPill = elements.commentsCategoryPills.querySelector('.comm-cat-pill[data-cat="all"]');
+          if (allPill) allPill.classList.add('active');
+        }
+        renderCommentsStream();
+      });
+    }
+
+    // 12. Load More Button
+    if (elements.commentsLoadMoreBtn) {
+      elements.commentsLoadMoreBtn.addEventListener('click', () => {
+        state.commentsPageSize += 6;
+        renderCommentsStream();
+      });
+    }
+
+    // 13. Delegated Event Handlers for Stream Items (Upvote, Reply, Share)
+    if (elements.commentsStream) {
+      elements.commentsStream.addEventListener('click', (e) => {
+        const upvoteBtn = e.target.closest('[data-action="upvote"]');
+        if (upvoteBtn) {
+          const id = upvoteBtn.dataset.id;
+          toggleCommentUpvote(id);
+          return;
+        }
+
+        const replyToggleBtn = e.target.closest('[data-action="toggle-reply"]');
+        if (replyToggleBtn) {
+          const id = replyToggleBtn.dataset.id;
+          const box = document.getElementById(`replyBox-${id}`);
+          if (box) {
+            box.style.display = box.style.display === 'none' ? 'flex' : 'none';
+            if (box.style.display === 'flex') {
+              const ta = document.getElementById(`replyText-${id}`);
+              if (ta) ta.focus();
+            }
+          }
+          return;
+        }
+
+        const cancelReplyBtn = e.target.closest('[data-action="cancel-reply"]');
+        if (cancelReplyBtn) {
+          const id = cancelReplyBtn.dataset.id;
+          const box = document.getElementById(`replyBox-${id}`);
+          if (box) box.style.display = 'none';
+          return;
+        }
+
+        const submitReplyBtn = e.target.closest('[data-action="submit-reply"]');
+        if (submitReplyBtn) {
+          const id = submitReplyBtn.dataset.id;
+          const nameInput = document.getElementById(`replyName-${id}`);
+          const textInput = document.getElementById(`replyText-${id}`);
+          const name = nameInput ? nameInput.value : '';
+          const text = textInput ? textInput.value : '';
+          if (!text || !text.trim()) {
+            alert('Please enter your reply text.');
+            if (textInput) textInput.focus();
+            return;
+          }
+          addCommentReply(id, name, text);
+          return;
+        }
+
+        const shareBtn = e.target.closest('[data-action="share"]');
+        if (shareBtn) {
+          const id = shareBtn.dataset.id;
+          const url = `${window.location.origin}/#${id}`;
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(url).then(() => {
+              showToast('Direct link to discussion copied to clipboard!');
+            }).catch(() => {
+              prompt('Copy link to this discussion:', url);
+            });
+          } else {
+            prompt('Copy link to this discussion:', url);
+          }
+          return;
+        }
+      });
+    }
+
+    // 14. Global Navigation Buttons
+    if (elements.headerCommentsBtn) {
+      elements.headerCommentsBtn.addEventListener('click', () => {
+        navigateToComments();
+      });
+    }
+    if (elements.mtdCommentsBtn) {
+      elements.mtdCommentsBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToComments();
+      });
+    }
+    if (elements.readerCommentsBtn) {
+      elements.readerCommentsBtn.addEventListener('click', () => {
+        closeReader();
+        const activeSub = state.currentSubject ? state.currentSubject.id : null;
+        navigateToComments(activeSub);
+      });
+    }
+    if (elements.footerContactBarCommentsLink) {
+      elements.footerContactBarCommentsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToComments();
+      });
+    }
+    if (elements.footerCommentsLink) {
+      elements.footerCommentsLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToComments();
+      });
+    }
+  }
+
+  function init() {
+    // Theme setup
+    applyTheme(state.darkMode);
+    initAudioPlayer();
+    updateStarBadge();
+    initCommentsModule();
+
+    // Hero Action Buttons
+    if (elements.heroExploreBtn) {
+      elements.heroExploreBtn.addEventListener('click', () => {
+        const semSec = document.querySelector('.sem-selection-section');
+        if (semSec) semSec.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+    if (elements.heroMockBtn) {
+      elements.heroMockBtn.addEventListener('click', openMockExam);
+    }
+    if (elements.heroBnsBtn) {
+      elements.heroBnsBtn.addEventListener('click', openBnsConverter);
+    }
+
+    // BNS Converter Modal
+    if (elements.headerBnsConverterBtn) {
+      elements.headerBnsConverterBtn.addEventListener('click', openBnsConverter);
+    }
+    if (elements.bnsCloseBtn) elements.bnsCloseBtn.addEventListener('click', closeBnsConverter);
+    if (elements.bnsModalOverlay) elements.bnsModalOverlay.addEventListener('click', closeBnsConverter);
+    if (elements.bnsSearchInput) {
+      elements.bnsSearchInput.addEventListener('input', (e) => {
+        const cat = elements.bnsCategoryPills ? elements.bnsCategoryPills.querySelector('.bns-pill.active').dataset.cat : 'all';
+        renderBnsConverterCards(cat, e.target.value);
+      });
+    }
+    if (elements.bnsCategoryPills) {
+      elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(pill => {
+        pill.addEventListener('click', () => {
+          elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
+          renderBnsConverterCards(pill.dataset.cat, q);
+        });
+      });
+    }
+
+    // DU Mock Exam Simulator
+    if (elements.headerMockExamBtn) {
+      elements.headerMockExamBtn.addEventListener('click', openMockExam);
+    }
+    if (elements.mockCloseBtn) elements.mockCloseBtn.addEventListener('click', closeMockExam);
+    if (elements.mockModalOverlay) elements.mockModalOverlay.addEventListener('click', closeMockExam);
+    if (elements.btnGenMockPaper) elements.btnGenMockPaper.addEventListener('click', generateMockPaper);
+    if (elements.btnEvaluateMock) elements.btnEvaluateMock.addEventListener('click', evaluateMockExam);
+    if (elements.btnPrintMock) elements.btnPrintMock.addEventListener('click', () => window.print());
+    if (elements.mockTimerToggleBtn) {
+      elements.mockTimerToggleBtn.addEventListener('click', () => {
+        if (state.mockTimerRunning) pauseMockTimer();
+        else startMockTimer();
+      });
+    }
+    if (elements.mockTimerResetBtn) elements.mockTimerResetBtn.addEventListener('click', resetMockTimer);
+    if (elements.mockSubjectSelect) elements.mockSubjectSelect.addEventListener('change', generateMockPaper);
+
+    // Bookmarks Drawer
+    if (elements.headerBookmarksBtn) {
+      elements.headerBookmarksBtn.addEventListener('click', openBookmarksDrawer);
+    }
+    if (elements.bookmarksCloseBtn) elements.bookmarksCloseBtn.addEventListener('click', closeBookmarksDrawer);
+    if (elements.bookmarksOverlay) elements.bookmarksOverlay.addEventListener('click', closeBookmarksDrawer);
+
+    // Mobile Quick Tools Drawer
+    if (elements.headerMobileMenuBtn) {
+      elements.headerMobileMenuBtn.addEventListener('click', openMobileTools);
+    }
+    if (elements.mobileToolsCloseBtn) {
+      elements.mobileToolsCloseBtn.addEventListener('click', closeMobileTools);
+    }
+    if (elements.mobileToolsOverlay) {
+      elements.mobileToolsOverlay.addEventListener('click', closeMobileTools);
+    }
+    if (elements.mtdMockBtn) {
+      elements.mtdMockBtn.addEventListener('click', () => { closeMobileTools(); openMockExam(); });
+    }
+    if (elements.mtdBnsBtn) {
+      elements.mtdBnsBtn.addEventListener('click', () => { closeMobileTools(); openBnsConverter(); });
+    }
+    if (elements.mtdBareActBtn) {
+      elements.mtdBareActBtn.addEventListener('click', () => { closeMobileTools(); openBareActDrawer(); });
+    }
+    if (elements.mtdFlashcardsBtn) {
+      elements.mtdFlashcardsBtn.addEventListener('click', () => { closeMobileTools(); openFlashcardsModal(); });
+    }
+    if (elements.mtdBookmarksBtn) {
+      elements.mtdBookmarksBtn.addEventListener('click', () => { closeMobileTools(); openBookmarksDrawer(); });
+    }
+    if (elements.mtdSemesterBtn) {
+      elements.mtdSemesterBtn.addEventListener('click', () => { closeMobileTools(); showView('semester'); });
+    }
+    if (elements.mtdContactBtn) {
+      elements.mtdContactBtn.addEventListener('click', () => { closeMobileTools(); openContactModal(); });
+    }
+    if (elements.headerContactBtn) {
+      elements.headerContactBtn.addEventListener('click', openContactModal);
+    }
+    if (elements.footerContactBtn) {
+      elements.footerContactBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openContactModal();
+      });
+    }
+    if (elements.headerEmailBtn) {
+      elements.headerEmailBtn.addEventListener('click', () => {
+        const email = 'ankur@makelaweasy.in';
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).catch(() => {});
+        }
+        showToast('Email copied: ankur@makelaweasy.in 📋', 'fa-envelope');
+      });
+    }
+    if (elements.contactModalCloseBtn) {
+      elements.contactModalCloseBtn.addEventListener('click', closeContactModal);
+    }
+    if (elements.contactModalOverlay) {
+      elements.contactModalOverlay.addEventListener('click', closeContactModal);
+    }
+    if (elements.copyContactEmailBtn) {
+      elements.copyContactEmailBtn.addEventListener('click', copyContactEmail);
+    }
+
+    
+    // Precedent Flashcards & Bare Act Header / Hub Launchers
+    if (elements.headerBareActBtn) {
+      elements.headerBareActBtn.addEventListener('click', () => openBareActDrawer());
+    }
+    if (elements.headerFlashcardBtn) {
+      elements.headerFlashcardBtn.addEventListener('click', () => openFlashcardsModal());
+    }
+    if (elements.hubStartFlashcardsBtn) {
+      elements.hubStartFlashcardsBtn.addEventListener('click', () => openFlashcardsModal());
+    }
+    if (elements.hubOpenBareActBtn) {
+      elements.hubOpenBareActBtn.addEventListener('click', () => openBareActDrawer());
+    }
+
+    // Flashcard Modal Controls
+    if (elements.fcCloseBtn) elements.fcCloseBtn.addEventListener('click', closeFlashcardsModal);
+    if (elements.activeFlashcard) elements.activeFlashcard.addEventListener('click', flipFlashcard);
+    if (elements.fcPrevBtn) elements.fcPrevBtn.addEventListener('click', prevFlashcard);
+    if (elements.fcNextBtn) elements.fcNextBtn.addEventListener('click', nextFlashcard);
+    if (elements.fcShuffleBtn) elements.fcShuffleBtn.addEventListener('click', shuffleFlashcards);
+    if (elements.fcBtnReview) elements.fcBtnReview.addEventListener('click', () => markFlashcardMastery(false));
+    if (elements.fcBtnMastered) elements.fcBtnMastered.addEventListener('click', () => markFlashcardMastery(true));
+
+    // Bare Act Drawer Controls
+    if (elements.bareActCloseBtn) elements.bareActCloseBtn.addEventListener('click', closeBareActDrawer);
+    if (elements.bareActOverlay) elements.bareActOverlay.addEventListener('click', closeBareActDrawer);
+
+    if (elements.badActTabs) {
+      elements.badActTabs.querySelectorAll('.bad-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          elements.badActTabs.querySelectorAll('.bad-tab').forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          state.bareActs.activeAct = tab.dataset.act;
+          renderQuickSecRibbon();
+          renderBareActList();
+        });
+      });
+    }
+
+    if (elements.bareActSearchInput) {
+      elements.bareActSearchInput.addEventListener('input', (e) => {
+        state.bareActs.searchQuery = e.target.value.trim();
+        if (elements.bareActClearSearch) {
+          elements.bareActClearSearch.style.display = state.bareActs.searchQuery ? 'block' : 'none';
+        }
+        renderBareActList();
+      });
+    }
+
+    if (elements.bareActClearSearch) {
+      elements.bareActClearSearch.addEventListener('click', () => {
+        state.bareActs.searchQuery = '';
+        if (elements.bareActSearchInput) elements.bareActSearchInput.value = '';
+        elements.bareActClearSearch.style.display = 'none';
+        renderBareActList();
+      });
+    }
+
+    // Global Event Delegation for Bare Act Section Hyperlinks
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('.bare-act-link');
+      if (link) {
+        e.preventDefault();
+        const sec = link.dataset.sec;
+        openBareActDrawer(sec);
+      }
+    });
+
+    elements.themeToggleBtn.addEventListener('click', () => {
+      state.darkMode = !state.darkMode;
+      applyTheme(state.darkMode);
+    });
+
+    // Brand click returns to Homepage (Semester selection view)
+    elements.brandLogo.addEventListener('click', () => {
+      showView('semester', true);
+    });
+
+    // Header Semester Dropdown Menu (Click & Hover Interactive)
+    renderHeaderSemDropdown();
+
+    if (elements.headerSemDropdownWrap && elements.headerSemesterBtn) {
+      // Hover interaction (cursor enters badge or menu) - ONLY on desktop/fine-pointer devices
+      elements.headerSemDropdownWrap.addEventListener('mouseenter', () => {
+        if (!isFinePointer()) return;
+        clearTimeout(semDropdownHoverTimer);
+        openHeaderSemDropdown(true);
+      });
+
+      // Hover interaction (cursor leaves badge and menu) - ONLY on desktop/fine-pointer devices
+      elements.headerSemDropdownWrap.addEventListener('mouseleave', () => {
+        if (!isFinePointer()) return;
+        clearTimeout(semDropdownHoverTimer);
+        semDropdownHoverTimer = setTimeout(closeHeaderSemDropdown, 220);
+      });
+
+      // Click / Tap interaction (toggle dropdown on click or mobile tap)
+      elements.headerSemesterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleHeaderSemDropdown();
+      });
+
+      // Mobile Backdrop Tap-to-Dismiss
+      if (elements.semDropdownBackdrop) {
+        elements.semDropdownBackdrop.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeHeaderSemDropdown();
+        });
+        elements.semDropdownBackdrop.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          closeHeaderSemDropdown();
+        }, { passive: false });
+      }
+
+      // Close dropdown when clicking or tapping outside
+      const handleOutsideDropdown = (e) => {
+        if (elements.headerSemDropdownWrap && !elements.headerSemDropdownWrap.contains(e.target)) {
+          closeHeaderSemDropdown();
+        }
+      };
+      document.addEventListener('click', handleOutsideDropdown);
+      document.addEventListener('touchend', handleOutsideDropdown, { passive: true });
+    }
+
+    if (elements.headerSemDdAllBtn) {
+      elements.headerSemDdAllBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showView('semester', true);
+        closeHeaderSemDropdown();
+      });
+    }
+
+    // Change Semester Button in Subjects View
+    if (elements.changeSemBtn) {
+      elements.changeSemBtn.addEventListener('click', () => {
+        handleSubjectsBack();
+      });
+    }
+
+    // Back to All Semesters breadcrumb link in Subjects View
+    if (elements.subjectsBackBtn) {
+      elements.subjectsBackBtn.addEventListener('click', () => {
+        handleSubjectsBack();
+      });
+    }
+
+    // Back to Subjects button in Hub Banner
+    elements.hubBackBtn.addEventListener('click', () => {
+      handleHubBack();
+    });
+
+    // Desktop Hub Tab switching
+    elements.hubTabs.forEach(tabBtn => {
+      tabBtn.addEventListener('click', () => {
+        const targetTab = tabBtn.dataset.tab;
+        switchHubTab(targetTab);
+      });
+    });
+
+    // Mobile Bottom Navigation Bar buttons
+    elements.mobileNavItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const action = item.dataset.action;
+        if (action === 'back-subjects') {
+          handleHubBack();
+        } else {
+          const tab = item.dataset.tab;
+          if (tab) switchHubTab(tab);
+        }
+      });
+    });
+
+    // Search input in Hub
+    elements.hubSearchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.trim();
+      if (elements.searchClearBtn) {
+        elements.searchClearBtn.style.display = state.searchQuery ? 'flex' : 'none';
+      }
+      renderActiveTabContent();
+    });
+
+    // Clear search button
+    if (elements.searchClearBtn) {
+      elements.searchClearBtn.addEventListener('click', () => {
+        elements.hubSearchInput.value = '';
+        state.searchQuery = '';
+        elements.searchClearBtn.style.display = 'none';
+        renderActiveTabContent();
+        elements.hubSearchInput.focus();
+      });
+    }
+
+    // Unit filter in Hub
+    elements.unitFilterSelect.addEventListener('change', (e) => {
+      state.selectedUnitFilter = e.target.value;
+      renderActiveTabContent();
+    });
+
+    // Reader Modal Back & Close listeners
+    if (elements.readerBackBtn) {
+      elements.readerBackBtn.addEventListener('click', handleReaderBack);
+    }
+    elements.readerCloseBtn.addEventListener('click', handleReaderBack);
+    elements.readerModal.addEventListener('click', (e) => {
+      if (e.target === elements.readerModal) handleReaderBack();
+    });
+
+    // Browser Popstate (Native Back/Forward Button & Mobile Gesture Navigation)
+    window.addEventListener('popstate', (event) => {
+      const st = event.state;
+
+      // 1. If Reader Modal is open but target history state is not reader -> Close Reader!
+      if (elements.readerModal && elements.readerModal.classList.contains('active')) {
+        if (!st || st.view !== 'reader') {
+          closeReader(false);
+        }
+      }
+
+      // 2. Close any open drawers or modals if navigating back
+      if (elements.flashcardsModal && elements.flashcardsModal.classList.contains('active')) {
+        closeFlashcardsModal();
+      }
+      if (elements.bnsModal && elements.bnsModal.classList.contains('active')) {
+        closeBnsConverter();
+      }
+      if (elements.mockModal && elements.mockModal.classList.contains('active')) {
+        closeMockExam();
+      }
+      if (elements.bookmarksDrawer && elements.bookmarksDrawer.classList.contains('active')) {
+        closeBookmarksDrawer();
+      }
+      if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) {
+        closeMobileTools();
+      }
+      if (elements.contactModal && elements.contactModal.classList.contains('active')) {
+        closeContactModal();
+      }
+      if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) {
+        closeFeedbackModal();
+      }
+      if (elements.bareActDrawer && elements.bareActDrawer.classList.contains('active')) {
+        closeBareActDrawer();
+      }
+      closeHeaderSemDropdown();
+
+      // 3. Check for reader state
+      const isReaderHash = window.location.hash.includes('reader') || (st && st.view === 'reader');
+      if (isReaderHash && st && st.fileUrl) {
+        if (!elements.readerModal.classList.contains('active')) {
+          openReader(st.fileUrl, st.title, st.subInfo, false);
+        }
+        return;
+      }
+
+      // 4. Resolve Route using universal route parser
+      const route = parseRoute(window.location.pathname, window.location.search, window.location.hash);
+      if (!route) return;
+
+      if (route.view === 'hub' && route.subId) {
+        if (st && st.semId) {
+          state.currentSemester = st.semId;
+        } else {
+          const data = window.DU_LAW_PORTAL_DATA;
+          if (data && data.semesters) {
+            const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(route.subId));
+            if (foundSem) state.currentSemester = foundSem.id;
+          }
+        }
+        if (!state.currentSubject || state.currentSubject.id !== route.subId) {
+          openSubjectHub(route.subId, false);
+        } else {
+          showView('hub', false);
+        }
+        const targetTab = route.tab || (st && st.tab) || 'topics';
+        if (['topics', 'cases', 'pyqs', 'revision'].includes(targetTab)) {
+          switchHubTab(targetTab, false);
+        }
+        return;
+      }
+
+      if (route.view === 'subjects' && route.semId) {
+        const semId = route.semId;
+        if (state.currentSemester !== semId) {
+          state.currentSemester = semId;
+          localStorage.setItem('du_law_selected_semester', semId);
+        }
+        showView('subjects', false);
+        return;
+      }
+
+      if (route.view === 'tool') {
+        if (route.tool === 'bare-acts') openBareActDrawer();
+        else if (route.tool === 'bns') openBnsConverter();
+        else if (route.tool === 'flashcards') openFlashcardsModal();
+        return;
+      }
+
+      if (route.view === 'feedback') {
+        navigateToFeedback();
+        return;
+      }
+
+      if (route.view === 'contact') {
+        openContactModal();
+        return;
+      }
+
+      if (route.view === 'comments' || route.view === 'discussions') {
+        navigateToComments(route.subject, false);
+        return;
+      }
+
+      // Homepage fallback
+      showView('semester', false);
+    });
+
+    // Keyboard ESC to close reader or mobile tools
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (elements.readerModal && elements.readerModal.classList.contains('active')) {
+          handleReaderBack();
+          return;
+        }
+        if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
+        if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
+        if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) closeFeedbackModal();
+        closeHeaderSemDropdown();
+      }
+    });
+
+    // Floating Scroll to Top button
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 240) {
+        elements.scrollTopBtn.classList.add('visible');
+      } else {
+        elements.scrollTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    elements.scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Global Liquid Metal Dynamic Specular Sheen Tracking
+    document.addEventListener('mousemove', e => {
+      const btn = e.target.closest('.liquid-metal-btn, .sem-liquid-metal-btn, .topic-liquid-metal-btn, .hub-tab-btn, .filter-chip, .sub-open-btn, .hub-action-btn, .hero-btn-primary, .btn-rev-reader, .btn-copy-cite, .scroll-top-btn, .btn-open-newtab, .unit-check-btn, .view-mode-btn');
+      if (btn) {
+        const rect = btn.getBoundingClientRect();
+        btn.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        btn.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      }
+    }, { passive: true });
+
+    // Initialize 3D Books Showcase Engine
+    if (window.DUBooksShowcase && elements.booksShowcaseContainer && elements.booksCanvas) {
+      window.DUBooksShowcase.init({
+        container: elements.booksShowcaseContainer,
+        canvas: elements.booksCanvas,
+        prevBtn: elements.bsPrev,
+        nextBtn: elements.bsNext,
+        closeBtn: elements.bsCloseBtn,
+        openSlip: elements.bsOpenSlip,
+        detailPanel: elements.bsDetailPanel,
+        codeBadge: elements.bsCodeBadge,
+        semBadge: elements.bsSemBadge,
+        detailTitle: elements.bsDetailTitle,
+        detailDesc: elements.bsDetailDesc,
+        unitsCount: elements.bsUnitsCount,
+        yearBadge: elements.bsYear,
+        actionBtn: elements.bsActionExplore,
+        onCarouselChange: (idx, book) => {
+          updateActiveSubjectPill(idx, book);
+        },
+        onExploreSubject: (book) => {
+          if (book && book.id) {
+            openSubjectHub(book.id);
+          }
+        }
+      });
+    }
+
+    // View Mode Toggle Listeners (3D Books vs Grid)
+    if (elements.viewModeBooksBtn) {
+      elements.viewModeBooksBtn.addEventListener('click', () => {
+        applySubjectsViewMode('books');
+      });
+    }
+    if (elements.viewModeGridBtn) {
+      elements.viewModeGridBtn.addEventListener('click', () => {
+        applySubjectsViewMode('grid');
+      });
+    }
+
+    // Initial Routing: Parse current URL path, search params, and hash
+    const initialRoute = parseRoute(window.location.pathname, window.location.search, window.location.hash);
+
+    if (initialRoute && initialRoute.view === 'hub' && initialRoute.subId) {
+      const data = window.DU_LAW_PORTAL_DATA;
+      let foundSemId = initialRoute.semId || 1;
+      if (data && data.semesters) {
+        const foundSem = data.semesters.find(s => s.subjectIds && s.subjectIds.includes(initialRoute.subId));
+        if (foundSem) {
+          state.currentSemester = foundSem.id;
+          foundSemId = foundSem.id;
+        }
+      }
+      openSubjectHub(initialRoute.subId, false);
+      const activeTab = (initialRoute.tab && ['topics', 'cases', 'pyqs', 'revision'].includes(initialRoute.tab)) ? initialRoute.tab : 'topics';
+      const tabPath = activeTab !== 'topics' ? `/subject/${initialRoute.subId}/${activeTab}` : `/subject/${initialRoute.subId}`;
+      window.history.replaceState({ view: 'hub', semId: state.currentSemester || foundSemId, subId: initialRoute.subId, tab: activeTab }, '', tabPath);
+      if (activeTab !== 'topics') {
+        setTimeout(() => {
+          switchHubTab(activeTab, false);
+        }, 50);
+      }
+    } else if (initialRoute && initialRoute.view === 'subjects' && initialRoute.semId) {
+      const semNum = initialRoute.semId;
+      selectSemester(semNum, false);
+      window.history.replaceState({ view: 'subjects', semId: semNum }, '', `/semester-${semNum}`);
+    } else if (initialRoute && initialRoute.view === 'tool') {
+      showView('semester', false);
+      if (initialRoute.tool === 'bare-acts') setTimeout(openBareActDrawer, 100);
+      else if (initialRoute.tool === 'bns') setTimeout(openBnsConverter, 100);
+      else if (initialRoute.tool === 'flashcards') setTimeout(openFlashcardsModal, 100);
+    } else if (initialRoute && initialRoute.view === 'feedback') {
+      showView('semester', false);
+      setTimeout(navigateToFeedback, 350);
+    } else if (initialRoute && initialRoute.view === 'contact') {
+      showView('semester', false);
+      setTimeout(openContactModal, 250);
+    } else if (initialRoute && (initialRoute.view === 'comments' || initialRoute.view === 'discussions')) {
+      showView('discussions', false);
+      if (initialRoute.subject) {
+        state.commentsSubjectFilter = initialRoute.subject;
+        if (elements.commentsSubjectFilter) elements.commentsSubjectFilter.value = initialRoute.subject;
+        if (elements.commentSubjectTag) elements.commentSubjectTag.value = initialRoute.subject;
+        renderCommentsStream();
+      }
+    } else {
+      const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
+      if (
+        curPath === '/terms' || curPath === '/terms.html' ||
+        curPath === '/privacy' || curPath === '/privacy.html' ||
+        curPath === '/about' || curPath === '/about.html'
+      ) {
+        return;
+      }
+      showView('semester', false);
+      window.history.replaceState({ view: 'semester' }, '', '/');
+    }
+
+    // Global link delegation for seamless SPA navigation
+    document.addEventListener('click', (e) => {
+      const anchor = e.target.closest('a');
+      if (!anchor) return;
+      const href = anchor.getAttribute('href');
+      if (!href) return;
+
+      if (
+        anchor.target === '_blank' ||
+        href.startsWith('http://') ||
+        href.startsWith('https://') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('tel:') ||
+        href.startsWith('javascript:') ||
+        href.startsWith('#')
+      ) {
+        return;
+      }
+
+      const route = parseRoute(href, '', '');
+      if (!route) return;
+
+      if (route.view === 'hub' && route.subId) {
+        e.preventDefault();
+        openSubjectHub(route.subId, true);
+        if (route.tab && route.tab !== 'topics') {
+          switchHubTab(route.tab, true);
+        }
+      } else if (route.view === 'subjects' && route.semId) {
+        e.preventDefault();
+        selectSemester(route.semId, true);
+      } else if (route.view === 'semester') {
+        e.preventDefault();
+        showView('semester', true);
+      } else if (route.view === 'comments' || route.view === 'discussions') {
+        e.preventDefault();
+        navigateToComments(route.subject, true);
+      }
+    });
+
+    // Student Feedback System (Google Forms Style)
+    initStudentFeedbackForm();
+
+    if (window.location.hash === '#contact' || (new URLSearchParams(window.location.search)).get('contact') === 'true') {
+      setTimeout(openContactModal, 250);
+    } else if (window.location.hash === '#feedback' || (new URLSearchParams(window.location.search)).get('feedback') === 'true') {
+      setTimeout(navigateToFeedback, 350);
+    } else if (window.location.hash === '#comments' || window.location.hash === '#discussions' || window.location.hash === '#communityCommentsSection' || window.location.hash.startsWith('#comm-') || (new URLSearchParams(window.location.search)).get('comments') === 'true' || (new URLSearchParams(window.location.search)).get('discussions') === 'true') {
+      setTimeout(() => {
+        showView('discussions', false);
+        if (window.location.hash.startsWith('#comm-')) {
+          const targetCard = document.getElementById(window.location.hash.substring(1));
+          if (targetCard) targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 350);
+    }
+  }
+
+  // Boot on DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+
+})();

@@ -14,6 +14,7 @@ import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
+import android.webkit.WebResourceResponse
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -24,7 +25,8 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import java.io.InputStream
+import java.net.URLDecoder
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,6 +61,9 @@ class MainActivity : AppCompatActivity() {
     class WebAppInterface(private val activity: MainActivity) {
         @android.webkit.JavascriptInterface
         fun isNativeApp(): Boolean = true
+
+        @android.webkit.JavascriptInterface
+        fun isOfflineBundled(): Boolean = true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,7 +85,6 @@ class MainActivity : AppCompatActivity() {
         loadPortalUrl(savedInstanceState)
     }
 
-
     @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
         // Explicit GPU hardware acceleration for smooth 60fps rendering
@@ -94,11 +98,10 @@ class MainActivity : AppCompatActivity() {
         // Enable core web APIs for PWA & modern vanilla JS portal
         settings.javaScriptEnabled = true
         settings.domStorageEnabled = true
-        settings.databaseEnabled = true
         settings.cacheMode = WebSettings.LOAD_DEFAULT
         settings.mixedContentMode = WebSettings.MIXED_CONTENT_NEVER_ALLOW
 
-        // Viewport and rendering optimizations (strictly honor mobile viewport)
+        // Viewport and rendering optimizations (strictly honor mobile & tablet viewports)
         settings.useWideViewPort = true
         settings.loadWithOverviewMode = false
         settings.textZoom = 100
@@ -115,7 +118,6 @@ class MainActivity : AppCompatActivity() {
 
         // Enable Cookies
         val cookieManager = CookieManager.getInstance()
-
         cookieManager.setAcceptCookie(true)
         cookieManager.setAcceptThirdPartyCookies(webView, true)
 
@@ -153,7 +155,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // WebViewClient: Navigation, error handling & external links
+        // WebViewClient: Asset interception for 100% offline standalone speed & navigation
         webView.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
                 val url = request?.url ?: return false
@@ -193,6 +195,48 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            override fun shouldInterceptRequest(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): WebResourceResponse? {
+                val url = request?.url ?: return null
+                val host = url.host ?: ""
+
+                // 1. Intercept portal domain requests to serve from local bundled assets (100% offline)
+                if (host.equals(PORTAL_HOST, ignoreCase = true) ||
+                    host.equals(FIREBASE_HOST, ignoreCase = true) ||
+                    host.endsWith(".makelaweasy.in", ignoreCase = true)
+                ) {
+                    val assetResponse = getAssetResponse(url.path ?: "")
+                    if (assetResponse != null) {
+                        return assetResponse
+                    }
+                }
+
+                // 2. Intercept CDN libraries to serve local bundled copies offline
+                if (host.contains("cdnjs.cloudflare.com", ignoreCase = true)) {
+                    val path = url.path ?: ""
+                    val cdnAssetResponse = when {
+                        path.contains("font-awesome") && path.endsWith("all.min.css") ->
+                            getAssetResponse("lib/fontawesome/css/all.min.css")
+                        path.contains("three.min.js") ->
+                            getAssetResponse("lib/three.min.js")
+                        path.contains("gsap.min.js") ->
+                            getAssetResponse("lib/gsap.min.js")
+                        path.contains("webfonts/fa-") -> {
+                            val fontFile = path.substringAfterLast('/')
+                            getAssetResponse("lib/fontawesome/webfonts/$fontFile")
+                        }
+                        else -> null
+                    }
+                    if (cdnAssetResponse != null) {
+                        return cdnAssetResponse
+                    }
+                }
+
+                return super.shouldInterceptRequest(view, request)
+            }
+
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 showOfflineScreen(false)
             }
@@ -206,7 +250,7 @@ class MainActivity : AppCompatActivity() {
                 request: WebResourceRequest?,
                 error: WebResourceError?
             ) {
-                // Show offline layout only if main frame fails and no cached page is rendered
+                // If main frame fails and cannot be intercepted, show offline screen only if no network
                 if (request?.isForMainFrame == true && !isNetworkAvailable()) {
                     showOfflineScreen(true)
                 }
@@ -214,14 +258,86 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Resolves and streams local bundled assets from inside the APK
+     * Providing instant 0ms latency and 100% offline study access across all 18 subjects
+     */
+    private fun getAssetResponse(rawPath: String): WebResourceResponse? {
+        try {
+            var path = rawPath
+            val queryIdx = path.indexOf('?')
+            if (queryIdx != -1) path = path.substring(0, queryIdx)
+            val hashIdx = path.indexOf('#')
+            if (hashIdx != -1) path = path.substring(0, hashIdx)
+
+            path = URLDecoder.decode(path, "UTF-8")
+            path = path.trim().replace('\\', '/')
+            while (path.startsWith("/")) {
+                path = path.substring(1)
+            }
+
+            if (path.isEmpty()) {
+                path = "index.html"
+            }
+
+            val inputStream: InputStream = try {
+                assets.open(path)
+            } catch (_: Exception) {
+                // If path has no extension, try appending .html or /index.html
+                try {
+                    assets.open("$path.html")
+                } catch (_: Exception) {
+                    try {
+                        val trailing = if (path.endsWith("/")) "${path}index.html" else "$path/index.html"
+                        assets.open(trailing)
+                    } catch (_: Exception) {
+                        return null
+                    }
+                }
+            }
+
+            val lowerPath = path.lowercase()
+            val mimeType = when {
+                lowerPath.endsWith(".html") || lowerPath.endsWith(".htm") -> "text/html"
+                lowerPath.endsWith(".css") -> "text/css"
+                lowerPath.endsWith(".js") || lowerPath.endsWith(".mjs") -> "application/javascript"
+                lowerPath.endsWith(".json") -> "application/json"
+                lowerPath.endsWith(".svg") -> "image/svg+xml"
+                lowerPath.endsWith(".png") -> "image/png"
+                lowerPath.endsWith(".jpg") || lowerPath.endsWith(".jpeg") -> "image/jpeg"
+                lowerPath.endsWith(".webp") -> "image/webp"
+                lowerPath.endsWith(".gif") -> "image/gif"
+                lowerPath.endsWith(".ico") -> "image/x-icon"
+                lowerPath.endsWith(".woff2") -> "font/woff2"
+                lowerPath.endsWith(".woff") -> "font/woff"
+                lowerPath.endsWith(".ttf") -> "font/ttf"
+                lowerPath.endsWith(".otf") -> "font/otf"
+                lowerPath.endsWith(".xml") -> "application/xml"
+                lowerPath.endsWith(".txt") -> "text/plain"
+                else -> "application/octet-stream"
+            }
+
+            val encoding = if (mimeType.startsWith("text/") ||
+                mimeType.contains("javascript") ||
+                mimeType.contains("json") ||
+                mimeType.contains("xml")
+            ) "UTF-8" else null
+
+            val response = WebResourceResponse(mimeType, encoding, inputStream)
+            response.responseHeaders = mapOf(
+                "Access-Control-Allow-Origin" to "*",
+                "Cache-Control" to "public, max-age=86400"
+            )
+            return response
+        } catch (_: Exception) {
+            return null
+        }
+    }
+
     private fun setupOfflineRetry() {
         btnRetry.setOnClickListener {
-            if (isNetworkAvailable()) {
-                showOfflineScreen(false)
-                webView.loadUrl(PORTAL_URL)
-            } else {
-                Toast.makeText(this, R.string.offline_title, Toast.LENGTH_SHORT).show()
-            }
+            showOfflineScreen(false)
+            webView.loadUrl(PORTAL_URL)
         }
     }
 
@@ -265,13 +381,8 @@ class MainActivity : AppCompatActivity() {
                 PORTAL_URL
             }
 
-            if (isNetworkAvailable()) {
-                showOfflineScreen(false)
-                webView.loadUrl(targetUrl)
-            } else {
-                // Try loading from local cache; if nothing cached, show offline screen
-                webView.loadUrl(targetUrl)
-            }
+            showOfflineScreen(false)
+            webView.loadUrl(targetUrl)
         }
     }
 
@@ -284,7 +395,6 @@ class MainActivity : AppCompatActivity() {
             webView.visibility = View.VISIBLE
         }
     }
-
 
     private fun isNetworkAvailable(): Boolean {
         val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -304,8 +414,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onPause() {
-        webView.onPause()
         super.onPause()
+        webView.onPause()
     }
 
     override fun onDestroy() {

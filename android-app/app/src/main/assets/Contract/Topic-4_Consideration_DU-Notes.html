@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 4: Consideration — DU LLB Notes (Ss. 2(d), 2(f), 23, 25)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1a2a5e;--navy2:#24357a;--saffron:#e8760a;--cream:#fff9f0;--paper:#ffffff;--ink:#1e2433;--muted:#5b6478;--line:#e6e1d5;--green:#0e7a4d;--greenbg:#e8f6ee;--red:#b42318;--redbg:#fdecea;--blue:#175cd3;--bluebg:#e9f1ff;--purple:#6d28d9;--purplebg:#f1eaff;--amberbg:#fff4dd;--gold:#8a5a00;--teal:#0b6e6e;--tealbg:#e6f6f5}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#f3efe6;line-height:1.75;font-size:16.5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 80px}
+.topbar{background:linear-gradient(135deg,#0d2b2b 0%,#0b6e6e 55%,#1a2a5e 100%);color:#fff;padding:34px 0 30px;border-bottom:6px solid var(--saffron)}
+.topbar .wrap{padding-bottom:0}
+.badge{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:5px 12px;border-radius:20px;margin-bottom:12px}
+h1{font-size:34px;line-height:1.25;margin:6px 0 8px}
+h1 .s{color:#ffd9a3}
+.sub{font-family:Arial,Helvetica,sans-serif;font-size:14.5px;color:#e6f6f5;line-height:1.6}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-family:Arial,Helvetica,sans-serif;font-size:12.5px}
+.meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:8px}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:-22px auto 26px;padding:22px 26px;box-shadow:0 12px 30px rgba(11,110,110,.14);position:relative}
+.toc h2{font-family:Arial,Helvetica,sans-serif;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.toc ol{columns:2;column-gap:34px;margin-left:20px;font-family:Arial,Helvetica,sans-serif;font-size:13.5px}
+.toc li{margin:5px 0}
+.toc a{color:var(--navy2);text-decoration:none;border-bottom:1px dotted #9aa3c7}
+.toc a:hover{color:var(--saffron)}
+section.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px 32px;margin:24px 0;box-shadow:0 6px 18px rgba(26,42,94,.06)}
+.secnum{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#fff;background:var(--teal);display:inline-block;padding:5px 14px;border-radius:20px;margin-bottom:10px}
+.secnum.o{background:var(--saffron)} .secnum.g{background:var(--green)} .secnum.p{background:var(--purple)} .secnum.r{background:var(--red)} .secnum.b{background:var(--blue)} .secnum.n{background:var(--navy)}
+h2.st{font-size:26px;line-height:1.35;margin:4px 0 6px;color:var(--navy)}
+h3{font-size:20px;color:#0b4d4d;margin:22px 0 8px;border-left:5px solid var(--saffron);padding-left:12px;line-height:1.4}
+h4{font-size:17px;color:#7a3c00;margin:16px 0 6px;font-family:Arial,Helvetica,sans-serif}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 24px}
+li{margin:5px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;font-family:Arial,Helvetica,sans-serif}
+th{background:var(--teal);color:#fff;padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.4px}
+td{border:1px solid #d9d4c5;padding:10px 12px;vertical-align:top;line-height:1.55}
+tr:nth-child(even) td{background:#faf7ef}
+.statute{background:#0b2b3b;color:#f4f1ff;border-radius:12px;padding:20px 24px;margin:16px 0;font-size:15px;line-height:1.7;border-left:8px solid var(--saffron)}
+.statute b.t{color:#ffd9a3;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px}
+.illus{background:var(--amberbg);border:1px solid #e8c877;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.illus b.t,.note b.t,.exam b.t,.ratio b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px}
+.illus b.t{color:var(--gold)} .note b.t{color:var(--blue)} .exam b.t{color:var(--green)} .ratio b.t{color:var(--purple)}
+.note{background:var(--bluebg);border:1px solid #b9cdf5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.exam{background:var(--greenbg);border:1px solid #9ed3b5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.ratio{background:var(--purplebg);border:1px solid #c9b3f5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.warn{background:var(--redbg);border:1px solid #f0a9a3;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.warn b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;color:var(--red)}
+.teal{background:var(--tealbg);border:1px solid #9ed3d2;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.teal b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;color:var(--teal)}
+.flow{background:#f7f4ec;border:1.5px dashed #b9b09a;border-radius:14px;padding:20px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+.fbox{background:#fff;border:2px solid var(--teal);border-radius:12px;padding:12px 16px;margin:8px auto;max-width:660px;text-align:center;font-size:14.5px;box-shadow:0 3px 0 rgba(11,110,110,.15)}
+.fbox.q{border-color:var(--saffron);background:#fff8ec}
+.fbox.yes{border-color:var(--green);background:#eefaf2}
+.fbox.no{border-color:var(--red);background:#fef0ef}
+.fbox.end{border-color:var(--purple);background:#f4efff}
+.arrow{text-align:center;font-size:20px;color:var(--teal);line-height:1.1}
+.frow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.frow .fbox{flex:1;min-width:200px;margin:8px 0}
+.casehead{background:linear-gradient(135deg,#e6f6f5,#d3ecea);border:2px solid var(--teal);border-radius:14px;padding:20px 24px;margin:18px 0}
+.casehead .cn{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;color:#fff;background:var(--teal);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.casehead h3{border:none;padding:0;margin:4px 0 6px;font-size:22px;color:#083232}
+.casehead .cite{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;color:#274d4d}
+figure.cviz{margin:16px 0;text-align:center}
+figure.cviz img{max-width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(11,110,110,.2)}
+figure.cviz figcaption{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;font-style:italic}
+.args{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.args>div{border-radius:12px;padding:14px 16px;font-size:14.5px}
+.args .a1{background:#eef3ff;border:1px solid #b9cdf5} .args .a2{background:#fff3e2;border:1px solid #ecc27f}
+.args b.h{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.a1 b.h{color:var(--blue)} .a2 b.h{color:#8a4d00}
+.pyq{background:#fff;border:2px solid var(--green);border-radius:14px;padding:20px 22px;margin:16px 0}
+.pyq .qh{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--green);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.pyq h4{color:#0b3d26;font-size:17px;margin:6px 0 8px}
+.model{background:#f4faf6;border-left:5px solid var(--green);padding:12px 16px;border-radius:0 10px 10px 0;margin-top:10px;font-size:15px}
+.tag{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;font-weight:bold;padding:3px 10px;border-radius:20px;margin:2px 4px 2px 0}
+.t-s56{background:#b42318;color:#fff}.t-perf{background:#0b6e6e;color:#fff}.t-agmt{background:#6d28d9;color:#fff}.t-du{background:#0e7a4d;color:#fff}
+.timeline{position:relative;margin:16px 0 16px 8px;padding-left:26px;border-left:3px solid var(--teal)}
+.timeline .ev{margin:12px 0;position:relative;font-size:15px}
+.timeline .ev:before{content:"";position:absolute;left:-35px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--teal);border:3px solid #fff;box-shadow:0 0 0 2px var(--teal)}
+.timeline .yr{font-family:Arial,Helvetica,sans-serif;font-weight:bold;color:var(--teal);font-size:13px}
+footer{background:#0d2b2b;color:#cfd6f5;padding:26px 0;margin-top:30px;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+code.k{background:#eef0ff;border:1px solid #c3cbf5;border-radius:6px;padding:1px 7px;font-size:13px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:720px){.toc ol{columns:1}h1{font-size:26px}section.card{padding:22px 18px}.args{grid-template-columns:1fr}}
+@media print{.topbar{-webkit-print-color-adjust:exact;print-color-adjust:exact}section.card{box-shadow:none;break-inside:avoid}body{background:#fff}}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .case-box, .sub-section, .case-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  table, table.tbl, .table-wrap table, .tblwrap table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<div class="badge">DU LLB &bull; Semester I &bull; Law of Contract &bull; LB-102</div>
+<h1>Topic 4: Consideration <span class="s">— Meaning, Privity, Exceptions &amp; Lawfulness</span></h1>
+<p class="sub">Indian Contract Act, 1872 — <b>Sections 2(d), 2(f), 23 &amp; 25</b> &nbsp;|&nbsp; Meaning &amp; nature of consideration &bull; <b>Privity of contract vs privity of consideration</b> &bull; Subscription promises &bull; <b>S. 25 exceptions</b> &bull; Lawful objects.<br>Comprehensive deep notes <b>strictly anchored in DU Case Material (2023)</b> — Cases 13–17 (Book pp. 54–64) — with full statutory text, elements, illustrations, flowcharts, hypothetical case visuals, and DU-pattern PYQs with model answers.</p>
+<div class="meta"><span>📚 Primary source: DU Case Material LB-102 (2023)</span><span>📜 Bare Act: ICA, 1872 (Ss. 2(d), 2(f), 23, 25)</span><span>⚖️ 5 DU cases in full IRAC++ format</span><span>📝 12 PYQs + best model answers</span></div>
+</div></div>
+
+<div class="wrap">
+<nav class="toc">
+<h2>Contents — click to jump</h2>
+<ol>
+<li><a href="#pA">A. S. 2(d) — meaning, nature &amp; essentials of consideration</a></li>
+<li><a href="#pB">B. S. 23 — lawful consideration and objects</a></li>
+<li><a href="#pC">C. S. 25 — no consideration, no contract + 3 exceptions</a></li>
+<li><a href="#pD">D. Privity of contract &amp; of consideration + exceptions</a></li>
+<li><a href="#pE">E. DU Case 13 — Kedarnath v Gorie Mahomed (full brief)</a></li>
+<li><a href="#pF">F. DU Case 14 — Doraiswami v Arunachala (full brief)</a></li>
+<li><a href="#pG">G. DU Case 15 — Abdul Aziz v Masum Ali (full brief)</a></li>
+<li><a href="#pH">H. DU Case 16 — Chinnaya v Venkataramaya (full brief)</a></li>
+<li><a href="#pI">I. DU Case 17 — Khwaja Muhammad v Husaini Begam (full brief)</a></li>
+<li><a href="#pJ">J. Master flowcharts &amp; comparison tables</a></li>
+<li><a href="#pK">K. DU PYQs with best model answers (Q1–Q12)</a></li>
+<li><a href="#pL">L. One-page revision capsule + exam strategy</a></li>
+</ol>
+</nav>
+
+<section class="card" id="pA">
+<div class="secnum">Part A — The price of a promise</div>
+<h2>S. 2(d) — meaning, nature &amp; essentials of consideration ⭐⭐⭐</h2>
+<div class="statute"><b>S. 2(d) (memorise verbatim):</b> "When, <b>at the desire of the promisor</b>, the <b>promisee or any other person</b> has done or abstained from doing, or does or abstains from doing, or promises to do or to abstain from doing, <b>something</b>, such act or abstinence or promise is called a <b>consideration for the promise</b>."<br><b>S. 2(f):</b> "Promises which form the consideration or part of the consideration for each other are called <b>reciprocal promises</b>." (See S. 23 ills. (a)–(d): each party's promise = consideration for the other's.)</div>
+<h3>Essentials distilled (7 tests — run them in every answer)</h3>
+<table>
+<tr><th style="width:26%">Essential</th><th>Content + DU authority</th></tr>
+<tr><td><b>1. At the desire of the promisor</b> ⭐</td><td>Act must be <b>requested</b> by the promisor — voluntary/officious acts don't count. <b>Doraiswami</b> (Cornish J.): "There must have been some <b>request by the promisor</b> to the promisee to do something" — repairs contracted <b>before</b> subscription + no request = bare promise. <b>Kedarnath</b> contrast: subscribers knew "on the faith of their subscription an obligation was to be incurred" = implied request.</td></tr>
+<tr><td><b>2. By promisee OR any other person</b> ⭐</td><td>India abolishes <b>privity of consideration</b> — a stranger's act can be consideration. <b>Chinnaya</b> (Kindersley J.): "very wide definition … promisee, <b>or any other person</b>" — donor-sister's gift = consideration for donee's annuity promise to plaintiffs. Contrast English <i>Tweddle v Atkinson</i>.</td></tr>
+<tr><td><b>3. Past, present or future</b></td><td>"Has done … does … promises to do" — <b>executed</b> (act done), <b>executory</b> (promise for promise — S. 2(f)), and <b>past</b> (already done at desire — linked to S. 25(2)).</td></tr>
+<tr><td><b>4. Something of value in law</b></td><td>Need not be money — act, abstinence, forbearance, detriment. <b>Kedarnath</b>: incurring contractor liability = consideration. Must be <b>real, not illusory</b>; need not be adequate (S. 25 Expl. 2).</td></tr>
+<tr><td><b>5. Must be lawful</b></td><td>S. 23's six bars (Part B): forbidden by law, defeating law, fraudulent, injurious, immoral, opposed to public policy.</td></tr>
+<tr><td><b>6. Must be real, not pre-existing duty</b></td><td>Doing what one is <b>already bound</b> to do (public duty, contractual duty to same promisor) = no consideration. <b>Lalman</b> (Topic 2): munim's pre-undertaken search duty.</td></tr>
+<tr><td><b>7. Must move as part of the bargain</b></td><td><b>Doraiswami</b> + <i>In re Hudson</i> (Pearson J.): liabilities undertaken <b>not as part of the bargain</b> with the promisor ("no binding obligation between themselves and Mr. Hudson") = no consideration, however real the expenditure.</td></tr>
+</table>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>Desired?</b><br>Requested by promisor? (Doraiswami)</div><div class="arrow">→</div>
+<div class="fbox"><b>From whom?</b><br>Promisee OR stranger ✔ (Chinnaya)</div><div class="arrow">→</div>
+<div class="fbox t"><b>Bargain-linked?</b><br>Part of exchange? (Hudson)</div><div class="arrow">→</div>
+<div class="fbox o"><b>Lawful + real?</b><br>S. 23 + not pre-existing duty</div>
+</div></div>
+<div class="note"><b>S. 2(d) vs English law:</b> England needs consideration to <b>move from the promisee</b> (<i>Tweddle</i>); India expressly allows <b>"any other person"</b> — the statutory basis of <b>Chinnaya</b>. But note: India still requires <b>privity of contract</b> to <i>sue</i> (plaintiff must be a party/promisee) — subject to exceptions like <b>Khusaini Begam</b> (Part D).</div>
+</section>
+
+<section class="card" id="pB">
+<div class="secnum">Part B — Lawfulness filter</div>
+<h2>S. 23 — lawful consideration and objects ⭐⭐⭐</h2>
+<div class="statute"><b>S. 23:</b> "The consideration or object of an agreement is lawful, <b>unless</b> — it is <b>forbidden by law</b>; or is of such a nature that if permitted, it would <b>defeat the provisions of any law</b>; or is <b>fraudulent</b>; or <b>involves or implies injury to the person or property of another</b>; or the Court regards it as <b>immoral, or opposed to public policy</b>. In each of these cases … <b>Every agreement of which the object or consideration is unlawful is void</b>."</div>
+<h3>The six bars with illustrations (memorise pairs)</h3>
+<table>
+<tr><th style="width:24%">Bar</th><th>Illustration(s) + meaning</th></tr>
+<tr><td><b>1. Forbidden by law</b></td><td><b>(f)</b> buying public employment (Rs 1,000 for a post) → void. "Law" = enacted law + rules with force of law.</td></tr>
+<tr><td><b>2. Defeating provisions of law</b></td><td><b>(i)</b> defaulter's benami re-purchase of revenue-sold estate → void (renders transaction "in effect a purchase by the defaulter").</td></tr>
+<tr><td><b>3. Fraudulent</b></td><td><b>(e)</b> dividing fraud gains → void; <b>(g)</b> agent's secret deal for a lease behind principal's back → void (fraud by concealment).</td></tr>
+<tr><td><b>4. Injury to person/property</b></td><td><b>(h)</b> dropping a robbery prosecution for restoration → void (compounding non-compoundable offence harms justice + person). Principle extends to assault, libel, property damage bargains.</td></tr>
+<tr><td><b>5. Immoral</b></td><td><b>(j)</b> mukhtar's paid influence → void; <b>(k)</b> letting daughter for concubinage → void "though … not punishable under IPC" — court's moral lens, not criminality, decides.</td></tr>
+<tr><td><b>6. Opposed to public policy</b></td><td>Open-ended: trading with enemy, stifling prosecution, champerty/maintenance excesses, ousting courts' jurisdiction, restraining marriage/trade (Ss. 26–28 specifics), wagering (S. 30). Courts expand cautiously.</td></tr>
+</table>
+<div class="note"><b>Lawful pairs (ills. a–d):</b> house-for-Rs 10,000 (a); surety/time-grant (b); ship insurance (c); child maintenance for annual payment (d) — each party's promise lawful consideration for the other's (S. 2(f) reciprocal promises). <b>Adjunct — S. 24</b> (just beyond syllabus, one line): if any part of a <b>single</b> consideration/object is unlawful → <b>whole agreement void</b> (indigo + illegal traffic, one salary).</div>
+<div class="exam"><b>S. 23 answer skeleton:</b> (1) Quote S. 23 + identify which of the six bars is alleged. (2) Match an illustration. (3) Apply to facts — "forbidden" needs a prohibiting law; "immoral" needs court's view (ill. k: IPC irrelevant); "public policy" needs a recognised head. (4) Conclude void (wholly; S. 24 if part-unlawful single consideration).</div>
+</section>
+
+<section class="card" id="pC">
+<div class="secnum">Part C — S. 25</div>
+<h2>S. 25 — agreement without consideration + exceptions ⭐⭐⭐</h2>
+<div class="statute"><b>Rule:</b> "An agreement made <b>without consideration is void</b>, unless — <b>(1)</b> it is <b>expressed in writing and registered</b> … and made on account of <b>natural love and affection between parties standing in a near relation</b>; or <b>(2)</b> it is a promise to <b>compensate</b>, wholly or in part, a person who has <b>already voluntarily done something for the promisor, or something which the promisor was legally compellable to do</b>; or <b>(3)</b> it is a promise, <b>in writing and signed</b> by the person to be charged (or authorised agent), to pay wholly or in part <b>a debt barred by limitation</b>." — "In any of these cases, such an agreement is a contract."<br><b>Explanation 1:</b> completed <b>gifts</b> (donor–donee) unaffected. <b>Explanation 2:</b> <b>inadequacy ≠ no consideration</b> — but relevant to free consent.<br><b>Illustrations:</b> (a) Rs 1,000 gift promise → void; (b) registered father→son Rs 1,000 for love → contract; (c) purse found, Rs 50 promised → contract; (d) supporting promisor's infant son, expenses promised → contract; (e) written promise to pay Rs 500 of time-barred Rs 1,000 → contract; (f) Rs 1,000 horse for Rs 10, free consent → contract; (g) same facts, consent disputed → inadequacy evidences coercion/pressure.</div>
+<table>
+<tr><th style="width:18%">Exception</th><th style="width:34%">Ingredients (all needed)</th><th>Traps</th></tr>
+<tr><td><b>(1) Love &amp; affection</b></td><td>(i) <b>writing + registration</b>; (ii) <b>natural</b> love and affection (proved, subsisting — not past quarrel); (iii) <b>near relation</b> parties.</td><td>Unregistered family arrangement fails (1) (may survive as family settlement on other grounds); stranger's love letter fails (iii); "natural" is fact-tested.</td></tr>
+<tr><td><b>(2) Past voluntary service</b></td><td>(i) service <b>already done voluntarily</b> for promisor (or what he was <b>legally compellable</b> to do); (ii) promise to <b>compensate</b> for it. No writing needed.</td><td>Must be <b>voluntary</b> — done under pre-existing duty or at promisor's desire with payment terms = different analysis (S. 2(d)/quantum). Ills. (c)–(d). <b>Contrast Doraiswami:</b> trustees' repairs weren't at subscriber's desire at all.</td></tr>
+<tr><td><b>(3) Time-barred debt</b></td><td>(i) <b>written + signed</b> (no registration needed); (ii) <b>existing debt</b> enforceable but for limitation; (iii) promise to pay <b>wholly/partly</b>.</td><td>Must be a <b>debt</b> (liquidated money due) — not damages/claims; must have been enforceable (not void ab initio); part-payment promise valid (ill. e).</td></tr>
+<tr><td><b>Expl. 1 — Gifts</b></td><td><b>Actually made</b> (delivered/registered) gifts valid without consideration.</td><td>Mere promise to gift = void (ill. a). Gift needs Transfer of Property Act compliance.</td></tr>
+<tr><td><b>Expl. 2 — Inadequacy</b></td><td>Courts don't weigh equivalence; <b>gross inadequacy evidences</b> coercion/fraud/misrepresentation/undue influence.</td><td>Horse ills. (f)/(g) — same facts, opposite consent findings.</td></tr>
+</table>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>No consideration?</b><br>→ prima facie VOID (ill. a)</div><div class="arrow">→</div>
+<div class="fbox"><b>Check (1):</b> written + registered + love + near relation?</div><div class="arrow">→</div>
+<div class="fbox t"><b>Check (2):</b> past voluntary service + compensate?</div><div class="arrow">→</div>
+<div class="fbox o"><b>Check (3):</b> written + signed + time-barred debt?</div><div class="arrow">=</div>
+<div class="fbox"><b>Any yes → CONTRACT</b></div>
+</div></div>
+</section>
+
+<section class="card" id="pD">
+<div class="secnum">Part D — Who can sue?</div>
+<h2>Privity of contract &amp; of consideration + exceptions ⭐⭐⭐</h2>
+<p><b>Two distinct doctrines</b> — DU's favourite confusion trap:</p>
+<table>
+<tr><th style="width:26%">Doctrine</th><th>Rule in India</th><th>Authority</th></tr>
+<tr><td><b>Privity of CONSIDERATION</b> (must consideration move from plaintiff?)</td><td>❌ <b>ABOLISHED</b> — S. 2(d) "promisee <b>or any other person</b>" — a stranger's act suffices.</td><td><b>Chinnaya</b>: donor-sister's gift = consideration for annuity promise; Kindersley J. relies on S. 2(d)'s "very wide definition". (English <i>Tweddle</i> rejected on this point.)</td></tr>
+<tr><td><b>Privity of CONTRACT</b> (must plaintiff be a party?)</td><td>✅ <b>RETAINED as general rule</b> — only a party/promisee can sue; a <b>mere beneficiary</b> generally cannot. <b>But subject to exceptions.</b></td><td><i>Tweddle v Atkinson</i> (general rule); <b>Khusaini Begam</b> (equitable exception — charge on property); <b>Chinnaya</b> (plaintiffs <i>were</i> parties via Kararnama A — so no privity-of-contract breach at all).</td></tr>
+</table>
+<h3>Chinnaya's English-law tour (Innes J.) — know the triad</h3>
+<table>
+<tr><th style="width:22%">Case</th><th>Facts in brief</th><th>Holding on stranger's suit</th></tr>
+<tr><td><b>Dutton v Poole</b> (2 Lev 210)</td><td>Son promised father (refraining from felling £1,000 timber) to pay daughter Grisel £1,000 marriage portion.</td><td>✅ Daughter <b>could sue</b> — son got timber benefit; daughter lost portion through promise ("consideration indirectly moved").</td></tr>
+<tr><td><b>Rockwood's case</b></td><td>Eldest son promised father (refraining from charging lands) annuities to younger sons.</td><td>✅ Younger sons <b>could sue</b> — same indirect-consideration logic.</td></tr>
+<tr><td><b>Tweddle v Atkinson</b> (30 LJQB 265)</td><td>Two fathers agreed each to pay the husband; husband given "full power to sue".</td><td>❌ Husband <b>could not sue</b> — lost nothing, no benefit/detriment shift; "not a party to the consideration".</td></tr>
+</table>
+<div class="note"><b>Innes J.'s application:</b> present case = <b>Dutton, not Tweddle</b> — defendant gained "a large estate", plaintiffs "lost the yearly sum the donor would otherwise have paid" → consideration <b>indirectly moved from plaintiffs</b> → decree. <b>Kindersley J.'s shorter route:</b> gift deed B + Kararnama A = <b>one transaction</b>; S. 2(d) satisfied anyway.</div>
+<h3>Exceptions to privity of CONTRACT (beneficiary CAN sue) ⭐</h3>
+<table>
+<tr><th style="width:30%">Exception</th><th>Content + authority</th></tr>
+<tr><td><b>1. Charge/trust for beneficiary</b> ⭐</td><td>Where contract charges property / creates trust for a third person, beneficiary sues in equity. <b>Khusaini Begam</b>: Rs 500/month <b>charged on specified properties</b>; plaintiff "the only person beneficially entitled" → "clearly entitled to proceed in equity". (Tweddle = assumpsit, inapplicable.)</td></tr>
+<tr><td><b>2. Marriage/family arrangements</b></td><td>Settlements for minors' benefit (parents contracting). <b>Khusaini Begam</b> policy: minors' marriages "contracted by parents and guardians" — applying Tweddle "might occasion serious injustice".</td></tr>
+<tr><td><b>3. Acknowledgement / estoppel</b></td><td>Party, by separate conduct/agreement, acknowledges liability to third person (creates privity with him).</td></tr>
+<tr><td><b>4. Assignment</b></td><td>Contractual benefits assigned → assignee sues (subject to equities; burdens need novation).</td></tr>
+<tr><td><b>5. Agency (undisclosed principal)</b></td><td>Principal sues on agent's contract (Ss. 231–232).</td></tr>
+<tr><td><b>6. Covenants running with land</b></td><td>Burden/benefit annexed to property binds/sues successors.</td></tr>
+</table>
+<div class="warn"><b>⚠️ Precision point for toppers:</b> <b>Chinnaya is NOT a privity-of-contract exception</b> — the plaintiffs held a direct promise (Kararnama A) and were promisees; the case kills only <b>privity of consideration</b>. <b>Khusaini Begam IS the privity-of-contract exception</b> — plaintiff was "no party to the document" yet enforced it via charge + equity. Examiners test exactly this distinction.</div>
+</section>
+
+<section class="card" id="pE">
+<div class="secnum r">Part E — DU Case 13 (Book p. 54–55)</div>
+<div class="casehead"><div class="cn">DU Case 13 ★★ Subscription + faith-liability = enforceable contract</div>
+<h3>Kedarnath Bhattacharji v Gorie Mahomed, (1886) 7 ID 64 (Cal. — Petheram CJ, Reference)</h3>
+<div class="cite">S. 2(d) ICA &nbsp;|&nbsp; Questions: <b>(1) Maintainable representative suit? (2) Was the Rs 100 subscription enforceable?</b> &nbsp;|&nbsp; Answer: <b>Yes to both — subscription given knowing contractor-liability would follow = promise for good consideration. (Small Cause Court to decree + costs.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_4_consideration_du_notes_img1.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: Howrah Town Hall construction, subscription book"><figcaption>Hypothetical visual — Howrah, 1880s: the Town Hall rises (Rs 26,000 → Rs 40,000) on the faith of subscriptions — including Gorie Mahomed's Rs 100.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>Scheme:</b> Howrah Municipality Commissioners promoted a <b>Town Hall, conditional on sufficient subscriptions</b>; constituted themselves <b>trustees of the Town Hall Fund by deed</b>.</li>
+<li><b>Contract on faith:</b> once subscriptions sufficed, Commissioners (incl. plaintiff, Vice-Chairman) <b>contracted with a builder</b> (Rs 26,000 estimate); as subscriptions grew, plans enlarged → <b>Rs 40,000</b>; Commissioners <b>personally liable</b> throughout.</li>
+<li><b>Defendant:</b> subscribed <b>Rs 100</b> in the book; refused to pay → sued in <b>Howrah Small Cause Court</b> by plaintiff (as Vice-Chairman/trustee, one of the contractor-liable persons).</li>
+<li><b>Small Cause Judge:</b> Registrar couldn't grant leave; trust property → S. 437 CPC; suit bad ab initio; and (citing <i>Kedar Nath Mittra v Alisar Rahoman</i>) defendant "uneducated", couldn't know Town Hall's object/utility → <b>no legal obligation</b> → dismissed, <b>contingent reference</b> to HC on (1) maintainability, (2) trustees' entitlement.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Was the representative suit maintainable (CPC + trust)?</li><li>Did the subscription promise have consideration?</li></ol>
+<div class="args"><div class="a1"><b>Plaintiff-trustee:</b> all contractor-liable persons could jointly sue (CPC representative action cures form); subscription invited <b>knowing liability would be incurred on its faith</b> = consideration.</div><div class="a2"><b>Defendant:</b> plaintiff had no right to sue (trust/CPC bars); mere charity subscription = <b>no consideration</b>; uneducated subscriber, no understanding of object.</div></div>
+<h3>Decision &amp; reasoning (Petheram CJ)</h3>
+<ul>
+<li><b>(1) Maintainable:</b> plaintiff may sue <b>on behalf of himself and all jointly interested</b> under CPC, trustee or not — representative form "cure[s] any technical defect".</li>
+<li><b>(2) Consideration — the classic passage:</b> "great many subscriptions … cannot be recovered … because there is no consideration." <b>But here</b> subscribers knew "the purpose … and … on the faith of their subscription an obligation was to be incurred to pay the contractor." The subscriber "says, in effect — <b>In consideration of your agreeing to enter into a contract to erect … I undertake to supply the money</b> up to my subscription." = "perfectly valid contract … for good consideration … enforced … by the persons to whom the liability is incurred."</li>
+<li><b>Orders:</b> both questions affirmative; Small Cause Court to <b>decree the Rs 100 + costs</b> (incl. HC hearing).</li>
+</ul>
+<div class="ratio"><b>Ratio:</b> A charity <b>subscription is enforceable</b> where the subscriber knows the fund-seekers will <b>incur liability on its faith</b> and they do — the incurred/planned liability is <b>S. 2(d) consideration</b> (implied bargain: money for undertaking).</div>
+<div class="exam"><b>Exam use:</b> lead subscription-consideration authority; quote the "In consideration of your agreeing…" passage; pair with Doraiswami (no request → fails) and Abdul Aziz (nothing done → fails).</div>
+</section>
+
+<section class="card" id="pF">
+<div class="secnum r">Part F — DU Case 14 (Book pp. 56–57)</div>
+<div class="casehead"><div class="cn">DU Case 14 ★★ No request + no bargain = bare promise (Kedarnath distinguished)</div>
+<h3>Doraiswami Iyer v Arunachala Ayyar, (1935) 43 LW 259 (Mad. — Cornish J., Civil Revision)</h3>
+<div class="cite">S. 2(d) ICA; <i>In re Hudson</i> &nbsp;|&nbsp; Question: <b>Can temple trustees recover Rs 125 subscribed AFTER repair liability was incurred, with no request/bargain?</b> &nbsp;|&nbsp; Answer: <b>No — "bare promise unsupported by consideration". (Revision allowed; suit dismissed with costs throughout.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_4_consideration_du_notes_img2.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: 1928 temple repairs, subscription list"><figcaption>Hypothetical visual — Tamil Nadu, 1928: temple repairs begin in February on village funds; only in October is Rs 125 subscribed — after the liability, without any bargain.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>Feb 1928:</b> temple trustees <b>already contracted</b> for repairs; maistry paid from <b>village common fund</b>.</li>
+<li><b>Oct 1928:</b> more money needed → subscriptions invited; petitioner subscribed <b>Rs 125</b>.</li>
+<li><b>Plaint's pleaded consideration:</b> "relying on the promise … [trustees] incurred liabilities in repairing the temple." <b>Lower court decreed</b> → revision.</li>
+</ul>
+<h3>Issue</h3>
+<p>Does trustees' repair expenditure, incurred substantially <b>before and independent of</b> the subscription, constitute S. 2(d) consideration?</p>
+<div class="args"><div class="a1"><b>Trustees:</b> Kedarnath applies — liabilities incurred on strength of subscription = consideration.</div><div class="a2"><b>Subscriber:</b> no request ever made to him; no undertaking by trustees as part of any bargain with him — bare promise.</div></div>
+<h3>Decision &amp; reasoning (Cornish J.)</h3>
+<ul>
+<li><b>S. 2(d) test:</b> promisee must have acted on "more than a bare promise" — "some <b>bargain</b> between them in respect of which the consideration has been given." Kedarnath's passage presupposes the subscriber's <b>request/implied bargain</b> ("In consideration of your agreeing…").</li>
+<li><b>Rule:</b> "mere promise to subscribe … or entry in a subscription list" ≠ consideration; "There must have been <b>some request by the promisor</b> to the promisee to do something in consideration of the promised subscription."</li>
+<li><b><i>In re Hudson</i> (54 LJ Ch 811; Pearson J.):</b> chapel-debt contribution; committee's liabilities ≠ consideration — "no binding obligation between themselves and Mr. Hudson" — adopted.</li>
+<li><b>Application:</b> "not pleaded, nor is there evidence, that there was any request … or any undertaking by them to do anything" → <b>bare promise</b> → suit "ought to have been dismissed."</li>
+<li><b>Order: revision allowed with costs throughout.</b></li>
+</ul>
+<div class="ratio"><b>Ratio:</b> Subscription expenditure is consideration <b>only if undertaken at the subscriber's desire as part of the bargain</b> (S. 2(d) "at the desire of the promisor") — prior/independent liabilities don't qualify.</div>
+<div class="exam"><b>Exam use:</b> the "at the desire" authority; use to defeat after-the-fact reliance claims; Kedarnath–Doraiswami–Abdul Aziz form the subscription trilogy (bargain ✔ / no bargain ✘ / nothing done ✘).</div>
+</section>
+
+<section class="card" id="pG">
+<div class="secnum r">Part G — DU Case 15 (Book pp. 58–59)</div>
+<div class="casehead"><div class="cn">DU Case 15 ★★ Gratuitous mosque promise + dead cheque — nothing enforceable</div>
+<h3>Abdul Aziz v Masum Ali, AIR 1914 All 22 (Richards CJ)</h3>
+<div class="cite">S. 25 ICA (no consideration) &nbsp;|&nbsp; Question: <b>Are a treasurer's own Rs 500 mosque subscription and a stale Rs 500 cheque recoverable from his heirs?</b> &nbsp;|&nbsp; Answer: <b>No — gratuitous promise; gratuitous treasurership; no lifetime liability → none vs heirs. (Appeal allowed; both Rs 500 claims dismissed.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_4_consideration_du_notes_img3.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: 1907 Agra mosque fund, treasurer ledger, cheque"><figcaption>Hypothetical visual — Agra, 1907: subscriptions mount for Masjid Hamman Alawardi Khan — but no repair is ever begun, and one cheque quietly goes stale.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>1907 fund</b> for <b>Masjid Hamman Alawardi Khan</b> repairs: committee sanctioned <b>Rs 3,000</b>; Hakim Shafi Ullah paid <b>Rs 100</b> cash; <b>Munshi Abdul Karim promised Rs 500</b> (and became <b>treasurer</b>, receiving the Rs 3,100); <b>Munshi Jan Mohammad promised Rs 500</b> via cheque (12 Sept 1907).</li>
+<li><b>Cheque saga:</b> presented 29 Sept 1907 → returned ("endorsement not regular"); re-presented <b>12 Jan 1909</b> → "out of date".</li>
+<li><b>Deaths + suit:</b> Karim died <b>20 Apr 1909</b>; suit vs heirs <b>14 Apr 1910</b>; Jan Mohammad died May 1910. Rs 3,100 admitted; contested: Karim's Rs 500 + Jan's Rs 500. <b>Admitted: "nothing has been done"</b> on repairs. Trial court: Karim's Rs 500 decreed, Jan's dismissed; first appeal: whole claim decreed → second appeal.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Was Karim's promised subscription enforceable (does treasurership change it)?</li><li>Was Karim liable (as agent?) for the stale cheque?</li><li>Do liabilities survive against heirs?</li></ol>
+<div class="args"><div class="a1"><b>Committee:</b> treasurer's promise + office imply enforceability; as <b>agent</b>, Karim's <b>gross negligence</b> on the cheque caused Rs 500 loss → liable; heirs inherit liability.</div><div class="a2"><b>Heirs:</b> mere gratuitous promise (outsider's admittedly unenforceable; treasurership adds nothing); no agency, no gross negligence (natural endorsement error; delay explained by stalled works); no lifetime liability → no heir liability.</div></div>
+<h3>Decision &amp; reasoning (Richards CJ)</h3>
+<ul>
+<li><b>Karim's Rs 500:</b> "mere gratuitous promise" — concededly unenforceable from an outsider; <b>treasurership makes no difference</b>; no sum ever set aside. → dismissed.</li>
+<li><b>Jan's cheque:</b> treasurership "purely gratuitous" — Karim "might at any time have refused to go on"; <b>not an agent</b>; even if agent, no gross negligence (natural mistake + work-delay explanation). → no lifetime liability.</li>
+<li><b>Heirs:</b> "if no suit lay … in his lifetime, no suit could be brought after his death against his heirs."</li>
+<li><b>Order: appeal allowed; decree varied; both Rs 500 claims dismissed</b> (costs: appellants in appeal; proportionate below).</li>
+</ul>
+<div class="ratio"><b>Ratio:</b> (1) A <b>gratuitous subscription</b> with no Kedarnath-type faith-liability is <b>void for want of consideration (S. 25)</b> — office-holding doesn't supply it. (2) <b>Gratuitous agency</b> attracts no negligence liability for mere non-feasance short of gross fault. (3) No lifetime cause → no heir liability.</div>
+<div class="exam"><b>Exam use:</b> classic S. 25 application; completes the subscription trilogy; also use for gratuitous-agent + heir-liability side points.</div>
+</section>
+
+<section class="card" id="pH">
+<div class="secnum r">Part H — DU Case 16 (Book pp. 60–61)</div>
+<div class="casehead"><div class="cn">DU Case 16 ★★ Stranger to consideration CAN sue (S. 2(d))</div>
+<h3>Venkata Chinnaya Rau v Venkataramaya Garu, (1881) 1 ID 137 (Mad. — Innes + Kindersley JJ.)</h3>
+<div class="cite">S. 2(d) ICA &nbsp;|&nbsp; Question: <b>Can annuity plaintiffs, strangers to the gift-consideration, enforce the donee's Kararnama promise?</b> &nbsp;|&nbsp; Answer: <b>Yes — consideration indirectly moved from them (Dutton v Poole); S. 2(d) "any other person". (Second appeal dismissed with costs.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_4_consideration_du_notes_img4.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: 1877 gift deed of estate, annuity promise"><figcaption>Hypothetical visual — 9 April 1877: a sister gifts her estate to her daughter (deed B) — and the daughter promises the plaintiffs Rs 653 yearly (Kararnama A). Then stops paying.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>9 Apr 1877:</b> plaintiffs' sister gifted landed property to defendant (her daughter) by <b>registered deed B</b>, stipulating <b>Rs 653/year annuity</b> to plaintiffs (as donor had paid) until a village given them.</li>
+<li><b>Same date:</b> defendant executed <b>Kararnama A</b> to plaintiffs: "According to … paragraph 12 of the deed of gift … I hereby agree to continue to carry out in your favour, perpetually and hereditarily … the terms stated."</li>
+<li><b>Default + pleas:</b> annuity unpaid → suit. Pleas: <b>coercion</b> (concurrent finding: voluntary + registered — rejected) and <b>strangers to consideration</b> can't sue. Courts below decreed → second appeal. (Stamp objection: admitted as duly stamped; properly an agreement under 1869 Act, not a bond.)</li>
+</ul>
+<h3>Issue</h3>
+<p>Whether plaintiffs, strangers to the consideration (the gift), can enforce Kararnama A.</p>
+<div class="args"><div class="a1"><b>Plaintiffs:</b> direct promise in A; donor ceased paying only because the source passed to defendant — consideration indirectly moved (Dutton v Poole); S. 2(d) covers "any other person".</div><div class="a2"><b>Defendant:</b> Tweddle v Atkinson — strangers to consideration cannot sue; coercion; stamp defect.</div></div>
+<h3>Decision &amp; reasoning</h3>
+<ul>
+<li><b>Innes J.:</b> English rule: plaintiff sues only if consideration moved <b>directly or indirectly</b> from him. <b>Dutton v Poole</b> (£1,000 timber/daughter portion) + <b>Rockwood</b> (annuities to younger sons): indirect consideration → suit allowed — defendant's act "shut out the plaintiff from a certain benefit and substituted a future benefit." <b>Tweddle</b> distinguished: husband lost nothing, no benefit/detriment shift. <b>Here = Dutton:</b> defendant "gained a large estate", plaintiffs "lost the yearly sum the donor would otherwise have paid" → consideration indirectly moved → enforceable.</li>
+<li><b>Kindersley J. (concurring):</b> "but for the <b>very wide definition</b>" of S. 2(d) ("promisee, <b>or any other person</b>") he'd have doubted; gift + Kararnama = <b>one transaction</b> → sufficient consideration.</li>
+<li><b>Order: appeal dismissed with costs.</b></li>
+</ul>
+<div class="ratio"><b>Ratio:</b> Under S. 2(d), <b>consideration may move from a stranger</b> ("any other person") — privity of consideration abolished; plaintiffs holding the promise may sue though the benefit flowed from another's act. (Plaintiffs were promisees — no privity-of-contract issue arose.)</div>
+<div class="exam"><b>Exam use:</b> THE S. 2(d) stranger-consideration authority; master the Dutton–Rockwood–Tweddle triad + the two concurring routes; stress Kindersley J.'s "very wide definition" quote.</div>
+</section>
+
+<section class="card" id="pI">
+<div class="secnum r">Part I — DU Case 17 (Book pp. 62–64)</div>
+<div class="casehead"><div class="cn">DU Case 17 ★★ Non-party beneficiary enforces charged allowance in equity</div>
+<h3>Nawab Khwaja Muhammad Khan v Nawab Husaini Begam, (1910) 37 IA 152 (PC — Ameer Ali J.)</h3>
+<div class="cite">Privity of contract (exception) &nbsp;|&nbsp; Question: <b>Can a daughter-in-law, no party to the agreement, enforce Rs 500/month kharch-i-pandan charged on property — despite leaving her husband?</b> &nbsp;|&nbsp; Answer: <b>Yes — sole beneficial owner under a property charge sues in equity (Tweddle inapplicable); no cohabitation condition; misconduct unproved. (Appeal dismissed; HC affirmed.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_4_consideration_du_notes_img5.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: 1877 kharch-i-pandan agreement charging estate"><figcaption>Hypothetical visual — 25 October 1877: the Nawab charges his estates for his minor son's bride's Rs 500 monthly kharch-i-pandan — "in perpetuity", without conditions.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>Agreement (25 Oct 1877):</b> defendant (father-in-law) declared, pre-marriage (fixed 2 Nov 1877) and "in consideration of" it, to pay plaintiff <b>Rs 500/month "in perpetuity"</b> as <b>kharch-i-pandan</b> (betel-box expenses) from marriage/"reception", <b>charging specified properties</b>. Both spouses minors.</li>
+<li><b>Cohabitation:</b> reception delayed to <b>1883</b> (minority); lived together till <b>1896</b>; plaintiff then left for <b>Moradabad</b> (visited frequently by husband; no restitution suit ever filed).</li>
+<li><b>Defences:</b> (1) plaintiff <b>no party</b> → can't sue (<i>Tweddle v Atkinson</i>); (2) <b>misconduct + desertion</b> forfeit the allowance (pin-money analogy — husband-controlled, coverture-spent).</li>
+<li><b>Below:</b> Subordinate Judge: unchastity "not legally proved" (but "not free from suspicion" — deprecated by PC); desertion proved → <b>suit dismissed</b>. HC (argued only on maintainability): <b>clear right to sue → reversed + decreed</b>. Appeal to Privy Council.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Can a non-party beneficiary enforce the agreement (Tweddle)?</li><li>Did leaving the husband forfeit kharch-i-pandan?</li></ol>
+<div class="args"><div class="a1"><b>Father-in-law:</b> Tweddle — non-party can't sue; kharch-i-pandan = pin-money (husband-controlled, payable only during cohabitation); desertion (+ suspected misconduct) forfeits it.</div><div class="a2"><b>Plaintiff:</b> sole beneficiary of an express property charge → equitable enforcement; allowance unconditional ("in perpetuity" from reception); misconduct unproved; husband never sought restitution.</div></div>
+<h3>Decision &amp; reasoning (Ameer Ali J.)</h3>
+<ul>
+<li><b>Privity — exception:</b> <i>Tweddle</i> was <b>assumpsit</b> — its common-law rule "not applicable" here: agreement <b>"specifically charges immovable property"</b>; plaintiff "the only person beneficially entitled" → "clearly entitled to proceed <b>in equity</b> to enforce her claim." Policy: minors' marriages arranged by parents/guardians — Tweddle would cause "serious injustice."</li>
+<li><b>Kharch-i-pandan ≠ pin-money:</b> customary personal allowance (Upper India Muslim families of rank), fixed pre/post marriage, <b>no husband-control/coverture-spending obligation</b> — different legal footing from social institutions.</li>
+<li><b>No forfeiture:</b> defendant bound himself <b>"unreservedly"</b> — only condition was <b>commencement</b> (first entry, when matrimonial rights arise); no cohabitation-continuance term; contingency uncontemplated; defendant's Rampur-connection motive = suitable provision for her rank.</li>
+<li><b>Evidence:</b> "suspicion" remark "unsatisfactory" — charge proved or not, no middle ground; husband's visits uncontradicted; no restitution step.</li>
+<li><b>Order: appeal dismissed; HC affirmed.</b></li>
+</ul>
+<div class="ratio"><b>Ratio:</b> (1) A <b>non-party beneficiary may enforce in equity</b> a contract creating a <b>charge/trust on property</b> for her sole benefit — India's leading <b>privity-of-contract exception</b>. (2) <b>Kharch-i-pandan is unconditional personal allowance</b>, not coverture-bound pin-money. (3) Forfeiture needs proof, not suspicion.</div>
+<div class="exam"><b>Exam use:</b> THE privity-exception authority; contrast with Chinnaya (no privity issue there); quote "serious injustice" policy + "proceed in equity" holding.</div>
+</section>
+
+<section class="card" id="pJ">
+<div class="secnum">Part J — Visual revision</div>
+<h2>Master flowcharts &amp; comparison tables</h2>
+<h3>Flowchart 1 — "Is the promise enforceable?" (consideration audit)</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>1. Consideration?</b><br>S. 2(d): desired + by anyone + bargain-linked + real?</div><div class="arrow">→</div>
+<div class="fbox"><b>2. If none → S. 25?</b><br>Love/registered? Past service? Time-barred debt?</div><div class="arrow">→</div>
+<div class="fbox t"><b>3. Lawful?</b><br>S. 23 six bars?</div><div class="arrow">→</div>
+<div class="fbox o"><b>4. Who sues?</b><br>Party? (privity) — or beneficiary exception?</div>
+</div></div>
+<h3>Flowchart 2 — Subscription promises (the trilogy)</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>Kedarnath ✔</b><br>Subscriber knew liability would follow + it did → ENFORCEABLE</div><div class="arrow">vs</div>
+<div class="fbox"><b>Doraiswami ✘</b><br>No request, liability pre-existing/independent → BARE PROMISE</div><div class="arrow">vs</div>
+<div class="fbox o"><b>Abdul Aziz ✘</b><br>Nothing done at all → GRATUITOUS, void (S. 25)</div>
+</div></div>
+<h3>Table 1 — Five DU cases at a glance</h3>
+<table>
+<tr><th>Case</th><th>Section</th><th>One-line rule</th><th>Outcome</th></tr>
+<tr><td><b>13. Kedarnath</b></td><td>2(d)</td><td>Subscription + known faith-liability = good consideration.</td><td>Reference: decree Rs 100</td></tr>
+<tr><td><b>14. Doraiswami</b></td><td>2(d)</td><td>No request/bargain → expenditure ≠ consideration.</td><td>Revision allowed; suit dismissed</td></tr>
+<tr><td><b>15. Abdul Aziz</b></td><td>25</td><td>Gratuitous promise + gratuitous office = void; no heir liability.</td><td>Both Rs 500 claims dismissed</td></tr>
+<tr><td><b>16. Chinnaya</b></td><td>2(d)</td><td>Stranger's consideration suffices ("any other person").</td><td>Second appeal dismissed</td></tr>
+<tr><td><b>17. Khusaini</b></td><td>Privity</td><td>Charged beneficiary sues in equity (Tweddle inapplicable).</td><td>Appeal dismissed; HC affirmed</td></tr>
+</table>
+<h3>Table 2 — Privity confusion-buster</h3>
+<table>
+<tr><th>Question</th><th>Answer</th><th>Case</th></tr>
+<tr><td>Can consideration move from a stranger?</td><td>✅ Yes — S. 2(d) "any other person".</td><td>Chinnaya</td></tr>
+<tr><td>Can a stranger to the contract sue?</td><td>❌ Generally no (Tweddle) — ✅ if charge/trust/equity exception.</td><td>Khusaini Begam</td></tr>
+<tr><td>Were Chinnaya's plaintiffs strangers to the contract?</td><td>❌ No — they held Kararnama A directly.</td><td>Chinnaya</td></tr>
+<tr><td>Was Husaini Begam party to the contract?</td><td>❌ No — yet enforced via property charge.</td><td>Khusaini Begam</td></tr>
+</table>
+<h3>Table 3 — S. 25 exceptions checklist</h3>
+<table>
+<tr><th>Exception</th><th>Writing?</th><th>Registered?</th><th>Signed?</th><th>Extra</th></tr>
+<tr><td>(1) Love &amp; affection</td><td>✅</td><td>✅</td><td>—</td><td>Near relation + natural love</td></tr>
+<tr><td>(2) Past service</td><td>—</td><td>—</td><td>—</td><td>Voluntary + already done</td></tr>
+<tr><td>(3) Time-barred debt</td><td>✅</td><td>—</td><td>✅</td><td>Debt enforceable but for limitation</td></tr>
+</table>
+</section>
+
+<section class="card" id="pK">
+<div class="secnum">Part K — Practice</div>
+<h2>DU PYQs with best model answers (Q1–Q12)</h2>
+
+<div class="pyq"><div class="qh">Q1. Define consideration. Explain its essentials with illustrations. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Quote S. 2(d) + S. 2(f). (2) Seven essentials table: desire (Doraiswami), any person (Chinnaya), past/present/future, value, lawfulness (S. 23), real not pre-existing (Lalman), bargain-link (Hudson). (3) S. 23 ills. (a)–(d) reciprocal pairs. (4) Contrast English law (Tweddle). (5) Close: consideration = bargain element distinguishing contract from gift (S. 25).</div></div>
+
+<div class="pyq"><div class="qh">Q2. "A charity subscription is generally unenforceable." Discuss with Kedarnath, Doraiswami and Abdul Aziz. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) General rule: S. 25 — gratuitous promise void (Abdul Aziz: treasurer's Rs 500; "nothing done"). (2) Kedarnath exception: known faith-liability + incurred = consideration — quote passage; representative suit. (3) Doraiswami limit: S. 2(d) "desire" needs request + bargain; pre-existing/independent liability fails (Hudson: "no binding obligation"). (4) Trilogy flowchart. (5) Conclude: enforceability turns on bargain-link, not expenditure alone.</div></div>
+
+<div class="pyq"><div class="qh">Q3. A subscribes Rs 5,000 for a school building after construction has begun on other funds. The school sues. Decide. (7 marks)</div>
+<div class="model"><b>Model answer:</b> School loses — Doraiswami (+ Abdul Aziz). (1) No request by A to build; construction pre-existing/independent. (2) S. 2(d): no "desire", no bargain (Hudson). (3) Kedarnath distinguished (there: subscription invited first, liability followed on faith). (4) Bare promise, void under S. 25. Note: result flips if school proves A requested enlargement on faith of his pledge.</div></div>
+
+<div class="pyq"><div class="qh">Q4. Explain S. 23 — when are consideration and objects unlawful? (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Quote S. 23 + "every agreement … void". (2) Six bars with illustration pairs: forbidden (f); defeating law (i); fraud (e, g); injury (h); immoral (j, k — IPC irrelevant); public policy (heads + Ss. 26–28, 30). (3) Lawful pairs (a)–(d) + S. 2(f). (4) S. 24 one-line adjunct. (5) Answer skeleton: identify bar → match illustration → apply → conclude void.</div></div>
+
+<div class="pyq"><div class="qh">Q5. "An agreement without consideration is void." Discuss the exceptions under S. 25. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Rule + ill. (a). (2) Exception table: (1) writing + registration + natural love + near relation (ill. b); (2) past voluntary service/compellable act (ills. c–d); (3) written + signed time-barred debt promise (ill. e). (3) Expl. 1 gifts actually made; Expl. 2 inadequacy (ills. f–g). (4) Checklist table (writing/registration/signature). (5) Illustrate each with a one-line problem.</div></div>
+
+<div class="pyq"><div class="qh">Q6. A, out of love, orally promises his nephew Rs 50,000. B promises in writing to pay a 10-year-old time-barred loan of Rs 20,000. C promises Rs 5,000 to one who saved his goods voluntarily. Advise. (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) A: fails S. 25(1) — no writing + registration (love + near relation alone insufficient) → void. (2) B: valid under S. 25(3) — written, signed, enforceable-but-for-limitation debt (ill. e). (3) C: valid under S. 25(2) — past voluntary service + compensation promise, no writing needed (ill. c). General note: S. 25 exceptions need ALL ingredients.</div></div>
+
+<div class="pyq"><div class="qh">Q7. Distinguish privity of contract from privity of consideration. Can a stranger sue in India? (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Definitions + table: consideration-privity abolished (S. 2(d) "any other person" — Chinnaya); contract-privity retained generally (Tweddle) with exceptions. (2) Chinnaya: Dutton/Rockwood vs Tweddle; Innes (indirect consideration) + Kindersley (one transaction) routes; plaintiffs were promisees. (3) Khusaini: charge + sole beneficiary → equity enforcement; assumpsit distinguished; "serious injustice" policy. (4) Six-exception list. (5) Precision close: Chinnaya ≠ privity exception; Khusaini = privity exception.</div></div>
+
+<div class="pyq"><div class="qh">Q8. A gifts property to B on condition B pays Rs 1,000/month to C. B defaults. Can C sue? (7 marks)</div>
+<div class="model"><b>Model answer:</b> Yes — Chinnaya (+ Khusaini if charge). (1) C holds B's promise (Kararnama-type) → promisee; consideration (A's gift) validly moves from stranger (S. 2(d)). (2) Dutton analogy: B gained estate, C lost donor's payments → indirect consideration. (3) Kindersley: one transaction. (4) If gift charges property for C → Khusaini equity route additionally. Decree for arrears.</div></div>
+
+<div class="pyq"><div class="qh">Q9. Discuss Nawab Khwaja Muhammad Khan v Husaini Begam on beneficiary rights and kharch-i-pandan. (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Facts (1877 agreement, Rs 500 perpetuity, charge, 1896 separation). (2) Tweddle distinguished (assumpsit; charge + sole beneficiary → equity). (3) Minors'-marriage policy ("serious injustice"). (4) Kharch-i-pandan ≠ pin-money (no husband control/coverture condition; unconditional from reception). (5) Suspicion ≠ proof; no restitution step. (6) Appeal dismissed. Ratio + exam use as privity-exception lead.</div></div>
+
+<div class="pyq"><div class="qh">Q10. A agrees to pay B Rs 10,000 for procuring a government job for A's son. B fails; A sues for refund. Decide. (7 marks)</div>
+<div class="model"><b>Model answer:</b> Agreement void — S. 23 (ill. f squarely: trafficking in public office). (1) Consideration forbidden by law + opposed to public policy. (2) Void ab initio; no enforcement either way. (3) Refund: parties in pari delicto — generally no recovery (money paid under void-for-illegality agreement irrecoverable unless locus poenitentiae / not equally at fault — state briefly). Contrast lawful pairs (ills. a–d).</div></div>
+
+<div class="pyq"><div class="qh">Q11. A sells a Rs 1 lakh plot for Rs 10,000 under pressure; B alleges free consent. Discuss inadequacy of consideration. (7 marks)</div>
+<div class="model"><b>Model answer:</b> S. 25 Expl. 2 (ills. f–g). (1) Inadequacy alone never voids — courts don't weigh equivalence (ill. f: Rs 1,000 horse for Rs 10 valid if free). (2) Gross inadequacy (10×) is evidence of coercion/undue influence/fraud — burden-shifting fact (ill. g). (3) Apply: A must plead + prove vitiating factor; inadequacy corroborates. (4) If free consent proved → valid; else voidable (Ss. 19, 19A — later Topic).</div></div>
+
+<div class="pyq"><div class="qh">Q12. Write short notes on: (a) In re Hudson rule, (b) S. 2(f) reciprocal promises, (c) Dutton v Poole. (3×5 marks)</div>
+<div class="model"><b>Model answer: (a)</b> Chapel contribution; committee liabilities ≠ consideration — "no binding obligation between themselves and Mr. Hudson" (Pearson J.); adopted in Doraiswami for the bargain-link test. <b>(b)</b> Quote S. 2(f); promises forming consideration for each other; S. 23 ills. (a)–(d) pairs; basis of bilateral contracts + Ss. 51–54 (reciprocal performance). <b>(c)</b> Son/father/timber facts; daughter Grisel sued successfully — indirect consideration (benefit to promisor + lost portion); applied in Chinnaya; distinguished from Tweddle.</div></div>
+</section>
+
+<section class="card" id="pL">
+<div class="secnum">Part L — Last-mile</div>
+<h2>One-page revision capsule + exam strategy</h2>
+<table>
+<tr><th style="width:36%">Must-quote line</th><th>Source</th></tr>
+<tr><td>"At the desire of the promisor … promisee or any other person … something"</td><td>S. 2(d)</td></tr>
+<tr><td>"In consideration of your agreeing to enter into a contract … I undertake"</td><td>Kedarnath (Petheram CJ)</td></tr>
+<tr><td>"Some request by the promisor … some bargain between them"</td><td>Doraiswami (Cornish J.)</td></tr>
+<tr><td>"No binding obligation between themselves and Mr. Hudson"</td><td>In re Hudson (Pearson J.)</td></tr>
+<tr><td>"Very wide definition … or any other person"</td><td>Chinnaya (Kindersley J.)</td></tr>
+<tr><td>"Clearly entitled to proceed in equity" (charge + sole beneficiary)</td><td>Khusaini (Ameer Ali J.)</td></tr>
+<tr><td>"Forbidden … defeating … fraudulent … injury … immoral … public policy"</td><td>S. 23</td></tr>
+<tr><td>"Without consideration is void, unless — (1)…(2)…(3)…"</td><td>S. 25</td></tr>
+</table>
+<div class="exam">⭐ <b>Exam strategy:</b> (1) <b>Quote S. 2(d)/23/25 verbatim</b>. (2) Run the <b>consideration audit flowchart</b> (desire → person → bargain → lawful → privity). (3) Subscription problems: place on the <b>Kedarnath–Doraiswami–Abdul Aziz spectrum</b>. (4) Stranger problems: ask <b>two questions</b> — stranger to consideration? (fine — Chinnaya) vs stranger to contract? (needs Khusaini exception). (5) S. 25: check <b>all ingredients</b> via the writing/registration/signature table. (6) Traps: pre-existing duty; "desire" vs voluntary; love without registration; time-barred vs void debt; suspicion vs proof.</div>
+<div class="note"><b>Case–judge–court map:</b> 13 Kedarnath — Petheram CJ, Cal. (1886) · 14 Doraiswami — Cornish J., Mad. (1935) · 15 Abdul Aziz — Richards CJ, All. (1914) · 16 Chinnaya — Innes + Kindersley JJ., Mad. (1881) · 17 Khusaini — Ameer Ali J., PC (1910).</div>
+</section>
+
+</div>
+<div class="end">Topic 4 • Consideration (Ss. 2(d), 2(f), 23, 25) • DU LLB LB-102 • Strictly from DU Case Material Cases 13–17 (Book pp. 54–64) + ICA bare text • End of notes — all the best for the exam! 🎓</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37b3dd75d2af806',t:'MTc4ODg0MjA3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

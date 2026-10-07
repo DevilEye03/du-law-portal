@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topics 10+11: Quasi-Contracts &amp; E-Contracts — DU LLB Notes</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#1a2a5e;--navy2:#24357a;--saffron:#e8760a;--cream:#fff9f0;--paper:#ffffff;--ink:#1e2433;--muted:#5b6478;--line:#e6e1d5;--green:#0e7a4d;--greenbg:#e8f6ee;--red:#b42318;--redbg:#fdecea;--blue:#175cd3;--bluebg:#e9f1ff;--purple:#6d28d9;--purplebg:#f1eaff;--amberbg:#fff4dd;--gold:#8a5a00;--teal:#0b6e6e;--tealbg:#e6f6f5}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:#f3efe6;line-height:1.75;font-size:16.5px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px 80px}
+.topbar{background:linear-gradient(135deg,#0d2b2b 0%,#0b6e6e 55%,#1a2a5e 100%);color:#fff;padding:34px 0 30px;border-bottom:6px solid var(--saffron)}
+.topbar .wrap{padding-bottom:0}
+.badge{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:5px 12px;border-radius:20px;margin-bottom:12px}
+h1{font-size:34px;line-height:1.25;margin:6px 0 8px}
+h1 .s{color:#ffd9a3}
+.sub{font-family:Arial,Helvetica,sans-serif;font-size:14.5px;color:#e6f6f5;line-height:1.6}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-family:Arial,Helvetica,sans-serif;font-size:12.5px}
+.meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:8px}
+.toc{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:-22px auto 26px;padding:22px 26px;box-shadow:0 12px 30px rgba(11,110,110,.14);position:relative}
+.toc h2{font-family:Arial,Helvetica,sans-serif;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.toc ol{columns:2;column-gap:34px;margin-left:20px;font-family:Arial,Helvetica,sans-serif;font-size:13.5px}
+.toc li{margin:5px 0}
+.toc a{color:var(--navy2);text-decoration:none;border-bottom:1px dotted #9aa3c7}
+.toc a:hover{color:var(--saffron)}
+section.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:30px 32px;margin:24px 0;box-shadow:0 6px 18px rgba(26,42,94,.06)}
+.secnum{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;color:#fff;background:var(--teal);display:inline-block;padding:5px 14px;border-radius:20px;margin-bottom:10px}
+.secnum.o{background:var(--saffron)} .secnum.g{background:var(--green)} .secnum.p{background:var(--purple)} .secnum.r{background:var(--red)} .secnum.b{background:var(--blue)} .secnum.n{background:var(--navy)}
+h2.st{font-size:26px;line-height:1.35;margin:4px 0 6px;color:var(--navy)}
+h3{font-size:20px;color:#0b4d4d;margin:22px 0 8px;border-left:5px solid var(--saffron);padding-left:12px;line-height:1.4}
+h4{font-size:17px;color:#7a3c00;margin:16px 0 6px;font-family:Arial,Helvetica,sans-serif}
+p{margin:9px 0}
+ul,ol{margin:8px 0 8px 24px}
+li{margin:5px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;font-family:Arial,Helvetica,sans-serif}
+th{background:var(--teal);color:#fff;padding:10px 12px;text-align:left;font-size:13px;letter-spacing:.4px}
+td{border:1px solid #d9d4c5;padding:10px 12px;vertical-align:top;line-height:1.55}
+tr:nth-child(even) td{background:#faf7ef}
+.statute{background:#0b2b3b;color:#f4f1ff;border-radius:12px;padding:20px 24px;margin:16px 0;font-size:15px;line-height:1.7;border-left:8px solid var(--saffron)}
+.statute b.t{color:#ffd9a3;font-family:Arial,Helvetica,sans-serif;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:8px}
+.illus{background:var(--amberbg);border:1px solid #e8c877;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.illus b.t,.note b.t,.exam b.t,.ratio b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px}
+.illus b.t{color:var(--gold)} .note b.t{color:var(--blue)} .exam b.t{color:var(--green)} .ratio b.t{color:var(--purple)}
+.note{background:var(--bluebg);border:1px solid #b9cdf5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.exam{background:var(--greenbg);border:1px solid #9ed3b5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.ratio{background:var(--purplebg);border:1px solid #c9b3f5;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.warn{background:var(--redbg);border:1px solid #f0a9a3;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.warn b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;color:var(--red)}
+.teal{background:var(--tealbg);border:1px solid #9ed3d2;border-radius:12px;padding:16px 20px;margin:14px 0;font-size:15px}
+.teal b.t{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:8px;color:var(--teal)}
+.flow{background:#f7f4ec;border:1.5px dashed #b9b09a;border-radius:14px;padding:20px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+.fbox{background:#fff;border:2px solid var(--teal);border-radius:12px;padding:12px 16px;margin:8px auto;max-width:660px;text-align:center;font-size:14.5px;box-shadow:0 3px 0 rgba(11,110,110,.15)}
+.fbox.q{border-color:var(--saffron);background:#fff8ec}
+.fbox.yes{border-color:var(--green);background:#eefaf2}
+.fbox.no{border-color:var(--red);background:#fef0ef}
+.fbox.end{border-color:var(--purple);background:#f4efff}
+.arrow{text-align:center;font-size:20px;color:var(--teal);line-height:1.1}
+.frow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.frow .fbox{flex:1;min-width:200px;margin:8px 0}
+.casehead{background:linear-gradient(135deg,#e6f6f5,#d3ecea);border:2px solid var(--teal);border-radius:14px;padding:20px 24px;margin:18px 0}
+.casehead .cn{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:2px;color:#fff;background:var(--teal);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.casehead h3{border:none;padding:0;margin:4px 0 6px;font-size:22px;color:#083232}
+.casehead .cite{font-family:Arial,Helvetica,sans-serif;font-size:13.5px;color:#274d4d}
+figure.cviz{margin:16px 0;text-align:center}
+figure.cviz img{max-width:100%;border-radius:14px;border:1px solid var(--line);box-shadow:0 10px 26px rgba(11,110,110,.2)}
+figure.cviz figcaption{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px;font-style:italic}
+.args{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+.args>div{border-radius:12px;padding:14px 16px;font-size:14.5px}
+.args .a1{background:#eef3ff;border:1px solid #b9cdf5} .args .a2{background:#fff3e2;border:1px solid #ecc27f}
+.args b.h{display:block;font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.a1 b.h{color:var(--blue)} .a2 b.h{color:#8a4d00}
+.pyq{background:#fff;border:2px solid var(--green);border-radius:14px;padding:20px 22px;margin:16px 0}
+.pyq .qh{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--green);display:inline-block;padding:4px 12px;border-radius:20px;margin-bottom:8px}
+.pyq h4{color:#0b3d26;font-size:17px;margin:6px 0 8px}
+.model{background:#f4faf6;border-left:5px solid var(--green);padding:12px 16px;border-radius:0 10px 10px 0;margin-top:10px;font-size:15px}
+.tag{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:11.5px;font-weight:bold;padding:3px 10px;border-radius:20px;margin:2px 4px 2px 0}
+.t-s56{background:#b42318;color:#fff}.t-perf{background:#0b6e6e;color:#fff}.t-agmt{background:#6d28d9;color:#fff}.t-du{background:#0e7a4d;color:#fff}
+.timeline{position:relative;margin:16px 0 16px 8px;padding-left:26px;border-left:3px solid var(--teal)}
+.timeline .ev{margin:12px 0;position:relative;font-size:15px}
+.timeline .ev:before{content:"";position:absolute;left:-35px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--teal);border:3px solid #fff;box-shadow:0 0 0 2px var(--teal)}
+.timeline .yr{font-family:Arial,Helvetica,sans-serif;font-weight:bold;color:var(--teal);font-size:13px}
+footer{background:#0d2b2b;color:#cfd6f5;padding:26px 0;margin-top:30px;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+code.k{background:#eef0ff;border:1px solid #c3cbf5;border-radius:6px;padding:1px 7px;font-size:13px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:720px){.toc ol{columns:1}h1{font-size:26px}section.card{padding:22px 18px}.args{grid-template-columns:1fr}}
+@media print{.topbar{-webkit-print-color-adjust:exact;print-color-adjust:exact}section.card{box-shadow:none;break-inside:avoid}body{background:#fff}}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .case-box, .sub-section, .case-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  table, table.tbl, .table-wrap table, .tblwrap table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+<div class="badge">DU LLB &bull; Semester I &bull; Law of Contract &bull; LB-102</div>
+<h1>Topics 10 + 11: Quasi-Contracts &amp; E-Contracts <span class="s">— Ss. 68–72 ICA · IT Act Ss. 3–5, 10–17</span></h1>
+<p class="sub">Indian Contract Act, 1872 — <b>Chapter V (Ss. 68–72)</b>: obligations resembling contract — necessaries, reimbursement, <b>non-gratuitous acts (S. 70)</b>, finder of goods, mistake/coercion &nbsp;|&nbsp; Information Technology Act, 2000 — <b>Ss. 3–5, 10–17</b>: e-signatures, attribution, acknowledgement, <b>time/place of receipt (S. 13)</b>, e-contract validity.<br>Comprehensive deep notes anchored in <b>DU Case Material (2023)</b> — Case 40 <i>B.K. Mondal</i> (Book pp. 211–223) in full, Cases 41–42 per syllabus — with full statutory text, elements, flowcharts, hypothetical case visuals, and DU-pattern PYQs with model answers.</p>
+<div class="meta"><span>📚 Primary source: DU Case Material LB-102 (2023)</span><span>📜 Bare Acts: ICA Ch. V + IT Act 2000</span><span>⚖️ 3 cases in full IRAC++ format</span><span>📝 12 PYQs + best model answers</span></div>
+</div></div>
+
+<div class="wrap">
+<nav class="toc">
+<h2>Contents — click to jump</h2>
+<ol>
+<li><a href="#pA">A. Quasi-contracts — concept, basis &amp; classification map</a></li>
+<li><a href="#pB">B. Ss. 68–72 ICA — full text, elements &amp; illustrations</a></li>
+<li><a href="#pC">C. S. 70 master analysis — the Mondal principles</a></li>
+<li><a href="#pD">D. DU Case 40 — State of W.B. v B.K. Mondal (full brief)</a></li>
+<li><a href="#pE">E. E-Contracts — nature, scope, types &amp; formation</a></li>
+<li><a href="#pF">F. IT Act Ss. 3–5, 10–17 — the legislative framework</a></li>
+<li><a href="#pG">G. DU Case 41 — P R Transport v UOI (full brief)</a></li>
+<li><a href="#pH">H. DU Case 42 — Timex v Vedanta (full brief)</a></li>
+<li><a href="#pI">I. Master flowcharts &amp; comparison tables</a></li>
+<li><a href="#pJ">J. DU PYQs with best model answers (Q1–Q12)</a></li>
+<li><a href="#pK">K. One-page revision capsule + exam strategy</a></li>
+</ol>
+</nav>
+
+<section class="card" id="pA">
+<div class="secnum">Part A — Foundations (Topic 10)</div>
+<h2>Quasi-contracts — concept, basis &amp; classification ⭐⭐</h2>
+<p><b>Quasi-contract</b> ("as if contract") = an obligation <b>imposed by law</b> — not by the parties' agreement — where justice demands that one who has received a benefit pay for it. ICA Chapter V is headed <b>"Of certain relations resembling those created by contract"</b>: there is <b>no offer, no acceptance, no consensus</b> — the law <i>invents</i> a contractual-type duty to prevent <b>unjust enrichment</b> ("What S. 70 prevents is unjust enrichment" — <i>Mondal</i>, para 21).</p>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>Real contract</b><br>Agreement (offer + acceptance) → obligation</div><div class="arrow">vs</div>
+<div class="fbox t"><b>Quasi-contract</b><br>No agreement → law imposes obligation (benefit + justice)</div><div class="arrow">vs</div>
+<div class="fbox o"><b>No obligation</b><br>Officious/gift/gratuitous acts → no recovery</div>
+</div></div>
+<h3>Classification — the five statutory species (Ss. 68–72)</h3>
+<table>
+<tr><th style="width:12%">Section</th><th style="width:30%">Situation</th><th>Liability imposed</th><th style="width:24%">DU anchor</th></tr>
+<tr><td><b>S. 68</b></td><td><b>Necessaries</b> supplied to a person <b>incapable of contracting</b> (minor, lunatic) or his dependants.</td><td>Reimbursement <b>from the property</b> of the incapable person (not personal liability).</td><td>Ills. (a)–(b); <i>Mohori Bibee</i> link; minor excluded from S. 70 (<i>Mondal</i> para 21).</td></tr>
+<tr><td><b>S. 69</b></td><td>Person <b>interested</b> in payment of money which <b>another is bound by law to pay</b>, pays it.</td><td>Reimbursement by the other.</td><td>Zamindar-lease illustration; "bound by law" + "interested" tests.</td></tr>
+<tr><td><b>S. 70</b> ⭐</td><td>Person <b>lawfully</b> does/delivers something for another, <b>not gratuitously</b>, and the other <b>enjoys the benefit</b>.</td><td><b>Compensation or restoration</b>.</td><td><i>B.K. Mondal</i> — the charter case (Parts C–D).</td></tr>
+<tr><td><b>S. 71</b></td><td><b>Finder of goods</b> takes them into custody.</td><td><b>Same responsibility as a bailee</b> (Ss. 151–152, 168–169).</td><td>Duty of care; no reward except offered (S. 168).</td></tr>
+<tr><td><b>S. 72</b></td><td>Money paid / thing delivered <b>by mistake or under coercion</b>.</td><td><b>Must repay/return</b> it.</td><td>Ills. (a)–(b); mistake of law included; coercion wider than S. 15.</td></tr>
+</table>
+<div class="note"><b>Why "resembling" matters (Mondal, para 14):</b> Chapter V "does not deal with rights or liabilities accruing <i>from</i> contract" — so a S. 70 plaintiff <b>cannot sue for specific performance or breach damages</b>; only <b>compensation/restoration for accepted benefit</b>. The cause of action is <b>voluntary acceptance + enjoyment</b>, not any promise.</div>
+<div class="exam">⭐ <b>Exam opener for any quasi-contract answer:</b> "A quasi-contract is not a contract at all — it is a duty fastened by law on a party unjustly enriched at another's expense. The five instances are codified in Ss. 68–72, ICA…" Then apply the specific section's elements.</div>
+</section>
+
+<section class="card" id="pB">
+<div class="secnum">Part B — Chapter V, ICA (verbatim + elements)</div>
+<h2>Ss. 68–72 — the five obligations in detail ⭐⭐⭐</h2>
+
+<h3>S. 68 — Claim for necessaries supplied to person incapable of contracting ⭐⭐</h3>
+<div class="statute"><b>Text:</b> "If a person, <b>incapable of entering into a contract</b>, or any one whom he is <b>legally bound to support</b>, is supplied by another person with <b>necessaries suited to his condition in life</b>, the person who has furnished such supplies is entitled to be <b>reimbursed from the property</b> of such incapable person." <b>Ill. (a):</b> A supplies B, a lunatic, with necessaries — reimbursed from B's property. <b>Ill. (b):</b> A supplies the <b>wife and children</b> of B, a lunatic — reimbursed from B's property.</div>
+<table>
+<tr><th style="width:24%">Element</th><th>Detail (exam points)</th></tr>
+<tr><td><b>"Incapable of contracting"</b></td><td>Minor (S. 11) or <b>unsound mind</b> (S. 12: lunacy, idiocy, drunkenness). His <i>agreements are void</i> (<i>Mohori Bibee</i>) — S. 68 is the statute's <b>substitute remedy</b> for suppliers.</td></tr>
+<tr><td><b>"Legally bound to support"</b></td><td>Wife, children, and (by personal law) aged parents/dependants. Ill. (b) covers wife + children.</td></tr>
+<tr><td><b>"Necessaries suited to condition in life"</b></td><td>Two-fold test: (i) <b>capable of being necessary</b> (food, clothing, lodging, education, medical care, legal defence) — question of law; (ii) <b>actually needed</b> in the person's rank/circumstances — question of fact. Luxury goods, racing debts, diamonds for an infant already stocked = not necessaries.</td></tr>
+<tr><td><b>"From the property" only</b></td><td><b>No personal liability</b> — decree only against the minor's/lunatic's estate. If no property, supplier recovers nothing. (Contrast: adult's liability is personal.)</td></tr>
+<tr><td><b>Relation to S. 70</b></td><td>Minor is <b>outside S. 70</b> — "his case has been specifically provided for by S. 68" (<i>Mondal</i> para 21, citing <i>Bankay Behari v Mahendra Prasad</i>); voluntary acceptance — S. 70's foundation — can't fairly be imputed to a minor.</td></tr>
+</table>
+
+<h3>S. 69 — Reimbursement of person paying money due by another ⭐⭐</h3>
+<div class="statute"><b>Text:</b> "A person who is <b>interested in the payment of money which another is bound by law to pay</b>, and who therefore pays it, is entitled to be <b>reimbursed</b> by the other." <b>Illustration:</b> B holds land on lease from zamindar A; A's <b>revenue arrears</b> put the land up for Government sale, which would <b>annul B's lease</b>; B pays A's dues to save his lease → <b>A must make good</b> the amount.</div>
+<table>
+<tr><th style="width:24%">Element</th><th>Detail</th></tr>
+<tr><td><b>"Bound by law to pay"</b></td><td>The other's liability must be a <b>legal</b> duty (statute, decree, revenue law) — not merely moral. Bona fide belief tested on facts; payment under a <b>disputed but enforced</b> demand still qualifies where law compels.</td></tr>
+<tr><td><b>"Interested in the payment"</b></td><td>Payer must have a <b>legal interest to protect</b> (B's lease; a surety; a co-sharer; a buyer of equity of redemption) — a mere volunteer/officious payer gets nothing. Interest must exist <b>at the time of payment</b>.</td></tr>
+<tr><td><b>Payment, not promise</b></td><td>S. 69 requires <b>actual payment</b>; undertaking to pay is insufficient. Reimbursement = amount actually paid (with interest where equity allows).</td></tr>
+<tr><td><b>Classic applications</b></td><td>Tenant paying landlord's revenue; mortgagor's dues paid by puisne mortgagee; surety paying creditor (also S. 145); co-defendant paying decretal sum.</td></tr>
+</table>
+
+<h3>S. 70 — Obligation of person enjoying benefit of non-gratuitous act ⭐⭐⭐</h3>
+<div class="statute"><b>Text (memorise):</b> "Where a person <b>lawfully does anything for another person, or delivers anything to him, not intending to do so gratuitously</b>, and such other person <b>enjoys the benefit thereof</b>, the latter is bound to <b>make compensation</b> to the former in respect of, or <b>to restore</b>, the thing so done or delivered." <b>Ill. (a):</b> tradesman leaves goods at B's house <b>by mistake</b>; B treats them as his own → must pay. <b>Ill. (b):</b> A saves B's property from fire — <b>no compensation if done gratuitously</b>.</div>
+<p>The three requisites (G.K. Mitter J., approved in <i>Mondal</i>): <b>(i) lawfully done/delivered; (ii) not intended gratuitously; (iii) benefit enjoyed.</b> Full master analysis — <i>Mondal</i> principles, "lawfully", voluntariness, Government liability — in <b>Part C</b>.</p>
+
+<h3>S. 71 — Responsibility of finder of goods ⭐</h3>
+<div class="statute"><b>Text:</b> "A person who finds goods belonging to another, and <b>takes them into his custody</b>, is subject to the <b>same responsibility as a bailee</b>." — Read with <b>Ss. 151–152</b> (ordinary prudent care; no liability for loss without negligence), <b>S. 168</b> (may sue for <b>specific reward offered</b>; may retain goods as lien till reward paid) and <b>S. 169</b> (may sell if commonly saleable and owner untraceable, or goods perishable, or lawful charges = ⅔ value).</div>
+<table>
+<tr><th style="width:24%">Point</th><th>Detail</th></tr>
+<tr><td><b>No duty to pick up</b></td><td>S. 71 bites only if the finder <b>takes custody</b> — he may walk away. Custody = deemed bailment.</td></tr>
+<tr><td><b>Duties</b></td><td>Reasonable care (S. 151); reasonable efforts to find owner; no use, no mixing, no denial of title.</td></tr>
+<tr><td><b>Rights</b></td><td>No general reward — only <b>reward specifically offered</b> (S. 168) + lien till paid; right of sale in stated cases (S. 169).</td></tr>
+</table>
+
+<h3>S. 72 — Liability of person paid by mistake or under coercion ⭐⭐</h3>
+<div class="statute"><b>Text:</b> "A person to whom <b>money has been paid, or anything delivered, by mistake or under coercion, must repay or return it</b>." <b>Ill. (a):</b> A and B jointly owe C Rs 100; A pays; B, <b>not knowing</b>, pays again → C must repay B. <b>Ill. (b):</b> railway refuses goods except on <b>illegal excess charge</b>; consignee pays to get goods → recovers the <b>excess</b>.</div>
+<table>
+<tr><th style="width:24%">Point</th><th>Detail</th></tr>
+<tr><td><b>"Mistake" = fact or law</b></td><td>S. 72 covers <b>both</b> — since <i>Seth Kanhaya Lal v National Bank</i> / sales-tax refund line (<i>STO v Kanhaiya Lal Mukundlal Saraf</i>, AIR 1959 SC 135: tax paid under unconstitutional levy recoverable). Contrast S. 21 (mistake of law no excuse <i>for the promisor</i>) — S. 72 protects the <i>payer</i>. Money paid with <b>full knowledge</b> (without protest, "voluntary") is not recoverable.</td></tr>
+<tr><td><b>"Coercion" wider than S. 15</b></td><td>Not confined to IPC-offence/detention threats — any <b>compulsion of circumstance</b>: illegal levy to release goods (Ill. b), excess freight, payment under protest to avoid seizure. Paid <b>voluntarily with knowledge</b> = no recovery.</td></tr>
+<tr><td><b>Must repay/return</b></td><td>Restitution of the <b>exact sum/thing</b>; bona fide purchaser for value without notice and change-of-position equities may defend (general restitution principles).</td></tr>
+<tr><td><b>Burden</b></td><td>Plaintiff proves (i) payment/delivery, (ii) mistake or coercion. Defendant may show voluntary informed payment.</td></tr>
+</table>
+<div class="warn"><b>⚠️ S. 68 vs S. 70 (favourite trap):</b> supplier of necessaries to a minor sues under <b>S. 68 (property only)</b> — S. 70 is <b>unavailable</b> against minors. Government, conversely, <b>is</b> under S. 70 though it enjoys no S. 68-type shield (<i>Mondal</i> para 21: minor analogy rejected — S. 175(1) gives Government contracting power; only the <i>manner</i> is regulated).</div>
+</section>
+
+<section class="card" id="pC">
+<div class="secnum">Part C — The heart of Topic 10</div>
+<h2>S. 70 master analysis — the Mondal principles ⭐⭐⭐</h2>
+<p><i>State of West Bengal v B.K. Mondal</i> is the <b>charter on S. 70</b>. Gajendragadkar J. (majority) + Sarkar J. (concurring) settle its elements, its relation to Government contracts (S. 175(3), GOI Act 1935 — now <b>Art. 299, Constitution</b>), and its limits. Learn this Part as 8 propositions.</p>
+<h3>Proposition 1 — The three requisites (G.K. Mitter J., approved)</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>(i) Lawfully done/delivered</b><br>not forbidden by law; lawful relationship born on acceptance</div><div class="arrow">+</div>
+<div class="fbox"><b>(ii) Non-gratuitous</b><br>doer did not intend a gift (trade, estimate, prompt bill = proof)</div><div class="arrow">+</div>
+<div class="fbox t"><b>(iii) Benefit enjoyed</b><br>other party voluntarily accepts/uses it</div><div class="arrow">=</div>
+<div class="fbox o"><b>Compensation or restoration</b></div>
+</div></div>
+<h3>Proposition 2 — Cause of action = acceptance + enjoyment, NOT any contract/promise</h3>
+<p>"The alternative claim is based on the assumption that the contract … was ineffective and … <b>amounted to no contract at all</b>" (para 15). The doer <b>cannot compel acceptance</b> (Government could have ordered demolition), <b>cannot claim specific performance or breach damages</b> — "in the very nature of things claims for compensation are based on the footing that <b>there has been no contract</b>" (para 18). Compensation under S. 70 "may not mean the same thing as … damages for breach of contract" (para 19) — it is <b>quantum meruit for benefit enjoyed</b>, not the contract price as of right.</p>
+<h3>Proposition 3 — "Lawfully": the Straight J. test rejected</h3>
+<div class="statute"><b>Chedi Lal v Bhagwan Das (Straight J.):</b> "lawfully" needs a pre-existing relation entitling the doer to look for compensation. <b>SC (para 17):</b> rejected — "if one person is entitled by reason of [such] relationship … S. 70 would be <b>hardly necessary</b>." Correct view: "after something is delivered or done … and that thing is <b>accepted and enjoyed</b>, a <b>lawful relationship is born</b> between the two which … gives rise to a claim for compensation." "Lawfully" is not surplusage — thing must not be done <b>fraudulently, dishonestly, officiously</b> (para 18) — but mere absence of a valid contract doesn't make the doing "unlawful".</div>
+<h3>Proposition 4 — Voluntariness is the safeguard against officious claims</h3>
+<p>"S. 70 is not intended to entertain claims … by persons who <b>officiously interfere</b> … or who impose on others services not desired" (para 18). The defendant "<b>always has the option not to accept</b> the thing or to return it" (para 14) — citing Jenkins CJ (<i>Suchand v Balaram</i>): courts must be "guarded and circumspect … and not countenance acts or payments that are really <b>officious</b>" (para 23). Test Jenkins' warning + Ill. (b) (gratuitous fire rescue) in every answer.</p>
+<h3>Proposition 5 — No conflict with S. 175(3) (now Art. 299): separate fields</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>S. 175(3) / Art. 299</b><br>deals with CONTRACTS: how Government must contract (written, executed, expressed in Governor's name)</div><div class="arrow">≠</div>
+<div class="fbox t"><b>S. 70 ICA</b><br>deals with NO-contract cases: compensation where benefit voluntarily enjoyed</div><div class="arrow">→</div>
+<div class="fbox o"><b>"S. 70 supplements S. 175(3)"</b><br>(para 20) — no nullification</div>
+</div></div>
+<p>Reasoning (paras 15, 19–20): (a) building without a valid contract <b>contravenes nothing</b> — S. 175(3) forbids invalid <i>contracts</i>, not the <i>doing of work</i>; Ill. (a) (goods left by mistake with "B = Government") proves A contravenes nothing. (b) An <b>invalid request is in law no request at all</b> (para 19) — "request is not an element of S. 70 at all". (c) Policy: petty/emergency Government business is routinely done without strict form; denying S. 70 "may even … <b>bring to a standstill the efficient working of Government</b>". The Advocate-General himself confessed a <b>moral obligation</b> — "converted into a legal obligation" by S. 70 (Bachawat J., para 24).</p>
+<h3>Proposition 6 — Government is under S. 70 (minor analogy rejected)</h3>
+<p>Mr. Sen: Government, unable to contract except under S. 175(3), is like a minor (outside S. 70). <b>Rejected</b> (para 21): (i) S. 175(1) <b>confers</b> contracting power — only manner regulated; (ii) minor excluded because <b>S. 68 specially provides</b> for him (<i>Bankay Behari</i> FB); (iii) voluntary acceptance can't be imputed to a minor; (iv) "What S. 70 prevents is <b>unjust enrichment and it applies as much to individuals as to corporations and Government</b>."</p>
+<h3>Proposition 7 — Sarkar J.'s concurrence: no agreement at all + no tacit officer contract</h3>
+<ul>
+<li><b>Narrower route:</b> findings showed <b>no agreement whatever</b> — officers had no authority <b>to the respondent's knowledge</b> (Mitter J.: plaintiff "never had any doubt"; Bachawat J.: "no agreement either express or implied … no agreement which is void or discovered to be void"). So the Court <b>need not decide</b> S. 70-under-invalid-Government-contract in the abstract (para 35) — distinguishing <i>89 Cal LJ 342</i>.</li>
+<li><b>Officers' personal liability?</b> Requests in personal capacity could in theory imply a <b>tacit promise</b> (the classic ferryman illustration, para 37) — but only if "a man of business and experience would consider it reasonable" (para 38; Authoritative Contract Precedent quoted). Here officers expressly said <b>payment by Government after sanction</b>; respondent always looked to Government, never officers → <b>no tacit promise, no officer contract</b> (paras 39–40). Reserved: whether a contractor with a personal remedy against officers could <i>also</i> sue Government (para 36 — "grave doubts").</li>
+<li><b>Requisites satisfied</b> (para 42): benefit taken (urgent need, prompt use); non-gratuitous (trade = construction for payment, estimates + prompt bills, prior paid jobs, Government knew); lawful (para 44 — no law forbids Government taking benefit of work done without any contract; S. 175(3) assumed arguendo to taint only <i>invalid-contract</i> work).</li>
+<li><b>English law unnecessary</b> (para 45; also Ramanandi Kuer, para 12): S. 70's words are clear — "framed … to avoid the niceties of English law" (classic commentaries); S. 175(3) governs only <b>consensual contracts</b>, not law-implied/quasi-contracts.</li>
+</ul>
+<h3>Proposition 8 — Limits: what S. 70 does NOT do</h3>
+<table>
+<tr><th style="width:34%">Limit</th><th>Authority</th></tr>
+<tr><td>No specific performance / breach damages — compensation or restoration only.</td><td>Para 14, 18</td></tr>
+<tr><td>No claim against a <b>minor</b> (S. 68 covers him).</td><td>Para 21</td></tr>
+<tr><td>No claim for <b>officious/unwanted/gratuitous</b> acts; defendant must have had a real option to refuse.</td><td>Paras 14, 18, 23; Ill. (b)</td></tr>
+<tr><td>Compensation ≠ contract price necessarily; quantum = value of benefit (here undisputed).</td><td>Para 19, 24</td></tr>
+<tr><td><b>S. 65 distinguished:</b> S. 65 needs an <b>agreement discovered void / contract becoming void</b>; where there was <b>never any agreement</b>, only S. 70 fits (trial court; Bachawat J.).</td><td>Para 4; para 34</td></tr>
+</table>
+</section>
+
+<section class="card" id="pD">
+<div class="secnum r">Part D — DU Case 40 (Book pp. 211–223)</div>
+<div class="casehead"><div class="cn">DU Case 40 ★★ The S. 70 charter — Government liability for non-gratuitous work</div>
+<h3>State of West Bengal v B.K. Mondal &amp; Sons, AIR 1962 SC 779 (Gajendragadkar J. + Sarkar J. concurring)</h3>
+<div class="cite">S. 70 ICA; S. 175(3), GOI Act 1935 (now Art. 299) &nbsp;|&nbsp; Question: <b>Can a contractor recover under S. 70 for Government-enjoyed works done without a valid Art.299-type contract?</b> &nbsp;|&nbsp; Answer: <b>Yes — three requisites satisfied; S. 70 supplements (not nullifies) S. 175(3); Government bound like anyone. (Appeal dismissed.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_10_11_quasi_and_e_contracts_du_not_img1.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: 1944 Bengal, contractor building godowns for Civil Supplies Department"><figcaption>Hypothetical visual — Arambagh/Khanakul (Hooghly), 1944: emergency Civil Supplies godowns, roads and sheds built on officers' requests, used by Government but never paid for.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>First (paid) job:</b> 8 Feb 1944 offer → 12 Feb 1944 acceptance: temporary storage godowns at <b>Arambagh (Hooghly)</b> for Civil Supplies Dept.; bill <b>Rs 39,476 paid July 1944</b>.</li>
+<li><b>Disputed works:</b> (a) 7 Apr 1944: SDO Arambagh sought estimate for <b>kutcha road, guard room, office, kitchen, clerks' room</b>; 20 Apr 1944: Addl. Deputy Director allegedly instructed proceeding; bill <b>Rs 2,322/8</b> (27 Apr 1944). (b) 18 Apr 1944: Asst. Director asked respondent to proceed with <b>storage sheds at Khanakul</b>; bill <b>Rs 17,003</b>. <b>Total suit claim: Rs 19,325</b> (both bills unpaid).</li>
+<li><b>Pleading:</b> claim (i) on <b>contract</b>, alternatively (ii) under <b>S. 70</b> (lawful, non-gratuitous, benefit enjoyed). Defence: requests <b>invalid/unauthorised</b>, no S. 175(3)-compliant contract, <b>no privity</b>; vague written statement.</li>
+<li><b>Trial (G.K. Mitter J., 5 issues):</b> no valid contract (for State); <b>S. 70 applies</b> (for respondent); not time-barred; Bengal liability <b>devolved on West Bengal</b> under the Indian Independence (Rights, Property &amp; Liabilities) Order, 1947; <b>S. 65 inapplicable</b> → decree for respondent.</li>
+<li><b>Appeal (S.R. Das Gupta &amp; Bachawat JJ., separate concurring):</b> confirmed; certificate refused → <b>special leave</b> to SC. Sole SC question: <b>applicability of S. 70</b>.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Are S. 70's three requisites satisfied on these facts?</li><li>Does awarding S. 70 compensation <b>circumvent mandatory S. 175(3)</b>?</li><li>Is Government, like a minor, <b>outside S. 70's purview</b>?</li></ol>
+<div class="args"><div class="a1"><b>State (Mr. Sen):</b> (1) Compensating = treating an invalid contract as valid — circumvents S. 175(3). (2) "Lawfully" (read with S. 23) excludes work outside S. 175(3); <i>Chedi Lal</i>: no pre-existing compensable relation. (3) Government = minor (no capacity except as statute permits; <i>Mohori Bibee</i>; <i>Bankay Behari</i>) → outside S. 70. (4) English cases (<i>Young</i>, not <i>Lawford</i>) govern statutory contravention; no implied/quasi-contract possible with Government.</div><div class="a2"><b>Contractor:</b> works done for urgent Government need, accepted and used; claim assumes <i>no</i> contract — rests on <b>voluntary acceptance + enjoyment</b>; all three requisites proved; quantum never disputed; Government morally bound (A-G's confession).</div></div>
+<h3>Decision &amp; reasoning</h3>
+<ul>
+<li><b>Gajendragadkar J. (paras 12–24):</b> interpret S. 70 on its own clear words (<i>Ramanandi Kuer</i> — no English-law detour). Three requisites stated (para 14); defendant always had <b>refusal option</b> (could have ordered demolition). Circumvention argument fails: cause of action is <b>acceptance/enjoyment</b>, not the invalid contract; Ill. (a)-with-Government hypothetical; <b>invalid request = no request</b>; separate fields — <b>S. 70 supplements S. 175(3)</b>; policy of petty/emergency Government business (para 20). <i>Chedi Lal</i> rejected (para 17). Minor analogy rejected (para 21). Jenkins CJ warning adopted (para 23). Quantum + acceptance undisputed below; A-G's moral-obligation confession noted (para 24).</li>
+<li><b>Sarkar J. concurring (paras 26–45):</b> there was <b>no agreement whatever</b> (officers unauthorised, to respondent's knowledge) — so the abstract invalid-contract question needn't be decided; <b>no tacit officer contract</b> (ferryman test fails — payment expressly to come from Government after sanction); requisites satisfied (trade, estimates, prompt bills, prior paid jobs, urgent need, prompt use); "lawfully" satisfied (no law forbids taking benefit without contract); English law otiose; S. 175(3) covers only consensual contracts.</li>
+<li><b>Order:</b> appeal dismissed (claim decreed).</li>
+</ul>
+<div class="ratio"><b>Ratio / principles evolved:</b> (1) S. 70's gist = <b>lawful + non-gratuitous + voluntarily enjoyed benefit → compensation/restoration</b>, with cause of action in acceptance, not contract. (2) <b>"Lawfully" = lawful relationship born on acceptance</b> (Chedi Lal overruled in effect). (3) <b>S. 70 and S. 175(3)/Art. 299 occupy separate fields</b> — Government liable under S. 70 like any person. (4) Minor-analogy and English-law arguments rejected. (5) No tacit contract inferred unless a reasonable businessman would infer it.</div>
+<div class="exam"><b>Exam use:</b> cite Mondal for (i) 3 requisites, (ii) "lawfully" meaning, (iii) officiousness safeguard + Jenkins warning, (iv) S. 70 vs Art. 299, (v) Government/minor distinction, (vi) S. 65 vs S. 70 (never-any-agreement → S. 70), (vii) compensation ≠ breach damages.</div>
+</section>
+
+<section class="card" id="pE">
+<div class="secnum">Part E — Foundations (Topic 11)</div>
+<h2>E-Contracts — nature, scope, types &amp; formation ⭐⭐⭐</h2>
+<p><b>E-contract</b> = a contract <b>formed, communicated or performed through electronic means</b> — email, websites, EDI, e-auctions, click-wrap. Two statutes combine: the <b>ICA (substance)</b> — proposal, acceptance, consideration, capacity, consent, lawful object (S. 10) — and the <b>IT Act, 2000 (medium)</b> — legal recognition of electronic records/signatures and rules of attribution, acknowledgement, despatch and receipt. <b>S. 10A, IT Act</b> is the bridge: e-formed contracts "shall not be deemed to be unenforceable <b>solely</b> on the ground that … electronic form or means was used."</p>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>ICA (what makes a contract)</b><br>S. 10: agreement + consideration + capacity + free consent + lawful object</div><div class="arrow">+</div>
+<div class="fbox t"><b>IT Act (how electronics count)</b><br>Ss. 4–5 (recognition), 10A (validity), 11–13 (attribution, ack, time/place)</div><div class="arrow">=</div>
+<div class="fbox o"><b>Enforceable e-contract</b><br>if ICA substance + IT Act medium both satisfied</div>
+</div></div>
+<h3>Types of e-contracts (scope — quote with examples)</h3>
+<table>
+<tr><th style="width:20%">Type</th><th>How formed</th><th>Validity notes</th></tr>
+<tr><td><b>Email contracts</b></td><td>Offer/acceptance exchanged by email (commercial offers, purchase orders).</td><td>Fully valid — <i>Timex v Vedanta</i>: unconditional email acceptance = concluded contract; S. 7 ICA applies.</td></tr>
+<tr><td><b>E-auctions / e-tenders</b></td><td>Bids invited and accepted online; acceptance emailed.</td><td>Valid — <i>P R Transport</i>: emailed acceptance completes contract at addressee's place of business (S. 13(3)).</td></tr>
+<tr><td><b>Click-wrap ("I Agree")</b></td><td>User clicks acceptance of displayed terms (software, checkouts).</td><td>Valid if terms <b>reasonably notified</b> + <b>unequivocal act</b> of assent; S. 7–8 ICA read with S. 10A.</td></tr>
+<tr><td><b>Browse-wrap</b></td><td>Terms hyperlinked; use deemed agreement.</td><td>Weak — enforceable only with <b>actual/constructive notice</b>; no assent without knowledge.</td></tr>
+<tr><td><b>Shrink-wrap</b></td><td>Terms inside package; opening/retaining = acceptance.</td><td>Valid if buyer may <b>return for refund</b> on rejecting terms (notice + choice).</td></tr>
+<tr><td><b>EDI / automated systems</b></td><td>Computers transact per pre-programmed instructions (e.g. stock, supply chains).</td><td>Attributed to originator under <b>S. 11(c)</b> (auto-programmed system); S. 12 ack rules apply.</td></tr>
+</table>
+<h3>Formation mapped: ICA × IT Act</h3>
+<table>
+<tr><th style="width:26%">Formation step</th><th>ICA rule</th><th>IT Act overlay</th></tr>
+<tr><td><b>Proposal</b></td><td>Ss. 3–9: must be communicated; invitation ≠ proposal (website displays usually invitations).</td><td>S. 10A: proposal "expressed in electronic form" valid; S. 11: attributed to sender/auto-system.</td></tr>
+<tr><td><b>Acceptance</b></td><td>Ss. 3–9: absolute + unqualified (S. 7), communicated (S. 3–4), prescribed manner.</td><td>S. 10A validates e-acceptance; S. 12 (acknowledgement) + S. 13 (time/place of receipt) fix <b>when/where</b> complete.</td></tr>
+<tr><td><b>Communication complete</b></td><td>S. 4: acceptance complete <b>as against proposer when put in transmission</b>; as against acceptor <b>when it comes to proposer's knowledge</b> (postal rule vs receipt rule).</td><td>S. 13(2): receipt = entry into <b>designated computer resource</b> (or retrieval); S. 13(3): deemed received at <b>addressee's place of business</b> — <i>P R Transport</i> holds emailed acceptance completes contract there.</td></tr>
+<tr><td><b>Revocation</b></td><td>Ss. 4–6: before communication of acceptance complete.</td><td>S. 10A covers revocation "expressed in electronic form"; S. 13 fixes timing.</td></tr>
+<tr><td><b>Writing / signature</b></td><td>ICA rarely needs writing; special statutes do.</td><td>S. 4 (e-record = writing if accessible for subsequent reference) + S. 5 (e-signature = signature).</td></tr>
+<tr><td><b>Consideration, capacity, consent, object</b></td><td>Ss. 10–30 apply unchanged (minors clicking "agree" still minors!).</td><td>— (IT Act doesn't dilute ICA substance.)</td></tr>
+</table>
+<h3>Legislative lineage &amp; exclusions</h3>
+<ul>
+<li><b>UNCITRAL Model Law on E-Commerce (1996)</b> is the IT Act's parent — principles of <b>non-discrimination</b> (no denial of effect for electronic form), <b>functional equivalence</b> (e-record ≈ writing; e-signature ≈ signature), and <b>technology neutrality</b>.</li>
+<li><b>First Schedule (IT Act does NOT apply):</b> (1) <b>negotiable instrument</b> (other than a cheque); (2) <b>power of attorney</b>; (3) <b>trust</b>; (4) <b>will</b> / testamentary disposition; (5) <b>contract for sale or conveyance of immovable property</b> or interest therein. ⭐ Favourite short-note/exam trap.</li>
+<li><b>2008 amendments (Act 10 of 2009):</b> "digital signature" → technology-neutral <b>"electronic signature"</b>; new <b>S. 3A</b> (reliable ES techniques, Second Schedule); new <b>S. 10A</b> (e-contract validity); Ss. 14–16 updated to ES.</li>
+</ul>
+<div class="exam"><b>Model formation answer:</b> (1) Identify proposal/acceptance in the electronic exchange. (2) Test S. 7 ICA (absolute, unqualified — <i>Timex</i>). (3) Apply S. 10A (no unenforceability for electronic form). (4) Fix time/place via S. 13 (<i>P R Transport</i>). (5) Check remaining S. 10 ICA elements + First Schedule exclusion.</div>
+</section>
+
+<section class="card" id="pF">
+<div class="secnum">Part F — The legislative framework</div>
+<h2>IT Act, 2000 — Ss. 3–5, 10–17 in detail ⭐⭐⭐</h2>
+<h3>Gateway definitions (S. 2(1)) — learn functionally</h3>
+<table>
+<tr><th style="width:26%">Term</th><th>Meaning (substance)</th></tr>
+<tr><td><b>Electronic record</b> — S. 2(1)(t)</td><td>Data/record/image/sound <b>generated, sent, received or stored</b> in electronic form (incl. microfilm, computer printouts).</td></tr>
+<tr><td><b>Electronic signature</b> — S. 2(1)(ta)</td><td>Authentication of an e-record by a <b>subscriber</b> by technique in the <b>Second Schedule</b> (incl. digital signature).</td></tr>
+<tr><td><b>Originator</b> — S. 2(1)(za)</td><td>Person who <b>sends, generates, stores or transmits</b> an e-record (excludes <b>intermediary</b> — S. 2(1)(w): one who merely receives/stores/transmits on behalf of another).</td></tr>
+<tr><td><b>Addressee</b> — S. 2(1)(b)</td><td>Person <b>intended</b> by originator to receive the e-record (excludes intermediary).</td></tr>
+<tr><td><b>Computer resource</b> — S. 2(1)(k)</td><td>Computer, communication system, network, data, software — the "designated computer resource" of S. 13 (e.g. notified email inbox/server).</td></tr>
+<tr><td><b>Subscriber / Certifying Authority / Controller</b></td><td>Subscriber (S. 2(1)(zg)): holder of a signature certificate. CA (S. 2(1)(g)): licensed issuer of certificates (S. 24+). Controller (Ss. 17–25): regulator of CAs.</td></tr>
+</table>
+
+<h3>Chapter II — Authentication &amp; legal recognition (Ss. 3–5)</h3>
+<div class="statute"><b>S. 3 — Authentication of electronic records (digital signatures).</b> (1) A subscriber may authenticate an e-record by affixing his <b>digital signature</b>. (2) Authentication effected by <b>asymmetric crypto system + hash function</b> enveloping/transforming the record (hash = one-way algorithm; same input → same hash; computationally infeasible to reverse or to find two records with same hash). (3) Anyone may <b>verify with the subscriber's public key</b>. (4) Private + public keys are <b>unique to the subscriber</b> (functioning key pair).</div>
+<div class="statute"><b>S. 3A — Electronic signature (2008, technology-neutral).</b> A subscriber may authenticate by any <b>reliable</b> ES technique specified in the <b>Second Schedule</b>. Reliable = (a) signature-creation data <b>linked to signatory alone</b>; (b) under <b>his sole control</b> at signing; (c) later alterations to <b>signature detectable</b>; (d) later alterations to <b>information detectable</b>. Government may prescribe ascertainment procedure; notifications laid before Parliament.</div>
+<div class="statute"><b>S. 4 — Legal recognition of electronic records.</b> Where any law requires <b>writing / typewritten / printed form</b>, the requirement is satisfied if matter is (a) <b>rendered in electronic form</b> and (b) <b>accessible for subsequent reference</b>.<br><b>S. 5 — Legal recognition of electronic signatures.</b> Where any law requires <b>authentication by signature</b>, an <b>electronic signature affixed per Government rules</b> satisfies it.</div>
+
+<h3>S. 10 &amp; S. 10A — rulemaking + e-contract validity ⭐⭐</h3>
+<div class="statute"><b>S. 10 — Power to make rules re electronic signature.</b> Central Government may prescribe (a) <b>type</b> of ES; (b) <b>manner/format</b> of affixing; (c) <b>identification</b> procedure; (d) <b>integrity/security/confidentiality</b> controls; (e) any other matter giving legal effect to ES.<br><b>S. 10A — Validity of contracts formed through electronic means (2008) ⭐.</b> "Where in a contract formation, the <b>communication of proposals, the acceptance of proposals, the revocation of proposals and acceptances</b> … are expressed in electronic form or by means of electronic records, such contract <b>shall not be deemed to be unenforceable solely on the ground</b> that such electronic form or means was used."</div>
+<div class="note"><b>S. 10A decoded:</b> (i) It validates the <b>medium</b>, not a bad bargain — ICA S. 10 substance still needed. (ii) "Solely" = e-form can't be the <i>only</i> ground of attack (minor, no consideration, etc. still kill). (iii) Covers the <b>whole formation cycle</b>: proposal → acceptance → revocation of either. (iv) Pair with <i>Timex</i> (concluded e-contract) + <i>P R Transport</i> (e-acceptance completes contract).</div>
+
+<h3>Chapter IV — Attribution, acknowledgement, despatch (Ss. 11–13) ⭐⭐⭐</h3>
+<div class="statute"><b>S. 11 — Attribution.</b> An e-record is attributed to the originator if sent (a) <b>by himself</b>; (b) by a person <b>authorised</b> to act for him; or (c) by an <b>information system programmed by/on behalf of the originator to operate automatically</b>.<br><b>S. 12 — Acknowledgment of receipt.</b> (1) Unless a particular form/method stipulated, ack may be by <b>any communication (automated or otherwise)</b> or <b>any conduct</b> showing receipt. (2) If originator stipulated <b>binding-only-on-ack</b>, then without ack the record is <b>deemed never sent</b>. (3) Otherwise, if no ack within specified/agreed/<b>reasonable time</b>, originator may <b>notice + fix reasonable time</b>, and then (after notice) treat it as <b>never sent</b>.<br><b>S. 13 — Time and place of despatch and receipt ⭐.</b> (1) <b>Despatch</b> = when record enters a computer resource <b>outside originator's control</b>. (2) <b>Receipt</b>: (a) designated resource → <b>entry into it</b> (non-designated resource → <b>retrieval</b> by addressee); (b) no designated resource → <b>entry into addressee's resource</b>. (3) <b>Place</b>: deemed despatched at <b>originator's place of business</b>, received at <b>addressee's place of business</b>. (4) Applies though the computer resource sits <b>elsewhere</b>. (5) Multiple business places → <b>principal</b> one; none → <b>usual residence</b> (body corporate: place of registration). All "save as otherwise agreed".</div>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>Who sent it?</b><br>S. 11: self / agent / auto-system</div><div class="arrow">→</div>
+<div class="fbox"><b>Ack needed?</b><br>S. 12: stipulated? → binding only on ack; else notice + reasonable time</div><div class="arrow">→</div>
+<div class="fbox t"><b>When received?</b><br>S. 13(2): designated entry / retrieval</div><div class="arrow">→</div>
+<div class="fbox o"><b>Where received?</b><br>S. 13(3): addressee's place of business → contract complete there</div>
+</div></div>
+
+<h3>Chapter V — Secure records &amp; signatures; Controller (Ss. 14–17)</h3>
+<div class="statute"><b>S. 14 — Secure electronic record.</b> Where a <b>security procedure</b> is applied at a specific time, the record is <b>deemed secure</b> from then till verification.<br><b>S. 15 — Secure electronic signature.</b> An ES is deemed secure if (i) signature-creation data was under <b>exclusive control</b> of signatory at affixing; (ii) stored/affixed in the <b>prescribed exclusive manner</b>. (Secure ES/records attract <b>presumptions</b> under the Bharatiya Sakshya Adhiniyam, 2023 — formerly Evidence Act Ss. 85B–C.)<br><b>S. 16 — Security procedures and practices.</b> Central Government may <b>prescribe</b> them for Ss. 14–15, having regard to <b>commercial circumstances, nature of transactions</b> and related factors.<br><b>S. 17 — Appointment of Controller.</b> Central Government may appoint (by Gazette) a <b>Controller of Certifying Authorities</b> + Deputy/Assistant Controllers, officers, staff; Controller functions under Government's general control; qualifications/terms prescribed; offices + seal as specified. (Ss. 18–25 detail functions, recognition of CAs, licences, etc.)</div>
+<div class="exam"><b>Section-trio memory hooks:</b> <b>3–5 = "Authenticate–Recognise"</b> (how to sign + writing/signature equivalence) · <b>10–10A = "Rules–Validity"</b> · <b>11–13 = "Who–Ack–When/Where"</b> · <b>14–16 = "Secure–Secure–Procedures"</b> · <b>17 = Controller</b>.</div>
+</section>
+
+<section class="card" id="pG">
+<div class="secnum r">Part G — DU Case 41 (syllabus; full judgment AIR 2006 All 23)</div>
+<div class="casehead"><div class="cn">DU Case 41 ★★ E-acceptance completes contract where received (S. 13 IT Act)</div>
+<h3>P R Transport Agency v Union of India, AIR 2006 All 23 (Allahabad HC — Harkauli &amp; Pandey JJ., 24 Sept 2005)</h3>
+<div class="cite">S. 13 IT Act; S. 28 ICA; Art. 226 &nbsp;|&nbsp; Questions: <b>(i) Where is an emailed tender-acceptance received? (ii) Can an ouster clause kill Art. 226? (iii) Was belated cancellation lawful?</b> &nbsp;|&nbsp; Answers: <b>(i) At addressee's place of business — U.P. courts have jurisdiction; (ii) No — ouster clauses touch civil courts only; (iii) No — concluded contract + estoppel + natural justice. (Writ allowed; coal to be delivered.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_10_11_quasi_and_e_contracts_du_not_img2.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: coal e-auction, email acceptance, transport office"><figcaption>Hypothetical visual — July 2005: a 4,000 MT coal lot at Dobari Colliery won in e-auction; acceptance arrives by email; Rs 81.12 lakh deposited — then a bolt-from-the-blue cancellation.</figcaption></figure>
+<h3>Facts (detailed)</h3>
+<ul>
+<li><b>E-auction:</b> Respondents 2–3 (State coal entities) e-auctioned coal lots. Petitioner's bid — <b>4,000 MT from Dobari Colliery @ Rs 1,625/MT</b> — accepted; <b>acceptance letter emailed 19 July 2005</b> to petitioner's email address.</li>
+<li><b>Performance:</b> Acting on acceptance, petitioner deposited <b>Rs 81,12,000 by cheque (28 July 2005)</b>, which respondent 3 <b>accepted and encashed</b>.</li>
+<li><b>Cancellation:</b> Respondent 4 emailed <b>10 Aug 2005</b>: sale + auction "cancelled due to some <b>technical and unavoidable reasons</b>" — challenged in this writ (Annexure I). Interim order 13 Sept 2005 preserved the coal. Real reason (counsel, on instructions): a <b>slightly higher third-party bid</b> was lost to a <b>computer/programme/data-feeding flaw</b>; the third party never challenged anything and wasn't before Court.</li>
+<li><b>Preliminary objections (Madhur Prakash):</b> (1) no cause of action in U.P.; (2) none pleaded; (3) <b>cl. 10.5</b> ousts jurisdiction to <b>Jharkhand HC</b> ("any dispute … shall be subject to jurisdiction of Jharkhand HC"). Petitioner filed a <b>second supplementary affidavit</b> (partnership deed 7 July 2000): principal place of business <b>Chandauli</b>, only other place <b>Varanasi</b> — both in U.P.; acceptance received by email there.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Is the supplementary affidavit admissible?</li><li>Where is emailed acceptance "received" — and does part of the cause of action arise in U.P.?</li><li>Does cl. 10.5 oust Allahabad HC's Art. 226 jurisdiction?</li><li>Was the cancellation valid on merits?</li></ol>
+<div class="args"><div class="a1"><b>Petitioner (Manish Goyal):</b> acceptance received by email at Chandauli → <b>contract complete in U.P.</b> (S. 13(3) IT Act) → part of cause of action in U.P.; ouster clause can't touch <b>Art. 226</b>; concluded contract + money deposited → cancellation illegal.</div><div class="a2"><b>Respondents (Madhur Prakash):</b> no U.P. cause of action pleaded; supplementary affidavit belated (facts always known); cl. 10.5 confines disputes to Jharkhand; cancellation justified by the lost higher bid (computer flaw).</div></div>
+<h3>Decision &amp; reasoning</h3>
+<ul>
+<li><b>(1) Supplementary affidavit allowed</b> (para 5): the "known-facts" objection exists only for <b>review (O.47 R.1(a))</b>, <b>additional evidence in appeal (O.41 R.27(1)(aa))</b>, and <b>readiness/willingness amendments (S. 16(1)(c), Specific Relief Act)</b> — "we are not aware of any other principle" barring additional facts in writs.</li>
+<li><b>(2) S. 13(3) fixes receipt</b> (paras 6–10): Settled common law rule (telephone/telex/fax: contract complete when/where acceptance received) needs <b>fixed terminals</b>; email has <b>no fixed point</b> (transmitted from anywhere → server anywhere → retrieved anywhere). S. 13(3) solves it: deemed received at <b>addressee's place of business</b> → Varanasi/Chandauli → <b>contract complete in U.P.</b> → part of cause of action → territorial jurisdiction. ⭐</li>
+<li><b>(3) Ouster clause fails twice</b> (paras 11–20): (a) S. 28 ICA + <i>ABC Laminart</i>: confining jurisdiction needs <b>"alone/only/exclusive"</b> or <i>expressio unius</i>; cl. 10.5 ("subject to Jharkhand HC") doesn't oust. (b) Deeper: ouster clauses restrain <b>parties from approaching other civil courts</b>; but <b>Art. 226 judicial review is a basic feature</b> (<i>L. Chandra Kumar</i>) exercisable even <b>suo motu</b> — "cannot be curtailed … by an agreement between litigants." Ouster clauses oust <b>civil courts only</b>.</li>
+<li><b>(4) Merits</b> (paras 21–27): concluded contract (acceptance + encashed Rs 81.12 lakh); <b>promissory estoppel</b> (petitioner altered position to its disadvantage); respondents are <b>State (Art. 12)</b>; belated cancellation <b>without hearing violates natural justice</b>. Third party's absence kills the defence.</li>
+<li><b>Order:</b> writ allowed; 10 Aug 2005 communication + decision set aside; respondents 2–3 to <b>hand over the coal without delay</b>.</li>
+</ul>
+<div class="ratio"><b>Ratio:</b> (1) <b>Emailed acceptance is deemed received at the addressee's place of business (S. 13(3))</b>, completing the contract there for jurisdiction/cause of action. (2) <b>Forum-ouster clauses cannot exclude Art. 226</b>. (3) Accepted e-auction bids + acted-upon consideration = concluded contract; State cancellation needs hearing.</div>
+<div class="exam"><b>Exam use:</b> the lead authority for (i) S. 13 time/place of e-receipt, (ii) "no fixed point" email reasoning, (iii) S. 28/ABC Laminart ouster tests, (iv) Art. 226 vs contract clauses, (v) e-auction concluded contracts + estoppel.</div>
+</section>
+
+<section class="card" id="pH">
+<div class="secnum r">Part H — DU Case 42 (syllabus; (2010) 3 SCC 1)</div>
+<div class="casehead"><div class="cn">DU Case 42 ★★ Concluded contract + arbitration clause through emails alone</div>
+<h3>Timex International FZE Ltd., Dubai v Vedanta Aluminium Ltd., (2010) 3 SCC 1 (SC — Sathasivam J., Arb. Pet. 10/2009, 22 Jan 2010)</h3>
+<div class="cite">Ss. 4, 7 ICA; S. 7 + S. 11(6), Arbitration Act 1996 &nbsp;|&nbsp; Question: <b>Did email exchanges conclude a binding bauxite contract (with arbitration clause) without a signed formal agreement?</b> &nbsp;|&nbsp; Answer: <b>Yes — unconditional 16 Oct 2007 email acceptance concluded all essential terms; S. 11 petition maintainable. (Arbitrator — Justice B.N. Srikrishna — appointed; venue Mumbai.)</b></div></div>
+<figure class="cviz"><img src="../images/dossiers/topic_10_11_quasi_and_e_contracts_du_not_img3.jpg" loading="lazy" decoding="async" alt="Hypothetical visual: bauxite cargo ship Dubai-India, email contract, arbitration"><figcaption>Hypothetical visual — October 2007: a Dubai trader's email offer of bauxite shipments accepted from India; charter and supply chains swing into action — then the buyer denies any contract.</figcaption></figure>
+<h3>Facts (detailed — sequence is everything)</h3>
+<ul>
+<li><b>15 Oct 2007:</b> Timex (Dubai mineral trader) emailed a <b>commercial offer</b> to Vedanta (India) for bauxite supply — option of <b>2–5 shipments</b>, all essential commercial terms + <b>arbitration clause (Cl. 6)</b>; offer <b>valid till noon 16 Oct 2007</b>.</li>
+<li><b>16 Oct 2007:</b> first response carried a <b>rider (cancellation after 2 shipments)</b> = conditional. On request, Vedanta emailed at <b>3:06 p.m.</b>: <b>"we confirm the deal for five shipments"</b> — unconditional, unqualified. Timex's Mr. Swaminathan opened it → "irrevocable contract concluded".</li>
+<li><b>17 Oct 2007:</b> Timex acted: back-to-back <b>Rio Tinto (Australia) supply deal + Oslo charter-party</b>.</li>
+<li><b>8 Nov 2007:</b> Vedanta sent a <b>formal draft agreement with detailed arbitration clause (Cl. 29)</b>; Timex accepted <b>same evening with minor changes</b>. Draft never formally signed.</li>
+<li><b>1 Sept 2008:</b> Timex invoked arbitration claiming losses; Vedanta replied: <b>no concluded contract, no arbitration agreement</b> — still negotiating. Timex filed <b>S. 11(6) petition</b> in SC.</li>
+</ul>
+<h3>Issues</h3>
+<ol><li>Did the 15–16 Oct emails conclude a binding contract though no formal agreement was signed?</li><li>Was there a valid <b>arbitration agreement "in writing"</b> (S. 7, Arbitration Act)?</li><li>Maintainability of S. 11(6) appointment.</li></ol>
+<div class="args"><div class="a1"><b>Timex:</b> 3:06 p.m. email = <b>absolute, unconditional acceptance</b> (S. 7 ICA) of an offer containing all essentials + arbitration (Cl. 6); knowledge via opening (S. 4 ICA); acted upon (charter + supply); 8 Nov draft merely <b>records</b> the concluded deal (Cl. 29 accepted); emails = "agreement in writing" (S. 7, Arbitration Act); minimal interference (<i>Great Offshore</i>).</div><div class="a2"><b>Vedanta (C.A. Sundaram):</b> emails only <b>preliminary/negotiation-stage</b>; material terms unsettled; unsigned 8 Nov draft (subject to changes) proves <b>no consensus ad idem</b>; unclear clauses can't "stand on footing" to found arbitration; S. 11 not maintainable without concluded contract.</div></div>
+<h3>Decision &amp; reasoning (Sathasivam J.)</h3>
+<ul>
+<li><b>Concluded contract on 16 Oct 2007:</b> commercial offer = valid offer; first conditional reply cured by the <b>unconditional 3:06 p.m. confirmation</b> — S. 7 ICA's "absolute and unconditional" mandate <b>fulfilled</b>; S. 4 satisfied on opening. Later performance (charter 17 Oct) corroborates concluded intent.</li>
+<li><b>Unsigned formality irrelevant:</b> "in the absence of signed agreement … possible to infer [contract] from … <b>exchange of emails, letter, telex, telegrams and other means of telecommunication</b>" (para 60). 8 Nov draft = record of concluded deal; minor changes don't negate consensus.</li>
+<li><b>Arbitration agreement exists:</b> Cl. 6 (offer) + Cl. 29 (draft, accepted) exchanged in emails = <b>"agreement in writing" under S. 7, Arbitration Act</b>; Vedanta's precedents "not germane" against clear email materials (para 61).</li>
+<li><b>Relief:</b> S. 11(6) petition maintainable and allowed; <b>Justice B.N. Srikrishna appointed sole arbitrator</b>; venue Mumbai; fees shared.</li>
+</ul>
+<div class="ratio"><b>Ratio:</b> (1) <b>Unconditional email acceptance of an offer containing all essential terms concludes a binding contract</b> — absence of a signed formal agreement is irrelevant. (2) <b>Arbitration clauses travel through email exchanges</b> and satisfy "in writing" (S. 7, Arbitration Act). (3) Subsequent acting-upon + record-drafts confirm consensus; minor modifications don't undo it.</div>
+<div class="exam"><b>Exam use:</b> cite Timex for (i) e-contract formation/concluded-contract test, (ii) S. 7 absolute-acceptance via email (conditional → unconditional cure), (iii) unsigned-draft irrelevance, (iv) email arbitration clauses, (v) pairing with S. 10A IT Act.</div>
+</section>
+
+<section class="card" id="pI">
+<div class="secnum">Part I — Visual revision</div>
+<h2>Master flowcharts &amp; comparison tables</h2>
+<h3>Flowchart 1 — Any S. 70 problem (Mondal method)</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>1. Lawfully?</b><br>Not fraudulent/dishonest/forbidden? (No pre-existing relation needed)</div><div class="arrow">→</div>
+<div class="fbox"><b>2. Non-gratuitous?</b><br>Trade/estimate/bill/protest? (Ill. b kills gifts)</div><div class="arrow">→</div>
+<div class="fbox t"><b>3. Enjoyed voluntarily?</b><br>Had a real option to refuse/return? (Officious → fail)</div><div class="arrow">→</div>
+<div class="fbox o"><b>4. Who is defendant?</b><br>Minor → S. 68 only · Govt/corp/individual → S. 70 ✔</div><div class="arrow">→</div>
+<div class="fbox"><b>5. Relief</b><br>Compensation (benefit value) or restoration — NOT breach damages</div>
+</div></div>
+<h3>Flowchart 2 — Any e-contract problem</h3>
+<div class="flow"><div class="frow">
+<div class="fbox g"><b>1. ICA substance?</b><br>Proposal + absolute acceptance (S. 7) + consideration + capacity + consent</div><div class="arrow">→</div>
+<div class="fbox"><b>2. First Schedule?</b><br>Immovable sale/will/trust/POA/NI → IT Act can't save</div><div class="arrow">→</div>
+<div class="fbox t"><b>3. S. 10A</b><br>E-form alone can't defeat validity</div><div class="arrow">→</div>
+<div class="fbox o"><b>4. S. 11–13</b><br>Attribution? Ack? Time/place of receipt → where complete?</div>
+</div></div>
+<h3>Table 1 — Ss. 68–72 at a glance</h3>
+<table>
+<tr><th>Section</th><th>Trigger (one line)</th><th>Remedy</th><th>Key authority</th></tr>
+<tr><td><b>68</b></td><td>Necessaries to incapable person/dependants.</td><td>Reimbursement <b>from property</b>.</td><td>Ills. (a)–(b); <i>Mohori Bibee</i></td></tr>
+<tr><td><b>69</b></td><td>Interested person pays another's <b>legal dues</b>.</td><td>Reimbursement.</td><td>Zamindar illustration</td></tr>
+<tr><td><b>70</b></td><td>Lawful + non-gratuitous + <b>enjoyed</b> act/delivery.</td><td>Compensation or restoration.</td><td><i>Mondal</i>; Ills. (a)–(b)</td></tr>
+<tr><td><b>71</b></td><td>Finder takes custody of goods.</td><td>Bailee duties (Ss. 151–2, 168–9).</td><td>Bailment chapter</td></tr>
+<tr><td><b>72</b></td><td>Payment/delivery by <b>mistake/coercion</b>.</td><td>Repay/return.</td><td>Ills. (a)–(b); tax-refund line</td></tr>
+</table>
+<h3>Table 2 — S. 70 vs S. 65 vs breach damages</h3>
+<table>
+<tr><th>Point</th><th>S. 70</th><th>S. 65</th><th>S. 73 (breach)</th></tr>
+<tr><td><b>Needs an agreement?</b></td><td><b>Never any</b> (or none relied on).</td><td>Agreement <b>discovered void / becoming void</b>.</td><td><b>Valid contract broken</b>.</td></tr>
+<tr><td><b>Basis</b></td><td>Voluntary acceptance of benefit.</td><td>Restoration of advantage received.</td><td>Loss from breach.</td></tr>
+<tr><td><b>Measure</b></td><td>Benefit value / restoration.</td><td>Advantage restored.</td><td>Natural/contemplated loss.</td></tr>
+</table>
+<h3>Table 3 — IT Act Ss. 3–5, 10–17 map</h3>
+<table>
+<tr><th>Section</th><th>Function</th><th>One-line content</th></tr>
+<tr><td><b>3 / 3A</b></td><td>Authenticate</td><td>Digital signature (asymmetric crypto + hash) / reliable ES techniques (Second Schedule).</td></tr>
+<tr><td><b>4 / 5</b></td><td>Recognise</td><td>E-record = writing (accessible for later reference); ES = signature.</td></tr>
+<tr><td><b>10 / 10A</b></td><td>Rules / Validity</td><td>Govt. ES rules; e-formed contracts not unenforceable for e-form alone.</td></tr>
+<tr><td><b>11 / 12 / 13</b></td><td>Who / Ack / When-Where</td><td>Attribution (self/agent/auto-system); acknowledgement; despatch/receipt time + deemed places.</td></tr>
+<tr><td><b>14 / 15 / 16</b></td><td>Secure</td><td>Secure e-record; secure ES (exclusive control); Government security procedures.</td></tr>
+<tr><td><b>17</b></td><td>Regulate</td><td>Controller of Certifying Authorities (+ deputies, offices, seal).</td></tr>
+</table>
+<h3>Table 4 — Three cases at a glance</h3>
+<table>
+<tr><th>Case</th><th>Provision</th><th>One-line rule</th><th>Outcome</th></tr>
+<tr><td><b>40. Mondal</b></td><td>S. 70</td><td>Lawful + non-gratuitous + enjoyed → Government pays; S. 70 supplements Art. 299.</td><td>Appeal dismissed; Rs 19,325 decreed</td></tr>
+<tr><td><b>41. P R Transport</b></td><td>S. 13 IT Act</td><td>Emailed acceptance received at addressee's business place; ouster ≠ Art. 226.</td><td>Writ allowed; coal delivered</td></tr>
+<tr><td><b>42. Timex</b></td><td>S. 7 ICA / S. 7 Arb. Act</td><td>Unconditional email acceptance = concluded contract + written arbitration clause.</td><td>S. 11 allowed; Srikrishna J. appointed</td></tr>
+</table>
+</section>
+
+<section class="card" id="pJ">
+<div class="secnum">Part J — Practice</div>
+<h2>DU PYQs with best model answers (Q1–Q12)</h2>
+
+<div class="pyq"><div class="qh">Q1. What are quasi-contracts? Classify the obligations resembling those created by contract under Ss. 68–72, ICA. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Define: law-imposed duties without agreement, to prevent unjust enrichment; Ch. V heading. (2) Table all five with trigger + remedy + one illustration each. (3) Stress S. 70 as the residuary workhorse + Mondal gloss. (4) Relief pattern: reimbursement / compensation-or-restoration / bailee duties / repay-return. (5) Close: no specific performance or breach damages under Ch. V (Mondal para 14).</div></div>
+
+<div class="pyq"><div class="qh">Q2. State and explain the requisites of S. 70 with the help of State of W.B. v B.K. Mondal. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Quote S. 70 + Ills. (a)–(b). (2) Three requisites (Mitter J.): lawfully / non-gratuitous / enjoyed — Mondal facts mapped to each (urgent need + prompt use; trade + estimates + bills + prior jobs; no forbidding law). (3) Cause of action = acceptance/enjoyment, not contract — no compulsion, no breach damages. (4) "Lawfully" = born-on-acceptance (Chedi Lal rejected). (5) Voluntariness + Jenkins officiousness warning. (6) Government liable; S. 175(3) separate field. Conclude: appeal dismissed.</div></div>
+
+<div class="pyq"><div class="qh">Q3. "S. 70 supplements S. 175(3) of the Government of India Act." Discuss. (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Mr. Sen's circumvention argument (compensating = validating invalid contracts). (2) Rebuttal: S. 175(3)/Art. 299 governs <i>how Government contracts</i>; S. 70 governs <i>no-contract benefit cases</i> — separate fields (para 19). (3) Doing work ≠ making a contract (Ill. (a)-as-Government hypothetical); invalid request = no request. (4) Policy: petty/emergency governance would stall (para 20); A-G's moral-obligation confession converted to legal duty. (5) Sarkar J. narrower route: no agreement whatever — abstract question untouched (para 35).</div></div>
+
+<div class="pyq"><div class="qh">Q4. A, a contractor, repairs a Government building at an officer's oral request, knowing the officer awaits sanction. Government uses the building but refuses payment citing Art. 299. Advise A. (10 marks)</div>
+<div class="model"><b>Model answer:</b> A recovers under S. 70 (Mondal squarely). (1) No Art. 299 contract → sue on acceptance/enjoyment. (2) Requisites: lawful (repair work, no prohibition); non-gratuitous (contractor by trade — estimate + bill); enjoyed (building used; Government could have refused). (3) Officer's lack of authority known → no agreement at all (Sarkar J.) — S. 70 still fits; officers not personally liable (no tacit promise — ferryman test). (4) Relief: compensation (benefit value), not contract price as of right. (5) Caveat: quantum must be proved; S. 65 unavailable (never any agreement).</div></div>
+
+<div class="pyq"><div class="qh">Q5. Distinguish S. 68 from S. 70. Can a minor be sued under S. 70? (7 marks)</div>
+<div class="model"><b>Model answer:</b> (1) S. 68: necessaries → reimbursement <b>from property only</b>; S. 70: any lawful non-gratuitous enjoyed benefit → compensation. (2) No — minor outside S. 70 (Mondal para 21; Bankay Behari FB): S. 68 specifically provides; voluntary acceptance can't be imputed. (3) Government ≠ minor: S. 175(1) confers contracting power; S. 70 binds Government, corporations, individuals alike (unjust-enrichment rationale). (4) Illustration: lunatic's supplier uses S. 68 (Ills. a–b).</div></div>
+
+<div class="pyq"><div class="qh">Q6. Write short notes on: (a) S. 69, (b) S. 71, (c) S. 72 — mistake of law. (3×5 marks)</div>
+<div class="model"><b>Model answer: (a)</b> Quote S. 69 + zamindar illustration; twin tests — "bound by law" (legal duty, not moral) + "interested" (protectable interest, e.g. lease; no volunteers); actual payment needed. <b>(b)</b> Quote S. 71; custody = deemed bailment (S. 151 care; S. 168 offered-reward lien; S. 169 sale); no duty to pick up, no general reward. <b>(c)</b> Quote S. 72 + Ills.; "mistake" covers <b>law and fact</b> (sales-tax refund line — Kanhaiya Lal); "coercion" wider than S. 15 (compulsion of circumstance — Ill. b); voluntary informed payment irrecoverable.</div></div>
+
+<div class="pyq"><div class="qh">Q7. Discuss the nature and formation of e-contracts with reference to the ICA and the IT Act, 2000. (15 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Define e-contracts; dual statute structure (substance/medium) + S. 10A bridge. (2) Types table (email, e-auction, click/browse/shrink-wrap, EDI) with validity notes. (3) Formation mapping: proposal/acceptance/revocation via S. 10A; S. 7 absoluteness (Timex); S. 4 vs S. 13 timing (P R Transport). (4) UNCITRAL lineage (non-discrimination, functional equivalence, technology neutrality). (5) First Schedule exclusions. (6) ICA S. 10 elements unchanged (minor's click still void). Conclude with Timex + P R Transport holdings.</div></div>
+
+<div class="pyq"><div class="qh">Q8. Explain Ss. 11, 12 and 13 of the IT Act, 2000. (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) S. 11: three attribution routes (self/agent/auto-system); intermediary excluded; fixes <i>who</i> sent. (2) S. 12: ack by any communication/conduct unless form stipulated; binding-only-on-ack → no ack = never sent; else notice + reasonable-time procedure. (3) S. 13: despatch = beyond originator's control; receipt = designated-entry/retrieval/entry; place = business places; computer location irrelevant; principal-place/residence defaults; all subject to contrary agreement. (4) Apply: P R Transport (S. 13(3) → contract complete at Chandauli/Varanasi).</div></div>
+
+<div class="pyq"><div class="qh">Q9. A emails acceptance of B's tender; B later claims no concluded contract as no formal document was signed. B's office is in Patna, A's in Delhi. Where was the contract completed? (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) S. 10A: email acceptance valid; S. 7 ICA: if absolute/unconditional → concluded (Timex: unsigned formality irrelevant). (2) Completion place: emailed acceptance deemed received at <b>addressee's (B's) place of business — Patna</b> (S. 13(3); P R Transport — no fixed email point; traditional fixed-terminal rule inapplicable). (3) Time: S. 13(2) (designated-resource entry/retrieval). (4) Consequence: part of cause of action at Patna (jurisdiction). (5) Caveats: contrary agreement overrides ("save as otherwise agreed"); revocation before receipt effective (Ss. 4–5 ICA).</div></div>
+
+<div class="pyq"><div class="qh">Q10. Discuss P R Transport Agency v UOI on (a) ouster clauses and Art. 226, (b) natural justice in State e-auctions. (10 marks)</div>
+<div class="model"><b>Model answer: (a)</b> Facts: cl. 10.5 → Jharkhand HC. S. 28 ICA + ABC Laminart: need "alone/only/exclusive" or expressio unius — absent here. Deeper: ouster clauses restrain parties vis-à-vis <b>civil courts</b>; Art. 226 is a <b>basic feature</b> (L. Chandra Kumar), exercisable suo motu — uncurtailable by agreement. <b>(b)</b> Concluded e-auction contract (acceptance + Rs 81.12 lakh encashed) + <b>promissory estoppel</b> (altered position); State-respondents (Art. 12) cancelling belatedly without hearing = <b>natural-justice violation</b>; third-party computer-flaw defence fails (stranger, no challenge). Writ allowed; coal delivery ordered.</div></div>
+
+<div class="pyq"><div class="qh">Q11. "An arbitration clause can be concluded through emails." Discuss with Timex v Vedanta. (10 marks)</div>
+<div class="model"><b>Model answer:</b> (1) Timeline: 15 Oct offer (Cl. 6 arbitration) → conditional reply → <b>3:06 p.m. unconditional "confirm deal for five shipments"</b> → 17 Oct charter/supply → 8 Nov draft (Cl. 29) accepted with minor changes → denial → S. 11(6). (2) S. 7 ICA fulfilled (absolute/unqualified); S. 4 on opening. (3) Unsigned draft irrelevant (para 60: emails/letters/telex suffice); acting-upon corroborates. (4) Cl. 6 + Cl. 29 = <b>"agreement in writing" (S. 7, Arbitration Act)</b>; precedents "not germane". (5) Srikrishna J. appointed; Mumbai venue. Pair with S. 10A IT Act.</div></div>
+
+<div class="pyq"><div class="qh">Q12. Write short notes on: (a) Ss. 4–5, IT Act, (b) Secure e-record / secure e-signature (Ss. 14–16), (c) First Schedule exclusions. (3×5 marks)</div>
+<div class="model"><b>Model answer: (a)</b> S. 4: e-record = writing if electronic + accessible for subsequent reference; S. 5: ES = signature if per Government rules — functional equivalence. <b>(b)</b> S. 14: security procedure applied → deemed secure till verification; S. 15: ES secure if creation data under exclusive control + prescribed manner (evidentiary presumptions, BSA); S. 16: Government prescribes procedures (commercial circumstances). <b>(c)</b> IT Act inapplicable: NI (non-cheque), POA, trust, will, <b>immovable-property sale/conveyance</b> — must use traditional form; favourite trap with S. 10A.</div></div>
+</section>
+
+<section class="card" id="pK">
+<div class="secnum">Part K — Last-mile</div>
+<h2>One-page revision capsule + exam strategy</h2>
+<table>
+<tr><th style="width:30%">Must-quote line</th><th>Source</th></tr>
+<tr><td>"Lawfully … not intending gratuitously … enjoys the benefit → compensation or restoration"</td><td>S. 70 (3 requisites)</td></tr>
+<tr><td>"What S. 70 prevents is unjust enrichment … individuals, corporations and Government"</td><td>Mondal (Gajendragadkar, para 21)</td></tr>
+<tr><td>"Guarded and circumspect … not countenance … really officious"</td><td>Jenkins CJ (via Mondal para 23)</td></tr>
+<tr><td>"S. 70 supplements S. 175(3)" — separate fields</td><td>Mondal (para 20)</td></tr>
+<tr><td>"Not … unenforceable solely on the ground" of electronic form</td><td>S. 10A, IT Act</td></tr>
+<tr><td>"Deemed received at the place where the addressee has his place of business"</td><td>S. 13(3) + P R Transport</td></tr>
+<tr><td>Email has "no fixed point either of transmission or of receipt"</td><td>P R Transport (para 7)</td></tr>
+<tr><td>Unconditional email acceptance = concluded contract; unsigned draft irrelevant</td><td>Timex (paras 51, 60)</td></tr>
+</table>
+<div class="exam">⭐ <b>Exam strategy:</b> (1) Quasi-answers: <b>quote the section</b>, run its elements as numbered tests, cite the illustration, close with Mondal. (2) S. 70 problems: always test <b>officiousness/voluntariness</b> + defendant's capacity (minor → S. 68). (3) E-contract problems: <b>S. 10 ICA substance first</b>, then S. 10A, then S. 11–13 mechanics, then First Schedule check. (4) Pair holdings with <b>judge names</b>: Gajendragadkar/Sarkar (Mondal), Harkauli (P R Transport), Sathasivam (Timex). (5) Traps: S. 65 vs S. 70; "lawfully" ≠ pre-existing contract; S. 13 vs postal rule; ouster vs Art. 226; immovable e-contracts excluded.</div>
+<div class="note"><b>Case–judge–court map:</b> 40 Mondal — Gajendragadkar + Sarkar JJ., SC (1962) · 41 P R Transport — Harkauli &amp; Pandey JJ., Allahabad HC (2005) · 42 Timex — Sathasivam J., SC (2010). | <b>Honesty note:</b> DU case material in the project carries Case 40's full text (Book pp. 211–223); Cases 41–42 appear as syllabus entries, so their briefs are built from the full reported judgments (AIR 2006 All 23; (2010) 3 SCC 1) — every proposition above is judgment-text based. Web sources: P R Transport background [1](https://www.casemine.com/judgement/in/5608eb73e4b0149711118a34), [3](https://www.courtkutchehry.com/judgements/341319/pr-transport-agency-vs-union-of-india-uoi-and-others/), [5](https://legal-wires.com/case-study/case-study-p-r-transport-agency-v-union-of-india/); Timex background [2](https://www.rplegal.org/articles/60/view), [4](https://lawfyi.io/trimex-international-fze-vs-vedanta-aluminium-limitedindia-on-22-january-2010-case-summary/); IT Act texts [1](https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf), [3](https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf).</div>
+</section>
+
+</div>
+<div class="end">Topics 10 + 11 • Quasi-Contracts (Ss. 68–72) + E-Contracts (IT Act Ss. 3–5, 10–17) • DU LLB LB-102 • From DU Case Material + ICA/IT Act bare texts • End of notes — all the best for the exam! 🎓</div>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a37b2d053c3cdb32',t:'MTc4ODg0MTM4NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

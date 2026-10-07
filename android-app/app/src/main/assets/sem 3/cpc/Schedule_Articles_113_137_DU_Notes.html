@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 4 (Limitation) &mdash; The Schedule: Period of Limitation, Articles 113 &amp; 137 &mdash; DU LL.B. Notes</title>
+<style>
+
+
+:root{
+  --navy:#3f1622; --navy2:#5a2131; --navy3:#290d16;
+  --gold:#c9a227; --gold2:#a8861a; --goldsoft:#f3e8c5;
+  --maroon:#7b2d26; --teal:#0f6b6b;
+  --ink:#1f2733; --muted:#5a6572;
+  --paper:#faf7f0; --card:#ffffff; --line:#e3dccb;
+  --cream2:#f6efdd;
+  --ok:#1e7d32; --warn:#b26a00; --bad:#a02020;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; font-size:16px;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.page{max-width:1140px; margin:0 auto; padding:0 20px 80px;}
+
+.hero{position:relative; color:#fff; border-radius:0 0 26px 26px; overflow:hidden; box-shadow:0 10px 40px rgba(41,13,22,.35);}
+.hero img{width:100%; height:340px; object-fit:cover; display:block; filter:saturate(.95);}
+.hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,26,53,.55) 0%, rgba(12,26,53,.82) 70%, rgba(12,26,53,.95) 100%);}
+.hero .inner{position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:34px 42px 28px;}
+.hero .kicker{letter-spacing:.24em; text-transform:uppercase; font-size:.78rem; color:var(--gold); font-weight:700; margin-bottom:8px;}
+.hero h1{font-size:2.28rem; line-height:1.15; text-shadow:0 2px 10px rgba(0,0,0,.45);}
+.hero h1 em{color:var(--gold); font-style:normal;}
+.hero .sub{margin-top:10px; font-size:1.02rem; color:#e8e4d8; max-width:920px;}
+.badges{margin-top:16px; display:flex; flex-wrap:wrap; gap:9px;}
+.badge{background:rgba(201,162,39,.16); border:1px solid rgba(201,162,39,.65); color:#f5e7b8; padding:5px 13px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.03em;}
+
+nav.tocbar{position:sticky; top:0; z-index:60; background:var(--navy3); box-shadow:0 3px 14px rgba(0,0,0,.3); border-bottom:2px solid var(--gold);}
+nav.tocbar .bar{max-width:1140px; margin:0 auto; padding:9px 20px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+nav.tocbar a{color:#d8d3c2; text-decoration:none; font-size:.8rem; padding:5px 11px; border-radius:6px; border:1px solid transparent; white-space:nowrap;}
+nav.tocbar a:hover{background:rgba(201,162,39,.18); color:#ffe9a8; border-color:rgba(201,162,39,.5);}
+nav.tocbar a.home{color:var(--gold); font-weight:700;}
+
+section{margin-top:56px; scroll-margin-top:70px;}
+.sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
+.sec-num{flex:0 0 auto; width:52px; height:52px; border-radius:14px; background:linear-gradient(145deg,var(--navy),var(--navy2)); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.35rem; font-weight:700; box-shadow:0 4px 12px rgba(63,22,34,.35); border:1px solid rgba(201,162,39,.5);}
+h2.sec-title{font-size:1.72rem; color:var(--navy); line-height:1.2;}
+.sec-sub{color:var(--muted); font-size:.95rem; margin-bottom:18px; padding-left:66px;}
+.rule-chip{display:inline-block; background:var(--goldsoft); border:1px solid var(--gold); color:#6b5410; border-radius:999px; padding:2px 12px; font-size:.75rem; font-weight:700; margin-left:10px; vertical-align:middle; letter-spacing:.05em;}
+
+.card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 30px; margin:18px 0; box-shadow:0 3px 14px rgba(60,50,20,.06);}
+.card h3{color:var(--navy); font-size:1.28rem; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--goldsoft);}
+.card h4{color:var(--navy2); font-size:1.05rem; margin:18px 0 8px;}
+.card p{margin:9px 0;}
+.lead{font-size:1.06rem; color:#2a3340;}
+ul.tick, ul.dot, ol.num{margin:10px 0 10px 6px; padding-left:20px;}
+ul.tick li, ul.dot li, ol.num li{margin:7px 0;}
+ul.tick li::marker{content:"✔ "; color:var(--gold2);}
+ul.dot li::marker{color:var(--gold2);}
+b, strong{color:#3a1220;}
+.small{font-size:.86rem; color:var(--muted);}
+.center{text-align:center;}
+
+.statute{background:var(--cream2); border-left:5px solid var(--gold); padding:16px 20px; border-radius:0 12px 12px 0; margin:14px 0; font-size:.97rem;}
+.statute .s-head{font-weight:700; color:var(--maroon); font-family:Georgia,serif; margin-bottom:6px; font-size:1.02rem;}
+.judgement{background:#f4f1e8; border:1px dashed #cbb98a; border-left:5px solid var(--maroon); border-radius:0 12px 12px 0; padding:14px 20px; margin:14px 0; font-style:italic; color:#41403a;}
+.judgement .who{display:block; font-style:normal; font-weight:700; color:var(--maroon); margin-bottom:6px; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase;}
+
+.defbox{background:linear-gradient(135deg,#3f1622,#5a2131); color:#f0ead6; border-radius:16px; padding:24px 30px; margin:20px 0; border:1px solid rgba(201,162,39,.55); box-shadow:0 6px 20px rgba(41,13,22,.28);}
+.defbox .dt{color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; font-weight:700; margin-bottom:8px;}
+.defbox .dd{font-size:1.12rem; font-family:Georgia,serif; line-height:1.55;}
+
+table{width:100%; border-collapse:collapse; margin:16px 0; background:#fff; font-size:.92rem; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(60,50,20,.07);}
+th{background:var(--navy); color:#f5e9cd; text-align:left; padding:11px 14px; font-size:.85rem; letter-spacing:.05em; text-transform:uppercase; vertical-align:top;}
+td{padding:11px 14px; border-bottom:1px solid #eee7d6; vertical-align:top;}
+tr:nth-child(even) td{background:#fbf9f2;}
+tr:last-child td{border-bottom:none;}
+td .tag{display:inline-block; background:#eef3ff; color:var(--navy2); border:1px solid #c9d6f2; border-radius:6px; padding:1px 8px; font-size:.76rem; font-weight:600;}
+
+.note{border-radius:12px; padding:15px 19px; margin:15px 0; font-size:.95rem; border:1px solid;}
+.note.blue{background:#eef3fb; border-color:#b9cdec;}
+.note.amber{background:#fdf6e3; border-color:#e7cf8f;}
+.note.green{background:#edf7ee; border-color:#b5d9b8;}
+.note.red{background:#fbeeee; border-color:#e3b8b8;}
+.note .nt{font-weight:700; text-transform:uppercase; font-size:.72rem; letter-spacing:.12em; display:block; margin-bottom:4px;}
+.note.blue .nt{color:#2b5cad;} .note.amber .nt{color:#9c6d00;} .note.green .nt{color:#1e7d32;} .note.red .nt{color:#a02020;}
+
+figure{margin:22px 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 3px 14px rgba(60,50,20,.07);}
+figure img{width:100%; border-radius:10px; display:block;}
+figcaption{margin-top:12px; font-size:.85rem; color:var(--muted); text-align:center; font-style:italic;}
+.fig-hint{display:inline-block; background:#fdf6e3; border:1px solid #e7cf8f; color:#9c6d00; border-radius:999px; font-size:.7rem; font-weight:700; letter-spacing:.08em; padding:2px 10px; text-transform:uppercase; margin-bottom:10px;}
+.svgwrap{overflow-x:auto; border-radius:10px; background:#fffdf7; border:1px solid #efe8d3;}
+
+.case{background:#fff; border:1px solid var(--line); border-radius:18px; margin:30px 0; box-shadow:0 6px 24px rgba(60,50,20,.09); overflow:hidden;}
+.case-top{display:flex; align-items:center; gap:16px; padding:20px 28px; background:linear-gradient(120deg,var(--navy3),var(--navy2)); color:#fff; border-bottom:3px solid var(--gold);}
+.case-no{flex:0 0 auto; width:58px; height:58px; border-radius:50%; background:rgba(201,162,39,.15); border:2px solid var(--gold); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.25rem; font-weight:700;}
+.case-top .ct{font-size:1.34rem; font-family:Georgia,serif; line-height:1.25;}
+.case-top .cc{color:#e4d9b4; font-size:.86rem; margin-top:5px;}
+.case-body{padding:26px 30px;}
+.case-body h3{font-family:Georgia,serif; color:var(--navy); font-size:1.12rem; margin:22px 0 10px; display:flex; align-items:center; gap:9px;}
+.case-body h3 .ic{flex:0 0 auto; width:26px; height:26px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; font-size:.8rem; color:#fff; font-weight:700;}
+.ic.facts{background:#2b5cad;} .ic.issue{background:#9c6d00;} .ic.arg{background:var(--teal);} .ic.dec{background:var(--ok);} .ic.pri{background:var(--maroon);}
+.arg-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media(max-width:820px){.arg-grid{grid-template-columns:1fr;}}
+.arg-box{border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.arg-p{background:#eef3fb; border:1px solid #c3d4ee;}
+.arg-d{background:#f7eee9; border:1px solid #e0c6b8;}
+.arg-box .ah{font-weight:700; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; display:block;}
+.arg-p .ah{color:#2b5cad;} .arg-d .ah{color:#a04a20;}
+.principle{background:linear-gradient(135deg,#fdf6e3,#f6ecd2); border:1px solid var(--gold); border-radius:12px; padding:18px 22px; margin:16px 0;}
+.principle .ph{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px;}
+.timeline{border-left:3px solid var(--gold); margin:14px 0 8px 8px; padding-left:22px;}
+.timeline .tl-item{margin:12px 0; position:relative;}
+.timeline .tl-item::before{content:""; position:absolute; left:-29.5px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--gold); border:2.5px solid #fff; box-shadow:0 0 0 2px var(--gold);}
+.timeline .tl-date{font-weight:700; color:var(--navy2); font-size:.88rem;}
+.timeline .tl-txt{font-size:.94rem;}
+
+.pyq{background:#fff; border:2px solid var(--navy); border-radius:16px; margin:26px 0; overflow:hidden; box-shadow:0 6px 22px rgba(63,22,34,.12);}
+.pyq-q{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-q .qtag{background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-right:10px; text-transform:uppercase;}
+.pyq-q .qtext{font-family:Georgia,serif; font-size:1.05rem; margin-top:10px; line-height:1.5; color:#f5f1e4;}
+.pyq-a{padding:22px 26px;}
+.anslabel{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.mk{float:right; color:var(--muted); font-size:.8rem; font-style:italic;}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.kbox{background:#fff; border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:0 12px 12px 0; padding:16px 20px; margin:12px 0;}
+.kbox .kh{color:var(--teal); font-weight:700; font-family:Georgia,serif; margin-bottom:6px;}
+.top-btn{position:fixed; right:26px; bottom:26px; width:48px; height:48px; border-radius:50%; background:var(--navy); color:var(--gold); border:2px solid var(--gold); font-size:1.25rem; cursor:pointer; z-index:80; box-shadow:0 6px 18px rgba(0,0,0,.35); opacity:0; pointer-events:none; transition:opacity .25s;}
+.top-btn.show{opacity:1; pointer-events:auto;}
+.divider{height:3px; background:repeating-linear-gradient(90deg,var(--gold) 0 26px, transparent 26px 52px); border:none; margin:34px 0; border-radius:2px; opacity:.6;}
+footer{margin-top:70px; background:var(--navy3); color:#cfc9b4; border-radius:18px 18px 0 0; padding:34px 38px; font-size:.88rem; line-height:1.75;}
+footer h4{color:var(--gold); margin-bottom:10px; font-size:1rem;}
+.src-list li{margin:5px 0;}
+@media print{
+  nav.tocbar,.top-btn{display:none !important;}
+  .card,.case,.pyq,figure{break-inside:avoid; box-shadow:none;}
+  body{background:#fff;}
+  section{margin-top:26px;}
+}
+
+/* ============ supplement: case, pyq & layout components ============ */
+.case{padding-bottom:8px;}
+.case > .card, .case > .timeline, .case > .principle, .case > .arg-grid, .case > figure{margin-left:26px; margin-right:26px;}
+.case-hero{padding:26px 30px 22px; background:linear-gradient(125deg,var(--navy3) 0%,var(--navy2) 68%,#6d2f42 100%); color:#fff; border-bottom:3px solid var(--gold);}
+.case-hero .case-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.12em; border-radius:6px; padding:3px 10px; text-transform:uppercase; margin-bottom:10px;}
+.case-hero .case-name{font-family:Georgia,serif; font-size:1.7rem; line-height:1.2; color:#fff;}
+.case-hero .case-meta{margin-top:8px; color:#e4d9b4; font-size:.9rem; line-height:1.6;}
+.case-hero .chips{margin-top:12px; display:flex; flex-wrap:wrap; gap:7px;}
+.case-hero .chip{background:rgba(201,162,39,.14); border:1px solid rgba(201,162,39,.6); color:#f5e7b8; border-radius:999px; padding:2px 11px; font-size:.72rem; font-weight:600; letter-spacing:.03em;}
+.case-fig{margin:20px 26px;}
+.case-fig img{border:1px solid var(--line);}
+.arg-p h4, .arg-d h4{font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; font-family:"Segoe UI",Arial,sans-serif;}
+.arg-p h4{color:#2b5cad;} .arg-d h4{color:#a04a20;}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+@media(max-width:820px){.split{grid-template-columns:1fr;}}
+.maj{background:#edf7ee; border:1px solid #b5d9b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.min{background:#fbeeee; border:1px solid #e3b8b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.verdict{font-weight:800; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; display:block; border-radius:8px; padding:6px 10px; color:#fff;}
+.maj .verdict{background:var(--ok);} .min .verdict{background:var(--bad);}
+.principle .p-head{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:.05em;}
+.timeline .tl-title{font-weight:800; color:var(--navy); font-size:.95rem; letter-spacing:.05em; text-transform:uppercase; margin-bottom:6px;}
+.timeline .tl-body{font-size:.94rem;}
+.pyq-head{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:10px; text-transform:uppercase;}
+.pyq-head .pyq-q{padding:0; background:none; font-family:Georgia,serif; font-size:1.05rem; line-height:1.5; color:#f5f1e4;}
+.model{padding:22px 26px;}
+.model-badge{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:12px 0;}
+@media(max-width:820px){.grid3{grid-template-columns:1fr;}}
+.mini{background:var(--cream2); border:1px solid var(--goldsoft); border-left:4px solid var(--gold); border-radius:10px; padding:12px 14px; font-size:.88rem;}
+td.case-no{width:46px; height:40px; font-size:.95rem;}
+
+
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .case-box, .sub-section, .case-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  table, table.tbl, .table-wrap table, .tblwrap table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../../images/dossiers/schedule_articles_113_137_du_notes_img1.jpg" loading="lazy" decoding="async" alt="The Schedule of the Limitation Act as a grand clock-room library with a great brass clock and two hourglasses">
+  <div class="overlay"></div>
+  <div class="inner">
+    <div class="kicker">DU LL.B. (Hons.) &middot; Civil Procedure Code &amp; Limitation &middot; Part B: Limitation</div>
+    <h1>Topic 4 &mdash; <em>The Schedule: Period of Limitation</em><br>Articles 113 &amp; 137, Limitation Act, 1963</h1>
+    <div class="sub">The residuary provisions &mdash; any suit for which no period of limitation is provided elsewhere (Art. 113) and any other application for which no period is provided (Art. 137) &mdash; with the two prescribed cases (37&ndash;38) from the DU case material: State of Punjab v. Gurdev Singh and Ajaib Singh v. Sirhind Co-operative Marketing-cum-Processing Service Society Ltd.</div>
+    <div class="badges">
+      <span class="badge">Articles 113 &middot; 137 (and old Art. 120/181)</span>
+      <span class="badge">2 Prescribed Cases in Full Detail</span>
+      <span class="badge">"Right to Sue Accrues" Deep-Dive</span>
+      <span class="badge">Courts vs Tribunals under Art. 137</span>
+      <span class="badge">DU PYQs with Model Answers</span>
+      <span class="badge">Flowcharts &amp; Hypothetical Case Visuals</span>
+    </div>
+  </div>
+</div>
+
+<nav class="tocbar"><div class="bar">
+  <a class="home" href="#top">&#9878; The Schedule: Art. 113 &amp; 137</a>
+  <a href="#s1">1. Concept</a>
+  <a href="#s2">2. Article 113</a>
+  <a href="#s3">3. Article 137</a>
+  <a href="#cases">Case Laws</a>
+  <a href="#c37">Gurdev Singh</a>
+  <a href="#c38">Ajaib Singh</a>
+  <a href="#pyqs">PYQs + Answers</a>
+  <a href="#rev">Quick Revision</a>
+</div></nav>
+
+<div class="page" id="top">
+
+
+
+<!-- ================= SECTION 1 : CONCEPT ================= -->
+<section id="s1">
+  <div class="sec-head"><div class="sec-num">1</div><h2 class="sec-title">The Schedule — The Act's Clock-Room, and its Two Residuary Articles</h2></div>
+  <div class="sec-sub">How any suit or application, however novel, still finds its three years</div>
+
+  <div class="defbox">
+    <div class="dt">Core Idea</div>
+    <div class="dd">Section 3 of the Limitation Act bars every suit, appeal or application filed after the <b>prescribed period</b> — and the periods live in the <b>Schedule</b>. The Schedule's articles are specific clocks for known proceedings; but the legislature could not foresee every suit or application. So it installed two <b>residuary</b> clocks at the end of each division: <b>Art. 113</b> — any suit for which no period is provided elsewhere in the Schedule, <b>three years from when the right to sue accrues</b>; and <b>Art. 137</b> — any other application for which no period is provided elsewhere in that division, <b>three years from when the right to apply accrues</b>. Neither is an afterthought: as Gurdev Singh holds, "the statute of limitation was intended to provide a time limit for <b>all suits conceivable</b>" — a suit outside every specific article falls into Art. 113 by necessity, not by grace.</div>
+  </div>
+
+  <div class="card">
+    <h3>1.1 &nbsp;Finding the Right Article — The Routing Rules</h3>
+    <ul class="tick">
+      <li><b>Specific beats residuary.</b> The court first asks whether the suit falls within any specific article; only if none applies does Art. 113 (or, for applications, Art. 137) operate. The residuary article "is applicable to every variety of suits not otherwise provided for" (Gurdev Singh).</li>
+      <li><b>Characterise the relief, not the label.</b> The court's function "on the presentation of plaint is simply to examine whether, on the assumed facts, the plaintiff is within time. The court has to find out when the <b>'right to sue'</b> accrued" — i.e., when the cause of action arose, when the right asserted is infringed or there is a clear and unequivocal threat of infringement (<i>Mt. Bolo v. Mt. Koklan</i>, AIR 1930 PC 270; <i>Gannon Dunkerley</i>, (1969) 3 SCC 607).</li>
+      <li><b>Declaratory suits are suits.</b> A suit by a dismissed employee for a declaration that his dismissal is void and that he continues in service is a suit like any other — it must find its article; it is not immune from limitation merely because it attacks a <i>void</i> order (Gurdev Singh, overruling the P&amp;H line).</li>
+      <li><b>Set-off and counter-claim are suits</b> (s. 3); appeals have their own articles (Arts. 114–118); applications live in the third division (Arts. 119–137).</li>
+      <li><b>The 1908 Act ancestry:</b> Art. 120 of the old Act (six years, residuary for suits) became Art. 113 of the 1963 Act (three years); old Art. 181 (applications under the CPC and allied codes) became Art. 137 — with the added word "<b>other</b>", which (as <i>Athani</i> explains) imports an <i>ejusdem generis</i> reading against the earlier articles of that division.</li>
+    </ul>
+    <div class="note amber"><span class="nt">The two residuary articles in one line each</span><b>Art. 113 (suits):</b> "Any suit for which no period of limitation is provided elsewhere in this Schedule" — 3 years — "when the right to sue accrues." <b>Art. 137 (applications):</b> "Any other application for which no period of limitation is provided elsewhere in this Division" — 3 years — "when the right to apply accrues." Same period, same logic — but Art. 137 carries a jurisdictional limit the DU case material makes famous: it reaches <b>applications to courts</b>, not to tribunals that are not courts (<i>Ajaib Singh</i>).</div>
+  </div>
+
+  <div class="card">
+    <h3>1.2 &nbsp;"Right to Sue Accrues" — the Residuary Starting Point</h3>
+    <ul class="dot">
+      <li>The words "right to sue" ordinarily mean <b>the right to seek relief by means of legal proceedings</b> — generally the right accrues only when the cause of action arises: the right asserted is infringed, or threatened in a clear and unequivocal way (<i>Bolo</i>; <i>Gannon Dunkerley</i>; Gurdev Singh, para 6).</li>
+      <li>For a <b>continuing wrong</b>, each fresh infringement gives a fresh starting point (ss. 22–23 logic); for a suit attacking an order, the right to sue accrues when the order is made (or, where a statutory appeal/revision is pursued in time, when that remedy concludes against the challenger — as in <i>Syed Qamarali</i>, where the dismissal was 22-12-1945, the government rejected the appeal on 9-4-1947, and the suit of 8-12-1952 was within Art. 120's six years).</li>
+      <li>A <b>void order still has de facto operation</b> until quashed — "It bears no brand of invalidity on its forehead" (<i>Smith v. East Elloe RDC</i>, 1956 AC 736, Lord Radcliffe, quoted in Gurdev Singh) — so the aggrieved party must come to court <b>within the residuary period</b>, not whenever he pleases.</li>
+      <li>The Court in Gurdev Singh adopt Prof. Wade's summary: the court will invalidate an order only if "the right remedy is sought by the right person in the right proceedings and circumstances" — a nullity may remain effective in reality; hence even a void dismissal order starts the limitation clock for a declaratory suit.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 1 — Routing a proceeding to its clock</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 350" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="e1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="20" y="24" width="250" height="90" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="2.4"/>
+        <text x="145" y="52" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">PROCEEDING FILED</text>
+        <text x="145" y="74" fill="#6b5410" text-anchor="middle">suit · appeal · application</text>
+        <text x="145" y="94" fill="#6b5410" text-anchor="middle">(s.3: court must test it, pleaded or not)</text>
+        <line x1="275" y1="69" x2="330" y2="69" stroke="#3f1622" stroke-width="2.6" marker-end="url(#e1)"/>
+        <rect x="335" y="24" width="180" height="90" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.4"/>
+        <text x="425" y="50" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">APPEAL?</text>
+        <text x="425" y="72" fill="#2f5d38" text-anchor="middle">Arts. 114–118</text>
+        <text x="425" y="92" fill="#2f5d38" text-anchor="middle">(2nd division)</text>
+        <rect x="335" y="160" width="180" height="90" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.4"/>
+        <text x="425" y="186" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">APPLICATION?</text>
+        <text x="425" y="208" fill="#2f5d38" text-anchor="middle">specific Arts. 119–136,</text>
+        <text x="425" y="228" fill="#2f5d38" text-anchor="middle">else Art. 137 — but ONLY</text>
+        <text x="425" y="246" fill="#2f5d38" text-anchor="middle">if to a COURT (Ajaib Singh)</text>
+        <rect x="560" y="24" width="180" height="90" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2.4"/>
+        <text x="650" y="50" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">SUIT</text>
+        <text x="650" y="72" fill="#a02020" text-anchor="middle">specific article in the</text>
+        <text x="650" y="92" fill="#a02020" text-anchor="middle">Schedule? (Parts I–X)</text>
+        <line x1="515" y1="69" x2="555" y2="69" stroke="#3f1622" stroke-width="2.6" marker-end="url(#e1)"/>
+        <line x1="425" y1="118" x2="425" y2="155" stroke="#3f1622" stroke-width="2.2" marker-end="url(#e1)"/>
+        <line x1="650" y1="116" x2="650" y2="155" stroke="#3f1622" stroke-width="2.2" marker-end="url(#e1)"/>
+        <rect x="560" y="160" width="180" height="90" rx="12" fill="#3f1622"/>
+        <text x="650" y="186" fill="#f5e9cd" font-size="11.5" font-weight="bold" text-anchor="middle">NO ARTICLE FITS</text>
+        <text x="650" y="208" fill="#e8cfa0" text-anchor="middle">→ residuary</text>
+        <text x="650" y="228" fill="#e8cfa0" text-anchor="middle">ARTICLE 113: 3 years</text>
+        <text x="650" y="246" fill="#e8cfa0" text-anchor="middle">from right-to-sue accrual</text>
+        <line x1="745" y1="205" x2="800" y2="205" stroke="#3f1622" stroke-width="2.6" marker-end="url(#e1)"/>
+        <rect x="805" y="160" width="255" height="90" rx="12" fill="#fdf6e3" stroke="#e7cf8f" stroke-width="2.2"/>
+        <text x="932" y="184" fill="#9c6d00" font-size="11" font-weight="bold" text-anchor="middle">THE GURDEV SINGH RULE</text>
+        <text x="932" y="204" fill="#9c6d00" font-size="10" text-anchor="middle">"The statute of limitation was intended to</text>
+        <text x="932" y="220" fill="#9c6d00" font-size="10" text-anchor="middle">provide a time limit for all suits conceivable"</text>
+        <text x="932" y="240" fill="#9c6d00" font-size="10" text-anchor="middle">— even a void dismissal order has de facto life</text>
+      </g>
+      <text x="540" y="310" fill="#5a6572" font-size="11" text-anchor="middle">Anatomy of both residuary clocks: Art. 113 — "any suit … no period provided elsewhere in this Schedule" · Art. 137 — "any OTHER application … in this Division"</text>
+      <text x="540" y="332" fill="#5a6572" font-size="11" text-anchor="middle">"Other" in Art. 137 = ejusdem generis with the earlier articles → CPC-type applications to courts (Athani; Ajaib Singh)</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 1 — Every proceeding is routed to a clock: specific articles first, then the residuary articles; and Art. 137's jurisdictional gate — applications to <b>courts</b>, not to labour courts or tribunals.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ================= SECTION 2 : ARTICLE 113 ================= -->
+<section id="s2">
+  <div class="sec-head"><div class="sec-num">2</div><h2 class="sec-title">Article 113 — Any Suit for Which No Period of Limitation is Provided Elsewhere</h2></div>
+  <div class="sec-sub">The residuary clock for suits: three years from the accrual of the right to sue</div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/schedule_articles_113_137_du_notes_img2.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — the great apothecary cabinet of articles; one glowing bottom drawer receives the scroll that fits nowhere else, beside a three-year pocket watch">
+    <figcaption><b>Hypothetical visual — the last drawer:</b> the Schedule is a cabinet of labelled drawers, one for each known suit. A novel suit — the dismissed employee's declaration that his termination is void — fits no drawer; it drops into the one drawer that never closes: Article 113, with a three-year pocket watch beside it.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>2.1 &nbsp;The Article</h3>
+    <div class="statute"><div class="s-head">Article 113, Schedule, Limitation Act, 1963 — Part X: Suits for which there is no prescribed period</div>
+      <table style="margin:0">
+        <tr><th>Description of suit</th><th style="width:20%">Period of limitation</th><th style="width:34%">Time from which period begins to run</th></tr>
+        <tr><td><b>113.</b> Any suit for which no period of limitation is provided elsewhere in this Schedule.</td><td><b>Three years</b></td><td><b>When the right to sue accrues.</b></td></tr>
+      </table>
+    </div>
+    <ul class="tick">
+      <li><b>Ancestor:</b> Article 120 of the Limitation Act, 1908 — same description, but <b>six years</b>. The 1963 Act deliberately <b>halved the residuary period to three years</b> (Gurdev Singh, para 6: "Under Article 120 it was six years which has been reduced to three years under Article 113"). Suits falling in the old residuary article thus got materially shorter lives.</li>
+      <li><b>Function:</b> "The purpose of the residuary article is to provide for cases which could not be covered by any other provision in the Limitation Act. The residuary article is applicable to <b>every variety of suits not otherwise provided for</b>" (Gurdev Singh).</li>
+      <li><b>Exhaustive division:</b> Part X is the Schedule's catch-all for suits; there is no gap through which a suit can escape limitation — that is the very premise on which Gurdev Singh overruled the Punjab &amp; Haryana High Court's "no limitation for void-dismissal suits" line.</li>
+      <li><b>Contrast within the Schedule:</b> Art. 112 (suits relating to trusts — 3 years where no other article applies, from the death of the trustee etc.) and Art. 91 (declaratory decrees) can compete for a suit's character; the correct one is chosen by the <b>substantive relief</b> sought, not by the plaintiff's nomenclature.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2.2 &nbsp;When does the "Right to Sue" Accrue?</h3>
+    <div class="grid2">
+      <div class="kbox"><div class="kh">The general rule (Bolo · Gannon Dunkerley)</div>
+        The right to sue ordinarily accrues when the cause of action arises — "the right to prosecute to obtain relief by legal means." The suit must be instituted when the right asserted is <b>infringed</b>, or when there is a <b>clear and unequivocal threat</b> to infringe it by the defendant against whom the suit is brought. An abstract fear of future invasion does not start the clock; a present invasion or threat does.</div>
+      <div class="kbox"><div class="kh">The order-attack rule (Gurdev Singh)</div>
+        For a suit attacking an order (dismissal, termination, resumption): the right to sue accrues <b>when the order is passed</b> — or, where the challenger pursues the statutory appeal/revision provided to him, when that pursuit finally fails (<i>Syed Qamarali</i>: dismissal 22-12-1945 → appeal rejected 9-4-1947 → suit 8-12-1952 within six years under Art. 120, 1908 Act). Sitting still after exhausting (or ignoring) the internal remedies lets the residuary clock run out.</div>
+    </div>
+    <ul class="dot" style="margin-top:12px">
+      <li><b>Why a void order starts the clock</b> (Gurdev Singh, paras 8–10, adopting <i>Smith v. East Elloe</i> and Wade): an order, "even if not made in good faith, is still an act capable of legal consequences. It bears no brand of invalidity on its forehead. Unless the necessary proceedings are taken at law to establish the cause of invalidity... it will remain as effective for its ostensible purpose as the most impeccable of orders." The party aggrieved <b>must approach the court within the prescribed period</b>; if the statutory time expires, "the court cannot give the declaration sought for."</li>
+      <li><b>Wade's corollary:</b> a nullity remains effective until the right remedy is sought by the right person in the right proceedings — "the court will invalidate an order only if the right remedy is sought... The order may be hypothetically a nullity, but the court may refuse to quash it because of the plaintiff's lack of standing, because he does not deserve a discretionary remedy, because he has waived his rights, or for some other legal reason."</li>
+      <li><b>Distinction preserved:</b> a declaration merely declares the existing state of affairs — it does not quash to produce a new one; so the employee's plea "my dismissal was void ab initio, so time never began" fails: the order's <b>de facto operation</b> is enough to require diligence.</li>
+    </ul>
+    <div class="note blue"><span class="nt">The exam trap</span>"There is no limitation for a suit for declaration" — <b>wrong</b>, says Gurdev Singh: such suits fall under Art. 113 (three years, from accrual of the right to sue), and s. 3 obliges the court to apply the bar <b>even if limitation is not pleaded</b>. The High Court view (P&amp;H: <i>Ajit Singh</i>, <i>Ram Singh</i>) stood "not correct and stands overruled."</div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 2 — Article 113 in action: the dismissed employee's clock</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 320" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="e2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <line x1="40" y1="130" x2="1040" y2="130" stroke="#3f1622" stroke-width="4"/>
+      <g font-size="10.5">
+        <circle cx="150" cy="130" r="10" fill="#3f1622"/>
+        <text x="150" y="102" fill="#3f1622" font-size="11.5" font-weight="bold" text-anchor="middle">ORDER PASSED</text>
+        <text x="150" y="156" fill="#5a6572" text-anchor="middle">termination / discharge —</text>
+        <text x="150" y="172" fill="#5a6572" text-anchor="middle">void or not, it has de facto</text>
+        <text x="150" y="188" fill="#5a6572" text-anchor="middle">operation from day one</text>
+        <circle cx="430" cy="130" r="10" fill="#c9a227"/>
+        <text x="430" y="102" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">STATUTORY REMEDY PURSUED?</text>
+        <text x="430" y="156" fill="#5a6572" text-anchor="middle">appeal / revision rejected → right to</text>
+        <text x="430" y="172" fill="#5a6572" text-anchor="middle">sue accrues on that rejection</text>
+        <text x="430" y="188" fill="#5a6572" text-anchor="middle">(Syed Qamarali: 9-4-1947)</text>
+        <rect x="560" y="108" width="310" height="44" rx="9" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+        <text x="715" y="127" fill="#6b5410" font-size="11" font-weight="bold" text-anchor="middle">ARTICLE 113: THREE YEARS</text>
+        <text x="715" y="144" fill="#6b5410" font-size="10" text-anchor="middle">from accrual of the right to sue (old Art. 120: six years)</text>
+        <circle cx="940" cy="130" r="10" fill="#a02020"/>
+        <text x="940" y="102" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">CLOCK EXPIRES</text>
+        <text x="940" y="156" fill="#a02020" text-anchor="middle">suit filed later is barred —</text>
+        <text x="940" y="172" fill="#a02020" text-anchor="middle">declaration refused; s.3 applies</text>
+        <text x="940" y="188" fill="#a02020" text-anchor="middle">even unpleaded</text>
+      </g>
+      <g font-size="10.5">
+        <rect x="40" y="228" width="480" height="80" rx="11" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.2"/>
+        <text x="280" y="252" fill="#1e7d32" font-weight="bold" text-anchor="middle">GURDEV SINGH — C.A. 1852/1989 (sub-inspector)</text>
+        <text x="280" y="272" fill="#2f5d38" text-anchor="middle">absence from 29-9-1975 · terminated 27-1-1977 · suit 18-4-1984</text>
+        <text x="280" y="290" fill="#2f5d38" text-anchor="middle">→ seven years later: barred under Art. 113 (3 years)</text>
+        <rect x="560" y="228" width="480" height="80" rx="11" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2.2"/>
+        <text x="800" y="252" fill="#a02020" font-weight="bold" text-anchor="middle">GURDEV SINGH — C.A. 4772/1982 (constable)</text>
+        <text x="800" y="272" fill="#a02020" text-anchor="middle">discharged 15-3-1979 · appeal rejected 15-6-1979 · revision dismissed 30-11-1979</text>
+        <text x="800" y="290" fill="#a02020" text-anchor="middle">· suit 12-2-1985 → five-plus years later: barred</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption>Diagram 2 — The Art. 113 clock on a challenge to dismissal: the order's de facto operation starts time (or its confirmation on statutory appeal does), and the three-year residuary period swallows both Punjab suits in Gurdev Singh.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ================= SECTION 3 : ARTICLE 137 ================= -->
+<section id="s3">
+  <div class="sec-head"><div class="sec-num">3</div><h2 class="sec-title">Article 137 — Limitation Where No Period is Prescribed (Applications)</h2></div>
+  <div class="sec-sub">The residuary clock for applications — and its jurisdictional frontier: courts, not tribunals</div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/schedule_articles_113_137_du_notes_img3.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — a hall divided by a balustrade: petitions glide through the open golden doors of the civil courthouse on one side; a similar petition bounces off the closed door of the tribunal on the other">
+    <figcaption><b>Hypothetical visual — the boundary:</b> on the court side, petition-scrolls escort their three-year hourglasses through open golden doors; across the balustrade, an identical scroll bounces off the closed door of the industrial tribunal, its hourglass dimmed. Article 137 governs applications to courts — the Labour Court is not one.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>3.1 &nbsp;The Article</h3>
+    <div class="statute"><div class="s-head">Article 137, Schedule, Limitation Act, 1963 — Part II of the Third Division: Other Applications</div>
+      <table style="margin:0">
+        <tr><th>Description of application</th><th style="width:20%">Period of limitation</th><th style="width:34%">Time from which period begins to run</th></tr>
+        <tr><td><b>137.</b> Any other application for which no period of limitation is provided elsewhere in this Division.</td><td><b>Three years</b></td><td><b>When the right to apply accrues.</b></td></tr>
+      </table>
+    </div>
+    <ul class="tick">
+      <li><b>Scope:</b> as the DU compendium puts it, Art. 137 is applicable to applications both under the <b>CPC and under special Acts</b> — it is the residuary article for applications, with limitation of <b>three years</b> beginning "when the right to apply accrues." It applies to any petition filed before a <b>civil court</b>.</li>
+      <li><b>The terminus a quo (Mela Ram v. Dharam Chand, AIR 1958 Punj 132, FB):</b> in Art. 137 "the legislature makes provisions not for one definite type of cases, but for an unknown number of cases of all kinds. The provision which it makes is specific as regards the period of limitation but as regards the <i>terminus a quo</i> it is couched in general language and states, quite simply, the fundamental principle that for the purposes of any particular application time is to run from the moment at which the applicant <b>first had the right to make it</b>."</li>
+      <li><b>The word "other" (Athani):</b> Art. 137 of the 1963 Act added "other" to old Art. 181's description — importing an <b>ejusdem generis</b> reading: the residuary article takes its colour from the earlier articles of the third division, which (Arbitration Act and two CrPC exceptions aside) govern applications under the <b>Code of Civil Procedure</b>.</li>
+      <li><b>The frontier (Ajaib Singh):</b> the third division's articles apply to applications "presented to <b>courts</b> governed by the Code of Civil Procedure"; their scope "cannot be held to have been so enlarged as to include within them applications to bodies other than courts, such as a quasi-judicial tribunal, or even an executive authority." An Industrial Tribunal or Labour Court "is in no way governed either by the Code of Civil Procedure or the Code of Criminal Procedure" — Art. 137 does not reach it.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>3.2 &nbsp;The Court/Tribunal Line — the Supporting Authorities</h3>
+    <ul class="dot">
+      <li><b>Bombay Gas Co. v. Gopal Bhiva</b> (AIR 1964 SC 752): the provisions of Art. 181 (now Art. 137) apply only to applications made <b>under the CPC</b>; extending them to applications under s. 33-C(2) of the Industrial Disputes Act was not justified.</li>
+      <li><b>Town Municipal Council, Athani v. Presiding Officer, Labour Court</b> ((1969) 1 SCC 873): the full reasoning — the third division contemplates applications to <b>courts</b>; not even the CrPC amendments "materially altered the scope of the residuary Article"; industrial adjudication lies outside.</li>
+      <li><b>Nityananda M. Joshi v. LIC</b> ((1969) 2 SCC 199): applications under s. 33-C(2) ID Act are not governed by the Limitation Act's third division; only such limitation as the special law itself provides (there, none) applies.</li>
+      <li><b>Sakuru v. Tanaji</b> (AIR 1985 SC 1279): the Limitation Act applies only to proceedings <b>in courts</b>, not to appeals or applications before other bodies — even where those bodies wield specified powers of civil/criminal courts.</li>
+      <li><b>Sha Mulchand &amp; Co. v. Jawar Mills</b> (AIR 1953 SC 98): the Arbitration Act entries in the old third division did not change the residuary article's CPC character — the analogy Athani applies to the CrPC entries.</li>
+    </ul>
+    <div class="note green"><span class="nt">The consequence for delay (Ajaib Singh)</span>Because Art. 137 does not apply to Industrial Disputes Act proceedings, a workman's reference is not stale with age: "the relief under it cannot be denied to the workman <b>merely on the ground of delay</b>. The plea of delay if raised by the employer is required to be <b>proved as a matter of fact by showing the real prejudice</b> and not as a merely hypothetical defence. No reference to the Labour Court can be generally questioned on the ground of delay alone." Where delay is shown, the answer is to <b>mould the relief</b> — decline or cut back wages — not to destroy the claim (<i>Jai Bhagwan</i>: reinstatement without back wages; <i>HMT v. Labour Court</i> (1994) 2 SCC 38: 60% back wages after 14 years' delay).</div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 3 — Article 137's fork: court or not?</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="e3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="20" y="24" width="440" height="70" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="2.4"/>
+        <text x="240" y="52" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">AN APPLICATION WITH NO SPECIFIC ARTICLE</text>
+        <text x="240" y="76" fill="#6b5410" text-anchor="middle">(CPC or special Act) — filed where?</text>
+        <line x1="270" y1="98" x2="270" y2="128" stroke="#3f1622" stroke-width="2.6" marker-end="url(#e3)"/>
+        <rect x="20" y="134" width="440" height="60" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.4"/>
+        <text x="240" y="158" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">TO A CIVIL COURT</text>
+        <text x="240" y="180" fill="#2f5d38" font-size="10.5" text-anchor="middle">→ Art. 137: 3 years from when the right to apply accrues (Mela Ram)</text>
+        <rect x="20" y="214" width="440" height="60" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2.4"/>
+        <text x="240" y="238" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">TO A LABOUR COURT / INDUSTRIAL TRIBUNAL / EXECUTIVE AUTHORITY</text>
+        <text x="240" y="260" fill="#a02020" font-size="10.5" text-anchor="middle">→ Art. 137 does NOT apply (Athani · Sakuru · Ajaib Singh)</text>
+        <rect x="500" y="134" width="560" height="140" rx="14" fill="#3f1622"/>
+        <text x="780" y="162" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">IF NO LIMITATION APPLIES — WHAT OF DELAY? (Ajaib Singh)</text>
+        <text x="780" y="188" fill="#e8cfa0" font-size="11" text-anchor="middle">1. The workman's relief cannot be denied merely on the ground of delay</text>
+        <text x="780" y="210" fill="#e8cfa0" font-size="11" text-anchor="middle">2. Delay must be PLEADED and PROVED by the employer — real prejudice, not hypothesis</text>
+        <text x="780" y="232" fill="#e8cfa0" font-size="11" text-anchor="middle">3. If proved: MOULD the relief — no back wages till demand, or partial back wages</text>
+        <text x="780" y="254" fill="#f0c9c9" font-size="11" text-anchor="middle">(Jai Bhagwan 1984 · HMT 1994: 60% after 14 years' delay · Ajaib Singh: 60% + costs)</text>
+        <text x="780" y="296" fill="#5a6572" font-size="11" text-anchor="middle">Courts cannot prescribe limitation the legislature chose not to prescribe — "courts interpret law and do not make laws"</text>
+      </g>
+    </svg>
+    </div>
+    <figcaption>Diagram 3 — The Article 137 fork: applications to civil courts fall under the three-year residuary article; applications to labour courts and tribunals fall outside it — and in that unmapped territory, delay is a question of fact and prejudice, answered by moulding relief.</figcaption>
+  </figure>
+</section>
+
+
+<div class="divider"><span>THE PRESCRIBED CASES &nbsp;&middot;&nbsp; Part B: Limitation — Topic 4, pp. 208–216 of the DU case material</span></div>
+
+<!-- ================= CASES MAP ================= -->
+<section id="cases">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">The Prescribed Cases — DU Case Material</h2></div>
+  <div class="sec-sub">Full commentary: facts &rarr; issues &rarr; arguments &rarr; decision &rarr; principle evolved, with hypothetical visuals</div>
+
+  <div class="card">
+    <h3>How the Two Cases Divide the Topic</h3>
+    <table>
+      <tr><th style="width:22%">Case</th><th style="width:32%">The question it answers</th><th>One-line answer</th></tr>
+      <tr><td><b>37. State of Punjab v. Gurdev Singh</b><br>(1991) 4 SCC 1 (Jagannatha Shetty, J.)</td><td>Is there really <b>no limitation</b> for a dismissed employee's suit for declaration that he continues in service because his dismissal was void?</td><td><b>There is.</b> The suit falls under <b>Art. 113</b> (residuary; 3 years from accrual of the right to sue); even a void order has de facto operation; P&amp;H "no limitation" line overruled.</td></tr>
+      <tr><td><b>38. Ajaib Singh v. Sirhind Coop. Society</b><br>AIR 1999 SC 1351 (R.P. Sethi, J.)</td><td>Does <b>Art. 137</b> govern a workman's demand for reference to the Labour Court under the Industrial Disputes Act — so that a 7-year delay defeats him?</td><td><b>No.</b> Art. 137 applies only to applications to <b>courts</b>; the Labour Court is a tribunal — delay must be pleaded and proved as prejudice, and met by <b>moulding relief</b>, not by barring the claim.</td></tr>
+    </table>
+    <div class="note amber"><span class="nt">Read them as one arc</span>Both cases ask the same master question — <b>what happens where no specific limitation is prescribed?</b> — and answer it from the two ends of the Schedule: for <b>suits</b>, Gurdev Singh says there is always Art. 113 (no suit is limitation-free); for <b>applications</b> to non-court fora, Ajaib Singh says Art. 137 simply does not follow you there (no limitation at all — only fact-specific delay and moulded relief). Together they map the whole residuary terrain.</div>
+  </div>
+</section>
+
+<div class="divider"><span>CASE 37 &nbsp;&middot;&nbsp; from the DU case material, p. 208</span></div>
+
+<!-- ================= CASE 37 ================= -->
+<article id="c37" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 37 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): ARTICLE 113</div>
+    <h3 class="case-name">State of Punjab v. Gurdev Singh</h3>
+    <div class="case-meta"><b>(1991) 4 SCC 1</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Jagannatha Shetty, J. &nbsp;|&nbsp; State's appeals against the Punjab &amp; Haryana High Court</div>
+    <div class="chips"><span class="chip">Art. 113 residuary</span><span class="chip">3 years · old Art. 120: 6</span><span class="chip">right to sue accrues</span><span class="chip">void order, de facto operation</span><span class="chip">dismissed employee's declaration</span><span class="chip">P&amp;H line overruled</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/schedule_articles_113_137_du_notes_img4.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — the dismissed employee before the government desk, a crumpled stamped termination order, and a grandfather clock gathering dust between the 1977 order and the 1984 suit">
+    <figcaption><b>Hypothetical visual — the order that would not die, and the suit that arrived too late:</b> the termination order, stamped and sealed, keeps casting its shadow — "no brand of invalidity on its forehead" — while years pass at the office desk. When the suit finally comes in 1984, the residuary clock of Article 113 has long since run out.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail — Two Lead Appeals</h3>
+    <ul class="dot">
+      <li><b>C.A. No. 1852 of 1989 (the sub-inspector):</b> the respondent was appointed an <b>ad hoc sub-inspector</b> in the District Food and Supply Department, Punjab. He <b>absented himself from duty with effect from 29-9-1975</b>; his services were <b>terminated on 27-1-1977</b>. On <b>18-4-1984</b> — over seven years later — he instituted a suit for a declaration that the termination order was against the principles of natural justice and his terms of employment, <b>void and inoperative</b>, and that he continued to be in service. The State resisted, pleading (inter alia) that the termination was as per the terms of his ad hoc appointment and that <b>the suit was barred by time</b>. The trial court accepted the limitation plea and dismissed the suit; the <b>Additional District Judge, Jullundur reversed</b> — the termination, though simpliciter, was punitive (unauthorised absence punished without enquiry or opportunity), and "no limitation is prescribed for challenging an illegal order." The High Court agreed in second appeal, following its earlier decisions.</li>
+      <li><b>C.A. No. 4772 of 1982 (the constable):</b> the respondent, a <b>Railway Police Constable</b> appointed 14-11-1977, was <b>discharged on 15-3-1979</b> for misconduct; his departmental <b>appeal was rejected on 15-6-1979</b> (AIG, Railways, Patiala) and his <b>revision dismissed on 30-11-1979</b> (Inspector General of Police, Punjab). On <b>12-2-1985</b> — more than five years after the revision failed — he sued for a declaration that the discharge (and its confirmation) was illegal, ultra vires, unconstitutional, against natural justice, and that he continued in service as constable. The trial court dismissed; the <b>Additional District Judge decreed</b> ("discharge in contravention of mandatory rules has no legal effect; there is no period of limitation"); the High Court dismissed the State's second appeal <b>in limine</b>.</li>
+      <li><b>The High Court's standing position:</b> the P&amp;H High Court had "repeatedly held" that where dismissal/discharge/termination is illegal, unconstitutional or against natural justice, "the employee can approach the court <b>at any time</b>" — the suit is not governed by any provision of the Limitation Act (<i>State of Punjab v. Ajit Singh</i>, (1988) 1 SLR 96 (P&amp;H); <i>State of Punjab v. Ram Singh</i>, (1986) 3 SLR 379 (P&amp;H)).</li>
+    </ul>
+    <div class="timeline">
+      <div class="tl-title">The Gurdev Singh Timeline — C.A. 1852/1989</div>
+      <div class="tl-item"><div class="tl-date">29-9-1975</div><div class="tl-body">Sub-inspector begins unauthorised absence from duty.</div></div>
+      <div class="tl-item"><div class="tl-date">27-1-1977</div><div class="tl-body">Services terminated — the order that, void or not, governs de facto.</div></div>
+      <div class="tl-item"><div class="tl-date">Art. 113 window</div><div class="tl-body">Three years from the accrual of the right to sue — expiring by early 1980.</div></div>
+      <div class="tl-item"><div class="tl-date">18-4-1984</div><div class="tl-body">Suit for declaration + continuance in service — seven years after termination.</div></div>
+      <div class="tl-item"><div class="tl-date">Trial → ADJ → HC</div><div class="tl-body">Trial: barred → ADJ: decreed ("no limitation for illegal order") → HC: agreed, following its line.</div></div>
+      <div class="tl-item"><div class="tl-date">1991</div><div class="tl-body">Supreme Court: Art. 113 applies; both suits barred; P&amp;H view overruled; State's appeals allowed.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Issue</h3>
+    <p class="lead">A "short issue": <b>what limitation governs a dismissed employee's suit for declaration that he continues in service, his dismissal being void and inoperative?</b> Is such a suit outside the Limitation Act altogether, as the High Court held, or does it fall to be measured by the residuary article — and from when?</p>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the employees (respondents)</h4>
+      <ul class="dot">
+        <li><b>No limitation for illegal orders:</b> an order passed in breach of mandatory service rules is a <b>nullity</b> — void ab initio, of no legal existence; nothing needs to be "set aside," so no clock can start; the employee may sue whenever he chooses (the High Court's settled line, and the ADJs' reasoning below).</li>
+        <li>A declaration merely states what the law already is — it creates no new state of affairs — so the suit is not a "remedy" that limitation can bar.</li>
+        <li>Reliance on <i>State of M.P. v. Syed Qamarali</i> ((1967) 1 SLR 228 (SC)): where a dismissal order breaches mandatory provisions, "it had no legal existence and it was not necessary for the respondent to have the order set aside by a court" — the limitation defence "must therefore be rejected."</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for the State of Punjab (appellants)</h4>
+      <ul class="dot">
+        <li><b>No suit is limitation-free:</b> s. 3 commands dismissal of every late suit, even unpleaded; the Schedule's specific articles plus the residuary Art. 113 cover "all suits conceivable."</li>
+        <li>A declaratory suit by a dismissed employee is a civil suit like any other; if no specific article fits, <b>Art. 113</b> does — three years from when the right to sue accrued (the termination or its confirmation on statutory remedy).</li>
+        <li>Even a void order has <b>de facto operation</b> until quashed (<i>Smith v. East Eloe</i>, Lord Radcliffe): the employee cannot sleep for years and then demand a declaration.</li>
+        <li><i>Syed Qamarali</i> is distinguishable: <b>that</b> suit was brought within six years of the appellate rejection — the Court there never held such suits escape limitation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — Jagannatha Shetty, J.</h3>
+    <ul class="tick">
+      <li><b>No suit escapes the Act (para 6):</b> "to say that the suit is not governed by the law of limitation runs afoul of our Limitation Act. The statute of limitation was intended to provide a time limit for <b>all suits conceivable</b>." s. 3 mandates dismissal after the prescribed period, "although limitation has not been set up as a defence"; s. 2(j) defines "period of limitation" (Schedule period) and "prescribed period" (period computed under the Act). The court, on presentation of the plaint, examines whether on the assumed facts the plaintiff is in time — <b>when did the right to sue accrue?</b> If no specific article applies, the residuary article takes over: "The purpose of the residuary article is to provide for cases which could not be covered by any other provision... Article 113 (corresponding to Article 120 of the Act of 1908) is a residuary article... It prescribes a period of <b>three years</b> when the right to sue accrues. Under Article 120 it was six years which has been reduced to three years under Article 113." The words "right to sue" mean the right to seek relief by legal proceedings; the right accrues when the cause of action arises — infringement of the right asserted, or a clear and unequivocal threat to infringe it (<i>Mt. Bolo</i>; <i>Gannon Dunkerley</i>).</li>
+      <li><b>Void ≠ timeless (paras 7–10):</b> "we may assume that the order of dismissal was void, inoperative and ultra vires, and not voidable... But nonetheless the impugned dismissal order has at least a <b>de facto operation</b> unless and until it is declared to be void or nullity by a competent body or court." Lord Radcliffe in <i>Smith v. East Elloe</i>: "An order, even if not made in good faith, is still an act capable of legal consequences. It bears no brand of invalidity on its forehead. Unless the necessary proceedings are taken at law to establish the cause of invalidity and to get it quashed or otherwise upset, it will remain as effective for its ostensible purpose as the most impeccable of orders." Prof. Wade's principles adopted: the court will invalidate only if the right remedy is sought by the right person in the right circumstances; "the party aggrieved by the invalidity of the order <b>has to approach the court for relief of declaration... within the prescribed period of limitation. If the statutory time limit expires the court cannot give the declaration sought for.</b>"</li>
+      <li><b>Syed Qamarali distinguished (paras 11–12):</b> there, the dismissal (22-12-1945) was challenged by appeal, rejected 9-4-1947; the suit (8-12-1952) came within <b>six years of the accrual of the right to sue</b> under Art. 120 — "These observations are of little assistance to the plaintiffs in the present case... Syed Qamarali brought the suit within the period of limitation." The contrary High Court view — that such a declaration "runs afoul" of nothing — stands disapproved.</li>
+      <li><b>The correct rule (para 13):</b> "A suit for declaration that an order of dismissal or termination from service passed against the plaintiff is wrongful, illegal or ultra vires is governed by <b>Article 113</b> of the Limitation Act. The decision to the contrary taken by the Punjab and Haryana High Court in these and other cases (<i>State of Punjab v. Ajit Singh</i> and <i>State of Punjab v. Ram Singh</i>) <b>is not correct and stands overruled</b>." (Approving: <i>Jagdish Prasad Mathur v. United Provinces Government</i>, AIR 1956 All 114; <i>Abdul Vakil v. Secretary of State</i>, AIR 1943 Oudh 368.)</li>
+      <li><b>Result (para 14):</b> appeals allowed; High Court judgments and decrees set aside; <b>the suits dismissed in each case</b>; no order as to costs.</li>
+    </ul>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>No suit is beyond limitation:</b> every suit — including a declaratory suit attacking a void order — finds a clock in the Schedule; if no specific article fits, <b>Art. 113</b> applies: three years from accrual of the right to sue.</li>
+      <li><b>"Right to sue" = cause of action in motion:</b> the accrual is the infringement (or clear, unequivocal threat of infringement) of the right asserted; for orders, the order itself (or its confirmation on the statutory remedy pursued) starts time.</li>
+      <li><b>A void order has de facto operation until unmade:</b> "it bears no brand of invalidity on its forehead" — diligence is the price of the declaration; delay beyond the residuary period is fatal, even if the order is ultra vires.</li>
+      <li><b>Statutory internal remedies can defer the start:</b> where a departmental appeal/revision is pursued, the right to sue crystallises only when that pursuit fails (<i>Syed Qamarali</i> — a six-years-in-time suit).</li>
+      <li><b>High Courts cannot carve limitation-free zones</b> for classes of suits — the residuary article is exhaustive coverage, and s. 3 makes the bar mandatory and suo motu.</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>CASE 38 &nbsp;&middot;&nbsp; from the DU case material, p. 212</span></div>
+
+<!-- ================= CASE 38 ================= -->
+<article id="c38" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 38 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): ARTICLE 137</div>
+    <h3 class="case-name">Ajaib Singh v. Sirhind Co-operative Marketing-cum-Processing Service Society Ltd.</h3>
+    <div class="case-meta"><b>AIR 1999 SC 1351</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; R.P. Sethi, J. &nbsp;|&nbsp; Workman's appeal from the Punjab &amp; Haryana High Court (writ jurisdiction)</div>
+    <div class="chips"><span class="chip">Art. 137 inapplicable</span><span class="chip">Labour Court ≠ court</span><span class="chip">7-year delay</span><span class="chip">delay must be proved</span><span class="chip">moulding relief</span><span class="chip">social justice</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/schedule_articles_113_137_du_notes_img5.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — the workman at the labour court railing, cap in hand; the presiding officer at a plain bench; a golden scale tilted toward the workman; the employer's lawyer pointing at seven torn calendar pages">
+    <figcaption><b>Hypothetical visual — seven years and a tilted scale:</b> the workman, cap in hand, before the plain bench of a tribunal that is not a court; opposite him, the employer's counsel gestures at seven torn calendar pages. The balance tilts toward the workman — the Industrial Disputes Act is social welfare legislation, and Article 137's three-year clock was never installed in this hall.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>The appellant workman's services were <b>terminated on 16-7-1974</b> by the respondent management (a co-operative marketing-cum-processing society), allegedly <b>without compliance with the mandatory provisions of the Industrial Disputes Act, 1947</b>.</li>
+      <li>The management's justification: the workman, a <b>salesman, had embezzled thousands of rupees</b>. It also disputed the Labour Court's jurisdiction over the reference.</li>
+      <li>The workman issued his <b>notice of demand only on 8-12-1981</b> — seven years later. The dispute was <b>referred to the Labour Court by the appropriate Government on 19-3-1982</b>. The jurisdiction objection was <b>not pressed</b> before the Labour Court.</li>
+      <li><b>Award, 16-4-1986:</b> the Labour Court directed <b>reinstatement with full back wages from 8-12-1981</b> (the demand date).</li>
+      <li>The management moved the High Court under Art. 226 — <b>not on merits but on delay</b>: the workman "had slept over the matter for 7 years and confronted the management at a belated stage when it might have been difficult for the employer to prove the guilt of the workman." The <b>Single Judge allowed the writ</b>; the <b>Division Bench affirmed</b>. The workman appealed to the Supreme Court.</li>
+      <li><b>Undisputed before the SC:</b> termination 16-7-1974; demand notice 8-12-1981; <b>no plea of delay was taken by the management before the Labour Court</b> (as the issues framed show — the only defences were jurisdiction and justification); and Art. 137 has <b>not</b> been specifically made applicable to ID Act reference proceedings, nor had this Court ever held it so applicable.</li>
+    </ul>
+    <div class="timeline">
+      <div class="tl-title">The Ajaib Singh Timeline</div>
+      <div class="tl-item"><div class="tl-date">16-7-1974</div><div class="tl-body">Workman (a salesman, allegedly an embezzler) terminated — allegedly in breach of the ID Act's mandatory provisions.</div></div>
+      <div class="tl-item"><div class="tl-date">8-12-1981</div><div class="tl-body">Notice of demand issued — after seven years (the "prolonged delay" on which the writ proceeded).</div></div>
+      <div class="tl-item"><div class="tl-date">19-3-1982</div><div class="tl-body">Appropriate Government refers the dispute to the Labour Court.</div></div>
+      <div class="tl-item"><div class="tl-date">16-4-1986</div><div class="tl-body">Labour Court's award: reinstatement with full back wages from 8-12-1981.</div></div>
+      <div class="tl-item"><div class="tl-date">Writ → DB</div><div class="tl-body">Single Judge quashes the award on pure delay (7 years, no explanation); Division Bench affirms.</div></div>
+      <div class="tl-item"><div class="tl-date">1999</div><div class="tl-body">Supreme Court: Art. 137 inapplicable to ID Act proceedings; delay must be pleaded and proved; award restored — with back wages moulded to 60%.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Is <b>Art. 137</b> of the Limitation Act, 1963 (or its principle) <b>applicable</b> to proceedings under the Industrial Disputes Act — the making of a reference under s. 10 / an application to the Labour Court — so that a workman's demand is time-barred after three years?</li>
+      <li>If not, <b>what role does delay play</b> — can relief be denied to a workman merely on the ground of unexplained delay?</li>
+      <li>Can a court <b>prescribe</b> a period of limitation (as the P&amp;H Full Bench had — five years for raising demands) where the legislature has enacted none?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for Ajaib Singh (workman-appellant)</h4>
+      <ul class="dot">
+        <li>Art. 137 and its principle <b>cannot apply</b> to ID Act references — the special provisions of the Act must be respected, it being <b>social welfare legislation</b> intended to protect workmen; the management's reliance on judgments under other enactments was misconceived.</li>
+        <li>The management <b>never pleaded delay</b> before the Labour Court (issues framed show only jurisdiction and justification); the workman was never given a chance to explain the delay — the High Court's findings were returned <b>without pleadings</b>.</li>
+        <li>The Labour Court, a tribunal, is <b>not a court</b> governed by the CPC — the settled line from <i>Bombay Gas</i>, <i>Athani</i>, <i>Nityananda Joshi</i> and <i>Sakuru</i> keeps the Limitation Act's third division out.</li>
+        <li>"A fight between the workman and the management is not a fight between equals" — an even-handed balancing that frustrates the Act's social object is impermissible.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for the Society (respondent-management)</h4>
+      <ul class="dot">
+        <li>The <b>principle</b> of Art. 137, though not specifically made applicable, should be <b>deemed applicable</b> to references under s. 10 of the ID Act — a demand raised after seven years should not travel (supported by judgments under various enactments).</li>
+        <li>The workman "slept over the matter for 7 years": it would be difficult now for the employer to prove the workman's guilt (of embezzlement) — the High Court was right to quash the award.</li>
+        <li>Support from the P&amp;H Full Bench in <i>Ram Chander Morya v. State of Haryana</i> ((1999) 1 SCT 141): "reasonable time in the cases of labour for demand of reference or dispute by appropriate Government to labour tribunals will be <b>five years</b> after which the Government can refuse to make a reference on the ground of delay and laches if there is no explanation."</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — R.P. Sethi, J.</h3>
+    <ul class="tick">
+      <li><b>The Act's object first (para 5):</b> the ID Act was enacted "to ensure social justice to both the employers and employees and advance the progress of industry by bringing about... harmony"; it improves service conditions, secures industrial peace, and more production (<i>Hindustan Antibiotics v. Workmen</i>, AIR 1967 SC 948); its provisions "have to be interpreted in a manner which advances the object of the legislature"; courts emphasise the "doctrine of social justice, founded on the basic ideal of socio-economic equality enshrined in the Preamble."</li>
+      <li><b>Art. 137 stays outside (paras 7–8):</b> <i>Bombay Gas</i> — Art. 181 (now 137) applies only to applications made under the CPC; <i>Town Municipal Council, Athni</i> — the third division contemplates applications <b>presented to courts</b>; the word "other" imports an <i>ejusdem generis</i> reading; "An Industrial Tribunal or Labour Court... are not courts and they are in no way governed either by the Code of Civil Procedure or the Code of Criminal Procedure. We cannot, therefore, accept the submission... that this article will apply even to applications made to an Industrial Tribunal or a Labour Court." <i>Sakuru v. Tanaji</i> reiterated: the Limitation Act applies only to proceedings <b>in courts</b>, not before quasi-judicial tribunals or executive authorities, "notwithstanding that such bodies may be vested with certain specified powers conferred on courts."</li>
+      <li><b>The consequence (para 10):</b> "the provisions of Article 137... are <b>not applicable to the proceedings under the Act</b> and that the relief under it cannot be denied to the workman <b>merely on the ground of delay</b>. The plea of delay if raised by the employer is required to be <b>proved as a matter of fact by showing the real prejudice</b> and not as a merely hypothetical defence. No reference to the Labour Court can be generally questioned on the ground of delay alone. Even in a case where the delay is shown to be existing, the tribunal, labour court or board... can appropriately <b>mould the relief</b> by declining to grant back wages... till the date he raised the demand... or... direct the payment of part of the back wages instead of full back wages" (as in <i>Jai Bhagwan v. Ambala Central Coop. Bank</i>, AIR 1984 SC 286 — reinstatement without back wages; <i>HMT v. Labour Court</i>, (1994) 2 SCC 38 — 60% back wages after 14 years' delay).</li>
+      <li><b>Courts cannot legislate limitation (para 10, on <i>Ram Chander Morya</i>):</b> the P&amp;H Full Bench's five-year rule "completely ignored the object of the Act and various pronouncements of this Court... and thus is not a good law." — "It is not the function of the court to prescribe the limitation where the legislature in its wisdom had thought it fit not to prescribe any period. The courts admittedly <b>interpret law and do not make laws</b>. Personal views of the Judges... cannot be stretched to authorise them to interpret law in such a manner, which would amount to legislation intentionally left over by the legislature."</li>
+      <li><b>The writ jurisdiction misfired (para 11):</b> no plea of delay before the Labour Court; had it been raised, the workman could have explained; "the findings of fact returned by the High Court in writ proceedings, <b>even without pleadings</b> were, therefore, unjustified"; the HC's "even-handed justice" balancing "totally ignores the aims and object and the social object sought to be achieved by the Act" — "it is true that a fight between the workman and the management is not a just fight between equals," and the Court could not make them equals so as to frustrate the enactment; the HC "substituted its opinion for the opinion of the Labour Court, which was not permissible" under Arts. 226/227.</li>
+      <li><b>Result (para 12):</b> appeal allowed; award <b>upheld with modification</b> — reinstatement with <b>continuity of service</b>; <b>back wages at 60% from 8-12-1981 (the demand date) until the award (16-4-1986), and full back wages thereafter until reinstatement</b>; costs of ₹5,000 payable by the management.</li>
+    </ul>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>Art. 137 is court-bound:</b> the residuary article for applications governs applications to <b>civil courts</b> (CPC and, where the third division reaches them, allied codes) — not to labour courts, industrial tribunals or executive authorities, whatever powers those bodies wield.</li>
+      <li><b>No limitation prescribed → delay is a fact question:</b> where a special welfare statute prescribes no period, relief cannot be denied "merely on the ground of delay"; the employer must <b>plead and prove</b> delay and <b>real prejudice</b>; a reference cannot generally be questioned on delay alone.</li>
+      <li><b>Moulding, not destruction:</b> the answer to proved delay is calibrated relief — denial of back wages up to the demand date, or part back wages (<i>Jai Bhagwan</i>; <i>HMT</i>; applied here: 60% + costs).</li>
+      <li><b>Judicial legislation forbidden:</b> courts cannot prescribe periods of limitation the legislature deliberately omitted; the P&amp;H Full Bench's five-year rule "is not good law."</li>
+      <li><b>Writ courts respect adjudicatory findings:</b> findings returned without pleadings, and balancing that ignores a welfare statute's object, exceed Arts. 226/227 — the unequal contest between workman and management is the very reason the Act exists.</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>THE SUPPORTING CAST &nbsp;&middot;&nbsp; every authority the DU material cites, at a glance</span></div>
+
+<!-- ================= SUPPORTING CASES ================= -->
+<section id="cases2">
+  <div class="sec-head"><div class="sec-num">&#128220;</div><h2 class="sec-title">The Supporting Case Treasury</h2></div>
+  <p class="lead">Both DU cases are built on lines of authority. One line each — so that no citation in the exam hall surprises you.</p>
+
+  <div class="card">
+    <h3>A &middot; The Article 113 line — every suit has a clock (Gurdev Singh's spine)</h3>
+    <table>
+      <tr><th style="width:34%">Case</th><th>Contribution</th></tr>
+      <tr><td><b>Mt. Bolo v. Mt. Koklan</b> AIR 1930 PC 270</td><td>Privy Council anchor for the <b>terminus a quo</b>: the right to sue means the right to seek relief by legal proceedings; time runs from when the right is infringed or threatened.</td></tr>
+      <tr><td><b>Gannon Dunkerley &amp; Co. v. Union of India</b> (1969) 3 SCC 607</td><td>"Right to sue" accrues when the cause of action arises — the accrual rule quoted in Gurdev Singh for Art. 113's third column.</td></tr>
+      <tr><td><b>Smith v. East Elloe RDC</b> [1956] AC 736 (Lord Radcliffe)</td><td>"An order, even if not made in good faith, is still an act capable of legal consequences. It bears no brand of invalidity on its forehead" — the de facto operation of a void order until quashed.</td></tr>
+      <tr><td><b>Prof. W. Wade</b> (Administrative Law, quoted at para 9)</td><td>The court invalidates only if the right remedy is sought by the right person in the right circumstances; a nullity may remain effective in reality — hence limitation applies even to void-order challenges.</td></tr>
+      <tr><td><b>State of M.P. v. Syed Qamarali</b> (1967) 1 SLR 228 (SC)</td><td>Dismissal in breach of mandatory rules "totally invalid... no legal existence"; but the suit was <b>within six years</b> of the appeal's rejection under Art. 120 — precedent for deferring accrual, not for immunity from limitation.</td></tr>
+      <tr><td><b>Jagdish Prasad Mathur v. U.P. Government</b> AIR 1956 All 114 · <b>Abdul Vakil v. Secretary of State</b> AIR 1943 Oudh 368</td><td>The Allahabad/Oudh line — declaratory suits against void dismissals ARE governed by the residuary article — approved and adopted by Gurdev Singh.</td></tr>
+      <tr><td><b>State of Punjab v. Ajit Singh</b> (1988) 1 SLR 96 (P&amp;H) · <b>State of Punjab v. Ram Singh</b> (1986) 3 SLR 379 (P&amp;H)</td><td>The overruled line — "no limitation" for void-dismissal declarations; expressly overruled in para 13 of Gurdev Singh.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>B &middot; The Article 137 line — courts, tribunals and the residuary article (Ajaib Singh's spine)</h3>
+    <table>
+      <tr><th style="width:34%">Case</th><th>Contribution</th></tr>
+      <tr><td><b>Sha Mulchand &amp; Co. v. Jawar Mills</b> AIR 1953 SC 98</td><td>The Arbitration Act entries in the old third division did not alter the residuary article's CPC character — the analogy Athani builds on.</td></tr>
+      <tr><td><b>Bombay Gas Co. v. Gopal Bhiva</b> AIR 1964 SC 752</td><td>Art. 181 (now 137) applies only to applications made <b>under the CPC</b>; its extension to s. 33-C(2) ID Act applications unjustified.</td></tr>
+      <tr><td><b>Town Municipal Council, Athani v. Presiding Officer, Labour Court</b> (1969) 1 SCC 873</td><td>The master reasoning: "other" = ejusdem generis; the third division contemplates applications <b>to courts</b>; labour courts/tribunals lie outside.</td></tr>
+      <tr><td><b>Nityananda M. Joshi v. LIC of India</b> (1969) 2 SCC 199</td><td>s. 33-C(2) applications are outside the Limitation Act's third division; Athani approved.</td></tr>
+      <tr><td><b>Sakuru v. Tanaji</b> AIR 1985 SC 1279</td><td>The Limitation Act applies only to proceedings in <b>courts</b>, not to appeals/applications before tribunals or executive authorities, even with court-like powers.</td></tr>
+      <tr><td><b>Mela Ram v. Dharam Chand</b> AIR 1958 Punj 132 (FB)</td><td>Art. 137's <i>terminus a quo</i>: "for the purposes of any particular application time is to run from the moment at which the applicant first had the right to make it."</td></tr>
+      <tr><td><b>Jai Bhagwan v. Ambala Central Coop. Bank</b> AIR 1984 SC 286</td><td>Delay answered by relief-moulding: reinstatement with continuity, but no back wages for the period of the workman's inaction.</td></tr>
+      <tr><td><b>HMT Ltd. v. Labour Court</b> (1994) 2 SCC 38</td><td>14 years' delay: reinstatement with <b>60% back wages</b> — the template Ajaib Singh applied.</td></tr>
+      <tr><td><b>Ram Chander Morya v. State of Haryana</b> (1999) 1 SCT 141 (P&amp;H FB)</td><td>The five-year "reasonable time" rule for raising industrial demands — <b>disapproved</b>: "courts interpret law and do not make laws."</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>C &middot; Welfare-statute context — the ID Act's interpretive climate</h3>
+    <table>
+      <tr><th style="width:34%">Case</th><th>Contribution</th></tr>
+      <tr><td><b>Hindustan Antibiotics Ltd. v. Workmen</b> AIR 1967 SC 948</td><td>The ID Act's object: better service conditions, industrial peace, more production, national prosperity — the purpose lens Ajaib Singh applies.</td></tr>
+      <tr><td><b>s. 29(2), Limitation Act</b> (doctrinal anchor)</td><td>Where a special law prescribes a period but not the exclusion machinery, ss. 4–24 apply unless expressly excluded — the counterpart rule for special-law limitation; where the special law prescribes <b>no period at all</b>, Ajaib Singh shows the tribunal route leaves Art. 137 behind entirely.</td></tr>
+    </table>
+  </div>
+
+  <div class="note amber"><span class="nt">Memory hook — the treasury in one breath</span><i>Bolo</i> fixes accrual; <i>Gannon</i> repeats it; <i>East Elloe</i> brands no invalidity on any forehead; Wade dares you to seek the right remedy in time; <i>Syed Qamarali</i> chased his appeal and just survived six years; <i>Ajit</i> and <i>Ram Singh</i> promised no clocks and were overruled; <i>Bombay Gas</i> keeps Art. 137 inside the CPC; <i>Athani</i> builds the courts-only wall; <i>Sakuru</i> seals it; <i>Mela Ram</i> starts time at first entitlement; <i>Jai Bhagwan</i> trims the back wages; <i>HMT</i> halves them to 60; <i>Morya</i> invented five years and was told courts do not make laws; <i>Ajaib Singh</i> restores the award at 60% with costs.</div>
+</section>
+
+
+<!-- ================= PYQs ================= -->
+<section id="pyqs">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">Previous Year Questions — DU Semester Exams (with Model Answers)</h2></div>
+  <div class="sec-sub">Every DU PYQ on the residuary articles (Arts. 113 &amp; 137) from the solved-papers compendium</div>
+
+  <!-- PYQ 1 : Q.8(b)/2019 Art 137 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2019</span>
+      <div class="pyq-q">Q. 8(b)/2019 &mdash; Write a detailed note on: Limitation where no period is prescribed.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; ARTICLE 137 (APPLICATIONS WITH NO PRESCRIBED PERIOD)</div>
+      <p><b>The provision.</b> Art. 137, Schedule, Limitation Act, 1963: "Any <b>other application</b> for which no period of limitation is provided elsewhere in this Division" — <b>three years</b> — "when the <b>right to apply</b> accrues." It is the residuary article for applications, corresponding to Art. 181 of the 1908 Act.</p>
+      <p><b>Scope.</b> Art. 137 applies to applications both under the <b>CPC and under special Acts</b> — to any petition filed before a <b>civil court</b>. The terminus a quo is fixed by the Full Bench in <b><i>Mela Ram v. Dharam Chand</i>, AIR 1958 Punj 132</b>: the legislature "makes provisions not for one definite type of cases, but for an unknown number of cases of all kinds... as regards the <i>terminus a quo</i> it is couched in general language and states, quite simply, the fundamental principle that... time is to run from the moment at which the applicant <b>first had the right to make it</b>."</p>
+      <p><b>The jurisdictional limit — when Art. 137 is NOT attracted.</b> Only applications <b>to courts</b> fall under it: it "does not apply to tribunals who are only quasi-judicial authorities and not courts." The line: <i>Bombay Gas</i> (Art. 181 only for CPC applications; not s. 33-C(2) ID Act); <i>Town Municipal Council, Athani</i> ("other" = <i>ejusdem generis</i>; the third division reaches applications to courts, not to "a quasi-judicial tribunal, or even an executive authority"); <i>Nityananda Joshi</i> (LIC s. 33-C(2) outside); <i>Sakuru v. Tanaji</i> (Limitation Act only for court proceedings, despite court-like powers).</p>
+      <p><b>The leading case — <i>Ajaib Singh v. Sirhind Co-operative Marketing Society</i>, AIR 1999 SC 1351.</b> Workman terminated 16-7-1974; demand notice 8-12-1981; reference 19-3-1982; Labour Court's award (16-4-1986): reinstatement with full back wages; the High Court quashed the award on pure seven-year delay. <b>Held (R.P. Sethi J.):</b> (i) Art. 137 is <b>not applicable</b> to ID Act proceedings — the Labour Court is not a court, and the Limitation Act's third division cannot follow applications there; (ii) relief "cannot be denied to the workman merely on the ground of delay" — delay must be <b>pleaded and proved as a matter of fact by showing real prejudice</b>, "not [as] a merely hypothetical defence"; no reference can "generally [be] questioned on the ground of delay alone"; (iii) even proved delay is answered by <b>moulding relief</b> — declining back wages up to the demand date or awarding part back wages (<i>Jai Bhagwan</i>; <i>HMT</i>: 60% after 14 years); here the award was restored with <b>60% back wages</b> from the demand date and ₹5,000 costs; (iv) courts cannot <b>prescribe</b> limitation where the legislature enacted none — the P&amp;H Full Bench's five-year rule in <i>Ram Chander Morya</i> "is not good law": "courts interpret law and do not make laws."</p>
+      <p><b>The suits-side companion (one line, for completeness).</b> For <b>suits</b> with no prescribed period, the residuary is <b>Art. 113</b>: three years from accrual of the right to suit — see Q.6(d)/2017 and <i>Gurdev Singh</i> below.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 2 : Q.6(d)/2017 Art 113 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017</span>
+      <div class="pyq-q">Q. 6(d)/2017 &mdash; Write a short note on: Any suit for which no period of limitation is provided elsewhere.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; ARTICLE 113 (SUITS WITH NO PRESCRIBED PERIOD)</div>
+      <p><b>The provision.</b> Art. 113, Schedule, Limitation Act, 1963: "Any suit for which no period of limitation is provided elsewhere in this Schedule" — <b>three years</b> — "when the <b>right to sue</b> accrues." It replaced Art. 120 of the 1908 Act, which gave <b>six years</b> — the 1963 Act deliberately halved the residuary period.</p>
+      <p><b>Nature.</b> The residuary article exists "to provide for cases which could not be covered by any other provision in the Limitation Act"; it "is applicable to <b>every variety of suits not otherwise provided for</b>" — so that no civil suit is limitation-free. With s. 3 (mandatory, suo motu dismissal), the combined effect is a time limit "for all suits conceivable."</p>
+      <p><b>The starting point.</b> "Right to sue" = the right to seek relief by legal proceedings; it accrues when the cause of action arises — when the right asserted is infringed, or there is a clear and unequivocal threat of infringement (<i>Mt. Bolo v. Mt. Koklan</i>; <i>Gannon Dunkerley</i>).</p>
+      <p><b>The leading case — <i>State of Punjab v. Gurdev Singh</i>, (1991) 4 SCC 1.</b> Two dismissed employees (a sub-inspector: terminated 27-1-1977, suit 18-4-1984; a constable: discharged 15-3-1979, statutory appeal and revision exhausted by 30-11-1979, suit 12-2-1985) sued for declarations that they continued in service, their dismissals being void. The P&amp;H High Court had held such suits carried <b>no limitation</b> at all. The Supreme Court (Jagannatha Shetty J.) <b>overruled</b> that line: such a suit is governed by <b>Art. 113</b> — three years from accrual of the right to sue. Even a void order "bears no brand of invalidity on its forehead" and has de facto operation until quashed (<i>Smith v. East Eloe</i>); the aggrieved party must sue within the prescribed time. <i>Syed Qamarali</i> was distinguishable — that plaintiff had sued within six years of the rejection of his departmental appeal. Result: both suits dismissed as time-barred; <i>Ajit Singh</i> and <i>Ram Singh</i> (P&amp;H) overruled.</p>
+      <p><b>Illustrations.</b> (1) A suit for declaration that a void dismissal does not bind the plaintiff — Art. 113 from the order (or its confirmation on statutory remedy). (2) A novel tort or statutory claim with no specific article — Art. 113 from accrual of the cause of action. (3) A claim that has a specific article (e.g., Art. 19 money lent) never falls to Art. 113 — the specific article always prevails.</p>
+    </div>
+  </div>
+
+  <!-- Expected questions -->
+  <div class="card">
+    <h3>Questions to Expect Next Time</h3>
+    <ul class="tick">
+      <li>&ldquo;A government servant dismissed in 2015 files a suit in 2024 for a declaration that the dismissal was void. Decide.&rdquo; — Art. 113; three years from the order (or exhaustion of the statutory remedy); suit barred; Gurdev Singh.</li>
+      <li>&ldquo;Distinguish Article 113 from Article 137&rdquo; — suits vs applications; "elsewhere in this Schedule" vs "in this Division"; the courts-only limit of Art. 137.</li>
+      <li>&ldquo;Is there any proceeding to which the Limitation Act does not apply at all?&rdquo; — proceedings before tribunals not governed by the CPC (Ajaib Singh; Sakuru); and where a special law has its own complete limitation scheme excluding the Act (s. 29(1)).</li>
+      <li>&ldquo;A workman raises a demand after nine years — is he remediless?&rdquo; — no: Art. 137 inapplicable; delay must be pleaded/proved with real prejudice; relief moulded (Jai Bhagwan; HMT; Ajaib Singh's 60%).</li>
+      <li>&ldquo;Why did the residuary period fall from six years to three?&rdquo; — legislative policy of accelerated repose in the 1963 Act; Gurdev Singh notes the change while applying the new period.</li>
+      <li>&ldquo;Can a High Court prescribe a reasonable time where the statute is silent?&rdquo; — no (Ram Chander Morya disapproved); only the legislature can set limitation.</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ================= REVISION ================= -->
+<section id="rev">
+  <div class="sec-head"><div class="sec-num">&#9203;</div><h2 class="sec-title">Quick Revision Sheet — One Last Look Before the Hall</h2></div>
+  <div class="sec-sub">Articles 113 &amp; 137 and the two cases, compressed</div>
+
+  <div class="grid2">
+    <div class="kbox"><div class="kh">The Two Residuary Articles</div>
+      <b>Art. 113 (suits):</b> "any suit … no period provided elsewhere in this Schedule" — <b>3 years</b> — "when the right to sue accrues" (old Art. 120: 6 years). <b>Art. 137 (applications):</b> "any <b>other</b> application … in this Division" — <b>3 years</b> — "when the right to apply accrues" (old Art. 181). Specific articles always prevail; the residuary catches only what nothing else catches.</div>
+    <div class="kbox"><div class="kh">The Accrual Rules</div>
+      Right to sue applies = right to seek relief by legal proceedings = cause of action in motion: infringement or clear, unequivocal threat (<i>Bolo</i>; <i>Gannon Dunkerley</i>). For order-attacks: from the order — or from the failure of the statutory appeal/revision (<i>Syed Qamarali</i>). For applications: from "the moment at which the applicant <b>first had the right</b> to make it" (<i>Mela Ram</i>, FB).</div>
+    <div class="kbox"><div class="kh">Case 37 — Gurdev Singh (1991, Shetty J.)</div>
+      Sub-inspector: absent 29-9-1975 → terminated 27-1-1977 → suit 18-4-1984 (7 yrs). Constable: discharged 15-3-1979 → appeal/revision failed by 30-11-1979 → suit 12-2-1985 (5+ yrs). P&amp;H HC: "no limitation for void-dismissal suits" (<i>Ajit Singh</i>, <i>Ram Singh</i>). <b>Held:</b> Art. 113 (3 yrs); even a void order has <b>de facto operation</b> — "no brand of invalidity on its forehead" (<i>East Elloe</i>; Wade); s. 3 applies even unpleaded; <i>Syed Qamarali</i> distinguished (suit was in time under Art. 120); P&amp;H line <b>overruled</b>; both suits dismissed.</div>
+    <div class="kbox"><div class="kh">Case 38 — Ajaib Singh (1999, Sethi J.)</div>
+      Workman terminated 16-7-1974 (salesman; alleged embezzlement); demand 8-12-1981; reference 19-3-1982; award 16-4-1986 (reinstatement + full back wages); HC quashed on 7-year delay — <b>no plea of delay was ever taken before the Labour Court</b>. <b>Held:</b> Art. 137 <b>inapplicable</b> to ID Act proceedings (Labour Court ≠ court: <i>Bombay Gas</i>, <i>Athani</i>, <i>Sakuru</i>); delay must be <b>pleaded &amp; proved</b> with real prejudice; remedy = <b>mould relief</b> (back wages cut); <i>Ram Chander Morya</i>'s 5-year rule "not good law" — "courts interpret law and do not make laws"; award restored with <b>60% back wages</b> from demand date + ₹5,000 costs.</div>
+    <div class="kbox"><div class="kh">The Court/Tribunal Wall</div>
+      Art. 137 reaches applications <b>presented to courts</b> (CPC and, via the division, allied codes) — NOT labour courts, industrial tribunals, or executive authorities, "notwithstanding that such bodies may be vested with certain specified powers conferred on courts" (<i>Sakuru</i>). "Other" in Art. 137 = <i>ejusdem generis</i> with the earlier articles (<i>Athani</i>). Where no limitation applies at all: delay = question of fact + prejudice, answered by relief-moulding (<i>Jai Bhagwan</i>: no back wages; <i>HMT</i>: 60% after 14 years).</div>
+    <div class="kbox"><div class="kh">The Doctrinal Soundbites</div>
+      "A time limit for <b>all suits conceivable</b>" (Gurdev Singh). "It bears <b>no brand of invalidity</b> on its forehead" (Lord Radcliffe). The right remedy, by the right person, in the right proceedings, <b>in time</b> (Wade). "Courts <b>interpret law and do not make laws</b>" (Ajaib Singh). "A fight between the workman and the management is <b>not a fight between equals</b>" (Ajaib Singh). Six years (Art. 120) → three years (Art. 113): the residuary was halved.</div>
+  </div>
+
+  <div class="card">
+    <h3>Memory Hooks</h3>
+    <ul class="dot">
+      <li><b>113 = suits, 137 = applications:</b> one-three for suits in court; one-three-seven for petitions — both three years, both from accrual.</li>
+      <li><b>The halving:</b> old 120 gave six; new 113 gives three — "120 half of 240, 113 is roughly half of 120's spirit."</li>
+      <li><b>East Eloe's forehead:</b> no order walks around wearing "VOID" — it operates until a court says otherwise, so sue within three years.</li>
+      <li><b>Gurdev's two employees:</b> the sub-inspector waited seven years; the constable exhausted appeals then waited five — both beaten by Art. 113's three.</li>
+      <li><b>Syed Qamarali's mercy:</b> chase your departmental appeal and the clock waits for its rejection — but only the 1908 Act's six years saved him; three years today.</li>
+      <li><b>Athani's wall:</b> "other" is a wall-word — Art. 137 lives in courts, and the Labour Court is on the other side of the balustrade.</li>
+      <li><b>Ajaib's 60%:</b> delay proved → relief moulded, never the workman destroyed; and Morya's five-year invention was confiscated by the maxim: courts interpret, not legislate.</li>
+      <li><b>Case-number = fix:</b> 37 fixes suits' residuary clock (no suit is free); 38 frees tribunal proceedings from Art. 137 (no clock at all — only facts and moulding).</li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<footer>
+  <h4>Topic 4 (Limitation) &middot; The Schedule: Period of Limitation — Articles 113 &amp; 137, Limitation Act, 1963</h4>
+  <div>Detailed study notes for LL.B. (Hons.) &mdash; Civil Procedure Code &amp; Limitation (DU semester examination preparation), Part B: Limitation.</div>
+  <div style="margin-top:12px;"><b>Sources:</b></div>
+  <ul class="src-list">
+    <li>DU Case Material (LB-302) — State of Punjab v. Gurdev Singh, (1991) 4 SCC 1 (p. 208); Ajaib Singh v. Sirhind Co-operative Marketing-cum-Processing Service Society Ltd., AIR 1999 SC 1351 (p. 212)</li>
+    <li>The Limitation Act, 1963 (Act 36 of 1963) — ss. 2(j), 3, 29; the Schedule (Arts. 113, 137, and ancestors 120 &amp; 181 of the 1908 Act)</li>
+    <li>Industrial Disputes Act, 1947 — ss. 10, 33-C(2) (the Ajaib Singh setting)</li>
+    <li>DU PYQ solved papers — Q.8(b)/2019; Q.6(d)/2017</li>
+    <li>DU Case Material &amp; Statutory Provisions</li>
+  </ul>
+  <div style="margin-top:14px; color:#8d8875; font-size:.8rem;">Case visuals are hypothetical illustrative renderings created for study purposes; diagrams are original schematics of the doctrinal structure. Obvious OCR slips in the sources (e.g., "AIR 1999 SC 1251") have been silently corrected against the law reports. Prepared for personal academic revision.</div>
+</footer>
+
+<button class="top-btn" id="toTop" title="Back to top">&#9650;</button>
+
+<script>
+(function(){
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 600) { btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }, {passive:true});
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a38632612ce23b8d',t:'MTc4ODk1Njk0OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

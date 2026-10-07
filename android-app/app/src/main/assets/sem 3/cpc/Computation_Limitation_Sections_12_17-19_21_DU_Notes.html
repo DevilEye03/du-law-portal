@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 2 (Limitation) &mdash; Computation of Limitation: Sections 12, 17&ndash;19 &amp; 21 &mdash; DU LL.B. Notes</title>
+<style>
+
+
+:root{
+  --navy:#3f1622; --navy2:#5a2131; --navy3:#290d16;
+  --gold:#c9a227; --gold2:#a8861a; --goldsoft:#f3e8c5;
+  --maroon:#7b2d26; --teal:#0f6b6b;
+  --ink:#1f2733; --muted:#5a6572;
+  --paper:#faf7f0; --card:#ffffff; --line:#e3dccb;
+  --cream2:#f6efdd;
+  --ok:#1e7d32; --warn:#b26a00; --bad:#a02020;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; font-size:16px;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.page{max-width:1140px; margin:0 auto; padding:0 20px 80px;}
+
+.hero{position:relative; color:#fff; border-radius:0 0 26px 26px; overflow:hidden; box-shadow:0 10px 40px rgba(41,13,22,.35);}
+.hero img{width:100%; height:340px; object-fit:cover; display:block; filter:saturate(.95);}
+.hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,26,53,.55) 0%, rgba(12,26,53,.82) 70%, rgba(12,26,53,.95) 100%);}
+.hero .inner{position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:34px 42px 28px;}
+.hero .kicker{letter-spacing:.24em; text-transform:uppercase; font-size:.78rem; color:var(--gold); font-weight:700; margin-bottom:8px;}
+.hero h1{font-size:2.28rem; line-height:1.15; text-shadow:0 2px 10px rgba(0,0,0,.45);}
+.hero h1 em{color:var(--gold); font-style:normal;}
+.hero .sub{margin-top:10px; font-size:1.02rem; color:#e8e4d8; max-width:920px;}
+.badges{margin-top:16px; display:flex; flex-wrap:wrap; gap:9px;}
+.badge{background:rgba(201,162,39,.16); border:1px solid rgba(201,162,39,.65); color:#f5e7b8; padding:5px 13px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.03em;}
+
+nav.tocbar{position:sticky; top:0; z-index:60; background:var(--navy3); box-shadow:0 3px 14px rgba(0,0,0,.3); border-bottom:2px solid var(--gold);}
+nav.tocbar .bar{max-width:1140px; margin:0 auto; padding:9px 20px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+nav.tocbar a{color:#d8d3c2; text-decoration:none; font-size:.8rem; padding:5px 11px; border-radius:6px; border:1px solid transparent; white-space:nowrap;}
+nav.tocbar a:hover{background:rgba(201,162,39,.18); color:#ffe9a8; border-color:rgba(201,162,39,.5);}
+nav.tocbar a.home{color:var(--gold); font-weight:700;}
+
+section{margin-top:56px; scroll-margin-top:70px;}
+.sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
+.sec-num{flex:0 0 auto; width:52px; height:52px; border-radius:14px; background:linear-gradient(145deg,var(--navy),var(--navy2)); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.35rem; font-weight:700; box-shadow:0 4px 12px rgba(63,22,34,.35); border:1px solid rgba(201,162,39,.5);}
+h2.sec-title{font-size:1.72rem; color:var(--navy); line-height:1.2;}
+.sec-sub{color:var(--muted); font-size:.95rem; margin-bottom:18px; padding-left:66px;}
+.rule-chip{display:inline-block; background:var(--goldsoft); border:1px solid var(--gold); color:#6b5410; border-radius:999px; padding:2px 12px; font-size:.75rem; font-weight:700; margin-left:10px; vertical-align:middle; letter-spacing:.05em;}
+
+.card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 30px; margin:18px 0; box-shadow:0 3px 14px rgba(60,50,20,.06);}
+.card h3{color:var(--navy); font-size:1.28rem; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--goldsoft);}
+.card h4{color:var(--navy2); font-size:1.05rem; margin:18px 0 8px;}
+.card p{margin:9px 0;}
+.lead{font-size:1.06rem; color:#2a3340;}
+ul.tick, ul.dot, ol.num{margin:10px 0 10px 6px; padding-left:20px;}
+ul.tick li, ul.dot li, ol.num li{margin:7px 0;}
+ul.tick li::marker{content:"✔ "; color:var(--gold2);}
+ul.dot li::marker{color:var(--gold2);}
+b, strong{color:#3a1220;}
+.small{font-size:.86rem; color:var(--muted);}
+.center{text-align:center;}
+
+.statute{background:var(--cream2); border-left:5px solid var(--gold); padding:16px 20px; border-radius:0 12px 12px 0; margin:14px 0; font-size:.97rem;}
+.statute .s-head{font-weight:700; color:var(--maroon); font-family:Georgia,serif; margin-bottom:6px; font-size:1.02rem;}
+.judgement{background:#f4f1e8; border:1px dashed #cbb98a; border-left:5px solid var(--maroon); border-radius:0 12px 12px 0; padding:14px 20px; margin:14px 0; font-style:italic; color:#41403a;}
+.judgement .who{display:block; font-style:normal; font-weight:700; color:var(--maroon); margin-bottom:6px; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase;}
+
+.defbox{background:linear-gradient(135deg,#3f1622,#5a2131); color:#f0ead6; border-radius:16px; padding:24px 30px; margin:20px 0; border:1px solid rgba(201,162,39,.55); box-shadow:0 6px 20px rgba(41,13,22,.28);}
+.defbox .dt{color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; font-weight:700; margin-bottom:8px;}
+.defbox .dd{font-size:1.12rem; font-family:Georgia,serif; line-height:1.55;}
+
+table{width:100%; border-collapse:collapse; margin:16px 0; background:#fff; font-size:.92rem; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(60,50,20,.07);}
+th{background:var(--navy); color:#f5e9cd; text-align:left; padding:11px 14px; font-size:.85rem; letter-spacing:.05em; text-transform:uppercase; vertical-align:top;}
+td{padding:11px 14px; border-bottom:1px solid #eee7d6; vertical-align:top;}
+tr:nth-child(even) td{background:#fbf9f2;}
+tr:last-child td{border-bottom:none;}
+td .tag{display:inline-block; background:#eef3ff; color:var(--navy2); border:1px solid #c9d6f2; border-radius:6px; padding:1px 8px; font-size:.76rem; font-weight:600;}
+
+.note{border-radius:12px; padding:15px 19px; margin:15px 0; font-size:.95rem; border:1px solid;}
+.note.blue{background:#eef3fb; border-color:#b9cdec;}
+.note.amber{background:#fdf6e3; border-color:#e7cf8f;}
+.note.green{background:#edf7ee; border-color:#b5d9b8;}
+.note.red{background:#fbeeee; border-color:#e3b8b8;}
+.note .nt{font-weight:700; text-transform:uppercase; font-size:.72rem; letter-spacing:.12em; display:block; margin-bottom:4px;}
+.note.blue .nt{color:#2b5cad;} .note.amber .nt{color:#9c6d00;} .note.green .nt{color:#1e7d32;} .note.red .nt{color:#a02020;}
+
+figure{margin:22px 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 3px 14px rgba(60,50,20,.07);}
+figure img{width:100%; border-radius:10px; display:block;}
+figcaption{margin-top:12px; font-size:.85rem; color:var(--muted); text-align:center; font-style:italic;}
+.fig-hint{display:inline-block; background:#fdf6e3; border:1px solid #e7cf8f; color:#9c6d00; border-radius:999px; font-size:.7rem; font-weight:700; letter-spacing:.08em; padding:2px 10px; text-transform:uppercase; margin-bottom:10px;}
+.svgwrap{overflow-x:auto; border-radius:10px; background:#fffdf7; border:1px solid #efe8d3;}
+
+.case{background:#fff; border:1px solid var(--line); border-radius:18px; margin:30px 0; box-shadow:0 6px 24px rgba(60,50,20,.09); overflow:hidden;}
+.case-top{display:flex; align-items:center; gap:16px; padding:20px 28px; background:linear-gradient(120deg,var(--navy3),var(--navy2)); color:#fff; border-bottom:3px solid var(--gold);}
+.case-no{flex:0 0 auto; width:58px; height:58px; border-radius:50%; background:rgba(201,162,39,.15); border:2px solid var(--gold); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.25rem; font-weight:700;}
+.case-top .ct{font-size:1.34rem; font-family:Georgia,serif; line-height:1.25;}
+.case-top .cc{color:#e4d9b4; font-size:.86rem; margin-top:5px;}
+.case-body{padding:26px 30px;}
+.case-body h3{font-family:Georgia,serif; color:var(--navy); font-size:1.12rem; margin:22px 0 10px; display:flex; align-items:center; gap:9px;}
+.case-body h3 .ic{flex:0 0 auto; width:26px; height:26px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; font-size:.8rem; color:#fff; font-weight:700;}
+.ic.facts{background:#2b5cad;} .ic.issue{background:#9c6d00;} .ic.arg{background:var(--teal);} .ic.dec{background:var(--ok);} .ic.pri{background:var(--maroon);}
+.arg-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media(max-width:820px){.arg-grid{grid-template-columns:1fr;}}
+.arg-box{border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.arg-p{background:#eef3fb; border:1px solid #c3d4ee;}
+.arg-d{background:#f7eee9; border:1px solid #e0c6b8;}
+.arg-box .ah{font-weight:700; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; display:block;}
+.arg-p .ah{color:#2b5cad;} .arg-d .ah{color:#a04a20;}
+.principle{background:linear-gradient(135deg,#fdf6e3,#f6ecd2); border:1px solid var(--gold); border-radius:12px; padding:18px 22px; margin:16px 0;}
+.principle .ph{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px;}
+.timeline{border-left:3px solid var(--gold); margin:14px 0 8px 8px; padding-left:22px;}
+.timeline .tl-item{margin:12px 0; position:relative;}
+.timeline .tl-item::before{content:""; position:absolute; left:-29.5px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--gold); border:2.5px solid #fff; box-shadow:0 0 0 2px var(--gold);}
+.timeline .tl-date{font-weight:700; color:var(--navy2); font-size:.88rem;}
+.timeline .tl-txt{font-size:.94rem;}
+
+.pyq{background:#fff; border:2px solid var(--navy); border-radius:16px; margin:26px 0; overflow:hidden; box-shadow:0 6px 22px rgba(63,22,34,.12);}
+.pyq-q{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-q .qtag{background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-right:10px; text-transform:uppercase;}
+.pyq-q .qtext{font-family:Georgia,serif; font-size:1.05rem; margin-top:10px; line-height:1.5; color:#f5f1e4;}
+.pyq-a{padding:22px 26px;}
+.anslabel{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.mk{float:right; color:var(--muted); font-size:.8rem; font-style:italic;}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.kbox{background:#fff; border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:0 12px 12px 0; padding:16px 20px; margin:12px 0;}
+.kbox .kh{color:var(--teal); font-weight:700; font-family:Georgia,serif; margin-bottom:6px;}
+.top-btn{position:fixed; right:26px; bottom:26px; width:48px; height:48px; border-radius:50%; background:var(--navy); color:var(--gold); border:2px solid var(--gold); font-size:1.25rem; cursor:pointer; z-index:80; box-shadow:0 6px 18px rgba(0,0,0,.35); opacity:0; pointer-events:none; transition:opacity .25s;}
+.top-btn.show{opacity:1; pointer-events:auto;}
+.divider{height:3px; background:repeating-linear-gradient(90deg,var(--gold) 0 26px, transparent 26px 52px); border:none; margin:34px 0; border-radius:2px; opacity:.6;}
+footer{margin-top:70px; background:var(--navy3); color:#cfc9b4; border-radius:18px 18px 0 0; padding:34px 38px; font-size:.88rem; line-height:1.75;}
+footer h4{color:var(--gold); margin-bottom:10px; font-size:1rem;}
+.src-list li{margin:5px 0;}
+@media print{
+  nav.tocbar,.top-btn{display:none !important;}
+  .card,.case,.pyq,figure{break-inside:avoid; box-shadow:none;}
+  body{background:#fff;}
+  section{margin-top:26px;}
+}
+
+/* ============ supplement: case, pyq & layout components ============ */
+.case{padding-bottom:8px;}
+.case > .card, .case > .timeline, .case > .principle, .case > .arg-grid, .case > figure{margin-left:26px; margin-right:26px;}
+.case-hero{padding:26px 30px 22px; background:linear-gradient(125deg,var(--navy3) 0%,var(--navy2) 68%,#6d2f42 100%); color:#fff; border-bottom:3px solid var(--gold);}
+.case-hero .case-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.12em; border-radius:6px; padding:3px 10px; text-transform:uppercase; margin-bottom:10px;}
+.case-hero .case-name{font-family:Georgia,serif; font-size:1.7rem; line-height:1.2; color:#fff;}
+.case-hero .case-meta{margin-top:8px; color:#e4d9b4; font-size:.9rem; line-height:1.6;}
+.case-hero .chips{margin-top:12px; display:flex; flex-wrap:wrap; gap:7px;}
+.case-hero .chip{background:rgba(201,162,39,.14); border:1px solid rgba(201,162,39,.6); color:#f5e7b8; border-radius:999px; padding:2px 11px; font-size:.72rem; font-weight:600; letter-spacing:.03em;}
+.case-fig{margin:20px 26px;}
+.case-fig img{border:1px solid var(--line);}
+.arg-p h4, .arg-d h4{font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; font-family:"Segoe UI",Arial,sans-serif;}
+.arg-p h4{color:#2b5cad;} .arg-d h4{color:#a04a20;}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+@media(max-width:820px){.split{grid-template-columns:1fr;}}
+.maj{background:#edf7ee; border:1px solid #b5d9b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.min{background:#fbeeee; border:1px solid #e3b8b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.verdict{font-weight:800; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; display:block; border-radius:8px; padding:6px 10px; color:#fff;}
+.maj .verdict{background:var(--ok);} .min .verdict{background:var(--bad);}
+.principle .p-head{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:.05em;}
+.timeline .tl-title{font-weight:800; color:var(--navy); font-size:.95rem; letter-spacing:.05em; text-transform:uppercase; margin-bottom:6px;}
+.timeline .tl-body{font-size:.94rem;}
+.pyq-head{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:10px; text-transform:uppercase;}
+.pyq-head .pyq-q{padding:0; background:none; font-family:Georgia,serif; font-size:1.05rem; line-height:1.5; color:#f5f1e4;}
+.model{padding:22px 26px;}
+.model-badge{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:12px 0;}
+@media(max-width:820px){.grid3{grid-template-columns:1fr;}}
+.mini{background:var(--cream2); border:1px solid var(--goldsoft); border-left:4px solid var(--gold); border-radius:10px; padding:12px 14px; font-size:.88rem;}
+td.case-no{width:46px; height:40px; font-size:.95rem;}
+
+
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .case-box, .sub-section, .case-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  table, table.tbl, .table-wrap table, .tblwrap table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../../images/dossiers/computation_limitation_sections_12_17_19_img1.jpg" loading="lazy" decoding="async" alt="Computation of limitation — abacus, calendar with excluded days, hourglass and statute book">
+  <div class="overlay"></div>
+  <div class="inner">
+    <div class="kicker">DU LL.B. (Hons.) &middot; Civil Procedure Code &amp; Limitation &middot; Part B: Limitation</div>
+    <h1>Topic 2 &mdash; <em>Computation of Limitation</em><br>Sections 12, 17, 18, 19 &amp; 21, Limitation Act, 1963</h1>
+    <div class="sub">Exclusion of time for appeals and copies (s. 12) &middot; fraud &amp; mistake (s. 17) &middot; acknowledgment (s. 18) &middot; payment (s. 19) &middot; substituted &amp; added parties (s. 21) &mdash; with the four prescribed cases (31&ndash;34) from the DU case material: Madan Lal Das, Maharaj Narain, Mahabir Kishore and Sampuran Singh.</div>
+    <div class="badges">
+      <span class="badge">Sections 12 &middot; 17 &middot; 18 &middot; 19 &middot; 21</span>
+      <span class="badge">4 Prescribed Cases in Full Detail</span>
+      <span class="badge">"Time Requisite" &amp; "Acknowledgment" Deep-Dives</span>
+      <span class="badge">7 DU PYQs with Model Answers (2017&ndash;2020)</span>
+      <span class="badge">Flowcharts &amp; Schematics</span>
+      <span class="badge">Hypothetical Case Visuals</span>
+    </div>
+  </div>
+</div>
+
+<nav class="tocbar"><div class="bar">
+  <a class="home" href="#top">&#9878; Computation ss.12&ndash;21</a>
+  <a href="#s1">1. Concept</a>
+  <a href="#s2">2. Section 12</a>
+  <a href="#s3">3. Sections 17&ndash;21</a>
+  <a href="#cases">Case Laws</a>
+  <a href="#c31">Madan Lal Das</a>
+  <a href="#c32">Maharaj Narain</a>
+  <a href="#c33">Mahabir Kishore</a>
+  <a href="#c34">Sampuran Singh</a>
+  <a href="#pyqs">PYQs + Answers</a>
+  <a href="#rev">Quick Revision</a>
+</div></nav>
+
+<div class="page" id="top">
+
+
+<!-- ================= SECTION 1 : CONCEPT ================= -->
+<section id="s1">
+  <div class="sec-head"><div class="sec-num">1</div><h2 class="sec-title">Computation of Limitation — The Concept and the Framework</h2></div>
+  <div class="sec-sub">Part III of the Limitation Act, 1963: the machinery that decides whether a proceeding is "late"</div>
+
+  <div class="defbox">
+    <div class="dt">Core Idea</div>
+    <div class="dd">A limitation problem is never solved by the period alone. The court must compute the <b>prescribed period</b>: begin with the Schedule period for the right Article, fix its <b>starting point</b> (usually when the right to sue accrues), then apply the Act's adjustment machinery — <b>exclusions</b> of specified periods (ss. 12–15), <b>postponement</b> of the start (s. 17), <b>fresh periods</b> on acknowledgment or payment (ss. 18–19), and the <b>deemed institution dates</b> for added parties (s. 21). Only the resulting date can be tested against the bar of <b>s. 3</b>.</div>
+  </div>
+
+  <div class="card">
+    <h3>1.1 &nbsp;The Vocabulary (s. 2) — revision from Topic 1</h3>
+    <ul class="tick">
+      <li><b>"Period of limitation"</b> = the period prescribed for any suit, appeal or application <b>by the Schedule</b>; <b>"prescribed period"</b> = the period <b>computed in accordance with the provisions of this Act</b> — i.e., after the s. 12–24 machinery has done its work.</li>
+      <li>Section 3 dismisses proceedings filed after the <b>prescribed</b> period; ss. 4–24 exist precisely to enlarge or postpone that period in the situations they govern (the bar of s. 3 is "subject to the provisions contained in sections 4 to 24").</li>
+      <li><b>Where each section sits:</b> s. 12 (copies &amp; the first day) · ss. 13–15 (pauper leave, wrong-forum proceedings, injunctions/notices/stays — the <i>exclusion</i> family) · ss. 16–17 (death, fraud &amp; mistake — <i>starting-point</i> rules) · ss. 18–20 (acknowledgment &amp; payment — <i>fresh-period</i> rules) · s. 21 (added parties — <i>deemed institution</i>) · ss. 22–24 (continuing breaches, special damage, calendars).</li>
+      <li><b>Special laws:</b> by s. 29(2) the ss. 4–24 machinery applies to periods prescribed by special or local laws <b>unless expressly excluded</b> — the hinge on which both <i>Madan Lal Das</i> (U.P. Sales Tax Act) and <i>West Coast</i> (Railways Act) turned.</li>
+    </ul>
+    <div class="note amber"><span class="nt">The two moves a court can make</span>Everything in Part III does one of two things: (1) <b>EXCLUDE</b> a slice of time already elapsed (s. 12 — the day of judgment and the time for the copy; ss. 13–15 — time spent elsewhere in good faith), or (2) <b>RESTART / POSTPONE</b> the clock (s. 17 — from discovery of fraud or mistake; ss. 18–19 — a fresh period from acknowledgment or payment; s. 21 — a later deemed date for new parties, or an earlier one under the good-faith proviso). Keep this dichotomy in mind and every section finds its place.</div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 1 — The computation pipeline</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <rect x="15" y="24" width="200" height="74" rx="12" fill="#3f1622"/>
+      <text x="115" y="50" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">STEP 1 · THE ARTICLE</text>
+      <text x="115" y="70" fill="#e8cfa0" font-size="10.5" text-anchor="middle">find period + starting point</text>
+      <text x="115" y="86" fill="#e8cfa0" font-size="10.5" text-anchor="middle">(right to sue accrues...)</text>
+      <rect x="255" y="24" width="200" height="74" rx="12" fill="#5a2131"/>
+      <text x="355" y="50" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">STEP 2 · POSTPONE?</text>
+      <text x="355" y="70" fill="#e8cfa0" font-size="10.5" text-anchor="middle">fraud / mistake (s.17)</text>
+      <text x="355" y="86" fill="#e8cfa0" font-size="10.5" text-anchor="middle">discovery or means of discovery</text>
+      <rect x="495" y="24" width="200" height="74" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+      <text x="595" y="50" fill="#6b5410" font-size="12.5" font-weight="bold" text-anchor="middle">STEP 3 · EXCLUDE?</text>
+      <text x="595" y="70" fill="#6b5410" font-size="10.5" text-anchor="middle">s.12 day + copy time</text>
+      <text x="595" y="86" fill="#6b5410" font-size="10.5" text-anchor="middle">ss.13–15 other bona fide time</text>
+      <rect x="735" y="24" width="200" height="74" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+      <text x="835" y="50" fill="#1e7d32" font-size="12.5" font-weight="bold" text-anchor="middle">STEP 4 · RESTART?</text>
+      <text x="835" y="70" fill="#2f5d38" font-size="10.5" text-anchor="middle">s.18 acknowledgment / s.19 payment</text>
+      <text x="835" y="86" fill="#2f5d38" font-size="10.5" text-anchor="middle">fresh period from that date</text>
+      <rect x="255" y="150" width="440" height="74" rx="12" fill="#eef3fb" stroke="#b9cdec" stroke-width="2"/>
+      <text x="475" y="176" fill="#2b5cad" font-size="12.5" font-weight="bold" text-anchor="middle">STEP 5 · PARTIES ADDED LATE?</text>
+      <text x="475" y="196" fill="#2b5cad" font-size="10.5" text-anchor="middle">s.21(1): deemed instituted when made a party —</text>
+      <text x="475" y="212" fill="#2b5cad" font-size="10.5" text-anchor="middle">unless good-faith mistake → court may date it back (proviso)</text>
+      <rect x="735" y="150" width="200" height="74" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2.2"/>
+      <text x="835" y="176" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">THEN s.3 TESTS</text>
+      <text x="835" y="196" fill="#a02020" font-size="10.5" text-anchor="middle">filed after the prescribed</text>
+      <text x="835" y="212" fill="#a02020" font-size="10.5" text-anchor="middle">period? → dismissed</text>
+      <line x1="217" y1="61" x2="251" y2="61" stroke="#3f1622" stroke-width="2.8" marker-end="url(#c1)"/>
+      <line x1="457" y1="61" x2="491" y2="61" stroke="#3f1622" stroke-width="2.8" marker-end="url(#c1)"/>
+      <line x1="697" y1="61" x2="731" y2="61" stroke="#3f1622" stroke-width="2.8" marker-end="url(#c1)"/>
+      <line x1="835" y1="100" x2="600" y2="146" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c1)"/>
+      <line x1="695" y1="187" x2="731" y2="187" stroke="#a02020" stroke-width="2.8" marker-end="url(#c1)"/>
+      <rect x="15" y="150" width="200" height="170" rx="12" fill="#fdf6e3" stroke="#e7cf8f" stroke-width="1.8"/>
+      <text x="115" y="176" fill="#9c6d00" font-size="12" font-weight="bold" text-anchor="middle">THIS TOPIC'S SECTIONS</text>
+      <text x="115" y="200" fill="#9c6d00" font-size="10.5" text-anchor="middle">s.12 — Step 3 (exclusion)</text>
+      <text x="115" y="220" fill="#9c6d00" font-size="10.5" text-anchor="middle">s.17 — Step 2 (postponement)</text>
+      <text x="115" y="240" fill="#9c6d00" font-size="10.5" text-anchor="middle">ss.18–19 — Step 4 (restart)</text>
+      <text x="115" y="260" fill="#9c6d00" font-size="10.5" text-anchor="middle">s.20 — agency for 18/19</text>
+      <text x="115" y="280" fill="#9c6d00" font-size="10.5" text-anchor="middle">s.21 — Step 5 (parties)</text>
+      <text x="115" y="304" fill="#6b5410" font-size="10" text-anchor="middle">each tested by the prescribed cases</text>
+      <line x1="115" y1="100" x2="115" y2="146" stroke="#9c6d00" stroke-width="2.4" marker-end="url(#c1)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 1 — Computation is a pipeline: Article → postponement → exclusion → restart → party rules → the s. 3 bar. Every case in this topic is a walk through one or more of these steps.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ================= SECTION 2 : SECTION 12 ================= -->
+<section id="s2">
+  <div class="sec-head"><div class="sec-num">2</div><h2 class="sec-title">Section 12 — Exclusion of Time in Legal Proceedings <span class="rule-chip">SUB-TOPIC (a) OF THE SYLLABUS</span></h2></div>
+  <div class="sec-sub">The first day, the judgment day, and the time requisite for copies — the appellate litigant's arithmetic</div>
+
+  <div class="statute">
+    <div class="s-head">Section 12, Limitation Act, 1963 — Exclusion of time in legal proceedings</div>
+    <b>(1)</b> In computing the period of limitation for any suit, appeal or application, <b>the day from which such period is to be reckoned shall be excluded</b>.<br>
+    <b>(2)</b> In computing the period of limitation for an <b>appeal</b> or an <b>application for leave to appeal</b> or for <b>revision</b> or for <b>review of judgment</b>, <b>the day on which the judgment complained of was pronounced</b> and the <b>time requisite for obtaining a copy</b> of the decree, sentence or order appealed from or sought to be revised or reviewed shall be excluded.<br>
+    <b>(3)</b> Where a decree or order is appealed from or sought to be revised or reviewed, or where an application is made for leave to appeal from a decree or order, the time requisite for obtaining a copy of the <b>judgment</b> shall also be excluded. <span class="small">[Words "on which the decree or order is founded" omitted by Act 46 of 1999, w.e.f. 1-7-2002.]</span><br>
+    <b>(4)</b> In computing the period of limitation for an application <b>to set aside an award</b>, the time requisite for obtaining a copy of the award shall be excluded.<br>
+    <i>Explanation.</i> In computing under this section the time requisite for obtaining a copy of a decree or an order, <b>any time taken by the court to prepare the decree or order before an application for a copy thereof is made shall not be excluded</b>.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>2.1 &nbsp;What Each Sub-section Does</h3>
+      <ul class="dot">
+        <li><b>s.12(1) — the dies a quo rule:</b> the starting day itself is never counted (the period runs from the <i>next</i> day). Applies to <b>every</b> suit, appeal and application.</li>
+        <li><b>s.12(2) — the appellate double exclusion:</b> for appeals, leave-to-appeal, revision and review — (i) the day the judgment was pronounced, and (ii) the <b>time requisite for obtaining a copy</b> of the decree/sentence/order, are excluded. The 1963 Act adds revision to the 1908 list (Madan Lal Das).</li>
+        <li><b>s.12(3) — copies of the judgment:</b> even where the decree/order copy is what is formally appealed from, the time for the <b>judgment copy</b> is also excluded.</li>
+        <li><b>s.12(4) — arbitration:</b> for applications to set aside an award (now under ss. 33–34, Arbitration Act, 1996 as applied), time for the <b>award copy</b> is excluded.</li>
+        <li><b>The Explanation — the applicant's trap:</b> the court's own delay in <b>preparing</b> the decree/order <i>before</i> a copy application is made is <b>not</b> excluded — apply for the copy promptly; only the time <i>after</i> the application is protected.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>2.2 &nbsp;Scope &amp; Working Rules (from the PYQ compendium)</h3>
+      <ul class="dot">
+        <li><b>True effect:</b> "the periods referred to in the various sub-sections have to be <b>added to the period of limitation</b> for ascertaining the last date for filing the appeal" — exclusion works by extension backwards.</li>
+        <li><b>Plain reading of s.12:</b> only for computing limitation for (1) an appeal; (2) an application for leave to appeal; (3) revision; (4) review — the day of judgment and the time for the decree copy are excluded (PYQ book).</li>
+        <li><b>Conduct matters:</b> in determining "time requisite", the <b>conduct of the appellant</b> must be considered; no period is requisite which need not have elapsed had the appellant taken reasonable steps for the copy — but see <i>Maharaj Narain</i>: this does not import an obligation of promptitude.</li>
+        <li><b>Holidays &amp; vacations:</b> where judgment is pronounced just before holidays during which the appellant cannot apply for a copy, such holidays should be excluded; where judgment is delivered on the last working day before a vacation in which limitation would expire, the application for copies should be made on the re-opening day and the <b>vacation counts as time requisite</b> and is excluded; time during which the decree is <b>not drawn up</b> is excluded even though the copy application was made before drawing up (PYQ book, on <i>Commissioner of Sales Tax v. Madan Lal Das</i>).</li>
+        <li><b>Special laws:</b> s.12(2) applies to revision under the U.P. Sales Tax Act via <b>s.29(2)</b>, nothing therein expressly excluding it — <i>Madan Lal Das</i>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>2.3 &nbsp;"Time Requisite" — the Two Competing Readings (the exam's favourite duel)</h3>
+    <div class="arg-grid">
+      <div class="arg-p">
+        <h4>The strict view (Lahore: Mathela v. Sher Mohammad, AIR 1935 Lah 682; accepted by the Allahabad HC in Maharaj Narain)</h4>
+        <ul class="dot">
+          <li>"Requisite" is a strong word — <b>"properly required"</b> (J.N. Surty, PC): it throws on the appellant the burden of showing that no part of the delay beyond the prescribed period is due to his fault.</li>
+          <li>Time requisite = the <b>shortest time</b> in which a copy could have been obtained by an appellant acting with reasonable promptitude and diligence — not the time he actually took.</li>
+          <li>Delay caused by the appellant's <b>laches</b> is not deductible (<i>Pramatha Nath Roy v. Lee</i>, 49 IA 307).</li>
+        </ul>
+      </div>
+      <div class="arg-d">
+        <h4>The liberal view (FB Madras: Panjam v. Trimala Reddy, ILR 57 Mad 560 — adopted by the Supreme Court)</h4>
+        <ul class="dot">
+          <li>Time requisite = <b>the time beyond the party's control actually occupied in obtaining the copy which is filed</b> with the memorandum — "not an ideal lesser period which might have been occupied if the application for the copy had been filed on some other date".</li>
+          <li>S.12(2) <b>imposes no obligation to be prompt</b>: the appellant may apply for the copy on the last day of the period and still deduct the time it takes (Hedge, J. in <i>Maharaj Narain</i>).</li>
+          <li>A minimum-time enquiry in every appeal would be "unworkable" — courts cannot go hunting for other copies the litigant may have obtained for other purposes.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note green"><span class="nt">The settled law</span><b>Maharaj Narain</b> (AIR 1968 SC 960) adopts the liberal reading for <i>appeals</i>; <b>Madan Lal Das</b> (AIR 1977 SC 523) extends s.12(2) to <i>revisions</i> under special laws and holds the exclusion available <b>even where the copy is not required to be filed</b> with the application (following <i>J.N. Surty</i>, PC), and even where an earlier copy was <b>lost</b> and a fresh one had to be obtained. Together they make s.12(2) exclusion near-automatic once a copy was genuinely applied for and obtained for the proceeding.</div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 2 — Section 12(2) arithmetic for an appeal</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <line x1="60" y1="140" x2="1020" y2="140" stroke="#3f1622" stroke-width="4"/>
+      <g font-size="10.5">
+        <circle cx="130" cy="140" r="10" fill="#3f1622"/>
+        <text x="130" y="115" fill="#3f1622" font-size="11.5" font-weight="bold" text-anchor="middle">JUDGMENT DAY</text>
+        <text x="130" y="98" fill="#5a6572" text-anchor="middle">(excluded — s.12(2))</text>
+        <rect x="215" y="118" width="230" height="44" rx="9" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+        <text x="330" y="137" fill="#6b5410" font-size="11" font-weight="bold" text-anchor="middle">TIME REQUISITE FOR COPY</text>
+        <text x="330" y="153" fill="#6b5410" font-size="10" text-anchor="middle">(applied → ready → delivered) — EXCLUDED</text>
+        <rect x="510" y="118" width="300" height="44" rx="9" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+        <text x="660" y="137" fill="#1e7d32" font-size="11" font-weight="bold" text-anchor="middle">THE LIMITATION PERIOD RUNS HERE</text>
+        <text x="660" y="153" fill="#2f5d38" font-size="10" text-anchor="middle">count from the day after copy was available</text>
+        <circle cx="930" cy="140" r="10" fill="#a02020"/>
+        <text x="930" y="115" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">LAST DAY</text>
+        <text x="930" y="98" fill="#5a6572" text-anchor="middle">(s.4 may push it to re-opening)</text>
+      </g>
+      <text x="240" y="185" fill="#5a6572" font-size="10.5" text-anchor="middle">day of judgment excluded by statute</text>
+      <text x="480" y="185" fill="#5a6572" font-size="10.5" text-anchor="middle">copy time excluded ( Maharaj Narain: the copy FILED governs)</text>
+      <rect x="120" y="240" width="840" height="98" rx="13" fill="#3f1622"/>
+      <text x="540" y="266" fill="#f5e9cd" font-size="13" font-weight="bold" text-anchor="middle">THE TWO TRAPS — do not forget them in problems</text>
+      <text x="540" y="290" fill="#e8cfa0" font-size="11" text-anchor="middle">TRAP 1 (Explanation): the court's time to PREPARE the decree before you apply for the copy is NOT excluded — apply at once</text>
+      <text x="540" y="312" fill="#e8cfa0" font-size="11" text-anchor="middle">TRAP 2 (revision/award): s.12(2) covers revision too ( Madan Lal Das — even if the copy need not be filed); s.12(4) covers award copies</text>
+      <line x1="540" y1="205" x2="540" y2="236" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c2)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 2 — Appeal arithmetic: strike out the judgment day and the copy time; what remains is compared with the Article's period. Section 4 handles a last day on which the court is closed.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ================= SECTION 3 : SECTIONS 17-21 ================= -->
+<section id="s3">
+  <div class="sec-head"><div class="sec-num">3</div><h2 class="sec-title">Sections 17 to 21 — Fraud &amp; Mistake, Acknowledgment, Payment, Added Parties <span class="rule-chip">SUB-TOPIC (b) OF THE SYLLABUS</span></h2></div>
+  <div class="sec-sub">Four engines that move the clock: postpone, restart, restart, re-date</div>
+
+  <div class="statute">
+    <div class="s-head">Section 17 — Effect of fraud or mistake</div>
+    <b>17(1)</b> Where in any suit/application for which a period of limitation is prescribed — (a) it is based upon the <b>fraud</b> of the defendant/respondent or his agent; or (b) the <b>knowledge of the right or title</b> is concealed by such fraud; or (c) it is for <b>relief from the consequences of a mistake</b>; or (d) a <b>document necessary to establish the right has been fraudulently concealed</b> — the period <b>does not begin to run until the plaintiff/applicant has discovered the fraud or mistake, or could with reasonable diligence have discovered it</b>; for concealed documents, until he first had the means of producing it or compelling its production.<br>
+    <i>Proviso:</i> bonafide purchasers for value without notice of the fraud/mistake/concealment are protected.<br>
+    <b>17(2)</b> Where the judgment-debtor by <b>fraud or force</b> prevents execution of a decree within limitation, the court may, on the creditor's application made <b>within one year</b> of discovery of the fraud or cessation of force, <b>extend the period for execution</b>.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>3.1 &nbsp;Section 17 — Elements (PYQ compendium)</h3>
+      <ul class="dot">
+        <li><b>Object:</b> to keep the right to sue <b>suspended</b> so long as the person is, without his own fault, ignorant of the fraud — "the right of a party defrauded cannot be affected by lapse of time... so long as he remains, without any fault of his own, in ignorance of the fraud".</li>
+        <li><b>Applies to suits and applications — not appeals</b>; it is an enabling, postponing section (fixes the <i>starting point</i>, does not exclude elapsed time).</li>
+        <li><b>Three essentials to invoke:</b> (i) fraud/mistake/concealment exists; (ii) it kept the plaintiff from knowledge of his right; (iii) the extension operates only against the person guilty of (or accessory to) the fraud — not against a bona fide purchaser for value.</li>
+        <li><b>Fraud (s.17 read with s.17, Contract Act):</b> promise without intention to perform; act declared fraudulent by law; suggestion of falsehood; act fitted to deceive; active concealment.</li>
+        <li><b>Mistake of law:</b> in refund-of-tax suits, the mistake "becomes known" when a competent court declares the levy void — <i>Kanhaiya Lal</i>; <i>Mahabir Kishore</i> — "it is seldom that a person can, even with reasonable diligence, discover a mistake of law before a judgment adjudging the validity of the law."</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>3.2 &nbsp;Section 18 — Acknowledgment in Writing</h3>
+      <div class="statute">
+        <b>18(1)</b> Where, <b>before the expiration of the prescribed period</b> for a suit/application in respect of any property or right, an <b>acknowledgment of liability</b> in respect of such property or right has been made <b>in writing signed</b> by the party against whom the right is claimed, or by a person through whom he derives title or liability, <b>a fresh period of limitation is computed from the time the acknowledgment was signed</b>.<br>
+        <b>18(2)</b> Undated writing: oral evidence of the time of signing is allowed; but <b>oral evidence of contents</b> is not (subject to the Evidence Act).<br>
+        <i>Expl.</i> (a) sufficient though it omits the exact nature of the property/right, avers time has not come, is coupled with refusal to pay or with a claim to set-off, or is addressed to a stranger; (b) "signed" = personally or by duly authorised agent; (c) execution applications are not applications "in respect of any property or right".
+      </div>
+      <ul class="dot">
+        <li><b>Six conditions (PYQ book):</b> (1) made <b>before expiry</b> of the prescribed period — a barred debt cannot be revived (<i>Sampuran Singh</i>); (2) by the party liable or one through whom he derives title/liability; (3) <b>in writing</b>; (4) <b>signed</b>; (5) an admission of <b>liability</b> — no promise needed, refusal to pay is no obstacle, but a denial of liability is fatal; (6) may be made <b>to anyone</b>, not only the creditor.</li>
+        <li>Express or implied (<i>Bhagwan v. Madhav</i>, 46 Bom 1000); must <b>distinctly relate to the liability claimed</b> (<i>Gopal Rao v. Harilal</i>, 9 Bom LR 715).</li>
+        <li><b>Conscious liability:</b> the person acknowledging must be conscious of his liability; if the facts constituting liability are admitted, acknowledgment may be inferred (<i>State of Kerala v. T.M. Chacko</i>, (2000) 9 SCC 722).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>3.3 &nbsp;Section 19 — Payment on Account of Debt / Interest on Legacy</h3>
+      <div class="statute">
+        Where <b>payment on account of a debt or of interest on a legacy</b> is made <b>before the expiration of the prescribed period</b> by the person liable or his duly authorised agent, <b>a fresh period of limitation is computed from the time the payment was made</b>: <i>Provided</i> that an <b>acknowledgment of the payment appears in the handwriting of, or in a writing signed by</b>, the person making the payment.<br>
+        <i>Expl.</i> (a) receipt of <b>rent or produce of mortgaged land in mortgagee's possession is deemed payment</b>; (b) "debt" does not include money payable under a decree or order of court.
+      </div>
+      <ul class="dot">
+        <li>Two ingredients: (i) the <b>payment</b>, and (ii) a <b>writing recording it</b> in the payer's hand or signed by him.</li>
+        <li><b>s.18 vs s.19 (PYQ book):</b> not mutually exclusive — a defective s.19 payment can still save limitation as an s.18 acknowledgment if its conditions are met; s.18 covers <b>any property or right</b>, s.19 only debts and legacies; s.18 binds only the acknowledgor, s.19 payment operates against <b>all persons liable</b> for the debt; s.18 writing need not be addressed to the creditor, s.19 payment must be made to the person entitled; s.18 needs only an admission of liability, s.19 needs payment + record (<i>Parasuraman v. Purushottaman &amp; Co.</i>, AIR 1977 Ker 132).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>3.4 &nbsp;Sections 20 &amp; 21 — Agency for 18/19; Added Parties</h3>
+      <div class="statute">
+        <div class="s-head">Section 20 — acknowledgment or payment by another person</div>
+        (1) For persons under disability, "agent duly authorised" includes guardian/committee/manager or their agent. (2) One of several joint contractors/partners/executors/mortgagees is not chargeable by reason only of another's acknowledgment/payment. (3) A Hindu limited owner's acknowledgment binds the <b>reversioner</b>; the manager's acknowledgment binds the whole <b>Hindu undivided family</b>.
+      </div>
+      <div class="statute">
+        <div class="s-head">Section 21 — substituting or adding new plaintiff or defendant</div>
+        <b>21(1)</b> Where after institution of a suit a new plaintiff or defendant is substituted or added, the suit shall, as regards him, be <b>deemed to have been instituted when he was so made a party</b>: <i>Provided</i> the court, satisfied that the omission was due to a <b>mistake made in good faith</b>, may direct that the suit as regards him be deemed instituted on an <b>earlier date</b>.<br>
+        <b>21(2)</b> Does not apply where a party is added/substituted owing to <b>assignment or devolution of interest</b> during the suit, or where a plaintiff is made a defendant (or vice versa).
+      </div>
+      <ul class="dot">
+        <li><b>Object of s.21:</b> to let courts get over technical/procedural bottlenecks and implead necessary parties even after limitation, in the cause of real justice (PYQ book).</li>
+        <li><b>Good-faith proviso:</b> the non-impleading must be a <b>bona fide mistake</b>, proved to the court's satisfaction — the court's satisfaction "breathes life in the suit" (<i>Karuppaswamy v. C. Ramamurthy</i>, AIR 1993 SC 2324; <i>Ram Prasad Dagaduram v. Vijay Kumar</i>, AIR 1967 SC 1178). The proviso is of a piece with s.14 (bona fide wrong forum) and s.17 (fraud/mistake).</li>
+        <li><b>s.21(2) logic:</b> an assignee/legal representative steps into the shoes of the original party — no new limitation question arises; purchaser pendente lite comes on record within the decree's limitation, not from the purchase (<i>K.S. Lokaiah v. M.B. Shivaraya</i>, AIR 2007 NOC 430 (Kant)).</li>
+        <li>s.21 governs <b>addition</b> of parties only, not transposition; and not execution proceedings.</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 3 — The four engines on one clock face</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <line x1="40" y1="150" x2="1040" y2="150" stroke="#3f1622" stroke-width="4"/>
+      <g font-size="10.5">
+        <rect x="40" y="60" width="230" height="60" rx="11" fill="#eef3fb" stroke="#b9cdec" stroke-width="2"/>
+        <text x="155" y="84" fill="#2b5cad" font-size="11.5" font-weight="bold" text-anchor="middle">s.17 · POSTPONE</text>
+        <text x="155" y="103" fill="#2b5cad" text-anchor="middle">clock starts on discovery of</text>
+        <rect x="150" y="132" width="14" height="36" fill="#2b5cad"/>
+        <rect x="300" y="60" width="230" height="60" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+        <text x="415" y="84" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">s.18 · RESTART</text>
+        <text x="415" y="103" fill="#6b5410" text-anchor="middle">fresh period from signed</text>
+        <rect x="410" y="132" width="14" height="36" fill="#a8861a"/>
+        <rect x="560" y="60" width="230" height="60" rx="11" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+        <text x="675" y="84" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">s.19 · RESTART</text>
+        <text x="675" y="103" fill="#2f5d38" text-anchor="middle">fresh period from part</text>
+        <rect x="670" y="132" width="14" height="36" fill="#1e7d32"/>
+        <rect x="820" y="60" width="220" height="60" rx="11" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2"/>
+        <text x="930" y="84" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">s.21 · RE-DATE</text>
+        <text x="930" y="103" fill="#a02020" text-anchor="middle">new party: his own date —</text>
+        <rect x="925" y="132" width="14" height="36" fill="#a02020"/>
+      </g>
+      <text x="155" y="108" fill="#5a6572" font-size="10" text-anchor="middle"></text>
+      <text x="415" y="118" fill="#6b5410" font-size="10" text-anchor="middle">writing of liability (if in time)</text>
+      <text x="675" y="118" fill="#2f5d38" font-size="10" text-anchor="middle">payment + written record</text>
+      <text x="930" y="118" fill="#a02020" font-size="10" text-anchor="middle">or earlier via good faith</text>
+      <text x="155" y="118" fill="#2b5cad" font-size="10" text-anchor="middle">fraud / mistake (MahaBir)</text>
+      <rect x="40" y="210" width="1000" height="72" rx="12" fill="#3f1622"/>
+      <text x="540" y="236" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">THE GOLDEN GATE — ss.18 &amp; 19 open ONLY while limitation is ALIVE</text>
+      <text x="540" y="260" fill="#e8cfa0" font-size="11" text-anchor="middle">"Where, before the expiration of the prescribed period..." — acknowledgment/payment after expiry revives nothing (Sampuran Singh: 1893 mortgage, 60 years died 1953, 1960 acknowledgment ineffective)</text>
+      <line x1="540" y1="170" x2="540" y2="206" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c3)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 3 — s.17 fixes when the clock <i>starts</i>; ss.18–19 give a <i>fresh</i> period — but only if made before expiry; s.21 fixes the suit's birthday for each added party.</figcaption>
+  </figure>
+</section>
+
+
+<!-- ================= CASES MAP ================= -->
+<section id="cases">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">The Prescribed Cases — DU Case Material (Part B: Limitation)</h2></div>
+  <div class="sec-sub">Full commentary: facts &rarr; issues &rarr; arguments &rarr; decision &rarr; principle evolved, with hypothetical visuals</div>
+  <div class="card">
+    <table>
+      <tr><th style="width:12%">No.</th><th style="width:52%">Case</th><th>Theme for DU</th></tr>
+      <tr><td class="case-no">31</td><td><a href="#c31">The Commissioner of Sales Tax, U.P. v. M/s. Madan Lal Das &amp; Sons</a> &mdash; AIR 1977 SC 523</td><td>s.12(2): revision under special law; copy lost &amp; re-obtained; copy not required to be filed</td></tr>
+      <tr><td class="case-no">32</td><td><a href="#c32">State of Uttar Pradesh v. Maharaj Narain</a> &mdash; AIR 1968 SC 960</td><td>s.12(2): "time requisite" — the copy filed governs, not the ideal minimum</td></tr>
+      <tr><td class="case-no">33</td><td><a href="#c33">Mahabir Kishore v. State of Madhya Pradesh</a> &mdash; AIR 1990 SC 313</td><td>s.17(1)(c): mistake of law — clock from knowledge/declaration</td></tr>
+      <tr><td class="case-no">34</td><td><a href="#c34">Sampuran Singh v. Smt. Niranjan Kaur</a> &mdash; AIR 1999 SC 1047</td><td>s.18: acknowledgment after expiry revives nothing; oral mortgage limitation</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="divider"><span>CASE 31 &nbsp;&middot;&nbsp; from the DU case material, p. 159</span></div>
+
+<!-- ================= CASE 31 ================= -->
+<article id="c31" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 31 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): SECTION 12</div>
+    <h3 class="case-name">The Commissioner of Sales Tax, U.P. v. M/s. Madan Lal Das &amp; Sons, Bareilly</h3>
+    <div class="case-meta"><b>AIR 1977 SC 523</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; H.R. Khanna, J. (for the Bench) &nbsp;|&nbsp; Appeal by special leave from the Allahabad High Court</div>
+    <div class="chips"><span class="chip">s.12(2) exclusion</span><span class="chip">s.29(2) special laws</span><span class="chip">revision application</span><span class="chip">lost copy</span><span class="chip">J.N. Surty (PC)</span><span class="chip">U.P. Sales Tax Act</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/computation_limitation_sections_12_17_19_img2.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Madan Lal Das: the sales tax office, the dealer who lost his served copy, and three applications for fresh copies">
+    <figcaption><b>Hypothetical visual — the merchant who lost his copy:</b> the appellate order was served on the dealer in 1965; he lost it; a fresh copy took over two years of office time; the revision followed within days. Could that copy-time be excluded — under a special statute, and for a proceeding that did not even require the copy to be filed?</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li><b>Assessment year 1960-61.</b> The dealer-respondent (Madan Lal Das &amp; Sons, Bareilly) appealed against a Sales Tax Officer's order; the Additional Commissioner (Judicial) Sales Tax disposed of the appeal.</li>
+      <li><b>22-8-1965:</b> the copy of the appellate order was <b>served on the dealer</b> under the Act. He then <b>lost that copy</b>.</li>
+      <li><b>15-6-1966:</b> he applied for <b>another copy</b> of the order. The copy was ready <b>17-8-1967</b> and delivered <b>18-8-1967</b>.</li>
+      <li><b>9-9-1967:</b> he filed a <b>revision under s.10 of the U.P. Sales Tax Act, 1940</b> before the Judge (Revision), Sales Tax.</li>
+      <li><b>The limitation rule:</b> s.10(3-B) prescribed <b>one year from service</b> of the order, with power in the revising authority to entertain within a <b>further six months on proof of sufficient cause</b>.</li>
+      <li><b>The objection:</b> the revenue contended the revision was out of time; the dealer claimed exclusion under <b>s.12(2), Limitation Act, 1963</b> of the time spent obtaining the fresh copy.</li>
+      <li>The Judge (Revision) and the Allahabad High Court (on a referred question under s.11(3) of the Act) accepted the dealer's contention; the Commissioner appealed to the Supreme Court.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Does <b>s.12(2) of the Limitation Act, 1963</b> apply to computing limitation for a <b>revision application under a special law</b> (the U.P. Sales Tax Act) — or does the special law form a "complete code" excluding it?</li>
+      <li>Is the time for obtaining a copy excluded where the <b>copy was not required to be filed</b> along with the revision application?</li>
+      <li>Where a copy had been <b>served and lost</b>, is the time spent obtaining a <b>fresh copy</b> nonetheless "requisite"?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the Commissioner (appellant)</h4>
+      <ul class="dot">
+        <li>The U.P. Sales Tax Act is a <b>complete code</b> prescribing its own limitation for revisions; the Limitation Act's s.12(2) has no room.</li>
+        <li>The rules did not <b>require</b> a copy of the order to be filed with the revision petition — so no time for obtaining it could be "requisite".</li>
+        <li>A copy had already been <b>served</b> on the dealer under the Act; the loss was his own — the fresh copy was a luxury, not a requisite.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for Madan Lal Das (respondent)</h4>
+      <ul class="dot">
+        <li><b>s.29(2), Limitation Act</b>: ss.4–24 apply to special-law periods "in so far as... not expressly excluded" — nothing in the Sales Tax Act expressly excluded s.12(2).</li>
+        <li>Without the copy, the dealer and his adviser <b>could not decide</b> whether to revise and on what grounds — the time was genuinely requisite.</li>
+        <li>The 1963 Act's s.12(2) covers <b>revision</b> expressly (the 1908 Act's did not) — the legislative design supports exclusion.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — H.R. Khanna, J.</h3>
+    <ul class="tick">
+      <li><b>Special law, but s.12(2) applies:</b> the U.P. Sales Tax Act is a special law; by <b>s.29(2)</b> the provisions of s.12(2) apply to its limitation "in so far as and to the extent to which they are not expressly excluded" — and there was <b>no express exclusion</b>. Hence "the provisions of sub-section (2) of Section 12 can be invoked for computing the period of limitation prescribed for filing a revision petition under Section 10".</li>
+      <li><b>Copy need not be filed — still excluded:</b> nothing in s.12(2) limits the exclusion to cases where the copy must accompany the application; it would be "impermissible to read in" such a proviso the legislature never enacted. "It is also plain that without procuring copy of the order... the respondent and his legal adviser would not have been in a position to decide as to whether [the] revision petition should be filed... and if so, what grounds should be taken."</li>
+      <li><b>The authority — <i>J.N. Surty v. T.S. Chetiyar</i> (AIR 1928 PC 103):</b> the Privy Council held s.12(2) (of the 1908 Act) applies <b>even where the rules did not require the copy to be filed</b> with the memorandum of appeal: the section "makes no reference to the Code of Civil Procedure or to any other Act. It does not say why the time is to be excluded, but simply enacts it as a <b>positive direction</b>." The decree "may be complicated... the practitioner may well want to see its form before attacking it"; the Legislature "may not wish him to hurry to make a decision till he has well considered it."</li>
+      <li><b>The precedent-line:</b> FB Lahore (<i>Punjab Co-operative Bank v. Official Liquidators</i>, AIR 1941 Lah 257 — Companies Act appeals); FB Patna (<i>Mt. Lalitkumari v. Mahaprasad N. Singh</i>, AIR 1947 Pat 329 — Letters Patent appeals); SC (<i>Additional Collector of Customs v. Best &amp; Co.</i>, AIR 1966 SC 1713).</li>
+      <li><b>On the lost copy — <i>Maharaj Narain</i> applied a fortiori:</b> there, three copies obtained on different dates, and the SC excluded the time for the copy <b>filed with the memorandum</b> (which took the maximum time), refusing a minimum-time enquiry. "<b>If that be the position of law in a case where there was no allegation of the loss of any copy, a fortiori</b>... where the copy served upon a party is <b>lost</b> and there is no alternative except to apply for a fresh copy... the time spent in obtaining that copy would necessarily have to be excluded under Section 12(2)."</li>
+      <li><b>Result:</b> the High Court correctly answered the referred question for the dealer — time for the fresh copy excluded; revision within time.</li>
+    </ul>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-title">Timeline of the lost copy</div>
+    <div class="tl-item"><div class="tl-date">A.Y. 1960-61</div><div class="tl-body">Sales tax assessment; dealer's appeal disposed of by the Additional Commissioner (Judicial).</div></div>
+    <div class="tl-item"><div class="tl-date">22-8-1965</div><div class="tl-body"><b>Copy served</b> on the dealer under the Act — limitation (1 year + 6 months) begins from service (s.10(3-B)).</div></div>
+    <div class="tl-item"><div class="tl-date">1965–66</div><div class="tl-body">Dealer <b>loses the served copy</b>.</div></div>
+    <div class="tl-item"><div class="tl-date">15-6-1966</div><div class="tl-body"><b>Application for a fresh copy</b> — the protected period starts.</div></div>
+    <div class="tl-item"><div class="tl-date">17/18-8-1967</div><div class="tl-body">Copy <b>ready and delivered</b> — excluded time ends.</div></div>
+    <div class="tl-item"><div class="tl-date">9-9-1967</div><div class="tl-body"><b>Revision filed</b> — within time once the copy-period is excluded (s.12(2) via s.29(2)).</div></div>
+    <div class="tl-item"><div class="tl-date">1977</div><div class="tl-body"><b>SC affirms</b> — special laws take the Limitation Act's computation machinery unless they expressly exclude it.</div></div>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>s.29(2) gateway:</b> a special law's limitation period is computed with the full ss.4–24 machinery (including s.12(2)) <b>unless expressly excluded</b> — "complete code" arguments fail in the absence of express exclusion.</li>
+      <li><b>Exclusion does not depend on filing requirements:</b> the time for obtaining a copy is excluded even if the copy need not accompany the application — s.12(2) is "a positive direction" (<i>J.N. Surty</i>).</li>
+      <li><b>Lost copies:</b> where the served copy is lost, the time for obtaining a fresh copy is necessarily requisite and excluded (<i>a fortiori</i> from <i>Maharaj Narain</i>).</li>
+      <li>The 1963 Act extends s.12(2) to <b>revisions</b> expressly — a deliberate widening of the 1908 position.</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>CASE 32 &nbsp;&middot;&nbsp; from the DU case material, p. 163</span></div>
+
+<!-- ================= CASE 32 ================= -->
+<article id="c32" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 32 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): SECTION 12</div>
+    <h3 class="case-name">State of Uttar Pradesh v. Maharaj Narain</h3>
+    <div class="case-meta"><b>AIR 1968 SC 960</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Hedge, J. &nbsp;|&nbsp; Appeal by certificate from the Allahabad High Court &nbsp;|&nbsp; s.12(2), Indian Limitation Act, 1908 (Item 157)</div>
+    <div class="chips"><span class="chip">"time requisite"</span><span class="chip">three copies</span><span class="chip">no duty of promptitude</span><span class="chip">Panjam FB</span><span class="chip">Mathela disapproved</span><span class="chip">criminal appeal from acquittal</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/computation_limitation_sections_12_17_19_img3.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Maharaj Narain: the government law officer with one certified copy, three copies of the same order on the table, and the calendar of 1962-63">
+    <figcaption><b>Hypothetical visual — one order, three copies:</b> the State's criminal appeal from acquittal arrived with the copy that took the longest — applied for on 15-11-1962, ready on 3-1-1963. But two other copies of the very same order had been ready by 20-12-1962. Which copy's story counts for limitation?</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>The respondents were tried for various offences before the <b>Assistant Sessions Judge, Farrukhabad</b>, who <b>acquitted them on 10-11-1962</b>.</li>
+      <li>The State appealed to the Allahabad High Court. <b>Item 157, First Schedule (Act 1908)</b>: an appeal under CrPC 1898 from an order of acquittal lies within <b>three months from the date of the order</b>; <b>s.12(2)</b> excluded the day of judgment and the time requisite for a copy.</li>
+      <li><b>The memorandum of appeal was filed on 29-3-1963.</b> The copy of the order <b>filed with the memorandum</b> showed: <b>applied for 15-11-1962, ready 3-1-1963</b> — on that footing the appeal was <b>within time</b>.</li>
+      <li><b>But the State had obtained two more copies:</b> one applied for on <b>3-12-1962</b>, ready <b>20-12-1962</b>; yet another applied for on <b>21-12-1962</b>, ready <b>the same day</b>. Computing the three months from the earliest available copy (20/21-12-1962), the appeal (29-3-1963) was <b>out of time</b>.</li>
+      <li><b>Allahabad High Court:</b> "requisite" means <b>"properly required"</b> — limitation must be computed on the basis of the copies made available in December 1962; appeal <b>dismissed as time-barred</b>. The State appealed by certificate — purely to settle the question of law.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issue</h3>
+    <div class="judgement"><span class="who">The sole question (Hedge, J.)</span>"The only question that arises for decision is as to the <b>true scope of the expression 'time requisite for obtaining a copy of the decree, sentence or order appealed from'</b>" in s.12(2) — do other, earlier copies obtained by the appellant for other purposes curtail the exclusion?"</div>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the State (appellant)</h4>
+      <ul class="dot">
+        <li>The copy <b>filed with the memorandum</b> governs: its timeline showed the appeal within time.</li>
+        <li>S.12(2) imposes <b>no obligation of promptitude</b> — the appellant could have waited till the period was nearly exhausted and still deducted the copy time (a position not disputed by the other side).</li>
+        <li>Copies obtained <b>for other purposes</b> are irrelevant — the court has "nothing to do" with them.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for the respondents</h4>
+      <ul class="dot">
+        <li>"Requisite" = "properly required" (<i>J.N. Surty</i>, PC) — once copies were available in December 1962, no further time was <b>properly required</b>; the delay after 20-12-1962 was the State's own laches.</li>
+        <li>The Lahore rule (<i>Mathela</i>): time requisite is the <b>shortest time</b> in which a diligent appellant could have got a copy — not the time actually taken for the copy he chose to file.</li>
+        <li>Limitation should not be enlarged by the litigant's choice of the slower copy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — Hedge, J.</h3>
+    <ul class="tick">
+      <li><b>No promptitude obligation:</b> it was "not disputed that it was not necessary for the appellant to apply for a copy... immediately after the order was pronounced. The appellant could have, if it chose to take the risk, waited till the ninety days period allowed to it by the statute was almost exhausted" — and still deducted the copy time. Hence <b>"time requisite" cannot mean the time absolutely necessary</b>, nor the <b>minimum</b> time in which a copy could have been obtained.</li>
+      <li><b>The plain rule:</b> s.12(2) "permits the appellant to deduct from the time taken for filing the appeal, <b>the time required for obtaining the copy of the order appealed from</b> and not any lesser period which might have been occupied if the application for the copy had been filed at some other date... There is no justification for restricting the scope of that provision."</li>
+      <li><b>The workability test:</b> if appellate courts had to find the minimum time in every case, they would have to enquire into "other copies which he might have got and <b>used for other purposes with which the court has nothing to do</b>" — "a great deal of confusion" would follow; the rule would be "unworkable".</li>
+      <li><b>Mathela v. Sher Mohammad disapproved:</b> the Lahore reading — reasonable promptitude + shortest time — "does not lay down the law correctly"; no such requirements can be "spelt out" from s.12(2)'s language.</li>
+      <li><b>The PC cases confined to their facts:</b> <i>Pramatha Nath Roy v. Lee</i> (49 IA 307) — the appellant there was <b>guilty of laches</b>; time lost by laches is not deductible — the case "does not bear on the question". <i>J.N. Surty</i> (55 IA 161) — "requisite is a strong word... 'properly required'... throws upon the pleader... the necessity of showing that no part of the delay... is due to his fault" — means only that <b>delay due to the pleader's default cannot be deducted</b>; "there can be no question of any default if the steps taken by the appellant are in accordance with law".</li>
+      <li><b>The anchor — FB Madras, <i>Panjam v. Trimala Reddy</i></b> (ILR 57 Mad. 560): "the words 'time requisite for obtaining a copy of the decree' mean <b>the time beyond the party's control occupied in obtaining the copy which is filed with the memorandum of appeal</b> and not an ideal lesser period which might have been occupied if the application for the copy had been filed on some other date" — followed in Travancore-Cochin (<i>Kunju Kesavan</i>, AIR 1953 TC 552), Allahabad (<i>B. Govind Raj Sewak Singh</i>, AIR 1950 All 486) and MP (<i>K.U. Singh</i>, AIR 1960 MP 140).</li>
+      <li><b>Result:</b> the High Court's decision "does not lay down the law correctly" — but the State did not press the appeal on merits (it had come only to settle the law); <b>appeal dismissed</b>, the rule of law vindicated.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 4 — The three copies and the winning computation</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="20" y="30" width="320" height="120" rx="12" fill="#eef3fb" stroke="#b9cdec" stroke-width="2"/>
+        <text x="180" y="54" fill="#2b5cad" font-size="12" font-weight="bold" text-anchor="middle">COPY No. 1 (filed with appeal)</text>
+        <text x="180" y="76" fill="#2b5cad" text-anchor="middle">applied 15-11-1962 → ready 3-1-1963</text>
+        <text x="180" y="96" fill="#2b5cad" text-anchor="middle">time taken: ~49 days</text>
+        <text x="180" y="120" fill="#1e7d32" font-size="11" font-weight="bold" text-anchor="middle">THIS copy governs — the time is</text>
+        <text x="180" y="138" fill="#1e7d32" font-size="11" font-weight="bold" text-anchor="middle">excluded (Panjam FB rule)</text>
+        <rect x="380" y="30" width="320" height="120" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+        <text x="540" y="54" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">COPY No. 2 (other purpose)</text>
+        <text x="540" y="76" fill="#6b5410" text-anchor="middle">applied 3-12-1962 → ready 20-12-1962</text>
+        <text x="540" y="96" fill="#6b5410" text-anchor="middle">time taken: 17 days</text>
+        <text x="540" y="120" fill="#9c6d00" font-size="11" text-anchor="middle">irrelevant — "used for other purposes</text>
+        <text x="540" y="138" fill="#9c6d00" font-size="11" text-anchor="middle">with which the court has nothing to do"</text>
+        <rect x="740" y="30" width="320" height="120" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+        <text x="900" y="54" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">COPY No. 3 (same-day)</text>
+        <text x="900" y="76" fill="#6b5410" text-anchor="middle">applied 21-12-1962 → ready 21-12-1962</text>
+        <text x="900" y="96" fill="#6b5410" text-anchor="middle">time taken: 0 days</text>
+        <text x="900" y="120" fill="#9c6d00" font-size="11" text-anchor="middle">the "ideal minimum" the HC relied on —</text>
+        <text x="900" y="138" fill="#9c6d00" font-size="11" text-anchor="middle">rejected: no minimum-time enquiry</text>
+      </g>
+      <rect x="20" y="200" width="660" height="120" rx="13" fill="#3f1622"/>
+      <text x="350" y="226" fill="#f5e9cd" font-size="13" font-weight="bold" text-anchor="middle">THE COMPUTATION THAT PREVAILED</text>
+      <text x="350" y="250" fill="#e8cfa0" font-size="11" text-anchor="middle">order 10-11-1962 (day excluded) → copy No.1 ready 3-1-1963 (time excluded)</text>
+      <text x="350" y="270" fill="#e8cfa0" font-size="11" text-anchor="middle">3 months (to ~10-2-1963) — but with s.4 and copy exclusion the appeal of 29-3-1963</text>
+      <text x="350" y="290" fill="#e8cfa0" font-size="11" text-anchor="middle">counted from 3-1-1963 → within time on the filed copy's reckoning</text>
+      <text x="350" y="310" fill="#f0c9c9" font-size="11" text-anchor="middle">HC's December-copy reckoning: out of time → SC: that enquiry was impermissible</text>
+      <line x1="180" y1="152" x2="300" y2="196" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c5)"/>
+      <rect x="710" y="222" width="350" height="86" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+      <text x="885" y="248" fill="#1e7d32" font-size="12" font-weight="bold" text-anchor="middle">WHAT SURVIVES OF THE STRICT VIEW</text>
+      <text x="885" y="270" fill="#2f5d38" font-size="10.5" text-anchor="middle">laches still fatal (Pramatha Nath Roy)</text>
+      <text x="885" y="288" fill="#2f5d38" font-size="10.5" text-anchor="middle">pleader's own default not deductible (Surty)</text>
+      <text x="885" y="304" fill="#2f5d38" font-size="10.5" text-anchor="middle">— but no general duty of promptitude</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 4 — Maharaj Narain's arithmetic: the copy actually filed (No. 1) supplies the exclusion; earlier copies (Nos. 2–3) are beyond the court's enquiry.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>"Time requisite" = the time actually taken</b>, beyond the party's control, to obtain <b>the copy filed with the memorandum of appeal</b> — not the minimum or ideal time (<i>Panjam</i> FB, affirmed).</li>
+      <li><b>No obligation of promptitude</b> in applying for a copy: a litigant may apply on the last day of limitation and still exclude the copy time.</li>
+      <li>Copies obtained <b>for other purposes</b> cannot curtail the exclusion; a minimum-time enquiry in every appeal would be unworkable.</li>
+      <li>What the strict line still polices: <b>laches</b> and the <b>pleader's own default</b> — delay genuinely attributable to the appellant's fault is not deductible.</li>
+      <li>Read with <i>Madan Lal Das</i>: the exclusion extends to revisions under special laws, and to fresh copies after loss — s.12(2) is a beneficent, generously construed provision.</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>CASE 33 &nbsp;&middot;&nbsp; from the DU case material, p. 166</span></div>
+
+<!-- ================= CASE 33 ================= -->
+<article id="c33" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 33 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): SECTIONS 17–19, 21</div>
+    <h3 class="case-name">Mahabir Kishore v. State of Madhya Pradesh</h3>
+    <div class="case-meta"><b>AIR 1990 SC 313</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; K.N. Saikia, J. &nbsp;|&nbsp; Plaintiffs' appeal by special leave from the M.P. High Court</div>
+    <div class="chips"><span class="chip">s.17(1)(c) mistake</span><span class="chip">mistake of law</span><span class="chip">s.72 Contract Act</span><span class="chip">unjust enrichment</span><span class="chip">Art. 113</span><span class="chip">seven days late?</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/computation_limitation_sections_12_17_19_img4.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Mahabir Kishore: the liquor auction contract, the 7.5% cess ledger entry, the undelivered internal letter, and the refund claim">
+    <figcaption><b>Hypothetical visual — the cess that wasn't lawful:</b> the liquor contractors pay 7½% over the auction money as "mahua and fuel cess" (₹54,606 in all) while the courts have already declared the levy illegal; an internal government letter of 17-10-1961 stops the charge — but is never sent to the contractors. When does limitation for the refund suit begin: with the payments, the letter, or the contractors' discovery of the truth?</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>The appellant firm (<b>Rai Saheb Nandkishore Rai Saheb Jugalkishore</b>) was allotted contracts for <b>manufacture and sale of liquor</b> — calendar year 1959 (for ₹2,56,200) and 1-1-1960 to 31-3-1961 (for ₹4,71,900) — by the Government of M.P., which also charged <b>7½% over the auction money as "mahua and fuel cess"</b>.</li>
+      <li>Writ petitions challenging the charge were pending; the government announced it would continue collecting pending its decision, which would bind the contractors. The firm paid a total extra <b>₹54,606</b>.</li>
+      <li><b>24-4-1959 (reported 1960 MPLJ 39):</b> M.P. High Court in <i>Surajdin v. State of M.P.</i> declared the 7½% collection <b>illegal</b> — yet the government continued to charge it.</li>
+      <li><b>31-8-1961 (reported 1962 MPLJ 130):</b> the High Court again held the charge illegal (<i>N.K. Doongaji v. Collector, Surguja</i>). The appellants say they learnt of this <b>only in or about September 1962</b>.</li>
+      <li><b>17-10-1961:</b> the government <b>internally</b> decided not to charge the extra 7½% any more — <b>letter Ex. D-23, never communicated</b> to the appellants or any contractor.</li>
+      <li><b>17-10-1964:</b> s.80 CPC notice for refund of ₹54,606; <b>24-12-1964:</b> Civil Suit No. 1-B of 1964 filed before the Additional District Judge, Jabalpur.</li>
+      <li><b>Trial court:</b> Arts. 62 &amp; 96 of the 1908 Act applied — limitation ran from the <b>dates of payment</b> — suit barred. <b>High Court:</b> Art. 113 read with <b>s.17</b> of the 1963 Act (not Art. 24) — limitation ran from <b>17-10-1961</b> (the uncommunicated letter); with the two months of s.80 CPC, the suit expired 17-12-1964 — <b>seven days late</b>; "unfortunate" but barred. Leave to appeal refused; the firm came to the SC by special leave.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>What is the correct <b>starting point of limitation</b> for a suit for refund of money paid under a <b>mistake of law</b> — the date of payment, the date of the government's internal decision, or the plaintiff's <b>knowledge</b> of the mistake?</li>
+      <li>Does s.17(1)(c) require <b>actual discovery</b>, or does "could with reasonable diligence have discovered" start the clock from an uncommunicated internal order?</li>
+      <li>Which Article governs (Art. 113 / Art. 24 / Arts. 62–96 of the old Act), and how does s.72, Contract Act interact with the Limitation Act?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for Mahabir Kishore (appellants)</h4>
+      <ul class="dot">
+        <li>The letter of 17-10-1961 was <b>purely internal, never communicated</b> — the appellants had no opportunity to know of it; limitation cannot start from a fact locked in a government drawer.</li>
+        <li>Under <b>s.17(1)(c)</b>, in mistake-of-law cases knowledge ordinarily comes only with a <b>judgment declaring the law void</b>; at the least, "a week" must be allowed for knowledge to percolate — making the suit timely.</li>
+        <li>Their statement that they knew only in <b>September 1962</b> (after <i>Doongaji</i>) was never disproved; on that footing too, the suit (December 1964) was within three years.</li>
+        <li>The payments were made under a mistake common to both parties — the State was <b>unjustly enriched</b>; restitution under s.72, Contract Act should not be defeated by a technical starting point.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for the State of M.P. (respondent)</h4>
+      <ul class="dot">
+        <li>17-10-1961 was the date the government <b>finally decided</b> to stop the extra charge — the right to refund then crystallised; the HC rightly ran limitation from that date.</li>
+        <li>Even if not communicated, the contractors <b>with reasonable diligence</b> could have known of the decision on that very date.</li>
+        <li>On either Art. 24 or Art. 113, the suit of 24-12-1964 was barred (by seven days on the HC's reckoning).</li>
+        <li>The payments were made voluntarily, pending a declared government policy — no "mistake" should reset the clock.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — K.N. Saikia, J.</h3>
+    <ul class="tick">
+      <li><b>Characterising the suit:</b> the levy was charged "believing that it had power, but the High Court in two cases held that the power was not there. The money realised was <b>under a mistake and without authority of law</b>. The appellants also while paying suffered from the same mistake... the suit was for <b>refund of money paid under mistake of law</b>." Restitution tracks the three elements of <b>unjust enrichment</b> — enrichment, at the plaintiff's expense, unjust retention.</li>
+      <li><b>s.72 Contract Act includes mistake of law</b> — <i>STO v. Kanhaiya Lal</i> (AIR 1959 SC 135): money paid under mistake of law is recoverable, subject to estoppel, waiver, limitation; and on limitation, <b>s.17(1)(c)</b> applies — three years from <b>knowledge</b> of the mistake ("within 3 years of the knowledge of the mistake").</li>
+      <li><b>The settled rule (para 28):</b> "in a suit for refund of money paid under mistake of law, Section 72 of the Contract Act is applicable and the period of limitation is <b>three years under Article 113</b>... and the provisions of <b>Section 17(1)(c)</b>... will be applicable so that the period will begin to run from the <b>date of knowledge</b> of the particular law... being declared void; and this could be the date of the judgment of competent court declaring that law void."</li>
+      <li><b>The authorities run one way:</b> <i>D. Cawasji &amp; Co.</i> (AIR 1975 SC 813 — start from the judgment declaring the law void); <i>Shri Vallabh Glass Works</i> (AIR 1984 SC 971 — s.72 + s.17(1)(c) + Art. 113); <i>CST v. Auraiya Chamber</i> ((1986) 3 SCC 50 — mistake of law within s.72; no estoppel where the mistake is common to both); <i>Salonah Tea</i> ((1988) 1 SCC 401 — "no State has the right to receive or to retain taxes... without the authority of law"; limitation from knowledge, i.e., the <i>Loong Soong</i> judgment). And <i>Madras Port Trust v. Hymanshu International</i> ((1979) 4 SCC 176, Bhagwati J.): public authorities should not fling technical limitation pleas at just claims.</li>
+      <li><b>Why the HC's start-date failed:</b> the 17-10-1961 letter "was purely an <b>internal communication</b>... never communicated to the appellants or other liquor contractors. <b>There could, therefore, be no question of the limitation starting from that date.</b> Even with reasonable diligence, as envisaged in Section 17(1)(c), the appellants would have taken at least a week to know about it" — and State counsel conceded there was nothing to show they knew of it on that date or within a reasonable time thereafter.</li>
+      <li><b>Two saving computations:</b> (i) knowledge a week after 17-10-1961, or (ii) knowledge in <b>September 1962</b> (after <i>Doongaji</i> — the appellants' undisputed statement) — <b>on either, the suit was within three years under Art. 113</b>.</li>
+      <li><b>Result:</b> High Court set aside; <b>appeal allowed; suit remanded</b> for decision on merits, expeditiously; costs to the appellants.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 5 — Three candidate start-dates; only knowledge survives</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="20" y="26" width="310" height="110" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2"/>
+        <text x="175" y="50" fill="#a02020" font-size="12" font-weight="bold" text-anchor="middle">START = DATE OF PAYMENT?</text>
+        <text x="175" y="72" fill="#a02020" text-anchor="middle">(trial court: Arts. 62/96, 1908 Act)</text>
+        <text x="175" y="92" fill="#a02020" text-anchor="middle">rejected — payments made under a</text>
+        <text x="175" y="108" fill="#a02020" text-anchor="middle">mistake; s.17 postpones the start</text>
+        <rect x="370" y="26" width="310" height="110" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="2.2"/>
+        <text x="525" y="50" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">START = INTERNAL LETTER?</text>
+        <text x="525" y="72" fill="#6b5410" text-anchor="middle">(HC: 17-10-1961 — suit 7 days late)</text>
+        <text x="525" y="92" fill="#6b5410" text-anchor="middle">rejected — never communicated;</text>
+        <text x="525" y="108" fill="#6b5410" text-anchor="middle">"no question of limitation starting then"</text>
+        <rect x="720" y="26" width="340" height="110" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.4"/>
+        <text x="890" y="50" fill="#1e7d32" font-size="12" font-weight="bold" text-anchor="middle">START = KNOWLEDGE ✓ (s.17(1)(c))</text>
+        <text x="890" y="72" fill="#2f5d38" text-anchor="middle">week after 17-10-1961, or Sept. 1962</text>
+        <text x="890" y="92" fill="#2f5d38" text-anchor="middle">(Doongaji report) — on either view the</text>
+        <text x="890" y="108" fill="#2f5d38" text-anchor="middle">suit of 24-12-1964 is within 3 years</text>
+      </g>
+      <rect x="90" y="192" width="900" height="120" rx="14" fill="#3f1622"/>
+      <text x="540" y="218" fill="#f5e9cd" font-size="13" font-weight="bold" text-anchor="middle">THE SETTLED FORMULA (Mahabir Kishore, para 28)</text>
+      <text x="540" y="242" fill="#e8cfa0" font-size="11" text-anchor="middle">refund of money paid under mistake of law → s.72 Contract Act + Article 113 (3 years)</text>
+      <text x="540" y="262" fill="#e8cfa0" font-size="11" text-anchor="middle">+ s.17(1)(c): clock runs from knowledge — typically the judgment declaring the law void</text>
+      <text x="540" y="286" fill="#f0c9c9" font-size="11" text-anchor="middle">"no State has the right to receive or retain taxes or monies realised from citizens without</text>
+      <text x="540" y="304" fill="#f0c9c9" font-size="11" text-anchor="middle">the authority of law" (Salonah Tea) · public authorities should not use limitation to defeat just claims (Hymanshu)</text>
+      <line x1="525" y1="138" x2="500" y2="188" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c6)"/>
+      <line x1="175" y1="138" x2="360" y2="192" stroke="#3f1622" stroke-width="2.2" marker-end="url(#c6)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 5 — The court rejected both the payment-date and the internal-letter start-dates, adopting knowledge (with a week's reasonable-diligence allowance) — and saved a suit that was "seven days late" on the HC's arithmetic.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>Mistake of law postpones limitation under s.17(1)(c):</b> the clock for a refund suit runs from the plaintiff's <b>knowledge</b> of the mistake — usually the date of the judgment declaring the levy void — not from the payment, nor from an uncommunicated internal order.</li>
+      <li>"Could with reasonable diligence have discovered" gives a small, realistic allowance (here, at least a week) — not an assumption of omniscience.</li>
+      <li><b>Unjust enrichment + s.72, Contract Act</b> is the restitution engine for taxes collected without authority of law; the Limitation Act accommodates it through Art. 113 + s.17(1)(c).</li>
+      <li>An <b>undisputed assertion of knowledge</b> (September 1962) supplies the start-date; the burden lay on the State to disprove it.</li>
+      <li>Courts frown on public authorities raising limitation technicalities against just refund claims (Hymanshu; Salonah Tea).</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>CASE 34 &nbsp;&middot;&nbsp; from the DU case material, p. 172</span></div>
+
+<!-- ================= CASE 34 ================= -->
+<article id="c34" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 34 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): SECTIONS 17&ndash;19, 21</div>
+    <h3 class="case-name">Sampuran Singh v. Smt. Niranjan Kaur</h3>
+    <div class="case-meta"><b>AIR 1999 SC 1047</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; A.P. Misra, J. &nbsp;|&nbsp; Appeal from the Punjab &amp; Haryana High Court &nbsp;|&nbsp; Oral mortgage of 1893 &mdash; suit of 1980</div>
+    <div class="chips"><span class="chip">s.18 acknowledgment</span><span class="chip">revival only in time</span><span class="chip">oral mortgage validity</span><span class="chip">Art. 61(a) — 60/30 years</span><span class="chip">right to redeem accrues at once</span><span class="chip">₹53 mortgage</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/computation_limitation_sections_12_17_19_img5.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Sampuran Singh: the 1893 oral mortgage under a banyan tree, the 1960 registered sale deed with acknowledgment, and the 1980 redemption suit">
+    <figcaption><b>Hypothetical visual — a ₹53 mortgage across a century:</b> in 1893, Rekha and others mortgage 37 kanals 15 marlas at Sambhli (Karnal) orally for ₹53; in 1960 the mortgagee's heirs sell their mortgagee rights by registered deed, acknowledging the mortgage; in 1959-60 the purchasers of the equity sue — in 1980 — for redemption. Could the 1960 acknowledgment restart a clock that died in 1953?</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li><b>21-3-1893:</b> Rekha and others mortgaged <b>37 kanals 15 marlas</b> of land in Village Sambhli, Tehsil &amp; District Karnal (Khewat 260, Khatauni 448) <b>orally, for ₹53</b>, to Bakhatwara, Raju and Matu — possession delivered; mutation sanctioned. (A mortgage of under ₹100 was then valid in Punjab either by registered instrument <b>or by delivery of possession</b> — the Transfer of Property Act reached Punjab only on 1-11-1956, and Haryana on 5-8-1967.)</li>
+      <li><b>1959:</b> the appellants (purchasers from the original mortgagors) bought the equity in the land by three registered sale deeds; the mortgagors remained in possession through tenants till 1960-61.</li>
+      <li><b>11-1-1960:</b> the mortgagee Matu and Smt. Dasondha <b>sold their mortgagee rights by registered deed to the respondents</b>, who thereby <b>acknowledged the existence of the mortgage</b> in the deed.</li>
+      <li><b>1980:</b> the appellants sued for <b>possession by redemption on payment of ₹53</b>. The respondents pleaded the suit was <b>hopelessly time-barred</b> — they were owners, the mortgagee rights having been transferred to them outright; only limitation was pressed at every stage.</li>
+      <li><b>Trial court:</b> decreed redemption — reliance on <i>Inder Singh v. Kishno</i> ((1966) 68 Punj LR 408): for an unregistered/oral mortgage, limitation begins only after <b>12 years</b> from the mortgage (when the mortgagee's possession matures into a valid mortgage); 1893 + 12 = 1905; + 60 years = 1965; the <b>acknowledgment of 11-1-1960 was within that period</b> → fresh limitation from 1960 → the 1980 suit in time.</li>
+      <li><b>First appellate court:</b> reversed — <b>oral mortgages were valid in Punjab</b> at the relevant time; principal &lt; ₹100; mortgage with possession complete <b>on the day of execution (March 1893)</b> → 60 years expired <b>in 1953</b> → suit barred.</li>
+      <li><b>Punjab &amp; Haryana High Court (second appeal):</b> relied on its Full Bench decision <b><i>Shri Chand v. Nathi</i></b> ((1983) 85 Punj LR 288), which had <b>overruled <i>Inder Singh</i></b> — appeal dismissed. The mortgagors appealed to the Supreme Court.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>When did the limitation for a redemption suit on the <b>1893 oral mortgage</b> begin — at execution, or 12 years later (when possession might have "perfected" an invalid mortgage)?</li>
+      <li>Could the <b>acknowledgment of the mortgage contained in the 1960 registered sale deed</b> give a <b>fresh period of limitation</b> under <b>s.18</b> — even though the original 60-year period had already expired in 1953?</li>
+      <li>Does the "right to redeem" accrue only on tender of the mortgage money (or the mortgagee's communication of satisfaction by usufruct), as Art. 61(a)'s "when the right to redeem accrues" might suggest?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for Sampuran Singh (mortgagor-appellants)</h4>
+      <ul class="dot">
+        <li><b>s.18 revival:</b> the respondents, in the registered deed of 11-1-1960, <b>acknowledged the mortgage</b>; a fresh period should run from that date, making the 1980 suit timely.</li>
+        <li><i>Inder Singh</i> line: for an unregistered mortgage, possession perfects a valid mortgage only after 12 years — limitation (60 years) could not start before 1905; the acknowledgment of 1960 fell within the live period.</li>
+        <li><b>Approbate-reprobate</b> (<i>C. Beepathuma</i>, AIR 1965 SC 241): the respondents took the benefit of the mortgage under the deed — they cannot deny the mortgagors' corresponding right to redeem.</li>
+        <li>The <b>Redemption of Mortgages (Punjab) Act, 1913</b> first gave a redemption procedure — limitation for redemption could not run before 1913.</li>
+        <li>Under Art. 61(a), the right to redeem accrues only when the mortgagor <b>tenders</b> the amount or the mortgagee <b>communicates satisfaction</b> — neither had happened, so time never began.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for Niranjan Kaur (respondents)</h4>
+      <ul class="dot">
+        <li>The oral mortgage of 1893 was <b>valid when made</b> (Punjab law; &lt; ₹100; possession delivered) — the right to redeem accrued <b>from day one</b>, and 60 years expired in <b>1953</b>.</li>
+        <li><b>s.18's opening words</b> require the acknowledgment to be made "<b>before the expiration of the prescribed period</b>" — an acknowledgment of 1960 cannot revive a period dead since 1953.</li>
+        <li>The Full Bench in <i>Shri Chand v. Nathi</i> had already overruled <i>Inder Singh</i>, which had misapplied <i>Purusottam Das v. S.M. Desouza</i> (AIR 1950 Ori 213 — a case of an <b>invalid</b> unregistered mortgage where the TPA applied).</li>
+        <li>The respondents purchased the mortgagee rights <b>outright</b> — they claim as owners, not as mortgagees bound to account.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — A.P. Misra, J.</h3>
+    <ul class="tick">
+      <li><b>Validity of the oral mortgage — <i>Shri Chand</i> FB affirmed:</b> "there was no bar to give effect to an oral mortgage in a case where a mortgagor gave possession of the land to a mortgagee"; TPA s.59 had not reached Punjab/Haryana then; registration was "wholly irrelevant with regard to the issue of its validity". <i>Inder Singh</i> was rightly overruled: it misapplied <i>Purusottam Das</i> (where the TPA <b>did</b> apply and the mortgage was invalid). "We find no error committed in coming to the said decision by the Full Bench."</li>
+      <li><b>The s.18 kill-shot:</b> "Section 18 sub-section (1) itself starts with the words: '<b>Where, before the expiration of the prescribed period</b> for a suit or application in respect of any property or right, an acknowledgment of liability... has been made...'. Thus, the acknowledgment, if any, has to be <b>prior to the expiration of the prescribed period</b>... if the limitation has already expired, <b>it would not revive</b> under this section." With 60 years from March 1893 expiring in <b>1953</b>, the 1960 acknowledgment came too late.</li>
+      <li><b>Approbate-reprobate rejected:</b> <i>C. Beepathuma</i> concerns a person accepting benefit under an instrument while renouncing its obligations — here "there is neither any deed nor document of mortgage"; the only obligation of an oral mortgagee is to return possession when the mortgage money is paid, and the mortgagor never tendered it. The doctrine of election is irrelevant.</li>
+      <li><b>The 1913 Act argument rejected:</b> the Redemption of Mortgages (Punjab) Act, 1913 was enacted to give the Deputy Commissioner powers of restoration (mirroring s.7(5) of the Punjab Alienation of Land Act) and a summary procedure — it "has no correlation with the period of limitation"; and even from 1913, sixty years expired in <b>1973</b> — the 1980 suit was still late.</li>
+      <li><b>Art. 61(a) argument rejected — right to redeem accrues at once:</b> "Right accruing means, right either existing or coming into play thereafter. Where no period in the mortgage is specified, there exists a right to a mortgagor to redeem the mortgage by paying the amount <b>that very day</b>... or any day thereafter." The tender/satisfaction theory would mean limitation "never start[s] running... for an infinite period" — rejected. (At the relevant time the period was <b>60 years</b>; the present Art. 61(a) prescribes 30.)</li>
+      <li><b>Result:</b> limitation ran from <b>March 1893</b> and expired in 1953; no revival; the first appellate court and the High Court were right — <b>appeal dismissed</b>.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 6 — The century timeline and the s.18 gate</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="c7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <line x1="40" y1="150" x2="1040" y2="150" stroke="#3f1622" stroke-width="4"/>
+      <g font-size="10.5">
+        <circle cx="110" cy="150" r="10" fill="#3f1622"/>
+        <text x="110" y="120" fill="#3f1622" font-size="11.5" font-weight="bold" text-anchor="middle">21-3-1893</text>
+        <text x="110" y="102" fill="#5a6572" text-anchor="middle">oral mortgage ₹53 —</text>
+        <text x="110" y="117" fill="#5a6572" text-anchor="middle">valid from day one</text>
+        <rect x="215" y="128" width="420" height="44" rx="9" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+        <text x="425" y="147" fill="#1e7d32" font-size="11" font-weight="bold" text-anchor="middle">60-YEAR REDEMPTION PERIOD ALIVE (1893 → 1953)</text>
+        <text x="425" y="163" fill="#2f5d38" font-size="10" text-anchor="middle">right to redeem accrued the very day of the mortgage</text>
+        <circle cx="680" cy="150" r="10" fill="#a02020"/>
+        <text x="680" y="120" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">1953 — PERIOD EXPIRES</text>
+        <text x="680" y="102" fill="#5a6572" text-anchor="middle">the s.18 gate slams shut:</text>
+        <text x="680" y="117" fill="#5a6572" text-anchor="middle">no acknowledgment can revive</text>
+        <rect x="720" y="128" width="120" height="44" rx="9" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2"/>
+        <text x="780" y="147" fill="#a02020" font-size="10.5" font-weight="bold" text-anchor="middle">11-1-1960</text>
+        <text x="780" y="163" fill="#a02020" font-size="10" text-anchor="middle">deed: too late</text>
+        <circle cx="940" cy="150" r="10" fill="#a02020"/>
+        <text x="940" y="120" fill="#a02020" font-size="11.5" font-weight="bold" text-anchor="middle">1980 — suit filed</text>
+        <text x="940" y="102" fill="#5a6572" text-anchor="middle">barred (also barred even</text>
+        <text x="940" y="117" fill="#5a6572" text-anchor="middle">from 1913: till 1973)</text>
+      </g>
+      <rect x="40" y="230" width="1000" height="94" rx="13" fill="#3f1622"/>
+      <text x="540" y="256" fill="#f5e9cd" font-size="13" font-weight="bold" text-anchor="middle">THE s.18 GATE — "Where, BEFORE the expiration of the prescribed period..."</text>
+      <text x="540" y="280" fill="#e8cfa0" font-size="11" text-anchor="middle">acknowledgment in time → FRESH period from its date · acknowledgment after expiry → nothing revived (Sampuran Singh)</text>
+      <text x="540" y="302" fill="#e8cfa0" font-size="11" text-anchor="middle">same gate for s.19 payments — and remember: an oral mortgage's right to redeem accrues the day it is made</text>
+      <line x1="540" y1="180" x2="540" y2="226" stroke="#3f1622" stroke-width="2.6" marker-end="url(#c7)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 6 — The mortgage lived from 1893, the redemption window died in 1953, and every later event (the 1960 acknowledgment, the 1980 suit) fell on the far side of the s.18 gate.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>s.18 revives only a living period:</b> an acknowledgment of liability (or a part payment under s.19) made <b>after the prescribed period has expired</b> confers no fresh limitation — the opening words of s.18(1) are a condition precedent, not decoration.</li>
+      <li><b>Validity first, limitation second:</b> the court asks only whether the mortgage is <b>valid</b>; if valid (as an oral mortgage with possession then was in Punjab), <b>the right to redeem accrues on the day of its execution</b> — no 12-year incubation, no waiting for tender or satisfaction.</li>
+      <li>Art. 61(a)'s "when the right to redeem... accrues" means the day the mortgagor could lawfully have paid and demanded possession — the very first day, absent a contractual restriction; otherwise limitation would run "for an infinite period".</li>
+      <li>Local-law context matters: TPA s.59's registration requirement applied to Punjab only from 1-11-1956 (Haryana 5-8-1967) — earlier oral mortgages with possession stand valid (<i>Shri Chand</i> FB).</li>
+      <li>Equitable doctrines (election; approbate-reprobate) cannot stretch a statutory limitation period; nor can procedural statutes like the Punjab Redemption Act, 1913 postpone its start.</li>
+    </ol>
+  </div>
+</article>
+
+
+<div class="divider"><span>THE SUPPORTING CAST &nbsp;&middot;&nbsp; every authority the DU material cites, at a glance</span></div>
+
+<!-- ================= SUPPORTING CASES ================= -->
+<section id="cases2">
+<div class="sec-head"><div class="sec-num">&#128220;</div><h2 class="sec-title">The Supporting Case Treasury</h2></div>
+<p class="lead">The four DU cases do not stand alone. Each is the summit of a line of authority. These are the supporting decisions cited inside them — one line each, so that a citation in the exam hall never surprises you.</p>
+
+<div class="card">
+<h3>A &middot; The s.12(2) line — "time for obtaining a copy" (Madan Lal Das &amp; Maharaj Narain)</h3>
+<table>
+<tr><th style="width:34%">Case</th><th>What it decides / contributes</th></tr>
+<tr><td><b>J.N. Surty v. Tarini Charan</b> AIR 1928 PC 103</td><td>The Privy Council anchor: s.12's exclusion applies only where there is a <b>"positive direction"</b> to file a copy with the plea — and even then the practitioner "may want to study the decree before attacking it", so time to obtain the copy is excluded. Followed in Madan Lal Das.</td></tr>
+<tr><td><b>Punjab Co-operative Bank v. The Registrar</b> AIR 1941 Lah 257</td><td>Full Bench: where a copy of the order is a condition of attack (revision/appeal), time requisite for obtaining it is excluded under s.12(2).</td></tr>
+<tr><td><b> Mt. Lalitkumari v. Kedarnath</b> AIR 1947 Pat 329</td><td>Patna line supporting exclusion for obtaining the copy where the statute makes service of a copy the trigger.</td></tr>
+<tr><td><b>Best &amp; Co. v. Sangameshwar</b> AIR 1966 SC 1713</td><td>Supreme Court: the right to appeal includes the right to apply for and receive a certified copy — s.12(2) protects that time.</td></tr>
+<tr><td><b>Pramatha Nath Roy v. Saroda Kanto</b> 49 IA 307 (PC)</td><td>Laches case: a pleader's delay in settling the appeal is the <b>litigant's own</b> time, not "requisite" for the copy — Maharaj Narain holds it "does not bear" on the copy question.</td></tr>
+<tr><td><b>Surty v. Ram Prokash</b> 55 IA 161</td><td>Pleader's default is not a statutory obstacle; no deduction for time wasted in instructions. Distinguished, not overruled, by Maharaj Narain.</td></tr>
+<tr><td><b>Panjam v. Trimala Reddy</b> FB ILR 57 Mad 560</td><td>Madras Full Bench whose formula Maharaj Narain adopts: exclude "the time beyond the party's control occupied in obtaining the copy which is filed" with the appeal.</td></tr>
+<tr><td><b>Mathela v. Sher Mohammad</b> AIR 1935 Lah 682</td><td>Had demanded a "minimum time" enquiry into the copy's acquisition — <b>expressly disapproved</b> by the SC as "not laying down the law correctly" (unworkable in practice).</td></tr>
+<tr><td><b>Kunju Kesavan v. Moidin</b> AIR 1953 TC 552 · <b>B. Govind Raj v. Ram Singh</b> AIR 1950 All 486 · <b>K.U. Singh v. Ramzan</b> AIR 1960 MP 140</td><td>High-court line following Panjam: time taken to obtain the copy actually filed is excluded, regardless of earlier copies.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>B &middot; The s.17 line — mistake of law, knowledge, and the State (Mahabir Kishore)</h3>
+<table>
+<tr><th style="width:34%">Case</th><th>What it decides / contributes</th></tr>
+<tr><td><b>Surajdin v. State of M.P.</b> (1960) MPLJ 39</td><td>The first M.P. High Court decision declaring the 7½% "mahua and fuel cess" on liquor auctions illegal — the fountainhead of the appellants' claim.</td></tr>
+<tr><td><b>N.K. Doongaji v. Collector, Surguja</b> (1962) MPLJ 130</td><td>Second declaration of illegality (31-8-1961); the appellants said they knew of the mistake only in September 1962 through this decision.</td></tr>
+<tr><td><b>Sales Tax Officer v. Kanhaiya Lal</b> AIR 1959 SC 135</td><td>Mistake of law is within s.72, Contract Act; recovery of money so paid is subject to <b>limitation — three years from knowledge of the mistake</b> (the seed of the Mahabir Kishore formula).</td></tr>
+<tr><td><b>D. Cawasji &amp; Co. v. State of M.P.</b> AIR 1975 SC 813</td><td>Refund of octroi collected under a void Act: limitation runs from the <b>judgment declaring the law void</b> — knowledge arrives with the declaration.</td></tr>
+<tr><td><b>Madras Port Trust v. Hymanshu International</b> (1979) 4 SCC 176</td><td>Bhagwati J.: a public authority should not use the <b>technical plea of limitation</b> to defeat its just obligations to citizens.</td></tr>
+<tr><td><b>Shri Vallabh Glass Works v. State of U.P.</b> AIR 1984 SC 971</td><td>Sales-tax refund: s.72 + s.17(1)(c) + Art. 113 combine exactly as Mahabir Kishore later settles — payment under mistake, clock from knowledge.</td></tr>
+<tr><td><b>CST v. Auraiya Chamber of Commerce</b> (1986) 3 SCC 50</td><td>Mistake of law is a ground of restitution; no estoppel bars refund where the mistake is <b>common to both parties</b> (the taxpayer trusted the State's power just as the State did).</td></tr>
+<tr><td><b>Salonah Tea Co. v. State of Assam</b> (1988) 1 SCC 401</td><td>The rhetorical summit: "no State has the right to receive or to retain taxes or monies realised from citizens without the authority of law"; limitation from knowledge (the Loong Soong judgment).</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>C &middot; The s.18 line — acknowledgments: validity and effect (Sampuran Singh &amp; the PYQs)</h3>
+<table>
+<tr><th style="width:34%">Case</th><th>What it decides / contributes</th></tr>
+<tr><td><b>C. Beepathuma v. V. Sanyasi</b> AIR 1965 SC 241</td><td>Election — a party who accepts a benefit under an instrument cannot renounce its obligations; Sampuran Singh shows the doctrine cannot manufacture a right where the limitation gate has closed. Also traces the 1842 mortgage history and the 1871 acknowledgment rider.</td></tr>
+<tr><td><b>Shri Chand v. Nathi</b> (1983) 85 Punj LR 288 (FB)</td><td>Punjab &amp; Haryana Full Bench overruling Inder Singh: oral mortgages with possession were valid in Punjab pre-TPA; limitation for redemption runs from the mortgage itself. Affirmed by the SC in Sampuran Singh.</td></tr>
+<tr><td><b>Inder Singh v. Kishno</b> (1966) 68 Punj LR 408</td><td>The overruled view: a 12-year incubation before limitation began on unregistered/oral mortgages — good law only between 1966 and 1983.</td></tr>
+<tr><td><b>Purusottam Das v. S.M. Desouza</b> AIR 1950 Ori 213</td><td>Invalid (unregistered) mortgage under the TPA: limitation runs from when possession matures (12 years). Distinguishable because the TPA had not reached Punjab — its use in Inder Singh was the error.</td></tr>
+<tr><td><b>State of Kerala v. T.M. Chacko</b> (2000) 9 SCC 722</td><td>A signed balance-sheet or ledger entry can be a valid s.18 acknowledgment; the PYQ answer's modern authority on form and signing.</td></tr>
+<tr><td><b>Bhagwan v. Madhav</b> 46 Bom 1000 · <b>Gopal Rao v. Harilal</b> 9 Bom LR 715</td><td>Classic Bombay line on what passes muster as an acknowledgment — and on the rule that an acknowledgment must be made to the creditor (or his agent), not to a third party.</td></tr>
+<tr><td><b>Suganmal v. Bank of Ajmer</b> · <b>Tilokchand v. H.B. Munim</b></td><td>Part-payment and acknowledgment interplay: a payment "on account" may or may not acknowledge the larger jural relationship; the writing as a whole is read.</td></tr>
+<tr><td><b>Parasuraman v. Purushottaman</b> AIR 1977 Ker 132</td><td>The distinction case: payment (s.19) is a unilateral act; acknowledgment (s.18) is a jural statement of liability — used in the s.18-vs-s.19 PYQ answer.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>D &middot; The s.21 line — adding/substituting parties (PYQ answers)</h3>
+<table>
+<tr><th style="width:34%">Case</th><th>What it decides / contributes</th></tr>
+<tr><td><b>Ram Prasad Dagaduram v. Sham Kant</b> AIR 1967 SC 1178</td><td>Leading case on s.21(1) proviso: an applicant suing the "wrong" defendant (a person "apparently" intended) gets the protection only if he sued <b>in good faith</b>, with due diligence, and a mistake was made about the right party — the amendment/insertion then relates back.</td></tr>
+<tr><td><b>Karuppaswamy v. Periasami</b> AIR 1993 SC 2324</td><td>Where the sole defendant dies before substitution can be considered, the court must give the plaintiff a <b>reasonable opportunity (six weeks)</b> to bring in the legal representatives before dismissing for default.</td></tr>
+<tr><td><b>K.S. Lokaiah v. K. Hanumanthaiah</b> AIR 2007 NOC 430 Kant</td><td>A <b>purchaser pendente lite</b> can be brought on record by substitution under s.21 — the lis binds him anyway.</td></tr>
+</table>
+</div>
+
+<div class="note amber"><span class="nt">Memory hook — the treasury in one breath</span>
+<i>Surty</i> says get the copy; <i>Panjam</i> says exclude what's beyond control; <i>Mathela</i> asks for too little and is buried; <i>Kanhaiya Lal</i> opens mistake-of-law refunds; <i>Cawasji</i> waits for the judgment; <i>Hymanshu</i> shames the technical plea; <i>Salonah</i> forbids the State to keep a rupee without law; <i>Shri Chand</i> validates the oral mortgage; <i>Beepathuma</i> cannot elect a dead claim back to life; <i>Dagaduram</i> forgives the honest wrong defendant; <i>Karuppaswamy</i> grants six weeks; <i>Lokaiah</i> swaps in the pendente lite buyer.
+</div>
+</section>
+
+
+<!-- ================= PYQs ================= -->
+<section id="pyqs">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">Previous Year Questions — DU Semester Exams (with Model Answers)</h2></div>
+  <div class="sec-sub">Every DU PYQ on Sections 12, 17, 18, 19 and 21 of the Limitation Act from the solved-papers compendium</div>
+
+  <!-- PYQ 1 : Q.7(b)/2017 s.12(2) -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017</span>
+      <div class="pyq-q">Q. 7(b)/2017 &mdash; &ldquo;The expression &lsquo;time requisite&rsquo; under section 12(2) of the Limitation Act cannot be understood as the time necessary for obtaining the copy of the order.&rdquo; Discuss the statement in the light of the decided cases.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; EXCLUSION OF TIME (SECTION 12(2))</div>
+      <p><b>The provision.</b> Section 12 provides for <b>exclusion of time</b> in computing limitation. Its true effect: the periods referred to in the sub-sections <b>have to be added to the period of limitation</b> for ascertaining the last date of filing. The section excludes (a) <b>the day</b> from which the period is reckoned, and (b) the <b>time requisite for obtaining copies</b> of the judgment/order/decree, for an appeal, an application for leave to appeal, revision or review.</p>
+      <p><b>What &lsquo;time requisite&rsquo; means.</b> It means <b>&ldquo;properly required&rdquo;</b>, and it throws on the appellant the necessity of showing that no part of the delay beyond the prescribed period was due to his <b>default</b>. It is <b>not</b> the time <i>absolutely necessary</i> or the <i>minimum</i> time in which a copy could have been obtained — what is deductible is the time actually <b>taken for obtaining the copy which is filed</b> with the memorandum of appeal.</p>
+      <p><b>The conduct rule.</b> In determining &lsquo;time requisite&rsquo;, the <b>conduct of the appellant must be considered</b>: no period is requisite which need not have elapsed had he taken reasonable and proper steps to requisition the copy. It is a <b>question of fact</b> determined on the facts of each case.</p>
+      <p><b>Working rules from the case law:</b> (i) where judgment is pronounced just before <b>holidays</b> during which a copy cannot be applied for, the holidays are excluded; (ii) where judgment is delivered on the last working day before a <b>vacation</b> on which limitation would expire, an application on the reopening day suffices and the <b>vacation counts as time requisite</b>; (iii) time during which the <b>decree is not drawn up</b> is excluded even if the copy application was not made before the decree was drawn.</p>
+      <p><b>Case 1 — <i>Commissioner of Sales Tax, U.P. v. M/s. Madan Lal Das &amp; Sons</i>, AIR 1977 SC 523 (3 judges, Khanna J.).</b> Copy of the sales-tax appellate order <b>served 22-8-1965</b>; the assessee <b>lost it</b>; applied 15-6-1966 for a fresh copy, ready 17-8-1967, delivered 18-8-1967; revision filed 9-9-1967 (limitation: 1 year from service + 6 months condonable under s.10 U.P. Sales Tax Act). <b>Held:</b> s.12(2) of the 1963 Act is <b>attracted via s.29(2)</b> (the special law does not exclude it); and even though a copy was <b>not required to be filed</b> with the revision, the time for obtaining the fresh copy was excluded — a practitioner may reasonably want to study the decree before attacking it (<i>J.N. Surty</i>, AIR 1928 PC 103 — exclusion where there is a &ldquo;positive direction&rdquo; to file, and a fortiori where the served copy is lost). <i>A fortiori</i> from <i>Maharaj Narain</i>: if time for a copy one need not obtain is excluded, time to replace a <b>lost served copy</b> is necessarily excluded.</p>
+      <p><b>Case 2 — <i>State of U.P. v. Maharaj Narain</i>, AIR 1968 SC 960.</b> Acquittal 10-11-1962; appeal in the High Court 29-3-1963 (limitation: 3 months). Copy applied 15-11-1962, ready 3-1-1963 (timely if this copy governs); two other copies obtained earlier in December. The High Court read &lsquo;requisite&rsquo; as &lsquo;properly required&rsquo; and computed limitation by the <b>December copies</b> — appeal barred. <b>Supreme Court (Hegde J.) reversed:</b> the State was under <b>no duty of promptitude</b> — it could wait till the 90 days were nearly exhausted before applying; the time <b>requisite</b> is &ldquo;the time beyond the party&rsquo;s control occupied in obtaining the copy <b>which is filed</b> with the memorandum of appeal&rdquo; (<i>Panjam</i> FB, ILR 57 Mad 560), not an ideal lesser period. A minimum-time enquiry would compel appellate courts to chase copies &ldquo;used for other purposes with which the court has nothing to do&rdquo; — <b>unworkable</b>. The whole period from application (15-11-1962) to receipt of the filed copy (3-1-1963) was excluded — appeal <b>within time</b>. (<i>Mathela</i>, AIR 1935 Lah 682, which demanded minimum time, &ldquo;does not lay down the law correctly&rdquo;; <i>Pramatha Nath Roy</i>, 49 IA 307, is a laches case and &ldquo;does not bear on the question&rdquo;.)</p>
+      <p><b>Conclusion.</b> &lsquo;Time requisite&rsquo; is a <b>practical, fact-centric</b> concept — the time actually occupied in getting the copy actually used — disciplined only by the appellant&rsquo;s own conduct; it is emphatically not a notional minimum, and Maharaj Narain is the charter of that reading.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 2 : Q.7(a)/2019 s.21 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2019</span>
+      <div class="pyq-q">Q. 7(a)/2019 &mdash; What is the effect of addition of plaintiff or defendant in a pending suit upon the limitation for filing such suit?</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; EFFECT OF ADDITION/SUBSTITUTION OF PARTIES (SECTION 21)</div>
+      <p><b>The provision.</b> Section 21 deals with the effect of <b>substituting or adding</b> a new plaintiff or defendant — it applies to all persons brought on record <b>after the expiry of limitation</b>. It covers the suit stage up to decree by the trial court and the appellate stage; it does <b>not</b> govern execution proceedings, nor <b>transposition</b> of parties (a defendant made plaintiff or vice versa is not &lsquo;addition&rsquo;).</p>
+      <p><b>Object.</b> The emerging concept of justice empowers courts to get over <b>technical and procedural bottlenecks</b>; s.21 lets courts implead absolutely necessary parties even after limitation has expired, so that the matter is decided on merits.</p>
+      <p><b>s.21(1) — the general rule.</b> Where a new plaintiff or defendant is added or substituted, the suit shall, <b>as regards him, be deemed to have been instituted when he was made a party</b> — i.e., the fresh party&rsquo;s presence dates from his addition, and if limitation had already run, the suit qua him is late.</p>
+      <p><b>Proviso — the good-faith escape.</b> Where the court is satisfied that the omission to include the new plaintiff/defendant was due to a <b>mistake made in good faith</b>, it may direct that the suit as regards him be deemed instituted on the <b>earlier date</b>. <i>Ram Prasad Dagaduram v. Vijay Kumar</i>, AIR 1967 SC 1178: to earn the proviso the plaintiff must prove the non-impleadment was a bona fide mistake; the discretion is then exercised to relate the addition back and save the suit. (s.21(1) is confined to plaintiffs added in their <b>own right</b>; a plaintiff added through assignment from the original plaintiff falls under s.21(2).)</p>
+      <p><b>s.21(2) — the exceptions.</b> s.21(1) has no application where a party is added or substituted owing to (a) <b>assignment</b> or (b) <b>devolution of interest</b> during the pendency of the suit — the newcomer steps into the shoes of the assignor/deceased, and no new limitation question arises.</p>
+      <p><b>Leading cases.</b> (i) <i>Karuppaswamy v. C. Ramamurthy</i>, AIR 1993 SC 2324 — suit filed against a defendant who had in fact died six weeks earlier; the plaintiff knew of the death only from the process server&rsquo;s endorsement, and immediately applied under O.XXI CPC r.4 to bring in the legal representatives. <b>Held:</b> the plaintiff acted promptly and in good faith; the proviso to s.21(1) was attracted and the substitution <b>related back</b> to the original institution. The Court read the proviso as kindred to s.14 (bona fide proceedings without jurisdiction) and s.17 (fraud/mistake discovered later): all three soften limitation&rsquo;s edge for the diligent but mistaken suitor; an averment of good faith must be made and proved, for &ldquo;only the court&rsquo;s satisfaction breathes life into the suit&rdquo;. (ii) <i>K.S. Lokaiah v. M.B. Shivaraya</i>, AIR 2007 NOC 430 (Kant) — a <b>purchaser pendente lite</b> impleaded in execution steps into the decree-holder&rsquo;s shoes and may come on record <b>within 12 years of the decree</b> (not of his purchase); s.21(2), not s.21(1), applies.</p>
+      <p><b>Conclusion.</b> Addition generally restarts the suit qua the new party (s.21(1)); good faith plus diligence buys relation-back through the proviso; assignment/devolution cases ride on the original institution (s.21(2)).</p>
+    </div>
+  </div>
+
+  <!-- PYQ 3 : Q.7(b)/2019 s.18 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2019</span>
+      <div class="pyq-q">Q. 7(b)/2019 &mdash; Describe what is an &ldquo;acknowledgement&rdquo; under the Limitation Act. What is the effect of &ldquo;acknowledgement&rdquo; on limitation? Discuss with illustrations.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; ACKNOWLEDGMENT (SECTION 18)</div>
+      <p><b>Meaning.</b> An acknowledgment is a <b>definite, clear admission of existing liability</b> in respect of any <b>property or right</b> — not necessarily a promise to pay; the simple admission of a debt suffices. It creates <b>no new right of action</b>; it only <b>enlarges time</b>: a fresh period runs from the date of the acknowledgment. An acknowledgment of an <b>already barred</b> debt gives the creditor nothing.</p>
+      <p><b>Six conditions of validity.</b></p>
+      <ol class="num">
+        <li><b>Before expiry</b> — it must be made before the expiration of the prescribed period; once the period has expired it &ldquo;would not revive&rdquo; (<i>Sampuran Singh v. Niranjan Kaur</i>, AIR 1999 SC 1047 — deed of 11-1-1960 could not revive a 60-year mortgage period that died in 1953).</li>
+        <li><b>By the right person</b> — by the party against whom the right is claimed, or a person through whom he derives title or liability; an acknowledgment by a person not then liable is a nullity.</li>
+        <li><b>In writing</b> — if undated, oral evidence of the time of signing is admissible (s.18(2)); but oral evidence of its <b>contents</b> is barred.</li>
+        <li><b>Signed</b> — by the party or his duly authorised agent (Explanation (b): &lsquo;signed&rsquo; = personally or by agent authorised in that behalf).</li>
+        <li><b>An admission of liability</b> — not necessarily a promise; may be <b>express or implied</b> (<i>Bhagwan v. Madhav</i>, 46 Bom 1000); it must distinctly relate to the liability claimed (<i>Gopal Rao v. Harilal</i>, 9 Bom LR 715). It may even be coupled with a refusal to pay, a set-off claim, or a statement that time has not yet come — yet survive (Explanation (a)) — but a statement implying <b>no</b> liability is not an acknowledgment.</li>
+        <li><b>Any addressee</b> — it need not be made to the creditor; even a stranger will do.</li>
+      </ol>
+      <p><b>Agents and incapables.</b> A guardian/manager of a person under disability, a duly authorised agent, the manager of a joint Hindu family (within his borrowing authority), and a legal practitioner acting for a client can each sign a valid acknowledgment. But the <b>Official Assignee is not the agent of the insolvent</b>, and the Official Receiver is likewise not technically an agent — their acknowledgments do not save limitation.</p>
+      <p><b>Illustrations.</b> (1) A debtor&rsquo;s letter: &ldquo;I owe you ₹40,000&rdquo; — valid acknowledgment, fresh 3 years from its date. (2) A balance-sheet signed by a company&rsquo;s authorised officer showing the creditor&rsquo;s dues — valid (<i>State of Kerala v. T.M. Chacko</i>, (2000) 9 SCC 722: a fresh period is computed from when the acknowledgment was signed). (3) A mortgagor&rsquo;s heir writing in 1960 acknowledging an 1893 mortgage whose 60 years expired in 1953 — <b>no revival</b> (<i>Sampuran Singh</i>). (4) An unsigned diary entry or oral admission — not an acknowledgment; s.18 demands writing and signature.</p>
+      <p><b>Effect.</b> On a valid acknowledgment, limitation is <b>reset</b>: a fresh period (the same as the original) runs from the acknowledgment&rsquo;s date — against the maker and those claiming under him, not against co-debtors who did not sign.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 4 : Q.8(a)/2017 s.17 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017</span>
+      <div class="pyq-q">Q. 8(a)/2017 &mdash; Discuss the effect of fraud and mistake on the period of limitation.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; EFFECT OF FRAUD OR MISTAKE (SECTION 17)</div>
+      <p><b>The provision.</b> Under s.17, limitation is computed <b>from the time the fraud became known</b> to the person defrauded; where a document necessary to establish the right has been <b>fraudulently concealed</b>, from when he first had the means of producing or compelling its production; and where the suit is for relief from the consequences of a <b>mistake</b>, from when the mistake was <b>discovered</b> (or could have been discovered with reasonable diligence).</p>
+      <p><b>Object and principle.</b> The object is to keep the right to sue <b>suspended so long as the person is unaware of the fraud</b>. The principle: the right of a party defrauded cannot be affected by lapse of time while he remains, <b>without fault of his own</b>, ignorant of the fraud; once the circumstances constituting the fraud become known, subsequent lapse operates as a bar.</p>
+      <p><b>Application.</b> The section applies to <b>suits and applications, not appeals</b>; it is enabling — it <b>postpones the starting point</b>. It covers: (a) suits based on the fraud of the defendant/respondent or his agent; (b) concealment of knowledge of right or title; (c) suits for relief from mistake; (d) fraudulent concealment of documents. In the first three, time runs from discovery (actual or with reasonable diligence); in the fourth, from when production was first possible. <b>Bona fide purchasers for value without notice</b> remain protected.</p>
+      <p><b>Three essentials to invoke the section:</b> (i) there has been fraud; (ii) by means of it the plaintiff was kept from knowledge of his right to sue or of the title on which it is founded; (iii) extension operates only against the person guilty of fraud or an accessory — not a transferee in good faith and for value.</p>
+      <p><b>Ingredients of fraud</b> (to plead it): (i) a promise made without intention of performing; (ii) an act or omission the law specifically declares fraudulent; (iii) suggesting as a fact that which is not true, by one who does not believe it true; (iv) any other act fitted to deceive; (v) active concealment of a fact by one having knowledge or belief of it. Absent fraud by the defendant, the section gives the plaintiff nothing.</p>
+      <p><b>s.17(2).</b> Where execution of a decree/order in time was prevented by the <b>fraud or force</b> of the judgment-debtor, the court may, on the creditor&rsquo;s application made <b>within one year</b> of discovering the fraud (or cessation of force), extend the period for execution.</p>
+      <p><b>Leading case — <i>Mahabir Kishore v. State of M.P.</i>, AIR 1990 SC 313.</b> Liquor contractors paid ₹54,606 as an illegal 7½% cess; the government&rsquo;s internal letter of 17-10-1961 stopping the cess was <b>never communicated</b>; the contractors knew only by September 1962 (after <i>Doongaji</i>); refund suit filed 24-12-1964. Trial court (payments → Arts. 62/96, old Act) and High Court (17-10-1961 + s.17 → 7 days late) both held the suit barred. <b>Supreme Court (Saikia J.) allowed the appeal:</b> the suit was one for <b>refund of money paid under mistake of law</b>; s.72 Contract Act (which includes mistake of law) plus <b>Art. 113</b> plus <b>s.17(1)(c)</b> govern — three years from <b>knowledge</b>, typically the judgment declaring the law void; limitation cannot start from an uncommunicated internal letter, and even on &lsquo;reasonable diligence&rsquo; the appellants would take at least a week — on either computation (a week after 17-10-1961, or September 1962) the suit was in time. <b>Principle:</b> the clock of limitation runs against knowledge, not against the calendar of the wrongdoer.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 5 : Q.8(b)/2017 s.18 vs s.19 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017</span>
+      <div class="pyq-q">Q. 8(b)/2017 &mdash; Distinguish between section 18 and section 19 of the Limitation Act, 1963.</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; ACKNOWLEDGMENT (s.18) vs PAYMENT (s.19)</div>
+      <p><b>The two provisions.</b> s.18: an <b>acknowledgment in writing signed</b> of liability in respect of any property or right, made before expiry, gives a fresh period from its date. s.19: where <b>payment on account of a debt</b> (or of interest) or a legacy is made <b>before expiry</b> — evidenced in writing signed by the payer or his agent — a fresh period runs from the payment.</p>
+      <table>
+        <tr><th style="width:24%">Point</th><th>Section 18 — Acknowledgment</th><th>Section 19 — Payment</th></tr>
+        <tr><td><b>Not mutually exclusive</b></td><td colspan="2">A payment that fails s.19&rsquo;s requirements (e.g., not evidenced in writing) may still operate as an <b>acknowledgment under s.18</b> if its conditions are met — the sections overlap, not exclude.</td></tr>
+        <tr><td><b>Subject-matter</b></td><td>Any <b>property or right</b></td><td>Only <b>debts and legacies</b> (payment of interest or part of principal)</td></tr>
+        <tr><td><b>Who is bound</b></td><td>Operates only <b>against the maker</b> (and those claiming under him)</td><td>Operates <b>against all persons liable</b> for the debt, not merely the payer</td></tr>
+        <tr><td><b>Addressee / payee</b></td><td>Need not be addressed to the person entitled</td><td>Payment must be made <b>to the person entitled</b></td></tr>
+        <tr><td><b>Form</b></td><td>A mere writing containing an admission of liability is enough</td><td>Two things necessary: <b>(a) a payment, and (b) a writing recording such payment</b></td></tr>
+      </table>
+      <p><b>The Kerala formulation — <i>Parasuraman v. Purushottaman &amp; Co.</i>, AIR 1977 Ker 132:</b> &ldquo;As in the case of an acknowledgment under section 18, a payment under section 19 is also required to be recorded in writing. But unlike payment under section 18, the writing must contain within itself an admission of existing liability, while under section 19, it is sufficient if the writing merely records the fact of payment. An endorsement of payment need not imply an acknowledgment of liability&hellip; whereas an acknowledgment for the purpose of section 18 must be by the person against whom the property or right in question is claimed or by some person through whom he derives the title or liability, a payment for the purpose of section 19 need only be by the person liable to pay the debt&hellip; an acknowledgment under section 18 only operates against the person who makes it&hellip; but subject to the provision of sub-section (2) of section 20, a payment under section 19 saves limitation against all the persons who are liable for the debt.&rdquo;</p>
+    </div>
+  </div>
+
+  <!-- PYQ 6 : Q.5/2020 problem -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2020 (OBE)</span>
+      <div class="pyq-q">Q. 5/2020 &mdash; A took a loan of ₹50,000 from B on 01.04.2016. On 01.04.2017, A paid ₹20,000 to B in cash against due receipt. On 24.03.2020, A wrote a letter through courier wherein he stated that he owed the sum of ₹40,000. On the very next day the Government of India imposed a complete lockdown due to Covid-19. B received the letter on 15.06.2020 and filed a suit on 20.06.2020. A contended that the suit is barred by limitation. Decide with relevant provision and case law. (25 marks)</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; PROBLEM: PART-PAYMENT (s.19) + ACKNOWLEDGMENT (s.18)</div>
+      <p><b>Relevant provisions:</b> s.19 (effect of payment on account of debt or interest), s.18 (effect of acknowledgment in writing), Art. 19, Schedule (money lent — 3 years), with <i>State of Kerala v. T.M. Chacko</i>, (2000) 9 SCC 722 and <i>Sampuran Singh v. Niranjan Kaur</i>, AIR 1999 SC 1047 as the governing case law.</p>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">01.04.2016</div><div class="tl-body">Loan of ₹50,000 — original limitation (Art. 19) would run to <b>01.04.2019</b>.</div></div>
+        <div class="tl-item"><div class="tl-date">01.04.2017</div><div class="tl-body"><b>s.19 part-payment</b> of ₹20,000 against due receipt (payment + writing) — made before expiry → fresh period of 3 years from the payment, i.e., to <b>01.04.2020</b>.</div></div>
+        <div class="tl-item"><div class="tl-date">24.03.2020</div><div class="tl-body"><b>s.18 acknowledgment</b> — A&rsquo;s signed letter (&ldquo;I owe ₹40,000&rdquo;) made <b>within</b> the subsisting period (8 days before 01.04.2020) and despatched by courier — the admission of existing liability is complete and out of A&rsquo;s hands → fresh 3-year period from the acknowledgment.</div></div>
+        <div class="tl-item"><div class="tl-date">24.03.2020 &rarr; 24.03.2023</div><div class="tl-body"><b>New limitation period</b> extinguishes the earlier period; the lockdown of 25.03.2020 (court closures) could only have <b>extended</b> time further (s.4 / Supreme Court&rsquo;s Covid limitation extensions) — it cannot shorten it.</div></div>
+        <div class="tl-item"><div class="tl-date">20.06.2020</div><div class="tl-body">Recovery suit for ₹40,000 filed — <b>well within limitation</b> (due till 24.03.2023). B&rsquo;s delay in receiving the letter (15.06.2020) is immaterial: the acknowledgment operates from its date and despatch.</div></div>
+      </div>
+      <p><b>Decision:</b> The suit is <b>not barred</b>. The part-payment of 01.04.2017 (s.19) gave B a fresh period ending 01.04.2020; A&rsquo;s signed acknowledgment of 24.03.2020 — made before that expiry, in writing, by the person liable (<i>T.M. Chacko</i>: fresh period computed from the signing; <i>Sampuran Singh</i>: the only fatal defect would have been expiry — not the case here) — restarted limitation afresh till <b>24.03.2023</b>. The Covid lockdown and the courier delay are red herrings: they could not prejudice B, and the suit of 20.06.2020 is comfortably within time.</p>
+    </div>
+  </div>
+
+  <!-- Expected questions -->
+  <div class="card">
+    <h3>Questions to Expect Next Time</h3>
+    <ul class="tick">
+      <li>&ldquo;Where a copy of the order served on the party is lost, is the time spent in obtaining a fresh copy excluded under s.12(2)?&rdquo; — <i>Madan Lal Das</i> (yes, a fortiori).</li>
+      <li>&ldquo;Does limitation for a criminal appeal by the State run from the earliest copy obtained or the copy filed?&rdquo; — <i>Maharaj Narain</i> (the copy filed; no duty of promptitude).</li>
+      <li>&ldquo;Money paid to the State under an unconstitutional levy — when does limitation for refund begin?&rdquo; — <i>Mahabir Kishore</i> (knowledge; usually the judgment declaring the levy void).</li>
+      <li>&ldquo;Can an acknowledgment in a registered sale deed of 1960 revive a mortgage whose limitation expired in 1953?&rdquo; — <i>Sampuran Singh</i> (no; s.18 speaks only before expiry).</li>
+      <li>&ldquo;Distinguish fraud and mistake as grounds for postponing limitation (s.17) with the one-year rule of s.17(2).&rdquo;</li>
+      <li>Problems mixing part-payment, acknowledgment and holidays/vacations (ss.4, 12, 18, 19 together).</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ================= REVISION ================= -->
+<section id="rev">
+  <div class="sec-head"><div class="sec-num">&#9203;</div><h2 class="sec-title">Quick Revision Sheet — One Last Look Before the Hall</h2></div>
+  <div class="sec-sub">Sections 12, 17–19, 21 and the four cases, compressed</div>
+
+  <div class="grid2">
+    <div class="kbox"><div class="kh">The Five Sections in One Breath</div>
+      <b>s.12</b> — exclude the first day; exclude time <b>requisite</b> for copies (appeal/leave/revision/review); s.12(5) no exclusion where a copy is <i>not</i> required at all (but <i>Madan Lal Das</i> reads it down). <b>s.17</b> — fraud/mistake: clock from <b>knowledge</b> (reasonable diligence = at least a week's realism); s.17(2) execution barred by fraud/force → 1 year to apply. <b>s.18</b> — signed writing admitting liability <b>before expiry</b> → fresh period from its date; nothing after expiry. <b>s.19</b> — part-payment/interest on debt or legacy, evidenced in writing → fresh period, binds <b>all</b> co-debtors. <b>s.21</b> — added party's suit dates from addition, unless good-faith mistake (proviso; <i>Dagaduram</i>, <i>Karuppaswamy</i>); assignment/devolution ride the original suit (s.21(2)).</div>
+    <div class="kbox"><div class="kh">Case 31 — Madan Lal Das (1977)</div>
+      Copy served 22-8-1965 → <b>lost</b> → fresh copy 15-6-1966 to 18-8-1967 → revision 9-9-1967. <b>Held:</b> s.12(2) applies via s.29(2); time for the replacement copy excluded even though no copy needed filing — a practitioner may want to study the decree first (<i>Surty</i>: "positive direction"); <b>a fortiori</b> from <i>Maharaj Narain</i>. Khanna J., 3 judges.</div>
+    <div class="kbox"><div class="kh">Case 32 — Maharaj Narain (1968)</div>
+      Acquittal 10-11-1962; three copies (filed one: applied 15-11-1962, ready 3-1-1963); appeal 29-3-1963. <b>Held:</b> no duty of promptitude — wait out the 90 days if you wish; deduct time for <b>the copy filed</b>; "time beyond the party's control" (<i>Panjam</i>); minimum-time enquiries "unworkable"; <i>Mathela</i> wrong, <i>Pramatha Nath Roy</i> irrelevant. Appeal held <b>within time</b>.</div>
+    <div class="kbox"><div class="kh">Case 33 — Mahabir Kishore (1990)</div>
+      Illegal 7½% cess ₹54,606; internal uncommunicated letter 17-10-1961; knowledge September 1962 (<i>Doongaji</i>); notice 17-10-1964; suit 24-12-1964 — "7 days late" in the HC. <b>Held (Saikia J.):</b> refund for mistake of law → <b>s.72 Contract Act + Art. 113 (3 yrs) + s.17(1)(c)</b>; clock from knowledge — usually the judgment declaring the levy void; uncommunicated letter starts nothing; "at least a week" for diligence; <i>Salonah Tea</i>: no State may keep money without authority of law. Appeal allowed, remand.</div>
+    <div class="kbox"><div class="kh">Case 34 — Sampuran Singh (1999)</div>
+      1893 oral mortgage ₹53 (valid in Punjab: &lt;₹100 + possession; TPA came only 1956); equity bought 1959; mortgagee rights sold 11-1-1960 with acknowledgment; redemption suit 1980. <b>Held (A.P. Misra J.):</b> right to redeem accrued <b>the very day</b> of the mortgage → 60 years expired <b>1953</b> → the 1960 acknowledgment is <b>after expiry — revives nothing</b> ("Where, <i>before</i> the expiration..."); <i>Shri Chand</i> FB affirmed, <i>Inder Singh</i> overruled; Art.61(a) tender theory would make limitation infinite; 1913 Act procedural only. Appeal dismissed.</div>
+    <div class="kbox"><div class="kh">The Three Formulas to Memorise</div>
+      (1) <b>Copy rule:</b> last date = judgment date + limitation + time to get the copy filed (conduct disciplined). (2) <b>Refund rule:</b> money under mistake of law → Art. 113 (3 yrs) + s.17(1)(c) from knowledge = the voiding judgment (<i>Kanhaiya Lal → Cawasji → Vallabh Glass → Auraiya → Salonah Tea → Mahabir Kishore</i>). (3) <b>Revival gate:</b> acknowledgment (s.18) / part-payment (s.19) only <b>while the period lives</b> — after expiry, nothing revives (<i>Sampuran Singh</i>).</div>
+  </div>
+
+  <div class="card">
+    <h3>Memory Hooks</h3>
+    <ul class="dot">
+      <li><b>12 = Copies:</b> "twelve" rhymes with "send anew" — the day, the copy, the fresh copy.</li>
+      <li><b>17 = Secrets:</b> fraud and mistake hide the clock; knowledge drags it into daylight (and s.17(2) gives execution one year).</li>
+      <li><b>18 = Ink:</b> acknowledgment must be <b>in writing, signed, in time</b> — "18 words: before expiry, in writing, signed, by the liable hand."</li>
+      <li><b>19 = Cash + chit:</b> payment on account of debt/legacy, plus a writing to record it — and it binds every co-debtor.</li>
+      <li><b>21 = Late guests:</b> a party added after limitation re-dates the suit — unless the invitation was a bona fide mistake (then it relates back).</li>
+      <li><b>Case-number = fix:</b> 31 fixes lost copies; 32 fixes multiple copies; 33 fixes the seven-day shortfall; 34 fixes nothing — the mortgage was already dead in 1953.</li>
+      <li><b>Maharaj Narain's three copies:</b> only the one <i>filed</i> matters — the other two are "used for other purposes with which the court has nothing to do."</li>
+      <li><b>Sampuran's gate:</b> s.18's first words — "Where, <i>before</i> the expiration" — are a locked gate; 1953 had already turned the key.</li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<footer>
+  <h4>Topic 2 (Limitation) &middot; Computation of Limitation — Sections 12, 17, 18, 19 &amp; 21, Limitation Act, 1963</h4>
+  <div>Detailed study notes for LL.B. (Hons.) &mdash; Civil Procedure Code &amp; Limitation (DU semester examination preparation), Part B: Limitation.</div>
+  <div style="margin-top:12px;"><b>Sources:</b></div>
+  <ul class="src-list">
+    <li>DU Case Material (LB-302) — Commissioner of Sales Tax, U.P. v. M/s. Madan Lal Das &amp; Sons, Bareilly, AIR 1977 SC 523 (p. 159); State of U.P. v. Maharaj Narain, AIR 1968 SC 960 (p. 163); Mahabir Kishore v. State of M.P., AIR 1990 SC 313 (p. 166); Sampuran Singh v. Smt. Niranjan Kaur, AIR 1999 SC 1047 (p. 172)</li>
+    <li>The Limitation Act, 1963 (Act 36 of 1963) — ss. 12, 17, 18, 19, 21, 29(2); the Schedule (Arts. 19, 61(a), 113, 136)</li>
+    <li>Indian Contract Act, 1872 — s. 72 (money paid by mistake or under coercion)</li>
+    <li>DU PYQ solved papers — Q.7(b)/2017; Q.8(a)&amp;(b)/2017; Q.7(a)&amp;(b)/2019; Q.5/2020</li>
+    <li>DU Case Material &amp; Statutory Provisions</li>
+  </ul>
+  <div style="margin-top:14px; color:#8d8875; font-size:.8rem;">Case visuals are hypothetical illustrative renderings created for study purposes; diagrams are original schematics of the doctrinal structure. Obvious OCR slips in the PYQ compendium (e.g., "1955" for 1966; "1936" for 1963) have been silently corrected against the law reports. Prepared for personal academic revision.</div>
+</footer>
+
+<button class="top-btn" id="toTop" title="Back to top">&#9650;</button>
+
+<script>
+(function(){
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 600) { btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }, {passive:true});
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a385f2464f31d5f0',t:'MTc4ODk1NDMyMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

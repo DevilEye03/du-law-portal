@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NNW78WFV');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>BNS 2023 ↔ IPC 1860 Live Converter & Comparative Table — Make Law Easy</title>
+  <meta name="description" content="Instant cross-reference converter from Indian Penal Code 1860 to Bharatiya Nyaya Sanhita 2023 with section maps, key changes, and precedents.">
+  <link rel="canonical" href="https://makelaweasy.in/tools/bns-converter">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .standalone-page-body {
+      background: var(--bg-body, #0a0d14);
+      color: var(--text-primary, #f1f5f9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-header-nav {
+      background: var(--bg-card, rgba(17, 24, 39, 0.95));
+      border-bottom: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 20px;
+    }
+    .tool-header-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .tool-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary, #fff);
+    }
+    .tool-brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e11d48, #c9a84c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+    }
+    .tool-brand-text h1 {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .tool-brand-text span {
+      font-size: 0.72rem;
+      color: var(--du-gold, #c9a84c);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .tool-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-tool-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: var(--radius-pill, 9999px);
+      color: var(--text-primary, #fff);
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-tool-back:hover {
+      background: var(--primary, #2563eb);
+      border-color: var(--primary, #2563eb);
+      color: #fff;
+      transform: translateX(-2px);
+    }
+    .theme-toggle-standalone {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      color: var(--text-secondary, #cbd5e1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-standalone:hover {
+      color: var(--du-gold, #c9a84c);
+      background: var(--bg-elevated, rgba(255, 255, 255, 0.1));
+    }
+    .tool-hero {
+      max-width: 1300px;
+      margin: 28px auto 20px;
+      padding: 0 20px;
+      text-align: center;
+    }
+    .tool-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill, 9999px);
+      background: rgba(225, 29, 72, 0.12);
+      border: 1px solid rgba(225, 29, 72, 0.3);
+      color: #fb7185;
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .tool-hero h2 {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: var(--text-primary, #fff);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .tool-hero p {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 0.94rem;
+      color: var(--text-secondary, #cbd5e1);
+      line-height: 1.6;
+    }
+    .tool-container {
+      max-width: 1300px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      width: 100%;
+      flex: 1;
+    }
+    .search-filter-card {
+      background: var(--bg-card, #111827);
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.1));
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .search-input-wrap {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .search-input-wrap i.search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted, #94a3b8);
+      font-size: 1rem;
+    }
+    .search-input-standalone {
+      width: 100%;
+      padding: 14px 44px 14px 46px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.04));
+      border: 1.5px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: 12px;
+      color: var(--text-primary, #fff);
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+    }
+    .search-input-standalone:focus {
+      outline: none;
+      border-color: #e11d48;
+      box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
+    }
+    .btn-clear-input {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted, #94a3b8);
+      font-size: 1rem;
+      cursor: pointer;
+      display: none;
+    }
+    .bns-filter-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .bns-filter-pills::-webkit-scrollbar { display: none; }
+    .bns-pill {
+      flex-shrink: 0;
+      padding: 7px 14px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: var(--radius-pill, 9999px);
+      color: var(--text-secondary, #cbd5e1);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .bns-pill:hover {
+      background: var(--bg-elevated, rgba(255, 255, 255, 0.1));
+      color: #fff;
+    }
+    .bns-pill.active {
+      background: #e11d48;
+      border-color: #e11d48;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+    }
+    .bns-cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .tool-footer {
+      background: var(--bg-card, #0f172a);
+      border-top: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted, #94a3b8);
+      margin-top: auto;
+    }
+    .tool-footer a {
+      color: var(--du-gold, #c9a84c);
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .tool-header-nav { padding: 10px 14px; }
+      .tool-hero { margin: 20px auto 14px; padding: 0 14px; }
+      .tool-hero h2 { font-size: 1.45rem; }
+      .tool-container { padding: 0 12px; }
+      .search-filter-card { padding: 14px; border-radius: 12px; }
+      .search-input-standalone { font-size: 0.88rem; padding: 12px 38px 12px 40px; }
+    }
+  </style>
+</head>
+<body class="standalone-page-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNW78WFV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Top Navigation Header -->
+  <header class="tool-header-nav">
+    <div class="tool-header-inner">
+      <a href="/" class="tool-brand" title="Make Law Easy Homepage">
+        <div class="tool-brand-logo"><i class="fa-solid fa-gavel"></i></div>
+        <div class="tool-brand-text">
+          <h1>Make Law Easy</h1>
+          <span>DU Law Portal</span>
+        </div>
+      </a>
+      <div class="tool-nav-actions">
+        <a href="/" class="btn-tool-back"><i class="fa-solid fa-arrow-left"></i> <span>Study Portal</span></a>
+        <button class="theme-toggle-standalone" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="tool-hero">
+    <span class="tool-hero-badge"><i class="fa-solid fa-arrows-rotate"></i> Criminal Law Transition</span>
+    <h2>BNS 2023 ↔ IPC 1860 Converter</h2>
+    <p>Live dual-column comparative analysis between the Bharatiya Nyaya Sanhita, 2023 and the Indian Penal Code, 1860 with statutory changes, landmark precedents, and DU examination scoring tips.</p>
+  </section>
+
+  <!-- Main Tool Container -->
+  <main class="tool-container">
+    <!-- Search & Filter Card -->
+    <div class="search-filter-card">
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="bnsSearchInput" class="search-input-standalone" placeholder="Search by IPC section (e.g. 300, 302, 34, 120B), BNS section, or offense (e.g. Murder, Theft, Rape)..." autocomplete="off">
+        <button type="button" class="btn-clear-input" id="bnsClearBtn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="bns-filter-pills" id="bnsPillsStrip">
+        <button class="bns-pill active" data-cat="all"><i class="fa-solid fa-layer-group"></i> All Offenses</button>
+        <button class="bns-pill" data-cat="Offences Against Human Body"><i class="fa-solid fa-user-shield"></i> Offences Against Body</button>
+        <button class="bns-pill" data-cat="Offences Against Property"><i class="fa-solid fa-coins"></i> Offences Against Property</button>
+        <button class="bns-pill" data-cat="Offences Against Women & Children"><i class="fa-solid fa-person-breastfeeding"></i> Women & Children</button>
+        <button class="bns-pill" data-cat="Offences Against the State"><i class="fa-solid fa-flag"></i> Offences Against State</button>
+        <button class="bns-pill" data-cat="General Exceptions"><i class="fa-solid fa-shield-halved"></i> General Exceptions</button>
+      </div>
+    </div>
+
+    <!-- Results Count Bar -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:0.84rem; color:var(--text-muted,#94a3b8); padding:0 4px;">
+      <span id="bnsCountText">Showing sections...</span>
+      <span id="bnsCategoryText">All Categories</span>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="bns-cards-grid" id="bnsCardsContainer">
+      <div class="empty-state">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <h4>Loading BNS ↔ IPC Converter...</h4>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="tool-footer">
+    <p>© 2026 Make Law Easy • Educational portal for Faculty of Law, University of Delhi. <a href="/terms">Terms</a> • <a href="/privacy">Privacy</a> • <a href="/feedback">Feedback</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/bns_converter.js"></script>
+  <script>
+    (function() {
+      // Theme Management
+      const savedTheme = localStorage.getItem('du_law_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const themeBtn = document.getElementById('themeToggleBtn');
+      function updateThemeIcon(t) {
+        if (!themeBtn) return;
+        themeBtn.innerHTML = t === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+      }
+      updateThemeIcon(savedTheme);
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('du_law_theme', next);
+          updateThemeIcon(next);
+        });
+      }
+
+      const db = window.BNS_CONVERTER_DB;
+      if (!db || !db.sections) return;
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      const searchInput = document.getElementById('bnsSearchInput');
+      const clearBtn = document.getElementById('bnsClearBtn');
+      const pillsStrip = document.getElementById('bnsPillsStrip');
+      const container = document.getElementById('bnsCardsContainer');
+      const countText = document.getElementById('bnsCountText');
+      const catText = document.getElementById('bnsCategoryText');
+
+      // Check URL parameters for direct search (e.g. ?ipc=302 or ?bns=103 or ?q=murder)
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryParam = urlParams.get('ipc') || urlParams.get('bns') || urlParams.get('q');
+      if (queryParam) {
+        searchQuery = queryParam.trim();
+        if (searchInput) searchInput.value = searchQuery;
+        if (clearBtn) clearBtn.style.display = 'block';
+      }
+
+      if (pillsStrip) {
+        pillsStrip.querySelectorAll('.bns-pill').forEach(btn => {
+          btn.addEventListener('click', () => {
+            pillsStrip.querySelectorAll('.bns-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.dataset.cat;
+            renderCards();
+          });
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim();
+          if (clearBtn) clearBtn.style.display = searchQuery ? 'block' : 'none';
+          renderCards();
+        });
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearBtn.style.display = 'none';
+          searchInput.focus();
+          renderCards();
+        });
+      }
+
+      function renderCards() {
+        let items = db.sections;
+        if (activeCategory && activeCategory !== 'all') {
+          items = items.filter(s => (s.chapter && s.chapter.includes(activeCategory)) || (s.offense && s.offense.includes(activeCategory)));
+        }
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          items = items.filter(s =>
+            (s.bns && s.bns.toLowerCase().includes(q)) ||
+            (s.bnsNum && s.bnsNum.toLowerCase().includes(q)) ||
+            (s.ipc && s.ipc.toLowerCase().includes(q)) ||
+            (s.ipcNum && s.ipcNum.toLowerCase().includes(q)) ||
+            (s.offense && s.offense.toLowerCase().includes(q)) ||
+            (s.summary && s.summary.toLowerCase().includes(q)) ||
+            (s.changes && s.changes.toLowerCase().includes(q))
+          );
+        }
+
+        if (countText) countText.textContent = `Showing ${items.length} ${items.length === 1 ? 'provision mapping' : 'provision mappings'}`;
+        if (catText) catText.textContent = activeCategory === 'all' ? 'All Offenses' : activeCategory;
+
+        if (items.length === 0) {
+          container.innerHTML = `
+            <div class="empty-state">
+              <i class="fa-solid fa-scale-unbalanced"></i>
+              <h4>No corresponding sections found</h4>
+              <p>Try searching for a different IPC section, BNS section, or offense keyword.</p>
+              <button class="btn-tool-back" style="margin-top:14px;" onclick="document.getElementById('bnsClearBtn').click()">Reset Filter</button>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = items.map(s => `
+          <div class="bns-comp-card">
+            <div class="bns-comp-header">
+              <div class="bns-offense-info">
+                <h4>${s.offense}</h4>
+                <div class="bns-chapter-tag">${s.chapter || 'Indian Penal Transition'}</div>
+              </div>
+              <div class="bns-header-pills">
+                <span class="bns-code-badge bns-badge-ipc">Old: ${s.ipc}</span>
+                <span class="bns-code-badge bns-badge-bns">New: ${s.bns}</span>
+              </div>
+            </div>
+
+            <div class="bns-comp-body">
+              <div class="bns-side bns-ipc-side">
+                <div class="bns-side-title"><i class="fa-solid fa-scroll"></i> ${s.ipc} (IPC 1860)</div>
+                <p class="bns-summary-text">${s.summary}</p>
+              </div>
+              <div class="bns-side bns-bns-side">
+                <div class="bns-side-title"><i class="fa-solid fa-gavel"></i> ${s.bns} (BNS 2023)</div>
+                <div class="bns-changes-box">
+                  <div class="bns-changes-label"><i class="fa-solid fa-pen-to-square"></i> Key Statutory Changes:</div>
+                  <p>${s.changes}</p>
+                </div>
+              </div>
+            </div>
+
+            ${s.cases && s.cases.length ? `
+              <div class="bns-cases-row">
+                <span class="bns-row-label"><i class="fa-solid fa-landmark"></i> Precedents Applicable:</span>
+                <div class="bns-cases-chips">
+                  ${s.cases.map(c => `<span class="bns-case-chip">${c}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
+
+            ${s.duExamTip ? `
+              <div class="bns-exam-tip-row">
+                <span class="bns-exam-tip-badge"><i class="fa-solid fa-star"></i> DU Exam Tip:</span>
+                <p>${s.duExamTip}</p>
+              </div>
+            ` : ''}
+          </div>
+        `).join('');
+      }
+
+      renderCards();
+    })();
+  </script>
+</body>
+</html>

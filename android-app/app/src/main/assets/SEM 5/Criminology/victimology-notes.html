@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 6: Victimology — Comprehensive DU LL.B. Notes | Criminology (LB-5033)</title>
+<style>
+:root{
+  --ink:#1a1a2e; --maroon:#5c0a0a; --maroon2:#7b1e1e; --gold:#c9a227; --gold2:#f5e6b8;
+  --cream:#fdf9ef; --paper:#fffdf7; --teal:#0e5e5e; --teal2:#147a7a;
+  --blue:#1e3a8a; --slate:#334155; --muted:#64748b; --line:#e7dcc0;
+  --green:#166534; --red:#991b1b; --violet:#5b21b6;
+  --shadow:0 4px 18px rgba(60,20,20,.12);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Noto Sans",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;font-size:16px}
+a{color:var(--maroon2)}
+h1,h2,h3,h4{line-height:1.3}
+::selection{background:var(--gold2)}
+/* ===== HEADER ===== */
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(135deg,#2b0606,#5c0a0a 55%,#7b1e1e);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+.topbar-inner{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.brand{flex:1;min-width:0}
+.brand .kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);font-weight:700}
+.brand h1{margin:2px 0;font-size:clamp(17px,3.4vw,26px);letter-spacing:.3px}
+.brand h1 .gold{color:var(--gold)}
+.brand .sub{font-size:12px;color:#f3d9a4;margin:0}
+.menu-toggle{display:none}
+.hamburger{display:none;cursor:pointer;font-size:26px;padding:4px 10px;border:1px solid rgba(255,255,255,.4);border-radius:8px;user-select:none}
+nav.mainnav{background:#230505;border-top:1px solid rgba(255,255,255,.12)}
+nav.mainnav .links{max-width:1200px;margin:0 auto;padding:0 12px;display:flex;flex-wrap:wrap;gap:2px}
+nav.mainnav a{color:#ffe9bd;text-decoration:none;font-size:13px;font-weight:600;padding:9px 11px;border-radius:8px;white-space:nowrap}
+nav.mainnav a:hover{background:rgba(255,255,255,.12)}
+/* ===== HERO ===== */
+.hero{background:linear-gradient(180deg,#f7ecd0,#fdf9ef);border-bottom:3px double var(--gold);padding:26px 16px 20px}
+.hero-inner{max-width:1200px;margin:0 auto}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;border:1.5px solid}
+.b-du{background:#5c0a0a;color:#ffe9bd;border-color:#5c0a0a}
+.b-new{background:#0e5e5e;color:#e6fffa;border-color:#0e5e5e}
+.b-case{background:#1e3a8a;color:#dbeafe;border-color:#1e3a8a}
+.b-pyq{background:#c9a227;color:#3a2a00;border-color:#8a6d00}
+.b-sec{background:#fff;border-color:var(--maroon2);color:var(--maroon)}
+.hero h2{font-size:clamp(22px,4.5vw,34px);margin:6px 0 4px;color:var(--maroon)}
+.hero p.lead{font-size:clamp(14px,2.4vw,17px);color:var(--slate);max-width:950px}
+.quote-strip{background:var(--ink);color:#f5e6b8;border-left:6px solid var(--gold);padding:12px 16px;border-radius:0 12px 12px 0;margin:16px 0 4px;font-style:italic;font-size:14.5px}
+.quote-strip b{color:#fff;font-style:normal}
+/* ===== LAYOUT ===== */
+.wrap{max-width:1200px;margin:0 auto;padding:18px 16px 60px}
+.part{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);margin:26px 0;overflow:hidden}
+.part-head{padding:16px 20px;color:#fff;display:flex;gap:14px;align-items:center}
+.part-head .num{flex:0 0 auto;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.55)}
+.part-head h2{margin:0;font-size:clamp(18px,3.4vw,25px)}
+.part-head p{margin:2px 0 0;font-size:13px;opacity:.92}
+.ph-maroon{background:linear-gradient(135deg,#4a0808,#7b1e1e)}
+.ph-teal{background:linear-gradient(135deg,#073f3f,#147a7a)}
+.ph-blue{background:linear-gradient(135deg,#172554,#3457c6)}
+.ph-green{background:linear-gradient(135deg,#0c3d1f,#1d7a3c)}
+.ph-violet{background:linear-gradient(135deg,#3b0f73,#7c3aed)}
+.ph-gold{background:linear-gradient(135deg,#6b4d00,#b8901a)}
+.ph-ink{background:linear-gradient(135deg,#101028,#3a3a6e)}
+.part-body{padding:18px 20px 24px}
+h3.sec{color:var(--maroon);border-bottom:2px solid var(--gold);padding-bottom:6px;margin:26px 0 12px;font-size:clamp(16px,3vw,20px)}
+h3.sec:first-child{margin-top:0}
+h4.sub{color:var(--teal);margin:18px 0 8px;font-size:16.5px}
+h4.sub::before{content:"▸ ";color:var(--gold)}
+/* ===== COMPONENTS ===== */
+.card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0;background:#fff}
+.card.gold{background:linear-gradient(180deg,#fffaf0,#fff);border-left:6px solid var(--gold)}
+.card.green{background:#f0fdf4;border-left:6px solid var(--green)}
+.card.blue{background:#eff6ff;border-left:6px solid var(--blue)}
+.card.red{background:#fef2f2;border-left:6px solid var(--red)}
+.card.violet{background:#f5f3ff;border-left:6px solid var(--violet)}
+.card.teal{background:#ecfdfb;border-left:6px solid var(--teal)}
+.card h4{margin:0 0 6px}
+.def{background:#230505;color:#ffe9bd;border-radius:12px;padding:14px 18px;margin:12px 0;border:1px solid #5c0a0a}
+.def b.t{color:var(--gold)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px;background:#fff}
+th{background:var(--maroon);color:#ffe9bd;padding:10px 8px;text-align:left;font-size:13.5px}
+td{border:1px solid #ddd2b3;padding:9px 8px;vertical-align:top}
+tr:nth-child(even) td{background:#fbf6e9}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.tbl-wrap table{margin:0}
+ul.tight li,ol.tight li{margin-bottom:6px}
+.pill{display:inline-block;background:var(--maroon);color:#fff;font-size:11.5px;font-weight:700;padding:2px 10px;border-radius:999px;margin:2px 4px 2px 0}
+.pill.t{background:var(--teal)} .pill.b{background:var(--blue)} .pill.g{background:var(--green)} .pill.v{background:var(--violet)} .pill.o{background:#b45309}
+details{border:1px solid var(--line);border-radius:10px;margin:10px 0;background:#fff}
+details summary{cursor:pointer;font-weight:700;padding:11px 14px;color:var(--maroon);list-style:none;display:flex;gap:8px;align-items:center}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+";display:inline-flex;width:24px;height:24px;flex:0 0 24px;align-items:center;justify-content:center;background:var(--maroon);color:#fff;border-radius:50%;font-size:16px}
+details[open] summary::before{content:"–"}
+details .in{padding:0 16px 14px;border-top:1px dashed var(--line)}
+/* flowcharts */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;align-items:stretch}
+.fbox{background:#fff;border:2px solid var(--teal);border-radius:12px;padding:10px 14px;text-align:center;font-weight:600;font-size:14.5px;box-shadow:var(--shadow)}
+.fbox.alt{border-color:var(--maroon2);background:#fff7ef}
+.fbox.dark{background:var(--ink);color:#ffe9bd;border-color:var(--ink)}
+.farrow{text-align:center;font-size:22px;color:var(--maroon);line-height:1.2;font-weight:800}
+.frow{display:flex;gap:10px;flex-wrap:wrap}
+.frow .fbox{flex:1;min-width:150px}
+.fork{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.fork>div{flex:1;min-width:200px}
+/* timeline */
+.timeline{position:relative;margin:16px 0 8px;padding-left:26px;border-left:3px solid var(--gold)}
+.tl-item{position:relative;margin:0 0 16px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.tl-item::before{content:"";position:absolute;left:-35px;top:12px;width:14px;height:14px;border-radius:50%;background:var(--maroon);border:3px solid var(--gold)}
+.tl-item .yr{font-weight:800;color:var(--maroon);font-size:13px;letter-spacing:1px;text-transform:uppercase}
+/* case brief */
+.case{border:2px solid var(--blue);border-radius:14px;margin:18px 0;overflow:hidden;background:#fff}
+.case-head{background:linear-gradient(135deg,#172554,#3457c6);color:#fff;padding:14px 18px}
+.case-head .cno{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#bfdbfe;font-weight:700}
+.case-head h3{margin:4px 0;font-size:clamp(16px,3.2vw,21px)}
+.case-head .cite{font-size:13px;color:#e0e7ff}
+.case-body{padding:6px 18px 16px}
+.facts{background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;margin:10px 0}
+.ratio{background:linear-gradient(180deg,#fffbeb,#fff);border:2px solid var(--gold);border-radius:10px;padding:10px 14px;margin:10px 0}
+.ratio b{color:var(--maroon)}
+.exam-tip{background:#f0fdf4;border:1.5px dashed var(--green);border-radius:10px;padding:10px 14px;margin:10px 0;font-size:14.5px}
+.pyq{background:#fff;border:2px solid var(--violet);border-radius:14px;margin:16px 0;overflow:hidden}
+.pyq-head{background:linear-gradient(135deg,#3b0f73,#7c3aed);color:#fff;padding:12px 18px}
+.pyq-head h3{margin:0;font-size:clamp(15px,3vw,19px)}
+.pyq-head .yr{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#ddd6fe;font-weight:700}
+.pyq-body{padding:6px 18px 16px}
+.ans{background:#f5f3ff;border-radius:10px;padding:12px 16px;margin:10px 0;border:1px solid #c4b5fd}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.kv{display:flex;gap:10px;margin:8px 0;align-items:flex-start}
+.kv .k{flex:0 0 150px;font-weight:800;color:var(--maroon);font-size:14px}
+.kv .v{flex:1;font-size:14.5px}
+.foot{background:#1a1a2e;color:#d6c58a;padding:26px 16px;text-align:center;font-size:13.5px}
+.foot b{color:#fff}
+.topbtn{position:fixed;bottom:18px;right:16px;background:var(--maroon);color:#ffe9bd;border:2px solid var(--gold);border-radius:50%;width:48px;height:48px;font-size:22px;cursor:pointer;box-shadow:var(--shadow);z-index:60}
+.syl li{margin-bottom:8px}
+code.secno{background:#230505;color:var(--gold2);padding:1px 8px;border-radius:6px;font-weight:700;font-size:13.5px;white-space:nowrap}
+.hi{background:linear-gradient(transparent 60%,#fde68a 60%);font-weight:700}
+@media(max-width:760px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  .hamburger{display:block}
+  nav.mainnav .links{display:none;flex-direction:column;padding:6px 12px 12px}
+  .menu-toggle:checked ~ nav.mainnav .links{display:flex}
+  nav.mainnav a{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .kv{flex-direction:column;gap:2px}
+  .kv .k{flex:none}
+  body{font-size:15px}
+  .part-body{padding:14px 14px 20px}
+  table{font-size:13.5px}
+}
+@media print{
+  .topbar,nav.mainnav,.topbtn,.hamburger{display:none}
+  .part{box-shadow:none;break-inside:avoid}
+  details{break-inside:avoid}
+  body{background:#fff}
+}
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (v2.0)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Responsive: Zero Horizontal Wobble, Zero Viewport Drift,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+
+/* 1. UNCONDITIONAL ROOT & VIEWPORT LOCK (Rule 3)
+   Applies across ALL screen widths (320px to 4K desktop) and inside iframes.
+   Prevents any horizontal movement, wobble, or scrollbar spill. */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: clip !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. UNIVERSAL CONTAINER CONTAINMENT (UNCONDITIONAL) */
+.wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+.content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+.quicknav-inner, .hero-inner, .doc-wrap, .main-wrap, .paper, .note-container,
+.notes-body, .reading-container, .syllabus-container, .wrapper, .site-main,
+.doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+.firac-wrapper, .briefs-container, .pyq-wrap, .deck {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Prevent decorative pseudo-elements from bleeding outside viewport */
+.cover, header.hero, .hero, .casehead, .case-hd {
+  position: relative !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hero banners & headers must never leak out with negative margins */
+header.hero, header.doc, header.top, header.cover, header.topbar,
+header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+.cover, .case-hero, .doc-header {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* 3. UNIVERSAL TABLE CONTAINMENT (UNCONDITIONAL) */
+.tw, .twrap, .tblwrap, .tbl-wrap, .table-wrap, .tbl-scroll, .scroll, .table-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+  margin: 12px 0 !important;
+}
+
+.tw table, .twrap table, .tblwrap table, .tbl-wrap table, .table-wrap table, .tbl-scroll table, .scroll table, .table-container table {
+  display: table !important;
+  width: 100% !important;
+  min-width: 480px !important;
+  max-width: none !important;
+  border-collapse: collapse !important;
+  box-sizing: border-box !important;
+}
+
+/* Fallback: Auto-contain any table without an outer scroll wrapper */
+table:not(.tw table):not(.twrap table):not(.tblwrap table):not(.tbl-wrap table):not(.table-wrap table):not(.tbl-scroll table):not(.scroll table):not(.table-container table) {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  margin: 12px 0 !important;
+  box-sizing: border-box !important;
+}
+
+th, td {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 4. TIMELINE & OFFSET MARKERS CONTAINMENT */
+.tl, .timeline {
+  margin-left: 14px !important;
+  max-width: calc(100% - 14px) !important;
+  box-sizing: border-box !important;
+}
+
+/* 5. SVG & MEDIA CONTAINMENT */
+svg, img {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+svg:not(.crest):not(.icon):not([width="18"]):not([width="20"]):not([width="24"]):not([height="18"]):not([height="20"]):not([height="24"]) {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+.fig, .figure, figure, .case-visual, .diagram-wrap, .flow-svg, .diagram-frame, .diagram-box, .svgbox {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 6. PRE & CODE BLOCKS CONTAINMENT */
+pre, code, pre code, .stat, .mnem {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 7. FLEXBOX OVERFLOW DEFENSE (Rule 3) */
+.brand, .navlinks, .topbar, .topbar-in, .hero .meta, .chips, .tags,
+.badge-row, .meta-strip, .hero-meta, .sec-head, .header-card, .chapter-header,
+.casehead, .case-hd, .q, .pyq, .pyq-hd, .qh, .badge, .chip, .tag {
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT ADAPTATIONS (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: clip !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  /* Reclaim side margins on mobile touchscreens */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar, aside.toc {
+    display: none !important;
+  }
+
+  /* Header & Hero Scaling */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Horizontal Navigation & Swipe */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips & Meta */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* All Cards, Boxes & Sections */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .defcard, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .caseblock, .case-box, .sub-section, .case-detail, .argcard, .verdict, .srcnote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* Diagrams & Visuals */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Flowcharts: vertical orientation */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Multi-column Grid collapse */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Table cells on mobile */
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   DARK THEME PALETTE FOR NOTES
+   ========================================================================== */
+[data-theme="dark"] body {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+[data-theme="dark"] .card, [data-theme="dark"] section, [data-theme="dark"] .box.plain,
+[data-theme="dark"] .mini, [data-theme="dark"] .toc, [data-theme="dark"] details,
+[data-theme="dark"] .fig, [data-theme="dark"] .case, [data-theme="dark"] .pyq,
+[data-theme="dark"] .tw, [data-theme="dark"] .twrap, [data-theme="dark"] .tblwrap {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+[data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] td {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] strong, [data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] th {
+  color: #f1f5f9 !important;
+}
+[data-theme="dark"] tr:nth-child(even) td {
+  background: #192231 !important;
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+
+</style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="kicker">DU LL.B. V Term · Criminology (LB-5033) · Topic 6</div>
+      <h1>⚖️ VICTIMOLOGY <span class="gold">— Complete Notes</span></h1>
+      <p class="sub">Strictly anchored in DU Case Material (July 2025) · BNSS Updated · Cases · PYQs · Model Answers</p>
+    </div>
+    <label class="hamburger" for="menu">☰</label>
+  </div>
+  <input type="checkbox" id="menu" class="menu-toggle">
+  <nav class="mainnav"><div class="links">
+    <a href="#syllabus">📋 Syllabus Map</a>
+    <a href="#p1">1 · Meaning &amp; Scope</a>
+    <a href="#p2">2 · Victim in CJS</a>
+    <a href="#p3">3 · Rights &amp; Remedies</a>
+    <a href="#p4">4 · BNSS 395–397</a>
+    <a href="#p5">5 · Case Laws</a>
+    <a href="#p6">6 · PYQs + Answers</a>
+    <a href="#p7">7 · Rapid Revision</a>
+  </div></nav>
+</div>
+
+<div class="hero"><div class="hero-inner">
+  <div class="badges">
+    <span class="badge b-du">DU CASE MATERIAL = PRIMARY SOURCE</span>
+    <span class="badge b-new">BNSS 2023 UPDATED</span>
+    <span class="badge b-case">6 PRESCRIBED CASES IN FULL IRAC</span>
+    <span class="badge b-pyq">DU PYQs 2017 &amp; 2022 SOLVED</span>
+  </div>
+  <h2>Topic 6: Victimology — Meaning, Role of Victim, Rights &amp; Remedies, Compensation</h2>
+  <p class="lead">These notes cover <b>every limb of the DU syllabus</b> — (i) Meaning &amp; scope · (ii) Role of victim in criminal justice administration · (iii) Victims' rights &amp; remedies in India · (iv) Compensation (BNSS Ss. 395, 396, 397) — built <b>maximum-portion-first on the DU case material</b> (S.C. Raina, <i>Rights of Victims</i>; the four extracted judgments; the two starred online cases), supplemented at each point by the prescribed readings (UN Declaration 40/34, Zender, Makkar &amp; Friday), N.V. Paranjape, and all connected provisions (BNS, BNSS, POCSO, POA Act, MV Act, PHR Act) for a holistic understanding.</p>
+  <div class="quote-strip">“The criminal law in India is <b>not victim oriented</b> and the suffering of the victim, often immeasurable, <b>is entirely overlooked in misplaced sympathy for the criminal</b>.” — <b>Justice V.R. Krishna Iyer</b> (quoted in Paranjape; soul of this topic — use it to open any victimology answer)</div>
+</div></div>
+
+<div class="wrap">
+
+<!-- ================= SYLLABUS MAP ================= -->
+<div class="part" id="syllabus">
+  <div class="part-head ph-ink"><div class="num">📋</div><div><h2>Syllabus Map &amp; Exam Strategy</h2><p>What DU prescribes for Topic 6 — and how each item is covered in these notes</p></div></div>
+  <div class="part-body">
+    <div class="tbl-wrap"><table>
+      <tr><th style="width:26%">DU Syllabus Item</th><th>Prescribed Content</th><th style="width:26%">Covered Here</th></tr>
+      <tr><td><b>(i) Meaning and scope of Victimology</b></td><td>Definition, evolution, theories, classifications, contents of the discipline</td><td><a href="#p1">Part 1</a> — definitions (Separovic, UN, BNSS), history timeline, 7 contents, all theories compared</td></tr>
+      <tr><td><b>(ii) Role of the victim in Criminal justice administration</b></td><td>Victim as forgotten person → participant; reporting → trial → appeal; restorative justice</td><td><a href="#p2">Part 2</a> — stage-wise role chart, UN Declaration, secondary victimisation, media, assistance programme</td></tr>
+      <tr><td><b>(iii) Victims' rights and remedies in India</b></td><td>Constitutional + statutory + public-law compensation jurisprudence</td><td><a href="#p3">Part 3</a> — rights catalogue, constitutional tort line of cases, allied Acts</td></tr>
+      <tr><td><b>(iv) Concept of compensation: Ss. 395, 396, 397 BNSS</b></td><td>Order to pay compensation; Victim Compensation Scheme; Treatment of victims</td><td><a href="#p4">Part 4</a> — bare-text analysis of each section + flowcharts + CrPC/BNS mapping</td></tr>
+      <tr><td><b>Readings 1–3</b></td><td>1. UN GA Res. 40/34 (1985 Declaration) · 2. Zender, "Victims", <i>Oxford Handbook of Criminology</i> (2nd ed. 1997) · 3. Makkar &amp; Friday (eds.), <i>Global Perspectives in Victimology</i> (pp. 147–163, 1993)</td><td><a href="#p2">UN Declaration</a> in full; <a href="#readings">Reading capsules</a> for Zender + Makkar &amp; Friday</td></tr>
+      <tr><td><b>Suggested Reading 4</b></td><td>S.C. Raina, "Rights of Victims", in Renu Ghosh (ed.), <i>Branded</i> (2001) — <b>extracted in DU material, pp. 245–252</b></td><td>Forms the <b>backbone</b> of Parts 1–3 (early history, scope, Indian experience i–vi)</td></tr>
+      <tr><td><b>Cases 19–24</b></td><td>19. <i>Ajaib Singh</i> · 20. <i>Jacob George</i> · 21. <i>Chandrima Das</i> · 22. <i>Rachhpal Singh</i> · 23*. <i>Laxmi</i> · 24*. <i>Nipun Saxena</i> (*starred = online, not in case material)</td><td><a href="#p5">Part 5</a> — full Facts–Issues–Arguments–Decision–Ratio for all six</td></tr>
+    </table></div>
+    <div class="grid2" style="margin-top:12px">
+      <div class="card gold"><h4>🎯 How DU asks this topic (pattern)</h4>
+        <ul class="tight"><li><b>Essay:</b> "We have cared too much for the criminal…" (2017, Q7a) — theory + judicial decisions.</li>
+        <li><b>Problem + rights:</b> custodial/police rape with compensation &amp; victim-rights discussion (2022, Q6).</li>
+        <li><b>Probable:</b> BNSS 395 vs 396 distinction problem; acid-attack compensation problem; rape-victim identity/anonymity problem; UN Declaration essay.</li></ul>
+      </div>
+      <div class="card green"><h4>✅ Model-answer formula (use in every answer)</h4>
+        <ol class="tight"><li>Open with <b>Krishna Iyer quote</b> + victim = "forgotten person" → rights-holder.</li>
+        <li>Define victim: <b>UN Arts. 1–2 + BNSS s. 2(1)(y)</b> (old CrPC 2(wa)).</li>
+        <li>Apply <b>Raina's framework</b> (constitutional mandate → legal safeguards → compensation jurisprudence).</li>
+        <li>Cite <b>2–3 DU cases</b> with ratios + <b>BNSS sections</b> with CrPC equivalents.</li>
+        <li>Close with <b>restorative justice / NALSA scheme / reform suggestions</b>.</li></ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PART 1 ================= -->
+<div class="part" id="p1">
+  <div class="part-head ph-maroon"><div class="num">1</div><div><h2>Meaning &amp; Scope of Victimology <span style="font-weight:400;font-size:14px">[Syllabus limb (i)]</span></h2><p>Definitions · history · contents · theories · classifications — the conceptual foundation</p></div></div>
+  <div class="part-body">
+
+  <h3 class="sec">1.1 Definitions — What is "Victimology"? Who is a "Victim"?</h3>
+  <div class="def"><b class="t">Core definition (Karmen, adopted by Paranjape — LEARN VERBATIM):</b><br>
+  "Victimology is the <b>scientific study of victimisation</b>, including the <b>relationships between victims and offenders</b>, the <b>interactions between victims and the criminal justice system</b> (police, courts, correctional officials), and the <b>connections between victims and other social groups and institutions</b> — such as the media, businesses and social movements."</div>
+
+  <div class="grid2">
+    <div class="card gold"><h4>📖 Separovic's synthesis (quoted by Raina in DU material)</h4>
+    <p><i>"Victims are persons <b>threatened, injured or destroyed</b> by an act or omission of another man (man, structure, organisation or institution)."</i> → Separovic interprets <b>crime = violation of basic human rights</b> (life, health, security, well-being); victimisation must be evaluated as <b>human-rights violation</b> of the individual.</p></div>
+    <div class="card blue"><h4>🌐 UN Declaration 40/34, Arts. 1–2 (1985) — the international definition</h4>
+    <p><b>Art. 1:</b> "Victims" = persons who, <b>individually or collectively</b>, have suffered harm — <b>physical or mental injury, emotional suffering, economic loss or substantial impairment of fundamental rights</b> — through acts/omissions violating criminal laws (including laws on <b>criminal abuse of power</b>).<br><b>Art. 2:</b> A person is a victim <b>regardless of whether the offender is identified, apprehended, prosecuted or convicted</b>, and regardless of family relationship; includes <b>immediate family/dependents</b> and <b>persons harmed while intervening to help</b>.</p></div>
+  </div>
+
+  <div class="card green"><h4>⚖️ Indian statutory definition — BNSS s. 2(1)(y) [old CrPC s. 2(wa), inserted 2008, w.e.f. 31-12-2009]</h4>
+  <p>"<b>Victim</b> means a person who has suffered <b>any loss or injury</b> caused by reason of the act or omission for which the <b>accused person has been charged</b>, and the expression <b>includes his or her guardian or legal heir</b>." <span class="pill">Exam note</span> India's definition is <b>narrower</b> than the UN's (it ties victimhood to a <i>charge</i> against an accused; UN covers unidentified offenders too — the gap is partly filled by BNSS s. 396(4), compensation even where offender is not traced).</p></div>
+
+  <div class="card violet"><h4>🧭 Elias Neumann (Latin America, 1984 — in Raina)</h4>
+  <p>Drew attention to <b>victims of the legal system itself</b> — victims of <b>police brutality, torture, non-existence of legal assistance</b>. This expands victimology beyond conventional crime to <b>abuse-of-power victimisation</b> — the foundation of India's public-law compensation cases (Rudul Shah → Nilabati → D.K. Basu).</p></div>
+
+  <h4 class="sub">Victimology vs Criminology vs Penology (favourite 5-mark distinction)</h4>
+  <div class="tbl-wrap"><table>
+    <tr><th>Basis</th><th>Criminology</th><th>Victimology</th><th>Penology</th></tr>
+    <tr><td><b>Central question</b></td><td>Why does the <b>offender</b> commit crime? (causation)</td><td>Why does a person <b>become a victim</b>, and how can victims be helped?</td><td>How should the <b>offender be punished/treated</b>?</td></tr>
+    <tr><td><b>Focus person</b></td><td>Criminal</td><td><b>Victim — the "lynch-pin"</b> of victimological study</td><td>Convict / prisoner</td></tr>
+    <tr><td><b>Relationship</b></td><td>Parent discipline</td><td><b>Specialised branch of criminology</b> (other sub-fields: sociology of law &amp; penology; delinquency; comparative/historical criminology)</td><td>Sister branch (punishment science)</td></tr>
+    <tr><td><b>Aim</b></td><td>Understand &amp; prevent crime</td><td><b>Redress, relief, rehabilitation</b>; access to justice; prevention of victimisation</td><td>Justify &amp; administer punishment</td></tr>
+    <tr><td><b>Founders</b></td><td>Beccaria, Lombroso</td><td><b>Mendelsohn &amp; Von Hentig — "fathers of victimology"</b>; Wolfgang</td><td>Bentham, Howard</td></tr>
+  </table></div>
+
+  <h3 class="sec">1.2 Historical Evolution — From Private Vengeance to Victim Justice</h3>
+  <p>Raina ("Early history of victimology", DU material pp. 245–246) + Paranjape trace five phases:</p>
+  <div class="timeline">
+    <div class="tl-item"><div class="yr">Phase 1 · Pre-organised society — Private vengeance</div>People took law into their own hands; <b>unrestricted retaliation</b>. Victim (or clan) was the sole avenger — no State, no procedure.</div>
+    <div class="tl-item"><div class="yr">Phase 2 · Clan/tribal society — Collective responsibility + Composition</div>Victimisation became a <b>collective (clan) concern</b>; to reduce feuding, offenders with surplus wealth offered <b>payment to victims as compensation</b> — formalised in the <b>Code of Hammurabi</b>; parallels: <b>Greek death-fines, early Hebrew/Hindu/Turkish fines, Roman Twelve Tables, Law of Moses</b>. <i>Victim was central and compensated.</i></div>
+    <div class="tl-item"><div class="yr">Phase 3 · Rise of the State — The victim is "eclipsed"</div>The State took over the <b>exclusive right to punish</b>; crime became an <b>injury to the State</b>, not to the person. The victim shrank to a mere <b>witness/informant</b> — "the <b>forgotten person</b> in criminal justice administration". Retribution/deterrence theories spoke only of the offender.</div>
+    <div class="tl-item"><div class="yr">Phase 4 · 1940s–1960s — Birth of victimology as science</div><b>Mendelsohn, Von Hentig, Wolfgang</b> founded victimology (initially "victim precipitation" studies). By the <b>late 1960s</b> the emerging science "significantly boosted the victims' status" (Raina). Criminal-injuries compensation boards appeared (UK 1964; many US states).</div>
+    <div class="tl-item"><div class="yr">Phase 5 · 1980s–today — Rights-based victimology</div><b>Women's rights movement + human-rights jurisprudence</b> widened the field; feminists attacked "victim-blaming"; <b>UN Declaration 40/34 (1985)</b> globalised victim rights; India: <b>compensation jurisprudence (1983→)</b>, CrPC amendments <b>2008 (2(wa), 357A, 372 proviso)</b> &amp; <b>2013 (357B, 357C, 326A/B IPC, 166B)</b>, <b>NALSA Scheme 2018</b>, and now <b>BNSS 395–398 (2024)</b>.</div>
+  </div>
+
+  <h3 class="sec">1.3 Scope &amp; Contents of Victimology</h3>
+  <div class="card teal"><h4>The 7 broad contents (Paranjape) — draw as a wheel in exams</h4>
+    <div class="frow">
+      <div class="fbox">1️⃣ Victimisation (patterns, causes, impact)</div>
+      <div class="fbox">2️⃣ Victim–offender relationship</div>
+      <div class="fbox">3️⃣ Victim–criminal justice interface</div>
+    </div><div class="frow" style="margin-top:10px">
+      <div class="fbox">4️⃣ Victim &amp; media</div>
+      <div class="fbox">5️⃣ Victims vs societal relations</div>
+      <div class="fbox">6️⃣ Victims &amp; costs of crime</div>
+    </div><div class="frow" style="margin-top:10px"><div class="fbox dark">7️⃣ Compensatory redress for victims ⭐ (core of syllabus limb iv)</div></div>
+  </div>
+  <ul class="tight">
+    <li><b>Modern scope is multi-disciplinary</b> — law + sociology + psychology + medicine + economics + media studies; professionals include judges, lawyers, policymakers, doctors, social workers (Paranjape).</li>
+    <li><b>Not confined to crime-victims</b>: covers victims of <b>traffic hazards, natural disasters, war crimes, abuse of power, corruption</b> (Paranjape); accident/flood/famine/tsunami/blast victims share the common element of <b>suffering from forces beyond control</b>.</li>
+    <li>Raina's Indian caution: in India victimology is still understood <b>"more as a method of sentencing the perpetrator than of restituting the victim"</b> — it must grow into (a) compensating victims of <b>conventional crime</b> and (b) compensating victims of <b>abuse of power</b>.</li>
+  </ul>
+
+  <h4 class="sub">Who counts as a victim? — Three levels (Paranjape)</h4>
+  <div class="flow">
+    <div class="fbox dark">CRIMINAL ACT OCCURS</div><div class="farrow">▼</div>
+    <div class="fork">
+      <div class="fbox"><b>Primary victim</b><br><span style="font-weight:400">Directly harmed person<br><i>e.g., the raped woman; riot dead/injured</i></span></div>
+      <div class="fbox alt"><b>Secondary victim</b><br><span style="font-weight:400">Harmed <i>through</i> the primary victim<br><i>e.g., husband/children/illegitimate child; dependents of riot victims</i></span></div>
+      <div class="fbox"><b>Tertiary victim</b><br><span style="font-weight:400">Wider circle stigmatised/traumatised<br><i>e.g., whole family facing ostracism; community living in hate-phobia</i></span></div>
+    </div>
+  </div>
+  <div class="exam-tip">⚠️ <b>Caution (Paranjape, via Rachel Mattison):</b> primary/secondary/tertiary is <b>NOT a hierarchy of suffering</b> — a widow (secondary) or children (tertiary) may suffer <i>more</i> than the deceased primary victim. Auto-accident illustration: dead occupant (primary, no more suffering) → illiterate widow with whole family burden (secondary, maximum suffering) → children losing support (tertiary). <i>Excellent example to quote in answers.</i></div>
+
+  <h3 class="sec">1.4 Theories of Victimology (with critical appraisal)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th style="width:22%">Theory / Thinker</th><th>Core Proposition</th><th>Status / Critique (must write)</th></tr>
+    <tr><td><b>Victim precipitation</b> — Mendelsohn, Von Hentig, Wolfgang (1940s)</td><td>Victims as "hapless dupes who <b>instigated their own victimisation</b>"; victim's conduct contributes to crime (e.g., provocative behaviour, carelessness).</td><td><span class="pill">REJECTED</span> Attacked by <b>feminists (1980s)</b> as <b>"victim-blaming"</b>; destructive/negative approach; now "redundant and obsolete" (Paranjape). <i>Never justify an offence with it in exams — mention only to criticise.</i></td></tr>
+    <tr><td><b>Victim facilitation</b> — Marvin Wolfgang</td><td>Does <b>not blame</b> the victim; studies <b>interactions/elements that make a victim more accessible or vulnerable</b> to attack.</td><td><span class="pill g">ACCEPTED</span> Positive, preventive orientation — helps awareness + investigation (Godwin 1998: victim's social behaviour/personality relevant to involvement).</td></tr>
+    <tr><td><b>Mendelsohn's 3-model theory</b></td><td>Crime-precipitating conditions: <b>(1) time &amp; space</b> — wrong place, wrong time; <b>(2) attracting factors/lifestyle</b>; <b>(3) pre-disposing factors</b> — too young/poor, minority, unemployed.</td><td>Foundation of later lifestyle &amp; routine-activity theories.</td></tr>
+    <tr><td><b>Routine Activities Theory</b> — Cohen &amp; Felson (1979)</td><td>Crime occurs when three converge: <b>(i) suitable target + (ii) motivated offender + (iii) absence of capable guardian</b> (security/parental care).</td><td><span class="pill g">LEADING</span> Explains burglary, street crime, cyber fraud; basis of situational crime prevention.</td></tr>
+    <tr><td><b>"Penal couple" concept</b></td><td>Crime has <b>two partners</b> — offender + victim who "provides opportunity"; victim should share responsibility.</td><td><span class="pill">REJECTED</span> Same as victim-precipitation in new words; discarded by most victimologists.</td></tr>
+    <tr><td><b>Benjamin &amp; Masters — 3 factors</b></td><td><b>(1) Precipitating</b> (wrong place/time); <b>(2) Attracting</b> (choices, lifestyle); <b>(3) Pre-disposing</b> (demographics: female, young, poor, single, slum-dweller, unemployed).</td><td>Useful vulnerability checklist for policy.</td></tr>
+    <tr><td><b>Proximity hypothesis</b></td><td>Criminals and victims often share <b>socio-demographic traits and physical proximity</b> (same group/locality).</td><td>Explains intra-community violence; supports community-policing answers.</td></tr>
+  </table></div>
+
+  <h4 class="sub">Classifications of victims (quote any one + examples)</h4>
+  <div class="grid2">
+    <div class="card blue"><h4>Von Hentig (1948) — 5 types</h4><ol class="tight"><li><b>Innocent</b> — wrong place, wrong time.</li><li><b>Depressive</b> — careless, unsuspecting, easy target.</li><li><b>Greedy</b> — duped due to craze for money/easy gain <i>(e.g., Ponzi-scam investors)</i>.</li><li><b>Wanton</b> — vulnerable to life-stresses: juveniles, pregnant women, prostitutes.</li><li><b>Tormentor</b> — attacked by the target of his own abuse <i>(e.g., batterer beaten by battered partner)</i>.</li></ol></div>
+    <div class="card gold"><h4>Abdel Fattah (Canadian) — 5 categories</h4><ol class="tight"><li><b>Non-participating</b> — wholly innocent: foeticide (BNS equivalent of IPC 315/316), kidnapping, infanticide, geronticide.</li><li><b>Latent</b> — victimised but unaware (blackmail networks).</li><li><b>Provocative</b> — provoked into self-harm (abetment of suicide, dowry death).</li><li><b>Participating</b> — sati, devadasi, prostitution, some cyber-crimes.</li><li><b>Defiant/retaliating</b> — resists but fails: rape, robbery, dacoity, domestic violence.</li></ol></div>
+  </div>
+  <div class="card red"><h4>🗂️ Paranjape's subject-matter chart (victims by field)</h4>
+    <div class="frow"><div class="fbox">🏭 <b>Environmental offences</b><br><span style="font-weight:400">gas leakage (Bhopal), river pollution</span></div>
+    <div class="fbox alt">🔪 <b>Person/property crimes</b><br><span style="font-weight:400">murder, dowry death, grievous hurt, dacoity, robbery, assault</span></div>
+    <div class="fbox">🚔 <b>Abuse of power</b><br><span style="font-weight:400">third-degree methods, custodial torture/death, custodial rape, groundless arrest, hospital victims</span></div></div>
+  </div>
+  </div>
+</div>
+
+<!-- ================= PART 2 ================= -->
+<div class="part" id="p2">
+  <div class="part-head ph-teal"><div class="num">2</div><div><h2>Role of the Victim in Criminal Justice Administration <span style="font-weight:400;font-size:14px">[Syllabus limb (ii)]</span></h2><p>Forgotten person → participant · stage-wise role · UN Declaration 40/34 · restorative justice · media</p></div></div>
+  <div class="part-body">
+
+  <h3 class="sec">2.1 The journey: from "forgotten person" to rights-holder</h3>
+  <div class="flow">
+    <div class="fbox alt">😶 <b>Traditional position:</b> victim = only <b>informant + witness</b> for the State; no say in investigation, withdrawal, sentencing; conviction gives <b>only "mental satisfaction"</b>, no relief (Paranjape; Schafer 1968).</div>
+    <div class="farrow">▼ reform levers ▼</div>
+    <div class="frow"><div class="fbox">📜 UN Declaration 40/34 (1985)</div><div class="fbox">⚖️ SC compensation jurisprudence (1983→)</div><div class="fbox">✏️ CrPC amendments 2008 + 2013</div><div class="fbox">🆕 BNSS 2023 (Ss. 395–398)</div></div>
+    <div class="farrow">▼</div>
+    <div class="fbox dark">🧍‍♀️ <b>Emerging position:</b> victim = <b>participant with rights</b> — to report, be informed, be protected, be heard (counsel), claim compensation, appeal, and be treated with dignity.</div>
+  </div>
+  <div class="card red"><h4>Why the victim stays marginal — 8 reasons for non-reporting (K.D. Gaur, in Paranjape)</h4>
+  <ol class="tight"><li>Public apathy/indifference</li><li>Petty/insignificant effect</li><li>Offender unknown</li><li>Fear of threat/harassment by culprit</li><li><b>Social stigma</b> — especially rape, abortion, sexual offences</li><li>Cost/time of prolonged litigation</li><li>Witness reluctance/hostility</li><li><b>No faith in police action</b></li></ol>
+  <p><b>Consequence:</b> victim apathy encourages criminality → victimologists must fix the victim's <b>access barriers</b> to justice agencies.</p></div>
+
+  <h3 class="sec">2.2 Stage-wise role of the victim in India (with provisions)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th style="width:16%">Stage</th><th>Victim's Role &amp; Rights</th><th style="width:30%">Provisions (BNSS-first; CrPC in brackets)</th></tr>
+    <tr><td><b>1. Reporting</b></td><td>Right to <b>lodge FIR</b> in cognizable cases; registration is <b>mandatory</b> (<i>Lalita Kumari v. State of U.P.</i>, 2014); or <b>complaint to Magistrate</b> (cognizable or not). Zero-FIR &amp; e-FIR recognised under BNSS; women victims — statement safeguards.</td><td><code class="secno">BNSS 173</code> (CrPC 154) · <code class="secno">BNSS 175</code> (CrPC 156) · complaint: <code class="secno">BNSS 210</code> (CrPC 190)</td></tr>
+    <tr><td><b>2. Investigation</b></td><td>Victim is the <b>first-hand witness &amp; main source of evidence</b> — testimony must be weighed, not discarded; <b>medical examination of rape victim within 24 hours</b> by registered practitioner with consent; rape-victim statement audio-video recorded; victim to be informed of progress; protection from accused.</td><td><code class="secno">BNSS 184</code> (CrPC 164A) · statement: <code class="secno">BNSS 183</code> (CrPC 164) · <code class="secno">BNSS 398</code> Witness Protection (new)</td></tr>
+    <tr><td><b>3. Medical aid</b></td><td><b>Immediate free first-aid/treatment</b> in all hospitals (govt./private); hospital must <b>inform police</b>; no refusal for want of speciality. Refusal punishable.</td><td><code class="secno">BNSS 397</code> (CrPC 357C) · refusal: <code class="secno">BNS 200</code> (IPC 166B)</td></tr>
+    <tr><td><b>4. Trial</b></td><td>Right to <b>engage private counsel</b> (acts under PP's directions; written arguments after evidence with leave); in Magistrate courts may <b>conduct prosecution</b> with permission; <b>in-camera trial</b> for rape/sexual offences; <b>identity protection</b>; compensation plea u/s 395.</td><td><code class="secno">BNSS 360–361</code> (CrPC 301–302; <i>Shiv Kumar v. Hukam Chand</i>, 1999) · <code class="secno">BNSS 366</code> (CrPC 327) · <code class="secno">BNS 72</code> (IPC 228A)</td></tr>
+    <tr><td><b>5. Plea bargaining</b></td><td>Victim's <b>claims must not be ignored</b> in anxiety to dispose of cases; compensation to victim is part of "mutually satisfactory disposition".</td><td>CrPC Ss. 265A ff. → BNSS plea-bargaining chapter; Paranjape principle 5</td></tr>
+    <tr><td><b>6. Sentencing</b></td><td>Court may order <b>fine-based compensation</b> (395(1)) or <b>direct compensation without fine</b> (395(3)); must consider victim's loss; US-style <b>victim-impact panels</b> (<i>Payne v. Tennessee</i>, 1991) — persuasive.</td><td><code class="secno">BNSS 395</code> (CrPC 357) · <code class="secno">POA Act s. 5</code></td></tr>
+    <tr><td><b>7. Appeal / revision</b></td><td><b>Victim's own right of appeal</b> — against <b>acquittal</b>, conviction for <b>lesser offence</b>, or <b>inadequate compensation</b>; no need for prosecution's consent (post-2008; Malimath recommendation implemented).</td><td><code class="secno">BNSS 413 proviso</code> (CrPC 372 proviso)</td></tr>
+    <tr><td><b>8. Rehabilitation</b></td><td>State-funded compensation <b>even on acquittal/discharge, or where offender untraced &amp; no trial</b>; interim relief + free medical benefits via DLSA/SLSA.</td><td><code class="secno">BNSS 396</code> (CrPC 357A/357B)</td></tr>
+  </table></div>
+  <div class="exam-tip">📝 <b>2022 PYQ (Q6) applied exactly this table</b> — custodial rape by policeman Raghav: the solved answer structures victim-side relief as (i) FIR/154 → (ii) private counsel/301–302 → (iii) appeal/372 → (iv) restitution/357 → (v) compensation/357A → (vi) assistance/164A + <i>Delhi Domestic Working Women</i> + <i>Nipun Saxena</i>. Memorise this sequence.</div>
+
+  <h3 class="sec">2.3 UN Declaration of Basic Principles of Justice for Victims of Crime &amp; Abuse of Power (GA Res. 40/34, 29 Nov 1985)</h3>
+  <p><span class="pill">Reading 1</span> Adopted on the report of the <b>7th UN Congress (Milan, 1985)</b>; India's 2008/2013 amendments and BNSS 395–398 are its domestic transplants. Structure it in answers as <b>A → B</b>:</p>
+  <div class="card gold"><h4>A. Victims of Crime (paras 4–17)</h4>
+  <ol class="tight">
+    <li><b>Access to justice &amp; fair treatment (4–7):</b> treat victims with <b>compassion &amp; respect for dignity</b>; <b>access to justice + prompt redress</b>; create/strengthen <b>judicial &amp; administrative mechanisms</b>; inform victims of <b>rights, role, scope, timing</b> of proceedings; allow <b>views &amp; concerns at appropriate stages</b>; provide <b>proper (legal) assistance</b>; <b>minimise inconvenience, protect privacy &amp; safety</b> (incl. family/witnesses) from intimidation/retaliation; <b>avoid unnecessary delay</b>; use <b>informal mechanisms</b> (mediation, arbitration, customary justice) where appropriate.</li>
+    <li><b>Restitution (8–11):</b> offenders/third parties should make <b>fair restitution</b> — <b>return of property, payment for harm/loss, reimbursement of expenses, provision of services, restoration of rights</b>; restitution as a <b>sentencing option</b>; <b>environmental restitution</b> (restore environment, infrastructure, relocation costs); where <b>public officials</b> violated criminal law, <b>the State pays restitution</b> (successor State liable if regime gone).</li>
+    <li><b>Compensation (12–13):</b> where not fully available from offender, <b>States shall provide financial compensation</b> for (a) <b>significant bodily injury/impairment of physical or mental health</b>; (b) <b>family/dependents of deceased or incapacitated</b> victims; establish/strengthen <b>national funds</b>.</li>
+    <li><b>Assistance (14–17):</b> <b>material, medical, psychological &amp; social</b> assistance; inform victims of services; <b>train</b> police, justice, health, social-service personnel; special attention to victims with <b>special needs</b> (children, women, disabled).</li>
+  </ol></div>
+  <div class="card blue"><h4>B. Victims of Abuse of Power (paras 18–21)</h4>
+  <p>Victims = those harmed by acts/omissions <b>not yet criminal under national law</b> but violating <b>international human-rights norms</b>; States should enact norms <b>proscribing abuses of power</b> with remedies of <b>restitution/compensation + material, medical, psychological, social support</b>; negotiate <b>multilateral treaties</b>; report periodically. → <i>India's counterpart: PHR Act 1993 + constitutional-tort compensation (Rudul Shah line).</i></p></div>
+
+  <h3 class="sec">2.4 Impact of victimisation &amp; secondary victimisation</h3>
+  <div class="grid3">
+    <div class="card red"><h4>💔 Physical</h4><p>Hyper-tension, numbness, grief; <b>"fight or flight"</b> response; immediate or delayed injuries (knives/firearms fatal); some <b>permanent</b>, some healable; delayed shock/trauma on memory return.</p></div>
+    <div class="card gold"><h4>💸 Financial</h4><p>Medical costs; property damage; <b>litigation costs</b>; loss of earnings/employment; funeral expenses; <b>relocation costs</b>; destroyed family/marital life (esp. rape survivors).</p></div>
+    <div class="card violet"><h4>🧠 Psychological</h4><p>Fear, anxiety, shame, self-blame, anger → <b>PTSD</b> (Ferraro 1995); alcoholism, drug abuse, <b>social withdrawal</b>; worse when victim is <b>disbelieved or blamed</b> ("walked alone", "dressed attractively"); <b>repeat victimisation</b> traps (esp. rape).</p></div>
+  </div>
+  <div class="card teal"><h4>🔁 Secondary victimisation — victimisation <i>by</i> the system (Paranjape; Raina on media)</h4>
+  <ul class="tight"><li><b>Primary</b> = the crime itself; <b>secondary</b> = fresh trauma from <b>police</b> (hostile questioning, delay), <b>courts</b> (tiresome procedure, manipulated evidence, acquittal shock), <b>hospitals</b> (treatment withheld till police arrive), <b>society</b> (blame, ostracism), <b>media</b> (sensational reporting, identity exposure).</li>
+  <li>Worst when offender = <b>protector-turned-perpetrator</b> (custodial torture, police atrocities, jail/orphanage abuse) — shatters trust, hard to prove.</li>
+  <li><b>Collective-violence victims</b> (riots, blasts, terrorism) suffer prolonged trauma + displacement till resettlement.</li>
+  <li>Raina: <b>media must wield power "judiciously and responsibly"</b> and, like the State, <b>preserve social order</b> — directly tested via <i>Nipun Saxena</i> (identity bans).</li></ul></div>
+
+  <h3 class="sec">2.5 Restorative justice &amp; the victim-assistance programme</h3>
+  <div class="card green"><h4>⚖️ Restorative justice — "paradigm shift" (Paranjape)</h4>
+  <p>Beyond retributive/preventive models: involves <b>offender + victim + community</b> to balance punishment with victim-rights protection. <b>Compensatory relief = key feature.</b> Four themes:</p>
+  <div class="frow"><div class="fbox">🌱 <b>Restoration</b><br><span style="font-weight:400">victim restored to normal life <b>whether or not offender is caught</b>; offender acknowledges harm &amp; redresses it</span></div><div class="fbox">🤝 <b>Accountability</b><br><span style="font-weight:400">victim–offender mediation (France 1993, Germany 1994); guilt acceptance soothes victim</span></div></div>
+  <div class="frow" style="margin-top:10px"><div class="fbox">🛡️ <b>Community protection</b><br><span style="font-weight:400">community surveillance reforms offender; community support returns victim to normal life</span></div><div class="fbox">🧰 <b>Skill development</b><br><span style="font-weight:400">vocational training for offender <i>and</i> victim; competency programmes</span></div></div></div>
+  <details><summary>UN Handbook on Justice for Victims (1999) — Assistance Programme: objectives, Advisory Group, services</summary><div class="in">
+    <ul class="tight"><li><b>Objectives:</b> govts + NGOs assist restoration/rehabilitation; help <b>beyond immediate injury, through the aftermath</b>; expand victim <b>participation</b> in justice process; build <b>community support</b>; serve <b>under-served victims</b>.</li>
+    <li><b>Advisory Group</b> (per area): police, prosecution, health, psychologists, academics, local representatives — <b>representative</b> (gender, age, region, religion, class); functions: collect victimisation data, surveys, trigger relief on police/medical/media reports, liaise with NGOs, represent victims in process — with <b>confidentiality, no identity disclosure</b>.</li>
+    <li><b>8 services:</b> crisis intervention (medical aid, food, shelter, safety, money) → counselling → advocacy → support during <b>investigation</b> → during <b>trial</b> → <b>after disposal</b> → violence prevention → offender–victim mediation.</li></ul>
+  </div></details>
+  <details><summary>Comparative snapshots — France · USA · others (Paranjape)</summary><div class="in">
+    <ul class="tight"><li><b>France (partie civile):</b> injured party <b>impleaded from investigation stage</b>; can move court against delay/distortion; supplements evidence; resists unjustified withdrawal/closure; welfare bodies may implead for rape/child victims.</li>
+    <li><b>USA:</b> victim-opportunity to ventilate cause before trial court; <b>National Crime Victimization Survey</b> guides prevention; <i>Payne v. Tennessee</i> (1991) — victim rights at <b>sentencing</b>; <b>Victim Impact Panels</b> (victim meets convicted offender for restoration).</li>
+    <li><b>Continental consensus:</b> two basic rights — <b>(i) participate</b> (know, be heard, help find truth) + <b>(ii) compensation + interim relief</b>. (Belgium, Canada, Germany, UK, Japan, NZ, SA, Mexico — Mexico even constitutionalised victim rights.)</li>
+    <li><b>SASCV (South Asian Society of Criminology &amp; Victimology, est. Feb 2011):</b> 8 SAARC-region states share best practices; restorative justice; training; victim-sensitive policy.</li></ul>
+  </div></details>
+
+  <h3 class="sec" id="readings">2.6 Prescribed-reading capsules — Zender &amp; Makkar/Friday (how to cite them)</h3>
+  <div class="card violet"><h4>📚 Reading 2 — Lucia Zender, "Victims", <i>Oxford Handbook of Criminology</i> (2nd ed. 1997)</h4>
+  <ul class="tight"><li><b>Thesis:</b> the late-20th-century <b>"rediscovery" of the victim</b> — victim moved from margin to centre of criminology, policy and politics.</li>
+  <li><b>Drivers she analyses:</b> (i) <b>victimisation surveys</b> (UK British Crime Survey from 1982 — exposed the "dark figure" of unreported crime and unequal risks); (ii) <b>feminist campaigns</b> on rape/domestic violence (redefined private harms as public crimes; attacked victim-blaming); (iii) <b>left realism</b> (crime hits the poor hardest — take victims seriously without abandoning social justice); (iv) <b>victim-support movement</b> &amp; criminal-injuries compensation (UK 1964).</li>
+  <li><b>Critical edge (use for evaluation marks):</b> warns against the <b>political use of "the victim"</b> — idealised victims invoked to justify <b>punitiveness</b>; victims' interests do not automatically equal harsher punishment (many want <b>recognition, repair, prevention</b>); risks of <b>responsibilisation</b> (making citizens bear crime-prevention burdens) and of <b>zero-sum thinking</b> (victim rights <i>vs</i> offenders' rights).</li>
+  <li><b>Exam line:</b> <i>"As Zender cautions, victim-centred reform must empower victims through rights and redress — not merely instrumentalise them to legitimise punitiveness."</i></li></ul></div>
+  <div class="card blue"><h4>📚 Reading 3 — Makkar &amp; Friday (eds.), <i>Global Perspectives in Victimology</i> (1993, pp. 147–163 portion)</h4>
+  <ul class="tight"><li><b>Thesis:</b> <b>comparative/global victimology</b> — victimisation patterns, victim movements and redress models differ across societies but converge on the UN Declaration's core (access, restitution, compensation, assistance).</li>
+  <li><b>Themes in the prescribed pages:</b> cross-national victim surveys and risk distribution; growth of <b>victim-assistance and compensation schemes</b> worldwide; victims of <b>abuse of power</b> in developing/transitional societies; need to adapt global standards to <b>local justice institutions</b> (customary, community-based mechanisms alongside courts).</li>
+  <li><b>Exam line:</b> <i>"The global-perspectives literature (Makkar &amp; Friday) shows victimology is no longer a Western import but a universal template — India's trajectory from Hammurabi-style composition to BNSS victim-compensation schemes mirrors that global arc."</i></li></ul></div>
+  </div>
+</div>
+
+<!-- ================= PART 3 ================= -->
+<div class="part" id="p3">
+  <div class="part-head ph-blue"><div class="num">3</div><div><h2>Victims' Rights &amp; Remedies in India <span style="font-weight:400;font-size:14px">[Syllabus limb (iii) · Raina's "Indian experience" i–vi]</span></h2><p>Constitution · statutes · public-law compensation · judicial trend — the remedial architecture</p></div></div>
+  <div class="part-body">
+
+  <h3 class="sec">3.1 Constitutional mandate (Raina §i)</h3>
+  <div class="grid2">
+    <div class="card gold"><h4>🏛️ Fundamental Rights + DPSP</h4><ul class="tight">
+      <li><b>Art. 21</b> — life &amp; personal liberty "except according to procedure established by law" → SC read into it: <b>right to live with dignity</b>, rape as Art-21 violation (<i>Bodhisattwa</i>), <b>right to compensation</b> for State violations (<i>Rudul Shah → Nilabati → D.K. Basu</i>).</li>
+      <li><b>Art. 14</b> — equality before law / equal protection → available to <b>"persons" including foreigners</b> (<i>Chandrima Das</i>).</li>
+      <li><b>Art. 32 / 226</b> — writ remedy; compensation as <b>public-law relief</b> ("monetary amends").</li>
+      <li><b>Art. 38</b> — State to promote welfare of the people; <b>Art. 39A</b> — free legal aid; <b>Art. 41</b> — assistance in cases of disablement/undeserved want.</li></ul></div>
+    <div class="card red"><h4>📌 Raina's rule</h4><p>"When an individual's fundamental or legal rights are violated because of the <b>callous attitude of the custodians of law</b>, the <b>State shall be held responsible</b> and courts should <b>not hesitate in granting compensation</b> in appropriate cases."</p>
+    <p><span class="pill">Exam use</span> Open any "abuse of power" answer with Art. 21 + this rule, then march through Rudul Shah → PUDR → Nilabati → D.K. Basu.</p></div>
+  </div>
+
+  <h3 class="sec">3.2 Statutory safeguards — the victim-protection cluster (Raina §ii, updated to BNSS/BNS)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th style="width:24%">Provision</th><th>What it gives the victim</th><th style="width:24%">Conditions / notes</th></tr>
+    <tr><td><code class="secno">BNSS 395</code> (CrPC 357)</td><td><b>Compensation from fine</b> on conviction — prosecution costs, <b>loss/injury compensation</b>, bona-fide purchaser refund, maintenance-like support; or <b>direct compensation even without fine</b> [395(3)].</td><td>Conviction needed; capacity-to-pay considered; counts in later civil suit. <a href="#p4">↗ Full analysis in Part 4</a></td></tr>
+    <tr><td><code class="secno">BNSS 396</code> (CrPC 357A + 357B)</td><td><b>State-funded Victim Compensation Scheme</b> — rehabilitation money via DLSA/SLSA on court recommendation; <b>even on acquittal/discharge</b>; <b>even where offender untraced &amp; no trial</b>; interim relief + free medical benefits.</td><td>396(7): State money is <b>in addition to</b> fine paid to victim under BNS 65/70/124(1). <a href="#p4">↗ Part 4</a></td></tr>
+    <tr><td><code class="secno">BNSS 397</code> (CrPC 357C)</td><td><b>Free immediate treatment</b> in ALL hospitals for acid-attack &amp; sexual-offence victims + POCSO victims; <b>police to be informed immediately</b>.</td><td>Covers BNS 64–68, 70, 71, 124(1) + POCSO 4/6/8/10. Refusal → <code class="secno">BNS 200</code> (IPC 166B). <a href="#p4">↗ Part 4</a></td></tr>
+    <tr><td><code class="secno">BNSS 398</code> (NEW)</td><td><b>Witness Protection Scheme</b> — every State to prepare &amp; notify one (threat analysis, relocation, identity change, in-camera deposition).</td><td>Statutory backing to SC's <i>Mahender Chawla</i> (2018) scheme. Victim-witnesses protected.</td></tr>
+    <tr><td><code class="secno">BNSS 399</code> (CrPC 358)</td><td><b>Compensation for groundless arrest</b> — Magistrate may award up to <b>₹1,000</b> where arrest lacked sufficient ground.</td><td>Direct remedy for abuse-of-power victims at the grass roots.</td></tr>
+    <tr><td>CrPC 250 (retained in BNSS)</td><td><b>Compensation for false/frivolous accusation</b> in complaint cases ending in discharge/acquittal.</td><td>Needs: complaint-based case + triable by Magistrate + acquittal + <b>no reasonable ground</b>. (Raina lists all five conditions.)</td></tr>
+    <tr><td><code class="secno">POA Act, s. 5</code></td><td>Court releasing offender on probation (ss. 3/4) may order <b>reasonable compensation + costs</b>, recoverable as fine.</td><td>Non-penal character (unlike CrPC fine); fine = penalty under CrPC, no penal element under POA Act (Raina).</td></tr>
+    <tr><td><code class="secno">MV Act</code></td><td><b>Motor-accident compensation</b>: claim to MACT <b>within 6 months</b> (1988 Act ss. 140–144) → now <b>no-fault liability</b> (2019 Act s. 164: ₹5L death / ₹2.5L grievous hurt), hit-and-run fund (s. 161), golden-hour treatment (s. 162).</td><td>Criminal + claims remedies run parallel.</td></tr>
+    <tr><td><code class="secno">PHR Act 1993</code> ss. 12, 18</td><td><b>NHRC/SHRC</b> inquire into human-rights violations &amp; <b>recommend compensation</b>; watchdog for victims of State commissions/omissions (Raina §iii).</td><td>Post-UDHR (1948) domestication after ~5 decades.</td></tr>
+    <tr><td><code class="secno">BNS 72</code> (IPC 228A)</td><td><b>Identity shield</b> for sexual-offence victims — printing/publishing name or identifying matter punishable (2 yrs + fine).</td><td>Backbone of <i>Nipun Saxena</i>; FIRs under rape/POCSO off public domain.</td></tr>
+    <tr><td><code class="secno">BNS 124</code> (IPC 326A/B)</td><td>Acid attack = dedicated offence; <b>fine must be just &amp; reasonable for victim's medical expenses</b> (124(1)); attempt punished (124(2)).</td><td>Born from <i>Laxmi</i> (via Verma Committee, 2013).</td></tr>
+    <tr><td>POCSO ss. 19, 23, 33(8) + Rules</td><td><b>Mandatory reporting</b>; <b>media gag</b> on child identity; Special Court awards <b>interim + final compensation</b> (Rule 9, 2020 Rules / Rule 7, 2012 Rules) — <i>Nipun Saxena</i> makes NALSA Scheme the guide.</td><td>Gender-neutral; compensation even during trial.</td></tr>
+    <tr><td>DV Act 2005 ss. 20, 22</td><td><b>Monetary relief + compensation/damages</b> for domestic-violence victims (civil-cum-criminal remedy).</td><td>Protects economic + psychological harm.</td></tr>
+    <tr><td>SC/ST (POA) Act + 2015 Rules</td><td><b>Graded compensation slabs</b> (Annexure I) for atrocity victims — paid in stages (FIR → chargesheet → conviction).</td><td>Shows "compensation de-linked from conviction".</td></tr>
+  </table></div>
+  <div class="card gold"><h4>⚠️ Raina's critique — why statutes alone fail (quote in answers)</h4>
+  <ul class="tight"><li>Victim/dependents have <b>no legal right to claim</b> compensation from offender or State under these provisions — courts act <b>only within the framework</b>.</li>
+  <li>Courts <b>rarely use</b> fine/compensation powers because (i) offender seen as <b>unable to pay</b>; (ii) judges <b>won't keep files open</b> amid workload (41st Law Commission Report flagged this rigidity).</li>
+  <li>Under old s. 357, <b>no fine → no compensation</b> (gap cured by 357(3)/395(3) direct-compensation power + 357A/396 State fund).</li></ul></div>
+
+  <h3 class="sec">3.3 Compensatory jurisprudence — two tracks (Raina §v)</h3>
+  <div class="grid2">
+    <div class="card green"><h4>🟢 Track A — Victims of (conventional) crime</h4>
+    <ul class="tight"><li><i>Hari Kishan v. Sukhbir Singh</i>, AIR 1988 SC 2127 — <b>all criminal courts must exercise s. 357 liberally</b>; compensation reassures the victim she is <b>"not forgotten"</b>; reconciles victim with offender; amount must be <b>reasonable</b>.</li>
+    <li><i>Bodhisattwa Gautam v. Subhra Chakraborty</i>, AIR 1996 SC 922 — rape on false promise of marriage + forced abortions → SC ordered <b>interim maintenance/compensation during trial, even before conviction</b>; rape court can award <b>interim + final</b> compensation.</li>
+    <li><i>Delhi Domestic Working Women's Forum v. UoI</i>, (1995) 1 SCC 14 — rape = offence against <b>basic human rights + Art. 21</b>; compensation jurisdiction is part of the <b>overall jurisdiction of the rape-trial court</b>; guidelines (legal representation, anonymity, Criminal Injuries Board).</li>
+    <li><i>State of Gujarat v. Hon'ble High Court of Gujarat</i>, (1998) 7 SCC 392 — victims/families compensated from <b>wages earned by prisoners</b> (via fund, respecting sensibilities).</li></ul></div>
+    <div class="card red"><h4>🔴 Track B — Victims of abuse of power (constitutional tort)</h4>
+    <ul class="tight"><li><i>Rudul Shah v. State of Bihar</i>, AIR 1983 SC 1086 — <b>₹35,000</b> for 14-year illegal detention; Art. 21 "denuded of content" if courts could only order release; State must <b>repair damage, may recover from officers</b>.</li>
+    <li><i>PUDR v. State of Bihar</i>, AIR 1987 SC 355 — unwarranted police firing (21 dead incl. children) → <b>₹20,000 per death as working principle</b> (not absolution).</li>
+    <li><i>Nilabati Behara v. State of Orissa</i>, AIR 1993 SC 1960 — custodial death → <b>₹1 lakh "monetary amends"</b>; <b>sovereign immunity inapplicable</b>; Art. 32 obliges SC to <b>forge new tools</b>; cites <b>ICCPR Art. 9(5)</b>.</li>
+    <li><i>D.K. Basu v. State of W.B.</i>, AIR 1997 SC 610 — compensation is <b>"sometimes perhaps the only suitable remedy"</b>; State vicariously liable, indemnified by wrongdoer; award is <b>compensatory not punitive</b>; <b>without prejudice</b> to civil suit/criminal prosecution; quantum per facts.</li>
+    <li>Also: <i>Bhim Singh</i> (₹50,000, malicious arrest of MLA); <i>SAHELI</i> (₹75,000, 9-yr-old beaten to death in custody); <i>Inder Singh v. Punjab</i> (1995) 3 SCC 702 (torture by Punjab police — State pays for failure to protect).</li></ul></div>
+  </div>
+  <div class="flow">
+    <div class="fbox dark">ABUSE-OF-POWER VICTIM? — Apply the constitutional-tort test</div><div class="farrow">▼</div>
+    <div class="fbox">1️⃣ Violation of <b>Art. 21/14</b> by State instrumentality? → 2️⃣ File <b>Art. 32 / 226</b> → 3️⃣ Court awards <b>"monetary amends"</b> (compensatory, interim/final) → 4️⃣ <b>No sovereign-immunity defence</b> → 5️⃣ State pays, <b>recovers from delinquent officers</b> → 6️⃣ Civil suit + criminal prosecution <b>still open</b></div>
+  </div>
+
+  <h3 class="sec">3.4 Institutions &amp; action plan (Raina §§iv, vi)</h3>
+  <div class="grid2">
+    <div class="card blue"><h4>🏛️ Indian Society of Victimology (est. 1992)</h4><p>Drafted the <b>Victims (Criminal Injuries) Right to Assistance Bill, 1996</b> — full scheme for <b>funds, disbursement machinery, eligibility, computation</b> for victims of criminal injuries <i>and</i> abuse of power. (Cite as model-law demand.)</p></div>
+    <div class="card teal"><h4>🗺️ Raina's future action plan (2017 PYQ answer uses this!)</h4><ol class="tight"><li><b>State responsibility</b> — State must accept duty to rehabilitate.</li><li><b>Machinery</b> — separate boards/tribunals for adjudicating claims.</li><li><b>Special provisions</b> for rape victims &amp; children.</li><li><b>Abuse-of-power victims</b> — constant vigilance over public officials.</li><li><b>Access to justice &amp; fair treatment</b> — compassion.</li><li><b>Restitution &amp; assistance</b> — material/medical/psychological/social.</li></ol></div>
+  </div>
+  <div class="card violet"><h4>📋 Malimath Committee (2003) — victim-side recommendations (Paranjape)</h4><p>Victim's <b>right to participate &amp; be impleaded</b>; right to <b>appeal against acquittal/lesser sentence</b> (implemented via CrPC 372 proviso, 2008); <b>Victim Compensation Fund</b> (implemented via 357A/396); compensation as part of sentencing. <i>Use: "The 2008 amendments substantially implement Malimath + 154th Law Commission."</i></p></div>
+
+  <h3 class="sec">3.5 Master rights-catalogue (one table for all "rights of victim" questions)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Right</th><th>Content + authority</th></tr>
+    <tr><td><b>Report &amp; be heard at threshold</b></td><td>Mandatory FIR (<i>Lalita Kumari</i>); complaint to Magistrate; victim heard before cancellation/closure report acceptance; heard in bail matters (esp. sexual offences).</td></tr>
+    <tr><td><b>Information</b></td><td>Progress of investigation; UN para 6(a); BNSS victim-information duties; copy of FIR free.</td></tr>
+    <tr><td><b>Protection</b></td><td>BNSS 398 Witness Protection; in-camera trial (BNSS 366); protection from intimidation (UN para 6(d)).</td></tr>
+    <tr><td><b>Privacy / anonymity</b></td><td>BNS 72 (no disclosure of sexual-offence victim identity); POCSO s. 23; <i>Nipun Saxena</i> bans (name, photos, FIR in public domain; pseudonyms X/Y).</td></tr>
+    <tr><td><b>Medical care</b></td><td>BNSS 397 free treatment; BNSS 184 exam within 24 hrs with consent; ban on two-finger test (<i>Rajesh v. Haryana</i>, 2013).</td></tr>
+    <tr><td><b>Legal aid &amp; counsel</b></td><td>Art. 39A + Legal Services Authorities Act; BNSS 360–361 private counsel (<i>Shiv Kumar</i>); <i>Delhi Domestic Working Women</i> legal-assistance-at-police-station directive.</td></tr>
+    <tr><td><b>Compensation &amp; rehabilitation</b></td><td>BNSS 395 (offender-pays) + 396 (State-pays, incl. acquittal/untraced cases) + NALSA schemes + POCSO interim awards.</td></tr>
+    <tr><td><b>Appeal</b></td><td>BNSS 413 proviso — acquittal / lesser offence / inadequate compensation.</td></tr>
+    <tr><td><b>Speedy justice</b></td><td>Art. 21 (<i>Hussainara Khatoon</i>); <i>Ajaib Singh</i> deprecates 18-year time-lag; day-to-day rape trials.</td></tr>
+    <tr><td><b>Dignity in process</b></td><td>Compassionate treatment (UN para 4); no character assassination (BNS-era rape-trial shields; S. 53A Indian Evidence Act → BSA s. 48).</td></tr>
+  </table></div>
+  </div>
+</div>
+
+<!-- ================= PART 4 ================= -->
+<div class="part" id="p4">
+  <div class="part-head ph-green"><div class="num">4</div><div><h2>Concept of Compensation — BNSS Ss. 395, 396, 397 <span style="font-weight:400;font-size:14px">[Syllabus limb (iv)]</span></h2><p>Clause-by-clause analysis · correspondence tables · procedure flowcharts · quantum principles</p></div></div>
+  <div class="part-body">
+
+  <div class="card gold"><h4>🗺️ First, the correspondence map (examiners expect both codes)</h4>
+  <div class="tbl-wrap"><table>
+    <tr><th>BNSS 2023 (w.e.f. 1-7-2024)</th><th>CrPC 1973</th><th>Subject</th><th>Who pays? / Trigger</th></tr>
+    <tr><td><code class="secno">395</code></td><td>357</td><td><b>Order to pay compensation</b></td><td><b>Offender</b> (from fine / directly) — on <b>conviction</b></td></tr>
+    <tr><td><code class="secno">396(1)–(6)</code></td><td>357A</td><td><b>Victim Compensation Scheme</b></td><td><b>State fund</b> via DLSA/SLSA — even on <b>acquittal/discharge/untraced offender</b></td></tr>
+    <tr><td><code class="secno">396(7)</code></td><td>357B</td><td>Compensation <b>in addition to</b> fine</td><td>State money <b>+</b> fine to victim under BNS 65/70/124(1) — cumulative, not alternative</td></tr>
+    <tr><td><code class="secno">397</code></td><td>357C</td><td><b>Treatment of victims</b></td><td><b>All hospitals free</b> — acid + sexual + POCSO offences; inform police</td></tr>
+    <tr><td><code class="secno">398</code></td><td>— (NEW)</td><td><b>Witness Protection Scheme</b></td><td>State-notified scheme</td></tr>
+    <tr><td><code class="secno">399</code></td><td>358</td><td>Groundless arrest (up to ₹1,000)</td><td>Person causing arrest</td></tr>
+    <tr><td><code class="secno">400</code></td><td>359</td><td>Costs in non-cognizable cases</td><td>Convict → complainant</td></tr>
+  </table></div></div>
+
+  <h3 class="sec">4.1 BNSS s. 395 — Order to pay compensation [CrPC 357]</h3>
+  <div class="def"><b class="t">Bare-text essence:</b> "When a Court imposes a sentence of <b>fine</b>, or a sentence (including death) <b>of which fine forms a part</b>, the Court may, when passing judgment, order the <b>whole or any part of the fine recovered</b> to be applied for the four statutory purposes below; and where <b>no fine is imposed</b>, it may still order the accused to <b>pay compensation directly</b> [395(3)]."</div>
+  <h4 class="sub">4.1.1 The four application-heads of s. 395(1)</h4>
+  <div class="frow">
+    <div class="fbox">💼 <b>(a) Prosecution expenses</b><br><span style="font-weight:400">defraying expenses properly incurred in prosecution</span></div>
+    <div class="fbox alt">🩹 <b>(b) Loss/injury compensation</b><br><span style="font-weight:400">to any person for loss/injury by the offence, where recoverable in civil court ⭐ most-used head</span></div>
+  </div><div class="frow" style="margin-top:10px">
+    <div class="fbox">🏺 <b>(c) Fatal-Accidents dependents</b><br><span style="font-weight:400">where offence caused death (or abetment thereof) — compensation to persons entitled under the <b>Fatal Accidents Act, 1855</b></span></div>
+    <div class="fbox alt">🍚 <b>(d) Bona-fide purchaser refund</b><br><span style="font-weight:400">where offence involves theft / misappropriation / breach of trust / cheating — refund to innocent buyer</span></div>
+  </div>
+  <h4 class="sub">4.1.2 Sub-sections (2)–(5): the operating rules</h4>
+  <ul class="tight">
+    <li><b>395(2):</b> if fine imposed in a case <b>appealable</b>, no compensation order until appeal period over / appeal decided (protects accused from irreversible payout).</li>
+    <li><b>395(3) ⭐:</b> where Court imposes a sentence <b>of which fine does NOT form part</b>, it may still order the accused to <b>pay compensation</b> to the victim of loss/injury. → <i>Rachhpal Singh</i> turns on this: High Court gave only life imprisonment (no fine) → compensation was validly awarded under 357(3)/395(3).</li>
+    <li><b>395(4):</b> <b>Appellate / Sessions / High Court (revision)</b> may equally make 395(1)/(3) orders — compensation jurisdiction travels upward.</li>
+    <li><b>395(5):</b> sums paid/recovered under 395 are <b>taken into account in any later civil suit</b> for the same matter (no double recovery).</li>
+  </ul>
+  <h4 class="sub">4.1.3 Judicially-evolved principles for s. 395 (cite these!)</h4>
+  <div class="tbl-wrap"><table>
+    <tr><th>Principle</th><th>Authority</th></tr>
+    <tr><td><b>Liberal exercise</b> — every criminal court should use s. 395 to meet the ends of justice; reassures victim she is <b>"not forgotten"</b>; reconciles victim &amp; offender; constructive step forward.</td><td><i>Hari Kishan v. Sukhbir Singh</i>, AIR 1988 SC 2127 (Shetty, J.) — quoted in <i>Jacob George</i></td></tr>
+    <tr><td><b>Quantum must be reasonable</b> — depends on facts of each case; consider <b>capacity of accused to pay</b> (object is collection + payment, not default imprisonment).</td><td><i>Hari Kishan</i>; <i>Palaniappa Gounder v. State of T.N.</i> (1977) 2 SCC 634; <i>Sarwan Singh v. Punjab</i> (1978) 4 SCC 111 (both cited in <i>Rachhpal</i>)</td></tr>
+    <tr><td><b>Without-fine compensation</b> valid where substantive sentence stands alone — High Court need not first enhance fine.</td><td><i>Rachhpal Singh</i> (2002) — rejects the "must enhance fine first" argument</td></tr>
+    <tr><td><b>Capacity assessed from record + judicial notice</b> — land, tractor, car → reasonably affluent → ₹1 lakh per accused upheld (reduced from ₹2 lakh for want of fuller material).</td><td><i>Rachhpal Singh</i></td></tr>
+    <tr><td><b>Compensation may dominate over imprisonment</b> where rehabilitation of victim's dependants is the ultimate aim — fine enhanced ₹5,000 → <b>₹1 lakh</b> (bank deposit, interest to guardian till majority).</td><td><i>Jacob George</i> (1994)</td></tr>
+    <tr><td><b>Even on acquittal</b> — compensation may be directed where justice demands (offer-based, victim-centred).</td><td><i>Ajaib Singh</i> (1995) — ₹5 lakh despite acquittal</td></tr>
+  </table></div>
+
+  <h3 class="sec">4.2 BNSS s. 396 — Victim Compensation Scheme [CrPC 357A + 357B]</h3>
+  <div class="def"><b class="t">Legislative history (one line for exams):</b> Recommended by the <b>154th Law Commission</b> + <b>Malimath Committee</b> → inserted as CrPC 357A by <b>Act 5 of 2009 (w.e.f. 31-12-2009)</b> → carried into <b>BNSS s. 396</b>; CrPC 357B (Criminal Law Amendment 2013, Verma Committee) → <b>BNSS s. 396(7)</b>.</div>
+  <h4 class="sub">4.2.1 Sub-section walkthrough</h4>
+  <div class="tbl-wrap"><table>
+    <tr><th style="width:16%">Sub-section</th><th>Content</th><th style="width:30%">Exam significance</th></tr>
+    <tr><td><b>396(1)</b></td><td><b>Every State Govt</b>, in coordination with Centre, <b>shall prepare a scheme</b> providing funds for victims/dependents who suffered loss/injury and <b>require rehabilitation</b>.</td><td>Mandatory ("shall"); each State notifies its own VCS with slabs (e.g., Delhi VCS; NALSA 2018 model for sexual offences).</td></tr>
+    <tr><td><b>396(2)</b></td><td>On <b>court recommendation</b>, <b>DLSA/SLSA</b> decides the <b>quantum</b> under the scheme.</td><td>Court recommends → Legal Services Authority quantifies &amp; disburses.</td></tr>
+    <tr><td><b>396(3)</b></td><td>At conclusion of trial, if <b>395-compensation is inadequate</b> for rehabilitation, <b>or</b> case ends in <b>acquittal/discharge</b> yet victim needs rehabilitation → court <b>may recommend</b> compensation.</td><td>⭐ Compensation <b>de-linked from conviction</b> — the philosophical core.</td></tr>
+    <tr><td><b>396(4)</b></td><td>Where <b>offender not traced/identified</b> but victim identified, and <b>no trial takes place</b> → victim/dependents may <b>apply directly to DLSA/SLSA</b>.</td><td>Covers hit-and-run, unknown assailants, unsolved cases (UN Art. 2 spirit).</td></tr>
+    <tr><td><b>396(5)</b></td><td>DLSA/SLSA shall, <b>after due enquiry, award adequate compensation, completing enquiry within 2 months</b>.</td><td>Time-bound relief; "adequate" = rehabilitation-linked.</td></tr>
+    <tr><td><b>396(6)</b></td><td>To <b>alleviate suffering</b>, DLSA/SLSA may order <b>immediate first-aid / free medical benefits</b> (on certificate of SHO-level officer or Magistrate) or <b>any other interim relief</b>.</td><td>⭐ Interim relief without waiting for trial end (<i>Bodhisattwa</i> logic codified).</td></tr>
+    <tr><td><b>396(7)</b></td><td>State compensation under s. 396 is <b>in addition to</b> fine payable to victim under <b>BNS s. 65, s. 70 and s. 124(1)</b> (rape-in-certain-cases, gang rape, acid attack).</td><td>Old CrPC 357B (IPC 326A, 376AB/D/DA/DB). <b>Cumulative, not set-off.</b></td></tr>
+  </table></div>
+  <h4 class="sub">4.2.2 Procedure flowchart (draw this for 10-mark questions)</h4>
+  <div class="flow">
+    <div class="fbox dark">VICTIM SUFFERS LOSS/INJURY + NEEDS REHABILITATION</div><div class="farrow">▼</div>
+    <div class="fork">
+      <div class="fbox"><b>Route A — Trial held</b><br><span style="font-weight:400">Trial Court at conclusion finds 395-amount inadequate, OR acquits/discharges → <b>recommends</b> u/s 396(3) → DLSA/SLSA holds enquiry (≤2 months) → awards <b>adequate compensation</b></span></div>
+      <div class="fbox alt"><b>Route B — No trial (offender untraced)</b><br><span style="font-weight:400">Victim/dependents <b>apply directly</b> u/s 396(4) → DLSA/SLSA enquiry (≤2 months) → awards compensation</span></div>
+    </div>
+    <div class="farrow">▼ + at any stage ▼</div>
+    <div class="fbox"><b>Interim track — s. 396(6):</b> free first-aid / medical benefits / other interim relief on SHO/Magistrate certificate</div>
+  </div>
+  <div class="card blue"><h4>💰 Quantum illustrations (real figures to quote)</h4><ul class="tight">
+    <li><b>Acid attack:</b> minimum <b>₹3 lakh</b> (₹1L within 15 days + ₹2L within 2 months) — <i>Laxmi</i>.</li>
+    <li><b>NALSA Scheme 2018</b> (sexual assault survivors; extended to POCSO children via <i>Nipun Saxena</i>): graded minima/maxima in lakhs by category (death, gang rape, rape, unnatural offences, acid attack) + interim relief; funds parkable in interest-bearing accounts for minors.</li>
+    <li><b>SC/ST (POA) Rules 2015, Annexure I:</b> stage-wise slabs (25% on FIR → 50% on chargesheet → 25% on conviction).</li>
+    <li><b>Judicial awards:</b> ₹10L (<i>Chandrima</i>), ₹5L (<i>Ajaib</i>), ₹1L (<i>Jacob George</i>, <i>Rachhpal</i> per accused), ₹35K–₹1L (constitutional-tort line).</li></ul></div>
+
+  <h3 class="sec">4.3 BNSS s. 397 — Treatment of victims [CrPC 357C]</h3>
+  <div class="def"><b class="t">Bare-text essence:</b> "<b>All hospitals, public or private</b> — Central/State/local-body or any other person — <b>shall immediately provide first-aid or medical treatment, free of cost</b>, to victims of offences under <b>BNS ss. 64, 65, 66, 67, 68, 70, 71, 124(1)</b> (rape &amp; aggravated sexual offences + acid attack) and <b>POCSO ss. 4, 6, 8, 10</b>, and <b>shall immediately inform the police</b>."</div>
+  <ul class="tight">
+    <li><b>Origin:</b> Criminal Law (Amendment) Act 2013 (Verma Committee) → CrPC 357C → BNSS 397 (now expressly extended to <b>POCSO victims</b>).</li>
+    <li><b>No-refusal rule</b> (<i>Laxmi</i>): <b>no hospital/clinic may refuse</b> pleading lack of speciality — stabilise + first-aid first, then refer; private hospitals bound equally (<i>Laxmi</i>: State to arrange if private hospital defaults).</li>
+    <li><b>Teeth:</b> refusal/contravention → <code class="secno">BNS s. 200</code> (IPC 166B) — punishment for <b>non-treatment of victim</b> by person in charge of hospital.</li>
+    <li><b>Companion duties:</b> examination with <b>consent</b>, within 24 hrs for rape (BNSS 184); <b>two-finger test banned</b> (<i>Rajesh v. Haryana</i>).</li>
+  </ul>
+
+  <h3 class="sec">4.4 The surrounding sections — 398, 399, 400 + BNS fine provisions</h3>
+  <div class="grid2">
+    <div class="card teal"><h4>🛡️ BNSS 398 — Witness Protection (new)</h4><p>Every State <b>shall prepare &amp; notify</b> a Witness Protection Scheme — threat categorisation, protection measures, identity protection, relocation, special deposition. Gives statute-book status to <i>Mahender Chawla v. UoI</i> (2018). Victim-witnesses in rape, terror, organised-crime trials are prime beneficiaries.</p></div>
+    <div class="card gold"><h4>💵 BNS fine-to-victim provisions (feeds 396(7))</h4><ul class="tight"><li><b>BNS 124(1)</b> (acid attack): fine shall be <b>just &amp; reasonable to meet medical expenses</b>, paid to victim.</li><li><b>BNS 65(2)/70(2)</b> (rape/gang-rape of minor): fine with victim-payment direction.</li><li><b>BNS 72</b> (identity disclosure) + <b>BNS 73</b> (court-proceeding publication): punish media/breach — the <i>Nipun Saxena</i> shield.</li></ul></div>
+  </div>
+  <div class="exam-tip">🧮 <b>395 vs 396 — the classic distinction (learn as a table):</b> (1) <b>Source:</b> offender's fine (395) vs State fund (396) · (2) <b>Trigger:</b> conviction needed (395) vs acquittal/discharge/untraced also covered (396) · (3) <b>Decider:</b> trial/appellate court itself (395) vs court recommends + DLSA/SLSA quantifies (396) · (4) <b>Purpose:</b> recompense for proved loss (395) vs <b>rehabilitation</b> (396) · (5) <b>Cumulative:</b> 396(7) expressly adds State money <i>over</i> BNS fines — no set-off.</div>
+  </div>
+</div>
+
+<!-- ================= PART 5 ================= -->
+<div class="part" id="p5">
+  <div class="part-head ph-violet"><div class="num">5</div><div><h2>DU Case Laws in Full Detail <span style="font-weight:400;font-size:14px">[Cases 19–24]</span></h2><p>Facts · Issues · Arguments (both sides) · Decision · Ratio — strictly from DU material + authoritative reports</p></div></div>
+  <div class="part-body">
+
+  <!-- CASE 19 -->
+  <div class="case" id="crim-case-u5-1"><div class="case-head"><div class="cno">DU Case 19 · DU material pp. 253–256</div>
+    <h3>State of Punjab v. Ajaib Singh — AIR 1995 SC 975 : (1995) 2 SCC 486</h3>
+    <div class="cite">Bench: R.M. Sahai, J. · Appeal against acquittal (Art. 136) · Ss. 302 IPC, 100 IPC (private defence), compensation despite acquittal</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts (as found by Courts below)</h4>
+    <div class="facts"><ul class="tight">
+      <li><b>Night of 16-12-1976, ~11 PM, G.T. Road before Sat Kartar Cold Storage, Phagwara:</b> two Punjab Traffic Police groups clashed over <b>authority to check trucks</b>. Sub-Inspector <b>Ajaib Singh</b> (respondent) fired <b>3 shots</b> from his service revolver — killing <b>ASI Gurnam Singh</b> and <b>Constable Paramjit Singh</b>; third shot hit a cycle-shop shutter. Time/date/place and the firing itself were <b>undisputed</b>.</li>
+      <li><b>Prosecution version:</b> deliberate, unjustified, cold-blooded murder (deceased caught/held, shot point-blank).</li>
+      <li><b>Defence version:</b> Ajaib Singh, tipped by a truck driver that men in police uniform were <b>extorting truck drivers</b>, reached the spot, challenged ASI Gurnam Singh who <b>did not disclose identity</b> and moved suspiciously; grappling followed; Ajaib Singh suffered <b>9 danda-blow injuries</b> (held <b>not self-inflicted</b>) from 3 companions → fired in <b>private defence</b> under <b>s. 100 IPC, clauses I &amp; II</b> (reasonable apprehension of death/grievous hurt).</li>
+      <li><b>Trial Court:</b> disbelieved prosecution's origin-story (accepted defence version of origin; unexplained FIR delay — constables allegedly hiding in fields on a winter night; no rojnamacha entry for "nakabandi"), but <b>convicted u/s 302</b> (life + s. 87 Arms Act 2 yrs) holding <b>right of private defence exceeded</b> (dandas vs firearm). Co-accused Balbir Kumar → probation (s. 383); Jit Singh acquitted.</li>
+      <li><b>High Court:</b> dismissed State revision for death sentence; <b>acquitted Ajaib Singh</b> — deceased party was <b>illegally checking trucks/extorting</b>; forensic evidence showed shots from <b>deceased's revolver</b> too; apprehension of death was <b>reasonable</b>; firing within s. 100 IPC.</li>
+      <li><b>Before SC:</b> counsel for respondent (R.K. Garg) offered <b>₹5 lakh as genuine remorse</b> (not cover/excuse) given 18-year delay; State counsel refused money, pressed for conviction as cold-blooded murder.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li>Whether the High Court's acquittal was <b>palpably erroneous/perverse</b> warranting Art. 136 interference?</li><li>Whether the respondent <b>exceeded the right of private defence</b> (dandas vs firearm)?</li><li>Whether <b>monetary compensation</b> to victims' families was appropriate despite acquittal?</li></ol>
+    <h4 class="sub">Arguments</h4>
+    <div class="grid2"><div class="card red"><h4>State (appellant)</h4><ul class="tight"><li>Cold-blooded murder; private defence <b>exceeded</b> — danda attack cannot justify firearm use.</li><li>Deceased's revolver found <b>holstered inside woollen overcoat</b> — clinching proof he never fired; forensic opinion be ignored.</li><li>Refused compensation — wanted conviction, not money.</li></ul></div>
+    <div class="card green"><h4>Respondent (Ajaib Singh)</h4><ul class="tight"><li><b>No previous enmity</b> (found by trial court) — mistaken-identity clash the deceased provoked.</li><li>Even trial court accepted <b>right of private defence existed</b>; 9 real injuries → <b>reasonable apprehension of death</b>; ss. 100(I)–(II) don't mandate weapon-parity.</li><li><b>Delay of ~18 years</b>; offered ₹5 lakh from genuine remorse to avoid further litigation.</li></ul></div></div>
+    <h4 class="sub">Decision</h4>
+    <ul class="tight"><li><b>Appeal dismissed.</b> Acquittal-view was a <b>possible view</b> — appellate court against acquittal interferes only if view impossible; even accepting the holster fact and ignoring forensic opinion, the finding was <b>neither perverse nor infirm</b>.</li>
+      <li><b>s. 100 IPC test:</b> weapon-parity is <b>not the law</b>; question is whether assault could cause <b>reasonable apprehension that death would otherwise ensue</b> — 3 men with dandas + 9 injuries satisfied it.</li>
+      <li><b>Compensation:</b> respondent to <b>deposit ₹5 lakh</b> in one month with HC Registrar — <b>₹3.5L to ASI Gurnam Singh's dependents + ₹1.5L to Constable Paramjit Singh's dependents</b>.</li></ul>
+    <div class="ratio"><b>⭐ Ratio / principle evolved:</b> (1) <b>Victim compensation is decoupled from conviction</b> — the Court can direct substantial compensation to victims' families <b>even while upholding acquittal</b>, where the incident is admitted and justice to victims demands it. (2) <b>Speedy-trial concern:</b> 18-year time-lag deprecated — speedy trial/disposal is the <i>sine qua non</i> of criminal jurisprudence (2017 PYQ answer quotes this). (3) Private-defence proportionality = <b>reasonable apprehension</b>, not weapon-matching.</div>
+    <div class="exam-tip">📝 <b>Use in:</b> "compensation without conviction" (with BNSS 396(3)); delay/trauma of victims; Raina's "broader interpretation of victim". Pair with <i>Jacob George</i> (rehabilitation over incarceration).</div>
+  </div></div>
+
+  <!-- CASE 20 -->
+  <div class="case" id="crim-case-u5-2"><div class="case-head"><div class="cno">DU Case 20 · DU material pp. 257–262</div>
+    <h3>Dr. Jacob George v. State of Kerala — (1994) 3 SCC 430</h3>
+    <div class="cite">Bench: B.L. Hansaria, J. · Ss. 312/314 IPC, MTP Act 1971, s. 357 CrPC · Sentence vs compensation</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts</h4>
+    <div class="facts"><ul class="tight">
+      <li>Deceased <b>Thankamani</b> (deserted-then-reconciled wife; mother of one son) became pregnant again and sought <b>abortion</b>. Through PW1 (relative) she reached appellant's <b>clinic at Nilambur</b> (appellant = <b>homeopath</b>, no surgical training).</li>
+      <li><b>14–15 Jan 1987:</b> admitted; ₹600 agreed (₹500 + balance); taken to theatre ~10 PM on 15.1.1987; declared "successful" at midnight though <b>unconscious</b>; brief rally at 5 AM (16th), then <b>sinking, froth, death</b>. Post-mortem: <b>uterus perforated by crude use of scientific gadgets</b> — "daring, crude and criminal" (HC).</li>
+      <li><b>Trial (Asst. Sessions Judge):</b> <b>acquitted</b> — charges not proved beyond reasonable doubt (PWs 3–4 nurses hostile).</li>
+      <li><b>High Court:</b> State appeal + <b>suo motu revision</b> → convicted under <b>s. 314 IPC</b> (death caused by act done with intent to cause miscarriage, <b>with woman's consent</b> — max 10 yrs); <b>RI 4 years + ₹5,000 fine (₹4,000 to children)</b>; refused probation.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li>Whether conviction u/s 314 IPC was sustainable (PW1 sole reliance, hostile witnesses, defence of crude-stick abortion by PW1)?</li><li>Whether benefit of <b>Probation of Offenders Act</b> (Madras HC <i>Manickam Pillai</i> cited) should be granted?</li><li>What is the <b>proper sentence</b> — purposes of punishment vs <b>compensation/rehabilitation of the victim's minor son</b> (s. 357)?</li></ol>
+    <h4 class="sub">Arguments</h4>
+    <div class="grid2"><div class="card red"><h4>Appellant (Dr. Jacob George — Sh. Jain)</h4><ul class="tight"><li>Conviction rests <b>only on PW1</b>; PWs 3–4 hostile → no corroboration.</li><li><b>Defence:</b> PW1 himself caused abortion crudely (stick/rod); deceased brought for emergency care.</li><li><b>Sentence:</b> ~2 months already undergone — reduce to period undergone; alternatively <b>probation</b> (to save practice via POA Act s. 12).</li></ul></div>
+    <div class="card green"><h4>State</h4><ul class="tight"><li>PW1 (near relative, central actor) fully reliable; PW5 (clinic employee) admitted 14th admission; <b>autopsy corroborates</b> (perforation, ~36-hr timeline).</li><li>Defence demolished: a clinic-head facing medico-legal emergency would <b>inform police</b> — failure "speaks volumes".</li><li>Quack surgery killing a consenting woman deserves <b>custodial + compensatory</b> response; probation inappropriate.</li></ul></div></div>
+    <h4 class="sub">Decision</h4>
+    <ul class="tight"><li><b>Conviction upheld</b> — case not covered by any <b>MTP Act 1971 exception</b> (health/humanitarian/eugenic grounds); Court <b>expressly left open</b> whether a right to abortion inheres in <b>Art. 21</b>.</li>
+      <li><b>Probation refused:</b> homeopath perforating uterus ≠ trained surgeon's error of judgment; practice must suffer for the "unwanted act".</li>
+      <li><b>Sentence remodelled — the famous four-purpose analysis:</b> <b>retribution</b> (served by conviction's blow to practice; s. 314 carries no death penalty) + <b>prevention</b> (2 months = eye-opener) + <b>deterrence</b> (conviction + jail stigma deters quacks) + <b>reformation</b> (2 months behind bars taught trauma) → <b>substantive sentence reduced to period already undergone (~2 months)</b>.</li>
+      <li><b>Fine enhanced ₹5,000 → ₹1,00,000</b> (6 months to deposit; on default, HC sentence revives): invoking <b>s. 357 + <i>Hari Kishan</i></b> ("reassure the victim she is not forgotten"); ₹1,000/month nursing needs of destitute minor son; amount to <b>nationalised-bank deposit in son's name — guardian withdraws interest till majority</b>.</li></ul>
+    <div class="ratio"><b>⭐ Ratio:</b> (1) <b>Rehabilitation of the victim's dependants can outweigh long incarceration</b> — compensation is a <b>constructive, reconciling</b> sentencing tool. (2) <b>All criminal courts should exercise s. 357/395 liberally</b>; "reasonable" quantum = fact-sensitive (child's needs × offender's roaring practice). (3) <b>Probation is character-sensitive</b> — quackery disentitles; s. 12 protection rightly denied. (4) Four purposes of punishment (R-P-D-R) must each be consciously tested at sentencing.</div>
+    <div class="exam-tip">📝 <b>Use in:</b> s. 395/BNSS-395 answers; "rehabilitation of victim vs punishment of offender"; sentencing philosophy; <i>Bodhisattwa</i> comparison (interim relief). Quote: fine-structure with bank-deposit machinery = model of <b>restorative sentencing</b>.</div>
+  </div></div>
+
+  <!-- CASE 21 -->
+  <div class="case" id="crim-case-u5-3"><div class="case-head"><div class="cno">DU Case 21 · DU material pp. 263–268</div>
+    <h3>The Chairman, Railway Board v. Mrs. Chandrima Das — AIR 2000 SC 988 : (2000) 2 SCC 465</h3>
+    <div class="cite">Bench: S. Saghir Ahmad, J. · Art. 226 PIL · Gang rape of Bangladeshi national by railway staff · ₹10 lakh compensation</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts</h4>
+    <div class="facts"><ul class="tight">
+      <li><b>Victim: Smt. Hanufa Khatoon</b>, Bangladeshi national (elected Union Board representative), arrived <b>Howrah Station 26-2-1998</b> for Jodhpur Express to Ajmer Sharif; waitlisted → TTE sent her to <b>Ladies Waiting Room</b>.</li>
+      <li><b>Touts + railway staff trap:</b> Ashoke Singh (tout) &amp; Siya Ram Singh (ticket broker) "confirmed" berth; boy Kashi took her for food (vomiting after meal); ~9 PM Ashoke + <b>Rafi Ahmed (Parcel Supervisor)</b> lured her to <b>Yatri Niwas</b> (Room 102, booked on railway pass) — credentials vouched by lady attendants; <b>Sitaram Singh (Khalasi)</b> joined en route; inside waited <b>Lalan Singh (Parcel Clerk)</b> &amp; Awdesh Singh.</li>
+      <li><b>Gang rape:</b> forced into room, bolted from outside (Awdesh guarding), forced liquor, <b>brutal gang rape by 4</b>; victim escaped in shock to platform; missed train; Siya Ram posed as saviour → took her to a Jorabagan flat → <b>raped again</b>, gagged till profuse bleeding → rescued on landlord's alarm by Jorabagan police (GRPS Case 19/98).</li>
+      <li><b>PIL:</b> Advocate <b>Mrs. Chandrima Das</b> filed Art. 226 petition (compensation + clean-up of Howrah station crime). <b>Calcutta HC awarded ₹10 lakh</b> — rape at railway building by railway employees. Railways appealed.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li><b>Maintainability/locus:</b> Art. 226 PIL by an unconnected advocate? Public law vs private-law (civil suit) remedy?</li>
+    <li>Can a <b>foreigner (Bangladeshi)</b> claim Fundamental-Rights relief in India?</li>
+    <li>Is the <b>Railway/Union vicariously liable</b> for rape by employees — or was it purely individual acts + sovereign function (<i>Kasturilal</i>)?</li></ol>
+    <h4 class="sub">Arguments</h4>
+    <div class="grid2"><div class="card red"><h4>Railways / Union (appellants)</h4><ul class="tight"><li><b>Private-law matter:</b> victim should sue for tort damages with evidence; writ court can't decide disputed facts.</li><li><b>No locus:</b> Chandrima Das personally unconnected — PIL incompetent.</li><li><b>Foreigner:</b> Fundamental Rights (Part III) are for <b>citizens only</b> — no Art. 21 claim by a Bangladeshi.</li><li><b>No vicarious liability:</b> rape is <b>not an official act</b>; only individual culprits liable; running railways = <b>sovereign function</b> (<i>Kasturilal</i>).</li></ul></div>
+    <div class="card green"><h4>Respondent (supported by HC findings)</h4><ul class="tight"><li><b>Public-law violation:</b> rape by State employees at State premises = <b>Art. 21 violation</b>; writ remedy lies alongside tort suit (<i>Common Cause</i> — public functionaries + FR breach → Art. 226/32).</li><li><b>PIL locus:</b> petition espouses public interest (victim + station crime) — maintainable.</li><li><b>"Life" belongs to "persons":</b> Art. 14 &amp; <b>Art. 21 use "person", not "citizen"</b> (unlike Arts. 15, 16, 19); <b>UDHR Art. 3 + ICCPR</b> (ratified by India; <i>Kubic Darusz</i>) give "life" the same expansive meaning.</li><li><b>Vicarious liability:</b> railways + Yatri Niwas = <b>commercial activity</b>, not sovereign power; employees acting <b>under cover of official position</b> (pass-booked room) → State liable.</li></ul></div></div>
+    <h4 class="sub">Decision</h4>
+    <ul class="tight"><li><b>Appeal dismissed; ₹10 lakh compensation upheld</b> — payable through the <b>Bangladesh High Commissioner within 3 months</b>.</li>
+      <li><b>Public law covers it:</b> where public functionaries + FR violation/enforcement of public duties are involved, <b>Art. 226 lies though a civil suit also lies</b> (<i>Common Cause, Regd. Society v. UoI</i> (1999) 6 SCC 667).</li>
+      <li><b>Rape = Art. 21 violation</b> (<i>Bodhisattwa</i>: rape destroys psychology, pushes into deep emotional crisis; violates <b>right to life with dignity</b>).</li>
+      <li><b>Foreigners hold Art. 21:</b> Arts. 14 &amp; 21 say <b>"person"</b> (Constitution-text + Art. 19-citizen contrast cases: <i>State Trading Corp.</i>, <i>Hans Muller</i>, <i>Anwar</i>); UDHR-consonant reading — "life" cannot be narrowed.</li>
+      <li><b>Vicarious liability affirmed:</b> running railways/Yatri Niwas is <b>commercial</b>; <i>Kasturilal</i> (sovereign immunity) <b>inapplicable</b>; tort-by-employee + <b>public-law domain</b> (room secured via official position) → Union liable.</li></ul>
+    <div class="ratio"><b>⭐ Ratio (4 holdings — memorise):</b> (1) <b>Rape violates Art. 21</b> (dignity-autonomy). (2) <b>Art. 21 protects every person on Indian soil, citizen or foreigner</b> (text + UDHR harmonisation). (3) <b>Writ compensation lies for State-actor sexual violence</b> despite availability of tort suit. (4) <b>State is vicariously liable</b> where employees exploit official position/facilities; <b>commercial functions attract no sovereign immunity</b>.</div>
+    <div class="exam-tip">📝 <b>Use in:</b> every answer on rape, foreigners' rights, PIL locus, public-vs-private law, vicarious liability, UDHR-as-interpretive-aid. Cite with <i>Bodhisattwa</i> (rape/Art.21) + <i>Nilabati/D.K. Basu</i> (State pays).</div>
+  </div></div>
+
+  <!-- CASE 22 -->
+  <div class="case" id="crim-case-u5-4"><div class="case-head"><div class="cno">DU Case 22 · DU material pp. 269–272</div>
+    <h3>Rachhpal Singh v. State of Punjab — AIR 2002 SC 2710</h3>
+    <div class="cite">Bench: Santosh Hegde, J. · Ss. 302/148/149 IPC + Arms Act · <b>s. 357(1) vs 357(3)</b> — the locus classicus on "compensation without fine"</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts</h4>
+    <div class="facts"><ul class="tight">
+      <li><b>Civil land dispute</b> (plot abutting houses, Srawan Bodla, Malout): deceased <b>Virsa Singh</b> obtained <b>interim stay</b> against Kuljinder Singh on <b>11-10-1996</b>; appellant No. 2's family backed Kuljinder Singh. Afternoon <b>verbal + grappling fight</b> defused by womenfolk.</li>
+      <li><b>~8 PM same day:</b> appellants + 3 others arrived in <b>white Maruti (CHK 8320)</b>, raised <b>'lalkara' (challenge)</b> to "teach a lesson for the stay"; <b>Rachhpal Singh (.12-bore DBBL gun)</b> and <b>Gurmit Singh (.44-40 rifle)</b> + 3 dang-wielding men attacked <b>Virsa Singh &amp; young son Kulwant Singh on their roof</b> — each suffered <b>2 bullet injuries, died on spot</b>. Eyewitnesses: <b>PW3 Ravinder Singh</b> (son/brother) + <b>PW4 Darbara Singh</b> (visiting relative returning a trolley).</li>
+      <li><b>Investigation:</b> FIR 11 PM (9 km away; Magistrate by 2:45 AM); blood-earth, <b>2 empty .12 + 3 empty .44-40 casings</b> seized; arrests 25.10.1996 (rifle + live cartridges on Gurmit; car seized; dangs recovered on disclosure); Rachhpal arrested 27.10.1996 (DBBL + belt of 9 cartridges). <b>PW2 Dr. Randhawa:</b> ante-mortem firearm lacerations of lung.</li>
+      <li><b>Sessions:</b> appellants → <b>death (s. 302) + fine ₹5,000</b>; 3 others → life. <b>High Court:</b> conviction confirmed; death → <b>life</b> (not rarest-of-rare); 3 others <b>acquitted of 302</b> (449 only, time undergone); on victim's <b>Crl. Revision 443/99</b>, awarded <b>₹2 lakh per appellant (₹4L total) u/s 357</b> + <b>5 yrs RI default (consecutive)</b>.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li>Reliability of PWs 3–4 (could they see? why didn't PW3 intervene? trolley story unproved?).</li><li><b>s. 357 locus:</b> where Sessions imposed ₹5,000 fine, could the HC award ₹2L compensation <b>without first enhancing fine</b> — must compensation come <b>only from fine</b> u/s 357(1)(b)?</li><li>Was ₹2L each <b>arbitrary/excessive</b> without evidence of <b>capacity to pay / victim needs</b> and without hearing the accused (<i>Palaniappa; Sarwan Singh</i>)?</li></ol>
+    <h4 class="sub">Arguments</h4>
+    <div class="grid2"><div class="card red"><h4>Appellants (K.B. Sinha)</h4><ul class="tight"><li><b>Eyewitnesses planted:</b> couldn't have seen from their spot; PW3's non-intervention unnatural; PW4's late visit + missing trolley = improbable.</li><li><b>s. 357(1) only:</b> compensation must flow <b>from fine imposed</b>; HC should have <b>enhanced the ₹5,000 fine</b> and paid from it — no standalone compensation atop the fine.</li><li><b>₹2L arbitrary:</b> no material on capacity/needs; no opportunity to lead evidence; violates <i>Palaniappa/Sarwan Singh</i> proportionality.</li></ul></div>
+    <div class="card green"><h4>State / complainant</h4><ul class="tight"><li>Prompt FIR, on-spot empties matching weapons, medical corroboration — <b>conviction concurrent</b>.</li><li><b>s. 357(3) route:</b> HC altered sentence to <b>life only</b> for s. 302, <b>without recording/confirming any fine</b> → deemed <b>no-fine sentence</b> → s. 357(3) <b>direct compensation</b> squarely available.</li><li>Object of s. 357 + brutal double murder of breadwinners justified invoking compensation; capacity inferable (<b>land, tractor-trolley, Maruti</b>).</li></ul></div></div>
+    <h4 class="sub">Decision</h4>
+    <ul class="tight"><li><b>Conviction + life sentence confirmed</b> (evidence believed).</li>
+      <li><b>s. 357(3) upheld:</b> since HC awarded <b>only substantive life imprisonment</b> u/s 302 (no fine recorded), s. 357(3) "comes into play" — Court may award compensation to victim/family <b>even absent fine</b>; HC was <b>well within jurisdiction</b>.</li>
+      <li><b>Quantum moderated:</b> HC lacked full capacity-material, but object of s. 357 justified invocation; assessing from record + <b>judicial notice</b> (agri-land, tractor-trolley, Maruti = reasonably affluent) → <b>reduced ₹2L → ₹1L per appellant (₹2L total)</b>.</li></ul>
+    <div class="ratio"><b>⭐ Ratio:</b> (1) <b>357(1) vs 357(3) test:</b> compensation <b>from fine</b> needs a fine; where sentence carries <b>no fine</b>, 357(3) permits <b>direct compensation orders</b> — appellate courts need not route through fine-enhancement. (2) <b>Quantum = capacity × gravity × victim-needs</b> (<i>Palaniappa; Sarwan Singh</i> affirmed) — but scanty material doesn't defeat jurisdiction; courts may assess via <b>record + judicial notice</b>, moderating to a safe figure. (3) Compensation jurisdiction of courts is <b>settled law</b>.</div>
+    <div class="exam-tip">📝 <b>Use in:</b> BNSS 395(1) vs 395(3) distinction problems; "capacity to pay" principle; default sentence consecutive-run point. Always pair with <i>Jacob George</i> for "reasonable quantum".</div>
+  </div></div>
+
+  <!-- CASE 23 -->
+  <div class="case" id="crim-case-u5-5"><div class="case-head"><div class="cno">DU Case 23 ★ (starred — online) · PIL series</div>
+    <h3>Laxmi v. Union of India — (2014) 4 SCC 427; (2016) 3 SCC 669</h3>
+    <div class="cite">PIL by acid-attack survivor Laxmi (attacked 2005, aged 15) · Regulating acid sale + minimum compensation + free treatment · Led to IPC 326A/B, CrPC 357B/C</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts</h4>
+    <div class="facts"><ul class="tight">
+      <li><b>Laxmi</b>, attacked with acid in Delhi (2005) by a spurned suitor's associates — grievous disfigurement, multiple surgeries, immense physical/mental trauma; trial-court conviction followed, but <b>compensation hopelessly inadequate</b> for surgeries/rehabilitation.</li>
+      <li><b>PIL (2006):</b> prayed for (i) <b>amendments to IPC/CrPC</b> creating dedicated acid-attack offences; (ii) <b>ban/regulation of over-the-counter acid sale</b>; (iii) <b>prosecution guidelines + rehabilitation</b> (treatment + compensation + aftercare).</li>
+      <li><b>Context:</b> free availability of concentrated acid; no dedicated penal provision (prosecuted as ordinary hurt/grievous hurt/attempt-murder); victims bankrupted by surgeries.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li>How to <b>curb easy availability</b> of acid/corrosives?</li><li>What <b>minimum compensation + medical-treatment</b> guarantees must States/UTs provide acid-attack victims?</li><li>What <b>legislative reform</b> is needed for acid offences?</li></ol>
+    <h4 class="sub">Arguments (PIL — petitioner vs Union/States)</h4>
+    <div class="grid2"><div class="card green"><h4>Petitioner (Laxmi)</h4><ul class="tight"><li>Acid = <b>weapon of patriarchal control</b>; existing law treats it as <b>ordinary hurt</b> — needs <b>separate offence + stringent punishment</b>.</li><li><b>Complete ban / strict licensing</b> of retail acid; acids as <b>scheduled poisons</b>.</li><li><b>Free treatment + substantial compensation + rehabilitation</b> as victim's right; wide publicity of schemes.</li></ul></div>
+    <div class="card red"><h4>Union / States (response)</h4><ul class="tight"><li>Centre framed <b>Model Rules</b> under the <b>Poisons Act, 1919</b> for sale/storage/licensing — circulated to States/UTs.</li><li>States (e.g., T.N.) undertook <b>strict rules within 2 months</b>; acid attacks made <b>cognizable + non-bailable</b>.</li><li>Supported compensation via <b>s. 357A schemes</b> + free treatment linkage.</li></ul></div></div>
+    <h4 class="sub">Decision — series of directions (2013 → 2015)</h4>
+    <ul class="tight"><li><b>Acid-sale regulation (2013 order):</b> <b>no over-the-counter sale to minors (below 18)</b>; seller to keep <b>register (buyer ID + address + quantity + purpose)</b>; buyer must show <b>govt. photo-ID + stated purpose</b>; dealers to <b>declare stocks to SDM within 15 days</b>; undeclared stock → <b>confiscation + fine up to ₹50,000</b>; States to notify acid as <b>poison</b>.</li>
+      <li><b>Minimum compensation:</b> <b>₹3 lakh per acid-attack victim</b> in every State/UT — <b>₹1L within 15 days</b> of incident/notice (immediate medical expenses) + <b>₹2L within 2 months</b>.</li>
+      <li><b>Free treatment:</b> <b>full medical assistance free</b> — <b>private hospitals equally bound</b>; <b>no refusal for lack of speciality</b> (stabilise + first-aid, then refer); SLSAs to give <b>wide publicity</b> to VCS.</li>
+      <li><b>Legislative fruit:</b> Criminal Law (Amendment) Act 2013 — <b>IPC 326A</b> (acid attack, min 10 yrs + fine-for-medical-costs) &amp; <b>326B</b> (attempt), <b>CrPC 357B</b> (State money additional to fine) &amp; <b>357C</b> (free treatment) — now <b>BNS 124, BNSS 396(7), 397</b>.</li></ul>
+    <div class="ratio"><b>⭐ Ratio:</b> (1) <b>Preventive + restorative justice fused</b> — Court regulated the <i>weapon</i> (acid market) alongside the <i>wound</i> (treatment + money). (2) <b>Floor-level compensation as a right</b> (₹3L, time-bound tranches) — model for all VCS slabs. (3) <b>Private hospitals are State-agents for emergency victim-care</b> — no commercial refusal. (4) PIL can midwife <b>substantive penal reform</b> (326A/B template).</div>
+    <div class="exam-tip">📝 <b>Use in:</b> acid-attack problems; BNSS 396/397 answers; "compensation + regulation" essays; gender-justice dimensions. Real-example add-on: post-<i>Laxmi</i>, Delhi/UP VCSs list acid-attack slabs up to ₹5–7L; NALSA 2018 scheme dedicates an acid-attack head.</div>
+  </div></div>
+
+  <!-- CASE 24 -->
+  <div class="case" id="crim-case-u5-6"><div class="case-head"><div class="cno">DU Case 24 ★ (starred — online) · Victim-identity + compensation architecture</div>
+    <h3>Nipun Saxena v. Union of India — 2017 SCC OnLine SC 1776; (2019) 2 SCC 703</h3>
+    <div class="cite">PIL on media disclosure of rape-victim identity + inadequacy of VCS · Ss. 228A IPC (BNS 72), 327 CrPC (BNSS 366), 372 proviso · NALSA Scheme 2018 for sexual-assault survivors &amp; POCSO children</div></div>
+  <div class="case-body">
+    <h4 class="sub">Facts</h4>
+    <div class="facts"><ul class="tight">
+      <li><b>Trigger:</b> media repeatedly <b>identified rape survivors</b> despite <b>s. 228A IPC</b> — e.g., naming a survivor as a <b>State-board topper</b> (identity instantly deducible); blurring the face but <b>naming village + relatives</b>. Investigation itself re-traumatised victims through repetitive questioning.</li>
+      <li><b>PIL</b> sought enforcement of identity-protection + uniform, adequate <b>compensation machinery</b> for sexual-offence victims (women <i>and</i> POCSO children).</li>
+      <li><b>Parallel track:</b> post-10-8-2018 order, a Committee finalised <b>"NALSA's Compensation Scheme for Women Victims/Survivors of Sexual Assault/Other Crimes — 2018"</b>; Court found <b>no comparable scheme for POCSO child victims</b> (Rules under POCSO amendment awaited) — a <b>"hiatus"</b>.</li>
+    </ul></div>
+    <h4 class="sub">Issues</h4>
+    <ol class="tight"><li>Scope of <b>s. 228A IPC</b> — what counts as "identity disclosure"? Who (if anyone) can authorise it?</li><li>What <b>procedural shields</b> (FIR publicity, in-camera trial, court records) must apply?</li><li>What <b>compensation framework</b> should govern women survivors <i>and</i> POCSO children?</li></ol>
+    <h4 class="sub">Arguments</h4>
+    <div class="grid2"><div class="card green"><h4>Petitioner</h4><ul class="tight"><li>s. 228A + s. 327(2) (Amendment Act 43 of 1983) mandate <b>absolute non-disclosure</b> — media circumvents via indirect identifiers.</li><li>Victims need <b>anonymity at every stage</b> (FIR → trial → appeal → records) + <b>one-stop support</b> + assured compensation.</li></ul></div>
+    <div class="card red"><h4>State / ASG</h4><ul class="tight"><li>Accepted protection goals; noted <b>practical necessities</b> (name in FIR file, police records — s. 228A(2) exception for police).</li><li>POCSO amendment + <b>dedicated compensation Rules forthcoming</b>; interim guidance acceptable.</li></ul></div></div>
+    <h4 class="sub">Decision — two judgments' holdings combined</h4>
+    <ul class="tight"><li><b>Identity ban (2019) 2 SCC 703:</b> <b>no person</b> may print/publish in <b>print, electronic or social media</b> the name <b>or any matter</b> by which the victim's identity may be known (ban covers <b>indirect identifiers</b> too); breach = offence u/s <b>228A (now BNS 72)</b> — <b>2 yrs + fine</b>. <b>Police</b> must keep <b>FIRs under rape/POCSO provisions off the public domain</b> (media included); authorities/courts privy to identity must <b>seal/mask records</b>.</li>
+      <li><b>Authorised disclosure — narrow gates:</b> adult victim may <b>herself authorise in writing</b> [228A(2)(b)]; if victim <b>dead/unsound</b> → <b>next of kin applies to Sessions Judge/Magistrate</b>; if victim is a <b>minor</b> → only with <b>Special Court permission, child's interest paramount</b>.</li>
+      <li><b>Appeal anonymity:</b> victim appealing u/s <b>372 proviso (BNSS 413)</b> may use <b>pseudonyms (X/Y)</b>.</li>
+      <li><b>Trial shields:</b> <b>in-camera proceedings</b> u/s <b>327(2) (BNSS 366)</b>; publication of court proceedings without prior permission punishable (s. 228 IPC → <b>BNS 73</b>).</li>
+      <li><b>Compensation architecture:</b> <b>NALSA Scheme 2018 adopted nationally</b> (graded slabs + interim relief for sexual-assault survivors); extended as <b>interim guideline for POCSO Special Courts under Rule 7</b> (2012 Rules) till Centre frames Rules — <b>gender-neutral, w.e.f. 2-10-2018</b>; funds to be <b>protected in interest-bearing accounts</b> for children; copies to <b>every HC Registrar General → District/Special Judges + Legal Services Committees + Judicial Academies</b>.</li>
+      <li><b>One-Stop Centres:</b> States/UTs urged to run <b>one-stop centres in every district</b> (medical + legal + counselling under one roof).</li></ul>
+    <div class="ratio"><b>⭐ Ratio:</b> (1) <b>Victim anonymity is absolute-by-default</b> — "identity" means <b>any identifying matter</b>, not just the name; exceptions need <b>victim's writing or court sanction</b>. (2) <b>Rehabilitation is parallel to punishment</b> — NALSA 2018 + POCSO interim awards institutionalise <b>money-during-trial</b>. (3) Courts must <b>engineer administrative compliance</b> (circulation chains, OSCs) — victim justice is <b>implementation-heavy</b>.</div>
+    <div class="exam-tip">📝 <b>Use in:</b> media/identity problems; POCSO compensation; "drawbacks of 357/357A → NALSA Scheme" narrative (2022 PYQ answer cites exactly this). Pair with <i>Chandrima</i> (anonymity was also ordered there) + <i>Delhi Domestic Working Women</i>.</div>
+  </div></div>
+
+  <h3 class="sec">Ready-reckoner — all six DU cases at a glance</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Case</th><th>One-line holding</th><th>Figure</th><th>Best paired with</th></tr>
+    <tr><td><b>Ajaib Singh</b> (1995)</td><td>Compensation <b>even on acquittal</b>; private defence = reasonable apprehension</td><td>₹5L (3.5 + 1.5)</td><td>BNSS 396(3); speedy trial</td></tr>
+    <tr><td><b>Jacob George</b> (1994)</td><td>Jail cut to time-served; <b>fine → ₹1L rehabilitation fund</b> for minor son</td><td>₹1L in bank, interest to guardian</td><td>BNSS 395; Hari Kishan</td></tr>
+    <tr><td><b>Chandrima Das</b> (2000)</td><td><b>Rape = Art. 21 breach</b>; foreigners protected; State <b>vicariously liable</b></td><td>₹10L via Bangladesh HC</td><td>Bodhisattwa; Nilabati; UDHR</td></tr>
+    <tr><td><b>Rachhpal Singh</b> (2002)</td><td><b>357(3) direct compensation without fine</b>; quantum ∝ capacity × gravity × needs</td><td>₹2L each → ₹1L each</td><td>Palaniappa; Sarwan Singh</td></tr>
+    <tr><td><b>Laxmi</b> (2014/2016)</td><td><b>Acid regulated + ₹3L floor + free treatment</b>; birthed 326A/B, 357B/C</td><td>₹1L/15 days + ₹2L/2 months</td><td>BNSS 396(7), 397; BNS 124</td></tr>
+    <tr><td><b>Nipun Saxena</b> (2019)</td><td><b>Absolute identity shield</b> + NALSA 2018 scheme (+ POCSO interim guide)</td><td>Slabs in lakhs; OSCs</td><td>BNS 72/73; BNSS 366/396/398</td></tr>
+  </table></div>
+
+  <h3 class="sec">Supporting cases — one-line arsenal (from Raina + Paranjape + PYQ answers)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Case</th><th>Use it for</th></tr>
+    <tr><td><i>Hari Kishan v. Sukhbir Singh</i> (1988)</td><td>s. 395 "exercise liberally"; victim "not forgotten"; reasonable amount</td></tr>
+    <tr><td><i>Bodhisattwa Gautam</i> (1996)</td><td>Rape = Art. 21; <b>interim compensation during trial even before conviction</b></td></tr>
+    <tr><td><i>Delhi Domestic Working Women v. UoI</i> (1995)</td><td>Compensation = part of rape-court's jurisdiction; anonymity + legal aid + Injuries Board</td></tr>
+    <tr><td><i>Rudul Shah</i> (1983) · <i>PUDR</i> (1987) · <i>Nilabati</i> (1993) · <i>D.K. Basu</i> (1997)</td><td>The <b>constitutional-tort ladder</b>: illegal detention → police firing → custodial death → custodial torture norms + compensation doctrine</td></tr>
+    <tr><td><i>Bhim Singh</i> (1985) · <i>SAHELI</i> (1990) · <i>Inder Singh</i> (1995)</td><td>Malicious arrest / custodial killing of child / police torture — State pays</td></tr>
+    <tr><td><i>State of Gujarat v. Hon'ble HC Gujarat</i> (1998)</td><td>Victims compensated from <b>prisoners' wages</b> (via fund)</td></tr>
+    <tr><td><i>Rajesh v. State of Haryana</i> (2013)</td><td><b>Two-finger test unconstitutional</b>; dignified medical procedures; consent</td></tr>
+    <tr><td><i>Lalita Kumari</i> (2014) · <i>Shiv Kumar v. Hukam Chand</i> (1999)</td><td>Mandatory FIR · s. 301 vs 302 private-counsel distinction</td></tr>
+    <tr><td><i>Payne v. Tennessee</i> (1991, US)</td><td>Victim rights at sentencing; victim-impact evidence (persuasive)</td></tr>
+  </table></div>
+  </div>
+</div>
+
+<!-- ================= PART 6 ================= -->
+<div class="part" id="p6">
+  <div class="part-head ph-gold"><div class="num">6</div><div><h2>DU PYQs with Best Model Answers <span style="font-weight:400;font-size:14px">+ probable questions</span></h2><p>2017 &amp; 2022 victimology questions solved in full — learn the structure, reproduce with BNSS updates</p></div></div>
+  <div class="part-body">
+
+  <div class="pyq" id="crim-pyq-u5-1"><div class="pyq-head"><div class="yr">DU LL.B. · Criminology (2022) · Q.6 — Problem question</div>
+    <h3>"Raghav, a police officer, was sentenced to life imprisonment u/s 376 IPC for the rape of an illegally arrested woman in his police station. From commission till conclusion of trial, the victim and her family suffered immense physical, mental and financial agony. Substantiate with relevant case law and legal provisions dealing with the rights of victims."</h3></div>
+  <div class="pyq-body">
+  <div class="ans">
+    <p><b>MODEL ANSWER — structure: (A) Identify issues → (B) Victim definition → (C) UN framework → (D) Rights catalogue applied → (E) Compensation (395/396) → (F) Case-law wall → (G) Conclusion applying to Raghav's victim.</b></p>
+    <p><b>(A) Issues:</b> (i) What <b>rights</b> does a rape victim (also an abuse-of-power victim — illegal arrest + custodial rape by a police officer) hold in Indian criminal justice? (ii) What <b>compensation/rehabilitation</b> can she claim, from whom — offender, State, or both?</p>
+    <p><b>(B) Who is a victim?</b> Open with Justice Krishna Iyer ("law not victim oriented…") + UN Declaration Arts. 1–2 (harm incl. emotional suffering + fundamental-rights impairment; family/dependents included; offender's identification irrelevant) + <b>BNSS s. 2(1)(y)</b> (loss/injury by the charged act; includes guardian/legal heir). This victim qualifies triply: sexual-offence victim, <b>custodial/abuse-of-power victim</b> (Neumann's category), and her <b>family as secondary victims</b>.</p>
+    <p><b>(C) UN Declaration 40/34 framework:</b> (1) <b>Access to justice &amp; fair treatment</b> (compassion, dignity, information, participation, protection, no delay); (2) <b>Restitution</b> (offender/third parties; State where officials offended — para 11 squarely covers a policeman-rapist); (3) <b>Compensation</b> from State funds where offender cannot fully pay; (4) <b>Assistance</b> (medical, psychological, social). India transplants these via BNSS 395–398 + constitutional tort.</p>
+    <p><b>(D) Rights applied to this victim:</b></p>
+    <ol class="tight">
+      <li><b>Right to register FIR &amp; be investigated fairly</b> — BNSS 173 (mandatory registration, <i>Lalita Kumari</i>); complaint to Magistrate (BNSS 210); illegal arrest itself actionable (BNSS 399 compensation; constitutional tort).</li>
+      <li><b>Right to private counsel</b> — BNSS 360 (counsel under PP's directions; written arguments) / 361 (conduct prosecution in Magistrate court with permission); <i>Shiv Kumar v. Hukam Chand</i> distinction; note legislative-judicial curbs on private counsel (DU 2022 solved answer emphasises this).</li>
+      <li><b>Right to appeal</b> — BNSS 413 proviso (acquittal / lesser offence / inadequate compensation); pseudonym appeal per <i>Nipun Saxena</i>.</li>
+      <li><b>Right to restitution</b> — BNSS 395: fine-based (395(1)(b)) or direct (395(3)); life sentence without fine still permits <i>Rachhpal</i>-route compensation.</li>
+      <li><b>Right to State compensation</b> — BNSS 396: court recommendation → DLSA/SLSA quantum; interim + free medical benefits (396(6)); applicable even without conviction; 396(7) cumulation with BNS fine (BNS 64/65/70).</li>
+      <li><b>Right to assistance &amp; dignity</b> — medical exam within 24 hrs with consent (BNSS 184); free treatment (BNSS 397); <i>Delhi Domestic Working Women</i> guidelines (legal aid at police station, anonymity); no two-finger test (<i>Rajesh</i>); in-camera trial (BNSS 366); identity shield (BNS 72; <i>Nipun Saxena</i> bans incl. FIR off public domain).</li>
+    </ol>
+    <p><b>(E) Compensation — dual-track liability of Raghav + State:</b> (i) <b>Offender track:</b> BNSS 395 — fine/compensation from Raghav (life sentence → 395(3) direct order; <i>Rachhpal; Jacob George</i> "liberal exercise"). (ii) <b>State track:</b> BNSS 396 scheme + <b>constitutional tort</b> — custodial rape by police = Art. 21 violation; State vicariously liable (<i>Chandrima Das</i> — ₹10L for gang rape by railway staff; <i>Nilabati; D.K. Basu</i> — compensatory, interim/final, no sovereign immunity). Also <b>NALSA Scheme 2018</b> slabs for sexual-assault survivors (<i>Nipun Saxena</i>). (iii) <b>Medical track:</b> BNSS 397 free treatment; refusal → BNS 200.</p>
+    <p><b>(F) Case-law wall (cite 5–6):</b> <i>Chandrima Das</i> (closest — State-employee rape → ₹10L) · <i>Nipun Saxena</i> (identity + NALSA scheme) · <i>Jacob George</i> (rehabilitation over jail; liberal 395) · <i>Bodhisattwa</i> (interim relief pre-conviction; rape = Art. 21) · <i>D.K. Basu/Nilabati</i> (State pays for custodial abuse) · <i>State of Gujarat v. HC Gujarat</i> (wages-to-victims; restorative imagination).</p>
+    <p><b>(G) Conclusion:</b> Conviction of Raghav satisfies <b>retribution</b>, but victim justice demands <b>restoration</b>: she can claim (a) BNSS 395 compensation from Raghav, (b) BNSS 396 State rehabilitation money via DLSA/SLSA (+ NALSA 2018 slabs), (c) writ compensation for custodial Art-21 violation, (d) free medical/psychological care, anonymity and counsel rights through trial and appeal. Courts must act <i>suo motu</i>-sensitively — victim is no longer the "forgotten person".</p>
+  </div>
+  <div class="exam-tip">📝 This answer mirrors the <b>DU 2022 solved-paper answer</b> (Q&A Solved Papers, pp. 32–37) — same sequence (victim definition → UN Declaration → FIR → counsel → appeal → restitution/357 → 357A → 164A → <i>Delhi Domestic Working Women/Rajesh</i> → <i>Nipun Saxena/Jacob George/Chandrima/State of Gujarat/Laxmi</i>), here <b>upgraded with BNSS/BNS numbers</b>. In the exam, cite CrPC numbers alongside BNSS to be safe.</div>
+  </div></div>
+
+  <div class="pyq" id="crim-pyq-u5-2"><div class="pyq-head"><div class="yr">DU LL.B. · Criminology (2017) · Q.7(a) — Essay</div>
+    <h3>"It has now been felt that we have cared too much for the criminal and his rehabilitation but very little for the victim." Comment in the light of various judicial decisions.</h3></div>
+  <div class="pyq-body">
+  <div class="ans">
+    <p><b>MODEL ANSWER — structure: (A) Thesis &amp; theoretical basis → (B) Dual obligations → (C) Judicial proof (Track A + Track B) → (D) Statutory catching-up → (E) Remaining gaps → (F) Action plan + conclusion.</b></p>
+    <p><b>(A) Thesis:</b> Agree — modern penology (reformative theory, probation, parole, Arts. 20–22 shields, <i>D.K. Basu</i> arrestee-safeguards) built an elaborate <b>offender-care architecture</b> while the victim remained, in Paranjape's phrase, the <b>"forgotten person"</b> — a mere witness whose vindication ended at conviction. Quote Krishna Iyer + Raina ("victimology in India = method of <b>sentencing</b>, not <b>restitution</b>").</p>
+    <p><b>(B) The dual-obligation theory</b> (DU 2017 solved answer): restitution rests on (i) the <b>criminal's obligation</b> (he inflicted harm) + (ii) the <b>State's obligation</b> (it monopolised punishment yet failed to protect). The State having taken the exclusive right to punish must accept the <b>correlative duty to repair</b>.</p>
+    <p><b>(C) Judicial proof — Track A (conventional crime):</b> <i>Hari Kishan</i> (liberal 357; "not forgotten") → <i>Jacob George</i> (jail cut, ₹1L rehabilitation fund for minor son — victim-rehabilitation as <b>ultimate aim</b>) → <i>Ajaib Singh</i> (₹5L <b>despite acquittal</b>; 18-year delay deprecated; speedy disposal = <i>sine qua non</i>) → <i>Rachhpal</i> (357(3) without fine; capacity-calibrated quantum) → <i>Bodhisattwa</i> (interim relief pre-conviction) → <i>Delhi Domestic Working Women</i> (rape-court's inherent compensation jurisdiction) → <i>State of Gujarat v. HC Gujarat</i> (prison wages to victims) → <i>Laxmi</i> (₹3L floor + free treatment) → <i>Nipun Saxena</i> (NALSA 2018 slabs; POCSO interim).</p>
+    <p><b>Track B (abuse of power):</b> <i>Rudul Shah</i> (₹35K; Art. 21 needs compensation teeth) → <i>PUDR</i> (₹20K working principle) → <i>Nilabati</i> (₹1L monetary amends; no sovereign immunity; ICCPR 9(5)) → <i>D.K. Basu</i> (compensatory-not-punitive; State pays + recovers; civil/criminal remedies preserved) → <i>Chandrima Das</i> (₹10L; rape = Art. 21; foreigners covered; commercial-function liability) → <i>Bhim Singh/SAHELI/Inder Singh</i>.</p>
+    <p><b>(D) Statutory catching-up:</b> CrPC 2008 (2(wa) victim definition; <b>357A scheme</b>; <b>372 proviso appeal</b>) + 2013 (326A/B, 357B/C, 166B) → <b>BNSS 395–398</b> (offender-pays + State-pays + free treatment + witness protection); POA Act s. 5; MV Act no-fault; POCSO interim awards; SC/ST slabs; NALSA 2018.</p>
+    <p><b>(E) Gaps admitted:</b> Raina's critique — no <b>claimable right</b>, rare judicial use (capacity doubts, docket pressure — 41st Law Commission); uneven State VCS slabs; <b>secondary victimisation</b> by police/courts/media persists; private-counsel role still curbed (<i>Shiv Kumar</i>).</p>
+    <p><b>(F) Action plan + conclusion (Raina's 6 points):</b> State responsibility → separate boards/tribunals → special rape/child provisions → abuse-of-power vigilance → compassionate access → restitution + assistance. <b>Conclude:</b> the statement was true of classical penology; since the 1980s the Court has built a <b>compensatory jurisprudence</b> and Parliament a <b>rehabilitation architecture</b> — but victimology must still grow from <b>sentencing technique into a rights-regime</b>, ending with Zender's caution (empower victims; don't instrumentalise them for punitiveness).</p>
+  </div>
+  </div></div>
+
+  <h3 class="sec">Probable questions — practice with frameworks</h3>
+  <details><summary>P1. "Discuss the UN Declaration (1985) on victims and its impact on Indian law." (Essay, 15 marks)</summary><div class="in"><ol class="tight"><li>Intro: Milan Congress → GA 40/34; India's ratification ethos (UDHR/ICCPR consonance per <i>Kubic Darusz/Chandrima</i>).</li><li>Body A: Arts. 1–2 definition (compare BNSS 2(1)(y) — narrower, charge-linked).</li><li>Body B: paras 4–7 (access), 8–11 (restitution), 12–13 (compensation funds), 14–17 (assistance), 18–21 (abuse of power) — one Indian transplant per head: access → Lalita Kumari/413 proviso; restitution → 395; compensation → 396 + Laxmi ₹3L; assistance → 397 + NALSA/OSC; abuse → PHR Act + Rudul Shah line.</li><li>Critical close: declaration = soft law; implementation gaps (slab variance, delay); <i>Nipun Saxena</i> as compliance-engineering.</li></ol></div></details>
+  <details><summary>P2. "X is acquitted of murder; his victim's widow seeks compensation. Advise." (Problem)</summary><div class="in"><ul class="tight"><li><b>Route 1 — BNSS 396(3):</b> trial court, though acquitting, may <b>recommend</b> if victim needs rehabilitation → DLSA/SLSA quantum (≤2 months). Authority: <i>Ajaib Singh</i> (₹5L despite acquittal).</li><li><b>Route 2 — BNSS 396(4):</b> if offender untraced/no trial, <b>direct application</b>.</li><li><b>Route 3 — constitutional tort</b> (if State fault: shoddy probe, custodial angle): Art. 32/226 (<i>Rudul Shah</i> line).</li><li><b>Interim:</b> 396(6) immediate relief. Conclude: <b>acquittal ≠ end of victim justice</b>.</li></ul></div></details>
+  <details><summary>P3. "A newspaper publishes a rape survivor's photograph and village. Discuss liability and protections." (Problem)</summary><div class="in"><ul class="tight"><li><b>Offence:</b> BNS 72 (IPC 228A) — name <b>or any identifying matter</b> → 2 yrs + fine; court-proceeding publication → BNS 73; POCSO s. 23 if minor.</li><li><b><i>Nipun Saxena</i> injunctions:</b> absolute default ban (incl. indirect identifiers); FIRs off public domain; sealed records; in-camera trial (BNSS 366); pseudonym appeal; next-of-kin/Special-Court gates.</li><li><b>Parallel relief:</b> BNSS 395/396 compensation + 397 treatment + NALSA 2018.</li><li>Close with Raina on media responsibility + Zender (victims ≠ TRP objects).</li></ul></div></details>
+  <details><summary>P4. "Compare compensation under BNSS 395 and 396." (Analytical, 10 marks)</summary><div class="in"><p>Use the <b>5-point table</b> (source / trigger / decider / purpose / cumulation) from Part 4 + <i>Rachhpal</i> (395(1) vs (3)) + <i>Jacob George</i> (liberal 395) + <i>Ajaib</i>/<i>Laxmi</i> (396 spirit) + flowcharts. Conclude: 395 = <b>offender-pays retributive-restitutive</b>; 396 = <b>State-pays rehabilitative</b>; 396(7) makes them <b>cumulative</b>.</p></div></details>
+  <details><summary>P5. "Acid attack on Z; offender absconding. Detail Z's remedies." (Problem)</summary><div class="in"><ul class="tight"><li><b>Criminal:</b> BNS 124(1)/(2) (fine for medical costs); arrest/prosecution when traced.</li><li><b>Immediate:</b> BNSS 397 free treatment (no-refusal; BNS 200 for default); BNSS 184-style exam; police intimation.</li><li><b>Money without trial:</b> BNSS 396(4) direct DLSA/SLSA application + 396(6) interim; <i>Laxmi</i> <b>₹3L floor</b> (₹1L/15 days + ₹2L/2 months).</li><li><b>Regulatory:</b> acid-sale register/ID/age/stock-declaration duties — dealer liability.</li><li><b>Support:</b> NALSA 2018 acid head; OSC; anonymity if sexual offence overlaps.</li></ul></div></details>
+  <details><summary>P6. "Victim participation in Indian criminal trials — evaluate." (Essay)</summary><div class="in"><ol class="tight"><li>Traditional exclusion (State = prosecutor; victim = witness).</li><li>Openings: FIR rights, BNSS 360/361 counsel (<i>Shiv Kumar</i> limits), 413 proviso appeal, 395 compensation plea, plea-bargaining victim voice, 398 protection, 366 in-camera.</li><li>Comparative: French <i>partie civile</i> (impleader from investigation) vs US victim-impact (<i>Payne</i>) — India mid-way.</li><li>Evaluation: Malimath implementation partial; private counsel still "under PP"; closure-report hearings + victim-appeal = real gains; suggest Victim Impact Statements + advisory groups (UN Handbook).</li></ol></div></details>
+  </div>
+</div>
+
+<!-- ================= PART 7 ================= -->
+<div class="part" id="p7">
+  <div class="part-head ph-ink"><div class="num">7</div><div><h2>Rapid Revision Kit <span style="font-weight:400;font-size:14px">— last-night pages</span></h2><p>Mindmap · section ready-reckoner · quote bank · 10 golden lines</p></div></div>
+  <div class="part-body">
+  <h3 class="sec">7.1 One-page mindmap (screenshot this!)</h3>
+  <div class="flow">
+    <div class="fbox dark">⚖️ VICTIMOLOGY = scientific study of victimisation (victim = lynch-pin; "forgotten person" → rights-holder)</div>
+    <div class="farrow">▼</div>
+    <div class="fork">
+      <div class="fbox"><b>(i) Meaning &amp; Scope</b><br><span style="font-weight:400">Karmen · Separovic (HR-violation) · UN Arts.1–2 · BNSS 2(1)(y) · History: vengeance → Hammurabi → State eclipse → 1940s founders → 1985 UN → BNSS · 7 contents · Theories: precipitation❌ / facilitation✅ / routine-activity✅ / penal-couple❌ · Von Hentig-5 · Fattah-5 · 1°/2°/3° victims</span></div>
+      <div class="fbox alt"><b>(ii) Role in CJS</b><br><span style="font-weight:400">Stage ladder: FIR 173 → investigation 184 → treatment 397 → trial counsel 360/361 + in-camera 366 → plea voice → sentence 395 → appeal 413 → rehab 396 · Secondary victimisation (police/court/hospital/society/media) · Restorative justice: restoration–accountability–community–skills</span></div>
+    </div>
+    <div class="fork" style="margin-top:10px">
+      <div class="fbox alt"><b>(iii) Rights &amp; Remedies</b><br><span style="font-weight:400">Art.21/14/32/39A · Track A (crime): Hari Kishan→Bodhisattwa→Delhi Forum→Gujarat-wages · Track B (power): Rudul→PUDR→Nilabati→DK Basu→Chandrima · PHR Act · POA s.5 · MV no-fault · POCSO · DV · SC/ST slabs</span></div>
+      <div class="fbox"><b>(iv) Compensation 395–397</b><br><span style="font-weight:400">395 = offender-pays (1: from fine; 3: without fine; 4: appellate; 5: civil set-off) · 396 = State-pays (1: scheme; 2: DLSA quantum; 3: acquittal too; 4: untraced; 5: 2-month enquiry; 6: interim; 7: +BNS fine) · 397 = free treatment (BNS 64–68/70/71/124 + POCSO; BNS 200 teeth)</span></div>
+    </div>
+    <div class="farrow">▼</div>
+    <div class="fbox dark">6 DU CASES: Ajaib ₹5L-acquittal · Jacob ₹1L-rehab · Chandrima ₹10L-Art.21-foreigner · Rachhpal 357(3)-no-fine · Laxmi ₹3L-acid · Nipun anonymity+NALSA &nbsp;|&nbsp; PYQs: 2022-Q6 (Raghav) · 2017-Q7a (cared-too-much)</div>
+  </div>
+
+  <h3 class="sec">7.2 Section ready-reckoner (CrPC → BNSS/BNS)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Old (DU material cites)</th><th>New (cite alongside)</th><th>One-liner</th></tr>
+    <tr><td>CrPC 2(wa)</td><td><b>BNSS 2(1)(y)</b></td><td>Victim definition</td></tr>
+    <tr><td>CrPC 154 / 190</td><td><b>BNSS 173</b> / 210</td><td>FIR (mandatory) / complaint</td></tr>
+    <tr><td>CrPC 164 / 164A</td><td><b>BNSS 183 / 184</b></td><td>Statements / rape-victim medical exam (24 hrs)</td></tr>
+    <tr><td>CrPC 250</td><td>BNSS (retained)</td><td>False-accusation compensation</td></tr>
+    <tr><td>CrPC 301 / 302</td><td><b>BNSS 360 / 361</b></td><td>Private counsel (under PP / conduct in Magistrate court)</td></tr>
+    <tr><td>CrPC 327</td><td><b>BNSS 366</b></td><td>In-camera trial (sexual offences)</td></tr>
+    <tr><td>CrPC 357</td><td><b>BNSS 395</b></td><td>Offender-pays compensation</td></tr>
+    <tr><td>CrPC 357A / 357B / 357C</td><td><b>BNSS 396(1–6) / 396(7) / 397</b></td><td>State scheme / additionality / free treatment</td></tr>
+    <tr><td>CrPC 358 / 359</td><td><b>BNSS 399 / 400</b></td><td>Groundless arrest / non-cognizable costs</td></tr>
+    <tr><td>—</td><td><b>BNSS 398</b> (new)</td><td>Witness Protection Scheme</td></tr>
+    <tr><td>CrPC 372 proviso</td><td><b>BNSS 413 proviso</b></td><td>Victim's appeal</td></tr>
+    <tr><td>IPC 228A / 228</td><td><b>BNS 72 / 73</b></td><td>Identity shield / proceeding-publication ban</td></tr>
+    <tr><td>IPC 326A / 326B</td><td><b>BNS 124(1) / 124(2)</b></td><td>Acid attack / attempt (fine → victim)</td></tr>
+    <tr><td>IPC 166B</td><td><b>BNS 200</b></td><td>Non-treatment of victim by hospital</td></tr>
+    <tr><td>IPC 376-series</td><td><b>BNS 64–71</b></td><td>Rape &amp; aggravated forms (fines feed 396(7))</td></tr>
+  </table></div>
+
+  <h3 class="sec">7.3 Quote bank (open/close answers with these)</h3>
+  <div class="grid2">
+    <div class="card gold"><ul class="tight">
+      <li>🖋️ <b>Krishna Iyer:</b> "Law not victim oriented… suffering overlooked in misplaced sympathy for the criminal."</li>
+      <li>🖋️ <b><i>Hari Kishan</i> (Shetty, J.):</b> compensation reassures the victim she is <b>"not forgotten"</b>.</li>
+      <li>🖋️ <b><i>Bodhisattwa/Chandrima</i>:</b> rape "destroys the entire psychology… pushes into deep emotional crisis… violates <b>right to life with dignity</b>".</li>
+    </ul></div>
+    <div class="card blue"><ul class="tight">
+      <li>🖋️ <b><i>D.K. Basu</i>:</b> compensation "sometimes <b>perhaps the only suitable remedy</b>"; "balm on wounds, not punishment".</li>
+      <li>🖋️ <b><i>Nilabati</i>:</b> Art. 32 obliges the Court to <b>"forge new tools"</b>; sovereign immunity inapplicable.</li>
+      <li>🖋️ <b><i>Jacob George</i> (Hansaria, J.):</b> "Life… <b>beyond price</b>" — Rig/Atharva Veda invocations.</li>
+    </ul></div>
+  </div>
+
+  <h3 class="sec">7.4 Ten golden lines (if you remember nothing else)</h3>
+  <ol class="tight">
+    <li>Victimology = <b>scientific study of victimisation</b> (Karmen); victim = <b>lynch-pin</b>; founded by <b>Mendelsohn &amp; Von Hentig</b>.</li>
+    <li><b>UN Arts. 1–2</b> define victim by <b>harm</b> (incl. family + rescuers), <b>not by offender's fate</b>; India (BNSS 2(1)(y)) is narrower — 396(4) fills the gap.</li>
+    <li><b>Precipitation/penal-couple = rejected</b> (victim-blaming); <b>facilitation + routine-activity</b> (target + offender − guardian) = accepted.</li>
+    <li>Victim's ladder: <b>173 → 184 → 397 → 360/361 → 366 → 395 → 413 → 396</b> (FIR to rehabilitation).</li>
+    <li><b>395 = offender pays</b> (with/without fine); <b>396 = State pays</b> (even acquittal/untraced + interim); <b>397 = hospitals treat free</b>.</li>
+    <li><b>Rape = Art. 21 violation</b> (<i>Bodhisattwa/Chandrima</i>); <b>Art. 21 covers foreigners</b> ("person" ≠ "citizen").</li>
+    <li><b>State pays for abuse of power</b> — Rudul (35K) → PUDR (20K) → Nilabati (1L) → DK Basu (doctrine) → Chandrima (10L).</li>
+    <li><b>Compensation without conviction:</b> <i>Ajaib</i> (₹5L, acquittal) + 396(3) + <i>Bodhisattwa</i> (interim pre-conviction).</li>
+    <li><b>Acid:</b> regulate sale + <b>₹3L floor</b> + free treatment (<i>Laxmi</i> → BNS 124, BNSS 396(7)/397).</li>
+    <li><b>Identity:</b> absolute default ban, even indirect identifiers; NALSA 2018 → women + POCSO children (<i>Nipun Saxena</i>).</li>
+  </ol>
+  <div class="card green"><h4>📚 Sources used (in priority order)</h4><p style="font-size:14px">1. <b>DU Case Material, Criminology (July 2025)</b> — Raina extract (pp. 245–252), <i>Ajaib Singh, Jacob George, Chandrima Das, Rachhpal Singh</i> (pp. 253–272) · 2. DU 2017 material (same readings) · 3. <b>DU Q&amp;A Solved Papers (2022 + 2017)</b> for PYQs · 4. N.V. Paranjape, <i>Criminology &amp; Penology with Victimology</i>, Ch. XVII (Pt. III) · 5. UN GA Res. 40/34 text · 6. BNSS/BNS correspondence (official table; ss. 395–400 verified) · 7. <i>Laxmi</i> &amp; <i>Nipun Saxena</i> reports · 8. Zender &amp; Makkar/Friday thematic capsules for citation.</p></div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+<button class="topbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+<div class="foot">
+  <b>Topic 6: Victimology — DU LL.B. Criminology Notes</b><br>
+  Built maximum-portion-first from DU case material · BNSS-updated · Mobile-responsive · Print-friendly (Ctrl/Cmd+P)<br>
+  <span style="opacity:.8">Tip: in answers, always cite <b>both</b> CrPC and BNSS numbers — DU papers are in transition and examiners reward mapping.</span>
+</div>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

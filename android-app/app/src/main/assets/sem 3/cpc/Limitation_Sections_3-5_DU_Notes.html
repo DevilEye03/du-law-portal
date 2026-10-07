@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 1 (Limitation) &mdash; Limitation of Suits, Appeals and Applications: Sections 3&ndash;5 &mdash; DU LL.B. Notes</title>
+<style>
+
+:root{
+  --navy:#3f1622; --navy2:#5a2131; --navy3:#290d16;
+  --gold:#c9a227; --gold2:#a8861a; --goldsoft:#f3e8c5;
+  --maroon:#7b2d26; --teal:#0f6b6b;
+  --ink:#1f2733; --muted:#5a6572;
+  --paper:#faf7f0; --card:#ffffff; --line:#e3dccb;
+  --cream2:#f6efdd;
+  --ok:#1e7d32; --warn:#b26a00; --bad:#a02020;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,Arial,sans-serif; color:var(--ink); background:var(--paper); line-height:1.65; font-size:16px;}
+h1,h2,h3,h4,.serif{font-family:Georgia,"Times New Roman",serif;}
+.page{max-width:1140px; margin:0 auto; padding:0 20px 80px;}
+
+.hero{position:relative; color:#fff; border-radius:0 0 26px 26px; overflow:hidden; box-shadow:0 10px 40px rgba(41,13,22,.35);}
+.hero img{width:100%; height:340px; object-fit:cover; display:block; filter:saturate(.95);}
+.hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(12,26,53,.55) 0%, rgba(12,26,53,.82) 70%, rgba(12,26,53,.95) 100%);}
+.hero .inner{position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; padding:34px 42px 28px;}
+.hero .kicker{letter-spacing:.24em; text-transform:uppercase; font-size:.78rem; color:var(--gold); font-weight:700; margin-bottom:8px;}
+.hero h1{font-size:2.28rem; line-height:1.15; text-shadow:0 2px 10px rgba(0,0,0,.45);}
+.hero h1 em{color:var(--gold); font-style:normal;}
+.hero .sub{margin-top:10px; font-size:1.02rem; color:#e8e4d8; max-width:920px;}
+.badges{margin-top:16px; display:flex; flex-wrap:wrap; gap:9px;}
+.badge{background:rgba(201,162,39,.16); border:1px solid rgba(201,162,39,.65); color:#f5e7b8; padding:5px 13px; border-radius:999px; font-size:.78rem; font-weight:600; letter-spacing:.03em;}
+
+nav.tocbar{position:sticky; top:0; z-index:60; background:var(--navy3); box-shadow:0 3px 14px rgba(0,0,0,.3); border-bottom:2px solid var(--gold);}
+nav.tocbar .bar{max-width:1140px; margin:0 auto; padding:9px 20px; display:flex; gap:6px; flex-wrap:wrap; align-items:center;}
+nav.tocbar a{color:#d8d3c2; text-decoration:none; font-size:.8rem; padding:5px 11px; border-radius:6px; border:1px solid transparent; white-space:nowrap;}
+nav.tocbar a:hover{background:rgba(201,162,39,.18); color:#ffe9a8; border-color:rgba(201,162,39,.5);}
+nav.tocbar a.home{color:var(--gold); font-weight:700;}
+
+section{margin-top:56px; scroll-margin-top:70px;}
+.sec-head{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
+.sec-num{flex:0 0 auto; width:52px; height:52px; border-radius:14px; background:linear-gradient(145deg,var(--navy),var(--navy2)); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.35rem; font-weight:700; box-shadow:0 4px 12px rgba(63,22,34,.35); border:1px solid rgba(201,162,39,.5);}
+h2.sec-title{font-size:1.72rem; color:var(--navy); line-height:1.2;}
+.sec-sub{color:var(--muted); font-size:.95rem; margin-bottom:18px; padding-left:66px;}
+.rule-chip{display:inline-block; background:var(--goldsoft); border:1px solid var(--gold); color:#6b5410; border-radius:999px; padding:2px 12px; font-size:.75rem; font-weight:700; margin-left:10px; vertical-align:middle; letter-spacing:.05em;}
+
+.card{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 30px; margin:18px 0; box-shadow:0 3px 14px rgba(60,50,20,.06);}
+.card h3{color:var(--navy); font-size:1.28rem; margin-bottom:12px; padding-bottom:8px; border-bottom:2px solid var(--goldsoft);}
+.card h4{color:var(--navy2); font-size:1.05rem; margin:18px 0 8px;}
+.card p{margin:9px 0;}
+.lead{font-size:1.06rem; color:#2a3340;}
+ul.tick, ul.dot, ol.num{margin:10px 0 10px 6px; padding-left:20px;}
+ul.tick li, ul.dot li, ol.num li{margin:7px 0;}
+ul.tick li::marker{content:"✔ "; color:var(--gold2);}
+ul.dot li::marker{color:var(--gold2);}
+b, strong{color:#3a1220;}
+.small{font-size:.86rem; color:var(--muted);}
+.center{text-align:center;}
+
+.statute{background:var(--cream2); border-left:5px solid var(--gold); padding:16px 20px; border-radius:0 12px 12px 0; margin:14px 0; font-size:.97rem;}
+.statute .s-head{font-weight:700; color:var(--maroon); font-family:Georgia,serif; margin-bottom:6px; font-size:1.02rem;}
+.judgement{background:#f4f1e8; border:1px dashed #cbb98a; border-left:5px solid var(--maroon); border-radius:0 12px 12px 0; padding:14px 20px; margin:14px 0; font-style:italic; color:#41403a;}
+.judgement .who{display:block; font-style:normal; font-weight:700; color:var(--maroon); margin-bottom:6px; font-size:.85rem; letter-spacing:.04em; text-transform:uppercase;}
+
+.defbox{background:linear-gradient(135deg,#3f1622,#5a2131); color:#f0ead6; border-radius:16px; padding:24px 30px; margin:20px 0; border:1px solid rgba(201,162,39,.55); box-shadow:0 6px 20px rgba(41,13,22,.28);}
+.defbox .dt{color:var(--gold); text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; font-weight:700; margin-bottom:8px;}
+.defbox .dd{font-size:1.12rem; font-family:Georgia,serif; line-height:1.55;}
+
+table{width:100%; border-collapse:collapse; margin:16px 0; background:#fff; font-size:.92rem; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(60,50,20,.07);}
+th{background:var(--navy); color:#f5e9cd; text-align:left; padding:11px 14px; font-size:.85rem; letter-spacing:.05em; text-transform:uppercase; vertical-align:top;}
+td{padding:11px 14px; border-bottom:1px solid #eee7d6; vertical-align:top;}
+tr:nth-child(even) td{background:#fbf9f2;}
+tr:last-child td{border-bottom:none;}
+td .tag{display:inline-block; background:#eef3ff; color:var(--navy2); border:1px solid #c9d6f2; border-radius:6px; padding:1px 8px; font-size:.76rem; font-weight:600;}
+
+.note{border-radius:12px; padding:15px 19px; margin:15px 0; font-size:.95rem; border:1px solid;}
+.note.blue{background:#eef3fb; border-color:#b9cdec;}
+.note.amber{background:#fdf6e3; border-color:#e7cf8f;}
+.note.green{background:#edf7ee; border-color:#b5d9b8;}
+.note.red{background:#fbeeee; border-color:#e3b8b8;}
+.note .nt{font-weight:700; text-transform:uppercase; font-size:.72rem; letter-spacing:.12em; display:block; margin-bottom:4px;}
+.note.blue .nt{color:#2b5cad;} .note.amber .nt{color:#9c6d00;} .note.green .nt{color:#1e7d32;} .note.red .nt{color:#a02020;}
+
+figure{margin:22px 0; background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 3px 14px rgba(60,50,20,.07);}
+figure img{width:100%; border-radius:10px; display:block;}
+figcaption{margin-top:12px; font-size:.85rem; color:var(--muted); text-align:center; font-style:italic;}
+.fig-hint{display:inline-block; background:#fdf6e3; border:1px solid #e7cf8f; color:#9c6d00; border-radius:999px; font-size:.7rem; font-weight:700; letter-spacing:.08em; padding:2px 10px; text-transform:uppercase; margin-bottom:10px;}
+.svgwrap{overflow-x:auto; border-radius:10px; background:#fffdf7; border:1px solid #efe8d3;}
+
+.case{background:#fff; border:1px solid var(--line); border-radius:18px; margin:30px 0; box-shadow:0 6px 24px rgba(60,50,20,.09); overflow:hidden;}
+.case-top{display:flex; align-items:center; gap:16px; padding:20px 28px; background:linear-gradient(120deg,var(--navy3),var(--navy2)); color:#fff; border-bottom:3px solid var(--gold);}
+.case-no{flex:0 0 auto; width:58px; height:58px; border-radius:50%; background:rgba(201,162,39,.15); border:2px solid var(--gold); color:var(--gold); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-size:1.25rem; font-weight:700;}
+.case-top .ct{font-size:1.34rem; font-family:Georgia,serif; line-height:1.25;}
+.case-top .cc{color:#e4d9b4; font-size:.86rem; margin-top:5px;}
+.case-body{padding:26px 30px;}
+.case-body h3{font-family:Georgia,serif; color:var(--navy); font-size:1.12rem; margin:22px 0 10px; display:flex; align-items:center; gap:9px;}
+.case-body h3 .ic{flex:0 0 auto; width:26px; height:26px; border-radius:7px; display:inline-flex; align-items:center; justify-content:center; font-size:.8rem; color:#fff; font-weight:700;}
+.ic.facts{background:#2b5cad;} .ic.issue{background:#9c6d00;} .ic.arg{background:var(--teal);} .ic.dec{background:var(--ok);} .ic.pri{background:var(--maroon);}
+.arg-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media(max-width:820px){.arg-grid{grid-template-columns:1fr;}}
+.arg-box{border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.arg-p{background:#eef3fb; border:1px solid #c3d4ee;}
+.arg-d{background:#f7eee9; border:1px solid #e0c6b8;}
+.arg-box .ah{font-weight:700; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; display:block;}
+.arg-p .ah{color:#2b5cad;} .arg-d .ah{color:#a04a20;}
+.principle{background:linear-gradient(135deg,#fdf6e3,#f6ecd2); border:1px solid var(--gold); border-radius:12px; padding:18px 22px; margin:16px 0;}
+.principle .ph{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px;}
+.timeline{border-left:3px solid var(--gold); margin:14px 0 8px 8px; padding-left:22px;}
+.timeline .tl-item{margin:12px 0; position:relative;}
+.timeline .tl-item::before{content:""; position:absolute; left:-29.5px; top:6px; width:12px; height:12px; border-radius:50%; background:var(--gold); border:2.5px solid #fff; box-shadow:0 0 0 2px var(--gold);}
+.timeline .tl-date{font-weight:700; color:var(--navy2); font-size:.88rem;}
+.timeline .tl-txt{font-size:.94rem;}
+
+.pyq{background:#fff; border:2px solid var(--navy); border-radius:16px; margin:26px 0; overflow:hidden; box-shadow:0 6px 22px rgba(63,22,34,.12);}
+.pyq-q{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-q .qtag{background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-right:10px; text-transform:uppercase;}
+.pyq-q .qtext{font-family:Georgia,serif; font-size:1.05rem; margin-top:10px; line-height:1.5; color:#f5f1e4;}
+.pyq-a{padding:22px 26px;}
+.anslabel{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.mk{float:right; color:var(--muted); font-size:.8rem; font-style:italic;}
+
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+@media(max-width:820px){.grid2{grid-template-columns:1fr;}}
+.kbox{background:#fff; border:1px solid var(--line); border-left:5px solid var(--teal); border-radius:0 12px 12px 0; padding:16px 20px; margin:12px 0;}
+.kbox .kh{color:var(--teal); font-weight:700; font-family:Georgia,serif; margin-bottom:6px;}
+.top-btn{position:fixed; right:26px; bottom:26px; width:48px; height:48px; border-radius:50%; background:var(--navy); color:var(--gold); border:2px solid var(--gold); font-size:1.25rem; cursor:pointer; z-index:80; box-shadow:0 6px 18px rgba(0,0,0,.35); opacity:0; pointer-events:none; transition:opacity .25s;}
+.top-btn.show{opacity:1; pointer-events:auto;}
+.divider{height:3px; background:repeating-linear-gradient(90deg,var(--gold) 0 26px, transparent 26px 52px); border:none; margin:34px 0; border-radius:2px; opacity:.6;}
+footer{margin-top:70px; background:var(--navy3); color:#cfc9b4; border-radius:18px 18px 0 0; padding:34px 38px; font-size:.88rem; line-height:1.75;}
+footer h4{color:var(--gold); margin-bottom:10px; font-size:1rem;}
+.src-list li{margin:5px 0;}
+@media print{
+  nav.tocbar,.top-btn{display:none !important;}
+  .card,.case,.pyq,figure{break-inside:avoid; box-shadow:none;}
+  body{background:#fff;}
+  section{margin-top:26px;}
+}
+
+/* ============ supplement: case, pyq & layout components ============ */
+.case{padding-bottom:8px;}
+.case > .card, .case > .timeline, .case > .principle, .case > .arg-grid, .case > figure{margin-left:26px; margin-right:26px;}
+.case-hero{padding:26px 30px 22px; background:linear-gradient(125deg,var(--navy3) 0%,var(--navy2) 68%,#6d2f42 100%); color:#fff; border-bottom:3px solid var(--gold);}
+.case-hero .case-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.12em; border-radius:6px; padding:3px 10px; text-transform:uppercase; margin-bottom:10px;}
+.case-hero .case-name{font-family:Georgia,serif; font-size:1.7rem; line-height:1.2; color:#fff;}
+.case-hero .case-meta{margin-top:8px; color:#e4d9b4; font-size:.9rem; line-height:1.6;}
+.case-hero .chips{margin-top:12px; display:flex; flex-wrap:wrap; gap:7px;}
+.case-hero .chip{background:rgba(201,162,39,.14); border:1px solid rgba(201,162,39,.6); color:#f5e7b8; border-radius:999px; padding:2px 11px; font-size:.72rem; font-weight:600; letter-spacing:.03em;}
+.case-fig{margin:20px 26px;}
+.case-fig img{border:1px solid var(--line);}
+.arg-p h4, .arg-d h4{font-size:.82rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px; font-family:"Segoe UI",Arial,sans-serif;}
+.arg-p h4{color:#2b5cad;} .arg-d h4{color:#a04a20;}
+.split{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:8px;}
+@media(max-width:820px){.split{grid-template-columns:1fr;}}
+.maj{background:#edf7ee; border:1px solid #b5d9b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.min{background:#fbeeee; border:1px solid #e3b8b8; border-radius:12px; padding:16px 18px; font-size:.93rem;}
+.verdict{font-weight:800; font-size:.8rem; letter-spacing:.06em; text-transform:uppercase; margin-bottom:10px; display:block; border-radius:8px; padding:6px 10px; color:#fff;}
+.maj .verdict{background:var(--ok);} .min .verdict{background:var(--bad);}
+.principle .p-head{color:var(--maroon); font-weight:700; font-family:Georgia,serif; font-size:1.05rem; margin-bottom:8px; text-transform:uppercase; letter-spacing:.05em;}
+.timeline .tl-title{font-weight:800; color:var(--navy); font-size:.95rem; letter-spacing:.05em; text-transform:uppercase; margin-bottom:6px;}
+.timeline .tl-body{font-size:.94rem;}
+.pyq-head{background:var(--navy); color:#fff; padding:18px 24px;}
+.pyq-tag{display:inline-block; background:var(--gold); color:var(--navy3); font-weight:800; font-size:.72rem; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:10px; text-transform:uppercase;}
+.pyq-head .pyq-q{padding:0; background:none; font-family:Georgia,serif; font-size:1.05rem; line-height:1.5; color:#f5f1e4;}
+.model{padding:22px 26px;}
+.model-badge{display:inline-block; background:var(--ok); color:#fff; font-size:.72rem; font-weight:800; letter-spacing:.1em; border-radius:6px; padding:3px 10px; margin-bottom:12px; text-transform:uppercase;}
+.grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:12px 0;}
+@media(max-width:820px){.grid3{grid-template-columns:1fr;}}
+.mini{background:var(--cream2); border:1px solid var(--goldsoft); border-left:4px solid var(--gold); border-radius:10px; padding:12px 14px; font-size:.88rem;}
+td.case-no{width:46px; height:40px; font-size:.95rem;}
+
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (320px - 768px)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Mobile Responsive: Zero Side Margins, Zero Viewport Wobble,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+
+  /* 2. RECLAIM ALL WASTED SIDE MARGINS ACROSS ALL CONTAINER TYPES */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar TOC on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar {
+    display: none !important;
+  }
+
+  /* 3. HERO & HEADER RESPONSIVE SCALING */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Decorative Crests in Hero Banners */
+  svg.crest, .hero-crest, .hero svg.crest, svg.crest-mark {
+    width: 60px !important;
+    height: 60px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    opacity: 0.16 !important;
+    position: absolute !important;
+    right: 6px !important;
+    top: 6px !important;
+    pointer-events: none !important;
+  }
+
+  svg.hero-visual {
+    max-width: 110px !important;
+    height: auto !important;
+    margin: 6px auto !important;
+    display: block !important;
+  }
+
+  svg[viewBox="0 0 24 24"], svg.icon, .icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 0 !important;
+    max-width: 24px !important;
+    display: inline-block !important;
+  }
+
+  /* 4. HORIZONTAL NAVIGATION & CHIPS SMOOTH TOUCH SWIPE */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips, tags, meta badges */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ALL SECTIONS, CARDS & BOXES ACROSS ALL 13 SUBJECTS */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .case-box, .sub-section, .case-detail {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .hsub, .subhead, .sec-sub {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* 6. DIAGRAMS & SVGS: 100% FULL VISIBILITY & CONTAINMENT */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    background: var(--card, #ffffff) !important;
+    border: 1px solid var(--line, #e2e8f0) !important;
+    border-radius: 10px !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.04) !important;
+  }
+
+  /* All SVG diagrams & flowcharts scale proportionally to 100% container width — 100% FULLY VISIBLE */
+  svg, .fig svg, .figure svg, .scene svg, .svgwrap svg, .flow-svg svg, .flow svg,
+  svg.diagram, .svgbox svg, .diagram-box svg, .diagram-frame svg, .case-visual svg,
+  .fchart svg, .svg-flow svg,
+  svg[width]:not(.icon):not([width="18"]):not([width="20"]):not([width="24"]) {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .fig .cap, .fig .caption, .fcap, .scene .badge, .scene .cap, .diagram-title, .diagram-hint {
+    display: block !important;
+    font-size: 11.5px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin: 4px auto 6px !important;
+    color: var(--sub, #4a5a6a) !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 95% !important;
+  }
+
+  /* 7. CSS FLOWCHARTS & TIMELINES ACROSS ALL SUBJECTS */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .node small, .flow > .node small, .fbox small {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 3px !important;
+  }
+
+  /* Flow arrows: rotate horizontal '→' 90deg into vertical down arrow '↓' */
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--accent, #c8102e) !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  /* Flowchart Splits and Branches (e.g. Property Law & Contract) */
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .branch, .frow .fbox {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 8. COLLAPSE ALL MULTI-COLUMN GRIDS INTO CLEAN SINGLE COLUMN */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vs > div, .cmp > div {
+    border-right: none !important;
+    border-bottom: 1px solid var(--line, #e2e8f0) !important;
+    width: 100% !important;
+  }
+
+  /* 9. ALL TABLES: RESPONSIVE HORIZONTAL SCROLL & CELL TEXT BREAKING */
+  .tblwrap, .tbl-scroll, .twrap, .tbl-wrap, .table-wrap, .tw, .scroll {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+    margin: 10px 0 !important;
+  }
+
+  table, table.tbl, .table-wrap table, .tblwrap table {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-collapse: collapse !important;
+    margin: 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* 10. PRE & CODE BLOCKS */
+  pre, code, pre code, .stat, .mnem {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 11. SECTION HEADERS & CARDS */
+  .sec-head, .header-card, .chapter-header, .case-head, .answer-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img1.jpg" loading="lazy" decoding="async" alt="The law of limitation — courthouse, hourglass, scales and case files">
+  <div class="overlay"></div>
+  <div class="inner">
+    <div class="kicker">DU LL.B. (Hons.) &middot; Civil Procedure Code &amp; Limitation &middot; Part B: Limitation</div>
+    <h1>Topic 1 &mdash; <em>Limitation of Suits, Appeals and Applications</em><br>Sections 3, 4 &amp; 5, Limitation Act, 1963</h1>
+    <div class="sub">Bar of limitation and its effect on remedy &middot; expiry when court is closed &middot; extension of time and condonation of delay &mdash; with the six prescribed cases (25&ndash;30) from the DU case material: Butler, West Coast Paper Mills, PNB v. Surendra Prasad Sinha, Katiji, Lipok AO and Bherulal.</div>
+    <div class="badges">
+      <span class="badge">Sections 3 &middot; 4 &middot; 5</span>
+      <span class="badge">6 Prescribed Cases in Full Detail</span>
+      <span class="badge">"Sufficient Cause" Deep-Dive</span>
+      <span class="badge">DU PYQs with Model Answers (2017&ndash;2020)</span>
+      <span class="badge">Flowcharts &amp; Schematics</span>
+      <span class="badge">Hypothetical Case Visuals</span>
+    </div>
+  </div>
+</div>
+
+<nav class="tocbar"><div class="bar">
+  <a class="home" href="#top">&#9203; Limitation ss.3&ndash;5</a>
+  <a href="#s1">1. Concept &amp; Policy</a>
+  <a href="#s2">2. Framework</a>
+  <a href="#s3">3. Section 3 &mdash; Bar</a>
+  <a href="#s4">4. Section 4 &mdash; Court Closed</a>
+  <a href="#s5">5. Section 5 &mdash; Condonation</a>
+  <a href="#s6">6. State as Litigant</a>
+  <a href="#cases">Case Laws</a>
+  <a href="#c25">Butler</a>
+  <a href="#c26">West Coast</a>
+  <a href="#c27">PNB</a>
+  <a href="#c28">Katiji</a>
+  <a href="#c29">Lipok</a>
+  <a href="#c30">Bherulal</a>
+  <a href="#pyqs">PYQs + Answers</a>
+  <a href="#rev">Quick Revision</a>
+</div></nav>
+
+<div class="page" id="top">
+
+<!-- ================= SECTION 1 : CONCEPT & POLICY ================= -->
+<section id="s1">
+  <div class="sec-head"><div class="sec-num">1</div><h2 class="sec-title">The Law of Limitation — Concept, Object &amp; Policy</h2></div>
+  <div class="sec-sub">Why the law compels litigants to be diligent — and what exactly limitation destroys</div>
+
+  <div class="defbox">
+    <div class="dt">Core Definition</div>
+    <div class="dd">The <b>law of limitation</b> prescribes the time-limits within which suits, appeals and applications must be brought before a court; a proceeding launched after the <b>prescribed period</b> is liable to be <b>dismissed as time-barred</b> (s. 3, Limitation Act, 1963). It creates no rights and defines no causes of action — it only <b>bars the judicial remedy</b> for enforcing existing rights after the lapse of the fixed period: <i>"vigilantibus non dormientibus jura subveniunt"</i> — the law aids the diligent, not those who sleep over their rights.</div>
+  </div>
+
+  <div class="card">
+    <h3>1.1 &nbsp;Statutes of Repose, Peace and Justice</h3>
+    <p class="lead">Limitation laws are called <b>statutes of repose</b>: they quiet long possession, extinguish stale demands and bring litigation to an end — "disputes would be immortal, when men are mortal". The principle on which the statute is founded is <b><i>interest reipublicae ut sit finis litium</i></b> — the interest of the State requires that litigation come to an end.</p>
+    <ul class="tick">
+      <li><b>Policy pillars:</b> (i) keeping litigation alive for unlimited periods disturbs the peace of society; (ii) a constant threat of involvement in judicial process generates insecurity, retarding national growth; (iii) the law compels litigants to approach courts within the prescribed time, and quiets long possession.</li>
+      <li><b>Two broad considerations</b> underlying the doctrine: (1) a right not exercised for a long time is <b>presumed not to exist</b>; (2) rights in property and rights in general must not remain in constant <b>uncertainty, doubt and suspense</b>.</li>
+      <li><b>Settled Common Law Principles</b> — three objects of limitation statutes: (i) long dormant claims have often <b>more of cruelty than justice</b> in them; (ii) the defendant may have <b>lost the evidence</b> to rebut a stale claim; (iii) persons with good causes of action should pursue them with <b>reasonable diligence</b>.</li>
+      <li>Best, C.J. in <b>A'Court v. Cross</b> (1825) 3 Bing. 329 (quoted in <i>Butler</i>): "It is, as I have heard it often called by great judges, <b>an act of peace</b>. Long dormant claims have often more cruelty than justice in them."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>1.2 &nbsp;The Master Maxim — Limitation bars the Remedy, not the Right</h3>
+    <div class="judgement"><span class="who">Punjab National Bank v. Surendra Prasad Sinha, AIR 1992 SC 1815 (K. Ramaswamy, J.)</span>"The rules of limitation are not meant to destroy the rights of the parties. <b>Section 3 of the Limitation Act... only bars the remedy, but does not destroy the right</b> which the remedy relates to. The right to the debt continues to exist notwithstanding the remedy is barred by limitation. <b>Only exception in which the remedy also becomes barred by limitation is that the right itself is destroyed</b> — for example under Section 27 of the Act a suit for possession of any property becoming barred by limitation, the right to property itself is destroyed... The time barred debt does not cease to exist by reason of Section 3. That right can be exercised in any other manner than by means of a suit."</div>
+    <ul class="dot">
+      <li><b>Consequences of the maxim:</b> a time-barred debt is still <b>due</b> — "after a debt becomes barred a person is still deemed to owe and it does not cease to be due" (<i>First National Bank Ltd. v. Seth Santlal</i>, AIR 1954 Punj 328); a claim <b>satisfied outside court</b> after expiry of limitation is not illegal, and the payment cannot be recovered back.</li>
+      <li><b>Enforcement without suit:</b> a creditor may <b>adjust a time-barred debt</b> out of money paid by the debtor, and may <b>appropriate it against a security in his possession</b> (the <i>PNB</i> holding itself — Case 27 below).</li>
+      <li><b>The s. 27 exception:</b> in a suit for possession of immovable property based on title, once limitation (Art. 65 — 12 years) expires, not only the remedy but the <b>owner's very title is extinguished</b>, and the adverse possessor's title matures — the one great inroad on the maxim (see the PYQ on <i>Mohan &amp; Sohan</i>, Section 13).</li>
+      <li><b>Criminal law overlay:</b> a creditor acting within his contractual rights to adjust a security is not guilty of <b>criminal breach of trust</b> (ss. 405/409 IPC) — <i>PNB</i>: "Action in terms of the contract... is a negation of criminal breach of trust."</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 1 — The architecture of the law of limitation</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 350" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <rect x="375" y="14" width="330" height="64" rx="14" fill="#3f1622"/>
+      <text x="540" y="40" fill="#f5e9cd" font-size="15" font-weight="bold" text-anchor="middle">LIMITATION ACT, 1963</text>
+      <text x="540" y="60" fill="#c9a227" font-size="11" text-anchor="middle">Act 36 of 1963 &middot; in force 1-1-1964 &middot; Schedule of Articles</text>
+      <g font-size="10.5">
+        <rect x="15" y="120" width="205" height="84" rx="11" fill="#3f1622"/>
+        <text x="117" y="144" fill="#f5e9cd" font-size="12" font-weight="bold" text-anchor="middle">s.3 — BAR</text>
+        <text x="117" y="163" fill="#e8cfa0" text-anchor="middle">dismissal after the</text>
+        <text x="117" y="178" fill="#e8cfa0" text-anchor="middle">prescribed period —</text>
+        <text x="117" y="193" fill="#e8cfa0" text-anchor="middle">even if not pleaded</text>
+        <rect x="240" y="120" width="205" height="84" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+        <text x="342" y="144" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">s.4 — COURT CLOSED</text>
+        <text x="342" y="163" fill="#6b5410" text-anchor="middle">period expires on a</text>
+        <text x="342" y="178" fill="#6b5410" text-anchor="middle">closed day → file on</text>
+        <text x="342" y="193" fill="#6b5410" text-anchor="middle">re-opening day</text>
+        <rect x="465" y="120" width="205" height="84" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+        <text x="567" y="144" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">s.5 — CONDONATION</text>
+        <text x="567" y="163" fill="#6b5410" text-anchor="middle">appeal/application (not</text>
+        <text x="567" y="178" fill="#6b5410" text-anchor="middle">suit, not O.21) admitted</text>
+        <text x="567" y="193" fill="#6b5410" text-anchor="middle">on "sufficient cause"</text>
+        <rect x="690" y="120" width="190" height="84" rx="11" fill="#eef3fb" stroke="#b9cdec" stroke-width="1.6"/>
+        <text x="785" y="144" fill="#2b5cad" font-size="12" font-weight="bold" text-anchor="middle">ss.6–24</text>
+        <text x="785" y="163" fill="#2b5cad" text-anchor="middle">disability, fraud,</text>
+        <text x="785" y="178" fill="#2b5cad" text-anchor="middle">acknowledgment,</text>
+        <text x="785" y="193" fill="#2b5cad" text-anchor="middle">exclusion of time</text>
+        <rect x="896" y="120" width="170" height="84" rx="11" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.6"/>
+        <text x="981" y="144" fill="#a02020" font-size="12" font-weight="bold" text-anchor="middle">s.27</text>
+        <text x="981" y="163" fill="#a02020" text-anchor="middle">right itself</text>
+        <text x="981" y="178" fill="#a02020" text-anchor="middle">extinguished</text>
+        <text x="981" y="193" fill="#a02020" text-anchor="middle">(possession suits)</text>
+      </g>
+      <line x1="440" y1="80" x2="120" y2="116" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l1)"/>
+      <line x1="500" y1="80" x2="342" y2="116" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l1)"/>
+      <line x1="575" y1="80" x2="565" y2="116" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l1)"/>
+      <line x1="660" y1="80" x2="775" y2="116" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l1)"/>
+      <line x1="700" y1="80" x2="965" y2="116" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l1)"/>
+      <rect x="15" y="242" width="1050" height="92" rx="13" fill="#edf7ee" stroke="#b5d9b8"/>
+      <text x="540" y="266" fill="#1e7d32" font-size="13" font-weight="bold" text-anchor="middle">THE MASTER MAXIM — "Limitation bars the remedy, but does not destroy the right"</text>
+      <text x="540" y="288" fill="#2f5d38" font-size="11" text-anchor="middle">time-barred debt still due · voluntary satisfaction valid · adjustment against security valid (PNB) · suit on barred claim dismissed (s.3)</text>
+      <text x="540" y="308" fill="#a02020" font-size="11" font-weight="bold" text-anchor="middle">EXCEPTION — s.27: for possession suits, expiry of limitation extinguishes the owner's title itself (adverse possession matures)</text>
+      <line x1="540" y1="206" x2="540" y2="238" stroke="#1e7d32" stroke-width="2.6" marker-end="url(#l1)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 1 — This topic covers ss. 3, 4 and 5 (dark boxes); ss. 6–24 (computation, disability, fraud, acknowledgment) and s. 27 form other topics of the Limitation syllabus.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= SECTION 2 : FRAMEWORK ================= -->
+<section id="s2">
+  <div class="sec-head"><div class="sec-num">2</div><h2 class="sec-title">The Statutory Framework &amp; Key Definitions</h2></div>
+  <div class="sec-sub">Act 36 of 1963, the Schedule of Articles, s. 2 definitions, s. 29(2) special laws, and the CPC's position</div>
+
+  <div class="card">
+    <h3>2.1 &nbsp;The Limitation Act, 1963</h3>
+    <ul class="dot">
+      <li><b>Act 36 of 1963</b>, enacted 5 October 1963, brought into force <b>1 January 1964</b>; it <b>consolidates and amends</b> the law of limitation of suits and other proceedings (replacing the Indian Limitation Act, 1908).</li>
+      <li><b>Structure:</b> Part I (ss. 1–2, preliminary) · Part II (ss. 3–11, limitation of suits/appeals/applications) · Part III (ss. 12–24, computation) · Part IV (ss. 25–27, acquisition of ownership by possession) · Part V (ss. 28–32, miscellaneous) · the <b>Schedule</b> of 137+ Articles prescribing periods and starting points.</li>
+      <li><b>Key definitions (s. 2):</b> "<b>period of limitation</b>" = the period prescribed for any suit, appeal or application <b>by the Schedule</b>; "<b>prescribed period</b>" = the period <b>computed in accordance with the provisions of this Act</b> (i.e., after applying ss. 4–24 — extension, exclusion, disability). "<b>Suit</b>" does <b>not</b> include an appeal or an application. "Application" includes a petition; "applicant" includes a petitioner and persons through whom he derives his right to apply.</li>
+    </ul>
+    <div class="note amber"><span class="nt">The distinction that matters in every problem question</span>"Period of limitation" is the raw Schedule period; "prescribed period" is that period <b>as adjusted by ss. 4–24</b> (court-closed extension, exclusions under s. 12–15, disability, acknowledgment). Section 3's bar operates on the <b>prescribed</b> period; Section 5 can extend it for appeals and applications. Examiners test exactly this vocabulary.</div>
+  </div>
+
+  <div class="card">
+    <h3>2.2 &nbsp;Special &amp; Local Laws — s. 29(2)</h3>
+    <div class="statute">
+      <div class="s-head">Section 29(2), Limitation Act, 1963</div>
+      Where any special or local law prescribes for any suit, appeal or application a period of limitation different from the period prescribed by the Schedule, <b>the provisions of section 3 shall apply as if such period were the period prescribed by the Schedule</b>, and for the purpose of determining any period of limitation prescribed for any suit, appeal or application by any special or local law, the provisions contained in <b>sections 4 to 24 shall apply only in so far as, and to the extent to which, they are not expressly excluded</b> by such special or local law.
+    </div>
+    <ul class="dot">
+      <li>A special law (e.g., the U.P. Sales Tax Act in <i>Madan Lal Das</i>, the Indian Railways Act in <i>West Coast</i>) may prescribe its own periods — but <b>s. 3's mandatory bar still applies</b> to them, and ss. 4–24 (including s. 5 condonation and s. 12 exclusion) apply <b>unless expressly excluded</b>.</li>
+      <li>The "prescribed period" for s. 3 and s. 5 therefore includes periods prescribed by <b>any law for the time being in force</b>, not merely the Schedule (PYQ book).</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>2.3 &nbsp;The Code's Position</h3>
+    <ul class="dot">
+      <li>The CPC, 1908 originally contained its own <b>s. 3 (Limitation of suits)</b>; upon the Limitation Act, 1963 coming into force, the field is occupied by the Act — the CPC's present s. 3 is "Subordination of Courts", and the Code now repeatedly defers to the Limitation Act (e.g., O.7 r.10B: re-present of returned plaint "subject to the provisions of the Limitation Act, 1963").</li>
+      <li><b>Interaction with the Code:</b> plaints (s. 26 CPC), appeals (s. 96; O.41), second appeals (s. 100), review (O.47 r.1), execution (O.21; Art. 136 — 12 years) and set-off/counter-claims (treated as separate suits under s. 3(2)(b) of the Act) all take their limitation from the Act.</li>
+      <li><b>Criminal side:</b> the Limitation Act applies to <b>court proceedings</b>; for prosecutions, s. 468 CrPC governs cognizance-periods — but <b>s. 5's philosophy governs "leave to appeal" applications by the State under s. 378(3) CrPC</b> (<i>Lipok AO</i>, Case 29) and condonation practice in criminal appeals.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= SECTION 3 : SECTION 3 BAR ================= -->
+<section id="s3">
+  <div class="sec-head"><div class="sec-num">3</div><h2 class="sec-title">Section 3 — Bar of Limitation &amp; its Effect <span class="rule-chip">SUB-TOPIC (a) OF THE SYLLABUS</span></h2></div>
+  <div class="sec-sub">The mandatory dismissal rule, the deemed dates of institution, and the effect of expiry on remedy and right</div>
+
+  <div class="statute">
+    <div class="s-head">Section 3, Limitation Act, 1963 — Bar of limitation</div>
+    <b>(1)</b> Subject to the provisions contained in sections 4 to 24 (inclusive), every suit instituted, appeal preferred, and application made <b>after the prescribed period shall be dismissed</b>, <b>although limitation has not been set up as a defence</b>.<br>
+    <b>(2)</b> For the purposes of this Act —<br>
+    (a) a suit is instituted — (i) in an ordinary case, when the <b>plaint is presented to the proper officer</b>; (ii) in the case of a pauper, when his <b>application for leave to sue as a pauper</b> is made; (iii) in the case of a claim against a company being wound up by the court, when the claimant first <b>sends in his claim to the official liquidator</b>;<br>
+    (b) any claim by way of <b>set-off or counter-claim shall be treated as a separate suit</b> and deemed instituted — (i) in the case of set-off, on the <b>same date as the suit</b> in which it is pleaded; (ii) in the case of a counter-claim, on the <b>date it is made in court</b>;<br>
+    (c) an application by <b>notice of motion</b> in a High Court is made when the application is presented to the proper officer of that court.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>3.1 &nbsp;The Mandate — a Duty, not a Option</h3>
+      <ul class="tick">
+        <li><b>"Shall be dismissed"</b> — the word is imperative. The bar is applied by the court <b>ex debito justitiae</b>; the plea of limitation need not be taken by the defendant.</li>
+        <li>Limitation is a <b>question of law</b> for the court: it must be considered <b>at any stage</b>, even suo motu, in appeal and second appeal as well (<i>Mohinder Singh Jagdev</i>: "the court is bound to take note thereof... and dismiss the suit, if it is barred by limitation").</li>
+        <li>But the court cannot <b>refuse relief to a plaintiff on the mere possibility</b> that limitation may be pleaded — where the date of institution and the accrual are clear and the suit is within time, dismissal is impermissible (PYQ book).</li>
+        <li>Subject "to the provisions of ss. 4 to 24": the bar applies to the <b>prescribed period</b>, i.e., after the Act's own extensions and exclusions are worked out.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>3.2 &nbsp;When does the clock start?</h3>
+      <ul class="dot">
+        <li>The Schedule fixes both the <b>period</b> and the <b>starting point</b> ("time from which period begins to run") for each Article — usually when <b>the right to sue accrues</b> (Art. 113: "when the right to sue accrues") or "first accrues" (Art. 58, declarations).</li>
+        <li><b>Cause of action accrues</b> when every ingredient exists — a person capable of suing and a person who can be sued (<i>Butler</i>, Case 25); ignorance of the wrongdoer's identity does not stop the clock.</li>
+        <li><b>"Once limitation starts running, it runs its full course"</b> until interdicted by an order of a competent court (<i>P.K. Kutty</i> — though overruled on merger in <i>West Coast</i>, this proposition still holds where no appeal is pending).</li>
+        <li><b>Continuing breaches:</b> for continuing wrongs (e.g., dispossession — Art. 64/65), fresh limitation runs from each act; s. 22 and Arts. 26–27 supply special rules.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>3.3 &nbsp;Effect of Expiry — the Full Picture</h3>
+    <table>
+      <tr><th style="width:34%">Consequence</th><th>Law</th></tr>
+      <tr><td>Suit / appeal / application dismissed</td><td>s.3(1) — mandatory, even if limitation not pleaded</td></tr>
+      <tr><td>Right survives (generally)</td><td>PNB v. Surendra Prasad Sinha — remedy barred, right subsists; time-barred debt still due (First National Bank v. Seth Santlal)</td></tr>
+      <tr><td>Voluntary satisfaction valid</td><td>Payment on a time-barred debt cannot be recovered — no "injustice" in satisfying a subsisting obligation</td></tr>
+      <tr><td>Adjustment against security valid</td><td>PNB — creditor holding security may appropriate the time-barred debt per contract; no criminal breach of trust</td></tr>
+      <tr><td>Right extinguished (exception)</td><td>s.27 — suits for possession: on expiry, title itself extinguished (adverse possession; Art. 65, 12 years)</td></tr>
+      <tr><td>Set-off / counter-claim</td><td>s.3(2)(b) — separate suits with their own limitation (set-off: date of suit; counter-claim: date made)</td></tr>
+      <tr><td>Dismissal for want of limitation ≠ decree on merits</td><td>ULS — order rejecting a condonation application is not a decree; dismissal as time-barred leaves the right untouched</td></tr>
+    </table>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 2 — Section 3 decision path</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 400" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs>
+        <marker id="l2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker>
+        <marker id="l2r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a02020"/></marker>
+        <marker id="l2g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e7d32"/></marker>
+      </defs>
+      <rect x="330" y="10" width="420" height="58" rx="13" fill="#3f1622"/>
+      <text x="540" y="34" fill="#f5e9cd" font-size="14" font-weight="bold" text-anchor="middle">SUIT / APPEAL / APPLICATION FILED</text>
+      <text x="540" y="54" fill="#c9a227" font-size="11" text-anchor="middle">institution dates: plaint presented · pauper application · claim to liquidator · set-off/counter-claim separate</text>
+      <polygon points="540,100 740,158 540,216 340,158" fill="#fff" stroke="#3f1622" stroke-width="2.3"/>
+      <text x="540" y="148" fill="#3f1622" font-size="12.5" font-weight="bold" text-anchor="middle">Filed within the PRESCRIBED period?</text>
+      <text x="540" y="168" fill="#5a6572" font-size="10.5" text-anchor="middle">(Schedule period adjusted by ss.4–24 · special laws via s.29(2))</text>
+      <text x="540" y="190" fill="#5a6572" font-size="10.5" text-anchor="middle">limitation may be raised by anyone — even by the court itself</text>
+      <line x1="540" y1="68" x2="540" y2="96" stroke="#3f1622" stroke-width="3" marker-end="url(#l2)"/>
+      <rect x="790" y="118" width="270" height="80" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+      <text x="925" y="144" fill="#1e7d32" font-size="13" font-weight="bold" text-anchor="middle">YES → PROCEEDS</text>
+      <text x="925" y="164" fill="#2f5d38" font-size="10.5" text-anchor="middle">court cannot refuse relief on a</text>
+      <text x="925" y="180" fill="#2f5d38" font-size="10.5" text-anchor="middle">mere apprehended plea of limitation</text>
+      <line x1="740" y1="158" x2="786" y2="158" stroke="#1e7d32" stroke-width="2.8" marker-end="url(#l2g)"/>
+      <polygon points="540,244 700,296 540,348 380,296" fill="#fff" stroke="#a02020" stroke-width="2.3"/>
+      <text x="540" y="288" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">NO → is there a cure?</text>
+      <text x="540" y="308" fill="#5a6572" font-size="10.5" text-anchor="middle">s.4 closed court · s.5 condonation (appeal/</text>
+      <text x="540" y="324" fill="#5a6572" font-size="10.5" text-anchor="middle">application only) · ss.6–24 exclusion/disability</text>
+      <line x1="540" y1="216" x2="540" y2="240" stroke="#a02020" stroke-width="2.8" marker-end="url(#l2r)"/>
+      <rect x="30" y="252" width="300" height="88" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.8"/>
+      <text x="180" y="276" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">CURE SHOWN → PROCEEDS</text>
+      <text x="180" y="296" fill="#a02020" font-size="10.5" text-anchor="middle">s.4: last day closed → re-opening day accepted</text>
+      <text x="180" y="312" fill="#a02020" font-size="10.5" text-anchor="middle">s.5: sufficient cause → appeal/application admitted</text>
+      <text x="180" y="328" fill="#a02020" font-size="10.5" text-anchor="middle">ss.6–24: period excluded / extended</text>
+      <rect x="760" y="252" width="300" height="88" rx="12" fill="#3f1622"/>
+      <text x="910" y="276" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">NO CURE → DISMISSED (s.3)</text>
+      <text x="910" y="296" fill="#e8cfa0" font-size="10.5" text-anchor="middle">although limitation not set up as defence</text>
+      <text x="910" y="312" fill="#e8cfa0" font-size="10.5" text-anchor="middle">remedy barred — RIGHT survives</text>
+      <text x="910" y="328" fill="#f0b8b8" font-size="10.5" text-anchor="middle">(s.27 possession: right itself extinguished)</text>
+      <line x1="380" y1="296" x2="334" y2="296" stroke="#3f1622" stroke-width="2.6" marker-end="url(#l2)"/>
+      <line x1="700" y1="296" x2="756" y2="296" stroke="#a02020" stroke-width="2.6" marker-end="url(#l2r)"/>
+      <text x="540" y="380" fill="#5a6572" font-size="11" text-anchor="middle">Remember: s.5 never applies to a SUIT or to O.XXI (execution) applications — a late suit is dead unless ss. 6–24 or Art.-specific savings apply</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 2 — Section 3's mandatory bar, with its escape routes. The prescribed period is computed only after applying ss. 4–24.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= SECTION 4 : SECTION 4 ================= -->
+<section id="s4">
+  <div class="sec-head"><div class="sec-num">4</div><h2 class="sec-title">Section 4 — Expiry of Prescribed Period when Court is Closed <span class="rule-chip">S.4</span></h2></div>
+  <div class="sec-sub">The gentlest section of the Act — and a favourite short-note</div>
+
+  <div class="statute">
+    <div class="s-head">Section 4, Limitation Act, 1963</div>
+    Where the prescribed period for any suit, appeal or application <b>expires on a day when the court is closed</b>, the suit, appeal or application may be instituted, preferred or made <b>on the day when the court re-opens</b>.<br>
+    <i>Explanation.</i> A court shall be deemed to be closed on any day if <b>during any part of its normal working hours it remains closed</b> on that day.
+  </div>
+
+  <div class="card">
+    <h3>4.1 &nbsp;Points to Note</h3>
+    <ul class="tick">
+      <li><b>Operation:</b> s. 4 does not extend limitation generally — it only permits filing on the <b>re-opening day</b> when the last day of the period falls on a closed day (holiday, strike-closure, vacation where the court is closed).</li>
+      <li><b>"Closed" is generous:</b> even partial closure during normal working hours makes the day a "closed" day (Explanation) — so a court that functions only in the morning, or is closed by a strike for part of the day, counts as closed.</li>
+      <li><b>Contrast with the strike problem:</b> in the 2019 PYQ (Section 13), the limitation expired on <b>12 October 1980</b> during a widespread strike, and the State appealed on <b>15 October</b> — s. 4 was not enough (the closure did not cover all days, and the appeal was 3 days late); the rescue had to come from <b>s. 5 condonation</b> on "sufficient cause".</li>
+      <li><b>Prospective operation:</b> s. 4 applies when the <b>period expires</b> on a closed day — not when the cause of action arose on a closed day.</li>
+      <li>Section 4 applies to <b>suits</b> too (unlike s. 5) — and via s. 29(2) to special laws unless excluded.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= SECTION 5 : SECTION 5 ================= -->
+<section id="s5">
+  <div class="sec-head"><div class="sec-num">5</div><h2 class="sec-title">Section 5 — Extension of the Prescribed Period: Condonation of Delay <span class="rule-chip">SUB-TOPIC (b) OF THE SYLLABUS</span></h2></div>
+  <div class="sec-sub">"Sufficient cause" — the most litigated phrase in the Limitation Act</div>
+
+  <div class="statute">
+    <div class="s-head">Section 5, Limitation Act, 1963 — Extension of prescribed period in certain cases</div>
+    Any <b>appeal</b> or any <b>application</b>, other than an application under any of the provisions of <b>Order XXI of the Code of Civil Procedure, 1908</b>, may be admitted after the prescribed period if the appellant or the applicant <b>satisfies the court that he had sufficient cause</b> for not preferring the appeal or making the application within such period.<br>
+    <i>Explanation.</i> The fact that the appellant or the applicant was <b>misled by any order, practice or judgment of the High Court</b> in ascertaining or computing the prescribed period may be sufficient cause within the meaning of this section.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>5.1 &nbsp;Scope — the Three Exclusions</h3>
+      <ul class="dot">
+        <li><b>No suits:</b> s. 5 applies only to appeals and applications — a <b>suit</b> filed late cannot be condoned; it stands dismissed under s. 3.</li>
+        <li><b>No execution:</b> applications under <b>O.XXI CPC</b> (execution proceedings) are expressly excluded.</li>
+        <li><b>Courts only:</b> s. 5 empowers only a <b>"court"</b> — it has no application to quasi-judicial tribunals, labour courts, bodies acting as <i>persona designata</i>, or executive authorities (PYQ book; Settled Procedural Law).</li>
+        <li><b>Trigger:</b> the "prescribed period" must be over; "prescribed period" means any period prescribed by any law in force (including special laws via s. 29(2)).</li>
+        <li><b>Explanation — misled by the High Court:</b> an order, practice or judgment of the HC that misleads a litigant in computing time is itself sufficient cause.</li>
+        <li><b>Not a decree:</b> an order allowing or rejecting condonation is not a decree; dismissal of an appeal as time-barred follows the rejection (ULS: <i>Ratan Singh v. Vijaya Singh</i>, AIR 2001 SC 279).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>5.2 &nbsp;"Sufficient Cause" — the Working Definition</h3>
+      <ul class="dot">
+        <li>Not defined in the Act. It must mean a cause <b>beyond the control of the party</b> invoking the section; a cause which by <b>due care and attention</b> the party could have avoided is not sufficient cause — "nothing is bona fide unless it is done with due care and attention".</li>
+        <li>The extension rests on <b>judicial discretion</b> — "discretionary, not arbitrary"; no hard-and-fast rule; each case on its own facts; reasons must be recorded.</li>
+        <li><b>Proof of sufficient cause is a condition precedent</b> to the exercise of discretion; even after cause is shown, condonation is not a matter of right (<i>Ram Lal v. Rewa Coalfields</i>; <i>Lipok AO</i>).</li>
+        <li><b>Liberal construction</b> to advance substantial justice: <i>N. Balakrishnan v. M. Krishnamurthy</i> (AIR 1998 SC 3222) — the court must place itself in the position of the applicant and ask whether the delay resulted from the cause adduced.</li>
+        <li>The discretion "should not be defined or crystallised so as to convert a discretionary matter into a rigid rule of law" (<i>New India Assurance v. Shanti Misra</i>, (1975) 2 SCC 840).</li>
+        <li><b>The true guide</b> is whether the applicant acted with <b>reasonable diligence</b> in prosecuting the appeal (<i>Brij Indar Singh v. Kanshi Ram</i>, AIR 1917 PC 156).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>5.3 &nbsp;Ram Lal v. Rewa Coalfields Ltd., AIR 1962 SC 361 — the Three Canons</h3>
+    <ol class="num">
+      <li>It would be unreasonable to require a party to act on the first day; a party may file on <b>any day within the period</b> — so it is <b>prima facie not required to explain conduct during the whole limitation period</b>.</li>
+      <li>"Within such period" means within the period ending with the <b>last day</b> — the party must show cause <b>why it did not file on the last day</b>, and thereafter explain the delay <b>day by day</b> from that last day to the actual filing.</li>
+      <li>Even after sufficient cause is shown, condonation is <b>not a matter of right</b> — it remains a discretionary jurisdiction vested by s. 5.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h3>5.4 &nbsp;Illustrations of Sufficient Cause (the PYQ catalogue)</h3>
+    <table>
+      <tr><th style="width:26%">Plea</th><th>Position</th></tr>
+      <tr><td><b>Illness</b></td><td>Must subsist for the whole period; person shown unable to attend to any duty; a question of fact on each case; cause shown ≠ automatic condonation</td></tr>
+      <tr><td><b>Imprisonment</b></td><td>Imprisonment in a criminal case is sufficient cause; time in jail may be deducted</td></tr>
+      <tr><td><b>Mistake of counsel</b></td><td>Bona fide mistake of lawyer/clerk may suffice (no general proposition that it always does): bona fide → condonable (<i>Lala Mata Din</i>; <i>Concord of India</i>); negligence, even honest → not (<i>Chand v. Tripat Singh</i>); mistake where law unsettled → yes; settled law → no (<i>Kunda Madiah</i>)</td></tr>
+      <tr><td><b>Mistake / ignorance of law</b></td><td>Proceeding to a wrong forum in genuine misreading of the law — time before that forum excluded (<i>Somnath v. Vivek</i>, AIR 1988 Cal 366)</td></tr>
+      <tr><td><b>Wrong proceeding in good faith</b></td><td>Bona fide suit instead of appeal, appeal preferred promptly after error → sufficient cause (<i>Sitaram v. Nimba</i>, 12 Bom 320); must act with due diligence after termination</td></tr>
+      <tr><td><b>Proceeding in wrong court</b></td><td>Bona fide appeal to wrong court → condonation (<i>Balbir Singh v. Bhog Singh</i>, AIR 1974 SC 650); pendency of O.9 r.13 application ≠ cause for second appeal delay (<i>Ujagar v. Duni Chand</i>)</td></tr>
+      <tr><td><b>Amendment of decree</b></td><td>Time runs from the original decree; amendment helps only if grounds of appeal intimately connected with it (<i>Ram Singh v. Rama Bal</i>)</td></tr>
+      <tr><td><b>Ignorance of fact</b></td><td>Per se not sufficient cause (<i>Firm Dittu Ram</i>, AIR 1960 Punj 335 (FB)) — depends on facts</td></tr>
+      <tr><td><b>Missing files, red tape (State)</b></td><td>Katiji / Lipok line (see Section 6) — but post-2012 Living Media / Bherulal strictness against blanket bureaucratic excuses</td></tr>
+    </table>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 3 — Section 5 decision tree</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 430" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs>
+        <marker id="l3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker>
+        <marker id="l3r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a02020"/></marker>
+        <marker id="l3g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e7d32"/></marker>
+      </defs>
+      <rect x="340" y="10" width="400" height="56" rx="13" fill="#3f1622"/>
+      <text x="540" y="32" fill="#f5e9cd" font-size="13.5" font-weight="bold" text-anchor="middle">APPEAL / APPLICATION FILED LATE</text>
+      <text x="540" y="52" fill="#c9a227" font-size="11" text-anchor="middle">after the prescribed period (s.3 bar has set in)</text>
+      <polygon points="540,96 720,150 540,204 360,150" fill="#fff" stroke="#3f1622" stroke-width="2.3"/>
+      <text x="540" y="142" fill="#3f1622" font-size="12" font-weight="bold" text-anchor="middle">Is it an appeal / application</text>
+      <text x="540" y="160" fill="#3f1622" font-size="12" font-weight="bold" text-anchor="middle">(NOT a suit, NOT O.XXI)?</text>
+      <text x="540" y="182" fill="#5a6572" font-size="10.5" text-anchor="middle">and made to a "court" (not a tribunal/persona designata)?</text>
+      <line x1="540" y1="66" x2="540" y2="92" stroke="#3f1622" stroke-width="3" marker-end="url(#l3)"/>
+      <rect x="30" y="112" width="290" height="76" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.8"/>
+      <text x="175" y="138" fill="#a02020" font-size="12" font-weight="bold" text-anchor="middle">NO → s.5 UNAVAILABLE</text>
+      <text x="175" y="157" fill="#a02020" font-size="10.5" text-anchor="middle">late suit / execution application</text>
+      <text x="175" y="173" fill="#a02020" font-size="10.5" text-anchor="middle">stands dismissed under s.3</text>
+      <line x1="360" y1="150" x2="324" y2="150" stroke="#a02020" stroke-width="2.6" marker-end="url(#l3r)"/>
+      <polygon points="540,232 710,286 540,340 370,286" fill="#fff" stroke="#a8861a" stroke-width="2.5"/>
+      <text x="540" y="278" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">"SUFFICIENT CAUSE" shown?</text>
+      <text x="540" y="297" fill="#6b5410" font-size="10.5" text-anchor="middle">beyond the party's control · reasonable diligence</text>
+      <text x="540" y="314" fill="#6b5410" font-size="10.5" text-anchor="middle">· day-by-day explanation after the last day (Ram Lal)</text>
+      <text x="540" y="331" fill="#6b5410" font-size="10.5" text-anchor="middle">· liberal, justice-oriented approach (Katiji)</text>
+      <line x1="540" y1="204" x2="540" y2="228" stroke="#3f1622" stroke-width="2.8" marker-end="url(#l3)"/>
+      <rect x="30" y="252" width="300" height="76" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.8"/>
+      <text x="180" y="276" fill="#a02020" font-size="12" font-weight="bold" text-anchor="middle">NO → application rejected</text>
+      <text x="180" y="295" fill="#a02020" font-size="10.5" text-anchor="middle">appeal/application remains time-barred</text>
+      <text x="180" y="311" fill="#a02020" font-size="10.5" text-anchor="middle">no vested right in another's non-deliberate delay</text>
+      <line x1="370" y1="286" x2="334" y2="286" stroke="#a02020" stroke-width="2.6" marker-end="url(#l3r)"/>
+      <polygon points="540,364 660,400 540,426 420,400" fill="#fff" stroke="#1e7d32" stroke-width="2.4"/>
+      <text x="540" y="397" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">Court's discretion</text>
+      <text x="540" y="415" fill="#2f5d38" font-size="10" text-anchor="middle">judicial, reasoned, not arbitrary</text>
+      <rect x="740" y="360" width="320" height="66" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+      <text x="900" y="384" fill="#1e7d32" font-size="12" font-weight="bold" text-anchor="middle">CONDONED → heard on merits</text>
+      <text x="900" y="404" fill="#2f5d38" font-size="10.5" text-anchor="middle">substantial justice over technicality (Katiji)</text>
+      <line x1="540" y1="340" x2="540" y2="362" stroke="#1e7d32" stroke-width="2.6" marker-end="url(#l3g)"/>
+      <line x1="660" y1="400" x2="736" y2="398" stroke="#1e7d32" stroke-width="2.6" marker-end="url(#l3g)"/>
+      <text x="870" y="290" fill="#5a6572" font-size="11" text-anchor="middle">even with cause shown, condonation</text>
+      <text x="870" y="308" fill="#5a6572" font-size="11" text-anchor="middle">is discretionary — not a matter of right</text>
+      <text x="870" y="326" fill="#5a6572" font-size="11" text-anchor="middle">(Ram Lal canon 3; Lipok AO)</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 3 — Section 5 in operation: eligibility filter, then the sufficient-cause inquiry, then the discretionary balance.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= SECTION 6 : STATE AS LITIGANT ================= -->
+<section id="s6">
+  <div class="sec-head"><div class="sec-num">6</div><h2 class="sec-title">The Evolution — Government as a Litigant: from Katiji's Liberality to Bherulal's Stick <span class="rule-chip">THE EXAM ARC</span></h2></div>
+  <div class="sec-sub">The single most testable storyline in Topic 1 — 1987 → 2020 in one narrative</div>
+
+  <div class="card">
+    <h3>6.1 &nbsp;Three Ages of Section 5</h3>
+    <div class="timeline">
+      <div class="tl-title">The doctrinal pendulum</div>
+      <div class="tl-item"><div class="tl-date">1917–1987 &middot; FOUNDATIONS</div><div class="tl-body"><b>Brij Indar Singh</b> (PC, 1917): reasonable diligence is the guide. <b>Ram Lal</b> (1962): day-by-day explanation. <b>Katiji</b> (1987): the liberal charter — substantial justice over technicality; State entitled to the same even-handed treatment; "step-motherly treatment" deprecated; impersonal machinery and file-pushing understood.</div></div>
+      <div class="tl-item"><div class="tl-date">1988–2005 &middot; CONSOLIDATED LIBERALITY</div><div class="tl-body"><b>G. Ramegowda</b> (1988): "a little play at the joints" for Government. <b>Chandra Mani</b> (1996): pragmatic, justice-oriented approach; State ≠ individual in decision-speed. <b>Lipok AO</b> (2005): 57 days condoned; missing file + departmental follow-up = sufficient cause; delay by length irrelevant — sufficiency is everything.</div></div>
+      <div class="tl-item"><div class="tl-date">2012–2020 &middot; THE STRICT TURN</div><div class="tl-body"><b>Living Media</b> (2012): modern technology has destroyed the bureaucratic excuse; condonation is an exception, not an anticipated benefit; law of limitation binds everybody including Government. <b>Bherulal</b> (2020): 663 days! — SLP dismissed as time-barred with ₹25,000 costs recoverable from the responsible officers; "certificate cases" deprecated; Katiji cannot be invoked mechanically.</div></div>
+    </div>
+    <div class="note blue"><span class="nt">How to reconcile them in an answer</span>Katiji/Lipok and Living Media/Bherulal are not opposites. The liberal line governs <b>short, non-deliberate delays</b> where the State acted bona fide and with some diligence; the strict line governs <b>inordinate, unexplained delays</b> supported only by generic "red tape" assertions. Bherulal itself accepts that "some leeway is given for the Government inefficiencies" — but Katiji-era liberality cannot be claimed as of right in the age of email, e-filing and tracked files. State the length of delay, the specificity of the explanation, and the era of the authority relied upon.</div>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 4 — The pendulum of governmental delay</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <line x1="60" y1="150" x2="1020" y2="150" stroke="#3f1622" stroke-width="3"/>
+      <g font-size="10.5">
+        <rect x="60" y="40" width="280" height="86" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+        <text x="200" y="64" fill="#1e7d32" font-size="12.5" font-weight="bold" text-anchor="middle">LIBERAL ERA</text>
+        <text x="200" y="84" fill="#2f5d38" text-anchor="middle">Katiji (1987) · Ramegowda (1988)</text>
+        <text x="200" y="100" fill="#2f5d38" text-anchor="middle">Chandra Mani (1996) · Lipok (2005)</text>
+        <text x="200" y="118" fill="#1e7d32" text-anchor="middle">"substantial justice" · State ≠ litigant non grata</text>
+        <rect x="740" y="40" width="280" height="86" rx="12" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2"/>
+        <text x="880" y="64" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">STRICT ERA</text>
+        <text x="880" y="84" fill="#a02020" text-anchor="middle">Living Media (2012) · Bherulal (2020)</text>
+        <text x="880" y="100" fill="#a02020" text-anchor="middle">technology + specific explanation needed</text>
+        <text x="880" y="118" fill="#a02020" text-anchor="middle">condonation = exception, not benefit</text>
+      </g>
+      <circle cx="200" cy="150" r="9" fill="#1e7d32"/><circle cx="880" cy="150" r="9" fill="#a02020"/>
+      <path d="M 215 144 C 500 90, 580 90, 862 143" fill="none" stroke="#a8861a" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#l4)"/>
+      <text x="540" y="96" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">the swing: from understanding bureaucracy to policing it</text>
+      <rect x="290" y="200" width="500" height="82" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+      <text x="540" y="224" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">COMMON GROUND — never disputed in either era</text>
+      <text x="540" y="245" fill="#6b5410" font-size="10.5" text-anchor="middle">law of limitation binds the State equally (Art. 14) · proof of sufficient cause is</text>
+      <text x="540" y="261" fill="#6b5410" font-size="10.5" text-anchor="middle">condition precedent · discretion judicial, not arbitrary · no gross negligence or</text>
+      <text x="540" y="277" fill="#6b5410" font-size="10.5" text-anchor="middle">deliberate inaction or mala fides → lean towards condonation</text>
+      <line x1="200" y1="159" x2="330" y2="210" stroke="#3f1622" stroke-width="2.2" marker-end="url(#l4)"/>
+      <line x1="880" y1="159" x2="750" y2="210" stroke="#3f1622" stroke-width="2.2" marker-end="url(#l4)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 4 — The two eras reconcile on their common ground: equality before the law of limitation, and case-specific judicial discretion.</figcaption>
+  </figure>
+</section>
+
+<!-- ================= CASES MAP ================= -->
+<section id="cases">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">The Prescribed Cases — DU Case Material (Part B: Limitation)</h2></div>
+  <div class="sec-sub">Full commentary: facts &rarr; issues &rarr; arguments &rarr; decision &rarr; principle evolved, with hypothetical visuals</div>
+  <div class="card">
+    <table>
+      <tr><th style="width:12%">No.</th><th style="width:52%">Case</th><th>Theme for DU</th></tr>
+      <tr><td class="case-no">25</td><td><a href="#c25">R.B. Policies at Lloyd's v. Butler</a> &mdash; (1949) 2 All ER 226 (KBD)</td><td>Accrual of cause of action; policy of limitation law</td></tr>
+      <tr><td class="case-no">26</td><td><a href="#c26">Union of India v. West Coast Paper Mills Ltd.</a> &mdash; AIR 2004 SC 1596</td><td>Starting point of limitation; doctrine of merger; Art. 58 vs 113</td></tr>
+      <tr><td class="case-no">27</td><td><a href="#c27">Punjab National Bank v. Surendra Prasad Sinha</a> &mdash; AIR 1992 SC 1815</td><td>s.3 bars remedy, not right; adjustment against security</td></tr>
+      <tr><td class="case-no">28</td><td><a href="#c28">Collector, Land Acquisition, Anantnag v. Katiji</a> &mdash; AIR 1987 SC 1353</td><td>Sufficient cause — the liberal charter for s.5</td></tr>
+      <tr><td class="case-no">29</td><td><a href="#c29">State of Nagaland v. Lipok AO</a> &mdash; (2005) 3 SCC 752</td><td>Sufficient cause in operation; State's 57-day delay</td></tr>
+      <tr><td class="case-no">30</td><td><a href="#c30">State of Madhya Pradesh v. Bherulal</a> &mdash; (2020) 10 SCC 654</td><td>The strict turn — 663 days, costs, "certificate cases"</td></tr>
+    </table>
+  </div>
+</section>
+
+<div class="divider"><span>CASE 25 &nbsp;&middot;&nbsp; from the DU case material, p. 136</span></div>
+
+<!-- ================= CASE 25 ================= -->
+<article id="c25" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 25 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): SECTION 3</div>
+    <h3 class="case-name">R.B. Policies at Lloyd's v. Butler</h3>
+    <div class="case-meta"><b>(1949) 2 All ER 226</b> &nbsp;|&nbsp; King's Bench Division (England) &nbsp;|&nbsp; Streatfeild, J. &nbsp;|&nbsp; Limitation Act, 1939 (UK), ss. 2(1), 3(1), 26</div>
+    <div class="chips"><span class="chip">accrual of cause of action</span><span class="chip">unknown defendant</span><span class="chip">stale demands</span><span class="chip">innocent purchaser</span><span class="chip">act of peace</span><span class="chip">conversion / detinue</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img2.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Butler: the stolen motor car passing through a chain of purchasers to an innocent buyer, before the King's Bench">
+    <figcaption><b>Hypothetical visual — the stolen car's seven-year journey:</b> from the Lloyd's policyholders' garage (registration JD 6412) through a shadowy chain of intermediate purchasers to the innocent Mr. Butler (registration ALN 765) — while the courtroom's hourglass empties. The question: had the cause of action "accrued" the day the car was stolen, by a thief nobody could name?</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>R.B. Policies at Lloyd's (the plaintiffs, underwriters) owned a <b>motor car</b>, registration <b>JD 6412</b>. It was <b>stolen from them by some person or persons unknown on 27 June 1940</b>.</li>
+      <li>In <b>January 1947</b> the car — now bearing registration <b>ALN 765</b> — was found in the possession of <b>Mr. Alfred Butler</b>, having reached him through <b>a line of intermediate purchasers during the previous seven years</b>.</li>
+      <li>The plaintiffs issued a writ on <b>16 July 1947</b> claiming <b>return of the car</b> as wrongfully detained by the defendant.</li>
+      <li><b>Defence:</b> the cause of action was barred by the <b>Limitation Act, 1939 (UK), s. 2(1)</b> — "no action shall be brought after the expiration of <b>six years from the date on which the cause of action accrued</b>"; the theft having occurred in June 1940, six years expired in June 1946, a year before the writ.</li>
+      <li>The plaintiffs were owners; Butler was an <b>innocent purchaser for good consideration and in good faith</b>, years after the theft. The preliminary issue: <b>on what date did the cause of action accrue?</b></li>
+    </ul>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-title">Timeline</div>
+    <div class="tl-item"><div class="tl-date">27-6-1940</div><div class="tl-body"><b>Car stolen</b> from the plaintiffs by person(s) unknown — conversion by the thief; identity never discovered.</div></div>
+    <div class="tl-item"><div class="tl-date">1940–1946</div><div class="tl-body">Car passes <b>through a line of intermediate purchasers</b>; registration changes to ALN 765.</div></div>
+    <div class="tl-item"><div class="tl-date">June 1946</div><div class="tl-body"><b>Six years from the theft expire</b> (s. 2(1), Limitation Act, 1939).</div></div>
+    <div class="tl-item"><div class="tl-date">Jan 1947</div><div class="tl-body">Car <b>found in Butler's possession</b> — an innocent purchaser for value without notice.</div></div>
+    <div class="tl-item"><div class="tl-date">16-7-1947</div><div class="tl-body"><b>Writ issued</b> claiming return of the car — more than six years after the theft, under two years within discovery.</div></div>
+    <div class="tl-item"><div class="tl-date">1949</div><div class="tl-body"><b>Held (Streatfeild, J.):</b> cause of action accrued on the date of theft; the claim is <b>statute-barred</b>.</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>On what date did the plaintiffs' <b>cause of action accrue</b> — the date of the theft (1940), or the date the car (and a suable defendant) was discovered (1947)?</li>
+      <li>Does the fact that the <b>thief was unknown and untraceable</b> prevent the accrual of a cause of action against him?</li>
+      <li>Could s. 26 of the 1939 Act (fraudulent concealment) or the principle of discovering the wrong postpone the running of time?</li>
+      <li>What is the <b>policy</b> of a limitation statute in a contest between an owner and an innocent purchaser?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the Plaintiffs (R.B. Policies at Lloyd's)</h4>
+      <ul class="dot">
+        <li>A cause of action requires <b>a person capable of suing and a person who can be sued</b> — the thief being unknown, no action could be brought in 1940, so the cause of action cannot have accrued then.</li>
+        <li>Only in January 1947 was there an <b>identifiable defendant</b> (Butler) in possession — limitation should run from discovery of the wrong and the wrongdoer.</li>
+        <li>It would be unjust to deprive the true owner of property merely because the thief concealed his identity.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for the Defendant (Butler)</h4>
+      <ul class="dot">
+        <li>The theft itself was a <b>complete conversion</b> the moment it occurred — every ingredient of the cause of action existed in June 1940.</li>
+        <li>S. 3(1) of the 1939 Act: subsequent conversions by the chain of purchasers are comprehended in the original accrual — <b>no action lies after six years from the original cause of action</b>.</li>
+        <li>S. 26 (fraudulent concealment) is a <b>special, limited exception</b> — and it postpones the running of time only until fraud is or could be discovered; it does not postpone accrual for a merely unknown thief.</li>
+        <li>The Act protects <b>innocent purchasers against stale demands</b> — that is its policy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision</h3>
+    <p class="lead"><b>Preliminary point decided in favour of the defendant: the claim was barred by limitation.</b> The cause of action accrued in <b>June 1940, when the car was stolen</b>.</p>
+    <ul class="tick">
+      <li><b>Accrual:</b> "A cause of action cannot accrue unless there be a person in existence capable of suing and another person in existence who can be sued" — the thief <b>was in existence</b>, though not traceable: "It was, no doubt, a misfortune to the plaintiffs that they could not find a defendant whose name they could insert in a writ, but the fact remains that <b>every other ingredient of the cause of action was present</b>."</li>
+      <li><b>S. 26 is the sole postponement:</b> it says time "shall not begin to run" until discovery of fraud — it does not say the cause of action accrues afresh on discovery; absent pleaded fraud, <b>time runs from the theft notwithstanding ignorance of the thief's identity</b>.</li>
+      <li><b>The watch illustration:</b> "It would lead to appalling results if someone, having lost a watch and discovered it fifty or sixty years later in the possession of a wholly innocent person who had bought it many years previously, was able to bring an action for its recovery merely because he did not know who the thief was."</li>
+      <li><b>Policy — the twin principles:</b> (i) "those who go to sleep on their claims should not be assisted by the Courts in recovering their property"; (ii) equally, "there shall be an end of these matters... <b>protection against stale demands</b>" — quoting Best, C.J. in <i>A'Court v. Cross</i>: the Act is "an act of peace"; "long dormant claims have often more cruelty than justice in them".</li>
+      <li>A claim made seven-eight years after the loss, against a perfectly innocent holder who gave value without knowing of the theft, "does not seem just" — the Act exists to <b>prevent precisely such injustices</b>.</li>
+    </ul>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li>A cause of action <b>accrues when all its ingredients exist</b> — the existence (not the identity or traceability) of a wrongdoer suffices; ignorance of the defendant's name does not postpone accrual.</li>
+      <li>Limitation statutes are <b>acts of peace</b> designed to bury stale demands, protect defendants from lost evidence, and shield <b>innocent purchasers</b> — dormancy is cruelty, not justice.</li>
+      <li>Postponement of limitation is <b>exceptional</b> (fraudulent concealment-type provisions) and must be strictly construed — it delays the running of time, it does not re-create the cause of action.</li>
+      <li>Owners must be diligent: he who sleeps on his claim forfeits the court's assistance — the creditor's remedy dies while the duty to be alert lives.</li>
+    </ol>
+  </div>
+</article>
+
+<div class="divider"><span>CASE 26 &nbsp;&middot;&nbsp; from the DU case material, p. 139</span></div>
+
+<!-- ================= CASE 26 ================= -->
+<article id="c26" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 26 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): SECTION 3</div>
+    <h3 class="case-name">Union of India v. West Coast Paper Mills Ltd.</h3>
+    <div class="case-meta"><b>AIR 2004 SC 1596</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Three-Judge Bench: R.C. Lahoti, C.J.I., S.B. Sinha &amp; S.H. Kapadia, JJ. &nbsp;|&nbsp; P.K. Kutty overruled</div>
+    <div class="chips"><span class="chip">starting point of limitation</span><span class="chip">doctrine of merger</span><span class="chip">Art. 58 vs Art. 113</span><span class="chip">special leave &amp; finality</span><span class="chip">ss. 14–15 exclusion</span><span class="chip">liberal construction of s.3</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img3.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — West Coast: the freight line from the paper mill, the Railway Rates Tribunal, and the Supreme Court — two orders merging into one">
+    <figcaption><b>Hypothetical visual — one dispute, three forums, one operative order:</b> the paper mill's freight challenge travels from the Railway Rates Tribunal to the Supreme Court (with a bank guarantee in hand), and the refund suit waits upon the final word — because under the doctrine of merger, the Tribunal's declaration and the Supreme Court's order become a single operative decree.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li><b>The freight dispute:</b> West Coast Paper Mills (respondent) transported goods by rail over the branch line <b>Alnavar → Dandeli</b>, paying a common freight rate based on weight. The Railways revised the rate <b>w.e.f. 1-2-1964</b> — levying <b>standard telescopic class rates on three times the inflated distance</b>.</li>
+      <li><b>18-4-1966:</b> The <b>Railway Rates Tribunal</b> declared the levy <b>unreasonable</b> (complaint held: unjust, unreasonable, discriminatory).</li>
+      <li><b>Special leave:</b> The Union of India appealed to the Supreme Court. Special leave was <b>granted with a limited interim order</b>: "The Railway may charge the usual rates <b>without inflation of the distance</b>, and the Respondent will give a Bank guarantee... for Rupees Two Lakhs to be renewed each year until the disposal of the appeal." The SLP was ultimately <b>dismissed on 14-10-1970</b>.</li>
+      <li><b>5-1-1972:</b> The mill filed a <b>writ petition</b> (W.P. No. 210/1972); the High Court <b>declined jurisdiction</b> on 29-10-1973, leaving it to an ordinary civil suit — parties free to raise all contentions.</li>
+      <li><b>12-12-1973 &amp; 18-4-1974:</b> The mill filed <b>two civil suits</b> (later O.S. 38/1982 &amp; 39/1982) for <b>refund of excess freight</b> for the periods 24-6-1963 to 1-2-1964 and 1-2-1964 to 18-4-1966, with interest.</li>
+      <li><b>The limitation objection:</b> UOI contended the cause of action arose with the <b>Tribunal's declaration (18-4-1966)</b> — under <b>Art. 58</b> (declaration suits: 3 years from when the right to sue <b>first accrues</b>), the suits (filed 1973-74) were hopelessly late; and since <b>no stay</b> of the Tribunal's judgment had been granted, the pendency before the SC did not stop the clock.</li>
+      <li><b>Trial Court &amp; High Court:</b> suits were <b>within time</b> — the mill was entitled to the benefit of <b>ss. 14 and 15</b> (exclusion of time spent bona fide prosecuting the writ remedy). UOI appealed; a Division Bench doubted <i>P.K. Kutty</i> and referred the matter to a <b>three-Judge Bench</b>.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 5 — The procedural journey and the starting point of limitation</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 330" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="15" y="60" width="200" height="96" rx="12" fill="#eef3fb" stroke="#b9cdec" stroke-width="1.8"/>
+        <text x="115" y="84" fill="#2b5cad" font-size="12" font-weight="bold" text-anchor="middle">TRIBUNAL</text>
+        <text x="115" y="102" fill="#2b5cad" text-anchor="middle">18-4-1966: levy declared</text>
+        <text x="115" y="118" fill="#2b5cad" text-anchor="middle">unreasonable (declaration</text>
+        <text x="115" y="134" fill="#2b5cad" text-anchor="middle">only — no execution power)</text>
+        <text x="115" y="150" fill="#2b5cad" text-anchor="middle">UOI's SLP →</text>
+        <rect x="245" y="60" width="220" height="96" rx="12" fill="#f5e9cd" stroke="#c9a227" stroke-width="2.2"/>
+        <text x="355" y="82" fill="#6b5410" font-size="12" font-weight="bold" text-anchor="middle">SUPREME COURT</text>
+        <text x="355" y="100" fill="#6b5410" text-anchor="middle">special leave GRANTED + limited</text>
+        <text x="355" y="116" fill="#6b5410" text-anchor="middle">interim order (no inflated distance;</text>
+        <text x="355" y="132" fill="#6b5410" text-anchor="middle">₹2 lakh bank guarantee renewed yearly)</text>
+        <text x="355" y="150" fill="#6b5410" font-weight="bold" text-anchor="middle">SLP dismissed 14-10-1970 ★</text>
+        <rect x="495" y="60" width="200" height="96" rx="12" fill="#fdf6e3" stroke="#e7cf8f" stroke-width="1.8"/>
+        <text x="595" y="84" fill="#9c6d00" font-size="12" font-weight="bold" text-anchor="middle">WRIT PETITION</text>
+        <text x="595" y="102" fill="#9c6d00" text-anchor="middle">5-1-1972 → dismissed</text>
+        <text x="595" y="118" fill="#9c6d00" text-anchor="middle">29-10-1973: "avail the</text>
+        <text x="595" y="134" fill="#9c6d00" text-anchor="middle">ordinary remedy of a suit"</text>
+        <text x="595" y="150" fill="#9c6d00" text-anchor="middle">(time excludable: ss. 14–15)</text>
+        <rect x="725" y="60" width="200" height="96" rx="12" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2.2"/>
+        <text x="825" y="84" fill="#1e7d32" font-size="12" font-weight="bold" text-anchor="middle">THE TWO SUITS</text>
+        <text x="825" y="102" fill="#1e7d32" text-anchor="middle">12-12-1973 &amp; 18-4-1974</text>
+        <text x="825" y="118" fill="#1e7d32" text-anchor="middle">refund of excess freight</text>
+        <text x="825" y="134" fill="#1e7d32" text-anchor="middle">Art. 113: 3 years from right</text>
+        <text x="825" y="150" fill="#1e7d32" text-anchor="middle">to sue accruing — IN TIME ✓</text>
+      </g>
+      <line x1="217" y1="108" x2="241" y2="108" stroke="#3f1622" stroke-width="2.6" marker-end="url(#l5)"/>
+      <line x1="467" y1="108" x2="491" y2="108" stroke="#3f1622" stroke-width="2.6" marker-end="url(#l5)"/>
+      <line x1="697" y1="108" x2="721" y2="108" stroke="#3f1622" stroke-width="2.6" marker-end="url(#l5)"/>
+      <rect x="245" y="212" width="440" height="100" rx="14" fill="#3f1622"/>
+      <text x="465" y="238" fill="#f5e9cd" font-size="13" font-weight="bold" text-anchor="middle">DOCTRINE OF MERGER — Kunhayammed</text>
+      <text x="465" y="258" fill="#e8cfa0" font-size="10.5" text-anchor="middle">"there cannot be more than one decree or operative order governing the</text>
+      <text x="465" y="274" fill="#e8cfa0" font-size="10.5" text-anchor="middle">same subject-matter at a given point of time" — the Tribunal's declaration</text>
+      <text x="465" y="290" fill="#e8cfa0" font-size="10.5" text-anchor="middle">merges in the SC's order; finality comes only from the last word</text>
+      <path d="M 355 158 C 355 195, 400 200, 440 210" fill="none" stroke="#3f1622" stroke-width="2.6" marker-end="url(#l5)"/>
+      <rect x="725" y="212" width="340" height="100" rx="14" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.8"/>
+      <text x="895" y="236" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">OVERDULED / DISTINGUISHED</text>
+      <text x="895" y="256" fill="#a02020" font-size="10.5" text-anchor="middle">P.K. Kutty (1996) — overruled: merger argument never considered</text>
+      <text x="895" y="273" fill="#a02020" font-size="10.5" text-anchor="middle">Mohinder Singh Jagdev — different facts</text>
+      <text x="895" y="290" fill="#a02020" font-size="10.5" text-anchor="middle">Juscurn Boid, Maqbul Ahmad — peculiar facts; point not arising</text>
+      <text x="115" y="240" fill="#5a6572" font-size="10.5" text-anchor="middle">Art. 58: "right to sue FIRST accrues"</text>
+      <text x="115" y="258" fill="#5a6572" font-size="10.5" text-anchor="middle">vs Art. 113: "right to sue accrues"</text>
+      <text x="115" y="276" fill="#5a6572" font-size="10.5" text-anchor="middle">— refund suit accrues when the</text>
+      <text x="115" y="294" fill="#5a6572" font-size="10.5" text-anchor="middle">right is finally determined</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 5 — UOI's case put time's start at the Tribunal (1966); the SC put it at its own order (1970), with the writ interlude excluded under ss. 14–15 — so the 1973–74 suits were in time.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>From what date did limitation run for a suit for <b>refund of excess freight</b> — the Tribunal's declaration (18-4-1966) or the Supreme Court's final order (14-10-1970)?</li>
+      <li>Did the absence of a <b>stay</b> of the Tribunal's judgment make it operative from 1966, so that the SLP's pendency did not matter?</li>
+      <li>Which article governed — <b>Art. 58</b> (declaration suits, "right to sue first accrues") or <b>Art. 113</b> (residuary, "right to sue accrues")?</li>
+      <li>Did the <b>doctrine of merger</b> apply to the Tribunal's decision once special leave was granted — and was <i>P.K. Kutty</i>, which ignored merger, good law?</li>
+      <li>Were the periods of the writ petition excludable under <b>ss. 14–15</b>?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the Union of India (appellant)</h4>
+      <ul class="dot">
+        <li>The cause of action arose on the <b>Tribunal's declaration (18-4-1966)</b>; under <b>Art. 58</b> the three-year clock then began; suits of 1973–74 were 4–5 years late.</li>
+        <li><b>No stay</b> of the Tribunal's judgment was ever granted by the SC — the interim order was only partial — so the judgment was operative and enforceable, and pendency of the SLP could not exclude time.</li>
+        <li>Under <b>s. 46A, Indian Railways Act</b>, the Tribunal's judgment was <b>final</b>; the refund claim stood on it and could not be deferred.</li>
+        <li>Reliance: <i>Juscurn Boid</i> (PC), <i>Maqbul Ahmad</i> (PC), <i>P.K. Kutty</i> (SC), <i>Mohinder Singh Jagdev</i> (SC) — "once limitation starts running, it runs its full course".</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Arguments for West Coast Paper Mills (respondent)</h4>
+      <ul class="dot">
+        <li><b>Art. 113</b> (residuary), not Art. 58, governed — this was a suit for <b>refund of money</b>, not for a declaration; the declaration had already been obtained.</li>
+        <li>Once <b>special leave was granted</b> and an interim order passed, the Tribunal's judgment was <b>"in jeopardy"</b> — its finality was gone; correctness stood "wide open".</li>
+        <li><b>Doctrine of merger</b> (<i>Kunhayammed v. State of Kerala</i>, (2000) 6 SCC 359): the Tribunal's order merged in the SC's order; limitation for consequential relief runs from the <b>appellate order</b>.</li>
+        <li>In any event, the <b>writ interlude was excludable</b> under ss. 14–15 — a bona fide prosecution of a remedy before the appropriate forum.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — Three-Judge Bench (S.B. Sinha, J. for the Bench)</h3>
+    <ul class="tick">
+      <li><b>Tribunal's powers were declaratory only:</b> under the Railways Act "the Tribunal was only entitled to make a declaration... It did not have any jurisdiction to execute its own order" — a suit was the execution path.</li>
+      <li><b>s. 46A could not exclude Art. 136:</b> finality before the Tribunal did not touch the Supreme Court's special appellate power; once special leave was granted, "the correctness or otherwise of the judgment of the Tribunal becomes <b>wide open</b>... In such an event the correctness of the judgment is <b>in jeopardy</b>."</li>
+      <li><b>Merger applies to tribunals as to courts</b> — following the Constitution Bench line (<i>Mohammad Nooh</i> — Vivian Bose, J.: justice "in a common sense liberal way... broadbased on human values rather than... hair-splitting technicalities"; <i>S.S. Rathore</i> — the court/tribunal distinction "is one without any legal justification"): "an appeal is a continuation of the suit", the decree becomes executable only when finally disposed of by the last court.</li>
+      <li><b>Starting point = the SC's order (14-10-1970)</b>; the writ period was additionally excludable under ss. 14–15 — the suits were <b>within limitation</b>. Trial Court and High Court affirmed; nothing to differ.</li>
+      <li><b>Art. 58 vs Art. 113 distinction:</b> Art. 58 counts three years from when the right to sue <b>first</b> accrues; Art. 113 counts from when the right to sue accrues — "the right to sue may accrue to a suitor... at different points of time", the last determination fixing the date. A refund suit needs a finally determined right; the mill did not sue for a declaration at all.</li>
+      <li><b>Overruled <i>P.K. Kutty</i></b> — it "does not lay down the law correctly": merger and the Constitution Bench precedents were never argued or noticed there. <i>Mohinder Singh Jagdev</i> distinguished on facts; <i>Maqbul Ahmad</i> and <i>Juscurn Boid</i> turned on peculiar facts.</li>
+      <li><b>The liberal gloss on s. 3 itself:</b> "Despite the rigours of Section 3 of the Limitation Act, 1963, the provisions thereof are required to be construed in a <b>broad based and liberal manner</b>."</li>
+    </ul>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li>Where an order is subjected to appeal (including special leave under Art. 136), its <b>finality is in jeopardy</b>; by the doctrine of merger the appellate order becomes the sole operative order — limitation for consequential relief (refund suit) runs from the <b>date of the last order</b>, not the first.</li>
+      <li><b>Stay is not the touchstone of jeopardy:</b> the absence of a formal stay does not restart finality once the superior court has entertained the challenge and applied its mind to merits.</li>
+      <li><b>Art. 58 ≠ Art. 113:</b> "first accrues" (first accrual of right to sue) vs "accrues" (accrual, including the final determination) — classification of the article decides many limitation problems.</li>
+      <li>Time spent <b>bona fide prosecuting a remedy in the appropriate forum</b> (including a writ petition wrongly but genuinely chosen) is excluded under ss. 14–15.</li>
+      <li>Section 3's rigour is real but its provisions are construed <b>broadly and liberally</b> in aid of justice.</li>
+    </ol>
+  </div>
+</article>
+
+<div class="divider"><span>CASE 27 &nbsp;&middot;&nbsp; from the DU case material, p. 146</span></div>
+
+<!-- ================= CASE 27 ================= -->
+<article id="c27" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 27 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (a): SECTION 3</div>
+    <h3 class="case-name">Punjab National Bank v. Surendra Prasad Sinha</h3>
+    <div class="case-meta"><b>AIR 1992 SC 1815</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; K. Ramaswamy, J. &nbsp;|&nbsp; Quashing of private complaint u/ss 409, 109/114 IPC</div>
+    <div class="chips"><span class="chip">s.3 bars remedy not right</span><span class="chip">time-barred debt still due</span><span class="chip">adjustment against security</span><span class="chip">guarantor's liability</span><span class="chip">criminal breach of trust</span><span class="chip">abuse of process</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img4.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — PNB: the bank counter, the fixed deposit receipt held as security, the ledger adjusting the defaulted loan, and the rejected complaint">
+    <figcaption><b>Hypothetical visual — the security that outlived limitation:</b> the bank holds the guarantor's Fixed Deposit Receipt; the principal debtor's loan (₹15,000) has gone time-barred; the ledger's pen moves across the matured FDR (₹41,292), adjusts the dues, credits the balance — while the guarantor's criminal complaint lies rejected on the floor. The right survived the remedy.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li><b>5-5-1984:</b> PNB's Katni branch lent <b>₹15,000</b> to one Sriman Narain Dubey. The respondent — <b>an Advocate and Standing Counsel for the Bank itself</b> — and his wife Annapoorna stood <b>guarantors</b>, executed a security bond and handed over a <b>Fixed Deposit Receipt of ₹24,000</b> (F.D. A/c No. 77/83, maturing 1-11-1988; value at maturity <b>₹41,292</b>).</li>
+      <li>The principal debtor <b>defaulted</b>. At maturity, the Branch Manager adjusted <b>₹27,037.60</b> (the debt due as on December 1988) from the FDR and credited the balance <b>₹14,254.40 to the respondent's Savings Bank Account</b> (No. 3763), intimated to him on 14-1-1989.</li>
+      <li><b>The complaint:</b> the respondent filed a private complaint (C.C. No. 933 of 1991) before the Additional Chief Judicial Magistrate, Katni, against the Bank, its Chairman, Managing Director and four officers, alleging offences under <b>s. 409 IPC</b> (criminal breach of trust by banker/merchant) and <b>ss. 109/114 IPC</b> (abetment) — the Bank had "criminally embezzled" the FDR amount.</li>
+      <li><b>His theory:</b> the principal debt became <b>barred by limitation on 5-5-1987</b> (three years from the loan); the guarantor's liability being <b>co-extensive</b> with the debtor's, it too stood "extinguished" on that date; the Bank, with a <b>"dishonest interest to save itself from the financial obligation"</b>, neglected to recover from the debtor in time and then converted the entrusted FDR money to its own use — in violation of his specific direction to credit the entire ₹41,292.</li>
+      <li>The Magistrate <b>mechanically issued process</b> against all the appellants; the High Court <b>declined to quash</b>, finding the Bank had acted "prima facie high-handedly". The Bank appealed to the Supreme Court. The respondent (served 29-7-1991) neither appeared nor was represented.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>The Security Bond — the contract that decided the case</h3>
+    <ul class="tick">
+      <li>"We confirm having handed over to you by way of security... F.D. Account No. 77/83 dated November 1, 1983 for Rs 24,000..." — "the F.D.R. will continue to remain with the bank as security here."</li>
+      <li>"<b>The amount due and other charges, if any, be adjusted and appropriated by you from the proceeds of the said F.D.R. at any time before, or on its maturity at your discretion</b>, unless the loan is otherwise fully adjusted from the dues on demand in writing made by you..."</li>
+      <li>"We give the bank right to credit the balance to our savings bank account... and adjust the amount due from the borrowers out of the same."</li>
+      <li>"We authorise you... the F.D.R. pledged as security... shall also be security including the surplus proceeds thereof for any other liability... and the bank shall be entitled to retain/realise/utilise/appropriate the same <b>without reference to us</b>."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Did the bar of limitation under <b>s. 3</b> extinguish the debt (and the co-extensive guarantor's liability), so that the Bank's appropriation from the FDR became <b>criminal misappropriation</b>?</li>
+      <li>Is a creditor entitled to <b>adjust a time-barred debt</b> out of a <b>security in his possession</b>, under the contract?</li>
+      <li>Did the facts make out even a <b>prima facie case</b> of criminal breach of trust (ss. 405/409 IPC) — "entrustment" and "dishonest conversion"?</li>
+      <li>Was the Magistrate right to issue process against the Bank's senior-most officers, and the High Court right to refuse to quash?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for PNB (appellants)</h4>
+      <ul class="dot">
+        <li>s. 3 <b>bars only the remedy, not the right</b>: the debt subsisted despite limitation; the Bank was not obliged to sue at all.</li>
+        <li>The security bond <b>expressly authorised</b> appropriation from the FDR at maturity "at your discretion" and "without reference to us" — the Bank acted precisely as the contract permitted.</li>
+        <li>The FDR was entrusted <b>as guarantor's security, not in the course of banking business</b> — s. 409 IPC has no application; and action under contract negatives "dishonesty" (s. 405).</li>
+        <li>The complaint was a <b>patent abuse of process</b> to harass the Bank and its officers — the respondent was himself the Bank's Standing Counsel pursuing a <b>personal vendetta</b>.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Case for the Respondent (Sinha)</h4>
+      <ul class="dot">
+        <li>The loan became time-barred on <b>5-5-1987</b>; the guarantor's co-extensive liability stood <b>extinguished</b>; the Bank's neglect to sue the debtor was with a <b>dishonest interest</b> to escape its own obligation.</li>
+        <li>Having allowed the claim to become barred, the Bank could not help itself to the <b>entrusted FDR proceeds</b> — that was <b>embezzlement</b> (s. 409) by the Bank and abetment (ss. 109/114) by its officers.</li>
+        <li>His direction that the entire ₹41,292 be credited was disobeyed; only ₹14,254.40 was credited despite repeated demands.</li>
+        <li>The High Court had found the Bank's conduct "prima facie high-handed"; the Magistrate's process could not be interfered with at that stage.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision</h3>
+    <p class="lead"><b>Appeal allowed; complaint quashed.</b> K. Ramaswamy, J. held the complaint "eloquently manifest on its face a clear abuse of the process of the court to harass the appellants".</p>
+    <ul class="tick">
+      <li><b>The maxim applied:</b> "The rules of limitation are not meant to destroy the rights of the parties. Section 3... only bars the remedy, but does not destroy the right which the remedy relates to. The right to the debt continues to exist notwithstanding the remedy is barred by limitation." The <b>only exception</b>: where the right itself is destroyed — s. 27 (possession suits).</li>
+      <li><b>Time-barred debt does not cease to exist:</b> "It is not obligatory to file a suit to recover the debt." A creditor may <b>adjust a time-barred debt</b> from payments, and — "when he is in possession of an adequate security" — may <b>adjust the debt from that security</b>. The Bank's appropriation was per the contract; the balance was duly credited.</li>
+      <li><b>No criminal breach of trust:</b> "Action in terms of the contract expressly or implied is a <b>negation of criminal breach of trust</b> defined in Section 405 and punishable under Section 409 IPC. It is neither dishonest, nor misappropriation." Moreover the FDR was entrusted in the capacity of <b>guarantor</b>, not in the course of the Bank's business as banker.</li>
+      <li><b>No prima facie case at all:</b> "The complaint does not make out any case much less prima facie case, a condition precedent to set criminal law in motion." The Magistrate issued process "obviously, in a mechanical manner"; the High Court committed "grave error" in refusing to quash.</li>
+      <li><b>Process as oppression:</b> "Judicial process should not be an instrument of oppression or needless harassment." Impleading the Chairman and MD by name and a host of officers = "wreak[ing] personal vengeance"; criminal justice exists for "vindication of majesty of justice", not private vendetta.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 6 — Why the Bank's ledger was lawful</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 300" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <rect x="20" y="24" width="250" height="120" rx="13" fill="#3f1622"/>
+      <text x="145" y="50" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">LOAN ₹15,000 (5-5-1984)</text>
+      <text x="145" y="72" fill="#e8cfa0" font-size="10.5" text-anchor="middle">principal debtor defaults</text>
+      <text x="145" y="90" fill="#e8cfa0" font-size="10.5" text-anchor="middle">remedy to sue barred 5-5-1987 (s.3)</text>
+      <text x="145" y="112" fill="#c9a227" font-size="10.5" font-weight="bold" text-anchor="middle">BUT the debt — the RIGHT — survives</text>
+      <text x="145" y="130" fill="#c9a227" font-size="10.5" text-anchor="middle">guarantor's liability co-extensive</text>
+      <rect x="415" y="24" width="250" height="120" rx="13" fill="#f5e9cd" stroke="#c9a227" stroke-width="2"/>
+      <text x="540" y="50" fill="#6b5410" font-size="12.5" font-weight="bold" text-anchor="middle">FDR ₹24,000 (matures 1-11-1988)</text>
+      <text x="540" y="72" fill="#6b5410" font-size="10.5" text-anchor="middle">pledged by guarantor couple</text>
+      <text x="540" y="90" fill="#6b5410" font-size="10.5" text-anchor="middle">value at maturity ₹41,292</text>
+      <text x="540" y="112" fill="#6b5410" font-size="10.5" text-anchor="middle">bond: adjust "at your discretion"</text>
+      <text x="540" y="130" fill="#6b5410" font-size="10.5" text-anchor="middle">"without reference to us"</text>
+      <rect x="810" y="24" width="250" height="120" rx="13" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+      <text x="935" y="50" fill="#1e7d32" font-size="12.5" font-weight="bold" text-anchor="middle">APPROPRIATION (Dec 1988)</text>
+      <text x="935" y="72" fill="#2f5d38" font-size="10.5" text-anchor="middle">₹27,037.60 adjusted to dues</text>
+      <text x="935" y="90" fill="#2f5d38" font-size="10.5" text-anchor="middle">balance ₹14,254.40 to SB a/c</text>
+      <text x="935" y="112" fill="#1e7d32" font-size="10.5" font-weight="bold" text-anchor="middle">lawful: contract + surviving right</text>
+      <text x="935" y="130" fill="#1e7d32" font-size="10.5" text-anchor="middle">no s.405/409 IPC — no dishonesty</text>
+      <line x1="272" y1="84" x2="411" y2="84" stroke="#3f1622" stroke-width="2.8" marker-end="url(#l6)"/>
+      <line x1="667" y1="84" x2="806" y2="84" stroke="#3f1622" stroke-width="2.8" marker-end="url(#l6)"/>
+      <rect x="180" y="206" width="720" height="76" rx="13" fill="#fbeeee" stroke="#e3b8b8" stroke-width="1.8"/>
+      <text x="540" y="230" fill="#a02020" font-size="12.5" font-weight="bold" text-anchor="middle">THE COMPLAINANT'S ERROR — and the court's answer</text>
+      <text x="540" y="252" fill="#a02020" font-size="11" text-anchor="middle">"extinguished by limitation" — NO: s.3 bars the remedy, never the right (except s.27); a time-barred debt is still due and adjustable against security</text>
+      <text x="540" y="270" fill="#a02020" font-size="11" text-anchor="middle">"embezzlement" — NO: action in terms of the contract is the negation of criminal breach of trust; complaint quashed as abuse of process</text>
+      <line x1="935" y1="146" x2="760" y2="202" stroke="#a02020" stroke-width="2.2" marker-end="url(#l6)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 6 — The three documents in the case: the defaulted (time-barred) loan, the pledged FDR, and the contractual appropriation that the SC held lawful.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>S. 3 bars the remedy, not the right</b> (s. 27 the sole statutory exception) — a time-barred debt subsists, is still "due", and may be satisfied, set off, or adjusted against a <b>security in the creditor's possession</b> in terms of the contract.</li>
+      <li>Non-suiting a debtor within limitation is a business misfortune, not a crime: mere failure to sue before the bar <b>cannot convert lawful contractual appropriation into "dishonest" misappropriation</b> under ss. 405/409 IPC.</li>
+      <li><b>Entrustment under s. 409 must be in the course of business as banker/merchant</b> — a FDR pledged by a guarantor is outside it.</li>
+      <li>Criminal process must not become an instrument of oppression: no process without a prima facie case; impleading senior officers without basis is harassment; quashing is the proper cure for complaint-vendettas.</li>
+    </ol>
+  </div>
+</article>
+
+<div class="divider"><span>CASE 28 &nbsp;&middot;&nbsp; from the DU case material, p. 148</span></div>
+
+<!-- ================= CASE 28 ================= -->
+<article id="c28" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 28 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): SECTION 5</div>
+    <h3 class="case-name">Collector, Land Acquisition, Anantnag v. Mst. Katiji</h3>
+    <div class="case-meta"><b>AIR 1987 SC 1353</b> &nbsp;|&nbsp; (1987) 2 SCC 107 &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Thommen &amp; Thakkar, JJ. (Thakkar, J.)</div>
+    <div class="chips"><span class="chip">sufficient cause</span><span class="chip">liberal construction</span><span class="chip">State as litigant</span><span class="chip">equality before law</span><span class="chip">substantial justice</span><span class="chip">4 days' delay</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img5.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Katiji: acquired Kashmiri terraced land, the file travelling desk to desk, and the scales tipping toward substantial justice">
+    <figcaption><b>Hypothetical visual — the file that moved too slowly:</b> compensation for acquired Anantnag land enhanced eightfold; the State's appeal just <b>four days late</b>; the file crawls through the note-making, file-pushing bureaucracy — while the scales of justice tip decisively toward deciding causes on merits rather than on calendars.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>The State of Jammu &amp; Kashmir filed an appeal against a decision <b>enhancing compensation</b> for land acquired for a <b>public purpose</b> — an upward revision of nearly <b>800%</b> (from ₹1,000 per kanal to ₹8,000 per kanal), involving roughly <b>₹14 lakhs</b> and raising important questions on <b>principles of valuation</b>.</li>
+      <li>The appeal was <b>four days beyond limitation</b>; the accompanying application for condonation of delay was <b>rejected</b>, and the appeal was <b>dismissed as time-barred</b> by the High Court.</li>
+      <li>The State appealed to the Supreme Court <b>by special leave</b>.</li>
+    </ul>
+    <div class="judgement"><span class="who">The opening of the judgment (Thakkar, J.) — a classic</span>"<b>To condone or not to condone, is not the only question.</b> Whether or not to apply the same standard in applying the 'sufficient cause' test to all the litigants regardless of their personality in the said context is another."</div>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Should the delay of four days in filing the State's appeal be condoned under s. 5 — was there "sufficient cause"?</li>
+      <li>Should the same standard of the "sufficient cause" test apply to <b>all litigants regardless of personality</b> — does it matter that the applicant is the <b>State</b>?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Case for the State (appellant)</h4>
+      <ul class="dot">
+        <li>The delay of four days was neither deliberate nor mala fide — caused in the ordinary course of governmental file movement; the merits of a ₹14-lakh, 800%-enhancement valuation challenge deserved a hearing.</li>
+        <li>"Sufficient cause" must receive a justice-oriented, liberal construction; refusing condonation throws out a meritorious cause at the threshold.</li>
+        <li>Equality before law (Art. 14) demands the same treatment for the State as for any private litigant — the HC's stricter approach to a State applicant was impermissible.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Case for Katiji (respondent)</h4>
+      <ul class="dot">
+        <li>"Every day's delay must be explained" — the State had shown no cause for each of the four days, only a general plea of official procedure.</li>
+        <li>The decree-holder's rights had crystallised; the law of limitation binds the Government equally, and condonation would reward governmental lethargy at the cost of a poor landowner.</li>
+        <li>A liberal approach for the State would create a separate, privileged limitation regime for the biggest litigant of all.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision &amp; the Six Principles</h3>
+    <p class="lead"><b>Appeal allowed; the HC's order set aside; matter remitted to the High Court for disposal on merits.</b> The Court held that the legislature conferred the s. 5 power "to enable the Courts to do substantial justice to parties by disposing of matters on merits", and that "the expression 'sufficient cause' employed by the legislature is <b>adequately elastic</b> to enable the Courts to apply the law in a meaningful manner which subserves the ends of justice — that being the life-purpose for the existence of the institution of Courts."</p>
+    <p>The liberal approach rests on six numbered principles:</p>
+    <ol class="num">
+      <li><b>Ordinarily a litigant does not stand to benefit by lodging an appeal late.</b></li>
+      <li><b>Refusing to condone delay can result in a meritorious matter being thrown out at the very threshold</b> and the cause of justice being defeated.</li>
+      <li>As against this, <b>when delay is condoned the highest that can happen is that a cause would be decided on merits</b> after hearing the parties.</li>
+      <li>"<b>Every day's delay must be explained</b>" does not mean a <b>pedantic approach</b> — "Why not every hour's delay, every second's delay? The doctrine must be applied in a rational, common-sense, pragmatic manner."</li>
+      <li><b>When substantial justice and technical considerations are pitted against each other, substantial justice deserves to be preferred</b> — "the other side cannot claim to have vested right in injustice being done because of a non-deliberate delay."</li>
+      <li><b>There is no presumption that delay is occasioned deliberately, or on account of culpable negligence, or on account of mala fides.</b> "A litigant does not stand to benefit by resorting to delay. In fact he runs a serious risk."</li>
+    </ol>
+    <ul class="tick">
+      <li><b>On the State:</b> "The fact that it was the 'State' which was seeking condonation and not a private party was altogether <b>irrelevant</b>. The doctrine of equality before law demands that all litigants, including the State as litigant, are accorded the same treatment and the law is administered in an even-handed manner. There is no warrant for according step-motherly treatment when the 'State' is the applicant."</li>
+      <li><b>The bureaucratic insight:</b> "experience shows that on account of an <b>impersonal machinery</b> (no one in charge of matter is directly hit or hurt by the judgment sought to be subjected to appeal) and the inherited <b>bureaucratic methodology imbued with the note-making, file-pushing and passing-on-the-buck</b> ethos, delay on its part is <b>less difficult to understand though more difficult to approve</b>... the State which represents the collective cause of the community does not deserve a <b>litigant non grata</b> status."</li>
+      <li><b>The credo:</b> "It must be grasped that <b>judiciary is respected not on account of its power to legalize injustice on technical grounds but because it is capable of removing injustice</b> and is expected to do so." — Sufficient cause existed; the HC order dismissing the appeal as time-barred was set aside and the appeal remitted for decision on merits.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 7 — The Katiji six, as one memory structure</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 360" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <rect x="365" y="14" width="350" height="60" rx="14" fill="#3f1622"/>
+      <text x="540" y="39" fill="#f5e9cd" font-size="14.5" font-weight="bold" text-anchor="middle">SUFFICIENT CAUSE — the liberal charter</text>
+      <text x="540" y="59" fill="#c9a227" font-size="11" text-anchor="middle">"adequately elastic" · justice-oriented approach</text>
+      <g font-size="10.5">
+        <rect x="20" y="112" width="330" height="66" rx="11" fill="#edf7ee" stroke="#b5d9b8" stroke-width="1.8"/>
+        <text x="185" y="136" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">1 · No one benefits from late appeals</text>
+        <text x="185" y="154" fill="#2f5d38" text-anchor="middle">the late litigant "runs a serious risk"</text>
+        <rect x="365" y="112" width="330" height="66" rx="11" fill="#edf7ee" stroke="#b5d9b8" stroke-width="1.8"/>
+        <text x="530" y="136" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">2 · Refusal may kill a meritorious cause</text>
+        <text x="530" y="154" fill="#2f5d38" text-anchor="middle">thrown out "at the very threshold"</text>
+        <rect x="710" y="112" width="350" height="66" rx="11" fill="#edf7ee" stroke="#b5d9b8" stroke-width="1.8"/>
+        <text x="885" y="136" fill="#1e7d32" font-size="11.5" font-weight="bold" text-anchor="middle">3 · Condonation's worst case: merits</text>
+        <text x="885" y="154" fill="#2f5d38" text-anchor="middle">cause decided after hearing both sides</text>
+        <rect x="20" y="206" width="330" height="66" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+        <text x="185" y="230" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">4 · "Every day" — not pedantically</text>
+        <text x="185" y="248" fill="#6b5410" text-anchor="middle">why not every hour, every second? —</text>
+        <text x="185" y="262" fill="#6b5410" text-anchor="middle">rational, common-sense, pragmatic</text>
+        <rect x="365" y="206" width="330" height="66" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+        <text x="530" y="230" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">5 · Substantial justice &gt; technicality</text>
+        <text x="530" y="248" fill="#6b5410" text-anchor="middle">no "vested right in injustice" from</text>
+        <text x="530" y="262" fill="#6b5410" text-anchor="middle">another's non-deliberate delay</text>
+        <rect x="710" y="206" width="350" height="66" rx="11" fill="#f5e9cd" stroke="#c9a227" stroke-width="1.8"/>
+        <text x="885" y="230" fill="#6b5410" font-size="11.5" font-weight="bold" text-anchor="middle">6 · No presumption of deliberateness</text>
+        <text x="885" y="248" fill="#6b5410" text-anchor="middle">no presumption of culpable negligence</text>
+        <text x="885" y="262" fill="#6b5410" text-anchor="middle">or mala fides</text>
+      </g>
+      <line x1="470" y1="76" x2="190" y2="108" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l7)"/>
+      <line x1="540" y1="76" x2="530" y2="108" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l7)"/>
+      <line x1="610" y1="76" x2="880" y2="108" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l7)"/>
+      <rect x="20" y="296" width="1040" height="56" rx="12" fill="#3f1622"/>
+      <text x="540" y="318" fill="#f5e9cd" font-size="12" font-weight="bold" text-anchor="middle">THE STATE: same standard, no step-motherly treatment — impersonal machinery + note-making, file-pushing, passing-on-the-buck</text>
+      <text x="540" y="338" fill="#e8cfa0" font-size="11" text-anchor="middle">"less difficult to understand though more difficult to approve" · no litigant-non-grata status · judiciary is respected for removing injustice</text>
+    </svg>
+    </div>
+    <figcaption>Diagram 7 — The Katiji six + the State doctrine. Learn the numbered order; examiners ask for "the principles laid down in Katiji" verbatim.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li>"Sufficient cause" under s. 5 is <b>adequately elastic</b> and must receive a <b>justice-oriented, liberal construction</b> — the section exists to bring matters to merits, not to bury them on calendars.</li>
+      <li>The "every day's delay must be explained" doctrine demands a <b>rational, common-sense, pragmatic</b> application, not pedantry.</li>
+      <li><b>Substantial justice prevails over technicality</b>; no party acquires a vested right in another's non-deliberate delay.</li>
+      <li><b>Equality of all litigants</b> — the State included: the same sufficient-cause standard, no step-motherly treatment; but the State's impersonal, file-driven machinery makes its delays "less difficult to understand though more difficult to approve".</li>
+      <li>Short delays (here: <b>4 days</b>) supported by an honest explanation should ordinarily be condoned and the appeal heard on merits.</li>
+    </ol>
+    <div class="note amber"><span class="nt">Caveat for the exam</span><b>Bherulal (2020)</b> holds that Katiji's liberality belongs to "a period of time when technology had not advanced"; it is not a licence for inordinate delay. Pair the two cases in every answer on governmental delay (see Section 6).</div>
+  </div>
+</article>
+
+<div class="divider"><span>CASE 29 &nbsp;&middot;&nbsp; from the DU case material, p. 150</span></div>
+
+<!-- ================= CASE 29 ================= -->
+<article id="c29" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 29 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): SECTION 5</div>
+    <h3 class="case-name">State of Nagaland v. Lipok AO</h3>
+    <div class="case-meta"><b>(2005) 3 SCC 752</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Arijit Pasayat, J. &amp; S.H. Kapadia, J. &nbsp;|&nbsp; Appeal from Gauhati High Court, Kohima Bench</div>
+    <div class="chips"><span class="chip">57 days' delay</span><span class="chip">missing file</span><span class="chip">s.378(3) CrPC leave</span><span class="chip">sufficiency &gt; length</span><span class="chip">chain of authorities</span><span class="chip">legal cells</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img6.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Lipok: the Nagaland police headquarters searching for the missing file, the calendar running to May 2003, the High Court in the distance">
+    <figcaption><b>Hypothetical visual — the case of the vanishing file:</b> acquittal in the ministerial escort shoot-out case (18-12-2002); the appeal file enters the police headquarters, disappears for two months, reappears as mysteriously as it left; the calendar unwinds to 14-5-2003 — fifty-seven days late. Was that "sufficient cause"? The Supreme Court said yes.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li><b>The prosecution story:</b> on 29-5-1999, five accused police officials formed the <b>escort party of a State Cabinet Minister</b> at Dimapur, Nagaland. Their version: a Maruti Zen crossed the Minister's cavalcade and shouted at it; the Minister's PSO saw an occupant with a firearm; later the escort vehicle spotted the car, whose occupant opened fire; the police party fired back. The car was later found with one occupant dead; of the two injured survivors, one died in hospital, the other lost an arm. An FIR under <b>ss. 302/307/326/34 IPC</b> followed.</li>
+      <li><b>Acquittal (18-12-2002):</b> the trial court (Additional Deputy Commissioner (Judicial), Dimapur) found the ballistic report established the bullets came from the accused's guns and that they had <b>exceeded their powers</b> ("misfeasance") — but the <b>absence of the post-mortem report</b> "vitally affected the prosecution case", self-defence (AK-47/M-22 fire) was made out, and the accused received the <b>benefit of doubt</b>.</li>
+      <li><b>The State's leave application:</b> the State desired to appeal the acquittal — requiring <b>special leave of the High Court under s. 378(3) CrPC</b>. The chronology of officialdom: copy of the judgment received 15-1-2003; papers put up the same day before the DIG (Headquarters); forwarded next day to DIG (M&amp;P); <b>the entire file with the note-sheet went missing</b> and could not be traced despite best efforts; <b>traced on 15-3-2003</b> (on directions to reconstruct the file, it "suddenly appeared" in the DGP's office); put up to the ADG (Headquarters), who opined on 26-3-2003 that an appeal should be filed; a <b>Special Public Prosecutor was appointed</b>; when no appeal was filed, the Secretary (Law &amp; Justice) chased the Additional Advocate General; the appeal was finally filed <b>14-5-2003</b> — <b>57 days beyond limitation</b>.</li>
+      <li><b>High Court:</b> refused condonation — "it is the duty of the litigant to file an appeal before the expiry of the limitation period"; the AAG's inaction despite instructions was not sufficient cause; missing records were not a valid ground; the department should have pursued the matter and made enquiries. The leave application fell with it. The State appealed.</li>
+      <li>Notably, <b>police officials were themselves the accused</b>, and the Court did not miss the possibility "that the mischief [was] played by some persons interested to help the accused colleagues" — the file's disappearance was not necessarily innocent.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Whether the delay of <b>57 days</b> in filing the leave application (with the appeal) was protected by "sufficient cause" under s. 5?</li>
+      <li>What is the correct judicial approach to "sufficient cause" — length of delay versus sufficiency of explanation?</li>
+      <li>Do Government departments deserve any latitude for their impersonal machinery — and how much?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Arguments for the State of Nagaland (appellant)</h4>
+      <ul class="dot">
+        <li>Every fact in the condonation application stood <b>unrebutted</b> — no denial of the missing file, the reconstruction efforts, the appointments and reminders; bona fide departmental action at every step.</li>
+        <li>The approach of the HC was contrary to the settled line of authority — <i>Katiji</i>, <i>Chandra Mani</i>, <i>Ramegowda</i>: sufficiency, not length, is the test; a pragmatic, justice-oriented view must govern.</li>
+        <li>The file's disappearance was plausibly the mischief of persons helping accused colleagues — the department should not suffer for sabotage.</li>
+        <li>The acquittal of police officials in a double-death shooting deserved appellate scrutiny in the public interest.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>Case for Lipok AO (respondent)</h4>
+      <ul class="dot">
+        <li>It is the litigant's duty to file within limitation; instructions to the AAG were no excuse — the department should have pursued and enquired whether the appeal had actually been filed (the HC's reasoning).</li>
+        <li>Missing records are the State's own internal failure; acceptance would make every file-misplacement a ground for extension.</li>
+        <li>The acquittal rested on benefit of doubt and self-defence; nothing in the "sufficient cause" showing warranted disturbing it.</li>
+      </ul>
+      <p class="small">The respondent did not appear before the Supreme Court despite service.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — and the gallery of authorities marshalled</h3>
+    <p class="lead"><b>Appeal allowed; the 57 days' delay condoned; the High Court directed to grant leave and dispose of the appeal on merits</b> (the SC itself directed grant of leave given the long passage of time). Pasayat, J. first laid the foundations, then applied them:</p>
+    <ul class="tick">
+      <li><b>Condition precedent:</b> "The proof of sufficient cause is a condition precedent for exercise of the extraordinary discretion vested in the court. <b>What counts is not the length of the delay but the sufficiency of the cause</b>, and shortness of the delay is one of the circumstances to be taken into account in using the discretion."</li>
+      <li><b>Liberal construction</b> — <i>N. Balakrishnan v. M. Krishnamurthy</i> (AIR 1998 SC 3222): the court "has to go in the position of the person concerned" and ask whether the delay resulted from the cause adduced.</li>
+      <li><b>No hard-and-fast rules</b> — <i>New India Assurance v. Shanti Misra</i> (1975): discretion under s. 5 must not be "crystallised into a rigid rule of law".</li>
+      <li><b>Reasonable diligence is the guide</b> — <i>Brij Indar Singh v. Kanshi Ram</i> (PC 1917).</li>
+      <li><b>Bona fides must be presumed absent proof</b> — <i>Shakuntala Devi Jain v. Kuntal Kumari</i> (3-Judge Bench): "unless want of bona fides... or negligence as would deprive a party of the protection of Section 5 is proved, the application must not be thrown out".</li>
+      <li><b>Counsel's mistake</b> — <i>Concord of India</i> (negligence of counsel misleading a litigant — condoned); <i>Lala Mata Din v. A. Narayanan</i>: no general proposition that counsel's mistake is always sufficient — the question is whether it was bona fide or a device for an ulterior purpose.</li>
+      <li><b>Question of fact</b> — <i>State of Kerala v. E.K. Kuriyipe</i>; reassessment under Art. 136 possible — <i>Milavi Devi</i>.</li>
+      <li><b>Grave miscarriage of justice</b> as a ground — <i>O.P. Kathpalia</i> (3-Judge Bench).</li>
+      <li><b>Katiji recited in full</b> — substantial justice, even-handed treatment, no step-motherly approach to the State, the "less difficult to understand though more difficult to approve" bureaucracy passage; <i>Prabha v. Ram Parkash Kalra</i>: no "injustice-oriented approach".</li>
+      <li><b>The State's special texture</b> — <i>G. Ramegowda</i> (1988): Government decisions are "proverbially slow", encumbered by procedural red tape; "a certain amount of latitude is not impermissible"; those who bear the responsibility of Government must have <b>"a little play at the joints"</b>; if Government appeals are lost for such defaults "no person is individually affected, but what in the ultimate analysis suffers is <b>public interest</b>"; yet no special standards — only a realistic view of how Government works. <i>Chandra Mani</i> (1996) and <i>Special Tehsildar v. K.V. Ayisumma</i> (1996) endorsed; strict standards can produce "public mischief by skilful management of delay".</li>
+      <li><b>Institutional prescription:</b> Government should constitute <b>legal cells</b> to sift appeals from settlements; the officer responsible for filing must be <b>personally responsible for lapses</b>; the State "cannot be put on the same footing as an individual" in decision-speed — the individual is "a person legally injured", the State "an impersonal machinery working through its officers or servants".</li>
+      <li><b>Result:</b> on these facts the delay of 57 days "deserved condonation"; leave to appeal directed to be granted, the appeal to be heard on merits (no opinion expressed on its merits).</li>
+    </ul>
+  </div>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>Sufficiency, not length:</b> the inquiry under s. 5 is into the quality of the explanation; the number of days is only one circumstance weighing on discretion.</li>
+      <li>S. 5 is construed <b>liberally to advance substantial justice</b>; delays are generally condonable where no <b>gross negligence, deliberate inaction or lack of bona fides</b> is imputable (<i>Ramegowda</i> formulation, adopted).</li>
+      <li><b>Government cases:</b> the same law, realistically applied — "a little play at the joints" for the slow wheels of the State; public interest, not individuals, suffers when State appeals default; legal cells and officer accountability are the systemic cure.</li>
+      <li>Unrebutted, specific, official explanations (the missing file chronology) constitute sufficient cause; appellate courts may reassess condonation refusals under Art. 136.</li>
+    </ol>
+  </div>
+</article>
+
+<div class="divider"><span>CASE 30 &nbsp;&middot;&nbsp; from the DU case material, p. 156</span></div>
+
+<!-- ================= CASE 30 ================= -->
+<article id="c30" class="case">
+  <div class="case-hero">
+    <div class="case-tag">CASE 30 &mdash; DU CASE MATERIAL &middot; SUB-TOPIC (b): SECTION 5</div>
+    <h3 class="case-name">State of Madhya Pradesh v. Bherulal</h3>
+    <div class="case-meta"><b>(2020) 10 SCC 654</b> &nbsp;|&nbsp; Supreme Court of India &nbsp;|&nbsp; Sanjay Kishan Kaul, J. &amp; Dinesh Maheshwari, J. &nbsp;|&nbsp; 663 days' delay — SLP dismissed with costs</div>
+    <div class="chips"><span class="chip">663 days</span><span class="chip">Living Media strictness</span><span class="chip">certificate cases</span><span class="chip">costs on officers</span><span class="chip">condonation = exception</span><span class="chip">Katiji contextualised</span></div>
+  </div>
+
+  <figure class="case-fig">
+    <img src="../../images/dossiers/limitation_sections_3_5_du_notes_img7.jpg" loading="lazy" decoding="async" alt="Hypothetical visual — Bherulal: the government office buried in files, the 663-day calendar, the Supreme Court, and the costs order">
+    <figcaption><b>Hypothetical visual — the office that forgot the clock:</b> a Special Leave Petition arrives at the Supreme Court <b>663 days late</b>, explained only by "unavailability of documents" and "the bureaucratic process"; the files lie unmoved; the Court's order imposes ₹25,000 costs — <b>recoverable from the officers responsible</b> — and a copy goes to the Chief Secretary.</figcaption>
+  </figure>
+
+  <div class="card">
+    <h3>Facts in Detail</h3>
+    <ul class="dot">
+      <li>The State of Madhya Pradesh filed a <b>Special Leave Petition in the Supreme Court with a delay of 663 days</b> — almost two years beyond limitation.</li>
+      <li><b>The entire explanation</b> in the condonation application: the delay occurred "due to <b>unavailability of the documents and the process of arranging the documents</b>", and (in the next paragraph) — "<b>bureaucratic process works, it is inadvertent that delay occurs</b>". No dates, no movement-chart, no officer-wise responsibility — only a generic apology.</li>
+      <li>The Bench (Sanjay Kishan Kaul, J.) found itself "constrained to pen down a detailed order" because "all our counseling to Government and Government authorities [has] fallen on deaf ears" — the Supreme Court "cannot be a place for the Governments to walk in when they choose, ignoring the period of limitation prescribed".</li>
+      <li>The Court had earlier suggested that if the Government's machinery was "so inefficient and incapable", the remedy might be legislative — a <b>longer limitation period for Government authorities</b>; but "that is not so": "Till the Statute subsists, the appeals/petitions have to be filed as per the Statutes prescribed."</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Issues</h3>
+    <ol class="num">
+      <li>Whether a delay of 663 days, explained only by "unavailability of documents" and generic references to bureaucratic process, constitutes "sufficient cause" under s. 5?</li>
+      <li>Whether the liberal Katiji-era approach to governmental delay still holds in the age of modern technology?</li>
+      <li>What consequences can the Court visit on State machinery that treats limitation casually and uses the Supreme Court for "certificates"?</li>
+    </ol>
+  </div>
+
+  <div class="arg-grid">
+    <div class="arg-p">
+      <h4>Case for the State of MP (petitioner)</h4>
+      <ul class="dot">
+        <li>The delay was inadvertent — born of the bureaucratic process of collecting and arranging documents, not of deliberate inaction or mala fides.</li>
+        <li>The matter had some merit — a meritorious case ought not to be shut out for delay alone.</li>
+        <li>The line of authority from <i>Katiji</i> through <i>Lipok AO</i> requires a liberal, justice-oriented approach to the State's delays.</li>
+      </ul>
+    </div>
+    <div class="arg-d">
+      <h4>The Court's answer (no appearance needed to state it)</h4>
+      <ul class="dot">
+        <li>Some leeway exists for Government inefficiencies — but the authorities "keep on relying on judicial pronouncements for a period of time when technology had not advanced and a greater leeway was given" (<i>Katiji</i> contextualised).</li>
+        <li>Merit is no answer: "If a case is good on merits, it will succeed in any case. <b>It is really a bar of limitation which can even shut out good cases</b>."</li>
+        <li>The application disclosed "the casual manner" of drafting — no plausible, acceptable, officer-wise explanation; <i>Living Media</i> (2012) had already warned: red-tape explanations shall not be accepted; condonation is an exception, not an anticipated benefit.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The Decision — the Living Media charter applied, with teeth</h3>
+    <div class="judgement"><span class="who">Office of the Chief Post Master General v. Living Media India Ltd., (2012) 3 SCC 563 (quoted at length)</span>"...the claim on account of impersonal machinery and inherited bureaucratic methodology of making several notes cannot be accepted in view of the <b>modern technologies being used and available</b>. <b>The law of limitation undoubtedly binds everybody including the Government.</b> ... it is the right time to inform all the government bodies, their agencies and instrumentalities that unless they have <b>reasonable and acceptable explanation</b> for the delay and there was <b>bona fide effort</b>, there is no need to accept the usual explanation that the file was kept pending for several months/years due to considerable degree of procedural red-tape... The government departments are under a <b>special obligation to ensure that they perform their duties with diligence and commitment</b>. <b>Condonation of delay is an exception and should not be used as an anticipated benefit for government departments. The law shelters everyone under the same light and should not be swirled for the benefit of a few.</b>" — and Bherulal adds: <b>"Eight years hence the judgment is still unheeded!"</b></div>
+    <ul class="tick">
+      <li><b>The "preposterous proposition" rejected:</b> that merit alone earns condonation — limitation "can even shut out good cases"; the court's power to condone remains, but must be exercised on cause, not on merits.</li>
+      <li><b>"Certificate cases" exposed:</b> governments file hopelessly time-barred SLPs "to obtain a certificate of dismissal from the Supreme Court to put a <b>quietus</b> to the issue" — to complete the formality and <b>"save the skin of officers who may be at default"</b>; the Court "strongly deprecated" the practice; "in none of the cases any action is taken against the officers who sit on the files and do nothing"; counsel even addressed merits without touching limitation until the Bench pointed it out.</li>
+      <li><b>The signal:</b> State authorities "must pay for wastage of judicial time which has its own value" — such costs "can be recovered from the officers responsible".</li>
+      <li><b>The order:</b> looking to the period of delay (663 days) and the casual drafting — <b>costs of ₹25,000</b> on the petitioner State, payable within four weeks to the <b>Mediation and Conciliation Project Committee</b>, <b>recovered from the officers responsible</b> for the delay with a certificate of recovery filed; <b>SLP dismissed as time-barred</b>; non-compliance would invite <b>contempt proceedings against the Chief Secretary</b>; a copy of the order placed before the Chief Secretary, MP.</li>
+    </ul>
+  </div>
+
+  <figure>
+    <span class="fig-hint">Diagram 8 — Katiji vs Bherulal: the same statute, two eras</span>
+    <div class="svgwrap">
+    <svg viewBox="0 0 1080 310" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+      <defs><marker id="l8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f1622"/></marker></defs>
+      <g font-size="10.5">
+        <rect x="20" y="30" width="500" height="180" rx="14" fill="#edf7ee" stroke="#b5d9b8" stroke-width="2"/>
+        <text x="270" y="56" fill="#1e7d32" font-size="13.5" font-weight="bold" text-anchor="middle">KATIJI (1987) &amp; LIPOK (2005)</text>
+        <text x="270" y="82" fill="#2f5d38" text-anchor="middle">delay: 4 days · 57 days — short, explained, unrebutted</text>
+        <text x="270" y="102" fill="#2f5d38" text-anchor="middle">sufficient cause = quality of explanation</text>
+        <text x="270" y="122" fill="#2f5d38" text-anchor="middle">substantial justice over technicality</text>
+        <text x="270" y="142" fill="#2f5d38" text-anchor="middle">State understood: impersonal machinery, red tape</text>
+        <text x="270" y="162" fill="#2f5d38" text-anchor="middle">outcome: delay CONDONED — heard on merits</text>
+        <text x="270" y="188" fill="#1e7d32" font-size="10" text-anchor="middle">era of paper files and postal communication</text>
+        <rect x="560" y="30" width="500" height="180" rx="14" fill="#fbeeee" stroke="#e3b8b8" stroke-width="2"/>
+        <text x="810" y="56" fill="#a02020" font-size="13.5" font-weight="bold" text-anchor="middle">LIVING MEDIA (2012) &amp; BHERULAL (2020)</text>
+        <text x="810" y="82" fill="#a02020" text-anchor="middle">delay: 427 days · 663 days — inordinate, generic excuse</text>
+        <text x="810" y="102" fill="#a02020" text-anchor="middle">"unavailability of documents" ≠ sufficient cause</text>
+        <text x="810" y="122" fill="#a02020" text-anchor="middle">modern technology defeats the bureaucratic plea</text>
+        <text x="810" y="142" fill="#a02020" text-anchor="middle">condonation = exception, not anticipated benefit</text>
+        <text x="810" y="162" fill="#a02020" text-anchor="middle">outcome: DISMISSED time-barred + costs on officers</text>
+        <text x="810" y="188" fill="#a02020" font-size="10" text-anchor="middle">era of email, e-filing, tracked movement of files</text>
+      </g>
+      <rect x="230" y="240" width="620" height="58" rx="12" fill="#3f1622"/>
+      <text x="540" y="263" fill="#f5e9cd" font-size="12.5" font-weight="bold" text-anchor="middle">RECONCILIATION FOR THE EXAM</text>
+      <text x="540" y="284" fill="#e8cfa0" font-size="11" text-anchor="middle">same s.5, same Art.14 — the variable is the QUALITY of the explanation and the LENGTH of the delay</text>
+      <line x1="280" y1="212" x2="420" y2="238" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l8)"/>
+      <line x1="800" y1="212" x2="660" y2="238" stroke="#3f1622" stroke-width="2.4" marker-end="url(#l8)"/>
+    </svg>
+    </div>
+    <figcaption>Diagram 8 — Do not present Bherulal as overruling Katiji; present it as confining Katiji's liberality to its facts and its era.</figcaption>
+  </figure>
+
+  <div class="principle">
+    <div class="p-head">PRINCIPLE EVOLVED</div>
+    <ol class="num">
+      <li><b>The law of limitation binds everybody, including the Government</b> — condonation under s. 5 is an <b>exception</b>, never an <b>anticipated benefit</b> for government departments.</li>
+      <li>Generic pleas — "unavailability of documents", "bureaucratic process", "procedural red-tape" — are <b>not reasonable and acceptable explanations</b> in the era of modern technology (<i>Living Media</i> applied).</li>
+      <li><b>Merit does not purchase time:</b> limitation can shut out even good cases; the court may condone only on sufficient cause, not on the strength of the case.</li>
+      <li>"Certificate cases" — time-barred SLPs filed to obtain a dismissal certificate and shield defaulting officers — are an <b>abuse of the Supreme Court's process</b>; the officers, not the public exchequer silently, must bear the consequences: <b>costs recoverable from the officers responsible</b>, with compliance policed through the Chief Secretary.</li>
+      <li>Katiji's liberality survives only for <b>short, honestly explained, non-deliberate delays</b>; Bherulal is the modern counterweight every answer on State delay must cite.</li>
+    </ol>
+  </div>
+</article>
+
+<!-- ================= SUPPORTING CASES ================= -->
+<section id="support">
+  <div class="sec-head"><div class="sec-num">&#9636;</div><h2 class="sec-title">Supporting Case-Law Treasury</h2></div>
+  <div class="sec-sub">Every authority cited inside the six prescribed cases and the PYQ answers — one line each, grouped by theme</div>
+
+  <div class="card">
+    <h3>A. &nbsp;On Section 3 — accrual, effect, starting point</h3>
+    <table>
+      <tr><th style="width:32%">Case</th><th>Holding / relevance</th></tr>
+      <tr><td><b>A'Court v. Cross</b> (1825) 3 Bing. 329 (Best, C.J.)</td><td>Limitation Act is "an act of peace"; long dormant claims have more cruelty than justice — the policy speech quoted in <i>Butler</i>.</td></tr>
+      <tr><td><b>First National Bank Ltd. v. Seth Santlal</b> AIR 1954 Punj 328</td><td>A time-barred debt is still "deemed to be owed... does not cease to be due" — the maxim in action.</td></tr>
+      <tr><td><b>Kanhaiya Lal Makund Lal Saraf</b> AIR 1959 SC 135 (STO Banaras)</td><td>Suit to recover tax paid under mistake of law: cause of action arises when the mistake becomes known to the party.</td></tr>
+      <tr><td><b>P.K. Kutty Anuja Raja v. State of Kerala</b> (1996) 2 SCC 496</td><td>"Once limitation starts running, it runs its full course" until interdicted — <b>overruled in <i>West Coast</i></b> for ignoring merger.</td></tr>
+      <tr><td><b>Secretary, Ministry of Works &amp; Housing v. Mohinder Singh Jagdev</b> (1996) 6 SCC 229</td><td>Art. 58 declaration suits: right to sue "first accrues" on termination of service; s. 3's bar noticed judicially — distinguished in <i>West Coast</i>.</td></tr>
+      <tr><td><b>Juscurn Boid v. Pirthichand Lal</b> L.R. Ind. App. 52 (PC)</td><td>Where the original decree is not appealed and not stayed, its operation continues; dismissal of appeal elsewhere does not extend time (peculiar facts — <i>West Coast</i>).</td></tr>
+      <tr><td><b>Maqbul Ahmad v. Onkar Pratap Narain Singh</b> AIR 1935 PC 85</td><td>Execution application under a preliminary decree is not "the same relief" as the suit; s. 14 exclusion refused on its facts.</td></tr>
+      <tr><td><b>Ratan Singh v. Vijaya Singh</b> AIR 2001 SC 279</td><td>(via ULS) Order rejecting a condonation application is not a decree; dismissal of the appeal as time-barred follows.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>B. &nbsp;On merger &amp; finality (inside West Coast)</h3>
+    <table>
+      <tr><th style="width:32%">Case</th><th>Holding / relevance</th></tr>
+      <tr><td><b>Kunhayammed v. State of Kerala</b> (2000) 6 SCC 359</td><td>The classic statement: "there cannot be more than one decree or operative order governing the same subject-matter"; merger absorbs the lower order; not of unlimited application.</td></tr>
+      <tr><td><b>State of UP v. Mohammad Nooh</b> 1958 SCR 595 (Vivian Bose, J.)</td><td>Justice "in a common sense liberal way... broadbased on human values rather than... hair-splitting technicalities".</td></tr>
+      <tr><td><b>S.S. Rathore v. State of MP</b> (1989) 4 SCC 582</td><td>Constitution-Bench line: the court/tribunal distinction for merger is "without any legal justification" — merger applies to tribunals.</td></tr>
+      <tr><td><b>Madan Gopal Rungta v. Secy., Govt. of Orissa</b> 1962 Supp 3 SCR 906; <b>Collector of Customs v. East India Commercial Co.</b> (1963) 2 SCR 563; <b>Somnath Sahu v. State of Orissa</b></td><td>The precedent-line on court/tribunal parity adopted in <i>Rathore</i> and <i>West Coast</i>.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>C. &nbsp;On Section 5 — the sufficient-cause gallery (from Lipok &amp; the PYQs)</h3>
+    <table>
+      <tr><th style="width:32%">Case</th><th>Holding / relevance</th></tr>
+      <tr><td><b>Brij Indar Singh v. Kanshi Ram</b> AIR 1917 PC 156</td><td>The true guide: whether the appellant acted with reasonable diligence in prosecuting the appeal.</td></tr>
+      <tr><td><b>Ram Lal v. Rewa Coalfields Ltd.</b> AIR 1962 SC 361</td><td>Three canons: act any day within period; explain from the last day, day-by-day; condonation discretionary even after cause shown.</td></tr>
+      <tr><td><b>New India Assurance Co. v. Shanti Misra</b> (1975) 2 SCC 840</td><td>Discretion must not be crystallised into a rigid rule of law; liberal construction of "sufficient cause".</td></tr>
+      <tr><td><b>Shakuntala Devi Jain v. Kuntal Kumari</b> AIR 1969 SC 575 (3J)</td><td>Unless want of bona fides or negligence depriving protection is proved, the application must not be thrown out.</td></tr>
+      <tr><td><b>Concord of India Insurance v. Nirmala Devi</b> (1979) 4 SCC 365</td><td>Counsel's negligence misleading the litigant — delay condoned.</td></tr>
+      <tr><td><b>Lala Mata Din v. A. Narayanan</b> (1969) 2 SCC 770</td><td>No general proposition that counsel's mistake is always cause; the test is bona fides versus device.</td></tr>
+      <tr><td><b>State of Kerala v. E.K. Kuriyipe</b> 1981 Supp SCC 72</td><td>Sufficient cause is a question of fact, case-by-case.</td></tr>
+      <tr><td><b>Milavi Devi v. Dina Nath</b> (1982) 3 SCC 366</td><td>Art. 136 power to reassess a condonation refusal and remit for merits.</td></tr>
+      <tr><td><b>O.P. Kathpalia v. Lakhmir Singh</b> (1984) 4 SCC 66 (3J)</td><td>Refusal producing grave miscarriage of justice is itself a ground to condone.</td></tr>
+      <tr><td><b>Prabha v. Ram Parkash Kalra</b> 1987 Supp SCC 339</td><td>No "injustice-oriented approach" in rejecting condonation.</td></tr>
+      <tr><td><b>G. Ramegowda v. Spl. Land Acquisition Officer</b> (1988) 2 SCC 142</td><td>"A little play at the joints"; Government proverbially slow; public interest suffers when State appeals default; 1-year delay condoned.</td></tr>
+      <tr><td><b>N. Balakrishnan v. M. Krishnamurthy</b> AIR 1998 SC 3222</td><td>S. 5 construed liberally to advance substantial justice; put yourself in the applicant's position.</td></tr>
+      <tr><td><b>State of Haryana v. Chandra Mani</b> (1996) 3 SCC 132 (AIR 1996 SC 1623)</td><td>Pragmatic, justice-oriented approach; State ≠ individual in decision-speed; 109 days condoned.</td></tr>
+      <tr><td><b>Special Tehsildar, Land Acquisition v. K.V. Ayisumma</b> (1996) 10 SCC 634</td><td>Strict standards can cause "public mischief by skilful management of delay".</td></tr>
+      <tr><td><b>Office of the Chief Post Master General v. Living Media India Ltd.</b> (2012) 3 SCC 563</td><td>The strict turn: modern technology; red-tape explanations rejected; condonation an exception, not an anticipated benefit.</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>D. &nbsp;From the PYQ answers (Section-5 illustrations)</h3>
+    <table>
+      <tr><th style="width:32%">Case</th><th>Holding / relevance</th></tr>
+      <tr><td><b>Union of India v. Ram Charan</b> AIR 1964 SC 215</td><td>Art. 14: governmental agencies cannot claim special privilege; treated on par with private parties in limitation.</td></tr>
+      <tr><td><b>Chand v. Tripat Singh</b> AIR 1963 J&amp;K 53</td><td>Good-faith reliance on negligently-given counsel advice is not sufficient cause.</td></tr>
+      <tr><td><b>Kunda Madiah v. Spl. LAO</b> (1969) 2 Mys LJ 469</td><td>Counsel's mistake of unsettled law = cause; of settled law = not.</td></tr>
+      <tr><td><b>Balbir Singh v. Bhog Singh</b> AIR 1974 SC 650</td><td>Bona fide appeal to the wrong court — condonation granted.</td></tr>
+      <tr><td><b>Sitaram v. Nimba</b> 12 Bom 320</td><td>Bonâ fide suit instead of appeal, promptly corrected — sufficient cause.</td></tr>
+      <tr><td><b>Somnath v. Vivek</b> AIR 1988 Cal 366</td><td>Mistake of law — time before the wrong forum excluded.</td></tr>
+      <tr><td><b>Ujagar v. Duni Chand</b> AIR 1951 HP 68; <b>Firm Dittu Ram</b> AIR 1960 Punj 335 (FB); <b>Ram Singh v. Rama Bal</b> AIR 1968 MP 220</td><td>O.9 r.13 pendency ≠ cause (second appeal); ignorance of fact per se ≠ cause; decree amendments help only if connected to appeal grounds.</td></tr>
+    </table>
+    <p class="small">Sources: DU case material (LB-302, Part B); DU PYQ solved papers; bare Limitation Act, 1963; ULS; DU Case Material (Limitation commentary); Settled Procedural Law.</p>
+  </div>
+</section>
+
+<!-- ================= PYQs ================= -->
+<section id="pyqs">
+  <div class="sec-head"><div class="sec-num">&#9878;</div><h2 class="sec-title">Previous Year Questions — DU Semester Exams (with Model Answers)</h2></div>
+  <div class="sec-sub">Every DU PYQ on Sections 3–5 of the Limitation Act from the solved-papers compendium</div>
+
+  <!-- PYQ 1 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2019</span>
+      <div class="pyq-q">Q. 6/2019 — "Admittedly there was widespread strike by non-gazetted officers of the State between 5th September to 13th October, 1980. Various offices including those of the Deputy Commissioner as well as majority of Courts were not functioning properly, because of strike. Though the strike was called off on 13th October, 1980, it took some time before the employees came back to service and normally returned. State filed an appeal on 15th October, 1980. Period of limitation had expired on 12th October, 1980. An application was filed for condonation of delay on the ground that there was a general strike and the work in the offices was disrupted. How would you decide?"</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; CONDONATION OF DELAY (SECTION 5)</div>
+      <p><b>The provision.</b> Section 5: any <b>appeal or application</b> (other than an application under O.XXI CPC) may be admitted after the prescribed period if the appellant/applicant satisfies the court that he had <b>sufficient cause</b> for not preferring it within time. Here the proceeding is an <b>appeal</b> by the State — squarely within s. 5 (a late suit could not have been saved).</p>
+      <p><b>The delay is of 3 days</b> (limitation expired 12-10-1980; appeal filed 15-10-1980). <b>Meaning of sufficient cause:</b> not defined in the Act; it means a cause beyond the party's control; a cause avoidable by due care and attention is not sufficient; the discretion is <b>judicial, not arbitrary</b>, exercised case-by-case with reasons; <b>proof of sufficient cause is a condition precedent</b>. Even when shown, condonation is not a matter of right (<i>Ram Lal v. Rewa Coalfields</i>, AIR 1962 SC 361).</p>
+      <p><b>The strike as sufficient cause.</b> A general strike paralysing the offices of the Deputy Commissioner and the majority of courts is an event <b>outside the State's control</b> — akin to the court itself being closed. It prevented the preparation, processing and filing of the appeal through no deliberate inaction or negligence of the State. The explanation is bona fide, specific and co-extensive with the delay. Under the settled approach:</p>
+      <ul class="dot">
+        <li><b><i>Collector, Land Acquisition, Anantnag v. Katiji</i></b> (AIR 1987 SC 1353): "sufficient cause" is adequately elastic; ordinarily a litigant gains nothing by late filing; refusal may throw out a meritorious cause at the threshold; every day's delay need not be explained pedantically — a rational, common-sense, pragmatic manner; substantial justice preferred over technicality; no presumption of deliberateness or mala fides.</li>
+        <li><b><i>State of Haryana v. Chandra Mani</i></b> (AIR 1996 SC 1623): for Government appeals, a <b>pragmatism in justice-oriented approach</b> rather than "technical detection of sufficient cause for explaining every day's delay"; the State's impersonal machinery cannot decide as fast as an injured individual.</li>
+        <li><b><i>State of Nagaland v. Lipok AO</i></b> (2005) 3 SCC 752: "what counts is not the <b>length</b> of the delay but the <b>sufficiency</b> of the cause" — a 57-day delay with an unrebutted official explanation was condoned; short delays supported by honest explanations deserve condonation.</li>
+      </ul>
+      <p><b>Distinction from s. 4:</b> s. 4 (court closed) could not help directly — the period expired on 12-10-1980, which was not itself shown to be a day the court was closed for the whole of its working hours; the rescue must come from s. 5, and it can.</p>
+      <p><b>Decision.</b> The application deserves to be <b>allowed</b>: there exists sufficient cause for the delay of 3 days born of a general strike that stalled the State's offices and the courts themselves. The delay is condoned and the appeal is to be heard on merits. (The same framework decides the 90-day State criminal appeal problem — Q.7/2017(a) below.)</p>
+    </div>
+  </div>
+
+  <!-- PYQ 2 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2018</span>
+      <div class="pyq-q">Q. 7/2018(a) — "Section 3 [Limitation Act] only bars the remedy and does not destroy the right to which the remedy relates. Do you agree with the statement? Explain with case laws."</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER</div>
+      <p><b>Yes — the statement is the settled law</b>, with one statutory exception. The law of limitation bars the remedy in a court of law once the prescribed period expires, but does not extinguish the right itself; a claim satisfied outside court after expiry of limitation is not illegal and cannot be recovered back.</p>
+      <p><b>The classic authority — <i>Punjab National Bank v. Surendra Prasad Sinha</i></b> (AIR 1992 SC 1815): "Section 3... only bars the remedy, but does not destroy the right which the remedy relates to. The right to the debt continues to exist notwithstanding the remedy is barred... The time-barred debt does not cease to exist by reason of Section 3. That right can be exercised in any other manner than by means of a suit." The Bank there adjusted the time-barred loan from the guarantor's FDR <b>as per the security bond</b> — lawful appropriation, not criminal breach of trust; the complaint was quashed as an abuse of process.</p>
+      <p><b>Supporting propositions:</b> a time-barred debt is still deemed due (<i>First National Bank v. Seth Santlal</i>, AIR 1954 Punj 328); a creditor may adjust a time-barred debt from payments and from a security in his possession; it is not obligatory to sue.</p>
+      <p><b>The exception — s. 27:</b> in a suit for possession of property, on determination of the limitation period <b>the right itself is extinguished</b> — the owner's title dies and the adverse possessor's matures (12 years, Art. 65). Hence, outside s. 27, remedy goes, right stays.</p>
+      <p><b>Policy frame for the answer:</b> limitation statutes are statutes of repose — <i>interest reipublicae ut sit finis litium</i>; <i>vigilantibus non dormientibus jura subveniunt</i>; Settled limitation principles (dormant claims cruel; evidence lost; diligence expected); the Act does not create rights, only fixes enforcement windows.</p>
+      <p><b>Conclusion:</b> the statement is correct, as explained in <i>PNB</i> — s. 3 kills the remedy and, except for possession suits under s. 27, leaves the right intact and enforceable by every lawful non-judicial means.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 3 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2018</span>
+      <div class="pyq-q">Q. 7/2018(b) — "The expression 'sufficient cause' employed by the legislature is adequately elastic to enable the courts to apply the law in a meaningful manner which subserves the ends of justice. Explain the relevant section with case laws."</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER</div>
+      <p><b>The section: s. 5</b> (appeals and applications, excluding O.XXI; court's satisfaction of sufficient cause; Explanation — misleading HC order/practice/judgment). <b>The quoted words are from <i>Collector, Land Acquisition, Anantnag v. Katiji</i></b> (AIR 1987 SC 1353), the fountainhead of the liberal construction.</p>
+      <p><b>Content of the elasticity:</b> (i) proof of cause is a condition precedent, but no pedantry — "every day's delay must be explained" is applied rationally, common-sensibly, pragmatically ("Why not every hour's delay, every second's delay?"); (ii) substantial justice outweighs technicality — no vested right in another's non-deliberate delay; (iii) no presumption of deliberate delay, culpable negligence or mala fides; (iv) refusal may kill a meritorious cause at the threshold, while condonation's worst case is a decision on merits; (v) same standard for the State — no step-motherly treatment, its impersonal, file-pushing machinery being "less difficult to understand though more difficult to approve".</p>
+      <p><b>The gallery:</b> <i>N. Balakrishnan</i> (AIR 1998 SC 3222 — liberal construction to advance substantial justice); <i>Shanti Misra</i> (1975 — discretion not to be crystallised); <i>Brij Indar Singh</i> (PC 1917 — reasonable diligence); <i>Shakuntala Devi Jain</i> (3J — bona fides presumed); <i>Lala Mata Din</i> / <i>Concord of India</i> (counsel's bona fide mistake); <i>Ramegowda</i> (1988 — "a little play at the joints" for Government); <i>Chandra Mani</i> (1996 — pragmatic approach); <i>Lipok AO</i> (2005 — 57 days condoned; sufficiency over length).</p>
+      <p><b>The modern boundary:</b> <i>Living Media</i> (2012) and <i>Bherulal</i> (2020) 10 SCC 654 — the elasticity is not endless: inordinate delays explained by generic "red tape" fail in the technology era; condonation is an <b>exception</b>, not an anticipated benefit; 663 days' delay was refused with ₹25,000 costs recoverable from the officers responsible.</p>
+      <p><b>Conclusion:</b> "sufficient cause" is a judicially elastic concept — generous to honest, short, explained delays; stern with inordinate, unexplained ones — always harnessed to the ends of substantial justice.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 4 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017</span>
+      <div class="pyq-q">Q. 7/2017(a) — "A State Government files a criminal appeal in the High Court against the acquittal of the accused person along with the application for condonation of delay of 90 days in filing the appeal. Decide whether the said delay can be condoned under section 5 of the Limitation Act on the basis of the decided cases."</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER &mdash; THE LIPOK PATTERN</div>
+      <p><b>Framework.</b> The State's appeal against acquittal requires leave/grant procedures (s. 378(3) CrPC) and falls to be governed, for its delay, by the s. 5 discipline as interpreted for State litigants. The question is <b>not the bare length (90 days) but the sufficiency of the explanation</b>.</p>
+      <p><b>Step 1 — the controlling cases.</b> <i>Katiji</i> (AIR 1987 SC 1353): even-handed treatment of the State; elasticity of "sufficient cause"; substantial justice over technicality. <i>Chandra Mani</i> (AIR 1996 SC 1623): 109 days' delay of the Government condoned with the "pragmatism in justice-oriented approach" — the State's impersonal machinery and collective decision-making are relevant considerations. <i>Lipok AO</i> (2005) 3 SCC 752: a State's leave application <b>57 days</b> late (missing police file, reconstructed records, SPP appointed, Secretary's follow-up) condoned — every fact unrebutted, bona fides undisputed.</p>
+      <p><b>Step 2 — the modern counterweight.</b> <i>Living Media</i> (2012) 3 SCC 563 and <i>Bherulal</i> (2020) 10 SCC 654: the plea must be specific, plausible and acceptable; "the file was pending due to red tape" without more fails; condonation is an exception, not an anticipated benefit; costs may follow, recoverable from officers. Also <i>Ram Charan</i> (AIR 1964 SC 215): no special privilege for Government — Art. 14 parity.</p>
+      <p><b>Step 3 — application to the 90 days.</b> The answer turns on the affidavit's content: (a) If the delay is explained officer-wise, date-wise — movement of the file, consultation with the Law Department, appointment of counsel, and the period genuinely consumed by these steps — the delay is condonable: 90 days sits between Chandra Mani's 109 and Ramegowda's 365+, both condoned on proper explanations. (b) If the application offers only "the appeal could not be filed in time due to administrative delays" — it must be <b>refused</b> post-<i>Living Media</i>/<i>Bherulal</i>, for red-tape is not a reasonable explanation in the technological era.</p>
+      <p><b>Decision.</b> On the decided cases: the 90-day delay <b>can be condoned under s. 5</b> provided the State makes out a specific, bona fide, unrebutted explanation of the causes beyond its control (the <i>Katiji–Chandra Mani–Lipok</i> line); a bare plea of departmental slow motion, however, invites refusal (the <i>Living Media–Bherulal</i> line) — with the possibility of costs on the State.</p>
+    </div>
+  </div>
+
+  <!-- PYQ 5 -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">PYQ &mdash; 2017 (short notes)</span>
+      <div class="pyq-q">Q. 6(b)/2017 — "Limitation bars the remedy but does not destroy the right." &nbsp;&middot;&nbsp; Q. 6(c)/2017 — "Statutes of limitation are statutes of repose, peace and justice."</div>
+    </div>
+    <div class="model">
+      <div class="model-badge">MODEL ANSWER (NOTE-FORM)</div>
+      <p><b>(b)</b> See the full model answer to Q.7/2018(a) above: s. 3 bars the judicial remedy alone; the right (e.g., the debt) survives; voluntary satisfaction is valid; adjustment against security is lawful (<i>PNB v. Surendra Prasad Sinha</i>); <b>s. 27 is the exception</b> — for possession suits the right itself is extinguished.</p>
+      <p><b>(c)</b> Limitation is the "law of peace": perpetual litigation disturbs social peace and breeds insecurity. Objects: to quiet long possession; extinguish stale demands; compel diligence — <i>interest reipublicae ut sit finis litium</i>; <i>vigilantibus non dormientibus jura subveniunt</i>. Two considerations: rights long unexercised are presumed non-existent; rights must not remain in uncertainty and suspense. Settled limitation principles (cruelty of dormant claims; lost evidence; expected diligence). Best, C.J. in <i>A'Court v. Cross</i> (quoted in <i>Butler</i>): "an act of peace — long dormant claims have often more cruelty than justice in them."</p>
+    </div>
+  </div>
+
+  <!-- Adjacent PYQs -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">ADJACENT LIMITATION PYQs</span>
+      <div class="pyq-q">Other Limitation-Act questions in the DU papers — they belong to the companion topics (ss. 12, 17–19, 27, 29), but the s. 3 vocabulary above feeds every one of them</div>
+    </div>
+    <div class="model">
+      <table>
+        <tr><th style="width:22%">Question</th><th>Core answer &amp; where it sits</th></tr>
+        <tr><td><b>Q.5/2020 (ORE)</b> — loan ₹50,000 (1-4-2016); part-payment ₹20,000 (1-4-2017); letter acknowledging ₹40,000 (24-3-2020); suit 20-6-2020. Barred?</td><td>No — s. 18 (acknowledgment in writing within limitation, signed, before the barred period ends) restarts limitation from the acknowledgment: fresh period 24-3-2020 to 24-3-2023; suit in time. (Part-payment: s. 19.) <i>Topic: computation/acknowledgment.</i></td></tr>
+        <tr><td><b>Q.6/2020 (ORE)</b> — Mohan in possession 2005–2019; Sohan sues 2020 for recovery — "limitation bars the remedy, but not the right"?</td><td>Sohan's suit fails: Art. 65 (12 years, possession based on title) expired 2017; under <b>s. 27</b> the right itself stood extinguished — adverse possession matured in Mohan. <i>Topic: s. 27.</i></td></tr>
+        <tr><td><b>Q.7(a)/2019</b> — effect of addition of plaintiff/defendant on limitation</td><td>s. 21: addition of parties does not affect limitation if the original suit was in time; the added party is treated as if he had been a party from the start (with the court's satisfaction on prejudice). <i>Topic: computation.</i></td></tr>
+        <tr><td><b>Q.7(b)/2019</b> — "acknowledgment" under the Act and its effect</td><td>s. 18: acknowledgment of liability in writing signed before the period expires gives a fresh period; unsecured promise; may be made to a third party. <i>Topic: ss. 18–19.</i></td></tr>
+        <tr><td><b>Q.8(a)/2019</b> — acquisition of ownership by possession</td><td>Adverse possession elements (continuous, open, hostile, 12 years) + s. 27 extinguishment. <i>Topic: s. 27.</i></td></tr>
+        <tr><td><b>Q.8(b)/2019</b> — limitation where no period is prescribed</td><td>s. 29(2) &amp; Art. 113/Art. 137: three years from when the right to sue accrues; s. 29(1) saves contract-law waiver. <i>Touches Art. 113 — see West Coast.</i></td></tr>
+        <tr><td><b>Q.7(b)/2017</b> — "time requisite" under s. 12(2)</td><td>Not the time "absolutely necessary" nor the minimum time — the time actually taken for the copy filed with the appeal, governed by the appellant's conduct: <i>Madan Lal Das</i> (AIR 1977 SC 523, H.R. Khanna, J.); <i>State of UP v. Maharaj Narain</i> (AIR 1968 SC 960). <i>Topic: s. 12.</i></td></tr>
+        <tr><td><b>Q.8/2017; Q.8/2018(a)</b> — fraud &amp; mistake; ss. 18 vs 19</td><td>s. 17 (fraud/mistake — limitation runs from discovery); s. 18 (acknowledgment) vs s. 19 (part payment of debt/interest) distinctions. <i>Topic: ss. 17–19.</i></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Expected -->
+  <div class="pyq">
+    <div class="pyq-head">
+      <span class="pyq-tag">EXPECTED / PRACTICE</span>
+      <div class="pyq-q">Likely exam questions on this topic (prepared from the DU pattern)</div>
+    </div>
+    <div class="model">
+      <ol class="num">
+        <li>"The bar of limitation is obligatory on the court even when not pleaded." Discuss s. 3 with the effect of expiry on remedy and right (<i>PNB</i>; <i>Butler</i> policy).</li>
+        <li>Can a suit filed beyond limitation be condoned under s. 5? Distinguish the position of suits, appeals, applications and execution petitions.</li>
+        <li>"Once limitation starts running it runs its full course." Examine this statement in the light of the doctrine of merger (<i>West Coast Paper Mills</i>; <i>P.K. Kutty</i> overruled).</li>
+        <li>Trace the changing judicial attitude to condonation of delay by Government from <i>Katiji</i> (1987) to <i>Bherulal</i> (2020).</li>
+        <li>A time-barred debtor's FDR is adjusted by the bank under the security bond — is the bank guilty of criminal breach of trust? (<i>PNB</i> problem.)</li>
+        <li>Write notes: (a) s. 4 — court closed; (b) Explanation to s. 5 — misled by High Court; (c) "certificate cases" (<i>Bherulal</i>); (d) set-off and counter-claim as separate suits (s. 3(2)(b)).</li>
+        <li>The owner of stolen goods discovers them 8 years later with an innocent purchaser — advise the owner (<i>Butler</i>).</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REVISION ================= -->
+<section id="rev">
+  <div class="sec-head"><div class="sec-num">&#9203;</div><h2 class="sec-title">Quick Revision Sheet — One Last Look Before the Hall</h2></div>
+  <div class="sec-sub">Sections 3–5 and the six cases, compressed</div>
+
+  <div class="grid2">
+    <div class="kbox"><div class="kh">The Sections in One Breath</div>
+      <b>s.3</b> — dismissal after the prescribed period, <b>even if limitation is not pleaded</b>; subject to ss.4–24; institution = plaint presented (pauper: application; winding-up: claim to liquidator); <b>set-off/counter-claim = separate suits</b>. <b>s.4</b> — last day closed → file on re-opening day ("closed" = closed during any part of normal working hours). <b>s.5</b> — appeals/applications only (never suits; never O.XXI; only "courts"); "sufficient cause"; Explanation — misled by HC order/practice/judgment.</div>
+    <div class="kbox"><div class="kh">The Vocabulary Trap</div>
+      <b>"Period of limitation"</b> = raw Schedule period. <b>"Prescribed period"</b> = period as computed under the Act (after ss.4–24). s.3's bar + s.5's extension both operate on the <b>prescribed</b> period. Special laws: s.29(2) — s.3 applies; ss.4–24 apply unless expressly excluded. "Suit" excludes appeal and application. Art. 58: "right to sue <i>first</i> accrues" ≠ Art. 113: "right to sue accrues" (<i>West Coast</i>).</div>
+    <div class="kbox"><div class="kh">Case 25 — Butler (1949, KBD)</div>
+      Car stolen 27-6-1940 by unknown thief; found with innocent purchaser Jan 1947; writ 16-7-1947. <b>Held:</b> cause of action <b>accrued at the theft</b> — every ingredient existed; unknown identity of thief ≠ no accrual; s.26 (fraud) only postpones the <i>running</i>, never re-creates accrual; "appalling results" otherwise (the watch after 60 years). Policy: act of <b>peace</b>; stale claims = cruelty; protect innocent purchasers; sleepers get no help.</div>
+    <div class="kbox"><div class="kh">Case 26 — West Coast (AIR 2004 SC 1596, 3J)</div>
+      Freight declared unreasonable by Railway Rates Tribunal (18-4-1966) → SC special leave (interim: no inflated distance; ₹2L bank guarantee) → SLP dismissed 14-10-1970 → writ refused (29-10-1973) → refund suits 1973/74. <b>Held:</b> merger (Kunhayammed; Rathore — tribunals equal courts; Mohammad Nooh) → refund suit's limitation ran from <b>SC's order</b>, not the Tribunal's; stay irrelevant once correctness "in jeopardy"; Art. 113, not 58; writ period excluded (ss.14–15); suits in time; <b>P.K. Kutty overruled</b>; s.3 to be construed "broad based and liberal[ly]".</div>
+    <div class="kbox"><div class="kh">Case 27 — PNB (AIR 1992 SC 1815)</div>
+      Loan ₹15,000 (5-5-1984); guarantor's FDR ₹24,000 → ₹41,292; debtor defaults; debt time-barred 5-5-1987; bank adjusts ₹27,037.60 at maturity, credits balance. Complaint u/ss 409/109/114 IPC. <b>Held:</b> s.3 <b>bars remedy, not right</b> (s.27 sole exception); time-barred debt still due; adjustment from security in creditor's possession = lawful contract performance = <b>negation of s.405/409</b>; FDR entrusted as guarantor, not in banking course; no prima facie case; complaint quashed — process is not for oppression/vendetta.</div>
+    <div class="kbox"><div class="kh">Case 28 — Katiji (AIR 1987 SC 1353)</div>
+      ₹14 lakh / 800% enhancement (₹1,000→₹8,000/kanal); State's appeal <b>4 days late</b>; HC refused condonation. <b>Held (Thakkar, J.):</b> "To condone or not to condone is not the only question"; sufficient cause is <b>"adequately elastic"</b>; six principles (no benefit in delay; refusal kills merits; condonation's worst case = merits; no pedantry — why not every hour/second?; substantial justice &gt; technicality; no presumption of deliberateness); <b>State ≠ litigant non grata</b> — equality, no step-motherly treatment; impersonal machinery, note-making/file-pushing/passing-the-buck — "less difficult to understand though more difficult to approve"; judiciary respected for <b>removing</b> injustice. Delay condoned; remitted to HC.</div>
+    <div class="kbox"><div class="kh">Case 29 — Lipok AO ((2005) 3 SCC 752)</div>
+      Acquittal (18-12-2002) of police escort in shooting case (2 dead; post-mortem report missing → benefit of doubt); State's s.378(3) CrPC leave application <b>57 days late</b>: copy 15-1-2003 → file missing → traced 15-3-2003 → ADG 26-3-2003 → SPP → Secretary chases Addl. AG → filed 14-5-2003. HC refused. <b>Held (Pasayat, J.):</b> proof of cause = condition precedent; <b>sufficiency, not length</b>; liberal construction (N. Balakrishnan); no rigid rules (Shanti Misra); reasonable diligence (Brij Indar Singh); State gets "a little play at the joints" (Ramegowda); public interest suffers when State appeals default; legal cells + officer accountability; <b>57 days condoned; leave directed</b>.</div>
+    <div class="kbox"><div class="kh">Case 30 — Bherulal ((2020) 10 SCC 654)</div>
+      SLP <b>663 days late</b>; explanation: "unavailability of documents" + "bureaucratic process... inadvertent". <b>Held (Kaul, J.):</b> SC is not a place for governments "to walk in when they choose"; Katiji belonged to the pre-technology era; <i>Living Media</i>: red-tape explanations rejected — "condonation of delay is an <b>exception</b> and should not be used as an <b>anticipated benefit</b>"; "law shelters everyone under the same light"; merit is no answer — "a bar of limitation can even shut out good cases"; <b>"certificate cases"</b> to save officers' skin deprecated; <b>₹25,000 costs recoverable from the responsible officers</b>, certificate of recovery to court, copy to Chief Secretary, contempt on default; SLP dismissed as time-barred.</div>
+  </div>
+
+  <div class="card">
+    <h3>Memory Hooks</h3>
+    <ul class="tick">
+      <li><b>"Dismiss–Deem–Don't-plead"</b> — s.3: dismiss as time-barred even without the plea; deemed dates of institution in s.3(2).</li>
+      <li><b>"Last-day grace"</b> — s.4 cares only about the day the period <i>expires</i>; s.5 cares about the days <i>after</i> it.</li>
+      <li><b>"A-A-A"</b> — s.5 covers <b>A</b>ppeals and <b>A</b>pplications (not suits) made to a <b>A</b>court... minus O.XXI.</li>
+      <li><b>Case-number = delay-scale:</b> Katiji 4 days → Lipok 57 → Chandra Mani 109 → Bherulal <b>663!</b> The bigger the number, the harsher the Court.</li>
+      <li><b>Butler's watch:</b> if the owner wins, a 60-year-old claim on an innocent buyer succeeds — "appalling results"; hence accrual at theft.</li>
+      <li><b>PNB's ledger:</b> the right survived in the FDR — limitation killed the suit, not the security.</li>
+    </ul>
+  </div>
+</section>
+
+</div><!-- /page -->
+
+<footer>
+  <h4>Topic 1 (Limitation) &middot; Limitation of Suits, Appeals and Applications &mdash; Sections 3, 4 &amp; 5, Limitation Act, 1963</h4>
+  <div>Detailed study notes for LL.B. (Hons.) &mdash; Civil Procedure Code &amp; Limitation (DU semester examination preparation), Part B: Limitation.</div>
+  <div style="margin-top:12px;"><b>Sources:</b></div>
+  <ul class="src-list">
+    <li>DU Case Material (LB-302) — R.B. Policies at Lloyd's v. Butler (p. 136); Union of India v. West Coast Paper Mills (p. 139); Punjab National Bank v. Surendra Prasad Sinha (p. 146); Collector, Land Acquisition, Anantnag v. Katiji (p. 148); State of Nagaland v. Lipok AO (p. 150); State of MP v. Bherulal (p. 156)</li>
+    <li>The Limitation Act, 1963 (Act 36 of 1963) — ss. 2, 3, 4, 5, 27, 29(2); the Schedule (Arts. 58, 65, 113, 136)</li>
+    <li>DU PYQ solved papers — Q.6/2019; Q.7/2018(a)&amp;(b); Q.7/2017(a)&amp;(b); Q.6(b)&amp;(c)/2017; Q.5/2020; Q.6/2020; Q.7/2019; Q.8/2017–2019</li>
+    <li>DU Case Material &amp; Statutory Provisions</li>
+  </ul>
+  <div style="margin-top:14px; color:#8d8875; font-size:.8rem;">Case visuals are hypothetical illustrative renderings created for study purposes; diagrams are original schematics of the doctrinal structure. The PYQ book's reference to the "Limitation Act of 1936" is treated as the Limitation Act, 1963 (OCR corruption). Prepared for personal academic revision.</div>
+</footer>
+
+<button class="top-btn" id="toTop" title="Back to top">&#9650;</button>
+
+<script>
+(function(){
+  var btn = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if (window.scrollY > 600) { btn.classList.add('show'); } else { btn.classList.remove('show'); }
+  }, {passive:true});
+  btn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a385d0bbdadbd5f0',t:'MTc4ODk1Mjk0OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

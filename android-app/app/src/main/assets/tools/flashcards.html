@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NNW78WFV');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Precedent Recall Flashcards — Make Law Easy (DU Law Portal)</title>
+  <meta name="description" content="Master landmark case ratios and judicial authorities for Delhi University LL.B. semester exams with interactive active recall flashcards.">
+  <link rel="canonical" href="https://makelaweasy.in/tools/flashcards">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    .standalone-page-body {
+      background: var(--bg-body, #0a0d14);
+      color: var(--text-primary, #f1f5f9);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-header-nav {
+      background: var(--bg-card, rgba(17, 24, 39, 0.95));
+      border-bottom: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 12px 20px;
+    }
+    .tool-header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .tool-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-primary, #fff);
+    }
+    .tool-brand-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #10b981, #c9a84c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+    }
+    .tool-brand-text h1 {
+      font-family: var(--font-display, 'Cinzel', serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .tool-brand-text span {
+      font-size: 0.72rem;
+      color: var(--du-gold, #c9a84c);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .tool-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-tool-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: var(--radius-pill, 9999px);
+      color: var(--text-primary, #fff);
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-tool-back:hover {
+      background: var(--primary, #2563eb);
+      border-color: var(--primary, #2563eb);
+      color: #fff;
+      transform: translateX(-2px);
+    }
+    .theme-toggle-standalone {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.06));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      color: var(--text-secondary, #cbd5e1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+    .tool-main-stage {
+      max-width: 900px;
+      margin: 24px auto 40px;
+      padding: 0 16px;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .fc-deck-controls-card {
+      background: var(--bg-card, #111827);
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.1));
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+    .fc-subject-select {
+      padding: 9px 14px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.14));
+      border-radius: 10px;
+      color: var(--text-primary, #fff);
+      font-size: 0.88rem;
+      font-family: inherit;
+      min-width: 220px;
+      cursor: pointer;
+    }
+    .fc-subject-select:focus {
+      outline: none;
+      border-color: #10b981;
+    }
+    .tool-footer {
+      background: var(--bg-card, #0f172a);
+      border-top: 1px solid var(--border-line, rgba(255, 255, 255, 0.08));
+      padding: 24px 20px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted, #94a3b8);
+      margin-top: auto;
+    }
+    .tool-footer a { color: var(--du-gold, #c9a84c); text-decoration: none; }
+  </style>
+</head>
+<body class="standalone-page-body">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNW78WFV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Top Navigation Header -->
+  <header class="tool-header-nav">
+    <div class="tool-header-inner">
+      <a href="/" class="tool-brand" title="Make Law Easy Homepage">
+        <div class="tool-brand-logo"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="tool-brand-text">
+          <h1>Make Law Easy</h1>
+          <span>DU Law Portal</span>
+        </div>
+      </a>
+      <div class="tool-nav-actions">
+        <a href="/" class="btn-tool-back"><i class="fa-solid fa-arrow-left"></i> <span>Study Portal</span></a>
+        <button class="theme-toggle-standalone" id="themeToggleBtn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Flashcard Stage -->
+  <main class="tool-main-stage">
+    <!-- Subject & Unit Selector Bar -->
+    <div class="fc-deck-controls-card">
+      <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <label for="subjectSelect" style="font-size:0.84rem; font-weight:700; color:var(--text-secondary,#cbd5e1);">
+          <i class="fa-solid fa-book"></i> Select Subject:
+        </label>
+        <select id="subjectSelect" class="fc-subject-select"></select>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button type="button" class="fc-btn-action" id="shuffleBtn" title="Shuffle Deck" style="padding:7px 12px; font-size:0.82rem; background:var(--bg-surface); border:1px solid var(--border-line); border-radius:var(--radius-pill); color:var(--text-primary); cursor:pointer;">
+          <i class="fa-solid fa-shuffle"></i> <span>Shuffle</span>
+        </button>
+        <button type="button" class="fc-btn-action" id="resetMasteryBtn" title="Reset Mastery Progress" style="padding:7px 12px; font-size:0.82rem; background:var(--bg-surface); border:1px solid var(--border-line); border-radius:var(--radius-pill); color:var(--text-primary); cursor:pointer;">
+          <i class="fa-solid fa-rotate-left"></i> <span>Reset</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Active Flashcard Container -->
+    <div class="flashcards-window" style="height:auto; min-height:480px; box-shadow:0 12px 36px rgba(0,0,0,0.3); border-radius:18px; border:1px solid var(--border-line);">
+      <!-- Progress Bar -->
+      <div class="fc-progress-wrap">
+        <div class="fc-progress-bar" id="fcProgressBar" style="width: 0%;"></div>
+      </div>
+
+      <!-- Flashcard Header -->
+      <div class="flashcards-header" style="border-radius:18px 18px 0 0;">
+        <div class="fc-meta-group">
+          <span class="fc-unit-pill" id="fcUnitPill">Loading Subject...</span>
+          <span class="fc-counter" id="fcCounter">Card 0 of 0</span>
+        </div>
+        <div class="fc-mastery-count" id="fcMasteryStats">0 Mastered</div>
+      </div>
+
+      <!-- 3D Flip Scene -->
+      <div class="flashcard-scene" style="min-height:300px; padding:20px;">
+        <div class="flashcard" id="standaloneFlashcard" title="Click or tap to flip card">
+          <!-- Front Face -->
+          <div class="flashcard-face flashcard-front">
+            <div class="fc-badge-strip">
+              <span class="fc-badge-authority"><i class="fa-solid fa-scale-balanced"></i> Landmark Judicial Precedent</span>
+              <span class="fc-tap-hint"><i class="fa-solid fa-hand-pointer"></i> Tap to reveal Court Ratio</span>
+            </div>
+            <h3 class="fc-case-name" id="fcCaseName">Loading Authority...</h3>
+            <div class="fc-citation" id="fcCitation">Prescribed DU Case Material</div>
+            <div class="fc-facts-prompt" id="fcFactsPrompt">Essential Facts & Legal Dilemma Loading...</div>
+          </div>
+
+          <!-- Back Face -->
+          <div class="flashcard-face flashcard-back">
+            <div class="fc-badge-strip">
+              <span class="fc-badge-ratio"><i class="fa-solid fa-gavel"></i> Ratio Decidendi & Legal Principle</span>
+              <span class="fc-tap-hint"><i class="fa-solid fa-hand-pointer"></i> Tap to flip back</span>
+            </div>
+            <div class="fc-ratio-text" id="fcRatioText">Judicial ratio loading...</div>
+            <div class="fc-principle-tag" id="fcPrincipleTag" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Mastery Bar -->
+      <div class="flashcards-bottom-bar" style="border-radius:0 0 18px 18px;">
+        <button class="fc-nav-btn" id="fcPrevBtn" title="Previous Card (Left Arrow)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="fc-actions-center">
+          <button class="fc-btn-mastery btn-review-again" id="fcBtnReview" title="Review Again (Key 1)">
+            <i class="fa-solid fa-clock-rotate-left"></i> <span>Review (1)</span>
+          </button>
+          <button class="fc-btn-mastery btn-mastered" id="fcBtnMastered" title="Mastered (Key 2)">
+            <i class="fa-solid fa-check"></i> <span>Mastered (2)</span>
+          </button>
+        </div>
+        <button class="fc-nav-btn" id="fcNextBtn" title="Next Card (Right Arrow)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Keyboard Shortcuts Legend -->
+    <div style="margin-top:16px; text-align:center; font-size:0.8rem; color:var(--text-muted,#94a3b8);">
+      <span><kbd style="background:var(--bg-card); padding:2px 6px; border-radius:4px; border:1px solid var(--border-line);">Space</kbd> Flip Card • <kbd style="background:var(--bg-card); padding:2px 6px; border-radius:4px; border:1px solid var(--border-line);">←</kbd> Previous • <kbd style="background:var(--bg-card); padding:2px 6px; border-radius:4px; border:1px solid var(--border-line);">→</kbd> Next • <kbd style="background:var(--bg-card); padding:2px 6px; border-radius:4px; border:1px solid var(--border-line);">1</kbd> Review • <kbd style="background:var(--bg-card); padding:2px 6px; border-radius:4px; border:1px solid var(--border-line);">2</kbd> Mastered</span>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="tool-footer">
+    <p>© 2026 Make Law Easy • Educational portal for Faculty of Law, University of Delhi. <a href="/terms">Terms</a> • <a href="/privacy">Privacy</a> • <a href="/feedback">Feedback</a></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/data.js"></script>
+  <script>
+    (function() {
+      // Theme Management
+      const savedTheme = localStorage.getItem('du_law_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const themeBtn = document.getElementById('themeToggleBtn');
+      function updateThemeIcon(t) {
+        if (!themeBtn) return;
+        themeBtn.innerHTML = t === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+      }
+      updateThemeIcon(savedTheme);
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('du_law_theme', next);
+          updateThemeIcon(next);
+        });
+      }
+
+      const portalData = window.DU_LAW_PORTAL_DATA;
+      if (!portalData || !portalData.subjects) {
+        console.error('Portal data not loaded.');
+        return;
+      }
+
+      // Populate Subject Dropdown
+      const subjectSelect = document.getElementById('subjectSelect');
+      const subjectKeys = Object.keys(portalData.subjects);
+
+      subjectKeys.forEach(k => {
+        const sub = portalData.subjects[k];
+        if (sub.cases && sub.cases.length > 0) {
+          const opt = document.createElement('option');
+          opt.value = k;
+          opt.textContent = `${sub.name} (${sub.cases.length} Precedents)`;
+          subjectSelect.appendChild(opt);
+        }
+      });
+
+      // Mastery tracking
+      let masteredIds = JSON.parse(localStorage.getItem('du_law_flashcard_mastery') || '[]');
+      let activeDeck = [];
+      let currentIndex = 0;
+      let isFlipped = false;
+
+      const cardEl = document.getElementById('standaloneFlashcard');
+      const caseNameEl = document.getElementById('fcCaseName');
+      const citationEl = document.getElementById('fcCitation');
+      const factsEl = document.getElementById('fcFactsPrompt');
+      const ratioEl = document.getElementById('fcRatioText');
+      const principleEl = document.getElementById('fcPrincipleTag');
+      const counterEl = document.getElementById('fcCounter');
+      const progressBar = document.getElementById('fcProgressBar');
+      const masteryStats = document.getElementById('fcMasteryStats');
+      const unitPill = document.getElementById('fcUnitPill');
+
+      function loadSubjectDeck(subKey) {
+        const sub = portalData.subjects[subKey];
+        if (!sub || !sub.cases) return;
+        activeDeck = [...sub.cases];
+        currentIndex = 0;
+        isFlipped = false;
+        renderCard();
+      }
+
+      function renderCard() {
+        if (!activeDeck.length) return;
+        const c = activeDeck[currentIndex];
+        const total = activeDeck.length;
+        const curNum = currentIndex + 1;
+
+        isFlipped = false;
+        if (cardEl) cardEl.classList.remove('is-flipped');
+
+        if (counterEl) counterEl.textContent = `Card ${curNum} of ${total}`;
+        if (progressBar) progressBar.style.width = `${(curNum / total) * 100}%`;
+        if (unitPill) unitPill.textContent = c.unit || `Unit ${c.unitNumber || 1}`;
+
+        const masteredCount = activeDeck.filter(item => masteredIds.includes(item.name)).length;
+        if (masteryStats) masteryStats.textContent = `${masteredCount} of ${total} Mastered`;
+
+        if (caseNameEl) caseNameEl.textContent = c.name;
+        if (citationEl) citationEl.textContent = c.citation || 'Prescribed DU Case Material';
+        if (factsEl) factsEl.textContent = c.facts || 'Essential facts of this authority are recorded in full subject dossier.';
+        if (ratioEl) ratioEl.textContent = c.ratio || 'Court judgment ratio decidendi.';
+
+        if (principleEl) {
+          if (c.principleEvolved || c.principles) {
+            principleEl.style.display = 'block';
+            principleEl.textContent = `💡 Doctrine: ${c.principleEvolved || c.principles}`;
+          } else {
+            principleEl.style.display = 'none';
+          }
+        }
+      }
+
+      function flipCard() {
+        isFlipped = !isFlipped;
+        if (cardEl) cardEl.classList.toggle('is-flipped', isFlipped);
+      }
+
+      function nextCard() {
+        if (!activeDeck.length) return;
+        currentIndex = (currentIndex < activeDeck.length - 1) ? currentIndex + 1 : 0;
+        renderCard();
+      }
+
+      function prevCard() {
+        if (!activeDeck.length) return;
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : activeDeck.length - 1;
+        renderCard();
+      }
+
+      function markMastery(isMastered) {
+        if (!activeDeck.length) return;
+        const c = activeDeck[currentIndex];
+        if (isMastered) {
+          if (!masteredIds.includes(c.name)) masteredIds.push(c.name);
+        } else {
+          masteredIds = masteredIds.filter(id => id !== c.name);
+        }
+        localStorage.setItem('du_law_flashcard_mastery', JSON.stringify(masteredIds));
+        renderCard();
+        setTimeout(nextCard, 350);
+      }
+
+      // Check URL parameters for subject pre-selection (e.g. ?sub=contract)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlSub = urlParams.get('subject') || urlParams.get('sub');
+      if (urlSub && portalData.subjects[urlSub]) {
+        subjectSelect.value = urlSub;
+        loadSubjectDeck(urlSub);
+      } else {
+        const firstKey = subjectSelect.value || subjectKeys[0];
+        loadSubjectDeck(firstKey);
+      }
+
+      subjectSelect.addEventListener('change', () => loadSubjectDeck(subjectSelect.value));
+      if (cardEl) cardEl.addEventListener('click', flipCard);
+      document.getElementById('fcNextBtn').addEventListener('click', nextCard);
+      document.getElementById('fcPrevBtn').addEventListener('click', prevCard);
+      document.getElementById('fcBtnReview').addEventListener('click', () => markMastery(false));
+      document.getElementById('fcBtnMastered').addEventListener('click', () => markMastery(true));
+
+      document.getElementById('shuffleBtn').addEventListener('click', () => {
+        for (let i = activeDeck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [activeDeck[i], activeDeck[j]] = [activeDeck[j], activeDeck[i]];
+        }
+        currentIndex = 0;
+        renderCard();
+      });
+
+      document.getElementById('resetMasteryBtn').addEventListener('click', () => {
+        if (confirm('Reset mastery marks for current deck?')) {
+          const names = activeDeck.map(c => c.name);
+          masteredIds = masteredIds.filter(id => !names.includes(id));
+          localStorage.setItem('du_law_flashcard_mastery', JSON.stringify(masteredIds));
+          renderCard();
+        }
+      });
+
+      // Keyboard shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+        if (e.code === 'Space' || e.key === ' ') {
+          e.preventDefault();
+          flipCard();
+        } else if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+          e.preventDefault();
+          nextCard();
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          prevCard();
+        } else if (e.key === '1') {
+          e.preventDefault();
+          markMastery(false);
+        } else if (e.key === '2') {
+          e.preventDefault();
+          markMastery(true);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

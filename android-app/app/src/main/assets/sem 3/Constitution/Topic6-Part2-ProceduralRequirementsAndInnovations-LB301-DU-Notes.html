@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topic 6 Part-II – Procedural Requirements &amp; Innovations: Locus Standi, Laches, Res Judicata, Exhaustion, PIL; Orders &amp; Compensation | LB-301 DU Notes</title>
+<style>
+:root{
+  --ink:#14213d; --gold:#f4a261; --gold2:#e76f51; --teal:#0b6e6e; --teal2:#0f9b8e;
+  --bg:#f7f9fc; --card:#ffffff; --line:#dde5f0; --muted:#5b6b84; --accent:#264653;
+  --green:#1b7f4d; --red:#b3261e; --purple:#5e60ce; --soft:#eef4fb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:17px}
+h1,h2,h3,h4,h5,.sans{font-family:'Segoe UI',Arial,Helvetica,sans-serif}
+a{color:var(--teal)}
+/* ======= LAYOUT ======= */
+.layout{display:flex;max-width:1500px;margin:0 auto;gap:0}
+nav#toc{width:310px;flex:0 0 310px;position:sticky;top:0;height:100vh;overflow-y:auto;background:#0e2a47;color:#eaf2fb;padding:18px 14px 60px;z-index:50}
+nav#toc h2{font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;border-bottom:1px solid #23486e;padding-bottom:10px}
+nav#toc a{display:block;color:#d7e5f5;text-decoration:none;font-size:13.5px;padding:7px 9px;border-radius:7px;margin:2px 0;font-family:'Segoe UI',Arial,sans-serif;line-height:1.45}
+nav#toc a:hover{background:#1b4570;color:#fff}
+nav#toc a.sec{font-weight:700;color:#ffd9a8;margin-top:10px}
+nav#toc a.case{padding-left:20px;color:#9fe0d4}
+main{flex:1;min-width:0;padding:0 34px 90px}
+/* ======= HERO ======= */
+.hero{background:linear-gradient(135deg,#0e2a47 0%,#14507a 55%,#0b6e6e 100%);color:#fff;margin:0 -34px 30px;padding:44px 40px 38px;border-bottom:5px solid var(--gold)}
+.hero .tag{display:inline-block;background:var(--gold);color:#14213d;font-weight:800;font-size:12.5px;letter-spacing:.12em;padding:5px 14px;border-radius:30px;text-transform:uppercase;font-family:'Segoe UI',Arial,sans-serif}
+.hero h1{font-size:clamp(26px,3.4vw,42px);margin:16px 0 8px;line-height:1.25}
+.hero p.sub{font-size:16.5px;color:#d9ecf7;max-width:950px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.hero .meta span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:6px 13px;border-radius:8px;font-size:13.5px;font-family:'Segoe UI',Arial,sans-serif}
+/* ======= MOBILE NAV ======= */
+#navtoggle{display:none;position:sticky;top:0;z-index:60;background:#0e2a47;color:#ffd9a8;border:0;width:100%;padding:13px 18px;text-align:left;font-size:16px;font-weight:700;cursor:pointer;font-family:'Segoe UI',Arial,sans-serif}
+#navtoggle span{float:right}
+/* ======= CONTENT BLOCKS ======= */
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 32px;margin-bottom:30px;box-shadow:0 2px 10px rgba(20,33,61,.05)}
+section>h2{font-size:clamp(21px,2.4vw,28px);color:var(--accent);border-left:6px solid var(--gold2);padding-left:14px;margin-bottom:6px;line-height:1.3}
+section>h2 .num{display:block;font-size:13px;letter-spacing:.16em;color:var(--gold2);text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.lead{color:var(--muted);font-size:16.5px;margin-bottom:18px;font-style:italic}
+h3{font-size:19.5px;color:var(--teal);margin:26px 0 10px;padding-bottom:6px;border-bottom:2px dashed var(--line)}
+h4{font-size:17px;color:var(--accent);margin:18px 0 8px}
+h5{font-size:15.5px;color:var(--purple);margin:14px 0 6px}
+p{margin-bottom:12px;text-align:justify}
+ul,ol{margin:8px 0 14px 26px}
+li{margin-bottom:7px}
+strong{color:#0d3b66}
+em{color:#334}
+blockquote{background:#fff8ee;border-left:5px solid var(--gold);margin:14px 0;padding:13px 18px;font-style:italic;border-radius:0 10px 10px 0;color:#4a3b22}
+blockquote .src{display:block;font-style:normal;font-weight:700;font-size:13px;color:#9c6b12;margin-top:7px;font-family:'Segoe UI',Arial,sans-serif}
+.cite{background:#e8f4f4;border:1px solid #bfe3e0;padding:2px 8px;border-radius:6px;font-size:14.5px;font-weight:700;color:#0b6e6e;white-space:nowrap;font-family:'Segoe UI',Arial,sans-serif}
+/* cards & grids */
+.grid{display:grid;gap:16px;margin:16px 0}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.card h4{margin-top:0;color:#14507a}
+.card.a{background:#eefaf3;border-color:#bfe8d2}
+.card.b{background:#fff4ec;border-color:#ffd9c2}
+.card.c{background:#f2f0fd;border-color:#d5d1f7}
+.card.d{background:#fdf2f6;border-color:#f6cfe0}
+.kbox{background:#0e2a47;color:#eaf2fb;border-radius:12px;padding:18px 20px;margin:16px 0}
+.kbox h4{color:var(--gold);margin-top:0}
+/* tables */
+.twrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:640px;background:#fff;font-size:15.4px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:#14507a;color:#fff;font-family:'Segoe UI',Arial,sans-serif;font-size:14.5px;letter-spacing:.02em}
+tr:nth-child(even) td{background:#f6f9fd}
+td strong{color:#0d3b66}
+/* case blocks */
+.case{border:2px solid #0b6e6e;border-radius:16px;margin:26px 0;overflow:hidden;background:#fff}
+.case>.casehead{background:linear-gradient(90deg,#0b6e6e,#12857f);color:#fff;padding:16px 22px}
+.case>.casehead .cnum{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ffd9a8;font-weight:800;font-family:'Segoe UI',Arial,sans-serif}
+.case>.casehead h3{color:#fff;border:0;margin:4px 0 4px;font-size:clamp(18px,2.2vw,23px)}
+.case>.casehead .cmeta{font-size:14px;font-family:'Segoe UI',Arial,sans-serif;color:#d6f5f1}
+.casebody{padding:20px 24px}
+.casebody h4{background:#e9f7f5;padding:8px 12px;border-radius:8px;border-left:4px solid var(--teal2);margin-top:18px}
+.casebody h4:first-child{margin-top:0}
+.facts{background:#fbfdff;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.issue{background:#fff4ec;border-left:4px solid var(--gold2);padding:10px 14px;margin:8px 0;border-radius:0 8px 8px 0}
+.argu{background:#f4f8ff;border:1px solid #d5e4f7;border-radius:10px;padding:12px 16px;margin:8px 0}
+.argu.pet{border-left:5px solid var(--teal)}
+.argu.res{border-left:5px solid var(--gold2)}
+.held{background:#eefaf3;border:1px solid #bfe8d2;border-radius:10px;padding:14px 16px}
+.principle{background:#0e2a47;color:#eaf6ff;border-radius:10px;padding:14px 18px;margin-top:12px}
+.principle h5{color:var(--gold);margin-top:0;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px}
+/* timeline */
+.tl{position:relative;margin:18px 0 10px;padding-left:26px;border-left:4px solid var(--teal2)}
+.tl .ev{position:relative;background:#f6f9fd;border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px}
+.tl .ev::before{content:"";position:absolute;left:-35px;top:16px;width:16px;height:16px;background:var(--gold);border:3px solid #0b6e6e;border-radius:50%}
+.tl .ev b.yr{color:var(--gold2);font-family:'Segoe UI',Arial,sans-serif}
+/* flow diagram wrapper */
+.fig{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:18px 0;text-align:center;overflow-x:auto}
+.fig .cap{font-size:13.5px;color:var(--muted);font-family:'Segoe UI',Arial,sans-serif;margin-top:8px;font-style:italic}
+svg .box{fill:#eef4fb;stroke:#14507a;stroke-width:1.6}
+svg .box2{fill:#fff4ec;stroke:#e76f51;stroke-width:1.6}
+svg .box3{fill:#eefaf3;stroke:#1b7f4d;stroke-width:1.6}
+svg .box4{fill:#f2f0fd;stroke:#5e60ce;stroke-width:1.6}
+svg text{font-family:'Segoe UI',Arial,sans-serif;font-size:13px;fill:#14213d}
+svg .arw{stroke:#5b6b84;stroke-width:1.8;fill:none;marker-end:url(#arr)}
+svg .ttl{font-weight:700;font-size:14.5px}
+/* pyq */
+.pyq{border:2px solid #5e60ce;border-radius:14px;margin:24px 0;overflow:hidden}
+.pyq .pyqhead{background:linear-gradient(90deg,#5e60ce,#7d7ef0);color:#fff;padding:13px 20px;font-family:'Segoe UI',Arial,sans-serif}
+.pyq .pyqhead b{color:#ffe89a}
+.pyq .pyqbody{padding:18px 22px;background:#fbfaff}
+.qtext{background:#f2f0fd;border-left:5px solid var(--purple);padding:12px 16px;border-radius:0 8px 8px 0;font-weight:600;margin-bottom:14px}
+.ans h5{color:var(--purple);margin-top:16px;font-family:'Segoe UI',Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:13px}
+/* misc helpers */
+.mini{font-size:14px;color:var(--muted)}
+.tagline{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.tagline span{background:#eef4fb;border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:13.5px;font-family:'Segoe UI',Arial,sans-serif}
+details{background:#f6f9fd;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:700;color:#14507a;font-family:'Segoe UI',Arial,sans-serif}
+details[open]{background:#fff}
+hr.soft{border:0;border-top:1px dashed var(--line);margin:22px 0}
+.badge{display:inline-block;background:var(--gold2);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:12px;font-family:'Segoe UI',Arial,sans-serif;letter-spacing:.05em}
+.badge.g{background:var(--green)} .badge.p{background:var(--purple)} .badge.b{background:#14507a}
+.art{display:inline-block;background:#14507a;color:#fff;border-radius:6px;padding:1px 8px;font-family:'Segoe UI',Arial,sans-serif;font-size:14px;font-weight:700;white-space:nowrap}
+.quotebox{background:#f0f7ff;border:1px solid #cfe2f7;border-radius:10px;padding:12px 16px;margin:10px 0;font-style:italic;color:#233}
+.quotebox .src{display:block;font-style:normal;font-weight:700;font-size:12.5px;color:#14507a;margin-top:6px;font-family:'Segoe UI',Arial,sans-serif}
+.warn{background:#fff1f0;border:1px solid #f5c6c2;border-left:5px solid var(--red);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0}
+.good{background:#eefaf3;border:1px solid #bfe8d2;border-left:5px solid var(--green);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0}
+@media (max-width:1024px){
+  #navtoggle{display:block}
+  .layout{display:block}
+  nav#toc{position:fixed;left:0;top:0;width:min(84vw,330px);flex:none;transform:translateX(-105%);transition:transform .3s ease;height:100vh;box-shadow:4px 0 20px rgba(0,0,0,.35)}
+  nav#toc.open{transform:translateX(0)}
+  main{padding:0 16px 70px}
+  .hero{margin:0 -16px 22px;padding:30px 20px}
+  section{padding:22px 18px}
+  body{font-size:16.5px}
+  table{font-size:14.6px;min-width:560px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  section{padding:18px 14px;border-radius:10px}
+  .casebody{padding:14px 14px}
+  .hero .meta span{font-size:12.5px}
+  blockquote{padding:11px 13px}
+  h3{font-size:17.5px}
+}
+#scrim{display:none;position:fixed;inset:0;background:rgba(6,18,33,.55);z-index:45}
+#scrim.show{display:block}
+
+
+/* ==========================================================================
+   MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE (v2.0)
+   Applied to EVERY Topic of EVERY Subject of EVERY Semester
+   100% Responsive: Zero Horizontal Wobble, Zero Viewport Drift,
+   100% Full Visibility for All Diagrams, Flowcharts, Grids, and Tables
+   ========================================================================== */
+
+/* 1. UNCONDITIONAL ROOT & VIEWPORT LOCK (Rule 3)
+   Applies across ALL screen widths (320px to 4K desktop) and inside iframes.
+   Prevents any horizontal movement, wobble, or scrollbar spill. */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: clip !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* 2. UNIVERSAL CONTAINER CONTAINMENT (UNCONDITIONAL) */
+.wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+.content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+.quicknav-inner, .hero-inner, .doc-wrap, .main-wrap, .paper, .note-container,
+.notes-body, .reading-container, .syllabus-container, .wrapper, .site-main,
+.doc-wrapper, .document-body, .notes-content, .revision-wrap, .exam-wrap,
+.firac-wrapper, .briefs-container, .pyq-wrap, .deck {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
+/* Prevent decorative pseudo-elements from bleeding outside viewport */
+.cover, header.hero, .hero, .casehead, .case-hd {
+  position: relative !important;
+  overflow: hidden !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hero banners & headers must never leak out with negative margins */
+header.hero, header.doc, header.top, header.cover, header.topbar,
+header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+.cover, .case-hero, .doc-header {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+/* 3. UNIVERSAL TABLE CONTAINMENT (UNCONDITIONAL) */
+.tw, .twrap, .tblwrap, .tbl-wrap, .table-wrap, .tbl-scroll, .scroll, .table-container {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  box-sizing: border-box !important;
+  margin: 12px 0 !important;
+}
+
+.tw table, .twrap table, .tblwrap table, .tbl-wrap table, .table-wrap table, .tbl-scroll table, .scroll table, .table-container table {
+  display: table !important;
+  width: 100% !important;
+  min-width: 480px !important;
+  max-width: none !important;
+  border-collapse: collapse !important;
+  box-sizing: border-box !important;
+}
+
+/* Fallback: Auto-contain any table without an outer scroll wrapper */
+table:not(.tw table):not(.twrap table):not(.tblwrap table):not(.tbl-wrap table):not(.table-wrap table):not(.tbl-scroll table):not(.scroll table):not(.table-container table) {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  border-collapse: collapse !important;
+  margin: 12px 0 !important;
+  box-sizing: border-box !important;
+}
+
+th, td {
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 4. TIMELINE & OFFSET MARKERS CONTAINMENT */
+.tl, .timeline {
+  margin-left: 14px !important;
+  max-width: calc(100% - 14px) !important;
+  box-sizing: border-box !important;
+}
+
+/* 5. SVG & MEDIA CONTAINMENT */
+svg, img {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+svg:not(.crest):not(.icon):not([width="18"]):not([width="20"]):not([width="24"]):not([height="18"]):not([height="20"]):not([height="24"]) {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+.fig, .figure, figure, .case-visual, .diagram-wrap, .flow-svg, .diagram-frame, .diagram-box, .svgbox {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 6. PRE & CODE BLOCKS CONTAINMENT */
+pre, code, pre code, .stat, .mnem {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  box-sizing: border-box !important;
+}
+
+/* 7. FLEXBOX OVERFLOW DEFENSE (Rule 3) */
+.brand, .navlinks, .topbar, .topbar-in, .hero .meta, .chips, .tags,
+.badge-row, .meta-strip, .hero-meta, .sec-head, .header-card, .chapter-header,
+.casehead, .case-hd, .q, .pyq, .pyq-hd, .qh, .badge, .chip, .tag {
+  min-width: 0 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+/* ==========================================================================
+   MOBILE VIEWPORT ADAPTATIONS (320px - 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* ROOT & VIEWPORT LOCK: ZERO HORIZONTAL WOBBLE (Rule 3) */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: clip !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  /* Reclaim side margins on mobile touchscreens */
+  .wrap, .page, .layout, .container, .page-wrap, main, article, .dossier,
+  .content, .shell, .inner, .cover, .cover-in, .cover-content, .topbar-inner,
+  .quicknav-inner, .hero-inner, .doc-wrap, .main-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Hide sticky desktop sidebar on mobile */
+  nav#toc, aside.sidebar, .toc-sidebar, #toc, .sidebar, aside.toc {
+    display: none !important;
+  }
+
+  /* Header & Hero Scaling */
+  header.hero, header.doc, header.top, header.cover, header.topbar,
+  header.chapter-header, header.main-header, .hero, .header, .top-bar, .topbar,
+  .cover, .case-hero, .doc-header {
+    padding: 22px 10px 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 0 12px 12px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  header.hero h1, header.doc h1, header.cover h1, .hero h1, .topbar h1, h1 {
+    font-size: clamp(19px, 5.6vw, 28px) !important;
+    line-height: 1.22 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    margin: 4px 0 !important;
+  }
+
+  header.hero .lede, header.doc .sub, .hero p, .hero-sub, .lead, .sub, .subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.48 !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Horizontal Navigation & Swipe */
+  nav.toc, .toc-nav, .quicknav {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  nav.toc .wrap, .toc-nav .wrap, .quicknav-inner {
+    display: flex !important;
+    gap: 4px !important;
+    overflow-x: auto !important;
+    padding: 0 8px !important;
+    width: max-content !important;
+    max-width: none !important;
+  }
+
+  nav.toc a, .toc-nav a {
+    padding: 9px 8px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Chips & Meta */
+  .chips, .meta, .badge-row, .chiprow, .tags, .meta-strip, .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 6px !important;
+    margin: 8px 0 !important;
+  }
+
+  .chip, .tag, .badge, .pill, .sec-badges span {
+    font-size: 11.5px !important;
+    padding: 3px 8px !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  /* All Cards, Boxes & Sections */
+  section, section.card, .section, .block, .card, .cassheet, .case, .pyq, .box,
+  .bx, .statute, .illus, .note, .exam, .warn, .ratio, .teal, .toc, .pyqbox,
+  .sourceband, .fbox, .casefile, .cf-sec, .lawbox, .kbox, .ifbox, .dbox, .pbox,
+  .exam-box, .mini-card, .case-banner, .outcome-card, .kcard, .tipbox, .warnbox,
+  .aobx, .exbox, .casecard, .keybox, .panel, .def-card, .defcard, .principle-box, .pyq-card,
+  .quick-card, .defbox, .tcard, .tbox, .highlight-box, .definition-box, .pyq-box,
+  .diagram-box, .ans-sec, .casequote, .casehead, .casebody, .case-head, .case-body,
+  .quotebox, .secintro, .caseq, .quiz-card, .case-lib, .section-intro, .rbox,
+  .case-block, .caseblock, .case-box, .sub-section, .case-detail, .argcard, .verdict, .srcnote {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 14px 10px !important;
+    margin: 10px 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+
+  .secnum, .sec-num, .sec-no, .chapter-num, .badge-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+    margin-right: 8px !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  h2 {
+    font-size: clamp(17px, 4.8vw, 22px) !important;
+    line-height: 1.28 !important;
+    margin: 18px 0 8px !important;
+    word-break: break-word !important;
+  }
+
+  h3 {
+    font-size: clamp(15px, 4.2vw, 19px) !important;
+    line-height: 1.3 !important;
+    margin: 14px 0 6px !important;
+    word-break: break-word !important;
+  }
+
+  h4 {
+    font-size: clamp(13.5px, 3.8vw, 16.5px) !important;
+    line-height: 1.35 !important;
+    margin: 10px 0 4px !important;
+    word-break: break-word !important;
+  }
+
+  p, li {
+    font-size: 14.5px !important;
+    line-height: 1.58 !important;
+    text-align: left !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  ul, ol {
+    padding-left: 20px !important;
+    margin: 6px 0 10px !important;
+  }
+
+  /* Diagrams & Visuals */
+  .fig, .figure, .scene, .svgwrap, figure, .case-visual, .diagram-wrap, .flow-svg,
+  .diagram-frame, .diagram-box, .svgbox, .dia, .fchart, .svg-flow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+    padding: 8px 4px !important;
+    margin: 12px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Flowcharts: vertical orientation */
+  .flow:not(.flow-svg):not(:has(svg)), .fchart:not(:has(svg)), .vflow, .flowcol {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    gap: 8px !important;
+    padding: 10px 6px !important;
+    margin: 12px 0 !important;
+  }
+
+  .flow .node, .flow > .node, .flow.horizontal .node, .fbox, .fnode, .fstep,
+  .arch-node, .flow-step, .step-card {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin: 2px 0 !important;
+    padding: 10px 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  .flow .ar, .flow span.ar, .flow > .ar, .arrow, .flow .arrow {
+    display: block !important;
+    text-align: center !important;
+    margin: 2px auto !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  .flow .ar::before, .flow span.ar::before {
+    content: "↓" !important;
+  }
+
+  .split, .branches, .frow {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Multi-column Grid collapse */
+  .grid, .grid2, .grid3, .grid4, .g2, .g3, .two-col, .twocol, .two, .three,
+  .four, .two-up, .three-up, .remedy-grid, .test-grid, .revision-grid,
+  .lease-fields, .lease-field, .vs, .kv, .cgrid, .arg2, .comparison, .step-grid,
+  .timeline, .statute-grid, .def-grid, .defgrid, .vs-split, .quick-grid, .three-col,
+  .four-col, .rule-grid, .memory-grid, .arg-grid, .cover-grid, .mcqgrid,
+  .two-col-doc, .cmp, .checkgrid, .case-grid, .cols, .args, .decision, .side,
+  .story, .clause-grid, .source-grid, .architecture, .arguments, .irac, .fir,
+  .toc.grid, .toc-cols, .lane-wrap, .rmap {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    gap: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Table cells on mobile */
+  th, td {
+    padding: 7px 7px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+  }
+}
+
+/* ==========================================================================
+   DARK THEME PALETTE FOR NOTES
+   ========================================================================== */
+[data-theme="dark"] body {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+[data-theme="dark"] .card, [data-theme="dark"] section, [data-theme="dark"] .box.plain,
+[data-theme="dark"] .mini, [data-theme="dark"] .toc, [data-theme="dark"] details,
+[data-theme="dark"] .fig, [data-theme="dark"] .case, [data-theme="dark"] .pyq,
+[data-theme="dark"] .tw, [data-theme="dark"] .twrap, [data-theme="dark"] .tblwrap {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+[data-theme="dark"] p, [data-theme="dark"] li, [data-theme="dark"] td {
+  color: #cbd5e1 !important;
+}
+[data-theme="dark"] strong, [data-theme="dark"] h1, [data-theme="dark"] h2,
+[data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] th {
+  color: #f1f5f9 !important;
+}
+[data-theme="dark"] tr:nth-child(even) td {
+  background: #192231 !important;
+}
+/* END MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE */
+</style>
+  <link rel="stylesheet" href="../../css/notes-responsive.css">
+</head>
+<body>
+<button id="navtoggle">☰ Topic 6 Part-II — Navigation &amp; Contents <span>≡</span></button>
+<div class="layout">
+<nav id="toc">
+<h2>Topic 6 · Part-II · Procedural Innovations</h2>
+<a class="sec" href="#s-scope">Orientation &amp; Exam Map</a>
+<a class="sec" href="#s-frame">§1 Activism · Overreach · Restraint</a>
+<a class="sec" href="#s-locus">§2 Locus Standi <span class="mini">← DU core</span></a>
+<a class="sec" href="#s-laches">§3 Laches</a>
+<a class="sec" href="#s-rj">§4 Res Judicata</a>
+<a class="sec" href="#s-exhaust">§5 Exhaustion of Remedies</a>
+<a class="sec" href="#s-pil">§6 PIL &amp; Pro Bono Publico</a>
+<a class="sec" href="#s-orders">§7 Power to Issue Orders &amp; Directions</a>
+<a class="sec" href="#s-comp">§8 Power to Award Compensation</a>
+<a class="sec" href="#s-cases">§9 Case Notes (46–50, DU Format)</a>
+<a class="case" href="#c-sp-gupta">DU anchor · S.P. Gupta (Locus Standi)</a>
+<a class="case" href="#c-daryao">46 · Daryao v. State of U.P.</a>
+<a class="case" href="#c-trilok">47 · Trilokchand v. H.B. Munshi</a>
+<a class="case" href="#c-bandhua">48 · Bandhua Mukti Morcha</a>
+<a class="case" href="#c-rudul">49 · Rudul Sah v. Bihar</a>
+<a class="case" href="#c-mcmehta">50 · M.C. Mehta (Oleum)</a>
+<a class="sec" href="#s-acts">§10 Related Acts, Rules &amp; Provisions</a>
+<a class="sec" href="#s-real">§11 Real-World Examples</a>
+<a class="sec" href="#s-pyq">§12 DU PYQs + Model Answers</a>
+<a class="sec" href="#s-rev">§13 Rapid Revision Kit</a>
+</nav>
+<main>
+
+<div class="hero">
+<span class="tag">DU LL.B. · LB-301 · Topic 6 · Part-II of II</span>
+<h1>Procedural Requirements &amp; Innovations</h1>
+<p class="sub">Everything in one file: <b>who may knock on the court's door (locus standi)</b>, <b>when they may be turned away (laches · res judicata · exhaustion of alternative remedies)</b>, <b>how the court stretched its door open for the poor (Public Interest Litigation — pro bono publico)</b>, and <b>what it can then hand out (appropriate orders &amp; directions · compensation)</b> — all five syllabus cases (46 Daryao, 47 Trilokchand, 48 Bandhua Mukti Morcha, 49 Rudul Sah, 50 M.C. Mehta) in facts / issues / arguments of both sides / decision / principle format, maximum DU case material (the <i>S.P. Gupta</i> “Locus Standi” extract), flowcharts, related Acts &amp; provisions inline, real-world examples, and solved DU semester PYQs.</p>
+<div class="meta">
+<span>📜 Cases 46–50 of the DU syllabus</span>
+<span>§§13 sections · 5 diagrams · 2 PYQ model answers</span>
+<span>🏷 DU-material + RESEARCHED badges</span>
+<span>📱 mobile-responsive · single file</span>
+</div>
+</div>
+
+<!-- ============ ORIENTATION ============ -->
+<section id="s-scope">
+<h2>Orientation &amp; Exam Map</h2>
+<p class="lead">Topic 6 is taught in two parts. <b>Part-I</b> (constitution of the courts: S.P. Gupta's court-reforms portion, In re Special Reference No. 1 of 1998, Supreme Court Advocates-on-Record Assn., NJAC, L. Chandra Kumar) was covered separately. <b>This file is Part-II</b> — the <i>procedural requirements and innovations</i>: doctrines that regulate access to the writ courts plus the court's remedial toolkit.</p>
+
+<div class="kbox">
+<h4>📜 Part-II syllabus — verbatim (DU study material)</h4>
+<p style="font-size:15.2px"><b>Part-II — Procedural requirements and innovations</b></p>
+<p style="font-size:15.2px"><b>(a)</b> Judicial Activism and overreach/self-restraint, Locus Standi, Laches, Res Judicata, Exhaustion of Alternative Remedies and Public Interest Litigation – PIL (Concept of <i>pro bono public</i>)</p>
+<ul style="font-size:15.2px">
+<li><b>46.</b> <i>Daryao v. State of U.P.</i>, AIR 1961 SC 1457</li>
+<li><b>47.</b> <i>Trilokchand Motichand v. H.B. Munshi</i>, (1969) 1 SCC 110</li>
+<li><b>48.</b> <i>Bandhua Mukti Morcha v. U.O.I.</i>, (1984) 3 SCC 161</li>
+</ul>
+<p style="font-size:15.2px"><b>(b)</b> Power to issue appropriate orders and directions; Power to award Compensation</p>
+<ul style="font-size:15.2px">
+<li><b>49.</b> <i>Rudul Sah v. State of Bihar</i>, AIR 1983 SC 1086</li>
+<li><b>50.</b> <i>M.C. Mehta v. U.O.I.</i>, AIR 1987 SC 1086</li>
+</ul>
+</div>
+
+<div class="grid g2">
+<div class="card a">
+<h4>🔑 Source map of this file (how to read the badges)</h4>
+<ul>
+<li><span class="badge b">DU CASE MATERIAL</span> — the DU case book itself carries this passage. In Part-II the DU volume contains the <b><i>S.P. Gupta v. Union of India</i>, 1981 Supp (1) SCC 87, “Locus Standi” passage of Bhagwati J. (paras 13–26, book pp. 177–185)</b> — the doctrinal heart of item (a); it is reproduced as a full case-note below and quoted extensively.</li>
+<li><span class="badge g">RESEARCHED</span> — <b>no excerpt exists in the DU case material</b> for syllabus cases 46–50 (verified), so these five notes are built from researched standard sources; internal structure follows the DU format (facts → issues → arguments of both sides → decision → principle).</li>
+<li>Constitutional text is quoted verbatim (Wikisource <i>Constitution of India (2020)</i>); PYQs are transcribed from the uploaded DU question papers.</li>
+</ul>
+</div>
+<div class="card b">
+<h4>🎯 Exam map — where Part-II has actually been asked</h4>
+<ul>
+<li><b>December 2024 paper — Q6(c): “Doctrine of locus standi” (10 marks)</b>, a short note under “Write short notes on any two of the following”. <b>Full model answer in §12.</b></li>
+<li><b>December 2024 — Q6(b): “Theory of Separation of Power” (10 marks)</b> — the constitutional matrix of <i>judicial overreach/self-restraint</i>; companion model answer tuned to item (a) in §12.</li>
+<li>The uploaded <b>Centenary Chance Examination</b> paper (both pages examined) contains <b>no question</b> on this topic.</li>
+<li>Expect: short note on locus standi/PIL; an essay on judicial activism; case-based questions on Daryao (res judicata) or Rudul Sah (compensation); and 10-mark items on “appropriate orders and directions”.</li>
+</ul>
+</div>
+</div>
+
+<h3>The two propositions of Part-II in one view</h3>
+<div class="twrap"><table>
+<tr><th style="width:11%">Proposition</th><th style="width:30%">Syllabus words</th><th style="width:30%">Core idea</th><th style="width:29%">Syllabus cases</th></tr>
+<tr><td><b>(a)</b></td><td>Activism · overreach/self-restraint · locus standi · laches · res judicata · exhaustion · PIL (pro bono publico)</td><td><b>Access + discipline.</b> The court relaxes <i>who</i> may litigate for the public good, while four self-restraint doctrines police <i>when</i> it will hear a stale, repeated, or avoidable claim.</td><td>46 Daryao (res judicata) · 47 Trilokchand (laches + self-restraint + exhaustion) · 48 Bandhua (PIL/locus standi in action)</td></tr>
+<tr><td><b>(b)</b></td><td>Power to issue appropriate orders and directions; power to award compensation</td><td><b>Remedy.</b> What the court can <i>do</i> once it hears the case: writs, directions, monitoring, guidelines — and, pioneeringly, <i>money</i>: constitutional compensation.</td><td>49 Rudul Sah (compensation under Art 32/21) · 50 M.C. Mehta (orders, conditions, absolute-liability compensation)</td></tr>
+</table></div>
+
+<div class="good">
+<b>The spine of the whole topic (memorise this sentence):</b> <i>The writ court first widened its gate (locus standi → PIL → pro bono publico), then posted four guards at the gate (laches, res judicata, exhaustion, justiciability), and finally stocked its shop with remedies (orders, directions, compensation) — each case in the syllabus is one of those six moves.</i>
+</div>
+</section>
+
+<!-- ============ §1 ACTIVISM / OVERREACH / RESTRAINT ============ -->
+<section id="s-frame">
+<h2>§1 · Judicial Activism, Overreach &amp; Self-Restraint</h2>
+<p class="lead">Item (a) opens with a <i>pairing</i>: “Judicial Activism <b>and</b> overreach/self-restraint”. The syllabus wants you to hold three concepts together — activism as the engine, self-restraint as the brakes, and “overreach” as the accusation made when the brakes fail (or when the driver leaves the road).</p>
+
+<div class="grid g3">
+<div class="card a">
+<h4>⚖️ Judicial activism</h4>
+<p>Where the court <b>energises procedure or doctrine to reach a substantive injustice</b>: enlarging locus standi, treating a letter as a petition, appointing its own commissioners, awarding compensation, writing guidelines, monitoring compliance. Its engine is <span class="art">Art 32</span>/<span class="art">Art 226</span> read with <span class="art">Art 142</span> (“complete justice”).</p>
+<p class="mini">DU exemplar: Bhagwati J.'s “<b>new jurisprudence</b>” demanding “<b>judicial statesmanship and high creative ability</b>” (S.P. Gupta, para 24).</p>
+</div>
+<div class="card b">
+<h4>🛑 Overreach (the critique)</h4>
+<p>The charge that the court has crossed from <i>enforcing</i> law into <i>making</i> policy — occupying space the Constitution assigns to the elected branches. The DU material itself states the limit from the <i>inside</i>:</p>
+<div class="quotebox">“…the Court <b>must not overstep the limits of its judicial function and trespass into areas reserved to the Executive and the Legislature</b>.”
+<span class="src">S.P. Gupta, Bhagwati J., para 24 — DU case material (book p. 183)</span></div>
+</div>
+<div class="card c">
+<h4>🧘 Self-restraint</h4>
+<p>The court's <b>voluntary disciplines</b>: comity with High Courts, insistence on ordinary remedies first, laches, res judicata, the “sufficient interest” filter, and refusing to act on political or pressure-group motives.</p>
+<p class="mini">DU exemplar: Trilokchand — “This Court <b>puts itself in restraint</b> in the matter of petitions under Article 32 and this practice has now become <b>inveterate</b>.” (Hidayatullah C.J.)</p>
+</div>
+</div>
+
+<div class="fig">
+<svg viewBox="0 0 760 260" width="100%" style="max-width:760px">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5b6b84"/></marker></defs>
+<rect x="20" y="90" width="210" height="76" rx="12" class="box2"/>
+<text x="125" y="118" text-anchor="middle" class="ttl">SELF-RESTRAINT</text>
+<text x="125" y="140" text-anchor="middle">comity · laches · res judicata</text>
+<text x="125" y="158" text-anchor="middle">exhaustion · “sufficient interest”</text>
+<rect x="530" y="90" width="210" height="76" rx="12" class="box3"/>
+<text x="635" y="118" text-anchor="middle" class="ttl">JUDICIAL ACTIVISM</text>
+<text x="635" y="140" text-anchor="middle">letters as petitions · commissions</text>
+<text x="635" y="158" text-anchor="middle">compensation · guidelines · monitoring</text>
+<rect x="270" y="80" width="220" height="96" rx="12" class="box"/>
+<text x="380" y="112" text-anchor="middle" class="ttl">THE WRIT COURT'S</text>
+<text x="380" y="132" text-anchor="middle" class="ttl">DILEMMA (Arts 32 / 226)</text>
+<text x="380" y="156" text-anchor="middle">“judicial statesmanship”</text>
+<path class="arw" d="M232,128 L266,128"/>
+<path class="arw" d="M494,128 L528,128"/>
+<rect x="270" y="196" width="220" height="50" rx="12" class="box4"/>
+<text x="380" y="217" text-anchor="middle" class="ttl">“OVERREACH”</text>
+<text x="380" y="236" text-anchor="middle">trespass into Executive/Legislature domain</text>
+<path class="arw" d="M380,178 L380,192"/>
+<text x="380" y="30" text-anchor="middle" class="ttl">Balance is the constitutional art</text>
+<text x="380" y="52" text-anchor="middle">Activism without restraint = overreach; restraint without activism = abdication</text>
+<line x1="60" y1="66" x2="700" y2="66" stroke="#c9d6e8" stroke-width="2"/>
+</svg>
+<div class="cap">Fig. 1 — The activation–restraint equilibrium of the writ jurisdiction</div>
+</div>
+
+<h3>1.1 The doctrine in DU words — the two anchor quotes</h3>
+<div class="grid g2">
+<div class="card">
+<h4>For activism (why the court <i>must</i> act)</h4>
+<div class="quotebox">“[The] rule of law would be a hollow boast if the law courts were to deny relief to a person for his inability to stand the heavy costs of litigation.” — courts “readily respond even to a letter” when it discloses public injury, <b>acting pro bono publico</b>; “procedure is but a handmaiden of justice.”
+<span class="src">S.P. Gupta, Bhagwati J., paras 17, 20 — DU case material</span></div>
+<div class="quotebox">“…the new jurisprudence which the Court is evolving calls for judicial statesmanship and high creative ability…”
+<span class="src">S.P. Gupta, Bhagwati J., para 24 — DU case material</span></div>
+</div>
+<div class="card">
+<h4>For restraint (why the court must <i>stop</i>)</h4>
+<div class="quotebox">“The Court <b>must not overstep the limits of its judicial function and trespass into areas reserved to the Executive and the Legislature</b>. [There is a] vital distinction between <i>locus standi</i> and <i>justiciability</i>…”
+<span class="src">S.P. Gupta, Bhagwati J., para 24 — DU case material</span></div>
+<div class="quotebox">“…in rare cases, where the ordinary process of law appears to be inefficacious, that this Court interferes… <b>extraordinary remedies should not take the place of ordinary remedies</b>… This Court refrains from acting under Article 32 [where the party has already moved the High Court]. This constitutes a <b>comity between the Supreme Court and the High Court</b>.”
+<span class="src">Trilokchand Motichand v. H.B. Munshi (1969) 1 SCC 110 — headnote/observations <span class="badge g">RESEARCHED</span></span></div>
+</div>
+</div>
+
+<h3>1.2 Activism vs restraint — the working checklist</h3>
+<div class="twrap"><table>
+<tr><th style="width:18%">Question</th><th style="width:41%">Activism column</th><th style="width:41%">Restraint column</th></tr>
+<tr><td><b>Who may come?</b></td><td>Any member of the public for an indeterminate class; a letter is enough (Bandhua); lawyers themselves have “sufficient interest” (S.P. Gupta para 26).</td><td>Bona fide only — no busybody, no political motivation, no pressure-group games (S.P. Gupta para 24); private legal injury still needs personal standing (para 14).</td></tr>
+<tr><td><b>When will it act?</b></td><td>Even post-limitation periods where the breach is ongoing; time spent pursuing remedies excuses delay (Trilokchand headnote).</td><td>Unexplained laches defeats the claim (Trilokchand); a stale claim is refused on public policy — <i>vigilantibus non dormientibus jura subveniunt</i>.</td></tr>
+<tr><td><b>Against whom?</b></td><td>“State” broadly — executives, instrumentalities, and private enterprises doing hazardous/public-utility work (Bandhua; Oleum via Art 21).</td><td>Not into policy domains: courts will not order the “how” of executive policy (S.P. Gupta para 24 trespass test).</td></tr>
+<tr><td><b>What then?</b></td><td>Full remedial inventiveness: directions, commissions, monitoring, guidelines, compensation (Rudul Sah, Oleum).</td><td>Only “appropriate” orders — the power is <b>judicial</b> by nature (Bandhua: “limited by its very nature… judicial power”).</td></tr>
+<tr><td><b>Second look?</b></td><td>Continuing mandamus keeps orders alive for years (compliance monitoring).</td><td>Res judicata closes the door after a merits decision (Daryao); alternative remedies must first be exhausted (Trilokchand).</td></tr>
+</table></div>
+
+<div class="warn">
+<b>Language discipline for exams:</b> never write that Indian courts have a free-floating “activist mandate”. The Constitution's scheme is <b>review, not governance</b>: the court enforces rights (<span class="art">Art 32</span>/<span class="art">226</span>), declares the law (<span class="art">Art 141</span>) and does “complete justice” (<span class="art">Art 142</span>) — while the doctrines in §§3–5 (laches, res judicata, exhaustion) are the court's own <b>self-imposed guardrails</b>. “Overreach” is the label critics attach when guardrails are skipped; the DU text answers with the <b>locus standi ≠ justiciability</b> distinction of para 24.
+</div>
+</section>
+<!-- ============ §2 LOCUS STANDI ============ -->
+<section id="s-locus">
+<h2>§2 · Locus Standi <span class="badge b">DU CASE MATERIAL — PRIMARY SOURCE</span></h2>
+<p class="lead">“Locus standi” = <b>the place (right) of standing</b> — who may address the court. The DU case book's Part-II core is the dedicated <b>“Locus Standi” passage of Bhagwati J. in <i>S.P. Gupta v. Union of India</i>, 1981 Supp (1) SCC 87 (paras 13–26, book pp. 177–185)</b>; it is reproduced as a full case-note in §9 and digested here article-by-article.</p>
+
+<h3>2.1 The traditional rule — and why it existed</h3>
+<div class="quotebox">“The traditional rule of <i>locus standi</i> is that only a person whose <b>personal legal right or interest</b> is infringed may maintain an action for redress… It is a <b>rule of ancient vintage</b> [from] the time <b>when private law dominated</b> the legal system…”
+<span class="src">S.P. Gupta, Bhagwati J., para 14 — DU case material (book p. 178)</span></div>
+<p>Under the classical rule, the plaintiff must plead a <b>legal injury to himself</b> — not the public's. A taxpayer could not sue over public expenditure; a bystander could not sue over a polluted river. The injury had to be <i>special</i>, not general. That worked in a private-law world; in a constitutional democracy governed by <span class="art">Part III</span> and <span class="art">Part IV</span> it produced an absurdity: <b>the larger the wrong, the fewer the plaintiffs</b>.</p>
+
+<h3>2.2 Exceptions the court had already recognised (para 15)</h3>
+<div class="twrap"><table>
+<tr><th style="width:26%">Exception</th><th style="width:40%">What it allows</th><th style="width:34%">DU-cited authority</th></tr>
+<tr><td><b>Ratepayer / taxpayer</b></td><td>A person contributing to a public fund may challenge its illegal application — his own money is concerned.</td><td><span class="cite">K. Ramadas Shenoy AIR 1974 SC 2177</span>; <span class="cite">Varadarajan AIR 1973 Mad 55</span></td></tr>
+<tr><td><b>Participant in the decision-making process</b></td><td>One whose inputs a statute/authority were bound to consider may complain when the process was bypassed.</td><td><span class="cite">Queen v. Bowman [1898 1 QB 663]</span></td></tr>
+<tr><td><b>Statutory special interest</b></td><td>A person to whom a statute itself gives a right or duty touching the subject-matter.</td><td><span class="cite">Jasbhai Motibhai Desai AIR 1976 SC 578</span></td></tr>
+</table></div>
+
+<h3>2.3 The disability rule — another person litigates for you (para 16)</h3>
+<div class="grid g2">
+<div class="card">
+<ul>
+<li><b>Minor / unsound mind</b> — the next friend sues: <span class="art">Order XXXII CPC</span>.</li>
+<li><b>Detenu</b> — habeas corpus may be moved by <i>another</i>: the prisoner often cannot reach the court (hence the “letter” jurisprudence).</li>
+</ul>
+</div>
+<div class="card">
+<ul>
+<li><b>Prisoner</b> — the court has entertained prisoners' <b>letter-petitions</b> directly.</li>
+<li><b>Minority shareholder</b> — may sue for wrongs to the company where majority is complicit.</li>
+</ul>
+</div>
+</div>
+
+<h3>2.4 The breakthrough — public injury &amp; the relaxed rule (paras 17–19)</h3>
+<div class="quotebox">“[A] member of the public acting bona fide and having sufficient interest may move the High Court under Art 226 or the Supreme Court under Art 32 complaining of a wrong to an <b>indeterminate class</b>… [the courts] would <b>readily respond even to a letter</b> addressed to them, <b>acting pro bono public[o]</b>… <b>procedure is but a handmaiden of justice</b>… the petition must be bona fide — not for personal gain or private profit or political motivation or other oblique motives…”
+<span class="src">S.P. Gupta, Bhagwati J., para 17 — DU case material (book pp. 179–180)</span></div>
+<div class="grid g2">
+<div class="card a">
+<h4>Public injury vs private injury (paras 18–19)</h4>
+<ul>
+<li><b>Private injury</b>: hurts <i>me</i> — traditional standing suffices.</li>
+<li><b>Public injury</b>: hurts an <i>indefinite class</i> or the community — pollution of air/water,noxious-gas emissions, cruelty to prisoners, bonded labour. The public at large cannot assemble as plaintiffs; if the court insists on the classical rule, <b>the wrong goes unredressed</b> because no single victim is identifiable.</li>
+<li>The law must be “a device of organised social action” — standing rules are handmaidens, not masters, of that aim.</li>
+</ul>
+</div>
+<div class="card b">
+<h4>Deterrence &amp; prudence (para 17 tail)</h4>
+<ul>
+<li><b>Bona fide filter:</b> no personal gain, private profit, political motivation or oblique purpose.</li>
+<li><b>Prudential preference:</b> courts prefer cases where the affected class can be <b>determinate</b> (even while permitting indeterminate-class petitions) — a note of restraint embedded in the relaxation itself.</li>
+</ul>
+</div>
+</div>
+
+<h3>2.5 Who protects the public? The AG problem &amp; the PIL definition (para 20)</h3>
+<p>Traditionally the <b>Attorney General (Union)</b> / <b>Advocate General (State)</b> sues for public wrongs under <b>ss. 91–92, CPC</b> — but both are <i>chosen by the political branches</i>, so public remedies could stall at the pleasure of government. Bhagwati J.: standing rules must therefore be <b>liberalised</b> — courts themselves must let citizens step into that role. Hence the definition carried in the DU notes:</p>
+<div class="quotebox"><b>PIL</b> = “litigation <b>undertaken for the purpose of redressing a public injury</b>, enforcing a public duty, protecting social, collective, ‘diffused’ rights and interests.” The trigger is <b>“sufficient interest”</b>, which the court keeps <b>deliberately discretionary</b> — “no strait-jacket formula.”
+<span class="src">S.P. Gupta, Bhagwati J., para 20 — DU case material (book p. 181)</span></div>
+
+<h3>2.6 The internal limits — overreach guard (paras 24–25)</h3>
+<div class="quotebox">“…the Court <b>must not overstep the limits of its judicial function and trespass into areas reserved to the Executive and the Legislature</b>.” There is a “<b>vital distinction between <i>locus standi</i> and <i>justiciability</i></b>” — relaxing <i>who</i> may sue does not create <i>subject-matter</i> jurisdiction over political questions. Pressure groups must not use the courts as instruments of conflict, and PIL must not become the vehicle of a “secondary public injury” — a private grievance cosmetised as public. The passage concedes the danger: courts must be alert to <b>motive</b> (para 24) and confine themselves to bona fide, rights-based claims (para 25).
+<span class="src">S.P. Gupta, Bhagwati J., paras 24–25 — DU case material (book pp. 183–184)</span></div>
+
+<h3>2.7 The application — lawyers may sue, “priests in the temple of justice” (para 26)</h3>
+<div class="quotebox">A group of Bombay lawyers (led by <b>Iqbal Chagla</b>) moved to enforce duties owed to the public: their concern was “<b>deeper than that of a busybody</b>” — such petitioners “<b>cannot be told off at the gates</b>” (Krishna Iyer J. in <span class="cite">Fertiliser Corp. Kamgar Union AIR 1981 SC 344</span>). Lawyers are “<b>priests in the temple of justice</b>”; their <i>locus standi</i> is the widest among ordinary citizens.
+<span class="src">S.P. Gupta, Bhagwati J., para 26 — DU case material (book p. 185)</span></div>
+
+<div class="fig">
+<svg viewBox="0 0 780 330" width="100%" style="max-width:780px">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5b6b84"/></marker></defs>
+<rect x="180" y="8" width="420" height="44" rx="10" class="box2"/>
+<text x="390" y="27" text-anchor="middle" class="ttl">TRADITIONAL RULE (para 14)</text>
+<text x="390" y="44" text-anchor="middle">only personal legal injury → standing</text>
+<rect x="60" y="86" width="215" height="58" rx="10" class="box"/>
+<text x="167" y="106" text-anchor="middle" class="ttl">EXCEPTIONS (para 15)</text>
+<text x="167" y="123" text-anchor="middle">ratepayer · participant</text>
+<text x="167" y="138" text-anchor="middle">statutory special interest</text>
+<rect x="290" y="86" width="200" height="58" rx="10" class="box"/>
+<text x="390" y="106" text-anchor="middle" class="ttl">DISABILITY RULE (16)</text>
+<text x="390" y="123" text-anchor="middle">minor · detenu · prisoner</text>
+<text x="390" y="138" text-anchor="middle">minority shareholder</text>
+<rect x="505" y="86" width="215" height="58" rx="10" class="box"/>
+<text x="612" y="106" text-anchor="middle" class="ttl">PUBLIC-FACING PROSECUTOR</text>
+<text x="612" y="123" text-anchor="middle">AG / Adv. General</text>
+<text x="612" y="138" text-anchor="middle">ss. 91–92 CPC (para 20)</text>
+<rect x="120" y="176" width="540" height="56" rx="12" class="box3"/>
+<text x="390" y="197" text-anchor="middle" class="ttl">RELAXED RULE — PUBLIC INJURY (paras 17–20)</text>
+<text x="390" y="215" text-anchor="middle">member of public · sufficient interest · indeterminate class · letter = petition</text>
+<text x="390" y="230" text-anchor="middle">“pro bono publico” · bona fide only · “procedure is handmaiden of justice”</text>
+<rect x="120" y="258" width="260" height="56" rx="12" class="box4"/>
+<text x="250" y="278" text-anchor="middle" class="ttl">SAFEGUARDS (paras 24–25)</text>
+<text x="250" y="296" text-anchor="middle">no politics/pressure groups · no secondary</text>
+<text x="250" y="311" text-anchor="middle">public injury · justiciability ≠ standing</text>
+<rect x="400" y="258" width="260" height="56" rx="12" class="box3"/>
+<text x="530" y="278" text-anchor="middle" class="ttl">APPLICATION (para 26)</text>
+<text x="530" y="296" text-anchor="middle">Iqbal Chagla's lawyers — “priests in the</text>
+<text x="530" y="311" text-anchor="middle">temple of justice” · “not busybodies”</text>
+<path class="arw" d="M390,54 L390,82"/>
+<path class="arw" d="M167,146 L240,172"/>
+<path class="arw" d="M390,146 L390,172"/>
+<path class="arw" d="M612,146 L540,172"/>
+<path class="arw" d="M300,234 L270,254"/>
+<path class="arw" d="M480,234 L510,254"/>
+</svg>
+<div class="cap">Fig. 2 — The locus standi ladder built in S.P. Gupta (paras 14 → 26) — the DU backbone of item (a)</div>
+</div>
+
+<h3>2.8 Evolution timeline — how the gate swung open</h3>
+<div class="tl">
+<div class="ev"><b class="yr">1976</b> — <span class="cite">Jasbhai Motibhai Desai AIR 1976 SC 578</span>: statutory “special interest” accepted as an exception (DU para 15).</div>
+<div class="ev"><b class="yr">1979</b> — <span class="cite">Hussainara Khatoon v. State of Bihar</span>: the court moves on its own from press reports; tens of thousands of under-trials released — the <b>birth of mass-impact PIL</b>.</div>
+<div class="ev"><b class="yr">1981</b> — <span class="cite">S.P. Gupta (1981 Supp (1) SCC 87)</span>: Bhagwati J. lays down the full doctrine — public injury, sufficient interest, letter jurisdiction, bona fide filter, limits. <span class="badge b">DU</span></div>
+<div class="ev"><b class="yr">1982→84</b> — <span class="cite">Bandhua Mukti Morcha (1984) 3 SCC 161</span>: a letter becomes a writ petition; court appoints fact-finding commissioners; bonded labour presumed on showing forced labour. <b>Syllabus case 48.</b> <span class="badge g">RESEARCHED</span></div>
+<div class="ev"><b class="yr">1985</b> — <span class="cite">Olga Tellis v. Bombay Municipal Corporation</span>: pavement dwellers' counsel heard as representatives; eviction only with notice + alternative site — “Procedure is handmaiden” in action.</div>
+<div class="ev"><b class="yr">1986</b> — <span class="cite">M.C. Mehta (Oleum)</span>: PIL by a lawyer for an unidentifiable class of gas victims; compensation applications by the Delhi Legal Aid &amp; Advice Board and Delhi Bar Association entertained. <b>Syllabus case 50.</b> <span class="badge g">RESEARCHED</span></div>
+<div class="ev"><b class="yr">1997</b> — <span class="cite">Vishaka</span> (guidelines against workplace harassment) &amp; <span class="cite">D.K. Basu</span> (arrest safeguards): NGOs litigating for classes become the norm.</div>
+<div class="ev"><b class="yr">2026</b> — <span class="cite">Mizo Chief Council</span> (Pardiwala &amp; Mahadevan JJ.): standing upheld to be tested, but petition fails at the threshold — <b>relaxed standing + strict proof of breach</b> is the modern equilibrium. <span class="badge g">RESEARCHED</span></div>
+</div>
+
+<div class="warn">
+<b>Traps to avoid:</b> (i) “PIL abolished locus standi” — wrong: it <i>relaxed</i> it, retaining the bona fide/sufficient-interest filter (paras 17, 24). (ii) “Any busybody may file” — para 24's pressure-group warning says the opposite. (iii) Confusing <b>locus standi</b> (who may sue) with <b>justiciability</b> (whether the court may touch the subject at all) — para 24 calls this a “vital distinction”. (iv) Forgetting the AG route (ss. 91–92 CPC) that PIL supplements.
+</div>
+</section>
+
+<!-- ============ §3 LACHES ============ -->
+<section id="s-laches">
+<h2>§3 · Laches (unreasonable, unexplained delay)</h2>
+<p class="lead"><b>Laches</b> = such delay, unexplained and unexcused, that the claim has become stale and it would be inequitable to entertain it. Unlike limitation it is <b>not a statute</b> — it is the court's equitable refusal, policed by the maxim <i>vigilantibus non dormientibus jura subveniunt</i> (“the law aids the vigilant, not those who sleep”). Syllabus case 47 (<i>Trilokchand</i>) is the fountainhead.</p>
+
+<h3>3.1 The puzzle: no Limitation Act, yet delay kills</h3>
+<div class="grid g2">
+<div class="card a">
+<h4>Settled (all five judges in Trilokchand agreed)</h4>
+<ul>
+<li><b>The Limitation Act, 1963 does not directly apply</b> to Art 32/226 proceedings — there is no prescribed period.</li>
+<li>A legislative attempt to impose a short period would itself be questionable under <span class="art">Art 13(2)</span> (it could extinguish a fundamental right).</li>
+<li>Time spent pursuing representations/appeals to authorities is ordinarily a good explanation for delay.</li>
+</ul>
+</div>
+<div class="card b">
+<h4>But the Court's own rules do the work</h4>
+<ul>
+<li><b>Analogy:</b> where the writ remedy mirrors a suit remedy limited by statute, the court “adopts the statute as its own rule of procedure” and measures delay by that period (Bachawat J.).</li>
+<li><b>Public policy:</b> stale claims are refused even absent a statutory bar; only an <i>extinguished right</i> (prescription, s.27 Limitation Act) leaves nothing to enforce; an extinguished <i>remedy</i> still permits a public-policy refusal.</li>
+</ul>
+</div>
+</div>
+
+<h3>3.2 Trilokchand's five-judge split (learn who said what)</h3>
+<div class="twrap"><table>
+<tr><th style="width:22%">Judge</th><th style="width:44%">On laches under Art 32</th><th style="width:34%">Result for the petitioners</th></tr>
+<tr><td><b>Bachawat J.</b> (majority)</td><td>Art 32 power must not ignore “limitation, res judicata and the like”; analogy of Limitation Acts applies on public policy; extraordinary remedies are not for recovering money that a suit could not recover (time-barred).</td><td rowspan="3"><b>Petition dismissed</b> — ~10-year delay; claim stale; though <b>not</b> barred by res judicata (High Court had dismissed the earlier petition in limine, i.e., not on merits).</td></tr>
+<tr><td><b>Mitter J.</b> (majority)</td><td>Concurs — stale claim; analogy of limitation governs.</td></tr>
+<tr><td><b>Hidayatullah C.J.</b> (majority)</td><td>Self-restraint: “extraordinary remedies should not take the place of ordinary remedies”; comity with the High Court; but time pursuing remedies explains delay.</td></tr>
+<tr><td><b>Sikri J.</b> (dissent)</td><td>Stale-claim doctrine may apply only after <b>extreme</b> delay — yardstick ≈ <b>one year from discovery</b> of the right; petitioners came within six months of discovering their mistake (via <span class="cite">Kantilal Babulal</span>).</td><td rowspan="2">Would have <b>allowed</b> the Art 32 petition.</td></tr>
+<tr><td><b>Hegde J.</b> (dissent)</td><td>“A relief asked for under Article 32 <b>cannot be refused on the ground of laches</b>”; Limitation Act irrelevant; “law reports do not show a single instance” of refusal on delay; laches is proper only under the discretionary Art 226. (Warning: importing laches would “pull down from the high pedestal now occupied by the fundamental rights”.)</td></tr>
+</table></div>
+<p class="mini">Citation: <span class="cite">Trilokchand Motichand v. H.B. Munshi (1969) 1 SCC 110; AIR 1970 SC 898; [1969] 2 SCR 824</span> — Constitution Bench, decided 22-11-1968; dismissed 3:2. <span class="badge g">RESEARCHED</span></p>
+
+<h3>3.3 Interaction with res judicata &amp; exhaustion (the Daryao filter)</h3>
+<div class="good">
+Delay and bars interlock: a High Court that refuses on <b>laches</b> or <b>alternative-remedy</b> grounds has <i>not</i> decided the merits — so its order generally <b>cannot be pleaded as res judicata</b> against a later Art 32 petition (unless the facts it found are themselves relevant under Art 32). Conversely, delay that is <b>explained</b> by pursuing remedies is excused (Trilokchand headnote). Daryao draws this line; Trilokchand applies it.
+</div>
+
+<h3>3.4 The modern restatement (2026): a flexible rule of practice</h3>
+<div class="card c">
+<p>In <span class="cite">Mizo Chief Council v. Union of India</span> (2026; Pardiwala &amp; Mahadevan JJ.), reviewing the law from <i>Trilokchand</i> onwards, the Supreme Court held:</p>
+<ul>
+<li>Laches in Art 32 proceedings is “a <b>flexible rule of practice</b> anchored in judicial discretion, <b>not a rigid rule of law</b>”;</li>
+<li>“The operative test is not one of <b>'unreasonable delay'</b> but of <b>'unexplained delay'</b>” — the <i>adequacy of the explanation</i> is decisive;</li>
+<li>Two filters: would entertaining the petition <b>disturb settled matters/third-party rights</b>, and has the delay been <b>satisfactorily explained</b>;</li>
+<li>The State “cannot be permitted to benefit from its own lethargy by <b>weaponising the doctrine of laches</b>” where the delay is partly its own doing (indecision, false assurances);</li>
+<li>Still threshold-strict: the petitioner must prove <b>a fundamental right and its actual or threatened breach</b>.</li>
+</ul>
+<p class="mini">PETITION FAILED — not on laches, but because no FR breach was proved (land compensation/privy-purse claim, notification of 1955, petition filed 2014). <span class="badge g">RESEARCHED</span></p>
+</div>
+
+<div class="fig">
+<svg viewBox="0 0 780 175" width="100%" style="max-width:780px">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5b6b84"/></marker></defs>
+<rect x="15" y="50" width="170" height="70" rx="10" class="box"/>
+<text x="100" y="76" text-anchor="middle" class="ttl">DELAY IN FILING</text>
+<text x="100" y="96" text-anchor="middle">Art 32/226 petition</text>
+<text x="100" y="112" text-anchor="middle">(no fixed limitation)</text>
+<rect x="225" y="50" width="180" height="70" rx="10" class="box2"/>
+<text x="315" y="72" text-anchor="middle" class="ttl">IS IT EXPLAINED?</text>
+<text x="315" y="92" text-anchor="middle">pursuing remedies · minority ·</text>
+<text x="315" y="110" text-anchor="middle">State's own inaction → excused</text>
+<rect x="445" y="12" width="320" height="60" rx="10" class="box3"/>
+<text x="605" y="34" text-anchor="middle" class="ttl">EXPLAINED / ongoing breach</text>
+<text x="605" y="54" text-anchor="middle">→ petition heard on merits (Mizo test: unexplained delay)</text>
+<rect x="445" y="100" width="320" height="60" rx="10" class="box2"/>
+<text x="605" y="122" text-anchor="middle" class="ttl">UNEXPLAINED &amp; STALE</text>
+<text x="605" y="142" text-anchor="middle">→ dismissed on laches; NOT res judicata (Daryao)</text>
+<path class="arw" d="M187,85 L221,85"/>
+<path class="arw" d="M407,72 L441,48"/>
+<path class="arw" d="M407,98 L441,128"/>
+</svg>
+<div class="cap">Fig. 3 — Laches decision path (Trilokchand → Mizo Chief Council)</div>
+</div>
+
+<div class="warn">
+<b>Traps:</b> (i) “Laches = limitation” — no; limitation is statutory, laches is discretionary. (ii) “No limitation applies, so delay never matters” — Trilokchand's majority rejected that; Hegde's dissent was the exception. (iii) Saying a laches-dismissal bars a fresh Art 32 petition — <b>Daryao says it does not</b> (no merits decision). (iv) Forgetting the plaintiff's own duty to explain: the modern test is <b>unexplained</b> delay.
+</div>
+</section>
+<!-- ============ §4 RES JUDICATA ============ -->
+<section id="s-rj">
+<h2>§4 · Res Judicata (claim-preclusion across the writ court)</h2>
+<p class="lead"><b>Res judicata</b> — a thing adjudicated is treated as the truth (<i>res iudicata pro veritate habitur</i>): no person shall be vexed twice for the same cause (<i>nemo debet bis vexari pro una eademque causa</i>). Statutorily it is <b>s. 11, CPC</b>; constitutionally the question is whether it fences in the “heartbeat” remedy of <span class="art">Art 32</span>. Syllabus case 46 (<i>Daryao</i>) answers: <b>yes — with conditions</b>.</p>
+
+<div class="kbox">
+<h4>📐 Section 11 CPC — the elements (inline)</h4>
+<p style="font-size:15px">No court shall try any suit or issue in which the matter <b>directly and substantially in issue</b> has been directly and substantially in issue—(i) in a <b>former suit</b> between the same parties (or their litigating under the <b>same title</b>); (ii) in a court <b>competent</b> to try the subsequent suit; (iii) where the matter was <b>finally decided</b> in the former suit. “Suit” is read widely (any litigation, incl. writs) once the twin pillars — <b>same parties + same title + same matter finally decided on merits</b> — exist. Two maxims travel with it: <i>public interest in finality of litigation</i>, and <i>a person should not be tried twice for the same cause</i> (Daryao's rationale).</p>
+</div>
+
+<h3>4.1 Daryao's four propositions — the headnote framework (verbatim structure)</h3>
+<div class="twrap"><table>
+<tr><th style="width:6%">#</th><th style="width:52%">How the High Court disposed of the Art 226 petition</th><th style="width:42%">Effect on a later Art 32 petition (same parties, same facts, same relief)</th></tr>
+<tr><td><b>1</b></td><td><b>Dismissed ON MERITS</b> — “no fundamental right is proved, or its contravention is not established, or is shown to be constitutionally justified” (speaking order)</td><td><b>BARRED by res judicata.</b> The SC will not re-hear it under Art 32. <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>2</b></td><td><b>Dismissed on laches</b> or on the ground of an <b>alternative remedy</b></td><td><b>NOT barred</b> — except where the <i>facts found</i> by the HC are themselves relevant even under Art 32.</td></tr>
+<tr><td><b>3</b></td><td><b>Dismissed in limine with an order</b></td><td>Bar depends on the <b>nature of the order</b> (was anything actually decided?).</td></tr>
+<tr><td><b>4</b></td><td><b>Dismissed in limine without a speaking order</b>, or <b>withdrawn</b></td><td><b>NO bar</b> — nothing was tried and decided; unsafe to presume a merits decision.</td></tr>
+</table></div>
+
+<h3>4.2 Daryao's reasoning — why Art 32 is not immune</h3>
+<div class="grid g2">
+<div class="card a">
+<h4>Arguments of the petitioner (as recorded)</h4>
+<ul>
+<li>Res judicata is a <b>technical rule akin to estoppel</b> — inapplicable to fundamental-rights enforcement.</li>
+<li><span class="art">Art 32(1)</span> itself is a <b>fundamental right</b>; whittling it down with a procedural bar is unconstitutional.</li>
+<li>A High Court trying under <span class="art">Art 226</span> cannot be the “same court” as the Supreme Court under <span class="art">Art 32</span> — the s.11 competence test fails; the reliefs/forums differ.</li>
+<li>English analogy: habeas corpus petitions may be filed one after the other — successive petitions never precluded.</li>
+</ul>
+</div>
+<div class="card b">
+<h4>Arguments of the respondents</h4>
+<ul>
+<li>Art 32 guarantees an “<b>appropriate proceeding</b>”, not an automatic original petition; the proper channel after a 226 verdict was <span class="art">Art 136</span> (SLP).</li>
+<li>Finality rests on <b>public policy</b>; repeated litigation vexes the same person twice — the twin maxims apply to FR petitions too.</li>
+<li><span class="cite">Raj Lakshmi Dasi v. Banamali Sen</span>: res judicata can operate even where the first court could not have tried the second matter — competence need not be identical.</li>
+<li>The HC's jurisdiction under 226 is <b>substantially the same</b> as the SC's under 32 (same parties, same cause of action, same character of relief).</li>
+</ul>
+</div>
+</div>
+
+<div class="held">
+<h4>Decision — Daryao v. State of U.P., AIR 1961 SC 1457 (27-03-1961; Gajendragadkar C.J.) <span class="badge g">RESEARCHED</span></h4>
+<ul>
+<li><b>Held:</b> the Art 32 petition is <b>barred</b> — the Allahabad HC had dismissed the identical 226 petition <b>on merits</b> by a speaking order. The four-proposition table above is the operative test.</li>
+<li><b>Rejected:</b> “res judicata = technical estoppel” (it “rests on maxims… taken from Roman law”, not on technical estoppel); “the HC cannot bind an Art 32 petition” (competence is substantially satisfied); the English habeas-corpus analogy (“no analogy between the petition for habeas corpus and petitions under Art 226 or 32”); and the notion that Art 32 is merely a discretionary power like Art 226 — “citizens have ordinarily the right to invoke Art 32” once an illegal FR violation is shown.</li>
+<li><b>Confirmed:</b> the rule “<b>can be invoked even against a petition filed under Art 32</b>” (also on the authority of an earlier SC Art 32 round).</li>
+</ul>
+</div>
+
+<h3>4.3 Trilokchand's contrast — the in-limine case</h3>
+<div class="quotebox">In <i>Trilokchand</i> the earlier Bombay HC petition had been dismissed <b>in limine</b> — so, applying Daryao (point 4), the <b>Full Court held res judicata did not bar</b> the Art 32 petition; the petition nevertheless <b>failed on laches</b> (§3). The headnote also records the Court's famous double thought: the principle of res judicata <i>is</i> applied to Art 32 “although the expression is somewhat inapt and unfortunate” — the motivating factor being “another parallel jurisdiction in another Court” (comity + finality).
+<span class="src">Trilokchand (1969) 1 SCC 110 — headnote/observations <span class="badge g">RESEARCHED</span></span></div>
+
+<h3>4.4 The converse direction: 226 → suit</h3>
+<div class="card c">
+<p><span class="cite">State of U.P. v. Nawab Hussain (1984) 2 SCC 149</span>: a writ petition dismissed <b>because an ordinary suit was an equally efficacious remedy</b> did <b>not</b> bar the subsequent suit under s.11 CPC — nothing was tried and decided on merits. The same case confirms the general proposition that a <b>decision on merits under Art 226 has the same preclusive force</b> as a suit — the doctrine cuts both ways. <span class="badge g">RESEARCHED</span></p>
+</div>
+
+<div class="fig">
+<svg viewBox="0 0 800 360" width="100%" style="max-width:800px">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5b6b84"/></marker></defs>
+<rect x="250" y="8" width="300" height="46" rx="10" class="box"/>
+<text x="400" y="28" text-anchor="middle" class="ttl">Same party moves the SC under Art 32</text>
+<text x="400" y="46" text-anchor="middle">after an earlier Art 226 petition?</text>
+<rect x="230" y="86" width="340" height="40" rx="10" class="box2"/>
+<text x="400" y="111" text-anchor="middle" class="ttl">Was the 226 petition decided ON MERITS?</text>
+<rect x="40" y="168" width="230" height="74" rx="10" class="box3"/>
+<text x="155" y="190" text-anchor="middle" class="ttl">YES — speaking order</text>
+<text x="155" y="210" text-anchor="middle">“no FR proved / justified”</text>
+<text x="155" y="230" text-anchor="middle">→ BARRED (Daryao pt. 1)</text>
+<rect x="300" y="168" width="230" height="74" rx="10" class="box2"/>
+<text x="415" y="190" text-anchor="middle" class="ttl">LACHES / ALT. REMEDY</text>
+<text x="415" y="210" text-anchor="middle">dismissed without merits</text>
+<text x="415" y="230" text-anchor="middle">NOT barred (pt. 2)</text>
+<rect x="560" y="168" width="230" height="74" rx="10" class="box2"/>
+<text x="675" y="190" text-anchor="middle" class="ttl">IN LIMINE</text>
+<text x="675" y="210" text-anchor="middle">with order → see nature</text>
+<text x="675" y="230" text-anchor="middle">no speaking order → no bar (pts. 3–4)</text>
+<rect x="130" y="284" width="540" height="56" rx="12" class="box4"/>
+<text x="400" y="306" text-anchor="middle" class="ttl">SAME TEST IN REVERSE: 226 dismissal on laches/alt. remedy never bars Art 32</text>
+<text x="400" y="326" text-anchor="middle">unless the facts the HC found are themselves relevant under Art 32 (Daryao)</text>
+<path class="arw" d="M400,56 L400,82"/>
+<path class="arw" d="M400,130 L160,164"/>
+<path class="arw" d="M400,130 L415,164"/>
+<path class="arw" d="M400,130 L650,164"/>
+<path class="arw" d="M400,246 L400,280"/>
+</svg>
+<div class="cap">Fig. 4 — Res judicata decision-tree for a fresh Art 32 petition after an earlier 226 attempt (Daryao + Trilokchand)</div>
+</div>
+
+<div class="warn">
+<b>Traps:</b> (i) “Res judicata never applies to Art 32” — Daryao overruled that folklore. (ii) “Any dismissal bars” — only a <b>merits</b> dismissal with a speaking order. (iii) Confusing <b>res judicata</b> (preclusion by decision) with <b>estoppel</b> (preclusion by conduct) — Daryao stresses the difference. (iv) Forgetting it flows <b>226 → 32</b> <i>and</i> (on merits) <b>32 → 32</b>, and that a laches/alternative-remedy dismissal does not preclude.
+</div>
+</section>
+
+<!-- ============ §5 EXHAUSTION ============ -->
+<section id="s-exhaust">
+<h2>§5 · Exhaustion of Alternative Remedies</h2>
+<p class="lead">The doctrine of <b>self-help first</b>: where an efficacious alternative remedy exists — suit, appeal, revision, statutory tribunal, departmental channel — the writ court will ordinarily <b>decline to interfere</b>. It is a doctrine of <b>comity and complementary jurisdiction</b>, not of extinguishment (its refusal normally carries <b>no res judicata</b> effect — §4).</p>
+
+<h3>5.1 The rule and its constitutional flavouring</h3>
+<div class="grid g2">
+<div class="card a">
+<h4>Core statements (Trilokchand)</h4>
+<ul>
+<li>“In <b>rare cases</b>, where the ordinary process of law appears <b>inefficacious</b>, does this Court interfere even where other remedies are available.”</li>
+<li>“<b>Extraordinary remedies should not take the place of ordinary remedies.</b>”</li>
+<li>The SC refrains where the party has <b>already moved the HC</b> for the same relief, and where a <b>better remedy</b> lies in the High Court, “which can go into the controversy <b>more comprehensively</b>” (affidavits, evidence, cross-examination) — “<b>comity between the Supreme Court and the High Court</b>.”</li>
+<li>This self-restraint “has now become <b>inveterate</b>” (Hidayatullah C.J.). <span class="badge g">RESEARCHED</span></li>
+</ul>
+</div>
+<div class="card b">
+<h4>Why the rule exists</h4>
+<ul>
+<li><b>Division of labour:</b> the writ remedy is residual — “court of first resort” only where no other door opens.</li>
+<li><b>Factual advantages:</b> ordinary forums can record evidence; writ courts act on affidavits.</li>
+<li><b>Delay-explanation link:</b> time spent pursuing the alternative remedy is ordinarily a good explanation for delay in filing the writ (Trilokchand) — exhaustion <i>helps</i> your laches profile.</li>
+<li><b>No forfeiture:</b> refusal on this ground is not a merits decision → no res judicata (Daryao pt.2; <i>Nawab Hussain</i>). <span class="badge g">RESEARCHED</span></li>
+</ul>
+</div>
+</div>
+
+<h3>5.2 Exceptions — when the court will not insist</h3>
+<div class="twrap"><table>
+<tr><th style="width:34%">Exception</th><th style="width:40%">Reason</th><th style="width:26%">Illustration</th></tr>
+<tr><td><b>No efficacious remedy exists</b> (or it is illusory/delayed)</td><td>Exhaustion is required only of <i>equally efficacious</i> alternatives; a hopeless or barred remedy need not be pursued.</td><td>Trilokchand — court interferes only in “rare cases… inefficacious” ordinary process</td></tr>
+<tr><td><b>Fundamental-right / constitutional question</b></td><td>The Art 32 remedy is itself a FR; courts do not casually condition it on first-round skirmishes.</td><td>Daryao — “citizens have ordinarily the right to invoke Art 32” once breach shown</td></tr>
+<tr><td><b>Public interest + indigence (PIL)</b></td><td>Where affected persons “by reason of poverty or disability… cannot approach a court”, procedural rules bend.</td><td>Oleum (compensation applications of Delhi Legal Aid &amp; Advice Board / Delhi Bar Association treated as maintainable); Bandhua (letter petition) <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Pending/likely multiplicity; suppression; urgency</b></td><td>Where going channel-by-channel would defeat the right (eviction imminent, continuing hazard).</td><td>Vishaka-type interim directions; Oleum safety conditions during pendency <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Discretionary waiver by the court</b></td><td>Exhaustion is a rule of convenience, not jurisdiction: the court may in its discretion hear a stale/parallel claim where demand for justice is high.</td><td>Trilokchand headnote — “existence of other ordinary remedy” as an <i>instance of self-restraint</i>, not a bar</td></tr>
+</table></div>
+
+<div class="good">
+<b>Interplay in one line:</b> exhaustion governs <i>order of forums</i>, laches governs <i>time</i>, res judicata governs <i>repeat litigation after a merits decision</i> — and a refusal grounded in the first two never triggers the third.
+</div>
+</section>
+
+<!-- ============ §6 PIL ============ -->
+<section id="s-pil">
+<h2>§6 · Public Interest Litigation &amp; the Concept of <i>Pro Bono Publico</i></h2>
+<p class="lead">PIL is the <b>institutional form</b> of relaxed locus standi: litigation “undertaken for redressing a public injury, enforcing a public duty, protecting social, collective, 'diffused' rights” (DU, para 20). Its operating motto is the DU phrase — the courts act <b>pro bono publico</b>: <b>for the public good</b>, not for any party's private gain.</p>
+
+<div class="grid g3">
+<div class="card c">
+<h4>📌 Concept</h4>
+<p>A suit or petition where the <b>cause is the public's</b>, the remedy is <b>class-wide or community-wide</b>, and standing rests on <b>sufficient interest</b> rather than personal injury. The litigant may be an NGO, a lawyer, a journalist, an activist — or no litigant at all (suo motu).</p>
+</div>
+<div class="card a">
+<h4>🔑 <i>Pro bono publico</i></h4>
+<p>Latin: <b>“for the public good”</b>. In the DU passage it is the label for the court's willingness to act on a <b>mere letter</b> disclosing public injury — justice untethered from fee, formality and filing-fee logic. Closely allied: “<b>procedure is but a handmaiden of justice</b>”.</p>
+</div>
+<div class="card b">
+<h4>⚖️ Constitutional anchors</h4>
+<p><span class="art">Art 32</span>/<span class="art">226</span> (forum), <span class="art">Art 21</span> (life/dignity content), <span class="art">Art 39A</span> (equal justice &amp; free legal aid), <span class="art">Art 41–43A</span>+<span class="art">48A</span>/<span class="art">51A(g)</span> (welfare &amp; environment duties), <span class="art">Art 142</span> (complete justice), <span class="art">Art 141</span> (binding declaration).</p>
+</div>
+</div>
+
+<h3>6.1 The PIL toolbox — procedural innovations</h3>
+<div class="twrap"><table>
+<tr><th style="width:24%">Tool</th><th style="width:44%">How it works</th><th style="width:32%">Landmark use</th></tr>
+<tr><td><b>Letter jurisdiction (epistolary)</b></td><td>A letter to a judge/Chief Justice is registered as a writ petition; no court fee, no formal verification in the classical sense.</td><td><span class="cite">Bandhua Mukti Morcha</span> — 25-02-1982 letter became the Art 32 petition <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Suo motu cognizance</b></td><td>The court acts on press reports, films, letters from prisoners, or its own knowledge.</td><td><span class="cite">Hussainara Khatoon</span> (1979) — mass release of under-trials</td></tr>
+<tr><td><b>Amicus curiae</b></td><td>Court appoints a friend of the court to represent an absent/vulnerable class.</td><td>Environmental &amp; custodial PILs (regularly)</td></tr>
+<tr><td><b>Fact-finding commissions</b></td><td>Retired judges/advocates/experts investigate on the ground; reports become evidence — the court steps outside the adversarial model because “the oppressed cannot afford legal aid”.</td><td><span class="cite">Bandhua</span> — Ashok Srivastava &amp; Ashok Panda appointed Commissioners (26-02-1982) <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Continuing mandamus / monitoring</b></td><td>Directions remain under the court's supervision for years; compliance affidavits &amp; periodic reports.</td><td><span class="cite">Vineet Narain</span> (CBI monitoring); Bandhua follow-ups (1984 → 1991) <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Guidelines / legislative-filling orders</b></td><td>Court writes interim rules where the legislature/executive failed (until law catches up).</td><td><span class="cite">Vishaka</span> (harassment); <span class="cite">D.K. Basu</span> (arrest procedure)</td></tr>
+<tr><td><b>Consent conditions &amp; security</b></td><td>Industry permitted to run subject to inspections, deposits, undertakings — enforced by the court itself.</td><td><span class="cite">M.C. Mehta (Oleum)</span> — CPCB monitoring, ₹20 lakh deposit + ₹15 lakh bank guarantee <span class="badge g">RESEARCHED</span></td></tr>
+</table></div>
+
+<h3>6.2 The admission filters — PIL is liberal, not boundless</h3>
+<div class="grid g2">
+<div class="card a">
+<h4>From the DU text (paras 17, 20, 24–25)</h4>
+<ul>
+<li><b>Bona fide</b> — not for personal gain, private profit, political motivation or oblique purpose (para 17);</li>
+<li><b>Sufficient interest</b> — discretionary, no strait-jacket (para 20);</li>
+<li><b>No pressure-group weaponisation</b> — courts must not become instruments of sectional conflict (para 24);</li>
+<li><b>No “secondary public injury”</b> — private grievances cannot be repackaged (para 25);</li>
+<li><b>Justiciability intact</b> — relaxed standing never opens political questions reserved to the other organs (para 24).</li>
+</ul>
+</div>
+<div class="card b">
+<h4>Applied in later case law</h4>
+<ul>
+<li>Art 32 power “limited by its very nature” — it is <b>judicial</b> power (Bandhua, Bhagwati J.);</li>
+<li>Court will not entertain petitions with “misleading and inaccurate statements” (Trilokchand);</li>
+<li>Threshold burden: prove a <b>fundamental right and its actual/threatened breach</b> (Mizo Chief Council) <span class="badge g">RESEARCHED</span>;</li>
+<li>Empirical filter: unexplained decades-old delay defeats even a well-standing petitioner (§3).</li>
+</ul>
+</div>
+</div>
+
+<h3>6.3 PIL vs traditional litigation</h3>
+<div class="twrap"><table>
+<tr><th style="width:22%">Dimension</th><th style="width:39%">Traditional suit</th><th style="width:39%">PIL</th></tr>
+<tr><td>Injury</td><td>Personal legal injury</td><td>Public / class / diffused injury</td></tr>
+<tr><td>Standing</td><td>Direct affected party</td><td>Sufficient interest; NGO, lawyer, next friend, letter, suo motu</td></tr>
+<tr><td>Procedure</td><td>Pleadings, evidence, cross-examination</td><td>Affidavits, commissions, reports, monitoring — “procedure is handmaiden”</td></tr>
+<tr><td>Forum entry</td><td>Court fee, verification, limitation</td><td>No fee in letter petitions; limitation flexible (but laches policed)</td></tr>
+<tr><td>Relief</td><td>Private remedy (damages, declaration)</td><td>Directions, guidelines, compensation, rehabilitation, monitoring</td></tr>
+<tr><td>Pitfall</td><td>—</td><td>Politically motivated or proxy-litigation (filtered by paras 17/24)</td></tr>
+</table></div>
+
+<div class="quotebox">“[Courts] would readily respond even to a letter addressed to them, acting pro bono publico… <b>procedure is but a handmaiden of justice.</b>”
+<span class="src">S.P. Gupta, Bhagwati J., para 17 — DU case material — the constitutional charter of Indian PIL</span></div>
+</section>
+<!-- ============ §7 ORDERS & DIRECTIONS ============ -->
+<section id="s-orders">
+<h2>§7 · Power to Issue Appropriate Orders &amp; Directions</h2>
+<p class="lead">Item (b) is the <b>remedial jurisdiction</b>: what the court may actually <i>do</i> after the access doctrines of item (a) admit the case. The DU case book carries no separate excerpt for item (b), so this section is built on the <b>verbatim constitutional text</b> <span class="badge b">VERBATIM</span> plus the syllabus cases' application <span class="badge g">RESEARCHED</span>. Remember the DU sentence: <b>“procedure is but a handmaiden of justice”</b> — and the countervailing one from <i>Bandhua</i>: the power, though of “widest amplitude”, “is limited by its very nature, that it is <b>judicial</b> power.”</p>
+
+<div class="kbox">
+<h4>📜 Article 32 — verbatim (Constitution of India)</h4>
+<p style="font-size:15.2px"><b>32. Remedies for enforcement of rights conferred by this Part.</b>—(1) The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed.</p>
+<p style="font-size:15.2px">(2) The Supreme Court shall have power to issue <b>directions or orders or writs</b>, including writs in the nature of <b>habeas corpus, mandamus, prohibition, quo warranto and certiorari</b>, whichever may be appropriate, for the enforcement of any of the rights conferred by this Part.</p>
+<p style="font-size:15.2px">(3) Without prejudice to the powers conferred on the Supreme Court by clauses (1) and (2), Parliament may by law empower any other court to exercise within the local limits of its jurisdiction all or any of the powers exercisable by the Supreme Court under clause (2).</p>
+<p style="font-size:15.2px">(4) The right guaranteed by this article shall not be suspended except as otherwise provided for by this Constitution.</p>
+</div>
+<div class="grid g2">
+<div class="card a">
+<h4>Reading 32(1)–(4)</h4>
+<ul>
+<li><b>32(1)</b> — the <i>right to move</i> is itself a fundamental right (this is why Daryao says citizens are “ordinarily entitled” to relief; and why Trilokchand's Hegde J. called it non-discretionary).</li>
+<li><b>32(2)</b> — the engine of item (b): three species — <b>directions, orders, writs</b> — “whichever may be appropriate”. “Appropriate” is the self-restraint word: relief must fit the breach.</li>
+<li><b>32(3)</b> — residual empowerment of other courts by Parliament; note also <span class="art">Art 139</span>: Parliament may confer on the SC power to issue writs <i>for other purposes</i> beyond 32(2).</li>
+<li><b>32(4)</b> — suspension only as the Constitution itself provides (e.g., Arts 352–360 mechanics; after the 44th Amendment, <span class="art">Arts 20 &amp; 21</span> can never be suspended).</li>
+</ul>
+</div>
+<div class="card b">
+<h4>Why “directions or orders or writs” matters</h4>
+<ul>
+<li>The list is <b>expansive, not exhaustive</b> — the Court has issued <i>continuing</i> directions, monitoring regimes, guidelines, commissions, consent terms and money awards under it.</li>
+<li><b>Writs</b> are named “in the nature of” the five classical forms — Indian courts issue them with adapted, flexible scope (e.g., habeas for bonded labour detention).</li>
+<li><b>32(2) is jurisdictional; 32(1) is enforceable against the State machinery itself</b> — K.S. Puttaswamy-style reading of the remedy as substantive.</li>
+</ul>
+</div>
+</div>
+
+<div class="kbox">
+<h4>📜 Article 226 — verbatim (Constitution of India)</h4>
+<p style="font-size:15.2px"><b>226. Power of High Courts to issue certain writs.</b>—(1) Notwithstanding anything in article 32, every High Court shall have power, throughout the territories in relation to which it exercises jurisdiction, to issue to <b>any person or authority, including in appropriate cases, any Government</b>, within those territories <b>directions, orders or writs</b>, including writs in the nature of habeas corpus, mandamus, prohibition, quo warranto and certiorari, or any of them, <b>for the enforcement of any of the rights conferred by Part III and for any other purpose</b>.</p>
+<p style="font-size:15.2px">(2) The power conferred by clause (1) … may also be exercised by any High Court exercising jurisdiction in relation to the territories within which the <b>cause of action, wholly or in part, arises</b> … notwithstanding that the seat of such Government or authority or the residence of such person is not within those territories.</p>
+<p style="font-size:15.2px">(3) Where any party against whom an <b>interim order</b> … is made … without furnishing copies and an opportunity of being heard, applies for its vacation, the High Court shall dispose of the application <b>within two weeks</b> … failing which the interim order <b>stands vacated</b>.</p>
+<p style="font-size:15.2px">(4) The power conferred on a High Court by this article shall not be in derogation of the power conferred on the Supreme Court by clause (2) of article 32.</p>
+<p style="font-size:15.2px" class="mini">[Also: <b>Article 226A</b> (inserted by the 42nd Amendment) bars consideration of the constitutional validity of Central laws in proceedings under Art 226.]</p>
+</div>
+
+<div class="twrap"><table>
+<tr><th style="width:24%">Dimension</th><th style="width:38%">Art 32 (Supreme Court)</th><th style="width:38%">Art 226 (High Courts)</th></tr>
+<tr><td><b>Scope of subject-matter</b></td><td>Enforcement of <b>Part III rights only</b> (“rights conferred by this Part”).</td><td>Part III rights <b>+ “any other purpose”</b> — any legal right/public law duty (wide “other purposes” jurisdiction).</td></tr>
+<tr><td><b>Who can be addressed</b></td><td>Against any person/authority violating Part III (incl. private parties, e.g., industrialists in Art 21 cases).</td><td>“Any person or authority, including in appropriate cases, any Government.”</td></tr>
+<tr><td><b>Nature</b></td><td><b>Guaranteed right</b> to move (32(1)) — “the heart and soul” (Kaswan sense: portal of fundamental rights).</td><td><b>Discretionary</b> equitable jurisdiction (laches, parity, alternative remedy are native tools).</td></tr>
+<tr><td><b>Territory</b></td><td>Whole of India (court sits at Delhi; original writ runs nationwide).</td><td>Territory of its jurisdiction, extended by 226(2) where the cause of action arises wholly/partly.</td></tr>
+<tr><td><b>Overlap</b></td><td>Parallel — 226(4) saves 32(2); Daryao/Trilokchand police the overlap with res judicata &amp; comity.</td><td>Same five writs + directions/orders; “Notwithstanding anything in article 32” opens 226(1).</td></tr>
+<tr><td><b>Interim orders</b></td><td>Discretionary stay/injunction inherent.</td><td>226(3): ex-parte interim orders without copies/hearing lapse if vacatur application not decided in <b>2 weeks</b>.</td></tr>
+</table></div>
+
+<div class="grid g3">
+<div class="card c">
+<h4>📜 Art 141 — precedent machinery</h4>
+<p>“The law declared by the Supreme Court shall be binding on all courts within the territory of India.” → every PIL innovation (Bandhua presumption, Oleum liability) becomes <b>national law</b> on declaration.</p>
+</div>
+<div class="card d">
+<h4>📜 Art 142 — the complete-justice engine</h4>
+<p><b>142(1):</b> the SC “may pass such decree or make such order as is necessary for <b>doing complete justice</b> in any cause or matter pending before it”, enforceable nationwide (by law of Parliament, or until then as the President may prescribe). <b>142(2):</b> powers to secure attendance, discovery/production of documents, and contempt. → basis for <b>continuing mandamus, monitoring regimes, global settlements</b>.</p>
+</div>
+<div class="card a">
+<h4>📜 Related articles</h4>
+<p><span class="art">Art 136</span> (discretionary SLP — the “other appropriate proceeding” after a 226 round, per Daryao's respondents); <span class="art">Art 137</span> (review); <span class="art">Art 139</span> (Parliament may extend SC writ power beyond Art 32(2) purposes); <span class="art">Art 145</span> (rules of procedure); <span class="art">Art 129/215</span> (courts of record — contempt power to enforce directions).</p>
+</div>
+</div>
+
+<h3>7.1 The menu of “appropriate orders and directions”</h3>
+<div class="twrap"><table>
+<tr><th style="width:20%">Kind of order</th><th style="width:44%">Function</th><th style="width:36%">Syllabus / landmark illustration</th></tr>
+<tr><td><b>Habeas corpus</b></td><td>Produce the detained person; test legality of custody.</td><td><b>Rudul Sah</b> — release ordered; then compensation (case 49) <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Mandamus</b> (+ continuing mandamus)</td><td>Command a public body to perform statutory/constitutional duty; keep it under supervision.</td><td><b>Bandhua</b> — identify, release, rehabilitate; quarterly compliance <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Prohibition / Certiorari</b></td><td>Stop or quash excess-of-jurisdiction proceedings.</td><td>Classical administrative-law use (Trilokchand's HC round involved certiorari-type relief)</td></tr>
+<tr><td><b>Quo warranto</b></td><td>Test authority to hold a public office.</td><td>Public office PILs</td></tr>
+<tr><td><b>Declarations</b></td><td>Declare law/rights (Art 141 gives them pan-India force).</td><td>Daryao declared the res-judicata conditions <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Directions to the State (policy-adjacent, but enforceable)</b></td><td>Implement statutes, frame schemes, submit affidavits.</td><td><b>Bandhua</b>: enforcement of the Bonded Labour System (Abolition) Act 1976 + Mines Act 1952 + Workmen's Compensation Act 1923 <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Commissions / commissioners</b></td><td>Court-supervised fact-finding where parties cannot prove.</td><td><b>Bandhua</b> — Commissioners appointed 26-02-1982 <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Consent terms, conditions, securities</b></td><td>Regulate hazardous operations pending decision: inspections, undertakings, deposits, bank guarantees.</td><td><b>Oleum</b> — 11 safety conditions; ₹20 lakh deposit + ₹15 lakh bank guarantee; CPCB monitoring <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Guidelines / gap-filling rules</b></td><td>Bind authorities until legislation arrives (constitutional basic-structure concerns noted elsewhere).</td><td>Vishaka; D.K. Basu</td></tr>
+<tr><td><b>Compensation (money)</b></td><td>Public-law reparation for FR violation — see §8.</td><td><b>Rudul Sah</b>; <b>Oleum</b> <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Costs / contempt</b></td><td>Enforcement teeth: Art 129/215 courts of record; Art 142(2) contempt power.</td><td>Monitoring cases</td></tr>
+</table></div>
+
+<div class="fig">
+<svg viewBox="0 0 800 330" width="100%" style="max-width:800px">
+<defs><marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 z" fill="#5b6b84"/></marker></defs>
+<rect x="270" y="8" width="260" height="50" rx="10" class="box"/>
+<text x="400" y="30" text-anchor="middle" class="ttl">BREACH OF A FUNDAMENTAL RIGHT</text>
+<text x="400" y="49" text-anchor="middle">(or any legal right, for Art 226 “any other purpose”)</text>
+<rect x="60" y="96" width="300" height="56" rx="10" class="box4"/>
+<text x="210" y="118" text-anchor="middle" class="ttl">Art 32 — Supreme Court</text>
+<text x="210" y="138" text-anchor="middle">directions · orders · writs “whichever may be appropriate”</text>
+<rect x="440" y="96" width="300" height="56" rx="10" class="box4"/>
+<text x="590" y="118" text-anchor="middle" class="ttl">Art 226 — High Courts</text>
+<text x="590" y="138" text-anchor="middle">same five writs + “any other purpose” (subject to discretion)</text>
+<rect x="30" y="196" width="170" height="52" rx="10" class="box3"/>
+<text x="115" y="217" text-anchor="middle" class="ttl">PREVENTIVE</text>
+<text x="115" y="236" text-anchor="middle">habeas · prohibition</text>
+<rect x="220" y="196" width="170" height="52" rx="10" class="box3"/>
+<text x="305" y="217" text-anchor="middle" class="ttl">COMPELLATORY</text>
+<text x="305" y="236" text-anchor="middle">mandamus · declarations</text>
+<rect x="410" y="196" width="170" height="52" rx="10" class="box3"/>
+<text x="495" y="217" text-anchor="middle" class="ttl">SUPERVISORY</text>
+<text x="495" y="236" text-anchor="middle">commissions · monitoring</text>
+<rect x="600" y="196" width="170" height="52" rx="10" class="box2"/>
+<text x="685" y="217" text-anchor="middle" class="ttl">REPARATORY</text>
+<text x="685" y="236" text-anchor="middle">compensation (§8)</text>
+<rect x="150" y="278" width="500" height="44" rx="10" class="box"/>
+<text x="400" y="297" text-anchor="middle" class="ttl">GUARDS: “appropriate” (32(2)) · judicial power (Bandhua) · laches · res judicata · exhaustion</text>
+<text x="400" y="315" text-anchor="middle">Art 141 gives the declaration national force; Art 142 makes it complete and enforceable</text>
+<path class="arw" d="M400,58 L400,80"/>
+<path class="arw" d="M330,80 L200,92"/>
+<path class="arw" d="M470,80 L600,92"/>
+<path class="arw" d="M210,154 L140,192"/>
+<path class="arw" d="M250,154 L300,192"/>
+<path class="arw" d="M560,154 L500,192"/>
+<path class="arw" d="M650,154 L690,192"/>
+<path class="arw" d="M400,250 L400,274"/>
+</svg>
+<div class="cap">Fig. 5 — The remedial map: from breach to the four families of relief (item b)</div>
+</div>
+
+<div class="warn">
+<b>Guardrails restated (Bandhua's own words):</b> “Article 32 confers widest amplitude of power… no express language limiting or circumscribing that power. <b>Yet, the power is limited by its very nature, that it is judicial power.</b>” Add Trilokchand's self-restraint practice and §3–§5 doctrines, and you have the constitutional answer to “judicial overreach”: <b>plenary remedy, disciplined jurisdiction.</b>
+</div>
+</section>
+
+<!-- ============ §8 COMPENSATION ============ -->
+<section id="s-comp">
+<h2>§8 · Power to Award Compensation</h2>
+<p class="lead">Can a court enforcing a <i>right</i> award <i>money</i>? Until <b>Rudul Sah (1983)</b> the orthodox answer was no — release was the writ's terminal point. Rudul Sah made compensation the second limb of an effective Art 32 remedy; <b>Oleum (1987)</b> then extended the compensatory logic to <i>private</i> hazardous enterprises through <b>absolute liability</b>. These are syllabus cases 49 and 50.</p>
+
+<div class="kbox">
+<h4>📜 Rudul Sah — the founding formula (verbatim)</h4>
+<p style="font-size:15.4px;font-style:italic">“Article 21 would be <b>denuded of its significant content</b> if the power of this Court were limited to passing orders of release from illegal detention. One of the telling ways in which the violation of that right can reasonably be prevented and due compliance with the mandate of Article 21 secured, is to <b>mulct its violators in the payment of monetary compensation</b>.”</p>
+<p class="mini">— Rudul Sah v. State of Bihar, AIR 1983 SC 1086 (Chandrachud C.J.) <span class="badge g">RESEARCHED</span></p>
+</div>
+
+<h3>8.1 The constitutional logic of the award</h3>
+<div class="grid g3">
+<div class="card a">
+<h4>Right ↔ Remedy symmetry</h4>
+<p><span class="art">Art 32(2)</span> says “directions or orders” without excluding money; if the “heart and soul” article cannot award a repair, it would be a right without a remedy for the poorest victims.</p>
+</div>
+<div class="card b">
+<h4>Deterrence function</h4>
+<p>Compensation is the only language the violator understands: it makes violation <i>costly</i> for the State/enterprise and future-proof for citizens — “palliative” justice (Rudul Sah).</p>
+</div>
+<div class="card c">
+<h4>Reparation, not bounty</h4>
+<p>Public-law compensation = <b>reparation for breach of a constitutional duty</b>; distinct from tort <i>damages</i> (which remain claimable in a civil suit — Rudul Sah expressly kept that door open).</p>
+</div>
+</div>
+
+<h3>8.2 Compensation toolkit — heads, standards, interplay</h3>
+<div class="twrap"><table>
+<tr><th style="width:22%">Head / mode</th><th style="width:40%">Standard</th><th style="width:38%">Authority</th></tr>
+<tr><td><b>Interim compensation</b></td><td>Paid forthwith while the claim matures; often within weeks.</td><td><b>Rudul Sah</b> — ₹30,000 in addition to ₹5,000 already paid, within 2 weeks <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Compensation without filing-fee/formality</b></td><td>Poor victims' applications entertained as PIL.</td><td>Oleum — Delhi Legal Aid &amp; Advice Board / Delhi Bar Association applications held maintainable under Art 32 <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Enterprise-scale (deterrent) compensation</b></td><td>Quantum correlated to the <b>size and prosperity</b> of the enterprise (“deep pockets”); no-fault.</td><td><b>Oleum</b> — absolute-liability rule (see 8.3) <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Custodial/public-authority reparation</b></td><td>State pays for injury caused by its agents.</td><td>Line continued in <span class="cite">Nilabati Behera (1993)</span> — compensation under Arts 32/226 is a public-law remedy distinct from private-law damages <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Non-cash “compensatory” relief</b></td><td>Rehabilitation, medical care, wages, housing, monitoring — where money alone cannot cure.</td><td><b>Bandhua</b> — release + rehabilitation directions under the Bonded Labour Act 1976 <span class="badge g">RESEARCHED</span></td></tr>
+<tr><td><b>Residuum</b></td><td>A constitutional award does <b>not</b> bar a suit for larger damages; court may award more on fuller material.</td><td><b>Rudul Sah</b> itself (liberty to sue preserved) <span class="badge g">RESEARCHED</span></td></tr>
+</table></div>
+
+<h3>8.3 From fault to no-fault: the Oleum absolute-liability rule</h3>
+<div class="quotebox">“Where an enterprise is engaged in a hazardous or dangerous activity and harm results to anyone on account of an accident in the operation of such hazardous or inherently dangerous activity, the enterprise is <b>strictly and absolutely liable to compensate</b> all those who are affected by the accident and such liability is <b>not subject to any of the exceptions</b> which operate vis-à-vis the tortious principle of strict liability under the rule in <i>Rylands v. Fletcher</i>.”
+<span class="src">M.C. Mehta v. Union of India (Oleum Gas Leak case), AIR 1987 SC 1086 <span class="badge g">RESEARCHED</span></span></div>
+
+<div class="twrap"><table>
+<tr><th style="width:20%">Feature</th><th style="width:40%">Strict liability — Rylands v. Fletcher (1868, England)</th><th style="width:40%">Absolute liability — Oleum (India, 1987)</th></tr>
+<tr><td>Trigger</td><td>Non-natural use of land + escape of a dangerous thing</td><td>Any <b>hazardous or inherently dangerous activity</b></td></tr>
+<tr><td>Exceptions</td><td>Act of God, act of stranger, plaintiff's own fault, consent, statutory authority</td><td><b>None</b> — no exception whatsoever</td></tr>
+<tr><td>Damages</td><td>Compensatory</td><td><b>Correlated to the magnitude &amp; prosperity of the enterprise</b> (deterrent)</td></tr>
+<tr><td>Rationale</td><td>19th-century common law</td><td>Enterprise must absorb the social cost of the risk it creates; Art 21 dignity &amp; environment; post-Bhopal context</td></tr>
+<tr><td>Proof path</td><td>Plaintiff proves escape &amp; non-natural use</td><td>Harm from hazardous activity → enterprise liable; duty is “absolute and non-delegable” to the community</td></tr>
+</table></div>
+
+<div class="good">
+<b>Exam spine for item (b):</b> (1) <i>Text</i> — Art 32(2)/226(1) permit “directions or orders or writs”; Art 142 completes justice. (2) <i>Money as a direction</i> — Rudul Sah: releasing the victim while ignoring 14 years of unlawful detention would “denude Article 21”. (3) <i>Enterprise liability</i> — Oleum: absolute, exceptionless, size-scaled. (4) <i>Discipline</i> — “appropriate” relief only; judicial in nature; filtered by laches/res judicata/exhaustion.
+</div>
+</section><!-- ============ §9 CASE NOTES ============ -->
+<section id="s-cases">
+<h2>§9 · Case Notes — DU Format (Facts · Issues · Arguments · Decision · Principle)</h2>
+<p class="lead">First the <b>DU anchor</b> (the only Part-II case material the DU book carries), then all five syllabus cases in order. DU-material passages carry the blue badge; the five syllabus cases have no DU excerpt and carry the green RESEARCHED badge with an explicit note.</p>
+
+<!-- DU ANCHOR -->
+<article class="case" id="c-sp-gupta">
+<div class="casehead">
+<span class="cnum">DU anchor for Part-II · (the “Locus Standi” extract)</span>
+<h3>S.P. Gupta v. Union of India — Locus Standi &amp; Public Interest Litigation</h3>
+<p class="cmeta">1981 Supp (1) SCC 87 (also AIR 1981 SC 1276; “First Judges Case”) · Bhagwati J.'s “Locus Standi” discussion, <b>paras 13–26</b> · DU case material, book pp. 177–185 <span class="badge b">DU CASE MATERIAL</span></p>
+</div>
+<div class="casebody">
+<h4>Facts (as they bear on Part-II)</h4>
+<div class="facts">
+<p>The wider litigation concerned the constitutional validity of government action regarding the transfer/posting of High Court judges and the use of presidential communications — a <b>Part-I matter</b> (Topic 6 syllabus item on constitution of courts). What makes it the <b>DU backbone of Part-II</b> is Bhagwati J.'s sweeping discussion of <b>locus standi</b> — who may invoke <span class="art">Art 32</span>/<span class="art">226</span> — prompted by the question whether ordinary citizens and associations could challenge executive action at all. Within the passage, a group of Bombay lawyers led by <b>Iqbal Chagla</b> figures as the concrete applicants whose standing had to be validated (para 26). The court traversed: the classical private-injury rule; its statutory and public-law exceptions; the disability rule; the public-injury doctrine; the dependence of the Attorney General route on political branches (ss. 91–92 CPC); the PIL definition; and the safeguards against misuse.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether the traditional rule — standing only for personal legal injury — must be relaxed in a Constitution dedicated to rule of law and socio-economic justice. <b>2.</b> Whether a member of the public may move Art 226/Art 32 for an <b>indeterminate class</b> affected by a public injury, and whether a mere letter can be treated as a petition. <b>3.</b> What limits bind that relaxation (bona fides, justiciability, separation of organs).</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>For liberalisation (the forward case, developed in the opinion):</b> private-law standing “cannot be the measure” of a constitutional court; the rule of law is hollow if only the rich can litigate; the AG/Advocates-General answer to the political branches, so citizens must be allowed to enforce public duties; public wrongs (pollution, prison conditions, bonded labour) have no single “injured owner”; PIL = litigation for redressing public injury, enforcing public duty, protecting social/collective/diffused rights; “sufficient interest” should be discretionary; procedure is but a handmaiden of justice.</div>
+<div class="argu res"><b>The cautionary case (also inside the DU passage):</b> para 17 — petitions must be bona fide, never for personal gain, private profit, political motivation or oblique motives, and courts prudentially prefer determinate-class cases; para 24 — courts must not “overstep the limits of the judicial function and trespass into areas reserved to the Executive and the Legislature”; pressure groups must not weaponise the court; there is a “vital distinction between locus standi and justiciability”; para 25 — a secondary public injury (private grievance in public clothing) is impermissible.</div>
+<h4>Decision (the four-step doctrine the court laid down)</h4>
+<div class="held">
+<p><b>Step 1 — Traditional rule recognised</b> (para 14): redress only for personal legal injury — a rule “of ancient vintage” from the age “when private law dominated”. <b>Step 2 — Exceptions preserved</b> (paras 15–16): ratepayers (<span class="cite">K. Ramadas Shenoy AIR 1974 SC 2177</span>; <span class="cite">Varadarajan AIR 1973 Mad 55</span>), decision-making participants (<span class="cite">Queen v. Bowman [1898 1 QB 663]</span>), statutory special interest (<span class="cite">Jasbhai AIR 1976 SC 578</span>); disability rule — minors (Order XXXII CPC), detenus, prisoners' letter-petitions, minority shareholders. <b>Step 3 — Public-injury relaxation declared</b> (paras 17–20): a member of the public, bona fide and sufficiently interested, may sue for an indeterminate class; courts respond even to a letter, acting pro bono publico; public wrongs must be redressable; PIL defined; “sufficient interest” left to judicial discretion. <b>Step 4 — Limits fenced</b> (paras 24–25): no trespass into executive/legislature domains; no pressure-group litigation; no secondary public injury. <b>Application (para 26):</b> Iqbal Chagla's lawyers have standing — their concern is “deeper than that of a busybody”; they “cannot be told off at the gates”.</p>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<i>Locus standi</i> in Indian constitutional law is neither classical nor unlimited: it is <b>classical by default, relaxed for public injury, conditioned by sufficient interest and bona fides, and bounded by justiciability and separation of powers.</b>” The court's liberalised standing is the doorway; paras 24–25 are the doorframe. This passage — with Trilokchand's restraint observations — is the DU-cited balance-sheet of judicial activism.</p></div>
+</div>
+</article>
+
+<!-- CASE 46 -->
+<article class="case" id="c-daryao">
+<div class="casehead">
+<span class="cnum">Syllabus Case 46 · Item (a) — Res Judicata</span>
+<h3>Daryao v. State of U.P.</h3>
+<p class="cmeta">AIR 1961 SC 1457; (1962) 1 SCR 574 · decided 27-03-1961 · Gajendragadkar C.J. · no DU excerpt — built from standard sources <span class="badge g">RESEARCHED</span></p>
+</div>
+<div class="casebody">
+<h4>Facts</h4>
+<div class="facts">
+<p>The petitioners (in a dispute over land/property against the State of U.P. and others) first moved the <b>Allahabad High Court under Art 226</b>. The High Court heard the matter and <b>dismissed the petition on merits</b> — by a speaking order — holding that no fundamental right of the petitioners had been proved to be infringed, or that the alleged contravention was constitutionally justified. Undeterred, on <b>14 March 1956</b> the petitioners filed a <b>petition in the Supreme Court under Art 32</b>, raising precisely the same grounds and seeking the same or similar writs. The respondents raised a preliminary objection: the claim was barred by <b>res judicata</b>. The Court noted that the question of res judicata had earlier been left open (Fazl Ali J. had “reserved opinion” whether a 32 petition lies after a 226 dismissal) — Daryao was the occasion to settle it.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether a petition under Art 32 is barred when the same party has already obtained an adverse <b>on-merits decision of the High Court under Art 226</b> on the same facts and reliefs. <b>2.</b> Whether the doctrine of res judicata (s.11 CPC / public-policy maxims) is at all applicable to fundamental-rights petitions — i.e., whether Art 32 immunity defeats it. <b>3.</b> Whether Art 32 confers only a discretionary power (as Art 226 does), such that the earlier forum's competence objection has force.</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>Petitioner:</b> (i) Res judicata is a technical rule akin to <b>estoppel</b> and irrelevant to enforcement of fundamental rights; (ii) Art 32(1) is itself a fundamental right — applying a procedural bar shrinks it unconstitutionally; (iii) the competence test of s.11 fails because the High Court trying under Art 226 is not the court that would try under Art 32, and the reliefs differ; (iv) in England successive habeas corpus petitions are entertained — dismissal of one never bars the next; (v) the High Court judgment is not the “same” adjudication for an Art 32 purpose.</div>
+<div class="argu res"><b>Respondents:</b> (i) Art 32 guarantees only an “appropriate proceeding”, not an original hearing; after a 226 verdict the proper route was <span class="art">Art 136</span>; (ii) finality of litigation rests on <b>public policy</b> — a person shall not be vexed twice for the same cause; (iii) <span class="cite">Raj Lakshmi Dasi v. Banamali Sen</span> shows res judicata can operate even where the first court could not have tried the second matter — identity of jurisdiction is not essential; (iv) the High Court's jurisdiction under 226 is <b>substantially the same</b> as the Supreme Court's under 32 — same parties, same cause of action, same character of relief.</div>
+<h4>Decision</h4>
+<div class="held">
+<ul>
+<li><b>Dismissed.</b> The Art 32 petition is <b>barred by res judicata</b> because the Allahabad High Court had decided the identical matter on merits.</li>
+<li><b>Four-point test adopted</b> (as in §4.1): merits dismissal → barred; laches/alternative-remedy dismissal → generally <b>not</b> barred (except where facts found are relevant under Art 32); in limine with order → depends on the order's nature; in limine without a speaking order or withdrawn → <b>no bar</b>.</li>
+<li><b>Rejected the petitioner's doctrinal case:</b> res judicata “rests on maxims… taken from Roman law” and is not technical estoppel; the s.11 competence test is <b>substantially satisfied</b>; the habeas-corpus analogy was distinguished (“no analogy”); Art 32 is <b>not</b> a mere discretionary power like Art 226 — “citizens have ordinarily the right to invoke Art 32”.</li>
+<li><b>Confirmed reach:</b> the rule “can be invoked even against a petition filed under Art 32” — including where the earlier decision was of the Supreme Court itself in a prior Art 32 round.</li>
+</ul>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<b>A final on-merits decision of the High Court under Art 226 is res judicata against a subsequent Art 32 petition by the same party on the same facts and reliefs</b> — the public interest in finality and the maxim against twice-vexation are not suspended by the fundamental-rights character of the remedy. But <b>only a speaking merits decision binds</b>: dismissals for laches, want of prosecution, alternative remedy, or in limine without reasons leave the Art 32 door open.” → <b>connects:</b> §4 (res judicata), §3 (laches no-bar), §5 (exhaustion no-bar).</p></div>
+</div>
+</article>
+
+<!-- CASE 47 -->
+<article class="case" id="c-trilok">
+<div class="casehead">
+<span class="cnum">Syllabus Case 47 · Item (a) — Laches · Self-Restraint · Exhaustion</span>
+<h3>Trilokchand Motichand v. H.B. Munshi</h3>
+<p class="cmeta">(1969) 1 SCC 110; AIR 1970 SC 898; [1969] 2 SCR 824 · decided 22-11-1968 · Constitution Bench (5 Judges), Hidayatullah C.J. · no DU excerpt <span class="badge g">RESEARCHED</span></p>
+</div>
+<div class="casebody">
+<h4>Facts</h4>
+<div class="facts">
+<p>The petitioners were Bombay traders from whom <b>sales tax was collected under the Bombay Sales Tax Act, 1953</b>; a refund of <b>₹26,563.50</b> was withheld/forfeited because they did not satisfy the statutory condition of passing the tax on to their customers (the “passed-on” condition). In <b>1958</b> they challenged the levy/condition in the <b>Bombay High Court under Art 226</b>, arguing ultra vires and infringement of fundamental rights — the petition was <b>dismissed in limine</b> without adverting to those contentions. Years later, the Supreme Court's decision in <span class="cite">Kantilal Babulal</span> (discovered 29-09-1967) appeared to vindicate their position. On <b>9 February 1968</b> — roughly a decade after the payments and five years after the 226 dismissal — they filed an <b>Art 32 petition</b> claiming refund as money paid “under a mistake of law or coercion” under <b>s. 72, Indian Contract Act, 1872</b>.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether the petition was barred by <b>res judicata</b> given the earlier High Court disposal. <b>2.</b> Whether an Art 32 petition — for which <b>no period of limitation</b> is prescribed — can be refused on grounds of <b>delay/laches</b>, and whether the Limitation Act or its <i>analogies</i> apply. <b>3.</b> Whether the power under Art 32 is <b>discretionary</b> (as under Art 226) or a matter of right.</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>For the petitioners:</b> Art 32 is a guaranteed right; no limitation statute applies directly or indirectly; the Court's power under Art 32 is not discretionary; Hegde J. — “a relief asked for under Article 32 cannot be refused on the ground of laches”; law reports show no instance of refusal on delay; importing laches would “pull down from the high pedestal now occupied by the fundamental rights”; the earlier dismissal was in limine (no merits) so no res judicata; Sikri J. — even a stale-claim doctrine needs <i>extreme</i> delay: yardstick ≈ one year from <i>discovery</i> of the right, and they moved within six months of <i>Kantilal Babulal</i>; time pursuing remedies explains delay.</div>
+<div class="argu res"><b>For the State/respondent (and the majority):</b> the writ under Art 32 issues as a matter of course on breach — but “this does not mean that in giving relief the Court must ignore and trample under foot all laws of procedure — evidence, limitation, res judicata and the like”; where the writ remedy corresponds to a suit remedy limited by statute, the Court “adopts the statute as its own rule of procedure”; statutes of limitation rest on public policy (<i>vigilantibus non dormientibus jura subveniunt</i>); the extraordinary remedies of Arts 32/226 “are not intended to enable a claimant to recover monies the recovery of which by suit is barred by limitation”; a petition will not be entertained containing “misleading and inaccurate statements”; comity — “extraordinary remedies should not take the place of ordinary remedies”.</div>
+<h4>Decision</h4>
+<div class="held">
+<ul>
+<li><b>Res judicata — NO (Full Court).</b> The High Court had dismissed in limine without merits; applying Daryao (points 3–4), there was no bar — “the expression [res judicata] is somewhat inapt and unfortunate”, but the principle applies on public-policy grounds driven by the <b>parallel jurisdiction</b> of the two courts (comity).</li>
+<li><b>Laches — YES (majority; Sikri and Hegde JJ. dissenting).</b> The Limitation Act does <i>not</i> directly apply, but by analogy/public policy the Court treats the analogous period as the measure of a permissible claim; a ~10-year-old claim for money recoverable by suit (now time-barred) is stale. <b>Petition dismissed.</b></li>
+<li><b>Discretion/character of Art 32:</b> majority treated the jurisdiction as accompanied by discretionary self-restraints — hence the famous headnote: instances of <b>self-restraint</b> = existence of other ordinary remedy, delay, comity with the High Court, refusal of fresh grounds after an adverse 226 round.</li>
+<li><b>Delay-explanation rule:</b> time spent in appeals/representations to authorities “may ordinarily be taken as a good explanation for the delay”.</li>
+</ul>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<b>The right to move under Art 32 is guaranteed, but the remedy is not immune from equitable self-discipline:</b> the Court may refuse relief for <b>unexplained delay measured by the analogy of limitation</b>, for the existence of an <b>efficacious alternative remedy</b>, or out of <b>comity</b> to a parallel forum — while an in-limine, non-speaking High Court order never bars a fresh Art 32 petition.” This single case teaches <b>laches (§3), exhaustion (§5), the non-merits rule of res judicata (§4), and judicial self-restraint (§1)</b>.</p></div>
+</div>
+</article>
+
+<!-- CASE 48 -->
+<article class="case" id="c-bandhua">
+<div class="casehead">
+<span class="cnum">Syllabus Case 48 · Item (a) — Locus Standi &amp; PIL in action</span>
+<h3>Bandhua Mukti Morcha v. Union of India</h3>
+<p class="cmeta">(1984) 3 SCC 161; AIR 1984 SC 802 · decided 16-12-1983 · Bhagwati J., R.S. Pathak &amp; A.N. Sen JJ. · no DU excerpt <span class="badge g">RESEARCHED</span></p>
+</div>
+<div class="casebody">
+<h4>Facts</h4>
+<div class="facts">
+<p><b>Bandhua Mukti Morcha</b> — an organisation campaigning against bonded labour — addressed a <b>letter dated 25-02-1982</b> to Justice P.N. Bhagwati alleging that hundreds of migrant labourers were working in the <b>stone quarries and stone-crushers of Faridabad district, Haryana</b>, under “inhuman and intolerable” conditions: hazardous dust, non-payment of wages, no drinking water, no medical care, rampant accidents, and workers <b>not allowed to leave</b> until “advances” were settled. The Supreme Court <b>treated the letter as a writ petition under Art 32</b> and (on 26-02-1982) appointed <b>two advocates — Ashok Srivastava and Ashok Panda — as Commissioners</b> to investigate. Their reports (later reinforced by two further Commissioners) and worker affidavits (24-08-1982) confirmed forced labour: e.g., of ~250 persons in straw jhuggies at Lakarpur, 100 from Bilaspur and 150 from Allahabad, many “forcibly kept by the contractor”. The State of Haryana and mine-lessees denied everything.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether a <b>letter</b> can be entertained as a writ petition, and whether an NGO like BMM has <i>locus standi</i> to litigate for workers who cannot approach the court (PIL). <b>2.</b> Whether the Supreme Court may appoint <b>commissions</b> to ascertain facts in a PIL (inherent power?). <b>3.</b> Whether, on a showing of <b>forced labour</b>, the labourer must be <b>presumed</b> a bonded labourer within the Bonded Labour System (Abolition) Act, 1976, and who must rebut. <b>4.</b> What relief Art 32/21/23 permits — release alone, or <b>rehabilitation</b> and statutory welfare enforcement.</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>Petitioner (BMM):</b> the letter discloses violation of workers' fundamental rights; indigent, migrant, possibly detained workers cannot themselves move the Court — exactly the public-injury situation of S.P. Gupta paras 17–20; forced labour is prohibited by Art 23; life with dignity (Art 21) requires water, health, wages; the State's constitutional obligation extends to ensuring lessees/contractors observe labour-welfare laws.</div>
+<div class="argu res"><b>Respondents — ASG (for the Union/State) &amp; lessee's counsel:</b> (i) even if the letter's averments were true, <b>no fundamental right of the petitioners</b> or of the workers was infringed — no locus; (ii) worker affidavits are untested — <b>no cross-examination</b> of the deponents, so no reliable proof; (iii) definitionally, a bonded labourer must have incurred a <b>bonded debt</b> — nothing shows an “advance or economic consideration”; there may be forced labourers, but not “bonded” labourers under the Act; (iv) State of Haryana: there is no bonded labour in these quarries (an assertion the material contradicted).</div>
+<h4>Decision</h4>
+<div class="held">
+<ul>
+<li><b>Letter entertained; preliminary objections overruled.</b> Art 32 permits “appropriate proceedings”; Art 32/226 lay down no prescribed procedure; where victims are indigent and in bondage, PIL enlarges locus standi — refusal would defeat the constitutional mandate (“procedure is a handmaiden”).</li>
+<li><b>Commission power inherent in Art 32.</b> The traditional adversarial model is unsuited to vulnerable groups; commissioners' reports supply prima facie material the court may act on.</li>
+<li><b>Burden shifted:</b> “<b>Whenever it is shown that a labourer is made to provide forced labour, the Court would raise a presumption that he is required to do so in consideration of an advance or other economic consideration… and he is therefore a bonded labourer</b>.” Rebuttable only by <b>satisfactory material</b> from the employer/State — which was absent.</li>
+<li><b>Relief package (mandatory directions)</b> to the Union, State of Haryana and quarry owners: <b>identify, release and rehabilitate</b> bonded labourers; wages, medical facilities, drinking water, sanitation, safety (dust control, protective gear), schooling; strict enforcement of the <b>Bonded Labour System (Abolition) Act 1976</b>, Mines Act 1952, Workmen's Compensation Act 1923 and allied welfare laws — with continuing supervision (later follow-up orders in 1991 on implementation failure).</li>
+<li>Art 21 read with Arts 39(c), 41, 42 (Directive Principles) requires more than release — <b>rehabilitation</b> is part of the right to life; non-implementation itself is a constitutional failure.</li>
+</ul>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<b>In PIL the court may reshape procedure to reach substance:</b> a letter = petition; standing = public interest; facts = through its own commissioners; burden on the custodian of power to disprove bondage; and relief that <i>rehabilitates</i>, not merely releases. Bandhua is S.P. Gupta's doctrine operationalised — locus standi relaxed (paras 17–20), limits respected (it decided rights, not policy — para 24), remedy of ‘widest amplitude’ yet ‘judicial’ in nature.”</p></div>
+</div>
+</article>
+
+<!-- CASE 49 -->
+<article class="case" id="c-rudul">
+<div class="casehead">
+<span class="cnum">Syllabus Case 49 · Item (b) — Power to award Compensation</span>
+<h3>Rudul Sah v. State of Bihar</h3>
+<p class="cmeta">AIR 1983 SC 1086; (1983) 4 SCC 141 · decided 01-08-1983 · Chandrachud C.J., A.N. Sen &amp; R.B. Misra JJ. · no DU excerpt <span class="badge g">RESEARCHED</span></p>
+</div>
+<div class="casebody">
+<h4>Facts</h4>
+<div class="facts">
+<p><b>Rudul Sah</b> was arrested on the charge of murdering his wife. On <b>3 June 1968</b> the Sessions Court at Muzaffarpur <b>acquitted</b> him — yet he <b>remained in jail for over fourteen years</b>, finally released on <b>16 October 1982</b>. The State's explanations were shifting and evidence-free: a jailer's affidavit said the Additional Sessions Judge had ordered that he be detained “till further orders” as a person of “unsound mind”, but there was <b>no medical record, no diagnosis, no treatment proof, and no order authorising post-acquittal detention</b>; eventually the State conceded administrative lapses. His family moved the Supreme Court under <b>Art 32 (habeas corpus)</b>, seeking release (soon infructuous), <b>State-funded medical treatment, rehabilitation, and compensation</b> for 14 years of unlawful imprisonment.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether continued detention after acquittal violated <span class="art">Art 21</span> (procedure established by law). <b>2.</b> Whether, in a habeas/Art 32 proceeding, the Court can go beyond ordering release and <b>award monetary compensation</b> for the FR violation — and if so, on what footing (palliative? reparation? deterrent?). <b>3.</b> Whether the plea of insanity (unsupported) could justify the detention.</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>Petitioner:</b> 14 years' post-acquittal imprisonment is an absolute violation of Arts 21 and 32; mere release cannot undo the harm — lost liberty, mental agony, stigma, destitution; the Court must have power to compensate, otherwise Art 32 delivers liberty without justice; sought medical costs and rehabilitation funds.</div>
+<div class="argu res"><b>State of Bihar:</b> the detention was pursuant to the Additional Sessions Judge's order (produce only on government/IG-Prisons orders); Rudul Sah was of “unsound mind” and was kept for treatment in the jail hospital; the Court's jurisdiction under Art 21/32 is limited to ordering release from unlawful detention — compensation is outside the writ's province (and belongs, if anywhere, to a civil claim).</div>
+<h4>Decision</h4>
+<div class="held">
+<ul>
+<li><b>Detention wholly unjustified.</b> “The State's response was ruthless and had no factual basis”; even a genuinely mentally ill person retains legal rights in trial — insanity cannot licence post-acquittal imprisonment without procedure.</li>
+<li><b>Compensation awarded for the first time under Art 32:</b> the Court directed the State of Bihar to pay <b>₹30,000 as interim compensation within two weeks, in addition to ₹5,000 already paid</b> (₹35,000 total).</li>
+<li><b>The formula:</b> “Article 21 would be <b>denuded of its significant content</b> if the power of this Court were limited to passing orders of release from illegal detention. One of the telling ways in which the violation of that right can reasonably be prevented and due compliance with the mandate of Article 21 secured, is to <b>mulct its violators in the payment of monetary compensation</b>.”</li>
+<li><b>Scope preserved:</b> the award is <b>interim/palliative</b>; it does <b>not</b> bar Rudul Sah from filing a separate civil suit against the State and its officers for full damages.</li>
+</ul>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<b>Constitutional compensation:</b> where the State breaches Art 21, the Art 32 court's remedy includes money — release without reparation is an incomplete remedy. Compensation here performs three functions at once: <b>palliative</b> (rebuild the victim's life), <b>deterrent</b> (price future violations), and <b>declaratory</b> (State liability for agents' lawlessness). It is a <b>public-law</b> award, distinct from — and not a bar to — private-law damages; quantum may be enhanced on fuller material.”</p></div>
+</div>
+</article>
+
+<!-- CASE 50 -->
+<article class="case" id="c-mcmehta">
+<div class="casehead">
+<span class="cnum">Syllabus Case 50 · Item (b) — Appropriate orders, directions &amp; compensation</span>
+<h3>M.C. Mehta v. Union of India — the Oleum Gas Leak Case</h3>
+<p class="cmeta">AIR 1987 SC 1086 · judgment 20-12-1986 (reported 1987) · Constitution Bench, Bhagwati C.J. · no DU excerpt <span class="badge g">RESEARCHED</span></p>
+</div>
+<div class="casebody">
+<h4>Facts</h4>
+<div class="facts">
+<p><b>Shriram Foods and Fertilizer Industries (SFFI)</b> — a unit of Delhi Cloth Mills Ltd. — sat in <b>Kirti Nagar, Delhi</b>, amid a population of lakhs, manufacturing caustic soda, chlorine, sulphuric acid and oleum (fuming sulphuric acid). Environmental lawyer <b>M.C. Mehta</b> had filed a PIL under <b>Arts 21 and 32</b> seeking <b>closing/relocation</b> of the caustic-chlorine and sulphuric-acid plants to safer sites. While the petition was pending, on <b>4 December 1985 oleum gas leaked</b> — an advocate practicing at Tis Hazari courts <b>died</b>, many workers and residents were hospitalised; a <b>second, smaller leak followed on 6 December</b>. The District Magistrate acted under <b>s. 133 CrPC</b> (order dated 6-12-1985) directing the unit to cease handling dangerous substances. The Supreme Court, managing the crisis through <b>interim consent conditions</b> (eleven conditions on CPCB monitoring, safety board, protective gear, alarm systems, personal undertakings of the DCM Chairman, a <b>₹20 lakh deposit + ₹15 lakh bank guarantee</b> for compensation claims, on reports of expert committees including Manmohan Singh and Nilay Choudhary), referred the constitutional questions to a larger bench. Applications for compensation were made by the <b>Delhi Legal Aid &amp; Advice Board</b> and the <b>Delhi Bar Association</b> on behalf of victims.</p>
+</div>
+<h4>Issues</h4>
+<div class="issue"><b>1.</b> Whether <b>compensation claims are maintainable under Art 32</b> (the original petition had not pleaded compensation; new applicants were not parties). <b>2.</b> Whether <span class="art">Art 21</span> can be enforced against a <b>private enterprise</b> — including the Art 12 “other authority” question and the effect of governmental consents/licences/grants. <b>3.</b> Whether the English rule in <i>Rylands v. Fletcher</i> (strict liability with exceptions) suffices for hazardous industries in India, or a new principle is required. <b>4.</b> Whether permanent closure should be ordered, or regulated operation with conditions — balancing life, livelihood and development.</div>
+<h4>Arguments</h4>
+<div class="argu pet"><b>Petitioner / applicants:</b> the leaks infringed the right to life (Art 21 includes right to a pollution-free environment) of an unidentifiable class — PIL standing and letter-style flexibility apply; victims are poor and cannot litigate individually — compensation applications must be entertained; expert committee opinion: risk can be <i>reduced</i> by safety measures but not <i>eliminated</i> — <b>relocation is the only long-term solution</b>; enterprises in inherently dangerous trades must answer for harm regardless of care taken; the Court should direct closure/relocation and award compensation.</div>
+<div class="argu res"><b>Respondents:</b> <i>Shriram:</i> (i) no compensation prayer in the original petition, and the new applicants (Delhi Legal Aid Board, Bar Association) were not parties; (ii) Shriram is a private company outside Art 12 — Art 21 cannot run against it; (iii) permanent closure would idly displace ~4,000 workers and cripple an essential-goods plant; liability, if any, must follow <i>Rylands</i> with its exceptions. <i>State:</i> interim safety conditions (the eleven-condition regime) can mitigate the risk, so blanket closure is unnecessary.</div>
+<h4>Decision</h4>
+<div class="held">
+<ul>
+<li><b>Compensation maintainable.</b> Applications by the Delhi Legal Aid &amp; Advice Board and Delhi Bar Association “cannot be thrown out” — they enforce the Art 21 right of persons who “by reason of poverty or disability… cannot approach a Court of law”; Art 32 procedure flexes for them.</li>
+<li><b>Art 21 reaches the hazardous enterprise:</b> the Court examined Art 12 (“other authority”) dimensions and the State-regulated, licensed, consented and subsidised character of the enterprise; an undertaking engaged in inherently dangerous activity owes “an <b>absolute and non-delegable duty to the community</b>” — highest safety standards, and liability for harm.</li>
+<li><b>New rule — absolute liability (formulation):</b> “Where an enterprise is engaged in a hazardous or dangerous activity and harm results… the enterprise is <b>strictly and absolutely liable</b>… <b>not subject to any of the exceptions</b>… under the rule in <i>Rylands v. Fletcher</i>.” No act of God, stranger, victim's fault, consent or statutory authority. Quantum: “<b>larger and more prosperous the enterprise, greater the compensation</b>” (deterrence/deep pockets); “compensation is the social cost” of the activity.</li>
+<li><b>Orders and directions:</b> industry <b>not permanently closed</b> (balance with livelihoods/national production) but regulated by the consent-condition regime, continuous CPCB inspection, safety boards, personal undertakings, deposit and bank guarantee for victims; the Court considered and favoured setting up <b>environmental courts</b> (expert, time-bound remedy) as a systemic direction.</li>
+<li><b>Right content:</b> Art 21 includes the right to live in a clean, healthy, pollution-free environment — anchoring environmental PIL.</li>
+</ul>
+</div>
+<h4>Principle</h4>
+<div class="principle"><h5>Rule to write in the exam</h5><p>“<b>Three propositions:</b> (1) <i>Forum</i> — Art 32 compensation applications on behalf of an unidentifiable, indigent class are maintainable as PIL; (2) <i>Right</i> — Art 21 embraces a pollution-free environment and binds even private hazardous enterprises through the State's regulatory weave; (3) <i>Remedy</i> — absolute, exceptionless, size-scaled liability, enforced not by shutting industry down but by <b>appropriate orders and directions</b> — conditions, monitoring, security, undertaking — under continuing judicial supervision. This is item (b) in one case: orders, directions, <i>and</i> compensation.”</p></div>
+</div>
+</article>
+</section>
+<!-- ============ §10 ACTS ============ -->
+<section id="s-acts">
+<h2>§10 · Related Acts, Rules &amp; Provisions — consolidated quick reference</h2>
+<p class="lead">Inline hooks used across §§1–9, collected for revision. Constitutional articles are quoted verbatim in §7; statutes below are the ones that actually surface in the syllabus cases.</p>
+
+<div class="grid g3">
+<div class="card">
+<h4>Constitutional matrix</h4>
+<ul>
+<li><span class="art">Art 32</span> — SC remedies (32(1) right · 32(2) directions/orders/writs · 32(3) other courts · 32(4) suspension clause)</li>
+<li><span class="art">Art 226</span> — HC writs (Part III + “any other purpose”; 226(2) territorial; 226(3) interim-order vacation; 226(4) saving); <span class="art">Art 226A</span> (42nd Amd)</li>
+<li><span class="art">Art 141</span> — declaration binding; <span class="art">Art 142</span> — complete justice + enforcement; <span class="art">Art 139</span> — extension of SC writ power; <span class="art">Arts 136, 137</span> — SLP, review</li>
+<li><span class="art">Arts 129, 215</span> — courts of record (contempt = enforcement teeth)</li>
+<li><span class="art">Art 21</span> — life/dignity/environment (Rudul Sah, Oleum, Bandhua); <span class="art">Art 23</span> — forced labour (Bandhua)</li>
+<li><span class="art">Art 39A</span> — equal justice &amp; free legal aid; <span class="art">Arts 41, 42, 48A, 51A(g)</span> — welfare/environment anchors cited in Bandhua/Oleum</li>
+<li><span class="art">Arts 352–360</span> — emergency suspensions (32(4) refers to “this Constitution”)</li>
+</ul>
+</div>
+<div class="card">
+<h4>Code of Civil Procedure, 1908</h4>
+<ul>
+<li><b>s. 11</b> — res judicata (elements at §4; applied to writs by Daryao)</li>
+<li><b>ss. 91–92</b> — representative suits for public wrongs (the AG/Advocate-General route that S.P. Gupta says must be supplemented)</li>
+<li><b>Order XXXII</b> — suits by minors/next friend (disability rule, DU para 16)</li>
+<li><b>s. 80</b> — notice before suit vs Government: expressly <b>inapplicable</b> to Art 32 proceedings (Trilokchand)</li>
+<li><b>Limitation Act, 1963</b> — not directly applicable; analogy adopted (Trilokchand); s.27 prescription extinguishes rights (no residual claim)</li>
+<li><b>Indian Contract Act, s. 72</b> — money paid under mistake/coercion recoverable (Trilokchand's substantive claim)</li>
+</ul>
+</div>
+<div class="card">
+<h4>Welfare / regulatory statutes inside the cases</h4>
+<ul>
+<li><b>Bonded Labour System (Abolition) Act, 1976</b> — identification, release, rehabilitation (Bandhua directions; presumption crafted by the Court)</li>
+<li><b>Mines Act, 1952</b>; <b>Workmen's Compensation Act, 1923</b> — enforcement directed (Bandhua)</li>
+<li><b>Water (P&amp;C Pollution) Act, 1974</b>; <b>Air (P&amp;C Pollution) Act, 1981</b>; <b>Environment (Protection) Act, 1986</b> — the statutory backdrop of Oleum (Art 48A/51A(g) framework)</li>
+<li><b>CrPC s. 133</b> — District Magistrate's order to remove dangerous condition (Oleum, 6-12-1985)</li>
+<li><b>Bombay Sales Tax Act, 1953</b> — refund condition behind Trilokchand</li>
+<li><b>Legal Services Authorities Act, 1987</b> — free legal aid; institutionalises the access logic of PIL (with Art 39A)</li>
+</ul>
+</div>
+</div>
+<div class="good"><b>How to use in answers:</b> one statutory anchor per proposition — Daryao → s.11 CPC; Trilokchand → Limitation Act analogy + s.72 Contract Act + s.80 CPC (inapplicable); Bandhua → Bonded Labour Act 1976 (+ Mines Act/Workmen's Compensation Act); Rudul Sah → Art 21 (no statute needed); Oleum → EPA 1986/Water Act 1974 + s.133 CrPC + Rylands v. Fletcher.</div>
+</section>
+
+<!-- ============ §11 REAL EXAMPLES ============ -->
+<section id="s-real">
+<h2>§11 · Real-World Examples (ready to drop into answers)</h2>
+<div class="grid g2">
+<div class="card a">
+<h4>Activism in action</h4>
+<ul>
+<li><b>Hussainara Khatoon (1979)</b> — suo motu action from press reports; tens of thousands of under-trials released: the mass-impact birth of PIL.</li>
+<li><b>Sunil Batra (1978)</b> — prisoners' letters treated as petitions; handcuffing/privileges reformed — the “detenu/prisoner” limb of DU para 16.</li>
+<li><b>Bandhua (1983–91)</b> — letter → commissioners → presumption of bondage → rehabilitation directions → monitoring of compliance for years.</li>
+<li><b>Olga Tellis (1985)</b> — pavement dwellers represented; eviction only after notice and alternative accommodation: procedure as handmaiden.</li>
+<li><b>Oleum (1985–86)</b> — running consent-regime: 11 conditions, deposit, bank guarantee, CPCB inspection, expert committees — court as regulator-in-chief during the case.</li>
+<li><b>Vishaka (1997) / D.K. Basu (1997)</b> — guidelines filling legislative vacuums; still applied today.</li>
+<li><b>Vineet Narain (1998)</b> — continuing mandamus: the Court supervised the CBI's investigations itself.</li>
+</ul>
+</div>
+<div class="card b">
+<h4>Restraint in action</h4>
+<ul>
+<li><b>Trilokchand (1968)</b> — decade-old refund claim dismissed on laches despite a guaranteed Art 32 right.</li>
+<li><b>Daryao (1961)</b> — the “heart and soul” petition shut by res judicata after a merits decision of the High Court.</li>
+<li><b>Comity practice</b> — Supreme Court consistently declines a first hearing where the High Court can comprehensively adjudicate (headnote: “instances of self-restraint”).</li>
+<li><b>S.P. Gupta para 24</b> — courts refuse to become pressure-group arenas or to wander into executive/legislative domains; locus standi ≠ justiciability.</li>
+<li><b>Mizo Chief Council (2026)</b> — six-decade-old claim rejected: standing upheld to be tested strictly; “unexplained delay” and proof of FR breach are non-negotiable thresholds.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ============ §12 PYQ ============ -->
+<section id="s-pyq">
+<h2>§12 · DU PYQs + Best Model Answers</h2>
+<p class="lead">Both uploaded DU papers were examined page-by-page (the Centenary paper is a scan — both pages read). <b>One question squarely on Part-II</b> (plus one adjacent). Full model answers below.</p>
+
+<div class="pyq">
+<div class="pyqhead"><b>December 2024 Examination · Q6(c) · 10 marks</b> — “Write short notes on any two of the following: … (c) Doctrine of locus standi”</div>
+<div class="pyqbody">
+<div class="qtext">Write a short note on the <b>Doctrine of locus standi</b>. <span class="mini">(10 marks — DU LL.B. III Semester, Dec 2024)</span></div>
+<div class="ans">
+<h5>Model answer (≈ 450 words — structured for full marks)</h5>
+<p><b>Meaning.</b> <i>Locus standi</i> (“place to stand”) denotes the right of a person to be heard by a court — whether the litigant has a sufficient connection to the grievance to sustain the proceeding.</p>
+<p><b>1. The traditional rule.</b> At common law and in classical Indian practice, only a person whose <b>personal legal right or interest</b> is infringed may sue; general public grievances were nobody's cause of action. As Bhagwati J. observed in <b>S.P. Gupta (1981 Supp (1) SCC 87)</b>, this is “a rule of ancient vintage” from the age “when private law dominated”.</p>
+<p><b>2. Recognised exceptions.</b> (i) <b>Ratepayer/taxpayer</b> (<span class="cite">K. Ramadas Shenoy AIR 1974 SC 2177</span>; <span class="cite">Varadarajan AIR 1973 Mad 55</span>); (ii) <b>participant in the decision-making process</b> (<span class="cite">Queen v. Bowman [1898 1 QB 663]</span>); (iii) <b>statutory special interest</b> (<span class="cite">Jasbhai Motibhai Desai AIR 1976 SC 578</span>); and (iv) the <b>disability rule</b> — minors sue through a next friend (Order XXXII CPC), detenus through others (habeas corpus), prisoners through letter-petitions, minorities through shareholders.</p>
+<p><b>3. The public-injury relaxation (PIL).</b> For wrongs to an <b>indeterminate class</b> — pollution, prison cruelty, bonded labour — the court holds that “a member of the public acting <b>bona fide</b> and having <b>sufficient interest</b>” may move the High Court under Art 226 and the Supreme Court under Art 32; courts will “readily respond even to a <b>letter</b>… acting <b>pro bono publico</b>”, because “procedure is but a handmaiden of justice”. PIL = litigation for redressing public injury, enforcing public duty, and protecting social, collective and diffused rights; “sufficient interest” is deliberately left to judicial discretion. The Attorney-General route (ss. 91–92 CPC) depends on the political branches, so standing had to be liberalised. <b>Applied:</b> the letter in <b>Bandhua Mukti Morcha (1984) 3 SCC 161</b> became a writ petition.</p>
+<p><b>4. Limits.</b> The relaxation is conditioned: petitions must be bona fide — not for personal gain, political motivation or oblique ends; pressure groups must not weaponise the court; there must be no “secondary public injury”; and courts “must not overstep… and trespass into areas reserved to the Executive and the Legislature” — a “vital distinction between <i>locus standi</i> and <i>justiciability</i>” (S.P. Gupta, paras 24–25). Stale claims remain defeatable by <b>laches</b> (<i>Trilokchand</i>).</p>
+<p><b>Conclusion.</b> The modern doctrine is thus: classical by default, relaxed for public injury on sufficient interest, disciplined by bona fides and justiciability — a doorway wide, a doorframe firm.</p>
+<h5>Examiner-pleasers to add if word count allows</h5>
+<p class="mini">• Iqbal Chagla's lawyers — “priests in the temple of justice”, “cannot be told off at the gates” (S.P. Gupta para 26). • Hussainara Khatoon (1979) — suo motu mass bail. • One line each on laches/res judicata/exhaustion as the guardrails at the gate.</p>
+</div>
+</div>
+</div>
+
+<div class="pyq">
+<div class="pyqhead"><b>December 2024 Examination · Q6(b) · 10 marks</b> — companion question to item (a)'s “overreach/self-restraint”</div>
+<div class="pyqbody">
+<div class="qtext">Write a short note on the <b>Theory of Separation of Powers</b>. <span class="mini">(10 marks — DU LL.B. III Semester, Dec 2024 — adjacent to “Judicial Activism and overreach/self-restraint”)</span></div>
+<div class="ans">
+<h5>Model answer (≈ 400 words — tailored to this topic)</h5>
+<p><b>Core.</b> Montesquieu's theory (<i>L'Esprit des Lois</i>, 1748) — legislative makes, executive executes, judicial decides — assigns each function to a distinct organ to prevent tyranny through concentration. Its genius is <i>functional</i>: liberty survives when power checks power.</p>
+<p><b>Indian position.</b> The Constitution does not adopt a rigid mechanical separation (as the USA does) but a <b>system of checks and balances with functional independence</b>: Art 50 directs the State to secure judicial independence; the judiciary alone adjudicates (Arts 32/226/132–136); legislatures legislate (Arts 107–122/211–212); the executive governs (Arts 52–78/155–167). Separation is thus a <b>basic-structure principle</b> (Indira Nehru Gandhi; L. Chandra Kumar's discussion of the institutional integrity of courts), not a bar on cooperation — the “deliberate mix” of ordinance powers, delegated legislation and judicial review shows a designed interlock.</p>
+<p><b>Link to this topic — activism, overreach, restraint.</b> Judicial review is the judiciary's check on the other organs (Art 13; basic structure; Arts 32/226). Activism = courts energising remedies (letters as petitions, commissions, compensation — Bandhua, Rudul Sah, Oleum); <b>overreach</b> = the court stepping into policy domains reserved to the elected branches; <b>self-restraint</b> is the corrective: comity with High Courts, insistence on ordinary remedies, laches, res judicata and exhaustion (<i>Trilokchand</i>: “extraordinary remedies should not take the place of ordinary remedies”), and the S.P. Gupta limit — courts “must not… trespass into areas reserved to the Executive and the Legislature” (para 24). The health of the separation scheme is measured precisely by that balance: courts that decide <i>rights</i> enforce the Constitution; courts that decide <i>policy</i> unsettle it.</p>
+<p><b>Conclusion.</b> In India the theory survives as functional separation with calibrated overlap — each organ checking the others, the judiciary enforcing the Constitution's own limits on its own jurisdiction.</p>
+</div>
+</div>
+</div>
+
+<p class="mini">No other uploaded paper contains a Part-II question: the <b>Centenary Chance Examination</b> (Q1 parliamentary privileges, Q2 judges' appointments, Q3 repugnancy, Q4 federalism, Q5 CM/PM/Governor, Q6 Art 301, Q7 Art 356, Q8 new States/ordinances/colourable legislation) has nothing on locus standi, PIL, laches, res judicata, exhaustion or compensation.</p>
+</section>
+
+<!-- ============ §13 REVISION ============ -->
+<section id="s-rev">
+<h2>§13 · Rapid Revision Kit</h2>
+
+<div class="twrap"><table>
+<tr><th style="width:17%">Doctrine</th><th style="width:37%">One-line rule</th><th style="width:24%">Leading syllabus case</th><th style="width:22%">Trap to dodge</th></tr>
+<tr><td><b>Locus standi</b></td><td>Classical rule (personal injury) relaxed for public injury on sufficient interest + bona fides; letter = petition.</td><td>DU: S.P. Gupta paras 13–26; applied in Bandhua</td><td>“Standing abolished” — it was <i>relaxed</i>, not abolished; para 24 limits intact.</td></tr>
+<tr><td><b>Laches</b></td><td>No fixed limitation, but unexplained delay → refusal by analogy/public policy; explained delay (esp. State-caused) excused.</td><td>Trilokchand (dismissed 3:2)</td><td>“No Limitation Act ⇒ delay irrelevant”; “laches = res judicata”.</td></tr>
+<tr><td><b>Res judicata</b></td><td>On-merits speaking HC decision under 226 bars identical Art 32 petition; non-merits dismissals do not.</td><td>Daryao (4-proposition test)</td><td>“Any dismissal bars”; confusing estoppel with res judicata.</td></tr>
+<tr><td><b>Exhaustion</b></td><td>Efficacious alternative remedy first; exceptions for FR/public interest/inefficacy; refusal = no bar.</td><td>Trilokchand headnote (“self-restraint”)</td><td>“Always mandatory”; forgetting time-spent-excuses-delay rule.</td></tr>
+<tr><td><b>PIL / pro bono publico</b></td><td>Litigation for public injury/duties/diffused rights; court acts on letters for the public good.</td><td>Bandhua; Oleum applications</td><td>No filters (paras 17/24/25) — political PILs are justiciable suicide.</td></tr>
+<tr><td><b>Orders &amp; directions</b></td><td>Arts 32(2)/226(1): directions, orders, writs “whichever may be appropriate”; Art 142 completes justice; Art 141 makes declarations national.</td><td>Bandhua (commissions/monitoring); Oleum (conditions)</td><td>Calling the power unlimited — “judicial power… limited by its very nature”.</td></tr>
+<tr><td><b>Compensation</b></td><td>Public-law reparation for FR breach (Rudul Sah); absolute liability for hazardous enterprises (Oleum); no bar to a later suit.</td><td>Rudul Sah (₹30,000 + ₹5,000); Oleum (size-scaled)</td><td>“Compensation = tort damages”; “Rylands exceptions available”.</td></tr>
+</table></div>
+
+<div class="kbox">
+<h4>🧠 High-yield verbatim quotes (choose 2–3 per essay)</h4>
+<ul style="font-size:14.8px">
+<li>“Procedure is but a handmaiden of justice.” · “acting pro bono publico” — S.P. Gupta para 17 (DU)</li>
+<li>“Must not… trespass into areas reserved to the Executive and the Legislature” · “vital distinction between locus standi and justiciability” — para 24 (DU)</li>
+<li>“New jurisprudence… judicial statesmanship and high creative ability” — para 24 (DU)</li>
+<li>“Extraordinary remedies should not take the place of ordinary remedies.” · “comity between the Supreme Court and the High Court” — Trilokchand</li>
+<li>“Vigilantibus non dormientibus jura subveniunt” — Trilokchand (Bachawat J.)</li>
+<li>“Article 21 would be denuded of its significant content… mulct its violators in the payment of monetary compensation.” — Rudul Sah</li>
+<li>“Absolute and non-delegable duty to the community” · “larger and more prosperous the enterprise, greater the compensation” — Oleum</li>
+<li>“The power is limited by its very nature, that it is judicial power.” — Bandhua para 59</li>
+<li>“The operative test is not… unreasonable delay but… unexplained delay.” — Mizo Chief Council (2026)</li>
+</ul>
+</div>
+
+<div class="grid g2">
+<div class="card c">
+<h4>⏱ 60-second opening lines (ready to write)</h4>
+<p style="font-size:14.8px"><b>For a locus standi/PIL essay:</b> “Part-II of Topic 6 is a story of a gate and its guards: the court widened the gate for the poor — public injury, sufficient interest, letters as petitions — while laches, res judicata, exhaustion and justiciability stand guard, so that an open door never becomes an open house.”</p>
+<p style="font-size:14.8px"><b>For an activism/overreach question:</b> “Bhagwati J. asked for ‘judicial statesmanship’ in the same breath as he warned courts not to ‘trespass into areas reserved to the Executive and the Legislature’ — Indian activism is therefore constitutional only when self-restraint travels with it.”</p>
+<p style="font-size:14.8px"><b>For item (b):</b> “Rudul Sah converted Art 32 from a key that opens the prison into a remedy that repairs the prisoner; Oleum converted it further into a regulator of the hazards of capital — orders, directions and compensation are one continuous remedial vocabulary.”</p>
+</div>
+<div class="card d">
+<h4>🚫 Common exam mistakes (do not commit)</h4>
+<ul>
+<li>Writing Daryao as “the case where 32 was held immune” — it held the opposite.</li>
+<li>Saying res judicata applies after <i>any</i> High Court dismissal (only merits/speaking orders).</li>
+<li>Attributing “no laches under Art 32” to the Trilokchand <i>majority</i> — that was Hegde J.'s dissent.</li>
+<li>Forgetting the split: Sikri J.'s “one year from discovery” was dissent/alternative view.</li>
+<li>Calling Rudul Sah a MISA case or claiming the Court finally assessed full damages — it was interim compensation, with liberty to sue.</li>
+<li>Missing that Oleum was about a plant that was <b>not</b> shut down — relief was regulatory.</li>
+<li>Quoting “pro bono public” as a legal-aid statute — it is a Latin principle of public-good litigation.</li>
+<li>Presenting PIL as unlimited — para 24 (overreach), para 25 (secondary injury), Mizo (proof of breach).</li>
+<li>Ignoring item (b)'s DU gap — cite constitutional text + cases, don't fabricate DU quotes.</li>
+<li>Forgetting Art 141/142 when discussing “orders and directions”.</li>
+</ul>
+</div>
+</div>
+
+<div class="good">
+<b>Master flow to reproduce under exam pressure:</b> <i>Access</i> (locus standi → PIL/pro bono publico) → <i>Gates</i> (laches = time · res judicata = finality · exhaustion = forum · justiciability = subject) → <i>Remedy</i> (writs/directions under Arts 32(2)/226(1) + Art 142 + compensation à la Rudul Sah/Oleum) → <i>Discipline</i> (judicial power, para 24 limits, comity). Five cases: Daryao = gate of finality; Trilokchand = gate of delay/comity; Bandhua = access opened + remedy supervised; Rudul Sah = money remedy; Oleum = regulation + no-fault money.
+</div>
+</section>
+
+<footer style="background:#0e2a47;color:#cfe1f2;border-radius:14px;padding:22px 26px;margin:10px 0 40px;font-family:'Segoe UI',Arial,sans-serif;font-size:14.5px">
+<p><b style="color:#ffd9a8">Topic 6 Part-II — Procedural Requirements &amp; Innovations (Locus Standi · Laches · Res Judicata · Exhaustion · PIL; Orders, Directions &amp; Compensation)</b> · LB-301 Constitutional Law-I (DU) · Compiled from: DU case material (<b><i>S.P. Gupta</i> “Locus Standi” extract, Bhagwati J. paras 13–26, book pp. 177–185</b> — the only Part-II passage in the DU case book; verified), syllabus text (Part-II, cases 46–50), Constitution of India <b>verbatim</b> (Arts 32, 226, 141, 142, 139, 21, 23 — Wikisource <i>Constitution of India (2020)</i>), and <b>researched standard sources</b> for syllabus cases 46–50 (no DU excerpts exist for them — all five carry the RESEARCHED badge), DU question paper (LL.B. III Semester, <b>December 2024 — Q6(c) locus standi; Q6(b) separation of powers</b>) and the scanned <b>Centenary Chance Examination</b> paper (both pages examined — no Part-II question).</p>
+<p style="color:#8fb3d4">Companion files: <i>Topic1-General-ConstitutionalLaw-LB301-DU-Notes.html</i> · <i>Topic2-UnionAndItsTerritory-LB301-DU-Notes.html</i> · <i>Topic3-UnionAndStateExecutives-LB301-DU-Notes.html</i> · <i>Topic5-LegislativePowerOfExecutive-Ordinances-LB301-DU-Notes.html</i>. Case citations follow the DU syllabus; paragraph/headnote references follow the reported judgments. Cross-check all references against the prescribed texts before the exam.</p>
+</footer>
+
+</main>
+</div>
+<div id="scrim"></div>
+<script>
+(function(){
+  var t=document.getElementById('navtoggle'),n=document.getElementById('toc'),s=document.getElementById('scrim');
+  function close(){n.classList.remove('open');s.classList.remove('show');}
+  t.addEventListener('click',function(){n.classList.toggle('open');s.classList.toggle('show');});
+  s.addEventListener('click',close);
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(window.innerWidth<=1024)close();});});
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a435ad6d8cd62738',t:'MTc5MDc5Njk5Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
