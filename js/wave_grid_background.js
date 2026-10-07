@@ -405,11 +405,14 @@
     const hero = document.getElementById('heroCinematicContainer');
     const canvas = document.getElementById('waveGridCanvas');
     if (hero && canvas) {
-      // On mobile phones (< 768px), disable heavy 3D WebGL calculations to guarantee 60fps scrolling & instant load
-      if (window.innerWidth < 768) {
+      // On mobile phones & tablets (<= 1024px or touch devices), disable heavy background 3D WebGL
+      // calculations to guarantee silky 60fps scrolling, instant touch responsiveness & zero battery drain
+      const isTouchOrMobile = window.innerWidth <= 1024 || ('ontouchstart' in window && window.innerWidth <= 1180);
+      if (isTouchOrMobile) {
         canvas.style.display = 'none';
         return;
       }
+
       window.waveGridInstance = new WaveGridBackground({
         container: hero,
         canvas: canvas,

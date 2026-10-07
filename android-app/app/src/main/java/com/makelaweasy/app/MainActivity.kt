@@ -83,6 +83,9 @@ class MainActivity : AppCompatActivity() {
             getColor(R.color.brand_gold),
             getColor(R.color.brand_navy)
         )
+        swipeRefresh.setOnChildScrollUpCallback { _, _ ->
+            webView.scrollY > 0
+        }
         swipeRefresh.setOnRefreshListener {
             if (isNetworkAvailable()) {
                 webView.reload()
@@ -99,6 +102,12 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun setupWebView() {
+        // Explicit GPU hardware acceleration for smooth 60fps rendering
+        webView.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+        webView.overScrollMode = View.OVER_SCROLL_NEVER
+        webView.isVerticalScrollBarEnabled = false
+        webView.isHorizontalScrollBarEnabled = false
+
         val settings = webView.settings
 
         // Enable core web APIs for PWA & modern vanilla JS portal
@@ -108,15 +117,17 @@ class MainActivity : AppCompatActivity() {
         settings.cacheMode = WebSettings.LOAD_DEFAULT
         settings.mixedContentMode = WebSettings.MIXED_CONTENT_NEVER_ALLOW
 
-        // Viewport and rendering optimizations
+        // Viewport and rendering optimizations (strictly honor mobile viewport)
         settings.useWideViewPort = true
-        settings.loadWithOverviewMode = true
+        settings.loadWithOverviewMode = false
+        settings.textZoom = 100
         settings.builtInZoomControls = false
         settings.displayZoomControls = false
         settings.setSupportMultipleWindows(false)
         settings.allowFileAccess = true
         settings.allowContentAccess = true
         settings.mediaPlaybackRequiresUserGesture = false
+
 
         // Enable Cookies
         val cookieManager = CookieManager.getInstance()

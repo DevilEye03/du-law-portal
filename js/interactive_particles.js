@@ -551,8 +551,12 @@
   // Export globally
   window.InteractiveParticlesController = InteractiveParticlesController;
 
-  // Auto-boot
+  // Auto-boot (Desktop only; on mobile & tablets <= 1024px, the crisp HTML fallback headline is rendered with zero GPU/battery drain)
   function bootInteractiveParticles() {
+    const isTouchOrMobile = window.innerWidth <= 1024 || ('ontouchstart' in window && window.innerWidth <= 1180);
+    if (isTouchOrMobile) {
+      return;
+    }
     const container = document.getElementById('interactiveParticlesContainer');
     if (container && !window.activeParticles) {
       window.activeParticles = new InteractiveParticlesController({

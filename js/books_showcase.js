@@ -1210,7 +1210,10 @@
   let animId = null;
   let isPointerDown = false;
   let dragStartX = 0;
+  let dragStartY = 0;
   let dragDeltaX = 0;
+  let dragDeltaY = 0;
+  let isStageVisible = true;
   let currentCarouselIndex = 0;
   let selectedBook = null;
   let hoveredBook = null;
@@ -1607,6 +1610,7 @@
 
   function animate(now) {
     animId = requestAnimationFrame(animate);
+    if (!isStageVisible) return;
     const dt = Math.min(0.05, (now - lastTime) / 1000);
     lastTime = now;
 
@@ -1694,13 +1698,27 @@
         return;
       }
 
+      const isMobileOrTablet = window.innerWidth <= 1024 || ('ontouchstart' in window);
       renderer.setSize(dims.w, dims.h, false);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+      renderer.setPixelRatio(isMobileOrTablet ? 1.0 : Math.min(window.devicePixelRatio, 1.5));
       renderer.outputColorSpace = THREE.SRGBColorSpace;
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1.0;
-      renderer.shadowMap.enabled = true;
-      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      renderer.shadowMap.enabled = !isMobileOrTablet;
+      if (!isMobileOrTablet) {
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+      }
+
+      // Native touch scroll friendliness: never trap vertical page scrolling
+      canvasEl.style.touchAction = 'pan-y';
+
+      // Observe visibility to automatically pause WebGL rendering when scrolled out of view
+      if ('IntersectionObserver' in window && containerEl) {
+        const stageObs = new IntersectionObserver(([entry]) => {
+          isStageVisible = entry.isIntersecting;
+        }, { threshold: 0.05 });
+        stageObs.observe(containerEl);
+      }
 
       // Lights
       const hemi = new THREE.HemisphereLight(0x8fa0d8, 0x0d1024, 0.45);
@@ -1751,10 +1769,17 @@
 
         if (isPointerDown) {
           dragDeltaX = e.clientX - dragStartX;
+          dragDeltaY = e.clientY - dragStartY;
+          // If gesture is predominantly vertical, let the browser scroll the page normally
+          if (Math.abs(dragDeltaY) > Math.abs(dragDeltaX) * 1.2) {
+            return;
+          }
           if (Math.abs(dragDeltaX) > 40 && !selectedBook) {
             shiftCarousel(dragDeltaX > 0 ? -1 : 1);
             dragStartX = e.clientX;
+            dragStartY = e.clientY;
             dragDeltaX = 0;
+            dragDeltaY = 0;
           }
           return;
         }
@@ -1787,12 +1812,15 @@
       canvasEl.addEventListener('pointerdown', (e) => {
         isPointerDown = true;
         dragStartX = e.clientX;
+        dragStartY = e.clientY;
         dragDeltaX = 0;
+        dragDeltaY = 0;
       });
 
       window.addEventListener('pointerup', () => {
         isPointerDown = false;
       });
+
 
       canvasEl.addEventListener('click', (e) => {
         if (Math.abs(dragDeltaX) > 10) return; // ignore if dragging

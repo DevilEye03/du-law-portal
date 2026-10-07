@@ -563,13 +563,15 @@ button{font-family:inherit;cursor:pointer}
   width:100%;min-width:0;box-sizing:border-box}
 
 @media(max-width:860px){
-  .hub-tabs-container{top:56px;margin:8px 0 0;padding:4px 6px;border-radius:12px}
-  .hub-tabs{display:flex;flex-direction:row;align-items:center;gap:6px;
-    overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
-    scrollbar-width:none;-ms-overflow-style:none;width:100%;padding:2px 0;
-    flex-wrap:nowrap}
-  .hub-tabs::-webkit-scrollbar{display:none}
+  .hub-tabs-container{top:56px;margin:8px 0 10px;padding:4px;border-radius:12px}
+  .hub-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;width:100%;box-sizing:border-box}
+  .hub-tab-btn{min-height:38px;padding:2px}
+  .hub-tab-btn .metal-inner-body{padding:3px 4px;gap:5px;justify-content:center}
+  .hub-tab-btn .metal-icon-circle{width:22px;height:22px}
+  .hub-tab-btn .metal-icon-circle i{font-size:.72rem}
+  .hub-tab-btn .metal-btn-lbl{font-size:.70rem}
 }
+
 
 .hub-tab-btn{
   position:relative;border-radius:9999px;border:none;background:transparent;
@@ -1558,12 +1560,19 @@ body.reader-open .quick-filter-chips,
 .reader-iframe-wrap{flex:1;width:100% !important;min-width:0;max-width:100% !important;
   height:calc(100% - 44px) !important;height:calc(100vh - 44px) !important;height:calc(100dvh - 44px) !important;
   background:#fff;overflow:hidden;-webkit-overflow-scrolling:touch;position:relative}
-.reader-iframe{width:100% !important;height:100% !important;min-width:0;max-width:100% !important;border:none !important;display:block}
+.reader-iframe{width:100% !important;height:100% !important;min-width:0;max-width:100% !important;border:none !important;display:block;touch-action:pan-y !important;-webkit-overflow-scrolling:touch !important}
 @media(max-width:768px){
-  .reader-header{height:42px !important;min-height:42px !important;max-height:42px !important;padding:0 8px !important}
-  .reader-badge-sub{max-width:90px !important;font-size:.7rem !important}
-  .reader-iframe-wrap{height:calc(100% - 42px) !important;height:calc(100vh - 42px) !important;height:calc(100dvh - 42px) !important}
+  .reader-header{height:46px !important;min-height:46px !important;max-height:46px !important;padding:0 8px !important}
+  .btn-reader-back{height:34px;padding:0 8px;font-size:.78rem}
+  .reader-header-divider{display:none !important}
+  .reader-badge-sub{max-width:80px !important;font-size:.68rem !important;padding:2px 6px}
+  .reader-title-box h3{font-size:.82rem !important}
+  .btn-reader-action{width:34px;height:34px;min-width:34px;min-height:34px}
+  .btn-reader-close{width:34px;height:34px;min-width:34px;min-height:34px}
+  #readerNewTabBtn{display:none !important}
+  .reader-iframe-wrap{height:calc(100% - 46px) !important;height:calc(100vh - 46px) !important;height:calc(100dvh - 46px) !important;touch-action:pan-y;-webkit-overflow-scrolling:touch}
 }
+
 
 .mobile-bottom-nav{position:fixed;bottom:0;left:0;width:100%;height:62px;
   background:var(--bg-card);border-top:1px solid var(--border-line);display:none;
@@ -1688,26 +1697,32 @@ body.reader-open .quick-filter-chips,
 @media (max-width: 768px) {
   /* Layout & Viewport Containment */
   html, body {
-    overflow-x: hidden;
-    max-width: 100vw;
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .main-wrapper {
-    padding: 0 14px 40px;
+    padding: 0 12px 40px;
     max-width: 100%;
-    overflow-x: clip;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   /* Cinematic Hero Section */
   .sem-hero-cinematic {
-    padding: 44px 16px 36px;
-    margin: 0 -14px;
-    min-height: 280px;
+    padding: 32px 14px 28px;
+    margin: 0 0 16px;
+    border-radius: var(--radius-lg);
+    min-height: 240px;
+    box-sizing: border-box;
   }
   .hero-particle-text-stage {
-    min-height: 150px;
+    min-height: 120px;
     margin-bottom: 8px;
     max-width: 100%;
   }
+
   .sem-hero-badge {
     padding: 5px 16px;
     font-size: 0.72rem;
@@ -3585,11 +3600,11 @@ body[data-active-subject="bsa"] {
   display: none;
 }
 
-/* Mobile Responsive Collapse for Header */
-@media (max-width: 768px) {
+/* Tablet & Mobile Responsive Collapse for Header */
+@media (max-width: 1024px) {
   .site-header {
     width: 100% !important;
-    max-width: 100vw !important;
+    max-width: 100% !important;
     overflow: visible !important;
     box-sizing: border-box !important;
   }
@@ -3597,9 +3612,10 @@ body[data-active-subject="bsa"] {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    padding: 0 10px !important;
-    gap: 6px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
   }
+
   .brand-wrap {
     gap: 7px;
     min-width: 0;
@@ -6925,9 +6941,12 @@ body.drawer-open {
 }
 
 /* Responsive adjustments for 3D Books Showcase */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .books-showcase-stage {
-    height: 560px;
+    height: 420px;
+  }
+  .books-showcase-stage canvas {
+    touch-action: pan-y !important;
   }
   .bs-detail-panel {
     width: 90%;
@@ -6955,11 +6974,15 @@ body.drawer-open {
   .bs-arrow-next { right: 14px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .books-showcase-stage {
-    height: 490px;
+    height: 350px;
     border-radius: 16px;
   }
+  .books-showcase-stage canvas {
+    touch-action: pan-y !important;
+  }
+
   .bs-detail-title {
     font-size: 1.5rem;
   }
@@ -9852,6 +9875,147 @@ body.drawer-open {
     justify-content: space-between;
   }
 }
+/* ==========================================================================
+   MOBILE & TABLET OMNI-COMPATIBILITY ENGINE
+   Guarantees 60fps fluidity, zero horizontal drift, and touch responsiveness
+   across all phone and tablet screen viewports (320px to 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+    touch-action: pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
 
+  /* Prevent auto-zooming input bug on mobile browsers */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 
+  /* Touch targets manipulation */
+  button, a, input, select, textarea {
+    touch-action: manipulation;
+  }
+
+  /* Tablets & Mobile Container Clamping */
+  .main-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Subject cards grid: 2 columns on tablet, clean wrapping */
+  .subjects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  /* Topics & Units grid */
+  .topics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)) !important;
+    gap: 16px !important;
+  }
+
+  /* Revision capsules grid */
+  .revision-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  /* Full FIRAC, Case card, PYQ card containment */
+  .case-card, .firac-box, .pyq-card, .rev-capsule-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-wrapper {
+    padding: 0 12px 40px !important;
+  }
+
+  /* 1-column Semester Cards on mobile */
+  .semester-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .sem-card-inner {
+    padding: 18px 16px !important;
+    min-height: auto !important;
+  }
+
+  .sem-roman {
+    font-size: 2.2rem !important;
+  }
+
+  /* 1-column Subject Cards on mobile */
+  .subjects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* 1-column Topics / Unit Cards on mobile */
+  .topics-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .unit-card {
+    padding: 16px 14px !important;
+  }
+
+  .unit-badge-number {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1rem !important;
+  }
+
+  .unit-actions-row {
+    width: 100% !important;
+    margin-top: 14px !important;
+  }
+
+  .btn-read-notes.topic-liquid-metal-btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+
+  /* Filter bar stacking */
+  .hub-filter-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .search-box-wrap,
+  .unit-filter-select {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Breadcrumbs on mobile */
+  .subjects-breadcrumbs {
+    margin-bottom: 12px !important;
+  }
+
+  .subjects-breadcrumbs button {
+    min-height: 40px !important;
+  }
+}
 
