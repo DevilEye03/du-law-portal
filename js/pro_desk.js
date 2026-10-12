@@ -2049,6 +2049,37 @@
   let currentUser = null;
   let isAuthInitialized = false;
 
+  const ADMIN_USER = {
+    displayName: 'Chamber Administrator',
+    email: 'admin@makelaweasy.in (Direct Access)',
+    photoURL: null,
+    isAdmin: true
+  };
+
+  function checkIsAdminMode() {
+    try {
+      if (typeof window === 'undefined') return false;
+      const path = (window.location && window.location.pathname) || '';
+      const search = (window.location && window.location.search) || '';
+      const hash = (window.location && window.location.hash) || '';
+      if (
+        path === '/admin' || path === '/pro/admin' || path === '/pro-admin' ||
+        search.includes('admin=true') || search.includes('admin=1') ||
+        hash === '#admin' || hash === '#pro-admin'
+      ) {
+        if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
+        if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
+        return true;
+      }
+      return (
+        (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('mle_admin_mode') === 'true') ||
+        (typeof localStorage !== 'undefined' && localStorage.getItem('mle_admin_mode') === 'true')
+      );
+    } catch (e) {
+      return false;
+    }
+  }
+
   function initFirebaseAuth() {
     if (isAuthInitialized) return;
     if (typeof window === 'undefined' || typeof firebase === 'undefined') {
@@ -2076,8 +2107,13 @@
 
       // Track persistent auth state across page sessions
       firebaseAuth.onAuthStateChanged(user => {
-        currentUser = user;
-        updateProAuthUI(user);
+        if (checkIsAdminMode()) {
+          currentUser = ADMIN_USER;
+          updateProAuthUI(ADMIN_USER);
+        } else {
+          currentUser = user;
+          updateProAuthUI(user);
+        }
       });
     } catch (err) {
       console.warn('[Firebase Auth Init]', err);
@@ -2092,25 +2128,51 @@
     const userNameEl = document.getElementById('proUserName');
     const userEmailEl = document.getElementById('proUserEmail');
     const userAvatarEl = document.getElementById('proUserAvatar');
+    const userBadgeEl = document.getElementById('proUserBadge');
+    const signOutBtn = document.getElementById('proSignOutBtn');
 
     if (user) {
-      // Authenticated with Google
+      // Authenticated with Google or Chamber Administrator Direct Access
       if (authGate) authGate.style.display = 'none';
       if (contentWrapper) contentWrapper.style.display = 'block';
       if (userStatusBar) userStatusBar.style.display = 'flex';
 
-      if (userNameEl) {
-        userNameEl.textContent = user.displayName || 'Verified Scholar';
-      }
-      if (userEmailEl) {
-        userEmailEl.textContent = user.email || '';
-      }
-      if (userAvatarEl) {
-        if (user.photoURL) {
-          userAvatarEl.innerHTML = `<img src="${escapeHtml(user.photoURL)}" alt="${escapeHtml(user.displayName || 'User')}" class="pro-avatar-img" referrerpolicy="no-referrer">`;
-        } else {
-          const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
-          userAvatarEl.innerHTML = `<span class="pro-avatar-initial">${initial}</span>`;
+      if (user.isAdmin) {
+        if (userNameEl) userNameEl.textContent = 'Chamber Administrator';
+        if (userEmailEl) userEmailEl.textContent = 'admin@makelaweasy.in (Direct Access)';
+        if (userAvatarEl) {
+          userAvatarEl.innerHTML = `<span class="pro-avatar-initial admin-initial" style="color:#f59e0b;"><i class="fa-solid fa-crown"></i></span>`;
+        }
+        if (userBadgeEl) {
+          userBadgeEl.className = 'pro-user-badge admin-badge';
+          userBadgeEl.innerHTML = `<i class="fa-solid fa-shield-halved"></i> Chamber Administrator &bull; Direct Access`;
+        }
+        if (signOutBtn) {
+          signOutBtn.title = 'Exit Administrator Mode';
+          signOutBtn.innerHTML = `<i class="fa-solid fa-door-open"></i> <span>Exit Admin Mode</span>`;
+        }
+      } else {
+        if (userNameEl) {
+          userNameEl.textContent = user.displayName || 'Verified Scholar';
+        }
+        if (userEmailEl) {
+          userEmailEl.textContent = user.email || '';
+        }
+        if (userAvatarEl) {
+          if (user.photoURL) {
+            userAvatarEl.innerHTML = `<img src="${escapeHtml(user.photoURL)}" alt="${escapeHtml(user.displayName || 'User')}" class="pro-avatar-img" referrerpolicy="no-referrer">`;
+          } else {
+            const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+            userAvatarEl.innerHTML = `<span class="pro-avatar-initial">${initial}</span>`;
+          }
+        }
+        if (userBadgeEl) {
+          userBadgeEl.className = 'pro-user-badge';
+          userBadgeEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> Verified Chamber Member`;
+        }
+        if (signOutBtn) {
+          signOutBtn.title = 'Sign Out from Pro Desk';
+          signOutBtn.innerHTML = `<i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Sign Out</span>`;
         }
       }
     } else {
@@ -2197,6 +2259,10 @@
   let updateSearchQuery = '';
 
   function initProDesk() {
+    if (checkIsAdminMode()) {
+      currentUser = ADMIN_USER;
+      updateProAuthUI(ADMIN_USER);
+    }
     initFirebaseAuth();
     renderProTabs();
     updateCategoryBadges();
@@ -2829,9 +2895,47 @@ Source: Make Law Easy (https://makelaweasy.in/pro)`;
     if (googleBtn) {
       googleBtn.addEventListener('click', signInWithGoogle);
     }
+    function exitAdminMode() {
+      try {
+        if (typeof sessionStorage !== 'undefined') sessionStorage.removeItem('mle_admin_mode');
+        if (typeof localStorage !== 'undefined') localStorage.removeItem('mle_admin_mode');
+      } catch (e) {}
+      currentUser = (firebaseAuth && firebaseAuth.currentUser) ? firebaseAuth.currentUser : null;
+      updateProAuthUI(currentUser);
+      showProToast('Exited Chamber Administrator Mode.');
+      if (typeof window !== 'undefined' && window.history) {
+        window.history.replaceState({ view: 'pro' }, '', '/pro');
+      }
+    }
+
+    function handleSignOutOrExitAdmin() {
+      if (currentUser && currentUser.isAdmin) {
+        exitAdminMode();
+      } else {
+        signOutGoogleUser();
+      }
+    }
+
     const signOutBtn = document.getElementById('proSignOutBtn');
     if (signOutBtn) {
-      signOutBtn.addEventListener('click', signOutGoogleUser);
+      signOutBtn.addEventListener('click', handleSignOutOrExitAdmin);
+    }
+
+    const adminDirectLink = document.getElementById('proAdminDirectLink');
+    if (adminDirectLink) {
+      adminDirectLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        try {
+          if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
+          if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
+        } catch (err) {}
+        currentUser = ADMIN_USER;
+        updateProAuthUI(ADMIN_USER);
+        showProToast('👑 Chamber Administrator Direct Access granted!');
+        if (typeof window !== 'undefined' && window.history) {
+          window.history.replaceState({ view: 'pro', admin: true }, '', '/pro/admin');
+        }
+      });
     }
   }
 
@@ -2845,12 +2949,19 @@ Source: Make Law Easy (https://makelaweasy.in/pro)`;
       .replace(/'/g, '&#039;');
   }
 
-  // Initialize Firebase Auth immediately when DOM is ready
+  // Initialize Firebase Auth & Admin Mode immediately when DOM is ready
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initFirebaseAuth);
-    } else {
+    const onDomReady = () => {
+      if (checkIsAdminMode()) {
+        currentUser = ADMIN_USER;
+        updateProAuthUI(ADMIN_USER);
+      }
       initFirebaseAuth();
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onDomReady);
+    } else {
+      onDomReady();
     }
   }
 

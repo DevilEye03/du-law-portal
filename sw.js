@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v79";
+const CACHE_NAME = "du-law-portal-v80";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
@@ -10,20 +10,20 @@ const ASSETS_TO_CACHE = [
   "./tools/bare-acts.html",
   "./tools/bns-converter.html",
   "./tools/flashcards.html",
-  "./css/styles.css?v=79.0",
-  "./css/notes-responsive.css?v=79.0",
+  "./css/styles.css?v=80.0",
+  "./css/notes-responsive.css?v=80.0",
   "./lib/three.min.js",
   "./lib/gsap.min.js",
   "./lib/fontawesome/css/all.min.css",
-  "./js/wave_grid_background.js?v=79.0",
-  "./js/interactive_particles.js?v=79.0",
+  "./js/wave_grid_background.js?v=80.0",
+  "./js/interactive_particles.js?v=80.0",
   "./particles.png",
-  "./js/books_showcase.js?v=79.0",
-  "./js/data.js?v=79.0",
-  "./js/bare_acts.js?v=79.0",
-  "./js/bns_converter.js?v=79.0",
-  "./js/pro_desk.js?v=79.0",
-  "./js/app.js?v=79.0",
+  "./js/books_showcase.js?v=80.0",
+  "./js/data.js?v=80.0",
+  "./js/bare_acts.js?v=80.0",
+  "./js/bns_converter.js?v=80.0",
+  "./js/pro_desk.js?v=80.0",
+  "./js/app.js?v=80.0",
   "./favicon.svg",
   "./manifest.json"
 ];
@@ -76,6 +76,10 @@ self.addEventListener("fetch", (event) => {
     url.pathname.startsWith("/semester") ||
     url.pathname.startsWith("/sem") ||
     url.pathname.startsWith("/tools/") ||
+    url.pathname.startsWith("/pro") ||
+    url.pathname.startsWith("/admin") ||
+    url.pathname.startsWith("/discussions") ||
+    url.pathname.startsWith("/comments") ||
     url.pathname === "/terms" ||
     url.pathname === "/terms.html" ||
     url.pathname.endsWith("/terms.html") ||
