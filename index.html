@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=77.0">
+  <link rel="stylesheet" href="/css/styles.css?v=78.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -730,6 +730,94 @@
           <span class="pro-breadcrumb-tag"><i class="fa-solid fa-crown" style="color:#f59e0b;"></i> Make Law Easy Pro Suite</span>
         </div>
 
+        <!-- Authenticated Chamber User Bar -->
+        <div class="pro-user-status-bar" id="proUserStatusBar" style="display: none;">
+          <div class="pro-user-info">
+            <div class="pro-user-avatar" id="proUserAvatar">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="pro-user-meta">
+              <div class="pro-user-name" id="proUserName">Signed In User</div>
+              <div class="pro-user-email" id="proUserEmail">user@gmail.com</div>
+            </div>
+            <span class="pro-user-badge"><i class="fa-solid fa-circle-check"></i> Verified Chamber Member</span>
+          </div>
+          <button type="button" class="pro-signout-btn" id="proSignOutBtn" title="Sign Out from Pro Desk">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Sign Out</span>
+          </button>
+        </div>
+
+        <!-- Authentication Gate: Required Sign Up / Sign In via Google Firebase -->
+        <div class="pro-auth-gate" id="proAuthGate">
+          <div class="pro-auth-card">
+            <div class="pro-auth-badge">
+              <i class="fa-solid fa-lock"></i> <span>CHAMBER AUTHENTICATION REQUIRED</span>
+            </div>
+            <div class="pro-auth-crest">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="pro-auth-title">Make Law Easy Pro &bull; Chamber Practice Desk</h3>
+            <p class="pro-auth-subtitle">
+              Sign in with your Google account (Gmail) to access 111+ court-tested litigation drafts, daily judicial ratio decidendi digests, and confidential chamber practice tools.
+            </p>
+
+            <!-- Google Sign-in Action Button -->
+            <div class="pro-auth-action-wrap">
+              <button type="button" class="pro-google-btn" id="proGoogleSignInBtn">
+                <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+                <span>Sign in with Google</span>
+              </button>
+              <div class="pro-auth-status" id="proAuthStatus" style="display:none;"></div>
+            </div>
+
+            <!-- Features Unlocked on Sign-In -->
+            <div class="pro-auth-features-preview">
+              <div class="pro-auth-feature-col">
+                <i class="fa-solid fa-file-contract"></i>
+                <div>
+                  <strong>111+ Legal Templates</strong>
+                  <span>Crime (63), NDPS (23), PC Act, Marriage, Property, Company, Civil</span>
+                </div>
+              </div>
+              <div class="pro-auth-feature-col">
+                <i class="fa-solid fa-scale-unbalanced-flip"></i>
+                <div>
+                  <strong>Daily Judicial Ratio Decidendi</strong>
+                  <span>High Court &amp; Supreme Court Division Bench digests</span>
+                </div>
+              </div>
+              <div class="pro-auth-feature-col">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                  <strong>1-Click Export &amp; Download</strong>
+                  <span>Formatted text copying and instant .txt chamber downloads</span>
+                </div>
+              </div>
+              <div class="pro-auth-feature-col">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <strong>100% Client-Side Privacy</strong>
+                  <span>Zero server tracking; confidential case details stay on your device</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Legal Compliance & Privacy Assurance -->
+            <div class="pro-auth-footer-note">
+              <i class="fa-solid fa-scale-balanced"></i>
+              <span><strong>BAR COUNCIL OF INDIA RULE 36:</strong> Academic legal research &amp; continuing education repository. Non-commercial, zero solicitation. 100% free access for law students, judicial aspirants, and advocates.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pro Suite Full Content (Unlocked After Authentication) -->
+        <div class="pro-content-wrapper" id="proContentWrapper" style="display: none;">
+
         <!-- Section Header with Crest & Badges -->
         <div class="pro-section-header">
           <div class="pro-badge-strip">
@@ -1136,6 +1224,8 @@
             </div>
           </div>
         </div>
+
+        </div><!-- End #proContentWrapper -->
 
       </div>
     </section>
@@ -2629,14 +2719,17 @@
   <!-- Scripts -->
   <script src="/lib/three.min.js" defer></script>
   <script src="/lib/gsap.min.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=77.0" defer></script>
-  <script src="/js/interactive_particles.js?v=77.0" defer></script>
-  <script src="/js/books_showcase.js?v=77.0" defer></script>
-  <script src="/js/data.js?v=77.0" defer></script>
-  <script src="/js/bare_acts.js?v=77.0" defer></script>
-  <script src="/js/bns_converter.js?v=77.0" defer></script>
-  <script src="/js/pro_desk.js?v=77.0" defer></script>
-  <script src="/js/app.js?v=77.0" defer></script>
+  <!-- Firebase Authentication SDKs (Google Sign-In) -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
+  <script src="/js/wave_grid_background.js?v=78.0" defer></script>
+  <script src="/js/interactive_particles.js?v=78.0" defer></script>
+  <script src="/js/books_showcase.js?v=78.0" defer></script>
+  <script src="/js/data.js?v=78.0" defer></script>
+  <script src="/js/bare_acts.js?v=78.0" defer></script>
+  <script src="/js/bns_converter.js?v=78.0" defer></script>
+  <script src="/js/pro_desk.js?v=78.0" defer></script>
+  <script src="/js/app.js?v=78.0" defer></script>
 
 
   <script>

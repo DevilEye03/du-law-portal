@@ -435,6 +435,10 @@ try {
   assert(htmlContent.includes('id="tplCountAll"'), 'Template count badge id="tplCountAll" exists');
   assert(htmlContent.includes('id="tplCountCrime"'), 'Template count badge id="tplCountCrime" exists');
   assert(htmlContent.includes('id="proOverviewPanel"'), 'Pro Overview homepage panel id="proOverviewPanel" exists in index.html');
+  assert(htmlContent.includes('id="proAuthGate"'), 'Pro Auth gate id="proAuthGate" exists in index.html');
+  assert(htmlContent.includes('id="proGoogleSignInBtn"'), 'Pro Google Sign-in button id="proGoogleSignInBtn" exists in index.html');
+  assert(htmlContent.includes('id="proUserStatusBar"'), 'Pro user status bar id="proUserStatusBar" exists in index.html');
+  assert(htmlContent.includes('id="proContentWrapper"'), 'Pro content wrapper id="proContentWrapper" exists in index.html');
   assert(htmlContent.includes('data-tab="overview"'), 'Pro overview navigation tab exists in index.html');
   assert(htmlContent.includes('data-tab="templates"'), 'Pro templates navigation tab exists in index.html');
   assert(htmlContent.includes('id="proOpenAllTemplatesBtn"'), 'proOpenAllTemplatesBtn launcher button exists in index.html');
@@ -443,6 +447,9 @@ try {
   assert(cssContent.includes('.pro-chamber-card'), '.pro-chamber-card style rule exists in styles.css');
   assert(cssContent.includes('.pro-legal-statement-bar'), '.pro-legal-statement-bar style rule exists in styles.css');
   assert(cssContent.includes('.pro-cat-launch-grid'), '.pro-cat-launch-grid style rule exists in styles.css');
+  assert(cssContent.includes('.pro-auth-gate'), '.pro-auth-gate style rule exists in styles.css');
+  assert(cssContent.includes('.pro-google-btn'), '.pro-google-btn style rule exists in styles.css');
+  assert(cssContent.includes('.pro-user-status-bar'), '.pro-user-status-bar style rule exists in styles.css');
   assert(cssContent.includes('.cat-crime'), '.cat-crime style rule exists in styles.css');
   assert(fs.existsSync('js/pro_desk.js'), 'js/pro_desk.js exists');
 

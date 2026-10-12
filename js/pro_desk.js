@@ -2033,8 +2033,162 @@
   ];
 
   // =========================================================================
-  // 3. PRO SECTION CONTROLLER & UI COMPONENT
+  // 3. PRO SECTION CONTROLLER & FIREBASE GOOGLE AUTHENTICATION GATE
   // =========================================================================
+  const FIREBASE_CONFIG = {
+    projectId: "make-law-easy",
+    appId: "1:468037137314:web:dab5e30fe60c3b0dd8b8fb",
+    storageBucket: "make-law-easy.firebasestorage.app",
+    apiKey: "AIzaSyDlEGILq4f0IWcBuWIkSsswmOE5OxUdIGM",
+    authDomain: "make-law-easy.firebaseapp.com",
+    messagingSenderId: "468037137314",
+    measurementId: "G-8ZG7VS1G45"
+  };
+
+  let firebaseAuth = null;
+  let currentUser = null;
+  let isAuthInitialized = false;
+
+  function initFirebaseAuth() {
+    if (isAuthInitialized) return;
+    if (typeof window === 'undefined' || typeof firebase === 'undefined') {
+      return;
+    }
+
+    try {
+      if (!firebase.apps || !firebase.apps.length) {
+        firebase.initializeApp(FIREBASE_CONFIG);
+      }
+      firebaseAuth = firebase.auth();
+      isAuthInitialized = true;
+
+      // Handle redirect result if user was redirected back
+      if (typeof firebaseAuth.getRedirectResult === 'function') {
+        firebaseAuth.getRedirectResult().then(result => {
+          if (result && result.user) {
+            showProToast(`Welcome ${result.user.displayName || 'Advocate'}! Pro Chamber unlocked.`);
+          }
+        }).catch(err => {
+          console.error('[Firebase Redirect Auth Error]', err);
+          showAuthStatus(err.message || 'Redirect sign-in error', 'error');
+        });
+      }
+
+      // Track persistent auth state across page sessions
+      firebaseAuth.onAuthStateChanged(user => {
+        currentUser = user;
+        updateProAuthUI(user);
+      });
+    } catch (err) {
+      console.warn('[Firebase Auth Init]', err);
+    }
+  }
+
+  function updateProAuthUI(user) {
+    if (typeof document === 'undefined') return;
+    const authGate = document.getElementById('proAuthGate');
+    const contentWrapper = document.getElementById('proContentWrapper');
+    const userStatusBar = document.getElementById('proUserStatusBar');
+    const userNameEl = document.getElementById('proUserName');
+    const userEmailEl = document.getElementById('proUserEmail');
+    const userAvatarEl = document.getElementById('proUserAvatar');
+
+    if (user) {
+      // Authenticated with Google
+      if (authGate) authGate.style.display = 'none';
+      if (contentWrapper) contentWrapper.style.display = 'block';
+      if (userStatusBar) userStatusBar.style.display = 'flex';
+
+      if (userNameEl) {
+        userNameEl.textContent = user.displayName || 'Verified Scholar';
+      }
+      if (userEmailEl) {
+        userEmailEl.textContent = user.email || '';
+      }
+      if (userAvatarEl) {
+        if (user.photoURL) {
+          userAvatarEl.innerHTML = `<img src="${escapeHtml(user.photoURL)}" alt="${escapeHtml(user.displayName || 'User')}" class="pro-avatar-img" referrerpolicy="no-referrer">`;
+        } else {
+          const initial = (user.displayName || user.email || 'U').charAt(0).toUpperCase();
+          userAvatarEl.innerHTML = `<span class="pro-avatar-initial">${initial}</span>`;
+        }
+      }
+    } else {
+      // Not Authenticated
+      if (authGate) authGate.style.display = 'block';
+      if (contentWrapper) contentWrapper.style.display = 'none';
+      if (userStatusBar) userStatusBar.style.display = 'none';
+      closeTemplatePreviewModal();
+    }
+  }
+
+  function signInWithGoogle() {
+    if (!firebaseAuth) {
+      initFirebaseAuth();
+    }
+    if (!firebaseAuth) {
+      showAuthStatus('Firebase Authentication service is loading. Please check internet connection and try again.', 'error');
+      return;
+    }
+
+    const signInBtn = document.getElementById('proGoogleSignInBtn');
+    if (signInBtn) signInBtn.disabled = true;
+    showAuthStatus('Connecting to Google Sign-In...', 'loading');
+
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+
+    firebaseAuth.signInWithPopup(provider)
+      .then(result => {
+        hideAuthStatus();
+        showProToast(`Welcome ${result.user.displayName || 'Advocate'}! Chamber access unlocked.`);
+      })
+      .catch(error => {
+        console.error('[Google Sign-In Error]', error);
+        if (error.code === 'auth/popup-blocked') {
+          showAuthStatus('Popup was blocked by your browser. Redirecting to Google Sign-In...', 'loading');
+          firebaseAuth.signInWithRedirect(provider);
+        } else if (error.code === 'auth/popup-closed-by-user') {
+          showAuthStatus('Sign-in cancelled. Please sign in with your Google account (Gmail) to access Pro Suite.', 'error');
+        } else if (error.code === 'auth/unauthorized-domain') {
+          showAuthStatus('Domain requires authorization in Firebase Console.', 'error');
+        } else {
+          showAuthStatus(error.message || 'Failed to sign in with Google. Please try again.', 'error');
+        }
+      })
+      .finally(() => {
+        if (signInBtn) signInBtn.disabled = false;
+      });
+  }
+
+  function signOutGoogleUser() {
+    if (!firebaseAuth) return;
+    firebaseAuth.signOut().then(() => {
+      showProToast('You have signed out of Pro Desk.');
+    }).catch(err => {
+      console.error('[Sign Out Error]', err);
+    });
+  }
+
+  function showAuthStatus(msg, type) {
+    if (typeof document === 'undefined') return;
+    const statusEl = document.getElementById('proAuthStatus');
+    if (!statusEl) return;
+    statusEl.style.display = 'block';
+    statusEl.className = `pro-auth-status ${type || ''}`;
+    if (type === 'loading') {
+      statusEl.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> <span>${escapeHtml(msg)}</span>`;
+    } else {
+      statusEl.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> <span>${escapeHtml(msg)}</span>`;
+    }
+  }
+
+  function hideAuthStatus() {
+    if (typeof document === 'undefined') return;
+    const statusEl = document.getElementById('proAuthStatus');
+    if (statusEl) statusEl.style.display = 'none';
+  }
+
   let activeTab = 'overview'; // 'overview' | 'templates' | 'updates' | 'roadmap'
   let activeTemplateCategory = 'all';
   let activeUpdateCategory = 'all';
@@ -2042,6 +2196,7 @@
   let updateSearchQuery = '';
 
   function initProDesk() {
+    initFirebaseAuth();
     renderProTabs();
     updateCategoryBadges();
     renderProTemplates();
@@ -2079,6 +2234,14 @@
   }
 
   function switchToTemplatesCategory(category) {
+    if (!currentUser) {
+      const gate = document.getElementById('proAuthGate');
+      if (gate) {
+        gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      showProToast('Please sign in with Google to explore court templates.');
+      return;
+    }
     activeTab = 'templates';
     activeTemplateCategory = category || 'all';
     renderProTabs();
@@ -2324,6 +2487,12 @@
   }
 
   function openTemplatePreviewModal(templateId) {
+    if (!currentUser) {
+      const gate = document.getElementById('proAuthGate');
+      if (gate) gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showProToast('Please sign in with Google to view full template text.');
+      return;
+    }
     const template = PRO_TEMPLATES_DB.find(t => t.id === templateId);
     if (!template) return;
 
@@ -2433,6 +2602,10 @@
   }
 
   function copyTemplateContent(templateId, triggerBtn) {
+    if (!currentUser) {
+      showProToast('Please sign in with Google to copy this template.');
+      return;
+    }
     const template = PRO_TEMPLATES_DB.find(t => t.id === templateId);
     if (!template) return;
 
@@ -2649,6 +2822,16 @@ Source: Make Law Easy (https://makelaweasy.in/pro)`;
         if (rdPanel) rdPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
+
+    // Google Sign-In & Sign-Out Action Listeners
+    const googleBtn = document.getElementById('proGoogleSignInBtn');
+    if (googleBtn) {
+      googleBtn.addEventListener('click', signInWithGoogle);
+    }
+    const signOutBtn = document.getElementById('proSignOutBtn');
+    if (signOutBtn) {
+      signOutBtn.addEventListener('click', signOutGoogleUser);
+    }
   }
 
   function escapeHtml(str) {
@@ -2659,6 +2842,15 @@ Source: Make Law Easy (https://makelaweasy.in/pro)`;
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
+  }
+
+  // Initialize Firebase Auth immediately when DOM is ready
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFirebaseAuth);
+    } else {
+      initFirebaseAuth();
+    }
   }
 
   // Expose Global Controller
