@@ -394,7 +394,7 @@ try {
   assert(htmlContent.includes('id="communityCommentsSection"'), 'communityCommentsSection container exists in index.html');
   assert(htmlContent.includes('id="commentComposeForm"'), 'commentComposeForm exists in index.html');
   assert(htmlContent.includes('id="commentsStream"'), 'commentsStream container exists in index.html');
-  assert(htmlContent.includes('id="headerCommentsBtn"'), 'headerCommentsBtn exists in index.html');
+  assert(!htmlContent.includes('id="headerCommentsBtn"'), 'headerCommentsBtn removed from upper tab in index.html');
   assert(htmlContent.includes('id="mtdCommentsBtn"'), 'mtdCommentsBtn exists in index.html');
   assert(htmlContent.includes('id="readerBackBtn"'), 'id="readerBackBtn" exists in index.html');
   assert(htmlContent.includes('id="readerFullscreenBtn"'), 'id="readerFullscreenBtn" exists in index.html');
