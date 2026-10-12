@@ -158,12 +158,17 @@
     commentsBottomPrompt: document.getElementById('commentsBottomPrompt'),
     btnPromptCompose: document.getElementById('btnPromptCompose'),
     discussionsBackBtn: document.getElementById('discussionsBackBtn'),
+    headerProBtn: document.getElementById('headerProBtn'),
+    mtdProBtn: document.getElementById('mtdProBtn'),
+    footerProLink: document.getElementById('footerProLink'),
+    proBackBtn: document.getElementById('proBackBtn'),
 
     // Views
     semesterView: document.getElementById('semesterView'),
     subjectsView: document.getElementById('subjectsView'),
     subjectHubView: document.getElementById('subjectHubView'),
     discussionsView: document.getElementById('communityCommentsSection'),
+    proSectionView: document.getElementById('proSectionView'),
 
     // Semester View Elements
     semesterGrid: document.getElementById('semesterGrid'),
@@ -333,6 +338,14 @@
     }
     if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
       return { view: 'contact' };
+    }
+    if (
+      rawPath === '/pro' || rawPath === '/pro-desk' ||
+      currentHash === '#pro' || currentHash === '#proSection' ||
+      currentHash === '#proSectionView' ||
+      params.get('pro') === 'true'
+    ) {
+      return { view: 'pro' };
     }
     if (
       rawPath === '/comments' || rawPath === '/discussions' ||
@@ -567,6 +580,7 @@
     elements.subjectsView.classList.remove('active');
     elements.subjectHubView.classList.remove('active');
     if (elements.discussionsView) elements.discussionsView.classList.remove('active');
+    if (elements.proSectionView) elements.proSectionView.classList.remove('active');
     if (elements.mobileBottomNav) elements.mobileBottomNav.classList.remove('active');
 
     if (viewName === 'semester') {
@@ -623,6 +637,23 @@
         document.title = 'Student Academic Discussions & Insights | Make Law Easy';
         if (!window.history.state || window.history.state.view !== 'discussions') {
           window.history.pushState({ view: 'discussions' }, '', '/discussions');
+        }
+      }
+    } else if (viewName === 'pro') {
+      document.body.removeAttribute('data-active-subject');
+      if (elements.proSectionView) elements.proSectionView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Pro Suite';
+      }
+      if (typeof window.initProDesk === 'function') {
+        window.initProDesk();
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        document.title = 'Make Law Easy Pro — Legal Templates, Drafting Studio & Law Updates';
+        if (!window.history.state || window.history.state.view !== 'pro') {
+          window.history.pushState({ view: 'pro' }, '', '/pro');
         }
       }
     }
@@ -3990,6 +4021,10 @@ Submission Time: ${new Date().toLocaleString()}
     showView('discussions', pushHistory);
   }
 
+  function navigateToPro(pushHistory = true) {
+    showView('pro', pushHistory);
+  }
+
   function initCommentsModule() {
     renderCommentsStream();
 
@@ -4374,6 +4409,28 @@ Submission Time: ${new Date().toLocaleString()}
       elements.footerContactBarCommentsLink.addEventListener('click', (e) => {
         e.preventDefault();
         navigateToComments();
+      });
+    }
+    if (elements.headerProBtn) {
+      elements.headerProBtn.addEventListener('click', () => {
+        navigateToPro();
+      });
+    }
+    if (elements.mtdProBtn) {
+      elements.mtdProBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToPro();
+      });
+    }
+    if (elements.footerProLink) {
+      elements.footerProLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        navigateToPro();
+      });
+    }
+    if (elements.proBackBtn) {
+      elements.proBackBtn.addEventListener('click', () => {
+        showView('semester', true);
       });
     }
     if (elements.footerCommentsLink) {
@@ -4821,6 +4878,11 @@ Submission Time: ${new Date().toLocaleString()}
         return;
       }
 
+      if (route.view === 'pro') {
+        navigateToPro(false);
+        return;
+      }
+
       if (route.view === 'comments' || route.view === 'discussions') {
         navigateToComments(route.subject, false);
         return;
@@ -5002,6 +5064,9 @@ Submission Time: ${new Date().toLocaleString()}
       } else if (route.view === 'comments' || route.view === 'discussions') {
         e.preventDefault();
         navigateToComments(route.subject, true);
+      } else if (route.view === 'pro') {
+        e.preventDefault();
+        navigateToPro(true);
       }
     });
 
@@ -5012,6 +5077,10 @@ Submission Time: ${new Date().toLocaleString()}
       setTimeout(openContactModal, 250);
     } else if (window.location.hash === '#feedback' || (new URLSearchParams(window.location.search)).get('feedback') === 'true') {
       setTimeout(navigateToFeedback, 350);
+    } else if (window.location.hash === '#pro' || window.location.hash === '#proSection' || (new URLSearchParams(window.location.search)).get('pro') === 'true') {
+      setTimeout(() => {
+        showView('pro', false);
+      }, 350);
     } else if (window.location.hash === '#comments' || window.location.hash === '#discussions' || window.location.hash === '#communityCommentsSection' || window.location.hash.startsWith('#comm-') || (new URLSearchParams(window.location.search)).get('comments') === 'true' || (new URLSearchParams(window.location.search)).get('discussions') === 'true') {
       setTimeout(() => {
         showView('discussions', false);

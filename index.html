@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=71.0">
+  <link rel="stylesheet" href="/css/styles.css?v=72.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -301,6 +301,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="header-contact-pill liquid-metal-btn pro-header-btn" id="headerProBtn" title="Make Law Easy Pro — Practice Desk, Templates &amp; Law Updates" aria-label="Make Law Easy Pro" type="button">
+          <span class="btn-icon-wrap pro-wrap" style="color:#f59e0b;"><i class="fa-solid fa-crown"></i></span>
+          <span class="btn-lbl">Pro <span class="pro-badge-dot"></span></span>
+        </button>
         <button class="header-contact-pill liquid-metal-btn comments-header-btn" id="headerCommentsBtn" title="Student Discussions & Comments" aria-label="Student Discussions & Comments" type="button">
           <span class="btn-icon-wrap comments-wrap" style="color:#60a5fa;"><i class="fa-solid fa-comments"></i></span>
           <span class="btn-lbl">Discussions</span>
@@ -709,6 +713,180 @@
             <button type="button" class="btn-prompt-compose" id="btnPromptCompose">
               <i class="fa-solid fa-pen-nib"></i> <span>Ask Doubt / Post Comment</span>
             </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
+         VIEW 5: MAKE LAW EASY PRO — PRACTICE DESK & LAW UPDATES
+         --------------------------------------------------------------- -->
+    <section class="pro-view pro-section-wrapper" id="proSectionView" aria-label="Make Law Easy Pro Practice Desk">
+      <div class="pro-section-container">
+        
+        <!-- Breadcrumbs Navigation Bar -->
+        <div class="pro-breadcrumbs-bar">
+          <button type="button" id="proBackBtn" class="pro-back-btn" title="Return to All Semesters">
+            <i class="fa-solid fa-arrow-left"></i> <span>Home / All Semesters</span>
+          </button>
+          <span class="pro-breadcrumb-sep">/</span>
+          <span class="pro-breadcrumb-tag"><i class="fa-solid fa-crown" style="color:#f59e0b;"></i> Make Law Easy Pro Suite</span>
+        </div>
+
+        <!-- Section Header with Crest & Badges -->
+        <div class="pro-section-header">
+          <div class="pro-badge-strip">
+            <span class="pro-crest-badge"><i class="fa-solid fa-crown"></i> Make Law Easy Pro</span>
+            <span class="pro-status-badge"><span class="live-pulse-dot"></span> Practice Desk &amp; Updates</span>
+          </div>
+          <h2 class="pro-section-title">Legal Practice Desk, Ready Templates &amp; Law Updates</h2>
+          <p class="pro-section-desc">
+            Engineered for practicing advocates, judicial service aspirants (DJS/PCS-J), judicial clerks, and ambitious LL.B. scholars. Access vetted statutory notice drafts, court pleadings, and verified landmark legal developments.
+          </p>
+
+          <!-- Metrics Counter Bar -->
+          <div class="pro-metrics-grid">
+            <div class="pro-metric-card">
+              <div class="metric-icon" style="color: #f59e0b;"><i class="fa-solid fa-file-contract"></i></div>
+              <div class="metric-val" id="metricTotalTemplates">10+</div>
+              <div class="metric-label">Ready Legal Templates</div>
+            </div>
+            <div class="pro-metric-card">
+              <div class="metric-icon" style="color: #60a5fa;"><i class="fa-solid fa-newspaper"></i></div>
+              <div class="metric-val" id="metricTotalUpdates">6</div>
+              <div class="metric-label">Curated Law Updates</div>
+            </div>
+            <div class="pro-metric-card">
+              <div class="metric-icon" style="color: #34d399;"><i class="fa-solid fa-bolt"></i></div>
+              <div class="metric-val">1-Click</div>
+              <div class="metric-label">Copy &amp; Text Download</div>
+            </div>
+            <div class="pro-metric-card">
+              <div class="metric-icon" style="color: #a78bfa;"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="metric-val">100%</div>
+              <div class="metric-label">Private &amp; Offline PWA</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs: Templates vs Law Updates vs Roadmap -->
+        <div class="pro-nav-tabs-wrap">
+          <div class="pro-nav-tabs">
+            <button type="button" class="pro-tab-btn active" data-tab="templates">
+              <i class="fa-solid fa-file-pen"></i> <span>Ready-to-Use Templates</span>
+            </button>
+            <button type="button" class="pro-tab-btn" data-tab="updates">
+              <i class="fa-solid fa-scale-balanced"></i> <span>Real-Time Law Updates</span>
+            </button>
+            <button type="button" class="pro-tab-btn" data-tab="roadmap">
+              <i class="fa-solid fa-compass"></i> <span>Pro Roadmap &amp; Request</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- TAB 1: READY-TO-USE TEMPLATES -->
+        <div class="pro-tab-panel active" id="proTemplatesPanel">
+          <!-- Filter & Search Bar -->
+          <div class="pro-filter-bar">
+            <div class="pro-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="proTemplateSearchInput" placeholder="Search templates by title, statute (NI Act, CPC, BNSS), or keyword...">
+              <button type="button" id="proTemplateSearchClear" class="pro-search-clear" style="display:none;" title="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="pro-filter-pills-wrap">
+              <button type="button" class="pro-filter-pill active" data-tpl-cat="all">All Templates</button>
+              <button type="button" class="pro-filter-pill" data-tpl-cat="notices">Statutory Notices</button>
+              <button type="button" class="pro-filter-pill" data-tpl-cat="pleadings">Court Pleadings &amp; Bail</button>
+              <button type="button" class="pro-filter-pill" data-tpl-cat="contracts">Contracts &amp; Retainers</button>
+            </div>
+          </div>
+
+          <!-- Templates Grid -->
+          <div class="pro-templates-grid" id="proTemplatesGrid">
+            <!-- Dynamically populated by js/pro_desk.js -->
+          </div>
+        </div>
+
+        <!-- TAB 2: REAL-TIME LAW UPDATES -->
+        <div class="pro-tab-panel" id="proUpdatesPanel" style="display:none;">
+          <!-- Filter & Search Bar -->
+          <div class="pro-filter-bar">
+            <div class="pro-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="proUpdateSearchInput" placeholder="Search law updates by case name, citation, or doctrine...">
+              <button type="button" id="proUpdateSearchClear" class="pro-search-clear" style="display:none;" title="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="pro-filter-pills-wrap">
+              <button type="button" class="pro-filter-pill active" data-upd-cat="all">All Updates</button>
+              <button type="button" class="pro-filter-pill" data-upd-cat="criminal">Criminal Law (BNS/BNSS)</button>
+              <button type="button" class="pro-filter-pill" data-upd-cat="civil">Civil &amp; Commercial</button>
+              <button type="button" class="pro-filter-pill" data-upd-cat="ethics">Bar &amp; Practice Rules</button>
+            </div>
+          </div>
+
+          <!-- Updates Stream -->
+          <div class="pro-updates-stream" id="proUpdatesStream">
+            <!-- Dynamically populated by js/pro_desk.js -->
+          </div>
+        </div>
+
+        <!-- TAB 3: PRO ROADMAP & CUSTOM REQUEST -->
+        <div class="pro-tab-panel" id="proRoadmapPanel" style="display:none;">
+          <div class="pro-roadmap-card">
+            <div class="pro-roadmap-header">
+              <div class="pro-roadmap-crest"><i class="fa-solid fa-compass-drafting"></i></div>
+              <div>
+                <h3>Pro Features Under Active Editorial Development</h3>
+                <p>We are continuously expanding Make Law Easy Pro with specialized courtroom and chamber utilities.</p>
+              </div>
+            </div>
+
+            <div class="pro-roadmap-grid">
+              <div class="pro-roadmap-item">
+                <div class="roadmap-item-icon" style="color:#f59e0b;"><i class="fa-solid fa-calculator"></i></div>
+                <div>
+                  <h4>Statutory Limitation Act Calculator</h4>
+                  <p>Interactive schedule-based calculator computing exact filing deadlines, S. 12 exclusion periods, and S. 5 condonation windows.</p>
+                </div>
+              </div>
+              <div class="pro-roadmap-item">
+                <div class="roadmap-item-icon" style="color:#60a5fa;"><i class="fa-solid fa-gavel"></i></div>
+                <div>
+                  <h4>Trial Court Objections Quick Card (BSA / IEA)</h4>
+                  <p>Rapid reference guide on statutory grounds for objecting during witness examination (leading questions, hearsay, beyond pleadings).</p>
+                </div>
+              </div>
+              <div class="pro-roadmap-item">
+                <div class="roadmap-item-icon" style="color:#10b981;"><i class="fa-solid fa-handcuffs"></i></div>
+                <div>
+                  <h4>Bail Argument &amp; Triple Test Builder</h4>
+                  <p>Guided argument tree for criminal defense litigators covering Satender Kumar Antil compliance and parity principles.</p>
+                </div>
+              </div>
+              <div class="pro-roadmap-item">
+                <div class="roadmap-item-icon" style="color:#a78bfa;"><i class="fa-solid fa-receipt"></i></div>
+                <div>
+                  <h4>Court Fee &amp; Welfare Stamp Estimator</h4>
+                  <p>State-wise valuation and ad-valorem court fee schedule guide for suits, appeals, and vakalatnama welfare adhesive stamps.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pro-roadmap-cta">
+              <div class="pro-cta-text">
+                <i class="fa-solid fa-comment-dots"></i>
+                <span>Need a specific legal drafting template, court format, or state-specific calculator?</span>
+              </div>
+              <button type="button" class="pro-cta-btn liquid-metal-btn" id="proRequestFeatureBtn">
+                <span class="btn-icon-wrap"><i class="fa-solid fa-paper-plane"></i></span>
+                <span class="btn-lbl">Request a Pro Template or Feature</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1371,6 +1549,14 @@
     </div>
     <div class="mtd-body">
       <div class="mtd-grid">
+        <button class="mtd-action-card mtd-pro-card" id="mtdProBtn">
+          <div class="mtd-card-icon pro-card-icon" style="background:linear-gradient(135deg,#f59e0b,#b45309);color:#fff;"><i class="fa-solid fa-crown"></i></div>
+          <div class="mtd-card-text">
+            <h4>Make Law Easy Pro <span class="mtd-new-badge" style="background:#f59e0b;color:#000;font-size:0.65rem;padding:2px 6px;border-radius:4px;font-weight:800;margin-left:4px;">PRO</span></h4>
+            <p>Ready Legal Templates, Notice Studio &amp; Real-Time Law Updates</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
         <button class="mtd-action-card" id="mtdMockBtn">
           <div class="mtd-card-icon mock"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="mtd-card-text">
@@ -2179,6 +2365,8 @@
         <span class="footer-dot">&bull;</span>
         <a href="/terms">Terms of Service</a>
         <span class="footer-dot">&bull;</span>
+        <a href="#proSection" id="footerProLink" class="footer-pro-link"><i class="fa-solid fa-crown" style="color:#f59e0b;"></i> Pro Section</a>
+        <span class="footer-dot">&bull;</span>
         <a href="#communityCommentsSection" id="footerCommentsLink" class="footer-comments-link"><i class="fa-solid fa-comments"></i> Discussions</a>
         <span class="footer-dot">&bull;</span>
         <a href="mailto:ankur@makelaweasy.in" id="footerContactBtn">Contact Us</a>
@@ -2194,13 +2382,14 @@
   <!-- Scripts -->
   <script src="/lib/three.min.js" defer></script>
   <script src="/lib/gsap.min.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=71.0" defer></script>
-  <script src="/js/interactive_particles.js?v=71.0" defer></script>
-  <script src="/js/books_showcase.js?v=71.0" defer></script>
-  <script src="/js/data.js?v=71.0" defer></script>
-  <script src="/js/bare_acts.js?v=71.0" defer></script>
-  <script src="/js/bns_converter.js?v=71.0" defer></script>
-  <script src="/js/app.js?v=71.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=72.0" defer></script>
+  <script src="/js/interactive_particles.js?v=72.0" defer></script>
+  <script src="/js/books_showcase.js?v=72.0" defer></script>
+  <script src="/js/data.js?v=72.0" defer></script>
+  <script src="/js/bare_acts.js?v=72.0" defer></script>
+  <script src="/js/bns_converter.js?v=72.0" defer></script>
+  <script src="/js/pro_desk.js?v=72.0" defer></script>
+  <script src="/js/app.js?v=72.0" defer></script>
 
 
   <script>

@@ -424,6 +424,9 @@ try {
   assert(appJsContent.includes('DEFAULT_COMMENTS'), 'DEFAULT_COMMENTS registry exists in js/app.js');
   assert(cssContent.includes('.community-comments-section'), '.community-comments-section styles exist in styles.css');
   assert(cssContent.includes('.comment-card'), '.comment-card styles exist in styles.css');
+  assert(htmlContent.includes('id="proSectionView"'), 'proSectionView container exists in index.html');
+  assert(cssContent.includes('.pro-view'), '.pro-view style rule exists in styles.css');
+  assert(fs.existsSync('js/pro_desk.js'), 'js/pro_desk.js exists');
 
   // Verify sample notes have mobile responsive engine & diagram rules
   const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');
@@ -464,6 +467,7 @@ const jsFilesToCheck = [
   'js/books_showcase.js',
   'js/wave_grid_background.js',
   'js/interactive_particles.js',
+  'js/pro_desk.js',
   'sw.js'
 ];
 
