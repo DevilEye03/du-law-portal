@@ -20,55 +20,244 @@
     // SUBJECT 1: CRIME (General Criminal Law, BNSS 2023, BNS 2023, CrPC 1973)
     // -----------------------------------------------------------------------
     {
-      id: 'tpl-pdf-criminal-trial',
+      id: 'tpl-pdf-criminal-complete-kit',
+      isMasterPdf: true,
+      pageCount: '200 Pages',
       category: 'crime',
       categoryLabel: 'Crime',
-      statute: 'Criminal Procedure & BNSS / CrPC Trial Practice',
-      title: 'Criminal Defense & Trial Court Pleadings Compendium (Master Docket PDF)',
-      shortDesc: 'Authoritative trial court drafting compendium containing vetted criminal trial court applications, bail petitions, and trial formats.',
-      limitationNotice: 'Master Docket PDF: Complete court-tested litigation file containing standard trial court applications and procedural formats.',
-      tags: ['Criminal Practice', 'Bail', 'Trial Court', 'Official PDF', 'Compendium', 'Crime'],
+      statute: 'Bharatiya Nyaya Sanhita, 2023 • BNSS, 2023 • BSA, 2023',
+      title: 'Criminal Law Drafts & Formats: Complete Template Kit (44 Formats + Worked Illustrations)',
+      shortDesc: 'Official 200-page practitioner & student template kit under the 2023 criminal triad. Contains 44 ready-to-adapt draft formats across investigation, bail, trial and appeals, each accompanied by blank formats, filled specimen illustrations, master pre-filing checklists, and 8 procedural annexures.',
+      limitationNotice: '200-Page Official Master Compendium: Complete litigation manual with Part I (Blank Formats) and Part II (Specimen Worked Illustrations) for every application.',
+      tags: ['Official PDF', '200 Pages', '44 Formats', 'BNSS 2023', 'BNS 2023', 'BSA 2023', 'Investigation', 'Bail', 'Trial Court', 'Appeals', 'Crime'],
       pdfUrl: '/Templates/criminal%20template.pdf',
       content: `========================================================================
-CRIMINAL DEFENSE & TRIAL COURT PLEADINGS COMPENDIUM (MASTER DOCKET)
-Source Document: Templates/criminal template.pdf (~558 KB)
+CRIMINAL LAW DRAFTS & FORMATS: A COMPLETE TEMPLATE KIT
+Statutes: Bharatiya Nyaya Sanhita, 2023 (BNS) • Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) • Bharatiya Sakshya Adhiniyam, 2023 (BSA)
+Edition: October 2026 | Source: Templates/criminal template.pdf (200 Pages, ~558 KB)
 ========================================================================
 
-This master courtroom drafting compendium is available for instant direct viewing and download.
-Click "Download Official PDF" to access the full verified court file.
+ABOUT THIS COMPLETE LITIGATION KIT:
+This 200-page court-tested kit contains 44 ready-to-adapt draft formats covering the complete lifecycle of a criminal matter — from information given to the police station, through bail, trial before the Magistrate or Court of Session, to appeals, revisions, quashing, maintenance, and electronic evidence certificates.
 
-CONTENTS INCLUDE:
-1. Applications for Grant of Regular Bail & Interim Bail
-2. Applications for Anticipatory Bail with Affidavit
-3. Applications for Discharge / Dropping of Proceedings
-4. Exemption Applications under Section 205 CrPC / BNSS
-5. Applications for Superdari / Custody of Impounded Property
-6. Section 156(3) / 175(3) Applications for Directions to Register FIR`
+EVERY FORMAT APPEARS IN TWO INTEGRAL PARTS:
+• PART I: BLANK FORMAT (Standard court structure with dotted blanks & square-bracket instructions)
+• PART II: ILLUSTRATION (Complete specimen draft filled with realistic case facts for instant adaptation)
+
+------------------------------------------------------------------------
+SECTION 1: MASTER PRE-FILING CHECKLIST (BEFORE FILING ANY APPLICATION)
+------------------------------------------------------------------------
+A. COURT AND JURISDICTION:
+   1. Jurisdiction check: Judicial Magistrate, Court of Session, High Court, or Executive authority (Sections 21-23 & Chapter XIV BNSS).
+   2. Local territorial jurisdiction or assignment order.
+   3. Custody fact verification: Date of arrest, duration of detention, and police/judicial custody status.
+B. CAUSE TITLE & PARTICULARS:
+   4. Correct case number, police station, FIR number, sections, and date of impugned order.
+   5. Full description of parties: Parentage, age, residence, and correct designation.
+   6. Statutory alignment: Quote Section 480 BNSS (not old 437/439 CrPC), Section 482 BNSS (not 438 CrPC), Section 528 BNSS (not 482 CrPC).
+C. PRAYERS & ANNEXURES:
+   7. Precise relief in the prayer clause, interim prayer where urgent relief is required, and sworn verification affidavit.
+
+------------------------------------------------------------------------
+SECTION 2: COMPLETE INDEX OF 44 FORMATS ACROSS 7 PARTS
+------------------------------------------------------------------------
+
+PART A — COMPLAINT, FIR AND INVESTIGATION-STAGE FORMATS (pp. 8–34)
+• A1. Written Complaint to the Police for Registration of an FIR (Section 173 BNSS)
+• A2. Complaint to the Superintendent of Police on Refusal to Register an FIR (Section 173(4) BNSS)
+• A3. Application to the Magistrate for a Direction to Register an FIR and Investigate (Section 175(3) BNSS)
+• A4. Application for Supply of Copy of FIR, Case Papers & Status of Investigation
+• A5. Application for Witness Protection & Police Protection
+• A6. Application for Return of Seized Property (Muddamaal / Supardari) (Sections 497 & 503 BNSS)
+• A7. Application for Restoration of Possession of Immovable Property (Section 506 BNSS)
+
+PART B — BAIL, BOND AND CUSTODY FORMATS (pp. 35–69)
+• B1. Bail Application in a Bailable Offence (Section 478 BNSS)
+• B2. Regular Bail Application in a Non-Bailable Offence before the Magistrate (Section 480 BNSS)
+• B3. Bail Application before the Court of Session or the High Court (Section 483 BNSS)
+• B4. Anticipatory Bail Application (Section 482 BNSS)
+• B5. Default Bail (Statutory Bail) on Expiry of Period of Investigation (Section 187 BNSS)
+• B6. Application for Release of an Undertrial Prisoner under Section 479 BNSS
+• B7. Application for Cancellation of Bail / Cancellation of Bond (Section 480(5) / 483(3) BNSS)
+• B8. Application for Reduction of Bond Amount, Change of Surety & Discharge of Surety
+• B9. Application for Suspension of Sentence and Release on Bail Pending Appeal (Section 430 BNSS)
+
+PART C — TRIAL-STAGE FORMATS BEFORE A MAGISTRATE (pp. 70–106)
+• C1. Application for Supply of Police Report and Documents to the Accused (Section 230 BNSS)
+• C2. Application for Discharge in a Warrant-Case (Section 262 BNSS)
+• C3. Application for Dismissal of Complaint / Dropping of Proceedings in Summons-Case
+• C4. Application for Alteration or Addition of the Charge (Section 239 BNSS)
+• C5. Application for Summoning Documents or Witnesses (Electronic & Official Records) (Section 94 BNSS)
+• C6. Joint Application by Parties for Compounding of Offences (Section 359 BNSS)
+• C7. Application for Withdrawal of Complaint / Withdrawal from Prosecution (Section 360 BNSS)
+• C8. Application for Grant of Pardon to an Accomplice / Approver (Section 343 BNSS)
+• C9. Application for Specimen Signatures, Handwriting, Finger Impressions or Voice Sample (Section 349 BNSS)
+• C10. Application for Plea Bargaining (Chapter XXI BNSS, Sections 289–300)
+• C11. Application for Exemption from Personal Appearance (Section 228 BNSS)
+
+PART D — COURT OF SESSION & PROCEDURAL APPLICATIONS (pp. 107–121)
+• D1. Application for Discharge before the Court of Session (Section 250 BNSS)
+• D2. Application for Transfer of a Criminal Case (Sections 446 & 447 BNSS)
+• D3. Application for Examination of Witness on Commission (Sections 319–323 BNSS)
+• D4. Application for Conduct of Proceedings in Electronic Mode (Audio-Video Linkage)
+
+PART E — APPEAL, REVISION AND QUASHING FORMATS (pp. 122–146)
+• E1. Petition of Appeal to the Court of Session against Conviction (Section 415 BNSS)
+• E2. Petition of Appeal to the High Court against Conviction / Sentence (Section 415 BNSS)
+• E3. Application for Condonation of Delay in Filing Appeal or Revision (Section 5 Limitation Act)
+• E4. Criminal Revision Petition against Order or Judgment (Sections 438 & 442 BNSS)
+• E5. Petition for Quashing of FIR, Complaint or Criminal Proceedings (Section 528 BNSS / Art. 226)
+• E6. Application for Special Leave to Appeal against Order of Acquittal (Section 419 BNSS)
+
+PART F — MAINTENANCE, VICTIM RIGHTS & COMPENSATION (pp. 147–164)
+• F1. Application for Maintenance of Wife, Children or Parents (Section 144 BNSS)
+• F2. Application for Interim Maintenance with Affidavit of Disclosure of Assets & Liabilities (Rajnesh v. Neha)
+• F3. Application for Alteration, Enhancement & Enforcement of Maintenance Order (Sections 146 & 147 BNSS)
+• F4. Application for Victim Compensation (Section 396 BNSS)
+
+PART G — EVIDENCE-STAGE FORMATS (ELECTRONIC EVIDENCE) (pp. 165–176)
+• G1. Certificate for Admissibility of Electronic Record (Part A: Producer, Part B: Expert) under Section 63 BSA, 2023
+• G2. Application for Recalling Witness to Prove or Contradict Electronic Evidence
+• G3. Affidavit in Proof of Evidence of Formal Character or Conduct of Public Servant (Section 332 BNSS)
+
+ANNEXURES & PROCEDURAL READY-RECKONERS (pp. 177–200)
+• H1. Vakalatnama and Memo of Appearance
+• H2. Affidavit — General Format, Verification Clauses & Attestation
+• H3. Bond, Bail Bond and Surety Declaration Formats
+• H4. Index and List of Documents / List of Annexures
+• H5. Limitation and Key BNSS Timelines Ready-Reckoner
+• H6. Index of Statutory Court Forms in Second Schedule to BNSS
+• H7. Full CrPC 1973 to BNSS 2023 Conversion Table
+• H8. Common Offences under BNS: Punishment, Bailability and Trial Court Chart`
     },
     {
-      id: 'tpl-pdf-criminal-appeals',
+      id: 'tpl-pdf-criminal-pleadings-compilation',
+      isMasterPdf: true,
+      pageCount: '218 Pages',
       category: 'crime',
       categoryLabel: 'Crime',
-      statute: 'Criminal Appellate Practice & High Court Jurisprudence',
-      title: 'Criminal Revisions, Quashing & Appeals Master Manual (Part II PDF)',
-      shortDesc: 'Advanced appellate criminal drafting compendium for Sessions Courts and High Courts covering revisions, quashing, and statutory appeals.',
-      limitationNotice: 'Master Docket PDF: High Court & Sessions Court appellate drafting compendium with standard prayer clauses.',
-      tags: ['Criminal Revision', 'Appeals', 'High Court', 'Official PDF', 'Compendium', 'Crime'],
+      statute: 'Bharatiya Nagarik Suraksha Sanhita, 2023 • BNS 2023 • BSA 2023',
+      title: 'Criminal Law Drafting: Forms, Precedents & Pleadings (70 Formats Compilation)',
+      shortDesc: 'Comprehensive 218-page practitioner compilation containing 70 court pleadings across 7 parts, 15 features of the new criminal regime, CrPC–BNSS, IPC–BNS and Evidence Act–BSA conversion tables, Delhi practice notes, and complete worked Delhi regular bail model.',
+      limitationNotice: '218-Page Official Master Compendium: 70 formats covering private complaints, Zero FIR, S. 183 statements, protest petitions, special act bails (NDPS/PMLA/UAPA/POCSO), compounding, quashing, and worked Delhi model.',
+      tags: ['Official PDF', '218 Pages', '70 Formats', 'Cross-Reference Tables', 'Delhi Practice Notes', 'Pleadings & Precedents', 'Crime'],
       pdfUrl: '/Templates/criminal%20template%201.pdf',
       content: `========================================================================
-CRIMINAL REVISIONS, QUASHING & APPEALS MASTER MANUAL (PART II)
-Source Document: Templates/criminal template 1.pdf (~652 KB)
+CRIMINAL LAW DRAFTING — FORMS, PRECEDENTS & PLEADINGS
+Principal Statute: The Bharatiya Nagarik Suraksha Sanhita, 2023 (Act 46 of 2023)
+Read with: Bharatiya Nyaya Sanhita, 2023 (BNS) & Bharatiya Sakshya Adhiniyam, 2023 (BSA)
+First Edition: 2026 | Source: Templates/criminal template 1.pdf (218 Pages, ~652 KB)
 ========================================================================
 
-This advanced appellate drafting compendium is available for instant direct viewing and download.
-Click "Download Official PDF" to open the complete court file.
+COMPILATION ARCHITECTURE:
+A 218-page master drafting compilation designed for advocates, judicial service aspirants, law clerks, and scholars. Comprises 70 structured formats across 7 parts, statutory cross-reference tables, Delhi practice notes, and a worked Delhi bail application model under Section 480 BNSS.
 
-CONTENTS INCLUDE:
-1. Criminal Revision Petitions against summoning orders and framing of charges
-2. Section 482 CrPC / Section 528 BNSS Quashing Petitions
-3. Criminal Appeal Formats against judgment of conviction
-4. Applications for Suspension of Sentence pending appeal
-5. Criminal Writ Petitions under Article 226 of the Constitution of India`
+------------------------------------------------------------------------
+SECTION 1: INTRODUCTORY CHAPTERS & PRACTICE TOOLS
+------------------------------------------------------------------------
+• PART I: How to Use this Compilation (Court levels, numbering conventions, adapting templates)
+• PART II: General Rules of Criminal Drafting (Clarity, active voice, non-repetitive ground structures)
+• PART III: Pre-Filing Checklist for Every Criminal Application (15-point jurisdictional check)
+• PART IV: Fifteen Features of the New Criminal Law Regime that Every Draft Must Reflect (Audio-video recordings, electronic summons, Zero FIR, preliminary enquiry, Section 35(3) notice, timeline ceilings)
+• PART V: Limitation and Time Limits Chart (Appeals, revisions, default bail deadlines)
+• PART VI: The Number Traps (Navigating overlapping BNS/IPC sections during transition)
+• PART VII: Complete Cross-Reference Tables:
+  - Table 1: Code of Criminal Procedure, 1973 to Bharatiya Nagarik Suraksha Sanhita, 2023
+  - Table 2: Indian Penal Code, 1860 to Bharatiya Nyaya Sanhita, 2023
+  - Table 3: Indian Evidence Act, 1872 to Bharatiya Sakshya Adhiniyam, 2023
+• PART VIII: Landmark Precedents (Satender Kumar Antil, Arnesh Kumar, Lalita Kumari, D.K. Basu, Mohanlal)
+
+------------------------------------------------------------------------
+SECTION 2: COMPLETE INDEX OF 70 FORMATS ACROSS 7 PARTS
+------------------------------------------------------------------------
+
+PART A — GENERAL FORMATS & COURT ADMINISTRATION (pp. 25–40)
+• Format A-1: Vakalatnama (Criminal Proceedings)
+• Format A-2: Memo of Appearance
+• Format A-3: Affidavit — General Format for Criminal Proceedings
+• Format A-4: Application for Exemption from Personal Appearance
+• Format A-5: Application for Certified Copy of Order / Judgment / Record
+• Format A-6: Application for Supply of Documents and Statements to the Accused
+• Format A-7: Application for Free Legal Aid / Assignment of Counsel at State Expense
+• Format A-8: Application for Return / Release of Documents and Annexures Filed in Court
+
+PART B — COMPLAINT, FIR & PRE-TRIAL INVESTIGATION (pp. 41–71)
+• Format B-9: Written Complaint to Station House Officer for Registration of FIR
+• Format B-10: Complaint to Superintendent of Police on Refusal to Register FIR
+• Format B-11: Application to Magistrate for Direction to Police to Register FIR and Investigate (Section 175(3) BNSS)
+• Format B-12: Application for Registration of Zero FIR / Transfer of Investigation to Competent Police Station
+• Format B-13: Private Complaint to Magistrate (Section 223 BNSS)
+• Format B-14: Application for Recording of Confession / Statement of Witness under Section 183 BNSS
+• Format B-15: Application for Recording Statement of Victim / Witness through Audio-Video Electronic Means
+• Format B-16: Objection / Protest Petition against Closure Report (Final Report)
+• Format B-17: Application for Further Investigation / Re-Investigation
+• Format B-18: Application Challenging Arrest / for Release on Notice of Appearance under Section 35(3) BNSS
+• Format B-19: Undertaking / Compliance with Notice of Appearance under Section 35(3) BNSS
+• Format B-20: Application for Release of Seized Vehicle / Property at Police Stage
+
+PART C — BAIL, REMAND & CUSTODIAL RELIEF (pp. 72–109)
+• Format C-21: Application for Regular Bail before Magistrate (Section 480 BNSS)
+• Format C-22: Application for Bail before Court of Session / High Court (Section 483 BNSS)
+• Format C-23: Application for Anticipatory Bail (Section 482 BNSS)
+• Format C-24: Application for Statutory / Default Bail (Section 187 BNSS)
+• Format C-25: Application for Interim Bail (Medical / Humanitarian Grounds)
+• Format C-26: Application for Bail in NDPS Act Cases (Rebutting Section 37)
+• Format C-27: Application for Bail in Prevention of Money-Laundering Act (PMLA) Cases (Rebutting Section 45)
+• Format C-28: Application for Bail in UAPA Cases (Section 43D(5))
+• Format C-29: Application for Bail in POCSO Act Cases
+• Format C-30: Application for Reduction of Bail Amount / Relaxation of Bail Conditions
+• Format C-31: Bail Bond and Surety Bond Format
+• Format C-32: Application for Cancellation of Bail
+• Format C-33: Application for Discharge / Replacement of Surety
+• Format C-34: Application for Extension of Interim Bail / Time to Surrender
+
+PART D — REMAND, MEDICAL & UNDERTRIAL INCARCERATION (pp. 110–128)
+• Format D-35: Application for Police Custody Remand (for Prosecution)
+• Format D-36: Objection to Police Custody Remand (for Accused)
+• Format D-37: Application for Medical Examination of Arrested Person / Accused
+• Format D-38: Application for Release of Undertrial Prisoner on Completion of Half / One-Third Sentence (Section 479 BNSS)
+• Format D-39: Application for Set-Off of Period of Detention against Sentence (Section 468 BNSS)
+• Format D-40: Application for Parole / Furlough / Emergency Parole
+• Format D-41: Application for Witness Protection
+
+PART E — INQUIRIES, TRIAL, EVIDENCE & COMPOUNDING (pp. 129–153)
+• Format E-42: Application for Discharge in Warrant Case (Instituted on Police Report)
+• Format E-43: Application for Discharge in Sessions Case
+• Format E-44: Application for Recall / Re-Examination of Witness & Summoning Material Witness (Section 348 BNSS)
+• Format E-45: Application for Compounding of Offences
+• Format E-46: Application for Plea Bargaining (Chapter XXI BNSS)
+• Format E-47: Application for Withdrawal from Prosecution (by Public Prosecutor)
+• Format E-48: Application for Recording Evidence / Examination through Audio-Video Electronic Means
+• Format E-49: Application for Local Inspection of Place of Occurrence
+• Format E-50: Application for Examination of Defence Witnesses & Issuance of Summons to Defence Witnesses
+• Format E-51: Application for Discharge of Proclamation / Recall of NBW / Setting Aside Ex-Parte Order
+• Format E-52: Application for Specimen Signature / Handwriting / Voice Sample
+
+PART F — APPEALS, REVISIONS, QUASHING & WRITS (pp. 154–187)
+• Format F-53: Petition of Appeal against Conviction
+• Format F-54: Application for Suspension of Sentence and Bail Pending Appeal
+• Format F-55: Appeal against Acquittal (by State / Complainant)
+• Format F-56: Criminal Revision against Order / Judgment
+• Format F-57: Petition for Quashing of FIR / Criminal Proceedings (Section 528 BNSS / Art. 226)
+• Format F-58: Application for Transfer of Criminal Case
+• Format F-59: Application for Release of Case Property after Conclusion of Trial
+• Format F-60: Application for Compensation to Victim
+• Format F-61: Application for Compensation for Groundless Arrest / Illegal Detention
+• Format F-62: Special Leave Petition (Criminal) before Supreme Court of India
+• Format F-63: Criminal Writ Petition (Habeas Corpus / Mandamus)
+
+PART G — SPECIAL ACTS, MAINTENANCE & STATUTORY PROCEEDINGS (pp. 188–212)
+• Format G-64: Complaint under Section 138 of Negotiable Instruments Act, 1881
+• Format G-65: Application for Maintenance of Wife, Children and Parents under Section 144 BNSS
+• Format G-66: Application for Interim Maintenance
+• Format G-67: Application for Enforcement / Execution of Maintenance Order
+• Format G-68: Application under Section 12 of Protection of Women from Domestic Violence Act, 2005
+• Format G-69: Application for Bail in Cases under Scheduled Castes & Scheduled Tribes (PoA) Act, 1989
+• Format G-70: Application for Attachment, Forfeiture or Restoration of Property (Section 107 BNSS)
+
+WORKED DELHI COURTROOM MODEL (pp. 213–218)
+• Format X-01: Worked Delhi Example — Complete Application for Regular Bail under Section 480 BNSS, 2023
+• Annexure II: Practical Notes on Filing, E-Filing & Electronic Modes in Delhi District Courts & Delhi High Court`
     },
     {
       id: 'tpl-bnss-regular-bail',
@@ -336,29 +525,80 @@ ___________________________
     // SUBJECT 2: NDPS (Narcotic Drugs and Psychotropic Substances Act, 1985)
     // -----------------------------------------------------------------------
     {
-      id: 'tpl-pdf-ndps-docket',
+      id: 'tpl-pdf-ndps-compendium',
+      isMasterPdf: true,
+      pageCount: '100 Pages',
       category: 'ndps',
       categoryLabel: 'NDPS',
-      statute: 'Narcotic Drugs & Psychotropic Substances Act, 1985',
-      title: 'Special NDPS Act Trial & Section 37 Bail Practice Compendium (PDF)',
-      shortDesc: 'Specialized litigation compendium for NDPS Special Courts covering search & seizure memo compliance, sampling, and Section 37 bail.',
-      limitationNotice: 'Special Statute PDF: Focuses on Section 37 twin conditions, Section 42/50 search compliance, and Section 52A inventory certification.',
-      tags: ['NDPS Act', 'Section 37 Bail', 'Special Court', 'Official PDF', 'Narcotics', 'NDPS'],
+      statute: 'Narcotic Drugs & Psychotropic Substances Act, 1985 & BNSS, 2023',
+      title: 'NDPS Act, 1985: Drafting, Pleadings, Forms & Formats (Practitioner\'s Compendium)',
+      shortDesc: 'Official 100-page Special Court compendium containing 118 bookmarked sections: practice notes, quantity threshold matrices, Section 37 twin conditions bail analysis, Sections 50 & 52-A mandatory compliance matrix, 16 defense drafts, and departmental seizure forms.',
+      limitationNotice: '100-Page Official Master Compendium: Covers commercial quantity bail, default bail under S. 36A(4), S. 64-A addict treatment immunity, supardari, and bilingual S. 50 personal search notices.',
+      tags: ['Official PDF', '100 Pages', 'NDPS Act', 'Section 37 Bail', 'Section 50 Notice', 'Section 52A Sampling', 'Special Court', 'Compendium', 'NDPS'],
       pdfUrl: '/Templates/ndps%20template.pdf',
       content: `========================================================================
-SPECIAL NDPS ACT TRIAL & SECTION 37 BAIL PRACTICE COMPENDIUM
-Source Document: Templates/ndps template.pdf (~551 KB)
+NDPS ACT, 1985 — DRAFTING, PLEADINGS, FORMS & FORMATS
+A Practitioner's Compendium of Model Drafts, Court Pleadings and Departmental Forms
+Under the Narcotic Drugs and Psychotropic Substances Act, 1985 & BNSS, 2023
+Source: Templates/ndps template.pdf (100 Pages, ~551 KB)
 ========================================================================
 
-Complete specialized litigation manual for proceedings under the NDPS Act, 1985 before the Special Judge / High Court.
-Click "Download Official PDF" to open the complete court file.
+COMPENDIUM HIGHLIGHTS:
+An authoritative 100-page Special Court compendium covering the entire spectrum of narcotics litigation: bail, anticipatory bail, statutory default bail, discharge, compounding, probation, property forfeiture under Chapter V-A, search & seizure compliance, and departmental forms.
 
-SPECIALIZED CHAPTERS:
-1. Bail Applications in Commercial Quantity matters dealing with Section 37 twin conditions
-2. Grounds challenging non-compliance with Section 42 (Mandatory recording of secret information)
-3. Mandatory notice and compliance under Section 50 (Search of person before Gazetted Officer / Magistrate)
-4. Section 52A sampling and magistrate inventory certification jurisprudence
-5. Regular and Default Bail parameters under NDPS Act read with BNSS / CrPC`
+------------------------------------------------------------------------
+DIVISION 1: PRACTICE NOTES & STATUTORY MATRIX (PART A, pp. 5–18)
+------------------------------------------------------------------------
+• A-1. The Act in Outline: Scheme, Chapters and Key Amendments
+  - Statutory scheme and 1988, 2001, 2014 amendment timelines
+  - Procedural transition post-01.07.2024 under BNSS, 2023
+• A-2. Quantity Thresholds and Punishment Structure
+  - The three statutory bands: Small quantity, Intermediate quantity, Commercial quantity
+  - Punishment matrix under Sections 15–22 & 27 NDPS Act
+  - Principles for determining quantity on record (Neutral substance rule: Hira Singh v. Union of India)
+• A-3. Statutory Timelines at a Glance
+  - 60 days vs 180 days default bail period; Section 36A(4) public prosecutor report requirements
+• A-4. Mandatory Procedure: The Compliance Matrix
+  - Section 41: Search warrant issued by Magistrate or Gazetted Officer
+  - Section 42: Secret information recording & 72-hour transmission requirement (Karnail Singh)
+  - Section 43: Seizure in public transit places
+  - Section 50: Search of person before Gazetted Officer / Magistrate (Baldev Singh / Vijaysinh)
+  - Section 52 & 57: Prompt report of arrest and seizure within 48 hours
+  - Section 52-A: Mandatory sampling in presence of Magistrate (Mohanlal v. Union of India)
+• A-5. Bail under Section 37: Framework, Twin Conditions and Current Trends
+  - Scope of Section 37(1)(b): Satisfaction of reasonable grounds of innocence
+  - Prolonged incarceration and right to speedy trial under Article 21 (Mohd. Muslim v. State, 2023)
+• A-6. Presumptions, Evidence and Confessional Statements
+  - Statutory presumptions under Sections 35 & 54 NDPS Act
+  - Inadmissibility of statements made to NCB / Police officers under Section 67 (Tofan Singh, 2021)
+• A-7. Drafting Conventions and the BNSS Transition (Corresponding sections table)
+
+------------------------------------------------------------------------
+DIVISION 2: DEFENCE-SIDE DRAFTS (PART B, pp. 19–55)
+------------------------------------------------------------------------
+• B-1. Vakalatnama, Memorandum of Appearance & Application for Exemption from Personal Appearance
+• B-2. Bail Application — Small or Intermediate Quantity with Pairokar Affidavit
+• B-3. Bail Application — Commercial Quantity (Comprehensive Section 37 Rebuttal Grounds)
+• B-4. Anticipatory Bail Application before Special Court / High Court
+• B-5. Default Bail Application under Section 36A(4) read with Section 187 BNSS / 167(2) CrPC
+• B-6. Interim Bail on Medical or Humanitarian Grounds
+• B-7. Discharge Application before Special Judge under Section 250 BNSS / 227 CrPC
+• B-8. Application for Supply of Documents & for Re-Analysis / Re-Test of Duplicate Chemical Sample
+• B-9. Application for Release of Seized Vehicle / Conveyance (Supardari)
+• B-10. Application for Release of Seized Cash, Mobile Phone, Personal Articles and Documents
+• B-11. Application for Statutory Immunity under Section 64-A (Addict Volunteering for Treatment)
+• B-12. Representation to Investigating Officer / Government for Tender of Immunity under Section 64
+• B-13. Application for Probation, Bond and De-Addiction for an Addict Convict under Section 39
+• B-14. Complaint against Vexatious Entry, Search, Seizure or Arrest under Section 58 NDPS Act
+• B-15. Objection to Notice of Forfeiture of Property under Chapter V-A (Section 68-H)
+• B-16. Memorandum of Criminal Appeal to High Court against Special Court Conviction
+
+------------------------------------------------------------------------
+DIVISION 3: INVESTIGATION & DEPARTMENTAL FORMATS (PART C, pp. 56–65)
+------------------------------------------------------------------------
+• C-1. Arrest Memo, Written Grounds of Arrest & Section 35(3) BNSS Notice of Appearance
+• C-2. Notice and Record of the Option under Section 50 (Bilingual in English & Hindi)
+• C-3. Application under Section 52-A for Inventory, Photographic Certification & Magistrate Sampling`
     },
     {
       id: 'tpl-ndps-regular-bail',
@@ -1507,6 +1747,7 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
   function updateCategoryBadges() {
     const counts = {
       all: PRO_TEMPLATES_DB.length,
+      pdf: PRO_TEMPLATES_DB.filter(t => t.isMasterPdf || !!t.pdfUrl).length,
       crime: PRO_TEMPLATES_DB.filter(t => t.category === 'crime').length,
       ndps: PRO_TEMPLATES_DB.filter(t => t.category === 'ndps').length,
       corruption: PRO_TEMPLATES_DB.filter(t => t.category === 'corruption').length,
@@ -1518,6 +1759,7 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
 
     const countEls = {
       all: document.getElementById('tplCountAll'),
+      pdf: document.getElementById('tplCountPdf'),
       crime: document.getElementById('tplCountCrime'),
       ndps: document.getElementById('tplCountNdps'),
       corruption: document.getElementById('tplCountCorruption'),
@@ -1541,7 +1783,11 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
 
   function filterTemplates() {
     return PRO_TEMPLATES_DB.filter(t => {
-      const matchesCategory = (activeTemplateCategory === 'all' || t.category === activeTemplateCategory);
+      const matchesCategory = (
+        activeTemplateCategory === 'all' ||
+        t.category === activeTemplateCategory ||
+        (activeTemplateCategory === 'pdf' && (t.isMasterPdf || !!t.pdfUrl))
+      );
       const q = templateSearchQuery.trim().toLowerCase();
       const matchesSearch = !q || (
         t.title.toLowerCase().includes(q) ||
@@ -1585,10 +1831,11 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
     }
 
     grid.innerHTML = filtered.map(t => `
-      <article class="pro-card pro-template-card" data-template-id="${t.id}" data-category="${t.category}">
+      <article class="pro-card pro-template-card ${t.isMasterPdf ? 'pro-card-master-pdf' : ''}" data-template-id="${t.id}" data-category="${t.category}">
         <div class="pro-card-header">
           <div class="pro-badge-group">
             <span class="pro-category-chip cat-${t.category}"><i class="fa-solid fa-folder-closed"></i> ${escapeHtml(t.categoryLabel)}</span>
+            ${t.isMasterPdf ? `<span class="pro-master-pdf-badge"><i class="fa-solid fa-file-pdf"></i> Official PDF (${escapeHtml(t.pageCount)})</span>` : ''}
             <span class="pro-statute-chip"><i class="fa-solid fa-scale-balanced"></i> ${escapeHtml(t.statute)}</span>
           </div>
           <button class="pro-quick-copy-icon-btn" data-copy-id="${t.id}" title="Quick Copy Template" aria-label="Quick Copy Template">
@@ -1610,11 +1857,11 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
 
         <div class="pro-card-footer">
           <button type="button" class="pro-btn-preview" data-preview-id="${t.id}">
-            <i class="fa-solid fa-eye"></i> <span>Preview &amp; Customize</span>
+            <i class="fa-solid ${t.isMasterPdf ? 'fa-book-open' : 'fa-eye'}"></i> <span>${t.isMasterPdf ? 'Preview Full Index &amp; Guide' : 'Preview &amp; Customize'}</span>
           </button>
           ${t.pdfUrl ? `
-          <a href="${t.pdfUrl}" target="_blank" rel="noopener noreferrer" class="pro-btn-copy pro-btn-pdf-link" style="text-decoration:none;background:rgba(220,38,38,0.18);border-color:rgba(220,38,38,0.45);color:#ef4444;">
-            <i class="fa-solid fa-file-pdf"></i> <span>Open PDF</span>
+          <a href="${t.pdfUrl}" target="_blank" rel="noopener noreferrer" class="pro-btn-copy pro-btn-pdf-link" style="text-decoration:none;background:rgba(220,38,38,0.18);border-color:rgba(220,38,38,0.45);color:#ef4444;font-weight:700;">
+            <i class="fa-solid fa-file-pdf"></i> <span>Open Official PDF</span>
           </a>` : `
           <button type="button" class="pro-btn-copy" data-copy-id="${t.id}">
             <i class="fa-solid fa-copy"></i> <span>Copy Draft</span>
@@ -1764,6 +2011,7 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
             <div>
               <div class="pro-modal-meta-top">
                 <span class="pro-category-chip cat-${template.category}">${escapeHtml(template.categoryLabel)}</span>
+                ${template.isMasterPdf ? `<span class="pro-master-pdf-badge"><i class="fa-solid fa-file-pdf"></i> Official PDF (${escapeHtml(template.pageCount)})</span>` : ''}
                 <span class="pro-statute-chip">${escapeHtml(template.statute)}</span>
               </div>
               <h3 class="pro-modal-title">${escapeHtml(template.title)}</h3>
@@ -1774,10 +2022,15 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
           </button>
         </div>
 
+        ${template.isMasterPdf ? `
+        <div class="pro-modal-alert" style="background:rgba(220,38,38,0.12);border-color:rgba(220,38,38,0.35);color:#fca5a5;">
+          <i class="fa-solid fa-file-pdf" style="color:#ef4444;"></i>
+          <span><b>Official Master Courtroom Compendium (${escapeHtml(template.pageCount)}):</b> Complete litigation file with verified blank formats, filled specimen illustrations, checklists, and statutory conversion tables. Click <b>"Download Official PDF"</b> to view/print the full file.</span>
+        </div>` : `
         <div class="pro-modal-alert">
           <i class="fa-solid fa-circle-info"></i>
           <span><b>Customization Tip:</b> Replace the bracketed placeholders like <code>[Insert Name]</code> with your actual case particulars.</span>
-        </div>
+        </div>`}
 
         <div class="pro-modal-body">
           <div class="pro-modal-text-wrap">
@@ -1791,15 +2044,15 @@ Advocate for the [Plaintiff / Defendant / Petitioner / Respondent / Accused]`
               <i class="fa-solid fa-download"></i> <span>Download Draft (.txt)</span>
             </button>
             ${template.pdfUrl ? `
-            <a href="${template.pdfUrl}" target="_blank" rel="noopener noreferrer" class="pro-modal-download-btn" style="text-decoration:none;background:rgba(220,38,38,0.15);border-color:rgba(220,38,38,0.4);color:#ef4444;">
-              <i class="fa-solid fa-file-pdf"></i> <span>Download Official PDF</span>
+            <a href="${template.pdfUrl}" target="_blank" rel="noopener noreferrer" class="pro-modal-download-btn" style="text-decoration:none;background:rgba(220,38,38,0.22);border-color:rgba(220,38,38,0.5);color:#ef4444;font-weight:700;">
+              <i class="fa-solid fa-file-pdf"></i> <span>Download Official PDF (${escapeHtml(template.pageCount || 'PDF')})</span>
             </a>` : ''}
           </div>
           <div class="pro-modal-footer-right">
             <button type="button" class="pro-modal-close-secondary" id="proModalSecondaryCloseBtn">Close</button>
             <button type="button" class="pro-modal-copy-btn liquid-metal-btn" id="proModalCopyBtn">
               <span class="btn-icon-wrap"><i class="fa-solid fa-copy"></i></span>
-              <span class="btn-lbl">Copy Complete Draft</span>
+              <span class="btn-lbl">${template.isMasterPdf ? 'Copy Formats Index' : 'Copy Complete Draft'}</span>
             </button>
           </div>
         </div>

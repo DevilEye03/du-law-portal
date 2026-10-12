@@ -10538,6 +10538,54 @@ body.drawer-open {
   border-color: rgba(99, 102, 241, 0.35);
 }
 
+.pro-official-pdf-pill {
+  border-color: rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.06);
+  color: #ef4444;
+}
+
+.pro-official-pdf-pill:hover {
+  background: rgba(239, 68, 68, 0.14);
+  color: #f87171;
+}
+
+.pro-official-pdf-pill.active {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.pro-official-pdf-pill.active .pro-pill-count {
+  background: #ef4444;
+  color: #fff;
+}
+
+.pro-card.pro-card-master-pdf {
+  border-color: rgba(239, 68, 68, 0.35);
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.04) 0%, var(--bg-surface) 100%);
+  position: relative;
+}
+
+.pro-card.pro-card-master-pdf:hover {
+  border-color: rgba(239, 68, 68, 0.65);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14), 0 0 18px rgba(239, 68, 68, 0.15);
+}
+
+.pro-master-pdf-badge {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .pro-statute-chip {
   background: var(--bg-elevated);
   color: var(--text-muted);
