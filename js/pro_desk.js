@@ -2151,7 +2151,8 @@
         } else if (error.code === 'auth/popup-closed-by-user') {
           showAuthStatus('Sign-in cancelled. Please sign in with your Google account (Gmail) to access Pro Suite.', 'error');
         } else if (error.code === 'auth/unauthorized-domain') {
-          showAuthStatus('Domain requires authorization in Firebase Console.', 'error');
+          const host = (typeof window !== 'undefined' && window.location) ? window.location.hostname : 'makelaweasy.in';
+          showAuthStatus(`Domain "${host}" needs to be added in Firebase Console &gt; Authentication &gt; Settings &gt; Authorized domains. (Currently works on make-law-easy.web.app)`, 'error');
         } else {
           showAuthStatus(error.message || 'Failed to sign in with Google. Please try again.', 'error');
         }
