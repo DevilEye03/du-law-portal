@@ -425,7 +425,6 @@ try {
   assert(cssContent.includes('.community-comments-section'), '.community-comments-section styles exist in styles.css');
   assert(cssContent.includes('.comment-card'), '.comment-card styles exist in styles.css');
   assert(htmlContent.includes('id="proSectionView"'), 'proSectionView container exists in index.html');
-  assert(htmlContent.includes('data-tpl-cat="pdf"'), 'Template subsection "pdf" (MASTER DOCKETS) pill exists in index.html');
   assert(htmlContent.includes('data-tpl-cat="crime"'), 'Template subsection "crime" pill exists in index.html');
   assert(htmlContent.includes('data-tpl-cat="ndps"'), 'Template subsection "ndps" pill exists in index.html');
   assert(htmlContent.includes('data-tpl-cat="corruption"'), 'Template subsection "corruption" pill exists in index.html');
@@ -434,43 +433,28 @@ try {
   assert(htmlContent.includes('data-tpl-cat="company"'), 'Template subsection "company" pill exists in index.html');
   assert(htmlContent.includes('data-tpl-cat="civil"'), 'Template subsection "civil" (ALL OTHER SUBJECTS) pill exists in index.html');
   assert(htmlContent.includes('id="tplCountAll"'), 'Template count badge id="tplCountAll" exists');
-  assert(htmlContent.includes('id="tplCountPdf"'), 'Template count badge id="tplCountPdf" exists');
   assert(htmlContent.includes('id="tplCountCrime"'), 'Template count badge id="tplCountCrime" exists');
   assert(cssContent.includes('.pro-view'), '.pro-view style rule exists in styles.css');
   assert(cssContent.includes('.pro-subsections-bar'), '.pro-subsections-bar style rule exists in styles.css');
-  assert(cssContent.includes('.pro-card-master-pdf'), '.pro-card-master-pdf style rule exists in styles.css');
-  assert(cssContent.includes('.pro-master-pdf-badge'), '.pro-master-pdf-badge style rule exists in styles.css');
   assert(cssContent.includes('.cat-crime'), '.cat-crime style rule exists in styles.css');
   assert(fs.existsSync('js/pro_desk.js'), 'js/pro_desk.js exists');
-
-  // Verify Templates folder master PDF files on disk
-  const officialPdfFiles = [
-    'Templates/criminal template.pdf',
-    'Templates/criminal template 1.pdf',
-    'Templates/ndps template.pdf'
-  ];
-  officialPdfFiles.forEach(f => {
-    assert(fs.existsSync(f), `Master template file exists on disk: ${f}`);
-    assert(fs.statSync(f).size > 100000, `Master template file size > 100KB: ${f}`);
-  });
 
   // Verify Pro Templates & Daily Updates DB integrity
   const proDeskCode = fs.readFileSync('js/pro_desk.js', 'utf8');
   eval(proDeskCode);
   const proTemplates = window.PRO_TEMPLATES_DB;
   assert(Array.isArray(proTemplates), 'window.PRO_TEMPLATES_DB is registered and is an array');
-  assert(proTemplates.length >= 30, `PRO_TEMPLATES_DB contains at least 30 templates (Found: ${proTemplates.length})`);
-  const masterPdfs = proTemplates.filter(t => t.isMasterPdf);
-  assert(masterPdfs.length === 3, `PRO_TEMPLATES_DB contains exactly 3 master compendia (Found: ${masterPdfs.length})`);
-  assert(masterPdfs.some(t => t.id === 'tpl-pdf-criminal-complete-kit'), 'tpl-pdf-criminal-complete-kit registered');
-  assert(masterPdfs.some(t => t.id === 'tpl-pdf-criminal-pleadings-compilation'), 'tpl-pdf-criminal-pleadings-compilation registered');
-  assert(masterPdfs.some(t => t.id === 'tpl-pdf-ndps-compendium'), 'tpl-pdf-ndps-compendium registered');
+  assert(proTemplates.length >= 75, `PRO_TEMPLATES_DB contains at least 75 templates (Found: ${proTemplates.length})`);
+  const masterPdfs = proTemplates.filter(t => t.isMasterPdf || !!t.pdfUrl);
+  assert(masterPdfs.length === 0, `All PDF references removed from website templates (Found: ${masterPdfs.length})`);
 
   const reqSubCats = ['crime', 'ndps', 'corruption', 'marriage', 'property', 'company', 'civil'];
   reqSubCats.forEach(cat => {
     const catTemplates = proTemplates.filter(t => t.category === cat);
     assert(catTemplates.length >= 3, `Subject subsection "${cat}" has at least 3 legal templates (Found: ${catTemplates.length})`);
   });
+  assert(proTemplates.filter(t => t.category === 'crime').length >= 30, 'Crime subsection has >= 30 structured court templates');
+  assert(proTemplates.filter(t => t.category === 'ndps').length >= 15, 'NDPS subsection has >= 15 structured court templates');
 
   // Verify sample notes have mobile responsive engine & diagram rules
   const sampleNote = fs.readFileSync('sem 2/PROPERTY LAW/Topic1_Movable_Immovable_Property_DU_Notes.html', 'utf8');
