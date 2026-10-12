@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=72.0">
+  <link rel="stylesheet" href="/css/styles.css?v=73.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -749,7 +749,7 @@
           <div class="pro-metrics-grid">
             <div class="pro-metric-card">
               <div class="metric-icon" style="color: #f59e0b;"><i class="fa-solid fa-file-contract"></i></div>
-              <div class="metric-val" id="metricTotalTemplates">10+</div>
+              <div class="metric-val" id="metricTotalTemplates">30+</div>
               <div class="metric-label">Ready Legal Templates</div>
             </div>
             <div class="pro-metric-card">
@@ -774,13 +774,13 @@
         <div class="pro-nav-tabs-wrap">
           <div class="pro-nav-tabs">
             <button type="button" class="pro-tab-btn active" data-tab="templates">
-              <i class="fa-solid fa-file-pen"></i> <span>Ready-to-Use Templates</span>
+              <i class="fa-solid fa-file-signature"></i> <span>TEMPLATES</span>
             </button>
             <button type="button" class="pro-tab-btn" data-tab="updates">
-              <i class="fa-solid fa-scale-balanced"></i> <span>Real-Time Law Updates</span>
+              <i class="fa-solid fa-newspaper"></i> <span>DAILY UPDATES</span>
             </button>
             <button type="button" class="pro-tab-btn" data-tab="roadmap">
-              <i class="fa-solid fa-compass"></i> <span>Pro Roadmap &amp; Request</span>
+              <i class="fa-solid fa-compass"></i> <span>ROADMAP &amp; REQUESTS</span>
             </button>
           </div>
         </div>
@@ -796,11 +796,36 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
-            <div class="pro-filter-pills-wrap">
-              <button type="button" class="pro-filter-pill active" data-tpl-cat="all">All Templates</button>
-              <button type="button" class="pro-filter-pill" data-tpl-cat="notices">Statutory Notices</button>
-              <button type="button" class="pro-filter-pill" data-tpl-cat="pleadings">Court Pleadings &amp; Bail</button>
-              <button type="button" class="pro-filter-pill" data-tpl-cat="contracts">Contracts &amp; Retainers</button>
+            <div class="pro-subsections-bar">
+              <div class="pro-subsections-label">
+                <i class="fa-solid fa-folder-tree"></i> <span>SUBJECT SUBSECTIONS:</span>
+              </div>
+              <div class="pro-filter-pills-wrap">
+                <button type="button" class="pro-filter-pill active" data-tpl-cat="all">
+                  <i class="fa-solid fa-layer-group"></i> ALL SUBJECTS <span class="pro-pill-count" id="tplCountAll">31</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="crime">
+                  <i class="fa-solid fa-handcuffs"></i> CRIME <span class="pro-pill-count" id="tplCountCrime">7</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="ndps">
+                  <i class="fa-solid fa-capsules"></i> NDPS <span class="pro-pill-count" id="tplCountNdps">3</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="corruption">
+                  <i class="fa-solid fa-shield-halved"></i> CORRUPTION <span class="pro-pill-count" id="tplCountCorruption">3</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="marriage">
+                  <i class="fa-solid fa-ring"></i> MARRIAGE <span class="pro-pill-count" id="tplCountMarriage">4</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="property">
+                  <i class="fa-solid fa-building"></i> PROPERTY <span class="pro-pill-count" id="tplCountProperty">4</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="company">
+                  <i class="fa-solid fa-briefcase"></i> COMPANY <span class="pro-pill-count" id="tplCountCompany">4</span>
+                </button>
+                <button type="button" class="pro-filter-pill" data-tpl-cat="civil">
+                  <i class="fa-solid fa-scale-balanced"></i> ALL OTHER SUBJECTS <span class="pro-pill-count" id="tplCountCivil">6</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -821,11 +846,16 @@
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
-            <div class="pro-filter-pills-wrap">
-              <button type="button" class="pro-filter-pill active" data-upd-cat="all">All Updates</button>
-              <button type="button" class="pro-filter-pill" data-upd-cat="criminal">Criminal Law (BNS/BNSS)</button>
-              <button type="button" class="pro-filter-pill" data-upd-cat="civil">Civil &amp; Commercial</button>
-              <button type="button" class="pro-filter-pill" data-upd-cat="ethics">Bar &amp; Practice Rules</button>
+            <div class="pro-subsections-bar">
+              <div class="pro-subsections-label">
+                <i class="fa-solid fa-newspaper"></i> <span>UPDATE STREAMS:</span>
+              </div>
+              <div class="pro-filter-pills-wrap">
+                <button type="button" class="pro-filter-pill active" data-upd-cat="all">ALL UPDATES</button>
+                <button type="button" class="pro-filter-pill" data-upd-cat="criminal">CRIMINAL LAW (BNS/BNSS)</button>
+                <button type="button" class="pro-filter-pill" data-upd-cat="civil">CIVIL &amp; COMMERCIAL</button>
+                <button type="button" class="pro-filter-pill" data-upd-cat="ethics">BAR &amp; PRACTICE RULES</button>
+              </div>
             </div>
           </div>
 
@@ -2382,14 +2412,14 @@
   <!-- Scripts -->
   <script src="/lib/three.min.js" defer></script>
   <script src="/lib/gsap.min.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=72.0" defer></script>
-  <script src="/js/interactive_particles.js?v=72.0" defer></script>
-  <script src="/js/books_showcase.js?v=72.0" defer></script>
-  <script src="/js/data.js?v=72.0" defer></script>
-  <script src="/js/bare_acts.js?v=72.0" defer></script>
-  <script src="/js/bns_converter.js?v=72.0" defer></script>
-  <script src="/js/pro_desk.js?v=72.0" defer></script>
-  <script src="/js/app.js?v=72.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=73.0" defer></script>
+  <script src="/js/interactive_particles.js?v=73.0" defer></script>
+  <script src="/js/books_showcase.js?v=73.0" defer></script>
+  <script src="/js/data.js?v=73.0" defer></script>
+  <script src="/js/bare_acts.js?v=73.0" defer></script>
+  <script src="/js/bns_converter.js?v=73.0" defer></script>
+  <script src="/js/pro_desk.js?v=73.0" defer></script>
+  <script src="/js/app.js?v=73.0" defer></script>
 
 
   <script>
