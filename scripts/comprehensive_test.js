@@ -434,8 +434,15 @@ try {
   assert(htmlContent.includes('data-tpl-cat="civil"'), 'Template subsection "civil" (ALL OTHER SUBJECTS) pill exists in index.html');
   assert(htmlContent.includes('id="tplCountAll"'), 'Template count badge id="tplCountAll" exists');
   assert(htmlContent.includes('id="tplCountCrime"'), 'Template count badge id="tplCountCrime" exists');
+  assert(htmlContent.includes('id="proOverviewPanel"'), 'Pro Overview homepage panel id="proOverviewPanel" exists in index.html');
+  assert(htmlContent.includes('data-tab="overview"'), 'Pro overview navigation tab exists in index.html');
+  assert(htmlContent.includes('data-tab="templates"'), 'Pro templates navigation tab exists in index.html');
+  assert(htmlContent.includes('id="proOpenAllTemplatesBtn"'), 'proOpenAllTemplatesBtn launcher button exists in index.html');
   assert(cssContent.includes('.pro-view'), '.pro-view style rule exists in styles.css');
   assert(cssContent.includes('.pro-subsections-bar'), '.pro-subsections-bar style rule exists in styles.css');
+  assert(cssContent.includes('.pro-chamber-card'), '.pro-chamber-card style rule exists in styles.css');
+  assert(cssContent.includes('.pro-legal-statement-bar'), '.pro-legal-statement-bar style rule exists in styles.css');
+  assert(cssContent.includes('.pro-cat-launch-grid'), '.pro-cat-launch-grid style rule exists in styles.css');
   assert(cssContent.includes('.cat-crime'), '.cat-crime style rule exists in styles.css');
   assert(fs.existsSync('js/pro_desk.js'), 'js/pro_desk.js exists');
 

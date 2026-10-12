@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=75.0">
+  <link rel="stylesheet" href="/css/styles.css?v=76.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -770,14 +770,17 @@
           </div>
         </div>
 
-        <!-- Navigation Tabs: Templates vs Law Updates vs Roadmap -->
+        <!-- Navigation Tabs: Overview vs Templates vs Law Updates vs Roadmap -->
         <div class="pro-nav-tabs-wrap">
           <div class="pro-nav-tabs">
-            <button type="button" class="pro-tab-btn active" data-tab="templates">
-              <i class="fa-solid fa-file-signature"></i> <span>TEMPLATES</span>
+            <button type="button" class="pro-tab-btn active" data-tab="overview">
+              <i class="fa-solid fa-landmark"></i> <span>CHAMBER OVERVIEW</span>
+            </button>
+            <button type="button" class="pro-tab-btn" data-tab="templates">
+              <i class="fa-solid fa-file-signature"></i> <span>LEGAL TEMPLATES</span> <span class="pro-tab-count-badge" id="proTabTplCount">111</span>
             </button>
             <button type="button" class="pro-tab-btn" data-tab="updates">
-              <i class="fa-solid fa-newspaper"></i> <span>DAILY UPDATES</span>
+              <i class="fa-solid fa-newspaper"></i> <span>DAILY UPDATES</span> <span class="pro-tab-count-badge">6</span>
             </button>
             <button type="button" class="pro-tab-btn" data-tab="roadmap">
               <i class="fa-solid fa-compass"></i> <span>ROADMAP &amp; REQUESTS</span>
@@ -785,8 +788,226 @@
           </div>
         </div>
 
-        <!-- TAB 1: READY-TO-USE TEMPLATES -->
-        <div class="pro-tab-panel active" id="proTemplatesPanel">
+        <!-- TAB 0: CHAMBER OVERVIEW (PRO HOMEPAGE) -->
+        <div class="pro-tab-panel active" id="proOverviewPanel">
+          
+          <!-- Legal Compliance Statement Banner -->
+          <div class="pro-legal-statement-bar">
+            <div class="pro-legal-statement-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="pro-legal-statement-text">
+              <strong>BAR COUNCIL OF INDIA RULE 36 STATEMENT:</strong> Make Law Easy Pro is an academic, non-commercial institutional research and continuing legal education portal. It contains zero client solicitation, commercial advertising, or fee touting. All court templates and judicial precedents are provided exclusively for educational research, study, and moot court / judicial service preparation.
+            </div>
+          </div>
+
+          <!-- Module 1: Ready-to-Use Courtroom Drafting Templates -->
+          <div class="pro-chamber-card">
+            <div class="pro-chamber-card-header">
+              <div class="pro-chamber-card-title-wrap">
+                <span class="pro-module-badge"><i class="fa-solid fa-file-contract"></i> Module I &bull; Practice Formats</span>
+                <h3 class="pro-chamber-card-title">Ready-to-Use Courtroom &amp; Chamber Drafting Repository</h3>
+                <p class="pro-chamber-card-desc">
+                  Vetted, court-tested litigation drafts covering the complete procedural lifecycle &mdash; from pre-litigation statutory notices and police-stage complaints to bail, remand, trial discharge, compounding, quashing, and High Court / Supreme Court petitions. Every format adheres strictly to the 2023 criminal triad (BNS, BNSS, BSA) and the Code of Civil Procedure, 1908.
+                </p>
+              </div>
+              <button type="button" class="pro-chamber-cta-btn" id="proOpenAllTemplatesBtn">
+                <i class="fa-solid fa-folder-tree"></i> <span>Open Templates Repository (111+ Drafts) &rarr;</span>
+              </button>
+            </div>
+
+            <!-- Subject Categories Quick-Launch Label -->
+            <div class="pro-cat-launch-label">
+              <i class="fa-solid fa-arrow-pointer"></i> <span>EXPLORE COURT DRAFTS BY SUBJECT SUBSECTION:</span>
+            </div>
+
+            <!-- Subject Categories Quick-Launch Grid -->
+            <div class="pro-cat-launch-grid">
+              <!-- Crime -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-crime"><i class="fa-solid fa-handcuffs"></i></span>
+                  <span class="pro-cat-launch-count">63 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Crime (General Criminal Law)</h4>
+                <div class="pro-cat-launch-statute">BNS 2023 &bull; BNSS 2023 &bull; BSA 2023</div>
+                <p class="pro-cat-launch-desc">
+                  FIR complaints (S. 173), S. 175(3) investigation directions, Zero FIR transfers, regular bail before Magistrate (S. 480) &amp; Sessions (S. 483), anticipatory bail (S. 482), default bail (S. 187), trial discharge, compounding, quashing (S. 528), and S. 63 BSA electronic evidence certificates.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="crime">
+                  <span>Open Crime Templates (63)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- NDPS -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-ndps"><i class="fa-solid fa-capsules"></i></span>
+                  <span class="pro-cat-launch-count">23 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">NDPS Act Special Drafts</h4>
+                <div class="pro-cat-launch-statute">NDPS Act, 1985 &bull; Special NDPS Court</div>
+                <p class="pro-cat-launch-desc">
+                  Commercial quantity bail rebutting Section 37 twin conditions, small/intermediate bail, bilingual Section 50 search notices, Section 52-A Magistrate inventory certifications, duplicate sample re-analysis, vehicle superdari, and Section 64-A addict immunity.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="ndps">
+                  <span>Open NDPS Templates (23)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Corruption -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-corruption"><i class="fa-solid fa-shield-halved"></i></span>
+                  <span class="pro-cat-launch-count">3 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Corruption &amp; Economic Offences</h4>
+                <div class="pro-cat-launch-statute">PC Act, 1988 &bull; PMLA, 2002</div>
+                <p class="pro-cat-launch-desc">
+                  Section 17A &amp; Section 19 PC Act sanction discharge applications, regular bail in CBI/ACB trap cases, and Section 45 PMLA anticipatory and regular bail applications.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="corruption">
+                  <span>Open Corruption Templates (3)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Marriage -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-marriage"><i class="fa-solid fa-ring"></i></span>
+                  <span class="pro-cat-launch-count">6 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Matrimonial &amp; Family Disputes</h4>
+                <div class="pro-cat-launch-statute">HMA, 1955 &bull; BNSS, 2023 &bull; DV Act, 2005</div>
+                <p class="pro-cat-launch-desc">
+                  Section 13B mutual consent divorce joint petitions, Section 144 BNSS maintenance petitions, Supreme Court Rajnesh v. Neha mandatory asset disclosure affidavits, and Section 12 DV Act complaints.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="marriage">
+                  <span>Open Marriage Templates (6)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Property -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-property"><i class="fa-solid fa-building"></i></span>
+                  <span class="pro-cat-launch-count">4 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Property &amp; Tenancy Litigation</h4>
+                <div class="pro-cat-launch-statute">Transfer of Property Act, 1882 &bull; CPC, 1908</div>
+                <p class="pro-cat-launch-desc">
+                  Section 106 TPA statutory eviction notices, civil suits for partition and separate possession, comprehensive agreement to sell with earnest money (bayana), and tenant ejectment plaints with mesne profits.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="property">
+                  <span>Open Property Templates (4)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Company -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-company"><i class="fa-solid fa-briefcase"></i></span>
+                  <span class="pro-cat-launch-count">4 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Corporate &amp; Insolvency Practice</h4>
+                <div class="pro-cat-launch-statute">Companies Act, 2013 &bull; IBC, 2016</div>
+                <p class="pro-cat-launch-desc">
+                  Sections 241-242 NCLT company petitions for relief against oppression and mismanagement, Section 8 IBC demand notices (Form 3/4), corporate mutual NDAs, and certified Board resolutions.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="company">
+                  <span>Open Company Templates (4)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+
+              <!-- Civil / Other -->
+              <div class="pro-cat-launch-card">
+                <div class="pro-cat-launch-header">
+                  <span class="pro-cat-launch-icon cat-civil"><i class="fa-solid fa-scale-balanced"></i></span>
+                  <span class="pro-cat-launch-count">8 Drafts</span>
+                </div>
+                <h4 class="pro-cat-launch-title">Civil, Notices &amp; Special Acts</h4>
+                <div class="pro-cat-launch-statute">NI Act, 1881 &bull; CPC, 1908 &bull; Consumer Act</div>
+                <p class="pro-cat-launch-desc">
+                  Section 138 NI Act demand notices and criminal complaints, Section 80 CPC government notices, consumer dispute notices, Section 148A caveats, Order XXXIX temporary injunctions, and formal court Vakalatnamas.
+                </p>
+                <button type="button" class="pro-cat-launch-btn" data-jump-cat="civil">
+                  <span>Open All Other Drafts (8)</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 2: Daily Law Updates & Ratio Decidendi -->
+          <div class="pro-chamber-card">
+            <div class="pro-chamber-card-header">
+              <div class="pro-chamber-card-title-wrap">
+                <span class="pro-module-badge badge-updates"><i class="fa-solid fa-newspaper"></i> Module II &bull; Case Intelligence</span>
+                <h3 class="pro-chamber-card-title">Daily Legal Precedents &amp; Judicial Ratio Decidendi</h3>
+                <p class="pro-chamber-card-desc">
+                  Curated daily legal digests distilling binding ratios decidendi, statutory interpretations, and courtroom takeaways from Constitution Benches, 3-Judge Benches, and High Court Division Benches.
+                </p>
+              </div>
+              <button type="button" class="pro-chamber-cta-btn pro-cta-updates" id="proOpenAllUpdatesBtn">
+                <i class="fa-solid fa-newspaper"></i> <span>Open Daily Updates Stream &rarr;</span>
+              </button>
+            </div>
+
+            <!-- Key Updates Preview Strip -->
+            <div class="pro-updates-preview-grid">
+              <div class="pro-update-preview-item">
+                <div class="pro-update-item-tag"><i class="fa-solid fa-gavel"></i> Supreme Court &bull; 3-Judge Bench</div>
+                <h5 class="pro-update-item-title">Article 20(1) vs. Procedural Applicability of BNSS 2023</h5>
+                <p class="pro-update-item-desc">Substantive liability governed by law at time of act (IPC); post-July 2024 procedural filings governed by BNSS.</p>
+              </div>
+              <div class="pro-update-preview-item">
+                <div class="pro-update-item-tag"><i class="fa-solid fa-gavel"></i> Supreme Court &bull; Criminal Division</div>
+                <h5 class="pro-update-item-title">Section 35 BNSS Arrest Safeguards Reaffirmed (Antil Doctrine)</h5>
+                <p class="pro-update-item-desc">Mandatory reasons in writing for offences up to 7 years; non-compliance warrants immediate Category A regular bail.</p>
+              </div>
+              <div class="pro-update-preview-item">
+                <div class="pro-update-item-tag"><i class="fa-solid fa-gavel"></i> High Court of Delhi &bull; Division Bench</div>
+                <h5 class="pro-update-item-title">Section 63 BSA Electronic Record Certificate Protocols</h5>
+                <p class="pro-update-item-desc">Mandatory contemporaneous certificate for secondary electronic evidence (WhatsApp chats, CDRs, CCTV clips).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Module 3: Chamber Guarantees & Privacy Architecture -->
+          <div class="pro-chamber-card">
+            <div class="pro-chamber-card-header">
+              <div class="pro-chamber-card-title-wrap">
+                <span class="pro-module-badge badge-security"><i class="fa-solid fa-shield-halved"></i> Module III &bull; Chamber Standards</span>
+                <h3 class="pro-chamber-card-title">Confidential Chamber Workflows &amp; Privacy-First Architecture</h3>
+                <p class="pro-chamber-card-desc">
+                  Engineered with zero tracking and full local client-side security to safeguard confidential litigant data, client communications, and privileged chamber notes.
+                </p>
+              </div>
+              <button type="button" class="pro-chamber-cta-btn pro-cta-roadmap" id="proOpenRoadmapBtn">
+                <i class="fa-solid fa-compass-drafting"></i> <span>View Roadmap &amp; Submit Request &rarr;</span>
+              </button>
+            </div>
+
+            <div class="pro-pillars-grid">
+              <div class="pro-pillar-card">
+                <div class="pro-pillar-icon"><i class="fa-solid fa-user-shield"></i></div>
+                <h5 class="pro-pillar-title">100% Client-Side Privacy</h5>
+                <p class="pro-pillar-text">All draft customization, placeholder replacements, and copy actions execute strictly within your local browser memory. Zero case data is transmitted to or stored on remote servers.</p>
+              </div>
+              <div class="pro-pillar-card">
+                <div class="pro-pillar-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h5 class="pro-pillar-title">1-Click Chamber Export</h5>
+                <p class="pro-pillar-text">Instantly copy formatted legal drafts to your clipboard for word processors (MS Word, LibreOffice) or download clean .txt drafts with full cause titles and verifications.</p>
+              </div>
+              <div class="pro-pillar-card">
+                <div class="pro-pillar-icon"><i class="fa-solid fa-wifi-slash"></i></div>
+                <h5 class="pro-pillar-title">Offline PWA Readiness</h5>
+                <p class="pro-pillar-text">Caches essential litigation templates and statutory rules for instant courtroom reference even in courtrooms with zero cellular reception.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 1: READY-TO-USE TEMPLATES (OPENED VIA TEMPLATES TAB OR CATEGORY BUTTONS) -->
+        <div class="pro-tab-panel" id="proTemplatesPanel" style="display:none;">
           <!-- Filter & Search Bar -->
           <div class="pro-filter-bar">
             <div class="pro-search-box">
@@ -2412,14 +2633,14 @@
   <!-- Scripts -->
   <script src="/lib/three.min.js" defer></script>
   <script src="/lib/gsap.min.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=75.0" defer></script>
-  <script src="/js/interactive_particles.js?v=75.0" defer></script>
-  <script src="/js/books_showcase.js?v=75.0" defer></script>
-  <script src="/js/data.js?v=75.0" defer></script>
-  <script src="/js/bare_acts.js?v=75.0" defer></script>
-  <script src="/js/bns_converter.js?v=75.0" defer></script>
-  <script src="/js/pro_desk.js?v=75.0" defer></script>
-  <script src="/js/app.js?v=75.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=76.0" defer></script>
+  <script src="/js/interactive_particles.js?v=76.0" defer></script>
+  <script src="/js/books_showcase.js?v=76.0" defer></script>
+  <script src="/js/data.js?v=76.0" defer></script>
+  <script src="/js/bare_acts.js?v=76.0" defer></script>
+  <script src="/js/bns_converter.js?v=76.0" defer></script>
+  <script src="/js/pro_desk.js?v=76.0" defer></script>
+  <script src="/js/app.js?v=76.0" defer></script>
 
 
   <script>

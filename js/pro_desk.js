@@ -2035,7 +2035,7 @@
   // =========================================================================
   // 3. PRO SECTION CONTROLLER & UI COMPONENT
   // =========================================================================
-  let activeTab = 'templates'; // 'templates' | 'updates' | 'roadmap'
+  let activeTab = 'overview'; // 'overview' | 'templates' | 'updates' | 'roadmap'
   let activeTemplateCategory = 'all';
   let activeUpdateCategory = 'all';
   let templateSearchQuery = '';
@@ -2061,6 +2061,7 @@
     });
 
     const panels = {
+      overview: document.getElementById('proOverviewPanel'),
       templates: document.getElementById('proTemplatesPanel'),
       updates: document.getElementById('proUpdatesPanel'),
       roadmap: document.getElementById('proRoadmapPanel')
@@ -2075,6 +2076,18 @@
         }
       }
     });
+  }
+
+  function switchToTemplatesCategory(category) {
+    activeTab = 'templates';
+    activeTemplateCategory = category || 'all';
+    renderProTabs();
+    updateTemplateCategoryPills();
+    renderProTemplates();
+    const tplPanel = document.getElementById('proTemplatesPanel');
+    if (tplPanel) {
+      tplPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   function updateCategoryBadges() {
@@ -2109,6 +2122,11 @@
     const totalMetricsEl = document.getElementById('metricTotalTemplates');
     if (totalMetricsEl) {
       totalMetricsEl.textContent = `${PRO_TEMPLATES_DB.length}+`;
+    }
+
+    const tabTplCountEl = document.getElementById('proTabTplCount');
+    if (tabTplCountEl) {
+      tabTplCountEl.textContent = `${PRO_TEMPLATES_DB.length}`;
     }
   }
 
@@ -2593,6 +2611,42 @@ Source: Make Law Easy (https://makelaweasy.in/pro)`;
         } else {
           window.location.hash = '#feedback';
         }
+      });
+    }
+
+    // Overview Page Category Jump Buttons
+    document.querySelectorAll('[data-jump-cat]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-jump-cat') || 'all';
+        switchToTemplatesCategory(cat);
+      });
+    });
+
+    // Overview Action CTAs
+    const openAllTplBtn = document.getElementById('proOpenAllTemplatesBtn');
+    if (openAllTplBtn) {
+      openAllTplBtn.addEventListener('click', () => {
+        switchToTemplatesCategory('all');
+      });
+    }
+
+    const openAllUpdBtn = document.getElementById('proOpenAllUpdatesBtn');
+    if (openAllUpdBtn) {
+      openAllUpdBtn.addEventListener('click', () => {
+        activeTab = 'updates';
+        renderProTabs();
+        const updPanel = document.getElementById('proUpdatesPanel');
+        if (updPanel) updPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    const openRoadmapBtn = document.getElementById('proOpenRoadmapBtn');
+    if (openRoadmapBtn) {
+      openRoadmapBtn.addEventListener('click', () => {
+        activeTab = 'roadmap';
+        renderProTabs();
+        const rdPanel = document.getElementById('proRoadmapPanel');
+        if (rdPanel) rdPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
   }
