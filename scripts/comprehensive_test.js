@@ -451,9 +451,6 @@ try {
   assert(cssContent.includes('.pro-google-btn'), '.pro-google-btn style rule exists in styles.css');
   assert(cssContent.includes('.pro-user-status-bar'), '.pro-user-status-bar style rule exists in styles.css');
   assert(cssContent.includes('.cat-crime'), '.cat-crime style rule exists in styles.css');
-  assert(htmlContent.includes('id="proAdminDirectLink"'), 'Pro Admin direct access link exists in index.html');
-  assert(cssContent.includes('.pro-auth-admin-link'), '.pro-auth-admin-link style exists in styles.css');
-  assert(cssContent.includes('.pro-user-badge.admin-badge'), '.pro-user-badge.admin-badge style exists in styles.css');
   assert(fs.existsSync('js/pro_desk.js'), 'js/pro_desk.js exists');
 
   // Verify Pro Templates & Daily Updates DB integrity

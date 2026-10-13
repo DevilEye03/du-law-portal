@@ -76,10 +76,6 @@ self.addEventListener("fetch", (event) => {
     url.pathname.startsWith("/semester") ||
     url.pathname.startsWith("/sem") ||
     url.pathname.startsWith("/tools/") ||
-    url.pathname.startsWith("/pro") ||
-    url.pathname.startsWith("/admin") ||
-    url.pathname.startsWith("/discussions") ||
-    url.pathname.startsWith("/comments") ||
     url.pathname === "/terms" ||
     url.pathname === "/terms.html" ||
     url.pathname.endsWith("/terms.html") ||

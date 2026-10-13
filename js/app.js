@@ -339,32 +339,13 @@
     if (rawPath === '/contact' || currentHash === '#contact' || params.get('contact') === 'true') {
       return { view: 'contact' };
     }
-
-    // Admin Direct Access Route (Bypass Sign-In)
-    const isAdminRoute = (
-      rawPath === '/admin' || rawPath === '/pro/admin' || rawPath === '/pro-admin' ||
-      params.get('admin') === 'true' || params.get('admin') === '1' ||
-      currentHash === '#admin' || currentHash === '#pro-admin'
-    );
-    if (isAdminRoute) {
-      try {
-        if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
-        if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
-      } catch (e) {}
-      return { view: 'pro', admin: true };
-    }
-
     if (
       rawPath === '/pro' || rawPath === '/pro-desk' ||
       currentHash === '#pro' || currentHash === '#proSection' ||
       currentHash === '#proSectionView' ||
       params.get('pro') === 'true'
     ) {
-      const hasAdminFlag = (
-        (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('mle_admin_mode') === 'true') ||
-        (typeof localStorage !== 'undefined' && localStorage.getItem('mle_admin_mode') === 'true')
-      );
-      return { view: 'pro', admin: hasAdminFlag };
+      return { view: 'pro' };
     }
     if (
       rawPath === '/comments' || rawPath === '/discussions' ||
@@ -671,13 +652,8 @@
       window.dispatchEvent(new Event('resize'));
       if (pushHistory) {
         document.title = 'Make Law Easy Pro — Legal Templates, Drafting Studio & Law Updates';
-        const isAdmin = (
-          (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('mle_admin_mode') === 'true') ||
-          (typeof localStorage !== 'undefined' && localStorage.getItem('mle_admin_mode') === 'true')
-        );
-        const targetPath = isAdmin ? (window.location.pathname.includes('admin') ? window.location.pathname : '/pro/admin') : '/pro';
         if (!window.history.state || window.history.state.view !== 'pro') {
-          window.history.pushState({ view: 'pro', admin: !!isAdmin }, '', targetPath);
+          window.history.pushState({ view: 'pro' }, '', '/pro');
         }
       }
     }
@@ -4903,12 +4879,6 @@ Submission Time: ${new Date().toLocaleString()}
       }
 
       if (route.view === 'pro') {
-        if (route.admin) {
-          try {
-            if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
-            if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
-          } catch(e) {}
-        }
         navigateToPro(false);
         return;
       }
@@ -5044,19 +5014,6 @@ Submission Time: ${new Date().toLocaleString()}
         if (elements.commentSubjectTag) elements.commentSubjectTag.value = initialRoute.subject;
         renderCommentsStream();
       }
-    } else if (initialRoute && initialRoute.view === 'pro') {
-      if (initialRoute.admin) {
-        try {
-          if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
-          if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
-        } catch(e) {}
-      }
-      showView('pro', false);
-      const isAdmin = initialRoute.admin || 
-        (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('mle_admin_mode') === 'true') ||
-        (typeof localStorage !== 'undefined' && localStorage.getItem('mle_admin_mode') === 'true');
-      const targetPath = isAdmin ? (window.location.pathname.includes('admin') ? window.location.pathname : '/pro/admin') : '/pro';
-      window.history.replaceState({ view: 'pro', admin: !!isAdmin }, '', targetPath);
     } else {
       const curPath = (window.location.pathname || '').replace(/\/+$/, '') || '/';
       if (
@@ -5109,12 +5066,6 @@ Submission Time: ${new Date().toLocaleString()}
         navigateToComments(route.subject, true);
       } else if (route.view === 'pro') {
         e.preventDefault();
-        if (route.admin) {
-          try {
-            if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('mle_admin_mode', 'true');
-            if (typeof localStorage !== 'undefined') localStorage.setItem('mle_admin_mode', 'true');
-          } catch(e) {}
-        }
         navigateToPro(true);
       }
     });

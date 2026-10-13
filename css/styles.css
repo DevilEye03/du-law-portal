@@ -10226,13 +10226,6 @@ body.drawer-open {
   margin-left: 6px;
 }
 
-.pro-user-badge.admin-badge {
-  background: rgba(245, 158, 11, 0.18);
-  color: #f59e0b;
-  border: 1px solid rgba(245, 158, 11, 0.45);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
-}
-
 .pro-signout-btn {
   display: inline-flex;
   align-items: center;
@@ -10466,63 +10459,6 @@ body.drawer-open {
   color: #f59e0b;
   font-size: 1rem;
   flex-shrink: 0;
-}
-
-/* Administrator Direct Access Link Wrap */
-.pro-auth-admin-link-wrap {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-align: center;
-  max-width: 100%;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.pro-auth-admin-text {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  max-width: 100%;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.pro-auth-admin-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #f59e0b;
-  background: rgba(245, 158, 11, 0.1);
-  border: 1px solid rgba(245, 158, 11, 0.35);
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-  transition: all .2s ease;
-  cursor: pointer;
-  font-family: inherit;
-  max-width: 100%;
-  min-width: 0;
-  overflow-wrap: break-word;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pro-auth-admin-link:hover {
-  background: rgba(245, 158, 11, 0.22);
-  border-color: #f59e0b;
-  color: #fbbf24;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
 }
 
 /* Header & Crest */
@@ -11269,7 +11205,7 @@ body.drawer-open {
 /* Template Cards Grid */
 .pro-templates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
   gap: 18px;
 }
 
@@ -11285,6 +11221,48 @@ body.drawer-open {
   box-sizing: border-box;
   min-width: 0;
   overflow-wrap: break-word;
+}
+
+.pro-template-card {
+  padding: 22px 20px 18px;
+  min-height: 150px;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-line);
+  border-radius: var(--radius-lg);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.pro-template-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245, 158, 11, 0.55);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14), 0 0 18px rgba(245, 158, 11, 0.1);
+}
+
+.pro-template-card .pro-card-title {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-primary);
+  flex-grow: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  transition: color .2s ease;
+}
+
+.pro-template-card:hover .pro-card-title {
+  color: #f59e0b;
+}
+
+.pro-template-card .pro-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  border-top: 1px solid var(--border-line);
+  padding-top: 14px;
 }
 
 .pro-card:hover {
@@ -11471,16 +11449,18 @@ body.drawer-open {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: 6px;
   background: var(--bg-elevated);
   border: 1px solid var(--border-line);
   color: var(--text-primary);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   transition: all .18s ease;
   font-family: inherit;
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .pro-btn-preview:hover {
@@ -11494,16 +11474,19 @@ body.drawer-open {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 9px 16px;
   border-radius: 6px;
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(217, 119, 6, 0.15));
   border: 1px solid rgba(245, 158, 11, 0.45);
   color: #f59e0b;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
   cursor: pointer;
   transition: all .18s ease;
   font-family: inherit;
+  min-width: 0;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .pro-btn-copy:hover {
