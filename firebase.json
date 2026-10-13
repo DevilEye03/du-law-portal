@@ -48,7 +48,7 @@
         ]
       },
       {
-        "source": "/js/@(data|books_showcase|app).js",
+        "source": "/js/@(data|books_showcase|app|pro_desk).js",
         "headers": [
           {
             "key": "Cache-Control",

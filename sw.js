@@ -1,31 +1,32 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v80";
+const CACHE_NAME = "du-law-portal-v81";
 const ASSETS_TO_CACHE = [
-  "./",
-  "./index.html",
-  "./terms",
-  "./privacy",
-  "./about",
-  "./feedback.html",
-  "./tools/bare-acts.html",
-  "./tools/bns-converter.html",
-  "./tools/flashcards.html",
-  "./css/styles.css?v=80.0",
-  "./css/notes-responsive.css?v=80.0",
-  "./lib/three.min.js",
-  "./lib/gsap.min.js",
-  "./lib/fontawesome/css/all.min.css",
-  "./js/wave_grid_background.js?v=80.0",
-  "./js/interactive_particles.js?v=80.0",
-  "./particles.png",
-  "./js/books_showcase.js?v=80.0",
-  "./js/data.js?v=80.0",
-  "./js/bare_acts.js?v=80.0",
-  "./js/bns_converter.js?v=80.0",
-  "./js/pro_desk.js?v=80.0",
-  "./js/app.js?v=80.0",
-  "./favicon.svg",
-  "./manifest.json"
+  "/",
+  "/index.html",
+  "/terms",
+  "/privacy",
+  "/about",
+  "/pro",
+  "/feedback.html",
+  "/tools/bare-acts.html",
+  "/tools/bns-converter.html",
+  "/tools/flashcards.html",
+  "/css/styles.css?v=81.0",
+  "/css/notes-responsive.css?v=81.0",
+  "/lib/three.min.js",
+  "/lib/gsap.min.js",
+  "/lib/fontawesome/css/all.min.css",
+  "/js/wave_grid_background.js?v=81.0",
+  "/js/interactive_particles.js?v=81.0",
+  "/particles.png",
+  "/js/books_showcase.js?v=81.0",
+  "/js/data.js?v=81.0",
+  "/js/bare_acts.js?v=81.0",
+  "/js/bns_converter.js?v=81.0",
+  "/js/pro_desk.js?v=81.0",
+  "/js/app.js?v=81.0",
+  "/favicon.svg",
+  "/manifest.json"
 ];
 
 
@@ -72,6 +73,8 @@ self.addEventListener("fetch", (event) => {
   // 2. Main Portal Shell & Clean Routed Pages (Network-First with immediate cache fallback)
   const isMainShell = isHtml && (
     url.pathname === "/" ||
+    url.pathname === "/pro" ||
+    url.pathname.startsWith("/pro/") ||
     url.pathname.startsWith("/subject") ||
     url.pathname.startsWith("/semester") ||
     url.pathname.startsWith("/sem") ||
@@ -138,32 +141,15 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // 4. Static Assets (JS, CSS, Images, Fonts, Data) — Stale-While-Revalidate
+  // 4. Static Assets (JS, CSS, Images, Fonts, Data)
   event.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.match(event.request).then((cachedResponse) => {
-        if (!cachedResponse) {
-          return cache.match(event.request, { ignoreSearch: true }).then((fallbackResponse) => {
-            const initial = fallbackResponse || null;
-            const fetchPromise = fetch(event.request).then((networkResponse) => {
-              if (
-                networkResponse &&
-                networkResponse.status === 200 &&
-                (networkResponse.type === "basic" ||
-                 url.hostname.includes("fonts.googleapis.com") ||
-                 url.hostname.includes("fonts.gstatic.com") ||
-                 url.hostname.includes("cdnjs.cloudflare.com"))
-              ) {
-                cache.put(event.request, networkResponse.clone());
-              }
-              return networkResponse;
-            }).catch(() => initial);
-
-            return initial || fetchPromise;
-          });
+        if (cachedResponse) {
+          return cachedResponse;
         }
 
-        const fetchPromise = fetch(event.request).then((networkResponse) => {
+        return fetch(event.request).then((networkResponse) => {
           if (
             networkResponse &&
             networkResponse.status === 200 &&
@@ -175,9 +161,10 @@ self.addEventListener("fetch", (event) => {
             cache.put(event.request, networkResponse.clone());
           }
           return networkResponse;
-        }).catch(() => cachedResponse);
-
-        return cachedResponse || fetchPromise;
+        }).catch(() => {
+          // If offline and exact request not found, fallback to search-ignored cache
+          return cache.match(event.request, { ignoreSearch: true });
+        });
       });
     })
   );
