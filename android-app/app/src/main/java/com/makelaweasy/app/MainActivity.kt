@@ -248,6 +248,120 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        @android.webkit.JavascriptInterface
+        fun printOrSavePdf(title: String) {
+            activity.runOnUiThread {
+                try {
+                    val printManager = activity.getSystemService(Context.PRINT_SERVICE) as? android.print.PrintManager
+                    val jobName = "${title.ifBlank { "MakeLawEasy_StudyNotes" }}_Doc"
+                    val printAdapter = activity.webView.createPrintDocumentAdapter(jobName)
+                    printManager?.print(jobName, printAdapter, android.print.PrintAttributes.Builder().build())
+                } catch (e: Exception) {
+                    Toast.makeText(activity, "PDF Print failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun saveThumbnail(pageId: String, base64Png: String) {
+            try {
+                val thumbDir = File(activity.filesDir, "spen_thumbs")
+                if (!thumbDir.exists()) thumbDir.mkdirs()
+                val safeId = pageId.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                val file = File(thumbDir, "$safeId.png")
+                val pure = if (base64Png.contains(",")) base64Png.substringAfter(",") else base64Png
+                val bytes = Base64.decode(pure, Base64.DEFAULT)
+                FileOutputStream(file).use { it.write(bytes) }
+            } catch (_: Exception) {}
+        }
+
+        @android.webkit.JavascriptInterface
+        fun getThumbnail(pageId: String): String {
+            return try {
+                val safeId = pageId.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                val file = File(File(activity.filesDir, "spen_thumbs"), "$safeId.png")
+                if (file.exists()) {
+                    val bytes = file.readBytes()
+                    "data:image/png;base64," + Base64.encodeToString(bytes, Base64.NO_WRAP)
+                } else ""
+            } catch (_: Exception) {
+                ""
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun exportMasterNotesBackup() {
+            activity.runOnUiThread {
+                try {
+                    val notesDir = File(activity.filesDir, "spen_notes")
+                    if (!notesDir.exists()) {
+                        Toast.makeText(activity, "No saved notes found to backup", Toast.LENGTH_SHORT).show()
+                        return@runOnUiThread
+                    }
+                    val files = notesDir.listFiles() ?: arrayOf()
+                    val masterBundle = JSONObject()
+                    val pagesObj = JSONObject()
+                    for (f in files) {
+                        if (f.name.endsWith(".json") && f.name != "index.json") {
+                            val key = f.name.removeSuffix(".json")
+                            try {
+                                pagesObj.put(key, JSONObject(f.readText(Charsets.UTF_8)))
+                            } catch (_: Exception) {}
+                        }
+                    }
+                    val indexFile = File(notesDir, "index.json")
+                    val indexData = if (indexFile.exists()) {
+                        try { JSONArray(indexFile.readText(Charsets.UTF_8)) } catch (_: Exception) { JSONArray() }
+                    } else JSONArray()
+
+                    masterBundle.put("version", 2)
+                    masterBundle.put("exportTime", System.currentTimeMillis())
+                    masterBundle.put("index", indexData)
+                    masterBundle.put("pages", pagesObj)
+
+                    val exportDir = File(activity.cacheDir, "exports")
+                    if (!exportDir.exists()) exportDir.mkdirs()
+                    val exportFile = File(exportDir, "MakeLawEasy_MasterNotes_Backup.mle-notes")
+                    exportFile.writeText(masterBundle.toString(2), Charsets.UTF_8)
+
+                    val uri = FileProvider.getUriForFile(activity, "${activity.packageName}.fileprovider", exportFile)
+                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = "application/octet-stream"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        putExtra(Intent.EXTRA_SUBJECT, "Make Law Easy - Master Notes Backup")
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    activity.startActivity(Intent.createChooser(shareIntent, "Backup Master Notes"))
+                } catch (e: Exception) {
+                    Toast.makeText(activity, "Backup export failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun importMasterNotesBackup(jsonString: String): Boolean {
+            return try {
+                val root = JSONObject(jsonString)
+                val pages = root.optJSONObject("pages") ?: return false
+                val index = root.optJSONArray("index") ?: JSONArray()
+                val notesDir = File(activity.filesDir, "spen_notes")
+                if (!notesDir.exists()) notesDir.mkdirs()
+
+                val keys = pages.keys()
+                while (keys.hasNext()) {
+                    val key = keys.next()
+                    val pageObj = pages.getJSONObject(key)
+                    val file = File(notesDir, "$key.json")
+                    file.writeText(pageObj.toString(), Charsets.UTF_8)
+                }
+                val indexFile = File(notesDir, "index.json")
+                indexFile.writeText(index.toString(), Charsets.UTF_8)
+                true
+            } catch (_: Exception) {
+                false
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -623,6 +737,39 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         webView.onPause()
+    }
+
+    override fun dispatchGenericMotionEvent(event: android.view.MotionEvent): Boolean {
+        try {
+            if (event.source and InputDevice.SOURCE_CLASS_POINTER != 0) {
+                val isStylus = event.getToolType(0) == android.view.MotionEvent.TOOL_TYPE_STYLUS
+                if (isStylus) {
+                    if (event.action == android.view.MotionEvent.ACTION_HOVER_MOVE ||
+                        event.action == android.view.MotionEvent.ACTION_HOVER_ENTER
+                    ) {
+                        val density = resources.displayMetrics.density
+                        val x = event.x / density
+                        val y = event.y / density
+                        val isButtonPressed = event.isButtonPressed(android.view.MotionEvent.BUTTON_STYLUS_PRIMARY)
+                        webView.evaluateJavascript("if(window.__onSpenHover) window.__onSpenHover($x, $y, $isButtonPressed);", null)
+                    } else if (event.action == android.view.MotionEvent.ACTION_HOVER_EXIT) {
+                        webView.evaluateJavascript("if(window.__onSpenHoverExit) window.__onSpenHoverExit();", null)
+                    }
+                }
+            }
+        } catch (_: Exception) {}
+        return super.dispatchGenericMotionEvent(event)
+    }
+
+    override fun dispatchTouchEvent(event: android.view.MotionEvent): Boolean {
+        try {
+            val isStylus = event.getToolType(0) == android.view.MotionEvent.TOOL_TYPE_STYLUS
+            if (isStylus) {
+                val isButtonPressed = event.isButtonPressed(android.view.MotionEvent.BUTTON_STYLUS_PRIMARY)
+                webView.evaluateJavascript("if(window.__onSpenButtonState) window.__onSpenButtonState($isButtonPressed);", null)
+            }
+        } catch (_: Exception) {}
+        return super.dispatchTouchEvent(event)
     }
 
     override fun onDestroy() {
