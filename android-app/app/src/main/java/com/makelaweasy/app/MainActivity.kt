@@ -25,8 +25,19 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import android.os.Build
+import android.os.Vibrator
+import android.os.VibratorManager
+import android.os.VibrationEffect
+import android.view.InputDevice
+import android.util.Base64
+import androidx.core.content.FileProvider
+import java.io.File
+import java.io.FileOutputStream
 import java.io.InputStream
 import java.net.URLDecoder
+import org.json.JSONArray
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
@@ -64,6 +75,179 @@ class MainActivity : AppCompatActivity() {
 
         @android.webkit.JavascriptInterface
         fun isOfflineBundled(): Boolean = true
+
+        @android.webkit.JavascriptInterface
+        fun hasStylus(): Boolean {
+            val deviceIds = InputDevice.getDeviceIds()
+            for (id in deviceIds) {
+                val device = InputDevice.getDevice(id) ?: continue
+                val sources = device.sources
+                if ((sources and InputDevice.SOURCE_STYLUS) == InputDevice.SOURCE_STYLUS ||
+                    (sources and InputDevice.SOURCE_BLUETOOTH_STYLUS) == InputDevice.SOURCE_BLUETOOTH_STYLUS
+                ) {
+                    return true
+                }
+            }
+            return false
+        }
+
+        @android.webkit.JavascriptInterface
+        fun saveAnnotations(pageId: String, title: String, subject: String, dataJson: String) {
+            try {
+                val notesDir = File(activity.filesDir, "spen_notes")
+                if (!notesDir.exists()) notesDir.mkdirs()
+
+                val safeId = pageId.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                val pageFile = File(notesDir, "$safeId.json")
+                pageFile.writeText(dataJson, Charsets.UTF_8)
+
+                val indexFile = File(notesDir, "index.json")
+                val indexArray = if (indexFile.exists()) {
+                    try { JSONArray(indexFile.readText(Charsets.UTF_8)) } catch (_: Exception) { JSONArray() }
+                } else {
+                    JSONArray()
+                }
+
+                var strokeCount = 0
+                var stickyCount = 0
+                try {
+                    val obj = JSONObject(dataJson)
+                    strokeCount = obj.optJSONArray("strokes")?.length() ?: 0
+                    stickyCount = obj.optJSONArray("stickyNotes")?.length() ?: 0
+                } catch (_: Exception) {}
+
+                val newArray = JSONArray()
+                for (i in 0 until indexArray.length()) {
+                    val entry = indexArray.optJSONObject(i) ?: continue
+                    if (entry.optString("pageId") != pageId) {
+                        newArray.put(entry)
+                    }
+                }
+
+                if (strokeCount > 0 || stickyCount > 0) {
+                    val newEntry = JSONObject().apply {
+                        put("pageId", pageId)
+                        put("title", if (title.isNotBlank()) title else "Comprehensive Study Notes")
+                        put("subject", if (subject.isNotBlank()) subject else "Law Subject")
+                        put("timestamp", System.currentTimeMillis())
+                        put("strokeCount", strokeCount)
+                        put("stickyCount", stickyCount)
+                    }
+                    newArray.put(0, newEntry)
+                }
+
+                indexFile.writeText(newArray.toString(), Charsets.UTF_8)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun loadAnnotations(pageId: String): String {
+            return try {
+                val safeId = pageId.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                val pageFile = File(File(activity.filesDir, "spen_notes"), "$safeId.json")
+                if (pageFile.exists()) pageFile.readText(Charsets.UTF_8) else ""
+            } catch (_: Exception) {
+                ""
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun getAllNotesIndex(): String {
+            return try {
+                val indexFile = File(File(activity.filesDir, "spen_notes"), "index.json")
+                if (indexFile.exists()) indexFile.readText(Charsets.UTF_8) else "[]"
+            } catch (_: Exception) {
+                "[]"
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun deleteAnnotations(pageId: String): Boolean {
+            return try {
+                val notesDir = File(activity.filesDir, "spen_notes")
+                val safeId = pageId.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                val pageFile = File(notesDir, "$safeId.json")
+                if (pageFile.exists()) pageFile.delete()
+
+                val indexFile = File(notesDir, "index.json")
+                if (indexFile.exists()) {
+                    val indexArray = try { JSONArray(indexFile.readText(Charsets.UTF_8)) } catch (_: Exception) { JSONArray() }
+                    val newArray = JSONArray()
+                    for (i in 0 until indexArray.length()) {
+                        val entry = indexArray.optJSONObject(i) ?: continue
+                        if (entry.optString("pageId") != pageId) {
+                            newArray.put(entry)
+                        }
+                    }
+                    indexFile.writeText(newArray.toString(), Charsets.UTF_8)
+                }
+                true
+            } catch (_: Exception) {
+                false
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun vibratePen(type: Int) {
+            activity.runOnUiThread {
+                try {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                        val vm = activity.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as? VibratorManager
+                        val vib = vm?.defaultVibrator
+                        val effect = if (type == 2) {
+                            VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK)
+                        } else {
+                            VibrationEffect.createPredefined(VibrationEffect.EFFECT_TICK)
+                        }
+                        vib?.vibrate(effect)
+                    } else {
+                        @Suppress("DEPRECATION")
+                        val vib = activity.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            vib?.vibrate(VibrationEffect.createOneShot(if (type == 2) 35L else 15L, VibrationEffect.DEFAULT_AMPLITUDE))
+                        } else {
+                            @Suppress("DEPRECATION")
+                            vib?.vibrate(if (type == 2) 35L else 15L)
+                        }
+                    }
+                } catch (_: Exception) {}
+            }
+        }
+
+        @android.webkit.JavascriptInterface
+        fun exportPageImage(base64Png: String, title: String) {
+            activity.runOnUiThread {
+                try {
+                    val pureBase64 = if (base64Png.contains(",")) base64Png.substringAfter(",") else base64Png
+                    val imageBytes = Base64.decode(pureBase64, Base64.DEFAULT)
+
+                    val exportDir = File(activity.cacheDir, "exports")
+                    if (!exportDir.exists()) exportDir.mkdirs()
+
+                    val safeTitle = title.replace("[^a-zA-Z0-9_-]".toRegex(), "_")
+                    val file = File(exportDir, "${safeTitle}_Notes.png")
+                    FileOutputStream(file).use { it.write(imageBytes) }
+
+                    val uri = FileProvider.getUriForFile(
+                        activity,
+                        "${activity.packageName}.fileprovider",
+                        file
+                    )
+
+                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                        this.type = "image/png"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        putExtra(Intent.EXTRA_SUBJECT, title)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    activity.startActivity(Intent.createChooser(shareIntent, "Share Study Notes"))
+                } catch (e: Exception) {
+                    Toast.makeText(activity, "Export failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -243,6 +427,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 progressBar.visibility = View.GONE
+                injectSpenSuite(view)
             }
 
             override fun onReceivedError(
@@ -332,6 +517,28 @@ class MainActivity : AppCompatActivity() {
         } catch (_: Exception) {
             return null
         }
+    }
+
+    private fun injectSpenSuite(view: WebView?) {
+        try {
+            val injectScript = """
+                (function() {
+                    if (!document.getElementById('spenSuiteStyles')) {
+                        var link = document.createElement('link');
+                        link.id = 'spenSuiteStyles';
+                        link.rel = 'stylesheet';
+                        link.href = '/css/spen_notes.css';
+                        document.head.appendChild(link);
+                    }
+                    if (!window.__SPEN_ENGINE_INITIALIZED__) {
+                        var script = document.createElement('script');
+                        script.src = '/js/spen_notes_engine.js';
+                        document.body.appendChild(script);
+                    }
+                })();
+            """.trimIndent()
+            view?.evaluateJavascript(injectScript, null)
+        } catch (_: Exception) {}
     }
 
     private fun setupOfflineRetry() {
