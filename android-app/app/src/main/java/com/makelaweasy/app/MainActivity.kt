@@ -751,39 +751,6 @@ class MainActivity : AppCompatActivity() {
         webView.onPause()
     }
 
-    override fun dispatchGenericMotionEvent(event: android.view.MotionEvent): Boolean {
-        try {
-            if (event.source and InputDevice.SOURCE_CLASS_POINTER != 0) {
-                val isStylus = event.getToolType(0) == android.view.MotionEvent.TOOL_TYPE_STYLUS
-                if (isStylus) {
-                    if (event.action == android.view.MotionEvent.ACTION_HOVER_MOVE ||
-                        event.action == android.view.MotionEvent.ACTION_HOVER_ENTER
-                    ) {
-                        val density = resources.displayMetrics.density
-                        val x = event.x / density
-                        val y = event.y / density
-                        val isButtonPressed = event.isButtonPressed(android.view.MotionEvent.BUTTON_STYLUS_PRIMARY)
-                        webView.evaluateJavascript("if(window.__onSpenHover) window.__onSpenHover($x, $y, $isButtonPressed);", null)
-                    } else if (event.action == android.view.MotionEvent.ACTION_HOVER_EXIT) {
-                        webView.evaluateJavascript("if(window.__onSpenHoverExit) window.__onSpenHoverExit();", null)
-                    }
-                }
-            }
-        } catch (_: Exception) {}
-        return super.dispatchGenericMotionEvent(event)
-    }
-
-    override fun dispatchTouchEvent(event: android.view.MotionEvent): Boolean {
-        try {
-            val isStylus = event.getToolType(0) == android.view.MotionEvent.TOOL_TYPE_STYLUS
-            if (isStylus) {
-                val isButtonPressed = event.isButtonPressed(android.view.MotionEvent.BUTTON_STYLUS_PRIMARY)
-                webView.evaluateJavascript("if(window.__onSpenButtonState) window.__onSpenButtonState($isButtonPressed);", null)
-            }
-        } catch (_: Exception) {}
-        return super.dispatchTouchEvent(event)
-    }
-
     override fun onDestroy() {
         webView.destroy()
         super.onDestroy()
