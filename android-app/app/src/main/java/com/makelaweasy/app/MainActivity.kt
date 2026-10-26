@@ -635,24 +635,36 @@ class MainActivity : AppCompatActivity() {
 
     private fun injectSpenSuite(view: WebView?) {
         try {
+            val cssText = assets.open("css/spen_notes.css").bufferedReader().use { it.readText() }
+            val jsText = assets.open("js/spen_notes_engine.js").bufferedReader().use { it.readText() }
+
+            val quotedCss = JSONObject.quote(cssText)
+            val quotedJs = JSONObject.quote(jsText)
+
             val injectScript = """
                 (function() {
-                    if (!document.getElementById('spenSuiteStyles')) {
-                        var link = document.createElement('link');
-                        link.id = 'spenSuiteStyles';
-                        link.rel = 'stylesheet';
-                        link.href = '/css/spen_notes.css';
-                        document.head.appendChild(link);
-                    }
-                    if (!window.__SPEN_ENGINE_INITIALIZED__) {
-                        var script = document.createElement('script');
-                        script.src = '/js/spen_notes_engine.js';
-                        document.body.appendChild(script);
+                    try {
+                        if (!document.getElementById('spenSuiteStyles')) {
+                            var style = document.createElement('style');
+                            style.id = 'spenSuiteStyles';
+                            style.textContent = $quotedCss;
+                            document.head.appendChild(style);
+                        }
+                        if (!window.__SPEN_ENGINE_INITIALIZED__) {
+                            var script = document.createElement('script');
+                            script.id = 'spenEngineScript';
+                            script.textContent = $quotedJs;
+                            document.body.appendChild(script);
+                        }
+                    } catch(e) {
+                        console.error('SPen injection error:', e);
                     }
                 })();
             """.trimIndent()
             view?.evaluateJavascript(injectScript, null)
-        } catch (_: Exception) {}
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun setupOfflineRetry() {

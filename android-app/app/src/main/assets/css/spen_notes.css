@@ -1,7 +1,8 @@
 /* ==========================================================================
-   MAKE LAW EASY — SAMSUNG S-PEN & STYLUS ULTIMATE SUITE (v1.2.0)
-   World-class Samsung Notes-grade handwriting, palm rejection,
-   lasso selection, split margin notepad, hold-to-snap & consolidated hub.
+   MAKE LAW EASY — SAMSUNG S-PEN & NOTESHELF 3 ULTIMATE SUITE (v1.3.0)
+   True Dual-Touch Tablet Operation:
+   - Finger Touch: 100% Native Scrolling, Pinch-Zoom, Navigation & Buttons
+   - S-Pen: Exclusive Handwriting, Highlighting, Pencil, Shapes, Images, Notes
    ========================================================================== */
 
 :root {
@@ -10,7 +11,7 @@
   --spen-navy: #0f172a;
   --spen-surface: rgba(15, 23, 42, 0.94);
   --spen-surface-light: rgba(30, 41, 59, 0.96);
-  --spen-border: rgba(255, 255, 255, 0.14);
+  --spen-border: rgba(255, 255, 255, 0.16);
   --spen-active: #f59e0b;
   --spen-radius: 14px;
   --spen-shadow: 0 10px 36px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -18,6 +19,8 @@
 
 /* --------------------------------------------------------------------------
    Annotation Overlay Canvas
+   CRITICAL: pointer-events: none ensures FINGERS SCROLL THE PAGE FREELY!
+   S-Pen is captured via window-level pointerdown capture listener.
    -------------------------------------------------------------------------- */
 .spen-canvas-layer {
   position: absolute;
@@ -25,20 +28,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: auto;
+  pointer-events: none !important; /* Finger touch passes straight through to page below */
   z-index: 80;
-  touch-action: none; /* Required for stylus precision without browser scroll interference */
+  background: transparent;
+  touch-action: auto !important;
   user-select: none;
   -webkit-user-select: none;
-  background: transparent;
+}
+
+.spen-canvas-layer.finger-draw-mode {
+  pointer-events: auto !important;
+  touch-action: none !important;
 }
 
 .spen-canvas-layer.spen-hidden {
   display: none !important;
-}
-
-.spen-canvas-layer.spen-nav-mode {
-  pointer-events: none !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -62,7 +66,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Floating S-Pen Toolbar (Samsung One UI 7 Floating Island)
+   Floating S-Pen Toolbar (Noteshelf 3 / One UI 7 Island)
    -------------------------------------------------------------------------- */
 .spen-toolbar-container {
   position: fixed;
@@ -82,6 +86,7 @@
   box-shadow: var(--spen-shadow);
   user-select: none;
   -webkit-user-select: none;
+  pointer-events: auto !important;
   transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease, border-color 0.2s ease;
   max-width: 98vw;
   box-sizing: border-box;
@@ -113,6 +118,7 @@
   box-shadow: 0 8px 26px rgba(245, 158, 11, 0.45), 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
   position: relative;
+  pointer-events: auto !important;
 }
 
 .spen-fab-btn:active {
@@ -185,6 +191,7 @@
   transition: all 0.16s ease;
   flex-shrink: 0;
   padding: 0;
+  pointer-events: auto !important;
 }
 
 .spen-btn:hover {
@@ -227,7 +234,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Tool Popovers (Colors, Widths, Pens)
+   Noteshelf 3 Popovers (Pens, Colors, Shapes, Eraser, etc.)
    -------------------------------------------------------------------------- */
 .spen-popover {
   position: absolute;
@@ -245,7 +252,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  min-width: 250px;
+  min-width: 270px;
   z-index: 9999995;
 }
 
@@ -268,16 +275,58 @@
   justify-content: space-between;
 }
 
+/* Pen Type / Shape Selector Grid (Noteshelf 3 style) */
+.spen-pen-types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.spen-pen-type-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.spen-pen-type-card:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.spen-pen-type-card.active {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.spen-pen-type-card i {
+  font-size: 16px;
+}
+
+.spen-pen-type-card span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+/* Color Swatches Grid */
 .spen-colors-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
   margin-bottom: 10px;
 }
 
 .spen-color-swatch {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid transparent;
@@ -304,9 +353,10 @@
   padding-top: 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 .spen-custom-color-input {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -321,16 +371,17 @@
   border-radius: 50%;
 }
 
+/* Stroke Sizes Grid */
 .spen-sizes-grid {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
   justify-content: space-between;
 }
 
 .spen-size-btn {
   flex: 1;
-  height: 32px;
+  height: 30px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -356,24 +407,125 @@
 }
 
 /* --------------------------------------------------------------------------
-   Lasso Selection Marquee & Bounding Box
+   Shape Recognition Popover (Noteshelf 3 Shapes)
    -------------------------------------------------------------------------- */
-.spen-lasso-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 85;
+.spen-shapes-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
 }
 
+.spen-shape-btn {
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.spen-shape-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.spen-shape-btn.active {
+  background: #f59e0b;
+  color: #0f172a;
+  border-color: #f59e0b;
+}
+
+/* --------------------------------------------------------------------------
+   Added Image Container (Noteshelf 3 Image Inset)
+   -------------------------------------------------------------------------- */
+.spen-inserted-image {
+  position: absolute;
+  border: 2px solid rgba(245, 158, 11, 0.6);
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 85;
+  user-select: none;
+  touch-action: none;
+  pointer-events: auto !important;
+  overflow: visible;
+  min-width: 120px;
+  min-height: 80px;
+}
+
+.spen-inserted-img-el {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.spen-image-header {
+  position: absolute;
+  top: -34px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 3px 8px;
+  cursor: grab;
+}
+
+.spen-image-header:active {
+  cursor: grabbing;
+}
+
+.spen-image-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.spen-image-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.spen-image-btn.del:hover {
+  background: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+}
+
+.spen-image-resize-handle {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f59e0b;
+  border: 2px solid #fff;
+  cursor: nwse-resize;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Lasso Selection Marquee & Bounding Box
+   -------------------------------------------------------------------------- */
 .spen-lasso-box {
   position: absolute;
   border: 2px dashed #f59e0b;
   background: rgba(245, 158, 11, 0.06);
   border-radius: 8px;
-  pointer-events: auto;
+  pointer-events: auto !important;
   cursor: move;
   z-index: 86;
   box-shadow: 0 0 16px rgba(245, 158, 11, 0.3);
@@ -392,7 +544,7 @@
   border-radius: 24px;
   padding: 4px 8px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  pointer-events: auto;
+  pointer-events: auto !important;
 }
 
 .spen-lasso-btn {
@@ -419,149 +571,14 @@
 }
 
 /* --------------------------------------------------------------------------
-   S-Pen Split Legal Margin Notepad (Side Drawer)
-   -------------------------------------------------------------------------- */
-.spen-margin-pad-drawer {
-  position: fixed;
-  top: 0;
-  right: -480px;
-  width: 440px;
-  max-width: 90vw;
-  height: 100vh;
-  z-index: 999990;
-  background: #fffbeb; /* Legal Yellow Pad default */
-  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.45);
-  display: flex;
-  flex-direction: column;
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  border-left: 2px solid rgba(0, 0, 0, 0.12);
-  color: #1e293b;
-}
-
-.spen-margin-pad-drawer.open {
-  right: 0;
-}
-
-.spen-margin-pad-drawer.paper-white {
-  background: #ffffff;
-}
-
-.spen-margin-pad-drawer.paper-grid {
-  background-color: #f8fafc;
-  background-image: linear-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.spen-margin-pad-drawer.paper-dark {
-  background: #0f172a;
-  color: #f8fafc;
-  border-left-color: rgba(255, 255, 255, 0.15);
-}
-
-.spen-margin-header {
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
-  background: rgba(0, 0, 0, 0.03);
-}
-
-.spen-margin-pad-drawer.paper-dark .spen-margin-header {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.spen-margin-title {
-  font-size: 14px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.spen-margin-actions {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.spen-margin-btn {
-  background: transparent;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  padding: 6px;
-  border-radius: 6px;
-  color: inherit;
-  opacity: 0.75;
-  transition: opacity 0.15s ease, background 0.15s ease;
-}
-
-.spen-margin-btn:hover {
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.spen-margin-canvas-container {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  background: repeating-linear-gradient(
-    transparent,
-    transparent 31px,
-    rgba(59, 130, 246, 0.2) 31px,
-    rgba(59, 130, 246, 0.2) 32px
-  );
-  border-left: 2px solid rgba(239, 68, 68, 0.35); /* Margin line */
-  margin-left: 36px;
-}
-
-.spen-margin-pad-drawer.paper-white .spen-margin-canvas-container {
-  background: repeating-linear-gradient(
-    transparent,
-    transparent 31px,
-    rgba(148, 163, 184, 0.2) 31px,
-    rgba(148, 163, 184, 0.2) 32px
-  );
-  border-left-color: rgba(239, 68, 68, 0.3);
-}
-
-.spen-margin-pad-drawer.paper-grid .spen-margin-canvas-container {
-  background: transparent;
-  border-left: none;
-  margin-left: 0;
-}
-
-.spen-margin-pad-drawer.paper-dark .spen-margin-canvas-container {
-  background: repeating-linear-gradient(
-    transparent,
-    transparent 31px,
-    rgba(255, 255, 255, 0.06) 31px,
-    rgba(255, 255, 255, 0.06) 32px
-  );
-  border-left-color: rgba(245, 158, 11, 0.3);
-}
-
-.spen-margin-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  touch-action: none;
-}
-
-/* --------------------------------------------------------------------------
-   Draggable Sticky Notes
+   Draggable Sticky Notes (5 Noteshelf Pastel Colors)
    -------------------------------------------------------------------------- */
 .spen-sticky-note {
   position: absolute;
-  width: 220px;
-  background: #fef08a; /* Post-it yellow */
+  width: 230px;
+  background: #fef08a; /* Default Yellow */
   color: #1e293b;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 85;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -570,6 +587,20 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   user-select: none;
   overflow: hidden;
+  pointer-events: auto !important;
+}
+
+.spen-sticky-note.color-pink {
+  background: #fecdd3;
+}
+.spen-sticky-note.color-green {
+  background: #bbf7d0;
+}
+.spen-sticky-note.color-purple {
+  background: #e9d5ff;
+}
+.spen-sticky-note.color-blue {
+  background: #bae6fd;
 }
 
 .spen-sticky-note.collapsed {
@@ -581,12 +612,11 @@
   justify-content: center;
   font-size: 16px;
   cursor: pointer;
-  background: #fde047;
 }
 
 .spen-sticky-header {
   padding: 6px 10px;
-  background: #fde047;
+  background: rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -600,7 +630,6 @@
 .spen-sticky-title {
   font-size: 11px;
   font-weight: 800;
-  color: #854d0e;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   display: flex;
@@ -616,7 +645,6 @@
 .spen-sticky-icon-btn {
   background: transparent;
   border: none;
-  color: #854d0e;
   font-size: 11px;
   cursor: pointer;
   padding: 2px 4px;
@@ -670,7 +698,7 @@
 .spen-hub-overlay.active {
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
+  pointer-events: auto !important;
 }
 
 .spen-hub-modal {
@@ -1132,9 +1160,6 @@
   }
   .spen-status-pill {
     display: none;
-  }
-  .spen-margin-pad-drawer {
-    width: 100vw;
   }
   .spen-hub-metrics {
     grid-template-columns: repeat(2, 1fr);

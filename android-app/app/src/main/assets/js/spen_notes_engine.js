@@ -1,7 +1,8 @@
 /**
- * MAKE LAW EASY — SAMSUNG S-PEN & STYLUS ULTIMATE ENGINE (v1.2.0)
- * Best-in-class Samsung Notes-grade handwritten notes, strict palm rejection,
- * hold-to-snap shapes, lasso selection, split legal margin pad, air hover & consolidated hub.
+ * MAKE LAW EASY — SAMSUNG S-PEN & NOTESHELF 3 ULTIMATE ENGINE (v1.3.0)
+ * Dual-Touch Architecture:
+ * - FINGER: 100% Native Scrolling, Pinch-Zoom, Navigation & Buttons
+ * - S-PEN: Exclusive Handwriting, Highlighting, Pencil, Shapes, Images & Notes
  */
 (function () {
   'use strict';
@@ -9,28 +10,31 @@
   if (window.__SPEN_ENGINE_INITIALIZED__) return;
   window.__SPEN_ENGINE_INITIALIZED__ = true;
 
-  console.log('[SPenEngine] Initializing Ultimate S-Pen & Notes Suite v1.2.0...');
+  console.log('[SPenEngine] Initializing Samsung Noteshelf 3 Suite v1.3.0...');
 
   // Configuration & Engine State
   const state = {
-    activeTool: 'pen', // 'pen' | 'fountain' | 'highlighter' | 'eraser' | 'lasso' | 'sticky' | 'nav'
-    previousTool: 'pen',
-    penType: 'ballpoint', // 'ballpoint' | 'fountain'
+    activeTool: 'fountain', // 'fountain' | 'ballpoint' | 'pencil' | 'highlighter' | 'marker' | 'eraser' | 'shape' | 'lasso' | 'sticky' | 'image'
+    previousTool: 'fountain',
+    penType: 'fountain', // 'fountain' | 'ballpoint' | 'pencil' | 'marker'
+    activeShape: 'line', // 'line' | 'rect' | 'circle' | 'arrow' | 'triangle'
+    shapeModeActive: false,
     penColor: '#0f172a', // Onyx Black
-    penSize: 3.0,
+    penSize: 3.5,
     highlighterColor: 'rgba(250, 204, 21, 0.45)', // Neon Yellow
-    highlighterSize: 22.0,
-    eraserMode: 'stroke', // 'stroke' | 'pixel'
-    eraserSize: 24.0,
-    stylusOnlyMode: true, // Palm Rejection: true = ONLY stylus writes, fingers scroll!
+    highlighterSize: 24.0,
+    eraserMode: 'stroke', // 'stroke' | 'area'
+    eraserSize: 26.0,
+    stylusOnlyMode: true, // TRUE PALM REJECTION: S-Pen draws, fingers scroll!
     markupVisible: true,
-    holdToSnap: true, // Hold pen still at stroke end to snap into straight line / box
+    holdToSnap: true, // Hold pen still at end of stroke for 450ms to snap into line / box
     isDrawing: false,
     currentStroke: null,
     strokes: [], // Canvas strokes array
     undoStack: [],
     redoStack: [],
     stickyNotes: [],
+    insertedImages: [],
     isSpenDetected: false,
     currentPageId: '',
     currentPageTitle: '',
@@ -49,29 +53,14 @@
 
     // Lasso Tool State
     lasso: {
-      active: false,
       isSelecting: false,
       loopPoints: [],
       selectedStrokes: [],
       boxEl: null,
-      startX: 0,
-      startY: 0,
-      origPositions: [],
-    },
-
-    // Split Legal Margin Notepad Drawer
-    marginPad: {
-      open: false,
-      paperStyle: 'ruled', // 'ruled' | 'white' | 'grid' | 'dark'
-      canvas: null,
-      ctx: null,
-      strokes: [],
-      isDrawing: false,
-      currentStroke: null,
     },
   };
 
-  // Pre-configured Legal Scholar Ink Palettes
+  // Noteshelf 3 Legal Scholar & Pastel Palettes
   const PEN_COLORS = [
     { name: 'Onyx Black', value: '#0f172a' },
     { name: 'Court Navy', value: '#1e3a8a' },
@@ -79,7 +68,7 @@
     { name: 'Emerald Act', value: '#047857' },
     { name: 'Legal Amber', value: '#d97706' },
     { name: 'Royal Purple', value: '#6b21a8' },
-    { name: 'Chalk White', value: '#f8fafc' },
+    { name: 'Graphite Lead', value: '#475569' },
   ];
 
   const HIGHLIGHTER_COLORS = [
@@ -192,15 +181,15 @@
         if (
           (data.strokes && data.strokes.length > 0) ||
           (data.stickyNotes && data.stickyNotes.length > 0) ||
-          (data.marginStrokes && data.marginStrokes.length > 0)
+          (data.insertedImages && data.insertedImages.length > 0)
         ) {
           idx.unshift({
             pageId,
             title: title || 'Comprehensive Study Notes',
             subject: subject || 'Law Subject',
             timestamp: Date.now(),
-            strokeCount: (data.strokes ? data.strokes.length : 0) + (data.marginStrokes ? data.marginStrokes.length : 0),
-            stickyCount: data.stickyNotes ? data.stickyNotes.length : 0,
+            strokeCount: data.strokes ? data.strokes.length : 0,
+            stickyCount: (data.stickyNotes ? data.stickyNotes.length : 0) + (data.insertedImages ? data.insertedImages.length : 0),
           });
         }
         localStorage.setItem('mle_notes_master_index', JSON.stringify(idx));
@@ -250,7 +239,7 @@
           window.AndroidApp.exportMasterNotesBackup();
         } else {
           const master = {
-            version: 2,
+            version: 3,
             exportTime: Date.now(),
             index: NativeBridge.getAllIndex(),
             pages: {},
@@ -324,7 +313,6 @@
     hoverRingEl.style.top = y + 'px';
     hoverRingEl.classList.add('active');
 
-    // Handle Barrel button state during hover
     if (isButtonPressed && !state.isBarrelButtonActive) {
       handleBarrelButtonDown();
     } else if (!isButtonPressed && state.isBarrelButtonActive) {
@@ -336,7 +324,6 @@
     if (hoverRingEl) hoverRingEl.classList.remove('active');
   };
 
-  // Hook for Native Android touch stylus button
   window.__onSpenButtonState = function (isPressed) {
     if (isPressed && !state.isBarrelButtonActive) {
       handleBarrelButtonDown();
@@ -355,7 +342,7 @@
 
   function handleBarrelButtonUp() {
     state.isBarrelButtonActive = false;
-    setTool(state.previousTool || 'pen');
+    setTool(state.previousTool || 'fountain');
     NativeBridge.vibrate(1);
   }
 
@@ -371,6 +358,15 @@
         pill.innerHTML = '<i class="fa-solid fa-hand-pointer"></i> <span>Touch</span>';
       }
     }
+  }
+
+  // Helper to test if pointer event is from S-Pen / Stylus
+  function isSpenPointer(e) {
+    return (
+      e.pointerType === 'pen' ||
+      e.pointerType === 'stylus' ||
+      (e.pressure > 0 && e.pointerType !== 'mouse')
+    );
   }
 
   // =========================================================================
@@ -430,11 +426,12 @@
       existingCanvas.remove();
     }
     ctxInfo.container.querySelectorAll('.spen-sticky-note').forEach((el) => el.remove());
+    ctxInfo.container.querySelectorAll('.spen-inserted-image').forEach((el) => el.remove());
 
     const canvas = ctxInfo.doc.createElement('canvas');
     canvas.className = 'spen-canvas-layer';
     if (!state.markupVisible) canvas.classList.add('spen-hidden');
-    if (state.activeTool === 'nav') canvas.classList.add('spen-nav-mode');
+    if (!state.stylusOnlyMode) canvas.classList.add('finger-draw-mode');
 
     if (getComputedStyle(ctxInfo.container).position === 'static') {
       ctxInfo.container.style.position = 'relative';
@@ -446,7 +443,7 @@
     state.canvasContainer = ctxInfo.container;
 
     syncCanvasSize(canvas, ctxInfo.container, ctxInfo.doc);
-    bindCanvasEvents(canvas, ctxInfo.win);
+    bindDualTouchEvents(ctxInfo.win, ctxInfo.doc);
     loadPageData(state.currentPageId);
 
     ctxInfo.win.removeEventListener('resize', handleContextResize);
@@ -461,7 +458,7 @@
   }
 
   function syncCanvasSize(canvas, container, doc) {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2.5); // High-res Samsung AMOLED rendering
+    const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
     const width = Math.max(container.scrollWidth, doc.documentElement.scrollWidth, window.innerWidth);
     const height = Math.max(container.scrollHeight, doc.documentElement.scrollHeight, window.innerHeight);
 
@@ -487,28 +484,30 @@
   }
 
   // =========================================================================
-  // 4. S-PEN POINTER & DRAWING ENGINE
+  // 4. DUAL-TOUCH EVENT ENGINE (FINGER SCROLLS vs S-PEN WRITES)
   // =========================================================================
-  function bindCanvasEvents(canvas, win) {
-    canvas.addEventListener('pointerdown', onPointerDown, { passive: false });
-    canvas.addEventListener('pointermove', onPointerMove, { passive: false });
-    canvas.addEventListener('pointerup', onPointerUp, { passive: false });
-    canvas.addEventListener('pointercancel', onPointerUp, { passive: false });
+  function bindDualTouchEvents(win, doc) {
+    // Remove previous listeners if any
+    win.removeEventListener('pointerdown', onUniversalPointerDown, true);
+    win.removeEventListener('pointermove', onUniversalPointerMove, true);
+    win.removeEventListener('pointerup', onUniversalPointerUp, true);
+    win.removeEventListener('pointercancel', onUniversalPointerUp, true);
 
-    canvas.addEventListener('pointerenter', (e) => {
-      if (e.pointerType === 'pen') setSpenDetected(true);
-    });
+    // Register with CAPTURE phase = true
+    win.addEventListener('pointerdown', onUniversalPointerDown, true);
+    win.addEventListener('pointermove', onUniversalPointerMove, true);
+    win.addEventListener('pointerup', onUniversalPointerUp, true);
+    win.addEventListener('pointercancel', onUniversalPointerUp, true);
   }
 
-  function getCanvasCoords(e) {
+  function getCanvasCoordsFromEvent(e) {
     const canvas = state.canvas;
+    if (!canvas) return { x: e.clientX, y: e.clientY, pressure: 0.5 };
     const rect = canvas.getBoundingClientRect();
-    const scrollX = canvas.ownerDocument.defaultView.pageXOffset || canvas.ownerDocument.documentElement.scrollLeft || 0;
-    const scrollY = canvas.ownerDocument.defaultView.pageYOffset || canvas.ownerDocument.documentElement.scrollTop || 0;
 
     return {
-      x: e.clientX - rect.left + scrollX,
-      y: e.clientY - rect.top + scrollY,
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
       pressure: e.pressure > 0 ? e.pressure : 0.5,
       pointerType: e.pointerType,
       isButton2: e.buttons === 2 || e.buttons === 32 || e.button === 2 || e.button === 5,
@@ -516,38 +515,56 @@
     };
   }
 
-  function onPointerDown(e) {
-    // Palm Rejection: If Stylus-only mode is ON, reject finger touches completely!
-    if (state.stylusOnlyMode && e.pointerType === 'touch') {
-      return;
-    }
+  function onUniversalPointerDown(e) {
+    const isStylus = isSpenPointer(e);
 
-    if (state.activeTool === 'nav') return;
-
-    if (e.pointerType === 'pen') {
+    if (isStylus) {
       setSpenDetected(true);
     }
 
-    // Sticky Note creation
+    // 1. Check if user is interacting with floating UI (toolbar, popover, sticky notes, modal)
+    const target = e.target;
+    if (
+      target.closest('#spenToolbarContainer') ||
+      target.closest('.spen-popover') ||
+      target.closest('.spen-hub-overlay') ||
+      target.closest('.spen-sticky-note') ||
+      target.closest('.spen-inserted-image') ||
+      target.closest('.spen-toast') ||
+      target.closest('.spen-lasso-toolbar')
+    ) {
+      // Let pointer interact normally with buttons/text inputs!
+      return;
+    }
+
+    // 2. FINGER TOUCH HANDLING (When Palm Rejection / Stylus-Only Mode is ON)
+    if (!isStylus) {
+      if (state.stylusOnlyMode) {
+        // Finger touch is ignored by drawing engine so browser scrolls naturally!
+        return;
+      }
+    }
+
+    // 3. S-PEN WRITING / DRAWING PATH
+    e.preventDefault(); // Stop page scroll & selection while writing with S-Pen!
+    e.stopPropagation();
+
+    const pt = getCanvasCoordsFromEvent(e);
+
+    // Sticky Note placement
     if (state.activeTool === 'sticky') {
-      e.preventDefault();
-      const pt = getCanvasCoords(e);
       createStickyNote(pt.x, pt.y);
-      setTool('pen');
+      setTool('fountain');
       return;
     }
 
-    // Lasso Selection mode
+    // Lasso Selection
     if (state.activeTool === 'lasso') {
-      e.preventDefault();
-      startLassoSelection(getCanvasCoords(e));
+      startLassoSelection(pt);
       return;
     }
 
-    e.preventDefault();
     state.isDrawing = true;
-
-    const pt = getCanvasCoords(e);
     const isEraser = state.activeTool === 'eraser' || pt.isButton2 || state.isBarrelButtonActive;
 
     if (isEraser) {
@@ -558,13 +575,22 @@
 
     // Start New Stroke
     const isHighlighter = state.activeTool === 'highlighter';
-    const isFountain = state.penType === 'fountain';
+    const isPencil = state.activeTool === 'pencil' || state.penType === 'pencil';
+    const isFountain = state.activeTool === 'fountain' || state.penType === 'fountain';
+    const isMarker = state.activeTool === 'marker' || state.penType === 'marker';
+
+    let strokeType = 'ballpoint';
+    if (isHighlighter) strokeType = 'highlighter';
+    else if (isPencil) strokeType = 'pencil';
+    else if (isFountain) strokeType = 'fountain';
+    else if (isMarker) strokeType = 'marker';
+
     const baseWidth = isHighlighter ? state.highlighterSize : state.penSize;
     const color = isHighlighter ? state.highlighterColor : state.penColor;
 
     state.currentStroke = {
       id: 'stroke_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
-      type: isHighlighter ? 'highlighter' : isFountain ? 'fountain' : 'pen',
+      type: strokeType,
       color: color,
       baseWidth: baseWidth,
       points: [pt],
@@ -574,26 +600,28 @@
 
     drawStrokeSegment(state.currentStroke, pt, pt);
 
-    // Setup Hold-to-Snap Ruler Timer (450ms)
+    // Start Hold-to-Snap Ruler Timer (450ms)
     startHoldToSnapTimer(pt);
   }
 
-  function onPointerMove(e) {
+  function onUniversalPointerMove(e) {
     if (state.activeTool === 'lasso' && state.lasso.isSelecting) {
       e.preventDefault();
-      continueLassoSelection(getCanvasCoords(e));
+      continueLassoSelection(getCanvasCoordsFromEvent(e));
       return;
     }
 
     if (!state.isDrawing) return;
-    if (state.stylusOnlyMode && e.pointerType === 'touch') return;
+
+    const isStylus = isSpenPointer(e);
+    if (!isStylus && state.stylusOnlyMode) return;
 
     e.preventDefault();
 
     const events = typeof e.getCoalescedEvents === 'function' ? e.getCoalescedEvents() : [e];
 
     for (let i = 0; i < events.length; i++) {
-      const pt = getCanvasCoords(events[i]);
+      const pt = getCanvasCoordsFromEvent(events[i]);
       const isEraser = state.activeTool === 'eraser' || pt.isButton2 || state.isBarrelButtonActive;
 
       if (isEraser) {
@@ -609,11 +637,9 @@
       const dx = pt.x - prevPt.x;
       const dy = pt.y - prevPt.y;
       if (dx * dx + dy * dy < 2.0) {
-        // Pen is resting or moving very slowly -> check hold to snap
         continue;
       }
 
-      // Reset hold timer on significant movement
       startHoldToSnapTimer(pt);
 
       pts.push(pt);
@@ -621,7 +647,7 @@
     }
   }
 
-  function onPointerUp(e) {
+  function onUniversalPointerUp(e) {
     clearTimeout(state.holdTimer);
 
     if (state.activeTool === 'lasso' && state.lasso.isSelecting) {
@@ -634,6 +660,11 @@
     state.isDrawing = false;
 
     if (state.currentStroke && state.currentStroke.points.length > 0) {
+      // If Auto-Shape Mode was active, snap shape on release
+      if (state.shapeModeActive) {
+        applyAutoShapeToStroke(state.currentStroke, state.activeShape);
+      }
+
       state.strokes.push(state.currentStroke);
       state.undoStack.push({ type: 'add_stroke', stroke: state.currentStroke });
       state.redoStack = [];
@@ -644,64 +675,7 @@
   }
 
   // =========================================================================
-  // 5. HOLD-TO-SNAP SHAPES & RULER ENGINE (Samsung Notes feature)
-  // =========================================================================
-  function startHoldToSnapTimer(pt) {
-    clearTimeout(state.holdTimer);
-    if (!state.holdToSnap || !state.currentStroke) return;
-
-    state.lastHoldPoint = pt;
-
-    state.holdTimer = setTimeout(() => {
-      if (!state.isDrawing || !state.currentStroke) return;
-      snapCurrentStroke();
-    }, 450);
-  }
-
-  function snapCurrentStroke() {
-    const stroke = state.currentStroke;
-    if (!stroke || stroke.points.length < 4) return;
-
-    const pts = stroke.points;
-    const startPt = pts[0];
-    const endPt = pts[pts.length - 1];
-
-    // Check if loop is closed (Rectangle / Circle box detection)
-    const distSq = (endPt.x - startPt.x) ** 2 + (endPt.y - startPt.y) ** 2;
-    const isClosedLoop = distSq < 1600 && pts.length > 8; // start and end within 40px
-
-    if (isClosedLoop) {
-      // Find bounding box and snap to perfect clean rectangle!
-      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-      pts.forEach((p) => {
-        if (p.x < minX) minX = p.x;
-        if (p.y < minY) minY = p.y;
-        if (p.x > maxX) maxX = p.x;
-        if (p.y > maxY) maxY = p.y;
-      });
-
-      stroke.points = [
-        { x: minX, y: minY, pressure: 0.6 },
-        { x: maxX, y: minY, pressure: 0.6 },
-        { x: maxX, y: maxY, pressure: 0.6 },
-        { x: minX, y: maxY, pressure: 0.6 },
-        { x: minX, y: minY, pressure: 0.6 },
-      ];
-      stroke.isStraightLine = true;
-      showToast('Snapped to Rectangle Box');
-    } else {
-      // Snap to perfect straight rule line
-      stroke.points = [startPt, endPt];
-      stroke.isStraightLine = true;
-      showToast('Snapped to Straight Line');
-    }
-
-    NativeBridge.vibrate(2);
-    redrawAllStrokes();
-  }
-
-  // =========================================================================
-  // 6. DRAWING SEGMENT & RENDERING
+  // 5. NOTESHELF 3 PENS & INK STYLES
   // =========================================================================
   function drawStrokeSegment(stroke, p1, p2) {
     const ctx = state.ctx;
@@ -713,18 +687,36 @@
       ctx.globalCompositeOperation = 'multiply';
       ctx.strokeStyle = stroke.color;
       ctx.lineWidth = stroke.baseWidth;
+      ctx.lineCap = 'square';
+    } else if (stroke.type === 'pencil') {
+      // Noteshelf 3 Graphite Pencil texture simulation
+      ctx.globalCompositeOperation = 'source-over';
+      const pressure = p2.pressure || 0.5;
+      ctx.strokeStyle = stroke.color;
+      ctx.globalAlpha = 0.4 + 0.5 * pressure;
+      ctx.lineWidth = Math.max(1.0, stroke.baseWidth * (0.6 + 0.4 * pressure));
       ctx.lineCap = 'round';
     } else if (stroke.type === 'fountain') {
-      // Fountain / Calligraphy pressure dynamics
+      // Noteshelf 3 Calligraphy Fountain Pen (sharp tapering & chisel angle)
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = stroke.color;
-      const pressureMultiplier = 0.2 + 0.9 * (p2.pressure || 0.5);
+      const pressureMultiplier = 0.2 + 1.1 * (p2.pressure || 0.5);
       ctx.lineWidth = Math.max(1.0, stroke.baseWidth * pressureMultiplier);
+      ctx.lineCap = 'round';
+    } else if (stroke.type === 'marker') {
+      // Felt-Tip Marker
+      ctx.globalCompositeOperation = 'source-over';
+      ctx.strokeStyle = stroke.color;
+      ctx.globalAlpha = 0.88;
+      ctx.lineWidth = stroke.baseWidth * 1.2;
+      ctx.lineCap = 'round';
     } else {
+      // Ballpoint Studio Pen
       ctx.globalCompositeOperation = 'source-over';
       ctx.strokeStyle = stroke.color;
-      const pressureMultiplier = 0.5 + 0.5 * (p2.pressure || 0.5);
+      const pressureMultiplier = 0.6 + 0.4 * (p2.pressure || 0.5);
       ctx.lineWidth = Math.max(1.0, stroke.baseWidth * pressureMultiplier);
+      ctx.lineCap = 'round';
     }
 
     ctx.beginPath();
@@ -755,12 +747,24 @@
         ctx.globalCompositeOperation = 'multiply';
         ctx.strokeStyle = stroke.color;
         ctx.lineWidth = stroke.baseWidth;
+        ctx.lineCap = 'square';
+      } else if (stroke.type === 'pencil') {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.strokeStyle = stroke.color;
+        ctx.globalAlpha = 0.7;
+        ctx.lineCap = 'round';
+      } else if (stroke.type === 'marker') {
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.strokeStyle = stroke.color;
+        ctx.globalAlpha = 0.88;
+        ctx.lineWidth = stroke.baseWidth * 1.2;
+        ctx.lineCap = 'round';
       } else {
         ctx.globalCompositeOperation = 'source-over';
         ctx.strokeStyle = stroke.color;
+        ctx.lineCap = 'round';
       }
 
-      ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
 
       if (pts.length === 1) {
@@ -772,7 +776,7 @@
         continue;
       }
 
-      if (stroke.isStraightLine) {
+      if (stroke.isStraightLine || stroke.isShape) {
         ctx.lineWidth = stroke.baseWidth;
         ctx.beginPath();
         ctx.moveTo(pts[0].x, pts[0].y);
@@ -793,7 +797,8 @@
 
         if (stroke.type !== 'highlighter') {
           const pressure = pts[i].pressure || 0.5;
-          const mult = stroke.type === 'fountain' ? 0.2 + 0.9 * pressure : 0.5 + 0.5 * pressure;
+          let mult = 0.6 + 0.4 * pressure;
+          if (stroke.type === 'fountain') mult = 0.2 + 1.1 * pressure;
           ctx.lineWidth = Math.max(1.0, stroke.baseWidth * mult);
         }
 
@@ -807,7 +812,112 @@
   }
 
   // =========================================================================
-  // 7. ERASER ENGINE (Samsung Notes Stroke Eraser)
+  // 6. HOLD-TO-SNAP SHAPES & RULER ENGINE
+  // =========================================================================
+  function startHoldToSnapTimer(pt) {
+    clearTimeout(state.holdTimer);
+    if (!state.holdToSnap || !state.currentStroke) return;
+
+    state.lastHoldPoint = pt;
+
+    state.holdTimer = setTimeout(() => {
+      if (!state.isDrawing || !state.currentStroke) return;
+      snapCurrentStroke();
+    }, 450);
+  }
+
+  function snapCurrentStroke() {
+    const stroke = state.currentStroke;
+    if (!stroke || stroke.points.length < 4) return;
+
+    const pts = stroke.points;
+    const startPt = pts[0];
+    const endPt = pts[pts.length - 1];
+
+    const distSq = (endPt.x - startPt.x) ** 2 + (endPt.y - startPt.y) ** 2;
+    const isClosedLoop = distSq < 1600 && pts.length > 8;
+
+    if (isClosedLoop) {
+      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+      pts.forEach((p) => {
+        if (p.x < minX) minX = p.x;
+        if (p.y < minY) minY = p.y;
+        if (p.x > maxX) maxX = p.x;
+        if (p.y > maxY) maxY = p.y;
+      });
+
+      stroke.points = [
+        { x: minX, y: minY, pressure: 0.6 },
+        { x: maxX, y: minY, pressure: 0.6 },
+        { x: maxX, y: maxY, pressure: 0.6 },
+        { x: minX, y: maxY, pressure: 0.6 },
+        { x: minX, y: minY, pressure: 0.6 },
+      ];
+      stroke.isStraightLine = true;
+      stroke.isShape = true;
+      showToast('Snapped to Rectangle Box');
+    } else {
+      stroke.points = [startPt, endPt];
+      stroke.isStraightLine = true;
+      showToast('Snapped to Straight Line');
+    }
+
+    NativeBridge.vibrate(2);
+    redrawAllStrokes();
+  }
+
+  function applyAutoShapeToStroke(stroke, shapeName) {
+    if (!stroke || stroke.points.length < 2) return;
+    const startPt = stroke.points[0];
+    const endPt = stroke.points[stroke.points.length - 1];
+
+    if (shapeName === 'line') {
+      stroke.points = [startPt, endPt];
+      stroke.isStraightLine = true;
+    } else if (shapeName === 'rect') {
+      const minX = Math.min(startPt.x, endPt.x);
+      const maxX = Math.max(startPt.x, endPt.x);
+      const minY = Math.min(startPt.y, endPt.y);
+      const maxY = Math.max(startPt.y, endPt.y);
+      stroke.points = [
+        { x: minX, y: minY },
+        { x: maxX, y: minY },
+        { x: maxX, y: maxY },
+        { x: minX, y: maxY },
+        { x: minX, y: minY },
+      ];
+      stroke.isShape = true;
+    } else if (shapeName === 'arrow') {
+      const dx = endPt.x - startPt.x;
+      const dy = endPt.y - startPt.y;
+      const angle = Math.atan2(dy, dx);
+      const headLen = 18;
+      const h1 = {
+        x: endPt.x - headLen * Math.cos(angle - Math.PI / 6),
+        y: endPt.y - headLen * Math.sin(angle - Math.PI / 6),
+      };
+      const h2 = {
+        x: endPt.x - headLen * Math.cos(angle + Math.PI / 6),
+        y: endPt.y - headLen * Math.sin(angle + Math.PI / 6),
+      };
+      stroke.points = [startPt, endPt, h1, endPt, h2];
+      stroke.isShape = true;
+    } else if (shapeName === 'triangle') {
+      const midX = (startPt.x + endPt.x) / 2;
+      const topY = Math.min(startPt.y, endPt.y);
+      const botY = Math.max(startPt.y, endPt.y);
+      stroke.points = [
+        { x: midX, y: topY },
+        { x: endPt.x, y: botY },
+        { x: startPt.x, y: botY },
+        { x: midX, y: topY },
+      ];
+      stroke.isShape = true;
+    }
+  }
+
+  // =========================================================================
+  // 7. ERASER ENGINE (Stroke & Precision Area)
   // =========================================================================
   function handleEraserAction(pt) {
     const hitRadius = state.eraserSize;
@@ -836,8 +946,147 @@
     }
   }
 
+  function clearAllPageNotes() {
+    if (confirm('Wipe all handwritten annotations, sticky notes and images on this page?')) {
+      state.strokes = [];
+      state.stickyNotes = [];
+      state.insertedImages = [];
+      if (state.canvasContainer) {
+        state.canvasContainer.querySelectorAll('.spen-sticky-note').forEach((el) => el.remove());
+        state.canvasContainer.querySelectorAll('.spen-inserted-image').forEach((el) => el.remove());
+      }
+      redrawAllStrokes();
+      updateToolbarCounters();
+      debounceSave();
+      showToast('Page annotations cleared');
+    }
+  }
+
   // =========================================================================
-  // 8. LASSO SELECTION TOOL (Samsung Notes Specialty)
+  // 8. INSERT IMAGE (Noteshelf 3 Photo / Diagram Feature)
+  // =========================================================================
+  function triggerImagePicker() {
+    let input = document.getElementById('spenImagePickerInput');
+    if (!input) {
+      input = document.createElement('input');
+      input.type = 'file';
+      input.id = 'spenImagePickerInput';
+      input.accept = 'image/*';
+      input.style.display = 'none';
+      document.body.appendChild(input);
+
+      input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (ev) => {
+          createInsertedImage(100, 200, 320, 240, ev.target.result);
+          NativeBridge.vibrate(1);
+          showToast('Image inserted! Drag & resize with your fingers');
+        };
+        reader.readAsDataURL(file);
+      });
+    }
+    input.click();
+  }
+
+  function createInsertedImage(x, y, w, h, src, id) {
+    const container = state.canvasContainer;
+    if (!container) return;
+
+    const imgId = id || 'img_' + Date.now();
+    const card = document.createElement('div');
+    card.className = 'spen-inserted-image';
+    card.id = imgId;
+    card.style.left = (x || 50) + 'px';
+    card.style.top = (y || 100) + 'px';
+    card.style.width = (w || 300) + 'px';
+    card.style.height = (h || 200) + 'px';
+
+    card.innerHTML = `
+      <div class="spen-image-header">
+        <span style="font-size:11px;font-weight:700;"><i class="fa-solid fa-image"></i> Photo</span>
+        <button type="button" class="spen-image-btn del" title="Delete Image"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+      <img src="${src}" class="spen-inserted-img-el" alt="Inserted Note Image">
+      <div class="spen-image-resize-handle" title="Drag to Resize"></div>
+    `;
+
+    container.appendChild(card);
+
+    const delBtn = card.querySelector('.del');
+    const header = card.querySelector('.spen-image-header');
+    const resizeHandle = card.querySelector('.spen-image-resize-handle');
+
+    delBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      card.remove();
+      syncImagesData();
+      debounceSave();
+      NativeBridge.vibrate(1);
+    });
+
+    makeDraggable(card, header, () => {
+      syncImagesData();
+      debounceSave();
+    });
+
+    makeResizable(card, resizeHandle, () => {
+      syncImagesData();
+      debounceSave();
+    });
+
+    syncImagesData();
+    debounceSave();
+  }
+
+  function syncImagesData() {
+    const imgs = [];
+    if (!state.canvasContainer) return;
+    state.canvasContainer.querySelectorAll('.spen-inserted-image').forEach((el) => {
+      const img = el.querySelector('img');
+      imgs.push({
+        id: el.id,
+        x: parseInt(el.style.left) || 0,
+        y: parseInt(el.style.top) || 0,
+        w: parseInt(el.style.width) || 300,
+        h: parseInt(el.style.height) || 200,
+        src: img ? img.src : '',
+      });
+    });
+    state.insertedImages = imgs;
+  }
+
+  function makeResizable(element, handle, onEnd) {
+    handle.onpointerdown = function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const startW = element.offsetWidth;
+      const startH = element.offsetHeight;
+
+      function onMove(ev) {
+        ev.preventDefault();
+        const nw = Math.max(100, startW + (ev.clientX - startX));
+        const nh = Math.max(70, startH + (ev.clientY - startY));
+        element.style.width = nw + 'px';
+        element.style.height = nh + 'px';
+      }
+
+      function onUp() {
+        document.removeEventListener('pointermove', onMove);
+        document.removeEventListener('pointerup', onUp);
+        if (onEnd) onEnd();
+      }
+
+      document.addEventListener('pointermove', onMove);
+      document.addEventListener('pointerup', onUp);
+    };
+  }
+
+  // =========================================================================
+  // 9. LASSO SELECTION TOOL
   // =========================================================================
   function startLassoSelection(pt) {
     clearLassoSelection();
@@ -879,7 +1128,6 @@
       return;
     }
 
-    // Find enclosed strokes using ray-casting point-in-polygon
     const selected = [];
     for (let s = 0; s < state.strokes.length; s++) {
       const stroke = state.strokes[s];
@@ -933,7 +1181,6 @@
 
     box.innerHTML = `
       <div class="spen-lasso-toolbar">
-        <button type="button" class="spen-lasso-btn" id="spenLassoMove" title="Move Ink"><i class="fa-solid fa-up-down-left-right"></i></button>
         <button type="button" class="spen-lasso-btn" id="spenLassoColor" title="Change Color"><i class="fa-solid fa-palette"></i></button>
         <button type="button" class="spen-lasso-btn del" id="spenLassoDel" title="Delete Selected"><i class="fa-solid fa-trash-can"></i></button>
       </div>
@@ -942,7 +1189,6 @@
     state.canvasContainer.appendChild(box);
     state.lasso.boxEl = box;
 
-    // Actions
     box.querySelector('#spenLassoDel').addEventListener('click', (e) => {
       e.stopPropagation();
       strokes.forEach((s) => {
@@ -965,7 +1211,6 @@
       showToast('Selected ink color updated');
     });
 
-    // Make lasso box draggable
     makeLassoDraggable(box, strokes);
   }
 
@@ -992,7 +1237,6 @@
       box.style.top = (box.offsetTop - pos2) + 'px';
       box.style.left = (box.offsetLeft - pos1) + 'px';
 
-      // Move strokes points simultaneously!
       strokes.forEach((s) => {
         s.points.forEach((p) => {
           p.x -= pos1;
@@ -1019,180 +1263,18 @@
   }
 
   // =========================================================================
-  // 9. SPLIT LEGAL MARGIN NOTEPAD (Slide-out Notebook Drawer)
+  // 10. STICKY NOTES ON PAGE (5 Noteshelf Pastel Colors)
   // =========================================================================
-  function toggleMarginPad() {
-    let drawer = document.getElementById('spenMarginDrawer');
-    if (!drawer) {
-      drawer = createMarginPadDrawer();
-    }
-
-    state.marginPad.open = !state.marginPad.open;
-    if (state.marginPad.open) {
-      drawer.classList.add('open');
-      initMarginCanvas();
-      NativeBridge.vibrate(1);
-      showToast('Legal Margin Notepad Opened');
-    } else {
-      drawer.classList.remove('open');
-    }
-  }
-
-  function createMarginPadDrawer() {
-    const drawer = document.createElement('div');
-    drawer.id = 'spenMarginDrawer';
-    drawer.className = 'spen-margin-pad-drawer';
-
-    drawer.innerHTML = `
-      <div class="spen-margin-header">
-        <div class="spen-margin-title">
-          <i class="fa-solid fa-book-journal-whills" style="color:#d97706;"></i>
-          <span>Legal Margin Notepad</span>
-        </div>
-        <div class="spen-margin-actions">
-          <button type="button" class="spen-margin-btn" id="spenMarginPaperBtn" title="Switch Paper Style"><i class="fa-solid fa-scroll"></i></button>
-          <button type="button" class="spen-margin-btn" id="spenMarginClearBtn" title="Clear Pad"><i class="fa-solid fa-trash-can"></i></button>
-          <button type="button" class="spen-margin-btn" id="spenMarginCloseBtn" title="Close Pad"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-      </div>
-      <div class="spen-margin-canvas-container" id="spenMarginCanvasContainer">
-        <canvas class="spen-margin-canvas" id="spenMarginCanvas"></canvas>
-      </div>
-    `;
-
-    document.body.appendChild(drawer);
-
-    drawer.querySelector('#spenMarginCloseBtn').addEventListener('click', toggleMarginPad);
-
-    drawer.querySelector('#spenMarginClearBtn').addEventListener('click', () => {
-      if (confirm('Clear all handwritten notes on this margin notepad?')) {
-        state.marginPad.strokes = [];
-        redrawMarginStrokes();
-        debounceSave();
-      }
-    });
-
-    const styles = ['ruled', 'paper-white', 'paper-grid', 'paper-dark'];
-    let curStyleIdx = 0;
-    drawer.querySelector('#spenMarginPaperBtn').addEventListener('click', () => {
-      curStyleIdx = (curStyleIdx + 1) % styles.length;
-      drawer.className = 'spen-margin-pad-drawer open ' + (styles[curStyleIdx] === 'ruled' ? '' : styles[curStyleIdx]);
-      redrawMarginStrokes();
-    });
-
-    return drawer;
-  }
-
-  function initMarginCanvas() {
-    const canvas = document.getElementById('spenMarginCanvas');
-    const container = document.getElementById('spenMarginCanvasContainer');
-    if (!canvas || !container) return;
-
-    const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
-    const w = container.clientWidth;
-    const h = container.clientHeight;
-
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
-    canvas.width = Math.floor(w * dpr);
-    canvas.height = Math.floor(h * dpr);
-
-    const ctx = canvas.getContext('2d');
-    ctx.scale(dpr, dpr);
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-
-    state.marginPad.canvas = canvas;
-    state.marginPad.ctx = ctx;
-
-    // Bind pointer events on margin pad
-    canvas.onpointerdown = (e) => {
-      if (state.stylusOnlyMode && e.pointerType === 'touch') return;
-      e.preventDefault();
-      state.marginPad.isDrawing = true;
-      const rect = canvas.getBoundingClientRect();
-      const pt = { x: e.clientX - rect.left, y: e.clientY - rect.top, pressure: e.pressure || 0.5 };
-      state.marginPad.currentStroke = {
-        color: state.penColor,
-        baseWidth: state.penSize,
-        points: [pt],
-      };
-    };
-
-    canvas.onpointermove = (e) => {
-      if (!state.marginPad.isDrawing || !state.marginPad.currentStroke) return;
-      if (state.stylusOnlyMode && e.pointerType === 'touch') return;
-      e.preventDefault();
-      const rect = canvas.getBoundingClientRect();
-      const pt = { x: e.clientX - rect.left, y: e.clientY - rect.top, pressure: e.pressure || 0.5 };
-      const pts = state.marginPad.currentStroke.points;
-      const prev = pts[pts.length - 1];
-      pts.push(pt);
-
-      ctx.save();
-      ctx.strokeStyle = state.penColor;
-      ctx.lineWidth = Math.max(1.0, state.penSize * (0.4 + 0.6 * pt.pressure));
-      ctx.beginPath();
-      ctx.moveTo(prev.x, prev.y);
-      ctx.lineTo(pt.x, pt.y);
-      ctx.stroke();
-      ctx.restore();
-    };
-
-    canvas.onpointerup = () => {
-      if (!state.marginPad.isDrawing) return;
-      state.marginPad.isDrawing = false;
-      if (state.marginPad.currentStroke) {
-        state.marginPad.strokes.push(state.marginPad.currentStroke);
-        state.marginPad.currentStroke = null;
-        debounceSave();
-      }
-    };
-
-    redrawMarginStrokes();
-  }
-
-  function redrawMarginStrokes() {
-    const ctx = state.marginPad.ctx;
-    const canvas = state.marginPad.canvas;
-    if (!ctx || !canvas) return;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let s = 0; s < state.marginPad.strokes.length; s++) {
-      const stroke = state.marginPad.strokes[s];
-      const pts = stroke.points;
-      if (!pts || pts.length < 2) continue;
-
-      ctx.save();
-      ctx.strokeStyle = stroke.color;
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-      ctx.beginPath();
-      ctx.moveTo(pts[0].x, pts[0].y);
-
-      for (let i = 1; i < pts.length; i++) {
-        const midX = (pts[i - 1].x + pts[i].x) / 2;
-        const midY = (pts[i - 1].y + pts[i].y) / 2;
-        ctx.lineWidth = Math.max(1.0, stroke.baseWidth * (0.4 + 0.6 * (pts[i].pressure || 0.5)));
-        ctx.quadraticCurveTo(pts[i - 1].x, pts[i - 1].y, midX, midY);
-      }
-      ctx.lineTo(pts[pts.length - 1].x, pts[pts.length - 1].y);
-      ctx.stroke();
-      ctx.restore();
-    }
-  }
-
-  // =========================================================================
-  // 10. STICKY NOTES ON PAGE
-  // =========================================================================
-  function createStickyNote(x, y, text, id) {
+  function createStickyNote(x, y, text, id, colorClass) {
     const container = state.canvasContainer;
     if (!container) return;
 
+    const colors = ['', 'color-pink', 'color-green', 'color-purple', 'color-blue'];
+    const chosenColor = colorClass || colors[Math.floor(Math.random() * colors.length)];
+
     const noteId = id || 'sticky_' + Date.now();
     const noteEl = document.createElement('div');
-    noteEl.className = 'spen-sticky-note';
+    noteEl.className = 'spen-sticky-note ' + chosenColor;
     noteEl.id = noteId;
     noteEl.style.left = Math.max(10, x - 20) + 'px';
     noteEl.style.top = Math.max(10, y - 20) + 'px';
@@ -1232,14 +1314,18 @@
       e.stopPropagation();
       noteEl.classList.toggle('collapsed');
       if (noteEl.classList.contains('collapsed')) {
-        noteEl.innerHTML = '<i class="fa-solid fa-thumbtack" style="color:#854d0e;"></i>';
+        noteEl.innerHTML = '<i class="fa-solid fa-thumbtack"></i>';
       } else {
         noteEl.remove();
-        createStickyNote(parseInt(noteEl.style.left), parseInt(noteEl.style.top), textarea.value, noteId);
+        createStickyNote(parseInt(noteEl.style.left), parseInt(noteEl.style.top), textarea.value, noteId, chosenColor);
       }
     });
 
-    makeDraggable(noteEl, header);
+    makeDraggable(noteEl, header, () => {
+      syncStickyData();
+      debounceSave();
+    });
+
     syncStickyData();
     debounceSave();
   }
@@ -1249,19 +1335,26 @@
     if (!state.canvasContainer) return;
     state.canvasContainer.querySelectorAll('.spen-sticky-note').forEach((el) => {
       const textarea = el.querySelector('.spen-sticky-textarea');
+      let color = '';
+      if (el.classList.contains('color-pink')) color = 'color-pink';
+      if (el.classList.contains('color-green')) color = 'color-green';
+      if (el.classList.contains('color-purple')) color = 'color-purple';
+      if (el.classList.contains('color-blue')) color = 'color-blue';
+
       notes.push({
         id: el.id,
         x: parseInt(el.style.left) || 0,
         y: parseInt(el.style.top) || 0,
         text: textarea ? textarea.value : '',
         collapsed: el.classList.contains('collapsed'),
+        color: color,
       });
     });
     state.stickyNotes = notes;
     updateToolbarCounters();
   }
 
-  function makeDraggable(element, handle) {
+  function makeDraggable(element, handle, onEnd) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     (handle || element).onpointerdown = dragMouseDown;
 
@@ -1287,8 +1380,7 @@
     function closeDragElement() {
       document.onpointerup = null;
       document.onpointermove = null;
-      syncStickyData();
-      debounceSave();
+      if (onEnd) onEnd();
     }
   }
 
@@ -1306,21 +1398,18 @@
     if (!state.currentPageId) return;
 
     const data = {
-      version: 2,
+      version: 3,
       pageId: state.currentPageId,
       title: state.currentPageTitle,
       subject: state.currentPageSubject,
       updatedAt: Date.now(),
       strokes: state.strokes,
       stickyNotes: state.stickyNotes,
-      marginStrokes: state.marginPad.strokes,
+      insertedImages: state.insertedImages,
     };
 
     NativeBridge.save(state.currentPageId, state.currentPageTitle, state.currentPageSubject, data);
-
-    // Generate small thumbnail for Consolidated Notes Hub card
     generateAndSaveThumbnail(state.currentPageId);
-
     console.log('[SPenEngine] Saved notes for:', state.currentPageTitle, `(${state.strokes.length} strokes)`);
   }
 
@@ -1346,7 +1435,7 @@
   function loadPageData(pageId) {
     state.strokes = [];
     state.stickyNotes = [];
-    state.marginPad.strokes = [];
+    state.insertedImages = [];
     state.undoStack = [];
     state.redoStack = [];
 
@@ -1356,11 +1445,10 @@
         state.strokes = data.strokes;
       }
       if (data.stickyNotes && Array.isArray(data.stickyNotes) && state.canvasContainer) {
-        data.stickyNotes.forEach((n) => createStickyNote(n.x, n.y, n.text, n.id));
+        data.stickyNotes.forEach((n) => createStickyNote(n.x, n.y, n.text, n.id, n.color));
       }
-      if (data.marginStrokes && Array.isArray(data.marginStrokes)) {
-        state.marginPad.strokes = data.marginStrokes;
-        if (state.marginPad.open) redrawMarginStrokes();
+      if (data.insertedImages && Array.isArray(data.insertedImages) && state.canvasContainer) {
+        data.insertedImages.forEach((img) => createInsertedImage(img.x, img.y, img.w, img.h, img.src, img.id));
       }
       console.log('[SPenEngine] Loaded notes for:', pageId, `(${state.strokes.length} strokes)`);
     }
@@ -1370,7 +1458,7 @@
   }
 
   // =========================================================================
-  // 12. FLOATING SAMSUNG S-PEN TOOLBAR UI (One UI 7 Island)
+  // 12. FLOATING SAMSUNG S-PEN TOOLBAR UI (Noteshelf 3 / One UI 7)
   // =========================================================================
   function createToolbar() {
     if (document.getElementById('spenToolbarContainer')) return;
@@ -1388,41 +1476,41 @@
         <i class="fa-solid fa-hand-pointer"></i> <span>Touch</span>
       </div>
 
-      <!-- Ballpoint Pen Tool -->
-      <button type="button" class="spen-btn active" id="spenToolPen" title="S-Pen (Ballpoint)">
-        <i class="fa-solid fa-pen"></i>
+      <!-- Pen Arsenal Selector -->
+      <button type="button" class="spen-btn active" id="spenToolPen" title="Pen & Pencil Styles (Noteshelf 3)">
+        <i class="fa-solid fa-pen-nib" id="spenMainPenIcon"></i>
         <span class="spen-color-dot" id="spenPenDot" style="background:#0f172a;"></span>
       </button>
 
-      <!-- Fountain / Calligraphy Pen -->
-      <button type="button" class="spen-btn" id="spenToolFountain" title="Calligraphy Fountain Pen">
-        <i class="fa-solid fa-pen-nib"></i>
-      </button>
-
-      <!-- Chisel Highlighter Tool -->
+      <!-- Chisel Highlighter -->
       <button type="button" class="spen-btn" id="spenToolHighlighter" title="Chisel Highlighter">
         <i class="fa-solid fa-highlighter"></i>
         <span class="spen-color-dot" id="spenHighDot" style="background:#facc15;"></span>
       </button>
 
       <!-- Eraser Tool -->
-      <button type="button" class="spen-btn" id="spenToolEraser" title="Stroke Eraser (or hold S-Pen button)">
+      <button type="button" class="spen-btn" id="spenToolEraser" title="Stroke Eraser (Hold S-Pen button to erase)">
         <i class="fa-solid fa-eraser"></i>
+      </button>
+
+      <!-- Noteshelf Auto-Shapes -->
+      <button type="button" class="spen-btn" id="spenToolShapes" title="Shapes Tool (Lines, Rectangles, Arrows)">
+        <i class="fa-solid fa-shapes"></i>
+      </button>
+
+      <!-- Add Image / Photo -->
+      <button type="button" class="spen-btn" id="spenToolAddImage" title="Insert Image / Diagram (Noteshelf 3)">
+        <i class="fa-solid fa-image"></i>
+      </button>
+
+      <!-- Sticky Memo -->
+      <button type="button" class="spen-btn" id="spenToolSticky" title="Add Sticky Memo">
+        <i class="fa-solid fa-note-sticky"></i>
       </button>
 
       <!-- Lasso Selection Tool -->
       <button type="button" class="spen-btn" id="spenToolLasso" title="Lasso Selection (Circle notes to move/recolor)">
         <i class="fa-solid fa-wand-magic-sparkles"></i>
-      </button>
-
-      <!-- Legal Margin Notepad (Split Drawer) -->
-      <button type="button" class="spen-btn" id="spenToolMargin" title="Legal Margin Notepad">
-        <i class="fa-solid fa-book-journal-whills"></i>
-      </button>
-
-      <!-- Sticky Note Tool -->
-      <button type="button" class="spen-btn" id="spenToolSticky" title="Add Sticky Memo">
-        <i class="fa-solid fa-note-sticky"></i>
       </button>
 
       <div class="spen-divider"></div>
@@ -1435,9 +1523,9 @@
         <i class="fa-solid fa-rotate-right"></i>
       </button>
 
-      <!-- Hold-to-Snap Ruler Toggle -->
-      <button type="button" class="spen-btn active" id="spenBtnSnap" title="Smart Hold-to-Snap Ruler (Straight Lines & Boxes)">
-        <i class="fa-solid fa-ruler-combined"></i>
+      <!-- Palm Rejection Mode (Fingers Scroll vs Finger Draw) -->
+      <button type="button" class="spen-btn active" id="spenBtnPalmRejection" title="Palm Rejection: ON (Fingers Scroll, ONLY S-Pen Draws)">
+        <i class="fa-solid fa-hand"></i>
       </button>
 
       <!-- Hide/Show Markup Toggle -->
@@ -1445,30 +1533,50 @@
         <i class="fa-solid fa-eye" id="spenEyeIcon"></i>
       </button>
 
-      <!-- Palm Rejection Mode Toggle -->
-      <button type="button" class="spen-btn active" id="spenBtnPalmRejection" title="Palm Rejection: ON (Only Stylus Draws)">
-        <i class="fa-solid fa-hand"></i>
-      </button>
-
       <div class="spen-divider"></div>
 
-      <!-- Consolidated Notes Hub (Game Changer) -->
+      <!-- Consolidated Notes Hub (Master Law Hub) -->
       <button type="button" class="spen-btn" id="spenBtnNotesHub" title="My Consolidated Notes Hub" style="color:#f59e0b;">
         <i class="fa-solid fa-book-bookmark"></i>
       </button>
 
-      <!-- Export / Print PDF -->
+      <!-- Clear Page -->
+      <button type="button" class="spen-btn" id="spenBtnClearPage" title="Clear Page Annotations">
+        <i class="fa-solid fa-trash-can"></i>
+      </button>
+
+      <!-- Print / PDF -->
       <button type="button" class="spen-btn" id="spenBtnExport" title="Export or Print PDF">
         <i class="fa-solid fa-print"></i>
       </button>
 
-      <!-- Minimize to floating icon -->
+      <!-- Minimize to bubble -->
       <button type="button" class="spen-btn" id="spenBtnMinimize" title="Minimize Toolbar">
         <i class="fa-solid fa-chevron-down"></i>
       </button>
 
-      <!-- Pen Settings Popover (Colors & Sizes) -->
+      <!-- Pen Arsenal Popover (Noteshelf 3 Pens, Colors, Sizes) -->
       <div class="spen-popover" id="spenPenPopover">
+        <div class="spen-popover-title">Pen &amp; Pencil Arsenal</div>
+        <div class="spen-pen-types-grid">
+          <div class="spen-pen-type-card active" data-pen="fountain">
+            <i class="fa-solid fa-pen-nib"></i>
+            <span>Fountain</span>
+          </div>
+          <div class="spen-pen-type-card" data-pen="ballpoint">
+            <i class="fa-solid fa-pen"></i>
+            <span>Studio</span>
+          </div>
+          <div class="spen-pen-type-card" data-pen="pencil">
+            <i class="fa-solid fa-pencil"></i>
+            <span>Graphite</span>
+          </div>
+          <div class="spen-pen-type-card" data-pen="marker">
+            <i class="fa-solid fa-marker"></i>
+            <span>Felt Tip</span>
+          </div>
+        </div>
+
         <div class="spen-popover-title">Ink Colors</div>
         <div class="spen-colors-grid">
           ${PEN_COLORS.map(
@@ -1480,28 +1588,42 @@
           <input type="color" class="spen-custom-color-input" id="spenCustomPenColor" value="#0f172a" title="Custom Color Wheel">
           <span style="font-size:11px;color:rgba(255,255,255,0.7);">Custom Ink Palette</span>
         </div>
+
         <div class="spen-popover-title" style="margin-top:10px;">Stroke Width</div>
         <div class="spen-sizes-grid">
           <div class="spen-size-btn" data-size="1.8" title="Fine"><div class="spen-size-preview-dot" style="width:3px;height:3px;"></div></div>
           <div class="spen-size-btn active" data-size="3.5" title="Medium"><div class="spen-size-preview-dot" style="width:6px;height:6px;"></div></div>
           <div class="spen-size-btn" data-size="6.0" title="Bold"><div class="spen-size-preview-dot" style="width:10px;height:10px;"></div></div>
+          <div class="spen-size-btn" data-size="10.0" title="Heavy"><div class="spen-size-preview-dot" style="width:14px;height:14px;"></div></div>
         </div>
       </div>
 
-      <!-- Highlighter Settings Popover -->
+      <!-- Highlighter Popover -->
       <div class="spen-popover" id="spenHighPopover">
-        <div class="spen-popover-title">Highlighter Tones</div>
+        <div class="spen-popover-title">Chisel Highlighter Tones</div>
         <div class="spen-colors-grid">
           ${HIGHLIGHTER_COLORS.map(
             (c, i) =>
               `<div class="spen-color-swatch ${i === 0 ? 'active' : ''}" data-high-color="${c.value}" style="background:${c.value.replace('0.45', '1')};" title="${c.name}"></div>`
           ).join('')}
         </div>
-        <div class="spen-popover-title" style="margin-top:6px;">Chisel Width</div>
+        <div class="spen-popover-title" style="margin-top:8px;">Chisel Width</div>
         <div class="spen-sizes-grid">
           <div class="spen-size-btn" data-high-size="16" title="Single Line"><div class="spen-size-preview-dot" style="width:14px;height:6px;border-radius:2px;"></div></div>
           <div class="spen-size-btn active" data-high-size="24" title="Standard"><div class="spen-size-preview-dot" style="width:20px;height:10px;border-radius:2px;"></div></div>
           <div class="spen-size-btn" data-high-size="36" title="Header"><div class="spen-size-preview-dot" style="width:28px;height:14px;border-radius:2px;"></div></div>
+        </div>
+      </div>
+
+      <!-- Shapes Popover (Noteshelf 3 Shapes) -->
+      <div class="spen-popover" id="spenShapesPopover">
+        <div class="spen-popover-title">Auto-Shape Tools</div>
+        <div class="spen-shapes-grid">
+          <div class="spen-shape-btn active" data-shape="line" title="Straight Rule Line"><i class="fa-solid fa-minus"></i></div>
+          <div class="spen-shape-btn" data-shape="rect" title="Rectangle Box"><i class="fa-regular fa-square"></i></div>
+          <div class="spen-shape-btn" data-shape="circle" title="Circle / Oval"><i class="fa-regular fa-circle"></i></div>
+          <div class="spen-shape-btn" data-shape="arrow" title="Arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="spen-shape-btn" data-shape="triangle" title="Triangle"><i class="fa-solid fa-play" style="transform:rotate(-90deg);"></i></div>
         </div>
       </div>
     `;
@@ -1512,42 +1634,35 @@
 
   function setupToolbarEvents(bar) {
     const btnPen = bar.querySelector('#spenToolPen');
-    const btnFountain = bar.querySelector('#spenToolFountain');
     const btnHigh = bar.querySelector('#spenToolHighlighter');
     const btnEraser = bar.querySelector('#spenToolEraser');
-    const btnLasso = bar.querySelector('#spenToolLasso');
-    const btnMargin = bar.querySelector('#spenToolMargin');
+    const btnShapes = bar.querySelector('#spenToolShapes');
+    const btnAddImage = bar.querySelector('#spenToolAddImage');
     const btnSticky = bar.querySelector('#spenToolSticky');
+    const btnLasso = bar.querySelector('#spenToolLasso');
     const btnUndo = bar.querySelector('#spenBtnUndo');
     const btnRedo = bar.querySelector('#spenBtnRedo');
-    const btnSnap = bar.querySelector('#spenBtnSnap');
-    const btnEye = bar.querySelector('#spenBtnToggleEye');
     const btnPalm = bar.querySelector('#spenBtnPalmRejection');
+    const btnEye = bar.querySelector('#spenBtnToggleEye');
     const btnHub = bar.querySelector('#spenBtnNotesHub');
+    const btnClear = bar.querySelector('#spenBtnClearPage');
     const btnExport = bar.querySelector('#spenBtnExport');
     const btnMin = bar.querySelector('#spenBtnMinimize');
 
     const penPopover = bar.querySelector('#spenPenPopover');
     const highPopover = bar.querySelector('#spenHighPopover');
+    const shapesPopover = bar.querySelector('#spenShapesPopover');
 
     btnPen.addEventListener('click', () => {
       NativeBridge.vibrate(1);
-      state.penType = 'ballpoint';
-      if (state.activeTool === 'pen') {
+      if (state.activeTool === state.penType) {
         penPopover.classList.toggle('active');
         highPopover.classList.remove('active');
+        shapesPopover.classList.remove('active');
       } else {
-        setTool('pen');
-        highPopover.classList.remove('active');
+        setTool(state.penType || 'fountain');
+        closeAllPopovers();
       }
-    });
-
-    btnFountain.addEventListener('click', () => {
-      NativeBridge.vibrate(1);
-      state.penType = 'fountain';
-      setTool('fountain');
-      closeAllPopovers();
-      showToast('Calligraphy Fountain Pen: ON');
     });
 
     btnHigh.addEventListener('click', () => {
@@ -1555,9 +1670,10 @@
       if (state.activeTool === 'highlighter') {
         highPopover.classList.toggle('active');
         penPopover.classList.remove('active');
+        shapesPopover.classList.remove('active');
       } else {
         setTool('highlighter');
-        penPopover.classList.remove('active');
+        closeAllPopovers();
       }
     });
 
@@ -1567,36 +1683,56 @@
       closeAllPopovers();
     });
 
-    btnLasso.addEventListener('click', () => {
+    btnShapes.addEventListener('click', () => {
       NativeBridge.vibrate(1);
-      setTool('lasso');
-      closeAllPopovers();
-      showToast('Lasso Tool: Circle any notes to move or recolor');
+      state.shapeModeActive = !state.shapeModeActive;
+      if (state.shapeModeActive) {
+        shapesPopover.classList.toggle('active');
+        penPopover.classList.remove('active');
+        highPopover.classList.remove('active');
+        btnShapes.classList.add('active');
+        showToast('Auto-Shape Mode: ON');
+      } else {
+        shapesPopover.classList.remove('active');
+        btnShapes.classList.remove('active');
+        showToast('Auto-Shape Mode: OFF');
+      }
     });
 
-    btnMargin.addEventListener('click', () => {
+    btnAddImage.addEventListener('click', () => {
       NativeBridge.vibrate(1);
-      toggleMarginPad();
+      closeAllPopovers();
+      triggerImagePicker();
     });
 
     btnSticky.addEventListener('click', () => {
       NativeBridge.vibrate(1);
       setTool('sticky');
       closeAllPopovers();
-      showToast('Tap anywhere on the page to drop a sticky note');
+      showToast('Tap with S-Pen anywhere on page to drop a sticky note');
+    });
+
+    btnLasso.addEventListener('click', () => {
+      NativeBridge.vibrate(1);
+      setTool('lasso');
+      closeAllPopovers();
+      showToast('Lasso Tool: Circle notes with S-Pen to move or recolor');
     });
 
     btnUndo.addEventListener('click', handleUndo);
     btnRedo.addEventListener('click', handleRedo);
 
-    btnSnap.addEventListener('click', () => {
-      state.holdToSnap = !state.holdToSnap;
-      if (state.holdToSnap) {
-        btnSnap.classList.add('active');
-        showToast('Hold-to-Snap: ON (Straight Lines & Boxes)');
+    // Palm Rejection Toggle (Finger scroll vs Finger draw)
+    btnPalm.addEventListener('click', () => {
+      state.stylusOnlyMode = !state.stylusOnlyMode;
+      if (state.stylusOnlyMode) {
+        btnPalm.classList.add('active');
+        if (state.canvas) state.canvas.classList.remove('finger-draw-mode');
+        showToast('Palm Rejection: ON (Fingers scroll naturally, ONLY S-Pen writes)');
       } else {
-        btnSnap.classList.remove('active');
-        showToast('Hold-to-Snap: OFF');
+        btnPalm.classList.remove('active');
+        if (state.canvas) state.canvas.classList.add('finger-draw-mode');
+        showToast('Finger Drawing: Enabled');
       }
       NativeBridge.vibrate(1);
     });
@@ -1610,6 +1746,7 @@
         if (state.canvas) state.canvas.classList.remove('spen-hidden');
         if (state.canvasContainer) {
           state.canvasContainer.querySelectorAll('.spen-sticky-note').forEach((el) => (el.style.display = ''));
+          state.canvasContainer.querySelectorAll('.spen-inserted-image').forEach((el) => (el.style.display = ''));
         }
         redrawAllStrokes();
         showToast('Annotations Visible');
@@ -1619,37 +1756,53 @@
         if (state.canvas) state.canvas.classList.add('spen-hidden');
         if (state.canvasContainer) {
           state.canvasContainer.querySelectorAll('.spen-sticky-note').forEach((el) => (el.style.display = 'none'));
+          state.canvasContainer.querySelectorAll('.spen-inserted-image').forEach((el) => (el.style.display = 'none'));
         }
         showToast('Annotations Hidden (Reading Mode)');
       }
       NativeBridge.vibrate(1);
     });
 
-    btnPalm.addEventListener('click', () => {
-      state.stylusOnlyMode = !state.stylusOnlyMode;
-      if (state.stylusOnlyMode) {
-        btnPalm.classList.add('active');
-        showToast('Palm Rejection: ON (Fingers scroll, S-Pen draws)');
-      } else {
-        btnPalm.classList.remove('active');
-        showToast('Finger Drawing: Enabled');
-      }
-      NativeBridge.vibrate(1);
-    });
-
     btnHub.addEventListener('click', () => {
       NativeBridge.vibrate(1);
+      closeAllPopovers();
       openConsolidatedNotesHub();
+    });
+
+    btnClear.addEventListener('click', () => {
+      NativeBridge.vibrate(1);
+      clearAllPageNotes();
     });
 
     btnExport.addEventListener('click', () => {
       NativeBridge.vibrate(1);
-      showExportOptionsDialog();
+      NativeBridge.printPdf(state.currentPageTitle || 'MakeLawEasy_StudyNotes');
     });
 
     btnMin.addEventListener('click', minimizeToolbar);
 
-    // Color Swatches
+    // Pen Arsenal selection (Fountain, Ballpoint, Pencil, Marker)
+    penPopover.querySelectorAll('.spen-pen-type-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        penPopover.querySelectorAll('.spen-pen-type-card').forEach((c) => c.classList.remove('active'));
+        card.classList.add('active');
+        state.penType = card.getAttribute('data-pen');
+        setTool(state.penType);
+
+        // Update toolbar icon
+        const icon = bar.querySelector('#spenMainPenIcon');
+        if (state.penType === 'fountain') icon.className = 'fa-solid fa-pen-nib';
+        else if (state.penType === 'pencil') icon.className = 'fa-solid fa-pencil';
+        else if (state.penType === 'marker') icon.className = 'fa-solid fa-marker';
+        else icon.className = 'fa-solid fa-pen';
+
+        NativeBridge.vibrate(1);
+        closeAllPopovers();
+        showToast(state.penType.toUpperCase() + ' Pen Selected');
+      });
+    });
+
+    // Pen Colors
     penPopover.querySelectorAll('.spen-color-swatch').forEach((swatch) => {
       swatch.addEventListener('click', () => {
         penPopover.querySelectorAll('.spen-color-swatch').forEach((s) => s.classList.remove('active'));
@@ -1669,6 +1822,7 @@
       });
     }
 
+    // Pen Sizes
     penPopover.querySelectorAll('.spen-size-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         penPopover.querySelectorAll('.spen-size-btn').forEach((b) => b.classList.remove('active'));
@@ -1678,6 +1832,7 @@
       });
     });
 
+    // Highlighter Colors & Sizes
     highPopover.querySelectorAll('.spen-color-swatch').forEach((swatch) => {
       swatch.addEventListener('click', () => {
         highPopover.querySelectorAll('.spen-color-swatch').forEach((s) => s.classList.remove('active'));
@@ -1697,6 +1852,20 @@
       });
     });
 
+    // Shape Selector
+    shapesPopover.querySelectorAll('.spen-shape-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        shapesPopover.querySelectorAll('.spen-shape-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.activeShape = btn.getAttribute('data-shape');
+        state.shapeModeActive = true;
+        bar.querySelector('#spenToolShapes').classList.add('active');
+        NativeBridge.vibrate(1);
+        closeAllPopovers();
+        showToast('Auto-Shape: ' + state.activeShape.toUpperCase());
+      });
+    });
+
     makeDraggable(bar, bar.querySelector('#spenDragHandle'));
   }
 
@@ -1707,20 +1876,13 @@
 
     bar.querySelectorAll('.spen-btn').forEach((b) => b.classList.remove('active'));
 
-    if (toolName === 'pen') bar.querySelector('#spenToolPen')?.classList.add('active');
-    if (toolName === 'fountain') bar.querySelector('#spenToolFountain')?.classList.add('active');
+    if (toolName === 'fountain' || toolName === 'ballpoint' || toolName === 'pencil' || toolName === 'marker') {
+      bar.querySelector('#spenToolPen')?.classList.add('active');
+    }
     if (toolName === 'highlighter') bar.querySelector('#spenToolHighlighter')?.classList.add('active');
     if (toolName === 'eraser') bar.querySelector('#spenToolEraser')?.classList.add('active');
     if (toolName === 'lasso') bar.querySelector('#spenToolLasso')?.classList.add('active');
     if (toolName === 'sticky') bar.querySelector('#spenToolSticky')?.classList.add('active');
-
-    if (state.canvas) {
-      if (toolName === 'nav') {
-        state.canvas.classList.add('spen-nav-mode');
-      } else {
-        state.canvas.classList.remove('spen-nav-mode');
-      }
-    }
   }
 
   function closeAllPopovers() {
@@ -1751,7 +1913,7 @@
   function updateToolbarCounters() {
     const badge = document.getElementById('spenFabBadge');
     if (badge) {
-      const total = state.strokes.length + state.stickyNotes.length + state.marginPad.strokes.length;
+      const total = state.strokes.length + state.stickyNotes.length + state.insertedImages.length;
       badge.textContent = total;
       badge.style.display = total > 0 ? 'block' : 'none';
     }
@@ -1794,8 +1956,7 @@
   }
 
   // =========================================================================
-  // 13. CONSOLIDATED NOTES HUB 2.0 (Ultimate Edition)
-  // "i want those features so that my notes are consolidated , and at one place"
+  // 13. CONSOLIDATED NOTES HUB 2.0 (Tablet Modal)
   // =========================================================================
   function openConsolidatedNotesHub() {
     let overlay = document.getElementById('spenHubOverlay');
@@ -1815,7 +1976,6 @@
       totalStickies += n.stickyCount || 0;
     });
 
-    // Unique subjects for filter pills
     const subjects = ['All'];
     allNotes.forEach((n) => {
       if (n.subject && !subjects.includes(n.subject)) subjects.push(n.subject);
@@ -1828,7 +1988,7 @@
             <div class="spen-hub-crest"><i class="fa-solid fa-feather-pointed"></i></div>
             <div>
               <h2>Consolidated Notes Hub 2.0</h2>
-              <p>Handwritten S-Pen annotations, margin pads &amp; memos consolidated across Delhi University LL.B.</p>
+              <p>Handwritten S-Pen annotations, diagrams &amp; memos consolidated across Delhi University LL.B.</p>
             </div>
           </div>
           <div class="spen-hub-header-actions">
@@ -1864,7 +2024,7 @@
             <i class="fa-solid fa-note-sticky"></i>
             <div>
               <div class="spen-metric-num">${totalStickies}</div>
-              <div class="spen-metric-lbl">Sticky Memos</div>
+              <div class="spen-metric-lbl">Sticky Memos &amp; Photos</div>
             </div>
           </div>
           <div class="spen-metric-item">
@@ -1901,13 +2061,11 @@
 
     overlay.classList.add('active');
 
-    // Hub Event Listeners
     overlay.querySelector('#spenHubCloseBtn').addEventListener('click', closeConsolidatedNotesHub);
     overlay.addEventListener('click', (e) => {
       if (e.target === overlay) closeConsolidatedNotesHub();
     });
 
-    // Backup & Restore handlers
     overlay.querySelector('#spenHubBackupBtn').addEventListener('click', () => {
       NativeBridge.exportBackup();
     });
@@ -1927,7 +2085,6 @@
       reader.readAsText(file);
     });
 
-    // Filter pills
     let activeSubject = 'All';
     overlay.querySelectorAll('.spen-hub-pill').forEach((pill) => {
       pill.addEventListener('click', () => {
@@ -1938,7 +2095,6 @@
       });
     });
 
-    // Search filter
     const searchInput = overlay.querySelector('#spenHubSearchInput');
     searchInput.addEventListener('input', filterHubCards);
 
@@ -1965,7 +2121,7 @@
         <div class="spen-hub-empty">
           <i class="fa-solid fa-pen-ruler"></i>
           <h3>No Consolidated Notes Yet</h3>
-          <p>Open any subject or unit from your syllabus, grab your Samsung Pencil, and start writing notes! All your handwriting and memos will consolidate right here.</p>
+          <p>Open any subject or unit from your syllabus, grab your Samsung Pencil, and start writing notes! All your handwriting, diagrams, and memos consolidate right here.</p>
         </div>
       `;
     }
@@ -1991,7 +2147,7 @@
 
         <div class="spen-note-stats">
           <span><i class="fa-solid fa-pen-fancy"></i> ${n.strokeCount || 0} strokes</span>
-          <span><i class="fa-solid fa-note-sticky"></i> ${n.stickyCount || 0} memos</span>
+          <span><i class="fa-solid fa-note-sticky"></i> ${n.stickyCount || 0} items</span>
         </div>
         <div class="spen-note-card-footer">
           <button type="button" class="spen-card-open-btn" data-action="open" data-page-id="${n.pageId}">
@@ -2047,6 +2203,7 @@
             if (state.currentPageId === pageId) {
               state.strokes = [];
               state.stickyNotes = [];
+              state.insertedImages = [];
               redrawAllStrokes();
               updateToolbarCounters();
             }
@@ -2075,14 +2232,7 @@
   }
 
   // =========================================================================
-  // 14. EXPORT & PRINT AS PDF
-  // =========================================================================
-  function showExportOptionsDialog() {
-    NativeBridge.printPdf(state.currentPageTitle || 'MakeLawEasy_StudyNotes');
-  }
-
-  // =========================================================================
-  // 15. TOAST NOTIFICATIONS
+  // 14. TOAST NOTIFICATIONS
   // =========================================================================
   function showToast(msg) {
     let toast = document.getElementById('spenToast');
@@ -2102,9 +2252,6 @@
     }, 2400);
   }
 
-  // =========================================================================
-  // 16. UTILITY FUNCTIONS
-  // =========================================================================
   function escapeHtml(str) {
     if (!str) return '';
     return str
@@ -2129,7 +2276,7 @@
   }
 
   // =========================================================================
-  // 17. LIFECYCLE INITIALIZATION
+  // 15. LIFECYCLE INITIALIZATION
   // =========================================================================
   function initEngine() {
     createToolbar();
@@ -2137,7 +2284,7 @@
 
     setInterval(() => {
       attachCanvasToContext();
-    }, 600);
+    }, 500);
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -2147,7 +2294,7 @@
       }
     });
 
-    console.log('[SPenEngine] Samsung S-Pen Ultimate Notes Suite ready.');
+    console.log('[SPenEngine] Samsung Noteshelf 3 Suite ready.');
   }
 
   if (document.readyState === 'loading') {
