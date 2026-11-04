@@ -53,13 +53,16 @@
     // Header & Global
     headerMockExamBtn: document.getElementById('headerMockExamBtn'),
     headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
+    headerLimitationBtn: document.getElementById('headerLimitationBtn'),
     headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
     headerBareActBtn: document.getElementById('headerBareActBtn'),
     headerStarBadge: document.getElementById('headerStarBadge'),
     heroExploreBtn: document.getElementById('heroExploreBtn'),
     heroMockBtn: document.getElementById('heroMockBtn'),
     heroBnsBtn: document.getElementById('heroBnsBtn'),
+    heroLimitationBtn: document.getElementById('heroLimitationBtn'),
     hpConverterBanner: document.getElementById('hpConverterBanner'),
+    hpLimitationBanner: document.getElementById('hpLimitationBanner'),
     footerConverterLink: document.getElementById('footerConverterLink'),
     bnsModalOverlay: document.getElementById('bnsModalOverlay'),
     bnsModal: document.getElementById('bnsModal'),
@@ -69,6 +72,28 @@
     bnsSearchInput: document.getElementById('bnsSearchInput'),
     bnsCategoryPills: document.getElementById('bnsCategoryPills'),
     bnsCardsContainer: document.getElementById('bnsCardsContainer'),
+    limitationModalOverlay: document.getElementById('limitationModalOverlay'),
+    limitationModal: document.getElementById('limitationModal'),
+    limitationCloseBtn: document.getElementById('limitationCloseBtn'),
+    modalDivTabs: document.getElementById('modalDivTabs'),
+    modalArticleSelect: document.getElementById('modalArticleSelect'),
+    modalArticleInfo: document.getElementById('modalArticleInfo'),
+    modalAccrualDate: document.getElementById('modalAccrualDate'),
+    modalFilingDate: document.getElementById('modalFilingDate'),
+    modalCopyingApply: document.getElementById('modalCopyingApply'),
+    modalCopyingReady: document.getElementById('modalCopyingReady'),
+    modalAckDate: document.getElementById('modalAckDate'),
+    modalBtnCalculate: document.getElementById('modalBtnCalculate'),
+    modalStatusBanner: document.getElementById('modalStatusBanner'),
+    modalStatusIcon: document.getElementById('modalStatusIcon'),
+    modalStatusTitle: document.getElementById('modalStatusTitle'),
+    modalStatusDays: document.getElementById('modalStatusDays'),
+    modalStatusDeadline: document.getElementById('modalStatusDeadline'),
+    modalDoctrineBox: document.getElementById('modalDoctrineBox'),
+    modalDoctrineTitle: document.getElementById('modalDoctrineTitle'),
+    modalDoctrineContent: document.getElementById('modalDoctrineContent'),
+    modalCaseSnippet: document.getElementById('modalCaseSnippet'),
+    mtdLimitationBtn: document.getElementById('mtdLimitationBtn'),
     mockModalOverlay: document.getElementById('mockModalOverlay'),
     mockModal: document.getElementById('mockModal'),
     mockCloseBtn: document.getElementById('mockCloseBtn'),
@@ -345,6 +370,13 @@
     }
     if (rawPath === '/tools/flashcards' || params.get('tool') === 'flashcards') {
       return { view: 'tool', tool: 'flashcards' };
+    }
+    if (
+      rawPath === '/tools/limitation-calculator' || rawPath === '/tools/limitation' ||
+      rawPath === '/limitation-calculator' || rawPath === '/limitation' ||
+      params.get('tool') === 'limitation'
+    ) {
+      return { view: 'tool', tool: 'limitation' };
     }
     if (rawPath === '/feedback' || currentHash === '#feedback' || params.get('feedback') === 'true') {
       return { view: 'feedback' };
@@ -3156,6 +3188,156 @@
   }
 
   // ===================================================================
+  // FEATURE: LIMITATION ACT 1963 CALCULATOR MODAL & ENGINE
+  // ===================================================================
+  let limitationModalDiv = 'all';
+
+  function openLimitationModal() {
+    if (elements.limitationModal && elements.limitationModalOverlay) {
+      elements.limitationModal.classList.add('active');
+      elements.limitationModalOverlay.classList.add('active');
+
+      if (window.LimitationCalculator) {
+        initLimitationModalContent();
+      }
+    }
+  }
+
+  function closeLimitationModal() {
+    if (elements.limitationModal && elements.limitationModalOverlay) {
+      elements.limitationModal.classList.remove('active');
+      elements.limitationModalOverlay.classList.remove('active');
+    }
+  }
+
+  function initLimitationModalContent() {
+    if (!elements.modalArticleSelect || !window.LimitationCalculator) return;
+    
+    // Set default dates if empty
+    const today = new Date().toISOString().split('T')[0];
+    if (elements.modalFilingDate && !elements.modalFilingDate.value) {
+      elements.modalFilingDate.value = today;
+    }
+    if (elements.modalAccrualDate && !elements.modalAccrualDate.value) {
+      const d = new Date();
+      d.setFullYear(d.getFullYear() - 1);
+      elements.modalAccrualDate.value = d.toISOString().split('T')[0];
+    }
+
+    renderModalArticleOptions(limitationModalDiv);
+    runModalCalculation();
+  }
+
+  function renderModalArticleOptions(div) {
+    if (!elements.modalArticleSelect || !window.LimitationCalculator) return;
+    limitationModalDiv = div;
+    elements.modalArticleSelect.innerHTML = '';
+
+    const list = div === 'all'
+      ? window.LimitationCalculator.SCHEDULE
+      : window.LimitationCalculator.SCHEDULE.filter(a => a.division === div);
+
+    list.forEach(a => {
+      const opt = document.createElement('option');
+      opt.value = a.id;
+      opt.textContent = `${a.article}: ${a.title} (${a.periodValue} ${a.periodUnit})`;
+      elements.modalArticleSelect.appendChild(opt);
+    });
+
+    updateModalArticleInfo();
+  }
+
+  function updateModalArticleInfo() {
+    if (!elements.modalArticleSelect || !window.LimitationCalculator || !elements.modalArticleInfo) return;
+    const artId = elements.modalArticleSelect.value;
+    const art = window.LimitationCalculator.SCHEDULE.find(a => a.id === artId);
+    if (!art) return;
+
+    elements.modalArticleInfo.innerHTML = `
+      <strong>${art.article} &bull; ${art.divisionTitle}</strong> (${art.periodValue} ${art.periodUnit})<br>
+      <em>Starting Point:</em> ${art.startingPoint}
+    `;
+  }
+
+  function runModalCalculation() {
+    if (!elements.modalArticleSelect || !window.LimitationCalculator) return;
+    const artId = elements.modalArticleSelect.value;
+    if (!artId) return;
+
+    const accrual = elements.modalAccrualDate ? elements.modalAccrualDate.value : '';
+    const filing = elements.modalFilingDate ? elements.modalFilingDate.value : '';
+    const copyingApply = elements.modalCopyingApply ? elements.modalCopyingApply.value : null;
+    const copyingReady = elements.modalCopyingReady ? elements.modalCopyingReady.value : null;
+    const ackDate = elements.modalAckDate ? elements.modalAckDate.value : null;
+
+    if (!accrual) return;
+
+    try {
+      const res = window.LimitationCalculator.calculate({
+        articleId: artId,
+        accrualDate: accrual,
+        filingDate: filing,
+        copyingApplyDate: copyingApply,
+        copyingReadyDate: copyingReady,
+        ackDate: ackDate
+      });
+
+      if (elements.modalStatusBanner) {
+        if (res.isTimeBarred) {
+          elements.modalStatusBanner.className = 'status-banner time-barred';
+          if (elements.modalStatusIcon) elements.modalStatusIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+          if (elements.modalStatusTitle) elements.modalStatusTitle.textContent = 'TIME-BARRED (SECTION 3)';
+          if (elements.modalStatusDays) elements.modalStatusDays.textContent = `${res.daysDelayed} Days Delayed`;
+          if (elements.modalStatusDeadline) {
+            elements.modalStatusDeadline.innerHTML = `Prescribed Expiry Was: <strong>${window.LimitationCalculator.helpers.formatHumanDate(new Date(res.finalFilingDeadline))}</strong>`;
+          }
+        } else {
+          elements.modalStatusBanner.className = 'status-banner within-time';
+          if (elements.modalStatusIcon) elements.modalStatusIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+          if (elements.modalStatusTitle) elements.modalStatusTitle.textContent = 'WITHIN LIMITATION';
+          if (elements.modalStatusDays) elements.modalStatusDays.textContent = `${res.daysRemaining} Days Left`;
+          if (elements.modalStatusDeadline) {
+            elements.modalStatusDeadline.innerHTML = `Must File On or Before: <strong>${window.LimitationCalculator.helpers.formatHumanDate(new Date(res.finalFilingDeadline))}</strong>`;
+          }
+        }
+      }
+
+      // Doctrine Report
+      if (elements.modalDoctrineBox) {
+        if (res.section27Report) {
+          elements.modalDoctrineBox.style.display = 'block';
+          elements.modalDoctrineBox.className = 'alert-doctrine-box danger';
+          if (elements.modalDoctrineTitle) elements.modalDoctrineTitle.innerHTML = `<i class="fa-solid fa-skull-crossbones"></i> Section 27 Extinguishment`;
+          if (elements.modalDoctrineContent) {
+            elements.modalDoctrineContent.textContent = 'Title and substantive right to property extinguished under Section 27 (Ravinder Kaur Grewal v. Manjit Kaur (2019)).';
+          }
+        } else if (res.section5Report) {
+          elements.modalDoctrineBox.style.display = 'block';
+          elements.modalDoctrineBox.className = `alert-doctrine-box ${res.section5Report.statusClass}`;
+          if (elements.modalDoctrineTitle) elements.modalDoctrineTitle.innerHTML = `<i class="fa-solid fa-gavel"></i> ${res.section5Report.badgeText}`;
+          if (elements.modalDoctrineContent) {
+            elements.modalDoctrineContent.textContent = res.section5Report.headline;
+          }
+        } else {
+          elements.modalDoctrineBox.style.display = 'none';
+        }
+      }
+
+      // Case Snippet
+      if (elements.modalCaseSnippet) {
+        if (res.relevantCases && res.relevantCases.length > 0) {
+          const c = res.relevantCases[0];
+          elements.modalCaseSnippet.innerHTML = `<strong>${c.citation}</strong><br>${c.ratio}`;
+        } else {
+          elements.modalCaseSnippet.innerHTML = `<strong>Manindra Land & Building Corp. (AIR 1964 SC 1336)</strong><br>Section 3 imposes a mandatory duty upon the court to dismiss any suit or appeal instituted after the period of limitation, even if limitation has not been set up as a defence.`;
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  // ===================================================================
   // FEATURE 4: DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
   // ===================================================================
   function openMockExam() {
@@ -4719,6 +4901,50 @@ Submission Time: ${new Date().toLocaleString()}
       });
     }
 
+    // Limitation Period Calculator Modal (Limitation Act, 1963)
+    if (elements.headerLimitationBtn) {
+      elements.headerLimitationBtn.addEventListener('click', openLimitationModal);
+    }
+    if (elements.heroLimitationBtn) {
+      elements.heroLimitationBtn.addEventListener('click', openLimitationModal);
+    }
+    if (elements.hpLimitationBanner) {
+      elements.hpLimitationBanner.addEventListener('click', openLimitationModal);
+      elements.hpLimitationBanner.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLimitationModal();
+        }
+      });
+    }
+    if (elements.limitationCloseBtn) elements.limitationCloseBtn.addEventListener('click', closeLimitationModal);
+    if (elements.limitationModalOverlay) elements.limitationModalOverlay.addEventListener('click', closeLimitationModal);
+
+    if (elements.modalDivTabs) {
+      elements.modalDivTabs.querySelectorAll('.division-tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          elements.modalDivTabs.querySelectorAll('.division-tab-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderModalArticleOptions(btn.dataset.div);
+          runModalCalculation();
+        });
+      });
+    }
+
+    if (elements.modalArticleSelect) {
+      elements.modalArticleSelect.addEventListener('change', () => {
+        updateModalArticleInfo();
+        runModalCalculation();
+      });
+    }
+
+    if (elements.modalBtnCalculate) elements.modalBtnCalculate.addEventListener('click', runModalCalculation);
+    if (elements.modalAccrualDate) elements.modalAccrualDate.addEventListener('change', runModalCalculation);
+    if (elements.modalFilingDate) elements.modalFilingDate.addEventListener('change', runModalCalculation);
+    if (elements.modalCopyingApply) elements.modalCopyingApply.addEventListener('change', runModalCalculation);
+    if (elements.modalCopyingReady) elements.modalCopyingReady.addEventListener('change', runModalCalculation);
+    if (elements.modalAckDate) elements.modalAckDate.addEventListener('change', runModalCalculation);
+
     // DU Mock Exam Simulator
     if (elements.headerMockExamBtn) {
       elements.headerMockExamBtn.addEventListener('click', openMockExam);
@@ -4759,6 +4985,9 @@ Submission Time: ${new Date().toLocaleString()}
     }
     if (elements.mtdBnsBtn) {
       elements.mtdBnsBtn.addEventListener('click', () => { closeMobileTools(); openBnsConverter(); });
+    }
+    if (elements.mtdLimitationBtn) {
+      elements.mtdLimitationBtn.addEventListener('click', () => { closeMobileTools(); openLimitationModal(); });
     }
     if (elements.mtdBareActBtn) {
       elements.mtdBareActBtn.addEventListener('click', () => { closeMobileTools(); openBareActDrawer(); });
@@ -5030,6 +5259,9 @@ Submission Time: ${new Date().toLocaleString()}
       if (elements.bnsModal && elements.bnsModal.classList.contains('active')) {
         closeBnsConverter();
       }
+      if (elements.limitationModal && elements.limitationModal.classList.contains('active')) {
+        closeLimitationModal();
+      }
       if (elements.mockModal && elements.mockModal.classList.contains('active')) {
         closeMockExam();
       }
@@ -5099,6 +5331,7 @@ Submission Time: ${new Date().toLocaleString()}
         if (route.tool === 'bare-acts') openBareActDrawer();
         else if (route.tool === 'bns') openBnsConverter(route.act, route.query);
         else if (route.tool === 'flashcards') openFlashcardsModal();
+        else if (route.tool === 'limitation') openLimitationModal();
         return;
       }
 
@@ -5134,6 +5367,8 @@ Submission Time: ${new Date().toLocaleString()}
           return;
         }
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
+        if (elements.bnsModal && elements.bnsModal.classList.contains('active')) closeBnsConverter();
+        if (elements.limitationModal && elements.limitationModal.classList.contains('active')) closeLimitationModal();
         if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
         if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) closeFeedbackModal();
         closeHeaderSemDropdown();
@@ -5234,6 +5469,7 @@ Submission Time: ${new Date().toLocaleString()}
       if (initialRoute.tool === 'bare-acts') setTimeout(openBareActDrawer, 100);
       else if (initialRoute.tool === 'bns') setTimeout(() => openBnsConverter(initialRoute.act, initialRoute.query), 100);
       else if (initialRoute.tool === 'flashcards') setTimeout(openFlashcardsModal, 100);
+      else if (initialRoute.tool === 'limitation') setTimeout(openLimitationModal, 100);
     } else if (initialRoute && initialRoute.view === 'feedback') {
       showView('semester', false);
       setTimeout(navigateToFeedback, 350);

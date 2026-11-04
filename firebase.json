@@ -41,6 +41,18 @@
         "destination": "/tools/bns-converter.html"
       },
       {
+        "source": "/tools/limitation-calculator",
+        "destination": "/tools/limitation-calculator.html"
+      },
+      {
+        "source": "/limitation-calculator",
+        "destination": "/tools/limitation-calculator.html"
+      },
+      {
+        "source": "/limitation",
+        "destination": "/tools/limitation-calculator.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

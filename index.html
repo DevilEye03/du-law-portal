@@ -301,6 +301,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="header-contact-pill liquid-metal-btn limitation-header-btn" id="headerLimitationBtn" title="Limitation Period Calculator (Limitation Act, 1963)" aria-label="Limitation Calculator" type="button">
+          <span class="btn-icon-wrap" style="color:#10b981;"><i class="fa-solid fa-hourglass-half"></i></span>
+          <span class="btn-lbl">Limitation</span>
+        </button>
         <button class="header-contact-pill liquid-metal-btn converter-header-btn" id="headerBnsConverterBtn" title="Criminal Major Acts Converter (IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA)" aria-label="Criminal Law Converter" type="button">
           <span class="btn-icon-wrap" style="color:#e11d48;"><i class="fa-solid fa-scale-unbalanced-flip"></i></span>
           <span class="btn-lbl">Converter</span>
@@ -393,11 +397,15 @@
               <i class="fa-solid fa-scale-unbalanced-flip" style="color:#e11d48; font-size:1.05rem;"></i>
               <span>Criminal Law Converter (BNS / BNSS / BSA)</span>
             </button>
+            <button class="hero-btn-secondary hero-btn-limitation" id="heroLimitationBtn" type="button" title="Open Limitation Period Calculator">
+              <i class="fa-solid fa-hourglass-half" style="color:#10b981; font-size:1.05rem;"></i>
+              <span>Limitation Calculator (Limitation Act 1963)</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Prominent Quick Converter Spotlight Banner -->
+      <!-- Prominent Quick Converter & Calculator Spotlight Banner -->
       <div class="hp-converter-spotlight" id="hpConverterSpotlight">
         <div class="hp-spotlight-card" id="hpConverterBanner" role="button" tabindex="0" title="Click to open Criminal Major Acts Converter">
           <div class="hp-spotlight-left">
@@ -416,6 +424,28 @@
           <div class="hp-spotlight-btn-wrap">
             <span class="hp-spotlight-cta">
               <span>Open Converter</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="hp-spotlight-card hp-limitation-spotlight-card" id="hpLimitationBanner" role="button" tabindex="0" title="Click to open Limitation Period Calculator" style="margin-top: 12px; border-color: rgba(16, 185, 129, 0.28); background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(2, 132, 199, 0.07), rgba(202, 138, 4, 0.08));">
+          <div class="hp-spotlight-left">
+            <div class="hp-spotlight-icon-wrap" style="background: linear-gradient(135deg, #10b981, #0284c7); box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);">
+              <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <div class="hp-spotlight-text">
+              <div class="hp-spotlight-tag">
+                <span class="hp-spotlight-pill" style="background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981;"><i class="fa-solid fa-shield-halved"></i> STATUTORY ENGINE</span>
+                <span class="hp-spotlight-sub">Limitation Act 1963 &bull; Civil Suits &bull; Criminal Appeals &bull; Applications</span>
+              </div>
+              <h3 class="hp-spotlight-title">Limitation Period Calculator &amp; Precedent Advisor</h3>
+              <p class="hp-spotlight-desc">Compute exact deadlines with statutory exclusions (Ss. 12, 14, 15), legal disability (Ss. 6–8), acknowledgment resets (S. 18), and Section 5 condonation analysis backed by landmark Supreme Court case laws.</p>
+            </div>
+          </div>
+          <div class="hp-spotlight-btn-wrap">
+            <span class="hp-spotlight-cta" style="background: linear-gradient(135deg, #10b981, #0284c7); border-color: rgba(16, 185, 129, 0.5);">
+              <span>Open Calculator</span>
               <i class="fa-solid fa-arrow-right"></i>
             </span>
           </div>
@@ -1834,6 +1864,114 @@
   </div>
 
   <!-- ===================================================================
+       LIMITATION ACT 1963 STATUTORY CALCULATOR MODAL
+       =================================================================== -->
+  <div class="limitation-modal-overlay" id="limitationModalOverlay"></div>
+  <div class="limitation-modal" id="limitationModal" role="dialog" aria-modal="true">
+    <div class="limitation-modal-header">
+      <div class="limitation-header-title">
+        <i class="fa-solid fa-hourglass-half"></i>
+        <div>
+          <h3>Limitation Period Calculator</h3>
+          <p>Limitation Act, 1963 &bull; Civil Suits, Criminal Appeals &amp; Applications</p>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <a href="/tools/limitation-calculator.html" target="_blank" rel="noopener noreferrer" class="bns-fullscreen-btn" title="Open Fullscreen Page with Full Case Dossier" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.06); color:var(--text-muted,#94a3b8); border:1px solid rgba(255,255,255,0.1); text-decoration:none; transition:all .2s ease;">
+          <i class="fa-solid fa-up-right-from-square" style="font-size:0.85rem;"></i>
+        </a>
+        <button class="limitation-close-btn" id="limitationCloseBtn" title="Close Calculator (Esc)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="limitation-modal-body">
+      <!-- Left Column: Inputs -->
+      <div class="modal-calc-form-wrap" style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; gap:6px; overflow-x:auto; padding-bottom:4px;" id="modalDivTabs">
+          <button type="button" class="division-tab-btn active" data-div="all" style="font-size:0.75rem; padding:5px 10px;">All</button>
+          <button type="button" class="division-tab-btn" data-div="suits" style="font-size:0.75rem; padding:5px 10px;">Suits</button>
+          <button type="button" class="division-tab-btn" data-div="appeals" style="font-size:0.75rem; padding:5px 10px;">Appeals</button>
+          <button type="button" class="division-tab-btn" data-div="applications" style="font-size:0.75rem; padding:5px 10px;">Applications</button>
+          <button type="button" class="division-tab-btn" data-div="special" style="font-size:0.75rem; padding:5px 10px;">Special</button>
+        </div>
+
+        <div>
+          <label for="modalArticleSelect" style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:4px;">Cause of Action / Article:</label>
+          <select id="modalArticleSelect" class="form-select" style="font-size:0.85rem; padding:8px 12px;"></select>
+          <div id="modalArticleInfo" style="font-size:0.78rem; color:var(--text-muted); margin-top:4px; line-height:1.4;"></div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+          <div>
+            <label for="modalAccrualDate" style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:4px;">Accrual / Decree Date:</label>
+            <input type="date" id="modalAccrualDate" class="form-control" style="font-size:0.85rem; padding:8px 10px;">
+          </div>
+          <div>
+            <label for="modalFilingDate" style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:4px;">Filing Date (Default Today):</label>
+            <input type="date" id="modalFilingDate" class="form-control" style="font-size:0.85rem; padding:8px 10px;">
+          </div>
+        </div>
+
+        <!-- Copying Time & Exclusions -->
+        <div style="background:var(--bg-card, rgba(255,255,255,0.03)); border:1px solid var(--border-line, rgba(255,255,255,0.08)); border-radius:10px; padding:10px;">
+          <div style="font-size:0.78rem; font-weight:700; color:#0284c7; margin-bottom:6px;"><i class="fa-solid fa-clock-rotate-left"></i> Section 12(2) Copying Time Excluded:</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+            <div>
+              <label style="font-size:0.72rem; opacity:0.8;">Applied Date:</label>
+              <input type="date" id="modalCopyingApply" class="form-control" style="font-size:0.8rem; padding:6px 8px;">
+            </div>
+            <div>
+              <label style="font-size:0.72rem; opacity:0.8;">Ready Date:</label>
+              <input type="date" id="modalCopyingReady" class="form-control" style="font-size:0.8rem; padding:6px 8px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 18 Acknowledgment -->
+        <div>
+          <label for="modalAckDate" style="display:block; font-size:0.78rem; font-weight:600; margin-bottom:4px;">
+            <i class="fa-solid fa-rotate" style="color:#10b981;"></i> Section 18 Written Acknowledgment Date:
+          </label>
+          <input type="date" id="modalAckDate" class="form-control" style="font-size:0.85rem; padding:8px 10px;">
+        </div>
+
+        <button type="button" id="modalBtnCalculate" class="btn-calculate" style="padding:10px 18px; font-size:0.9rem;">
+          <i class="fa-solid fa-calculator"></i> Compute Limitation
+        </button>
+      </div>
+
+      <!-- Right Column: Live Output -->
+      <div class="modal-calc-output-wrap" style="display:flex; flex-direction:column; gap:12px;">
+        <div id="modalStatusBanner" class="status-banner within-time" style="padding:14px; margin-bottom:0;">
+          <div id="modalStatusIcon" style="font-size:1.6rem; margin-bottom:4px;"><i class="fa-solid fa-circle-check"></i></div>
+          <h4 id="modalStatusTitle" style="font-size:1.05rem; margin:0 0 4px; font-weight:700;">WITHIN LIMITATION</h4>
+          <div id="modalStatusDays" style="font-size:1.4rem; font-weight:800; font-family:'JetBrains Mono', monospace;">-- Days Left</div>
+          <div id="modalStatusDeadline" style="font-size:0.82rem; font-weight:600;">Deadline: --</div>
+        </div>
+
+        <div id="modalDoctrineBox" class="alert-doctrine-box warning" style="display:none; padding:10px 12px; font-size:0.78rem; margin:0;">
+          <div id="modalDoctrineTitle" style="font-weight:700; margin-bottom:4px;"></div>
+          <div id="modalDoctrineContent"></div>
+        </div>
+
+        <div style="background:var(--bg-card, rgba(255,255,255,0.03)); border:1px solid var(--border-line, rgba(255,255,255,0.08)); border-radius:10px; padding:12px; flex:1; display:flex; flex-direction:column; gap:8px;">
+          <div style="font-size:0.76rem; font-weight:700; color:var(--du-gold, #c9a84c); text-transform:uppercase;"><i class="fa-solid fa-landmark"></i> Landmark Ruling:</div>
+          <div id="modalCaseSnippet" style="font-size:0.8rem; line-height:1.45; color:var(--text-secondary, #94a3b8);"></div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end;">
+          <a href="/tools/limitation-calculator.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; font-size:0.8rem; color:#0284c7; text-decoration:none; font-weight:600;">
+            <span>Open Advanced Calculator with 40+ Articles &amp; Case Dossier</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
        DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
        =================================================================== -->
   <div class="mock-modal-overlay" id="mockModalOverlay"></div>
@@ -1975,6 +2113,14 @@
           <div class="mtd-card-text">
             <h4>Criminal Major Acts Converter</h4>
             <p>IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA live cross-reference</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdLimitationBtn">
+          <div class="mtd-card-icon limitation" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div class="mtd-card-text">
+            <h4>Limitation Period Calculator</h4>
+            <p>Limitation Act 1963 deadlines, statutory exclusions &amp; S. 5 analysis</p>
           </div>
           <i class="fa-solid fa-chevron-right mtd-arrow"></i>
         </button>
@@ -2792,14 +2938,15 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=85.0" defer></script>
-  <script src="/js/interactive_particles.js?v=85.0" defer></script>
-  <script src="/js/books_showcase.js?v=85.0" defer></script>
-  <script src="/js/data.js?v=85.0" defer></script>
-  <script src="/js/bare_acts.js?v=85.0" defer></script>
-  <script src="/js/bns_converter.js?v=85.0" defer></script>
-  <script src="/js/pro_desk.js?v=85.0" defer></script>
-  <script src="/js/app.js?v=85.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=86.0" defer></script>
+  <script src="/js/interactive_particles.js?v=86.0" defer></script>
+  <script src="/js/books_showcase.js?v=86.0" defer></script>
+  <script src="/js/data.js?v=86.0" defer></script>
+  <script src="/js/bare_acts.js?v=86.0" defer></script>
+  <script src="/js/bns_converter.js?v=86.0" defer></script>
+  <script src="/js/limitation_calculator.js?v=86.0" defer></script>
+  <script src="/js/pro_desk.js?v=86.0" defer></script>
+  <script src="/js/app.js?v=86.0" defer></script>
 
 
   <script>

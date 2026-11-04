@@ -354,6 +354,19 @@ try {
 } catch (err) {
   assert(false, `bns_converter.js execution error: ${err.message}`);
 }
+// 3B. LIMITATION_CALCULATOR.JS INTEGRITY
+try {
+  const limContent = fs.readFileSync('js/limitation_calculator.js', 'utf8');
+  eval(limContent);
+  assert(!!window.LimitationCalculator, 'LimitationCalculator is defined');
+  assert(window.LimitationCalculator.SCHEDULE.length >= 30, 'Limitation schedule articles >= 30 (Found: ' + window.LimitationCalculator.SCHEDULE.length + ')');
+  assert(window.LimitationCalculator.CASES.length >= 15, 'Limitation landmark cases >= 15 (Found: ' + window.LimitationCalculator.CASES.length + ')');
+  const testRes = window.LimitationCalculator.calculate({ articleId: 'art_54', accrualDate: '2023-01-15' });
+  assert(!!testRes && testRes.finalFilingDeadline === '2026-01-16', 'Limitation calculation engine produces exact date');
+} catch (err) {
+  assert(false, 'limitation_calculator.js execution error: ' + err.message);
+}
+
 
 // 4. STUDENT FEEDBACK SYSTEM & SERVICE WORKER INTEGRITY
 try {
@@ -415,6 +428,7 @@ try {
   // Verify standalone multi-page tools exist
   assert(fs.existsSync('tools/bare-acts.html'), 'tools/bare-acts.html exists');
   assert(fs.existsSync('tools/bns-converter.html'), 'tools/bns-converter.html exists');
+  assert(fs.existsSync('tools/limitation-calculator.html'), 'tools/limitation-calculator.html exists');
   assert(fs.existsSync('tools/flashcards.html'), 'tools/flashcards.html exists');
   assert(fs.existsSync('feedback.html'), 'feedback.html exists');
 
@@ -510,6 +524,7 @@ const jsFilesToCheck = [
   'js/wave_grid_background.js',
   'js/interactive_particles.js',
   'js/pro_desk.js',
+  'js/limitation_calculator.js',
   'sw.js'
 ];
 
