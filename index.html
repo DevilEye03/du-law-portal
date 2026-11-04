@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=88.0">
+  <link rel="stylesheet" href="/css/styles.css?v=89.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -409,9 +409,202 @@
       <div class="sem-selection-section">
         <div class="sem-section-label">Choose your semester</div>
         <div class="semester-grid" id="semesterGrid">
-          <!-- Injected dynamically by app.js -->
+          <div class="sem-card active-sem" data-sem-id="1">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">I</span>
+                <span class="sem-status-badge badge-active">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>5 Subjects Loaded</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester I</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>I Term (Autumn)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>5 Core Subjects Loaded</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn active-sem-btn" type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Enter Semester I Subjects</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="sem-card active-sem" data-sem-id="2">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">II</span>
+                <span class="sem-status-badge badge-active">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>3 Subjects Loaded</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester II</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>II Term (Spring)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>3 Core Subjects Loaded</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn active-sem-btn" type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Enter Semester II Subjects</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="sem-card active-sem" data-sem-id="3">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">III</span>
+                <span class="sem-status-badge badge-active">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>6 Subjects Loaded</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester III</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>III Term (Autumn)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>6 Core Subjects Loaded</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn active-sem-btn" type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Enter Semester III Subjects</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="sem-card coming-soon" data-sem-id="4">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">IV</span>
+                <span class="sem-status-badge badge-upcoming">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Coming Soon</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester IV</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>IV Term (Spring)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>5 Subjects Coming Soon</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn disabled-sem-btn" disabled type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Uploading in Few Days</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="sem-card active-sem" data-sem-id="5">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">V</span>
+                <span class="sem-status-badge badge-active">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>4 Subjects Loaded</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester V</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>V Term (Autumn)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>4 Core Subjects Loaded</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn active-sem-btn" type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Enter Semester V Subjects</span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="sem-card coming-soon" data-sem-id="6">
+            <div class="sem-card-strip"></div>
+            <div class="sem-card-inner">
+              <div class="sem-card-top">
+                <span class="sem-roman">VI</span>
+                <span class="sem-status-badge badge-upcoming">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Coming Soon</span>
+                </span>
+              </div>
+              <div class="sem-card-body">
+                <h3>Semester VI</h3>
+                <div class="sem-term"><i class="fa-regular fa-calendar-days"></i> <span>VI Term (Spring)</span></div>
+                <div class="sem-subject-count-pill">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span>4 Subjects Coming Soon</span>
+                </div>
+              </div>
+              <button class="sem-liquid-metal-btn disabled-sem-btn" disabled type="button">
+                <div class="metal-inner-body">
+                  <div class="metal-icon-circle">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <span class="metal-btn-lbl">Uploading in Few Days</span>
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+      <script>
+        (function() {
+          var grid = document.getElementById('semesterGrid');
+          if (grid) {
+            grid.addEventListener('click', function(e) {
+              var card = e.target.closest('.sem-card');
+              if (!card) return;
+              var semId = parseInt(card.getAttribute('data-sem-id'), 10);
+              if (card.classList.contains('active-sem')) {
+                if (window.selectSemester) {
+                  window.selectSemester(semId);
+                } else {
+                  localStorage.setItem('du_law_selected_semester', semId);
+                  window.location.href = '/semester-' + semId;
+                }
+              } else if (card.classList.contains('coming-soon')) {
+                if (window.showToast) {
+                  window.showToast('This semester is coming soon! Uploading in few days. ⏳', 'fa-clock');
+                } else {
+                  alert('This semester is coming soon! Uploading in few days.');
+                }
+              }
+            });
+          }
+        })();
+      </script>
 
       <!-- Quick Converter & Calculator Tools Spotlight Banners -->
       <div class="hp-converter-spotlight" id="hpConverterSpotlight">
@@ -2934,15 +3127,15 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=88.0" defer></script>
-  <script src="/js/interactive_particles.js?v=88.0" defer></script>
-  <script src="/js/books_showcase.js?v=88.0" defer></script>
-  <script src="/js/data.js?v=88.0" defer></script>
-  <script src="/js/bare_acts.js?v=88.0" defer></script>
-  <script src="/js/bns_converter.js?v=88.0" defer></script>
-  <script src="/js/limitation_calculator.js?v=88.0" defer></script>
-  <script src="/js/pro_desk.js?v=88.0" defer></script>
-  <script src="/js/app.js?v=88.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=89.0" defer></script>
+  <script src="/js/interactive_particles.js?v=89.0" defer></script>
+  <script src="/js/books_showcase.js?v=89.0" defer></script>
+  <script src="/js/data.js?v=89.0" defer></script>
+  <script src="/js/bare_acts.js?v=89.0" defer></script>
+  <script src="/js/bns_converter.js?v=89.0" defer></script>
+  <script src="/js/limitation_calculator.js?v=89.0" defer></script>
+  <script src="/js/pro_desk.js?v=89.0" defer></script>
+  <script src="/js/app.js?v=89.0" defer></script>
 
 
   <script>
