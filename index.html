@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=83.0">
+  <link rel="stylesheet" href="/css/styles.css?v=84.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -1796,12 +1796,13 @@
       <!-- 2. Search Input -->
       <div class="bns-search-input-wrap">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" class="bns-search-input" id="bnsSearchInput" placeholder="Enter section number (e.g. 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
+        <input type="text" class="bns-search-input" id="bnsSearchInput" placeholder="Enter any section number from any Act (e.g. 191, 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
       </div>
 
       <!-- 3. Quick Chips -->
       <div class="bns-quick-chips" id="bnsModalQuickChips">
         <span class="bns-chips-label"><i class="fa-solid fa-bolt"></i> Popular:</span>
+        <button type="button" class="bns-chip-btn" data-query="191">191 (Perjury)</button>
         <button type="button" class="bns-chip-btn" data-query="302">302 (Murder)</button>
         <button type="button" class="bns-chip-btn" data-query="154">154 (FIR)</button>
         <button type="button" class="bns-chip-btn" data-query="65B">65B (Electronic)</button>
@@ -1820,6 +1821,11 @@
         <button type="button" class="bns-pill" data-cat="Investigation">FIR &amp; Remand</button>
         <button type="button" class="bns-pill" data-cat="Bail">Bail &amp; Custody</button>
       </div>
+    </div>
+
+    <div class="bns-modal-status-bar" id="bnsModalStatusBar" style="display:flex; justify-content:space-between; align-items:center; padding:10px 24px 6px; font-size:0.8rem; color:var(--text-muted); border-bottom:1px solid rgba(255,255,255,0.06); flex-wrap:wrap; gap:8px;">
+      <span id="bnsModalCount"><i class="fa-solid fa-database" style="color:#ca8a04; margin-right:4px;"></i> 1,347 statutory provisions indexed across all 3 Acts</span>
+      <span style="color:#10b981; font-weight:600;"><i class="fa-solid fa-check-double"></i> Full Act Coverage (IPC • CrPC • IEA)</span>
     </div>
 
     <div class="bns-cards-container" id="bnsCardsContainer">
@@ -2786,14 +2792,14 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=83.0" defer></script>
-  <script src="/js/interactive_particles.js?v=83.0" defer></script>
-  <script src="/js/books_showcase.js?v=83.0" defer></script>
-  <script src="/js/data.js?v=83.0" defer></script>
-  <script src="/js/bare_acts.js?v=83.0" defer></script>
-  <script src="/js/bns_converter.js?v=83.0" defer></script>
-  <script src="/js/pro_desk.js?v=83.0" defer></script>
-  <script src="/js/app.js?v=83.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=84.0" defer></script>
+  <script src="/js/interactive_particles.js?v=84.0" defer></script>
+  <script src="/js/books_showcase.js?v=84.0" defer></script>
+  <script src="/js/data.js?v=84.0" defer></script>
+  <script src="/js/bare_acts.js?v=84.0" defer></script>
+  <script src="/js/bns_converter.js?v=84.0" defer></script>
+  <script src="/js/pro_desk.js?v=84.0" defer></script>
+  <script src="/js/app.js?v=84.0" defer></script>
 
 
   <script>

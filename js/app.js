@@ -2923,6 +2923,7 @@
   let bnsActiveCategory = 'all';
 
   function openBnsConverter(initialAct, initialQuery) {
+    window.__bnsModalShowAll = false;
     if (elements.bnsModal && elements.bnsModalOverlay) {
       if (initialAct && typeof initialAct === 'string') {
         bnsActiveAct = initialAct;
@@ -3056,14 +3057,47 @@
         (s.changes && s.changes.toLowerCase().includes(q)) ||
         (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
       );
+
+      items.sort((a, b) => {
+        const aOldExact = (a.oldSecNum && a.oldSecNum.toLowerCase() === q) || (a.oldSec && a.oldSec.toLowerCase() === 'section ' + q);
+        const bOldExact = (b.oldSecNum && b.oldSecNum.toLowerCase() === q) || (b.oldSec && b.oldSec.toLowerCase() === 'section ' + q);
+        if (aOldExact && !bOldExact) return -1;
+        if (!aOldExact && bOldExact) return 1;
+
+        const aNewExact = (a.newSecNum && a.newSecNum.toLowerCase() === q) || (a.newSec && a.newSec.toLowerCase() === 'section ' + q);
+        const bNewExact = (b.newSecNum && b.newSecNum.toLowerCase() === q) || (b.newSec && b.newSec.toLowerCase() === 'section ' + q);
+        if (aNewExact && !bNewExact) return -1;
+        if (!aNewExact && bNewExact) return 1;
+
+        const aTitle = a.offense && a.offense.toLowerCase().startsWith(q);
+        const bTitle = b.offense && b.offense.toLowerCase().startsWith(q);
+        if (aTitle && !bTitle) return -1;
+        if (!aTitle && bTitle) return 1;
+
+        return 0;
+      });
+    }
+
+    const modalCountEl = document.getElementById('bnsModalCount');
+    if (modalCountEl) {
+      const actLabel = bnsActiveAct === 'all' ? 'All 3 Acts' : bnsActiveAct.replace('_', ' ↔ ');
+      modalCountEl.innerHTML = '<i class="fa-solid fa-database" style="color:#ca8a04; margin-right:4px;"></i> Showing ' + items.length + ' ' + (items.length === 1 ? 'provision' : 'provisions') + ' (' + actLabel + ')';
     }
 
     if (items.length === 0) {
-      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No corresponding section found</h4><p>Try searching for section numbers (e.g. 302, 154, 65B, 438, 167) or legal terms.</p></div>';
+      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No corresponding section found</h4><p>Try searching for any section number from any Act (e.g. 191, 302, 154, 65B, 438, 167) or legal terms.</p></div>';
       return;
     }
 
-    elements.bnsCardsContainer.innerHTML = items.map(s => {
+    const totalCount = items.length;
+    let displayedItems = items;
+    let hasMore = false;
+    if (!query && items.length > 50 && !window.__bnsModalShowAll) {
+      displayedItems = items.slice(0, 50);
+      hasMore = true;
+    }
+
+    let cardsHtml = displayedItems.map(s => {
       const oldActName = s.oldAct || 'OLD STATUTE';
       const newActName = s.newAct || 'NEW STATUTE';
       const oldSecText = s.oldSec || s.ipc;
@@ -3103,6 +3137,22 @@
         '</div>' +
       '</div>';
     }).join('');
+
+    if (hasMore) {
+      cardsHtml += '<div style="text-align:center;padding:24px 10px;"><button type="button" id="bnsModalLoadAllBtn" class="bns-chip-btn" style="padding:12px 28px;font-size:0.95rem;border-radius:9999px;cursor:pointer;"><i class="fa-solid fa-list-check" style="margin-right:6px;"></i> Show All ' + totalCount + ' Provisions</button></div>';
+    }
+
+    elements.bnsCardsContainer.innerHTML = cardsHtml;
+
+    if (hasMore) {
+      const loadBtn = document.getElementById('bnsModalLoadAllBtn');
+      if (loadBtn) {
+        loadBtn.addEventListener('click', () => {
+          window.__bnsModalShowAll = true;
+          renderBnsConverterCards(cat, query);
+        });
+      }
+    }
   }
 
   // ===================================================================
@@ -4641,6 +4691,7 @@ Submission Time: ${new Date().toLocaleString()}
           btn.classList.add('active');
           bnsActiveAct = btn.dataset.act;
           bnsActiveCategory = 'all';
+          window.__bnsModalShowAll = false;
           renderBnsCategoryPillsInModal();
           const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
           renderBnsConverterCards(bnsActiveCategory, q);
@@ -4663,6 +4714,7 @@ Submission Time: ${new Date().toLocaleString()}
 
     if (elements.bnsSearchInput) {
       elements.bnsSearchInput.addEventListener('input', (e) => {
+        window.__bnsModalShowAll = false;
         renderBnsConverterCards(bnsActiveCategory, e.target.value);
       });
     }

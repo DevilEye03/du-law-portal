@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/styles.css?v=83.0">
+  <link rel="stylesheet" href="/css/styles.css?v=84.0">
 
   <style>
     .standalone-page-body {
@@ -438,13 +438,14 @@
       <!-- 2. Search Input -->
       <div class="search-input-wrap">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="bnsSearchInput" class="search-input-standalone" placeholder="Enter section number (e.g. 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
+        <input type="text" id="bnsSearchInput" class="search-input-standalone" placeholder="Enter any section number from any Act (e.g. 191, 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
         <button type="button" class="btn-clear-input" id="bnsClearBtn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
       <!-- 3. Quick Lookup Chips -->
       <div class="quick-chips-wrap" id="quickChipsWrap">
         <span class="quick-chips-label"><i class="fa-solid fa-bolt"></i> Popular:</span>
+        <button class="quick-chip" data-query="191">S. 191 IPC (Perjury)</button>
         <button class="quick-chip" data-query="302">S. 302 IPC (Murder)</button>
         <button class="quick-chip" data-query="154">S. 154 CrPC (FIR)</button>
         <button class="quick-chip" data-query="65B">S. 65B IEA (Electronic)</button>
@@ -485,7 +486,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/bns_converter.js?v=83.0"></script>
+  <script src="/js/bns_converter.js?v=84.0"></script>
   <script>
     (function() {
       // Theme Management
@@ -620,6 +621,7 @@
             btn.classList.add('active');
             activeAct = btn.dataset.act;
             activeCategory = 'all';
+            window.__bnsStandaloneShowAll = false;
             updatePlaceholder();
             renderCategoryPills();
             renderCards();
@@ -645,6 +647,7 @@
       if (searchInput) {
         searchInput.addEventListener('input', (e) => {
           searchQuery = e.target.value.trim();
+          window.__bnsStandaloneShowAll = false;
           if (clearBtn) clearBtn.style.display = searchQuery ? 'block' : 'none';
           renderCards();
         });
@@ -685,7 +688,7 @@
 
         // 3. Filter by Search Query (supports old section, new section, offense, summary, changes)
         if (searchQuery) {
-          const q = searchQuery.toLowerCase();
+          const q = searchQuery.toLowerCase().trim();
           items = items.filter(s =>
             (s.oldSec && s.oldSec.toLowerCase().includes(q)) ||
             (s.newSec && s.newSec.toLowerCase().includes(q)) ||
@@ -700,8 +703,28 @@
             (s.changes && s.changes.toLowerCase().includes(q)) ||
             (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
           );
+
+          items.sort((a, b) => {
+            const aOldExact = (a.oldSecNum && a.oldSecNum.toLowerCase() === q) || (a.oldSec && a.oldSec.toLowerCase() === 'section ' + q);
+            const bOldExact = (b.oldSecNum && b.oldSecNum.toLowerCase() === q) || (b.oldSec && b.oldSec.toLowerCase() === 'section ' + q);
+            if (aOldExact && !bOldExact) return -1;
+            if (!aOldExact && bOldExact) return 1;
+
+            const aNewExact = (a.newSecNum && a.newSecNum.toLowerCase() === q) || (a.newSec && a.newSec.toLowerCase() === 'section ' + q);
+            const bNewExact = (b.newSecNum && b.newSecNum.toLowerCase() === q) || (b.newSec && b.newSec.toLowerCase() === 'section ' + q);
+            if (aNewExact && !bNewExact) return -1;
+            if (!aNewExact && bNewExact) return 1;
+
+            const aTitle = a.offense && a.offense.toLowerCase().startsWith(q);
+            const bTitle = b.offense && b.offense.toLowerCase().startsWith(q);
+            if (aTitle && !bTitle) return -1;
+            if (!aTitle && bTitle) return 1;
+
+            return 0;
+          });
         }
 
+        const totalMatches = items.length;
         const actLabel = activeAct === 'all' ? 'Triad' : activeAct.replace('_', ' ↔ ');
         if (countText) countText.textContent = `Showing ${items.length} ${items.length === 1 ? 'provision mapping' : 'provision mappings'}`;
         if (catText) catText.textContent = `${actLabel} • ${activeCategory === 'all' ? 'All Categories' : activeCategory}`;
@@ -712,7 +735,7 @@
               <i class="fa-solid fa-scale-unbalanced" style="font-size:2.4rem; color:#ca8a04; margin-bottom:14px;"></i>
               <h4 style="font-size:1.15rem; margin:0 0 8px;">No corresponding provisions found</h4>
               <p style="color:var(--text-muted,#94a3b8); max-width:540px; margin:0 auto 16px; font-size:0.9rem;">
-                Try searching for standard section numbers (e.g. 302, 154, 65B, 438, 167) or key legal doctrines (e.g. Murder, Remand, Anticipatory Bail, Electronic Records, Handcuffs).
+                Try searching for any section number from any Act (e.g. 191, 302, 154, 65B, 438, 167) or key legal doctrines.
               </p>
               <button class="btn-tool-back" style="margin-top:6px;" onclick="document.getElementById('bnsClearBtn').click()">Reset Search</button>
             </div>
@@ -720,7 +743,14 @@
           return;
         }
 
-        container.innerHTML = items.map(s => `
+        let displayedItems = items;
+        let hasMore = false;
+        if (!searchQuery && items.length > 60 && !window.__bnsStandaloneShowAll) {
+          displayedItems = items.slice(0, 60);
+          hasMore = true;
+        }
+
+        container.innerHTML = displayedItems.map(s => `
           <div class="bns-comp-card">
             <div class="bns-comp-header">
               <div class="bns-offense-info" style="min-width:0; overflow-wrap:break-word;">
@@ -774,6 +804,24 @@
             </div>
           </div>
         `).join('');
+
+        if (hasMore) {
+          const loadWrap = document.createElement('div');
+          loadWrap.style.cssText = 'text-align:center; padding:24px 10px;';
+          loadWrap.innerHTML = `
+            <button type="button" class="btn-tool-back" id="bnsLoadAllBtn" style="font-size:0.95rem; padding:12px 28px; cursor:pointer;">
+              <i class="fa-solid fa-list-check" style="margin-right:6px;"></i> Show All ${totalMatches} Provisions
+            </button>
+          `;
+          container.appendChild(loadWrap);
+          const btn = document.getElementById('bnsLoadAllBtn');
+          if (btn) {
+            btn.addEventListener('click', () => {
+              window.__bnsStandaloneShowAll = true;
+              renderCards();
+            });
+          }
+        }
       }
 
       updatePlaceholder();
