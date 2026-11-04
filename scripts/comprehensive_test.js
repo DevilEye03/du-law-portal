@@ -367,6 +367,23 @@ try {
   assert(false, 'limitation_calculator.js execution error: ' + err.message);
 }
 
+// 3C. LAW_CRUX_DATA.JS & PDF REPOSITORY INTEGRITY
+try {
+  assert(fs.existsSync('LAW CRUX'), 'LAW CRUX folder exists in workspace');
+  const cruxContent = fs.readFileSync('js/law_crux_data.js', 'utf8');
+  eval(cruxContent);
+  assert(!!window.LAW_CRUX_DATA, 'LAW_CRUX_DATA is defined');
+  assert(Array.isArray(window.LAW_CRUX_DATA) && window.LAW_CRUX_DATA.length === 14, 'LAW_CRUX_DATA contains exactly 14 subject PDFs (Found: ' + (window.LAW_CRUX_DATA ? window.LAW_CRUX_DATA.length : 0) + ')');
+  window.LAW_CRUX_DATA.forEach(item => {
+    const fp = path.join(__dirname, '..', decodeURI(item.filePath));
+    assert(fs.existsSync(fp), 'Law Crux PDF exists on disk: ' + item.fileName);
+    assert(typeof item.semester === 'number' && item.semester > 0, 'Valid semester for ' + item.title);
+    assert(!!item.code, 'Valid paper code for ' + item.title);
+  });
+} catch (err) {
+  assert(false, 'law_crux_data.js execution error: ' + err.message);
+}
+
 
 // 4. STUDENT FEEDBACK SYSTEM & SERVICE WORKER INTEGRITY
 try {

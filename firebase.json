@@ -53,11 +53,36 @@
         "destination": "/tools/limitation-calculator.html"
       },
       {
+        "source": "/law-crux",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/crux",
+        "destination": "/index.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
     ],
     "headers": [
+      {
+        "source": "**/*.@(pdf)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=604800, stale-while-revalidate=86400"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/pdf"
+          },
+          {
+            "key": "Content-Disposition",
+            "value": "inline"
+          }
+        ]
+      },
       {
         "source": "**/*.@(html)",
         "headers": [

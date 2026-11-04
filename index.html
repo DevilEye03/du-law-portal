@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=90.0">
+  <link rel="stylesheet" href="/css/styles.css?v=91.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -301,6 +301,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="header-contact-pill liquid-metal-btn crux-header-btn" id="headerLawCruxBtn" title="LAW CRUX — Handcrafted Semester Notes PDF Series" aria-label="Law Crux PDF Series" type="button">
+          <span class="btn-icon-wrap" style="color:#ef4444;"><i class="fa-solid fa-file-pdf"></i></span>
+          <span class="btn-lbl">Law Crux <span class="crux-pill-tag">PDF</span></span>
+        </button>
         <a href="/tools/limitation-calculator.html" target="_blank" rel="noopener noreferrer" class="header-contact-pill liquid-metal-btn limitation-header-btn" id="headerLimitationBtn" title="Limitation Period Calculator (Limitation Act, 1963)" aria-label="Limitation Calculator">
           <span class="btn-icon-wrap" style="color:#10b981;"><i class="fa-solid fa-hourglass-half"></i></span>
           <span class="btn-lbl">Limitation</span>
@@ -392,6 +396,10 @@
                 </div>
                 <span class="metal-btn-lbl">Explore Semester Notes</span>
               </div>
+            </button>
+            <button class="hero-btn-secondary hero-btn-crux" id="heroCruxBtn" type="button" title="Browse LAW CRUX Handcrafted PDF Series">
+              <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.05rem;"></i>
+              <span>Law Crux (PDF Series)</span>
             </button>
             <button class="hero-btn-secondary hero-btn-converter" id="heroBnsBtn" type="button" title="Open Criminal Law Triad Converter">
               <i class="fa-solid fa-scale-unbalanced-flip" style="color:#e11d48; font-size:1.05rem;"></i>
@@ -651,6 +659,28 @@
             </span>
           </div>
         </a>
+
+        <div class="hp-spotlight-card hp-crux-spotlight-card" id="hpCruxBanner" role="button" tabindex="0" title="Click to browse LAW CRUX PDF Series" style="margin-top: 12px; border-color: rgba(239, 68, 68, 0.32); background: linear-gradient(135deg, rgba(239, 68, 68, 0.09), rgba(245, 158, 11, 0.08), rgba(99, 102, 241, 0.07));">
+          <div class="hp-spotlight-left">
+            <div class="hp-spotlight-icon-wrap" style="background: linear-gradient(135deg, #ef4444, #f59e0b); box-shadow: 0 6px 16px rgba(239, 68, 68, 0.35);">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <div class="hp-spotlight-text">
+              <div class="hp-spotlight-tag">
+                <span class="hp-spotlight-pill" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444;"><i class="fa-solid fa-fire"></i> SIGNATURE STUDY SERIES</span>
+                <span class="hp-spotlight-sub">14 Handcrafted Revision PDFs &bull; Semesters I, III &amp; V</span>
+              </div>
+              <h3 class="hp-spotlight-title">LAW CRUX — Master PDF Series of Law Notes</h3>
+              <p class="hp-spotlight-desc">High-yield, exam-oriented revision dossiers of each subject across all semesters in curriculum sequence. Read online or download high-res PDFs.</p>
+            </div>
+          </div>
+          <div class="hp-spotlight-btn-wrap">
+            <span class="hp-spotlight-cta" style="background: linear-gradient(135deg, #ef4444, #f59e0b); border-color: rgba(239, 68, 68, 0.5);">
+              <span>Open Law Crux</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1487,6 +1517,65 @@
     </section>
 
     <!-- ---------------------------------------------------------------
+         VIEW 6: LAW CRUX — MASTER PDF REVISION SERIES
+         --------------------------------------------------------------- -->
+    <section class="crux-view crux-section-wrapper" id="lawCruxView" aria-label="LAW CRUX PDF Revision Series">
+      <div class="crux-section-container">
+        
+        <!-- Breadcrumbs Navigation Bar -->
+        <div class="crux-breadcrumbs-bar">
+          <button type="button" id="cruxBackBtn" class="crux-back-btn" title="Return to All Semesters">
+            <i class="fa-solid fa-arrow-left"></i> <span>Home / All Semesters</span>
+          </button>
+          <span class="crux-breadcrumb-sep">/</span>
+          <span class="crux-breadcrumb-tag"><i class="fa-solid fa-file-pdf" style="color:#ef4444;"></i> LAW CRUX PDF Series</span>
+        </div>
+
+        <!-- Hero Header Card -->
+        <div class="crux-hero-card">
+          <div class="crux-hero-badge">
+            <i class="fa-solid fa-fire"></i> SIGNATURE REVISION SERIES &bull; 14 HIGH-YIELD DOSSIERS
+          </div>
+          <h2 class="crux-hero-title">LAW CRUX — Master PDF Series of Law Notes</h2>
+          <p class="crux-hero-desc">
+            Handcrafted, high-yield, exam-oriented revision dossiers of each subject across all semesters in perfect curriculum sequence. Formatted for fast retention, landmark ratio recall, and distinction scores in Delhi University LL.B. semester exams.
+          </p>
+          <div class="crux-stats-row">
+            <span class="crux-stat-pill"><i class="fa-solid fa-book-bookmark"></i> <strong>14</strong> Core Subjects</span>
+            <span class="crux-stat-pill"><i class="fa-solid fa-layer-group"></i> Semesters <strong>I, III &amp; V</strong> Active</span>
+            <span class="crux-stat-pill"><i class="fa-solid fa-bolt"></i> 100% Free Open Access</span>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls Bar -->
+        <div class="crux-controls-bar">
+          <div class="crux-semester-pills" id="cruxSemesterPills">
+            <button type="button" class="crux-sem-pill active" data-sem="all">All Semesters <span class="pill-count">14</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="1">Semester I <span class="pill-count">5</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="2">Semester II <span class="pill-badge-soon">Soon</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="3">Semester III <span class="pill-count">6</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="4">Semester IV <span class="pill-badge-soon">Soon</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="5">Semester V <span class="pill-count">3</span></button>
+            <button type="button" class="crux-sem-pill" data-sem="6">Semester VI <span class="pill-badge-soon">Soon</span></button>
+          </div>
+          <div class="crux-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="cruxSearchInput" placeholder="Search by subject, paper code (e.g. LB-102), or topic..." aria-label="Search Law Crux PDFs">
+          </div>
+        </div>
+
+        <!-- PDF Cards Grid (Populated dynamically by app.js in sequence) -->
+        <div class="crux-grid" id="cruxCardsGrid">
+          <div class="crux-loading-placeholder">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+            <span>Loading LAW CRUX PDF Series...</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------
          VIEW 2: SUBJECTS SELECTION DASHBOARD
          --------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------
@@ -1687,6 +1776,14 @@
               <span class="metal-btn-lbl">Last-Minute Revision</span>
             </div>
           </button>
+          <button class="hub-tab-btn" data-tab="crux" type="button" id="hubTabCrux">
+            <div class="metal-inner-body">
+              <div class="metal-icon-circle" style="color:#ef4444;">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <span class="metal-btn-lbl">Law Crux (PDF)</span>
+            </div>
+          </button>
         </div>
       </div>
 
@@ -1720,6 +1817,9 @@
         </div>
         <div class="tab-content-pane" id="revisionTabPane">
           <div id="revisionContainer"></div>
+        </div>
+        <div class="tab-content-pane" id="cruxTabPane">
+          <div id="cruxContainer"></div>
         </div>
       </div>
 
@@ -2165,6 +2265,39 @@
   </div>
 
   <!-- ===================================================================
+       LAW CRUX IN-PAGE PDF READER MODAL
+       =================================================================== -->
+  <div class="crux-modal-backdrop" id="cruxModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="cruxModalTitle">
+    <div class="crux-modal-window">
+      <div class="crux-modal-header">
+        <div class="crux-modal-title-wrap">
+          <i class="fa-solid fa-file-pdf" style="color:#ef4444; font-size:1.35rem;"></i>
+          <div>
+            <h3 id="cruxModalTitle">LAW CRUX PDF Viewer</h3>
+            <p id="cruxModalSubtitle">Delhi University LL.B. Handcrafted Revision Series</p>
+          </div>
+        </div>
+        <div class="crux-modal-actions">
+          <a href="#" id="cruxModalDownloadBtn" download class="crux-modal-btn download" title="Download PDF">
+            <i class="fa-solid fa-download"></i>
+            <span>Download</span>
+          </a>
+          <a href="#" id="cruxModalFullTabBtn" target="_blank" rel="noopener noreferrer" class="crux-modal-btn fulltab" title="Open in Full Tab">
+            <i class="fa-solid fa-up-right-from-square"></i>
+            <span>Full Tab</span>
+          </a>
+          <button type="button" id="cruxModalCloseBtn" class="crux-modal-close" title="Close Reader (Esc)">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="crux-modal-body">
+        <iframe id="cruxModalIframe" src="" title="LAW CRUX PDF Reader" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
        DU MOCK EXAM SIMULATOR ("5 OUT OF 8" EXAM HALL)
        =================================================================== -->
   <div class="mock-modal-overlay" id="mockModalOverlay"></div>
@@ -2306,6 +2439,14 @@
           <div class="mtd-card-text">
             <h4>Criminal Major Acts Converter</h4>
             <p>IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA live cross-reference</p>
+          </div>
+          <i class="fa-solid fa-chevron-right mtd-arrow"></i>
+        </button>
+        <button class="mtd-action-card" id="mtdLawCruxBtn">
+          <div class="mtd-card-icon crux" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;"><i class="fa-solid fa-file-pdf"></i></div>
+          <div class="mtd-card-text">
+            <h4>LAW CRUX PDF Series</h4>
+            <p>14 Signature subject revision PDFs in curriculum sequence</p>
           </div>
           <i class="fa-solid fa-chevron-right mtd-arrow"></i>
         </button>
@@ -3127,15 +3268,16 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=90.0" defer></script>
-  <script src="/js/interactive_particles.js?v=90.0" defer></script>
-  <script src="/js/books_showcase.js?v=90.0" defer></script>
-  <script src="/js/data.js?v=90.0" defer></script>
-  <script src="/js/bare_acts.js?v=90.0" defer></script>
-  <script src="/js/bns_converter.js?v=90.0" defer></script>
-  <script src="/js/limitation_calculator.js?v=90.0" defer></script>
-  <script src="/js/pro_desk.js?v=90.0" defer></script>
-  <script src="/js/app.js?v=90.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=91.0" defer></script>
+  <script src="/js/interactive_particles.js?v=91.0" defer></script>
+  <script src="/js/books_showcase.js?v=91.0" defer></script>
+  <script src="/js/data.js?v=91.0" defer></script>
+  <script src="/js/bare_acts.js?v=91.0" defer></script>
+  <script src="/js/bns_converter.js?v=91.0" defer></script>
+  <script src="/js/limitation_calculator.js?v=91.0" defer></script>
+  <script src="/js/law_crux_data.js?v=91.0" defer></script>
+  <script src="/js/pro_desk.js?v=91.0" defer></script>
+  <script src="/js/app.js?v=91.0" defer></script>
 
 
   <script>

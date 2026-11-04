@@ -52,6 +52,7 @@
   const elements = {
     // Header & Global
     headerMockExamBtn: document.getElementById('headerMockExamBtn'),
+    headerLawCruxBtn: document.getElementById('headerLawCruxBtn'),
     headerBnsConverterBtn: document.getElementById('headerBnsConverterBtn'),
     headerLimitationBtn: document.getElementById('headerLimitationBtn'),
     headerBookmarksBtn: document.getElementById('headerBookmarksBtn'),
@@ -59,8 +60,10 @@
     headerStarBadge: document.getElementById('headerStarBadge'),
     heroExploreBtn: document.getElementById('heroExploreBtn'),
     heroMockBtn: document.getElementById('heroMockBtn'),
+    heroCruxBtn: document.getElementById('heroCruxBtn'),
     heroBnsBtn: document.getElementById('heroBnsBtn'),
     heroLimitationBtn: document.getElementById('heroLimitationBtn'),
+    hpCruxBanner: document.getElementById('hpCruxBanner'),
     hpConverterBanner: document.getElementById('hpConverterBanner'),
     hpLimitationBanner: document.getElementById('hpLimitationBanner'),
     footerConverterLink: document.getElementById('footerConverterLink'),
@@ -132,6 +135,7 @@
     mobileToolsDrawer: document.getElementById('mobileToolsDrawer'),
     mobileToolsCloseBtn: document.getElementById('mobileToolsCloseBtn'),
     mtdMockBtn: document.getElementById('mtdMockBtn'),
+    mtdLawCruxBtn: document.getElementById('mtdLawCruxBtn'),
     mtdBnsBtn: document.getElementById('mtdBnsBtn'),
     mtdBareActBtn: document.getElementById('mtdBareActBtn'),
     mtdFlashcardsBtn: document.getElementById('mtdFlashcardsBtn'),
@@ -198,6 +202,21 @@
     subjectHubView: document.getElementById('subjectHubView'),
     discussionsView: document.getElementById('communityCommentsSection'),
     proSectionView: document.getElementById('proSectionView'),
+    lawCruxView: document.getElementById('lawCruxView'),
+    cruxBackBtn: document.getElementById('cruxBackBtn'),
+    cruxCardsGrid: document.getElementById('cruxCardsGrid'),
+    cruxSemesterPills: document.getElementById('cruxSemesterPills'),
+    cruxSearchInput: document.getElementById('cruxSearchInput'),
+    cruxModalBackdrop: document.getElementById('cruxModalBackdrop'),
+    cruxModalCloseBtn: document.getElementById('cruxModalCloseBtn'),
+    cruxModalTitle: document.getElementById('cruxModalTitle'),
+    cruxModalSubtitle: document.getElementById('cruxModalSubtitle'),
+    cruxModalDownloadBtn: document.getElementById('cruxModalDownloadBtn'),
+    cruxModalFullTabBtn: document.getElementById('cruxModalFullTabBtn'),
+    cruxModalIframe: document.getElementById('cruxModalIframe'),
+    hubTabCrux: document.getElementById('hubTabCrux'),
+    cruxTabPane: document.getElementById('cruxTabPane'),
+    cruxContainer: document.getElementById('cruxContainer'),
 
     // Semester View Elements
     semesterGrid: document.getElementById('semesterGrid'),
@@ -391,6 +410,13 @@
       params.get('pro') === 'true'
     ) {
       return { view: 'pro' };
+    }
+    if (
+      rawPath === '/law-crux' || rawPath === '/crux' || rawPath === '/law-crux-pdf' ||
+      currentHash === '#law-crux' || currentHash === '#crux' || currentHash === '#lawCruxView' ||
+      params.get('crux') === 'true' || params.get('law-crux') === 'true'
+    ) {
+      return { view: 'crux', sem: params.get('sem') || null };
     }
     if (
       rawPath === '/comments' || rawPath === '/discussions' ||
@@ -626,6 +652,7 @@
     elements.subjectHubView.classList.remove('active');
     if (elements.discussionsView) elements.discussionsView.classList.remove('active');
     if (elements.proSectionView) elements.proSectionView.classList.remove('active');
+    if (elements.lawCruxView) elements.lawCruxView.classList.remove('active');
     if (elements.mobileBottomNav) elements.mobileBottomNav.classList.remove('active');
 
     if (viewName === 'semester') {
@@ -699,6 +726,21 @@
         document.title = 'Make Law Easy Pro — Legal Templates, Drafting Studio & Law Updates';
         if (!window.history.state || window.history.state.view !== 'pro') {
           window.history.pushState({ view: 'pro' }, '', '/pro');
+        }
+      }
+    } else if (viewName === 'crux') {
+      document.body.removeAttribute('data-active-subject');
+      if (elements.lawCruxView) elements.lawCruxView.classList.add('active');
+      if (elements.headerSemText) {
+        elements.headerSemText.textContent = 'Law Crux';
+      }
+      renderLawCruxCards();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.dispatchEvent(new Event('resize'));
+      if (pushHistory) {
+        document.title = 'LAW CRUX — Master Handcrafted Law Notes PDF Series | Make Law Easy';
+        if (!window.history.state || window.history.state.view !== 'crux') {
+          window.history.pushState({ view: 'crux' }, '', '/law-crux');
         }
       }
     }
@@ -921,6 +963,20 @@
   }
   window.selectSemester = selectSemester;
   window.showToast = showToast;
+  window.navigateToCrux = navigateToCrux;
+  window.setCruxSemesterFilter = function (sem) {
+    if (elements.cruxSemesterPills) {
+      elements.cruxSemesterPills.querySelectorAll('.crux-sem-pill').forEach(b => {
+        if (b.dataset.sem === String(sem)) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+    }
+    renderLawCruxCards(sem, activeCruxSearch);
+  };
+  window.clearCruxSearch = function () {
+    if (elements.cruxSearchInput) elements.cruxSearchInput.value = '';
+    renderLawCruxCards(activeCruxSemester, '');
+  };
 
   // =========================================================================
   // 2. SUBJECTS SELECTION VIEW
@@ -1124,7 +1180,8 @@
         topics: `${state.currentSubject.name} (${state.currentSubject.code || ''}) | Make Law Easy`,
         cases: `Landmark Cases — ${state.currentSubject.name} | Make Law Easy`,
         pyqs: `PYQs & Model Answers — ${state.currentSubject.name} | Make Law Easy`,
-        revision: `Quick Revision — ${state.currentSubject.name} | Make Law Easy`
+        revision: `Quick Revision — ${state.currentSubject.name} | Make Law Easy`,
+        crux: `LAW CRUX (PDF) — ${state.currentSubject.name} | Make Law Easy`
       };
       document.title = tabTitles[tabName] || `${state.currentSubject.name} | Make Law Easy`;
       if (!window.history.state || window.history.state.tab !== tabName || window.history.state.subId !== subId) {
@@ -1241,6 +1298,8 @@
       renderPyqsTab(sub);
     } else if (state.currentTab === 'revision') {
       renderRevisionTab(sub);
+    } else if (state.currentTab === 'crux') {
+      renderSubjectCruxTab(sub);
     }
   }
 
@@ -4410,6 +4469,217 @@ Submission Time: ${new Date().toLocaleString()}
     showView('pro', pushHistory);
   }
 
+  // =========================================================================
+  // FEATURE: LAW CRUX — MASTER PDF REVISION SERIES
+  // =========================================================================
+  let activeCruxSemester = 'all';
+  let activeCruxSearch = '';
+
+  function navigateToCrux(pushHistory = true) {
+    showView('crux', pushHistory);
+  }
+
+  function openCruxPdfModal(item) {
+    if (!item || !elements.cruxModalBackdrop) return;
+    if (elements.cruxModalTitle) elements.cruxModalTitle.textContent = `${item.title} (${item.code})`;
+    if (elements.cruxModalSubtitle) elements.cruxModalSubtitle.textContent = `Semester ${item.semester} • ${item.fileSize} • Handcrafted LAW CRUX`;
+    if (elements.cruxModalDownloadBtn) {
+      elements.cruxModalDownloadBtn.href = item.filePath;
+      elements.cruxModalDownloadBtn.setAttribute('download', item.fileName);
+    }
+    if (elements.cruxModalFullTabBtn) {
+      elements.cruxModalFullTabBtn.href = item.filePath;
+    }
+    if (elements.cruxModalIframe) {
+      elements.cruxModalIframe.src = item.filePath;
+    }
+    elements.cruxModalBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCruxPdfModal() {
+    if (!elements.cruxModalBackdrop) return;
+    elements.cruxModalBackdrop.classList.remove('active');
+    if (elements.cruxModalIframe) {
+      elements.cruxModalIframe.src = '';
+    }
+    document.body.style.removeProperty('overflow');
+  }
+
+  function renderSubjectCruxTab(sub) {
+    if (!elements.cruxContainer) return;
+    const cruxItem = window.LAW_CRUX_DATA && typeof window.LAW_CRUX_DATA.getBySubject === 'function'
+      ? window.LAW_CRUX_DATA.getBySubject(sub.id)
+      : null;
+
+    if (!cruxItem) {
+      elements.cruxContainer.innerHTML = `
+        <div class="hub-empty-state" style="padding: 40px 20px; text-align: center;">
+          <div style="font-size: 2.8rem; color: #ef4444; margin-bottom: 14px;"><i class="fa-solid fa-hourglass-half"></i></div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">LAW CRUX PDF In Preparation</h3>
+          <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 20px; line-height: 1.55;">
+            The signature LAW CRUX handcrafted revision PDF for <strong>${sub.name}</strong> is currently being prepared by our editorial team. You can explore the full digital notes in the Topics tab or browse available PDFs in the Law Crux series.
+          </p>
+          <button type="button" class="btn-primary" onclick="window.navigateToCrux()" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 9999px; background: #ef4444; color: #fff; font-weight: 700; border: none; cursor: pointer;">
+            <i class="fa-solid fa-file-pdf"></i> Browse 14 Available LAW CRUX PDFs
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    elements.cruxContainer.innerHTML = `
+      <div class="subject-crux-hub-card">
+        <div class="subj-crux-top-banner" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(245, 158, 11, 0.08)); border: 1.5px solid rgba(239, 68, 68, 0.35); border-radius: 16px; padding: 24px; margin-bottom: 24px;">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, #ef4444, #f59e0b); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35);">
+                <i class="fa-solid fa-file-pdf"></i>
+              </div>
+              <div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+                  <span style="background: #ef4444; color: #fff; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 9999px;">OFFICIAL CRUX</span>
+                  <span style="color: var(--text-muted); font-size: 0.8rem; font-weight: 600;">${cruxItem.fileSize} &bull; Semester ${cruxItem.semester}</span>
+                </div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; margin: 0 0 4px; color: var(--text-primary);">${cruxItem.title} LAW CRUX</h3>
+                <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">${cruxItem.subtitle}</p>
+              </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <a href="${cruxItem.filePath}" target="_blank" rel="noopener noreferrer" class="crux-hub-btn fulltab" style="display: inline-flex; align-items: center; gap: 7px; padding: 10px 18px; border-radius: 10px; background: var(--bg-card); border: 1.5px solid var(--border-line); color: var(--text-primary); text-decoration: none; font-size: 0.86rem; font-weight: 700; transition: all .2s ease;">
+                <i class="fa-solid fa-up-right-from-square"></i> Open Full Tab
+              </a>
+              <a href="${cruxItem.filePath}" download="${cruxItem.fileName}" class="crux-hub-btn download" style="display: inline-flex; align-items: center; gap: 7px; padding: 10px 20px; border-radius: 10px; background: linear-gradient(135deg, #ef4444, #dc2626); color: #fff; text-decoration: none; font-size: 0.86rem; font-weight: 700; box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35); transition: all .2s ease;">
+                <i class="fa-solid fa-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="subj-crux-preview-wrap" style="background: var(--bg-card); border: 1.5px solid var(--border-line); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md);">
+          <div style="padding: 14px 20px; border-bottom: 1px solid var(--border-line); display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.02);">
+            <div style="font-weight: 700; font-size: 0.88rem; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-book-open-reader" style="color: #ef4444;"></i> Interactive PDF Reader Preview
+            </div>
+            <a href="javascript:void(0)" onclick="window.navigateToCrux()" style="font-size: 0.8rem; font-weight: 600; color: #ef4444; text-decoration: none;">
+              Browse Complete 14-Subject Crux Series &rarr;
+            </a>
+          </div>
+          <div style="position: relative; width: 100%; height: 780px;">
+            <iframe src="${cruxItem.filePath}" style="width: 100%; height: 100%; border: none;" title="${cruxItem.title} Law Crux PDF"></iframe>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderLawCruxCards(filterSem = activeCruxSemester, searchQuery = activeCruxSearch) {
+    if (!elements.cruxCardsGrid) return;
+    const data = window.LAW_CRUX_DATA || [];
+    activeCruxSemester = filterSem;
+    activeCruxSearch = (searchQuery || '').trim().toLowerCase();
+
+    // Check if this semester has 0 PDFs available yet (Semesters 2, 4, 6)
+    if (['2', '4', '6'].includes(String(filterSem))) {
+      const romMap = { '2': 'II', '4': 'IV', '6': 'VI' };
+      elements.cruxCardsGrid.innerHTML = `
+        <div class="crux-empty-state">
+          <div class="crux-empty-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+          <h3>Semester ${romMap[filterSem]} LAW CRUX PDFs In Editorial Curation</h3>
+          <p>Handcrafted revision dossiers for Semester ${romMap[filterSem]} core subjects are currently being typeset and will be published shortly.</p>
+          <button type="button" class="btn-reset-filters" onclick="window.setCruxSemesterFilter('all')">
+            <i class="fa-solid fa-arrows-rotate"></i> View Available Semesters (I, III &amp; V)
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    let filtered = data.filter(item => {
+      const matchSem = (filterSem === 'all' || String(item.semester) === String(filterSem));
+      if (!matchSem) return false;
+      if (!activeCruxSearch) return true;
+      const q = activeCruxSearch;
+      return item.title.toLowerCase().includes(q) ||
+        item.code.toLowerCase().includes(q) ||
+        item.subtitle.toLowerCase().includes(q) ||
+        (item.highlights && item.highlights.some(h => h.toLowerCase().includes(q)));
+    });
+
+    if (filtered.length === 0) {
+      elements.cruxCardsGrid.innerHTML = `
+        <div class="crux-empty-state">
+          <div class="crux-empty-icon"><i class="fa-solid fa-file-circle-xmark"></i></div>
+          <h3>No LAW CRUX PDFs Match "${activeCruxSearch}"</h3>
+          <p>Try searching for another subject name (e.g. Contract, CPC, BNS, Company) or paper code (LB-102, LB-301).</p>
+          <button type="button" class="btn-reset-filters" onclick="window.clearCruxSearch()">
+            <i class="fa-solid fa-arrows-rotate"></i> Reset Search
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    // Render cards in curriculum sequence
+    const romMap = { 1: 'I', 2: 'II', 3: 'III', 4: 'IV', 5: 'V', 6: 'VI' };
+    const html = filtered.map(item => {
+      const highlightList = (item.highlights || []).slice(0, 3).map(h => `<li><i class="fa-solid fa-check-circle"></i> <span>${h}</span></li>`).join('');
+      return `
+        <article class="crux-card" data-id="${item.id}" data-sem="${item.semester}" style="--accent-color: ${item.color || '#ef4444'};">
+          <div class="crux-card-accent-bar" style="background: ${item.color || '#ef4444'};"></div>
+          <div class="crux-card-inner">
+            <div class="crux-card-top">
+              <div class="crux-card-meta">
+                <span class="crux-sem-badge">Semester ${romMap[item.semester] || item.semester}</span>
+                <span class="crux-code-badge">${item.code}</span>
+                <span class="crux-tag-badge">${item.tag || 'CORE'}</span>
+              </div>
+              <span class="crux-size-pill"><i class="fa-solid fa-file-pdf"></i> ${item.fileSize}</span>
+            </div>
+
+            <div class="crux-card-header">
+              <h3 class="crux-card-title">${item.title}</h3>
+              <p class="crux-card-subtitle">${item.subtitle}</p>
+            </div>
+
+            <div class="crux-card-highlights">
+              <div class="crux-hl-label"><i class="fa-solid fa-bolt"></i> Key Syllabus Crux:</div>
+              <ul class="crux-hl-list">
+                ${highlightList}
+              </ul>
+            </div>
+
+            <div class="crux-card-actions">
+              <button type="button" class="crux-action-btn crux-read-btn" data-action="read" data-id="${item.id}" title="Read Online in Interactive Viewer">
+                <i class="fa-solid fa-book-open-reader"></i>
+                <span>Read Online</span>
+              </button>
+              <a href="${item.filePath}" target="_blank" rel="noopener noreferrer" class="crux-action-btn crux-tab-btn" title="Open PDF in Full New Tab">
+                <i class="fa-solid fa-up-right-from-square"></i>
+                <span>Full Tab</span>
+              </a>
+              <a href="${item.filePath}" download="${item.fileName}" class="crux-action-btn crux-dl-btn" title="Download High-Res PDF">
+                <i class="fa-solid fa-download"></i>
+                <span>Download</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    elements.cruxCardsGrid.innerHTML = html;
+
+    // Attach click listeners to "Read Online" buttons
+    elements.cruxCardsGrid.querySelectorAll('.crux-read-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const id = e.currentTarget.dataset.id;
+        const item = data.find(x => x.id === id);
+        if (item) openCruxPdfModal(item);
+      });
+    });
+  }
+
   function initCommentsModule() {
     renderCommentsStream();
 
@@ -4822,6 +5092,56 @@ Submission Time: ${new Date().toLocaleString()}
       elements.footerCommentsLink.addEventListener('click', (e) => {
         e.preventDefault();
         navigateToComments();
+      });
+    }
+
+    // LAW CRUX Handlers
+    if (elements.headerLawCruxBtn) {
+      elements.headerLawCruxBtn.addEventListener('click', () => navigateToCrux(true));
+    }
+    if (elements.heroCruxBtn) {
+      elements.heroCruxBtn.addEventListener('click', () => navigateToCrux(true));
+    }
+    if (elements.hpCruxBanner) {
+      elements.hpCruxBanner.addEventListener('click', () => navigateToCrux(true));
+      elements.hpCruxBanner.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          navigateToCrux(true);
+        }
+      });
+    }
+    if (elements.mtdLawCruxBtn) {
+      elements.mtdLawCruxBtn.addEventListener('click', () => {
+        closeMobileTools();
+        navigateToCrux(true);
+      });
+    }
+    if (elements.cruxBackBtn) {
+      elements.cruxBackBtn.addEventListener('click', () => {
+        showView('semester', true);
+      });
+    }
+    if (elements.cruxSemesterPills) {
+      elements.cruxSemesterPills.querySelectorAll('.crux-sem-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          elements.cruxSemesterPills.querySelectorAll('.crux-sem-pill').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderLawCruxCards(btn.dataset.sem, activeCruxSearch);
+        });
+      });
+    }
+    if (elements.cruxSearchInput) {
+      elements.cruxSearchInput.addEventListener('input', (e) => {
+        renderLawCruxCards(activeCruxSemester, e.target.value);
+      });
+    }
+    if (elements.cruxModalCloseBtn) {
+      elements.cruxModalCloseBtn.addEventListener('click', closeCruxPdfModal);
+    }
+    if (elements.cruxModalBackdrop) {
+      elements.cruxModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === elements.cruxModalBackdrop) closeCruxPdfModal();
       });
     }
   }
@@ -5340,6 +5660,14 @@ Submission Time: ${new Date().toLocaleString()}
         return;
       }
 
+      if (route.view === 'crux') {
+        navigateToCrux(false);
+        if (route.sem && typeof window.setCruxSemesterFilter === 'function') {
+          window.setCruxSemesterFilter(route.sem);
+        }
+        return;
+      }
+
       if (route.view === 'comments' || route.view === 'discussions') {
         navigateToComments(route.subject, false);
         return;
@@ -5359,6 +5687,7 @@ Submission Time: ${new Date().toLocaleString()}
         if (elements.mobileToolsDrawer && elements.mobileToolsDrawer.classList.contains('active')) closeMobileTools();
         if (elements.bnsModal && elements.bnsModal.classList.contains('active')) closeBnsConverter();
         if (elements.limitationModal && elements.limitationModal.classList.contains('active')) closeLimitationModal();
+        if (elements.cruxModalBackdrop && elements.cruxModalBackdrop.classList.contains('active')) closeCruxPdfModal();
         if (elements.contactModal && elements.contactModal.classList.contains('active')) closeContactModal();
         if (elements.studentFeedbackSection && elements.studentFeedbackSection.classList.contains('active')) closeFeedbackModal();
         closeHeaderSemDropdown();
@@ -5466,6 +5795,13 @@ Submission Time: ${new Date().toLocaleString()}
     } else if (initialRoute && initialRoute.view === 'contact') {
       showView('semester', false);
       setTimeout(openContactModal, 250);
+    } else if (initialRoute && initialRoute.view === 'pro') {
+      showView('pro', false);
+    } else if (initialRoute && initialRoute.view === 'crux') {
+      showView('crux', false);
+      if (initialRoute.sem && typeof window.setCruxSemesterFilter === 'function') {
+        window.setCruxSemesterFilter(initialRoute.sem);
+      }
     } else if (initialRoute && (initialRoute.view === 'comments' || initialRoute.view === 'discussions')) {
       showView('discussions', false);
       if (initialRoute.subject) {
@@ -5527,6 +5863,9 @@ Submission Time: ${new Date().toLocaleString()}
       } else if (route.view === 'pro') {
         e.preventDefault();
         navigateToPro(true);
+      } else if (route.view === 'crux') {
+        e.preventDefault();
+        navigateToCrux(true);
       }
     });
 
