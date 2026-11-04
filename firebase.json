@@ -33,6 +33,14 @@
         "destination": "/about.html"
       },
       {
+        "source": "/tools/bns-converter",
+        "destination": "/tools/bns-converter.html"
+      },
+      {
+        "source": "/converter",
+        "destination": "/tools/bns-converter.html"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

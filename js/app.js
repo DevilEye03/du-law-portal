@@ -59,6 +59,8 @@
     heroExploreBtn: document.getElementById('heroExploreBtn'),
     heroMockBtn: document.getElementById('heroMockBtn'),
     heroBnsBtn: document.getElementById('heroBnsBtn'),
+    hpConverterBanner: document.getElementById('hpConverterBanner'),
+    footerConverterLink: document.getElementById('footerConverterLink'),
     bnsModalOverlay: document.getElementById('bnsModalOverlay'),
     bnsModal: document.getElementById('bnsModal'),
     bnsCloseBtn: document.getElementById('bnsCloseBtn'),
@@ -4611,6 +4613,23 @@ Submission Time: ${new Date().toLocaleString()}
     }
     if (elements.heroBnsBtn) {
       elements.heroBnsBtn.addEventListener('click', () => openBnsConverter('all', ''));
+    }
+    if (elements.hpConverterBanner) {
+      elements.hpConverterBanner.addEventListener('click', () => openBnsConverter('all', ''));
+      elements.hpConverterBanner.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openBnsConverter('all', '');
+        }
+      });
+    }
+    if (elements.footerConverterLink) {
+      elements.footerConverterLink.addEventListener('click', (e) => {
+        if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+          e.preventDefault();
+          openBnsConverter('all', '');
+        }
+      });
     }
     if (elements.bnsCloseBtn) elements.bnsCloseBtn.addEventListener('click', closeBnsConverter);
     if (elements.bnsModalOverlay) elements.bnsModalOverlay.addEventListener('click', closeBnsConverter);

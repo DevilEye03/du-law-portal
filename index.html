@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=82.0">
+  <link rel="stylesheet" href="/css/styles.css?v=83.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -301,6 +301,10 @@
       </div>
 
       <div class="header-actions">
+        <button class="header-contact-pill liquid-metal-btn converter-header-btn" id="headerBnsConverterBtn" title="Criminal Major Acts Converter (IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA)" aria-label="Criminal Law Converter" type="button">
+          <span class="btn-icon-wrap" style="color:#e11d48;"><i class="fa-solid fa-scale-unbalanced-flip"></i></span>
+          <span class="btn-lbl">Converter</span>
+        </button>
         <button class="header-contact-pill liquid-metal-btn pro-header-btn" id="headerProBtn" title="Make Law Easy Pro — Practice Desk, Templates &amp; Law Updates" aria-label="Make Law Easy Pro" type="button">
           <span class="btn-icon-wrap pro-wrap" style="color:#f59e0b;"><i class="fa-solid fa-crown"></i></span>
           <span class="btn-lbl">Pro <span class="pro-badge-dot"></span></span>
@@ -385,6 +389,35 @@
                 <span class="metal-btn-lbl">Explore Semester Notes</span>
               </div>
             </button>
+            <button class="hero-btn-secondary hero-btn-converter" id="heroBnsBtn" type="button" title="Open Criminal Law Triad Converter">
+              <i class="fa-solid fa-scale-unbalanced-flip" style="color:#e11d48; font-size:1.05rem;"></i>
+              <span>Criminal Law Converter (BNS / BNSS / BSA)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prominent Quick Converter Spotlight Banner -->
+      <div class="hp-converter-spotlight" id="hpConverterSpotlight">
+        <div class="hp-spotlight-card" id="hpConverterBanner" role="button" tabindex="0" title="Click to open Criminal Major Acts Converter">
+          <div class="hp-spotlight-left">
+            <div class="hp-spotlight-icon-wrap">
+              <i class="fa-solid fa-scale-unbalanced-flip"></i>
+            </div>
+            <div class="hp-spotlight-text">
+              <div class="hp-spotlight-tag">
+                <span class="hp-spotlight-pill"><i class="fa-solid fa-bolt"></i> NEW CRIMINAL CODES</span>
+                <span class="hp-spotlight-sub">IPC ↔ BNS 2023 &bull; CrPC ↔ BNSS 2023 &bull; IEA ↔ BSA 2023</span>
+              </div>
+              <h3 class="hp-spotlight-title">Criminal Major Acts Live Converter &amp; Comparative Analysis</h3>
+              <p class="hp-spotlight-desc">Select your converter or enter any section (e.g. 302, 154, 65B, 438, 167) to see respective sections, statutory differences, and landmark precedents.</p>
+            </div>
+          </div>
+          <div class="hp-spotlight-btn-wrap">
+            <span class="hp-spotlight-cta">
+              <span>Open Converter</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
           </div>
         </div>
       </div>
@@ -1741,9 +1774,14 @@
           <p>IPC 1860 &harr; BNS 2023 &bull; CrPC 1973 &harr; BNSS 2023 &bull; IEA 1872 &harr; BSA 2023</p>
         </div>
       </div>
-      <button class="bns-close-btn" id="bnsCloseBtn" title="Close Converter (Esc)">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <a href="/tools/bns-converter.html" target="_blank" rel="noopener noreferrer" class="bns-fullscreen-btn" title="Open Fullscreen Page in New Tab" style="display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.06); color:var(--text-muted,#94a3b8); border:1px solid rgba(255,255,255,0.1); text-decoration:none; transition:all .2s ease;">
+          <i class="fa-solid fa-up-right-from-square" style="font-size:0.85rem;"></i>
+        </a>
+        <button class="bns-close-btn" id="bnsCloseBtn" title="Close Converter (Esc)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
     </div>
 
     <div class="bns-modal-toolbar">
@@ -2720,6 +2758,8 @@
         </a>
       </div>
       <div class="footer-legal-links">
+        <a href="/tools/bns-converter.html" class="footer-tool-link" id="footerConverterLink"><i class="fa-solid fa-scale-unbalanced-flip" style="color:#e11d48; margin-right:4px;"></i> Criminal Law Converter</a>
+        <span class="footer-dot">&bull;</span>
         <a href="/about">About Us</a>
         <span class="footer-dot">&bull;</span>
         <a href="/privacy">Privacy Policy</a>
@@ -2746,14 +2786,14 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=82.0" defer></script>
-  <script src="/js/interactive_particles.js?v=82.0" defer></script>
-  <script src="/js/books_showcase.js?v=82.0" defer></script>
-  <script src="/js/data.js?v=82.0" defer></script>
-  <script src="/js/bare_acts.js?v=82.0" defer></script>
-  <script src="/js/bns_converter.js?v=82.0" defer></script>
-  <script src="/js/pro_desk.js?v=82.0" defer></script>
-  <script src="/js/app.js?v=82.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=83.0" defer></script>
+  <script src="/js/interactive_particles.js?v=83.0" defer></script>
+  <script src="/js/books_showcase.js?v=83.0" defer></script>
+  <script src="/js/data.js?v=83.0" defer></script>
+  <script src="/js/bare_acts.js?v=83.0" defer></script>
+  <script src="/js/bns_converter.js?v=83.0" defer></script>
+  <script src="/js/pro_desk.js?v=83.0" defer></script>
+  <script src="/js/app.js?v=83.0" defer></script>
 
 
   <script>
