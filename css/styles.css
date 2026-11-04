@@ -5860,6 +5860,104 @@ body.drawer-open {
   gap: 10px;
 }
 
+/* Criminal Law Triad Converter Controls (IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA) */
+.bns-act-selector-bar {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.bns-act-selector-bar::-webkit-scrollbar { display: none; }
+
+.bns-act-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-pill, 9999px);
+  background: var(--bg-card, #ffffff);
+  border: 1.5px solid var(--border-color, #cbd5e1);
+  color: var(--text-color, #334155);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bns-act-btn:hover {
+  background: var(--bg-tint, #f1f5f9);
+  color: var(--text-color, #0f172a);
+  transform: translateY(-1px);
+}
+
+.bns-act-btn.active[data-act="all"] {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fbbf24;
+  border-color: #f59e0b;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+.bns-act-btn.active[data-act="IPC_BNS"] {
+  background: linear-gradient(135deg, #e11d48, #be123c);
+  color: #ffffff;
+  border-color: #e11d48;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.35);
+}
+
+.bns-act-btn.active[data-act="CRPC_BNSS"] {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.bns-act-btn.active[data-act="IEA_BSA"] {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: #ffffff;
+  border-color: #d97706;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+}
+
+.bns-quick-chips {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 2px 0;
+}
+.bns-quick-chips::-webkit-scrollbar { display: none; }
+.bns-chips-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted, #64748b);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.bns-chip-btn {
+  padding: 3px 10px;
+  border-radius: 9999px;
+  background: var(--bg-surface, rgba(0, 0, 0, 0.04));
+  border: 1px solid var(--border-color, #e2e8f0);
+  color: var(--text-color, #475569);
+  font-size: 0.74rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.bns-chip-btn:hover {
+  background: var(--primary, #183059);
+  color: #ffffff;
+  border-color: var(--primary, #183059);
+}
+
 .bns-search-input-wrap {
   position: relative;
   width: 100%;
@@ -6043,6 +6141,91 @@ body.drawer-open {
 [data-theme="dark"] .bns-exam-tip {
   background: #172554;
   color: #93c5fd;
+}
+
+/* Triad Converter Badges & Changes Callout */
+.bns-act-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.bns-act-badge.act-ipc_bns {
+  background: rgba(225, 29, 72, 0.12);
+  color: #e11d48;
+  border: 1px solid rgba(225, 29, 72, 0.28);
+}
+.bns-act-badge.act-crpc_bnss {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+}
+.bns-act-badge.act-iea_bsa {
+  background: rgba(217, 119, 6, 0.12);
+  color: #d97706;
+  border: 1px solid rgba(217, 119, 6, 0.28);
+}
+
+.bns-changes-callout {
+  margin: 12px 18px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-left: 4px solid #f59e0b;
+}
+.bns-changes-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #b45309;
+  margin-bottom: 6px;
+}
+.bns-changes-callout-text {
+  font-size: 0.86rem;
+  color: var(--text-color, #1e293b);
+  line-height: 1.6;
+  margin: 0;
+}
+
+[data-theme="dark"] .bns-changes-callout {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  border-left-color: #fbbf24;
+}
+[data-theme="dark"] .bns-changes-callout-header {
+  color: #fbbf24;
+}
+[data-theme="dark"] .bns-changes-callout-text {
+  color: #f1f5f9;
+}
+[data-theme="dark"] .bns-act-btn {
+  background: var(--bg-surface, rgba(255, 255, 255, 0.05));
+  border-color: var(--border-line, rgba(255, 255, 255, 0.12));
+  color: var(--text-secondary, #cbd5e1);
+}
+[data-theme="dark"] .bns-act-btn:hover {
+  background: var(--bg-elevated, rgba(255, 255, 255, 0.1));
+  color: #ffffff;
+}
+[data-theme="dark"] .bns-chip-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+}
+[data-theme="dark"] .bns-chip-btn:hover {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
 }
 
 /* DU Mock Exam Simulator Modal */

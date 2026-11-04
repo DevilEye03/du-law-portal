@@ -62,6 +62,8 @@
     bnsModalOverlay: document.getElementById('bnsModalOverlay'),
     bnsModal: document.getElementById('bnsModal'),
     bnsCloseBtn: document.getElementById('bnsCloseBtn'),
+    bnsModalActSelectorBar: document.getElementById('bnsModalActSelectorBar'),
+    bnsModalQuickChips: document.getElementById('bnsModalQuickChips'),
     bnsSearchInput: document.getElementById('bnsSearchInput'),
     bnsCategoryPills: document.getElementById('bnsCategoryPills'),
     bnsCardsContainer: document.getElementById('bnsCardsContainer'),
@@ -327,8 +329,17 @@
     if (rawPath === '/tools/bare-acts' || params.get('tool') === 'bare-acts') {
       return { view: 'tool', tool: 'bare-acts' };
     }
-    if (rawPath === '/tools/bns-converter' || rawPath === '/tools/bns' || params.get('tool') === 'bns') {
-      return { view: 'tool', tool: 'bns' };
+    if (
+      rawPath === '/tools/bns-converter' || rawPath === '/tools/bns' ||
+      rawPath === '/tools/converter' || rawPath === '/tools/criminal-converter' ||
+      params.get('tool') === 'bns' || params.get('tool') === 'converter'
+    ) {
+      return {
+        view: 'tool',
+        tool: 'bns',
+        act: params.get('act') || null,
+        query: params.get('sec') || params.get('q') || params.get('ipc') || params.get('crpc') || params.get('iea') || null
+      };
     }
     if (rawPath === '/tools/flashcards' || params.get('tool') === 'flashcards') {
       return { view: 'tool', tool: 'flashcards' };
@@ -2904,13 +2915,33 @@
   }
 
   // ===================================================================
-  // FEATURE 3: BNS 2023 ↔ IPC 1860 CONVERTER
+  // FEATURE 3: CRIMINAL MAJOR ACTS TRIAD CONVERTER (IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA)
   // ===================================================================
-  function openBnsConverter() {
+  let bnsActiveAct = 'all';
+  let bnsActiveCategory = 'all';
+
+  function openBnsConverter(initialAct, initialQuery) {
     if (elements.bnsModal && elements.bnsModalOverlay) {
+      if (initialAct && typeof initialAct === 'string') {
+        bnsActiveAct = initialAct;
+      }
       elements.bnsModal.classList.add('active');
       elements.bnsModalOverlay.classList.add('active');
-      renderBnsConverterCards('all', '');
+
+      // Sync active state on act selector buttons
+      if (elements.bnsModalActSelectorBar) {
+        elements.bnsModalActSelectorBar.querySelectorAll('.bns-act-btn').forEach(btn => {
+          if (btn.dataset.act === bnsActiveAct) btn.classList.add('active');
+          else btn.classList.remove('active');
+        });
+      }
+
+      if (initialQuery && elements.bnsSearchInput) {
+        elements.bnsSearchInput.value = initialQuery;
+      }
+      const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
+      renderBnsCategoryPillsInModal();
+      renderBnsConverterCards(bnsActiveCategory, q);
       if (elements.bnsSearchInput) elements.bnsSearchInput.focus();
     }
   }
@@ -2922,6 +2953,70 @@
     }
   }
 
+  function renderBnsCategoryPillsInModal() {
+    if (!elements.bnsCategoryPills) return;
+    const catMap = {
+      all: [
+        { id: 'all', label: 'All Provisions' },
+        { id: 'Body', label: 'Homicide & Life' },
+        { id: 'Women', label: 'Women & Children' },
+        { id: 'Property', label: 'Property Offences' },
+        { id: 'Investigation', label: 'FIR & Remand' },
+        { id: 'Bail', label: 'Bail & Custody' },
+        { id: 'Electronic', label: 'Electronic Evidence' },
+        { id: 'Trial', label: 'Court Trials' }
+      ],
+      IPC_BNS: [
+        { id: 'all', label: 'All IPC ↔ BNS' },
+        { id: 'Offences Affecting Life', label: 'Homicide & Life' },
+        { id: 'Women', label: 'Women & Children' },
+        { id: 'Property', label: 'Property Offences' },
+        { id: 'State', label: 'State Offences' },
+        { id: 'General Exceptions', label: 'General Exceptions' }
+      ],
+      CRPC_BNSS: [
+        { id: 'all', label: 'All CrPC ↔ BNSS' },
+        { id: 'Arrest', label: 'Arrest & Handcuffs' },
+        { id: 'Investigation', label: 'FIR & Police Remand' },
+        { id: 'Bail', label: 'Anticipatory & Regular Bail' },
+        { id: 'Trial', label: 'Discharge & Trials' },
+        { id: 'Inherent', label: 'High Court Quashing' }
+      ],
+      IEA_BSA: [
+        { id: 'all', label: 'All IEA ↔ BSA' },
+        { id: 'Documentary', label: 'Electronic Evidence (S. 63)' },
+        { id: 'Admissions', label: 'Confessions & Discovery' },
+        { id: 'Relevancy', label: 'Relevancy & Res Gestae' },
+        { id: 'Burden', label: 'Burden of Proof' },
+        { id: 'Examination', label: 'Witness Examination' }
+      ]
+    };
+
+    const list = catMap[bnsActiveAct] || catMap.all;
+    elements.bnsCategoryPills.innerHTML = list.map(c =>
+      '<button type="button" class="bns-pill ' + (c.id === bnsActiveCategory ? 'active' : '') + '" data-cat="' + c.id + '">' +
+        c.label +
+      '</button>'
+    ).join('');
+
+    elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        bnsActiveCategory = pill.dataset.cat;
+        const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
+        renderBnsConverterCards(bnsActiveCategory, q);
+      });
+    });
+  }
+
+  function getActTagClass(actPair) {
+    if (actPair === 'IPC_BNS') return 'act-ipc_bns';
+    if (actPair === 'CRPC_BNSS') return 'act-crpc_bnss';
+    if (actPair === 'IEA_BSA') return 'act-iea_bsa';
+    return 'act-ipc_bns';
+  }
+
   function renderBnsConverterCards(cat, query) {
     if (!elements.bnsCardsContainer) return;
     const db = window.BNS_CONVERTER_DB;
@@ -2931,28 +3026,80 @@
     }
 
     let items = db.sections;
-    if (cat && cat !== 'all') {
-      items = items.filter(s => (s.chapter && s.chapter.includes(cat)) || (s.offense && s.offense.includes(cat)));
+
+    // 1. Filter by Act Pair
+    if (bnsActiveAct && bnsActiveAct !== 'all') {
+      items = items.filter(s => s.actPair === bnsActiveAct);
     }
 
+    // 2. Filter by Category
+    if (cat && cat !== 'all') {
+      items = items.filter(s => (s.chapter && s.chapter.toLowerCase().includes(cat.toLowerCase())) || (s.offense && s.offense.toLowerCase().includes(cat.toLowerCase())));
+    }
+
+    // 3. Filter by Query
     if (query) {
-      const q = query.toLowerCase();
+      const q = query.toLowerCase().trim();
       items = items.filter(s =>
-        s.bns.toLowerCase().includes(q) ||
-        s.ipc.toLowerCase().includes(q) ||
-        s.offense.toLowerCase().includes(q) ||
-        s.summary.toLowerCase().includes(q) ||
+        (s.oldSec && s.oldSec.toLowerCase().includes(q)) ||
+        (s.newSec && s.newSec.toLowerCase().includes(q)) ||
+        (s.oldSecNum && s.oldSecNum.toLowerCase().includes(q)) ||
+        (s.newSecNum && s.newSecNum.toLowerCase().includes(q)) ||
+        (s.ipc && s.ipc.toLowerCase().includes(q)) ||
+        (s.bns && s.bns.toLowerCase().includes(q)) ||
+        (s.ipcNum && s.ipcNum.toLowerCase().includes(q)) ||
+        (s.bnsNum && s.bnsNum.toLowerCase().includes(q)) ||
+        (s.offense && s.offense.toLowerCase().includes(q)) ||
+        (s.summary && s.summary.toLowerCase().includes(q)) ||
+        (s.changes && s.changes.toLowerCase().includes(q)) ||
         (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
       );
     }
 
     if (items.length === 0) {
-      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No penal section match found</h4><p>Try searching for section numbers (e.g. 302, 103, 34, 498A) or offence names.</p></div>';
+      elements.bnsCardsContainer.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);"><i class="fa-solid fa-magnifying-glass" style="font-size:2rem;color:#cbd5e1;margin-bottom:10px;"></i><h4>No corresponding section found</h4><p>Try searching for section numbers (e.g. 302, 154, 65B, 438, 167) or legal terms.</p></div>';
       return;
     }
 
     elements.bnsCardsContainer.innerHTML = items.map(s => {
-      return '<div class="bns-comp-card fade-in"><div class="bns-comp-header"><div class="bns-comp-offense"><i class="fa-solid fa-gavel" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div><span class="bns-comp-badge ' + (s.ipc === '[NEW IN BNS]' ? 'new-prov' : '') + '">' + (s.ipc === '[NEW IN BNS]' ? '★ Brand New in BNS' : 'Key Substitution') + '</span></div><div class="bns-comp-body"><div class="bns-section-box bns-side"><div class="bns-sec-tag">NEW STATUTE: BNS 2023</div><div class="bns-sec-num">' + s.bns + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);">' + s.summary + '</p></div><div class="bns-section-box ipc-side"><div class="bns-sec-tag">OLD STATUTE: IPC 1860</div><div class="bns-sec-num">' + s.ipc + '</div><p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-muted);">' + (s.chapter || 'Indian Penal Code 1860 Reference') + '</p></div></div><div class="bns-comp-footer"><div class="bns-changes-text"><b>Legislative Transition:</b> ' + s.changes + '</div>' + (s.cases && s.cases.length > 0 ? '<div class="bns-precedents-row"><span><b>Landmark Cases:</b></span> ' + s.cases.map(c => '<span class="bns-case-tag">' + c + '</span>').join('') + '</div>' : '') + (s.duExamTip ? '<div class="bns-exam-tip"><i class="fa-solid fa-lightbulb" style="margin-right:4px;"></i> <b>DU Exam Tip:</b> ' + s.duExamTip + '</div>' : '') + '</div></div>';
+      const oldActName = s.oldAct || 'OLD STATUTE';
+      const newActName = s.newAct || 'NEW STATUTE';
+      const oldSecText = s.oldSec || s.ipc;
+      const newSecText = s.newSec || s.bns;
+      const isNewProv = s.badge && s.badge.includes('Brand New');
+
+      return '<div class="bns-comp-card fade-in">' +
+        '<div class="bns-comp-header">' +
+          '<div class="bns-comp-offense" style="min-width:0; overflow-wrap:break-word;">' +
+            '<div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; flex-wrap:wrap;">' +
+              '<span class="bns-act-badge ' + getActTagClass(s.actPair) + '">' + oldActName + ' &harr; ' + newActName + '</span>' +
+              '<span class="bns-comp-badge ' + (isNewProv ? 'new-prov' : '') + '">' + (s.badge || 'Key Provision') + '</span>' +
+            '</div>' +
+            '<div style="font-size:0.98rem; font-weight:700;"><i class="fa-solid fa-scale-balanced" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div>' +
+            '<div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">' + (s.chapter || 'Criminal Law Transition') + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="bns-comp-body">' +
+          '<div class="bns-section-box ipc-side">' +
+            '<div class="bns-sec-tag" style="color:#ef4444;"><i class="fa-solid fa-scroll"></i> OLD STATUTE: ' + oldActName + '</div>' +
+            '<div class="bns-sec-num" style="color:#ef4444;">' + oldSecText + '</div>' +
+            '<p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);line-height:1.5;">' + s.summary + '</p>' +
+          '</div>' +
+          '<div class="bns-section-box bns-side">' +
+            '<div class="bns-sec-tag" style="color:#10b981;"><i class="fa-solid fa-gavel"></i> NEW STATUTE: ' + newActName + '</div>' +
+            '<div class="bns-sec-num" style="color:#10b981;">' + newSecText + '</div>' +
+            '<p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);line-height:1.5;">' + s.summary + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="bns-changes-callout">' +
+          '<div class="bns-changes-callout-header"><i class="fa-solid fa-bolt-lightning"></i> Key Statutory Differences &amp; Changes in ' + newActName + ':</div>' +
+          '<p class="bns-changes-callout-text">' + s.changes + '</p>' +
+        '</div>' +
+        '<div class="bns-comp-footer">' +
+          (s.cases && s.cases.length > 0 ? '<div class="bns-precedents-row"><span><b>Landmark Cases:</b></span> ' + s.cases.map(c => '<span class="bns-case-tag">' + c + '</span>').join('') + '</div>' : '') +
+          (s.duExamTip ? '<div class="bns-exam-tip"><i class="fa-solid fa-lightbulb" style="margin-right:4px;"></i> <b>DU Exam / Practice Tip:</b> ' + s.duExamTip + '</div>' : '') +
+        '</div>' +
+      '</div>';
     }).join('');
   }
 
@@ -4458,30 +4605,46 @@ Submission Time: ${new Date().toLocaleString()}
     if (elements.heroMockBtn) {
       elements.heroMockBtn.addEventListener('click', openMockExam);
     }
-    if (elements.heroBnsBtn) {
-      elements.heroBnsBtn.addEventListener('click', openBnsConverter);
-    }
-
-    // BNS Converter Modal
+    // Criminal Major Acts Triad Converter Modal
     if (elements.headerBnsConverterBtn) {
-      elements.headerBnsConverterBtn.addEventListener('click', openBnsConverter);
+      elements.headerBnsConverterBtn.addEventListener('click', () => openBnsConverter('all', ''));
+    }
+    if (elements.heroBnsBtn) {
+      elements.heroBnsBtn.addEventListener('click', () => openBnsConverter('all', ''));
     }
     if (elements.bnsCloseBtn) elements.bnsCloseBtn.addEventListener('click', closeBnsConverter);
     if (elements.bnsModalOverlay) elements.bnsModalOverlay.addEventListener('click', closeBnsConverter);
-    if (elements.bnsSearchInput) {
-      elements.bnsSearchInput.addEventListener('input', (e) => {
-        const cat = elements.bnsCategoryPills ? elements.bnsCategoryPills.querySelector('.bns-pill.active').dataset.cat : 'all';
-        renderBnsConverterCards(cat, e.target.value);
+
+    if (elements.bnsModalActSelectorBar) {
+      elements.bnsModalActSelectorBar.querySelectorAll('.bns-act-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          elements.bnsModalActSelectorBar.querySelectorAll('.bns-act-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          bnsActiveAct = btn.dataset.act;
+          bnsActiveCategory = 'all';
+          renderBnsCategoryPillsInModal();
+          const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
+          renderBnsConverterCards(bnsActiveCategory, q);
+        });
       });
     }
-    if (elements.bnsCategoryPills) {
-      elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(pill => {
-        pill.addEventListener('click', () => {
-          elements.bnsCategoryPills.querySelectorAll('.bns-pill').forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-          const q = elements.bnsSearchInput ? elements.bnsSearchInput.value : '';
-          renderBnsConverterCards(pill.dataset.cat, q);
+
+    if (elements.bnsModalQuickChips) {
+      elements.bnsModalQuickChips.querySelectorAll('.bns-chip-btn').forEach(chip => {
+        chip.addEventListener('click', () => {
+          const val = chip.dataset.query;
+          if (elements.bnsSearchInput) {
+            elements.bnsSearchInput.value = val;
+            elements.bnsSearchInput.focus();
+            renderBnsConverterCards(bnsActiveCategory, val);
+          }
         });
+      });
+    }
+
+    if (elements.bnsSearchInput) {
+      elements.bnsSearchInput.addEventListener('input', (e) => {
+        renderBnsConverterCards(bnsActiveCategory, e.target.value);
       });
     }
 
@@ -4863,7 +5026,7 @@ Submission Time: ${new Date().toLocaleString()}
 
       if (route.view === 'tool') {
         if (route.tool === 'bare-acts') openBareActDrawer();
-        else if (route.tool === 'bns') openBnsConverter();
+        else if (route.tool === 'bns') openBnsConverter(route.act, route.query);
         else if (route.tool === 'flashcards') openFlashcardsModal();
         return;
       }
@@ -4998,7 +5161,7 @@ Submission Time: ${new Date().toLocaleString()}
     } else if (initialRoute && initialRoute.view === 'tool') {
       showView('semester', false);
       if (initialRoute.tool === 'bare-acts') setTimeout(openBareActDrawer, 100);
-      else if (initialRoute.tool === 'bns') setTimeout(openBnsConverter, 100);
+      else if (initialRoute.tool === 'bns') setTimeout(() => openBnsConverter(initialRoute.act, initialRoute.query), 100);
       else if (initialRoute.tool === 'flashcards') setTimeout(openFlashcardsModal, 100);
     } else if (initialRoute && initialRoute.view === 'feedback') {
       showView('semester', false);

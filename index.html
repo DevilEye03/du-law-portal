@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=81.0">
+  <link rel="stylesheet" href="/css/styles.css?v=82.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -1729,7 +1729,7 @@
        =================================================================== -->
   
   <!-- ===================================================================
-       BNS 2023 ↔ IPC 1860 CONVERTER MODAL
+       CRIMINAL MAJOR ACTS TRIAD CONVERTER MODAL (IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA)
        =================================================================== -->
   <div class="bns-modal-overlay" id="bnsModalOverlay"></div>
   <div class="bns-modal" id="bnsModal" role="dialog" aria-modal="true">
@@ -1737,8 +1737,8 @@
       <div class="bns-header-title">
         <i class="fa-solid fa-scale-unbalanced-flip"></i>
         <div>
-          <h3>BNS 2023 &harr; IPC 1860 Live Section Converter</h3>
-          <p>Criminal Law Transition Guide &bull; Comparative Analysis</p>
+          <h3>Criminal Major Acts Live Converter</h3>
+          <p>IPC 1860 &harr; BNS 2023 &bull; CrPC 1973 &harr; BNSS 2023 &bull; IEA 1872 &harr; BSA 2023</p>
         </div>
       </div>
       <button class="bns-close-btn" id="bnsCloseBtn" title="Close Converter (Esc)">
@@ -1747,16 +1747,40 @@
     </div>
 
     <div class="bns-modal-toolbar">
+      <!-- 1. Converter Mode Selector Bar -->
+      <div class="bns-act-selector-bar" id="bnsModalActSelectorBar">
+        <button type="button" class="bns-act-btn active" data-act="all"><i class="fa-solid fa-layer-group"></i> All 3 Acts</button>
+        <button type="button" class="bns-act-btn" data-act="IPC_BNS"><i class="fa-solid fa-gavel"></i> IPC &harr; BNS</button>
+        <button type="button" class="bns-act-btn" data-act="CRPC_BNSS"><i class="fa-solid fa-shield-halved"></i> CrPC &harr; BNSS</button>
+        <button type="button" class="bns-act-btn" data-act="IEA_BSA"><i class="fa-solid fa-scale-balanced"></i> IEA &harr; BSA</button>
+      </div>
+
+      <!-- 2. Search Input -->
       <div class="bns-search-input-wrap">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" class="bns-search-input" id="bnsSearchInput" placeholder="Search section number or offense name (e.g. 302, 103, murder, cruelty, 498A, theft)...">
+        <input type="text" class="bns-search-input" id="bnsSearchInput" placeholder="Enter section number (e.g. 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
       </div>
+
+      <!-- 3. Quick Chips -->
+      <div class="bns-quick-chips" id="bnsModalQuickChips">
+        <span class="bns-chips-label"><i class="fa-solid fa-bolt"></i> Popular:</span>
+        <button type="button" class="bns-chip-btn" data-query="302">302 (Murder)</button>
+        <button type="button" class="bns-chip-btn" data-query="154">154 (FIR)</button>
+        <button type="button" class="bns-chip-btn" data-query="65B">65B (Electronic)</button>
+        <button type="button" class="bns-chip-btn" data-query="167">167 (Remand)</button>
+        <button type="button" class="bns-chip-btn" data-query="438">438 (Anticipatory Bail)</button>
+        <button type="button" class="bns-chip-btn" data-query="Mob Lynching">Mob Lynching</button>
+        <button type="button" class="bns-chip-btn" data-query="Handcuffs">Handcuffs</button>
+      </div>
+
+      <!-- 4. Category Pills -->
       <div class="bns-category-pills" id="bnsCategoryPills">
-        <button class="bns-pill active" data-cat="all">All Offenses</button>
-        <button class="bns-pill" data-cat="Life">Homicide &amp; Life</button>
-        <button class="bns-pill" data-cat="Women">Women &amp; Children</button>
-        <button class="bns-pill" data-cat="Property">Offences Against Property</button>
-        <button class="bns-pill" data-cat="State">State &amp; Public Peace</button>
+        <button type="button" class="bns-pill active" data-cat="all">All Provisions</button>
+        <button type="button" class="bns-pill" data-cat="Life">Homicide &amp; Life</button>
+        <button type="button" class="bns-pill" data-cat="Women">Women &amp; Children</button>
+        <button type="button" class="bns-pill" data-cat="Property">Property Offences</button>
+        <button type="button" class="bns-pill" data-cat="Investigation">FIR &amp; Remand</button>
+        <button type="button" class="bns-pill" data-cat="Bail">Bail &amp; Custody</button>
       </div>
     </div>
 
@@ -1905,8 +1929,8 @@
         <button class="mtd-action-card" id="mtdBnsBtn">
           <div class="mtd-card-icon bns"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
           <div class="mtd-card-text">
-            <h4>BNS &harr; IPC Live Converter</h4>
-            <p>Compare new Bharatiya Nyaya Sanhita with IPC sections</p>
+            <h4>Criminal Major Acts Converter</h4>
+            <p>IPC ↔ BNS • CrPC ↔ BNSS • IEA ↔ BSA live cross-reference</p>
           </div>
           <i class="fa-solid fa-chevron-right mtd-arrow"></i>
         </button>
@@ -2722,14 +2746,14 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=81.0" defer></script>
-  <script src="/js/interactive_particles.js?v=81.0" defer></script>
-  <script src="/js/books_showcase.js?v=81.0" defer></script>
-  <script src="/js/data.js?v=81.0" defer></script>
-  <script src="/js/bare_acts.js?v=81.0" defer></script>
-  <script src="/js/bns_converter.js?v=81.0" defer></script>
-  <script src="/js/pro_desk.js?v=81.0" defer></script>
-  <script src="/js/app.js?v=81.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=82.0" defer></script>
+  <script src="/js/interactive_particles.js?v=82.0" defer></script>
+  <script src="/js/books_showcase.js?v=82.0" defer></script>
+  <script src="/js/data.js?v=82.0" defer></script>
+  <script src="/js/bare_acts.js?v=82.0" defer></script>
+  <script src="/js/bns_converter.js?v=82.0" defer></script>
+  <script src="/js/pro_desk.js?v=82.0" defer></script>
+  <script src="/js/app.js?v=82.0" defer></script>
 
 
   <script>

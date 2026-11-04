@@ -1,5 +1,5 @@
 // DU Law Notes Portal — Progressive Web App Service Worker
-const CACHE_NAME = "du-law-portal-v81";
+const CACHE_NAME = "du-law-portal-v82";
 const ASSETS_TO_CACHE = [
   "/",
   "/index.html",
@@ -11,20 +11,20 @@ const ASSETS_TO_CACHE = [
   "/tools/bare-acts.html",
   "/tools/bns-converter.html",
   "/tools/flashcards.html",
-  "/css/styles.css?v=81.0",
-  "/css/notes-responsive.css?v=81.0",
+  "/css/styles.css?v=82.0",
+  "/css/notes-responsive.css?v=82.0",
   "/lib/three.min.js",
   "/lib/gsap.min.js",
   "/lib/fontawesome/css/all.min.css",
-  "/js/wave_grid_background.js?v=81.0",
-  "/js/interactive_particles.js?v=81.0",
+  "/js/wave_grid_background.js?v=82.0",
+  "/js/interactive_particles.js?v=82.0",
   "/particles.png",
-  "/js/books_showcase.js?v=81.0",
-  "/js/data.js?v=81.0",
-  "/js/bare_acts.js?v=81.0",
-  "/js/bns_converter.js?v=81.0",
-  "/js/pro_desk.js?v=81.0",
-  "/js/app.js?v=81.0",
+  "/js/books_showcase.js?v=82.0",
+  "/js/data.js?v=82.0",
+  "/js/bare_acts.js?v=82.0",
+  "/js/bns_converter.js?v=82.0",
+  "/js/pro_desk.js?v=82.0",
+  "/js/app.js?v=82.0",
   "/favicon.svg",
   "/manifest.json"
 ];

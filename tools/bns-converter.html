@@ -11,15 +11,15 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>BNS 2023 ↔ IPC 1860 Live Converter & Comparative Table — Make Law Easy</title>
-  <meta name="description" content="Instant cross-reference converter from Indian Penal Code 1860 to Bharatiya Nyaya Sanhita 2023 with section maps, key changes, and precedents.">
+  <title>Criminal Law Triad Converter (BNS ↔ IPC • BNSS ↔ CrPC • BSA ↔ IEA) — Make Law Easy</title>
+  <meta name="description" content="Instant cross-reference converter and comparative analysis between BNS 2023 ↔ IPC 1860, BNSS 2023 ↔ CrPC 1973, and BSA 2023 ↔ IEA 1872 with key statutory differences, landmark precedents, and DU exam tips.">
   <link rel="canonical" href="https://makelaweasy.in/tools/bns-converter">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css?v=82.0">
 
   <style>
     .standalone-page-body {
@@ -147,14 +147,14 @@
     }
     .tool-hero h2 {
       font-family: var(--font-display, 'Cinzel', serif);
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.3rem);
       font-weight: 700;
       color: var(--text-primary, #fff);
       line-height: 1.25;
       margin-bottom: 10px;
     }
     .tool-hero p {
-      max-width: 780px;
+      max-width: 840px;
       margin: 0 auto;
       font-size: 0.94rem;
       color: var(--text-secondary, #cbd5e1);
@@ -175,9 +175,79 @@
       margin-bottom: 24px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
+    .converter-select-panel {
+      margin-bottom: 16px;
+    }
+    .converter-select-label {
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted, #94a3b8);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .act-tabs-strip {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .act-tabs-strip::-webkit-scrollbar { display: none; }
+    .act-tab-btn {
+      flex: 1;
+      min-width: 170px;
+      padding: 10px 16px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.04));
+      border: 1.5px solid var(--border-line, rgba(255, 255, 255, 0.12));
+      border-radius: 12px;
+      color: var(--text-secondary, #cbd5e1);
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap;
+    }
+    .act-tab-btn:hover {
+      background: var(--bg-elevated, rgba(255, 255, 255, 0.08));
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .act-tab-btn.active[data-act="all"] {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(225, 29, 72, 0.15));
+      border-color: #f59e0b;
+      color: #fbbf24;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.25);
+    }
+    .act-tab-btn.active[data-act="IPC_BNS"] {
+      background: linear-gradient(135deg, #e11d48, #be123c);
+      border-color: #e11d48;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+    }
+    .act-tab-btn.active[data-act="CRPC_BNSS"] {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      border-color: #2563eb;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    }
+    .act-tab-btn.active[data-act="IEA_BSA"] {
+      background: linear-gradient(135deg, #d97706, #b45309);
+      border-color: #d97706;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.35);
+    }
     .search-input-wrap {
       position: relative;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .search-input-wrap i.search-icon {
       position: absolute;
@@ -216,19 +286,56 @@
       cursor: pointer;
       display: none;
     }
+    .quick-chips-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .quick-chips-wrap::-webkit-scrollbar { display: none; }
+    .quick-chips-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--du-gold, #c9a84c);
+      white-space: nowrap;
+      margin-right: 4px;
+    }
+    .quick-chip {
+      padding: 4px 10px;
+      background: var(--bg-surface, rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--border-line, rgba(255, 255, 255, 0.1));
+      border-radius: var(--radius-pill, 9999px);
+      color: var(--text-secondary, #cbd5e1);
+      font-size: 0.74rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .quick-chip:hover {
+      background: var(--primary, #2563eb);
+      color: #fff;
+      border-color: var(--primary, #2563eb);
+    }
     .bns-filter-pills {
       display: flex;
       align-items: center;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 6px;
+      padding-bottom: 4px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
     .bns-filter-pills::-webkit-scrollbar { display: none; }
     .bns-pill {
       flex-shrink: 0;
-      padding: 7px 14px;
+      padding: 6px 14px;
       background: var(--bg-surface, rgba(255, 255, 255, 0.05));
       border: 1px solid var(--border-line, rgba(255, 255, 255, 0.12));
       border-radius: var(--radius-pill, 9999px);
@@ -240,6 +347,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
     .bns-pill:hover {
       background: var(--bg-elevated, rgba(255, 255, 255, 0.1));
@@ -276,6 +384,7 @@
       .tool-container { padding: 0 12px; }
       .search-filter-card { padding: 14px; border-radius: 12px; }
       .search-input-standalone { font-size: 0.88rem; padding: 12px 38px 12px 40px; }
+      .act-tab-btn { min-width: 140px; padding: 8px 12px; font-size: 0.78rem; }
     }
   </style>
 </head>
@@ -306,43 +415,66 @@
 
   <!-- Hero Section -->
   <section class="tool-hero">
-    <span class="tool-hero-badge"><i class="fa-solid fa-arrows-rotate"></i> Criminal Law Transition</span>
-    <h2>BNS 2023 ↔ IPC 1860 Converter</h2>
-    <p>Live dual-column comparative analysis between the Bharatiya Nyaya Sanhita, 2023 and the Indian Penal Code, 1860 with statutory changes, landmark precedents, and DU examination scoring tips.</p>
+    <span class="tool-hero-badge"><i class="fa-solid fa-scale-unbalanced-flip"></i> Criminal Law Triad Transition</span>
+    <h2>Criminal Major Acts Live Converter</h2>
+    <p>Live dual-column comparative cross-reference engine between the colonial triad (IPC 1860, CrPC 1973, IEA 1872) and India's three new criminal codes (BNS 2023, BNSS 2023, BSA 2023). Select your converter, lookup section numbers, and review exact statutory differences, landmark precedents, and DU examination scoring tips.</p>
   </section>
 
   <!-- Main Tool Container -->
   <main class="tool-container">
     <!-- Search & Filter Card -->
     <div class="search-filter-card">
+      <!-- 1. Converter Mode Selector -->
+      <div class="converter-select-panel">
+        <div class="converter-select-label"><i class="fa-solid fa-arrow-right-arrow-left"></i> Step 1: Select Converter Mode</div>
+        <div class="act-tabs-strip" id="actTabsStrip">
+          <button class="act-tab-btn active" data-act="all"><i class="fa-solid fa-layer-group"></i> All 3 Acts (Triad)</button>
+          <button class="act-tab-btn" data-act="IPC_BNS"><i class="fa-solid fa-gavel"></i> IPC ↔ BNS 2023</button>
+          <button class="act-tab-btn" data-act="CRPC_BNSS"><i class="fa-solid fa-shield-halved"></i> CrPC ↔ BNSS 2023</button>
+          <button class="act-tab-btn" data-act="IEA_BSA"><i class="fa-solid fa-scale-balanced"></i> IEA ↔ BSA 2023</button>
+        </div>
+      </div>
+
+      <!-- 2. Search Input -->
       <div class="search-input-wrap">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-        <input type="text" id="bnsSearchInput" class="search-input-standalone" placeholder="Search by IPC section (e.g. 300, 302, 34, 120B), BNS section, or offense (e.g. Murder, Theft, Rape)..." autocomplete="off">
+        <input type="text" id="bnsSearchInput" class="search-input-standalone" placeholder="Enter section number (e.g. 302, 154, 65B, 438, 167) or topic name..." autocomplete="off">
         <button type="button" class="btn-clear-input" id="bnsClearBtn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <!-- Category Filter Pills -->
+      <!-- 3. Quick Lookup Chips -->
+      <div class="quick-chips-wrap" id="quickChipsWrap">
+        <span class="quick-chips-label"><i class="fa-solid fa-bolt"></i> Popular:</span>
+        <button class="quick-chip" data-query="302">S. 302 IPC (Murder)</button>
+        <button class="quick-chip" data-query="154">S. 154 CrPC (FIR)</button>
+        <button class="quick-chip" data-query="65B">S. 65B IEA (Electronic)</button>
+        <button class="quick-chip" data-query="167">S. 167 CrPC (Remand)</button>
+        <button class="quick-chip" data-query="438">S. 438 CrPC (Anticipatory Bail)</button>
+        <button class="quick-chip" data-query="34">S. 34 IPC (Common Intention)</button>
+        <button class="quick-chip" data-query="420">S. 420 IPC (Cheating)</button>
+        <button class="quick-chip" data-query="124A">S. 124A IPC (Sedition)</button>
+        <button class="quick-chip" data-query="Mob Lynching">Mob Lynching (103(2))</button>
+        <button class="quick-chip" data-query="Handcuffs">Handcuffs (43(3))</button>
+        <button class="quick-chip" data-query="Zero FIR">Zero FIR (173)</button>
+      </div>
+
+      <!-- 4. Dynamic Category Filter Pills -->
       <div class="bns-filter-pills" id="bnsPillsStrip">
-        <button class="bns-pill active" data-cat="all"><i class="fa-solid fa-layer-group"></i> All Offenses</button>
-        <button class="bns-pill" data-cat="Offences Against Human Body"><i class="fa-solid fa-user-shield"></i> Offences Against Body</button>
-        <button class="bns-pill" data-cat="Offences Against Property"><i class="fa-solid fa-coins"></i> Offences Against Property</button>
-        <button class="bns-pill" data-cat="Offences Against Women & Children"><i class="fa-solid fa-person-breastfeeding"></i> Women & Children</button>
-        <button class="bns-pill" data-cat="Offences Against the State"><i class="fa-solid fa-flag"></i> Offences Against State</button>
-        <button class="bns-pill" data-cat="General Exceptions"><i class="fa-solid fa-shield-halved"></i> General Exceptions</button>
+        <!-- Rendered dynamically depending on selected act -->
       </div>
     </div>
 
     <!-- Results Count Bar -->
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:0.84rem; color:var(--text-muted,#94a3b8); padding:0 4px;">
-      <span id="bnsCountText">Showing sections...</span>
-      <span id="bnsCategoryText">All Categories</span>
+      <span id="bnsCountText">Showing provisions...</span>
+      <span id="bnsCategoryText">All Triad Provisions</span>
     </div>
 
     <!-- Cards Grid -->
     <div class="bns-cards-grid" id="bnsCardsContainer">
       <div class="empty-state">
         <i class="fa-solid fa-spinner fa-spin"></i>
-        <h4>Loading BNS ↔ IPC Converter...</h4>
+        <h4>Loading Criminal Law Triad Converter...</h4>
       </div>
     </div>
   </main>
@@ -353,7 +485,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../js/bns_converter.js"></script>
+  <script src="/js/bns_converter.js?v=82.0"></script>
   <script>
     (function() {
       // Theme Management
@@ -378,32 +510,134 @@
       const db = window.BNS_CONVERTER_DB;
       if (!db || !db.sections) return;
 
+      let activeAct = 'all';
       let activeCategory = 'all';
       let searchQuery = '';
 
       const searchInput = document.getElementById('bnsSearchInput');
       const clearBtn = document.getElementById('bnsClearBtn');
+      const actTabsStrip = document.getElementById('actTabsStrip');
       const pillsStrip = document.getElementById('bnsPillsStrip');
+      const quickChipsWrap = document.getElementById('quickChipsWrap');
       const container = document.getElementById('bnsCardsContainer');
       const countText = document.getElementById('bnsCountText');
       const catText = document.getElementById('bnsCategoryText');
 
-      // Check URL parameters for direct search (e.g. ?ipc=302 or ?bns=103 or ?q=murder)
-      const urlParams = new URLSearchParams(window.location.search);
-      const queryParam = urlParams.get('ipc') || urlParams.get('bns') || urlParams.get('q');
-      if (queryParam) {
-        searchQuery = queryParam.trim();
-        if (searchInput) searchInput.value = searchQuery;
-        if (clearBtn) clearBtn.style.display = 'block';
+      // Category definitions per act
+      const CATEGORIES = {
+        all: [
+          { id: 'all', label: 'All Provisions', icon: 'fa-layer-group' },
+          { id: 'Body', label: 'Body & Life', icon: 'fa-user-shield' },
+          { id: 'Women', label: 'Women & Children', icon: 'fa-person-breastfeeding' },
+          { id: 'Property', label: 'Property Offences', icon: 'fa-coins' },
+          { id: 'Investigation', label: 'FIR & Remand', icon: 'fa-magnifying-glass-chart' },
+          { id: 'Bail', label: 'Bail & Custody', icon: 'fa-key' },
+          { id: 'Electronic', label: 'Electronic Evidence', icon: 'fa-laptop-code' },
+          { id: 'Trial', label: 'Court Trials', icon: 'fa-gavel' }
+        ],
+        IPC_BNS: [
+          { id: 'all', label: 'All IPC ↔ BNS', icon: 'fa-gavel' },
+          { id: 'Offences Affecting Life', label: 'Homicide & Life', icon: 'fa-heart-pulse' },
+          { id: 'Women', label: 'Women & Children', icon: 'fa-person-breastfeeding' },
+          { id: 'Property', label: 'Offences Against Property', icon: 'fa-coins' },
+          { id: 'State', label: 'Offences Against State', icon: 'fa-flag' },
+          { id: 'General Exceptions', label: 'General Exceptions', icon: 'fa-shield-halved' }
+        ],
+        CRPC_BNSS: [
+          { id: 'all', label: 'All CrPC ↔ BNSS', icon: 'fa-shield-halved' },
+          { id: 'Arrest', label: 'Arrest & Handcuffs', icon: 'fa-handcuffs' },
+          { id: 'Investigation', label: 'FIR & Police Remand', icon: 'fa-file-signature' },
+          { id: 'Bail', label: 'Anticipatory & Regular Bail', icon: 'fa-key' },
+          { id: 'Trial', label: 'Discharge & Trials', icon: 'fa-landmark' },
+          { id: 'Inherent', label: 'High Court Quashing', icon: 'fa-scale-balanced' }
+        ],
+        IEA_BSA: [
+          { id: 'all', label: 'All IEA ↔ BSA', icon: 'fa-scale-balanced' },
+          { id: 'Documentary', label: 'Electronic Evidence (S. 63)', icon: 'fa-laptop-code' },
+          { id: 'Admissions', label: 'Confessions & Discovery', icon: 'fa-user-secret' },
+          { id: 'Relevancy', label: 'Relevancy & Res Gestae', icon: 'fa-timeline' },
+          { id: 'Burden', label: 'Burden of Proof & Dowry', icon: 'fa-weight-scale' },
+          { id: 'Examination', label: 'Witness Examination', icon: 'fa-users' }
+        ]
+      };
+
+      function updatePlaceholder() {
+        if (!searchInput) return;
+        if (activeAct === 'IPC_BNS') {
+          searchInput.placeholder = "Enter IPC (e.g. 302, 34, 420, 124A) or BNS (e.g. 103, 3(5), 318, 152) section or offense...";
+        } else if (activeAct === 'CRPC_BNSS') {
+          searchInput.placeholder = "Enter CrPC (e.g. 154, 167, 438, 482) or BNSS (e.g. 173, 187, 482, 528) section or procedure...";
+        } else if (activeAct === 'IEA_BSA') {
+          searchInput.placeholder = "Enter IEA (e.g. 65B, 27, 32, 113B) or BSA (e.g. 63, 23, 26, 117) section or rule...";
+        } else {
+          searchInput.placeholder = "Enter any section (e.g. 302, 154, 65B, 438, 167) or topic across IPC, CrPC, IEA, BNS, BNSS, BSA...";
+        }
       }
 
-      if (pillsStrip) {
+      function renderCategoryPills() {
+        if (!pillsStrip) return;
+        const list = CATEGORIES[activeAct] || CATEGORIES.all;
+        pillsStrip.innerHTML = list.map(c => `
+          <button class="bns-pill ${c.id === activeCategory ? 'active' : ''}" data-cat="${c.id}">
+            <i class="fa-solid ${c.icon}"></i> ${c.label}
+          </button>
+        `).join('');
+
         pillsStrip.querySelectorAll('.bns-pill').forEach(btn => {
           btn.addEventListener('click', () => {
             pillsStrip.querySelectorAll('.bns-pill').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             activeCategory = btn.dataset.cat;
             renderCards();
+          });
+        });
+      }
+
+      // Check URL parameters for direct deep-linking (e.g. ?act=crpc_bnss&sec=154 or ?q=murder)
+      const urlParams = new URLSearchParams(window.location.search);
+      const actParam = urlParams.get('act');
+      if (actParam) {
+        const normalized = actParam.toUpperCase().replace('-', '_');
+        if (['IPC_BNS', 'CRPC_BNSS', 'IEA_BSA', 'ALL'].includes(normalized)) {
+          activeAct = normalized === 'ALL' ? 'all' : normalized;
+        }
+      }
+
+      const queryParam = urlParams.get('sec') || urlParams.get('ipc') || urlParams.get('bns') || urlParams.get('crpc') || urlParams.get('bnss') || urlParams.get('iea') || urlParams.get('bsa') || urlParams.get('q');
+      if (queryParam) {
+        searchQuery = queryParam.trim();
+        if (searchInput) searchInput.value = searchQuery;
+        if (clearBtn) clearBtn.style.display = 'block';
+      }
+
+      if (actTabsStrip) {
+        actTabsStrip.querySelectorAll('.act-tab-btn').forEach(btn => {
+          if (btn.dataset.act === activeAct) btn.classList.add('active');
+          else btn.classList.remove('active');
+
+          btn.addEventListener('click', () => {
+            actTabsStrip.querySelectorAll('.act-tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeAct = btn.dataset.act;
+            activeCategory = 'all';
+            updatePlaceholder();
+            renderCategoryPills();
+            renderCards();
+          });
+        });
+      }
+
+      if (quickChipsWrap) {
+        quickChipsWrap.querySelectorAll('.quick-chip').forEach(chip => {
+          chip.addEventListener('click', () => {
+            const val = chip.dataset.query;
+            if (searchInput) {
+              searchInput.value = val;
+              searchQuery = val;
+              if (clearBtn) clearBtn.style.display = 'block';
+              searchInput.focus();
+              renderCards();
+            }
           });
         });
       }
@@ -426,34 +660,61 @@
         });
       }
 
+      function getActTagClass(actPair) {
+        if (actPair === 'IPC_BNS') return 'act-ipc_bns';
+        if (actPair === 'CRPC_BNSS') return 'act-crpc_bnss';
+        if (actPair === 'IEA_BSA') return 'act-iea_bsa';
+        return 'act-ipc_bns';
+      }
+
       function renderCards() {
         let items = db.sections;
-        if (activeCategory && activeCategory !== 'all') {
-          items = items.filter(s => (s.chapter && s.chapter.includes(activeCategory)) || (s.offense && s.offense.includes(activeCategory)));
+
+        // 1. Filter by Act
+        if (activeAct && activeAct !== 'all') {
+          items = items.filter(s => s.actPair === activeAct);
         }
-        if (searchQuery) {
-          const q = searchQuery.toLowerCase();
+
+        // 2. Filter by Category
+        if (activeCategory && activeCategory !== 'all') {
           items = items.filter(s =>
-            (s.bns && s.bns.toLowerCase().includes(q)) ||
-            (s.bnsNum && s.bnsNum.toLowerCase().includes(q)) ||
-            (s.ipc && s.ipc.toLowerCase().includes(q)) ||
-            (s.ipcNum && s.ipcNum.toLowerCase().includes(q)) ||
-            (s.offense && s.offense.toLowerCase().includes(q)) ||
-            (s.summary && s.summary.toLowerCase().includes(q)) ||
-            (s.changes && s.changes.toLowerCase().includes(q))
+            (s.chapter && s.chapter.toLowerCase().includes(activeCategory.toLowerCase())) ||
+            (s.offense && s.offense.toLowerCase().includes(activeCategory.toLowerCase()))
           );
         }
 
+        // 3. Filter by Search Query (supports old section, new section, offense, summary, changes)
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          items = items.filter(s =>
+            (s.oldSec && s.oldSec.toLowerCase().includes(q)) ||
+            (s.newSec && s.newSec.toLowerCase().includes(q)) ||
+            (s.oldSecNum && s.oldSecNum.toLowerCase().includes(q)) ||
+            (s.newSecNum && s.newSecNum.toLowerCase().includes(q)) ||
+            (s.ipc && s.ipc.toLowerCase().includes(q)) ||
+            (s.bns && s.bns.toLowerCase().includes(q)) ||
+            (s.ipcNum && s.ipcNum.toLowerCase().includes(q)) ||
+            (s.bnsNum && s.bnsNum.toLowerCase().includes(q)) ||
+            (s.offense && s.offense.toLowerCase().includes(q)) ||
+            (s.summary && s.summary.toLowerCase().includes(q)) ||
+            (s.changes && s.changes.toLowerCase().includes(q)) ||
+            (s.cases && s.cases.some(c => c.toLowerCase().includes(q)))
+          );
+        }
+
+        const actLabel = activeAct === 'all' ? 'Triad' : activeAct.replace('_', ' ↔ ');
         if (countText) countText.textContent = `Showing ${items.length} ${items.length === 1 ? 'provision mapping' : 'provision mappings'}`;
-        if (catText) catText.textContent = activeCategory === 'all' ? 'All Offenses' : activeCategory;
+        if (catText) catText.textContent = `${actLabel} • ${activeCategory === 'all' ? 'All Categories' : activeCategory}`;
 
         if (items.length === 0) {
           container.innerHTML = `
-            <div class="empty-state">
-              <i class="fa-solid fa-scale-unbalanced"></i>
-              <h4>No corresponding sections found</h4>
-              <p>Try searching for a different IPC section, BNS section, or offense keyword.</p>
-              <button class="btn-tool-back" style="margin-top:14px;" onclick="document.getElementById('bnsClearBtn').click()">Reset Filter</button>
+            <div class="empty-state" style="text-align:center; padding:50px 20px; background:var(--bg-card,#111827); border-radius:14px; border:1px solid var(--border-line,rgba(255,255,255,0.1));">
+              <i class="fa-solid fa-scale-unbalanced" style="font-size:2.4rem; color:#ca8a04; margin-bottom:14px;"></i>
+              <h4 style="font-size:1.15rem; margin:0 0 8px;">No corresponding provisions found</h4>
+              <p style="color:var(--text-muted,#94a3b8); max-width:540px; margin:0 auto 16px; font-size:0.9rem;">
+                Try searching for standard section numbers (e.g. 302, 154, 65B, 438, 167) or key legal doctrines (e.g. Murder, Remand, Anticipatory Bail, Electronic Records, Handcuffs).
+              </p>
+              <button class="btn-tool-back" style="margin-top:6px;" onclick="document.getElementById('bnsClearBtn').click()">Reset Search</button>
             </div>
           `;
           return;
@@ -462,49 +723,61 @@
         container.innerHTML = items.map(s => `
           <div class="bns-comp-card">
             <div class="bns-comp-header">
-              <div class="bns-offense-info">
-                <h4>${s.offense}</h4>
-                <div class="bns-chapter-tag">${s.chapter || 'Indian Penal Transition'}</div>
-              </div>
-              <div class="bns-header-pills">
-                <span class="bns-code-badge bns-badge-ipc">Old: ${s.ipc}</span>
-                <span class="bns-code-badge bns-badge-bns">New: ${s.bns}</span>
+              <div class="bns-offense-info" style="min-width:0; overflow-wrap:break-word;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;">
+                  <span class="bns-act-badge ${getActTagClass(s.actPair)}">${s.oldAct} ↔ ${s.newAct}</span>
+                  <span class="bns-comp-badge ${s.badge && s.badge.includes('Brand New') ? 'new-prov' : ''}">${s.badge || 'Key Provision'}</span>
+                </div>
+                <h4 style="margin:2px 0; font-size:1.02rem; font-weight:700;">${s.offense}</h4>
+                <div class="bns-chapter-tag" style="font-size:0.75rem; color:var(--text-muted,#94a3b8);">${s.chapter || 'Criminal Law Transition'}</div>
               </div>
             </div>
 
+            <!-- Dual-Column Comparison Body -->
             <div class="bns-comp-body">
-              <div class="bns-side bns-ipc-side">
-                <div class="bns-side-title"><i class="fa-solid fa-scroll"></i> ${s.ipc} (IPC 1860)</div>
-                <p class="bns-summary-text">${s.summary}</p>
+              <div class="bns-section-box ipc-side">
+                <div class="bns-sec-tag" style="color:#ef4444;"><i class="fa-solid fa-scroll"></i> OLD STATUTE: ${s.oldAct}</div>
+                <div class="bns-sec-num" style="font-size:1.15rem; font-weight:800; color:#ef4444; margin-bottom:6px;">${s.oldSec}</div>
+                <p class="bns-summary-text" style="font-size:0.86rem; line-height:1.55; margin:0; color:var(--text-color);">${s.summary}</p>
               </div>
-              <div class="bns-side bns-bns-side">
-                <div class="bns-side-title"><i class="fa-solid fa-gavel"></i> ${s.bns} (BNS 2023)</div>
-                <div class="bns-changes-box">
-                  <div class="bns-changes-label"><i class="fa-solid fa-pen-to-square"></i> Key Statutory Changes:</div>
-                  <p>${s.changes}</p>
-                </div>
+              <div class="bns-section-box bns-side">
+                <div class="bns-sec-tag" style="color:#10b981;"><i class="fa-solid fa-gavel"></i> NEW STATUTE: ${s.newAct}</div>
+                <div class="bns-sec-num" style="font-size:1.15rem; font-weight:800; color:#10b981; margin-bottom:6px;">${s.newSec}</div>
+                <p class="bns-summary-text" style="font-size:0.86rem; line-height:1.55; margin:0; color:var(--text-color);">${s.summary}</p>
               </div>
             </div>
 
-            ${s.cases && s.cases.length ? `
-              <div class="bns-cases-row">
-                <span class="bns-row-label"><i class="fa-solid fa-landmark"></i> Precedents Applicable:</span>
-                <div class="bns-cases-chips">
-                  ${s.cases.map(c => `<span class="bns-case-chip">${c}</span>`).join('')}
-                </div>
+            <!-- Difference & Key Changes in the New Act Callout -->
+            <div class="bns-changes-callout">
+              <div class="bns-changes-callout-header">
+                <i class="fa-solid fa-bolt-lightning"></i> Key Statutory Differences &amp; Changes in ${s.newAct}:
               </div>
-            ` : ''}
+              <p class="bns-changes-callout-text">${s.changes}</p>
+            </div>
 
-            ${s.duExamTip ? `
-              <div class="bns-exam-tip-row">
-                <span class="bns-exam-tip-badge"><i class="fa-solid fa-star"></i> DU Exam Tip:</span>
-                <p>${s.duExamTip}</p>
-              </div>
-            ` : ''}
+            <!-- Precedents & Tips Footer -->
+            <div class="bns-comp-footer">
+              ${s.cases && s.cases.length ? `
+                <div class="bns-cases-row" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; font-size:0.78rem;">
+                  <span class="bns-row-label" style="font-weight:700; color:var(--text-muted);"><i class="fa-solid fa-landmark"></i> Precedents Applicable:</span>
+                  <div class="bns-cases-chips" style="display:flex; gap:6px; flex-wrap:wrap;">
+                    ${s.cases.map(c => `<span class="bns-case-tag">${c}</span>`).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              ${s.duExamTip ? `
+                <div class="bns-exam-tip" style="margin-top:4px;">
+                  <i class="fa-solid fa-lightbulb" style="margin-right:4px;"></i> <b>DU Exam / Practice Tip:</b> ${s.duExamTip}
+                </div>
+              ` : ''}
+            </div>
           </div>
         `).join('');
       }
 
+      updatePlaceholder();
+      renderCategoryPills();
       renderCards();
     })();
   </script>
