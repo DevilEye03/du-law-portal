@@ -3199,19 +3199,12 @@
   }
 
   // ===================================================================
-  // FEATURE: LIMITATION ACT 1963 CALCULATOR MODAL & ENGINE
+  // FEATURE: LIMITATION ACT 1963 CALCULATOR (FULL NEW TAB)
   // ===================================================================
   let limitationModalDiv = 'all';
 
   function openLimitationModal() {
-    if (elements.limitationModal && elements.limitationModalOverlay) {
-      elements.limitationModal.classList.add('active');
-      elements.limitationModalOverlay.classList.add('active');
-
-      if (window.LimitationCalculator) {
-        initLimitationModalContent();
-      }
-    }
+    window.open('/tools/limitation-calculator.html', '_blank', 'noopener,noreferrer');
   }
 
   function closeLimitationModal() {
@@ -4912,22 +4905,8 @@ Submission Time: ${new Date().toLocaleString()}
       });
     }
 
-    // Limitation Period Calculator Modal (Limitation Act, 1963)
-    if (elements.headerLimitationBtn) {
-      elements.headerLimitationBtn.addEventListener('click', openLimitationModal);
-    }
-    if (elements.heroLimitationBtn) {
-      elements.heroLimitationBtn.addEventListener('click', openLimitationModal);
-    }
-    if (elements.hpLimitationBanner) {
-      elements.hpLimitationBanner.addEventListener('click', openLimitationModal);
-      elements.hpLimitationBanner.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openLimitationModal();
-        }
-      });
-    }
+    // Limitation Period Calculator (Limitation Act, 1963) - Opens in Full New Tab
+    // Native <a target="_blank"> links handle instant opening in a fresh full tab.
     if (elements.limitationCloseBtn) elements.limitationCloseBtn.addEventListener('click', closeLimitationModal);
     if (elements.limitationModalOverlay) elements.limitationModalOverlay.addEventListener('click', closeLimitationModal);
 
@@ -4998,7 +4977,7 @@ Submission Time: ${new Date().toLocaleString()}
       elements.mtdBnsBtn.addEventListener('click', () => { closeMobileTools(); openBnsConverter(); });
     }
     if (elements.mtdLimitationBtn) {
-      elements.mtdLimitationBtn.addEventListener('click', () => { closeMobileTools(); openLimitationModal(); });
+      elements.mtdLimitationBtn.addEventListener('click', () => { closeMobileTools(); });
     }
     if (elements.mtdBareActBtn) {
       elements.mtdBareActBtn.addEventListener('click', () => { closeMobileTools(); openBareActDrawer(); });
