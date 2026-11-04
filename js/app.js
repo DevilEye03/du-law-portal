@@ -3106,25 +3106,25 @@
 
       return '<div class="bns-comp-card fade-in">' +
         '<div class="bns-comp-header">' +
-          '<div class="bns-comp-offense" style="min-width:0; overflow-wrap:break-word;">' +
-            '<div style="display:flex; align-items:center; gap:6px; margin-bottom:4px; flex-wrap:wrap;">' +
+          '<div class="bns-comp-offense">' +
+            '<div style="display:flex; align-items:center; gap:6px; margin-bottom:6px; flex-wrap:wrap;">' +
               '<span class="bns-act-badge ' + getActTagClass(s.actPair) + '">' + oldActName + ' &harr; ' + newActName + '</span>' +
               '<span class="bns-comp-badge ' + (isNewProv ? 'new-prov' : '') + '">' + (s.badge || 'Key Provision') + '</span>' +
             '</div>' +
-            '<div style="font-size:0.98rem; font-weight:700;"><i class="fa-solid fa-scale-balanced" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div>' +
-            '<div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">' + (s.chapter || 'Criminal Law Transition') + '</div>' +
+            '<div class="bns-comp-offense-title"><i class="fa-solid fa-scale-balanced" style="color:#ca8a04;margin-right:6px;"></i> ' + s.offense + '</div>' +
+            '<div class="bns-chapter-tag">' + (s.chapter || 'Criminal Law Transition') + '</div>' +
           '</div>' +
         '</div>' +
         '<div class="bns-comp-body">' +
           '<div class="bns-section-box ipc-side">' +
             '<div class="bns-sec-tag" style="color:#ef4444;"><i class="fa-solid fa-scroll"></i> OLD STATUTE: ' + oldActName + '</div>' +
             '<div class="bns-sec-num" style="color:#ef4444;">' + oldSecText + '</div>' +
-            '<p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);line-height:1.5;">' + s.summary + '</p>' +
+            '<p class="bns-summary-text">' + s.summary + '</p>' +
           '</div>' +
           '<div class="bns-section-box bns-side">' +
             '<div class="bns-sec-tag" style="color:#10b981;"><i class="fa-solid fa-gavel"></i> NEW STATUTE: ' + newActName + '</div>' +
             '<div class="bns-sec-num" style="color:#10b981;">' + newSecText + '</div>' +
-            '<p style="font-size:0.84rem;margin:6px 0 0;color:var(--text-color);line-height:1.5;">' + s.summary + '</p>' +
+            '<p class="bns-summary-text">' + s.summary + '</p>' +
           '</div>' +
         '</div>' +
         '<div class="bns-changes-callout">' +

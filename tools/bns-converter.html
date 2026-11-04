@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/styles.css?v=84.0">
+  <link rel="stylesheet" href="/css/styles.css?v=85.0">
 
   <style>
     .standalone-page-body {
@@ -486,7 +486,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/bns_converter.js?v=84.0"></script>
+  <script src="/js/bns_converter.js?v=85.0"></script>
   <script>
     (function() {
       // Theme Management
@@ -753,13 +753,13 @@
         container.innerHTML = displayedItems.map(s => `
           <div class="bns-comp-card">
             <div class="bns-comp-header">
-              <div class="bns-offense-info" style="min-width:0; overflow-wrap:break-word;">
-                <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px; flex-wrap:wrap;">
+              <div class="bns-offense-info">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap;">
                   <span class="bns-act-badge ${getActTagClass(s.actPair)}">${s.oldAct} ↔ ${s.newAct}</span>
                   <span class="bns-comp-badge ${s.badge && s.badge.includes('Brand New') ? 'new-prov' : ''}">${s.badge || 'Key Provision'}</span>
                 </div>
-                <h4 style="margin:2px 0; font-size:1.02rem; font-weight:700;">${s.offense}</h4>
-                <div class="bns-chapter-tag" style="font-size:0.75rem; color:var(--text-muted,#94a3b8);">${s.chapter || 'Criminal Law Transition'}</div>
+                <div class="bns-comp-offense-title"><i class="fa-solid fa-scale-balanced" style="color:#ca8a04;margin-right:6px;"></i> ${s.offense}</div>
+                <div class="bns-chapter-tag">${s.chapter || 'Criminal Law Transition'}</div>
               </div>
             </div>
 
@@ -767,13 +767,13 @@
             <div class="bns-comp-body">
               <div class="bns-section-box ipc-side">
                 <div class="bns-sec-tag" style="color:#ef4444;"><i class="fa-solid fa-scroll"></i> OLD STATUTE: ${s.oldAct}</div>
-                <div class="bns-sec-num" style="font-size:1.15rem; font-weight:800; color:#ef4444; margin-bottom:6px;">${s.oldSec}</div>
-                <p class="bns-summary-text" style="font-size:0.86rem; line-height:1.55; margin:0; color:var(--text-color);">${s.summary}</p>
+                <div class="bns-sec-num" style="color:#ef4444;">${s.oldSec}</div>
+                <p class="bns-summary-text">${s.summary}</p>
               </div>
               <div class="bns-section-box bns-side">
                 <div class="bns-sec-tag" style="color:#10b981;"><i class="fa-solid fa-gavel"></i> NEW STATUTE: ${s.newAct}</div>
-                <div class="bns-sec-num" style="font-size:1.15rem; font-weight:800; color:#10b981; margin-bottom:6px;">${s.newSec}</div>
-                <p class="bns-summary-text" style="font-size:0.86rem; line-height:1.55; margin:0; color:var(--text-color);">${s.summary}</p>
+                <div class="bns-sec-num" style="color:#10b981;">${s.newSec}</div>
+                <p class="bns-summary-text">${s.summary}</p>
               </div>
             </div>
 
