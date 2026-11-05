@@ -4565,7 +4565,7 @@ Submission Time: ${new Date().toLocaleString()}
               Browse Complete 14-Subject Crux Series &rarr;
             </a>
           </div>
-          <div style="position: relative; width: 100%; height: 780px;">
+          <div class="subj-crux-iframe-box" style="position: relative; width: 100%; height: 780px;">
             <iframe src="${cruxItem.filePath}" style="width: 100%; height: 100%; border: none;" title="${cruxItem.title} Law Crux PDF"></iframe>
           </div>
         </div>

@@ -536,6 +536,10 @@ try {
 
   const limitationCalcHtml = fs.readFileSync('tools/limitation-calculator.html', 'utf8');
   assert(limitationCalcHtml.includes('@media (max-width: 768px)') && limitationCalcHtml.includes('@media (max-width: 480px)'), 'tools/limitation-calculator.html contains mobile media queries for 768px and 480px');
+
+  // Verify mobile responsiveness for Law Crux
+  assert(cssContent.includes('.crux-modal-window') && cssContent.includes('100dvh'), 'css/styles.css has full-viewport mobile rules for Law Crux reader modal');
+  assert(cssContent.includes('.subj-crux-iframe-box'), 'css/styles.css has mobile responsive rules for Subject Hub Crux iframe');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }
