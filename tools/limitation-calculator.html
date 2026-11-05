@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/styles.css?v=91.0">
+  <link rel="stylesheet" href="/css/styles.css?v=92.0">
 
   <style>
     /* -------------------------------------------------------------
@@ -994,6 +994,119 @@
       color: #475569;
     }
 
+    /* -------------------------------------------------------------
+       COMPREHENSIVE MOBILE RESPONSIVENESS (320px - 768px, incl. 390px)
+       ------------------------------------------------------------- */
+    @media (max-width: 768px) {
+      .tool-header-nav { padding: 10px 14px; }
+      .tool-header-inner { gap: 10px; }
+      .tool-brand-logo { width: 34px; height: 34px; font-size: 1.05rem; }
+      .tool-brand-text h1 { font-size: 1rem; }
+      .tool-brand-text span { font-size: 0.65rem; }
+      .btn-tool-back { padding: 6px 12px; font-size: 0.78rem; }
+
+      .calc-hero { margin: 18px auto 14px; padding: 0 14px; }
+      .calc-hero h2 { font-size: clamp(1.35rem, 4vw, 1.8rem); }
+      .calc-hero p { font-size: 0.86rem; line-height: 1.5; }
+      .calc-hero-badge { font-size: 0.7rem; padding: 3px 10px; margin-bottom: 8px; }
+
+      .preset-chips-wrap { padding: 0 12px; margin: 12px auto 18px; }
+      .preset-chips-inner { padding: 10px 12px; gap: 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .preset-label { font-size: 0.72rem; }
+      .preset-btn { font-size: 0.74rem; padding: 5px 10px; min-height: 32px; }
+
+      .calc-container { padding: 0 12px; gap: 18px; margin-bottom: 36px; }
+      .calc-form-card, .calc-results-card { padding: 16px 14px; border-radius: 14px; }
+      .calc-results-card { position: static !important; }
+
+      .form-section-title { font-size: 0.98rem; margin-bottom: 12px; }
+      .division-tabs { gap: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .division-tab-btn { font-size: 0.76rem; padding: 6px 10px; }
+
+      .form-control, .form-select {
+        font-size: 16px !important; /* Prevents iOS auto-zoom on input focus */
+        padding: 9px 12px;
+        border-radius: 10px;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .dates-row {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .accordion-header { padding: 10px 12px; font-size: 0.82rem; }
+      .accordion-body { padding: 12px; }
+
+      .calc-btn-group {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .btn-calculate {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 0.96rem;
+      }
+      .btn-reset-form {
+        width: 100%;
+        padding: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+      .btn-reset-form::after {
+        content: " Reset Calculation";
+        font-size: 0.84rem;
+      }
+
+      .status-banner { padding: 16px 12px; margin-bottom: 14px; border-radius: 12px; }
+      .status-icon { font-size: 1.8rem; }
+      .status-title { font-size: 1.12rem; overflow-wrap: break-word; }
+      .status-days { font-size: 1.5rem; overflow-wrap: break-word; }
+      .status-deadline-date { font-size: 0.85rem; overflow-wrap: break-word; }
+
+      .timeline-wrap { padding: 12px; }
+      .timeline-step { gap: 10px; }
+      .timeline-content { min-width: 0; overflow-wrap: break-word; }
+
+      .alert-doctrine-box { padding: 12px; font-size: 0.8rem; }
+
+      .res-action-bar {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .btn-export { width: 100%; padding: 10px; }
+
+      .cases-repo-section { padding: 0 12px; margin-bottom: 40px; }
+      .repo-header h3 { font-size: 1.3rem; }
+      .repo-header p { font-size: 0.84rem; }
+      .repo-filter-bar { gap: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .repo-filter-btn { font-size: 0.72rem; padding: 5px 10px; }
+      .cases-grid { grid-template-columns: 1fr; gap: 12px; }
+      .repo-case-card { padding: 14px 12px; border-radius: 12px; }
+      .case-card-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .case-card-title { font-size: 0.92rem; }
+    }
+
+    @media (max-width: 480px) {
+      .tool-header-nav { padding: 8px 10px; }
+      .tool-brand-text h1 { font-size: 0.92rem; }
+      .tool-brand-text span { display: none; }
+      .btn-tool-back span { display: none; }
+      .btn-tool-back { padding: 6px 10px; border-radius: 50%; width: 34px; height: 34px; justify-content: center; }
+
+      .calc-hero { padding: 0 10px; }
+      .preset-chips-wrap { padding: 0 10px; }
+      .calc-container { padding: 0 8px; }
+      .calc-form-card, .calc-results-card { padding: 14px 10px; }
+
+      .cases-repo-section { padding: 0 8px; }
+    }
+
     /* Print styling */
     @media print {
       .tool-header-nav, .preset-chips-wrap, .calc-btn-group, .calc-accordion, .res-action-bar, .cases-repo-section {
@@ -1350,7 +1463,7 @@
   </section>
 
   <!-- Limitation Calculator Scripts -->
-  <script src="/js/limitation_calculator.js?v=91.0"></script>
+  <script src="/js/limitation_calculator.js?v=92.0"></script>
   <script>
     (function() {
       // -------------------------------------------------------------

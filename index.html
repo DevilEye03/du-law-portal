@@ -50,7 +50,7 @@
   <noscript><link rel="stylesheet" href="/lib/fontawesome/css/all.min.css"></noscript>
 
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css?v=91.0">
+  <link rel="stylesheet" href="/css/styles.css?v=92.0">
   <style>
     /* CRITICAL FULL-SCREEN TOPIC READER (100% VIEWPORT COVERAGE, ZERO SCROLL OFFSET DRIFT) */
     html.reader-open, body.reader-open {
@@ -2196,7 +2196,7 @@
           <div id="modalArticleInfo" style="font-size:0.78rem; color:var(--text-muted); margin-top:4px; line-height:1.4;"></div>
         </div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+        <div class="modal-dates-grid">
           <div>
             <label for="modalAccrualDate" style="display:block; font-size:0.8rem; font-weight:600; margin-bottom:4px;">Accrual / Decree Date:</label>
             <input type="date" id="modalAccrualDate" class="form-control" style="font-size:0.85rem; padding:8px 10px;">
@@ -2210,7 +2210,7 @@
         <!-- Copying Time & Exclusions -->
         <div style="background:var(--bg-card, rgba(255,255,255,0.03)); border:1px solid var(--border-line, rgba(255,255,255,0.08)); border-radius:10px; padding:10px;">
           <div style="font-size:0.78rem; font-weight:700; color:#0284c7; margin-bottom:6px;"><i class="fa-solid fa-clock-rotate-left"></i> Section 12(2) Copying Time Excluded:</div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+          <div class="modal-dates-grid modal-dates-grid-sm">
             <div>
               <label style="font-size:0.72rem; opacity:0.8;">Applied Date:</label>
               <input type="date" id="modalCopyingApply" class="form-control" style="font-size:0.8rem; padding:6px 8px;">
@@ -2254,8 +2254,8 @@
           <div id="modalCaseSnippet" style="font-size:0.8rem; line-height:1.45; color:var(--text-secondary, #94a3b8);"></div>
         </div>
 
-        <div style="display:flex; justify-content:flex-end;">
-          <a href="/tools/limitation-calculator.html" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; font-size:0.8rem; color:#0284c7; text-decoration:none; font-weight:600;">
+        <div class="modal-calc-link-wrap">
+          <a href="/tools/limitation-calculator.html" target="_blank" rel="noopener noreferrer" class="modal-calc-fullscreen-link">
             <span>Open Advanced Calculator with 40+ Articles &amp; Case Dossier</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -3268,16 +3268,16 @@
   <!-- Firebase Authentication SDKs (Google Sign-In) -->
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js" defer></script>
-  <script src="/js/wave_grid_background.js?v=91.0" defer></script>
-  <script src="/js/interactive_particles.js?v=91.0" defer></script>
-  <script src="/js/books_showcase.js?v=91.0" defer></script>
-  <script src="/js/data.js?v=91.0" defer></script>
-  <script src="/js/bare_acts.js?v=91.0" defer></script>
-  <script src="/js/bns_converter.js?v=91.0" defer></script>
-  <script src="/js/limitation_calculator.js?v=91.0" defer></script>
-  <script src="/js/law_crux_data.js?v=91.0" defer></script>
-  <script src="/js/pro_desk.js?v=91.0" defer></script>
-  <script src="/js/app.js?v=91.0" defer></script>
+  <script src="/js/wave_grid_background.js?v=92.0" defer></script>
+  <script src="/js/interactive_particles.js?v=92.0" defer></script>
+  <script src="/js/books_showcase.js?v=92.0" defer></script>
+  <script src="/js/data.js?v=92.0" defer></script>
+  <script src="/js/bare_acts.js?v=92.0" defer></script>
+  <script src="/js/bns_converter.js?v=92.0" defer></script>
+  <script src="/js/limitation_calculator.js?v=92.0" defer></script>
+  <script src="/js/law_crux_data.js?v=92.0" defer></script>
+  <script src="/js/pro_desk.js?v=92.0" defer></script>
+  <script src="/js/app.js?v=92.0" defer></script>
 
 
   <script>

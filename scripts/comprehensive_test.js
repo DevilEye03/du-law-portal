@@ -526,6 +526,16 @@ try {
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');
   assert(!privacyContent.includes('Team Aditya Shukla'), 'privacy.html contains zero occurrences of Team Aditya Shukla');
+
+  // Verify mobile responsiveness for Converter & Limitation Calculator
+  assert(cssContent.includes('.limitation-modal') && cssContent.includes('100dvh'), 'css/styles.css has full-viewport mobile rules for limitation modal');
+  assert(cssContent.includes('.modal-dates-grid'), 'css/styles.css has modal-dates-grid responsive layout');
+
+  const bnsConverterHtml = fs.readFileSync('tools/bns-converter.html', 'utf8');
+  assert(bnsConverterHtml.includes('@media (max-width: 768px)') && bnsConverterHtml.includes('@media (max-width: 480px)'), 'tools/bns-converter.html contains mobile media queries for 768px and 480px');
+
+  const limitationCalcHtml = fs.readFileSync('tools/limitation-calculator.html', 'utf8');
+  assert(limitationCalcHtml.includes('@media (max-width: 768px)') && limitationCalcHtml.includes('@media (max-width: 480px)'), 'tools/limitation-calculator.html contains mobile media queries for 768px and 480px');
 } catch (err) {
   assert(false, `Feedback & SW integrity test error: ${err.message}`);
 }

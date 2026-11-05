@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="/css/styles.css?v=91.0">
+  <link rel="stylesheet" href="/css/styles.css?v=92.0">
 
   <style>
     .standalone-page-body {
@@ -378,13 +378,36 @@
       text-decoration: none;
     }
     @media (max-width: 768px) {
-      .tool-header-nav { padding: 10px 14px; }
-      .tool-hero { margin: 20px auto 14px; padding: 0 14px; }
-      .tool-hero h2 { font-size: 1.45rem; }
-      .tool-container { padding: 0 12px; }
-      .search-filter-card { padding: 14px; border-radius: 12px; }
-      .search-input-standalone { font-size: 0.88rem; padding: 12px 38px 12px 40px; }
-      .act-tab-btn { min-width: 140px; padding: 8px 12px; font-size: 0.78rem; }
+      .tool-header-nav { padding: 8px 14px; }
+      .tool-brand-logo { width: 34px; height: 34px; font-size: 1rem; }
+      .tool-brand-text h1 { font-size: 1rem; }
+      .tool-brand-text span { font-size: 0.65rem; }
+      .btn-tool-back { padding: 6px 12px; font-size: 0.78rem; }
+      .tool-hero { margin: 16px auto 12px; padding: 0 14px; }
+      .tool-hero-badge { font-size: 0.7rem; padding: 3px 10px; margin-bottom: 8px; }
+      .tool-hero h2 { font-size: clamp(1.3rem, 4.5vw, 1.7rem); }
+      .tool-hero p { font-size: 0.86rem; line-height: 1.5; }
+      .tool-container { padding: 0 10px; margin-bottom: 36px; }
+      .search-filter-card { padding: 14px 12px; border-radius: 14px; margin-bottom: 16px; }
+      .converter-select-panel { margin-bottom: 12px; }
+      .act-tabs-strip { gap: 6px; padding-bottom: 4px; }
+      .act-tab-btn { min-width: 130px; padding: 7px 10px; font-size: 0.76rem; border-radius: 10px; }
+      .search-input-wrap { margin-bottom: 12px; }
+      .search-input-standalone { font-size: 16px !important; padding: 10px 36px 10px 38px; border-radius: 10px; }
+      .quick-chips-wrap { gap: 5px; padding-bottom: 4px; }
+      .quick-chip { padding: 4px 8px; font-size: 0.72rem; min-height: 28px; }
+      .category-pills-wrap { gap: 5px; padding-bottom: 4px; }
+      .bns-pill { padding: 4px 10px; font-size: 0.74rem; min-height: 28px; }
+      .bns-cards-grid { gap: 12px; }
+    }
+    @media (max-width: 480px) {
+      .tool-header-nav { padding: 8px 10px; }
+      .tool-brand-text h1 { font-size: 0.94rem; }
+      .tool-brand-text span { display: none; }
+      .btn-tool-back span { display: none; }
+      .btn-tool-back { padding: 6px 10px; border-radius: 50%; width: 34px; height: 34px; justify-content: center; }
+      .tool-container { padding: 0 8px; }
+      .search-filter-card { padding: 12px 10px; border-radius: 12px; }
     }
   </style>
 </head>
@@ -486,7 +509,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/bns_converter.js?v=91.0"></script>
+  <script src="/js/bns_converter.js?v=92.0"></script>
   <script>
     (function() {
       // Theme Management
