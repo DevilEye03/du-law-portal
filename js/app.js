@@ -1576,7 +1576,9 @@
     elements.topicsContainer.querySelectorAll('.btn-open-newtab').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        window.open(btn.dataset.file, '_blank');
+        const rawFile = btn.dataset.file || '';
+        const targetUrl = rawFile.startsWith('/') ? rawFile : '/' + rawFile;
+        window.open(targetUrl, '_blank');
       });
     });
   }
@@ -2145,6 +2147,8 @@
   // 4. EMBEDDED FULL NOTES READER MODAL (Print PDF removed)
   // =========================================================================
   function openReader(fileUrl, title, subInfo, pushHistory = true) {
+    if (!fileUrl) return;
+    const cleanFileUrl = fileUrl.startsWith('/') ? fileUrl : '/' + fileUrl;
     // Preserve current scroll position before locking background scroll
     state.savedScrollY = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
@@ -2161,7 +2165,7 @@
       iframe.className = 'reader-iframe';
       iframe.id = 'readerIframe';
       iframe.title = 'Study Notes Reader';
-      iframe.src = fileUrl;
+      iframe.src = cleanFileUrl;
       iframe.addEventListener('load', () => {
         try {
           if (state.darkMode && iframe.contentDocument && iframe.contentDocument.documentElement) {
@@ -2172,7 +2176,7 @@
       iframeWrap.appendChild(iframe);
       elements.readerIframe = iframe;
     } else if (elements.readerIframe) {
-      elements.readerIframe.src = fileUrl;
+      elements.readerIframe.src = cleanFileUrl;
     }
 
     elements.readerModal.classList.add('active');
@@ -2197,14 +2201,14 @@
         view: 'reader',
         semId: semId,
         subId: subId,
-        fileUrl: fileUrl,
+        fileUrl: cleanFileUrl,
         title: title || '',
         subInfo: subInfo || ''
       }, '', baseSearch + '#reader');
     }
 
     trackEvent('read_notes', {
-      file: fileUrl,
+      file: cleanFileUrl,
       title: title || '',
       subject: state.currentSubject ? state.currentSubject.id : ''
     });
