@@ -712,6 +712,31 @@
           "Unit 7: The Indian Prison System: Prisoner Rights, Open Prisons & Prison Reforms"
         ]
       },
+      {
+        id: "taxation",
+        code: "LB-505",
+        title: "Principles of Taxation Law",
+        author: "LB-505 • Make Law Easy",
+        year: "2025–26",
+        stars: 5,
+        unitsCount: "6 Comprehensive Units",
+        casesCount: "39 Landmark Cases",
+        desc: "Constitutional Basis of Tax, Section 2(24) Income, Agricultural Income, Heads of Income, Clubbing & Assessment.",
+        spineBg: "#101f3f",
+        spineInk: "#a4802a",
+        spineFont: "700 34px Georgia",
+        backBg: "#0a1428",
+        backInk: "245,238,219",
+        edge: "#fdf6e3",
+        chapters: [
+          "Unit 1: Introduction, Basic Concepts & Income Definition",
+          "Unit 2: Agricultural Income & Partial Integration (ss. 2(1A), 10(1))",
+          "Unit 3: Residence and Scope of Total Income (ss. 4, 5, 6, 9)",
+          "Unit 4: Heads of Income: Salaries, House Property, PGBP, Capital Gains & Other Sources",
+          "Unit 5: Income of Other Persons Included in Assessee's Total Income (ss. 60–64)",
+          "Unit 6: Assessment: Best Judgment Assessment & Income Escaping Assessment (ss. 139–153)"
+        ]
+      },
     ],
     6: [
       {

@@ -283,6 +283,30 @@ try {
   const sem5 = portalData.semesters.find(s => s.id === 5);
   assert(sem5 && sem5.subjectIds.includes('criminology'), 'Semester 5 includes subject "criminology"');
 
+  // Principles of Taxation Law (LB-505) Integrity
+  const tax = portalData.subjects['taxation'];
+  assert(!!tax, 'Subject "taxation" is registered');
+  assert(tax.code === 'LB-505', 'Taxation code is LB-505');
+  assert(tax.units && tax.units.length === 6, `Taxation has exactly 6 units (Found: ${tax.units?.length})`);
+  assert(tax.cases && tax.cases.length === 39, `Taxation landmark cases count === 39 (Found: ${tax.cases?.length})`);
+  assert(tax.pyqs && tax.pyqs.length === 19, `Taxation PYQs with model answers === 19 (Found: ${tax.pyqs?.length})`);
+  assert(tax.revisions && tax.revisions.length === 6, `Taxation revision capsules === 6 (Found: ${tax.revisions?.length})`);
+
+  for (let u = 1; u <= 6; u++) {
+    const uCases = tax.cases.filter(c => c.unitNumber === u);
+    const uPyqs = tax.pyqs.filter(p => p.unitNumber === u);
+    const uRev = tax.revisions.filter(r => r.unitNumber === u);
+    assert(uCases.length > 0, `Taxation Unit ${u} has landmark cases (Found: ${uCases.length})`);
+    assert(uPyqs.length > 0, `Taxation Unit ${u} has PYQs (Found: ${uPyqs.length})`);
+    assert(uRev.length > 0, `Taxation Unit ${u} has revision capsule (Found: ${uRev.length})`);
+  }
+  tax.units.forEach(u => {
+    const p = path.resolve(u.file);
+    assert(fs.existsSync(p), `Taxation Dossier file exists: ${u.file}`);
+  });
+
+  assert(sem5 && sem5.subjectIds.includes('taxation'), 'Semester 5 includes subject "taxation"');
+
   // Verify all 18 subjects have quick revision htmlContent across all 150 units
   let totalRevHtml = 0;
   Object.keys(portalData.subjects).forEach(subKey => {
@@ -292,7 +316,7 @@ try {
       if (r.htmlContent && r.htmlContent.length > 50) totalRevHtml++;
     });
   });
-  assert(totalRevHtml === 150, `All 150 units across all 18 subjects have rich note quick revision htmlContent (Found: ${totalRevHtml}/150)`);
+  assert(totalRevHtml === 156, `All 156 units across all 19 subjects have rich note quick revision htmlContent (Found: ${totalRevHtml}/156)`);
 
 } catch (err) {
   assert(false, `data.js execution error: ${err.message}`);
@@ -522,6 +546,10 @@ try {
   const sem5ItLawsNote = fs.readFileSync('SEM 5/IT LAWS/IT_Act_2000_Unit-I_Introduction_DU_LB5031_Notes.html', 'utf8');
   assert(sem5ItLawsNote.includes('MAKE LAW EASY — UNIVERSAL OMNI-RESPONSIVE ENGINE'), 'Semester 5 IT Laws notes contain UNIVERSAL OMNI-RESPONSIVE ENGINE');
   assert(sem5ItLawsNote.includes('notes-responsive.css'), 'Semester 5 IT Laws notes link notes-responsive.css');
+
+  const sem5TaxationNote = fs.readFileSync('SEM 5/Taxation/Topic1_Introduction_Taxation_Law_DU.html', 'utf8');
+  assert(sem5TaxationNote.includes('notes-responsive.css'), 'Semester 5 Taxation notes link notes-responsive.css');
+  assert(sem5TaxationNote.includes('taxation-dark-theme'), 'Semester 5 Taxation notes have dark theme support');
 
   assert(!htmlContent.includes('Team Aditya Shukla'), 'index.html contains zero occurrences of Team Aditya Shukla');
   assert(!termsContent.includes('Team Aditya Shukla'), 'terms.html contains zero occurrences of Team Aditya Shukla');

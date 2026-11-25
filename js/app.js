@@ -1412,7 +1412,15 @@
     'media-5': 'Salus Populi Suprema Lex • Airwaves Regulation & IT Intermediary Safe Harbour (S. 79)',
     'media-6': 'Caveat Venditor • Protected Commercial Speech (Tata Press) & Misleading Ad Prohibitions',
     'media-7': 'Fiat Justitia Ruat Caelum • Inherent Postponement of Trial Reporting & Censorship Standards',
-    'media-8': 'Lex Parliamenti • Article 361A Legislative Reporting Shield & Paid News Inquiries'
+    'media-8': 'Lex Parliamenti • Article 361A Legislative Reporting Shield & Paid News Inquiries',
+
+    // Principles of Taxation Law (LB-505)
+    'taxation-1': 'Nullum Tributum Sine Lege • Article 265: No tax shall be levied or collected except by authority of law',
+    'taxation-2': 'Ex Nihilo Nihil Fit • Agricultural income immunity under Section 10(1) & basic agricultural operations',
+    'taxation-3': 'Lex Loci & Real Territorial Nexus • Worldwide taxation of residents vs deemed accrual in India',
+    'taxation-4': 'Singula Singulis Reddenda • Five statutory heads of income are mutually exclusive and collectively exhaustive',
+    'taxation-5': 'Substantia Praevalet Formae • Anti-splitting rules: Income of spouse and family clubbed to prevent tax avoidance',
+    'taxation-6': 'Audi Alteram Partem • Best judgment assessment and reassessment require tangible material, reason to believe and fair hearing'
   };
 
   function getTopicMaxim(subId, unitNumber, unitTitle, subTheme) {
