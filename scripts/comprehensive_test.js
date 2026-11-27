@@ -148,7 +148,7 @@ try {
   assert(drafting.code === 'LB-502', 'Drafting code is LB-502');
   assert(drafting.units && drafting.units.length === 7, `Drafting has exactly 7 units (Found: ${drafting.units?.length})`);
   assert(drafting.cases && drafting.cases.length === 51, `Drafting landmark cases count === 51 (Found: ${drafting.cases?.length})`);
-  assert(drafting.pyqs && drafting.pyqs.length === 51, `Drafting PYQs with model answers === 51 (Found: ${drafting.pyqs?.length})`);
+  assert(drafting.pyqs && drafting.pyqs.length === 83, `Drafting PYQs with model answers === 83 (Found: ${drafting.pyqs?.length})`);
   assert(drafting.revisions && drafting.revisions.length === 7, `Drafting revision capsules === 7 (Found: ${drafting.revisions?.length})`);
   assert(!drafting.cases.some(c => c.issues.includes('Core question of law') || c.arguments.includes('Submissions advanced')), 'Drafting cases have zero generic placeholder text');
 
@@ -171,7 +171,7 @@ try {
   assert(industrial.code === 'LB-503', 'Industrial Law code is LB-503');
   assert(industrial.units && industrial.units.length === 8, `Industrial Law has exactly 8 units (Found: ${industrial.units?.length})`);
   assert(industrial.cases && industrial.cases.length === 78, `Industrial Law landmark cases count === 78 (Found: ${industrial.cases?.length})`);
-  assert(industrial.pyqs && industrial.pyqs.length === 73, `Industrial Law PYQs with model answers === 73 (Found: ${industrial.pyqs?.length})`);
+  assert(industrial.pyqs && industrial.pyqs.length === 98, `Industrial Law PYQs with model answers === 98 (Found: ${industrial.pyqs?.length})`);
   assert(industrial.revisions && industrial.revisions.length === 8, `Industrial Law revision capsules === 8 (Found: ${industrial.revisions?.length})`);
   assert(!industrial.cases.some(c => c.issues.includes('Core question of law') || c.arguments.includes('Submissions advanced')), 'Industrial Law cases have zero generic placeholder text');
 
@@ -194,7 +194,7 @@ try {
   assert(itLaws.code === 'LB-5031', 'IT Law code is LB-5031');
   assert(itLaws.units && itLaws.units.length === 8, `IT Law has exactly 8 units (Found: ${itLaws.units?.length})`);
   assert(itLaws.cases && itLaws.cases.length === 50, `IT Law landmark cases count === 50 (Found: ${itLaws.cases?.length})`);
-  assert(itLaws.pyqs && itLaws.pyqs.length === 52, `IT Law PYQs with model answers === 52 (Found: ${itLaws.pyqs?.length})`);
+  assert(itLaws.pyqs && itLaws.pyqs.length === 71, `IT Law PYQs with model answers === 71 (Found: ${itLaws.pyqs?.length})`);
   assert(itLaws.revisions && itLaws.revisions.length === 8, `IT Law revision capsules === 8 (Found: ${itLaws.revisions?.length})`);
 
   for (let u = 1; u <= 8; u++) {
@@ -289,7 +289,7 @@ try {
   assert(tax.code === 'LB-505', 'Taxation code is LB-505');
   assert(tax.units && tax.units.length === 6, `Taxation has exactly 6 units (Found: ${tax.units?.length})`);
   assert(tax.cases && tax.cases.length === 39, `Taxation landmark cases count === 39 (Found: ${tax.cases?.length})`);
-  assert(tax.pyqs && tax.pyqs.length === 19, `Taxation PYQs with model answers === 19 (Found: ${tax.pyqs?.length})`);
+  assert(tax.pyqs && tax.pyqs.length === 28, `Taxation PYQs with model answers === 28 (Found: ${tax.pyqs?.length})`);
   assert(tax.revisions && tax.revisions.length === 6, `Taxation revision capsules === 6 (Found: ${tax.revisions?.length})`);
 
   for (let u = 1; u <= 6; u++) {
@@ -306,6 +306,28 @@ try {
   });
 
   assert(sem5 && sem5.subjectIds.includes('taxation'), 'Semester 5 includes subject "taxation"');
+
+  // Verify all Semester 5 Dec 2024 / July 2025 / Dec 2025 PYQ anchorIds resolve inside unit HTML files
+  ['drafting', 'industrial', 'it_laws', 'taxation'].forEach(subId => {
+    const s = portalData.subjects[subId];
+    const seenIds = new Set();
+    const seenUnitIds = new Set();
+    const fileCache = {};
+    s.pyqs.forEach(p => {
+      const unitScopedKey = `${p.unitNumber}:${p.id}`;
+      assert(!seenUnitIds.has(unitScopedKey), `${subId} Unit ${p.unitNumber} PYQ ID unique: ${p.id}`);
+      seenUnitIds.add(unitScopedKey);
+      if (/^(draft-pyq-202|ind-pyq-202|it-pyq-202|pyq-2025-)/.test(p.id)) {
+        assert(!seenIds.has(p.id), `${subId} new PYQ global ID unique: ${p.id}`);
+        seenIds.add(p.id);
+        if (!fileCache[p.file]) fileCache[p.file] = fs.readFileSync(path.resolve(p.file), 'utf8');
+        assert(fileCache[p.file].includes(`id="${p.anchorId}"`), `${subId} anchor "${p.anchorId}" present in ${p.file}`);
+      } else if (subId !== 'taxation') {
+        assert(!seenIds.has(p.id), `${subId} PYQ ID unique: ${p.id}`);
+        seenIds.add(p.id);
+      }
+    });
+  });
 
   // Verify all 18 subjects have quick revision htmlContent across all 150 units
   let totalRevHtml = 0;
